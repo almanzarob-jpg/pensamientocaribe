@@ -1,0 +1,155 @@
+/* ── Scroll reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+/* ── Hero stagger ── */
+.hero-badge,
+.hero-lema,
+.hero h1,
+.hero-sub,
+.hero-ctas,
+.hero-stats,
+.scroll-hint {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroFadeIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+.hero-badge     { animation-delay: 0.2s; }
+.hero-lema      { animation-delay: 0.4s; }
+.hero h1        { animation-delay: 0.6s; }
+.hero-sub       { animation-delay: 0.8s; }
+.hero-ctas      { animation-delay: 1.0s; }
+.hero-stats     { animation-delay: 1.2s; }
+.scroll-hint    { animation-delay: 1.5s; }
+
+@keyframes heroFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── Scroll hint pulse ── */
+.scroll-hint-line {
+  animation: hintPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes hintPulse {
+  0%, 100% { opacity: 0.4; width: 24px; }
+  50%      { opacity: 0.8; width: 36px; }
+}
+
+/* ── Floating nav toggle lines ── */
+.nav-toggle.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.nav-toggle.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ── Card line top-bar hover ── */
+.card-line::before {
+  transition: opacity var(--transition-base), background var(--transition-base);
+}
+
+.card-line:nth-child(even):hover::before {
+  background: var(--c-orange);
+}
+
+.card-line:nth-child(3n):hover::before {
+  background: var(--c-red);
+}
+
+/* ── Button ripple feel ── */
+.btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.05);
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.btn:hover::after {
+  opacity: 1;
+}
+
+/* ── Progress bar glow ── */
+.scroll-progress::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: -2px;
+  width: 80px;
+  height: 7px;
+  background: var(--c-orange);
+  filter: blur(6px);
+  opacity: 0.6;
+  border-radius: 50%;
+}
+
+/* ── Separator dot subtle pulse ── */
+.separator-dot {
+  animation: dotPulse 3s ease-in-out infinite;
+}
+
+.separator-dot:nth-child(2) { animation-delay: 0.4s; }
+.separator-dot:nth-child(4) { animation-delay: 0.8s; }
+
+@keyframes dotPulse {
+  0%, 100% { opacity: 0.4; }
+  50%      { opacity: 1; }
+}
+
+/* ── Reduced motion ── */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .hero-badge,
+  .hero-lema,
+  .hero h1,
+  .hero-sub,
+  .hero-ctas,
+  .hero-stats,
+  .scroll-hint {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  .scroll-hint-line {
+    animation: none;
+    opacity: 0.6;
+  }
+}

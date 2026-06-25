@@ -1,0 +1,1593 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pensamiento Caribe · Pensar desde nuestra orilla</title>
+  <meta name="description" content="Grupo de Investigación Pensamiento Caribe. Universidad del Magdalena. Investigación crítica sobre el Caribe, las vidas negras, la filosofía afrocaribeña, las geografías negras, el antirracismo y las formas situadas de pensamiento descolonial.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css?v=15">
+  <link rel="stylesheet" href="css/layout.css?v=17">
+  <link rel="stylesheet" href="css/components.css?v=37">
+  <link rel="stylesheet" href="css/animations.css?v=15">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+</head>
+<body>
+
+  <!-- Scroll progress -->
+  <div class="scroll-progress" aria-hidden="true"></div>
+
+  <!-- 3D background -->
+  <div class="canvas-wrap" aria-hidden="true">
+    <canvas id="bg-canvas"></canvas>
+  </div>
+  <div class="fallback-bg" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <!-- Page content -->
+  <div class="page-content">
+
+    <!-- ════════ NAV ════════ -->
+    <nav class="site-nav" aria-label="Navegación principal">
+      <a href="#" class="nav-brand">
+        <img src="assets/logo-pensamiento-caribe.png" alt="Grupo de Investigación Pensamiento Caribe" onerror="this.style.display='none'">
+      </a>
+      <div class="nav-links">
+        <a href="#lineas">Líneas</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#semillero">Semillero</a>
+        <a href="#equipo">Equipo</a>
+        <a href="#publicaciones">Publicaciones</a>
+        <a href="#noticias">Noticias</a>
+        <a href="#semana-antirracista">Semana</a>
+        <a href="#eventos">Eventos</a>
+        <a href="#medios">Medios</a>
+        <a href="#efemerides">Efemérides</a>
+        <a href="#redes">Redes</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <button class="nav-toggle" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <!-- Mobile overlay -->
+    <div class="nav-mobile-overlay" aria-label="Menú móvil">
+      <a href="#lineas">Líneas</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#semillero">Semillero</a>
+      <a href="#equipo">Equipo</a>
+      <a href="#publicaciones">Publicaciones</a>
+      <a href="#noticias">Noticias</a>
+      <a href="#semana-antirracista">Semana</a>
+      <a href="#eventos">Eventos</a>
+      <a href="#medios">Medios</a>
+      <a href="#efemerides">Efemérides</a>
+      <a href="#redes">Redes</a>
+      <a href="#contacto">Contacto</a>
+    </div>
+
+    <!-- ════════ HERO ════════ -->
+    <header class="hero" id="inicio">
+      <p class="hero-badge">Grupo de Investigación Pensamiento Caribe</p>
+      <p class="hero-lema">Pensar desde nuestra orilla</p>
+      <h1>Pensar el <em>Caribe</em> desde sus territorios, luchas y formas de vida</h1>
+      <p class="hero-sub">Investigamos las vidas negras, la filosofía afrocaribeña, las geografías del poder, las culturas populares, las prácticas de cuidado comunitario y las formas situadas de pensamiento crítico en el Caribe Colombiano.</p>
+      <div class="hero-ctas">
+        <a href="#lineas" class="btn btn--primary">Explorar líneas de investigación <span class="btn-arrow">&rarr;</span></a>
+        <a href="#publicaciones" class="btn btn--secondary">Ver publicaciones</a>
+      </div>
+      <div class="hero-stats">
+        <span class="hero-stat">Antropología del Caribe</span>
+        <span class="hero-stat">Filosofía afrocaribeña</span>
+        <span class="hero-stat">Geografías negras</span>
+        <span class="hero-stat">Cuidado comunitario</span>
+        <span class="hero-stat">Culturas afrocaribeñas</span>
+      </div>
+      <div class="scroll-hint">
+        <span class="scroll-hint-line"></span>
+        Desplazar
+      </div>
+    </header>
+
+    <!-- ════════ MANIFIESTO ════════ -->
+    <section class="section section--narrow manifiesto reveal" id="manifiesto">
+      <p class="manifiesto-quote">&ldquo;Pensar desde nuestra orilla no significa hablar desde el margen, sino desde una posición histórica capaz de <em>interrogar el centro</em>.&rdquo;</p>
+      <p class="manifiesto-text">Pensamiento Caribe parte de una convicción: el Caribe no es margen, sino una zona histórica donde se cruzan modernidad, racialización, violencia, creación y resistencia. Investigar desde el Caribe implica escuchar territorios heridos, cuerpos que recuerdan y formas de pensamiento que han sido sistemáticamente silenciadas.</p>
+    </section>
+
+    <!-- ════════ MAPA INTERACTIVO DEL GRAN CARIBE ════════ -->
+    <section class="section section--wide" id="caribe-mapa">
+      <div class="caribe-mapa-header reveal">
+        <p class="section-label">El Caribe como unidad</p>
+        <h2 class="section-title">El <em>Gran Caribe</em></h2>
+        <p class="section-subtitle">El borde costero que configura el mar Caribe forma una unidad geográfica, histórica y política. El Caribe Colombiano es una orilla de ese todo mayor. Una constelación de territorios articulada por el mar.</p>
+      </div>
+
+      <div class="caribe-mapa-wrap reveal">
+        <div class="caribe-mapa-filters" role="group" aria-label="Filtrar capas del mapa">
+          <button class="filter-btn is-active" data-layer="all">Todas las capas</button>
+          <button class="filter-btn" data-layer="Caribe Colombiano">Caribe Colombiano</button>
+          <button class="filter-btn" data-layer="Caribe insular colombiano">Insular colombiano</button>
+          <button class="filter-btn" data-layer="Antillas Mayores">Antillas Mayores</button>
+          <button class="filter-btn" data-layer="Antillas Menores">Antillas Menores</button>
+          <button class="filter-btn" data-layer="Caribe centroamericano">Centroamericano</button>
+          <button class="filter-btn" data-layer="Caribe venezolano">Venezolano</button>
+          <button class="filter-btn" data-layer="Caribe mexicano">Mexicano</button>
+          <button class="filter-btn" data-layer="Golfo de México">Golfo de México</button>
+          <button class="filter-btn" data-layer="Guyanas">Guyanas</button>
+          <button class="filter-btn" data-layer="Caribe suroriental">Suroriental</button>
+        </div>
+
+        <div id="caribe-leaflet-map" class="caribe-leaflet-map" role="application" aria-label="Mapa interactivo del Gran Caribe"></div>
+
+        <div class="caribe-mapa-legend">
+          <p class="legend-title">Leyenda conceptual</p>
+          <p class="legend-text">Este mapa es el territorio que habita nuestro logo: la región que delimita el mar Caribe. Cada nodo es un puerto, ciudad o territorio del Gran Caribe; las capas agrupan regiones por su lugar en la unidad caribeña: archipiélagos, costas continentales, Guyanas y Golfo. El mapa dibuja un <strong>pensar archipiélico</strong> —con Édouard Glissant: islas y orillas que se relacionan sin fundirse, una poética de la relación— sobre un <strong>mar histórico</strong> —con Derek Walcott: <em>«the sea is history»</em>, el mar como archivo de la trata, las travesías y las resistencias—. <strong>El Caribe Colombiano</strong> aparece destacado como orilla de enunciación del grupo. Haz clic en cada punto para ver su leyenda: historia, cultura popular, figuras y claves de pensamiento.</p>
+          <div id="caribe-legend-swatches" class="legend-swatches" role="group" aria-label="Regiones del Gran Caribe"></div>
+        </div>
+      </div>
+    </section>
+
+    <div class="separator" aria-hidden="true">
+      <span class="separator-line"></span>
+      <span class="separator-dot"></span>
+      <span class="separator-line"></span>
+      <span class="separator-dot"></span>
+      <span class="separator-line"></span>
+    </div>
+
+    <!-- ════════ LÍNEAS DE INVESTIGACIÓN ════════ -->
+    <section class="section" id="lineas">
+      <p class="section-label reveal">Investigación</p>
+      <h2 class="section-title reveal">Líneas de <em>investigación</em></h2>
+      <p class="section-subtitle reveal">Campos de pensamiento crítico desde los cuales el grupo interroga el Caribe como formación histórica, territorio racializado y horizonte de imaginación política.</p>
+
+      <div class="grid-lines" style="margin-top: var(--space-xl);">
+
+        <article class="card-line card-line--expandable reveal" data-linea="antropologia-caribe" role="button" tabindex="0" aria-expanded="false">
+          <div class="card-line-mark">
+            <svg viewBox="0 0 28 28"><polygon points="14,2 26,14 14,26 2,14" class="mark-diamond"/></svg>
+          </div>
+          <h3>Antropología del Caribe</h3>
+          <p>Estudia el Caribe como formación histórica, cultural y política, atendiendo a sus territorios, movilidades, memorias, desigualdades y formas de vida.</p>
+          <span class="card-line-toggle">Profundizar <span class="toggle-icon">+</span></span>
+        </article>
+
+        <article class="card-line card-line--expandable reveal reveal-delay-1" data-linea="filosofia-afrocaribena" role="button" tabindex="0" aria-expanded="false">
+          <div class="card-line-mark">
+            <svg viewBox="0 0 28 28"><circle cx="14" cy="14" r="11" class="mark-circle"/></svg>
+          </div>
+          <h3>Filosofía afrocaribeña</h3>
+          <p>Explora tradiciones de pensamiento negro y afrocaribeño, sus críticas a la modernidad racial y sus formas de imaginar libertad, humanidad y mundo.</p>
+          <span class="card-line-toggle">Profundizar <span class="toggle-icon">+</span></span>
+        </article>
+
+        <article class="card-line card-line--expandable reveal reveal-delay-2" data-linea="teoria-critica-raza" role="button" tabindex="0" aria-expanded="false">
+          <div class="card-line-mark">
+            <svg viewBox="0 0 28 28"><polygon points="14,2 26,26 2,26" class="mark-triangle"/></svg>
+          </div>
+          <h3>Teoría crítica de la raza y antirracismo</h3>
+          <p>Analiza la producción histórica de la raza, las formas contemporáneas del racismo y las prácticas intelectuales, pedagógicas y políticas del antirracismo.</p>
+          <span class="card-line-toggle">Profundizar <span class="toggle-icon">+</span></span>
+        </article>
+
+        <article class="card-line card-line--expandable reveal reveal-delay-3" data-linea="geografias-negras" role="button" tabindex="0" aria-expanded="false">
+          <div class="card-line-mark">
+            <svg viewBox="0 0 28 28"><polygon points="14,2 26,14 14,26 2,14" class="mark-diamond"/></svg>
+          </div>
+          <h3>Geografías negras y territorio</h3>
+          <p>Investiga las relaciones entre racialización, espacio, territorio, ciudad, paisaje, despojo y producción de lugares negros en el Caribe Colombiano.</p>
+          <span class="card-line-toggle">Profundizar <span class="toggle-icon">+</span></span>
+        </article>
+
+        <article class="card-line card-line--expandable reveal" data-linea="capitalismo-racial" role="button" tabindex="0" aria-expanded="false">
+          <div class="card-line-mark">
+            <svg viewBox="0 0 28 28"><path d="M14 4 C8 4, 4 10, 10 14 C4 18, 8 26, 14 20 C20 26, 24 18, 18 14 C24 10, 20 4, 14 4Z" class="mark-spiral"/></svg>
+          </div>
+          <h3>Capitalismo racial, plantación y modernidad caribeña</h3>
+          <p>Examina la plantación, el trabajo racializado, la acumulación, el extractivismo y las infraestructuras históricas que han configurado la modernidad caribeña.</p>
+          <span class="card-line-toggle">Profundizar <span class="toggle-icon">+</span></span>
+        </article>
+
+        <article class="card-line card-line--expandable reveal reveal-delay-1" data-linea="pensamiento-descolonial" role="button" tabindex="0" aria-expanded="false">
+          <div class="card-line-mark">
+            <svg viewBox="0 0 28 28"><circle cx="14" cy="14" r="11" class="mark-circle"/></svg>
+          </div>
+          <h3>Pensamiento descolonial y tradición radical negra</h3>
+          <p>Articula debates sobre colonialidad, descolonización, humanismo radical negro, imaginación política y crítica de las epistemologías dominantes.</p>
+          <span class="card-line-toggle">Profundizar <span class="toggle-icon">+</span></span>
+        </article>
+
+        <article class="card-line card-line--expandable reveal reveal-delay-2" data-linea="cuidado-comunitario" role="button" tabindex="0" aria-expanded="false">
+          <div class="card-line-mark">
+            <svg viewBox="0 0 28 28"><polygon points="14,2 26,26 2,26" class="mark-triangle"/></svg>
+          </div>
+          <h3>Prácticas de cuidado comunitario y salud</h3>
+          <p>Investiga las formas comunitarias de cuidado, sanación, acompañamiento, redes afectivas y saberes territoriales sobre la vida, el cuerpo y la salud como formas de resistencia, sostenimiento colectivo y producción de mundo.</p>
+          <span class="card-line-toggle">Profundizar <span class="toggle-icon">+</span></span>
+        </article>
+
+        <article class="card-line card-line--expandable reveal reveal-delay-3" data-linea="culturas-populares" role="button" tabindex="0" aria-expanded="false">
+          <div class="card-line-mark">
+            <svg viewBox="0 0 28 28"><polygon points="14,2 26,14 14,26 2,14" class="mark-diamond"/></svg>
+          </div>
+          <h3>Culturas populares y expresiones afrocaribeñas</h3>
+          <p>Estudia las formas expresivas, festivas, musicales, corporales, narrativas y estéticas mediante las cuales las comunidades afrocaribeñas producen memoria, pertenencia, crítica social y presencia histórica.</p>
+          <span class="card-line-toggle">Profundizar <span class="toggle-icon">+</span></span>
+        </article>
+
+      </div>
+
+      <!-- Panel de detalle de línea (se llena con las plantillas) -->
+      <div id="linea-detalle" class="linea-detalle" hidden>
+        <div class="linea-detalle-inner">
+          <button class="linea-detalle-close" type="button" aria-label="Cerrar detalle">&times;</button>
+          <p class="section-label">Línea de investigación</p>
+          <h3 class="linea-detalle-title"></h3>
+          <div class="linea-detalle-body"></div>
+        </div>
+      </div>
+
+      <!-- ── Plantillas de contenido ampliado por línea ── -->
+      <template data-linea-tpl="antropologia-caribe">
+        <div class="linea-detalle-grid">
+          <div class="linea-detalle-texto">
+            <p><!-- Texto por insertar --></p>
+            <p><!-- Texto por insertar --></p>
+            <div class="linea-detalle-claves">
+              <!-- Conceptos clave por insertar: <span>Concepto</span> -->
+            </div>
+          </div>
+          <aside class="linea-detalle-media" data-slug="antropologia-caribe"></aside>
+        </div>
+      </template>
+
+      <template data-linea-tpl="filosofia-afrocaribena">
+        <div class="linea-detalle-grid linea-detalle-grid--con-plano">
+          <div class="linea-detalle-texto">
+            <p>El Caribe ha producido una de las tradiciones filosóficas más potentes de la modernidad. La que emerge de la esclavización, la plantación y la lucha por la libertad. De Aimé Césaire a Frantz Fanon, Sylvia Wynter, Édouard Glissant, Manuel Zapata Olivella y el pensamiento radical negro. Se trata de una filosofía viva, no de un archivo muerto guardado en anaqueles y museos.</p>
+            <p>La filosofía afrocaribeña no vive solo en los textos. Vive en el son, en el tambor, en la oralidad, en la fiesta. Glissant hablaba del <em>tout-monde</em>, el mundo entero como relación, y lo encontraba en el créole, en la música, en los ritmos de la diáspora. Pensar el Caribe exige ampliar qué cuenta como pensamiento. Significa estudiar esas filosofías encarnadas junto a los textos canónicos, convencido de que la verdadera densidad intelectual emerge cuando unes ambas.</p>
+            <p>Desde la orilla Caribe de Colombia meditamos y nos activamos desde nuestra negrura como vidas negras habitando la blanquitud monumental.</p>
+            <div class="linea-detalle-claves">
+              <span>Negrura</span><span>Vidas negras</span><span>Blanquitud monumental</span><span>Fanon · Wynter · Glissant</span><span>Zapata Olivella</span><span>Tout-monde</span>
+            </div>
+          </div>
+          <figure class="linea-plano-lateral">
+            <img src="assets/img/lineas/filosofia-afrocaribena-01.png" alt="Negrura, Vidas Negras y Blanquitud Monumental — Levantamiento crítico del monumento a Rodrigo de Bastidas, Santa Marta" loading="lazy">
+            <figcaption>Negrura, Vidas Negras y Blanquitud Monumental · Levantamiento crítico — Monumento a Rodrigo de Bastidas · Camellón de la Bahía, Santa Marta · Plano CPC_VI · Junio 2026</figcaption>
+          </figure>
+        </div>
+      </template>
+
+      <template data-linea-tpl="teoria-critica-raza">
+        <div class="linea-detalle-grid">
+          <div class="linea-detalle-texto">
+            <p><!-- Texto por insertar --></p>
+            <p><!-- Texto por insertar --></p>
+            <div class="linea-detalle-claves">
+              <!-- Conceptos clave por insertar: <span>Concepto</span> -->
+            </div>
+          </div>
+          <aside class="linea-detalle-media" data-slug="teoria-critica-raza"></aside>
+        </div>
+      </template>
+
+      <template data-linea-tpl="geografias-negras">
+        <div class="linea-detalle-solo">
+          <!-- Galería de fotos arriba, visible inmediatamente -->
+          <div class="linea-galeria-top">
+            <figure class="linea-img-campo">
+              <img src="assets/img/lineas/geografias-negras-01.jpg" alt="Son de Negros — Consejo Comunitario Alejandro Chiquillo, Soplador, Zona Bananera">
+              <figcaption>Son de Negros · Soplador, Zona Bananera · Trabajo de campo CPC</figcaption>
+            </figure>
+            <figure class="linea-img-campo">
+              <img src="assets/img/lineas/geografias-negras-02.jpg" alt="Encuentro con comunidad — trabajo de campo Geografías Negras, Zona Bananera">
+              <figcaption>Encuentro con la comunidad · Trabajo de campo CPC · ICANH</figcaption>
+            </figure>
+          </div>
+          <p>Las geografías negras son los espacios, territorios y lugares producidos por las vidas negras del Caribe: memorias, movilidades, cuerpos y prácticas que construyen mundo frente al despojo. Esta línea investiga cómo las comunidades afrodescendientes de la Zona Bananera del Magdalena han creado, habitado y defendido sus espacios bajo el capitalismo racial, el extractivismo bananero y la violencia estructural.</p>
+          <p>El proyecto analiza once consejos comunitarios —Guacamayal, San José de Kennedy (Afrozona), Soplador, Tucurinca-Tenerife, entre otros— a través de cartografías colaborativas, talleres de historia comunitaria y etnografías sobre las tramas hidrosociales: ríos, acequias, ciénagas y bocatomas como archivos vivos de la presencia negra. El agua emerge como eje para comprender las espacialidades negras: mecanismo histórico de control y horizonte de resistencia.</p>
+          <p>Desde los Sones de Negros de Soplador hasta las memorias antillanas de los "yumecas" en Guacamayal, la investigación documenta contra-geografías que desbordan la noción estatal de territorio ancestral para revelar movilidades históricas y vínculos transatlánticos. Realizado en alianza con el Centro Regional Caribe del ICANH, el proyecto incluye la herramienta digital EVOQUE y un corto documental sobre el Consejo Comunitario Alejandro Chiquillo.</p>
+          <div class="linea-detalle-claves">
+            <span>Geografías negras</span><span>Zona Bananera</span><span>Vidas negras</span>
+            <span>Geo-poética hidrosocial</span><span>Capitalismo racial</span><span>Cartografías colaborativas</span>
+            <span>Son de Negros</span><span>Antillanos · Yumecas</span><span>ICANH</span>
+          </div>
+        </div>
+      </template>
+
+      <template data-linea-tpl="capitalismo-racial">
+        <div class="linea-detalle-grid">
+          <div class="linea-detalle-texto">
+            <p><!-- Texto por insertar --></p>
+            <p><!-- Texto por insertar --></p>
+            <div class="linea-detalle-claves">
+              <!-- Conceptos clave por insertar: <span>Concepto</span> -->
+            </div>
+          </div>
+          <aside class="linea-detalle-media" data-slug="capitalismo-racial"></aside>
+        </div>
+      </template>
+
+      <template data-linea-tpl="pensamiento-descolonial">
+        <div class="linea-detalle-grid">
+          <div class="linea-detalle-texto">
+            <p><!-- Texto por insertar --></p>
+            <p><!-- Texto por insertar --></p>
+            <div class="linea-detalle-claves">
+              <!-- Conceptos clave por insertar: <span>Concepto</span> -->
+            </div>
+          </div>
+          <aside class="linea-detalle-media" data-slug="pensamiento-descolonial"></aside>
+        </div>
+      </template>
+
+      <template data-linea-tpl="cuidado-comunitario">
+        <div class="linea-detalle-grid">
+          <div class="linea-detalle-texto">
+            <p><!-- Texto por insertar --></p>
+            <p><!-- Texto por insertar --></p>
+            <div class="linea-detalle-claves">
+              <!-- Conceptos clave por insertar: <span>Concepto</span> -->
+            </div>
+          </div>
+          <aside class="linea-detalle-media" data-slug="cuidado-comunitario"></aside>
+        </div>
+      </template>
+
+      <template data-linea-tpl="culturas-populares">
+        <div class="linea-detalle-grid">
+          <div class="linea-detalle-texto">
+            <p><!-- Texto por insertar --></p>
+            <p><!-- Texto por insertar --></p>
+            <div class="linea-detalle-claves">
+              <!-- Conceptos clave por insertar: <span>Concepto</span> -->
+            </div>
+          </div>
+          <aside class="linea-detalle-media" data-slug="culturas-populares"></aside>
+        </div>
+      </template>
+    </section>
+
+    <!-- ════════ SPLIT: ANTROPOLOGÍA DEL CARIBE COLOMBIANO ════════ -->
+    <section class="section section--wide" id="situado">
+      <div class="split reveal">
+        <div>
+          <p class="section-label">Enfoque</p>
+          <h2 class="section-title">Antropología del <em>Caribe Colombiano</em></h2>
+          <p class="antropologia-subtitle">Hacia una antropología archipiélica</p>
+          <p style="color: var(--c-gray); line-height: 1.85; margin-bottom: var(--space-md);">La antropología del Caribe que proponemos parte de un lugar específico: el Caribe Colombiano. No desde un margen entendido como falta, sino desde una orilla en tensión entre Colombia, la antropología nacional y el Gran Caribe. Desde ahí, el Caribe Colombiano se revela como zona de cruce: continental y marítima, nacional y archipielar, periférica pero relacional, atravesada por la historia colonial, la plantación, la racialización, las migraciones, las memorias populares y las disputas territoriales.</p>
+          <p style="color: var(--c-gray); line-height: 1.85; margin-bottom: var(--space-md);">Esta antropología presiona los límites de la antropología nacional, organizada históricamente desde un centro andino y continental, y dialoga de manera crítica con las antropologías del Gran Caribe: archipiélicas, abiertas, opacas, relacionales. Su lugar de enunciación no elige entre Colombia y el Caribe, sino que habita la fricción entre los dos: ese punto donde la nación se desestabiliza y el archipiélago se vuelve horizonte analítico, histórico y político.</p>
+        </div>
+        <div class="split-visual split-visual--diagram diagrama-full-width">
+          <svg class="diagrama-svg" viewBox="0 0 720 570" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Diagrama: La antropología del Caribe Colombiano como intersección entre antropologías continentales y archipiélicas">
+            <defs>
+              <!-- Acuarela verde (continental) — múltiples capas para efecto difuso -->
+              <radialGradient id="gc1" cx="45%" cy="48%" r="52%">
+                <stop offset="0%" stop-color="rgba(63,138,53,0.55)"/>
+                <stop offset="35%" stop-color="rgba(63,138,53,0.38)"/>
+                <stop offset="65%" stop-color="rgba(63,138,53,0.18)"/>
+                <stop offset="100%" stop-color="rgba(63,138,53,0.02)"/>
+              </radialGradient>
+              <radialGradient id="gc2" cx="55%" cy="40%" r="45%">
+                <stop offset="0%" stop-color="rgba(93,187,79,0.15)"/>
+                <stop offset="100%" stop-color="rgba(93,187,79,0)"/>
+              </radialGradient>
+              <!-- Acuarela naranja (archipiélica) — múltiples capas -->
+              <radialGradient id="ga1" cx="55%" cy="48%" r="52%">
+                <stop offset="0%" stop-color="rgba(240,122,22,0.50)"/>
+                <stop offset="35%" stop-color="rgba(240,122,22,0.32)"/>
+                <stop offset="65%" stop-color="rgba(240,122,22,0.14)"/>
+                <stop offset="100%" stop-color="rgba(240,122,22,0.02)"/>
+              </radialGradient>
+              <radialGradient id="ga2" cx="45%" cy="40%" r="45%">
+                <stop offset="0%" stop-color="rgba(255,160,60,0.12)"/>
+                <stop offset="100%" stop-color="rgba(255,160,60,0)"/>
+              </radialGradient>
+              <!-- Intersección — crema/ámbar prominente -->
+              <radialGradient id="gi" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="rgba(232,220,200,0.42)"/>
+                <stop offset="45%" stop-color="rgba(232,220,200,0.25)"/>
+                <stop offset="100%" stop-color="rgba(232,220,200,0.05)"/>
+              </radialGradient>
+              <!-- Glows -->
+              <filter id="glg"><feGaussianBlur stdDeviation="3.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+              <filter id="glo"><feGaussianBlur stdDeviation="3.5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+            </defs>
+
+            <!-- ══════════ TÍTULO ══════════ -->
+            <text x="360" y="32" fill="#e8dcc8" font-family="'Cormorant Garamond', serif" font-size="21" font-weight="700" text-anchor="middle">La antropología del Caribe Colombiano:</text>
+            <text x="360" y="57" fill="#e8dcc8" font-family="'Cormorant Garamond', serif" font-size="21" font-weight="700" text-anchor="middle">hacia una antropología archipiélica</text>
+            <text x="360" y="78" fill="rgba(138,138,122,0.9)" font-family="Inter, sans-serif" font-size="11" text-anchor="middle" font-style="italic">Superposición crítica de las antropologías continentales</text>
+
+            <!-- ══════════ CÍRCULO IZQUIERDO — Continental ══════════ -->
+            <circle cx="248" cy="300" r="200" fill="url(#gc1)" stroke="rgba(93,187,79,0.55)" stroke-width="2"/>
+            <circle cx="248" cy="300" r="200" fill="url(#gc2)" stroke="none"/>
+
+            <!-- ══════════ CÍRCULO DERECHO — Archipiélico ══════════ -->
+            <circle cx="480" cy="300" r="195" fill="url(#ga1)" stroke="rgba(240,122,22,0.55)" stroke-width="2"/>
+            <circle cx="480" cy="300" r="195" fill="url(#ga2)" stroke="none"/>
+
+            <!-- ══════════ ELIPSE CENTRAL — Intersección ══════════ -->
+            <ellipse cx="364" cy="300" rx="118" ry="92" fill="url(#gi)" stroke="rgba(232,220,200,0.6)" stroke-width="2"/>
+
+            <!-- ══════════ ETIQUETA: Continental (arriba-izq) ══════════ -->
+            <text x="140" y="118" fill="#5dbb4f" font-family="Inter, sans-serif" font-size="16" font-weight="700" text-anchor="middle">Antropologías</text>
+            <text x="140" y="138" fill="#5dbb4f" font-family="Inter, sans-serif" font-size="16" font-weight="700" text-anchor="middle">continentales</text>
+            <text x="140" y="155" fill="#c8c0b0" font-family="Inter, sans-serif" font-size="9.5" text-anchor="middle" font-style="italic">(lógica nacional, centro/periferia, territorialidad)</text>
+
+            <!-- ══════════ ETIQUETA: Archipiélica (arriba-der) ══════════ -->
+            <text x="580" y="114" fill="#f07a16" font-family="Inter, sans-serif" font-size="16" font-weight="700" text-anchor="middle">Antropología archipiélica</text>
+            <text x="580" y="134" fill="#f07a16" font-family="Inter, sans-serif" font-size="16" font-weight="700" text-anchor="middle">(Gran Caribe)</text>
+            <text x="580" y="151" fill="#c8c0b0" font-family="Inter, sans-serif" font-size="9.5" text-anchor="middle" font-style="italic">relacional, translocal, descentrada, histórica</text>
+
+            <!-- ══════════ NODO: Colombia ══════════ -->
+            <circle cx="188" cy="275" r="8" fill="#3f8a35" filter="url(#glg)"/>
+            <!-- Banderita colombiana -->
+            <rect x="170" y="265" width="6" height="3.5" rx="0.5" fill="#fcd116" opacity="0.8"/>
+            <rect x="170" y="268.5" width="6" height="2" rx="0.5" fill="#003893" opacity="0.8"/>
+            <rect x="170" y="270.5" width="6" height="2" rx="0.5" fill="#ce1126" opacity="0.8"/>
+            <text x="188" y="300" fill="#e8dcc8" font-family="'Cormorant Garamond', serif" font-size="16" font-weight="500" text-anchor="middle">Colombia</text>
+
+            <!-- ══════════ NODO: Brasil ══════════ -->
+            <circle cx="152" cy="390" r="8" fill="#3f8a35" filter="url(#glg)"/>
+            <text x="152" y="415" fill="#e8dcc8" font-family="'Cormorant Garamond', serif" font-size="16" font-weight="500" text-anchor="middle">Brasil</text>
+
+            <!-- ══════════ NODO: México ══════════ -->
+            <circle cx="110" cy="215" r="7" fill="#3f8a35" filter="url(#glg)"/>
+            <text x="110" y="237" fill="#e8dcc8" font-family="'Cormorant Garamond', serif" font-size="14" font-weight="500" text-anchor="middle">México</text>
+
+            <!-- ══════════ NODO: Venezuela ══════════ -->
+            <circle cx="100" cy="330" r="7" fill="#3f8a35" filter="url(#glg)"/>
+            <text x="100" y="352" fill="#e8dcc8" font-family="'Cormorant Garamond', serif" font-size="14" font-weight="500" text-anchor="middle">Venezuela</text>
+
+            <!-- ══════════ NODO: Argentina ══════════ -->
+            <circle cx="200" cy="440" r="7" fill="#3f8a35" filter="url(#glg)"/>
+            <text x="200" y="462" fill="#e8dcc8" font-family="'Cormorant Garamond', serif" font-size="14" font-weight="500" text-anchor="middle">Argentina</text>
+
+            <!-- Círculos autocontenidos (sin interconexión) -->
+            <!-- Círculo Colombia -->
+            <circle cx="188" cy="280" r="22" fill="none" stroke="rgba(93,187,79,0.4)" stroke-width="1.2"/>
+            <!-- Círculo México -->
+            <circle cx="110" cy="222" r="22" fill="none" stroke="rgba(93,187,79,0.4)" stroke-width="1.2"/>
+            <!-- Círculo Venezuela -->
+            <circle cx="100" cy="335" r="22" fill="none" stroke="rgba(93,187,79,0.4)" stroke-width="1.2"/>
+            <!-- Círculo Brasil -->
+            <circle cx="152" cy="395" r="22" fill="none" stroke="rgba(93,187,79,0.4)" stroke-width="1.2"/>
+            <!-- Círculo Argentina -->
+            <circle cx="200" cy="443" r="22" fill="none" stroke="rgba(93,187,79,0.4)" stroke-width="1.2"/>
+
+            <!-- ══════════ RED ARCHIPIÉLICA (10 conexiones) ══════════
+                 Cuba(505,195) Haití(590,240) RepDom(565,305)
+                 Jamaica(540,362) Martinica(510,400) -->
+
+            <!-- Conexiones FUERTES (vecinos directos) -->
+            <line x1="505" y1="195" x2="590" y2="240" stroke="rgba(240,122,22,0.55)" stroke-width="1.2" stroke-dasharray="5,4"/>
+            <line x1="590" y1="240" x2="565" y2="305" stroke="rgba(240,122,22,0.55)" stroke-width="1.2" stroke-dasharray="5,4"/>
+            <line x1="565" y1="305" x2="540" y2="362" stroke="rgba(240,122,22,0.55)" stroke-width="1.2" stroke-dasharray="5,4"/>
+            <line x1="540" y1="362" x2="510" y2="400" stroke="rgba(240,122,22,0.55)" stroke-width="1.2" stroke-dasharray="5,4"/>
+            <!-- Conexiones MEDIAS (un salto) -->
+            <line x1="505" y1="195" x2="565" y2="305" stroke="rgba(240,122,22,0.40)" stroke-width="1" stroke-dasharray="4,5"/>
+            <line x1="590" y1="240" x2="540" y2="362" stroke="rgba(240,122,22,0.40)" stroke-width="1" stroke-dasharray="4,5"/>
+            <line x1="565" y1="305" x2="510" y2="400" stroke="rgba(240,122,22,0.40)" stroke-width="1" stroke-dasharray="4,5"/>
+            <!-- Conexiones LARGAS (dos saltos) -->
+            <line x1="505" y1="195" x2="540" y2="362" stroke="rgba(240,122,22,0.28)" stroke-width="0.9" stroke-dasharray="3,5"/>
+            <line x1="505" y1="195" x2="510" y2="400" stroke="rgba(240,122,22,0.28)" stroke-width="0.9" stroke-dasharray="3,5"/>
+            <line x1="590" y1="240" x2="510" y2="400" stroke="rgba(240,122,22,0.28)" stroke-width="0.9" stroke-dasharray="3,5"/>
+
+            <!-- ══════════ NODOS ARCHIPIÉLICOS ══════════ -->
+            <!-- Cuba -->
+            <circle cx="505" cy="195" r="7.5" fill="#f07a16" filter="url(#glo)"/>
+            <text x="505" y="182" fill="#e8dcc8" font-family="'Cormorant Garamond', serif" font-size="15" font-weight="500" text-anchor="middle">Cuba</text>
+
+            <!-- Haití -->
+            <circle cx="590" cy="240" r="7.5" fill="#f07a16" filter="url(#glo)"/>
+            <text x="613" y="236" fill="#e8dcc8" font-family="'Cormorant Garamond', serif" font-size="15" font-weight="500" text-anchor="start">Haití</text>
+
+            <!-- Rep. Dominicana -->
+            <circle cx="565" cy="305" r="7.5" fill="#f07a16" filter="url(#glo)"/>
+            <text x="588" y="310" fill="#e8dcc8" font-family="'Cormorant Garamond', serif" font-size="14" font-weight="500" text-anchor="start">Rep. Dominicana</text>
+
+            <!-- Jamaica -->
+            <circle cx="540" cy="362" r="7.5" fill="#f07a16" filter="url(#glo)"/>
+            <text x="562" y="367" fill="#e8dcc8" font-family="'Cormorant Garamond', serif" font-size="15" font-weight="500" text-anchor="start">Jamaica</text>
+
+            <!-- Martinica -->
+            <circle cx="510" cy="400" r="7.5" fill="#f07a16" filter="url(#glo)"/>
+            <text x="532" y="405" fill="#e8dcc8" font-family="'Cormorant Garamond', serif" font-size="15" font-weight="500" text-anchor="start">Martinica</text>
+
+            <!-- ══════════ CENTRO — Antropología del Caribe Colombiano ══════════ -->
+            <text x="364" y="280" fill="#e8dcc8" font-family="'Cormorant Garamond', serif" font-size="20" font-weight="700" text-anchor="middle">Antropología</text>
+            <text x="364" y="306" fill="#e8dcc8" font-family="'Cormorant Garamond', serif" font-size="20" font-weight="700" text-anchor="middle">del Caribe Colombiano</text>
+            <text x="364" y="328" fill="rgba(138,138,122,0.95)" font-family="Inter, sans-serif" font-size="11" text-anchor="middle" font-style="italic">Una antropología intersticial</text>
+
+            <!-- ══════════ ETIQUETA INFERIOR ══════════ -->
+
+            <!-- ══════════ PULSO ANIMADO ══════════ -->
+            <circle cx="364" cy="300" r="6" fill="none" stroke="rgba(232,220,200,0.35)" stroke-width="1">
+              <animate attributeName="r" values="6;32;6" dur="5s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.45;0;0.45" dur="5s" repeatCount="indefinite"/>
+            </circle>
+          </svg>
+        </div>
+      </div>
+      <div class="antropologia-continuation reveal">
+        <p style="color: var(--c-gray); line-height: 1.85; margin-bottom: var(--space-md);">Desde ahí, esta antropología no reduce la región a una identidad homogénea ni exclusivamente afrocaribeña, aunque reconoce el peso histórico de las vidas negras, indígenas, raizales, campesinas, mestizas, populares y migrantes en su configuración. Su apuesta es entender cómo esas vidas producen saberes, memorias, prácticas de cuidado, formas de resistencia y mundos posibles dentro de relaciones persistentemente desiguales.</p>
+        <p style="color: var(--c-cream); line-height: 1.85; font-family: var(--ff-display); font-size: var(--fs-h3); font-style: italic;">Es, en ese sentido, una antropología situada, crítica y archipiélica: una forma de pensar el Caribe desde sus conexiones, fracturas, opacidades y desplazamientos. No busca fijar el Caribe como objeto cerrado, sino tratarlo como comunidad de argumentación, campo de disputa y espacio vivo de producción teórica.</p>
+      </div>
+    </section>
+
+    <!-- ════════ PROYECTOS DESTACADOS ════════ -->
+    <section class="section" id="proyectos">
+      <p class="section-label reveal">Territorio</p>
+      <h2 class="section-title reveal">Proyectos <em>destacados</em></h2>
+      <p class="section-subtitle reveal">Procesos de investigación, formación y acompañamiento territorial que articulan pensamiento crítico con las vidas y luchas del Caribe Colombiano.</p>
+
+      <div class="grid-projects" style="margin-top: var(--space-xl);">
+
+        <article class="card-project reveal" data-href="proyectos/zona-bananera.html">
+          <div class="card-project-meta">
+            <span class="card-project-category">Investigación</span>
+            <span class="card-project-status">En curso</span>
+          </div>
+          <h3>Geografías y memoria política de las vidas negras de la Zona Bananera del Magdalena</h3>
+          <p>Estudia cómo las comunidades afrodescendientes de la Zona Bananera han producido, habitado y defendido sus espacios frente al extractivismo, el racismo ambiental, el despojo y la violencia estructural. Analiza las geografías negras como formas políticas, afectivas y territoriales de existencia. Cofinanciado por la Universidad del Magdalena y el ICANH, con una duración de 30 meses.</p>
+          <div class="card-project-tags">
+            <span>Unimagdalena</span>
+            <span>ICANH</span>
+            <span>30 meses</span>
+          </div>
+        
+          <a href="proyectos/zona-bananera.html" class="card-project-link">Ver proyecto <span class="btn-arrow">&rarr;</span></a>
+        </article>
+
+        <article class="card-project reveal reveal-delay-1" data-href="proyectos/cartografias-negras.html">
+          <div class="card-project-meta">
+            <span class="card-project-category">Investigación participativa</span>
+            <span class="card-project-status">Nov 2025 – Abr 2026</span>
+          </div>
+          <h3>Cartografías Negras del Magdalena Grande: memorias, territorialidades afrodescendientes y archivos vivos</h3>
+          <p>Investigación etnológica y participativa con comunidades negras y afrodescendientes de Codazzi, Maicao y Santa Marta. Talleres de cartografía social activaron procesos colectivos de memoria, reconocimiento territorial y producción de conocimiento situado. Entiende el territorio como construcción histórica y relacional donde se articulan vida cotidiana, cultura, conflicto, espiritualidad y organización.</p>
+          <div class="card-project-tags">
+            <span>Codazzi</span>
+            <span>Maicao</span>
+            <span>Santa Marta</span>
+          </div>
+        
+          <a href="proyectos/cartografias-negras.html" class="card-project-link">Ver proyecto <span class="btn-arrow">&rarr;</span></a>
+        </article>
+
+        <article class="card-project reveal reveal-delay-2" data-href="proyectos/mi-barrio-es-historia.html">
+          <div class="card-project-meta">
+            <span class="card-project-category">Memoria territorial</span>
+            <span class="card-project-status">2025 – Mar 2026</span>
+          </div>
+          <h3>Mi Barrio es Historia: memorias barriales afrocaribeñas en Bastidas, Pescaíto y Cristo Rey</h3>
+          <p>Investigación financiada por la Vicerrectoría de Investigación de la Universidad del Magdalena y la Oficina de Comunidades Negras del Ministerio del Interior. Identifica, reconstruye y cartografía memorias barriales y populares en sectores de la Santa Marta afrocaribeña, proponiendo una lectura crítica de la historia urbana desde barrios que las narrativas oficiales han ignorado sistemáticamente.</p>
+          <div class="card-project-tags">
+            <span>Bastidas</span>
+            <span>Pescaíto</span>
+            <span>Cristo Rey</span>
+            <span>MinInterior</span>
+          </div>
+        
+          <a href="proyectos/mi-barrio-es-historia.html" class="card-project-link">Ver proyecto <span class="btn-arrow">&rarr;</span></a>
+        </article>
+
+        <article class="card-project reveal reveal-delay-3" data-href="proyectos/espacios-libres-racismo.html">
+          <div class="card-project-meta">
+            <span class="card-project-category">Antirracismo institucional</span>
+            <span class="card-project-status">Oct 2022 – Ago 2024</span>
+          </div>
+          <h3>Universidad del Magdalena: espacios libres de racismo</h3>
+          <p>Analizó cómo el racismo estructural y cotidiano se expresa en prácticas, discursos y experiencias dentro de la comunidad universitaria. Incluyó talleres diagnósticos, trabajo con los colectivos KUAGROS y ASODEIUM, cartografías sociales sobre experiencias de racismo en el campus, y la Primera Semana Educativa Antirracista e Intercultural. Documentó la normalización del lenguaje racista y la ausencia de rutas institucionales para atenderlo.</p>
+          <div class="card-project-tags">
+            <span>Unimagdalena</span>
+            <span>KUAGROS</span>
+            <span>ASODEIUM</span>
+          </div>
+        
+          <a href="proyectos/espacios-libres-racismo.html" class="card-project-link">Ver proyecto <span class="btn-arrow">&rarr;</span></a>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ════════ SEMILLERO ELEGUÁ ════════ -->
+    <section class="section" id="semillero">
+      <div class="semillero-header reveal">
+        <p class="section-label">Formación</p>
+        <h2 class="section-title">Semillero de Investigación <em>Elegguá</em></h2>
+      </div>
+
+      <div class="semillero-split reveal">
+        <div class="semillero-split-texto">
+          <p>El semillero de investigación <strong>Elegguá</strong> tiene como objetivo abrir caminos para que estudiantes de Antropología y otras carreras se vinculen a los procesos académicos e investigativos del Grupo de Investigación Pensamiento Caribe. Inspirado en Elegguá como figura que abre senderos y posibilidades, este espacio busca acompañar la formación de nuevas generaciones de investigadoras e investigadores comprometidos con las realidades, memorias y, sobre todo, con las experiencias de las vidas negras del Caribe Colombiano.</p>
+          <p>El semillero está conformado por estudiantes, semilleristas y egresados que, desde una construcción colectiva del conocimiento, buscan fortalecer sus recorridos académicos a través de diversas formas de investigación, creación y expresión. Se promueve el diálogo entre la antropología y las artes, el audiovisual, la escritura, la oralidad y otras metodologías que permitan comunicar y reflexionar sobre los trabajos realizados desde y para el Caribe Colombiano.</p>
+          <p>El Semillero se concibe como un espacio de encuentro, aprendizaje y acompañamiento mutuo, donde la lectura crítica, la discusión teórica, la investigación-creación y el intercambio de experiencias contribuyen al fortalecimiento de los proyectos académicos y al desarrollo de perspectivas situadas sobre las dinámicas sociales.</p>
+        </div>
+        <div class="semillero-split-elegua">
+          <div class="elegua-symbol">
+            <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="60" cy="60" r="54" fill="none" stroke="rgba(240,122,22,0.25)" stroke-width="1.5"/>
+              <circle cx="60" cy="60" r="38" fill="none" stroke="rgba(36,95,30,0.3)" stroke-width="1"/>
+              <path d="M60 10 L70 40 L100 40 L76 58 L86 88 L60 72 L34 88 L44 58 L20 40 L50 40 Z" fill="none" stroke="rgba(240,122,22,0.5)" stroke-width="1.2" stroke-linejoin="round"/>
+              <circle cx="60" cy="60" r="6" fill="var(--c-orange)" opacity="0.8"/>
+            </svg>
+          </div>
+          <p class="elegua-label">Elegguá</p>
+          <p class="elegua-sub">Orisha que abre caminos · figura liminal entre mundos</p>
+        </div>
+      </div>
+
+      <div class="semillero-blocks" style="margin-top: var(--space-xl);">
+
+        <div class="semillero-block reveal">
+          <span class="semillero-block-num">01</span>
+          <h3>Formación investigativa</h3>
+          <p>Acompañamiento en la construcción de proyectos de investigación situados, con énfasis en metodologías participativas, pensamiento crítico y ética territorial.</p>
+        </div>
+
+        <div class="semillero-block reveal reveal-delay-1">
+          <span class="semillero-block-num">02</span>
+          <h3>Lectura crítica y creación</h3>
+          <p>Espacios de lectura colectiva, discusión teórica e investigación-creación que articulan la escritura académica con las artes, el audiovisual y la oralidad del Caribe.</p>
+        </div>
+
+        <div class="semillero-block reveal reveal-delay-2">
+          <span class="semillero-block-num">03</span>
+          <h3>Trabajo situado y comunidad</h3>
+          <p>Participación en procesos territoriales, comunitarios y de cuidado que vinculan la formación académica con las realidades del Caribe Colombiano.</p>
+        </div>
+
+      </div>
+
+      <div style="margin-top: var(--space-xl);" class="reveal">
+        <a href="#contacto" class="btn btn--primary">Sumarse al semillero <span class="btn-arrow">&rarr;</span></a>
+      </div>
+    </section>
+
+    <div class="separator" aria-hidden="true">
+      <span class="separator-line"></span>
+      <span class="separator-dot"></span>
+      <span class="separator-line"></span>
+      <span class="separator-dot"></span>
+      <span class="separator-line"></span>
+    </div>
+
+    <!-- ════════ PUBLICACIONES ════════ -->
+    <section class="section" id="publicaciones">
+      <p class="section-label reveal">Archivo</p>
+      <h2 class="section-title reveal">Publicaciones y <em>producción intelectual</em></h2>
+      <p class="section-subtitle reveal">Libros, artículos, capítulos, informes y materiales pedagógicos producidos desde las líneas de investigación del grupo.</p>
+
+      <div class="pub-list" style="margin-top: var(--space-xl);">
+
+        <div class="pub-entry reveal">
+          <span class="pub-year">2023</span>
+          <div class="pub-body">
+            <h3 class="pub-title">La orilla de Calibán</h3>
+            <p class="pub-author">Roberto Almanza Hernández</p>
+            <span class="pub-type">Libro · Premio Casa de las Américas 2023</span>
+          </div>
+          <div class="pub-action">
+          </div>
+        </div>
+
+        <div class="pub-entry reveal reveal-delay-1">
+          <span class="pub-year">2023</span>
+          <div class="pub-body">
+            <h3 class="pub-title">Conciencia negra: la Blanquitud monumental debe caer</h3>
+            <p class="pub-author">Roberto Almanza Hernández</p>
+            <span class="pub-type">Artículo · Revista Tabula Rasa N.° 44</span>
+          </div>
+          <div class="pub-action">
+            <a href="https://www.revistatabularasa.org/numero-44/10-almanza.pdf" target="_blank" rel="noopener" class="btn btn--small btn--secondary">Consultar <span class="btn-arrow">&rarr;</span></a>
+          </div>
+        </div>
+
+        <div class="pub-entry reveal reveal-delay-2">
+          <span class="pub-year">2020</span>
+          <div class="pub-body">
+            <h3 class="pub-title">Panafricanismo afrocaribeño en George Padmore y C.L.R. James. Insumos para ampliar la genealogía de la teoría descolonial</h3>
+            <p class="pub-author">Roberto Almanza Hernández</p>
+            <span class="pub-type">Artículo · Revista Tabula Rasa N.° 35</span>
+          </div>
+          <div class="pub-action">
+            <a href="https://www.revistatabularasa.org/numero35/panafricanismo-afrocaribeno-en-george-padmore-y-c-l-r-james-insumos-para-ampliar-la-genealogia-de-la-teoria-descolonial/" target="_blank" rel="noopener" class="btn btn--small btn--secondary">Consultar <span class="btn-arrow">&rarr;</span></a>
+          </div>
+        </div>
+
+        <div class="pub-entry reveal reveal-delay-3">
+          <span class="pub-year">2018</span>
+          <div class="pub-body">
+            <h3 class="pub-title">Cuando los leones hacen la historia: el marxismo negro de Walter Rodney</h3>
+            <p class="pub-author">Roberto Almanza Hernández</p>
+            <span class="pub-type">Artículo · Revista Tabula Rasa N.° 28</span>
+          </div>
+          <div class="pub-action">
+            <a href="https://www.revistatabularasa.org/numero28/cuando-los-leones-hacen-la-historia-el-marxismo-negro-de-walter-rodney/" target="_blank" rel="noopener" class="btn btn--small btn--secondary">Consultar <span class="btn-arrow">&rarr;</span></a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="separator" aria-hidden="true">
+      <span class="separator-line"></span>
+      <span class="separator-dot"></span>
+      <span class="separator-line"></span>
+      <span class="separator-dot"></span>
+      <span class="separator-line"></span>
+    </div>
+
+    <!-- ════════ NOTICIAS ════════ -->
+    <section class="section" id="noticias">
+      <p class="section-label reveal">Actualidad</p>
+      <h2 class="section-title reveal"><em>Noticias</em> del grupo</h2>
+      <p class="section-subtitle reveal">Anuncios, presentaciones, convocatorias, premios y novedades de las investigadoras, investigadores y semilleristas de Pensamiento Caribe.</p>
+
+      <div class="noticias-grid" style="margin-top: var(--space-xl);">
+
+        <article class="card-noticia reveal">
+          <div class="card-noticia-thumb">
+            <div class="card-noticia-placeholder">
+              <span class="card-noticia-tag">Noticia</span>
+            </div>
+          </div>
+          <div class="card-noticia-body">
+            <p class="card-noticia-date">Próximamente</p>
+            <h3>Lanzamiento del Grupo de Investigación Pensamiento Caribe</h3>
+            <p>Presentación oficial del grupo, sus líneas de investigación y proyectos en curso ante la comunidad académica de la Universidad del Magdalena y aliados territoriales.</p>
+            <a href="#contacto" class="card-noticia-link">Leer más <span class="btn-arrow">&rarr;</span></a>
+          </div>
+        </article>
+
+        <article class="card-noticia reveal reveal-delay-1">
+          <div class="card-noticia-thumb">
+            <div class="card-noticia-placeholder">
+              <span class="card-noticia-tag">Convocatoria</span>
+            </div>
+          </div>
+          <div class="card-noticia-body">
+            <p class="card-noticia-date">Próximamente</p>
+            <h3>Convocatoria al Semillero de Investigación Eleguá 2026</h3>
+            <p>Apertura de inscripciones para estudiantes interesadas e interesados en sumarse al semillero, sus procesos de formación, lectura crítica y acompañamiento territorial.</p>
+            <a href="#semillero" class="card-noticia-link">Conocer el semillero <span class="btn-arrow">&rarr;</span></a>
+          </div>
+        </article>
+
+        <article class="card-noticia reveal reveal-delay-2">
+          <div class="card-noticia-thumb">
+            <div class="card-noticia-placeholder">
+              <span class="card-noticia-tag">Publicación</span>
+            </div>
+          </div>
+          <div class="card-noticia-body">
+            <p class="card-noticia-date">Próximamente</p>
+            <h3>Nuevos artículos en proceso editorial</h3>
+            <p>Avances de la producción intelectual del grupo: artículos, capítulos de libro y materiales pedagógicos en proceso de edición y publicación durante 2026.</p>
+            <a href="#publicaciones" class="card-noticia-link">Ver publicaciones <span class="btn-arrow">&rarr;</span></a>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="noticias-note reveal" style="margin-top: var(--space-lg); text-align: center; font-family: var(--ff-mono); font-size: var(--fs-meta); text-transform: uppercase; letter-spacing: 0.14em; color: var(--c-gray); opacity: 0.6;">Las primeras noticias se publicarán a medida que avancen los proyectos del grupo</p>
+    </section>
+
+    <!-- ════════ SEMANA ANTIRRACISTA · ARCHIVO ════════ -->
+    <section class="section" id="semana-antirracista">
+      <p class="section-label reveal">Archivo</p>
+      <h2 class="section-title reveal">Semana Antirracista <em>y Decolonial</em></h2>
+      <p class="section-subtitle reveal">Espacio anual de conversación, formación y acción política contra el racismo, articulando pensamiento académico, prácticas comunitarias y voces del Caribe Colombiano. Tres ediciones realizadas, cuarta en camino.</p>
+
+      <div class="declaracion-apertura reveal" style="margin-top: var(--space-xl);">
+        <p class="declaracion-label">Declaración de apertura · 12 de octubre</p>
+        <h3 class="declaracion-titulo">Día de la interculturalidad y el antirracismo</h3>
+        <div class="declaracion-body">
+          <p>Con la resolución 0138 del 31 de mayo de 2021, el Ministerio de Cultura de Colombia puso fin a la ignominia de nominar el 12 de octubre como el día de la raza, fecha en la que se solía celebrar el "descubrimiento" de América exaltando la herencia hispana de las antiguas colonias. Si bien es un gran avance en términos de dar un giro de sentido, al declarar el 12 de octubre como el "Día de la Diversidad Étnica y Cultural de la Nación" —muy acorde con los fundamentos multiculturales de nuestra Constitución de 1991—, consideramos que esta denominación se circunscribe a una lógica de supremacía blanco-mestiza que solo celebra la diversidad etnocultural, basada en principios de inclusión que no cuestionan las raíces estructurales e históricas de la desigualdad y de la injusticia etnoracial.</p>
+          <p>España, en 1914, en su agonía y nostalgia imperial, llamó esta fecha la "Fiesta de la Raza" como una manera de conmemorar la gran hazaña de Colón y su papel providencial de llevar la fe cristiana y la civilización al "Nuevo Mundo". Con el fin de la Segunda Guerra Mundial, el concepto de raza se convirtió en un término proscrito, razón por la cual la raza fue reemplazada por el término hispanidad y finalmente reducida en 1987 al "Día Nacional de España". Como bien lo expresa el Ministerio de Cultura en su justificación del cambio nominal, la mayoría de naciones suramericanas han renombrado esta fecha enalteciendo a los pueblos indígenas y afrodescendientes del Abya Yala y su aporte a las naciones del continente. No obstante, resulta sintomático que seamos los últimos en resignificar esta fecha apelando a la consigna de la celebración de la pluriculturalidad y la inclusión. Sin desconocer los grandes avances en términos de los reconocimientos jurídicos otorgados por la Constitución vigente, consideramos que esta fecha, más que dar cuenta de lo que ya sabemos —nuestra diversidad cultural—, debe poner el énfasis en culminar el proceso inacabado de la descolonización: descolonización epistemológica, institucional y subjetiva.</p>
+          <p>Para los pueblos aimaras y quechuas, por ejemplo, 1492 marcó el inicio de un <em>pachakuty</em>, un evento de transformación radical del tiempo y del espacio que puso literalmente el mundo patas pa' arriba. Para el filósofo boricua Nelson Maldonado-Torres se trató de una catástrofe doble: el genocidio indígena y la esclavización de millones de africanos. En ambos casos se trató de un gran trauma, una herida que no cierra al permanecer abierta por las continuidades del colonialismo, manifiesto en la exclusión histórica de las personas racializadas en las repúblicas criollas. El racismo está inscrito en la historia. Esto quiere decir que no ha estado siempre. El racismo que padecemos en el presente tiene su origen en la colonización ibérica de lo que hoy conocemos como América y que las naciones indígenas andinas llaman Abya Yala. De manera que el racismo tiene una densidad histórica que hay que desenmarañar, por ser una de las más nefastas permanencias del colonialismo como organizador de diferencias antropológicas que justifican la exclusión, la superexplotación y la subhumanización.</p>
+          <p>Por esta razón, no celebramos la diversidad cultural de la nación. Conmemoramos, sí, las luchas que, desde el arribo de los hombres pálidos y acorazados, armados con el Cristo y la espada, resistieron de múltiples maneras la colonización. Por eso, desde el Caribe Colombiano declaramos el 12 de octubre el día de la interculturalidad y el antirracismo. Una fecha que conecta las resistencias y las ontologías indígenas y negras con el horizonte utópico de una sociedad intercultural y libre de racismos.</p>
+        </div>
+      </div>
+
+      <div class="semana-archivo-grid" style="margin-top: var(--space-2xl);">
+
+        <!-- I EDICIÓN -->
+        <article class="semana-card reveal">
+          <div class="semana-card-poster semana-card-poster--sin-imagen">
+            <span class="semana-card-num">I</span>
+          </div>
+          <div class="semana-card-body">
+            <span class="semana-card-edicion">Primera edición</span>
+            <span class="semana-card-year">11–13 Oct 2023</span>
+            <h3 class="semana-card-tema">Racismo: historia y resistencias en el Gran Caribe</h3>
+            <p>Tres jornadas en la Universidad del Magdalena en torno al racismo histórico, el sistema educativo y los horizontes antirracistas desde la música, los feminismos negros y los movimientos sociales caribeños.</p>
+            <ul class="semana-card-actividades">
+              <li>Panel: Una aproximación al racismo histórico en el Gran Caribe · Alfonso Casiani</li>
+              <li>Actividad: Poesía antirracista · Convocatoria estudiantil</li>
+              <li>Taller FANCI: historieta sobre dispositivos categóriales de racismo</li>
+              <li>Corto: <em>Los Sonidos de los Colores</em> · SANARTE</li>
+              <li>Panel: Universidad del Magdalena, espacios libres de racismo · Roberto Almanza, ASODEIUM, KUAGROS</li>
+              <li>Panel: Músicas mulatas · Carolina Verbel, Nhorelsy Thowinson, Miliceth Martínez Iriarte</li>
+              <li>Panel: Feminismos negros · Rosane Borges (invitada internacional)</li>
+              <li>Panel: Resistencias cimarronas · Carmen, Wilfredo, Pacho</li>
+              <li>Narrativas de mujeres diversas · Tamborada Anfibia, Ritmo de Mujeres</li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- II EDICIÓN -->
+        <article class="semana-card reveal reveal-delay-1">
+          <div class="semana-card-poster">
+            <img src="assets/img/semana-antirracista-2da.jpg" alt="Póster 2da Semana Antirracista y Decolonial 2024" loading="lazy">
+          </div>
+          <div class="semana-card-body">
+            <span class="semana-card-edicion">Segunda edición</span>
+            <span class="semana-card-year">10–12 Oct 2024 · 150 asistentes</span>
+            <h3 class="semana-card-tema">Arte, resonancias, lienzos desde sentires y corporalidades caribeñas afrodiaspóricas</h3>
+            <p>El arte como dispositivo para interrumpir el racismo. El evento incorporó conferencias, conversatorios, talleres de edición comunitaria, proyección de documentales y performance.</p>
+            <ul class="semana-card-actividades">
+              <li>Conferencia: Archivo de artistas afro en Colombia · Liliana Angulo, directora del Museo Nacional</li>
+              <li>Conferencia: Transe-posesión en religiones de inspiración afro · Luis Carlos Castro</li>
+              <li>Conversatorio: Justicia restaurativa de la JEP y comunidades negras del Caribe</li>
+              <li>Panel: Racismo climático, experiencias locales e internacionales</li>
+              <li>Panel: Presencias negras en el quinto centenario de Santa Marta</li>
+              <li>Panel: Arte negro como dispositivo desestabilizador de la monumentalidad blanca</li>
+              <li>Talleres de edición comunitaria · Proyección de documentales · Performance</li>
+            </ul>
+            <p class="semana-card-nota">Primer evento en consolidarse como referente nacional de afrorreparaciones desde la universidad.</p>
+          </div>
+        </article>
+
+        <!-- III EDICIÓN -->
+        <article class="semana-card reveal reveal-delay-2">
+          <div class="semana-card-poster">
+            <img src="assets/img/semana-antirracista-3ra.jpeg" alt="Póster 3ra Semana Antirracista y Decolonial 2025" loading="lazy">
+          </div>
+          <div class="semana-card-body">
+            <span class="semana-card-edicion">Tercera edición</span>
+            <span class="semana-card-year">16–18 Oct 2025 · 150 asistentes</span>
+            <h3 class="semana-card-tema">500 años de la Santa Marta Negra, Indígena y Popular</h3>
+            <p>Contra-narrativa al discurso de los 500 años de Santa Marta. El evento incorporó voces directas de comunidades históricamente marginalizadas y cerró en el barrio El Pando con música, dominó y olla comunitaria.</p>
+            <ul class="semana-card-actividades">
+              <li>Taller: Cartografías de la Memoria Política · Red Antirracista y Descolonial del Caribe</li>
+              <li>Manifiesto colectivo sobre la violencia racial y el despojo en el Caribe Colombiano</li>
+              <li>Paneles: Historia afrodescendiente en Santa Marta desde el periodo colonial</li>
+              <li>Panel: Racismo y despojo en barrios negros · Cristo Rey, Pozos Colorados, Pescaito</li>
+              <li>Panel: Cultura negra — Picó, peinados, tamboras</li>
+              <li>Panel: Género y corporalidades de mujeres negras, indígenas y populares</li>
+              <li>Cierre en Barrio El Pando · Taller de música Afrocaribe · Olla comunitaria · Picó "Son Caribe"</li>
+            </ul>
+            <p class="semana-card-nota">Primera edición con cierre territorial fuera del campus universitario.</p>
+          </div>
+        </article>
+
+        <!-- IV EDICIÓN (próxima) -->
+        <article class="semana-card semana-card--proxima reveal reveal-delay-3">
+          <div class="semana-card-poster semana-card-poster--proxima">
+            <span class="semana-card-num">IV</span>
+            <span class="semana-card-pronto">Próximamente</span>
+          </div>
+          <div class="semana-card-body">
+            <span class="semana-card-edicion">Cuarta edición</span>
+            <span class="semana-card-year">Octubre 2026</span>
+            <h3 class="semana-card-tema">Temática por confirmar</h3>
+            <p>La cuarta Semana Antirracista y Decolonial continúa construyendo el espacio de conversación, investigación y acción política más importante del Caribe Colombiano en materia de antirracismo.</p>
+            <p class="semana-card-convocatoria">Convocatoria abierta próximamente — comunidades, colectivos, artivistas e investigadores del Caribe.</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <div class="separator" aria-hidden="true">
+      <span class="separator-line"></span>
+      <span class="separator-dot"></span>
+      <span class="separator-line"></span>
+      <span class="separator-dot"></span>
+      <span class="separator-line"></span>
+    </div>
+
+    <!-- ════════ EVENTOS ════════ -->
+    <section class="section" id="eventos">
+      <p class="section-label reveal">Agenda</p>
+      <h2 class="section-title reveal">Eventos y <em>agenda pública</em></h2>
+      <p class="section-subtitle reveal">Encuentros, seminarios, conversatorios y procesos formativos abiertos vinculados al trabajo del grupo y del Semillero Eleguá.</p>
+
+      <div class="events-list" style="margin-top: var(--space-xl);">
+
+        <div class="event-entry reveal">
+          <span class="event-date">Fecha por<br>confirmar</span>
+          <div class="event-body">
+            <h3>Semana Antirracista y Decolonial</h3>
+            <p>Espacio anual de conversación, formación y acción política contra el racismo, articulando pensamiento académico, prácticas comunitarias y voces del Caribe Colombiano.</p>
+          </div>
+          <span class="event-place">Santa Marta</span>
+        </div>
+
+        <div class="event-entry reveal reveal-delay-1">
+          <span class="event-date">Fecha por<br>confirmar</span>
+          <div class="event-body">
+            <h3>Conversatorio: Filosofía afrocaribeña y pensamiento radical negro</h3>
+            <p>Diálogo abierto sobre las tradiciones de pensamiento negro en el Caribe, sus genealogías y sus proyecciones contemporáneas.</p>
+          </div>
+          <span class="event-place">Universidad del Magdalena</span>
+        </div>
+
+        <div class="event-entry reveal reveal-delay-2">
+          <span class="event-date">Fecha por<br>confirmar</span>
+          <div class="event-body">
+            <h3>Seminario: Geografías negras y territorio en el Caribe Colombiano</h3>
+            <p>Seminario de investigación sobre las relaciones entre racialización, espacio, territorio y producción de lugares negros.</p>
+          </div>
+          <span class="event-place">Por confirmar</span>
+        </div>
+
+        <div class="event-entry reveal reveal-delay-3">
+          <span class="event-date">Fecha por<br>confirmar</span>
+          <div class="event-body">
+            <h3>Taller comunitario: Prácticas de cuidado y sanación</h3>
+            <p>Taller participativo sobre las formas comunitarias de cuidado, sanación y acompañamiento en el Caribe Colombiano.</p>
+          </div>
+          <span class="event-place">Por confirmar</span>
+        </div>
+
+        <div class="event-entry reveal">
+          <span class="event-date">Fecha por<br>confirmar</span>
+          <div class="event-body">
+            <h3>Laboratorio de memoria: Oralidad y archivo afrocaribeño</h3>
+            <p>Espacio de encuentro, escucha y construcción colectiva de memoria oral vinculada a las experiencias afrocaribeñas.</p>
+          </div>
+          <span class="event-place">Por confirmar</span>
+        </div>
+
+        <div class="event-entry reveal reveal-delay-1">
+          <span class="event-date">Fecha por<br>confirmar</span>
+          <div class="event-body">
+            <h3>Encuentro del Semillero Eleguá</h3>
+            <p>Sesión abierta de lectura, discusión y acompañamiento investigativo del Semillero de Investigación Eleguá.</p>
+          </div>
+          <span class="event-place">Universidad del Magdalena</span>
+        </div>
+
+      </div>
+    </section>
+
+    <div class="separator" aria-hidden="true">
+      <span class="separator-line"></span>
+      <span class="separator-dot"></span>
+      <span class="separator-line"></span>
+      <span class="separator-dot"></span>
+      <span class="separator-line"></span>
+    </div>
+
+    <!-- ════════ MEDIOS · VIDEOS Y PODCAST ════════ -->
+    <section class="section" id="medios">
+      <p class="section-label reveal">Voces y memorias</p>
+      <h2 class="section-title reveal">Videos y <em>podcast</em></h2>
+      <p class="section-subtitle reveal">Conversaciones, entrevistas, registros de campo y archivos audiovisuales producidos desde el Caribe Colombiano. Pensamiento situado en voz alta.</p>
+
+      <div class="medios-grid" style="margin-top: var(--space-xl);">
+
+        <article class="card-medio card-medio--video reveal">
+          <div class="card-medio-thumb">
+            <div class="card-medio-placeholder">
+              <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
+                <circle cx="12" cy="12" r="10"/>
+                <polygon points="10,8 16,12 10,16" fill="currentColor"/>
+              </svg>
+              <span class="card-medio-type">Video</span>
+            </div>
+          </div>
+          <div class="card-medio-body">
+            <p class="card-medio-meta">Próximamente</p>
+            <h3>Conversaciones del Caribe</h3>
+            <p>Serie de entrevistas con investigadoras, lideresas y pensadoras del Caribe Colombiano sobre racismo, memoria, territorio y formas de vida.</p>
+          </div>
+        </article>
+
+        <article class="card-medio card-medio--podcast reveal reveal-delay-1">
+          <div class="card-medio-thumb">
+            <div class="card-medio-placeholder">
+              <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
+                <rect x="9" y="2" width="6" height="12" rx="3"/>
+                <path d="M5 10v2a7 7 0 0 0 14 0v-2M12 19v3"/>
+              </svg>
+              <span class="card-medio-type">Podcast</span>
+            </div>
+          </div>
+          <div class="card-medio-body">
+            <p class="card-medio-meta">Próximamente</p>
+            <h3>Orilla · podcast del pensamiento caribeño</h3>
+            <p>Episodios mensuales con lecturas, debates y conversaciones sobre filosofía afrocaribeña, vidas negras, antirracismo y descolonización desde el Magdalena.</p>
+          </div>
+        </article>
+
+        <article class="card-medio card-medio--archive reveal reveal-delay-2">
+          <div class="card-medio-thumb">
+            <div class="card-medio-placeholder">
+              <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M3 7h18M5 7v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7M9 11h6"/>
+                <path d="M8 3h8v4H8z"/>
+              </svg>
+              <span class="card-medio-type">Archivo</span>
+            </div>
+          </div>
+          <div class="card-medio-body">
+            <p class="card-medio-meta">Próximamente</p>
+            <h3>Archivo audiovisual del Magdalena Grande</h3>
+            <p>Registros de campo, testimonios y memorias barriales producidos en el marco de los proyectos de investigación del grupo. Material consultable con fines académicos.</p>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="medios-note reveal" style="margin-top: var(--space-lg); text-align: center; font-family: var(--ff-mono); font-size: var(--fs-meta); text-transform: uppercase; letter-spacing: 0.14em; color: var(--c-gray); opacity: 0.6;">Espacio en construcción — los primeros materiales se publicarán durante 2026</p>
+    </section>
+
+    <!-- ════════ EFEMÉRIDES DEL CARIBE ════════ -->
+    <section class="section" id="efemerides">
+      <p class="section-label reveal">Memoria del Caribe</p>
+      <h2 class="section-title reveal">Efemérides del <em>Caribe</em></h2>
+      <p class="section-subtitle reveal">Figuras, fechas y hechos que tejen la memoria histórica, cultural y política del Caribe. Una serie de piezas para recordar y difundir el legado caribeño.</p>
+
+      <div class="efemerides-grid" id="efemerides-grid">
+
+        <figure class="efemeride-card reveal" tabindex="0" role="button" aria-label="Ver efeméride: Sara Gómez, 2 de junio">
+          <img src="assets/img/efemerides/sara-gomez-2-junio.png" alt="Efeméride — Sara Gómez, 2 de junio de 1942. La Habana, Cuba. Cineasta y pionera del cine feminista negro.">
+          <figcaption class="efemeride-caption">
+            <span class="efemeride-fecha">2 Junio</span>
+            <span class="efemeride-nombre">Sara Gómez</span>
+          </figcaption>
+        </figure>
+
+        <figure class="efemeride-card reveal reveal-delay-1" tabindex="0" role="button" aria-label="Ver efeméride: Elsa Goveia, 2 de junio">
+          <img src="assets/img/efemerides/elsa-goveia-2-junio.png" alt="Efeméride — Elsa Goveia, 2 de junio de 1925. Georgetown, Guyana Británica. Primera mujer profesora de historia del Caribe.">
+          <figcaption class="efemeride-caption">
+            <span class="efemeride-fecha">2 Junio</span>
+            <span class="efemeride-nombre">Elsa Goveia</span>
+          </figcaption>
+        </figure>
+
+        <figure class="efemeride-card reveal reveal-delay-2" tabindex="0" role="button" aria-label="Ver efeméride: Jacques Roumain, 4 de junio">
+          <img src="assets/img/efemerides/jacques-roumain-4-junio.png" alt="Efeméride — Jacques Roumain, 4 de junio de 1907. Port-au-Prince, Haití. Escritor, etnólogo y activista.">
+          <figcaption class="efemeride-caption">
+            <span class="efemeride-fecha">4 Junio</span>
+            <span class="efemeride-nombre">Jacques Roumain</span>
+          </figcaption>
+        </figure>
+
+        <figure class="efemeride-card reveal reveal-delay-3" tabindex="0" role="button" aria-label="Ver efeméride: Marvel Moreno, 5 de junio">
+          <img src="assets/img/efemerides/marvel-moreno-5-junio.png" alt="Efeméride — Marvel Moreno, 5 de junio de 1939. Barranquilla, Colombia. Narradora y escritora caribeña.">
+          <figcaption class="efemeride-caption">
+            <span class="efemeride-fecha">5 Junio</span>
+            <span class="efemeride-nombre">Marvel Moreno</span>
+          </figcaption>
+        </figure>
+
+        <figure class="efemeride-card reveal reveal-delay-4" tabindex="0" role="button" aria-label="Ver efeméride: George Lamming, 8 de junio">
+          <img src="assets/img/efemerides/george-lamming-8-junio.png" alt="Efeméride — George Lamming, 8 de junio de 1927. Carrington Village, Barbados. Novelista y ensayista.">
+          <figcaption class="efemeride-caption">
+            <span class="efemeride-fecha">8 Junio</span>
+            <span class="efemeride-nombre">George Lamming</span>
+          </figcaption>
+        </figure>
+
+        <figure class="efemeride-card reveal" tabindex="0" role="button" aria-label="Ver efeméride: Roberto Fernández Retamar, 9 de junio">
+          <img src="assets/img/efemerides/roberto-fernandez-retamar-9-junio.png" alt="Efeméride — Roberto Fernández Retamar, 9 de junio de 1930. La Habana, Cuba. Poeta, ensayista y teórico cultural.">
+          <figcaption class="efemeride-caption">
+            <span class="efemeride-fecha">9 Junio</span>
+            <span class="efemeride-nombre">Roberto Fernández Retamar</span>
+          </figcaption>
+        </figure>
+
+        <figure class="efemeride-card reveal reveal-delay-1" tabindex="0" role="button" aria-label="Ver efeméride: Marcus Garvey, 10 de junio">
+          <img src="assets/img/efemerides/marcus-garvey-10-junio.png" alt="Efeméride — Marcus Garvey, 10 de junio de 1940. Londres. Líder panafricanista y fundador del movimiento rastafari.">
+          <figcaption class="efemeride-caption">
+            <span class="efemeride-fecha">10 Junio</span>
+            <span class="efemeride-nombre">Marcus Garvey</span>
+          </figcaption>
+        </figure>
+
+        <figure class="efemeride-card reveal reveal-delay-2" tabindex="0" role="button" aria-label="Ver efeméride: Walter Rodney, 13 de junio">
+          <img src="assets/img/efemerides/walter-rodney-13-junio.png" alt="Efeméride — Walter Rodney, 13 de junio de 1980. Georgetown, Guyana. Historiador y activista político.">
+          <figcaption class="efemeride-caption">
+            <span class="efemeride-fecha">13 Junio</span>
+            <span class="efemeride-nombre">Walter Rodney</span>
+          </figcaption>
+        </figure>
+
+        <figure class="efemeride-card reveal reveal-delay-3" tabindex="0" role="button" aria-label="Ver efeméride: Andaiye, 14 de junio">
+          <img src="assets/img/efemerides/andaiye-14-junio.png" alt="Efeméride — Andaiye, 14 de junio de 2019. Georgetown, Guyana. Activista feminista y teórica política caribeña.">
+          <figcaption class="efemeride-caption">
+            <span class="efemeride-fecha">14 Junio</span>
+            <span class="efemeride-nombre">Andaiye</span>
+          </figcaption>
+        </figure>
+
+        <figure class="efemeride-card reveal reveal-delay-4" tabindex="0" role="button" aria-label="Ver efeméride: Erna Brodber, 16 de junio">
+          <img src="assets/img/efemerides/erna-brodber-16-junio.png" alt="Efeméride — Erna Brodber, 16 de junio de 1940. Woodside, Jamaica. Novelista, socióloga y activista.">
+          <figcaption class="efemeride-caption">
+            <span class="efemeride-fecha">16 Junio</span>
+            <span class="efemeride-nombre">Erna Brodber</span>
+          </figcaption>
+        </figure>
+
+        <figure class="efemeride-card reveal" tabindex="0" role="button" aria-label="Ver efeméride: Aimé Césaire, 26 de junio">
+          <img src="assets/img/efemerides/aime-cesaire-26-junio.png" alt="Efeméride — Aimé Césaire, 26 de junio de 1913. Basse-Pointe, Martinica. Poeta, dramaturgo y político.">
+          <figcaption class="efemeride-caption">
+            <span class="efemeride-fecha">26 Junio</span>
+            <span class="efemeride-nombre">Aimé Césaire</span>
+          </figcaption>
+        </figure>
+
+        <figure class="efemeride-card reveal reveal-delay-1" tabindex="0" role="button" aria-label="Ver efeméride: Héctor Lavoe, 29 de junio">
+          <img src="assets/img/efemerides/hector-lavoe-29-junio.png" alt="Efeméride — Héctor Lavoe, 29 de junio de 1993. Nueva York. Sonero y cronista de los barrios latinos.">
+          <figcaption class="efemeride-caption">
+            <span class="efemeride-fecha">29 Junio</span>
+            <span class="efemeride-nombre">Héctor Lavoe</span>
+          </figcaption>
+        </figure>
+
+        <figure class="efemeride-card reveal reveal-delay-2" tabindex="0" role="button" aria-label="Ver efeméride: Juan Bosch, 30 de junio">
+          <img src="assets/img/efemerides/juan-bosch-30-junio.png" alt="Efeméride — Juan Bosch, 30 de junio de 1909. La Vega, República Dominicana. Escritor, historiador y político.">
+          <figcaption class="efemeride-caption">
+            <span class="efemeride-fecha">30 Junio</span>
+            <span class="efemeride-nombre">Juan Bosch</span>
+          </figcaption>
+        </figure>
+
+      </div>
+
+      <p class="efemerides-vacio reveal" id="efemerides-vacio" hidden>Las primeras efemérides se publicarán próximamente.</p>
+    </section>
+
+    <!-- Lightbox -->
+    <dialog class="efemerides-lightbox" id="efemerides-lightbox" aria-modal="true" aria-label="Ver efeméride">
+      <button class="lightbox-close" id="lightbox-close" aria-label="Cerrar">&times;</button>
+      <img src="" alt="" class="lightbox-img" id="lightbox-img">
+    </dialog>
+
+    <!-- ════════ EQUIPO ════════ -->
+    <section class="section" id="equipo">
+      <p class="section-label reveal">Comunidad académica</p>
+      <h2 class="section-title reveal">Quiénes <em>somos</em></h2>
+      <div class="quienes-intro">
+        <div class="quienes-intro-text">
+          <p class="section-subtitle reveal">Pensamiento Caribe reúne investigadoras, investigadores, jóvenes investigadores e investigadoras y semilleristas comprometidos con una investigación crítica, situada y responsable desde el Caribe Colombiano.</p>
+          <p class="section-text reveal">Somos una comparsa de pensamiento y afectos. Singularidades diversas que encuentran resonancia en la síncopa afrocaribe. En la comparsa no se borran las diferencias, pero el sonido las sincroniza en un ritmo. Una cadencia que no clausura la distinción ni la improvisación individual. Somos <em>compas</em> que nos juntamos para pensar y movernos desde nuestra orilla vital.</p>
+        </div>
+        <div class="goce-ilustracion reveal">
+          <img src="assets/img/goce.png" alt="Goce — ilustración de una multitud en la calle" class="goce-img">
+        </div>
+      </div>
+
+      <!-- ── Investigadoras e Investigadores ── -->
+      <div class="team-group reveal" style="margin-top: var(--space-xl);">
+        <div class="team-group-header">
+          <span class="team-group-label team-group-label--green">Investigación</span>
+          <h3 class="team-group-title">Investigadoras e Investigadores</h3>
+          <span class="team-group-line"></span>
+        </div>
+        <div class="grid-team">
+          <article class="card-member card-member--researcher card-member--featured reveal">
+            <div class="card-member-avatar card-member-avatar--photo">
+              <img src="assets/roberto-almanza.jpeg" alt="Roberto Almanza Hernández" onerror="this.parentElement.innerHTML='R'">
+            </div>
+            <h3>Roberto Almanza Hernández</h3>
+            <p class="card-member-role">Director · Investigador</p>
+            <p class="card-member-bio">Antropólogo, magíster en Estudios Culturales y doctor en Estudios Latinoamericanos. Profesor asociado de la Universidad del Magdalena y director del Grupo de Investigación Pensamiento Caribe. Su obra articula antropología del Caribe, filosofía afrocaribeña y teoría crítica de la raza, con atención sostenida a las vidas negras y el antirracismo en el Caribe Colombiano. Autor de <em>La orilla de Calibán</em>, Premio Casa de las Américas 2023, genealogía crítica de la filosofía afrocaribeña en el siglo XX. Ha impulsado la Semana Antirracista y Decolonial y proyectos de cartografía social y memoria política con comunidades afrocaribeñas del Magdalena Grande.</p>
+            <div class="card-member-tags">
+              <span>Filosofía afrocaribeña</span>
+              <span>Vidas negras</span>
+              <span>Antirracismo</span>
+            </div>
+          </article>
+          <article class="card-member card-member--researcher card-member--featured reveal reveal-delay-1">
+            <div class="card-member-avatar card-member-avatar--photo">
+              <img src="assets/img/margarita.jpg" alt="Margarita Granados" onerror="this.parentElement.innerHTML='M'">
+            </div>
+            <h3>Margarita Granados</h3>
+            <p class="card-member-role">Investigadora externa</p>
+            <p class="card-member-bio">Coinvestigadora del proyecto <em>Geografías y memoria política de las vidas negras de la Zona Bananera del Magdalena</em>.</p>
+            <div class="card-member-tags">
+              <span>Geografías negras</span>
+              <span>Memoria territorial</span>
+              <span>Zona Bananera</span>
+            </div>
+          </article>
+          <article class="card-member card-member--researcher reveal reveal-delay-2">
+            <div class="card-member-avatar card-member-avatar--photo">
+              <img src="assets/img/caridad.jpeg" alt="Caridad Brito Ballesteros" onerror="this.parentElement.innerHTML='C'">
+            </div>
+            <h3>Caridad Brito Ballesteros</h3>
+            <p class="card-member-role">Investigadora</p>
+            <p class="card-member-bio">Mujer afrocaribeña, historiadora de la Universidad Nacional de Colombia, magíster en Gestión Cultural (Universidad de Barcelona) y doctoranda en Historia en la Universidade Federal de Minas Gerais (Brasil). Docente catedrática del programa de Historia y Patrimonio de la Universidad del Magdalena. Investiga la presencia negra en el Caribe, la historia de las mujeres esclavizadas y la etnoeducación.</p>
+            <div class="card-member-tags">
+              <span>Presencia negra en el Caribe</span><span>Historia de mujeres esclavizadas</span><span>Etnoeducación</span>
+            </div>
+          </article>
+          <article class="card-member card-member--researcher reveal reveal-delay-3">
+            <div class="card-member-avatar card-member-avatar--green">J</div>
+            <h3>Juan Carlos Gómez Blanco</h3>
+            <p class="card-member-role">Investigador</p>
+          </article>
+          <article class="card-member card-member--researcher reveal">
+            <div class="card-member-avatar card-member-avatar--green">D</div>
+            <h3>Deibys Carrasquilla Baza</h3>
+            <p class="card-member-role">Investigador</p>
+          </article>
+          <article class="card-member card-member--researcher reveal reveal-delay-1">
+            <div class="card-member-avatar card-member-avatar--green">N</div>
+            <h3>Natalia Ramírez Mendoza</h3>
+            <p class="card-member-role">Investigadora</p>
+          </article>
+          <article class="card-member card-member--researcher reveal reveal-delay-2">
+            <div class="card-member-avatar card-member-avatar--photo">
+              <img src="assets/img/demetrio.jpeg" alt="Demetrio Ribeiro De Andrade" onerror="this.parentElement.innerHTML='D'">
+            </div>
+            <h3>Demetrio Ribeiro De Andrade</h3>
+            <p class="card-member-role">Investigador externo</p>
+            <p class="card-member-bio">Doctorando en Desarrollo Rural (PGDR/UFRGS, Brasil) y magíster en Ambiente y Sostenibilidad. Integra los grupos ObservaCampos (UERGS) y POLEMHIS (UFRGS), investigando memoria política e inteligencia territorial desde perspectivas contracoloniales. Investigador Externo vinculado al ICANH, desarrolla contracartografías de la memoria política en la Zona Bananera del Magdalena.</p>
+            <div class="card-member-tags">
+              <span>Memoria política</span><span>Contracartografías</span><span>Zona Bananera</span>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <!-- ── Jóvenes Investigadores ── -->
+      <div class="team-group reveal" style="margin-top: var(--space-xl);">
+        <div class="team-group-header">
+          <span class="team-group-label team-group-label--orange">Formación avanzada</span>
+          <h3 class="team-group-title">Jóvenes Investigadores</h3>
+          <span class="team-group-line team-group-line--orange"></span>
+        </div>
+        <div class="grid-team">
+          <article class="card-member card-member--young reveal">
+            <div class="card-member-avatar card-member-avatar--orange">C</div>
+            <h3>Claribel Barros De La Hoz</h3>
+            <p class="card-member-role">Joven Investigadora</p>
+            <p class="card-member-bio">Antropóloga y estudiante de Maestría en la Universidad del Magdalena. Su trayectoria investigativa se centra en negritud, memorias barriales y procesos de racialización. Explora las dimensiones generizadas del racismo y las estéticas decoloniales desde el Caribe. Participa en la organización de la Semana Antirracista.</p>
+            <div class="card-member-tags">
+              <span>Negritud</span><span>Racialización</span><span>Estéticas decoloniales</span>
+            </div>
+          </article>
+          <article class="card-member card-member--young reveal reveal-delay-1">
+            <div class="card-member-avatar card-member-avatar--photo">
+              <img src="assets/img/dakna.jpeg" alt="Dakna Davraiskí Alvarado Maestre" onerror="this.parentElement.innerHTML='D'">
+            </div>
+            <h3>Dakna Davraiskí Alvarado Maestre</h3>
+            <p class="card-member-role">Joven Investigadora</p>
+            <p class="card-member-bio">Antropóloga, técnica en Diseño e Integración de Multimedia y próxima especialista en Derechos Humanos y DIH. Sus intereses se enfocan en la investigación social, la gestión socioambiental y la promoción de los derechos humanos. Ve en la escritura y la lectura bases de la reflexión crítica y el fortalecimiento de la memoria colectiva.</p>
+            <div class="card-member-tags">
+              <span>Derechos Humanos</span><span>Gestión socioambiental</span><span>Investigación social</span>
+            </div>
+          </article>
+          <article class="card-member card-member--young reveal reveal-delay-2">
+            <div class="card-member-avatar card-member-avatar--photo">
+              <img src="assets/img/dayana.png" alt="Dayana Granados Hernández" onerror="this.parentElement.innerHTML='D'">
+            </div>
+            <h3>Dayana Granados Hernández</h3>
+            <p class="card-member-role">Joven Investigadora</p>
+            <p class="card-member-bio">Antropóloga con experiencia en investigación social y gestión comunitaria, especializada en memoria histórica y participación comunitaria. Sus intereses se centran en los estudios afrocaribeños y comunidades negras con enfoque de género. Publicación en la revista Oraloteca sobre costumbres populares y dinámicas de distinción social.</p>
+            <div class="card-member-tags">
+              <span>Estudios afrocaribeños</span><span>Memoria histórica</span><span>Género</span>
+            </div>
+          </article>
+          <article class="card-member card-member--young reveal reveal-delay-3">
+            <div class="card-member-avatar card-member-avatar--orange">J</div>
+            <h3>Nombre por confirmar</h3>
+            <p class="card-member-role">Joven Investigador/a</p>
+          </article>
+        </div>
+      </div>
+
+      <!-- ── Miembros del Semillero ── -->
+      <div class="team-group reveal" style="margin-top: var(--space-xl);">
+        <div class="team-group-header">
+          <span class="team-group-label team-group-label--red">Semillero Elegguá</span>
+          <h3 class="team-group-title">Miembros del Semillero</h3>
+          <span class="team-group-line team-group-line--red"></span>
+        </div>
+        <div class="grid-team grid-team--semillero">
+          <article class="card-member card-member--semillero reveal">
+            <div class="card-member-avatar card-member-avatar--photo">
+              <img src="assets/img/everleidis.jpeg" alt="Everleidis Tatiana Dávila Sanabria" onerror="this.parentElement.innerHTML='E'">
+            </div>
+            <h3>Everleidis Tatiana Dávila Sanabria</h3>
+            <p class="card-member-role">Semillerista</p>
+            <p class="card-member-bio">Antropóloga de formación, artista callejera e investigadora del Caribe Colombiano. Su trabajo se sitúa desde perspectivas antirracistas y decoloniales, con especial interés en cómo las estructuras de raza-clase configuran las vidas negras en la región Caribe. Explora metodologías de investigación-creación que articulan la antropología audiovisual, la etnografía del dibujo y otras prácticas artísticas. Acompaña procesos comunitarios y de autorreconocimiento de juventudes negras, contribuyendo al diálogo de la memoria negra samaria.</p>
+            <div class="card-member-tags">
+              <span>Etnografía audiovisual</span>
+              <span>Mujeres negras</span>
+              <span>Creación artística</span>
+            </div>
+          </article>
+          <article class="card-member card-member--semillero reveal reveal-delay-1">
+            <div class="card-member-avatar card-member-avatar--photo">
+              <img src="assets/img/natalia.jpeg" alt="Natalia Mindiola Montero" onerror="this.parentElement.innerHTML='N'">
+            </div>
+            <h3>Natalia Mindiola Montero</h3>
+            <p class="card-member-role">Semillerista</p>
+            <p class="card-member-bio">Estudiante de Antropología en la Universidad del Magdalena. Sus intereses se centran en los estudios afrodescendientes, las estéticas afro y el arte afrocaribeño. Ha participado en procesos de formación sobre los derechos de las mujeres negras. Trenzadora.</p>
+            <div class="card-member-tags">
+              <span>Estéticas afro</span><span>Arte afrocaribeño</span><span>Mujeres negras</span>
+            </div>
+          </article>
+          <article class="card-member card-member--semillero reveal reveal-delay-2">
+            <div class="card-member-avatar card-member-avatar--photo">
+              <img src="assets/img/oliver.jpeg" alt="Oliver Poveda Pozo" onerror="this.parentElement.innerHTML='O'">
+            </div>
+            <h3>Oliver Poveda Pozo</h3>
+            <p class="card-member-role">Semillerista</p>
+            <p class="card-member-bio">Estudiante de Antropología enfocado en las vidas negras del Caribe y en el análisis crítico de las dinámicas históricas, culturales y raciales que configuran la región. Interesado en el antirracismo, las corporalidades y la música caribeña como campos de expresión y resistencia, y en la reflexión crítica sobre el discurso del desarrollo desde perspectivas situadas del Caribe.</p>
+            <div class="card-member-tags">
+              <span>Vidas negras</span><span>Música caribeña</span><span>Antirracismo</span>
+            </div>
+          </article>
+          <article class="card-member card-member--semillero reveal reveal-delay-3">
+            <div class="card-member-avatar card-member-avatar--red">S</div>
+            <h3>Nombre por confirmar</h3>
+            <p class="card-member-role">Semillerista</p>
+          </article>
+          <article class="card-member card-member--semillero reveal">
+            <div class="card-member-avatar card-member-avatar--red">S</div>
+            <h3>Nombre por confirmar</h3>
+            <p class="card-member-role">Semillerista</p>
+          </article>
+          <article class="card-member card-member--semillero reveal reveal-delay-1">
+            <div class="card-member-avatar card-member-avatar--red">S</div>
+            <h3>Nombre por confirmar</h3>
+            <p class="card-member-role">Semillerista</p>
+          </article>
+          <article class="card-member card-member--semillero reveal reveal-delay-2">
+            <div class="card-member-avatar card-member-avatar--red">S</div>
+            <h3>Nombre por confirmar</h3>
+            <p class="card-member-role">Semillerista</p>
+          </article>
+          <article class="card-member card-member--semillero reveal reveal-delay-3">
+            <div class="card-member-avatar card-member-avatar--red">S</div>
+            <h3>Nombre por confirmar</h3>
+            <p class="card-member-role">Semillerista</p>
+          </article>
+          <article class="card-member card-member--semillero reveal">
+            <div class="card-member-avatar card-member-avatar--red">S</div>
+            <h3>Nombre por confirmar</h3>
+            <p class="card-member-role">Semillerista</p>
+          </article>
+          <article class="card-member card-member--semillero reveal reveal-delay-1">
+            <div class="card-member-avatar card-member-avatar--red">S</div>
+            <h3>Nombre por confirmar</h3>
+            <p class="card-member-role">Semillerista</p>
+          </article>
+          <article class="card-member card-member--semillero reveal reveal-delay-2">
+            <div class="card-member-avatar card-member-avatar--red">S</div>
+            <h3>Nombre por confirmar</h3>
+            <p class="card-member-role">Semillerista</p>
+          </article>
+          <article class="card-member card-member--semillero reveal reveal-delay-3">
+            <div class="card-member-avatar card-member-avatar--red">S</div>
+            <h3>Nombre por confirmar</h3>
+            <p class="card-member-role">Semillerista</p>
+          </article>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- ════════ COMUNIDAD, TERRITORIO Y CUIDADO ════════ -->
+    <section class="section" id="comunidad">
+      <div class="split reveal">
+        <div>
+          <p class="section-label">Vínculo territorial</p>
+          <h2 class="section-title">Comunidad, territorio y <em>cuidado</em></h2>
+          <p style="color: var(--c-gray); line-height: 1.85;">Pensamiento Caribe entiende la investigación como un proceso de construcción colectiva que se sostiene en la escucha, la responsabilidad, la devolución y el cuidado de las relaciones con las comunidades y los territorios del Caribe Colombiano. Las comunidades no son objetos de estudio: son interlocutoras, creadoras de conocimiento y protagonistas de sus propias historias.</p>
+        </div>
+        <div>
+          <div class="community-pillars">
+            <div class="community-pillar">
+              <h3>Colaboración</h3>
+              <p>Investigación construida con las comunidades, no sobre ellas.</p>
+            </div>
+            <div class="community-pillar">
+              <h3>Escucha</h3>
+              <p>Atención a las voces, memorias y saberes territoriales.</p>
+            </div>
+            <div class="community-pillar">
+              <h3>Devolución</h3>
+              <p>Compromiso con retornar los resultados a quienes participan.</p>
+            </div>
+            <div class="community-pillar">
+              <h3>Cuidado</h3>
+              <p>Las prácticas de cuidado como forma de resistencia y sostenimiento colectivo.</p>
+            </div>
+            <div class="community-pillar">
+              <h3>Formación colectiva</h3>
+              <p>Aprendizaje compartido entre academia, territorio y comunidad.</p>
+            </div>
+            <div class="community-pillar">
+              <h3>Conocimiento situado</h3>
+              <p>Producción de saber desde los territorios y sus realidades concretas.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ════════ REDES Y ARTICULACIONES ════════ -->
+    <section class="section" id="redes">
+      <p class="section-label reveal">Tejido colectivo</p>
+      <h2 class="section-title reveal">Redes y <em>articulaciones</em></h2>
+      <p class="section-subtitle reveal">Pensamiento Caribe construye vínculos con grupos de investigación, colectivos y organizaciones que comparten el compromiso con el pensamiento crítico, el antirracismo y las luchas de las comunidades del Caribe y la diáspora.</p>
+
+      <div class="redes-grid reveal">
+        <a class="red-card" href="https://www.clacso.org/grupos-de-trabajo-3/grupos-de-trabajo-2026-2028/?pag=detalle&refe=2&ficha=3189" target="_blank" rel="noopener">
+          <span class="red-card-tipo">Grupo de Trabajo · CLACSO</span>
+          <h3 class="red-card-nombre">Antirracismo y afrodescendencia en el Sur Global</h3>
+          <p class="red-card-desc">Espacio de articulación académica y política en torno al antirracismo y los estudios afrodescendientes en el Sur Global, impulsado desde CLACSO.</p>
+        </a>
+        <a class="red-card" href="https://glefas.com/" target="_blank" rel="noopener">
+          <span class="red-card-tipo">Red académica y activista</span>
+          <h3 class="red-card-nombre">GLEFAS — Grupo Latinoamericano de Estudios, Formación y Acción Feminista</h3>
+          <p class="red-card-desc">Red que articula pensamiento feminista latinoamericano con prácticas de formación y acción política desde perspectivas críticas y situadas.</p>
+        </a>
+        <a class="red-card" href="https://malunga.org/" target="_blank" rel="noopener">
+          <span class="red-card-tipo">Red antirracista</span>
+          <h3 class="red-card-nombre">Malunga — Red por la Justicia Global y contra el Racismo Antinegro</h3>
+          <p class="red-card-desc">Red de organizaciones y personas comprometidas con la justicia global y la lucha contra el racismo antinegro en América Latina y el mundo.</p>
+        </a>
+      </div>
+    </section>
+
+    <div class="separator" aria-hidden="true">
+      <span class="separator-line"></span>
+      <span class="separator-dot"></span>
+      <span class="separator-line"></span>
+      <span class="separator-dot"></span>
+      <span class="separator-line"></span>
+    </div>
+
+    <!-- ════════ SANTIAGO ════════ -->
+    <div class="hace-calor-wrap">
+      <img src="assets/img/santiago.png" alt="Santiago — dibujo de jóvenes en el muelle caribeño" class="hace-calor-img">
+    </div>
+
+    <!-- ════════ CTA FINAL ════════ -->
+    <section class="cta-final reveal" id="contacto">
+      <p class="cta-final-title">&ldquo;Pensar desde nuestra orilla es escuchar el Caribe como archivo vivo, herida abierta y horizonte de <em>imaginación política</em>.&rdquo;</p>
+      <p class="cta-final-sub">Pensamiento Caribe abre un espacio para pensar, investigar y acompañar críticamente las vidas, territorios y luchas del Caribe Colombiano.</p>
+
+      <form class="form-contact" id="contact-form" style="margin: 0 auto var(--space-xl);" novalidate>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="contact-name">Nombre</label>
+            <input type="text" id="contact-name" name="name" placeholder="Tu nombre" required>
+            <span class="form-error-msg">Ingresa tu nombre</span>
+          </div>
+          <div class="form-field">
+            <label for="contact-email">Correo</label>
+            <input type="email" id="contact-email" name="email" placeholder="correo@ejemplo.com" required>
+            <span class="form-error-msg">Ingresa un correo válido</span>
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="contact-message">Mensaje</label>
+          <textarea id="contact-message" name="message" placeholder="Escribe tu mensaje o solicitud" rows="4"></textarea>
+        </div>
+        <button type="submit" class="btn btn--primary">Contactar al grupo <span class="btn-arrow">&rarr;</span></button>
+      </form>
+    </section>
+
+    <!-- ════════ FOOTER ════════ -->
+    <footer class="site-footer">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <img src="assets/logo-pensamiento-caribe.png" alt="Pensamiento Caribe" class="footer-brand-logo">
+          <p class="footer-brand-name">Pensamiento Caribe</p>
+          <p class="footer-brand-info">
+            Grupo de Investigación<br>
+            Universidad del Magdalena<br>
+            Santa Marta, Caribe Colombiano
+          </p>
+          <div class="footer-aval">
+            <p class="footer-aval-label">Avalado por</p>
+            <img src="assets/img/escudo-vicerrectoria.png" alt="Vicerrectoría de Investigación · Universidad del Magdalena" class="footer-aval-logo">
+          </div>
+        </div>
+        <div>
+          <p class="footer-nav-title">Navegación</p>
+          <ul class="footer-nav-list">
+            <li><a href="#lineas">Líneas de investigación</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#semillero">Semillero Eleguá</a></li>
+            <li><a href="#publicaciones">Publicaciones</a></li>
+            <li><a href="#eventos">Eventos</a></li>
+            <li><a href="#equipo">Equipo</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-nav-title">Contacto</p>
+          <ul class="footer-nav-list">
+            <li><a href="mailto:cpensamientocaribe@gmail.com">cpensamientocaribe@gmail.com</a></li>
+            <li><a href="https://www.instagram.com/cpcaribe" target="_blank" rel="noopener">Instagram: @cpcaribe</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span class="footer-lema">Pensamiento Caribe · Pensar desde nuestra orilla</span>
+        <span class="footer-credits">Universidad del Magdalena</span>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast" role="alert" aria-live="polite">
+    Gracias. Tu mensaje ha sido registrado como solicitud de contacto.
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+  <script src="js/scene.js" defer></script>
+  <script src="js/interactions.js" defer></script>
+  <script src="js/caribbean-map.js?v=4" defer></script>
+  <script src="js/lineas.js?v=3"></script>
+  <script src="js/forms.js" defer></script>
+  <script>
+    // ── Efemérides lightbox ──
+    (function () {
+      const dialog = document.getElementById('efemerides-lightbox');
+      const lbImg  = document.getElementById('lightbox-img');
+      const btnClose = document.getElementById('lightbox-close');
+      const grid   = document.getElementById('efemerides-grid');
+      const vacio  = document.getElementById('efemerides-vacio');
+
+      if (!dialog || !grid) return;
+
+      // Hide empty-state message if cards exist
+      function updateVacio() {
+        if (vacio) vacio.hidden = grid.querySelector('.efemeride-card') !== null;
+      }
+      updateVacio();
+
+      // Open lightbox on card click
+      grid.addEventListener('click', function (e) {
+        const card = e.target.closest('.efemeride-card');
+        if (!card) return;
+        const img = card.querySelector('img');
+        if (!img) return;
+        lbImg.src = img.src;
+        lbImg.alt = img.alt;
+        dialog.showModal();
+        document.body.style.overflow = 'hidden';
+      });
+
+      // Close on button or backdrop click
+      btnClose.addEventListener('click', closeLightbox);
+      dialog.addEventListener('click', function (e) {
+        if (e.target === dialog) closeLightbox();
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && dialog.open) closeLightbox();
+      });
+
+      function closeLightbox() {
+        dialog.close();
+        document.body.style.overflow = '';
+        lbImg.src = '';
+      }
+    })();
+  </script>
+
+</body>
+</html>

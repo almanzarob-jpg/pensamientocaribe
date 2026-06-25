@@ -1,0 +1,148 @@
+{
+  "label": "La negrura frente a la blanquitud monumental",
+  "description": "Este mapa organiza la constelación conceptual que articula el marco teórico. En el centro está la tensión constitutiva entre negrura y blanquitud: no son términos simétricos ni opuestos, sino posiciones producidas por una historia de captura, despojo y monumentalización que sigue operando en el presente, ahora también por vía algorítmica.\n\nLas ramas despliegan los conceptos, los operadores que los ponen en movimiento y los interlocutores con quienes se piensa. Cada nodo es editable: haz clic en el texto para abrir el panel, modifica la descripción y sube imágenes o gráficas. Guarda el trabajo con el botón Guardar.",
+  "children": [
+    {
+      "label": "Negrura",
+      "description": "La negrura no es una identidad ni un atributo del cuerpo: es un modo de existencia producido históricamente por el despojo colonial y racial, y a la vez un lugar desde el que se vive, se resiste y se crea. Pensarla como relación, y no como esencia, permite entender que lo negro no se agota en la victimización ni en la celebración identitaria.\n\nLa negrura nombra la posición desde la cual se experimenta la captura (Hartman), se ejerce la fuga (Moten), se reclama la opacidad (Glissant) y se produce un pensamiento que no necesita traducirse a los términos de la blanquitud para ser válido. Es, al mismo tiempo, herida y potencia: la marca que deja el despojo y el exceso que el despojo no logra contener.",
+      "children": [
+        {
+          "label": "Experiencia y existencia",
+          "description": "La negrura como registro existencial: lo que se siente, se padece y se inventa viviendo en un cuerpo y un mundo marcados por la racialización. No es una categoría abstracta sino un modo concreto de habitar el tiempo, el espacio y la relación con los otros."
+        },
+        {
+          "label": "Opacidad (Glissant)",
+          "description": "Édouard Glissant propone el derecho a la opacidad como resistencia a la exigencia occidental de transparencia total: ser comprendido, clasificado, reducido a lo inteligible. La opacidad no es oscuridad ni rechazo de la relación, sino la condición misma de una relación no jerárquica: me relaciono contigo sin exigir que te vuelvas transparente para mí.\n\nEn el marco de la negrura, la opacidad es un resguardo contra la captura epistémica que pretende definir qué es lo negro, cómo funciona, para qué sirve. Es también una forma de soberanía: el derecho a no ser descifrado."
+        },
+        {
+          "label": "Fugitividad (Moten)",
+          "description": "Fred Moten piensa la fugitividad no como huida puntual sino como condición ontológica de lo negro: un movimiento permanente que desborda las categorías de propiedad, identidad y representación. La fuga no es escapar de algo sino moverse en exceso respecto de cualquier marco que intente fijar lo negro.\n\nLa fugitividad se manifiesta en la improvisación musical, en las formas comunitarias de cuidado, en el habla, en las prácticas del undercommons, ese espacio de estudio y sociabilidad que existe dentro de las instituciones pero contra su lógica."
+        },
+        {
+          "label": "Carne y captura (Hartman)",
+          "description": "Saidiya Hartman elabora una genealogía del terror racial a partir de la noción de carne (flesh): el cuerpo negro reducido a materia disponible, a objeto de placer, castigo y acumulación. La escena primordial no es solo la violencia espectacular del látigo sino las formas cotidianas y legales de captura que persisten después de la abolición formal.\n\nLa captura es el régimen que convierte personas en cosas y que sigue operando, con otros mecanismos, en la vigilancia, el encarcelamiento masivo y la precarización contemporánea."
+        }
+      ]
+    },
+    {
+      "label": "Vidas negras",
+      "description": "Las vidas negras son la materia concreta de la que parte y a la que regresa la reflexión: las existencias singulares de personas negras en Santa Marta, en el Caribe colombiano y en la diáspora. No son datos estadísticos ni víctimas abstractas sino cuerpos que trabajan, recuerdan, celebran, enferman, resisten y crean.\n\nTomar las vidas negras como punto de partida implica un compromiso epistemológico: no pensar sobre lo negro desde afuera sino desde la densidad afectiva, sensorial y política de esas vidas. Es también una apuesta contra la monumentalización: frente al monumento que fija una versión abstracta del pasado, las vidas negras insisten en el presente irreductible de la experiencia.",
+      "children": [
+        {
+          "label": "Cotidianidad",
+          "description": "Lo cotidiano como terreno donde se negocian y se viven las tensiones de la negrura y la blanquitud: el trabajo doméstico, la calle, la cocina, el mercado, la fiesta. En lo cotidiano se reproduce la captura (precarización, racismo ambiental) pero también se inventa la fuga (redes de cuidado, oralidad, música)."
+        },
+        {
+          "label": "Memoria colectiva",
+          "description": "Las formas en que las comunidades negras del Caribe colombiano guardan, transmiten y reelaboran su pasado: oralidad, cantos, duelo, prácticas culinarias, cartografías del territorio. La memoria colectiva no es un archivo estable sino un proceso vivo, expuesto al olvido, la violencia y la reinvención."
+        },
+        {
+          "label": "Santa Marta y Caribe",
+          "description": "El anclaje territorial del proyecto: Santa Marta y la región de la Magdalena Grande como lugar desde el que se piensa, no como caso de estudio. El Caribe colombiano, con su historia de esclavización, cimarronaje, mestizaje y despojo contemporáneo, es tanto contexto como interlocutor teórico."
+        }
+      ]
+    },
+    {
+      "label": "Blanquitud monumental",
+      "description": "La blanquitud monumental es la operación mediante la cual la blanquitud se erige en norma duradera: se vuelve paisaje, archivo, institución, medida de lo humano. El monumento no es solo la estatua en la plaza sino todo dispositivo que fija una versión del mundo como si fuera natural y eterna: el canon literario, el currículo universitario, la arquitectura urbana, el mapa.\n\nLo que el monumento hace visible es, al mismo tiempo, lo que vuelve invisible: el trabajo negro que lo construyó, las vidas que desplazó, los saberes que silenció. La monumentalización produce un efecto de eternidad que naturaliza el despojo: así ha sido siempre, así debe ser.",
+      "children": [
+        {
+          "label": "Monumentalidad blanca",
+          "description": "La cualidad de lo monumental aplicada a la blanquitud: su capacidad de presentarse como universal, atemporal y autosuficiente. La monumentalidad blanca opera borrando las huellas de su construcción histórica, haciéndose pasar por naturaleza, por razón, por progreso, y produciendo un olvido activo de la violencia fundacional."
+        },
+        {
+          "label": "Despojo",
+          "description": "El mecanismo originario y recurrente: la sustracción de tierra, cuerpo, lengua, parentesco, futuro. El despojo no es un evento pasado (la esclavización, la colonización) sino una estructura que se renueva: desplazamiento forzado, extractivismo, gentrificación, precarización laboral."
+        },
+        {
+          "label": "Porosidad del despojo",
+          "description": "El despojo nunca es total ni hermético. Deja fisuras, filtraciones, restos por donde se cuela la vida y la posibilidad de fuga. La porosidad nombra la condición paradójica del despojo: es una operación de cierre que no logra cerrarse del todo.\n\nLo poroso es lo que impide que la captura sea absoluta: el canto que sobrevive en la cocina, la palabra que se esconde en otra lengua, la memoria que se transmite a pesar del silencio impuesto."
+        }
+      ]
+    },
+    {
+      "label": "Blanquitud algorítmica",
+      "description": "La blanquitud algorítmica es la extensión contemporánea de la blanquitud monumental al terreno de los datos, los modelos y las plataformas. Los sistemas algorítmicos, de clasificación, recomendación, vigilancia, generación, heredan y automatizan la norma blanca: sus sesgos de entrenamiento, sus categorías racializadas, su distribución desigual de visibilidad y valor.\n\nLo que la hace particularmente eficaz es su apariencia de neutralidad técnica: el algoritmo se presenta como objetivo, como puro cálculo, despojado de historia. Pero el trabajo que lo alimenta, el etiquetado, la moderación, la anotación de datos, se realiza mayoritariamente en el Sur global, por cuerpos racializados y precarizados. La monumentalidad algorítmica repite así la estructura de Juan Albañil: lo negro construye aquello que lo borra.",
+      "image": "data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20580%20200%22%20font-family%3D%22Archivo%2Csans-serif%22%3E%3Crect%20width%3D%22580%22%20height%3D%22200%22%20fill%3D%22%230D0B08%22%2F%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%232D5A1B%22%20stroke-width%3D%222%22%3E%3Crect%20x%3D%2218%22%20y%3D%2255%22%20width%3D%22152%22%20height%3D%2266%22%20rx%3D%2210%22%2F%3E%3Crect%20x%3D%22215%22%20y%3D%2255%22%20width%3D%22152%22%20height%3D%2266%22%20rx%3D%2210%22%2F%3E%3Crect%20x%3D%22412%22%20y%3D%2255%22%20width%3D%22152%22%20height%3D%2266%22%20rx%3D%2210%22%2F%3E%3C%2Fg%3E%3Cg%20fill%3D%22%23EDE5D8%22%20font-size%3D%2213%22%20font-weight%3D%22600%22%20text-anchor%3D%22middle%22%3E%3Ctext%20x%3D%2294%22%20y%3D%2283%22%3ETrabajo%20de%20datos%3C%2Ftext%3E%3Ctext%20x%3D%2294%22%20y%3D%22103%22%20font-weight%3D%22400%22%20font-size%3D%2211%22%20fill%3D%22%238A7E72%22%3E(Sur%20global)%3C%2Ftext%3E%3Ctext%20x%3D%22291%22%20y%3D%2283%22%3EModelo%20%2F%3C%2Ftext%3E%3Ctext%20x%3D%22291%22%20y%3D%22103%22%3Emonumento%3C%2Ftext%3E%3Ctext%20x%3D%22488%22%20y%3D%2293%22%3EBorramiento%3C%2Ftext%3E%3C%2Fg%3E%3Cg%20stroke%3D%22%232D5A1B%22%20fill%3D%22%232D5A1B%22%3E%3Cline%20x1%3D%22170%22%20y1%3D%2288%22%20x2%3D%22208%22%20y2%3D%2288%22%20stroke-width%3D%222%22%2F%3E%3Cpath%20d%3D%22M208%2C88%20l-8%2C-4%20v8%20z%22%2F%3E%3Cline%20x1%3D%22367%22%20y1%3D%2288%22%20x2%3D%22405%22%20y2%3D%2288%22%20stroke-width%3D%222%22%2F%3E%3Cpath%20d%3D%22M405%2C88%20l-8%2C-4%20v8%20z%22%2F%3E%3C%2Fg%3E%3Cpath%20d%3D%22M488%2C121%20C488%2C164%2094%2C164%2094%2C124%22%20fill%3D%22none%22%20stroke%3D%22%23C8401A%22%20stroke-width%3D%221.6%22%20stroke-dasharray%3D%225%204%22%2F%3E%3Cpath%20d%3D%22M94%2C124%20l-4%2C8%20h8%20z%22%20fill%3D%22%23C8401A%22%2F%3E%3Ctext%20x%3D%22291%22%20y%3D%22184%22%20text-anchor%3D%22middle%22%20font-size%3D%2211%22%20fill%3D%22%23C8401A%22%20font-style%3D%22italic%22%3Ese%20presenta%20como%20neutralidad%20t%C3%A9cnica%3C%2Ftext%3E%3C%2Fsvg%3E",
+      "imageCaption": "Circuito: el trabajo de datos del Sur global alimenta el modelo-monumento, cuyo efecto de borramiento se retroalimenta presentándose como neutralidad técnica.",
+      "children": [
+        {
+          "label": "Monumentalidad algorítmica",
+          "description": "La cualidad monumental de los sistemas algorítmicos: su escala, su opacidad, su pretensión de universalidad y su capacidad de fijar categorías que se vuelven infraestructura. Un modelo de lenguaje, un sistema de reconocimiento facial o un algoritmo de crédito funcionan como monumentos: estabilizan una versión del mundo y hacen difícil pensar fuera de ella."
+        },
+        {
+          "label": "Trabajo de datos (Sur global)",
+          "description": "Las tareas de etiquetado, moderación, verificación y anotación que sostienen los modelos de IA, realizadas predominantemente por trabajadores del Sur global en condiciones de precariedad. Este trabajo, repetitivo, mal pagado, invisibilizado, es la base material de la monumentalidad algorítmica: sin él, los modelos no funcionan, pero su contribución se borra en el producto final."
+        },
+        {
+          "label": "Sesgo y vigilancia (Noble, Buolamwini)",
+          "description": "Safiya Umoja Noble documenta cómo los algoritmos de búsqueda reproducen estereotipos racistas y sexistas. Joy Buolamwini demuestra que los sistemas de reconocimiento facial fallan sistemáticamente con rostros negros. Ambas muestran que la supuesta neutralidad técnica codifica la blanquitud como norma: el algoritmo reconoce mejor lo que se parece a lo blanco, y clasifica peor, o vigilando más, lo que se le desvía."
+        }
+      ]
+    },
+    {
+      "label": "Operadores conceptuales",
+      "description": "Figuras que ponen en movimiento la constelación conceptual: condensan en un personaje o una imagen la lógica que articula negrura y blanquitud. No son metáforas decorativas sino herramientas de pensamiento que permiten ver la estructura del despojo y la fuga operando en situaciones concretas.",
+      "children": [
+        {
+          "label": "Juan Albañil",
+          "description": "Figura conceptual del que construye, con su propio trabajo, aquello que lo borra. Juan Albañil es la mano negra que levanta el monumento de la blanquitud: pone los ladrillos de la pared que lo excluye, programa el modelo que lo clasifica, etiqueta los datos que alimentan el sistema que lo vigila.\n\nCondensa la paradoja del despojo productivo: edificar lo que niega a quien edifica. A diferencia de Calibán, que opera dentro de la fábula colonial shakespeareana, Juan Albañil nombra una posición estructural que se repite en cada ciclo de acumulación, de la plantación al data center."
+        },
+        {
+          "label": "Calibán",
+          "description": "El personaje de La tempestad de Shakespeare, releído por la tradición caribeña (Fernández Retamar, Césaire, Lamming) como cifra de lo colonial y de su reverso. Calibán es el colonizado que habla la lengua del amo y la vuelve contra él; es también el despojado de su isla, de su madre Sycorax, de su mundo.\n\nEn este marco se despliega en tres figuras que marcan tres momentos de la relación con el despojo: el despojado, el que escucha el susurro materno, y el que se expande más allá de la fábula colonial.",
+          "children": [
+            {
+              "label": "Despojado",
+              "description": "Calibán en su momento de máxima desposesión: privado de tierra, lengua y mundo. Es el punto de partida, la posición que impone la colonia. Pero incluso aquí hay un residuo que no se deja capturar del todo: la porosidad del despojo."
+            },
+            {
+              "label": "Susurro de Sycorax",
+              "description": "Calibán que escucha la voz de su madre sofocada, Sycorax: la bruja que Próspero encarceló y cuyo nombre la obra apenas menciona. El susurro es la memoria y el saber que la colonia intentó silenciar pero que persiste como murmullo, como eco, como saber del cuerpo.\n\nSycorax representa el conocimiento anterior a la captura colonial: no un origen puro sino una presencia espectral que interrumpe la narrativa del amo."
+            },
+            {
+              "label": "Expandido",
+              "description": "Calibán que desborda la fábula colonial: ya no es personaje de la obra de Shakespeare ni responde a Próspero. Se vuelve operador de un pensamiento propio, de una creación que no pide permiso ni se mide con la vara del amo. Es la posibilidad de pensar desde la negrura sin necesidad de traducirse a los términos de la blanquitud."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Interlocutores",
+      "description": "Los autores con quienes dialoga el marco. No son fuentes bibliográficas ni autoridades que se citan para validar: son interlocutores con quienes se piensa, se discute y, a veces, se discrepa. Cada uno aporta herramientas conceptuales que el marco retoma, transforma o tensiona.",
+      "children": [
+        {
+          "label": "Wynter",
+          "description": "Sylvia Wynter piensa la invención de lo humano como categoría excluyente: el Man occidental se erige como medida de lo humano excluyendo todo lo que no se le parezca. Su trabajo permite entender la blanquitud como un régimen de humanización/deshumanización, no solo como color de piel."
+        },
+        {
+          "label": "Glissant",
+          "description": "Édouard Glissant aporta las nociones de opacidad, relación, criollización y pensamiento archipielágico. Su poética de la relación propone un modo de estar en el mundo que no exige transparencia ni raíz única."
+        },
+        {
+          "label": "Fanon",
+          "description": "Frantz Fanon piensa la experiencia vivida del negro, la violencia colonial y la desalienación. Sus análisis de la epidermización de la inferioridad y de la sociogenia son fundacionales para cualquier pensamiento sobre la negrura."
+        },
+        {
+          "label": "Hartman"
+        },
+        {
+          "label": "Moten"
+        },
+        {
+          "label": "Ferreira da Silva",
+          "description": "Denise Ferreira da Silva analiza cómo la racialidad opera como arquitectura global de poder: no como prejuicio individual sino como forma de determinación que asigna valor diferencial a los cuerpos. Su trabajo sobre la negritud como exterioridad permite pensar la negrura fuera de la lógica de la inclusión."
+        },
+        {
+          "label": "McKittrick",
+          "description": "Katherine McKittrick trabaja las geografías negras: los modos en que los cuerpos negros producen, habitan y transforman el espacio a pesar y en contra de las lógicas de confinamiento. Su trabajo conecta con la cartografía negra y con los procesos de memoria territorial."
+        },
+        {
+          "label": "Benítez Rojo",
+          "description": "Antonio Benítez Rojo piensa el Caribe como meta-archipiélago: un espacio de repetición-con-diferencia cuya lógica no es lineal ni continental sino rítmica, performativa y caótica (en sentido matemático). Su noción de la máquina de la plantación como origen y de la cultura caribeña como su exceso es clave."
+        }
+      ]
+    }
+  ]
+}
