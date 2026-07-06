@@ -1,0 +1,919 @@
+[
+  {
+    "id": "cpc-001",
+    "titulo": "Frantz Fanon: Black Skin, White Mask",
+    "titulo_original": "Frantz Fanon: Black Skin, White Mask",
+    "director": [
+      "Isaac Julien"
+    ],
+    "pais": [
+      "Reino Unido"
+    ],
+    "anio": 1996,
+    "duracion_min": 52,
+    "genero": [
+      "cine_ensayo",
+      "documental"
+    ],
+    "idioma_original": "Inglés",
+    "subtitulos": [
+      "por_verificar"
+    ],
+    "fuente": {
+      "nombre": "California Newsreel",
+      "tipo": "distribuidora",
+      "acceso": "institucional",
+      "verificacion": "por_verificar"
+    },
+    "campo_disciplinar": [
+      "filosofia",
+      "cine",
+      "estudios_afrodescendientes"
+    ],
+    "categorias_cpc": [
+      "negrura",
+      "caliban"
+    ],
+    "interlocutores": [
+      "Fanon",
+      "Stuart Hall",
+      "Homi Bhabha"
+    ],
+    "nota_academica": "Pone en imagen la escisión fanoniana del esquema corporal: la negrura no como identidad sino como régimen de sensibilidad producido por la mirada blanca. Interlocutor directo para el Calibán despojado y para la fractura del cuerpo negro bajo la blanquitud.",
+    "relevancia": "alta"
+  },
+  {
+    "id": "cpc-002",
+    "titulo": "Sobre la violencia",
+    "titulo_original": "Concerning Violence",
+    "director": [
+      "Göran Hugo Olsson"
+    ],
+    "pais": [
+      "Suecia"
+    ],
+    "anio": 2014,
+    "duracion_min": 89,
+    "genero": [
+      "cine_ensayo",
+      "archivo"
+    ],
+    "idioma_original": "Inglés / sueco",
+    "subtitulos": [
+      "por_verificar"
+    ],
+    "fuente": {
+      "nombre": "Distribución institucional (Kanopy / educativa)",
+      "tipo": "plataforma_institucional",
+      "acceso": "institucional",
+      "verificacion": "por_verificar"
+    },
+    "campo_disciplinar": [
+      "filosofia",
+      "historia",
+      "cine"
+    ],
+    "categorias_cpc": [
+      "negrura"
+    ],
+    "interlocutores": [
+      "Fanon"
+    ],
+    "nota_academica": "Montaje de archivo sobre 'Los condenados de la tierra'; la violencia colonial como estructura y la descolonización como proceso encarnado. Sirve para tensionar la porosidad del despojo con la cuestión de la agencia y la ruptura.",
+    "relevancia": "alta"
+  },
+  {
+    "id": "cpc-003",
+    "titulo": "The Stuart Hall Project",
+    "titulo_original": "The Stuart Hall Project",
+    "director": [
+      "John Akomfrah"
+    ],
+    "pais": [
+      "Reino Unido"
+    ],
+    "anio": 2013,
+    "duracion_min": 103,
+    "genero": [
+      "cine_ensayo",
+      "archivo"
+    ],
+    "idioma_original": "Inglés",
+    "subtitulos": [
+      "por_verificar"
+    ],
+    "fuente": {
+      "nombre": "BFI / Kanopy",
+      "tipo": "plataforma_institucional",
+      "acceso": "institucional",
+      "verificacion": "por_verificar"
+    },
+    "campo_disciplinar": [
+      "estudios_poscoloniales",
+      "cine",
+      "filosofia"
+    ],
+    "categorias_cpc": [
+      "vidas_negras",
+      "memoria_colectiva"
+    ],
+    "interlocutores": [
+      "Stuart Hall",
+      "Glissant"
+    ],
+    "nota_academica": "Retrato-collage de Hall como pensador de la diáspora caribeña y de la identidad como posición, no esencia. Archivo audiovisual de una vida negra que teoriza su propio desplazamiento: identidad como ruta y no como raíz.",
+    "relevancia": "alta"
+  },
+  {
+    "id": "cpc-004",
+    "titulo": "Handsworth Songs",
+    "titulo_original": "Handsworth Songs",
+    "director": [
+      "Black Audio Film Collective",
+      "John Akomfrah"
+    ],
+    "pais": [
+      "Reino Unido"
+    ],
+    "anio": 1986,
+    "duracion_min": 59,
+    "genero": [
+      "cine_ensayo",
+      "documental"
+    ],
+    "idioma_original": "Inglés",
+    "subtitulos": [
+      "por_verificar"
+    ],
+    "fuente": {
+      "nombre": "LUX / BFI",
+      "tipo": "distribuidora",
+      "acceso": "institucional",
+      "verificacion": "por_verificar"
+    },
+    "campo_disciplinar": [
+      "estudios_poscoloniales",
+      "cine",
+      "historia"
+    ],
+    "categorias_cpc": [
+      "vidas_negras",
+      "blanquitud_monumental",
+      "memoria_colectiva"
+    ],
+    "interlocutores": [
+      "Stuart Hall"
+    ],
+    "nota_academica": "Ensayo sobre las revueltas de 1985 y la memoria migrante caribeña en Gran Bretaña. Trabaja el archivo estatal contra sí mismo: materia para pensar la blanquitud monumental como dispositivo que administra qué cuerpos aparecen y cómo.",
+    "relevancia": "alta"
+  },
+  {
+    "id": "cpc-005",
+    "titulo": "Édouard Glissant: Un mundo en Relación",
+    "titulo_original": "Édouard Glissant: One World in Relation",
+    "director": [
+      "Manthia Diawara"
+    ],
+    "pais": [
+      "Francia",
+      "Estados Unidos"
+    ],
+    "anio": 2010,
+    "duracion_min": 50,
+    "genero": [
+      "documental"
+    ],
+    "idioma_original": "Francés",
+    "subtitulos": [
+      "por_verificar"
+    ],
+    "fuente": {
+      "nombre": "Third World Newsreel",
+      "tipo": "distribuidora",
+      "acceso": "institucional",
+      "verificacion": "por_verificar"
+    },
+    "campo_disciplinar": [
+      "filosofia",
+      "estudios_poscoloniales"
+    ],
+    "categorias_cpc": [
+      "porosidad_del_despojo",
+      "memoria_colectiva"
+    ],
+    "interlocutores": [
+      "Glissant"
+    ],
+    "nota_academica": "Conversación fílmica con Glissant sobre la Relación, la opacidad y el archipiélago como forma de pensar. Fuente primaria para la poética de la Relación y para la orilla como categoría: interlocutor axial del segundo volumen.",
+    "relevancia": "alta"
+  },
+  {
+    "id": "cpc-006",
+    "titulo": "De cierta manera",
+    "titulo_original": "De cierta manera",
+    "director": [
+      "Sara Gómez"
+    ],
+    "pais": [
+      "Cuba"
+    ],
+    "anio": 1974,
+    "duracion_min": 78,
+    "genero": [
+      "cine_narrativo",
+      "documental"
+    ],
+    "idioma_original": "Español",
+    "subtitulos": [
+      "es"
+    ],
+    "fuente": {
+      "nombre": "ICAIC (productor)",
+      "tipo": "archivo_nacional",
+      "acceso": "publico",
+      "verificacion": "por_verificar"
+    },
+    "campo_disciplinar": [
+      "cine",
+      "estudios_afrodescendientes",
+      "antropologia"
+    ],
+    "categorias_cpc": [
+      "vidas_negras",
+      "negrura",
+      "materialidad"
+    ],
+    "interlocutores": [],
+    "nota_academica": "Único largometraje de la cineasta afrocubana; híbrido de ficción y documental sobre marginalidad, machismo y raza en la Cuba revolucionaria. Archivo de vidas negras que examina la promesa y los límites de la emancipación desde el barrio.",
+    "relevancia": "alta"
+  },
+  {
+    "id": "cpc-007",
+    "titulo": "Now!",
+    "titulo_original": "Now!",
+    "director": [
+      "Santiago Álvarez"
+    ],
+    "pais": [
+      "Cuba"
+    ],
+    "anio": 1965,
+    "duracion_min": 6,
+    "genero": [
+      "cortometraje",
+      "archivo"
+    ],
+    "idioma_original": "Sin diálogo",
+    "subtitulos": [],
+    "fuente": {
+      "nombre": "ICAIC / Internet Archive",
+      "tipo": "repositorio_abierto",
+      "acceso": "publico",
+      "verificacion": "por_verificar"
+    },
+    "campo_disciplinar": [
+      "cine",
+      "historia",
+      "estudios_afrodescendientes"
+    ],
+    "categorias_cpc": [
+      "negrura",
+      "vidas_negras"
+    ],
+    "interlocutores": [],
+    "nota_academica": "Cinepanfleto de montaje sobre la violencia racial en Estados Unidos, musicalizado con Lena Horne. Seis minutos que condensan la solidaridad tricontinental con la lucha negra: negrura como grito y como denuncia.",
+    "relevancia": "media"
+  },
+  {
+    "id": "cpc-008",
+    "titulo": "79 primaveras",
+    "titulo_original": "79 primaveras",
+    "director": [
+      "Santiago Álvarez"
+    ],
+    "pais": [
+      "Cuba"
+    ],
+    "anio": 1969,
+    "duracion_min": 25,
+    "genero": [
+      "cortometraje",
+      "archivo"
+    ],
+    "idioma_original": "Español",
+    "subtitulos": [
+      "es"
+    ],
+    "fuente": {
+      "nombre": "ICAIC / Internet Archive",
+      "tipo": "repositorio_abierto",
+      "acceso": "publico",
+      "verificacion": "por_verificar"
+    },
+    "campo_disciplinar": [
+      "cine",
+      "historia"
+    ],
+    "categorias_cpc": [
+      "memoria_colectiva"
+    ],
+    "interlocutores": [],
+    "nota_academica": "Elegía a Ho Chi Minh y al anticolonialismo tricontinental. Referencial para el imaginario descolonial caribeño del período y su gramática visual de montaje.",
+    "relevancia": "referencial"
+  },
+  {
+    "id": "cpc-009",
+    "titulo": "Calle Cabañas Negras",
+    "titulo_original": "La Rue Cases-Nègres",
+    "director": [
+      "Euzhan Palcy"
+    ],
+    "pais": [
+      "Francia",
+      "Martinica"
+    ],
+    "anio": 1983,
+    "duracion_min": 103,
+    "genero": [
+      "cine_narrativo"
+    ],
+    "idioma_original": "Francés / criollo",
+    "subtitulos": [
+      "por_verificar"
+    ],
+    "fuente": {
+      "nombre": "Distribución en catálogo (verificar)",
+      "tipo": "plataforma_pago",
+      "acceso": "pago",
+      "verificacion": "por_verificar"
+    },
+    "campo_disciplinar": [
+      "cine",
+      "filosofia",
+      "estudios_afrodescendientes"
+    ],
+    "categorias_cpc": [
+      "negrura",
+      "blanquitud_monumental",
+      "porosidad_del_despojo",
+      "materialidad"
+    ],
+    "interlocutores": [
+      "Joseph Zobel",
+      "Glissant",
+      "Fanon"
+    ],
+    "nota_academica": "Adaptación de Zobel: la plantación martiniquesa como archivo material del despojo y la infancia negra como umbral de conciencia. La plantación no como pasado sino como estructura persistente; materia para la orilla y la porosidad del despojo.",
+    "relevancia": "alta"
+  },
+  {
+    "id": "cpc-010",
+    "titulo": "La batalla de Argel",
+    "titulo_original": "La battaglia di Algeri",
+    "director": [
+      "Gillo Pontecorvo"
+    ],
+    "pais": [
+      "Italia",
+      "Argelia"
+    ],
+    "anio": 1966,
+    "duracion_min": 121,
+    "genero": [
+      "cine_narrativo",
+      "archivo"
+    ],
+    "idioma_original": "Árabe / francés",
+    "subtitulos": [
+      "por_verificar"
+    ],
+    "fuente": {
+      "nombre": "The Criterion Collection",
+      "tipo": "plataforma_pago",
+      "acceso": "pago",
+      "verificacion": "por_verificar"
+    },
+    "campo_disciplinar": [
+      "historia",
+      "cine",
+      "estudios_poscoloniales"
+    ],
+    "categorias_cpc": [
+      "memoria_colectiva"
+    ],
+    "interlocutores": [
+      "Fanon"
+    ],
+    "nota_academica": "Reconstrucción de la insurgencia anticolonial argelina; contrapunto visual de 'Los condenados de la tierra'. Referencial para la dialéctica colonial de la violencia y para situar el Caribe en la constelación tricontinental.",
+    "relevancia": "referencial"
+  },
+  {
+    "id": "cpc-011",
+    "titulo": "Chircales",
+    "titulo_original": "Chircales",
+    "director": [
+      "Marta Rodríguez",
+      "Jorge Silva"
+    ],
+    "pais": [
+      "Colombia"
+    ],
+    "anio": 1972,
+    "duracion_min": 42,
+    "genero": [
+      "etnografia_visual",
+      "documental"
+    ],
+    "idioma_original": "Español",
+    "subtitulos": [
+      "es"
+    ],
+    "fuente": {
+      "nombre": "Fundación Cine Documental (Marta Rodríguez)",
+      "tipo": "distribuidora",
+      "acceso": "institucional",
+      "verificacion": "por_verificar"
+    },
+    "campo_disciplinar": [
+      "antropologia",
+      "cine",
+      "historia"
+    ],
+    "categorias_cpc": [
+      "materialidad",
+      "memoria_colectiva",
+      "porosidad_del_despojo"
+    ],
+    "interlocutores": [],
+    "nota_academica": "Etnografía militante sobre las familias chircaleras y la explotación del trabajo del barro en la periferia bogotana; método participativo pionero. Referencia metodológica para tu propia práctica etnográfica y —de forma casi literal— para la figura de Juan Albañil: el que amasa el barro y sostiene lo que no habita.",
+    "relevancia": "alta"
+  },
+  {
+    "id": "cpc-012",
+    "titulo": "Nuestra voz de tierra, memoria y futuro",
+    "titulo_original": "Nuestra voz de tierra, memoria y futuro",
+    "director": [
+      "Marta Rodríguez",
+      "Jorge Silva"
+    ],
+    "pais": [
+      "Colombia"
+    ],
+    "anio": 1981,
+    "duracion_min": 95,
+    "genero": [
+      "etnografia_visual",
+      "documental"
+    ],
+    "idioma_original": "Español",
+    "subtitulos": [
+      "es"
+    ],
+    "fuente": {
+      "nombre": "Fundación Cine Documental (Marta Rodríguez)",
+      "tipo": "distribuidora",
+      "acceso": "institucional",
+      "verificacion": "por_verificar"
+    },
+    "campo_disciplinar": [
+      "antropologia",
+      "historia",
+      "cine"
+    ],
+    "categorias_cpc": [
+      "memoria_colectiva",
+      "materialidad",
+      "porosidad_del_despojo"
+    ],
+    "interlocutores": [],
+    "nota_academica": "Documental sobre la resistencia indígena y campesina y la memoria del despojo territorial en Colombia. Cartografía audiovisual de la lucha por la tierra; interlocutor para la memoria colectiva y para la orilla como geografía en disputa.",
+    "relevancia": "media"
+  },
+  {
+    "id": "cpc-013",
+    "titulo": "Divine Horsemen: The Living Gods of Haiti",
+    "titulo_original": "Divine Horsemen: The Living Gods of Haiti",
+    "director": [
+      "Maya Deren"
+    ],
+    "pais": [
+      "Estados Unidos",
+      "Haití"
+    ],
+    "anio": 1985,
+    "duracion_min": 52,
+    "genero": [
+      "etnografia_visual",
+      "archivo"
+    ],
+    "idioma_original": "Inglés",
+    "subtitulos": [
+      "por_verificar"
+    ],
+    "fuente": {
+      "nombre": "Internet Archive / circulación abierta",
+      "tipo": "repositorio_abierto",
+      "acceso": "publico",
+      "verificacion": "por_verificar"
+    },
+    "campo_disciplinar": [
+      "antropologia",
+      "estudios_afrodescendientes"
+    ],
+    "categorias_cpc": [
+      "negrura",
+      "materialidad",
+      "memoria_colectiva"
+    ],
+    "interlocutores": [],
+    "nota_academica": "Registro etnográfico del vodú haitiano (filmado 1947–1954, montado póstumamente); el cuerpo poseído como archivo de la cosmología afroatlántica. Fuente para la negrura como régimen de sensibilidad, y a la vez objeto de crítica de la mirada etnográfica blanca.",
+    "relevancia": "media"
+  },
+  {
+    "id": "cpc-014",
+    "titulo": "Sankofa",
+    "titulo_original": "Sankofa",
+    "director": [
+      "Haile Gerima"
+    ],
+    "pais": [
+      "Estados Unidos",
+      "Ghana",
+      "Burkina Faso"
+    ],
+    "anio": 1993,
+    "duracion_min": 125,
+    "genero": [
+      "cine_narrativo"
+    ],
+    "idioma_original": "Inglés",
+    "subtitulos": [
+      "por_verificar"
+    ],
+    "fuente": {
+      "nombre": "ARRAY Releasing (restauración)",
+      "tipo": "plataforma_pago",
+      "acceso": "pago",
+      "verificacion": "por_verificar"
+    },
+    "campo_disciplinar": [
+      "cine",
+      "historia",
+      "estudios_afrodescendientes"
+    ],
+    "categorias_cpc": [
+      "vidas_negras",
+      "negrura",
+      "memoria_colectiva",
+      "porosidad_del_despojo"
+    ],
+    "interlocutores": [],
+    "nota_academica": "Viaje de retorno a la plantación esclavista: el pasado no como memoria sino como presencia que reclama el cuerpo. 'Sankofa' —volver por lo dejado atrás— como figura de la memoria negra y de la temporalidad del despojo.",
+    "relevancia": "alta"
+  },
+  {
+    "id": "cpc-015",
+    "titulo": "The Black Power Mixtape 1967–1975",
+    "titulo_original": "The Black Power Mixtape 1967–1975",
+    "director": [
+      "Göran Hugo Olsson"
+    ],
+    "pais": [
+      "Suecia"
+    ],
+    "anio": 2011,
+    "duracion_min": 100,
+    "genero": [
+      "documental",
+      "archivo"
+    ],
+    "idioma_original": "Inglés",
+    "subtitulos": [
+      "por_verificar"
+    ],
+    "fuente": {
+      "nombre": "Distribución institucional / streaming",
+      "tipo": "plataforma_institucional",
+      "acceso": "institucional",
+      "verificacion": "por_verificar"
+    },
+    "campo_disciplinar": [
+      "historia",
+      "estudios_afrodescendientes",
+      "cine"
+    ],
+    "categorias_cpc": [
+      "vidas_negras",
+      "memoria_colectiva"
+    ],
+    "interlocutores": [
+      "Angela Davis",
+      "Stokely Carmichael"
+    ],
+    "nota_academica": "Archivo sueco redescubierto del movimiento Black Power narrado por sus voces. Archivo de vidas negras en su momento insurgente; útil para historizar el pensamiento radical negro que dialoga con tu marco.",
+    "relevancia": "media"
+  },
+  {
+    "id": "cpc-016",
+    "titulo": "I Am Not Your Negro",
+    "titulo_original": "I Am Not Your Negro",
+    "director": [
+      "Raoul Peck"
+    ],
+    "pais": [
+      "Estados Unidos",
+      "Francia",
+      "Haití"
+    ],
+    "anio": 2016,
+    "duracion_min": 93,
+    "genero": [
+      "cine_ensayo",
+      "documental"
+    ],
+    "idioma_original": "Inglés",
+    "subtitulos": [
+      "por_verificar"
+    ],
+    "fuente": {
+      "nombre": "Magnolia Pictures / streaming",
+      "tipo": "plataforma_pago",
+      "acceso": "pago",
+      "verificacion": "por_verificar"
+    },
+    "campo_disciplinar": [
+      "filosofia",
+      "estudios_afrodescendientes",
+      "cine"
+    ],
+    "categorias_cpc": [
+      "negrura",
+      "blanquitud_monumental",
+      "vidas_negras"
+    ],
+    "interlocutores": [
+      "James Baldwin"
+    ],
+    "nota_academica": "Ensayo fílmico sobre el manuscrito inconcluso de Baldwin: la mirada blanca y el lugar del negro en el imaginario nacional. La blanquitud como estructura de la visión, dirigida por un cineasta haitiano: negrura y blanquitud monumental en clave diaspórica.",
+    "relevancia": "alta"
+  },
+  {
+    "id": "cpc-017",
+    "titulo": "Lumumba",
+    "titulo_original": "Lumumba",
+    "director": [
+      "Raoul Peck"
+    ],
+    "pais": [
+      "Francia",
+      "Bélgica",
+      "Haití"
+    ],
+    "anio": 2000,
+    "duracion_min": 115,
+    "genero": [
+      "cine_narrativo"
+    ],
+    "idioma_original": "Francés",
+    "subtitulos": [
+      "por_verificar"
+    ],
+    "fuente": {
+      "nombre": "Zeitgeist Films",
+      "tipo": "plataforma_pago",
+      "acceso": "pago",
+      "verificacion": "por_verificar"
+    },
+    "campo_disciplinar": [
+      "historia",
+      "cine",
+      "estudios_poscoloniales"
+    ],
+    "categorias_cpc": [
+      "blanquitud_monumental",
+      "memoria_colectiva"
+    ],
+    "interlocutores": [],
+    "nota_academica": "Reconstrucción del ascenso y asesinato de Patrice Lumumba y la descolonización del Congo. Referencial para la violencia de la blanquitud monumental —estatal, colonial— y su gestión de las vidas negras que amenazan el orden.",
+    "relevancia": "referencial"
+  },
+  {
+    "id": "cpc-018",
+    "titulo": "La Playa D.C.",
+    "titulo_original": "La Playa D.C.",
+    "director": [
+      "Juan Andrés Arango"
+    ],
+    "pais": [
+      "Colombia",
+      "Brasil",
+      "Francia"
+    ],
+    "anio": 2012,
+    "duracion_min": 90,
+    "genero": [
+      "cine_narrativo"
+    ],
+    "idioma_original": "Español",
+    "subtitulos": [
+      "es"
+    ],
+    "fuente": {
+      "nombre": "Verificar (posible Retina Latina)",
+      "tipo": "plataforma_publica",
+      "acceso": "por_verificar",
+      "verificacion": "por_verificar"
+    },
+    "campo_disciplinar": [
+      "cine",
+      "antropologia",
+      "estudios_afrodescendientes"
+    ],
+    "categorias_cpc": [
+      "negrura",
+      "vidas_negras",
+      "porosidad_del_despojo",
+      "blanquitud_monumental"
+    ],
+    "interlocutores": [],
+    "nota_academica": "Un joven afrocolombiano desplazado del Pacífico sobrevive en Bogotá: la ciudad como dispositivo de blanquitud y el cuerpo negro como extranjero interno. Cine colombiano contemporáneo directamente conectado con vidas negras, desplazamiento y porosidad del despojo.",
+    "relevancia": "alta"
+  },
+  {
+    "id": "cpc-019",
+    "titulo": "Marímbula",
+    "titulo_original": "Marímbula",
+    "director": [
+      "Diana Kuellar"
+    ],
+    "pais": [
+      "Colombia"
+    ],
+    "anio": 2016,
+    "duracion_min": 72,
+    "genero": [
+      "documental"
+    ],
+    "idioma_original": "Español / inglés",
+    "subtitulos": [
+      "es"
+    ],
+    "fuente": {
+      "nombre": "Retina Latina",
+      "tipo": "plataforma_publica",
+      "acceso": "publico",
+      "disponibilidad_regional": [
+        "america_latina",
+        "caribe"
+      ],
+      "verificacion": "por_verificar"
+    },
+    "campo_disciplinar": [
+      "antropologia",
+      "cine",
+      "estudios_afrodescendientes",
+      "filosofia"
+    ],
+    "categorias_cpc": [
+      "porosidad_del_despojo",
+      "negrura",
+      "memoria_colectiva",
+      "caliban"
+    ],
+    "interlocutores": [
+      "Glissant",
+      "Benkos Biohó"
+    ],
+    "nota_academica": "Dos jóvenes de San Basilio de Palenque viajan a Senegal tras las huellas de Benkos Biohó; el África imaginada choca con el África real —deportación, olvido de la esclavitud americana—. Pone en acto la distinción glissantiana entre Raíz y Relación: el Caribe no se explica por el regreso al origen sino por lo que hizo con el despojo. El Lumbalú y la tri-alma palenquera como archivo vivo de la negrura.",
+    "relevancia": "alta"
+  },
+  {
+    "id": "cpc-020",
+    "titulo": "Keyla",
+    "titulo_original": "Keyla",
+    "director": [
+      "Viviana Gómez Echeverry"
+    ],
+    "pais": [
+      "Colombia"
+    ],
+    "anio": 2016,
+    "duracion_min": 90,
+    "genero": [
+      "cine_narrativo"
+    ],
+    "idioma_original": "Creole / español",
+    "subtitulos": [
+      "es"
+    ],
+    "fuente": {
+      "nombre": "RTVCPlay",
+      "tipo": "plataforma_publica",
+      "acceso": "publico",
+      "disponibilidad_regional": [
+        "colombia"
+      ],
+      "verificacion": "verificado"
+    },
+    "campo_disciplinar": [
+      "cine",
+      "antropologia",
+      "estudios_afrodescendientes"
+    ],
+    "categorias_cpc": [
+      "vidas_negras",
+      "negrura",
+      "memoria_colectiva"
+    ],
+    "interlocutores": [],
+    "nota_academica": "Rodada en Providencia con actores raizales no profesionales, en criollo sanandresano: una familia rota se reúne por la desaparición del padre pescador. Introduce el Caribe anglófono-criollo colombiano —el archipiélago raizal, descendiente de africanos, ingleses y piratas—, una negrura insular que descentra la ecuación 'Caribe = costa Atlántica'. Vidas negras isleñas y su lengua propia como archivo.",
+    "relevancia": "alta"
+  },
+  {
+    "id": "cpc-021",
+    "titulo": "La eterna noche de las doce lunas",
+    "titulo_original": "La eterna noche de las doce lunas",
+    "director": [
+      "Priscila Padilla"
+    ],
+    "pais": [
+      "Colombia"
+    ],
+    "anio": 2013,
+    "duracion_min": 89,
+    "genero": [
+      "documental",
+      "etnografia_visual"
+    ],
+    "idioma_original": "Español / wayuunaiki",
+    "subtitulos": [
+      "es"
+    ],
+    "fuente": {
+      "nombre": "RTVCPlay",
+      "tipo": "plataforma_publica",
+      "acceso": "publico",
+      "disponibilidad_regional": [
+        "colombia"
+      ],
+      "verificacion": "verificado"
+    },
+    "campo_disciplinar": [
+      "antropologia",
+      "cine"
+    ],
+    "categorias_cpc": [
+      "materialidad",
+      "memoria_colectiva"
+    ],
+    "interlocutores": [],
+    "nota_academica": "El encierro de casi un año de una niña wayúu de La Guajira tras su primera menstruación, filmado con método de observación participante y con la honestidad de mostrar que algunas mujeres lo leen como sometimiento. Trae el Caribe indígena y el cuerpo femenino como territorio de un rito ancestral; recuerda que el Caribe Colombiano no es solo afro: su negrura convive con otras corporalidades y regímenes de sensibilidad.",
+    "relevancia": "media"
+  },
+  {
+    "id": "cpc-022",
+    "titulo": "Chi ma nkongo, memorias de un pueblo Cimarrón",
+    "titulo_original": "Chi ma nkongo, memorias de un pueblo Cimarrón",
+    "director": [
+      "Lucas Silva"
+    ],
+    "pais": [
+      "Colombia"
+    ],
+    "anio": 2022,
+    "duracion_min": null,
+    "genero": [
+      "documental"
+    ],
+    "idioma_original": "Español / palenquero",
+    "subtitulos": [
+      "es"
+    ],
+    "fuente": {
+      "nombre": "Retina Latina",
+      "tipo": "plataforma_publica",
+      "acceso": "publico",
+      "disponibilidad_regional": [
+        "america_latina",
+        "caribe"
+      ],
+      "verificacion": "por_verificar"
+    },
+    "campo_disciplinar": [
+      "antropologia",
+      "cine",
+      "estudios_afrodescendientes"
+    ],
+    "categorias_cpc": [
+      "negrura",
+      "vidas_negras",
+      "memoria_colectiva",
+      "materialidad"
+    ],
+    "interlocutores": [
+      "Benkos Biohó"
+    ],
+    "nota_academica": "La historia de 'Las Alegres Ambulancias' de San Basilio de Palenque —fundado por afros cimarrones en el siglo XVII— y del reencuentro entre la cantadora Graciela Salgado y su hermano, el tamborero Paulino Salgado 'Batata'. Donde Marímbula filma la diáspora que sale a buscar África, esta filma la memoria que permanece y suena en el pueblo: el son palenquero y el Lumbalú como archivo vivo de la negrura, y el cimarronaje no como pasado heroico sino como forma presente de habitar el despojo.",
+    "relevancia": "alta"
+  }
+]
