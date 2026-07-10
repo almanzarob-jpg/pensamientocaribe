@@ -104,10 +104,12 @@
 
 .nav-links a {
   font-family: var(--ff-mono);
-  font-size: var(--fs-meta);
+  font-size: clamp(0.72rem, 0.85vw, 0.84rem);
   text-transform: uppercase;
-  letter-spacing: 0.12em;
-  color: var(--c-gray);
+  letter-spacing: 0.08em;
+  color: var(--c-cream);
+  opacity: 0.72;
+  transition: opacity var(--transition-base), color var(--transition-base);
   position: relative;
   padding-bottom: 2px;
 }
@@ -125,6 +127,7 @@
 
 .nav-links a:hover {
   color: var(--c-cream);
+  opacity: 1;
 }
 
 .nav-links a:hover::after {
