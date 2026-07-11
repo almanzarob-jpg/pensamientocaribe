@@ -7,10 +7,10 @@
   <meta name="description" content="Grupo de Investigación Pensamiento Caribe. Universidad del Magdalena. Investigación crítica sobre el Caribe, las vidas negras, la filosofía afrocaribeña, las geografías negras, el antirracismo y las formas situadas de pensamiento descolonial.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/reset.css?v=15">
-  <link rel="stylesheet" href="css/layout.css?v=17">
-  <link rel="stylesheet" href="css/components.css?v=37">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/reset.css?v=17">
+  <link rel="stylesheet" href="css/layout.css?v=19">
+  <link rel="stylesheet" href="css/components.css?v=41">
   <link rel="stylesheet" href="css/animations.css?v=15">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 </head>
@@ -35,18 +35,46 @@
         <img src="assets/logo-pensamiento-caribe.png" alt="Grupo de Investigación Pensamiento Caribe" onerror="this.style.display='none'">
       </a>
       <div class="nav-links">
-        <a href="#lineas">Líneas</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#semillero">Semillero</a>
-        <a href="#equipo">Equipo</a>
-        <a href="#publicaciones">Publicaciones</a>
-        <a href="#noticias">Noticias</a>
-        <a href="#semana-antirracista">Semana</a>
-        <a href="#eventos">Eventos</a>
-        <a href="#medios">Medios</a>
-        <a href="#efemerides">Efemérides</a>
-        <a href="#redes">Redes</a>
-        <a href="#contacto">Contacto</a>
+        <div class="nav-group">
+          <button class="nav-group-label" type="button" aria-haspopup="true" aria-expanded="false">Investigación <span class="nav-caret"></span></button>
+          <div class="nav-dropdown">
+            <div class="nav-dropdown-panel">
+              <a href="#lineas">Líneas</a>
+              <a href="#proyectos">Proyectos</a>
+              <a href="#publicaciones">Publicaciones</a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-group">
+          <button class="nav-group-label" type="button" aria-haspopup="true" aria-expanded="false">Comunidad <span class="nav-caret"></span></button>
+          <div class="nav-dropdown">
+            <div class="nav-dropdown-panel">
+              <a href="#semillero">Semillero</a>
+              <a href="#equipo">Equipo</a>
+              <a href="#redes">Redes</a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-group">
+          <button class="nav-group-label" type="button" aria-haspopup="true" aria-expanded="false">Agenda <span class="nav-caret"></span></button>
+          <div class="nav-dropdown">
+            <div class="nav-dropdown-panel">
+              <a href="#eventos">Eventos</a>
+              <a href="#semana-antirracista">Semana antirracista</a>
+              <a href="#efemerides">Efemérides</a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-group">
+          <button class="nav-group-label" type="button" aria-haspopup="true" aria-expanded="false">Medios <span class="nav-caret"></span></button>
+          <div class="nav-dropdown">
+            <div class="nav-dropdown-panel">
+              <a href="#noticias">Noticias</a>
+              <a href="#medios">Medios</a>
+            </div>
+          </div>
+        </div>
+        <a href="#contacto" class="nav-single">Contacto</a>
       </div>
       <button class="nav-toggle" aria-label="Abrir menú">
         <span></span>
@@ -57,18 +85,38 @@
 
     <!-- Mobile overlay -->
     <div class="nav-mobile-overlay" aria-label="Menú móvil">
-      <a href="#lineas">Líneas</a>
-      <a href="#proyectos">Proyectos</a>
-      <a href="#semillero">Semillero</a>
-      <a href="#equipo">Equipo</a>
-      <a href="#publicaciones">Publicaciones</a>
-      <a href="#noticias">Noticias</a>
-      <a href="#semana-antirracista">Semana</a>
-      <a href="#eventos">Eventos</a>
-      <a href="#medios">Medios</a>
-      <a href="#efemerides">Efemérides</a>
-      <a href="#redes">Redes</a>
-      <a href="#contacto">Contacto</a>
+      <div class="nav-m-group">
+        <button class="nav-m-label" type="button" aria-expanded="false">Investigación <span class="nav-caret"></span></button>
+        <div class="nav-m-sub">
+          <a href="#lineas">Líneas</a>
+          <a href="#proyectos">Proyectos</a>
+          <a href="#publicaciones">Publicaciones</a>
+        </div>
+      </div>
+      <div class="nav-m-group">
+        <button class="nav-m-label" type="button" aria-expanded="false">Comunidad <span class="nav-caret"></span></button>
+        <div class="nav-m-sub">
+          <a href="#semillero">Semillero</a>
+          <a href="#equipo">Equipo</a>
+          <a href="#redes">Redes</a>
+        </div>
+      </div>
+      <div class="nav-m-group">
+        <button class="nav-m-label" type="button" aria-expanded="false">Agenda <span class="nav-caret"></span></button>
+        <div class="nav-m-sub">
+          <a href="#eventos">Eventos</a>
+          <a href="#semana-antirracista">Semana antirracista</a>
+          <a href="#efemerides">Efemérides</a>
+        </div>
+      </div>
+      <div class="nav-m-group">
+        <button class="nav-m-label" type="button" aria-expanded="false">Medios <span class="nav-caret"></span></button>
+        <div class="nav-m-sub">
+          <a href="#noticias">Noticias</a>
+          <a href="#medios">Medios</a>
+        </div>
+      </div>
+      <a href="#contacto" class="nav-m-single">Contacto</a>
     </div>
 
     <!-- ════════ HERO ════════ -->
@@ -1581,7 +1629,19 @@
           </div>
         </article>
 
-        <article class="card-medio card-medio--archive reveal reveal-delay-2">
+        <article class="card-medio card-medio--podcast reveal reveal-delay-2">
+          <div class="card-medio-thumb card-medio-thumb--poster">
+            <img src="assets/img/el-club-negro.jpeg" alt="Portada de El Club Negro de Colombia" loading="lazy">
+          </div>
+          <div class="card-medio-body">
+            <p class="card-medio-meta">Pódcast · Gaceta Sonora</p>
+            <h3>El Club Negro</h3>
+            <p>En 1943, Manuel Zapata Olivella y Natanael Díaz fundaron un movimiento intelectual y político afrocolombiano que luchó contra la invisibilidad y la discriminación de la población negra en Colombia. Serie narrada por N. Hardem sobre <em>El Club Negro de Colombia</em> (Rosa Chamorro, 2024, MiCASa · Archivo General de la Nación), producción de Gaceta Sonora.</p>
+            <a href="https://www.youtube.com/playlist?list=PLVLwiWhcxDjGZ0BoEJVVv9iRvy_bEjKbW" class="card-project-link" target="_blank" rel="noopener">Escuchar en YouTube <span class="btn-arrow">&rarr;</span></a>
+          </div>
+        </article>
+
+        <article class="card-medio card-medio--archive reveal reveal-delay-3">
           <div class="card-medio-thumb">
             <div class="card-medio-placeholder">
               <svg viewBox="0 0 24 24" width="48" height="48" fill="none" stroke="currentColor" stroke-width="1.5">

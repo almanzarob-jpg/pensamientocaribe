@@ -128,14 +128,14 @@
 }
 
 .mapa-conceptual__panel-img-wrap p {
-  font-size: 0.72rem;
+  font-size: 0.88rem;
   font-style: italic;
   color: var(--c-gray);
-  opacity: 0.8;
+  opacity: 0.9;
 }
 
 .mapa-conceptual__panel-hint {
-  font-size: 0.72rem !important;
+  font-size: 0.88rem !important;
   color: var(--c-gray) !important;
   opacity: 0.7;
   border-top: 1px solid var(--c-border-green);

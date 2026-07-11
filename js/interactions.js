@@ -47,6 +47,15 @@
         document.body.style.overflow = '';
       });
     }
+
+    var mobileGroupLabels = mobileOverlay.querySelectorAll('.nav-m-label');
+    for (var k = 0; k < mobileGroupLabels.length; k++) {
+      mobileGroupLabels[k].addEventListener('click', function () {
+        var group = this.parentNode;
+        var isOpen = group.classList.toggle('open');
+        this.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+      });
+    }
   }
 
   var navAnchors = document.querySelectorAll('a[href^="#"]');
