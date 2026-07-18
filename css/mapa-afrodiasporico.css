@@ -1,0 +1,260 @@
+/* ════════════════════════════════════════════════
+   MÁS RAMAS QUE RAÍCES · Panel de lectura + travesía
+   ════════════════════════════════════════════════ */
+
+/* Negrillas del proyecto en salmón (paleta del mapa) */
+.proyecto-cuerpo strong,
+.caribe-mapa-legend .legend-text strong,
+.proyecto-lede strong {
+  color: #E8935A;
+}
+
+.atlantico-layout {
+  display: flex;
+  gap: 14px;
+  align-items: stretch;
+}
+
+.atlantico-layout .caribe-leaflet-map {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+/* ── Panel lateral de lectura ── */
+.atlantico-panel {
+  flex: 0 0 380px;
+  max-width: 380px;
+  background: var(--c-surface-a);
+  border: 1px solid var(--c-border-green);
+  border-radius: 10px;
+  padding: 22px 22px 18px;
+  overflow-y: auto;
+  max-height: 640px;
+  scrollbar-width: thin;
+}
+
+.atlantico-panel-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.atlantico-panel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex: 0 0 auto;
+}
+
+.atlantico-panel-cat {
+  font-family: var(--ff-body);
+  font-size: 11px;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.atlantico-panel-close {
+  margin-left: auto;
+  background: none;
+  border: none;
+  color: var(--c-gray);
+  font-size: 20px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 2px 6px;
+}
+.atlantico-panel-close:hover { color: var(--c-cream); }
+
+.atlantico-panel-title {
+  font-family: var(--ff-display);
+  font-size: 26px;
+  font-weight: var(--fw-semibold);
+  color: var(--c-cream);
+  line-height: 1.12;
+  margin: 0 0 4px;
+}
+
+.atlantico-panel-sub {
+  font-family: var(--ff-body);
+  font-size: 12px;
+  color: var(--c-gray);
+  letter-spacing: 0.04em;
+  margin: 0 0 14px;
+}
+
+.atlantico-panel-desc {
+  font-family: var(--ff-body);
+  font-size: 14px;
+  line-height: 1.75;
+  color: var(--c-cream);
+  opacity: 0.92;
+  margin: 0 0 14px;
+}
+
+.atlantico-panel-cultura {
+  font-family: var(--ff-body);
+  font-size: 12.5px;
+  color: var(--c-gray);
+  margin: 0 0 14px;
+}
+
+.atlantico-panel-player iframe {
+  border-radius: 6px;
+  display: block;
+  margin-bottom: 6px;
+}
+
+/* Miniatura del video: imagen real + botón de play; el iframe se crea al pulsar */
+.atlantico-video-facade {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  padding: 0;
+  border: 1px solid var(--c-border-green);
+  border-radius: 6px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #000;
+}
+
+.atlantico-video-facade img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  opacity: 0.82;
+  transition: opacity 0.2s;
+}
+
+.atlantico-video-facade:hover img { opacity: 1; }
+
+.atlantico-video-play {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(216, 58, 46, 0.92);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  padding-left: 4px;
+  pointer-events: none;
+}
+
+.atlantico-panel-cancion-label {
+  font-family: var(--ff-body);
+  font-size: 12px;
+  color: var(--c-gray);
+  margin: 0 0 6px;
+}
+
+.atlantico-panel-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 14px 0 0;
+}
+
+.atlantico-panel-tags span {
+  font-family: var(--ff-body);
+  font-size: 11px;
+  padding: 4px 9px;
+  border: 1px solid;
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+}
+
+.atlantico-panel-fuente {
+  font-family: var(--ff-body);
+  font-size: 11.5px;
+  font-style: italic;
+  color: var(--c-gray);
+  border-top: 1px solid var(--c-border-green);
+  margin-top: 16px;
+  padding-top: 10px;
+}
+
+.atlantico-panel-vacio {
+  font-family: var(--ff-body);
+  font-size: 13.5px;
+  line-height: 1.8;
+  color: var(--c-gray);
+}
+
+.atlantico-panel-vacio em {
+  color: var(--c-cream);
+  font-style: normal;
+}
+
+/* ── Travesía guiada ── */
+.atlantico-tour-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  border-top: 1px solid var(--c-border-orange);
+  margin-top: 16px;
+  padding-top: 12px;
+}
+
+.atlantico-tour-paso {
+  font-family: var(--ff-body);
+  font-size: 11.5px;
+  color: var(--c-gray);
+  letter-spacing: 0.08em;
+}
+
+.atlantico-tour-btn {
+  font-family: var(--ff-body);
+  font-size: 12px;
+  font-weight: var(--fw-medium);
+  background: none;
+  border: 1px solid var(--c-border-orange);
+  color: var(--c-cream);
+  border-radius: 999px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+.atlantico-tour-btn:hover { border-color: var(--c-orange); color: var(--c-orange); }
+.atlantico-tour-btn[disabled] { opacity: 0.35; cursor: default; }
+.atlantico-tour-btn--salir { border-color: transparent; color: var(--c-gray); }
+
+.filter-btn--travesia {
+  border-color: var(--c-orange) !important;
+  color: var(--c-orange) !important;
+}
+
+/* ── Responsive: hoja inferior en móvil ── */
+@media (max-width: 960px) {
+  .atlantico-layout { display: block; }
+
+  .atlantico-panel {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1200;
+    max-width: none;
+    max-height: 68vh;
+    border-radius: 14px 14px 0 0;
+    border-bottom: none;
+    background: rgba(9, 12, 7, 0.97);
+    transform: translateY(105%);
+    transition: transform 0.3s ease;
+    box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.5);
+  }
+
+  .atlantico-panel.is-open { transform: translateY(0); }
+}
+
+@media (min-width: 961px) {
+  .atlantico-panel { display: block; }
+}
