@@ -261,6 +261,21 @@
     var tourIdx = 0;
     var arcoSeleccionado = null;
 
+    // En pantallas angostas el panel es una hoja fija inferior. Un ancestro con
+    // transform (el efecto reveal del sitio) rompe position:fixed en móviles,
+    // así que ahí el panel se cuelga directamente de <body>.
+    var panelSitioOriginal = panel ? panel.parentNode : null;
+    function ubicarPanel() {
+      if (!panel || !panelSitioOriginal || !document.body) return;
+      if (window.innerWidth <= 960) {
+        if (panel.parentNode !== document.body) document.body.appendChild(panel);
+      } else {
+        if (panel.parentNode !== panelSitioOriginal) panelSitioOriginal.appendChild(panel);
+      }
+    }
+    ubicarPanel();
+    window.addEventListener('resize', ubicarPanel);
+
     function seleccionarArco(linea) {
       if (tourActivo) return;
       arcos.forEach(function (a) {
