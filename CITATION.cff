@@ -1,0 +1,29 @@
+cff-version: 1.2.0
+message: "Si usas este mapa en tu investigación o docencia, cítalo así."
+title: "Con el vaivén de las corrientes: cartografías sonoras del Atlántico Negro"
+type: software
+version: 1.0.0
+date-released: 2026-07-18
+url: "https://pensamientocaribe.org/proyectos/mas-ramas-que-raices.html"
+repository-code: "https://github.com/almanzarob-jpg/pensamientocaribe"
+abstract: >-
+  Mapa interactivo que documenta y hace audible el circuito de intercambios
+  musicales, políticos y espirituales entre el Gran Caribe y el continente
+  africano desde finales del siglo XVIII hasta hoy. Veintiséis rutas y
+  veinticuatro puertos, cada ruta con su fuente académica citada y su registro
+  sonoro. Inspirado en la tesis de Errol L. Montes Pizarro (Más ramas que
+  raíces, 2018) y construido desde el Caribe colombiano como orilla de
+  enunciación.
+authors:
+  - family-names: "Almanza Hernández"
+    given-names: "Roberto"
+    affiliation: "Universidad del Magdalena"
+  - name: "Grupo de Investigación Pensamiento Caribe, Universidad del Magdalena"
+keywords:
+  - "Atlántico Negro"
+  - "panafricanismo"
+  - "música afrodiaspórica"
+  - "Gran Caribe"
+  - "champeta"
+  - "cartografía sonora"
+license: "CC-BY-NC-SA-4.0"

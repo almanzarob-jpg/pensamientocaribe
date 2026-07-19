@@ -130,6 +130,23 @@
       return null;
     }
 
+    // Identificador estable para enlaces directos (#ruta=... / #puerto=...)
+    function slugDe(texto) {
+      return texto.toLowerCase()
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+        .replace(/[«»"'’,:;.!?()]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/[^a-z0-9\-]/g, '')
+        .replace(/\-+/g, '-')
+        .replace(/^\-|\-$/g, '');
+    }
+
+    function fijarEnlace(tipo, texto) {
+      if (window.history && window.history.replaceState) {
+        window.history.replaceState(null, '', '#' + tipo + '=' + slugDe(texto));
+      }
+    }
+
     function formatCoords(lat, lng) {
       var latDir = lat >= 0 ? 'N' : 'S';
       var lngDir = lng >= 0 ? 'E' : 'O';
@@ -367,6 +384,7 @@
         panelTags(n.claves, color) +
         (n.fuente ? '<p class="atlantico-panel-fuente">Fuente: ' + n.fuente + '</p>' : '')
       );
+      fijarEnlace('puerto', n.nombre);
     }
 
     function abrirPanelRuta(r, linea, enTour) {
@@ -389,8 +407,18 @@
         panelCancion(r.cancion) +
         panelTags(r.claves, color) +
         (r.fuente ? '<p class="atlantico-panel-fuente">Fuente: ' + r.fuente + '</p>' : '') +
+        '<button class="atlantico-tour-btn" type="button" data-copiar style="margin-top:12px">Copiar enlace de esta ruta</button>' +
         tourBar
       );
+      fijarEnlace('ruta', r.titulo);
+      var btnCopiar = panel ? panel.querySelector('[data-copiar]') : null;
+      if (btnCopiar) btnCopiar.addEventListener('click', function () {
+        var enlace = window.location.href.split('#')[0] + '#ruta=' + slugDe(r.titulo);
+        var listo = function () { btnCopiar.textContent = 'Enlace copiado'; };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(enlace).then(listo, listo);
+        } else { window.prompt('Copia el enlace:', enlace); }
+      });
       if (enTour && panel) {
         var prev = panel.querySelector('[data-tour="prev"]');
         var next = panel.querySelector('[data-tour="next"]');
@@ -464,6 +492,33 @@
     if (btnTravesia) btnTravesia.addEventListener('click', iniciarTravesia);
 
     panelIntro();
+
+    // Enlaces directos: #ruta=slug o #puerto=slug abren su ficha al cargar
+    function leerEnlaceInicial() {
+      var h = window.location.hash || '';
+      var m = h.match(/^#(ruta|puerto)=(.+)$/);
+      if (!m) return;
+      var tipo = m[1], slug = decodeURIComponent(m[2]);
+      if (tipo === 'ruta') {
+        for (var i = 0; i < arcos.length; i++) {
+          if (slugDe(arcos[i].rutaData.titulo) === slug) {
+            seleccionarArco(arcos[i]);
+            volarAArco(arcos[i]);
+            abrirPanelRuta(arcos[i].rutaData, arcos[i], false);
+            return;
+          }
+        }
+      } else {
+        for (var j = 0; j < nodos.length; j++) {
+          if (slugDe(nodos[j].nombre) === slug) {
+            map.flyTo([nodos[j].lat, nodos[j].lng], 5, { duration: 1.2 });
+            abrirPanelNodo(nodos[j]);
+            return;
+          }
+        }
+      }
+    }
+    leerEnlaceInicial();
 
     // ── Filtros por época ──
     function aplicarEpoca(capa) {
