@@ -9,6 +9,21 @@
   color: #E8935A;
 }
 
+/* Referencias APA: lista sin viñetas, con sangría francesa */
+.proyecto-cuerpo ul.apa-referencias {
+  list-style: none;
+  margin: 0 0 var(--space-md) 0;
+  padding: 0;
+  font-size: 0.98rem;
+}
+
+.proyecto-cuerpo ul.apa-referencias li {
+  margin: 0 0 14px 0;
+  padding-left: 2em;
+  text-indent: -2em;
+  line-height: 1.75;
+}
+
 .atlantico-layout {
   display: flex;
   gap: 14px;
