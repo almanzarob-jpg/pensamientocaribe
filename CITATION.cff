@@ -4,8 +4,13 @@ title: "Con el vaivén de las corrientes: cartografías sonoras del Atlántico N
 type: software
 version: 1.0.0
 date-released: 2026-07-18
+doi: "10.5281/zenodo.21435772"
 url: "https://pensamientocaribe.org/proyectos/mas-ramas-que-raices.html"
 repository-code: "https://github.com/almanzarob-jpg/pensamientocaribe"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.21435772"
+    description: "DOI archivado en Zenodo para la versión 1.0.0"
 abstract: >-
   Mapa interactivo que documenta y hace audible el circuito de intercambios
   musicales, políticos y espirituales entre el Gran Caribe y el continente
