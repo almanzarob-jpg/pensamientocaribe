@@ -1,14 +1,17 @@
 (function () {
   var toast = document.getElementById('toast');
+  var toastDefaultText = toast ? toast.textContent : '';
   var toastTimer;
 
-  function showToast() {
+  function showToast(message) {
     if (!toast) return;
+    toast.textContent = message || toastDefaultText;
     toast.classList.add('visible');
     clearTimeout(toastTimer);
     toastTimer = setTimeout(function () {
       toast.classList.remove('visible');
-    }, 4000);
+      toast.textContent = toastDefaultText;
+    }, 4500);
   }
 
   function validateEmail(email) {
@@ -30,6 +33,7 @@
 
       var emailField = contactForm.querySelector('[name="email"]');
       var nameField = contactForm.querySelector('[name="name"]');
+      var submitBtn = contactForm.querySelector('button[type="submit"]');
       var valid = true;
 
       if (nameField && nameField.value.trim().length < 2) {
@@ -44,8 +48,29 @@
 
       if (!valid) return;
 
-      showToast();
-      contactForm.reset();
+      if (submitBtn) submitBtn.disabled = true;
+
+      fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' }
+      })
+        .then(function (response) {
+          if (response.ok) {
+            showToast('Gracias. Tu mensaje ha sido enviado al grupo.');
+            contactForm.reset();
+          } else {
+            return response.json().then(function (data) {
+              throw new Error((data && data.error) || 'Error al enviar');
+            });
+          }
+        })
+        .catch(function () {
+          showToast('No se pudo enviar el mensaje. Escríbenos directamente a cpensamientocaribe@gmail.com.');
+        })
+        .finally(function () {
+          if (submitBtn) submitBtn.disabled = false;
+        });
     });
   }
 
