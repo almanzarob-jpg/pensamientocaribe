@@ -105,20 +105,39 @@
     var pubEntries = pubList.querySelectorAll('.pub-entry');
     var pubEmpty = document.getElementById('pub-empty');
     var pubCount = document.getElementById('pub-search-count');
+    var pubFilterPills = document.querySelectorAll('.pub-filter-pill');
+    var activeTipos = new Set();
 
     function filterPubs() {
       var query = pubSearchInput.value.trim().toLowerCase();
       var visibleCount = 0;
       for (var p = 0; p < pubEntries.length; p++) {
         var entry = pubEntries[p];
-        var matches = !query || entry.textContent.toLowerCase().indexOf(query) !== -1;
+        var matchesQuery = !query || entry.textContent.toLowerCase().indexOf(query) !== -1;
+        var matchesTipo = activeTipos.size === 0 || activeTipos.has(entry.getAttribute('data-tipo'));
+        var matches = matchesQuery && matchesTipo;
         entry.hidden = !matches;
         if (matches) visibleCount++;
       }
       if (pubEmpty) pubEmpty.hidden = visibleCount !== 0;
-      if (pubCount) pubCount.textContent = query ? visibleCount + ' / ' + pubEntries.length : '';
+      var filtering = !!query || activeTipos.size > 0;
+      if (pubCount) pubCount.textContent = filtering ? visibleCount + ' / ' + pubEntries.length : '';
     }
 
     pubSearchInput.addEventListener('input', filterPubs);
+
+    for (var f = 0; f < pubFilterPills.length; f++) {
+      pubFilterPills[f].addEventListener('click', function () {
+        var tipo = this.getAttribute('data-tipo-filter');
+        if (activeTipos.has(tipo)) {
+          activeTipos.delete(tipo);
+          this.setAttribute('aria-pressed', 'false');
+        } else {
+          activeTipos.add(tipo);
+          this.setAttribute('aria-pressed', 'true');
+        }
+        filterPubs();
+      });
+    }
   }
 })();

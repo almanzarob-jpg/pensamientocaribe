@@ -727,11 +727,19 @@
         <span class="pub-search-count" id="pub-search-count"></span>
       </div>
 
+      <div class="pub-filters reveal" id="pub-filters" role="group" aria-label="Filtrar por tipo de publicación">
+        <button type="button" class="pub-filter-pill" data-tipo-filter="articulo-arbitrado" aria-pressed="false">Artículo arbitrado</button>
+        <button type="button" class="pub-filter-pill" data-tipo-filter="libro" aria-pressed="false">Libro</button>
+        <button type="button" class="pub-filter-pill" data-tipo-filter="capitulo" aria-pressed="false">Capítulo</button>
+        <button type="button" class="pub-filter-pill" data-tipo-filter="poesia" aria-pressed="false">Poesía</button>
+        <button type="button" class="pub-filter-pill" data-tipo-filter="prensa" aria-pressed="false">Prensa</button>
+      </div>
+
       <div class="pub-list" id="pub-list" style="margin-top: var(--space-xl);">
 
         <p class="pub-empty" id="pub-empty" hidden>No se encontraron publicaciones que coincidan con tu búsqueda.</p>
 
-        <div class="pub-entry reveal">
+        <div class="pub-entry reveal" data-tipo="capitulo">
           <span class="pub-year">2026</span>
           <div class="pub-body">
             <h3 class="pub-title">Gramáticas e iconografías populares: el Picó y la tradición picotera en Santa Marta</h3>
@@ -742,7 +750,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-1">
+        <div class="pub-entry reveal reveal-delay-1" data-tipo="articulo-arbitrado">
           <span class="pub-year">2026</span>
           <div class="pub-body">
             <h3 class="pub-title">El Picó en el performance cultural afrocaribeño</h3>
@@ -753,7 +761,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal">
+        <div class="pub-entry reveal" data-tipo="prensa">
           <span class="pub-year">2026</span>
           <div class="pub-body">
             <h3 class="pub-title">Delia y el compás de las aguas</h3>
@@ -764,7 +772,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-1">
+        <div class="pub-entry reveal reveal-delay-1" data-tipo="prensa">
           <span class="pub-year">2024</span>
           <div class="pub-body">
             <h3 class="pub-title">El Club Negro de Colombia</h3>
@@ -775,7 +783,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-2">
+        <div class="pub-entry reveal reveal-delay-2" data-tipo="prensa">
           <span class="pub-year">2024</span>
           <div class="pub-body">
             <h3 class="pub-title">Origen y realidad de la afrocolombianidad</h3>
@@ -786,7 +794,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-3">
+        <div class="pub-entry reveal reveal-delay-3" data-tipo="prensa">
           <span class="pub-year">2024</span>
           <div class="pub-body">
             <h3 class="pub-title">Las Estrellas son Negras. Invocación a Arnoldo Palacios en los cien años de su natalicio</h3>
@@ -797,7 +805,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal">
+        <div class="pub-entry reveal" data-tipo="prensa">
           <span class="pub-year">2024</span>
           <div class="pub-body">
             <h3 class="pub-title">31 años después de la Ley 70: &#191;cuál es el balance de las políticas públicas para comunidades afro?</h3>
@@ -808,7 +816,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-1">
+        <div class="pub-entry reveal reveal-delay-1" data-tipo="prensa">
           <span class="pub-year">2024</span>
           <div class="pub-body">
             <h3 class="pub-title">El que vive o ha vivido en el Chocó puede vivir en cualquier parte del mundo</h3>
@@ -819,7 +827,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-2">
+        <div class="pub-entry reveal reveal-delay-2" data-tipo="prensa">
           <span class="pub-year">2024</span>
           <div class="pub-body">
             <h3 class="pub-title">Arnoldo Palacios en París y su conexión con Sédar Senghor y los movimientos de liberación africanos</h3>
@@ -830,7 +838,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-3">
+        <div class="pub-entry reveal reveal-delay-3" data-tipo="poesia">
           <span class="pub-year">2024</span>
           <div class="pub-body">
             <h3 class="pub-title">Poemas dedicados a los migrantes Sur&#8211;Sur: Colombia&#8211;Chile</h3>
@@ -841,7 +849,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal">
+        <div class="pub-entry reveal" data-tipo="prensa">
           <span class="pub-year">2023</span>
           <div class="pub-body">
             <h3 class="pub-title">Jhonatan Steven Mina y su teatro con raíces afro</h3>
@@ -852,7 +860,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-1">
+        <div class="pub-entry reveal reveal-delay-1" data-tipo="prensa">
           <span class="pub-year">2023</span>
           <div class="pub-body">
             <h3 class="pub-title">Cien años de la USO, el sindicato de los trabajadores petroleros que abrió el camino en Colombia</h3>
@@ -863,7 +871,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-2">
+        <div class="pub-entry reveal reveal-delay-2" data-tipo="prensa">
           <span class="pub-year">2022</span>
           <div class="pub-body">
             <h3 class="pub-title">No deberíamos hablar de razas porque no existen; existen el racismo y la discriminación</h3>
@@ -874,7 +882,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-3">
+        <div class="pub-entry reveal reveal-delay-3" data-tipo="prensa">
           <span class="pub-year">2022</span>
           <div class="pub-body">
             <h3 class="pub-title">A 57 años de la muerte de Clarence Williams, un grande de la primera generación del jazz</h3>
@@ -885,7 +893,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal">
+        <div class="pub-entry reveal" data-tipo="prensa">
           <span class="pub-year">2021</span>
           <div class="pub-body">
             <h3 class="pub-title">Masacre de las Bananeras: que la historia no se olvide</h3>
@@ -896,7 +904,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-1">
+        <div class="pub-entry reveal reveal-delay-1" data-tipo="poesia">
           <span class="pub-year">2021</span>
           <div class="pub-body">
             <h3 class="pub-title">Poesía afro</h3>
@@ -907,7 +915,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-2">
+        <div class="pub-entry reveal reveal-delay-2" data-tipo="prensa">
           <span class="pub-year">2021</span>
           <div class="pub-body">
             <h3 class="pub-title">Trenzar el cabello</h3>
@@ -918,7 +926,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-3">
+        <div class="pub-entry reveal reveal-delay-3" data-tipo="prensa">
           <span class="pub-year">2021</span>
           <div class="pub-body">
             <h3 class="pub-title">Ensayo</h3>
@@ -929,7 +937,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal">
+        <div class="pub-entry reveal" data-tipo="poesia">
           <span class="pub-year">2020</span>
           <div class="pub-body">
             <h3 class="pub-title">Poemas</h3>
@@ -940,7 +948,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-1">
+        <div class="pub-entry reveal reveal-delay-1" data-tipo="poesia">
           <span class="pub-year">2019</span>
           <div class="pub-body">
             <h3 class="pub-title">Poemas</h3>
@@ -951,7 +959,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-2">
+        <div class="pub-entry reveal reveal-delay-2" data-tipo="libro">
           <span class="pub-year">2018</span>
           <div class="pub-body">
             <h3 class="pub-title">La Sierra Negra</h3>
@@ -962,7 +970,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-3">
+        <div class="pub-entry reveal reveal-delay-3" data-tipo="prensa">
           <span class="pub-year">2016</span>
           <div class="pub-body">
             <h3 class="pub-title">Paíto: la gaita va explicando lo que va diciendo</h3>
@@ -973,7 +981,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal">
+        <div class="pub-entry reveal" data-tipo="libro">
           <span class="pub-year">2014</span>
           <div class="pub-body">
             <h3 class="pub-title">Luna en fuego</h3>
@@ -984,7 +992,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal">
+        <div class="pub-entry reveal" data-tipo="prensa">
           <span class="pub-year">2025</span>
           <div class="pub-body">
             <h3 class="pub-title">La opacidad de la negrura en Santa Marta y el retorno de los fantasmas coloniales</h3>
@@ -996,7 +1004,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal">
+        <div class="pub-entry reveal" data-tipo="libro">
           <span class="pub-year">2023</span>
           <div class="pub-body">
             <h3 class="pub-title">La orilla de Calibán</h3>
@@ -1007,7 +1015,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-1">
+        <div class="pub-entry reveal reveal-delay-1" data-tipo="articulo-arbitrado">
           <span class="pub-year">2023</span>
           <div class="pub-body">
             <h3 class="pub-title">Conciencia negra: la Blanquitud monumental debe caer</h3>
@@ -1019,7 +1027,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-2">
+        <div class="pub-entry reveal reveal-delay-2" data-tipo="articulo-arbitrado">
           <span class="pub-year">2020</span>
           <div class="pub-body">
             <h3 class="pub-title">Panafricanismo afrocaribeño en George Padmore y C.L.R. James. Insumos para ampliar la genealogía de la teoría descolonial</h3>
@@ -1031,7 +1039,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-3">
+        <div class="pub-entry reveal reveal-delay-3" data-tipo="articulo-arbitrado">
           <span class="pub-year">2018</span>
           <div class="pub-body">
             <h3 class="pub-title">Cuando los leones hacen la historia: el marxismo negro de Walter Rodney</h3>
@@ -1043,7 +1051,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal">
+        <div class="pub-entry reveal" data-tipo="articulo-arbitrado">
           <span class="pub-year">2022</span>
           <div class="pub-body">
             <h3 class="pub-title">El marxismo afrocaribeño como un humanismo de la praxis</h3>
@@ -1055,7 +1063,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-1">
+        <div class="pub-entry reveal reveal-delay-1" data-tipo="articulo-arbitrado">
           <span class="pub-year">2022</span>
           <div class="pub-body">
             <h3 class="pub-title">El tiempo de los monumentos. Presentación</h3>
@@ -1066,7 +1074,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-2">
+        <div class="pub-entry reveal reveal-delay-2" data-tipo="libro">
           <span class="pub-year">2020</span>
           <div class="pub-body">
             <h3 class="pub-title">Teorizando desde los pequeños lugares</h3>
@@ -1078,7 +1086,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-3">
+        <div class="pub-entry reveal reveal-delay-3" data-tipo="capitulo">
           <span class="pub-year">2020</span>
           <div class="pub-body">
             <h3 class="pub-title">Religiones afrocaribes / Afro-Caribbean religions</h3>
@@ -1089,7 +1097,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal">
+        <div class="pub-entry reveal" data-tipo="capitulo">
           <span class="pub-year">2016</span>
           <div class="pub-body">
             <h3 class="pub-title">La im-plantación civilizatoria moderna colonial capitalista en las Américas y lo Caribe como significante flotante</h3>
@@ -1100,7 +1108,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-1">
+        <div class="pub-entry reveal reveal-delay-1" data-tipo="capitulo">
           <span class="pub-year">2011</span>
           <div class="pub-body">
             <h3 class="pub-title">Ausencias y presencias para una interculturalidad crítica postabismal desde el Sur global</h3>
@@ -1111,7 +1119,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-2">
+        <div class="pub-entry reveal reveal-delay-2" data-tipo="articulo-arbitrado">
           <span class="pub-year">2009</span>
           <div class="pub-body">
             <h3 class="pub-title">Izquierdas otras o caminos descoloniales hacia mundos transmodernos</h3>
@@ -1123,7 +1131,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-3">
+        <div class="pub-entry reveal reveal-delay-3" data-tipo="articulo-arbitrado">
           <span class="pub-year">2008</span>
           <div class="pub-body">
             <h3 class="pub-title">Stuart Hall y el descenso a lo &#8220;mundano&#8221;. Una forma de imaginar y practicar los estudios culturales</h3>
@@ -1135,7 +1143,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal">
+        <div class="pub-entry reveal" data-tipo="prensa">
           <span class="pub-year">2026</span>
           <div class="pub-body">
             <h3 class="pub-title">Estudios de la champeta: comentarios y críticas de la narrativa académica champetológica</h3>
@@ -1146,7 +1154,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-1">
+        <div class="pub-entry reveal reveal-delay-1" data-tipo="articulo-arbitrado">
           <span class="pub-year">2025</span>
           <div class="pub-body">
             <h3 class="pub-title">Narrativas escritas, orales, transculturales y cimarronas sobre músicas mulatas en el bajo Magdalena</h3>
@@ -1158,7 +1166,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-2">
+        <div class="pub-entry reveal reveal-delay-2" data-tipo="articulo-arbitrado">
           <span class="pub-year">2024</span>
           <div class="pub-body">
             <h3 class="pub-title">Cambio cultural en cuidadores indígenas: bases etnográficas para la enfermería transcultural</h3>
@@ -1170,7 +1178,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-3">
+        <div class="pub-entry reveal reveal-delay-3" data-tipo="libro">
           <span class="pub-year">2023</span>
           <div class="pub-body">
             <h3 class="pub-title">Bejkaariwa&#8217;a. Propuesta de un modelo de salud intercultural del pueblo ette ennaka</h3>
@@ -1182,7 +1190,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal">
+        <div class="pub-entry reveal" data-tipo="articulo-arbitrado">
           <span class="pub-year">2022</span>
           <div class="pub-body">
             <h3 class="pub-title">Patient safety culture in Latin American hospitals: a systematic review with meta-analysis</h3>
@@ -1194,7 +1202,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-1">
+        <div class="pub-entry reveal reveal-delay-1" data-tipo="libro">
           <span class="pub-year">2019</span>
           <div class="pub-body">
             <h3 class="pub-title">Trayectorias históricas de la enfermería. Elementos para una arqueología del cuidado</h3>
@@ -1206,7 +1214,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-2">
+        <div class="pub-entry reveal reveal-delay-2" data-tipo="articulo-arbitrado">
           <span class="pub-year">2019</span>
           <div class="pub-body">
             <h3 class="pub-title">Representaciones sociales de salud, enfermedad y cuidado cultural en músicos tradicionales</h3>
@@ -1218,7 +1226,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-3">
+        <div class="pub-entry reveal reveal-delay-3" data-tipo="articulo-arbitrado">
           <span class="pub-year">2019</span>
           <div class="pub-body">
             <h3 class="pub-title">Historia social de la educación y la práctica de enfermería en Santa Marta, 1994-2015</h3>
@@ -1230,7 +1238,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal">
+        <div class="pub-entry reveal" data-tipo="articulo-arbitrado">
           <span class="pub-year">2019</span>
           <div class="pub-body">
             <h3 class="pub-title">Carga y tipología microbiana relacionada con infecciones asociadas a la asistencia sanitaria en servicios clínicos</h3>
@@ -1242,7 +1250,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-1">
+        <div class="pub-entry reveal reveal-delay-1" data-tipo="articulo-arbitrado">
           <span class="pub-year">2018</span>
           <div class="pub-body">
             <h3 class="pub-title">Experiencias del cuidado de enfermería en contexto intercultural</h3>
@@ -1254,7 +1262,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-2">
+        <div class="pub-entry reveal reveal-delay-2" data-tipo="articulo-arbitrado">
           <span class="pub-year">2018</span>
           <div class="pub-body">
             <h3 class="pub-title">Relación enfermera-paciente frente a la diversidad cultural. Una mirada en situaciones de cuidado a pacientes indígenas</h3>
@@ -1266,7 +1274,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-3">
+        <div class="pub-entry reveal reveal-delay-3" data-tipo="articulo-arbitrado">
           <span class="pub-year">2017</span>
           <div class="pub-body">
             <h3 class="pub-title">Representaciones e identidades en el Caribe colombiano: el rescate de las tradiciones en los festivales musicales</h3>
@@ -1278,7 +1286,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal">
+        <div class="pub-entry reveal" data-tipo="articulo-arbitrado">
           <span class="pub-year">2017</span>
           <div class="pub-body">
             <h3 class="pub-title">Niños, niñas y adolescentes &#191;víctimas o victimarios del conflicto armado en Colombia?</h3>
@@ -1290,7 +1298,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-1">
+        <div class="pub-entry reveal reveal-delay-1" data-tipo="articulo-arbitrado">
           <span class="pub-year">2015</span>
           <div class="pub-body">
             <h3 class="pub-title">Síndrome de Burnout en docentes universitarios</h3>
@@ -1302,7 +1310,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-2">
+        <div class="pub-entry reveal reveal-delay-2" data-tipo="articulo-arbitrado">
           <span class="pub-year">2014</span>
           <div class="pub-body">
             <h3 class="pub-title">Evaluación de un programa de atención de la hipertensión arterial, según normatividad vigente en Colombia</h3>
@@ -1314,7 +1322,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-3">
+        <div class="pub-entry reveal reveal-delay-3" data-tipo="capitulo">
           <span class="pub-year">2009</span>
           <div class="pub-body">
             <h3 class="pub-title">Entre las tradiciones de la tierra y los sonidos industrializados. Música tradicional e industrias culturales en el Caribe colombiano</h3>
@@ -1325,7 +1333,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal">
+        <div class="pub-entry reveal" data-tipo="capitulo">
           <span class="pub-year">2008</span>
           <div class="pub-body">
             <h3 class="pub-title">Rescate de la memoria histórica del Parque Nacional Natural Tayrona, Santa Marta-Colombia</h3>
@@ -1336,7 +1344,7 @@
           </div>
         </div>
 
-        <div class="pub-entry reveal reveal-delay-1">
+        <div class="pub-entry reveal reveal-delay-1" data-tipo="articulo-arbitrado">
           <span class="pub-year">2004</span>
           <div class="pub-body">
             <h3 class="pub-title">Continúa la lucha: una mirada al pasado y presente de los chimilas</h3>
@@ -2365,7 +2373,7 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin="" defer></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
   <script src="js/scene.js?v=1" defer></script>
-  <script src="js/interactions.js?v=1" defer></script>
+  <script src="js/interactions.js?v=2" defer></script>
   <script src="js/caribbean-map.js?v=4" defer></script>
   <script src="js/lineas.js?v=3"></script>
   <script src="js/forms.js?v=2" defer></script>

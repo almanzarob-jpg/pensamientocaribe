@@ -1098,6 +1098,39 @@
   font-size: var(--fs-small);
 }
 
+/* ── Publication type filters ── */
+.pub-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: var(--space-md);
+}
+
+.pub-filter-pill {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-meta);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  background: transparent;
+  color: var(--c-gray);
+  border: 1px solid var(--c-border-green);
+  border-radius: var(--radius-sm);
+  padding: 0.4rem 0.9rem;
+  transition: all var(--transition-base);
+}
+
+.pub-filter-pill:hover {
+  border-color: var(--c-green-light);
+  color: var(--c-cream);
+}
+
+.pub-filter-pill[aria-pressed="true"] {
+  background: var(--c-green);
+  border-color: var(--c-green);
+  color: var(--c-cream);
+}
+
 /* ── Publication entries ── */
 .pub-entry {
   display: flex;
