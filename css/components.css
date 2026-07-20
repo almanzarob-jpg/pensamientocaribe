@@ -1918,6 +1918,17 @@
   font-weight: var(--fw-medium);
 }
 
+.antropologia-teaser {
+  max-width: var(--content-narrow);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.antropologia-teaser .section-label,
+.antropologia-teaser .section-title {
+  text-align: center;
+}
+
 .antropologia-continuation {
   max-width: var(--content-narrow);
   margin: var(--space-xl) auto 0;
