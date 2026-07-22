@@ -1,265 +1,460 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Con el agua de por medio · Atlas para una antropología archipiélica · Pensamiento Caribe</title>
-  <meta name="description" content="Con el agua de por medio: atlas relacional interactivo del Gran Caribe. Ciento diecisiete obras y doscientas once relaciones organizadas por diez fenómenos transversales, no por fronteras nacionales.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/reset.css">
-  <link rel="stylesheet" href="../css/layout.css">
-  <link rel="stylesheet" href="../css/components.css">
-  <link rel="stylesheet" href="../css/animations.css">
-  <link rel="stylesheet" href="../css/proyecto.css">
-  <link rel="stylesheet" href="../css/atlas-archipielico.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Con el agua de por medio · atlas archipiélico del Gran Caribe</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-deep:#050604; --bg-warm:#0a0b08; --panel:#11130d;
+    --green:#245f1e; --green-l:#3f8a35; --orange:#f07a16; --red:#d83a2e; --gold:#c9a24d; --gold-d:#8a6c2c;
+    --cream:#f2ead8; --gray:#b9b09f; --line:#2c2e24;
+    --ff-display:'Cormorant Garamond',Georgia,serif;
+    --ff-body:'Inter',system-ui,sans-serif;
+    --ff-mono:ui-monospace,'SFMono-Regular','Consolas',monospace;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%}
+  body{background:var(--bg-deep); color:var(--cream); font-family:var(--ff-body); -webkit-font-smoothing:antialiased; overflow:hidden;}
+  header{padding:18px 28px 14px; border-bottom:1px solid var(--line); display:flex; align-items:flex-end; justify-content:space-between; gap:24px; flex-wrap:wrap; background:linear-gradient(180deg,var(--bg-warm),var(--bg-deep)); position:relative;}
+  header::after{content:"";position:absolute; left:28px; right:28px; bottom:0; height:2px;
+    background:linear-gradient(90deg, var(--green-l) 0 64px, transparent 64px 76px, var(--gold) 76px 118px, transparent 118px);}
+  header .t h1{font-family:var(--ff-display); font-size:32px; margin:0; font-weight:700; letter-spacing:.3px; color:var(--cream)}
+  header .t .sub{font-family:var(--ff-mono); color:var(--red); font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:3px; margin-top:8px}
+  .controls{display:flex; gap:18px; align-items:flex-end; flex-wrap:wrap}
+  .grp{display:flex; flex-direction:column; gap:6px}
+  .grp label{font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1.6px; color:var(--gray)}
+  .seg{display:flex; border:1px solid var(--line); border-radius:3px; overflow:hidden; background:rgba(255,255,255,.02)}
+  .seg button{font-family:var(--ff-mono); font-size:10.5px; text-transform:uppercase; letter-spacing:1px; padding:7px 13px; border:0; cursor:pointer; background:transparent; color:var(--gray); border-right:1px solid var(--line); transition:background .15s,color .15s;}
+  .seg button:last-child{border-right:0}
+  .seg button:hover{color:var(--cream)}
+  .seg button.on{background:var(--cream); color:var(--bg-deep)}
+  .seg.vista button:hover{background:rgba(63,138,53,.16)}
+  .seg.vista button.on{background:var(--green-l); color:#08110a; box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
+  .seg.capa button:hover{background:rgba(201,162,77,.14)}
+  .seg.capa button.on{background:var(--gold); color:#211a06; box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
+  .seg.tide button:hover{background:rgba(240,122,22,.14)}
+  .seg.tide button.on{background:var(--orange); color:var(--bg-deep); box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
+  .seg.base{background:transparent; border-color:var(--red)}
+  .seg.base button{color:var(--red); border-right:0; font-weight:600; letter-spacing:1.2px}
+  .seg.base button:hover{background:var(--red); color:var(--cream)}
+  main{position:relative; height:calc(100% - 106px)}
+  #stage{width:100%; height:100%; display:block; cursor:grab}
+  #stage.grabbing{cursor:grabbing}
+  .node circle.dot{transition:opacity .25s, r .2s}
+  .halo{fill:none; stroke:var(--cream); opacity:0; transition:opacity .2s}
+  .edge{fill:none; stroke:var(--orange); stroke-opacity:.4; stroke-width:1.3; stroke-linecap:round; stroke-dasharray:1.5 6; transition:stroke-opacity .25s}
+  .edge.disonancia{stroke:var(--red)}
+  .fricc{pointer-events:none}
+  .coast{fill:none; stroke:var(--green-l); stroke-opacity:.16; stroke-width:1}
+  .tideband{fill:none; stroke:#4a9db0; stroke-opacity:.07}
+  .placelbl{font-family:var(--ff-mono); font-size:10px; letter-spacing:.6px; pointer-events:none; transition:opacity .25s}
+  .placelbl.pais{fill:var(--gray); opacity:.85}
+  .placelbl.ciudad{fill:var(--orange); opacity:.9}
+  .clbl{font-family:var(--ff-mono); font-size:10.5px; text-transform:uppercase; letter-spacing:1.4px; font-weight:600; pointer-events:none; transition:opacity .25s}
+  #tip{position:absolute; left:0; top:0; pointer-events:none; z-index:16; background:rgba(17,19,13,.97); border:1px solid var(--line); border-left:3px solid var(--cream); border-radius:3px; padding:8px 12px; width:max-content; max-width:290px; opacity:0; transform:translate(-50%,calc(-100% - 15px)); transition:opacity .12s; box-shadow:0 10px 26px rgba(0,0,0,.55)}
+  #tip.show{opacity:1}
+  #tip.below{transform:translate(-50%,18px)}
+  #tip .tt{font-family:var(--ff-display); font-size:16px; line-height:1.22; color:var(--cream); font-weight:600}
+  #tip .ta{font-family:var(--ff-mono); font-size:9.5px; letter-spacing:.4px; color:var(--gray); margin-top:4px}
+  #tip .tf{font-family:var(--ff-mono); font-size:8.5px; text-transform:uppercase; letter-spacing:1px; margin-top:5px}
+  #panel{position:absolute; top:14px; right:14px; width:352px; max-height:calc(100% - 28px); overflow:auto; background:var(--panel); border:1px solid var(--line); border-radius:3px; padding:22px 24px; box-shadow:0 16px 44px rgba(0,0,0,.55); transform:translateX(125%); transition:transform .3s cubic-bezier(.4,0,.2,1);}
+  #panel.open{transform:none}
+  #panel .close{float:right; cursor:pointer; color:var(--gray); font-size:20px; line-height:1; border:0; background:none}
+  #panel .kind{font-family:var(--ff-mono); font-size:9.5px; text-transform:uppercase; letter-spacing:1.6px; color:var(--red)}
+  #panel h2{font-family:var(--ff-display); font-size:24px; margin:8px 0 3px; font-weight:600; line-height:1.2}
+  #panel .meta{font-size:12.5px; color:var(--gray); font-style:italic; margin-bottom:6px}
+  #panel .lugar{font-family:var(--ff-mono); font-size:10.5px; letter-spacing:.5px; margin-bottom:12px}
+  #panel .lugar.pais{color:var(--green-l)} #panel .lugar.ciudad{color:var(--orange)}
+  #panel .tags{display:flex; flex-wrap:wrap; gap:6px; margin:10px 0 12px}
+  #panel .tag{font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:.8px; padding:4px 10px; border-radius:11px; color:var(--bg-deep); cursor:pointer}
+  #panel .aporte{font-size:14px; line-height:1.55; margin:0 0 14px}
+  #panel .rel h3{font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1.4px; margin:14px 0 6px; border-top:1px solid var(--line); padding-top:12px}
+  #panel .rel h3.dir{color:var(--orange)} #panel .rel h3.ind{color:var(--gray)}
+  #panel .rel a{display:block; font-size:13px; color:var(--cream); text-decoration:none; padding:5px 0; cursor:pointer; border-bottom:1px dotted var(--line)}
+  #panel .rel a:hover{color:var(--orange)}
+  #panel .rel a .rtitle{color:var(--cream)}
+  #panel .rel a .r{color:var(--gray); font-style:italic; font-size:11px}
+  #panel .rel a .via{color:var(--green-l); font-style:italic; font-size:11px}
+  #panel .rel a .fu{display:block; font-size:11px; line-height:1.4; color:var(--gray); margin-top:3px; font-style:italic}
+  #panel .rel a .fu.pc{color:var(--red); opacity:.85}
+  #panel .cita{margin-top:16px; padding-top:12px; border-top:1px solid var(--line)}
+  #panel .cita .citalbl{display:block; font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1.4px; color:var(--gray); margin-bottom:6px}
+  #panel .cita .apa{font-size:12px; line-height:1.5; color:var(--cream); background:rgba(201,162,77,.06); border-left:2px solid var(--gold); padding:8px 10px; border-radius:2px; margin-bottom:8px}
+  #panel .cita .citarow{display:flex; align-items:center; gap:6px; flex-wrap:wrap}
+  #panel .cita code{font-family:var(--ff-mono); font-size:10px; color:var(--gold); word-break:break-all; background:rgba(201,162,77,.08); padding:2px 5px; border-radius:2px; flex:1 1 60%}
+  #panel .cita button{font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1px; padding:4px 9px; border:1px solid var(--line); background:transparent; color:var(--gray); cursor:pointer; border-radius:2px}
+  #panel .cita button:hover{color:var(--cream); border-color:var(--gold)}
+  #legend{position:absolute; left:16px; bottom:14px; background:rgba(10,11,8,.86); backdrop-filter:blur(3px); border:1px solid var(--line); border-radius:3px; padding:12px 15px; font-family:var(--ff-mono); font-size:10px; letter-spacing:.4px; color:var(--gray); max-width:370px}
+  #legend .lgtitle{font-size:8.5px; text-transform:uppercase; letter-spacing:1.4px; color:var(--gray); opacity:.7; margin-bottom:8px}
+  #legend .grid{display:grid; grid-template-columns:1fr 1fr; gap:5px 16px}
+  #legend .li{display:flex; align-items:center; gap:7px; cursor:pointer; padding:2px 4px; margin:-2px -4px; border-radius:3px; transition:background .15s}
+  #legend .li:hover{background:rgba(242,234,216,.06)}
+  #legend .li.sel{background:rgba(240,122,22,.15)}
+  #legend .sw{width:9px; height:9px; border-radius:50%; flex:none}
+  #legend .keys{display:flex; gap:14px; margin-top:9px; padding-top:9px; border-top:1px solid var(--line); font-size:9px; color:var(--gray); flex-wrap:wrap}
+  #legend .keys span{display:flex; align-items:center; gap:5px}
+  #legend .kob{width:9px;height:9px;border-radius:50%;background:var(--gray)}
+  #legend .kma{width:9px;height:9px;border-radius:50%;border:2px solid var(--gray);background:transparent}
+  #legend .kre{width:15px;height:0;border-top:2px solid var(--orange)}
+  #legend .kdi{width:15px;height:0;border-top:2px dashed var(--red)}
+  #legend .kfr{color:var(--cream);font-size:10px;line-height:1}
+  #legend .mlink{margin-top:9px;padding-top:9px;border-top:1px solid var(--line)}
+  #legend .mlink a{color:var(--orange);cursor:pointer;text-decoration:none;font-size:9.5px;letter-spacing:.6px}
+  #legend .mlink a:hover{color:var(--cream)}
+  #marco{position:absolute; inset:0; background:rgba(5,6,4,.95); backdrop-filter:blur(5px); z-index:22; display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity .35s}
+  #marco.show{opacity:1; pointer-events:auto}
+  #marco .mbox{max-width:760px; max-height:86%; overflow:auto; padding:34px 40px; background:var(--panel); border:1px solid var(--line); border-radius:4px; box-shadow:0 20px 60px rgba(0,0,0,.6)}
+  #marco .mclose{float:right; cursor:pointer; color:var(--gray); font-size:24px; border:0; background:none; line-height:1}
+  #marco h2{font-family:var(--ff-display); font-size:30px; font-weight:700; margin:0 0 3px}
+  #marco .msub{font-family:var(--ff-mono); font-size:9.5px; text-transform:uppercase; letter-spacing:2px; color:var(--red); margin-bottom:22px}
+  #marco .c{margin-bottom:19px; padding-left:16px; border-left:2px solid var(--line)}
+  #marco .c h3{font-family:var(--ff-display); font-size:20px; margin:0 0 3px; font-weight:600; color:var(--cream)}
+  #marco .c .who{font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1.2px; color:var(--orange); margin-bottom:5px}
+  #marco .c p{font-size:13.5px; line-height:1.55; color:var(--gray); margin:0}
+  #marco .c p b{color:var(--cream); font-weight:500}
+  #hint{position:absolute; left:16px; top:14px; font-size:12px; color:var(--gray); font-style:italic; max-width:240px; line-height:1.5}
+  #guion{position:absolute; left:50%; top:16px; transform:translateX(-50%) translateY(-14px); width:min(580px,74vw); background:rgba(17,19,13,.95); border:1px solid var(--line); border-left-width:3px; border-radius:3px; padding:13px 22px; opacity:0; pointer-events:none; transition:opacity .3s, transform .3s;}
+  #guion.show{opacity:1; transform:translateX(-50%) translateY(0)}
+  #guion .gf{font-family:var(--ff-mono); font-size:10px; text-transform:uppercase; letter-spacing:1.6px; margin-bottom:5px}
+  #guion .gt{font-family:var(--ff-display); font-size:17px; line-height:1.4; color:var(--cream)}
+  .credit{position:absolute; right:16px; bottom:12px; font-family:var(--ff-mono); font-size:9px; letter-spacing:.8px; text-transform:uppercase; color:var(--gray); opacity:.5; text-align:right; line-height:1.7}
+  #tabla{position:absolute; inset:0; overflow:auto; padding:20px 26px 60px; display:none}
+  #tabla.show{display:block}
+  #tabla .tcap{font-family:var(--ff-display); font-size:22px; color:var(--cream); margin:2px 0 4px}
+  #tabla .tsub{font-family:var(--ff-mono); font-size:10px; text-transform:uppercase; letter-spacing:1.4px; color:var(--gray); margin-bottom:16px}
+  #tabla table{border-collapse:collapse; width:100%; font-size:13.5px}
+  #tabla th{font-family:var(--ff-mono); font-size:9.5px; text-transform:uppercase; letter-spacing:1px; text-align:left; color:var(--gray); border-bottom:2px solid var(--line); padding:8px 12px; position:sticky; top:0; background:var(--bg-deep); cursor:pointer; user-select:none}
+  #tabla th:hover{color:var(--cream)}
+  #tabla td{padding:9px 12px; border-bottom:1px solid var(--line); vertical-align:top; color:var(--cream)}
+  #tabla tbody tr{cursor:pointer; transition:background .12s}
+  #tabla tbody tr:hover{background:rgba(242,234,216,.05)}
+  #tabla td.tit a{color:var(--cream); text-decoration:none; font-weight:500}
+  #tabla td.tit a:hover{color:var(--gold); text-decoration:underline}
+</style>
 </head>
 <body>
-  <div class="fallback-bg" aria-hidden="true"></div>
-  <div class="vignette" aria-hidden="true"></div>
-
-  <div class="page-content">
-    <nav class="site-nav" aria-label="Navegación principal">
-      <a href="../index.html" class="nav-brand">
-        <img src="../assets/logo-pensamiento-caribe.png" alt="Grupo de Investigación Pensamiento Caribe" onerror="this.style.display='none'">
-      </a>
-      <div class="nav-links">
-        <div class="nav-group">
-          <button class="nav-group-label" type="button" aria-haspopup="true" aria-expanded="false">Investigación <span class="nav-caret"></span></button>
-          <div class="nav-dropdown">
-            <div class="nav-dropdown-panel">
-              <a href="../manifiesto/antropologia-del-caribe-colombiano.html">Manifiesto</a>
-              <a href="../index.html#lineas">Líneas</a>
-              <a href="../index.html#proyectos">Proyectos</a>
-              <a href="../index.html#publicaciones">Publicaciones</a>
-            </div>
-          </div>
-        </div>
-        <div class="nav-group">
-          <button class="nav-group-label" type="button" aria-haspopup="true" aria-expanded="false">Comunidad <span class="nav-caret"></span></button>
-          <div class="nav-dropdown">
-            <div class="nav-dropdown-panel">
-              <a href="../index.html#semillero">Semillero</a>
-              <a href="../index.html#equipo">Equipo</a>
-              <a href="../index.html#redes">Redes</a>
-            </div>
-          </div>
-        </div>
-        <div class="nav-group">
-          <button class="nav-group-label" type="button" aria-haspopup="true" aria-expanded="false">Agenda <span class="nav-caret"></span></button>
-          <div class="nav-dropdown">
-            <div class="nav-dropdown-panel">
-              <a href="../index.html#eventos">Eventos</a>
-              <a href="../index.html#semana-antirracista">Semana antirracista</a>
-              <a href="../index.html#efemerides">Efemérides</a>
-            </div>
-          </div>
-        </div>
-        <div class="nav-group">
-          <button class="nav-group-label" type="button" aria-haspopup="true" aria-expanded="false">Medios <span class="nav-caret"></span></button>
-          <div class="nav-dropdown">
-            <div class="nav-dropdown-panel">
-              <a href="../index.html#noticias">Noticias</a>
-              <a href="../index.html#medios">Medios</a>
-            </div>
-          </div>
-        </div>
-        <a href="../index.html#contacto" class="nav-single">Contacto</a>
-      </div>
-      <button class="nav-toggle" aria-label="Abrir menú">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </nav>
-
-    <div class="nav-mobile-overlay" aria-label="Menú móvil">
-      <div class="nav-m-group">
-        <button class="nav-m-label" type="button" aria-expanded="false">Investigación <span class="nav-caret"></span></button>
-        <div class="nav-m-sub">
-          <a href="../manifiesto/antropologia-del-caribe-colombiano.html">Manifiesto</a>
-          <a href="../index.html#lineas">Líneas</a>
-          <a href="../index.html#proyectos">Proyectos</a>
-          <a href="../index.html#publicaciones">Publicaciones</a>
-        </div>
-      </div>
-      <div class="nav-m-group">
-        <button class="nav-m-label" type="button" aria-expanded="false">Comunidad <span class="nav-caret"></span></button>
-        <div class="nav-m-sub">
-          <a href="../index.html#semillero">Semillero</a>
-          <a href="../index.html#equipo">Equipo</a>
-          <a href="../index.html#redes">Redes</a>
-        </div>
-      </div>
-      <div class="nav-m-group">
-        <button class="nav-m-label" type="button" aria-expanded="false">Agenda <span class="nav-caret"></span></button>
-        <div class="nav-m-sub">
-          <a href="../index.html#eventos">Eventos</a>
-          <a href="../index.html#semana-antirracista">Semana antirracista</a>
-          <a href="../index.html#efemerides">Efemérides</a>
-        </div>
-      </div>
-      <div class="nav-m-group">
-        <button class="nav-m-label" type="button" aria-expanded="false">Medios <span class="nav-caret"></span></button>
-        <div class="nav-m-sub">
-          <a href="../index.html#noticias">Noticias</a>
-          <a href="../index.html#medios">Medios</a>
-        </div>
-      </div>
-      <a href="../index.html#contacto" class="nav-m-single">Contacto</a>
-    </div>
-
-    <main class="proyecto-page">
-      <header class="proyecto-hero">
-        <a href="../index.html#proyectos" class="proyecto-breadcrumb">&larr; Proyectos</a>
-        <p class="proyecto-cat">Atlas relacional interactivo<span class="proyecto-status">Corpus en crecimiento</span></p>
-        <h1 class="proyecto-title">Con el agua de por medio, <em>atlas para una antropología archipiélica</em></h1>
-        <p class="proyecto-lede">Un atlas que no organiza el Gran Caribe por países sino por fenómenos que los atraviesan: colonialidad, postplantación, capitalismo racial, catástrofes climáticas, soberanías, violencias, memoria, cimarronaje, creolización, cuerpo y erótica. Cada obra es un nodo; cada relación entre dos obras está tipificada como resonancia o disonancia y cita su propia fuente, abierta a corrección.</p>
-
-        <div class="proyecto-meta-bar">
-          <div class="proyecto-meta-item"><span class="proyecto-meta-label">Dirección</span><span class="proyecto-meta-value">Roberto Almanza Hernández</span></div><div class="proyecto-meta-item"><span class="proyecto-meta-label">Institución</span><span class="proyecto-meta-value">Universidad del Magdalena</span></div><div class="proyecto-meta-item"><span class="proyecto-meta-label">Territorio</span><span class="proyecto-meta-value">Gran Caribe archipiélico</span></div><div class="proyecto-meta-item"><span class="proyecto-meta-label">Método</span><span class="proyecto-meta-value">Antropología archipiélica</span></div><div class="proyecto-meta-item"><span class="proyecto-meta-label">Corpus</span><span class="proyecto-meta-value">117 obras · 211 relaciones</span></div>
-        </div>
-      </header>
-
-      <!-- ════════ ATLAS ARCHIPIÉLICO (canvas · vista geográfica) ════════ -->
-      <section class="section section--wide" id="atlas-archipielico" style="padding-top: 0;">
-        <div class="atlasarch-controls">
-          <div class="atlasarch-cgroup">
-            <span class="atlasarch-clabel">Vista</span>
-            <div id="atlasarch-vista" class="atlasarch-seg">
-              <button type="button" data-v="corriente" class="is-on">Corriente</button>
-              <button type="button" data-v="constelacion">Constelación</button>
-              <button type="button" data-v="tabla">Tabla</button>
-            </div>
-          </div>
-          <div class="atlasarch-cgroup">
-            <span class="atlasarch-clabel">Capa</span>
-            <div id="atlasarch-capa" class="atlasarch-seg">
-              <button type="button" data-v="ambas" class="is-on">Ambas</button>
-              <button type="button" data-v="investigacion">Investigación</button>
-              <button type="button" data-v="etnografica">Etnográfica</button>
-            </div>
-          </div>
-          <div class="atlasarch-cgroup">
-            <span class="atlasarch-clabel">Marea</span>
-            <div id="atlasarch-marea" class="atlasarch-seg">
-              <button type="button" data-v="flujo" class="is-on">Flujo</button>
-              <button type="button" data-v="quieta">Quieta</button>
-            </div>
-          </div>
-          <div class="atlasarch-cgroup atlasarch-cgroup--end">
-            <button id="atlasarch-marco-btn" type="button" class="atlasarch-cbtn">Marco conceptual</button>
-            <button id="atlasarch-fullscreen" type="button" class="atlasarch-cbtn">Pantalla completa</button>
-          </div>
-        </div>
-
-        <div class="atlasarch-wrap reveal">
-          <aside class="atlasarch-legend">
-            <input id="atlasarch-search" type="search" placeholder="Buscar obra o autor…" autocomplete="off">
-            <h4>Fenómenos <span class="atlasarch-h4-hint">clic para iluminar</span></h4>
-            <div id="atlasarch-fen-list"></div>
-            <button id="atlasarch-reset-fen">quitar resaltado</button>
-            <h4 class="is-second">Cómo leer el mapa</h4>
-            <div class="atlasarch-conv">
-              <div class="atlasarch-conv-row"><span class="atlasarch-conv-line res" aria-hidden="true"></span><span class="atlasarch-conv-txt"><b>Resonancia</b> — dos obras fluyen juntas</span></div>
-              <div class="atlasarch-conv-row"><span class="atlasarch-conv-line dis" aria-hidden="true"></span><span class="atlasarch-conv-txt"><b>Disonancia</b> — fricción epistémica</span></div>
-              <div class="atlasarch-conv-row"><span class="atlasarch-conv-line faint" aria-hidden="true"></span><span class="atlasarch-conv-txt">Corriente tenue — fuente <b>por corroborar</b></span></div>
-              <div class="atlasarch-conv-row"><span class="atlasarch-conv-nodes" aria-hidden="true"><i></i><i></i></span><span class="atlasarch-conv-txt">Nodo mayor — sostiene más relaciones</span></div>
-              <div class="atlasarch-conv-row"><span class="atlasarch-conv-ring" aria-hidden="true"></span><span class="atlasarch-conv-txt">Anillo hueco — material <b>etnográfico</b></span></div>
-              <div class="atlasarch-conv-row"><span class="atlasarch-conv-tether" aria-hidden="true"></span><span class="atlasarch-conv-txt">Hilo dorado — ciudad en tensión con su centro no caribeño</span></div>
-            </div>
-            <h4 class="is-second">Corpus</h4>
-            <p class="atlasarch-stat-line" id="atlasarch-stat-obras"></p>
-            <p class="atlasarch-stat-line" id="atlasarch-stat-rel"></p>
-            <p class="atlasarch-stat-line" id="atlasarch-stat-corrob"></p>
-          </aside>
-
-          <div class="atlasarch-graph-col">
-            <div id="atlasarch-cy" role="application" aria-label="Atlas archipiélico del Gran Caribe: mapa de la cuenca con obras conectadas por corrientes de resonancia y disonancia">
-              <svg id="atlasarch-svg" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid meet" style="width:100%;height:100%;display:block"></svg>
-              <div id="atlasarch-caption" aria-live="polite"></div>
-              <div id="atlasarch-tabla"></div>
-              <div id="atlasarch-panel">
-                <button id="atlasarch-panel-close" aria-label="Cerrar">×</button>
-                <div id="atlasarch-panel-body"></div>
-              </div>
-
-              <!-- BASE: Marco conceptual -->
-              <div id="atlasarch-marco">
-                <button id="atlasarch-marco-close" aria-label="Cerrar">×</button>
-                <div class="atlasarch-marco-inner">
-                  <p class="atlasarch-marco-eyebrow">Marco conceptual del mapa</p>
-                  <h3>Por qué un atlas archipiélico y no un mapa nacional</h3>
-                  <p class="atlasarch-marco-lede">La cuenca vista desde el mar. Las islas aparecen por su país; las ciudades del borde continental —Cartagena, Barranquilla, Santa Marta, Palenque, La Guajira, San Andrés, Veracruz, Costa Chica, Nueva Orleans— aparecen por su ciudad, en diálogo y tensión con un centro que no es caribeño. El Caribe colombiano se piensa desde una orilla intersticial: entre la lógica nacional que lo volvió periferia del centro andino y una antropología del Gran Caribe donde el mar conecta en vez de separar.</p>
-                  <div class="atlasarch-marco-authors">
-                    <div class="atlasarch-marco-card">
-                      <h4>Kamau Brathwaite</h4>
-                      <p>La marealéctica: pensar con la marea y no con la línea del tiempo. «La unidad es submarina». Por eso las corrientes del atlas suben y bajan en lugar de avanzar.</p>
-                    </div>
-                    <div class="atlasarch-marco-card">
-                      <h4>Derek Walcott</h4>
-                      <p>«El mar es historia». El archipiélago como fragmentos de una memoria épica que el continente no archiva: la cuenca guarda lo que la nación borró.</p>
-                    </div>
-                    <div class="atlasarch-marco-card">
-                      <h4>Ernesto Bassi</h4>
-                      <p>Un territorio acuoso. El geocuerpo andino-atlántico borró el mar y volvió periferia al Caribe colombiano. El atlas invierte el gesto y lo devuelve al centro.</p>
-                    </div>
-                    <div class="atlasarch-marco-card">
-                      <h4>Michael Monahan</h4>
-                      <p>La creolización como roce productivo entre saberes, no como fusión armónica. Nombra la fricción epistémica: las disonancias que el mapa no disuelve, marca.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div id="atlasarch-hint">clic en un fenómeno para iluminar sus obras y lugares · clic en una obra para su ficha</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <article class="proyecto-cuerpo">
-        <h2>Sobre este atlas</h2>
-<p>El Caribe se ha pensado casi siempre desde la nación que lo fragmenta o desde el área cultural que lo unifica por fuera. Sidney Mintz definió el Caribe como área sociocultural por una historia compartida de plantación esclavista y capitalismo agrario de ultramar, y ese gesto fundó el campo. Este atlas hereda esa pregunta y la desplaza: propone que la unidad de análisis no es el lugar que aloja un fenómeno, sino el fenómeno-relación que atraviesa la cuenca entera sin detenerse en sus fronteras. Trouillot ya lo había dicho de otro modo: el Caribe es una frontera abierta que desborda las categorías con que la antropología nacional intenta contenerlo. Aquí esa apertura se vuelve estructura de datos: cada nodo es una obra, cada arco es una relación argumentada entre dos obras. La vista Corriente devuelve esas obras al mapa de la cuenca vista desde el mar: las islas aparecen por su país y las ciudades del borde continental —Cartagena, Barranquilla, Santa Marta, Palenque, La Guajira, San Andrés, Veracruz, Costa Chica, Nueva Orleans— por su ciudad, en tensión con un centro que no es caribeño. Es la lección de Ernesto Bassi: el geocuerpo andino-atlántico borró el mar y volvió periferia al Caribe colombiano; el atlas invierte el gesto. La vista Constelación suelta las obras de la geografía y las agrupa por su cercanía argumentativa. El Caribe colombiano se lee entonces desde una orilla intersticial, ni continental ni plenamente insular, de espaldas al centro andino y de cara al mar.</p>
-
-        <h2>Diez fenómenos, no diez naciones</h2>
-<p>El corpus se organiza en diez categorías transversales. Cada una agrupa obras que piensan el mismo problema desde distintas orillas lingüísticas del Caribe (hispana, anglófona, francófona, neerlandesa) y distintos países, precisamente para que la comparación ocurra por argumento y no por geografía.</p>
-<dl class="apa-referencias" style="display:block;">
-<p><strong>Colonialidad.</strong> La herida que funda la región. Sigue ordenando saber, cuerpo y territorio mucho después de que se firmaron las actas de independencia. Trouillot la lee desde el silencio que la historia le impuso a Haití.</p>
-<p><strong>Postplantación.</strong> La plantación no terminó: mutó. Del ingenio al resort, la misma lógica de trabajo, raza y tierra sigue organizando la vida caribeña mucho después de la abolición.</p>
-<p><strong>Capitalismo racial.</strong> El capital nunca fue ciego al color. Robinson lo mostró: la acumulación se montó sobre la diferencia racial. La deuda que Francia le cobró a Haití es su cifra más brutal.</p>
-<p><strong>Catástrofes climáticas.</strong> El huracán es política antes que naturaleza. Revela de golpe quién resulta desechable. María, en Puerto Rico, desnudó la relación colonial mejor que cualquier tratado.</p>
-<p><strong>Soberanías.</strong> El eje más frágil del archivo, y por eso el más urgente. Bonilla lo formula sin rodeos: ¿qué significa libertad cuando la nación soberana dejó de ser la respuesta?</p>
-<p><strong>Violencias.</strong> De la trata al régimen carcelario corre una misma línea: la muerte administrada. El racismo funciona aquí como estructura que reparte vida y muerte, mucho antes de manifestarse como prejuicio individual.</p>
-<p><strong>Memoria y espiritualidad.</strong> Contra el silenciamiento, el archivo vivo. El monte, el tambor y el rito guardan lo que el Estado borra. La espiritualidad funciona como una forma de recordar.</p>
-<p><strong>Cimarronaje / fuga.</strong> La fuga hecha filosofía. Huir de la plantación fue también fundar mundo por fuera de ella. Roberts la piensa como la libertad misma, ya realizada en el acto de huir.</p>
-<p><strong>Creolización / oralitura.</strong> Lo nuevo que brota del encuentro forzado. Glissant lo llama Relación: una creación impredecible que convierte al Caribe en lengua propia.</p>
-<p><strong>Cuerpo, género y erótica.</strong> El cuerpo caribeño como campo de disputa y de goce. Del castigo esclavista a la erótica insurgente, el género y el deseo organizan a la vez el poder y la libertad. Tinsley y Alexander leen el placer y lo sagrado como formas de soberanía.</p>
-</dl>
-
-        <h2>Resonancia y disonancia: el marco conceptual</h2>
-<p>Cada relación entre dos obras se tipifica, no se da por sentada. Cuando dos textos se refuerzan, se citan o argumentan en la misma dirección, la relación es de <strong>resonancia</strong>. Cuando dos textos leen el mismo fenómeno desde marcos que friccionan (distinta tradición lingüística, distinta escuela, distinta conclusión), la relación es de <strong>disonancia</strong>, y esa fricción no se disuelve: se marca. El nombre viene de Michael Monahan, para quien la creolización no es fusión armónica sino roce productivo entre saberes. La forma misma del atlas intenta pensar con Kamau Brathwaite: no una historia lineal de causa y consecuencia, sino una temporalidad de marea, de vaivén, donde una obra de 1938 puede resonar hoy con una de 2025 sin que medie continuidad cronológica. Por eso el grafo no tiene tiempo en el eje horizontal: tiene cercanía argumentativa.</p>
-
-        <h2>Estado del corpus</h2>
-<p>A la fecha de esta versión, el atlas reúne <strong>117 obras</strong> y <strong>211 relaciones</strong> entre ellas, sin relaciones rotas: todo arco conecta dos obras que existen en el corpus. De esas 211 relaciones, 198 son de resonancia y 13 de disonancia. La cifra que este atlas no esconde es que el 49% de las relaciones (104 de 211) todavía están marcadas como <em>por corroborar</em>: la conexión se propuso porque hay razón argumentable para proponerla, pero falta verificar la cita directa, el archivo o la fuente secundaria que la sostenga con rigor. Esa proporción no es una falla de diseño. Es la fotografía honesta de un corpus construido obra por obra, ronda de siembra por ronda de siembra, donde cada libro se descarga, se verifica por su propio texto (nunca por el nombre del archivo) y se conecta con lo que ya existe. La sistematización bibliográfica —hoy hecha a mano, todavía sin un flujo completo desde Zotero— es, junto con la corroboración de esas 104 relaciones pendientes, el trabajo que este atlas necesita para crecer al ritmo de su propia ambición.</p>
-
-        <h2>Cómo leer el atlas</h2>
-<p>El atlas ofrece tres vistas de un mismo corpus. La vista <strong>Corriente</strong> lo despliega sobre el mapa de la cuenca: cada obra se sitúa en su lugar geográfico, las islas por su país y las ciudades continentales por su ciudad, y un hilo dorado tiende la tensión de cada ciudad con su centro no caribeño. La vista <strong>Constelación</strong> reordena las obras por fenómeno, en racimos, para leerlas por argumento y no por costa. La vista <strong>Tabla</strong> las lista para buscar y ordenar. Cada obra es un nodo: su color es su primer fenómeno y su tamaño crece con las relaciones que sostiene; el anillo hueco distingue el material etnográfico del Caribe colombiano del resto de la investigación, que la <em>capa</em> permite aislar. Las corrientes de resonancia fluyen turquesa; las de disonancia, la fricción epistémica, corren rojas y a contracorriente; su opacidad marca el estado de corroboración, más viva si la fuente está verificada y más tenue si sigue pendiente. La <em>marea</em> anima esas corrientes o las detiene. Un clic sobre una obra abre su ficha (autor, año, lugar, tradición lingüística, el apunte que motivó su inclusión) y todas sus relaciones con la fuente que las respalda; la leyenda filtra por fenómeno y el buscador ubica una obra o un autor. El botón <strong>Marco conceptual</strong> abre la explicación del mapa con sus autores centrales.</p>
-
-        <h2>Cómo citar</h2>
-<p>Los datos de este atlas están depositados en Zenodo con DOI permanente: <a href="https://doi.org/10.5281/zenodo.21483569" target="_blank" rel="noopener">10.5281/zenodo.21483569</a>. Cita sugerida: Almanza Hernández, Roberto (dir.), <em>Con el agua de por medio: atlas para una antropología archipiélica</em>, corpus bibliográfico y relacional, versión 1.0, Grupo de Investigación Pensamiento Caribe, Universidad del Magdalena, 2026, DOI: 10.5281/zenodo.21483569. El corpus se versiona: cada ampliación sustantiva se archiva de nuevo en Zenodo y actualiza esta página.</p>
-      </article>
-
-      <nav class="proyecto-footer-nav" aria-label="Navegación entre proyectos">
-        <a href="mas-ramas-que-raices.html" class="btn btn--secondary">&larr; Proyecto anterior</a>
-        <a href="../index.html#proyectos" class="btn btn--primary">Ver todos los proyectos</a>
-        <a href="negrura-blanquitud-monumental.html" class="btn btn--secondary">Proyecto siguiente &rarr;</a>
-      </nav>
-    </main>
+<header>
+  <div class="t">
+    <h1>Con el agua de por medio</h1>
+    <div class="sub">Atlas para una antropología archipiélica</div>
   </div>
-  <script src="../data/agua-de-por-medio/datos-atlas.js"></script>
-  <script src="../js/atlas-archipielico.js"></script>
-  <script src="../js/interactions.js"></script>
+  <div class="controls">
+    <div class="grp"><label>Vista</label><div class="seg vista" id="viewSeg"><button data-v="corriente" class="on">Corriente</button><button data-v="constelacion">Constelación</button><button data-v="tabla">Tabla</button></div></div>
+    <div class="grp"><label>Capa</label><div class="seg capa" id="layerSeg"><button data-l="ambas" class="on">Ambas</button><button data-l="obra">Investigación</button><button data-l="manifestacion">Etnográfica</button></div></div>
+    <div class="grp"><label>Marea</label><div class="seg tide" id="tideSeg"><button data-tide="on" class="on">Flujo</button><button data-tide="off">Quieta</button></div></div>
+    <div class="grp"><label>Base</label><div class="seg base"><button id="marcoBtn">Marco conceptual</button></div></div>
+    <div class="grp"><label>Modo</label><div class="seg base"><button id="presBtn">Pantalla completa</button></div></div>
+  </div>
+</header>
+<main>
+  <svg id="stage" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid meet"></svg>
+  <section id="tabla" aria-label="Catálogo del atlas en tabla accesible"></section>
+  <div id="tip"></div>
+  <div id="hint"></div>
+  <div id="guion"><div class="gf"></div><div class="gt"></div></div>
+  <div id="legend"></div>
+  <div class="credit">Centro de Pensamiento Caribe<br>siembra desde el archivo · boceto de investigación<br><a href="https://doi.org/10.5281/zenodo.21483569" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none">DOI 10.5281/zenodo.21483569</a></div>
+  <aside id="panel"></aside>
+  <div id="marco"><div class="mbox">
+    <button class="mclose">×</button>
+    <h2>Marco conceptual</h2>
+    <div class="msub">cómo piensa este atlas · y cómo la forma encarna la teoría</div>
+    <div class="c"><div class="who">Premisa</div><h3>Antropología archipiélica</h3><p>Contra la antropología continental y nacional, que toma el territorio delimitado como contenedor, aquí la unidad de análisis es el <b>fenómeno que atraviesa</b> la cuenca, no el lugar que lo aloja. Cartagena se entiende mejor junto a Nueva Orleans y Paramaribo que junto a Bogotá. Por eso el mapa premia el eje marítimo, horizontal, y no deja leer ninguna orilla como totalidad autosuficiente.</p></div>
+    <div class="c"><div class="who">Kamau Brathwaite</div><h3>Conexión submarina</h3><p>«The unity is submarine»: lo que une a las islas corre por debajo de la superficie, en la raíz común del agua. En el atlas, <b>las corrientes de relación cumplen esa función</b>: son la estructura del mapa, no su decoración. La tierra separa; el mar, por debajo, conecta.</p></div>
+    <div class="c"><div class="who">Kamau Brathwaite</div><h3>Marealéctica (tidalectics)</h3><p>Frente a la dialéctica que avanza hacia una síntesis, la marealéctica va y viene como la marea: <b>avance y retirada, sin progreso lineal</b>. La interfaz respira siguiendo ese ritmo; nada se resuelve, todo vuelve. El tiempo caribeño se comporta como el agua: sube, se retira, vuelve a subir.</p></div>
+    <div class="c"><div class="who">Resonancia y disonancia</div><h3>El diálogo no siempre es acuerdo</h3><p>Un vínculo entre obras puede ser armónico o puede ser un choque. Las corrientes <b style="color:var(--orange)">doradas resuenan</b>: una idea continúa, amplifica o hereda a otra. Las <b style="color:var(--red)">rojas disienten</b>: una tensiona, critica o contradice a la otra. El pensamiento caribeño se hace de eco y de fricción por igual, y el mapa distingue las dos cosas.</p></div>
+    <div class="c"><div class="who">Michael Monahan</div><h3>Fricción epistémica</h3><p>Para Monahan, la creolización ocurre como <b>roce productivo entre saberes</b>, no como fusión suave. Donde una corriente cruza entre tradiciones lingüísticas distintas (anglófona, francófona, hispana, neerlandesa), ese cruce que la academia mantuvo separado queda marcado en el mapa con un signo de fricción. El pensamiento archipiélico ocurre justo ahí, en el roce entre lenguas imperiales.</p></div>
+  </div></div>
+</main>
+<script src="../data/agua-de-por-medio/datos-atlas.js"></script>
+<script>
+if(typeof ATLAS==='undefined'){ document.body.innerHTML='<div style="color:#f2ead8;font-family:sans-serif;padding:48px;line-height:1.6">No se pudo cargar <b>datos-atlas.js</b>.<br>Colocá ese archivo en la misma carpeta que este HTML y volvé a abrirlo.</div>'; throw new Error('ATLAS ausente'); }
+const FEN = ATLAS.fenomenos;
+const L = ATLAS.lugares;
+const N = ATLAS.obras;
+const RELS = ATLAS.relaciones;
+const R = RELS.map(r=>[r.a,r.b]);
+const relDe=(a,b)=>RELS.find(x=>(x.a===a&&x.b===b)||(x.a===b&&x.b===a));
+const isDiso=(a,b)=>{ const r=relDe(a,b); return !!r && r.tipo==='disonancia'; };
+const fuenteDe=(a,b)=>{ const r=relDe(a,b); return r?(r.fuente||''):''; };
+const col = f => FEN[f].c;
+
+function tradCode(n){ const s=(n.tr||"").toLowerCase(); if(s.includes("neerland"))return"neer"; if(s.includes("francófono"))return"fra"; if(s.includes("anglófono"))return"ang"; if(s.includes("hispano"))return"his"; return"comp"; }
+
+const ADJ={};
+R.forEach(([a,b])=>{ (ADJ[a]=ADJ[a]||[]).push(b); (ADJ[b]=ADJ[b]||[]).push(a); });
+function neighbors(id){ const direct=new Set(ADJ[id]||[]); const indirect=new Set();
+  direct.forEach(d=>(ADJ[d]||[]).forEach(x=>{ if(x!==id && !direct.has(x)) indirect.add(x); })); return {direct,indirect}; }
+
+const VW=1200, VH=640, PAD=95;
+const LNG0=-98, LNG1=-53, LAT0=2, LAT1=33;
+const px = lng => PAD + (lng-LNG0)/(LNG1-LNG0)*(VW-2*PAD);
+const py = lat => PAD + (LAT1-lat)/(LAT1-LAT0)*(VH-2*PAD);
+
+const svg=document.getElementById('stage'); const tip=document.getElementById('tip');
+const NS="http://www.w3.org/2000/svg";
+const el=(n,at={})=>{const e=document.createElementNS(NS,n);for(const k in at)e.setAttribute(k,at[k]);return e;};
+const byId=id=>N.find(n=>n.id===id);
+const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+let state={view:"corriente",layer:"ambas",active:null, focusFen:null, tide:!reduced};
+let VNODES=[], EDGES=[], CLUSTERS=[]; let hoverNode=null;
+let vpt={k:1,tx:0,ty:0}; let vp=null;
+function applyVP(){ if(vp) vp.setAttribute('transform',`translate(${vpt.tx},${vpt.ty}) scale(${vpt.k})`); }
+
+const GOLD = 2.399963;
+function computeBase(){
+  CLUSTERS=[];
+  if(state.view==="corriente"){
+    const groups={}; N.forEach(n=>{(groups[n.l]=groups[n.l]||[]).push(n)});
+    Object.values(groups).forEach(arr=>{
+      const g=L[arr[0].l]; const bx=px(g[1]), by=py(g[0]);
+      arr.forEach((n,i)=>{ const rr = arr.length<=1?0 : 10.5*Math.sqrt(i+0.5); const ang=i*GOLD;
+        n._bx=bx+Math.cos(ang)*rr; n._by=by+Math.sin(ang)*rr;});
+    });
+  } else {
+    const keys=Object.keys(FEN); const cx=VW/2, cy=VH/2; const Rk=270;
+    keys.forEach((f,i)=>{
+      const ang=(i/keys.length)*Math.PI*2 - Math.PI/2;
+      const hx=cx+Math.cos(ang)*Rk, hy=cy+Math.sin(ang)*Rk*0.85;
+      const arr=N.filter(n=>n.f[0]===f);
+      arr.forEach((n,j)=>{ const ring = arr.length<=1?0 : 13*Math.sqrt(j+0.5);
+        const a2 = j*GOLD;
+        n._bx=hx+Math.cos(a2)*ring; n._by=hy+Math.sin(a2)*ring; });
+      CLUSTERS.push({f, x:cx+Math.cos(ang)*(Rk+62), y:cy+Math.sin(ang)*Rk*0.85 + Math.sin(ang)*44});
+    });
+  }
+  N.forEach(n=>{n._x=n._bx; n._y=n._by;});
+}
+function visible(n){ return state.layer==="ambas" || n.k===state.layer; }
+
+function render(){
+  svg.innerHTML=""; VNODES=[]; EDGES=[];
+  vp=el("g",{id:"vp"}); svg.appendChild(vp); applyVP();
+  computeBase();
+  const hint=document.getElementById('hint');
+  if(state.view==="corriente"){ drawBasin(); hint.textContent="La cuenca vista desde el mar. Islas por su país; puntos continentales (naranja) por su ciudad, regiones en tensión con un centro no caribeño. Pasá el cursor sobre un punto para leerlo."; }
+  else hint.textContent="Constelación de los fenómenos que atraviesan la cuenca. Rueda: zoom · arrastra: desplaza · doble clic: reencuadra. Pasá el cursor sobre un punto para leerlo.";
+  const eg=el("g"); vp.appendChild(eg);
+  R.forEach(([a,b],i)=>{ const na=byId(a), nb=byId(b); if(!na||!nb||!visible(na)||!visible(nb))return;
+    const type=isDiso(a,b)?"disonancia":"resonancia"; const friction=tradCode(na)!==tradCode(nb);
+    const p=el("path",{class:"edge "+type}); eg.appendChild(p);
+    let marker=null; if(friction){ marker=el("path",{class:"fricc", stroke:"var(--cream)", "stroke-width":1.1, fill:"none"}); eg.appendChild(marker); }
+    EDGES.push({na,nb,p,ph:i*0.7,type,friction,marker}); });
+  if(state.view==="corriente"){
+    const pg=el("g");
+    Object.entries(L).forEach(([k,v])=>{ if(!N.some(n=>n.l===k && visible(n)))return; const t=el("text",{class:"placelbl "+v[3], x:px(v[1])+14, y:py(v[0])+4}); t.textContent=v[2]; t._place=k; pg.appendChild(t); });
+    vp.appendChild(pg);
+  } else {
+    const cg=el("g");
+    CLUSTERS.forEach(c=>{ const t=el("text",{class:"clbl", x:c.x, y:c.y, "text-anchor":"middle", fill:FEN[c.f].c}); t.textContent=FEN[c.f].label; t._fen=c.f; cg.appendChild(t); });
+    vp.appendChild(cg);
+  }
+  N.forEach(n=>{
+    if(!visible(n))return;
+    const g=el("g",{class:"node"}); const r=n.k==="obra"?7:6.5;
+    const halo=el("circle",{class:"halo", r:r+6, "stroke-width":1.5});
+    const hit=el("circle",{r:16, fill:"transparent"});
+    const c=el("circle",{class:"dot", r:r, fill:n.k==="obra"?col(n.f[0]):"var(--bg-deep)", stroke:col(n.f[0]), "stroke-width":n.k==="obra"?1.2:2.6}); c._r=r;
+    g.appendChild(halo); g.appendChild(hit); g.appendChild(c); g.style.cursor="pointer";
+    g.addEventListener('mouseenter',()=>{ hoverNode=n; updateTip(); });
+    g.addEventListener('mouseleave',()=>{ if(hoverNode===n) hoverNode=null; updateTip(); });
+    g.addEventListener('click',ev=>{ ev.stopPropagation(); openPanel(n.id); });
+    vp.appendChild(g); n._g=g; n._c=c; n._halo=halo; VNODES.push(n);
+  });
+  buildLegend(); refreshHi(); place(0);
+}
+
+function drawBasin(){
+  vp.appendChild(el("path",{class:"coast", d:`M ${px(-85)},${py(30)} Q ${px(-80)},${py(23)} ${px(-74)},${py(20)} Q ${px(-66)},${py(18.5)} ${px(-61)},${py(16)} Q ${px(-59.5)},${py(12)} ${px(-61)},${py(10)}`}));
+  const sur=el("path",{class:"coast", d:`M ${px(-98)},${py(19)} Q ${px(-90)},${py(9)} ${px(-76)},${py(9)} Q ${px(-68)},${py(11)} ${px(-60)},${py(6)} Q ${px(-56)},${py(4.5)} ${px(-53)},${py(4)}`}); sur.style.strokeOpacity=.12; vp.appendChild(sur);
+  for(let i=0;i<3;i++) vp.appendChild(el("path",{class:"tideband", id:"tb"+i}));
+}
+function currentPath(e, ph, flowing){
+  const ax=e.na._x, ay=e.na._y, bx=e.nb._x, by=e.nb._y; const dx=bx-ax, dy=by-ay; const len=Math.hypot(dx,dy)||1; const nx=-dy/len, ny=dx/len;
+  let amp=Math.min(30,len*0.16); if(e.type==="disonancia") amp*=1.35;
+  const STEPS=22; let d="";
+  for(let i=0;i<=STEPS;i++){ const tt=i/STEPS; const env=Math.sin(Math.PI*tt); const trav=flowing?ph*1.7:0;
+    let wave;
+    if(e.type==="disonancia") wave=Math.sin(tt*3.4-trav+e.ph)-0.55*Math.sin(tt*5.2+trav*1.3+e.ph);
+    else wave=Math.sin(tt*3.4-trav+e.ph)+0.45*Math.sin(tt*6.6-trav*1.5+e.ph*1.9);
+    if(e.friction) wave+=0.28*Math.sin(tt*14-trav*2.2+e.ph);
+    const off=amp*env*wave*0.6; const x=ax+dx*tt+nx*off, y=ay+dy*tt+ny*off; d+=(i?" L ":"M ")+x.toFixed(1)+","+y.toFixed(1); }
+  return d;
+}
+function place(t){
+  if(state.view==="tabla") return;
+  const ph=t*0.00045; const flowing=state.tide; const sway=flowing?7*Math.sin(ph*0.6):0;
+  VNODES.forEach((n,idx)=>{ let dx=0,dy=0;
+    if(flowing){ if(state.view==="corriente"){ dx=sway+4.5*Math.sin(ph+n._bx*0.012); dy=3*Math.sin(ph*0.8+n._by*0.010+1.6); } else { dx=2.2*Math.sin(ph+idx*0.5); dy=2.2*Math.cos(ph*0.9+idx*0.5);} }
+    n._x=n._bx+dx; n._y=n._by+dy; n._g.setAttribute('transform',`translate(${n._x},${n._y})`); });
+  EDGES.forEach(e=>{ e.p.setAttribute('d', currentPath(e,ph,flowing)); e.p.setAttribute('stroke-dashoffset', flowing?(-t*0.03)%1000:0);
+    if(e.marker){ const mx=(e.na._x+e.nb._x)/2, my=(e.na._y+e.nb._y)/2; const s=2.4+(flowing?1.1*(0.5+0.5*Math.sin(ph*3+e.ph)):0); const rot=flowing?ph*40+e.ph*30:0; const c=Math.cos(rot), si=Math.sin(rot);
+      e.marker.setAttribute('d',`M ${(mx-s*c).toFixed(1)},${(my-s*si).toFixed(1)} L ${(mx+s*c).toFixed(1)},${(my+s*si).toFixed(1)} M ${(mx+s*si).toFixed(1)},${(my-s*c).toFixed(1)} L ${(mx-s*si).toFixed(1)},${(my+s*c).toFixed(1)}`); } });
+  if(state.view==="corriente" && flowing) for(let i=0;i<3;i++){ const b=document.getElementById('tb'+i); if(!b)continue; const yy=py(8-i*1.6); const amp=6+i*2; const o=ph*1.1+i; let d=`M ${px(-98)},${yy}`; for(let x=-96;x<=-53;x+=6) d+=` L ${px(x)},${yy+amp*Math.sin(o+x*0.14)}`; b.setAttribute('d',d); }
+  updateTip();
+}
+
+function screenXY(n){ const vx=vpt.tx+n._x*vpt.k, vy=vpt.ty+n._y*vpt.k; const r=svg.getBoundingClientRect(); return [vx/VW*r.width, vy/VH*r.height]; }
+function updateTip(){
+  const n = hoverNode || (state.active?byId(state.active):null);
+  if(!n || !n._g || !visible(n)){ tip.classList.remove('show'); tip._for=null; return; }
+  const [lx,ly]=screenXY(n); tip.style.left=lx+'px'; tip.style.top=ly+'px'; tip.classList.toggle('below', ly<130);
+  if(tip._for!==n.id){ tip._for=n.id; tip.style.borderLeftColor=col(n.f[0]);
+    tip.innerHTML=`<div class="tt">${n.t}</div><div class="ta">${n.a}${n.y?' · '+n.y:''} — ${n.tr}</div><div class="tf" style="color:${col(n.f[0])}">${n.f.map(f=>FEN[f].label).join('  ·  ')}</div>`; }
+  tip.classList.add('show');
+}
+
+function refreshHi(){
+  const fn=state.active, ff=state.focusFen; let nb=null; if(fn) nb=neighbors(fn);
+  VNODES.forEach(n=>{ let op=1, rmul=1, halo=0;
+    if(fn){ if(n.id===fn){op=1;rmul=1.5;halo=1;} else if(nb.direct.has(n.id)){op=1;rmul=1.15;} else if(nb.indirect.has(n.id)){op=.5;} else op=.08; }
+    else if(ff){ if(n.f.includes(ff)){op=1;rmul=n.f[0]===ff?1.25:1;} else op=.09; }
+    n._c.style.opacity=op; n._c.setAttribute('r', n._c._r*rmul); n._halo.style.opacity=halo?.9:0; n._halo.style.stroke=col(n.f[0]);
+  });
+  EDGES.forEach(e=>{ let op="";
+    if(fn){ const a=e.na.id,b=e.nb.id; const touchF=(a===fn||b===fn); const bothDir=(a===fn||nb.direct.has(a))&&(b===fn||nb.direct.has(b)); const toInd=(nb.direct.has(a)&&nb.indirect.has(b))||(nb.direct.has(b)&&nb.indirect.has(a)); op=touchF?.82:bothDir?.42:toInd?.26:.04; }
+    else if(ff){ op=(e.na.f.includes(ff)&&e.nb.f.includes(ff))?.65:.05; }
+    e.p.style.strokeOpacity=op;
+    if(e.marker) e.marker.style.strokeOpacity = (op==="")?.55 : Math.min(.7, op*1.1);
+  });
+  if(vp){
+    vp.querySelectorAll('.placelbl').forEach(t=>{ if(ff){ const has=N.some(n=>n.l===t._place && n.f.includes(ff)); t.style.opacity=has?1:.12; } else if(fn){ const has=N.some(n=>n.l===t._place && (n.id===fn||nb.direct.has(n.id))); t.style.opacity=has?1:.2; } else t.style.opacity=""; });
+    vp.querySelectorAll('.clbl').forEach(t=>{ if(ff){ t.style.opacity=(t._fen===ff)?1:.25; } else t.style.opacity=""; });
+  }
+}
+
+function showGuion(f){ const g=document.getElementById('guion'); if(!f){ g.classList.remove('show'); return; } g.style.borderLeftColor=FEN[f].c; const gf=g.querySelector('.gf'); gf.textContent=FEN[f].label; gf.style.color=FEN[f].c; g.querySelector('.gt').textContent=FEN[f].g; g.classList.add('show'); }
+function focusFen(f){ state.active=null; document.getElementById('panel').classList.remove('open'); state.focusFen=(state.focusFen===f)?null:f; showGuion(state.focusFen); buildLegend(); refreshHi(); updateTip(); if(state.view==="tabla") renderTable(); }
+
+function openPanel(id){
+  if(!byId(id)) return;
+  state.focusFen=null; showGuion(null); state.active=id; buildLegend(); refreshHi(); updateTip();
+  if(location.hash!=="#"+id){ try{ history.replaceState(null,"","#"+id); }catch(e){} }
+  const n=byId(id); const p=document.getElementById('panel'); const lu=L[n.l]; const {direct,indirect}=neighbors(id);
+  const tags=n.f.map(f=>`<span class="tag" data-fen="${f}" style="background:${col(f)}">${FEN[f].label}</span>`).join("");
+  const lugar = lu[3]==="pais" ? `<div class="lugar pais">◈ ${lu[2]} · nación caribeña</div>` : `<div class="lugar ciudad">◆ ${lu[2]} · región en tensión con ${lu[4]}</div>`;
+  const dList=[...direct].map(x=>byId(x)).filter(Boolean).map(o=>{ const fu=fuenteDe(id,o.id); const diso=isDiso(id,o.id); const porcorr=/corroborar/i.test(fu);
+    return `<a data-go="${o.id}"><span class="rtitle">${diso?'⚡ ':''}${o.t}</span> <span class="r">— ${o.a}</span>${fu?`<span class="fu${porcorr?' pc':''}">${fu}</span>`:''}</a>`; }).join("");
+  const iList=[...indirect].map(x=>{ const o=byId(x); if(!o)return""; let via=[...direct].find(d=>(ADJ[d]||[]).includes(x)); const vn=via?byId(via):null; const vname=vn?vn.a.replace(/\(.*/,'').split(',')[0].trim().split(' ').slice(-1)[0]:'…'; return `<a data-go="${o.id}">${o.t} <span class="via">— vía ${vname}</span></a>`; }).join("");
+  p.innerHTML=`<button class="close">×</button><div class="kind">${n.k==="obra"?"Investigación":"Etnografía / manifestación"}</div>
+    <h2>${n.t}</h2><div class="meta">${n.a}${n.y?" · "+n.y:""} · ${n.tr}</div>${lugar}
+    <div class="tags">${tags}</div><p class="aporte">${n.ap}</p>
+    <div class="rel"><h3 class="dir">Conexiones directas · dialoga con</h3>${dList||"<span style='font-size:12px;color:var(--gray)'>—</span>"}</div>
+    ${iList?`<div class="rel"><h3 class="ind">Conexiones indirectas · a dos orillas</h3>${iList}</div>`:""}
+    <div class="cita"><span class="citalbl">Cómo citar esta ficha</span>
+      <div class="apa" id="apacita">${n.a}${n.y?" ("+n.y+")":""}. <i>${n.t}</i>. En <i>Con el agua de por medio: atlas para una antropología archipiélica</i>, Centro de Pensamiento Caribe. ${location.origin+location.pathname}#${id}</div>
+      <div class="citarow"><code id="citaurl">${location.origin+location.pathname}#${id}</code><button id="citabtn">copiar cita</button></div></div>`;
+  p.classList.add('open');
+  p.querySelector('.close').onclick=()=>clearFocus();
+  p.querySelectorAll('[data-go]').forEach(a=>a.onclick=()=>openPanel(a.dataset.go));
+  p.querySelectorAll('[data-fen]').forEach(tg=>tg.onclick=()=>focusFen(tg.dataset.fen));
+  const cb=p.querySelector('#citabtn'); if(cb) cb.onclick=()=>{ try{ const txt=document.getElementById('apacita').textContent; navigator.clipboard.writeText(txt); cb.textContent='copiado'; setTimeout(()=>cb.textContent='copiar cita',1400); }catch(e){} };
+}
+function clearFocus(){ state.active=null; state.focusFen=null; hoverNode=null; document.getElementById('panel').classList.remove('open'); showGuion(null); buildLegend(); refreshHi(); updateTip(); try{ history.replaceState(null,"",location.pathname); }catch(e){} }
+
+function buildLegend(){
+  const lg=document.getElementById('legend');
+  const total=N.length, obras=N.filter(n=>n.k==="obra").length, manif=total-obras;
+  lg.innerHTML=`<div class="lgtitle">${total} referencias · clic en un fenómeno para iluminar</div><div class="grid"></div>`+
+    `<div class="keys"><span><i class="kob"></i>investigación (${obras})</span><span><i class="kma"></i>etnográfica (${manif})</span></div>`+
+    `<div class="keys"><span><i class="kre"></i>resonancia</span><span><i class="kdi"></i>disonancia</span><span><i class="kfr">✕</i>fricción epistémica</span></div>`+
+    `<div class="mlink"><a id="marcoLink">Base conceptual: Brathwaite · Monahan →</a></div>`;
+  const grid=lg.querySelector('.grid');
+  Object.entries(FEN).forEach(([k,v])=>{ const d=document.createElement('div'); d.className="li"+(state.focusFen===k?" sel":"");
+    const c=N.filter(n=>n.f.includes(k)).length;
+    d.innerHTML=`<span class="sw" style="background:${v.c}"></span>${v.label} <span style="opacity:.55">(${c})</span>`; d.onclick=()=>focusFen(k); grid.appendChild(d); });
+  const ml=lg.querySelector('#marcoLink'); if(ml) ml.onclick=openMarco;
+}
+function openMarco(){ document.getElementById('marco').classList.add('show'); }
+function closeMarco(){ document.getElementById('marco').classList.remove('show'); }
+
+function loop(t){ place(t); requestAnimationFrame(loop); }
+
+let tblSort={col:"t", dir:1};
+function tblRows(){
+  let rows=N.filter(n=>visible(n) && (!state.focusFen || n.f.includes(state.focusFen)));
+  const key=tblSort.col;
+  rows.sort((a,b)=>{ let va,vb;
+    if(key==="f"){ va=FEN[a.f[0]].label; vb=FEN[b.f[0]].label; }
+    else if(key==="l"){ va=L[a.l][2]; vb=L[b.l][2]; }
+    else if(key==="k"){ va=a.k; vb=b.k; }
+    else { va=(a[key]||"").toString().toLowerCase(); vb=(b[key]||"").toString().toLowerCase(); }
+    return va<vb?-1*tblSort.dir : va>vb?1*tblSort.dir : 0; });
+  return rows;
+}
+function renderTable(){
+  const cont=document.getElementById('tabla');
+  const rows=tblRows();
+  const cols=[["t","Obra"],["a","Autor"],["y","Año"],["k","Tipo"],["f","Fenómenos"],["l","Lugar"],["tr","Tradición"]];
+  const foco = state.focusFen ? ` · filtrado por «${FEN[state.focusFen].label}»` : "";
+  let h=`<div class="tcap">Catálogo del atlas</div><div class="tsub">${rows.length} referencias${foco} · ordená por cualquier columna · abrí una fila para ver su ficha</div>`;
+  h+=`<table><caption>Obras y manifestaciones del atlas «Con el agua de por medio».</caption><thead><tr>`;
+  cols.forEach(([k,lbl])=>{ const s = tblSort.col===k ? (tblSort.dir===1?"ascending":"descending") : "none"; h+=`<th scope="col" role="columnheader" aria-sort="${s}" data-col="${k}" tabindex="0">${lbl}</th>`; });
+  h+=`</tr></thead><tbody>`;
+  rows.forEach(n=>{
+    const fen=n.f.map(f=>`<span class="fenchip" style="background:${col(f)}"></span>${FEN[f].label}`).join(" · ");
+    const lu=L[n.l];
+    h+=`<tr><td class="tit"><a href="#${n.id}" data-go="${n.id}">${n.t}</a></td>`+
+       `<td>${n.a}</td><td>${n.y||"—"}</td>`+
+       `<td>${n.k==='obra'?'Investigación':'Etnografía'}</td>`+
+       `<td>${fen}</td><td>${lu[2]}</td><td>${n.tr}</td></tr>`;
+  });
+  h+=`</tbody></table>`;
+  cont.innerHTML=h;
+  cont.querySelectorAll('th[data-col]').forEach(th=>{
+    const go=()=>{ const c=th.dataset.col; if(tblSort.col===c) tblSort.dir*=-1; else { tblSort.col=c; tblSort.dir=1; } renderTable(); };
+    th.onclick=go; th.onkeydown=ev=>{ if(ev.key==="Enter"||ev.key===" "){ ev.preventDefault(); go(); } };
+  });
+  cont.querySelectorAll('a[data-go]').forEach(a=>a.onclick=ev=>{ ev.preventDefault(); openPanel(a.dataset.go); });
+}
+function switchView(v){
+  state.view=v;
+  const svg0=document.getElementById('stage'), tbl=document.getElementById('tabla'), lg=document.getElementById('legend');
+  if(v==="tabla"){ svg0.style.display="none"; document.getElementById('hint').style.display="none"; tbl.classList.add('show'); tbl.setAttribute('tabindex','-1'); renderTable(); tbl.focus(); }
+  else { svg0.style.display="block"; document.getElementById('hint').style.display=""; tbl.classList.remove('show'); render(); }
+}
+document.getElementById('viewSeg').addEventListener('click',e=>{ if(e.target.dataset.v){[...e.currentTarget.children].forEach(b=>b.classList.remove('on'));e.target.classList.add('on');clearFocus();switchView(e.target.dataset.v);} });
+document.getElementById('layerSeg').addEventListener('click',e=>{ if(e.target.dataset.l){[...e.currentTarget.children].forEach(b=>b.classList.remove('on'));e.target.classList.add('on');state.layer=e.target.dataset.l; state.view==="tabla"?renderTable():render();} });
+document.getElementById('tideSeg').addEventListener('click',e=>{ if(e.target.dataset.tide){[...e.currentTarget.children].forEach(b=>b.classList.remove('on'));e.target.classList.add('on');state.tide=e.target.dataset.tide==="on"; if(!state.tide) place(0);} });
+
+function toVB(x,y){ const r=svg.getBoundingClientRect(); return [ (x-r.left)/r.width*VW, (y-r.top)/r.height*VH ]; }
+svg.addEventListener('wheel',ev=>{ ev.preventDefault(); const [mx,my]=toVB(ev.clientX,ev.clientY); const factor=ev.deltaY<0?1.12:1/1.12; const nk=Math.max(0.6,Math.min(7,vpt.k*factor)); const f=nk/vpt.k; vpt.tx=mx-(mx-vpt.tx)*f; vpt.ty=my-(my-vpt.ty)*f; vpt.k=nk; applyVP(); },{passive:false});
+let panning=false, dragged=false, sx=0, sy=0, otx=0, oty=0;
+svg.addEventListener('mousedown',ev=>{ panning=true; dragged=false; sx=ev.clientX; sy=ev.clientY; otx=vpt.tx; oty=vpt.ty; svg.classList.add('grabbing'); });
+window.addEventListener('mousemove',ev=>{ if(!panning)return; if(Math.abs(ev.clientX-sx)+Math.abs(ev.clientY-sy)>3)dragged=true; const r=svg.getBoundingClientRect(); vpt.tx=otx+(ev.clientX-sx)/r.width*VW; vpt.ty=oty+(ev.clientY-sy)/r.height*VH; applyVP(); });
+window.addEventListener('mouseup',()=>{ panning=false; svg.classList.remove('grabbing'); });
+svg.addEventListener('click',ev=>{ if(dragged){ dragged=false; return; } clearFocus(); });
+svg.addEventListener('dblclick',()=>{ vpt={k:1,tx:0,ty:0}; applyVP(); });
+
+function setView(v){ document.querySelectorAll('#viewSeg button').forEach(b=>b.classList.toggle('on', b.dataset.v===v)); clearFocus(); switchView(v); }
+function setTide(on){ document.querySelectorAll('#tideSeg button').forEach(b=>b.classList.toggle('on', (b.dataset.tide==="on")===on)); state.tide=on; if(!on) place(0); }
+const fenKeys=Object.keys(FEN); let presIdx=-1;
+function presSetFen(f){ state.active=null; document.getElementById('panel').classList.remove('open'); state.focusFen=f; showGuion(f); buildLegend(); refreshHi(); updateTip(); if(state.view==="tabla") renderTable(); }
+function presNext(){ presIdx=(presIdx+1)%fenKeys.length; presSetFen(fenKeys[presIdx]); }
+function presPrev(){ presIdx=(presIdx-1+fenKeys.length)%fenKeys.length; presSetFen(fenKeys[presIdx]); }
+function presClear(){ presIdx=-1; presSetFen(null); }
+function enterPresent(){
+  document.body.classList.add('presenting');
+  const el=document.documentElement;
+  const req=el.requestFullscreen||el.webkitRequestFullscreen||el.msRequestFullscreen;
+  if(req) req.call(el).catch(()=>{});
+}
+function exitPresent(){
+  document.body.classList.remove('presenting');
+  if(document.fullscreenElement){ const ex=document.exitFullscreen||document.webkitExitFullscreen||document.msExitFullscreen; if(ex) ex.call(document).catch(()=>{}); }
+}
+document.getElementById('presBtn').onclick=enterPresent;
+document.getElementById('marcoBtn').onclick=openMarco;
+document.querySelector('#marco .mclose').onclick=closeMarco;
+document.getElementById('marco').addEventListener('click',ev=>{ if(ev.target.id==='marco') closeMarco(); });
+render();
+requestAnimationFrame(loop);
+(function(){ const h=decodeURIComponent(location.hash.replace(/^#/,'')); if(h && byId(h)){ openPanel(h); } })();
+window.addEventListener('hashchange',()=>{ const h=decodeURIComponent(location.hash.replace(/^#/,'')); if(h && byId(h)) openPanel(h); });
+</script>
 </body>
 </html>
