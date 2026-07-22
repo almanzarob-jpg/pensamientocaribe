@@ -179,14 +179,15 @@
 <header>
   <div class="t">
     <h1>Con el agua de por medio</h1>
-    <div class="sub">Atlas para una antropología archipiélica</div>
+    <div class="sub" data-i18n="sub">Atlas para una antropología archipiélica</div>
   </div>
   <div class="controls">
-    <div class="grp"><label>Vista</label><div class="seg vista" id="viewSeg"><button data-v="corriente" class="on">Corriente</button><button data-v="constelacion">Constelación</button><button data-v="tabla">Tabla</button></div></div>
-    <div class="grp"><label>Capa</label><div class="seg capa" id="layerSeg"><button data-l="ambas" class="on">Ambas</button><button data-l="obra">Investigación</button><button data-l="manifestacion">Etnográfica</button></div></div>
-    <div class="grp"><label>Marea</label><div class="seg tide" id="tideSeg"><button data-tide="on" class="on">Flujo</button><button data-tide="off">Quieta</button></div></div>
-    <div class="grp"><label>Base</label><div class="seg base"><button id="marcoBtn">Marco conceptual</button></div></div>
-    <div class="grp"><label>Modo</label><div class="seg base"><button id="presBtn">Pantalla completa</button></div></div>
+    <div class="grp"><label data-i18n="lblVista">Vista</label><div class="seg vista" id="viewSeg"><button data-v="corriente" class="on" data-i18n="vCorriente">Corriente</button><button data-v="constelacion" data-i18n="vConstelacion">Constelación</button><button data-v="tabla" data-i18n="vTabla">Tabla</button></div></div>
+    <div class="grp"><label data-i18n="lblCapa">Capa</label><div class="seg capa" id="layerSeg"><button data-l="ambas" class="on" data-i18n="cAmbas">Ambas</button><button data-l="obra" data-i18n="cObra">Investigación</button><button data-l="manifestacion" data-i18n="cManif">Etnográfica</button></div></div>
+    <div class="grp"><label data-i18n="lblMarea">Marea</label><div class="seg tide" id="tideSeg"><button data-tide="on" class="on" data-i18n="mFlujo">Flujo</button><button data-tide="off" data-i18n="mQuieta">Quieta</button></div></div>
+    <div class="grp"><label data-i18n="lblBase">Base</label><div class="seg base"><button id="marcoBtn" data-i18n="marcoBtn">Marco conceptual</button></div></div>
+    <div class="grp"><label data-i18n="lblModo">Modo</label><div class="seg base"><button id="presBtn" data-i18n="presBtn">Pantalla completa</button></div></div>
+    <div class="grp"><label data-i18n="lblIdioma">Idioma</label><div class="seg base" style="border-color:var(--gold)"><button id="langBtn" style="color:var(--gold)">EN</button></div></div>
   </div>
 </header>
 <main>
@@ -197,28 +198,28 @@
   <div id="guion"><div class="gf"></div><div class="gt"></div></div>
   <div id="legend"></div>
   <div class="credit">Centro de Pensamiento Caribe<br>siembra desde el archivo · boceto de investigación<br><a href="https://doi.org/10.5281/zenodo.21483569" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none">DOI 10.5281/zenodo.21483569</a></div>
-  <button id="presExit" title="Salir del modo presentación (Esc)">✕ salir</button>
-  <div id="presHelp"><span><b>1</b>corriente</span><span><b>2</b>constelación</span><span><b>M</b>marea</span><span><b>→</b>siguiente fenómeno</span><span><b>←</b>anterior</span><span><b>0</b>despejar</span><span><b>Esc</b>salir</span></div>
+  <button id="presExit" title="Salir del modo presentación (Esc)" data-i18n="presExit">✕ salir</button>
+  <div id="presHelp" data-i18n-html="presHelp"><span><b>1</b>corriente</span><span><b>2</b>constelación</span><span><b>M</b>marea</span><span><b>→</b>siguiente fenómeno</span><span><b>←</b>anterior</span><span><b>0</b>despejar</span><span><b>Esc</b>salir</span></div>
   <aside id="panel"></aside>
   <div id="umbral"><div class="box">
     <h2>Con el agua de por medio</h2>
-    <div class="u-sub">Atlas para una antropología archipiélica</div>
-    <p>Ninguna orilla es una totalidad. El archipiélago no lo hacen las naciones: lo hacen las fuerzas que cruzan de una orilla a otra. Cada obra vive aquí en el fenómeno que la atraviesa; el país que la aloja queda en segundo plano.</p>
-    <div class="how">Elige un fenómeno en la leyenda y <b>se encienden sus puntos</b> con su guión. Abre cualquier obra y <b>se ramifican sus conexiones</b>, directas e indirectas, a través del agua. Pasa el cursor para leer cada nodo. El fondo sube y baja como la marea, según Brathwaite.</div>
-    <button id="entrar">Entrar en la corriente</button>
-    <div style="margin-top:16px;font-family:var(--ff-mono);font-size:9.5px;letter-spacing:.6px;color:var(--gray)">Base conceptual: Brathwaite · Monahan — <a id="umarco" style="color:var(--orange);cursor:pointer;text-decoration:none">ver marco</a></div>
+    <div class="u-sub" data-i18n="sub">Atlas para una antropología archipiélica</div>
+    <p data-i18n-html="umbralP">Ninguna orilla es una totalidad. El archipiélago no lo hacen las naciones: lo hacen las fuerzas que cruzan de una orilla a otra. Cada obra vive aquí en el fenómeno que la atraviesa; el país que la aloja queda en segundo plano.</p>
+    <div class="how" data-i18n-html="umbralHow">Elige un fenómeno en la leyenda y <b>se encienden sus puntos</b> con su guión. Abre cualquier obra y <b>se ramifican sus conexiones</b>, directas e indirectas, a través del agua. Pasa el cursor para leer cada nodo. El fondo sube y baja como la marea, según Brathwaite.</div>
+    <button id="entrar" data-i18n="entrar">Entrar en la corriente</button>
+    <div style="margin-top:16px;font-family:var(--ff-mono);font-size:9.5px;letter-spacing:.6px;color:var(--gray)"><span data-i18n="umbralBase">Base conceptual: Brathwaite · Monahan — </span><a id="umarco" style="color:var(--orange);cursor:pointer;text-decoration:none" data-i18n="verMarco">ver marco</a></div>
   </div></div>
 
   <div id="marco"><div class="mbox">
     <button class="mclose">×</button>
-    <h2>Marco conceptual</h2>
-    <div class="msub">cómo piensa este atlas · y cómo la forma encarna la teoría</div>
-    <div class="c"><div class="who">Premisa</div><h3>Antropología archipiélica</h3><p>Contra la antropología continental y nacional, que toma el territorio delimitado como contenedor, aquí la unidad de análisis es el <b>fenómeno que atraviesa</b> la cuenca, no el lugar que lo aloja. Cartagena se entiende mejor junto a Nueva Orleans y Paramaribo que junto a Bogotá. Por eso el mapa premia el eje marítimo, horizontal, y no deja leer ninguna orilla como totalidad autosuficiente.</p></div>
-    <div class="c"><div class="who">Kamau Brathwaite</div><h3>Conexión submarina</h3><p>«The unity is submarine»: lo que une a las islas corre por debajo de la superficie, en la raíz común del agua. En el atlas, <b>las corrientes de relación cumplen esa función</b>: son la estructura del mapa, no su decoración. La tierra separa; el mar, por debajo, conecta.</p></div>
-    <div class="c"><div class="who">Kamau Brathwaite</div><h3>Marealéctica (tidalectics)</h3><p>Frente a la dialéctica que avanza hacia una síntesis, la marealéctica va y viene como la marea: <b>avance y retirada, sin progreso lineal</b>. El mapa entero se mueve con ese ritmo; nada se resuelve, todo vuelve. El tiempo caribeño se comporta como el agua: sube, se retira, vuelve a subir.</p></div>
-    <div class="c"><div class="who">Resonancia y disonancia</div><h3>El diálogo no siempre es acuerdo</h3><p>Un vínculo entre obras puede ser armónico o puede ser un choque. Las corrientes <b style="color:var(--orange)">doradas resuenan</b>: una idea continúa, amplifica o hereda a otra. Las <b style="color:var(--red)">rojas disienten</b>: una tensiona, critica o contradice a la otra. El pensamiento caribeño se hace de eco y de fricción por igual, y el mapa distingue las dos cosas.</p></div>
-    <div class="c"><div class="who">Michael Monahan</div><h3>Fricción epistémica</h3><p>Para Monahan, la creolización ocurre como <b>roce productivo entre saberes</b>, no como fusión suave. Donde una corriente cruza entre tradiciones lingüísticas distintas (anglófona, francófona, hispana, neerlandesa), ese cruce que la academia mantuvo separado queda marcado en el mapa con un signo de fricción. El pensamiento archipiélico ocurre justo ahí, en el roce entre lenguas imperiales.</p></div>
-    <div class="c" style="border-left-color:var(--gold)"><div class="who" style="color:var(--gold)">Cómo citar el corpus</div><h3>Dataset con DOI en Zenodo</h3><p>Almanza, R. (2026). <i>Atlas para una antropología archipiélica: con el agua de por medio</i> [conjunto de datos]. Zenodo. <a href="https://doi.org/10.5281/zenodo.21483569" target="_blank" rel="noopener" style="color:var(--gold)">https://doi.org/10.5281/zenodo.21483569</a></p></div>
+    <h2 data-i18n="marcoTit">Marco conceptual</h2>
+    <div class="msub" data-i18n="marcoSub">cómo piensa este atlas · y cómo la forma encarna la teoría</div>
+    <div class="c"><div class="who" data-i18n="mc1who">Premisa</div><h3 data-i18n="mc1h">Antropología archipiélica</h3><p data-i18n-html="mc1p">Contra la antropología continental y nacional, que toma el territorio delimitado como contenedor, aquí la unidad de análisis es el <b>fenómeno que atraviesa</b> la cuenca, no el lugar que lo aloja. Cartagena se entiende mejor junto a Nueva Orleans y Paramaribo que junto a Bogotá. Por eso el mapa premia el eje marítimo, horizontal, y no deja leer ninguna orilla como totalidad autosuficiente.</p></div>
+    <div class="c"><div class="who">Kamau Brathwaite</div><h3 data-i18n="mc2h">Conexión submarina</h3><p data-i18n-html="mc2p">«The unity is submarine»: lo que une a las islas corre por debajo de la superficie, en la raíz común del agua. En el atlas, <b>las corrientes de relación cumplen esa función</b>: son la estructura del mapa, no su decoración. La tierra separa; el mar, por debajo, conecta.</p></div>
+    <div class="c"><div class="who">Kamau Brathwaite</div><h3 data-i18n="mc3h">Marealéctica (tidalectics)</h3><p data-i18n-html="mc3p">Frente a la dialéctica que avanza hacia una síntesis, la marealéctica va y viene como la marea: <b>avance y retirada, sin progreso lineal</b>. El mapa entero se mueve con ese ritmo; nada se resuelve, todo vuelve. El tiempo caribeño se comporta como el agua: sube, se retira, vuelve a subir.</p></div>
+    <div class="c"><div class="who" data-i18n="mc4who">Resonancia y disonancia</div><h3 data-i18n="mc4h">El diálogo no siempre es acuerdo</h3><p data-i18n-html="mc4p">Un vínculo entre obras puede ser armónico o puede ser un choque. Las corrientes <b style="color:var(--orange)">doradas resuenan</b>: una idea continúa, amplifica o hereda a otra. Las <b style="color:var(--red)">rojas disienten</b>: una tensiona, critica o contradice a la otra. El pensamiento caribeño se hace de eco y de fricción por igual, y el mapa distingue las dos cosas.</p></div>
+    <div class="c"><div class="who">Michael Monahan</div><h3 data-i18n="mc5h">Fricción epistémica</h3><p data-i18n-html="mc5p">Para Monahan, la creolización ocurre como <b>roce productivo entre saberes</b>, no como fusión suave. Donde una corriente cruza entre tradiciones lingüísticas distintas (anglófona, francófona, hispana, neerlandesa), ese cruce que la academia mantuvo separado queda marcado en el mapa con un signo de fricción. El pensamiento archipiélico ocurre justo ahí, en el roce entre lenguas imperiales.</p></div>
+    <div class="c" style="border-left-color:var(--gold)"><div class="who" style="color:var(--gold)" data-i18n="mc6who">Cómo citar el corpus</div><h3 data-i18n="mc6h">Dataset con DOI en Zenodo</h3><p data-i18n-html="mc6p">Almanza, R. (2026). <i>Atlas para una antropología archipiélica: con el agua de por medio</i> [conjunto de datos]. Zenodo. <a href="https://doi.org/10.5281/zenodo.21483569" target="_blank" rel="noopener" style="color:var(--gold)">https://doi.org/10.5281/zenodo.21483569</a></p></div>
   </div></div>
 </main>
 <script src="../data/agua-de-por-medio/datos-atlas.js?v=20260722b"></script>
@@ -234,6 +235,116 @@ const relDe=(a,b)=>RELS.find(x=>(x.a===a&&x.b===b)||(x.a===b&&x.b===a));
 const isDiso=(a,b)=>{ const r=relDe(a,b); return !!r && r.tipo==='disonancia'; };
 const fuenteDe=(a,b)=>{ const r=relDe(a,b); return r?(r.fuente||''):''; };
 const col = f => FEN[f].c;
+
+/* ==================== BILINGÜE ES / EN ==================== */
+let LANG = (localStorage.getItem('atlas-lang')==='en') ? 'en' : 'es';
+/* Etiquetas y glosas de fenómenos en inglés (los datos base quedan en español) */
+const FEN_EN = {
+  colonialidad:{label:"Coloniality", g:"The wound that founds the region. It keeps ordering knowledge, body and territory long after the independence acts were signed. Trouillot reads it from the silence that history imposed on Haiti."},
+  postplantacion:{label:"Postplantation", g:"The plantation did not end: it mutated. From the sugar mill to the resort, the same logic of labor, race and land still organizes Caribbean life long after abolition."},
+  capitalismo_racial:{label:"Racial capitalism", g:"Capital was never color-blind. Robinson showed it: accumulation was built upon racial difference. The debt France charged Haiti is its most brutal figure."},
+  catastrofes:{label:"Climate catastrophes", g:"The hurricane is politics before it is nature. It lays bare, all at once, who is deemed disposable. María, in Puerto Rico, exposed the colonial relation better than any treaty."},
+  soberanias:{label:"Sovereignties", g:"The most fragile axis of the archive, and for that reason the most urgent. Bonilla puts it plainly: what does freedom mean once the sovereign nation has ceased to be the answer?"},
+  violencias:{label:"Violences", g:"From the slave trade to the carceral regime runs a single line: administered death. Racism works here as a structure that distributes life and death, long before it appears as individual prejudice."},
+  memoria:{label:"Memory and spirituality", g:"Against silencing, the living archive. The bush, the drum and the rite keep what the State erases. Spirituality works as a way of remembering."},
+  cimarronaje:{label:"Marronage / flight", g:"Flight made into philosophy. To flee the plantation was also to found a world beyond it. Roberts thinks of it as freedom itself, already realized in the act of fleeing."},
+  creolizacion:{label:"Creolization / oralitura", g:"The new that springs from forced encounter. Glissant calls it Relation: an unpredictable creation that turns the Caribbean into a language of its own."},
+  cuerpo_erotica:{label:"Body, gender and the erotic", g:"The Caribbean body as a field of dispute and of pleasure. From slave punishment to insurgent eroticism, gender and desire organize both power and freedom. Tinsley and Alexander read pleasure and the sacred as forms of sovereignty."}
+};
+const fenLabel = f => (LANG==='en' && FEN_EN[f]) ? FEN_EN[f].label : FEN[f].label;
+const fenGlosa = f => (LANG==='en' && FEN_EN[f] && FEN_EN[f].g) ? FEN_EN[f].g : (FEN[f].g||"");
+/* Diccionario de interfaz. data-i18n = textContent; data-i18n-html = innerHTML */
+const I18N = {
+  es:{
+    sub:"Atlas para una antropología archipiélica",
+    lblVista:"Vista", vCorriente:"Corriente", vConstelacion:"Constelación", vTabla:"Tabla",
+    lblCapa:"Capa", cAmbas:"Ambas", cObra:"Investigación", cManif:"Etnográfica",
+    lblMarea:"Marea", mFlujo:"Flujo", mQuieta:"Quieta",
+    lblBase:"Base", marcoBtn:"Marco conceptual",
+    lblModo:"Modo", presBtn:"Pantalla completa",
+    lblIdioma:"Idioma",
+    entrar:"Entrar en la corriente", umbralBase:"Base conceptual: Brathwaite · Monahan — ", verMarco:"ver marco",
+    umbralP:"Ninguna orilla es una totalidad. El archipiélago no lo hacen las naciones: lo hacen las fuerzas que cruzan de una orilla a otra. Cada obra vive aquí en el fenómeno que la atraviesa; el país que la aloja queda en segundo plano.",
+    umbralHow:"Elige un fenómeno en la leyenda y <b>se encienden sus puntos</b> con su guión. Abre cualquier obra y <b>se ramifican sus conexiones</b>, directas e indirectas, a través del agua. Pasa el cursor para leer cada nodo. El fondo sube y baja como la marea, según Brathwaite.",
+    marcoTit:"Marco conceptual", marcoSub:"cómo piensa este atlas · y cómo la forma encarna la teoría",
+    mc1who:"Premisa", mc1h:"Antropología archipiélica",
+    mc1p:"Contra la antropología continental y nacional, que toma el territorio delimitado como contenedor, aquí la unidad de análisis es el <b>fenómeno que atraviesa</b> la cuenca, no el lugar que lo aloja. Cartagena se entiende mejor junto a Nueva Orleans y Paramaribo que junto a Bogotá. Por eso el mapa premia el eje marítimo, horizontal, y no deja leer ninguna orilla como totalidad autosuficiente.",
+    mc2h:"Conexión submarina",
+    mc2p:"«The unity is submarine»: lo que une a las islas corre por debajo de la superficie, en la raíz común del agua. En el atlas, <b>las corrientes de relación cumplen esa función</b>: son la estructura del mapa, no su decoración. La tierra separa; el mar, por debajo, conecta.",
+    mc3h:"Marealéctica (tidalectics)",
+    mc3p:"Frente a la dialéctica que avanza hacia una síntesis, la marealéctica va y viene como la marea: <b>avance y retirada, sin progreso lineal</b>. El mapa entero se mueve con ese ritmo; nada se resuelve, todo vuelve. El tiempo caribeño se comporta como el agua: sube, se retira, vuelve a subir.",
+    mc4who:"Resonancia y disonancia", mc4h:"El diálogo no siempre es acuerdo",
+    mc4p:"Un vínculo entre obras puede ser armónico o puede ser un choque. Las corrientes <b style=\"color:var(--orange)\">doradas resuenan</b>: una idea continúa, amplifica o hereda a otra. Las <b style=\"color:var(--red)\">rojas disienten</b>: una tensiona, critica o contradice a la otra. El pensamiento caribeño se hace de eco y de fricción por igual, y el mapa distingue las dos cosas.",
+    mc5h:"Fricción epistémica",
+    mc5p:"Para Monahan, la creolización ocurre como <b>roce productivo entre saberes</b>, no como fusión suave. Donde una corriente cruza entre tradiciones lingüísticas distintas (anglófona, francófona, hispana, neerlandesa), ese cruce que la academia mantuvo separado queda marcado en el mapa con un signo de fricción. El pensamiento archipiélico ocurre justo ahí, en el roce entre lenguas imperiales.",
+    mc6who:"Cómo citar el corpus", mc6h:"Dataset con DOI en Zenodo",
+    mc6p:"Almanza, R. (2026). <i>Atlas para una antropología archipiélica: con el agua de por medio</i> [conjunto de datos]. Zenodo. <a href=\"https://doi.org/10.5281/zenodo.21483569\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold)\">https://doi.org/10.5281/zenodo.21483569</a>",
+    presExit:"✕ salir",
+    presHelp:"<span><b>1</b>corriente</span><span><b>2</b>constelación</span><span><b>M</b>marea</span><span><b>→</b>siguiente fenómeno</span><span><b>←</b>anterior</span><span><b>0</b>despejar</span><span><b>Esc</b>salir</span>",
+    hintCorriente:"La cuenca vista desde el mar. Islas por su país; puntos continentales (naranja) por su ciudad, regiones en tensión con un centro no caribeño. Pasa el cursor sobre un punto para leerlo.",
+    hintConstelacion:"Constelación de los fenómenos que atraviesan la cuenca. Rueda: zoom · arrastra: desplaza · doble clic: reencuadra. Pasa el cursor sobre un punto para leerlo.",
+    lgTitle:"referencias · clic en un fenómeno para iluminar",
+    lgResearch:"investigación", lgEthno:"etnográfica", lgReson:"resonancia", lgDisso:"disonancia", lgFricc:"fricción epistémica",
+    lgMarco:"Base conceptual: Brathwaite · Monahan →",
+    pKindObra:"Investigación", pKindManif:"Etnografía / manifestación",
+    pNacion:"nación caribeña", pRegion:"región en tensión con",
+    pRelDir:"Conexiones directas · dialoga con", pRelInd:"Conexiones indirectas · a dos orillas", pVia:"vía",
+    pCitaLbl:"Cómo citar esta ficha", pCitaEn:"En", pCitaBtn:"copiar cita", pCitaOk:"copiado",
+    pProyecto:"Con el agua de por medio: atlas para una antropología archipiélica",
+    tCap:"Catálogo del atlas", tRefs:"referencias", tFiltro:"filtrado por",
+    tSort:"ordena por cualquier columna · abre una fila para ver su ficha",
+    tCaption:"Obras y manifestaciones del atlas «Con el agua de por medio», con su fenómeno, lugar y tradición. Cada fila enlaza a la ficha completa.",
+    thObra:"Obra", thAutor:"Autor", thAno:"Año", thTipo:"Tipo", thFen:"Fenómenos", thLugar:"Lugar", thTrad:"Tradición",
+    tKindObra:"Investigación", tKindManif:"Etnografía", tCiudad:"(ciudad)",
+    tNote:"Esta tabla es la versión accesible del atlas: se navega con el tabulador y la leen los lectores de pantalla. Los mismos datos alimentan las vistas Corriente y Constelación. Fuente de datos:",
+    langBtn:"EN"
+  },
+  en:{
+    sub:"Atlas for an archipelagic anthropology",
+    lblVista:"View", vCorriente:"Current", vConstelacion:"Constellation", vTabla:"Table",
+    lblCapa:"Layer", cAmbas:"Both", cObra:"Research", cManif:"Ethnographic",
+    lblMarea:"Tide", mFlujo:"Flow", mQuieta:"Still",
+    lblBase:"Base", marcoBtn:"Conceptual frame",
+    lblModo:"Mode", presBtn:"Full screen",
+    lblIdioma:"Language",
+    entrar:"Enter the current", umbralBase:"Conceptual base: Brathwaite · Monahan — ", verMarco:"see frame",
+    umbralP:"No shore is a totality. The archipelago is not made by nations: it is made by the forces that cross from one shore to another. Each work lives here in the phenomenon that runs through it; the country that hosts it stays in the background.",
+    umbralHow:"Choose a phenomenon in the legend and <b>its points light up</b> with their note. Open any work and <b>its connections branch out</b>, direct and indirect, across the water. Hover over each node to read it. The ground rises and falls like the tide, after Brathwaite.",
+    marcoTit:"Conceptual frame", marcoSub:"how this atlas thinks · and how form embodies theory",
+    mc1who:"Premise", mc1h:"Archipelagic anthropology",
+    mc1p:"Against continental and national anthropology, which takes the bounded territory as a container, here the unit of analysis is the <b>phenomenon that runs through</b> the basin, not the place that hosts it. Cartagena is better understood alongside New Orleans and Paramaribo than alongside Bogotá. That is why the map favors the maritime, horizontal axis, and refuses to let any single shore be read as a self-sufficient totality.",
+    mc2h:"Submarine connection",
+    mc2p:"«The unity is submarine»: what unites the islands runs beneath the surface, in the shared root of the water. In the atlas, <b>the currents of relation perform that function</b>: they are the structure of the map, not its decoration. Land separates; the sea, beneath, connects.",
+    mc3h:"Tidalectics",
+    mc3p:"Against a dialectic that advances toward synthesis, tidalectics comes and goes like the tide: <b>advance and retreat, with no linear progress</b>. The whole map moves to that rhythm; nothing is resolved, everything returns. Caribbean time behaves like water: it rises, retreats, rises again.",
+    mc4who:"Resonance and dissonance", mc4h:"Dialogue is not always agreement",
+    mc4p:"A link between works can be harmonic or it can be a clash. The <b style=\"color:var(--orange)\">golden currents resonate</b>: one idea continues, amplifies or inherits another. The <b style=\"color:var(--red)\">red ones dissent</b>: one strains, criticizes or contradicts the other. Caribbean thought is made of echo and of friction alike, and the map tells the two apart.",
+    mc5h:"Epistemic friction",
+    mc5p:"For Monahan, creolization occurs as <b>productive friction between knowledges</b>, not as smooth fusion. Where a current crosses between distinct linguistic traditions (Anglophone, Francophone, Hispanic, Dutch), that crossing the academy kept apart is marked on the map with a friction sign. Archipelagic thought happens right there, in the rub between imperial tongues.",
+    mc6who:"How to cite the corpus", mc6h:"Dataset with DOI on Zenodo",
+    mc6p:"Almanza, R. (2026). <i>Atlas para una antropología archipiélica: con el agua de por medio</i> [dataset]. Zenodo. <a href=\"https://doi.org/10.5281/zenodo.21483569\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold)\">https://doi.org/10.5281/zenodo.21483569</a>",
+    presExit:"✕ exit",
+    presHelp:"<span><b>1</b>current</span><span><b>2</b>constellation</span><span><b>M</b>tide</span><span><b>→</b>next phenomenon</span><span><b>←</b>previous</span><span><b>0</b>clear</span><span><b>Esc</b>exit</span>",
+    hintCorriente:"The basin seen from the sea. Islands by their country; continental points (orange) by their city, regions in tension with a non-Caribbean center. Hover over a point to read it.",
+    hintConstelacion:"Constellation of the phenomena that run through the basin. Wheel: zoom · drag: pan · double-click: recenter. Hover over a point to read it.",
+    lgTitle:"references · click a phenomenon to illuminate",
+    lgResearch:"research", lgEthno:"ethnographic", lgReson:"resonance", lgDisso:"dissonance", lgFricc:"epistemic friction",
+    lgMarco:"Conceptual base: Brathwaite · Monahan →",
+    pKindObra:"Research", pKindManif:"Ethnography / manifestation",
+    pNacion:"Caribbean nation", pRegion:"region in tension with",
+    pRelDir:"Direct connections · in dialogue with", pRelInd:"Indirect connections · across two shores", pVia:"via",
+    pCitaLbl:"How to cite this entry", pCitaEn:"In", pCitaBtn:"copy citation", pCitaOk:"copied",
+    pProyecto:"Con el agua de por medio: An Atlas for an Archipelagic Anthropology",
+    tCap:"Atlas catalogue", tRefs:"references", tFiltro:"filtered by",
+    tSort:"sort by any column · open a row to see its entry",
+    tCaption:"Works and manifestations of the atlas «Con el agua de por medio», with their phenomenon, place and tradition. Each row links to the full entry.",
+    thObra:"Work", thAutor:"Author", thAno:"Year", thTipo:"Type", thFen:"Phenomena", thLugar:"Place", thTrad:"Tradition",
+    tKindObra:"Research", tKindManif:"Ethnography", tCiudad:"(city)",
+    tNote:"This table is the accessible version of the atlas: navigable by tab and read by screen readers. The same data feeds the Current and Constellation views. Data source:",
+    langBtn:"ES"
+  }
+};
+const t = k => (I18N[LANG] && I18N[LANG][k]!==undefined) ? I18N[LANG][k] : (I18N.es[k]||"");
 
 /* tradición lingüística: la fricción epistémica (Monahan) ocurre cuando una corriente cruza traditiones distintas */
 function tradCode(n){ const s=(n.tr||"").toLowerCase(); if(s.includes("neerland"))return"neer"; if(s.includes("francófono"))return"fra"; if(s.includes("anglófono"))return"ang"; if(s.includes("hispano"))return"his"; return"comp"; }
@@ -289,8 +400,8 @@ function render(){
   vp=el("g",{id:"vp"}); svg.appendChild(vp); applyVP();
   computeBase();
   const hint=document.getElementById('hint');
-  if(state.view==="corriente"){ drawBasin(); hint.textContent="La cuenca vista desde el mar. Islas por su país; puntos continentales (naranja) por su ciudad, regiones en tensión con un centro no caribeño. Pasa el cursor sobre un punto para leerlo."; }
-  else hint.textContent="Constelación de los fenómenos que atraviesan la cuenca. Rueda: zoom · arrastra: desplaza · doble clic: reencuadra. Pasa el cursor sobre un punto para leerlo.";
+  if(state.view==="corriente"){ drawBasin(); hint.textContent=t('hintCorriente'); }
+  else hint.textContent=t('hintConstelacion');
   const eg=el("g"); vp.appendChild(eg);
   R.forEach(([a,b],i)=>{ const na=byId(a), nb=byId(b); if(!na||!nb||!visible(na)||!visible(nb))return;
     const type=isDiso(a,b)?"disonancia":"resonancia"; const friction=tradCode(na)!==tradCode(nb);
@@ -303,7 +414,7 @@ function render(){
     vp.appendChild(pg);
   } else {
     const cg=el("g");
-    CLUSTERS.forEach(c=>{ const t=el("text",{class:"clbl", x:c.x, y:c.y, "text-anchor":"middle", fill:FEN[c.f].c}); t.textContent=FEN[c.f].label; t._fen=c.f; cg.appendChild(t); });
+    CLUSTERS.forEach(c=>{ const tx=el("text",{class:"clbl", x:c.x, y:c.y, "text-anchor":"middle", fill:FEN[c.f].c}); tx.textContent=fenLabel(c.f); tx._fen=c.f; cg.appendChild(tx); });
     vp.appendChild(cg);
   }
   N.forEach(n=>{
@@ -357,7 +468,7 @@ function updateTip(){
   if(!n || !n._g || !visible(n)){ tip.classList.remove('show'); tip._for=null; return; }
   const [lx,ly]=screenXY(n); tip.style.left=lx+'px'; tip.style.top=ly+'px'; tip.classList.toggle('below', ly<130);
   if(tip._for!==n.id){ tip._for=n.id; tip.style.borderLeftColor=col(n.f[0]);
-    tip.innerHTML=`<div class="tt">${n.t}</div><div class="ta">${n.a}${n.y?' · '+n.y:''} — ${n.tr}</div><div class="tf" style="color:${col(n.f[0])}">${n.f.map(f=>FEN[f].label).join('  ·  ')}</div>`; }
+    tip.innerHTML=`<div class="tt">${n.t}</div><div class="ta">${n.a}${n.y?' · '+n.y:''} — ${n.tr}</div><div class="tf" style="color:${col(n.f[0])}">${n.f.map(f=>fenLabel(f)).join('  ·  ')}</div>`; }
   tip.classList.add('show');
 }
 
@@ -380,7 +491,7 @@ function refreshHi(){
   }
 }
 
-function showGuion(f){ const g=document.getElementById('guion'); if(!f){ g.classList.remove('show'); return; } g.style.borderLeftColor=FEN[f].c; const gf=g.querySelector('.gf'); gf.textContent=FEN[f].label; gf.style.color=FEN[f].c; g.querySelector('.gt').textContent=FEN[f].g; g.classList.add('show'); }
+function showGuion(f){ const g=document.getElementById('guion'); if(!f){ g.classList.remove('show'); return; } g.style.borderLeftColor=FEN[f].c; const gf=g.querySelector('.gf'); gf.textContent=fenLabel(f); gf.style.color=FEN[f].c; g.querySelector('.gt').textContent=fenGlosa(f); g.classList.add('show'); }
 function focusFen(f){ state.active=null; document.getElementById('panel').classList.remove('open'); state.focusFen=(state.focusFen===f)?null:f; showGuion(state.focusFen); buildLegend(); refreshHi(); updateTip(); if(state.view==="tabla") renderTable(); }
 
 function openPanel(id){
@@ -388,38 +499,38 @@ function openPanel(id){
   state.focusFen=null; showGuion(null); state.active=id; buildLegend(); refreshHi(); updateTip();
   if(location.hash!=="#"+id){ try{ history.replaceState(null,"","#"+id); }catch(e){} }
   const n=byId(id); const p=document.getElementById('panel'); const lu=L[n.l]; const {direct,indirect}=neighbors(id);
-  const tags=n.f.map(f=>`<span class="tag" data-fen="${f}" style="background:${col(f)}">${FEN[f].label}</span>`).join("");
-  const lugar = lu[3]==="pais" ? `<div class="lugar pais">◈ ${lu[2]} · nación caribeña</div>` : `<div class="lugar ciudad">◆ ${lu[2]} · región en tensión con ${lu[4]}</div>`;
+  const tags=n.f.map(f=>`<span class="tag" data-fen="${f}" style="background:${col(f)}">${fenLabel(f)}</span>`).join("");
+  const lugar = lu[3]==="pais" ? `<div class="lugar pais">◈ ${lu[2]} · ${t('pNacion')}</div>` : `<div class="lugar ciudad">◆ ${lu[2]} · ${t('pRegion')} ${lu[4]}</div>`;
   const dList=[...direct].map(x=>byId(x)).filter(Boolean).map(o=>{ const fu=fuenteDe(id,o.id); const diso=isDiso(id,o.id); const porcorr=/corroborar/i.test(fu);
     return `<a data-go="${o.id}"><span class="rtitle">${diso?'⚡ ':''}${o.t}</span> <span class="r">— ${o.a}</span>${fu?`<span class="fu${porcorr?' pc':''}">${fu}</span>`:''}</a>`; }).join("");
-  const iList=[...indirect].map(x=>{ const o=byId(x); if(!o)return""; let via=[...direct].find(d=>(ADJ[d]||[]).includes(x)); const vn=via?byId(via):null; const vname=vn?vn.a.replace(/\(.*/,'').split(',')[0].trim().split(' ').slice(-1)[0]:'…'; return `<a data-go="${o.id}">${o.t} <span class="via">— vía ${vname}</span></a>`; }).join("");
-  p.innerHTML=`<button class="close">×</button><div class="kind">${n.k==="obra"?"Investigación":"Etnografía / manifestación"}</div>
+  const iList=[...indirect].map(x=>{ const o=byId(x); if(!o)return""; let via=[...direct].find(d=>(ADJ[d]||[]).includes(x)); const vn=via?byId(via):null; const vname=vn?vn.a.replace(/\(.*/,'').split(',')[0].trim().split(' ').slice(-1)[0]:'…'; return `<a data-go="${o.id}">${o.t} <span class="via">— ${t('pVia')} ${vname}</span></a>`; }).join("");
+  p.innerHTML=`<button class="close">×</button><div class="kind">${n.k==="obra"?t('pKindObra'):t('pKindManif')}</div>
     <h2>${n.t}</h2><div class="meta">${n.a}${n.y?" · "+n.y:""} · ${n.tr}</div>${lugar}
     <div class="tags">${tags}</div><p class="aporte">${n.ap}</p>
-    <div class="rel"><h3 class="dir">Conexiones directas · dialoga con</h3>${dList||"<span style='font-size:12px;color:var(--gray)'>—</span>"}</div>
-    ${iList?`<div class="rel"><h3 class="ind">Conexiones indirectas · a dos orillas</h3>${iList}</div>`:""}
-    <div class="cita"><span class="citalbl">Cómo citar esta ficha</span>
-      <div class="apa" id="apacita">${n.a}${n.y?" ("+n.y+")":""}. <i>${n.t}</i>. En <i>Con el agua de por medio: atlas para una antropología archipiélica</i>, Centro de Pensamiento Caribe. ${location.origin+location.pathname}#${id}</div>
-      <div class="citarow"><code id="citaurl">${location.origin+location.pathname}#${id}</code><button id="citabtn">copiar cita</button></div></div>`;
+    <div class="rel"><h3 class="dir">${t('pRelDir')}</h3>${dList||"<span style='font-size:12px;color:var(--gray)'>—</span>"}</div>
+    ${iList?`<div class="rel"><h3 class="ind">${t('pRelInd')}</h3>${iList}</div>`:""}
+    <div class="cita"><span class="citalbl">${t('pCitaLbl')}</span>
+      <div class="apa" id="apacita">${n.a}${n.y?" ("+n.y+")":""}. <i>${n.t}</i>. ${t('pCitaEn')} <i>${t('pProyecto')}</i>, Centro de Pensamiento Caribe. ${location.origin+location.pathname}#${id}</div>
+      <div class="citarow"><code id="citaurl">${location.origin+location.pathname}#${id}</code><button id="citabtn">${t('pCitaBtn')}</button></div></div>`;
   p.classList.add('open');
   p.querySelector('.close').onclick=()=>clearFocus();
   p.querySelectorAll('[data-go]').forEach(a=>a.onclick=()=>openPanel(a.dataset.go));
   p.querySelectorAll('[data-fen]').forEach(tg=>tg.onclick=()=>focusFen(tg.dataset.fen));
-  const cb=p.querySelector('#citabtn'); if(cb) cb.onclick=()=>{ try{ const txt=document.getElementById('apacita').textContent; navigator.clipboard.writeText(txt); cb.textContent='copiado'; setTimeout(()=>cb.textContent='copiar cita',1400); }catch(e){} };
+  const cb=p.querySelector('#citabtn'); if(cb) cb.onclick=()=>{ try{ const txt=document.getElementById('apacita').textContent; navigator.clipboard.writeText(txt); cb.textContent=t('pCitaOk'); setTimeout(()=>cb.textContent=t('pCitaBtn'),1400); }catch(e){} };
 }
 function clearFocus(){ state.active=null; state.focusFen=null; hoverNode=null; document.getElementById('panel').classList.remove('open'); showGuion(null); buildLegend(); refreshHi(); updateTip(); try{ history.replaceState(null,"",location.pathname); }catch(e){} }
 
 function buildLegend(){
   const lg=document.getElementById('legend');
   const total=N.length, obras=N.filter(n=>n.k==="obra").length, manif=total-obras;
-  lg.innerHTML=`<div class="lgtitle">${total} referencias · clic en un fenómeno para iluminar</div><div class="grid"></div>`+
-    `<div class="keys"><span><i class="kob"></i>investigación (${obras})</span><span><i class="kma"></i>etnográfica (${manif})</span></div>`+
-    `<div class="keys"><span><i class="kre"></i>resonancia</span><span><i class="kdi"></i>disonancia</span><span><i class="kfr">✕</i>fricción epistémica</span></div>`+
-    `<div class="mlink"><a id="marcoLink">Base conceptual: Brathwaite · Monahan →</a></div>`;
+  lg.innerHTML=`<div class="lgtitle">${total} ${t('lgTitle')}</div><div class="grid"></div>`+
+    `<div class="keys"><span><i class="kob"></i>${t('lgResearch')} (${obras})</span><span><i class="kma"></i>${t('lgEthno')} (${manif})</span></div>`+
+    `<div class="keys"><span><i class="kre"></i>${t('lgReson')}</span><span><i class="kdi"></i>${t('lgDisso')}</span><span><i class="kfr">✕</i>${t('lgFricc')}</span></div>`+
+    `<div class="mlink"><a id="marcoLink">${t('lgMarco')}</a></div>`;
   const grid=lg.querySelector('.grid');
   Object.entries(FEN).forEach(([k,v])=>{ const d=document.createElement('div'); d.className="li"+(state.focusFen===k?" sel":"");
     const c=N.filter(n=>n.f.includes(k)).length;
-    d.innerHTML=`<span class="sw" style="background:${v.c}"></span>${v.label} <span style="opacity:.55">(${c})</span>`; d.onclick=()=>focusFen(k); grid.appendChild(d); });
+    d.innerHTML=`<span class="sw" style="background:${v.c}"></span>${fenLabel(k)} <span style="opacity:.55">(${c})</span>`; d.onclick=()=>focusFen(k); grid.appendChild(d); });
   const ml=lg.querySelector('#marcoLink'); if(ml) ml.onclick=openMarco;
 }
 function openMarco(){ document.getElementById('marco').classList.add('show'); }
@@ -443,22 +554,22 @@ function tblRows(){
 function renderTable(){
   const cont=document.getElementById('tabla');
   const rows=tblRows();
-  const cols=[["t","Obra"],["a","Autor"],["y","Año"],["k","Tipo"],["f","Fenómenos"],["l","Lugar"],["tr","Tradición"]];
-  const foco = state.focusFen ? ` · filtrado por «${FEN[state.focusFen].label}»` : "";
-  let h=`<div class="tcap">Catálogo del atlas</div><div class="tsub">${rows.length} referencias${foco} · ordena por cualquier columna · abre una fila para ver su ficha</div>`;
-  h+=`<table><caption>Obras y manifestaciones del atlas «Con el agua de por medio», con su fenómeno, lugar y tradición. Cada fila enlaza a la ficha completa.</caption><thead><tr>`;
+  const cols=[["t",t('thObra')],["a",t('thAutor')],["y",t('thAno')],["k",t('thTipo')],["f",t('thFen')],["l",t('thLugar')],["tr",t('thTrad')]];
+  const foco = state.focusFen ? ` · ${t('tFiltro')} «${fenLabel(state.focusFen)}»` : "";
+  let h=`<div class="tcap">${t('tCap')}</div><div class="tsub">${rows.length} ${t('tRefs')}${foco} · ${t('tSort')}</div>`;
+  h+=`<table><caption>${t('tCaption')}</caption><thead><tr>`;
   cols.forEach(([k,lbl])=>{ const s = tblSort.col===k ? (tblSort.dir===1?"ascending":"descending") : "none"; h+=`<th scope="col" role="columnheader" aria-sort="${s}" data-col="${k}" tabindex="0">${lbl}</th>`; });
   h+=`</tr></thead><tbody>`;
   rows.forEach(n=>{
-    const fen=n.f.map(f=>`<span class="fenchip" style="background:${col(f)}"></span>${FEN[f].label}`).join(" · ");
+    const fen=n.f.map(f=>`<span class="fenchip" style="background:${col(f)}"></span>${fenLabel(f)}`).join(" · ");
     const lu=L[n.l];
     h+=`<tr><td class="tit"><a href="#${n.id}" data-go="${n.id}">${n.t}</a></td>`+
        `<td>${n.a}</td><td>${n.y||"—"}</td>`+
-       `<td class="${n.k==='obra'?'kind-o':'kind-m'}">${n.k==='obra'?'Investigación':'Etnografía'}</td>`+
-       `<td>${fen}</td><td>${lu[2]}${lu[3]==='ciudad'?' <span style="color:var(--gray)">(ciudad)</span>':''}</td><td>${n.tr}</td></tr>`;
+       `<td class="${n.k==='obra'?'kind-o':'kind-m'}">${n.k==='obra'?t('tKindObra'):t('tKindManif')}</td>`+
+       `<td>${fen}</td><td>${lu[2]}${lu[3]==='ciudad'?' <span style="color:var(--gray)">'+t('tCiudad')+'</span>':''}</td><td>${n.tr}</td></tr>`;
   });
   h+=`</tbody></table>`;
-  h+=`<p class="tnote">Esta tabla es la versión accesible del atlas: se navega con el tabulador y la leen los lectores de pantalla. Los mismos datos alimentan las vistas Corriente y Constelación. Fuente de datos: <a href="datos-atlas.json">datos-atlas.json</a>.</p>`;
+  h+=`<p class="tnote">${t('tNote')} <a href="../data/agua-de-por-medio/datos-atlas.json">datos-atlas.json</a>.</p>`;
   cont.innerHTML=h;
   cont.querySelectorAll('th[data-col]').forEach(th=>{
     const go=()=>{ const c=th.dataset.col; if(tblSort.col===c) tblSort.dir*=-1; else { tblSort.col=c; tblSort.dir=1; } renderTable(); };
@@ -522,7 +633,23 @@ document.getElementById('marcoBtn').onclick=openMarco;
 document.getElementById('umarco').onclick=openMarco;
 document.querySelector('#marco .mclose').onclick=closeMarco;
 document.getElementById('marco').addEventListener('click',ev=>{ if(ev.target.id==='marco') closeMarco(); });
+
+/* ---------- conmutador de idioma ES / EN ---------- */
+function applyLang(){
+  localStorage.setItem('atlas-lang', LANG);
+  document.documentElement.lang = LANG;
+  document.querySelectorAll('[data-i18n]').forEach(e=>{ const k=e.getAttribute('data-i18n'); if(I18N[LANG][k]!==undefined) e.textContent=I18N[LANG][k]; });
+  document.querySelectorAll('[data-i18n-html]').forEach(e=>{ const k=e.getAttribute('data-i18n-html'); if(I18N[LANG][k]!==undefined) e.innerHTML=I18N[LANG][k]; });
+  const lb=document.getElementById('langBtn'); if(lb) lb.textContent=t('langBtn');
+  const openId=state.active, ff=state.focusFen;
+  if(state.view==='tabla'){ renderTable(); } else { render(); }
+  if(openId){ openPanel(openId); }
+  else if(ff){ state.focusFen=ff; showGuion(ff); buildLegend(); refreshHi(); }
+}
+document.getElementById('langBtn').onclick=()=>{ LANG = (LANG==='es') ? 'en' : 'es'; applyLang(); };
+
 render();
+if(LANG==='en') applyLang();
 requestAnimationFrame(loop);
 /* enlace profundo: si la URL trae #idObra, abrir esa ficha y saltar el umbral */
 (function(){ const h=decodeURIComponent(location.hash.replace(/^#/,'')); if(h && byId(h)){ document.getElementById('umbral').classList.add('gone'); openPanel(h); } })();
