@@ -130,6 +130,27 @@ button {
   border-radius: var(--radius-xs);
 }
 
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -100px;
+  z-index: 9999;
+  background: var(--c-orange);
+  color: var(--c-bg-deep);
+  font-family: var(--ff-mono);
+  font-size: 0.85rem;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.02em;
+  padding: 0.8rem 1.4rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
 ::selection {
   background: var(--c-green);
   color: var(--c-cream);

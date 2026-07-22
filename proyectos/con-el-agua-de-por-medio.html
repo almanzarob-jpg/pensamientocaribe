@@ -136,6 +136,8 @@
   #marco .c p{font-size:13.5px; line-height:1.55; color:var(--gray); margin:0}
   #marco .c p b{color:var(--cream); font-weight:500}
   #hint{position:absolute; left:16px; top:14px; font-size:12px; color:var(--gray); font-style:italic; max-width:240px; line-height:1.5}
+  .skip-link{position:absolute; left:1rem; top:-100px; z-index:9999; background:var(--orange); color:var(--bg-deep); font-family:var(--ff-mono); font-size:.85rem; font-weight:600; letter-spacing:.02em; padding:.8rem 1.4rem; border-radius:4px; text-decoration:none; transition:top .2s ease}
+  .skip-link:focus{top:1rem}
   #guion{position:absolute; left:50%; top:16px; transform:translateX(-50%) translateY(-14px); width:min(580px,74vw); background:rgba(17,19,13,.95); border:1px solid var(--line); border-left-width:3px; border-radius:3px; padding:13px 22px; opacity:0; pointer-events:none; transition:opacity .3s, transform .3s;}
   #guion.show{opacity:1; transform:translateX(-50%) translateY(0)}
   #guion .gf{font-family:var(--ff-mono); font-size:10px; text-transform:uppercase; letter-spacing:1.6px; margin-bottom:5px}
@@ -230,6 +232,7 @@
 </script>
 </head>
 <body>
+<a href="#main-content" class="skip-link" id="skipLink" data-i18n="skipLink">Saltar al contenido principal</a>
 <header>
   <div class="t">
     <h1>Con el agua de por medio</h1>
@@ -244,7 +247,7 @@
     <div class="grp"><label data-i18n="lblIdioma">Idioma</label><div class="seg base" style="border-color:var(--gold)"><button id="langBtn" style="color:var(--gold)">EN</button></div></div>
   </div>
 </header>
-<main>
+<main id="main-content">
   <svg id="stage" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid meet"></svg>
   <section id="tabla" aria-label="Catálogo del atlas en tabla accesible"></section>
   <div id="tip"></div>
@@ -310,6 +313,7 @@ const fenGlosa = f => (LANG==='en' && FEN_EN[f] && FEN_EN[f].g) ? FEN_EN[f].g : 
 /* Diccionario de interfaz. data-i18n = textContent; data-i18n-html = innerHTML */
 const I18N = {
   es:{
+    skipLink:"Saltar al contenido principal",
     sub:"Atlas para una antropología archipiélica",
     lblVista:"Vista", vCorriente:"Corriente", vConstelacion:"Constelación", vTabla:"Tabla",
     lblCapa:"Capa", cAmbas:"Ambas", cObra:"Investigación", cManif:"Etnográfica",
@@ -354,6 +358,7 @@ const I18N = {
     langBtn:"EN"
   },
   en:{
+    skipLink:"Skip to main content",
     sub:"Atlas for an archipelagic anthropology",
     lblVista:"View", vCorriente:"Current", vConstelacion:"Constellation", vTabla:"Table",
     lblCapa:"Layer", cAmbas:"Both", cObra:"Research", cManif:"Ethnographic",

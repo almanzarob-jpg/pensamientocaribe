@@ -223,9 +223,13 @@ section{padding:var(--space-xl) 0}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important; scroll-behavior:auto}}
 @media (max-width:500px){:root{--nav-height:60px}}
+.skip-link{position:absolute;left:1rem;top:-100px;z-index:9999;background:var(--c-orange);color:var(--c-bg-deep);font-family:var(--ff-mono);font-size:.85rem;font-weight:600;letter-spacing:.02em;padding:.8rem 1.4rem;border-radius:4px;text-decoration:none;transition:top .2s ease}
+.skip-link:focus{top:1rem}
 </style>
 </head>
 <body>
+
+<a href="#main-content" class="skip-link">Saltar al contenido principal</a>
 
 <nav class="site-nav" aria-label="Navegación principal">
   <a href="https://pensamientocaribe.org/" class="nav-brand">
@@ -246,6 +250,7 @@ section{padding:var(--space-xl) 0}
   <button class="nav-toggle" id="navToggle" aria-label="Abrir menú"><span></span><span></span><span></span></button>
 </nav>
 
+<main id="main-content">
 <div class="hero"><div class="wrap">
   <p class="hero-badge">Medios · Filmoteca crítica</p>
   <h1>Cine y documental del <em>Caribe</em></h1>
@@ -295,6 +300,7 @@ section{padding:var(--space-xl) 0}
   </div>
   <div class="grid" id="grid"></div>
 </div></section>
+</main>
 
 <footer class="site-footer">
   <div class="wrap">
