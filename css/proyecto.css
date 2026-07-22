@@ -1,6 +1,18 @@
 /* ════════════════════════════════════════════════
    PÁGINA INDIVIDUAL DE PROYECTO
    ════════════════════════════════════════════════ */
+.licencia-nota {
+  font-size: 0.85em;
+  color: var(--c-gray);
+  font-style: italic;
+  margin-top: 0.75rem;
+  line-height: 1.6;
+}
+.licencia-nota a {
+  color: var(--c-gold, var(--c-orange));
+  text-decoration: underline;
+}
+
 .proyecto-page {
   min-height: 100vh;
   padding-top: calc(var(--nav-height) + var(--space-lg));
