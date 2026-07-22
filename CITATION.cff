@@ -1,5 +1,11 @@
 cff-version: 1.2.0
-message: "Si usas este mapa en tu investigación o docencia, cítalo así."
+message: >-
+  Este repositorio aloja varios proyectos citables de forma independiente,
+  cada uno con su propio DOI en Zenodo. La entrada principal de este archivo
+  corresponde a "Con el vaivén de las corrientes"; el resto de los proyectos
+  del grupo (incluido el atlas "Con el agua de por medio") están listados en
+  el campo references de este mismo archivo, con su ficha de cita también
+  disponible directamente en cada página del proyecto.
 title: "Con el vaivén de las corrientes: cartografías sonoras del Atlántico Negro"
 type: software
 version: 1.0.0
@@ -32,3 +38,32 @@ keywords:
   - "champeta"
   - "cartografía sonora"
 license: "CC-BY-NC-SA-4.0"
+references:
+  - type: dataset
+    title: "Con el agua de por medio: atlas para una antropología archipiélica"
+    version: "1.0.0"
+    date-released: 2026-07-22
+    doi: "10.5281/zenodo.21483569"
+    url: "https://pensamientocaribe.org/proyectos/con-el-agua-de-por-medio.html"
+    repository-code: "https://github.com/almanzarob-jpg/pensamientocaribe"
+    license: "CC-BY-NC-SA-4.0"
+    abstract: >-
+      Atlas interactivo que conecta 117 obras y manifestaciones del Gran
+      Caribe a través de diez fenómenos transversales (colonialidad,
+      postplantación, capitalismo racial, catástrofes climáticas,
+      soberanías, violencias, memoria y espiritualidad, cimarronaje,
+      creolización, cuerpo y erótica) en lugar de organizarlas por país.
+      Marco conceptual basado en Kamau Brathwaite, Michael Monahan, Derek
+      Walcott y Ernesto Bassi.
+    authors:
+      - family-names: "Almanza Hernández"
+        given-names: "Roberto"
+        affiliation: "Universidad del Magdalena"
+      - name: "Grupo de Investigación Pensamiento Caribe, Universidad del Magdalena"
+    keywords:
+      - "antropología archipiélica"
+      - "Gran Caribe"
+      - "marealéctica"
+      - "colonialidad"
+      - "cimarronaje"
+      - "creolización"

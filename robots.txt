@@ -1,4 +1,6 @@
 User-agent: *
 Allow: /
+Disallow: /index_backup.html
+Disallow: /prototipos/
 
 Sitemap: https://pensamientocaribe.org/sitemap.xml
