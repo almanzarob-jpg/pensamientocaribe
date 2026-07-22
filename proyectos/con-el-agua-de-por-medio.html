@@ -8,7 +8,6 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
   <link rel="stylesheet" href="../css/reset.css">
   <link rel="stylesheet" href="../css/layout.css">
   <link rel="stylesheet" href="../css/components.css">
@@ -123,52 +122,98 @@
         </div>
       </header>
 
-      <!-- ════════ ATLAS RELACIONAL (Cytoscape.js) ════════ -->
+      <!-- ════════ ATLAS ARCHIPIÉLICO (canvas · vista geográfica) ════════ -->
       <section class="section section--wide" id="atlas-archipielico" style="padding-top: 0;">
+        <div class="atlasarch-controls">
+          <div class="atlasarch-cgroup">
+            <span class="atlasarch-clabel">Vista</span>
+            <div id="atlasarch-vista" class="atlasarch-seg">
+              <button type="button" data-v="corriente" class="is-on">Corriente</button>
+              <button type="button" data-v="constelacion">Constelación</button>
+              <button type="button" data-v="tabla">Tabla</button>
+            </div>
+          </div>
+          <div class="atlasarch-cgroup">
+            <span class="atlasarch-clabel">Capa</span>
+            <div id="atlasarch-capa" class="atlasarch-seg">
+              <button type="button" data-v="ambas" class="is-on">Ambas</button>
+              <button type="button" data-v="investigacion">Investigación</button>
+              <button type="button" data-v="etnografica">Etnográfica</button>
+            </div>
+          </div>
+          <div class="atlasarch-cgroup">
+            <span class="atlasarch-clabel">Marea</span>
+            <div id="atlasarch-marea" class="atlasarch-seg">
+              <button type="button" data-v="flujo" class="is-on">Flujo</button>
+              <button type="button" data-v="quieta">Quieta</button>
+            </div>
+          </div>
+          <div class="atlasarch-cgroup atlasarch-cgroup--end">
+            <button id="atlasarch-marco-btn" type="button" class="atlasarch-cbtn">Marco conceptual</button>
+            <button id="atlasarch-fullscreen" type="button" class="atlasarch-cbtn">Pantalla completa</button>
+          </div>
+        </div>
+
         <div class="atlasarch-wrap reveal">
           <aside class="atlasarch-legend">
             <input id="atlasarch-search" type="search" placeholder="Buscar obra o autor…" autocomplete="off">
-            <h4>Fenómenos</h4>
+            <h4>Fenómenos <span class="atlasarch-h4-hint">clic para iluminar</span></h4>
             <div id="atlasarch-fen-list"></div>
-            <button id="atlasarch-reset-fen">mostrar todos</button>
-            <h4 class="is-second">Cómo leer los flujos</h4>
+            <button id="atlasarch-reset-fen">quitar resaltado</button>
+            <h4 class="is-second">Cómo leer el mapa</h4>
             <div class="atlasarch-conv">
-              <div class="atlasarch-conv-row">
-                <span class="atlasarch-conv-line res" aria-hidden="true"></span>
-                <span class="atlasarch-conv-txt"><b>Resonancia</b> — dos obras se refuerzan</span>
-              </div>
-              <div class="atlasarch-conv-row">
-                <span class="atlasarch-conv-line dis" aria-hidden="true"></span>
-                <span class="atlasarch-conv-txt"><b>Disonancia</b> — fricción entre marcos</span>
-              </div>
-              <div class="atlasarch-conv-row">
-                <span class="atlasarch-conv-line faint" aria-hidden="true"></span>
-                <span class="atlasarch-conv-txt">Línea tenue — fuente <b>por corroborar</b></span>
-              </div>
-              <div class="atlasarch-conv-row">
-                <span class="atlasarch-conv-nodes" aria-hidden="true"><i></i><i></i></span>
-                <span class="atlasarch-conv-txt">Nodo mayor — sostiene más relaciones</span>
-              </div>
-              <div class="atlasarch-conv-row">
-                <span class="atlasarch-conv-swatch" aria-hidden="true"></span>
-                <span class="atlasarch-conv-txt">Color del nodo — su primer fenómeno</span>
-              </div>
+              <div class="atlasarch-conv-row"><span class="atlasarch-conv-line res" aria-hidden="true"></span><span class="atlasarch-conv-txt"><b>Resonancia</b> — dos obras fluyen juntas</span></div>
+              <div class="atlasarch-conv-row"><span class="atlasarch-conv-line dis" aria-hidden="true"></span><span class="atlasarch-conv-txt"><b>Disonancia</b> — fricción epistémica</span></div>
+              <div class="atlasarch-conv-row"><span class="atlasarch-conv-line faint" aria-hidden="true"></span><span class="atlasarch-conv-txt">Corriente tenue — fuente <b>por corroborar</b></span></div>
+              <div class="atlasarch-conv-row"><span class="atlasarch-conv-nodes" aria-hidden="true"><i></i><i></i></span><span class="atlasarch-conv-txt">Nodo mayor — sostiene más relaciones</span></div>
+              <div class="atlasarch-conv-row"><span class="atlasarch-conv-ring" aria-hidden="true"></span><span class="atlasarch-conv-txt">Anillo hueco — material <b>etnográfico</b></span></div>
+              <div class="atlasarch-conv-row"><span class="atlasarch-conv-tether" aria-hidden="true"></span><span class="atlasarch-conv-txt">Hilo dorado — ciudad en tensión con su centro no caribeño</span></div>
             </div>
             <h4 class="is-second">Corpus</h4>
             <p class="atlasarch-stat-line" id="atlasarch-stat-obras"></p>
             <p class="atlasarch-stat-line" id="atlasarch-stat-rel"></p>
             <p class="atlasarch-stat-line" id="atlasarch-stat-corrob"></p>
           </aside>
+
           <div class="atlasarch-graph-col">
-            <div id="atlasarch-cy" role="application" aria-label="Grafo relacional del atlas archipiélico">
-              <div class="atlasarch-toolbar">
-                <button id="atlasarch-fullscreen" type="button">Pantalla completa</button>
-              </div>
+            <div id="atlasarch-cy" role="application" aria-label="Atlas archipiélico del Gran Caribe: mapa de la cuenca con obras conectadas por corrientes de resonancia y disonancia">
+              <svg id="atlasarch-svg" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid meet" style="width:100%;height:100%;display:block"></svg>
+              <div id="atlasarch-caption" aria-live="polite"></div>
+              <div id="atlasarch-tabla"></div>
               <div id="atlasarch-panel">
                 <button id="atlasarch-panel-close" aria-label="Cerrar">×</button>
                 <div id="atlasarch-panel-body"></div>
               </div>
-              <div id="atlasarch-hint">clic en un nodo para leer su ficha · rueda para zoom · arrastra para mover</div>
+
+              <!-- BASE: Marco conceptual -->
+              <div id="atlasarch-marco">
+                <button id="atlasarch-marco-close" aria-label="Cerrar">×</button>
+                <div class="atlasarch-marco-inner">
+                  <p class="atlasarch-marco-eyebrow">Marco conceptual del mapa</p>
+                  <h3>Por qué un atlas archipiélico y no un mapa nacional</h3>
+                  <p class="atlasarch-marco-lede">La cuenca vista desde el mar. Las islas aparecen por su país; las ciudades del borde continental —Cartagena, Barranquilla, Santa Marta, Palenque, La Guajira, San Andrés, Veracruz, Costa Chica, Nueva Orleans— aparecen por su ciudad, en diálogo y tensión con un centro que no es caribeño. El Caribe colombiano se piensa desde una orilla intersticial: entre la lógica nacional que lo volvió periferia del centro andino y una antropología del Gran Caribe donde el mar conecta en vez de separar.</p>
+                  <div class="atlasarch-marco-authors">
+                    <div class="atlasarch-marco-card">
+                      <h4>Kamau Brathwaite</h4>
+                      <p>La marealéctica: pensar con la marea y no con la línea del tiempo. «La unidad es submarina». Por eso las corrientes del atlas suben y bajan en lugar de avanzar.</p>
+                    </div>
+                    <div class="atlasarch-marco-card">
+                      <h4>Derek Walcott</h4>
+                      <p>«El mar es historia». El archipiélago como fragmentos de una memoria épica que el continente no archiva: la cuenca guarda lo que la nación borró.</p>
+                    </div>
+                    <div class="atlasarch-marco-card">
+                      <h4>Ernesto Bassi</h4>
+                      <p>Un territorio acuoso. El geocuerpo andino-atlántico borró el mar y volvió periferia al Caribe colombiano. El atlas invierte el gesto y lo devuelve al centro.</p>
+                    </div>
+                    <div class="atlasarch-marco-card">
+                      <h4>Michael Monahan</h4>
+                      <p>La creolización como roce productivo entre saberes, no como fusión armónica. Nombra la fricción epistémica: las disonancias que el mapa no disuelve, marca.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="atlasarch-hint">clic en un fenómeno para iluminar sus obras y lugares · clic en una obra para su ficha</div>
             </div>
           </div>
         </div>
@@ -176,7 +221,7 @@
 
       <article class="proyecto-cuerpo">
         <h2>Sobre este atlas</h2>
-<p>El Caribe se ha pensado casi siempre desde la nación que lo fragmenta o desde el área cultural que lo unifica por fuera. Sidney Mintz definió el Caribe como área sociocultural por una historia compartida de plantación esclavista y capitalismo agrario de ultramar, y ese gesto fundó el campo. Este atlas hereda esa pregunta y la desplaza: propone que la unidad de análisis no es el lugar que aloja un fenómeno, sino el fenómeno-relación que atraviesa la cuenca entera sin detenerse en sus fronteras. Trouillot ya lo había dicho de otro modo: el Caribe es una frontera abierta que desborda las categorías con que la antropología nacional intenta contenerlo. Aquí esa apertura se vuelve estructura de datos: cada nodo es una obra, cada arco es una relación argumentada entre dos obras, y el mapa que resulta no dibuja territorio sino conversación.</p>
+<p>El Caribe se ha pensado casi siempre desde la nación que lo fragmenta o desde el área cultural que lo unifica por fuera. Sidney Mintz definió el Caribe como área sociocultural por una historia compartida de plantación esclavista y capitalismo agrario de ultramar, y ese gesto fundó el campo. Este atlas hereda esa pregunta y la desplaza: propone que la unidad de análisis no es el lugar que aloja un fenómeno, sino el fenómeno-relación que atraviesa la cuenca entera sin detenerse en sus fronteras. Trouillot ya lo había dicho de otro modo: el Caribe es una frontera abierta que desborda las categorías con que la antropología nacional intenta contenerlo. Aquí esa apertura se vuelve estructura de datos: cada nodo es una obra, cada arco es una relación argumentada entre dos obras. La vista Corriente devuelve esas obras al mapa de la cuenca vista desde el mar: las islas aparecen por su país y las ciudades del borde continental —Cartagena, Barranquilla, Santa Marta, Palenque, La Guajira, San Andrés, Veracruz, Costa Chica, Nueva Orleans— por su ciudad, en tensión con un centro que no es caribeño. Es la lección de Ernesto Bassi: el geocuerpo andino-atlántico borró el mar y volvió periferia al Caribe colombiano; el atlas invierte el gesto. La vista Constelación suelta las obras de la geografía y las agrupa por su cercanía argumentativa. El Caribe colombiano se lee entonces desde una orilla intersticial, ni continental ni plenamente insular, de espaldas al centro andino y de cara al mar.</p>
 
         <h2>Diez fenómenos, no diez naciones</h2>
 <p>El corpus se organiza en diez categorías transversales. Cada una agrupa obras que piensan el mismo problema desde distintas orillas lingüísticas del Caribe (hispana, anglófona, francófona, neerlandesa) y distintos países, precisamente para que la comparación ocurra por argumento y no por geografía.</p>
@@ -200,7 +245,7 @@
 <p>A la fecha de esta versión, el atlas reúne <strong>117 obras</strong> y <strong>211 relaciones</strong> entre ellas, sin relaciones rotas: todo arco conecta dos obras que existen en el corpus. De esas 211 relaciones, 198 son de resonancia y 13 de disonancia. La cifra que este atlas no esconde es que el 49% de las relaciones (104 de 211) todavía están marcadas como <em>por corroborar</em>: la conexión se propuso porque hay razón argumentable para proponerla, pero falta verificar la cita directa, el archivo o la fuente secundaria que la sostenga con rigor. Esa proporción no es una falla de diseño. Es la fotografía honesta de un corpus construido obra por obra, ronda de siembra por ronda de siembra, donde cada libro se descarga, se verifica por su propio texto (nunca por el nombre del archivo) y se conecta con lo que ya existe. La sistematización bibliográfica —hoy hecha a mano, todavía sin un flujo completo desde Zotero— es, junto con la corroboración de esas 104 relaciones pendientes, el trabajo que este atlas necesita para crecer al ritmo de su propia ambición.</p>
 
         <h2>Cómo leer el atlas</h2>
-<p>Cada nodo es una obra; su color corresponde al primer fenómeno con que se clasifica, y su tamaño crece con el número de relaciones que sostiene dentro del corpus. Las líneas sólidas son resonancias; las líneas punteadas en rojo son disonancias. La opacidad de cada línea marca su estado de corroboración: más visible si la fuente ya está verificada, más tenue si sigue pendiente. Un clic sobre cualquier nodo abre su ficha completa (autor, año, lugar, tradición lingüística, el apunte argumentativo que motivó su inclusión) y la lista de todas sus relaciones con la fuente que las respalda. La leyenda de la izquierda filtra por fenómeno y permite aislar un eje temático a la vez; el buscador ubica una obra o un autor por nombre.</p>
+<p>El atlas ofrece tres vistas de un mismo corpus. La vista <strong>Corriente</strong> lo despliega sobre el mapa de la cuenca: cada obra se sitúa en su lugar geográfico, las islas por su país y las ciudades continentales por su ciudad, y un hilo dorado tiende la tensión de cada ciudad con su centro no caribeño. La vista <strong>Constelación</strong> reordena las obras por fenómeno, en racimos, para leerlas por argumento y no por costa. La vista <strong>Tabla</strong> las lista para buscar y ordenar. Cada obra es un nodo: su color es su primer fenómeno y su tamaño crece con las relaciones que sostiene; el anillo hueco distingue el material etnográfico del Caribe colombiano del resto de la investigación, que la <em>capa</em> permite aislar. Las corrientes de resonancia fluyen turquesa; las de disonancia, la fricción epistémica, corren rojas y a contracorriente; su opacidad marca el estado de corroboración, más viva si la fuente está verificada y más tenue si sigue pendiente. La <em>marea</em> anima esas corrientes o las detiene. Un clic sobre una obra abre su ficha (autor, año, lugar, tradición lingüística, el apunte que motivó su inclusión) y todas sus relaciones con la fuente que las respalda; la leyenda filtra por fenómeno y el buscador ubica una obra o un autor. El botón <strong>Marco conceptual</strong> abre la explicación del mapa con sus autores centrales.</p>
 
         <h2>Cómo citar</h2>
 <p>Los datos de este atlas están depositados en Zenodo con DOI permanente: <a href="https://doi.org/10.5281/zenodo.21483569" target="_blank" rel="noopener">10.5281/zenodo.21483569</a>. Cita sugerida: Almanza Hernández, Roberto (dir.), <em>Con el agua de por medio: atlas para una antropología archipiélica</em>, corpus bibliográfico y relacional, versión 1.0, Grupo de Investigación Pensamiento Caribe, Universidad del Magdalena, 2026, DOI: 10.5281/zenodo.21483569. El corpus se versiona: cada ampliación sustantiva se archiva de nuevo en Zenodo y actualiza esta página.</p>
@@ -213,6 +258,7 @@
       </nav>
     </main>
   </div>
+  <script src="../data/agua-de-por-medio/datos-atlas.js"></script>
   <script src="../js/atlas-archipielico.js"></script>
   <script src="../js/interactions.js"></script>
 </body>

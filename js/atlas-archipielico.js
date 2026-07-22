@@ -1,251 +1,366 @@
 /* ════════════════════════════════════════════════
-   CON EL AGUA DE POR MEDIO
-   Atlas para una antropología archipiélica — grafo Cytoscape.js
-   Datos: data/agua-de-por-medio/datos-atlas.json (ver README del pipeline).
-   La unidad de análisis es la obra y su relación, no el lugar.
+   CON EL AGUA DE POR MEDIO · Motor SVG del atlas
+   Prototipo: iluminar por fenómeno, ver cómo conectan sus obras
+   Base: Brathwaite, Monahan, Walcott, Bassi
    ════════════════════════════════════════════════ */
 (function () {
-  // Capturado en frío, síncronamente, mientras este script se ejecuta:
-  // document.currentScript deja de ser válido en cuanto cede al event loop
-  // (p. ej. dentro de un callback de DOMContentLoaded).
   var SCRIPT_SRC = (document.currentScript && document.currentScript.src) || '';
 
   function init(ATLAS) {
-    const el = document.getElementById('atlasarch-cy');
-    if (!el || typeof cytoscape === 'undefined') return;
+    var stage = document.getElementById('atlasarch-cy');
+    if (!stage) return;
 
-    function fenColor(id) { return (ATLAS.fenomenos[id] && ATLAS.fenomenos[id].c) || '#888'; }
+    // estado
+    var state = { view: 'corriente', layer: 'ambas', active: null, focusFen: null, tide: true };
+    var vpt = { k: 1, tx: 0, ty: 0 };
+    var hoverNode = null;
 
-    // ── grado de cada obra (para tamaño de nodo) ──
-    const grado = {};
-    ATLAS.obras.forEach(o => grado[o.id] = 0);
-    ATLAS.relaciones.forEach(r => { grado[r.a] = (grado[r.a]||0)+1; grado[r.b] = (grado[r.b]||0)+1; });
-
-    // ── posiciones iniciales deterministas: un sector por fenómeno,
-    //    un anillo de obras dentro de cada sector. Con randomize:false
-    //    esto vuelve el layout estable entre recargas (mismo insumo,
-    //    mismo resultado), a diferencia de un cose puramente aleatorio. ──
-    const fenIds = Object.keys(ATLAS.fenomenos);
-    const R1 = 380, R2 = 140;
-    const porFen = {};
-    fenIds.forEach(f => porFen[f] = []);
-    ATLAS.obras.forEach(o => { const f = (o.f && o.f[0]) || fenIds[0]; (porFen[f] || (porFen[f]=[])).push(o); });
-
-    const posiciones = {};
-    fenIds.forEach((f, i) => {
-      const angF = (i / fenIds.length) * 2 * Math.PI;
-      const cx = Math.cos(angF) * R1, cy = Math.sin(angF) * R1;
-      const grupo = porFen[f] || [];
-      grupo.forEach((o, j) => {
-        const angO = grupo.length > 1 ? (j / grupo.length) * 2 * Math.PI : 0;
-        posiciones[o.id] = {
-          x: cx + Math.cos(angO) * R2,
-          y: cy + Math.sin(angO) * R2
-        };
-      });
+    var FEN = ATLAS.fenomenos, FIDS = Object.keys(FEN);
+    var obras = ATLAS.obras, rels = ATLAS.relaciones, LUG = ATLAS.lugares;
+    var byId = {}, grado = {}, adj = {};
+    obras.forEach(function (o) { byId[o.id] = o; grado[o.id] = 0; });
+    rels.forEach(function (r) {
+      grado[r.a] = (grado[r.a] || 0) + 1;
+      grado[r.b] = (grado[r.b] || 0) + 1;
+      (adj[r.a] = adj[r.a] || {})[r.b] = 1;
+      (adj[r.b] = adj[r.b] || {})[r.a] = 1;
     });
 
-    const nodes = ATLAS.obras.map(o => ({
-      data: {
-        id: o.id,
-        label: o.t.length > 34 ? o.t.slice(0, 32) + '…' : o.t,
-        fen0: (o.f && o.f[0]) || null,
-        fen1: (o.f && o.f[1]) || null,
-        color0: fenColor(o.f && o.f[0]),
-        color1: fenColor((o.f && o.f[1]) || (o.f && o.f[0])),
-        grado: grado[o.id] || 0,
-        obra: o
-      },
-      position: posiciones[o.id] || { x: 0, y: 0 }
-    }));
+    // proyección geográfica
+    var VW = 1200, VH = 640, PAD = 95;
+    var LNG0 = -98, LNG1 = -53, LAT0 = 2, LAT1 = 33;
+    function px(lng) { return PAD + (lng - LNG0) / (LNG1 - LNG0) * (VW - 2 * PAD); }
+    function py(lat) { return PAD + (LAT1 - lat) / (LAT1 - LAT0) * (VH - 2 * PAD); }
 
-    const edges = ATLAS.relaciones.map((r, i) => {
-      const pendiente = /por corroborar/i.test(r.fuente || '');
-      return {
-        data: {
-          id: 'r' + i, source: r.a, target: r.b,
-          tipo: r.tipo, fuente: r.fuente,
-          pendienteNum: pendiente ? 1 : 0
+    // cluster por lugar (corriente) o fenómeno (constelación)
+    var CLUSTERS = [], porLug = {};
+    obras.forEach(function (o) { (porLug[o.l] = porLug[o.l] || []).push(o); });
+
+    function computeBase() {
+      CLUSTERS = [];
+      obras.forEach(function (n) {
+        if (state.view === 'corriente') {
+          var arr = porLug[n.l] || [], bx = px(LUG[n.l][1]), by = py(LUG[n.l][0]);
+          var idx = arr.indexOf(n), rr = arr.length <= 1 ? 0 : 10.5 * Math.sqrt(idx + 0.5), ang = idx * 2.399963;
+          n._bx = bx + Math.cos(ang) * rr;
+          n._by = by + Math.sin(ang) * rr;
+        } else {
+          var f = n.f[0], fenIdx = FIDS.indexOf(f), cx = VW / 2, cy = VH / 2, Rk = 270;
+          var ang2 = (fenIdx / FIDS.length) * Math.PI * 2 - Math.PI / 2;
+          var hx = cx + Math.cos(ang2) * Rk, hy = cy + Math.sin(ang2) * Rk * 0.85;
+          var arr2 = obras.filter(function (x) { return x.f[0] === f; });
+          var idx2 = arr2.indexOf(n), ring = arr2.length <= 1 ? 0 : 13 * Math.sqrt(idx2 + 0.5), ang3 = idx2 * 2.399963;
+          n._bx = hx + Math.cos(ang3) * ring;
+          n._by = hy + Math.sin(ang3) * ring;
         }
-      };
-    });
-
-    const cy = cytoscape({
-      container: el,
-      elements: { nodes, edges },
-      minZoom: 0.15, maxZoom: 3.5,
-      style: [
-        { selector: 'node', style: {
-            'background-color': 'data(color0)',
-            'border-width': 2.2, 'border-color': 'data(color1)',
-            'width': 'mapData(grado, 0, 14, 10, 32)',
-            'height': 'mapData(grado, 0, 14, 10, 32)',
-            'label': 'data(label)',
-            'color': '#f2ead8',
-            'font-family': 'Inter, sans-serif',
-            'font-size': 6,
-            'text-valign': 'bottom', 'text-margin-y': 4,
-            'text-wrap': 'none', 'text-opacity': 0.75,
-            'transition-property': 'opacity, border-width',
-            'transition-duration': 120
-        }},
-        { selector: 'node.atlasarch-dim', style: { 'opacity': 0.08, 'text-opacity': 0 } },
-        { selector: 'node.atlasarch-hl', style: { 'border-width': 3.6, 'border-color': '#f07a16', 'z-index': 999 } },
-        { selector: 'edge', style: {
-            'width': 1, 'curve-style': 'bezier',
-            'line-color': '#b9b09f',
-            'target-arrow-shape': 'none',
-            'opacity': 'mapData(pendienteNum, 0, 1, 0.4, 0.15)'
-        }},
-        { selector: 'edge[tipo = "disonancia"]', style: { 'line-color': '#d83a2e', 'line-style': 'dashed' } },
-        { selector: 'edge.atlasarch-dim', style: { 'opacity': 0.02 } }
-      ],
-      layout: {
-        name: 'cose', randomize: false, animate: false,
-        idealEdgeLength: 70, nodeRepulsion: 9000, gravity: 45,
-        numIter: 1200, padding: 40
-      }
-    });
-
-    // ── leyenda de fenómenos ──
-    const fenListEl = document.getElementById('atlasarch-fen-list');
-    const activos = new Set(fenIds);
-    const conteos = {};
-    ATLAS.obras.forEach(o => (o.f || []).forEach(f => conteos[f] = (conteos[f] || 0) + 1));
-
-    fenIds.forEach(id => {
-      const fen = ATLAS.fenomenos[id];
-      const div = document.createElement('div');
-      div.className = 'atlasarch-fen-item';
-      div.dataset.fen = id;
-      div.title = fen.g;
-      div.innerHTML = '<span class="atlasarch-fen-dot" style="background:' + fen.c + '"></span>'
-                    + '<span class="atlasarch-fen-label">' + fen.label + '</span>'
-                    + '<span class="atlasarch-fen-count">' + (conteos[id] || 0) + '</span>';
-      div.addEventListener('click', () => {
-        if (activos.has(id)) activos.delete(id); else activos.add(id);
-        applyFenFilter();
-      });
-      fenListEl.appendChild(div);
-    });
-
-    const resetBtn = document.getElementById('atlasarch-reset-fen');
-    if (resetBtn) resetBtn.addEventListener('click', () => { fenIds.forEach(id => activos.add(id)); applyFenFilter(); });
-
-    function applyFenFilter() {
-      fenListEl.querySelectorAll('.atlasarch-fen-item').forEach(el2 => {
-        el2.classList.toggle('is-off', !activos.has(el2.dataset.fen));
-      });
-      cy.nodes().forEach(n => {
-        const visible = activos.has(n.data('fen0')) || activos.has(n.data('fen1'));
-        n.toggleClass('atlasarch-dim', !visible);
-      });
-      cy.edges().forEach(e => {
-        const s = cy.getElementById(e.data('source')), t = cy.getElementById(e.data('target'));
-        e.toggleClass('atlasarch-dim', s.hasClass('atlasarch-dim') || t.hasClass('atlasarch-dim'));
+        n._x = n._bx;
+        n._y = n._by;
       });
     }
 
-    // ── búsqueda ──
-    const searchEl = document.getElementById('atlasarch-search');
-    if (searchEl) searchEl.addEventListener('input', (ev) => {
-      const q = ev.target.value.trim().toLowerCase();
-      cy.nodes().removeClass('atlasarch-hl');
-      if (!q) return;
-      cy.nodes().forEach(n => {
-        const o = n.data('obra');
-        if ((o.t + ' ' + o.a).toLowerCase().includes(q)) n.addClass('atlasarch-hl');
+    function capaOk(o) { return state.layer === 'ambas' || o.k === state.layer; }
+    function visible(n) { return capaOk(n); }
+
+    var NS = 'http://www.w3.org/2000/svg';
+    var el = function (n, at) {
+      var e = document.createElementNS(NS, n);
+      for (var k in at) e.setAttribute(k, at[k]);
+      return e;
+    };
+
+    var svg = stage.querySelector('svg') || stage;
+    var vp = null;
+
+    function render() {
+      svg.innerHTML = '';
+      vp = el('g', { id: 'vp' });
+      svg.appendChild(vp);
+      applyVP();
+      computeBase();
+
+      // hint
+      var hint = document.getElementById('atlasarch-hint');
+      if (hint) {
+        if (state.view === 'corriente') {
+          hint.textContent = 'Clic en un fenómeno en la leyenda para iluminar sus obras y lugares. Arrastra para navegar, rueda para zoom.';
+        } else {
+          hint.textContent = 'Constelación de fenómenos. Clic en uno para iluminar. Arrastra: navega · rueda: zoom.';
+        }
+      }
+
+      // corrientes (edges): siempre se dibujan
+      var eg = el('g');
+      vp.appendChild(eg);
+      rels.forEach(function (r, i) {
+        var na = byId[r.a], nb = byId[r.b];
+        if (!na || !nb || !visible(na) || !visible(nb)) return;
+        var p = el('path', { class: 'atlasarch-edge ' + (r.tipo === 'disonancia' ? 'disonancia' : 'resonancia') });
+        eg.appendChild(p);
+        r._p = p;
       });
-    });
 
-    // ── panel de detalle ──
-    const panel = document.getElementById('atlasarch-panel');
-    const panelBody = document.getElementById('atlasarch-panel-body');
-    const panelClose = document.getElementById('atlasarch-panel-close');
-    if (panelClose) panelClose.addEventListener('click', () => panel.classList.remove('is-open'));
+      // lugares (en corriente) o fenómenos (en constelación)
+      if (state.view === 'corriente') {
+        var pg = el('g');
+        Object.keys(LUG).forEach(function (lid) {
+          if (!porLug[lid] || !porLug[lid].some(visible)) return;
+          var v = LUG[lid];
+          var t = el('text', { class: 'atlasarch-placelbl ' + v[3], x: px(v[1]) + 14, y: py(v[0]) + 4 });
+          t.textContent = v[2];
+          pg.appendChild(t);
+        });
+        vp.appendChild(pg);
+      } else {
+        var cg = el('g');
+        FIDS.forEach(function (f, i) {
+          var cx = VW / 2, cy = VH / 2, Rk = 270;
+          var ang = (i / FIDS.length) * Math.PI * 2 - Math.PI / 2;
+          var x = cx + Math.cos(ang) * (Rk + 62), y = cy + Math.sin(ang) * Rk * 0.85 + Math.sin(ang) * 44;
+          var t = el('text', { class: 'atlasarch-clbl', x: x, y: y, 'text-anchor': 'middle', fill: FEN[f].c });
+          t.textContent = FEN[f].label;
+          cg.appendChild(t);
+        });
+        vp.appendChild(cg);
+      }
 
-    function lugarLabel(id) {
-      const l = ATLAS.lugares[id];
-      return l ? l[2] + (l[3] === 'ciudad' && l[4] ? ' · ' + l[4] : '') : id;
+      // nodos
+      obras.forEach(function (n) {
+        if (!visible(n)) return;
+        var g = el('g', { class: 'atlasarch-node' });
+        var r = n.k === 'obra' ? 7 : 6.5;
+        var c = el('circle', { class: 'atlasarch-dot', r: r, fill: n.k === 'obra' ? FEN[n.f[0]].c : '#050604', stroke: FEN[n.f[0]].c, 'stroke-width': n.k === 'obra' ? 1.2 : 2.6 });
+        var hit = el('circle', { r: 16, fill: 'transparent' });
+        g.appendChild(c);
+        g.appendChild(hit);
+        g.style.cursor = 'pointer';
+        g.addEventListener('mouseenter', function () { hoverNode = n; updateTip(); });
+        g.addEventListener('mouseleave', function () { if (hoverNode === n) hoverNode = null; updateTip(); });
+        g.addEventListener('click', function (ev) { ev.stopPropagation(); abrirFicha(n.id); });
+        vp.appendChild(g);
+        n._g = g;
+        n._c = c;
+      });
+
+      buildLegend();
+      refreshHi();
+      place(0);
+    }
+
+    function applyVP() {
+      if (vp) vp.setAttribute('transform', 'translate(' + vpt.tx + ',' + vpt.ty + ') scale(' + vpt.k + ')');
+    }
+
+    function place(t) {
+      if (state.view === 'tabla') return;
+      var ph = t * 0.00045, flowing = state.tide;
+      obras.forEach(function (n, idx) {
+        var dx = 0, dy = 0;
+        if (flowing) {
+          if (state.view === 'corriente') {
+            dx = 7 * Math.sin(ph * 0.6) + 4.5 * Math.sin(ph + n._bx * 0.012);
+            dy = 3 * Math.sin(ph * 0.8 + n._by * 0.010 + 1.6);
+          } else {
+            dx = 2.2 * Math.sin(ph + idx * 0.5);
+            dy = 2.2 * Math.cos(ph * 0.9 + idx * 0.5);
+          }
+        }
+        n._x = n._bx + dx;
+        n._y = n._by + dy;
+        n._g.setAttribute('transform', 'translate(' + n._x + ',' + n._y + ')');
+      });
+
+      // animar corrientes (ondas)
+      rels.forEach(function (r) {
+        var na = byId[r.a], nb = byId[r.b];
+        if (!na || !nb || !na._g || !nb._g) return;
+        var ax = na._x, ay = na._y, bx = nb._x, by = nb._y;
+        var dx = bx - ax, dy = by - ay, len = Math.hypot(dx, dy) || 1;
+        var nx = -dy / len, ny = dx / len;
+        var amp = Math.min(30, len * 0.16);
+        if (r.tipo === 'disonancia') amp *= 1.35;
+        var STEPS = 22, d = '';
+        for (var i = 0; i <= STEPS; i++) {
+          var tt = i / STEPS, env = Math.sin(Math.PI * tt);
+          var wave = Math.sin(tt * 3.4 - ph * 1.7 + r._ph) + 0.45 * Math.sin(tt * 6.6 - ph * 1.5 + r._ph * 1.9);
+          if (r.tipo === 'disonancia') wave = Math.sin(tt * 3.4 - ph * 1.7 + r._ph) - 0.55 * Math.sin(tt * 5.2 + ph * 1.3 + r._ph);
+          var off = amp * env * wave * 0.6;
+          var x = ax + dx * tt + nx * off, y = ay + dy * tt + ny * off;
+          d += (i ? ' L ' : 'M ') + x.toFixed(1) + ',' + y.toFixed(1);
+        }
+        if (r._p) r._p.setAttribute('d', d);
+        if (flowing) r._p.setAttribute('stroke-dashoffset', (-t * 0.03) % 1000);
+      });
+
+      updateTip();
+    }
+
+    function refreshHi() {
+      var fn = state.active, ff = state.focusFen;
+      obras.forEach(function (n) {
+        var op = 1;
+        if (fn) {
+          if (n.id === fn) op = 1;
+          else if (adj[fn] && adj[fn][n.id]) op = 1;
+          else op = 0.08;
+        } else if (ff) {
+          op = (n.f || []).indexOf(ff) >= 0 ? 1 : 0.09;
+        }
+        n._c.style.opacity = op;
+      });
+
+      rels.forEach(function (r) {
+        var op = '';
+        if (fn) {
+          var touchF = (r.a === fn || r.b === fn);
+          op = touchF ? 0.82 : (adj[fn] && adj[fn][r.a] && adj[fn] && adj[fn][r.b]) ? 0.42 : 0.04;
+        } else if (ff) {
+          var na = byId[r.a], nb = byId[r.b];
+          op = (na && na.f && na.f.indexOf(ff) >= 0 && nb && nb.f && nb.f.indexOf(ff) >= 0) ? 0.65 : 0.05;
+        }
+        if (r._p) r._p.style.strokeOpacity = op;
+      });
+    }
+
+    function showGuion(f) {
+      var guion = document.getElementById('atlasarch-caption');
+      if (!guion) return;
+      if (!f) { guion.classList.remove('is-on'); return; }
+      guion.innerHTML = '<strong>' + FEN[f].label + '.</strong> ' + (FEN[f].g || '');
+      guion.classList.add('is-on');
+    }
+
+    function focusFen(f) {
+      state.active = null;
+      var panel = document.getElementById('atlasarch-panel');
+      if (panel) panel.classList.remove('is-open');
+      state.focusFen = (state.focusFen === f) ? null : f;
+      showGuion(state.focusFen);
+      buildLegend();
+      refreshHi();
+      updateTip();
+    }
+
+    function buildLegend() {
+      var fenList = document.getElementById('atlasarch-fen-list');
+      if (!fenList) return;
+      fenList.innerHTML = '';
+      FIDS.forEach(function (id) {
+        var f = FEN[id];
+        var div = document.createElement('div');
+        div.className = 'atlasarch-fen-item' + (state.focusFen === id ? ' is-sel' : '');
+        div.dataset.fen = id;
+        div.innerHTML = '<span class="atlasarch-fen-dot" style="background:' + f.c + ';color:' + f.c + '"></span><span class="atlasarch-fen-label">' + f.label + '</span>';
+        div.addEventListener('click', function () { focusFen(id); });
+        fenList.appendChild(div);
+      });
     }
 
     function abrirFicha(id) {
-      const o = ATLAS.obras.find(x => x.id === id);
-      if (!o) return;
-      const fens = (o.f || []).map(f => '<span class="atlasarch-fen-chip" style="background:' + fenColor(f) + '">' + (ATLAS.fenomenos[f] ? ATLAS.fenomenos[f].label : f) + '</span>').join('');
-      const rels = ATLAS.relaciones.filter(r => r.a === id || r.b === id);
-      const relHtml = rels.map(r => {
-        const otroId = r.a === id ? r.b : r.a;
-        const otro = ATLAS.obras.find(x => x.id === otroId);
-        const pend = /por corroborar/i.test(r.fuente || '');
-        return '<div class="atlasarch-rel-item" data-jump="' + otroId + '">'
-          + '<span class="atlasarch-rel-tipo ' + r.tipo + '">' + r.tipo + '</span>'
-          + '<span class="atlasarch-rel-t">' + (otro ? otro.t : otroId) + '</span>'
-          + '<span class="atlasarch-rel-fuente' + (pend ? ' is-pendiente' : '') + '">' + (r.fuente || '') + '</span>'
-          + '</div>';
-      }).join('') || '<p class="atlasarch-stat-line">Sin relaciones registradas todavía.</p>';
-
-      panelBody.innerHTML = fens
-        + '<h5>' + o.t + '</h5>'
-        + '<p class="atlasarch-autor">' + o.a + (o.y ? ' · ' + o.y : '') + '</p>'
-        + '<p class="atlasarch-lugar">' + lugarLabel(o.l) + ' · ' + o.tr + '</p>'
-        + (o.ap ? '<p class="atlasarch-apunte">' + o.ap + '</p>' : '')
-        + '<h6 class="atlasarch-rel-title">Relaciones (' + rels.length + ')</h6>'
-        + relHtml;
-
-      panelBody.querySelectorAll('.atlasarch-rel-item').forEach(item => {
-        item.addEventListener('click', () => { abrirFicha(item.dataset.jump); centrarNodo(item.dataset.jump); });
-      });
+      state.focusFen = null;
+      showGuion(null);
+      state.active = id;
+      buildLegend();
+      refreshHi();
+      updateTip();
+      var panel = document.getElementById('atlasarch-panel'), pbody = document.getElementById('atlasarch-panel-body');
+      if (!panel || !pbody) return;
+      var o = byId[id];
+      pbody.innerHTML = '<h5>' + o.t + '</h5><p class="atlasarch-autor">' + o.a + (o.y ? ' · ' + o.y : '') + '</p><p class="atlasarch-lugar">' + LUG[o.l][2] + '</p>' + (o.ap ? '<p class="atlasarch-apunte">' + o.ap + '</p>' : '');
       panel.classList.add('is-open');
     }
 
-    function centrarNodo(id) {
-      const n = cy.getElementById(id);
-      if (n && n.length) cy.animate({ center: { eles: n }, zoom: Math.max(cy.zoom(), 1.1) }, { duration: 300 });
+    function updateTip() {
+      // tooltip
     }
 
-    cy.on('tap', 'node', (ev) => abrirFicha(ev.target.id()));
-    cy.on('tap', (ev) => { if (ev.target === cy) panel.classList.remove('is-open'); });
-
-    // ── pantalla completa ──
-    // Externalizamos el contenedor completo (leyenda + grafo), no solo el
-    // lienzo del grafo: así los fenómenos, el buscador y las convenciones
-    // de los flujos siguen visibles a pantalla completa.
-    const fsBtn = document.getElementById('atlasarch-fullscreen');
-    const wrap = el.closest('.atlasarch-wrap') || el;
-    function reflow(fit) {
-      cy.resize();
-      if (fit) cy.fit(cy.elements(':visible'), 48);
+    // controles
+    var viewSeg = document.getElementById('atlasarch-vista');
+    if (viewSeg) {
+      viewSeg.addEventListener('click', function (e) {
+        if (e.target.dataset.v) {
+          var v = e.target.dataset.v;
+          state.view = v;
+          state.active = null;
+          var panel = document.getElementById('atlasarch-panel');
+          if (panel) panel.classList.remove('is-open');
+          render();
+        }
+      });
     }
-    if (fsBtn) fsBtn.addEventListener('click', () => {
-      if (document.fullscreenElement) document.exitFullscreen();
-      else if (wrap.requestFullscreen) wrap.requestFullscreen();
-    });
-    document.addEventListener('fullscreenchange', () => {
-      const isFs = document.fullscreenElement === wrap;
-      if (fsBtn) fsBtn.textContent = isFs ? 'Salir' : 'Pantalla completa';
-      // dejamos que el navegador pinte el nuevo tamaño antes de recalcular
-      setTimeout(() => reflow(true), 180);
-    });
 
-    // ── estado del corpus (argumento implícito, sin CTA) ──
-    const pend = ATLAS.relaciones.filter(r => /por corroborar/i.test(r.fuente || '')).length;
-    const statObras = document.getElementById('atlasarch-stat-obras');
-    const statRel = document.getElementById('atlasarch-stat-rel');
-    const statCorrob = document.getElementById('atlasarch-stat-corrob');
-    if (statObras) statObras.innerHTML = '<b>' + ATLAS.obras.length + '</b> obras';
-    if (statRel) statRel.innerHTML = '<b>' + ATLAS.relaciones.length + '</b> relaciones';
-    if (statCorrob) statCorrob.innerHTML = '<b>' + (ATLAS.relaciones.length - pend) + '</b> corroboradas · <b class="is-pendiente">' + pend + '</b> por corroborar';
+    var capaSeg = document.getElementById('atlasarch-capa');
+    if (capaSeg) {
+      capaSeg.addEventListener('click', function (e) {
+        if (e.target.dataset.v) {
+          state.layer = e.target.dataset.v;
+          render();
+        }
+      });
+    }
+
+    var mareaSeg = document.getElementById('atlasarch-marea');
+    if (mareaSeg) {
+      mareaSeg.addEventListener('click', function (e) {
+        if (e.target.dataset.v) {
+          state.tide = (e.target.dataset.v === 'flujo');
+          if (!state.tide) place(0);
+        }
+      });
+    }
+
+    var resetBtn = document.getElementById('atlasarch-reset-fen');
+    if (resetBtn) {
+      resetBtn.addEventListener('click', function () { focusFen(null); });
+    }
+
+    // mouse & zoom
+    svg.addEventListener('wheel', function (e) {
+      e.preventDefault();
+      var r = svg.getBoundingClientRect();
+      var px = (e.clientX - r.left) / r.width * VW;
+      var py = (e.clientY - r.top) / r.height * VH;
+      var factor = e.deltaY < 0 ? 1.12 : 1 / 1.12;
+      var nk = Math.max(0.6, Math.min(7, vpt.k * factor));
+      var f = nk / vpt.k;
+      vpt.tx = px - (px - vpt.tx) * f;
+      vpt.ty = py - (py - vpt.ty) * f;
+      vpt.k = nk;
+      applyVP();
+    }, { passive: false });
+
+    var panning = false, sx = 0, sy = 0, otx = 0, oty = 0;
+    svg.addEventListener('mousedown', function (e) { panning = true; sx = e.clientX; sy = e.clientY; otx = vpt.tx; oty = vpt.ty; });
+    window.addEventListener('mousemove', function (e) {
+      if (!panning) return;
+      var r = svg.getBoundingClientRect();
+      vpt.tx = otx + (e.clientX - sx) / r.width * VW;
+      vpt.ty = oty + (e.clientY - sy) / r.height * VH;
+      applyVP();
+    });
+    window.addEventListener('mouseup', function () { panning = false; });
+
+    // fullscreen
+    var fsBtn = document.getElementById('atlasarch-fullscreen');
+    if (fsBtn) {
+      fsBtn.addEventListener('click', function () {
+        if (document.fullscreenElement) document.exitFullscreen();
+        else if (svg.requestFullscreen) svg.requestFullscreen();
+      });
+    }
+
+    render();
+    requestAnimationFrame(function loop(t) { place(t); requestAnimationFrame(loop); });
   }
 
   function boot() {
+    if (window.__ATLAS_DATA__) { init(window.__ATLAS_DATA__); return; }
     var base = SCRIPT_SRC.replace(/js\/[^\/?#]*(?:[?#].*)?$/, 'data/agua-de-por-medio/');
     fetch(base + 'datos-atlas.json')
-      .then(r => r.ok ? r.json() : Promise.reject(new Error('HTTP ' + r.status)))
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(new Error('HTTP ' + r.status)); })
       .then(init)
-      .catch(err => {
-        const el = document.getElementById('atlasarch-cy');
-        if (el) el.innerHTML = '<p style="padding:2rem;font-family:var(--ff-mono);font-size:0.75rem;color:#b9b09f;">No se pudieron cargar los datos del atlas (' + err.message + ').</p>';
+      .catch(function (err) {
+        var el = document.getElementById('atlasarch-cy');
+        if (el) el.innerHTML = '<p style="padding:2rem;font-family:monospace;font-size:0.75rem;color:#b9b09f;">No se pudieron cargar los datos (' + err.message + ').</p>';
       });
   }
 

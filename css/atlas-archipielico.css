@@ -1,214 +1,233 @@
 /* ════════════════════════════════════════════════
    CON EL AGUA DE POR MEDIO
-   Atlas para una antropología archipiélica — grafo Cytoscape.js
-   Namespaced con .atlasarch- / #atlasarch- para no chocar
-   con el resto del sitio.
+   Atlas para una antropología archipiélica — motor geográfico (canvas)
+   Namespaced con .atlasarch- / #atlasarch- para no chocar con el sitio.
    ════════════════════════════════════════════════ */
 
-.atlasarch-wrap {
-  display: flex;
-  gap: 14px;
-  align-items: stretch;
+/* ── barra de controles ── */
+.atlasarch-controls {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 18px;
+  margin-bottom: 14px; padding-bottom: 14px;
+  border-bottom: 1px solid rgba(242,234,216,0.1);
 }
+.atlasarch-cgroup { display: flex; align-items: center; gap: 8px; }
+.atlasarch-cgroup--end { margin-left: auto; gap: 8px; }
+.atlasarch-clabel {
+  font-family: var(--ff-mono); font-size: 0.6rem; text-transform: uppercase;
+  letter-spacing: 0.12em; color: var(--c-gray);
+}
+.atlasarch-seg {
+  display: inline-flex; background: rgba(7,8,6,0.6);
+  border: 1px solid rgba(242,234,216,0.18); border-radius: 7px; overflow: hidden;
+}
+.atlasarch-seg button {
+  font-family: var(--ff-mono); font-size: 0.68rem; letter-spacing: 0.02em;
+  background: none; border: none; color: var(--c-gray);
+  padding: 0.34rem 0.72rem; cursor: pointer; transition: background 0.15s, color 0.15s;
+}
+.atlasarch-seg button + button { border-left: 1px solid rgba(242,234,216,0.12); }
+.atlasarch-seg button:hover { color: var(--c-cream, #f2ead8); }
+.atlasarch-seg button.is-on { background: rgba(127,212,200,0.16); color: #8fd6cb; }
+.atlasarch-cbtn {
+  font-family: var(--ff-mono); font-size: 0.66rem; letter-spacing: 0.02em;
+  background: rgba(7,8,6,0.6); color: var(--c-cream, #f2ead8);
+  border: 1px solid rgba(242,234,216,0.22); border-radius: 6px;
+  padding: 0.36rem 0.7rem; cursor: pointer; transition: border-color 0.15s, color 0.15s;
+}
+.atlasarch-cbtn:hover { border-color: var(--c-orange); color: var(--c-orange); }
+.atlasarch-cbtn.is-on { border-color: #caa14a; color: #caa14a; }
+
+/* ── envoltorio ── */
+.atlasarch-wrap { display: flex; gap: 14px; align-items: stretch; }
 
 .atlasarch-legend {
-  flex: 0 0 250px;
-  max-width: 250px;
+  flex: 0 0 244px; max-width: 244px;
   background: var(--c-surface-a, rgba(242,234,216,0.03));
   border: 1px solid var(--c-border-green, rgba(242,234,216,0.14));
-  border-radius: 10px;
-  padding: 16px 14px;
-  overflow-y: auto;
-  max-height: 640px;
-  scrollbar-width: thin;
+  border-radius: 10px; padding: 16px 14px; overflow-y: auto;
+  max-height: 660px; scrollbar-width: thin;
 }
-
 .atlasarch-legend h4 {
-  font-family: var(--ff-mono);
-  font-size: 0.66rem;
-  text-transform: uppercase;
-  letter-spacing: 0.09em;
-  color: var(--c-gray);
-  margin: 0 0 0.6rem;
+  font-family: var(--ff-mono); font-size: 0.66rem; text-transform: uppercase;
+  letter-spacing: 0.09em; color: var(--c-gray); margin: 0 0 0.6rem;
 }
-
 .atlasarch-legend h4.is-second { margin-top: 1rem; padding-top: 0.9rem; border-top: 1px solid rgba(242,234,216,0.1); }
 
 #atlasarch-search {
-  width: 100%;
-  background: rgba(242,234,216,0.06);
-  border: 1px solid rgba(242,234,216,0.18);
-  color: var(--c-cream, #f2ead8);
-  border-radius: 6px;
-  padding: 0.45rem 0.6rem;
-  font-family: var(--ff-body);
-  font-size: 0.83rem;
-  margin-bottom: 0.85rem;
+  width: 100%; background: rgba(242,234,216,0.06); border: 1px solid rgba(242,234,216,0.18);
+  color: var(--c-cream, #f2ead8); border-radius: 6px; padding: 0.45rem 0.6rem;
+  font-family: var(--ff-body); font-size: 0.83rem; margin-bottom: 0.85rem;
 }
 #atlasarch-search::placeholder { color: var(--c-gray); }
+#atlasarch-search:focus { outline: none; border-color: #8fd6cb; }
 
 .atlasarch-fen-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.38rem 0.3rem;
-  border-radius: 6px;
-  cursor: pointer;
-  font-size: 0.8rem;
-  line-height: 1.25;
-  transition: background 0.15s;
-  user-select: none;
+  display: flex; align-items: center; gap: 0.5rem; padding: 0.36rem 0.3rem;
+  border-radius: 6px; cursor: pointer; font-size: 0.8rem; line-height: 1.25;
+  transition: background 0.15s; user-select: none;
 }
 .atlasarch-fen-item:hover { background: rgba(242,234,216,0.06); }
-.atlasarch-fen-item.is-off { opacity: 0.32; }
-
-.atlasarch-fen-dot {
-  width: 10px; height: 10px; border-radius: 50%;
-  flex: 0 0 auto;
-  box-shadow: 0 0 0 1px rgba(0,0,0,0.35) inset;
-}
+.atlasarch-fen-item.is-off { opacity: 0.3; }
+.atlasarch-fen-item.is-sel { background: rgba(242,234,216,0.09); opacity: 1; }
+.atlasarch-fen-item.is-sel .atlasarch-fen-label { color: var(--c-cream, #f2ead8); font-weight: 600; }
+.atlasarch-h4-hint { font-family: var(--ff-mono); font-size: 0.56rem; letter-spacing: 0.04em; color: var(--c-orange); text-transform: none; }
+.atlasarch-fen-dot { width: 10px; height: 10px; border-radius: 50%; flex: 0 0 auto; box-shadow: 0 0 6px 0 currentColor; }
 .atlasarch-fen-label { flex: 1; }
 .atlasarch-fen-count { font-family: var(--ff-mono); font-size: 0.66rem; color: var(--c-gray); }
 
 #atlasarch-reset-fen {
-  display: block;
-  margin: 0.5rem 0 0.2rem;
-  font-family: var(--ff-mono);
-  font-size: 0.68rem;
-  color: var(--c-orange);
-  background: none; border: none; cursor: pointer; padding: 0;
-  text-decoration: underline;
+  display: block; margin: 0.5rem 0 0.2rem; font-family: var(--ff-mono); font-size: 0.68rem;
+  color: var(--c-orange); background: none; border: none; cursor: pointer; padding: 0; text-decoration: underline;
 }
 
-.atlasarch-stat-line { font-family: var(--ff-mono); font-size: 0.7rem; color: var(--c-gray); margin: 0.15rem 0; }
+/* convenciones */
+.atlasarch-conv { display: flex; flex-direction: column; gap: 0.55rem; }
+.atlasarch-conv-row { display: flex; align-items: center; gap: 0.6rem; font-size: 0.76rem; line-height: 1.32; color: var(--c-gray); }
+.atlasarch-conv-txt b { color: var(--c-cream, #f2ead8); font-weight: 600; }
+.atlasarch-conv-line { flex: 0 0 26px; height: 0; }
+.atlasarch-conv-line.res { border-top: 2px solid #7fd4c8; box-shadow: 0 0 6px #7fd4c8; }
+.atlasarch-conv-line.dis { border-top: 2px dashed #f0705f; }
+.atlasarch-conv-line.faint { border-top: 2px solid rgba(127,212,200,0.3); }
+.atlasarch-conv-nodes { flex: 0 0 26px; display: flex; align-items: center; justify-content: center; gap: 5px; }
+.atlasarch-conv-nodes i { display: block; border-radius: 50%; background: #7fd4c8; box-shadow: 0 0 6px #7fd4c8; }
+.atlasarch-conv-nodes i:first-child { width: 7px; height: 7px; }
+.atlasarch-conv-nodes i:last-child { width: 13px; height: 13px; }
+.atlasarch-conv-ring { flex: 0 0 26px; display: flex; justify-content: center; }
+.atlasarch-conv-ring::before { content: ""; width: 12px; height: 12px; border-radius: 50%; border: 2px solid #8fd6cb; }
+.atlasarch-conv-tether { flex: 0 0 26px; border-top: 2px dashed #caa14a; height: 0; }
+
+.atlasarch-stat-line { font-family: var(--ff-mono); font-size: 0.7rem; color: var(--c-gray); margin: 0.15rem 0; line-height: 1.5; }
 .atlasarch-stat-line b { color: var(--c-cream, #f2ead8); }
 .atlasarch-stat-line .is-pendiente { color: #caa14a; }
 
-/* ── convenciones / cómo leer los flujos ── */
-.atlasarch-conv { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 0.2rem; }
-.atlasarch-conv-row { display: flex; align-items: center; gap: 0.6rem; font-size: 0.76rem; line-height: 1.3; color: var(--c-gray); }
-.atlasarch-conv-txt b { color: var(--c-cream, #f2ead8); font-weight: 600; }
-.atlasarch-conv-line { flex: 0 0 26px; height: 0; }
-.atlasarch-conv-line.res { border-top: 2px solid #d8cdb4; }
-.atlasarch-conv-line.dis { border-top: 2px dashed #d83a2e; }
-.atlasarch-conv-line.faint { border-top: 2px solid rgba(216,205,180,0.28); }
-.atlasarch-conv-nodes { flex: 0 0 26px; display: flex; align-items: center; justify-content: center; gap: 5px; }
-.atlasarch-conv-nodes i { display: block; border-radius: 50%; background: #8fd6cb; box-shadow: 0 0 0 1px rgba(0,0,0,0.35) inset; }
-.atlasarch-conv-nodes i:first-child { width: 7px; height: 7px; }
-.atlasarch-conv-nodes i:last-child { width: 13px; height: 13px; }
-.atlasarch-conv-swatch {
-  flex: 0 0 26px; height: 12px; border-radius: 3px;
-  background: linear-gradient(90deg,#5fa9a0,#caa14a,#d83a2e);
-}
-
+/* ── lienzo ── */
 .atlasarch-graph-col { flex: 1 1 auto; min-width: 0; position: relative; }
-
 #atlasarch-cy {
-  width: 100%;
-  height: 640px;
-  border-radius: 10px;
-  background: radial-gradient(ellipse at 50% 40%, #0c0d09 0%, #050604 75%);
+  position: relative; width: 100%; height: 660px; border-radius: 10px; overflow: hidden;
   border: 1px solid rgba(242,234,216,0.1);
-  position: relative;
+  background: radial-gradient(ellipse at 50% 35%, #0c0d09 0%, #050604 78%);
 }
-/* ── pantalla completa: se externaliza el atlas entero (leyenda + grafo) ── */
-.atlasarch-wrap:fullscreen {
-  background: radial-gradient(ellipse at 50% 30%, #0c0d09 0%, #050604 80%);
-  padding: 18px;
-  gap: 18px;
-  opacity: 1 !important;
-  transform: none !important;
-  filter: none !important;
-}
-.atlasarch-wrap:fullscreen .atlasarch-legend {
-  flex: 0 0 270px;
-  max-width: 270px;
-  max-height: none;
-  background: rgba(242,234,216,0.045);
-  align-self: stretch;
-}
-.atlasarch-wrap:fullscreen .atlasarch-graph-col { align-self: stretch; }
-.atlasarch-wrap:fullscreen #atlasarch-cy {
-  height: 100%;
-  border-radius: 12px;
-  border-color: rgba(242,234,216,0.16);
-}
+#atlasarch-canvas { display: block; width: 100%; height: 100%; touch-action: none; cursor: grab; }
 
-.atlasarch-toolbar {
-  position: absolute; top: 0.7rem; right: 0.8rem; z-index: 5;
-  display: flex; gap: 0.4rem;
+/* ── tabla ── */
+#atlasarch-tabla { display: none; position: absolute; inset: 0; background: #050b0d; overflow: hidden; }
+#atlasarch-tabla .ta-scroll { height: 100%; overflow-y: auto; scrollbar-width: thin; }
+#atlasarch-tabla table { width: 100%; border-collapse: collapse; font-size: 0.8rem; }
+#atlasarch-tabla thead th {
+  position: sticky; top: 0; background: #0b1418; text-align: left;
+  font-family: var(--ff-mono); font-size: 0.62rem; text-transform: uppercase; letter-spacing: 0.06em;
+  color: var(--c-gray); padding: 0.7rem 0.8rem; border-bottom: 1px solid rgba(242,234,216,0.14);
 }
-.atlasarch-toolbar button {
-  font-family: var(--ff-mono); font-size: 0.65rem;
-  background: rgba(7,8,6,0.7); color: var(--c-cream, #f2ead8);
-  border: 1px solid rgba(242,234,216,0.25); border-radius: 5px;
-  padding: 0.3rem 0.55rem; cursor: pointer;
-}
-.atlasarch-toolbar button:hover { border-color: var(--c-orange); color: var(--c-orange); }
+#atlasarch-tabla tbody td { padding: 0.6rem 0.8rem; border-bottom: 1px solid rgba(242,234,216,0.06); color: #cdd8d8; vertical-align: top; }
+#atlasarch-tabla tbody tr { cursor: pointer; }
+#atlasarch-tabla tbody tr:hover td { background: rgba(127,212,200,0.06); }
+#atlasarch-tabla .ta-t { color: var(--c-cream, #f2ead8); }
+#atlasarch-tabla .ta-c { font-family: var(--ff-mono); font-size: 0.68rem; color: var(--c-gray); }
+#atlasarch-tabla .ta-n { font-family: var(--ff-mono); text-align: center; color: #8fd6cb; }
 
+/* ── toolbar / hint ── */
 #atlasarch-hint {
   position: absolute; bottom: 0.7rem; left: 0.8rem; z-index: 4;
   font-family: var(--ff-mono); font-size: 0.65rem; color: var(--c-gray);
-  background: rgba(7,8,6,0.55); padding: 0.28rem 0.55rem; border-radius: 4px;
+  background: rgba(7,8,6,0.55); padding: 0.28rem 0.55rem; border-radius: 4px; pointer-events: none;
+}
+
+/* texto de la glosa del fenómeno iluminado */
+#atlasarch-caption {
+  position: absolute; top: 0.9rem; left: 0.9rem; z-index: 5; max-width: 340px;
+  background: rgba(7,8,6,0.82); border: 1px solid rgba(242,234,216,0.16);
+  border-left: 2px solid var(--c-orange); border-radius: 8px;
+  padding: 0.7rem 0.85rem; font-size: 0.8rem; line-height: 1.5; color: #cdd8d8;
+  opacity: 0; visibility: hidden; transform: translateY(-4px); transition: opacity 0.22s, transform 0.22s;
   pointer-events: none;
 }
+#atlasarch-caption.is-on { opacity: 1; visibility: visible; transform: none; }
+#atlasarch-caption strong { color: #f4eeda; font-weight: 600; }
 
+/* ── ficha ── */
 #atlasarch-panel {
-  position: absolute; top: 0; right: 0; width: 330px; max-width: 88%;
-  height: 100%;
-  background: rgba(7,8,6,0.97);
-  border-left: 1px solid rgba(242,234,216,0.14);
-  padding: 1.2rem 1.2rem 1.4rem;
-  overflow-y: auto;
-  transform: translateX(100%);
-  transition: transform 0.25s ease;
-  z-index: 6;
+  position: absolute; top: 0; right: 0; width: 330px; max-width: 88%; height: 100%;
+  background: rgba(7,8,6,0.97); border-left: 1px solid rgba(242,234,216,0.14);
+  padding: 1.2rem 1.2rem 1.4rem; overflow-y: auto; transform: translateX(100%);
+  transition: transform 0.25s ease; z-index: 6;
 }
 #atlasarch-panel.is-open { transform: translateX(0); }
-
-#atlasarch-panel-close {
-  position: absolute; top: 0.7rem; right: 0.9rem;
-  background: none; border: none; color: var(--c-gray);
-  font-size: 1.25rem; cursor: pointer; line-height: 1;
-}
+#atlasarch-panel-close { position: absolute; top: 0.7rem; right: 0.9rem; background: none; border: none; color: var(--c-gray); font-size: 1.25rem; cursor: pointer; line-height: 1; }
 #atlasarch-panel-close:hover { color: var(--c-cream, #f2ead8); }
-
-.atlasarch-fen-chip {
-  display: inline-block; font-family: var(--ff-mono); font-size: 0.62rem;
-  padding: 0.14rem 0.45rem; border-radius: 20px;
-  margin: 0 0.28rem 0.28rem 0; color: #070806; font-weight: 600;
-}
-
-#atlasarch-panel h5 {
-  font-family: var(--ff-display); font-weight: 600; font-size: 1.22rem;
-  margin: 1.4rem 0 0.15rem; line-height: 1.25; color: var(--c-cream, #f2ead8);
-}
+.atlasarch-fen-chip { display: inline-block; font-family: var(--ff-mono); font-size: 0.62rem; padding: 0.14rem 0.45rem; border-radius: 20px; margin: 0 0.28rem 0.28rem 0; color: #070806; font-weight: 600; }
+.atlasarch-capa-tag { display: inline-block; font-family: var(--ff-mono); font-size: 0.58rem; letter-spacing: 0.05em; text-transform: uppercase; color: #caa14a; border: 1px solid rgba(202,161,74,0.4); border-radius: 4px; padding: 0.12rem 0.4rem; margin: 0.1rem 0 0; }
+#atlasarch-panel h5 { font-family: var(--ff-display); font-weight: 600; font-size: 1.22rem; margin: 1rem 0 0.15rem; line-height: 1.25; color: var(--c-cream, #f2ead8); }
 .atlasarch-autor { font-size: 0.85rem; color: var(--c-gray); margin: 0 0 0.15rem; }
 .atlasarch-lugar { font-family: var(--ff-mono); font-size: 0.7rem; color: var(--c-gray); margin: 0 0 0.85rem; }
-.atlasarch-apunte {
-  font-size: 0.87rem; line-height: 1.55; color: var(--c-cream, #f2ead8);
-  border-left: 2px solid rgba(242,234,216,0.2); padding-left: 0.75rem;
-  margin: 0.85rem 0 1.1rem;
-}
-.atlasarch-rel-title {
-  font-family: var(--ff-mono); font-size: 0.66rem; text-transform: uppercase;
-  letter-spacing: 0.08em; color: var(--c-gray); margin: 1rem 0 0.45rem;
-  border-top: 1px solid rgba(242,234,216,0.1); padding-top: 0.85rem;
-}
+.atlasarch-apunte { font-size: 0.87rem; line-height: 1.55; color: var(--c-cream, #f2ead8); border-left: 2px solid rgba(242,234,216,0.2); padding-left: 0.75rem; margin: 0.85rem 0 1.1rem; }
+.atlasarch-rel-title { font-family: var(--ff-mono); font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.08em; color: var(--c-gray); margin: 1rem 0 0.45rem; border-top: 1px solid rgba(242,234,216,0.1); padding-top: 0.85rem; }
 .atlasarch-rel-item { padding: 0.45rem 0; border-bottom: 1px solid rgba(242,234,216,0.07); cursor: pointer; }
 .atlasarch-rel-item:hover .atlasarch-rel-t { color: var(--c-orange); }
-.atlasarch-rel-tipo {
-  font-family: var(--ff-mono); font-size: 0.6rem; text-transform: uppercase;
-  letter-spacing: 0.05em; padding: 0.07rem 0.38rem; border-radius: 3px; margin-right: 0.35rem;
-}
-.atlasarch-rel-tipo.resonancia { background: rgba(95,169,160,0.18); color: #8fd6cb; }
-.atlasarch-rel-tipo.disonancia { background: rgba(216,58,46,0.18); color: #f08a80; }
+.atlasarch-rel-tipo { font-family: var(--ff-mono); font-size: 0.6rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 0.07rem 0.38rem; border-radius: 3px; margin-right: 0.35rem; }
+.atlasarch-rel-tipo.resonancia { background: rgba(127,212,200,0.18); color: #8fd6cb; }
+.atlasarch-rel-tipo.disonancia { background: rgba(240,112,95,0.18); color: #f08a80; }
 .atlasarch-rel-t { font-size: 0.82rem; color: var(--c-cream, #f2ead8); display: block; margin: 0.2rem 0 0.12rem; }
 .atlasarch-rel-fuente { font-size: 0.72rem; color: var(--c-gray); font-style: italic; }
 .atlasarch-rel-fuente.is-pendiente { color: #caa14a; }
 
+/* ── base: marco conceptual (overlay) ── */
+#atlasarch-marco {
+  position: absolute; inset: 0; z-index: 8; overflow-y: auto;
+  background: rgba(4,8,10,0.97); backdrop-filter: blur(4px);
+  padding: 2.2rem 2.4rem 2.6rem; opacity: 0; visibility: hidden; transition: opacity 0.28s;
+}
+#atlasarch-marco.is-open { opacity: 1; visibility: visible; }
+#atlasarch-marco-close { position: absolute; top: 1rem; right: 1.2rem; background: none; border: none; color: var(--c-gray); font-size: 1.5rem; line-height: 1; cursor: pointer; z-index: 2; }
+#atlasarch-marco-close:hover { color: var(--c-cream, #f2ead8); }
+.atlasarch-marco-inner { max-width: 860px; margin: 0 auto; }
+.atlasarch-marco-eyebrow { font-family: var(--ff-mono); font-size: 0.66rem; text-transform: uppercase; letter-spacing: 0.14em; color: #8fd6cb; margin: 0 0 0.7rem; }
+#atlasarch-marco h3 { font-family: var(--ff-display); font-weight: 600; font-size: 1.75rem; line-height: 1.16; color: #f4eeda; margin: 0 0 0.9rem; }
+.atlasarch-marco-lede { font-size: 0.98rem; line-height: 1.62; color: #cdd8d8; margin: 0 0 1.6rem; }
+.atlasarch-marco-authors { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.atlasarch-marco-card { background: rgba(242,234,216,0.045); border: 1px solid rgba(242,234,216,0.13); border-radius: 11px; padding: 1rem 1.1rem; }
+.atlasarch-marco-card h4 { font-family: var(--ff-display); font-weight: 600; font-size: 1.1rem; color: #f4eeda; margin: 0 0 0.35rem; }
+.atlasarch-marco-card p { font-size: 0.85rem; line-height: 1.5; color: #b9c4c4; margin: 0; }
+.atlasarch-marco-foot { font-size: 0.86rem; line-height: 1.6; color: var(--c-gray); margin: 1.5rem 0 0; padding-top: 1.1rem; border-top: 1px solid rgba(242,234,216,0.12); font-style: italic; }
+
+/* ── pantalla completa: externaliza el atlas entero ── */
+.atlasarch-wrap:fullscreen {
+  background: radial-gradient(ellipse at 50% 30%, #0c0d09 0%, #050604 80%);
+  padding: 18px; gap: 18px; opacity: 1 !important; transform: none !important;
+}
+.atlasarch-wrap:fullscreen .atlasarch-legend { flex: 0 0 268px; max-width: 268px; max-height: none; align-self: stretch; }
+.atlasarch-wrap:fullscreen .atlasarch-graph-col { align-self: stretch; }
+.atlasarch-wrap:fullscreen #atlasarch-cy { height: 100%; }
+
+/* ── elementos SVG del atlas ── */
+#atlasarch-svg { cursor: grab; }
+#atlasarch-svg.grabbing { cursor: grabbing; }
+.atlasarch-edge { fill: none; stroke: #f07a16; stroke-opacity: 0.4; stroke-width: 1.3; stroke-linecap: round; transition: stroke-opacity 0.25s; }
+.atlasarch-edge.disonancia { stroke: #d83a2e; }
+.atlasarch-dot { transition: opacity 0.25s, r 0.2s; }
+.atlasarch-node { cursor: pointer; }
+.atlasarch-placelbl { font-family: var(--ff-mono); font-size: 0.66rem; letter-spacing: 0.04em; pointer-events: none; transition: opacity 0.25s; }
+.atlasarch-placelbl.pais { fill: #b9b09f; opacity: 0.85; }
+.atlasarch-placelbl.ciudad { fill: #f07a16; opacity: 0.9; }
+.atlasarch-clbl { font-family: var(--ff-mono); font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.09em; font-weight: 600; pointer-events: none; transition: opacity 0.25s; }
+
+/* ── glosa del fenómeno iluminado ── */
+#atlasarch-caption {
+  position: absolute; top: 1rem; left: 50%; transform: translateX(-50%); z-index: 5;
+  max-width: 360px; background: rgba(17,19,13,0.95); border: 1px solid rgba(242,234,216,0.16);
+  border-left-width: 3px; border-radius: 6px; padding: 0.8rem 1.2rem;
+  font-size: 0.85rem; line-height: 1.55; color: #cdd8d8;
+  opacity: 0; visibility: hidden; transform: translateX(-50%) translateY(-8px);
+  transition: opacity 0.3s, transform 0.3s; pointer-events: none;
+}
+#atlasarch-caption.is-on { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+#atlasarch-caption strong { color: #f4eeda; font-weight: 600; }
+
 @media (max-width: 860px) {
   .atlasarch-wrap { flex-direction: column; }
-  .atlasarch-legend { max-width: none; max-height: 220px; }
-  #atlasarch-cy { height: 62vh; }
+  .atlasarch-legend { max-width: none; max-height: 200px; }
+  #atlasarch-cy { height: 66vh; }
+  .atlasarch-marco-authors { grid-template-columns: 1fr; }
+  #atlasarch-marco { padding: 1.6rem 1.4rem; }
+  .atlasarch-controls { gap: 12px; }
+  .atlasarch-cgroup--end { margin-left: 0; }
 }
