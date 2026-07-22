@@ -208,11 +208,24 @@
     cy.on('tap', (ev) => { if (ev.target === cy) panel.classList.remove('is-open'); });
 
     // ── pantalla completa ──
+    // Externalizamos el contenedor completo (leyenda + grafo), no solo el
+    // lienzo del grafo: así los fenómenos, el buscador y las convenciones
+    // de los flujos siguen visibles a pantalla completa.
     const fsBtn = document.getElementById('atlasarch-fullscreen');
+    const wrap = el.closest('.atlasarch-wrap') || el;
+    function reflow(fit) {
+      cy.resize();
+      if (fit) cy.fit(cy.elements(':visible'), 48);
+    }
     if (fsBtn) fsBtn.addEventListener('click', () => {
       if (document.fullscreenElement) document.exitFullscreen();
-      else el.requestFullscreen && el.requestFullscreen();
-      setTimeout(() => cy.resize(), 250);
+      else if (wrap.requestFullscreen) wrap.requestFullscreen();
+    });
+    document.addEventListener('fullscreenchange', () => {
+      const isFs = document.fullscreenElement === wrap;
+      if (fsBtn) fsBtn.textContent = isFs ? 'Salir' : 'Pantalla completa';
+      // dejamos que el navegador pinte el nuevo tamaño antes de recalcular
+      setTimeout(() => reflow(true), 180);
     });
 
     // ── estado del corpus (argumento implícito, sin CTA) ──

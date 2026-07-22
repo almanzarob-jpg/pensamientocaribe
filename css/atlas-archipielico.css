@@ -84,6 +84,23 @@
 .atlasarch-stat-line b { color: var(--c-cream, #f2ead8); }
 .atlasarch-stat-line .is-pendiente { color: #caa14a; }
 
+/* ── convenciones / cómo leer los flujos ── */
+.atlasarch-conv { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 0.2rem; }
+.atlasarch-conv-row { display: flex; align-items: center; gap: 0.6rem; font-size: 0.76rem; line-height: 1.3; color: var(--c-gray); }
+.atlasarch-conv-txt b { color: var(--c-cream, #f2ead8); font-weight: 600; }
+.atlasarch-conv-line { flex: 0 0 26px; height: 0; }
+.atlasarch-conv-line.res { border-top: 2px solid #d8cdb4; }
+.atlasarch-conv-line.dis { border-top: 2px dashed #d83a2e; }
+.atlasarch-conv-line.faint { border-top: 2px solid rgba(216,205,180,0.28); }
+.atlasarch-conv-nodes { flex: 0 0 26px; display: flex; align-items: center; justify-content: center; gap: 5px; }
+.atlasarch-conv-nodes i { display: block; border-radius: 50%; background: #8fd6cb; box-shadow: 0 0 0 1px rgba(0,0,0,0.35) inset; }
+.atlasarch-conv-nodes i:first-child { width: 7px; height: 7px; }
+.atlasarch-conv-nodes i:last-child { width: 13px; height: 13px; }
+.atlasarch-conv-swatch {
+  flex: 0 0 26px; height: 12px; border-radius: 3px;
+  background: linear-gradient(90deg,#5fa9a0,#caa14a,#d83a2e);
+}
+
 .atlasarch-graph-col { flex: 1 1 auto; min-width: 0; position: relative; }
 
 #atlasarch-cy {
@@ -94,7 +111,28 @@
   border: 1px solid rgba(242,234,216,0.1);
   position: relative;
 }
-#atlasarch-cy:fullscreen { height: 100vh; border-radius: 0; }
+/* ── pantalla completa: se externaliza el atlas entero (leyenda + grafo) ── */
+.atlasarch-wrap:fullscreen {
+  background: radial-gradient(ellipse at 50% 30%, #0c0d09 0%, #050604 80%);
+  padding: 18px;
+  gap: 18px;
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+}
+.atlasarch-wrap:fullscreen .atlasarch-legend {
+  flex: 0 0 270px;
+  max-width: 270px;
+  max-height: none;
+  background: rgba(242,234,216,0.045);
+  align-self: stretch;
+}
+.atlasarch-wrap:fullscreen .atlasarch-graph-col { align-self: stretch; }
+.atlasarch-wrap:fullscreen #atlasarch-cy {
+  height: 100%;
+  border-radius: 12px;
+  border-color: rgba(242,234,216,0.16);
+}
 
 .atlasarch-toolbar {
   position: absolute; top: 0.7rem; right: 0.8rem; z-index: 5;
