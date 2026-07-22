@@ -32,6 +32,7 @@
   .seg button:last-child{border-right:0}
   .seg button:hover{color:var(--cream)}
   .seg button.on{background:var(--cream); color:var(--bg-deep)}
+  /* cada grupo de filtro con su propio acento, para leerse de un vistazo */
   .seg.vista button:hover{background:rgba(63,138,53,.16)}
   .seg.vista button.on{background:var(--green-l); color:#08110a; box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
   .seg.capa button:hover{background:rgba(201,162,77,.14)}
@@ -55,12 +56,14 @@
   .placelbl.pais{fill:var(--gray); opacity:.85}
   .placelbl.ciudad{fill:var(--orange); opacity:.9}
   .clbl{font-family:var(--ff-mono); font-size:10.5px; text-transform:uppercase; letter-spacing:1.4px; font-weight:600; pointer-events:none; transition:opacity .25s}
+  /* tooltip flotante (siempre nítido) */
   #tip{position:absolute; left:0; top:0; pointer-events:none; z-index:16; background:rgba(17,19,13,.97); border:1px solid var(--line); border-left:3px solid var(--cream); border-radius:3px; padding:8px 12px; width:max-content; max-width:290px; opacity:0; transform:translate(-50%,calc(-100% - 15px)); transition:opacity .12s; box-shadow:0 10px 26px rgba(0,0,0,.55)}
   #tip.show{opacity:1}
   #tip.below{transform:translate(-50%,18px)}
   #tip .tt{font-family:var(--ff-display); font-size:16px; line-height:1.22; color:var(--cream); font-weight:600}
   #tip .ta{font-family:var(--ff-mono); font-size:9.5px; letter-spacing:.4px; color:var(--gray); margin-top:4px}
   #tip .tf{font-family:var(--ff-mono); font-size:8.5px; text-transform:uppercase; letter-spacing:1px; margin-top:5px}
+  /* panel */
   #panel{position:absolute; top:14px; right:14px; width:352px; max-height:calc(100% - 28px); overflow:auto; background:var(--panel); border:1px solid var(--line); border-radius:3px; padding:22px 24px; box-shadow:0 16px 44px rgba(0,0,0,.55); transform:translateX(125%); transition:transform .3s cubic-bezier(.4,0,.2,1);}
   #panel.open{transform:none}
   #panel .close{float:right; cursor:pointer; color:var(--gray); font-size:20px; line-height:1; border:0; background:none}
@@ -88,6 +91,7 @@
   #panel .cita code{font-family:var(--ff-mono); font-size:10px; color:var(--gold); word-break:break-all; background:rgba(201,162,77,.08); padding:2px 5px; border-radius:2px; flex:1 1 60%}
   #panel .cita button{font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1px; padding:4px 9px; border:1px solid var(--line); background:transparent; color:var(--gray); cursor:pointer; border-radius:2px}
   #panel .cita button:hover{color:var(--cream); border-color:var(--gold)}
+  /* leyenda */
   #legend{position:absolute; left:16px; bottom:14px; background:rgba(10,11,8,.86); backdrop-filter:blur(3px); border:1px solid var(--line); border-radius:3px; padding:12px 15px; font-family:var(--ff-mono); font-size:10px; letter-spacing:.4px; color:var(--gray); max-width:370px}
   #legend .lgtitle{font-size:8.5px; text-transform:uppercase; letter-spacing:1.4px; color:var(--gray); opacity:.7; margin-bottom:8px}
   #legend .grid{display:grid; grid-template-columns:1fr 1fr; gap:5px 16px}
@@ -105,6 +109,7 @@
   #legend .mlink{margin-top:9px;padding-top:9px;border-top:1px solid var(--line)}
   #legend .mlink a{color:var(--orange);cursor:pointer;text-decoration:none;font-size:9.5px;letter-spacing:.6px}
   #legend .mlink a:hover{color:var(--cream)}
+  /* marco conceptual */
   #marco{position:absolute; inset:0; background:rgba(5,6,4,.95); backdrop-filter:blur(5px); z-index:22; display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity .35s}
   #marco.show{opacity:1; pointer-events:auto}
   #marco .mbox{max-width:760px; max-height:86%; overflow:auto; padding:34px 40px; background:var(--panel); border:1px solid var(--line); border-radius:4px; box-shadow:0 20px 60px rgba(0,0,0,.6)}
@@ -122,18 +127,52 @@
   #guion .gf{font-family:var(--ff-mono); font-size:10px; text-transform:uppercase; letter-spacing:1.6px; margin-bottom:5px}
   #guion .gt{font-family:var(--ff-display); font-size:17px; line-height:1.4; color:var(--cream)}
   .credit{position:absolute; right:16px; bottom:12px; font-family:var(--ff-mono); font-size:9px; letter-spacing:.8px; text-transform:uppercase; color:var(--gray); opacity:.5; text-align:right; line-height:1.7}
+  #umbral{position:absolute; inset:0; background:rgba(5,6,4,.94); backdrop-filter:blur(4px); display:flex; align-items:center; justify-content:center; z-index:20; transition:opacity .5s}
+  #umbral.gone{opacity:0; pointer-events:none}
+  #umbral .box{max-width:640px; padding:0 30px; text-align:center}
+  #umbral h2{font-family:var(--ff-display); font-size:36px; font-weight:700; margin:0 0 4px}
+  #umbral .u-sub{font-family:var(--ff-mono); font-size:10px; text-transform:uppercase; letter-spacing:2.4px; color:var(--red); margin-bottom:22px}
+  #umbral p{font-size:15px; line-height:1.65; color:var(--cream); margin:0 0 16px}
+  #umbral .how{font-size:13px; line-height:1.6; color:var(--gray); margin-bottom:26px}
+  #umbral .how b{color:var(--orange); font-weight:600}
+  #umbral button{font-family:var(--ff-mono); font-size:12px; text-transform:uppercase; letter-spacing:1.6px; padding:12px 28px; background:var(--orange); color:var(--bg-deep); border:0; border-radius:2px; cursor:pointer}
+  #umbral button:hover{background:var(--cream)}
+  /* vista tabla accesible */
   #tabla{position:absolute; inset:0; overflow:auto; padding:20px 26px 60px; display:none}
   #tabla.show{display:block}
   #tabla .tcap{font-family:var(--ff-display); font-size:22px; color:var(--cream); margin:2px 0 4px}
   #tabla .tsub{font-family:var(--ff-mono); font-size:10px; text-transform:uppercase; letter-spacing:1.4px; color:var(--gray); margin-bottom:16px}
   #tabla table{border-collapse:collapse; width:100%; font-size:13.5px}
+  #tabla caption{text-align:left; color:var(--gray); font-size:12px; font-style:italic; margin-bottom:10px}
   #tabla th{font-family:var(--ff-mono); font-size:9.5px; text-transform:uppercase; letter-spacing:1px; text-align:left; color:var(--gray); border-bottom:2px solid var(--line); padding:8px 12px; position:sticky; top:0; background:var(--bg-deep); cursor:pointer; user-select:none}
   #tabla th:hover{color:var(--cream)}
+  #tabla th[aria-sort="ascending"]::after{content:" ▲"; color:var(--gold)}
+  #tabla th[aria-sort="descending"]::after{content:" ▼"; color:var(--gold)}
   #tabla td{padding:9px 12px; border-bottom:1px solid var(--line); vertical-align:top; color:var(--cream)}
   #tabla tbody tr{cursor:pointer; transition:background .12s}
-  #tabla tbody tr:hover{background:rgba(242,234,216,.05)}
+  #tabla tbody tr:hover, #tabla tbody tr:focus-within{background:rgba(242,234,216,.05)}
   #tabla td.tit a{color:var(--cream); text-decoration:none; font-weight:500}
-  #tabla td.tit a:hover{color:var(--gold); text-decoration:underline}
+  #tabla td.tit a:hover, #tabla td.tit a:focus{color:var(--gold); text-decoration:underline; outline:2px solid var(--gold); outline-offset:2px}
+  #tabla td .fenchip{display:inline-block; width:9px; height:9px; border-radius:50%; margin-right:5px; vertical-align:middle}
+  #tabla td .kind-o{color:var(--gray)} #tabla td .kind-m{color:var(--orange)}
+  #tabla .tnote{margin-top:22px; font-size:12px; color:var(--gray); font-style:italic; line-height:1.6; max-width:760px}
+  #tabla .tnote a{color:var(--gold)}
+  /* modo presentación: pantalla negra, solo el mapa/constelación, sin cromo de interfaz */
+  body.presenting{background:#000}
+  body.presenting #stage{background:#000}
+  body.presenting header{display:none}
+  body.presenting main{height:100%}
+  body.presenting #legend{display:none}
+  body.presenting #hint{display:none}
+  body.presenting .credit{display:none}
+  body.presenting #tabla{display:none !important}
+  #presExit{position:fixed; right:16px; top:16px; z-index:30; font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1.4px; padding:7px 13px; background:rgba(0,0,0,.55); color:var(--gray); border:1px solid var(--line); border-radius:2px; cursor:pointer; opacity:0; pointer-events:none; transition:opacity .25s;}
+  body.presenting #presExit{opacity:.3; pointer-events:auto}
+  body.presenting #presExit:hover{opacity:1; color:var(--cream); border-color:var(--gold)}
+  #presHelp{position:fixed; left:16px; bottom:16px; z-index:30; font-family:var(--ff-mono); font-size:9.5px; letter-spacing:.6px; padding:9px 13px; background:rgba(0,0,0,.55); border:1px solid var(--line); border-radius:2px; color:var(--gray); opacity:0; pointer-events:none; transition:opacity .25s; display:flex; gap:14px; flex-wrap:wrap;}
+  body.presenting #presHelp{opacity:.4; pointer-events:auto}
+  body.presenting #presHelp:hover{opacity:1}
+  #presHelp b{color:var(--gold); font-weight:600; margin-right:4px}
 </style>
 </head>
 <body>
@@ -158,7 +197,18 @@
   <div id="guion"><div class="gf"></div><div class="gt"></div></div>
   <div id="legend"></div>
   <div class="credit">Centro de Pensamiento Caribe<br>siembra desde el archivo · boceto de investigación<br><a href="https://doi.org/10.5281/zenodo.21483569" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none">DOI 10.5281/zenodo.21483569</a></div>
+  <button id="presExit" title="Salir del modo presentación (Esc)">✕ salir</button>
+  <div id="presHelp"><span><b>1</b>corriente</span><span><b>2</b>constelación</span><span><b>M</b>marea</span><span><b>→</b>siguiente fenómeno</span><span><b>←</b>anterior</span><span><b>0</b>despejar</span><span><b>Esc</b>salir</span></div>
   <aside id="panel"></aside>
+  <div id="umbral"><div class="box">
+    <h2>Con el agua de por medio</h2>
+    <div class="u-sub">Atlas para una antropología archipiélica</div>
+    <p>Ninguna orilla es una totalidad. El archipiélago no lo hacen las naciones: lo hacen las fuerzas que cruzan de una orilla a otra. Cada obra vive aquí en el fenómeno que la atraviesa; el país que la aloja queda en segundo plano.</p>
+    <div class="how">Elegí un fenómeno en la leyenda y <b>se encienden sus puntos</b> con su guión. Abrí cualquier obra y <b>se ramifican sus conexiones</b>, directas e indirectas, a través del agua. Pasá el cursor para leer cada nodo. La interfaz respira como la marea, según Brathwaite.</div>
+    <button id="entrar">Entrar en la corriente</button>
+    <div style="margin-top:16px;font-family:var(--ff-mono);font-size:9.5px;letter-spacing:.6px;color:var(--gray)">Base conceptual: Brathwaite · Monahan — <a id="umarco" style="color:var(--orange);cursor:pointer;text-decoration:none">ver marco</a></div>
+  </div></div>
+
   <div id="marco"><div class="mbox">
     <button class="mclose">×</button>
     <h2>Marco conceptual</h2>
@@ -168,10 +218,12 @@
     <div class="c"><div class="who">Kamau Brathwaite</div><h3>Marealéctica (tidalectics)</h3><p>Frente a la dialéctica que avanza hacia una síntesis, la marealéctica va y viene como la marea: <b>avance y retirada, sin progreso lineal</b>. La interfaz respira siguiendo ese ritmo; nada se resuelve, todo vuelve. El tiempo caribeño se comporta como el agua: sube, se retira, vuelve a subir.</p></div>
     <div class="c"><div class="who">Resonancia y disonancia</div><h3>El diálogo no siempre es acuerdo</h3><p>Un vínculo entre obras puede ser armónico o puede ser un choque. Las corrientes <b style="color:var(--orange)">doradas resuenan</b>: una idea continúa, amplifica o hereda a otra. Las <b style="color:var(--red)">rojas disienten</b>: una tensiona, critica o contradice a la otra. El pensamiento caribeño se hace de eco y de fricción por igual, y el mapa distingue las dos cosas.</p></div>
     <div class="c"><div class="who">Michael Monahan</div><h3>Fricción epistémica</h3><p>Para Monahan, la creolización ocurre como <b>roce productivo entre saberes</b>, no como fusión suave. Donde una corriente cruza entre tradiciones lingüísticas distintas (anglófona, francófona, hispana, neerlandesa), ese cruce que la academia mantuvo separado queda marcado en el mapa con un signo de fricción. El pensamiento archipiélico ocurre justo ahí, en el roce entre lenguas imperiales.</p></div>
+    <div class="c" style="border-left-color:var(--gold)"><div class="who" style="color:var(--gold)">Cómo citar el corpus</div><h3>Dataset con DOI en Zenodo</h3><p>Almanza, R. (2026). <i>Atlas para una antropología archipiélica: con el agua de por medio</i> [conjunto de datos]. Zenodo. <a href="https://doi.org/10.5281/zenodo.21483569" target="_blank" rel="noopener" style="color:var(--gold)">https://doi.org/10.5281/zenodo.21483569</a></p></div>
   </div></div>
 </main>
-<script src="../data/agua-de-por-medio/datos-atlas.js"></script>
+<script src="datos-atlas.js"></script>
 <script>
+/* Datos del atlas: se cargan desde datos-atlas.js (archivo editable y versionable) */
 if(typeof ATLAS==='undefined'){ document.body.innerHTML='<div style="color:#f2ead8;font-family:sans-serif;padding:48px;line-height:1.6">No se pudo cargar <b>datos-atlas.js</b>.<br>Colocá ese archivo en la misma carpeta que este HTML y volvé a abrirlo.</div>'; throw new Error('ATLAS ausente'); }
 const FEN = ATLAS.fenomenos;
 const L = ATLAS.lugares;
@@ -183,6 +235,7 @@ const isDiso=(a,b)=>{ const r=relDe(a,b); return !!r && r.tipo==='disonancia'; }
 const fuenteDe=(a,b)=>{ const r=relDe(a,b); return r?(r.fuente||''):''; };
 const col = f => FEN[f].c;
 
+/* tradición lingüística: la fricción epistémica (Monahan) ocurre cuando una corriente cruza traditiones distintas */
 function tradCode(n){ const s=(n.tr||"").toLowerCase(); if(s.includes("neerland"))return"neer"; if(s.includes("francófono"))return"fra"; if(s.includes("anglófono"))return"ang"; if(s.includes("hispano"))return"his"; return"comp"; }
 
 const ADJ={};
@@ -205,7 +258,7 @@ let VNODES=[], EDGES=[], CLUSTERS=[]; let hoverNode=null;
 let vpt={k:1,tx:0,ty:0}; let vp=null;
 function applyVP(){ if(vp) vp.setAttribute('transform',`translate(${vpt.tx},${vpt.ty}) scale(${vpt.k})`); }
 
-const GOLD = 2.399963;
+const GOLD = 2.399963; // ángulo áureo: reparte nodos en espiral orgánica, como un arrecife, sin que se encimen
 function computeBase(){
   CLUSTERS=[];
   if(state.view==="corriente"){
@@ -279,9 +332,9 @@ function currentPath(e, ph, flowing){
   const STEPS=22; let d="";
   for(let i=0;i<=STEPS;i++){ const tt=i/STEPS; const env=Math.sin(Math.PI*tt); const trav=flowing?ph*1.7:0;
     let wave;
-    if(e.type==="disonancia") wave=Math.sin(tt*3.4-trav+e.ph)-0.55*Math.sin(tt*5.2+trav*1.3+e.ph);
+    if(e.type==="disonancia") wave=Math.sin(tt*3.4-trav+e.ph)-0.55*Math.sin(tt*5.2+trav*1.3+e.ph); // ondas encontradas
     else wave=Math.sin(tt*3.4-trav+e.ph)+0.45*Math.sin(tt*6.6-trav*1.5+e.ph*1.9);
-    if(e.friction) wave+=0.28*Math.sin(tt*14-trav*2.2+e.ph);
+    if(e.friction) wave+=0.28*Math.sin(tt*14-trav*2.2+e.ph); // turbulencia de fricción
     const off=amp*env*wave*0.6; const x=ax+dx*tt+nx*off, y=ay+dy*tt+ny*off; d+=(i?" L ":"M ")+x.toFixed(1)+","+y.toFixed(1); }
   return d;
 }
@@ -374,6 +427,7 @@ function closeMarco(){ document.getElementById('marco').classList.remove('show')
 
 function loop(t){ place(t); requestAnimationFrame(loop); }
 
+/* ---------- VISTA TABLA (accesible, navegable por teclado y lectores de pantalla) ---------- */
 let tblSort={col:"t", dir:1};
 function tblRows(){
   let rows=N.filter(n=>visible(n) && (!state.focusFen || n.f.includes(state.focusFen)));
@@ -392,7 +446,7 @@ function renderTable(){
   const cols=[["t","Obra"],["a","Autor"],["y","Año"],["k","Tipo"],["f","Fenómenos"],["l","Lugar"],["tr","Tradición"]];
   const foco = state.focusFen ? ` · filtrado por «${FEN[state.focusFen].label}»` : "";
   let h=`<div class="tcap">Catálogo del atlas</div><div class="tsub">${rows.length} referencias${foco} · ordená por cualquier columna · abrí una fila para ver su ficha</div>`;
-  h+=`<table><caption>Obras y manifestaciones del atlas «Con el agua de por medio».</caption><thead><tr>`;
+  h+=`<table><caption>Obras y manifestaciones del atlas «Con el agua de por medio», con su fenómeno, lugar y tradición. Cada fila enlaza a la ficha completa.</caption><thead><tr>`;
   cols.forEach(([k,lbl])=>{ const s = tblSort.col===k ? (tblSort.dir===1?"ascending":"descending") : "none"; h+=`<th scope="col" role="columnheader" aria-sort="${s}" data-col="${k}" tabindex="0">${lbl}</th>`; });
   h+=`</tr></thead><tbody>`;
   rows.forEach(n=>{
@@ -400,10 +454,11 @@ function renderTable(){
     const lu=L[n.l];
     h+=`<tr><td class="tit"><a href="#${n.id}" data-go="${n.id}">${n.t}</a></td>`+
        `<td>${n.a}</td><td>${n.y||"—"}</td>`+
-       `<td>${n.k==='obra'?'Investigación':'Etnografía'}</td>`+
-       `<td>${fen}</td><td>${lu[2]}</td><td>${n.tr}</td></tr>`;
+       `<td class="${n.k==='obra'?'kind-o':'kind-m'}">${n.k==='obra'?'Investigación':'Etnografía'}</td>`+
+       `<td>${fen}</td><td>${lu[2]}${lu[3]==='ciudad'?' <span style="color:var(--gray)">(ciudad)</span>':''}</td><td>${n.tr}</td></tr>`;
   });
   h+=`</tbody></table>`;
+  h+=`<p class="tnote">Esta tabla es la versión accesible del atlas: se navega con el tabulador y la leen los lectores de pantalla. Los mismos datos alimentan las vistas Corriente y Constelación. Fuente de datos: <a href="datos-atlas.json">datos-atlas.json</a>.</p>`;
   cont.innerHTML=h;
   cont.querySelectorAll('th[data-col]').forEach(th=>{
     const go=()=>{ const c=th.dataset.col; if(tblSort.col===c) tblSort.dir*=-1; else { tblSort.col=c; tblSort.dir=1; } renderTable(); };
@@ -430,6 +485,7 @@ window.addEventListener('mouseup',()=>{ panning=false; svg.classList.remove('gra
 svg.addEventListener('click',ev=>{ if(dragged){ dragged=false; return; } clearFocus(); });
 svg.addEventListener('dblclick',()=>{ vpt={k:1,tx:0,ty:0}; applyVP(); });
 
+/* ---------- modo presentación: pantalla negra, sin cromo, como un PowerPoint ---------- */
 function setView(v){ document.querySelectorAll('#viewSeg button').forEach(b=>b.classList.toggle('on', b.dataset.v===v)); clearFocus(); switchView(v); }
 function setTide(on){ document.querySelectorAll('#tideSeg button').forEach(b=>b.classList.toggle('on', (b.dataset.tide==="on")===on)); state.tide=on; if(!on) place(0); }
 const fenKeys=Object.keys(FEN); let presIdx=-1;
@@ -448,12 +504,28 @@ function exitPresent(){
   if(document.fullscreenElement){ const ex=document.exitFullscreen||document.webkitExitFullscreen||document.msExitFullscreen; if(ex) ex.call(document).catch(()=>{}); }
 }
 document.getElementById('presBtn').onclick=enterPresent;
+document.getElementById('presExit').onclick=exitPresent;
+document.addEventListener('fullscreenchange',()=>{ if(!document.fullscreenElement) document.body.classList.remove('presenting'); });
+document.addEventListener('keydown',ev=>{
+  if(!document.body.classList.contains('presenting'))return;
+  if(ev.key==='Escape') exitPresent();
+  else if(ev.key==='1') setView('corriente');
+  else if(ev.key==='2') setView('constelacion');
+  else if(ev.key.toLowerCase()==='m') setTide(!state.tide);
+  else if(ev.key==='ArrowRight'||ev.key==='ArrowDown'){ ev.preventDefault(); presNext(); }
+  else if(ev.key==='ArrowLeft'||ev.key==='ArrowUp'){ ev.preventDefault(); presPrev(); }
+  else if(ev.key==='0'){ presClear(); }
+});
+
+document.getElementById('entrar').onclick=()=>document.getElementById('umbral').classList.add('gone');
 document.getElementById('marcoBtn').onclick=openMarco;
+document.getElementById('umarco').onclick=openMarco;
 document.querySelector('#marco .mclose').onclick=closeMarco;
 document.getElementById('marco').addEventListener('click',ev=>{ if(ev.target.id==='marco') closeMarco(); });
 render();
 requestAnimationFrame(loop);
-(function(){ const h=decodeURIComponent(location.hash.replace(/^#/,'')); if(h && byId(h)){ openPanel(h); } })();
+/* enlace profundo: si la URL trae #idObra, abrir esa ficha y saltar el umbral */
+(function(){ const h=decodeURIComponent(location.hash.replace(/^#/,'')); if(h && byId(h)){ document.getElementById('umbral').classList.add('gone'); openPanel(h); } })();
 window.addEventListener('hashchange',()=>{ const h=decodeURIComponent(location.hash.replace(/^#/,'')); if(h && byId(h)) openPanel(h); });
 </script>
 </body>
