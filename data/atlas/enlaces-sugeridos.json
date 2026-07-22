@@ -1,0 +1,210 @@
+{
+  "enlaces_sugeridos": [],
+  "sin_correspondencia": [
+    {
+      "coll": "edge",
+      "id": "e01",
+      "cita": "Montes Pizarro 2018"
+    },
+    {
+      "coll": "edge",
+      "id": "e01",
+      "cita": "Bilby 2011"
+    },
+    {
+      "coll": "edge",
+      "id": "e02",
+      "cita": "Adi 2018"
+    },
+    {
+      "coll": "edge",
+      "id": "e03",
+      "cita": "Erlmann 1991"
+    },
+    {
+      "coll": "edge",
+      "id": "e03",
+      "cita": "Jaji 2014"
+    },
+    {
+      "coll": "edge",
+      "id": "e04",
+      "cita": "Montes Pizarro 2018"
+    },
+    {
+      "coll": "edge",
+      "id": "e04",
+      "cita": "Collins 1994"
+    },
+    {
+      "coll": "edge",
+      "id": "e05",
+      "cita": "Montes Pizarro 2018"
+    },
+    {
+      "coll": "edge",
+      "id": "e05",
+      "cita": "Rohlehr 1990"
+    },
+    {
+      "coll": "edge",
+      "id": "e06",
+      "cita": "Adi 2018"
+    },
+    {
+      "coll": "edge",
+      "id": "e07",
+      "cita": "Montes Pizarro 2018"
+    },
+    {
+      "coll": "edge",
+      "id": "e07",
+      "cita": "Denning 2015"
+    },
+    {
+      "coll": "edge",
+      "id": "e08",
+      "cita": "Matory 2005"
+    },
+    {
+      "coll": "edge",
+      "id": "e09",
+      "cita": "Shain 2018"
+    },
+    {
+      "coll": "edge",
+      "id": "e10",
+      "cita": "Adi 2018"
+    },
+    {
+      "coll": "edge",
+      "id": "e11",
+      "cita": "Montes Pizarro 2018"
+    },
+    {
+      "coll": "edge",
+      "id": "e12",
+      "cita": "Montes Pizarro 2018"
+    },
+    {
+      "coll": "edge",
+      "id": "e13",
+      "cita": "Shain 2018"
+    },
+    {
+      "coll": "edge",
+      "id": "e14",
+      "cita": "Shain 2018"
+    },
+    {
+      "coll": "edge",
+      "id": "e14",
+      "cita": "Gilroy 1993"
+    },
+    {
+      "coll": "edge",
+      "id": "e15",
+      "cita": "Bonacci 2015"
+    },
+    {
+      "coll": "edge",
+      "id": "e15",
+      "cita": "Adi 2018"
+    },
+    {
+      "coll": "edge",
+      "id": "e16",
+      "cita": "Montes Pizarro 2018"
+    },
+    {
+      "coll": "edge",
+      "id": "e17",
+      "cita": "Jaji 2014"
+    },
+    {
+      "coll": "edge",
+      "id": "e18",
+      "cita": "Von Eschen 2004"
+    },
+    {
+      "coll": "edge",
+      "id": "e19",
+      "cita": "Manuel 1995"
+    },
+    {
+      "coll": "edge",
+      "id": "e20",
+      "cita": "Montes Pizarro 2018"
+    },
+    {
+      "coll": "edge",
+      "id": "e20",
+      "cita": "Stewart 2000"
+    },
+    {
+      "coll": "edge",
+      "id": "e21",
+      "cita": "Cunin 2006"
+    },
+    {
+      "coll": "edge",
+      "id": "e21",
+      "cita": "Giraldo Barbosa 2016"
+    },
+    {
+      "coll": "edge",
+      "id": "e21",
+      "cita": "Ewens 1991"
+    },
+    {
+      "coll": "edge",
+      "id": "e22",
+      "cita": "Cunin 2003"
+    },
+    {
+      "coll": "edge",
+      "id": "e22",
+      "cita": "Montes Pizarro 2018"
+    },
+    {
+      "coll": "edge",
+      "id": "e23",
+      "cita": "Shain 2018"
+    },
+    {
+      "coll": "edge",
+      "id": "e23",
+      "cita": "Quintero Rivera 1998"
+    },
+    {
+      "coll": "edge",
+      "id": "e25",
+      "cita": "Guilbault 1993"
+    },
+    {
+      "coll": "edge",
+      "id": "e25",
+      "cita": "Manuel 1995"
+    },
+    {
+      "coll": "edge",
+      "id": "e26",
+      "cita": "Montes Pizarro 2018"
+    },
+    {
+      "coll": "node",
+      "id": "kingston",
+      "cita": "Montes Pizarro 2018"
+    },
+    {
+      "coll": "node",
+      "id": "kingston",
+      "cita": "Chude-Sokei 2015"
+    },
+    {
+      "coll": "node",
+      "id": "puerto-espana",
+      "cita": "Hamilton 2019"
+    }
+  ]
+}

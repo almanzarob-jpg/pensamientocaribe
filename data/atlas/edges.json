@@ -1,0 +1,801 @@
+[
+  {
+    "id": "e01",
+    "source": "kingston",
+    "target": "freetown",
+    "source_nombre": "Kingston",
+    "target_nombre": "Freetown",
+    "epoca": 1,
+    "curva": 0.22,
+    "titulo": "El gumbé: el primer viaje de vuelta",
+    "anos": "1796–1800",
+    "desc": "Los cimarrones de Trelawny, deportados a Nueva Escocia tras la segunda guerra cimarrona, fueron reembarcados a Freetown en 1800. Llevaron consigo el tambor gumbé: la primera música afrocaribeña documentada en regresar a África, donde echó ramas como goombay, gome y soumbe.",
+    "claves": [
+      "Cimarrones de Trelawny",
+      "Vía Nueva Escocia",
+      "Tambor gumbé"
+    ],
+    "cancion": {
+      "titulo": "Gumbay tradicional",
+      "artista": "Salome Peters · Sierra Leona",
+      "youtubeId": "ARZVVU9YRVs"
+    },
+    "fuente": "Montes Pizarro 2018 · Bilby 2011",
+    "titulo_en": "Gumbe: the first return voyage",
+    "anos_en": "1796–1800",
+    "desc_en": "The Trelawny Maroons, deported to Nova Scotia after the Second Maroon War, were shipped onward to Freetown in 1800. They carried with them the gumbe drum — the first documented Afro-Caribbean music to make the journey back to Africa, where it branched into goombay, gome, and soumbe.",
+    "claves_en": [
+      "Trelawny Maroons",
+      "Via Nova Scotia",
+      "Gumbe drum"
+    ],
+    "zoteroKeys": []
+  },
+  {
+    "id": "e02",
+    "source": "charlotte-amalie",
+    "target": "monrovia",
+    "source_nombre": "Charlotte Amalie",
+    "target_nombre": "Monrovia",
+    "epoca": 1,
+    "curva": 0.16,
+    "titulo": "Blyden: el panafricanismo letrado",
+    "anos": "1850–1912",
+    "desc": "Edward Wilmot Blyden salió de St. Thomas hacia Liberia en 1850. Su idea de una «personalidad africana» (pensada desde el Caribe y escrita en África) abrió el camino intelectual que después recorrieron Garvey, Padmore y Nkrumah.",
+    "claves": [
+      "Personalidad africana",
+      "Liberia y Sierra Leona",
+      "Caribe que piensa África"
+    ],
+    "fuente": "Adi 2018",
+    "titulo_en": "Blyden: literary pan-Africanism",
+    "anos_en": "1850–1912",
+    "desc_en": "Edward Wilmot Blyden left St. Thomas for Liberia in 1850. His idea of an \"African personality\" — conceived in the Caribbean and written in Africa — opened the intellectual path that Garvey, Padmore, and Nkrumah would later follow.",
+    "claves_en": [
+      "African personality",
+      "Liberia and Sierra Leone",
+      "A Caribbean that thinks Africa"
+    ],
+    "zoteroKeys": []
+  },
+  {
+    "id": "e03",
+    "source": "nueva-york",
+    "target": "johannesburgo",
+    "source_nombre": "Nueva York",
+    "target_nombre": "Johannesburgo",
+    "epoca": 1,
+    "curva": 0.12,
+    "titulo": "Espirituales: el primer estéreo panafricano",
+    "anos": "1890–1898",
+    "desc": "Los Virginia Jubilee Singers de Orpheus McAdoo desembarcaron en Ciudad del Cabo la noche del 30 de junio de 1890 y pasaron casi cinco años de gira: hasta el presidente Kruger los recibió en 1891. Los coros de la élite negra adoptaron los espirituales, y Erlmann traza desde ahí una línea continua que llega al canto coral zulú isicathamiya. Jaji lee en esa escucha el comienzo del «estereomodernismo»: la música afroamericana recibida en África como forma ya codificada de resistencia creativa.",
+    "claves": [
+      "Ciudad del Cabo, 30-jun-1890",
+      "Del Hampton al isicathamiya",
+      "Estereomodernismo (Jaji)"
+    ],
+    "cancion": {
+      "titulo": "Swing Low, Sweet Chariot (1909)",
+      "artista": "Fisk Jubilee Singers",
+      "youtubeId": "GUvBGZnL9rE"
+    },
+    "fuente": "Erlmann 1991 · Jaji 2014",
+    "titulo_en": "Spirituals: the first pan-African stereo",
+    "anos_en": "1890–1898",
+    "desc_en": "Orpheus McAdoo's Virginia Jubilee Singers landed in Cape Town on the night of June 30, 1890, and toured for nearly five years — even President Kruger received them in 1891. Choirs of the Black elite adopted the spirituals, and Erlmann traces from there an unbroken line running to Zulu isicathamiya choral singing. Jaji reads in that act of listening the beginning of \"stereomodernism\": African American music received in Africa as an already-codified form of creative resistance.",
+    "claves_en": [
+      "Cape Town, June 30, 1890",
+      "From Hampton to isicathamiya",
+      "Stereomodernism (Jaji)"
+    ],
+    "zoteroKeys": []
+  },
+  {
+    "id": "e04",
+    "source": "freetown",
+    "target": "accra",
+    "source_nombre": "Freetown",
+    "target_nombre": "Accra",
+    "epoca": 2,
+    "curva": 0.25,
+    "titulo": "Palmwine: puertos que se escuchan",
+    "anos": "1900–1930",
+    "desc": "Los marineros kru llevaron su guitarra por los puertos de la costa occidental. La palmwine music que tejieron entre Freetown, Monrovia y Accra fue el suelo del que brotó el highlife ghanés: música de puerto, de encuentro y de vino de palma.",
+    "claves": [
+      "Marineros kru",
+      "Guitarra de dos dedos",
+      "Raíz del highlife"
+    ],
+    "cancion": {
+      "titulo": "All For You",
+      "artista": "E.T. Mensah & The Tempos",
+      "youtubeId": "OVB8isxRngs"
+    },
+    "fuente": "Montes Pizarro 2018 · Collins 1994",
+    "titulo_en": "Palmwine: ports that listen to each other",
+    "anos_en": "1900–1930",
+    "desc_en": "Kru sailors carried their guitars from port to port along the West African coast. The palmwine music they wove together between Freetown, Monrovia, and Accra was the ground from which Ghanaian highlife grew — the music of harbors, of encounter, of palm wine.",
+    "claves_en": [
+      "Kru sailors",
+      "Two-finger guitar",
+      "Root of highlife"
+    ],
+    "zoteroKeys": []
+  },
+  {
+    "id": "e05",
+    "source": "puerto-espana",
+    "target": "freetown",
+    "source_nombre": "Puerto España",
+    "target_nombre": "Freetown",
+    "epoca": 2,
+    "curva": 0.14,
+    "titulo": "Regimientos y calipso",
+    "anos": "1914–1945",
+    "desc": "El calipso ya era crónica social cantada en Trinidad (Rohlehr historió su transición desde 1890 y los calipsos de la Gran Guerra) cuando los soldados caribeños de los British West Indian Regiments lo llevaron a África occidental. En Freetown se cruzó con el gumbé y la palmwine y nació la maringa que Ebenezer Calender volvió clásica. «Everybody Loves Saturday Night» es de ida y de vuelta: nadie sabe ya de qué orilla es.",
+    "claves": [
+      "West Indian Regiments",
+      "Calipso y maringa",
+      "Canciones sin orilla"
+    ],
+    "cancion": {
+      "titulo": "Everybody Loves Saturday Night",
+      "artista": "tradicional atlántica"
+    },
+    "fuente": "Montes Pizarro 2018 · Rohlehr 1990",
+    "titulo_en": "Regiments and calypso",
+    "anos_en": "1914–1945",
+    "desc_en": "Calypso was already sung social chronicle in Trinidad — Rohlehr traces its transition from 1890 and the calypsos of the Great War — when Caribbean soldiers of the British West Indian Regiments carried it to West Africa. In Freetown it crossed with gumbe and palmwine, and maringa was born, the style Ebenezer Calender made a classic. \"Everybody Loves Saturday Night\" travels both ways: no one remembers anymore which shore it came from.",
+    "claves_en": [
+      "West Indian Regiments",
+      "Calypso and maringa",
+      "Songs without a shore"
+    ],
+    "zoteroKeys": []
+  },
+  {
+    "id": "e06",
+    "source": "kingston",
+    "target": "nueva-york",
+    "source_nombre": "Kingston",
+    "target_nombre": "Nueva York",
+    "epoca": 2,
+    "curva": -0.2,
+    "titulo": "Garvey y la Black Star Line",
+    "anos": "1916–1927",
+    "desc": "Marcus Garvey fundó en Harlem la UNIA, el mayor movimiento negro de masas del siglo XX, y una naviera (la Black Star Line) para unir comercial y espiritualmente a África con su diáspora. El proyecto naufragó; el imaginario del retorno, no.",
+    "claves": [
+      "UNIA",
+      "Black Star Line",
+      "África para los africanos"
+    ],
+    "cancion": {
+      "titulo": "Marcus Garvey",
+      "artista": "Burning Spear",
+      "youtubeId": "oGN3R49-CAE"
+    },
+    "fuente": "Adi 2018",
+    "titulo_en": "Garvey and the Black Star Line",
+    "anos_en": "1916–1927",
+    "desc_en": "Marcus Garvey founded the UNIA in Harlem, the largest Black mass movement of the twentieth century, and a shipping line — the Black Star Line — meant to bind Africa to its diaspora commercially and spiritually. The venture sank; the imagination of return did not.",
+    "claves_en": [
+      "UNIA",
+      "Black Star Line",
+      "Africa for the Africans"
+    ],
+    "zoteroKeys": []
+  },
+  {
+    "id": "e07",
+    "source": "la-habana",
+    "target": "kinshasa",
+    "source_nombre": "La Habana",
+    "target_nombre": "Kinshasa",
+    "epoca": 2,
+    "curva": 0.2,
+    "titulo": "Discos GV: el son siembra la rumba",
+    "anos": "1932–1950",
+    "desc": "La serie GV de discos de 78 rpm llevó el son cubano a los puertos africanos. En los dos Congos, «El Manisero» y sus parientes sonaron a memoria propia, y de esa escucha nació la rumba congoleña.",
+    "claves": [
+      "Serie GV",
+      "Son en África",
+      "Escucha como reconocimiento"
+    ],
+    "cancion": {
+      "titulo": "El Manisero",
+      "artista": "Don Azpiazu & Antonio Machín",
+      "youtubeId": "essMVyS1Om0"
+    },
+    "fuente": "Montes Pizarro 2018 · Denning 2015",
+    "titulo_en": "GV records: son plants rumba",
+    "anos_en": "1932–1950",
+    "desc_en": "The GV series of 78 rpm records carried Cuban son to African ports. In the two Congos, \"El Manisero\" and its relatives sounded like memory recovered, and from that listening Congolese rumba was born.",
+    "claves_en": [
+      "GV series",
+      "Son in Africa",
+      "Listening as recognition"
+    ],
+    "zoteroKeys": []
+  },
+  {
+    "id": "e08",
+    "source": "la-habana",
+    "target": "lagos",
+    "source_nombre": "La Habana",
+    "target_nombre": "Lagos",
+    "epoca": 2,
+    "curva": -0.22,
+    "titulo": "El orisha atlántico: la nación lucumí",
+    "anos": "1890–1940",
+    "desc": "La religión de los orishas no sobrevivió en Cuba como reliquia aislada. Matory muestra una nación yoruba transatlántica sostenida por viajeros, cartas y libros: el Renacimiento cultural lagosiano de fines del siglo XIX alimentó la ortodoxia de la nación lucumí en las dos orillas. Lo sagrado también fue correspondencia.",
+    "claves": [
+      "Nación lucumí",
+      "Renacimiento lagosiano",
+      "Religión viajera"
+    ],
+    "cancion": {
+      "titulo": "Cantos a los orishas",
+      "artista": "Lázaro Ros"
+    },
+    "fuente": "Matory 2005",
+    "titulo_en": "The Atlantic orisha: the Lucumí nation",
+    "anos_en": "1890–1940",
+    "desc_en": "The orisha religion did not survive in Cuba as an isolated relic. Matory shows a transatlantic Yoruba nation sustained by travelers, letters, and books: Lagos's cultural renaissance of the late nineteenth century fed the orthodoxy of the Lucumí nation on both shores. The sacred, too, traveled by correspondence.",
+    "claves_en": [
+      "Lucumí nation",
+      "Lagos renaissance",
+      "A traveling religion"
+    ],
+    "zoteroKeys": []
+  },
+  {
+    "id": "e09",
+    "source": "la-habana",
+    "target": "dakar",
+    "source_nombre": "La Habana",
+    "target_nombre": "Dakar",
+    "epoca": 2,
+    "curva": 0.14,
+    "titulo": "La Habana–París–Dakar: son y négritude",
+    "anos": "1930–1940",
+    "desc": "Richard Shain documenta que la serie GV llegó a Dakar y Saint-Louis desde 1933, y que en los clubes afrocubanos de Montmartre estudiantes africanos y antillanos (Senghor entre ellos) compartieron pista y conversación: de esa sociabilidad emergió la négritude. La música afrocubana ofreció a los senegaleses una modernidad negra que no pasaba por Europa.",
+    "claves": [
+      "Serie GV en Dakar",
+      "Clubes de Montmartre",
+      "Modernidad negra (Shain)"
+    ],
+    "fuente": "Shain 2018",
+    "titulo_en": "Havana–Paris–Dakar: son and négritude",
+    "anos_en": "1930–1940",
+    "desc_en": "Richard Shain documents that the GV series reached Dakar and Saint-Louis as early as 1933, and that in the Afro-Cuban clubs of Montmartre, African and Antillean students — Senghor among them — shared the dance floor and the conversation from which négritude emerged. Afro-Cuban music offered Senegalese listeners a Black modernity that didn't run through Europe.",
+    "claves_en": [
+      "GV records in Dakar",
+      "Montmartre clubs",
+      "Black modernity (Shain)"
+    ],
+    "zoteroKeys": []
+  },
+  {
+    "id": "e10",
+    "source": "puerto-espana",
+    "target": "londres",
+    "source_nombre": "Puerto España",
+    "target_nombre": "Londres",
+    "epoca": 2,
+    "curva": 0.1,
+    "titulo": "Los congresos panafricanos",
+    "anos": "1900–1945",
+    "desc": "La primera Conferencia Panafricana se reunió en Londres en julio de 1900, convocada por Henry Sylvester Williams, abogado trinitario, y la African Association que había fundado en 1897. La serie culminó en Mánchester en 1945, con Padmore entre los organizadores y Nkrumah entre los delegados: de ahí salió, dice Adi, el programa práctico para la liberación política de África. El eje Trinidad–Londres muestra al Caribe organizando el panafricanismo desde el corazón del imperio.",
+    "claves": [
+      "Sylvester Williams 1900",
+      "Mánchester 1945",
+      "Padmore · Nkrumah · Du Bois"
+    ],
+    "cancion": {
+      "titulo": "London Is the Place for Me",
+      "artista": "Lord Kitchener",
+      "youtubeId": "dGt21q1AjuI"
+    },
+    "fuente": "Adi 2018",
+    "titulo_en": "The Pan-African congresses",
+    "anos_en": "1900–1945",
+    "desc_en": "The first Pan-African Conference met in London in July 1900, convened by Henry Sylvester Williams, a Trinidadian lawyer, and the African Association he had founded in 1897. The series culminated in Manchester in 1945, with Padmore among the organizers and Nkrumah among the delegates: from it came, Adi argues, the practical program for Africa's political liberation. The Trinidad–London axis shows the Caribbean organizing pan-Africanism from the very heart of empire.",
+    "claves_en": [
+      "Sylvester Williams, 1900",
+      "Manchester, 1945",
+      "Padmore · Nkrumah · Du Bois"
+    ],
+    "zoteroKeys": []
+  },
+  {
+    "id": "e11",
+    "source": "kinshasa",
+    "target": "brazzaville",
+    "source_nombre": "Kinshasa",
+    "target_nombre": "Brazzaville",
+    "epoca": 3,
+    "curva": 2.2,
+    "titulo": "La rumba de las dos orillas",
+    "anos": "1948–1960",
+    "desc": "A ambos lados del río Congo, Wendo Kolosoy, Grand Kallé y Franco convirtieron el son llegado en disco en una música nueva. El «Indépendance Cha Cha» (1960), compuesto durante la Mesa Redonda de Bruselas, fue el himno continental de las independencias.",
+    "claves": [
+      "Wendo · Kallé · Franco",
+      "Mesa Redonda de Bruselas",
+      "Himno de las independencias"
+    ],
+    "cancion": {
+      "titulo": "Marie Louise",
+      "artista": "Wendo Kolosoy & Henri Bowane"
+    },
+    "fuente": "Montes Pizarro 2018",
+    "titulo_en": "Rumba of the two shores",
+    "anos_en": "1948–1960",
+    "desc_en": "On both banks of the Congo River, Wendo Kolosoy, Grand Kallé, and Franco turned son arriving on record into a new music. \"Indépendance Cha Cha\" (1960), composed during the Brussels Round Table, became the continental anthem of independence.",
+    "claves_en": [
+      "Wendo · Kallé · Franco",
+      "Brussels Round Table",
+      "Anthem of independence"
+    ],
+    "zoteroKeys": []
+  },
+  {
+    "id": "e12",
+    "source": "la-habana",
+    "target": "conakry",
+    "source_nombre": "La Habana",
+    "target_nombre": "Conakry",
+    "epoca": 3,
+    "curva": 0.18,
+    "titulo": "Authenticité: el son como política de Estado",
+    "anos": "1958–1975",
+    "desc": "Tras decir no a Francia en 1958, la Guinea de Sékou Touré hizo de la música un proyecto nacional: orquestas estatales como Bembeya Jazz tocaban son y bolero cubanos con memoria mandinga. Modernidad alternativa: ni imitación de Europa ni folclor congelado.",
+    "claves": [
+      "Authenticité",
+      "Bembeya Jazz National",
+      "Modernidad alternativa"
+    ],
+    "cancion": {
+      "titulo": "Armée Guinéenne",
+      "artista": "Bembeya Jazz National",
+      "youtubeId": "YTISiYK58Sk"
+    },
+    "fuente": "Montes Pizarro 2018",
+    "titulo_en": "Authenticité: son as state policy",
+    "anos_en": "1958–1975",
+    "desc_en": "After saying no to France in 1958, Sékou Touré's Guinea made music a national project: state orchestras like Bembeya Jazz played Cuban son and bolero with Mandinka memory. An alternative modernity — neither imitation of Europe nor frozen folklore.",
+    "claves_en": [
+      "Authenticité",
+      "Bembeya Jazz National",
+      "Alternative modernity"
+    ],
+    "zoteroKeys": []
+  },
+  {
+    "id": "e13",
+    "source": "dakar",
+    "target": "la-habana",
+    "source_nombre": "Dakar",
+    "target_nombre": "La Habana",
+    "epoca": 3,
+    "curva": -0.16,
+    "titulo": "La salsa senegalesa",
+    "anos": "1960–1985",
+    "desc": "En el club Miami de Ibra Kassé nació el Star Band, que los músicos senegaleses reconocen como su conjunto «fundacional» (Shain): con Laba Sosseh y luego el Orchestra Baobab, Dakar cantó son y salsa en wolof, mandinga y castellano fonético, hasta volver la música cubana una lengua franca del Atlántico Negro.",
+    "claves": [
+      "Star Band del club Miami",
+      "Laba Sosseh · Baobab",
+      "Lengua franca atlántica"
+    ],
+    "cancion": {
+      "titulo": "Senegal An X",
+      "artista": "Laba Sosseh",
+      "youtubeId": "Nwp7NH44bwQ"
+    },
+    "fuente": "Shain 2018",
+    "titulo_en": "Senegalese salsa",
+    "anos_en": "1960–1985",
+    "desc_en": "In Ibra Kassé's Miami club, the Star Band was born — the group Senegalese musicians recognize as their \"founding\" ensemble (Shain). With Laba Sosseh and later Orchestra Baobab, Dakar sang son and salsa in Wolof, Mandinka, and phonetic Spanish, until Cuban music became a lingua franca of the Black Atlantic.",
+    "claves_en": [
+      "Star Band, club Miami",
+      "Laba Sosseh · Baobab",
+      "Atlantic lingua franca"
+    ],
+    "zoteroKeys": []
+  },
+  {
+    "id": "e14",
+    "source": "fort-de-france",
+    "target": "dakar",
+    "source_nombre": "Fort-de-France",
+    "target_nombre": "Dakar",
+    "epoca": 3,
+    "curva": -0.3,
+    "titulo": "Négritude: la ruta de la palabra",
+    "anos": "1935–1966",
+    "desc": "Césaire desde Martinica, Senghor desde Senegal, Damas desde Guayana: la négritude se tejió pasando por París y Présence Africaine, y culminó en el Festival Mundial de Artes Negras de Dakar (1966). Shain recuerda que ese encuentro tuvo pista de baile: los clubes afrocubanos de Montmartre fueron laboratorio de la idea. La palabra también viaja en barco.",
+    "claves": [
+      "Césaire · Senghor · Damas",
+      "Présence Africaine",
+      "Dakar 1966"
+    ],
+    "fuente": "Shain 2018 · Gilroy 1993",
+    "titulo_en": "Négritude: the route of the word",
+    "anos_en": "1935–1966",
+    "desc_en": "Césaire from Martinique, Senghor from Senegal, Damas from Guiana: négritude was woven together by way of Paris and Présence Africaine, and culminated in the First World Festival of Negro Arts in Dakar (1966). Shain recalls that this encounter had a dance floor too: the Afro-Cuban clubs of Montmartre were a laboratory for the idea. The word also travels by ship.",
+    "claves_en": [
+      "Césaire · Senghor · Damas",
+      "Présence Africaine",
+      "Dakar, 1966"
+    ],
+    "zoteroKeys": []
+  },
+  {
+    "id": "e15",
+    "source": "kingston",
+    "target": "adis-abeba",
+    "source_nombre": "Kingston",
+    "target_nombre": "Adís Abeba",
+    "epoca": 3,
+    "curva": 0.28,
+    "titulo": "Etiopía: el retorno sagrado",
+    "anos": "1930–hoy",
+    "desc": "La coronación de Haile Selassie (1930) confirmó para el etiopianismo jamaiquino una profecía: un rey negro en África. Sobre la concesión de tierras de Shashemene, los primeros repatriados (Helen y James Piper) llegaron en 1948, y Bonacci ha reconstruido esa historia con archivo en tres continentes. El rastafari hizo de Etiopía horizonte espiritual y del reggae su vehículo planetario.",
+    "claves": [
+      "Etiopianismo",
+      "Shashemene 1948",
+      "Reggae roots"
+    ],
+    "cancion": {
+      "titulo": "Exodus",
+      "artista": "Bob Marley & The Wailers",
+      "youtubeId": "OSOqWgqwynQ"
+    },
+    "fuente": "Bonacci 2015 · Adi 2018",
+    "titulo_en": "Ethiopia: the sacred return",
+    "anos_en": "1930–now",
+    "desc_en": "The coronation of Haile Selassie (1930) confirmed, for Jamaican Ethiopianism, a prophecy: a Black king in Africa. On land granted at Shashemene, the first repatriates — Helen and James Piper — arrived in 1948, and Bonacci has reconstructed that history from archives on three continents. Rastafari made Ethiopia a spiritual horizon and reggae its planetary vehicle.",
+    "claves_en": [
+      "Ethiopianism",
+      "Shashemene, 1948",
+      "Reggae roots"
+    ],
+    "zoteroKeys": []
+  },
+  {
+    "id": "e16",
+    "source": "accra",
+    "target": "lagos",
+    "source_nombre": "Accra",
+    "target_nombre": "Lagos",
+    "epoca": 3,
+    "curva": 0.4,
+    "titulo": "Del highlife al afrobeat",
+    "anos": "1950–1977",
+    "desc": "El highlife viajó de Accra a Lagos y allí Fela Kuti lo fundió con el jazz negro americano y el funk: el afrobeat, música panafricanista militante que hizo de la canción una asamblea política. Kalakuta Republic fue su territorio liberado.",
+    "claves": [
+      "Fela Kuti",
+      "Jazz negro + highlife",
+      "Canción como asamblea"
+    ],
+    "fuente": "Montes Pizarro 2018",
+    "titulo_en": "From highlife to Afrobeat",
+    "anos_en": "1950–1977",
+    "desc_en": "Highlife traveled from Accra to Lagos, where Fela Kuti fused it with Black American jazz and funk: Afrobeat, a militant pan-Africanist music that turned the song into a political assembly. Kalakuta Republic was its liberated territory.",
+    "claves_en": [
+      "Fela Kuti",
+      "Black jazz + highlife",
+      "Song as assembly"
+    ],
+    "zoteroKeys": []
+  },
+  {
+    "id": "e17",
+    "source": "dakar",
+    "target": "lagos",
+    "source_nombre": "Dakar",
+    "target_nombre": "Lagos",
+    "epoca": 3,
+    "curva": -0.18,
+    "titulo": "Los festivales panafricanos",
+    "anos": "1966–1977",
+    "desc": "El Festival Mundial de Artes Negras de Dakar (1966), impulsado por Senghor, fue la primera ocasión (señala Jaji) en que artistas negros de todo el planeta practicaron el panafricanismo cultural a gran escala. El formato probó su durabilidad: Argel 1969, Lagos con el FESTAC 77. Y los festivales generaron también contradiscursos frente al panafricanismo de Estado.",
+    "claves": [
+      "FESMAN 1966",
+      "FESTAC 77",
+      "Contradiscursos (Jaji)"
+    ],
+    "fuente": "Jaji 2014",
+    "titulo_en": "The pan-African festivals",
+    "anos_en": "1966–1977",
+    "desc_en": "The First World Festival of Negro Arts in Dakar (1966), driven by Senghor, was the first occasion — Jaji notes — on which Black artists from across the globe practiced cultural pan-Africanism at scale. The format proved durable: Algiers in 1969, Lagos with FESTAC 77. And the festivals also generated counter-discourses against state pan-Africanism.",
+    "claves_en": [
+      "FESMAN 1966",
+      "FESTAC 77",
+      "Counter-discourses (Jaji)"
+    ],
+    "zoteroKeys": []
+  },
+  {
+    "id": "e18",
+    "source": "nueva-york",
+    "target": "accra",
+    "source_nombre": "Nueva York",
+    "target_nombre": "Accra",
+    "epoca": 3,
+    "curva": 0.16,
+    "titulo": "Jazz ambassadors: Satchmo en Accra",
+    "anos": "1956–1961",
+    "desc": "Cuando Armstrong aterrizó en Accra en 1956, la ciudad lo recibió como a nadie antes. Cantó «Black and Blue» y Nkrumah lo escuchó con lágrimas en los ojos. En 1960 los congoleños lo pasearon en un trono por Leopoldville, mientras la CIA conspiraba contra Lumumba en la misma ciudad. Von Eschen documenta esa ironía: el jazz como embajador de un país que no resolvía su propio racismo.",
+    "claves": [
+      "Accra 1956",
+      "Nkrumah y «Black and Blue»",
+      "Leopoldville 1960"
+    ],
+    "cancion": {
+      "titulo": "Black and Blue",
+      "artista": "Louis Armstrong",
+      "youtubeId": "2LDPUfbXRLM"
+    },
+    "fuente": "Von Eschen 2004",
+    "titulo_en": "Jazz ambassadors: Satchmo in Accra",
+    "anos_en": "1956–1961",
+    "desc_en": "When Armstrong landed in Accra in 1956, the city welcomed him like no one before. He sang \"Black and Blue,\" and Nkrumah listened with tears in his eyes. In 1960 the Congolese carried him through Leopoldville on a throne, while the CIA plotted against Lumumba in that same city. Von Eschen documents the irony: jazz as ambassador for a country that hadn't settled its own racism.",
+    "claves_en": [
+      "Accra, 1956",
+      "Nkrumah and \"Black and Blue\"",
+      "Leopoldville, 1960"
+    ],
+    "zoteroKeys": []
+  },
+  {
+    "id": "e19",
+    "source": "nueva-york",
+    "target": "kinshasa",
+    "source_nombre": "Nueva York",
+    "target_nombre": "Kinshasa",
+    "epoca": 3,
+    "curva": 0.26,
+    "titulo": "Fania en Zaire 74: la salsa vuelve al Congo",
+    "anos": "1974",
+    "desc": "Del 22 al 24 de septiembre de 1974, el festival Zaire 74 reunió en el Stade du 20 Mai de Kinshasa a James Brown, B.B. King, Miriam Makeba, la TPOK Jazz de Franco y la Fania All Stars con Celia Cruz, como antesala del combate Ali–Foreman. Celia cantó «Quimbara» y «Guantanamera» ante el público kinés. El círculo se cerró esa noche: el son que había sembrado la rumba congoleña en discos GV volvía convertido en salsa, al mismo estadio donde reinaban sus nietos congoleños.",
+    "claves": [
+      "Stade du 20 Mai",
+      "Celia Cruz · «Quimbara»",
+      "Antesala del Ali–Foreman"
+    ],
+    "cancion": {
+      "titulo": "Quimbara (en vivo, Zaire 1974)",
+      "artista": "Celia Cruz & Fania All Stars",
+      "youtubeId": "AXN-_asIaYs"
+    },
+    "fuente": "Zaire 74: álbum y film Live in Africa · Manuel 1995 (Fania)",
+    "titulo_en": "Fania at Zaire 74: salsa returns to the Congo",
+    "anos_en": "1974",
+    "desc_en": "From September 22 to 24, 1974, the Zaire 74 festival brought James Brown, B.B. King, Miriam Makeba, Franco's TPOK Jazz, and the Fania All Stars with Celia Cruz to Kinshasa's Stade du 20 Mai, as a prelude to the Ali–Foreman fight. Celia sang \"Quimbara\" and \"Guantanamera\" before a Kinois crowd. The circle closed that night: the son that had planted Congolese rumba by way of GV records came back transformed into salsa, in the very stadium where its Congolese grandchildren now reigned.",
+    "claves_en": [
+      "Stade du 20 Mai",
+      "Celia Cruz · \"Quimbara\"",
+      "Prelude to Ali–Foreman"
+    ],
+    "zoteroKeys": []
+  },
+  {
+    "id": "e20",
+    "source": "brazzaville",
+    "target": "fort-de-france",
+    "source_nombre": "Brazzaville",
+    "target_nombre": "Fort-de-France",
+    "epoca": 4,
+    "curva": 0.24,
+    "titulo": "Ry-Co Jazz: África toca en las Antillas",
+    "anos": "1967–1971",
+    "desc": "Fundada por Henri Bowane, curtida en giras por África occidental y radicada luego en París, la Ry-Co Jazz llegó en 1967 a Martinica y Guadalupe. Su rumba congoleña se mezcló con la biguine y el konpa: una de las semillas de lo que germinaría como zouk.",
+    "claves": [
+      "Rythme Congolais",
+      "Gira antillana 1967",
+      "Semilla del zouk"
+    ],
+    "cancion": {
+      "titulo": "Bonne Année",
+      "artista": "Ry-Co Jazz",
+      "youtubeId": "Gto9mh58vRE"
+    },
+    "fuente": "Montes Pizarro 2018 · Stewart 2000",
+    "titulo_en": "Ry-Co Jazz: Africa plays in the Antilles",
+    "anos_en": "1967–1971",
+    "desc_en": "Founded by Henri Bowane, seasoned on tours through West Africa and later based in Paris, Ry-Co Jazz reached Martinique and Guadeloupe in 1967. Its Congolese rumba mixed with biguine and konpa — one of the seeds of what would germinate as zouk.",
+    "claves_en": [
+      "Rythme Congolais",
+      "1967 Antillean tour",
+      "Zouk's seed"
+    ],
+    "zoteroKeys": []
+  },
+  {
+    "id": "e21",
+    "source": "kinshasa",
+    "target": "cartagena-de-indias",
+    "source_nombre": "Kinshasa",
+    "target_nombre": "Cartagena de Indias",
+    "epoca": 4,
+    "curva": 0.2,
+    "titulo": "La champeta africana: los discos que llegaron",
+    "anos": "1970–1990",
+    "desc": "Marinos, coleccionistas y corresponsales picoteros trajeron a los puertos colombianos el soukous de los dos Congos, el highlife y el jùjú nigerianos, el mbaqanga sudafricano. Los picós convirtieron ese repertorio en patrimonio popular y lo bailaron con nombre propio: «música africana». El éxito continental de «Sweet Mother» sonó en las verbenas como en Lagos.",
+    "claves": [
+      "Soukous · Highlife · Mbaqanga",
+      "Corresponsales picoteros",
+      "«Música africana»"
+    ],
+    "cancion": {
+      "titulo": "Sweet Mother",
+      "artista": "Prince Nico Mbarga",
+      "youtubeId": "3mecNrIaWOA"
+    },
+    "fuente": "Cunin 2006 · Giraldo Barbosa 2016 · Ewens 1991",
+    "titulo_en": "African champeta: the records that arrived",
+    "anos_en": "1970–1990",
+    "desc_en": "Sailors, collectors, and picotero correspondents brought Colombian ports the soukous of the two Congos, Nigerian highlife and jùjú, South African mbaqanga. The picós turned that repertoire into popular heritage and danced it under a name of its own: \"African music.\" The continental hit \"Sweet Mother\" sounded at the verbenas just as it did in Lagos.",
+    "claves_en": [
+      "Soukous · Highlife · Mbaqanga",
+      "Picotero correspondents",
+      "\"African music\""
+    ],
+    "zoteroKeys": []
+  },
+  {
+    "id": "e22",
+    "source": "san-basilio-de-palenque",
+    "target": "cartagena-de-indias",
+    "source_nombre": "San Basilio de Palenque",
+    "target_nombre": "Cartagena de Indias",
+    "epoca": 4,
+    "curva": 1.6,
+    "titulo": "La champeta criolla: Palenque responde",
+    "anos": "1984–hoy",
+    "desc": "A mediados de los ochenta, los músicos palenqueros dejaron de solo versionar los discos africanos y grabaron lo suyo: Justo Valdez y Son Palenque abrieron el camino en el Festival de Música del Caribe de 1984, Viviano Torres lo consolidó con Anne Zwing en 1991. La champeta criolla es la respuesta del primer pueblo libre de América a la música del continente: África escuchada, bailada y reinventada en lengua propia.",
+    "claves": [
+      "Festival del Caribe 1984",
+      "Justo Valdez → Viviano Torres",
+      "Respuesta criolla"
+    ],
+    "cancion": {
+      "titulo": "Paquete Chileno",
+      "artista": "Viviano Torres · Anne Zwing",
+      "youtubeId": "-BfqjW1tb5w"
+    },
+    "fuente": "Cunin 2003 · Montes Pizarro 2018",
+    "titulo_en": "Champeta criolla: Palenque answers back",
+    "anos_en": "1984–now",
+    "desc_en": "By the mid-1980s, Palenquero musicians stopped merely covering African records and began recording their own: Justo Valdez and Son Palenque opened the way at the 1984 Caribbean Music Festival, and Viviano Torres consolidated it with Anne Zwing in 1991. Champeta criolla is the first free town in the Americas answering back to the music of the continent: Africa heard, danced, and reinvented in a language of its own.",
+    "claves_en": [
+      "1984 Caribbean Festival",
+      "Justo Valdez → Viviano Torres",
+      "A creole answer"
+    ],
+    "zoteroKeys": []
+  },
+  {
+    "id": "e23",
+    "source": "nueva-york",
+    "target": "dakar",
+    "source_nombre": "Nueva York",
+    "target_nombre": "Dakar",
+    "epoca": 4,
+    "curva": 0.2,
+    "titulo": "Africando: dos orillas, un estudio",
+    "anos": "1993–hoy",
+    "desc": "Africando juntó en Nueva York a soneros boricuas y dominicanos con las grandes voces de la salsa senegalesa. El disco confirmó lo que ambas orillas ya sabían: llevaban medio siglo cantando lo mismo. La salsa, dice Quintero Rivera, es una «manera de hacer música», y esa manera cabe en las dos orillas.",
+    "claves": [
+      "Salsa atlántica",
+      "Voces senegalesas",
+      "«Manera de hacer música»"
+    ],
+    "cancion": {
+      "titulo": "Yay Boy",
+      "artista": "Africando",
+      "youtubeId": "x0acVDXeBrc"
+    },
+    "fuente": "Shain 2018 · Quintero Rivera 1998",
+    "titulo_en": "Africando: two shores, one studio",
+    "anos_en": "1993–now",
+    "desc_en": "Africando brought together, in New York, Puerto Rican and Dominican soneros with the great voices of Senegalese salsa. The record confirmed what both shores already knew: they had been singing the same thing for half a century. Salsa, Quintero Rivera says, is a \"way of making music,\" and that way fits both shores at once.",
+    "claves_en": [
+      "Atlantic salsa",
+      "Senegalese voices",
+      "\"A way of making music\""
+    ],
+    "zoteroKeys": []
+  },
+  {
+    "id": "e24",
+    "source": "lagos",
+    "target": "kingston",
+    "source_nombre": "Lagos",
+    "target_nombre": "Kingston",
+    "epoca": 4,
+    "curva": 0.24,
+    "titulo": "Afrobeats y dancehall: el diálogo sigue",
+    "anos": "2010–hoy",
+    "desc": "Los afrobeats nigerianos y ghaneses conversan hoy con el dancehall jamaiquino y el reguetón caribeño en tiempo real: colaboraciones, riddims compartidos, giras cruzadas. El circuito que este mapa dibuja sigue abierto.",
+    "claves": [
+      "Afrobeats",
+      "Riddims compartidos",
+      "Presente sonoro"
+    ],
+    "cancion": {
+      "titulo": "Ye",
+      "artista": "Burna Boy",
+      "youtubeId": "lPe09eE6Xio"
+    },
+    "fuente": "registro contemporáneo",
+    "titulo_en": "Afrobeats and dancehall: the dialogue continues",
+    "anos_en": "2010–now",
+    "desc_en": "Nigerian and Ghanaian Afrobeats now converse with Jamaican dancehall and Caribbean reggaetón in real time: collaborations, shared riddims, crossed tours. The circuit this map traces is still open.",
+    "claves_en": [
+      "Afrobeats",
+      "Shared riddims",
+      "A living present"
+    ],
+    "zoteroKeys": []
+  },
+  {
+    "id": "e25",
+    "source": "fort-de-france",
+    "target": "mindelo",
+    "source_nombre": "Fort-de-France",
+    "target_nombre": "Mindelo",
+    "epoca": 4,
+    "curva": 0.18,
+    "titulo": "Cadence y zouk: el eco caboverdiano",
+    "anos": "1970–1990",
+    "desc": "La cadence antillana (con Exile One de Dominica al frente) caló en el África occidental francesa y portuguesa. En Cabo Verde el grupo Apollo se formó como copia fiel de Exile One. Y cuando Kassav&#39; llevó el zouk a la costa africana, su éxito se comparó allá con el de los Beatles. La raíz de toda esa familia rítmica es haitiana: el konpa direk que Nemours Jean-Baptiste bautizó en 1955.",
+    "claves": [
+      "Exile One → Apollo",
+      "Kassav&#39; en África",
+      "Raíz konpa"
+    ],
+    "cancion": {
+      "titulo": "Cadence-lypso",
+      "artista": "Exile One · Dominica All Stars",
+      "youtubeId": "wh1c8gbCOoA"
+    },
+    "fuente": "Guilbault 1993 · Manuel 1995",
+    "titulo_en": "Cadence and zouk: the Cabo Verdean echo",
+    "anos_en": "1970–1990",
+    "desc_en": "Antillean cadence — with Dominica's Exile One leading the way — struck deep in francophone and lusophone West Africa. In Cabo Verde, the group Apollo formed as a faithful copy of Exile One. And when Kassav&#39; brought zouk to the African coast, its success there was compared to the Beatles'. The root of that whole rhythmic family is Haitian: the konpa direk Nemours Jean-Baptiste christened in 1955.",
+    "claves_en": [
+      "Exile One → Apollo",
+      "Kassav&#39; in Africa",
+      "Konpa's root"
+    ],
+    "zoteroKeys": []
+  },
+  {
+    "id": "e26",
+    "source": "san-juan",
+    "target": "barranquilla",
+    "source_nombre": "San Juan",
+    "target_nombre": "Barranquilla",
+    "epoca": 4,
+    "curva": 0.35,
+    "titulo": "Rumba Africana: la radio como puente",
+    "anos": "2001–hoy",
+    "desc": "Desde 2001, Errol L. Montes Pizarro transmite Rumba Africana por Radio Universidad de Puerto Rico; desde 2014 la retransmite Radio Cultural FM de Barranquilla. El libro que inspira este mapa nació de ese programa: la escucha compartida como método panafricanista.",
+    "claves": [
+      "Radio Universidad PR",
+      "Radio Cultural FM",
+      "Escucha compartida"
+    ],
+    "fuente": "Montes Pizarro 2018",
+    "titulo_en": "Rumba Africana: radio as a bridge",
+    "anos_en": "2001–now",
+    "desc_en": "Since 2001, Errol L. Montes Pizarro has broadcast Rumba Africana on Radio Universidad de Puerto Rico; since 2014, Radio Cultural FM of Barranquilla has rebroadcast it. The book behind this map was born from that program: shared listening as a pan-African method.",
+    "claves_en": [
+      "Radio Universidad PR",
+      "Radio Cultural FM",
+      "Shared listening"
+    ],
+    "zoteroKeys": []
+  }
+]

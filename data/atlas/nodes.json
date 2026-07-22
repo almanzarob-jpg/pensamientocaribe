@@ -1,0 +1,663 @@
+[
+  {
+    "id": "kingston",
+    "nombre": "Kingston",
+    "pais": "Jamaica",
+    "lat": 17.9712,
+    "lng": -76.7936,
+    "categoria": "Gran Caribe",
+    "desc": "De aquí salieron los cimarrones de Trelawny deportados en 1796, aquí nació Marcus Garvey y aquí el rastafari volvió la mirada hacia Etiopía. Puerto matriz del panafricanismo popular. Aquí nació también el dub: en los estudios de Kingston de los años setenta, King Tubby y Lee «Scratch» Perry convirtieron la consola de mezcla en instrumento y el estudio de grabación en organismo vivo. Louis Chude-Sokei lee ese gesto como tecnopoética afrodiaspórica: una manera de creolizar la máquina que hereda (y responde a) el mismo lenguaje de amo y esclavo con que Occidente pensó la tecnología desde el siglo XIX.",
+    "claves": [
+      "Cimarrones",
+      "Marcus Garvey",
+      "Rastafari",
+      "Dub y tecnopoética"
+    ],
+    "cultura": "Gumbé · Mento · Reggae · Dancehall",
+    "cancion": {
+      "titulo": "Redemption Song",
+      "artista": "Bob Marley",
+      "youtubeId": "yv5xonFSC4c"
+    },
+    "fuente": "Montes Pizarro 2018 · Chude-Sokei 2015",
+    "desc_en": "The Trelawny Maroons deported in 1796 sailed from here; Marcus Garvey was born here; and here Rastafari turned its gaze toward Ethiopia. A matrix port for popular pan-Africanism. Dub was born here too: in the Kingston studios of the 1970s, King Tubby and Lee \"Scratch\" Perry turned the mixing console into an instrument and the recording studio into a living organism. Louis Chude-Sokei reads that gesture as an Afrodiasporic technopoetics — a way of creolizing the machine that inherits, and answers back to, the same master-and-slave language through which the West has thought about technology since the nineteenth century.",
+    "claves_en": [
+      "Maroons",
+      "Marcus Garvey",
+      "Rastafari",
+      "Dub and technopoetics"
+    ],
+    "cultura_en": "Gumbe · Mento · Reggae · Dancehall",
+    "zoteroKeys": []
+  },
+  {
+    "id": "la-habana",
+    "nombre": "La Habana",
+    "pais": "Cuba",
+    "lat": 23.1136,
+    "lng": -82.3666,
+    "categoria": "Gran Caribe",
+    "desc": "El son cubano viajó a África en discos de 78 revoluciones y allá lo escucharon como cosa propia, una rama que regresaba. Ninguna otra música caribeña sembró tanto en el continente.",
+    "claves": [
+      "Son cubano",
+      "Discos GV",
+      "Semilla de la rumba congoleña"
+    ],
+    "cultura": "Son · Rumba · Guaracha · Bolero",
+    "cancion": {
+      "titulo": "Chan Chan",
+      "artista": "Buena Vista Social Club",
+      "youtubeId": "tGbRZ73NvlY"
+    },
+    "nombre_en": "Havana",
+    "desc_en": "Cuban son traveled to Africa on 78 rpm records, and there it was heard as something of one's own — a branch returning home. No other Caribbean music took root on the continent so thoroughly.",
+    "claves_en": [
+      "Cuban son",
+      "GV records",
+      "Seed of Congolese rumba"
+    ],
+    "cultura_en": "Son · Rumba · Guaracha · Bolero",
+    "fuente": "",
+    "zoteroKeys": []
+  },
+  {
+    "id": "puerto-espana",
+    "nombre": "Puerto España",
+    "pais": "Trinidad y Tobago",
+    "lat": 10.6549,
+    "lng": -61.5019,
+    "categoria": "Gran Caribe",
+    "desc": "Cuna del calipso y de tres arquitectos del panafricanismo: Henry Sylvester Williams, organizador del primer congreso panafricano (1900), George Padmore y C.L.R. James. El calipso trinitario no solo hizo historia política: también se volvió arquitectura de la memoria literaria. Njelle Hamilton lee la novela Night Calypso de Lawrence Scott como una «memoria fonográfica» que narra el trauma colonial a través del calipsonero, y The Swinging Bridge de Ramabai Espinet como una novela construida con estética de dub (cortes, ecos, remezcla) para narrar el desplazamiento de la diáspora indocaribeña. Dos maneras de que la música, aquí, no solo se escuche: se recuerde.",
+    "claves": [
+      "Sylvester Williams",
+      "Padmore · C.L.R. James",
+      "Calipso",
+      "Memoria fonográfica"
+    ],
+    "cultura": "Calipso · Soca · Steelpan",
+    "cancion": {
+      "titulo": "Birth of Ghana",
+      "artista": "Lord Kitchener",
+      "youtubeId": "057BmLQ9MfU"
+    },
+    "fuente": "Hamilton 2019",
+    "nombre_en": "Port of Spain",
+    "desc_en": "Birthplace of calypso and of three architects of pan-Africanism: Henry Sylvester Williams, organizer of the first Pan-African Conference (1900), George Padmore, and C.L.R. James. Trinidadian calypso didn't only make political history — it also became an architecture of literary memory. Njelle Hamilton reads Lawrence Scott's novel Night Calypso as a \"phonographic memory\" that narrates colonial trauma through the calypsonian, and Ramabai Espinet's The Swinging Bridge as a novel built with dub aesthetics — cuts, echoes, remix — to narrate Indo-Caribbean displacement. Two ways in which music, here, is not only heard: it is remembered.",
+    "claves_en": [
+      "Sylvester Williams",
+      "Padmore · C.L.R. James",
+      "Calypso",
+      "Phonographic memory"
+    ],
+    "cultura_en": "Calypso · Soca · Steelpan",
+    "zoteroKeys": []
+  },
+  {
+    "id": "fort-de-france",
+    "nombre": "Fort-de-France",
+    "pais": "Martinica",
+    "lat": 14.6161,
+    "lng": -61.0588,
+    "categoria": "Gran Caribe",
+    "desc": "Ciudad de Césaire y Fanon, laboratorio de la négritude. En 1967 recibió a la Ry-Co Jazz congoleña y de ese encuentro germinó parte de lo que después floreció como zouk.",
+    "claves": [
+      "Aimé Césaire",
+      "Négritude",
+      "Semillero del zouk"
+    ],
+    "cultura": "Bèlè · Biguine · Zouk",
+    "cancion": {
+      "titulo": "Zouk La Sé Sèl Médikaman Nou Ni",
+      "artista": "Kassav'",
+      "youtubeId": "Dd3hjxxcTzw"
+    },
+    "pais_en": "Martinique",
+    "desc_en": "City of Césaire and Fanon, laboratory of négritude. In 1967 it welcomed the Congolese Ry-Co Jazz, and from that encounter part of what would later flourish as zouk began to take shape.",
+    "claves_en": [
+      "Aimé Césaire",
+      "Négritude",
+      "Zouk's seedbed"
+    ],
+    "cultura_en": "Bèlè · Biguine · Zouk",
+    "fuente": "",
+    "zoteroKeys": []
+  },
+  {
+    "id": "san-juan",
+    "nombre": "San Juan",
+    "pais": "Puerto Rico",
+    "lat": 18.4655,
+    "lng": -66.1057,
+    "categoria": "Gran Caribe",
+    "desc": "Desde Radio Universidad de Puerto Rico, Errol L. Montes Pizarro transmite Rumba Africana desde 2001: el programa que dio origen al libro que inspira este mapa. Y desde aquí Ángel Quintero Rivera pensó las «músicas mulatas» y la salsa como una «manera de hacer música»: teoría caribeña del vaivén.",
+    "claves": [
+      "Rumba Africana",
+      "Quintero Rivera · Músicas mulatas",
+      "Bomba y plena"
+    ],
+    "cultura": "Bomba · Plena · Salsa",
+    "cancion": {
+      "titulo": "Rumba Africana",
+      "artista": "Radio Universidad de Puerto Rico"
+    },
+    "desc_en": "From Radio Universidad de Puerto Rico, Errol L. Montes Pizarro has broadcast Rumba Africana since 2001 — the program that gave rise to the book behind this map. And it was here that Ángel Quintero Rivera theorized the \"músicas mulatas\" and salsa as a \"way of making music\": a Caribbean theory of vaivén, of back-and-forth motion.",
+    "claves_en": [
+      "Rumba Africana",
+      "Quintero Rivera · Músicas mulatas",
+      "Bomba and plena"
+    ],
+    "cultura_en": "Bomba · Plena · Salsa",
+    "fuente": "",
+    "zoteroKeys": []
+  },
+  {
+    "id": "puerto-principe",
+    "nombre": "Puerto Príncipe",
+    "pais": "Haití",
+    "lat": 18.5944,
+    "lng": -72.3074,
+    "categoria": "Gran Caribe",
+    "desc": "La revolución haitiana (1791–1804) es la matriz política de la negrura moderna: la primera vez que la libertad negra se hizo Estado. Benito Sylvain llevó esa herencia a los congresos panafricanos. En 1955 Nemours Jean-Baptiste bautizó el konpa direk, y esa cadencia terminó sonando en África occidental.",
+    "claves": [
+      "Revolución haitiana",
+      "Benito Sylvain",
+      "Konpa direk 1955"
+    ],
+    "cultura": "Vodú · Rara · Konpa",
+    "cancion": {
+      "titulo": "Compas Mondial",
+      "artista": "Nemours Jean-Baptiste",
+      "youtubeId": "GoarcCaNQIA"
+    },
+    "desc_en": "The Haitian Revolution (1791–1804) is the political matrix of modern Blackness: the first time Black freedom became a state. Benito Sylvain carried that legacy to the Pan-African congresses. In 1955 Nemours Jean-Baptiste christened konpa direk, a cadence that would later find its way into West African music.",
+    "claves_en": [
+      "Haitian Revolution",
+      "Benito Sylvain",
+      "Konpa direk, 1955"
+    ],
+    "cultura_en": "Vodou · Rara · Konpa",
+    "fuente": "",
+    "zoteroKeys": []
+  },
+  {
+    "id": "barranquilla",
+    "nombre": "Barranquilla",
+    "pais": "Colombia",
+    "lat": 10.9685,
+    "lng": -74.7813,
+    "categoria": "Caribe colombiano",
+    "desc": "Aquí se fabricaron los primeros picós con tecnología criolla en 1939, y aquí se formó la estética del «brillo»: las altas frecuencias de la zona del boliche. En las verbenas de San Roque, picós con nombre propio (El Coreano, El Timbalero, El Gran Fidel) volvieron la «música africana» cultura de barrio, con corresponsales que viajaban por discos exclusivos (Giraldo 2016). Desde 2014, Radio Cultural FM retransmite aquí Rumba Africana, y ASOBAILES impulsa el picó como patrimonio.",
+    "claves": [
+      "Picós desde 1939",
+      "El «brillo» · San Roque",
+      "Picó como patrimonio"
+    ],
+    "cultura": "Cumbia · Salsa · Música africana de picó",
+    "cancion": {
+      "titulo": "Shakalaodé",
+      "artista": "Wganda Kenya",
+      "youtubeId": "bMOajYNU60E"
+    },
+    "desc_en": "The first picós were built here with homegrown technology in 1939, and here the aesthetic of \"brillo\" took shape: the high frequencies of the boliche district. In the open-air dances of San Roque, picós with names of their own — El Coreano, El Timbalero, El Gran Fidel — turned \"African music\" into neighborhood culture, with correspondents who traveled the world in search of exclusive records (Giraldo, 2016). Since 2014, Radio Cultural FM has rebroadcast Rumba Africana here, and ASOBAILES has pushed for the picó's recognition as heritage.",
+    "claves_en": [
+      "Picós since 1939",
+      "The \"brillo\" · San Roque",
+      "Picó as heritage"
+    ],
+    "cultura_en": "Cumbia · Salsa · Picó's African music",
+    "fuente": "",
+    "zoteroKeys": []
+  },
+  {
+    "id": "cartagena-de-indias",
+    "nombre": "Cartagena de Indias",
+    "pais": "Colombia",
+    "lat": 10.391,
+    "lng": -75.4794,
+    "categoria": "Caribe colombiano",
+    "desc": "Antiguo puerto negrero convertido en capital de la champeta: aquí los picós volvieron patrimonio popular los discos africanos y aquí canta la escuela palenquera. El sonido cartagenero tiene estética propia: el «meke», el predominio de las bajas frecuencias, con epicentro en Torices y Crisanto Luque. Desde 2018, las asociaciones de las «tres perlas» impulsan el picó como patrimonio cultural inmaterial.",
+    "claves": [
+      "Champeta",
+      "El «meke» · Torices",
+      "World Picó 2024"
+    ],
+    "cultura": "Champeta · Bullerengue · Terapia",
+    "cancion": {
+      "titulo": "El Mecánico",
+      "artista": "Charles King"
+    },
+    "desc_en": "A former slaving port turned capital of champeta: here the picós made African records into popular heritage, and here the Palenque school sings. Cartagena's sound has its own aesthetic — the \"meke,\" a preference for low frequencies, centered in Torices and Crisanto Luque. Since 2018, associations from the \"three pearls\" have pushed for the picó's recognition as intangible cultural heritage.",
+    "claves_en": [
+      "Champeta",
+      "The \"meke\" · Torices",
+      "World Picó, 2024"
+    ],
+    "cultura_en": "Champeta · Bullerengue · Terapia",
+    "fuente": "",
+    "zoteroKeys": []
+  },
+  {
+    "id": "san-basilio-de-palenque",
+    "nombre": "San Basilio de Palenque",
+    "pais": "Colombia",
+    "lat": 10.1031,
+    "lng": -75.1997,
+    "categoria": "Caribe colombiano",
+    "desc": "Primer pueblo libre de América y cuna de la champeta criolla. De aquí salieron Justo Valdez con Son Palenque, Viviano Torres con Anne Zwing, Hernando Hernández con Kussima, y los «Reyes de la Terapia»: Charles King, Luis Towers, Melchor. Cunin lo documenta: en el paso de la música africana a la champeta, el pueblo es la bisagra.",
+    "claves": [
+      "Primer pueblo libre",
+      "Cuna de la champeta criolla",
+      "Lengua palenquera"
+    ],
+    "cultura": "Champeta criolla · Lumbalú · Sexteto palenquero",
+    "cancion": {
+      "titulo": "El Rey Soy Yo",
+      "artista": "Justo Valdez y su Son Palenque",
+      "youtubeId": "TTgMRziJ-Rc"
+    },
+    "desc_en": "The first free town in the Americas, and the birthplace of champeta criolla. From here came Justo Valdez with Son Palenque, Viviano Torres with Anne Zwing, Hernando Hernández with Kussima, and the \"Kings of Terapia\": Charles King, Luis Towers, Melchor. Cunin documents it: in the passage from African music to champeta, this town is the hinge.",
+    "claves_en": [
+      "First free town in the Americas",
+      "Birthplace of champeta criolla",
+      "Palenquero language"
+    ],
+    "cultura_en": "Champeta criolla · Lumbalú · Palenquero sextet",
+    "fuente": "",
+    "zoteroKeys": []
+  },
+  {
+    "id": "charlotte-amalie",
+    "nombre": "Charlotte Amalie",
+    "pais": "Islas Vírgenes",
+    "lat": 18.3419,
+    "lng": -64.9307,
+    "categoria": "Gran Caribe",
+    "desc": "Aquí nació en 1832 Edward Wilmot Blyden, considerado padre del panafricanismo letrado. Emigró a Liberia a los 18 años y pensó África como unidad y destino.",
+    "claves": [
+      "Edward W. Blyden",
+      "Personalidad africana",
+      "Emigración a Liberia"
+    ],
+    "cultura": "Quelbe · Calipso virginislandés",
+    "desc_en": "Edward Wilmot Blyden was born here in 1832; he is considered the father of literary pan-Africanism. He emigrated to Liberia at eighteen and thought of Africa as a unity and a destiny.",
+    "claves_en": [
+      "Edward W. Blyden",
+      "African personality",
+      "Emigration to Liberia"
+    ],
+    "cultura_en": "Quelbe · Virgin Islands calypso",
+    "fuente": "",
+    "zoteroKeys": []
+  },
+  {
+    "id": "nueva-york",
+    "nombre": "Nueva York",
+    "pais": "Estados Unidos",
+    "lat": 40.7128,
+    "lng": -74.006,
+    "categoria": "Diáspora del Norte",
+    "desc": "Harlem: sede de la UNIA de Garvey y del renacimiento negro; después, capital de la salsa con Fania y estudio donde Africando juntó a soneros neoyorquinos con voces senegalesas.",
+    "claves": [
+      "Harlem · UNIA",
+      "Fania Records",
+      "Jazz negro"
+    ],
+    "cultura": "Jazz · Salsa · Hip-hop",
+    "desc_en": "Harlem: seat of Garvey's UNIA and of the Black cultural renaissance; later, the capital of salsa with Fania, and the studio where Africando brought New York soneros together with Senegalese voices.",
+    "claves_en": [
+      "Harlem · UNIA",
+      "Fania Records",
+      "Black jazz"
+    ],
+    "cultura_en": "Jazz · Salsa · Hip-hop",
+    "fuente": "",
+    "zoteroKeys": []
+  },
+  {
+    "id": "paris",
+    "nombre": "París",
+    "pais": "Francia",
+    "lat": 48.8566,
+    "lng": 2.3522,
+    "categoria": "Diáspora del Norte",
+    "desc": "Encrucijada de la négritude y de Présence Africaine (1947). En los años 80 sus estudios grabaron el soukous y el zouk que circularon por África y el Caribe.",
+    "claves": [
+      "Présence Africaine",
+      "Négritude",
+      "Estudios del soukous"
+    ],
+    "cultura": "Négritude · Soukous parisino · Zouk",
+    "desc_en": "Crossroads of négritude and of Présence Africaine (1947). In the 1980s its studios recorded the soukous and zouk that circulated through Africa and the Caribbean.",
+    "claves_en": [
+      "Présence Africaine",
+      "Négritude",
+      "Soukous studios"
+    ],
+    "cultura_en": "Négritude · Parisian soukous · Zouk",
+    "fuente": "",
+    "zoteroKeys": []
+  },
+  {
+    "id": "freetown",
+    "nombre": "Freetown",
+    "pais": "Sierra Leona",
+    "lat": 8.484,
+    "lng": -13.234,
+    "categoria": "África",
+    "desc": "Puerto fundado para africanos liberados. Los cimarrones jamaiquinos llegaron en 1800 con el tambor gumbé: la primera música afrocaribeña en hacer el viaje de vuelta a África.",
+    "claves": [
+      "Gumbé desde 1800",
+      "Krios",
+      "Maringa"
+    ],
+    "cultura": "Gumbé · Maringa · Palmwine",
+    "cancion": {
+      "titulo": "Fire Fire Fire",
+      "artista": "Ebenezer Calender",
+      "youtubeId": "p3jorkz5J7A"
+    },
+    "desc_en": "A port founded for liberated Africans. Jamaican Maroons arrived in 1800 carrying the gumbe drum: the first Afro-Caribbean music documented making the return voyage to Africa.",
+    "claves_en": [
+      "Gumbe since 1800",
+      "Krios",
+      "Maringa"
+    ],
+    "cultura_en": "Gumbe · Maringa · Palmwine",
+    "fuente": "",
+    "zoteroKeys": []
+  },
+  {
+    "id": "monrovia",
+    "nombre": "Monrovia",
+    "pais": "Liberia",
+    "lat": 6.3005,
+    "lng": -10.7969,
+    "categoria": "África",
+    "desc": "Destino de Blyden y puerto de los marineros kru, que llevaron su guitarra de dos dedos por toda la costa occidental africana y tejieron la palmwine music.",
+    "claves": [
+      "Edward W. Blyden",
+      "Marineros kru",
+      "Palmwine"
+    ],
+    "cultura": "Palmwine · Highlife liberiano",
+    "desc_en": "Blyden's destination, and a port for the kru sailors, who carried their two-finger guitar style along the whole West African coast and wove together the palmwine music tradition.",
+    "claves_en": [
+      "Edward W. Blyden",
+      "Kru sailors",
+      "Palmwine"
+    ],
+    "cultura_en": "Palmwine · Liberian highlife",
+    "fuente": "",
+    "zoteroKeys": []
+  },
+  {
+    "id": "dakar",
+    "nombre": "Dakar",
+    "pais": "Senegal",
+    "lat": 14.7167,
+    "lng": -17.4677,
+    "categoria": "África",
+    "desc": "Ciudad de Senghor y del Festival Mundial de Artes Negras (1966). Su escena hizo del son y la salsa una lengua propia: de Laba Sosseh al Orchestra Baobab.",
+    "claves": [
+      "Senghor",
+      "Festival de 1966",
+      "Salsa senegalesa"
+    ],
+    "cultura": "Salsa senegalesa · Mbalax",
+    "cancion": {
+      "titulo": "Utrus Horas",
+      "artista": "Orchestra Baobab",
+      "youtubeId": "m4yFmRNcX3I"
+    },
+    "desc_en": "City of Senghor and of the First World Festival of Negro Arts (1966). Its scene turned son and salsa into a language of its own, from Laba Sosseh to Orchestra Baobab.",
+    "claves_en": [
+      "Senghor",
+      "1966 Festival",
+      "Senegalese salsa"
+    ],
+    "cultura_en": "Senegalese salsa · Mbalax",
+    "fuente": "",
+    "zoteroKeys": []
+  },
+  {
+    "id": "conakry",
+    "nombre": "Conakry",
+    "pais": "Guinea",
+    "lat": 9.6412,
+    "lng": -13.5784,
+    "categoria": "África",
+    "desc": "Tras la independencia (1958), la authenticité de Sékou Touré hizo de la música un proyecto de Estado: orquestas nacionales que tocaban son cubano con memoria mandinga.",
+    "claves": [
+      "Authenticité",
+      "Sékou Touré",
+      "Orquestas nacionales"
+    ],
+    "cultura": "Bembeya Jazz · Sily National",
+    "desc_en": "After independence (1958), Sékou Touré's authenticité turned music into a matter of state: national orchestras played Cuban son with Mandinka memory.",
+    "claves_en": [
+      "Authenticité",
+      "Sékou Touré",
+      "National orchestras"
+    ],
+    "cultura_en": "Bembeya Jazz · Sily National",
+    "fuente": "",
+    "zoteroKeys": []
+  },
+  {
+    "id": "accra",
+    "nombre": "Accra",
+    "pais": "Ghana",
+    "lat": 5.6037,
+    "lng": -0.187,
+    "categoria": "África",
+    "desc": "Capital del highlife y de la primera independencia subsahariana (1957). Nkrumah, formado en el panafricanismo diaspórico, hizo de la música parte de la nación nueva.",
+    "claves": [
+      "Highlife",
+      "Kwame Nkrumah",
+      "Independencia 1957"
+    ],
+    "cultura": "Highlife · Hiplife · Afrobeats",
+    "cancion": {
+      "titulo": "All For You",
+      "artista": "E.T. Mensah & The Tempos",
+      "youtubeId": "OVB8isxRngs"
+    },
+    "desc_en": "The capital of highlife, and of the first sub-Saharan independence (1957). Nkrumah, shaped by diasporic pan-Africanism, made music part of the new nation.",
+    "claves_en": [
+      "Highlife",
+      "Kwame Nkrumah",
+      "Independence, 1957"
+    ],
+    "cultura_en": "Highlife · Hiplife · Afrobeats",
+    "fuente": "",
+    "zoteroKeys": []
+  },
+  {
+    "id": "lagos",
+    "nombre": "Lagos",
+    "pais": "Nigeria",
+    "lat": 6.5244,
+    "lng": 3.3792,
+    "categoria": "África",
+    "desc": "Fela Kuti fundió highlife, jazz negro y funk en el afrobeat: panafricanismo sonoro y militante. Hoy los afrobeats dialogan de vuelta con el dancehall jamaiquino.",
+    "claves": [
+      "Fela Kuti",
+      "Afrobeat",
+      "Kalakuta Republic"
+    ],
+    "cultura": "Afrobeat · Jùjú · Afrobeats",
+    "cancion": {
+      "titulo": "Water No Get Enemy",
+      "artista": "Fela Kuti",
+      "youtubeId": "IQBC5URoF0s"
+    },
+    "desc_en": "Fela Kuti fused highlife, Black American jazz, and funk into Afrobeat: a militant, sonic pan-Africanism. Today Afrobeats speaks back to Jamaican dancehall.",
+    "claves_en": [
+      "Fela Kuti",
+      "Afrobeat",
+      "Kalakuta Republic"
+    ],
+    "cultura_en": "Afrobeat · Jùjú · Afrobeats",
+    "fuente": "",
+    "zoteroKeys": []
+  },
+  {
+    "id": "kinshasa",
+    "nombre": "Kinshasa",
+    "pais": "R.D. del Congo",
+    "lat": -4.4419,
+    "lng": 15.2663,
+    "categoria": "África",
+    "desc": "El son cubano llegado en disco se volvió rumba congoleña, la música africana más influyente del siglo XX. El Indépendance Cha Cha de Grand Kallé fue el himno de las independencias.",
+    "claves": [
+      "Rumba congoleña",
+      "Grand Kallé",
+      "Indépendance Cha Cha"
+    ],
+    "cultura": "Rumba congoleña · Soukous",
+    "cancion": {
+      "titulo": "Indépendance Cha Cha",
+      "artista": "Grand Kallé & African Jazz",
+      "youtubeId": "RxkZ95PYcrM"
+    },
+    "desc_en": "Cuban son, arriving on record, became Congolese rumba, the most influential African music of the twentieth century. Grand Kallé's \"Indépendance Cha Cha\" was the anthem of the independence era.",
+    "claves_en": [
+      "Congolese rumba",
+      "Grand Kallé",
+      "Indépendance Cha Cha"
+    ],
+    "cultura_en": "Congolese rumba · Soukous",
+    "fuente": "",
+    "zoteroKeys": []
+  },
+  {
+    "id": "brazzaville",
+    "nombre": "Brazzaville",
+    "pais": "Rep. del Congo",
+    "lat": -4.2634,
+    "lng": 15.2429,
+    "categoria": "África",
+    "desc": "La otra orilla del río Congo y de la rumba. De aquí y de Kinshasa salió la Ry-Co Jazz de Henri Bowane, escuela ambulante de música congoleña que llegó hasta las Antillas.",
+    "claves": [
+      "Ry-Co Jazz",
+      "Henri Bowane",
+      "Las dos orillas"
+    ],
+    "cultura": "Rumba congoleña · Ndombolo",
+    "desc_en": "The other bank of the Congo River, and of rumba. From here and from Kinshasa came Henri Bowane's Ry-Co Jazz, a traveling school of Congolese music that reached as far as the Antilles.",
+    "claves_en": [
+      "Ry-Co Jazz",
+      "Henri Bowane",
+      "The two banks"
+    ],
+    "cultura_en": "Congolese rumba · Ndombolo",
+    "fuente": "",
+    "zoteroKeys": []
+  },
+  {
+    "id": "adis-abeba",
+    "nombre": "Adís Abeba",
+    "pais": "Etiopía",
+    "lat": 9.03,
+    "lng": 38.74,
+    "categoria": "África",
+    "desc": "Horizonte sagrado del etiopianismo y del rastafari. La coronación de Haile Selassie (1930) y las tierras de Shashamane hicieron de Etiopía la promesa del retorno.",
+    "claves": [
+      "Etiopianismo",
+      "Haile Selassie",
+      "Shashamane"
+    ],
+    "cultura": "Ethio-jazz · Himnos rastafari",
+    "desc_en": "The sacred horizon of Ethiopianism and Rastafari. The coronation of Haile Selassie (1930) and the Shashamane land grant made Ethiopia the promise of return.",
+    "claves_en": [
+      "Ethiopianism",
+      "Haile Selassie",
+      "Shashamane"
+    ],
+    "cultura_en": "Ethio-jazz · Rastafari hymns",
+    "fuente": "",
+    "zoteroKeys": []
+  },
+  {
+    "id": "londres",
+    "nombre": "Londres",
+    "pais": "Reino Unido",
+    "lat": 51.5074,
+    "lng": -0.1278,
+    "categoria": "Diáspora del Norte",
+    "desc": "Henry Sylvester Williams fundó aquí la African Association en 1897 y convocó la primera Conferencia Panafricana en julio de 1900. Casi medio siglo después, el V Congreso Panafricano de Mánchester (1945) puso los cimientos del panafricanismo contemporáneo y trazó el programa de la liberación política de África.",
+    "claves": [
+      "Conferencia de 1900",
+      "African Association 1897",
+      "Mánchester 1945"
+    ],
+    "cultura": "Calipso de la Windrush · Sound systems",
+    "cancion": {
+      "titulo": "London Is the Place for Me",
+      "artista": "Lord Kitchener",
+      "youtubeId": "dGt21q1AjuI"
+    },
+    "desc_en": "Henry Sylvester Williams founded the African Association here in 1897 and convened the first Pan-African Conference in July 1900. Nearly half a century later, the Fifth Pan-African Congress in Manchester (1945) laid the groundwork for contemporary pan-Africanism and charted the program for Africa's political liberation.",
+    "claves_en": [
+      "1900 Conference",
+      "African Association, 1897",
+      "Manchester, 1945"
+    ],
+    "cultura_en": "Windrush calypso · Sound systems",
+    "fuente": "",
+    "zoteroKeys": []
+  },
+  {
+    "id": "mindelo",
+    "nombre": "Mindelo",
+    "pais": "Cabo Verde",
+    "lat": 16.8866,
+    "lng": -24.988,
+    "categoria": "África",
+    "desc": "Puerto criollo en medio del Atlántico. Aquí la cadence antillana pegó tan hondo que el grupo Apollo se formó como copia fiel de Exile One, y el zouk de Kassav&#39; encontró después una de sus orillas más fieles.",
+    "claves": [
+      "Grupo Apollo",
+      "Cadence · Cabo-zouk",
+      "Puerto criollo atlántico"
+    ],
+    "cultura": "Morna · Coladeira · Cabo-zouk",
+    "desc_en": "A creole port in the middle of the Atlantic. Antillean cadence struck such a chord here that the group Apollo formed as a faithful copy of Exile One, and Kassav&#39;s zouk later found one of its most devoted shores.",
+    "claves_en": [
+      "Grupo Apollo",
+      "Cadence · Cabo-zouk",
+      "Creole Atlantic port"
+    ],
+    "cultura_en": "Morna · Coladeira · Cabo-zouk",
+    "fuente": "",
+    "zoteroKeys": []
+  },
+  {
+    "id": "johannesburgo",
+    "nombre": "Johannesburgo",
+    "pais": "Sudáfrica",
+    "lat": -26.2041,
+    "lng": 28.0473,
+    "categoria": "África",
+    "desc": "Cuando los Virginia Jubilee Singers de Orpheus McAdoo desembarcaron en Ciudad del Cabo en 1890, los coros negros sudafricanos adoptaron los espirituales como música propia. De esa escucha (el «estereomodernismo» que estudia Tsitsi Jaji) vienen el marabi de los shebeens, Sophiatown, la revista Zonk! y Miriam Makeba.",
+    "claves": [
+      "Marabi · Sophiatown",
+      "Revista Zonk!",
+      "Estereomodernismo"
+    ],
+    "cultura": "Marabi · Mbube · Isicathamiya · Jazz sudafricano",
+    "cancion": {
+      "titulo": "Pata Pata",
+      "artista": "Miriam Makeba",
+      "youtubeId": "lNeP3hrm__k"
+    },
+    "desc_en": "When Orpheus McAdoo's Virginia Jubilee Singers landed in Cape Town in 1890, South Africa's Black choirs adopted spirituals as music of their own. From that listening — the \"stereomodernism\" Tsitsi Jaji studies — came the marabi of the shebeens, Sophiatown, Zonk! magazine, and Miriam Makeba.",
+    "claves_en": [
+      "Marabi · Sophiatown",
+      "Zonk! magazine",
+      "Stereomodernism"
+    ],
+    "cultura_en": "Marabi · Mbube · Isicathamiya · South African jazz",
+    "fuente": "",
+    "zoteroKeys": []
+  }
+]

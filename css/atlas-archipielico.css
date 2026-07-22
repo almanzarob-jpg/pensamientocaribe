@@ -1,0 +1,176 @@
+/* ════════════════════════════════════════════════
+   CON EL AGUA DE POR MEDIO
+   Atlas para una antropología archipiélica — grafo Cytoscape.js
+   Namespaced con .atlasarch- / #atlasarch- para no chocar
+   con el resto del sitio.
+   ════════════════════════════════════════════════ */
+
+.atlasarch-wrap {
+  display: flex;
+  gap: 14px;
+  align-items: stretch;
+}
+
+.atlasarch-legend {
+  flex: 0 0 250px;
+  max-width: 250px;
+  background: var(--c-surface-a, rgba(242,234,216,0.03));
+  border: 1px solid var(--c-border-green, rgba(242,234,216,0.14));
+  border-radius: 10px;
+  padding: 16px 14px;
+  overflow-y: auto;
+  max-height: 640px;
+  scrollbar-width: thin;
+}
+
+.atlasarch-legend h4 {
+  font-family: var(--ff-mono);
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--c-gray);
+  margin: 0 0 0.6rem;
+}
+
+.atlasarch-legend h4.is-second { margin-top: 1rem; padding-top: 0.9rem; border-top: 1px solid rgba(242,234,216,0.1); }
+
+#atlasarch-search {
+  width: 100%;
+  background: rgba(242,234,216,0.06);
+  border: 1px solid rgba(242,234,216,0.18);
+  color: var(--c-cream, #f2ead8);
+  border-radius: 6px;
+  padding: 0.45rem 0.6rem;
+  font-family: var(--ff-body);
+  font-size: 0.83rem;
+  margin-bottom: 0.85rem;
+}
+#atlasarch-search::placeholder { color: var(--c-gray); }
+
+.atlasarch-fen-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.38rem 0.3rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.8rem;
+  line-height: 1.25;
+  transition: background 0.15s;
+  user-select: none;
+}
+.atlasarch-fen-item:hover { background: rgba(242,234,216,0.06); }
+.atlasarch-fen-item.is-off { opacity: 0.32; }
+
+.atlasarch-fen-dot {
+  width: 10px; height: 10px; border-radius: 50%;
+  flex: 0 0 auto;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.35) inset;
+}
+.atlasarch-fen-label { flex: 1; }
+.atlasarch-fen-count { font-family: var(--ff-mono); font-size: 0.66rem; color: var(--c-gray); }
+
+#atlasarch-reset-fen {
+  display: block;
+  margin: 0.5rem 0 0.2rem;
+  font-family: var(--ff-mono);
+  font-size: 0.68rem;
+  color: var(--c-orange);
+  background: none; border: none; cursor: pointer; padding: 0;
+  text-decoration: underline;
+}
+
+.atlasarch-stat-line { font-family: var(--ff-mono); font-size: 0.7rem; color: var(--c-gray); margin: 0.15rem 0; }
+.atlasarch-stat-line b { color: var(--c-cream, #f2ead8); }
+.atlasarch-stat-line .is-pendiente { color: #caa14a; }
+
+.atlasarch-graph-col { flex: 1 1 auto; min-width: 0; position: relative; }
+
+#atlasarch-cy {
+  width: 100%;
+  height: 640px;
+  border-radius: 10px;
+  background: radial-gradient(ellipse at 50% 40%, #0c0d09 0%, #050604 75%);
+  border: 1px solid rgba(242,234,216,0.1);
+  position: relative;
+}
+#atlasarch-cy:fullscreen { height: 100vh; border-radius: 0; }
+
+.atlasarch-toolbar {
+  position: absolute; top: 0.7rem; right: 0.8rem; z-index: 5;
+  display: flex; gap: 0.4rem;
+}
+.atlasarch-toolbar button {
+  font-family: var(--ff-mono); font-size: 0.65rem;
+  background: rgba(7,8,6,0.7); color: var(--c-cream, #f2ead8);
+  border: 1px solid rgba(242,234,216,0.25); border-radius: 5px;
+  padding: 0.3rem 0.55rem; cursor: pointer;
+}
+.atlasarch-toolbar button:hover { border-color: var(--c-orange); color: var(--c-orange); }
+
+#atlasarch-hint {
+  position: absolute; bottom: 0.7rem; left: 0.8rem; z-index: 4;
+  font-family: var(--ff-mono); font-size: 0.65rem; color: var(--c-gray);
+  background: rgba(7,8,6,0.55); padding: 0.28rem 0.55rem; border-radius: 4px;
+  pointer-events: none;
+}
+
+#atlasarch-panel {
+  position: absolute; top: 0; right: 0; width: 330px; max-width: 88%;
+  height: 100%;
+  background: rgba(7,8,6,0.97);
+  border-left: 1px solid rgba(242,234,216,0.14);
+  padding: 1.2rem 1.2rem 1.4rem;
+  overflow-y: auto;
+  transform: translateX(100%);
+  transition: transform 0.25s ease;
+  z-index: 6;
+}
+#atlasarch-panel.is-open { transform: translateX(0); }
+
+#atlasarch-panel-close {
+  position: absolute; top: 0.7rem; right: 0.9rem;
+  background: none; border: none; color: var(--c-gray);
+  font-size: 1.25rem; cursor: pointer; line-height: 1;
+}
+#atlasarch-panel-close:hover { color: var(--c-cream, #f2ead8); }
+
+.atlasarch-fen-chip {
+  display: inline-block; font-family: var(--ff-mono); font-size: 0.62rem;
+  padding: 0.14rem 0.45rem; border-radius: 20px;
+  margin: 0 0.28rem 0.28rem 0; color: #070806; font-weight: 600;
+}
+
+#atlasarch-panel h5 {
+  font-family: var(--ff-display); font-weight: 600; font-size: 1.22rem;
+  margin: 1.4rem 0 0.15rem; line-height: 1.25; color: var(--c-cream, #f2ead8);
+}
+.atlasarch-autor { font-size: 0.85rem; color: var(--c-gray); margin: 0 0 0.15rem; }
+.atlasarch-lugar { font-family: var(--ff-mono); font-size: 0.7rem; color: var(--c-gray); margin: 0 0 0.85rem; }
+.atlasarch-apunte {
+  font-size: 0.87rem; line-height: 1.55; color: var(--c-cream, #f2ead8);
+  border-left: 2px solid rgba(242,234,216,0.2); padding-left: 0.75rem;
+  margin: 0.85rem 0 1.1rem;
+}
+.atlasarch-rel-title {
+  font-family: var(--ff-mono); font-size: 0.66rem; text-transform: uppercase;
+  letter-spacing: 0.08em; color: var(--c-gray); margin: 1rem 0 0.45rem;
+  border-top: 1px solid rgba(242,234,216,0.1); padding-top: 0.85rem;
+}
+.atlasarch-rel-item { padding: 0.45rem 0; border-bottom: 1px solid rgba(242,234,216,0.07); cursor: pointer; }
+.atlasarch-rel-item:hover .atlasarch-rel-t { color: var(--c-orange); }
+.atlasarch-rel-tipo {
+  font-family: var(--ff-mono); font-size: 0.6rem; text-transform: uppercase;
+  letter-spacing: 0.05em; padding: 0.07rem 0.38rem; border-radius: 3px; margin-right: 0.35rem;
+}
+.atlasarch-rel-tipo.resonancia { background: rgba(95,169,160,0.18); color: #8fd6cb; }
+.atlasarch-rel-tipo.disonancia { background: rgba(216,58,46,0.18); color: #f08a80; }
+.atlasarch-rel-t { font-size: 0.82rem; color: var(--c-cream, #f2ead8); display: block; margin: 0.2rem 0 0.12rem; }
+.atlasarch-rel-fuente { font-size: 0.72rem; color: var(--c-gray); font-style: italic; }
+.atlasarch-rel-fuente.is-pendiente { color: #caa14a; }
+
+@media (max-width: 860px) {
+  .atlasarch-wrap { flex-direction: column; }
+  .atlasarch-legend { max-width: none; max-height: 220px; }
+  #atlasarch-cy { height: 62vh; }
+}

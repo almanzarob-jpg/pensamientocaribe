@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Con el agua de por medio · Atlas para una antropología archipiélica · Pensamiento Caribe</title>
+  <meta name="description" content="Con el agua de por medio: atlas relacional interactivo del Gran Caribe. Ciento diecisiete obras y doscientas once relaciones organizadas por diez fenómenos transversales, no por fronteras nacionales.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.28.1/cytoscape.min.js"></script>
+  <link rel="stylesheet" href="../css/reset.css">
+  <link rel="stylesheet" href="../css/layout.css">
+  <link rel="stylesheet" href="../css/components.css">
+  <link rel="stylesheet" href="../css/animations.css">
+  <link rel="stylesheet" href="../css/proyecto.css">
+  <link rel="stylesheet" href="../css/atlas-archipielico.css">
+</head>
+<body>
+  <div class="fallback-bg" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+
+  <div class="page-content">
+    <nav class="site-nav" aria-label="Navegación principal">
+      <a href="../index.html" class="nav-brand">
+        <img src="../assets/logo-pensamiento-caribe.png" alt="Grupo de Investigación Pensamiento Caribe" onerror="this.style.display='none'">
+      </a>
+      <div class="nav-links">
+        <div class="nav-group">
+          <button class="nav-group-label" type="button" aria-haspopup="true" aria-expanded="false">Investigación <span class="nav-caret"></span></button>
+          <div class="nav-dropdown">
+            <div class="nav-dropdown-panel">
+              <a href="../manifiesto/antropologia-del-caribe-colombiano.html">Manifiesto</a>
+              <a href="../index.html#lineas">Líneas</a>
+              <a href="../index.html#proyectos">Proyectos</a>
+              <a href="../index.html#publicaciones">Publicaciones</a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-group">
+          <button class="nav-group-label" type="button" aria-haspopup="true" aria-expanded="false">Comunidad <span class="nav-caret"></span></button>
+          <div class="nav-dropdown">
+            <div class="nav-dropdown-panel">
+              <a href="../index.html#semillero">Semillero</a>
+              <a href="../index.html#equipo">Equipo</a>
+              <a href="../index.html#redes">Redes</a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-group">
+          <button class="nav-group-label" type="button" aria-haspopup="true" aria-expanded="false">Agenda <span class="nav-caret"></span></button>
+          <div class="nav-dropdown">
+            <div class="nav-dropdown-panel">
+              <a href="../index.html#eventos">Eventos</a>
+              <a href="../index.html#semana-antirracista">Semana antirracista</a>
+              <a href="../index.html#efemerides">Efemérides</a>
+            </div>
+          </div>
+        </div>
+        <div class="nav-group">
+          <button class="nav-group-label" type="button" aria-haspopup="true" aria-expanded="false">Medios <span class="nav-caret"></span></button>
+          <div class="nav-dropdown">
+            <div class="nav-dropdown-panel">
+              <a href="../index.html#noticias">Noticias</a>
+              <a href="../index.html#medios">Medios</a>
+            </div>
+          </div>
+        </div>
+        <a href="../index.html#contacto" class="nav-single">Contacto</a>
+      </div>
+      <button class="nav-toggle" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+
+    <div class="nav-mobile-overlay" aria-label="Menú móvil">
+      <div class="nav-m-group">
+        <button class="nav-m-label" type="button" aria-expanded="false">Investigación <span class="nav-caret"></span></button>
+        <div class="nav-m-sub">
+          <a href="../manifiesto/antropologia-del-caribe-colombiano.html">Manifiesto</a>
+          <a href="../index.html#lineas">Líneas</a>
+          <a href="../index.html#proyectos">Proyectos</a>
+          <a href="../index.html#publicaciones">Publicaciones</a>
+        </div>
+      </div>
+      <div class="nav-m-group">
+        <button class="nav-m-label" type="button" aria-expanded="false">Comunidad <span class="nav-caret"></span></button>
+        <div class="nav-m-sub">
+          <a href="../index.html#semillero">Semillero</a>
+          <a href="../index.html#equipo">Equipo</a>
+          <a href="../index.html#redes">Redes</a>
+        </div>
+      </div>
+      <div class="nav-m-group">
+        <button class="nav-m-label" type="button" aria-expanded="false">Agenda <span class="nav-caret"></span></button>
+        <div class="nav-m-sub">
+          <a href="../index.html#eventos">Eventos</a>
+          <a href="../index.html#semana-antirracista">Semana antirracista</a>
+          <a href="../index.html#efemerides">Efemérides</a>
+        </div>
+      </div>
+      <div class="nav-m-group">
+        <button class="nav-m-label" type="button" aria-expanded="false">Medios <span class="nav-caret"></span></button>
+        <div class="nav-m-sub">
+          <a href="../index.html#noticias">Noticias</a>
+          <a href="../index.html#medios">Medios</a>
+        </div>
+      </div>
+      <a href="../index.html#contacto" class="nav-m-single">Contacto</a>
+    </div>
+
+    <main class="proyecto-page">
+      <header class="proyecto-hero">
+        <a href="../index.html#proyectos" class="proyecto-breadcrumb">&larr; Proyectos</a>
+        <p class="proyecto-cat">Atlas relacional interactivo<span class="proyecto-status">Corpus en crecimiento</span></p>
+        <h1 class="proyecto-title">Con el agua de por medio, <em>atlas para una antropología archipiélica</em></h1>
+        <p class="proyecto-lede">Un atlas que no organiza el Gran Caribe por países sino por fenómenos que los atraviesan: colonialidad, postplantación, capitalismo racial, catástrofes climáticas, soberanías, violencias, memoria, cimarronaje, creolización, cuerpo y erótica. Cada obra es un nodo; cada relación entre dos obras está tipificada como resonancia o disonancia y cita su propia fuente, abierta a corrección.</p>
+
+        <div class="proyecto-meta-bar">
+          <div class="proyecto-meta-item"><span class="proyecto-meta-label">Dirección</span><span class="proyecto-meta-value">Roberto Almanza Hernández</span></div><div class="proyecto-meta-item"><span class="proyecto-meta-label">Institución</span><span class="proyecto-meta-value">Universidad del Magdalena</span></div><div class="proyecto-meta-item"><span class="proyecto-meta-label">Territorio</span><span class="proyecto-meta-value">Gran Caribe archipiélico</span></div><div class="proyecto-meta-item"><span class="proyecto-meta-label">Método</span><span class="proyecto-meta-value">Antropología archipiélica</span></div><div class="proyecto-meta-item"><span class="proyecto-meta-label">Corpus</span><span class="proyecto-meta-value">117 obras · 211 relaciones</span></div>
+        </div>
+      </header>
+
+      <!-- ════════ ATLAS RELACIONAL (Cytoscape.js) ════════ -->
+      <section class="section section--wide" id="atlas-archipielico" style="padding-top: 0;">
+        <div class="atlasarch-wrap reveal">
+          <aside class="atlasarch-legend">
+            <input id="atlasarch-search" type="search" placeholder="Buscar obra o autor…" autocomplete="off">
+            <h4>Fenómenos</h4>
+            <div id="atlasarch-fen-list"></div>
+            <button id="atlasarch-reset-fen">mostrar todos</button>
+            <h4 class="is-second">Corpus</h4>
+            <p class="atlasarch-stat-line" id="atlasarch-stat-obras"></p>
+            <p class="atlasarch-stat-line" id="atlasarch-stat-rel"></p>
+            <p class="atlasarch-stat-line" id="atlasarch-stat-corrob"></p>
+          </aside>
+          <div class="atlasarch-graph-col">
+            <div id="atlasarch-cy" role="application" aria-label="Grafo relacional del atlas archipiélico">
+              <div class="atlasarch-toolbar">
+                <button id="atlasarch-fullscreen" type="button">Pantalla completa</button>
+              </div>
+              <div id="atlasarch-panel">
+                <button id="atlasarch-panel-close" aria-label="Cerrar">×</button>
+                <div id="atlasarch-panel-body"></div>
+              </div>
+              <div id="atlasarch-hint">clic en un nodo para leer su ficha · rueda para zoom · arrastra para mover</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <article class="proyecto-cuerpo">
+        <h2>Sobre este atlas</h2>
+<p>El Caribe se ha pensado casi siempre desde la nación que lo fragmenta o desde el área cultural que lo unifica por fuera. Sidney Mintz definió el Caribe como área sociocultural por una historia compartida de plantación esclavista y capitalismo agrario de ultramar, y ese gesto fundó el campo. Este atlas hereda esa pregunta y la desplaza: propone que la unidad de análisis no es el lugar que aloja un fenómeno, sino el fenómeno-relación que atraviesa la cuenca entera sin detenerse en sus fronteras. Trouillot ya lo había dicho de otro modo: el Caribe es una frontera abierta que desborda las categorías con que la antropología nacional intenta contenerlo. Aquí esa apertura se vuelve estructura de datos: cada nodo es una obra, cada arco es una relación argumentada entre dos obras, y el mapa que resulta no dibuja territorio sino conversación.</p>
+
+        <h2>Diez fenómenos, no diez naciones</h2>
+<p>El corpus se organiza en diez categorías transversales. Cada una agrupa obras que piensan el mismo problema desde distintas orillas lingüísticas del Caribe (hispana, anglófona, francófona, neerlandesa) y distintos países, precisamente para que la comparación ocurra por argumento y no por geografía.</p>
+<dl class="apa-referencias" style="display:block;">
+<p><strong>Colonialidad.</strong> La herida que funda la región. Sigue ordenando saber, cuerpo y territorio mucho después de que se firmaron las actas de independencia. Trouillot la lee desde el silencio que la historia le impuso a Haití.</p>
+<p><strong>Postplantación.</strong> La plantación no terminó: mutó. Del ingenio al resort, la misma lógica de trabajo, raza y tierra sigue organizando la vida caribeña mucho después de la abolición.</p>
+<p><strong>Capitalismo racial.</strong> El capital nunca fue ciego al color. Robinson lo mostró: la acumulación se montó sobre la diferencia racial. La deuda que Francia le cobró a Haití es su cifra más brutal.</p>
+<p><strong>Catástrofes climáticas.</strong> El huracán es política antes que naturaleza. Revela de golpe quién resulta desechable. María, en Puerto Rico, desnudó la relación colonial mejor que cualquier tratado.</p>
+<p><strong>Soberanías.</strong> El eje más frágil del archivo, y por eso el más urgente. Bonilla lo formula sin rodeos: ¿qué significa libertad cuando la nación soberana dejó de ser la respuesta?</p>
+<p><strong>Violencias.</strong> De la trata al régimen carcelario corre una misma línea: la muerte administrada. El racismo funciona aquí como estructura que reparte vida y muerte, mucho antes de manifestarse como prejuicio individual.</p>
+<p><strong>Memoria y espiritualidad.</strong> Contra el silenciamiento, el archivo vivo. El monte, el tambor y el rito guardan lo que el Estado borra. La espiritualidad funciona como una forma de recordar.</p>
+<p><strong>Cimarronaje / fuga.</strong> La fuga hecha filosofía. Huir de la plantación fue también fundar mundo por fuera de ella. Roberts la piensa como la libertad misma, ya realizada en el acto de huir.</p>
+<p><strong>Creolización / oralitura.</strong> Lo nuevo que brota del encuentro forzado. Glissant lo llama Relación: una creación impredecible que convierte al Caribe en lengua propia.</p>
+<p><strong>Cuerpo, género y erótica.</strong> El cuerpo caribeño como campo de disputa y de goce. Del castigo esclavista a la erótica insurgente, el género y el deseo organizan a la vez el poder y la libertad. Tinsley y Alexander leen el placer y lo sagrado como formas de soberanía.</p>
+</dl>
+
+        <h2>Resonancia y disonancia: el marco conceptual</h2>
+<p>Cada relación entre dos obras se tipifica, no se da por sentada. Cuando dos textos se refuerzan, se citan o argumentan en la misma dirección, la relación es de <strong>resonancia</strong>. Cuando dos textos leen el mismo fenómeno desde marcos que friccionan (distinta tradición lingüística, distinta escuela, distinta conclusión), la relación es de <strong>disonancia</strong>, y esa fricción no se disuelve: se marca. El nombre viene de Michael Monahan, para quien la creolización no es fusión armónica sino roce productivo entre saberes. La forma misma del atlas intenta pensar con Kamau Brathwaite: no una historia lineal de causa y consecuencia, sino una temporalidad de marea, de vaivén, donde una obra de 1938 puede resonar hoy con una de 2025 sin que medie continuidad cronológica. Por eso el grafo no tiene tiempo en el eje horizontal: tiene cercanía argumentativa.</p>
+
+        <h2>Estado del corpus</h2>
+<p>A la fecha de esta versión, el atlas reúne <strong>117 obras</strong> y <strong>211 relaciones</strong> entre ellas, sin relaciones rotas: todo arco conecta dos obras que existen en el corpus. De esas 211 relaciones, 198 son de resonancia y 13 de disonancia. La cifra que este atlas no esconde es que el 49% de las relaciones (104 de 211) todavía están marcadas como <em>por corroborar</em>: la conexión se propuso porque hay razón argumentable para proponerla, pero falta verificar la cita directa, el archivo o la fuente secundaria que la sostenga con rigor. Esa proporción no es una falla de diseño. Es la fotografía honesta de un corpus construido obra por obra, ronda de siembra por ronda de siembra, donde cada libro se descarga, se verifica por su propio texto (nunca por el nombre del archivo) y se conecta con lo que ya existe. La sistematización bibliográfica —hoy hecha a mano, todavía sin un flujo completo desde Zotero— es, junto con la corroboración de esas 104 relaciones pendientes, el trabajo que este atlas necesita para crecer al ritmo de su propia ambición.</p>
+
+        <h2>Cómo leer el atlas</h2>
+<p>Cada nodo es una obra; su color corresponde al primer fenómeno con que se clasifica, y su tamaño crece con el número de relaciones que sostiene dentro del corpus. Las líneas sólidas son resonancias; las líneas punteadas en rojo son disonancias. La opacidad de cada línea marca su estado de corroboración: más visible si la fuente ya está verificada, más tenue si sigue pendiente. Un clic sobre cualquier nodo abre su ficha completa (autor, año, lugar, tradición lingüística, el apunte argumentativo que motivó su inclusión) y la lista de todas sus relaciones con la fuente que las respalda. La leyenda de la izquierda filtra por fenómeno y permite aislar un eje temático a la vez; el buscador ubica una obra o un autor por nombre.</p>
+
+        <h2>Cómo citar</h2>
+<p>Los datos de este atlas están depositados en Zenodo con DOI permanente: <a href="https://doi.org/10.5281/zenodo.21483569" target="_blank" rel="noopener">10.5281/zenodo.21483569</a>. Cita sugerida: Almanza Hernández, Roberto (dir.), <em>Con el agua de por medio: atlas para una antropología archipiélica</em>, corpus bibliográfico y relacional, versión 1.0, Grupo de Investigación Pensamiento Caribe, Universidad del Magdalena, 2026, DOI: 10.5281/zenodo.21483569. El corpus se versiona: cada ampliación sustantiva se archiva de nuevo en Zenodo y actualiza esta página.</p>
+      </article>
+
+      <nav class="proyecto-footer-nav" aria-label="Navegación entre proyectos">
+        <a href="mas-ramas-que-raices.html" class="btn btn--secondary">&larr; Proyecto anterior</a>
+        <a href="../index.html#proyectos" class="btn btn--primary">Ver todos los proyectos</a>
+        <a href="negrura-blanquitud-monumental.html" class="btn btn--secondary">Proyecto siguiente &rarr;</a>
+      </nav>
+    </main>
+  </div>
+  <script src="../js/atlas-archipielico.js"></script>
+  <script src="../js/interactions.js"></script>
+</body>
+</html>

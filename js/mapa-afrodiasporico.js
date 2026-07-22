@@ -5,6 +5,29 @@
    Inspirado en Errol L. Montes Pizarro (2018)
    ════════════════════════════════════════════════ */
 (function () {
+  // Fase 3 · datos declarativos: el mapa lee data/atlas/{nodes,edges}.json.
+  // El bloque inline de más abajo queda SOLO como fallback si el fetch falla
+  // (p. ej. al abrir el HTML con file://). En el sitio publicado manda el JSON.
+  var SCRIPT_SRC = (document.currentScript && document.currentScript.src) || '';
+  var ATLAS = null;
+
+  function loadAtlas(done) {
+    var base = SCRIPT_SRC.replace(/js\/[^\/?#]*(?:[?#].*)?$/, 'data/atlas/');
+    if (!/data\/atlas\/$/.test(base)) { done(); return; }
+    Promise.all([
+      fetch(base + 'nodes.json').then(function (r) { return r.ok ? r.json() : null; }),
+      fetch(base + 'edges.json').then(function (r) { return r.ok ? r.json() : null; })
+    ]).then(function (res) {
+      var n = res[0], e = res[1];
+      if (n && n.length && e && e.length) {
+        // Normaliza el esquema nuevo (source/target) al que espera el render (de/a).
+        e.forEach(function (x) { x.de = x.source_nombre; x.a = x.target_nombre; });
+        ATLAS = { nodos: n, rutas: e };
+      }
+      done();
+    }).catch(function () { done(); });
+  }
+
   function init() {
     var container = document.getElementById('atlantico-leaflet-map');
     if (!container || typeof L === 'undefined') return;
@@ -86,7 +109,7 @@
       'Diáspora del Norte':  '#9A8FC7'
     };
 
-    var nodos = [
+    var nodos = (ATLAS && ATLAS.nodos && ATLAS.nodos.length) ? ATLAS.nodos : [
       { nombre: 'Kingston',          pais: 'Jamaica',            lat: 17.9712, lng: -76.7936, categoria: 'Gran Caribe',        desc: 'De aquí salieron los cimarrones de Trelawny deportados en 1796, aquí nació Marcus Garvey y aquí el rastafari volvió la mirada hacia Etiopía. Puerto matriz del panafricanismo popular. Aquí nació también el dub: en los estudios de Kingston de los años setenta, King Tubby y Lee «Scratch» Perry convirtieron la consola de mezcla en instrumento y el estudio de grabación en organismo vivo. Louis Chude-Sokei lee ese gesto como tecnopoética afrodiaspórica: una manera de creolizar la máquina que hereda (y responde a) el mismo lenguaje de amo y esclavo con que Occidente pensó la tecnología desde el siglo XIX.', claves: ['Cimarrones', 'Marcus Garvey', 'Rastafari', 'Dub y tecnopoética'], cultura: 'Gumbé · Mento · Reggae · Dancehall', cancion: { titulo: 'Redemption Song', artista: 'Bob Marley', youtubeId: 'yv5xonFSC4c' }, fuente: 'Montes Pizarro 2018 · Chude-Sokei 2015',
         desc_en: 'The Trelawny Maroons deported in 1796 sailed from here; Marcus Garvey was born here; and here Rastafari turned its gaze toward Ethiopia. A matrix port for popular pan-Africanism. Dub was born here too: in the Kingston studios of the 1970s, King Tubby and Lee "Scratch" Perry turned the mixing console into an instrument and the recording studio into a living organism. Louis Chude-Sokei reads that gesture as an Afrodiasporic technopoetics — a way of creolizing the machine that inherits, and answers back to, the same master-and-slave language through which the West has thought about technology since the nineteenth century.', claves_en: ['Maroons', 'Marcus Garvey', 'Rastafari', 'Dub and technopoetics'], cultura_en: 'Gumbe · Mento · Reggae · Dancehall' },
       { nombre: 'La Habana',         pais: 'Cuba',               lat: 23.1136, lng: -82.3666, categoria: 'Gran Caribe',        desc: 'El son cubano viajó a África en discos de 78 revoluciones y allá lo escucharon como cosa propia, una rama que regresaba. Ninguna otra música caribeña sembró tanto en el continente.', claves: ['Son cubano', 'Discos GV', 'Semilla de la rumba congoleña'], cultura: 'Son · Rumba · Guaracha · Bolero', cancion: { titulo: 'Chan Chan', artista: 'Buena Vista Social Club', youtubeId: 'tGbRZ73NvlY' },
@@ -138,7 +161,7 @@
     ];
 
     // ── Rutas: arcos transatlánticos por época ──
-    var rutas = [
+    var rutas = (ATLAS && ATLAS.rutas && ATLAS.rutas.length) ? ATLAS.rutas : [
       // Época 1 · Travesías fundacionales
       { epoca: 1, de: 'Kingston', a: 'Freetown', curva: 0.22, titulo: 'El gumbé: el primer viaje de vuelta', anos: '1796–1800', desc: 'Los cimarrones de Trelawny, deportados a Nueva Escocia tras la segunda guerra cimarrona, fueron reembarcados a Freetown en 1800. Llevaron consigo el tambor gumbé: la primera música afrocaribeña documentada en regresar a África, donde echó ramas como goombay, gome y soumbe.', claves: ['Cimarrones de Trelawny', 'Vía Nueva Escocia', 'Tambor gumbé'], cancion: { titulo: 'Gumbay tradicional', artista: 'Salome Peters · Sierra Leona', youtubeId: 'ARZVVU9YRVs' }, fuente: 'Montes Pizarro 2018 · Bilby 2011',
         titulo_en: 'Gumbe: the first return voyage', anos_en: '1796–1800', desc_en: 'The Trelawny Maroons, deported to Nova Scotia after the Second Maroon War, were shipped onward to Freetown in 1800. They carried with them the gumbe drum — the first documented Afro-Caribbean music to make the journey back to Africa, where it branched into goombay, gome, and soumbe.', claves_en: ['Trelawny Maroons', 'Via Nova Scotia', 'Gumbe drum'] },
@@ -698,9 +721,11 @@
     setTimeout(function () { map.invalidateSize(); }, 300);
   }
 
+  function boot() { loadAtlas(function () { init(); }); }
+
   if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
+    document.addEventListener('DOMContentLoaded', boot);
   } else {
-    init();
+    boot();
   }
 })();
