@@ -204,7 +204,7 @@
     <h2>Con el agua de por medio</h2>
     <div class="u-sub">Atlas para una antropología archipiélica</div>
     <p>Ninguna orilla es una totalidad. El archipiélago no lo hacen las naciones: lo hacen las fuerzas que cruzan de una orilla a otra. Cada obra vive aquí en el fenómeno que la atraviesa; el país que la aloja queda en segundo plano.</p>
-    <div class="how">Elegí un fenómeno en la leyenda y <b>se encienden sus puntos</b> con su guión. Abrí cualquier obra y <b>se ramifican sus conexiones</b>, directas e indirectas, a través del agua. Pasá el cursor para leer cada nodo. El fondo sube y baja como la marea, según Brathwaite.</div>
+    <div class="how">Elige un fenómeno en la leyenda y <b>se encienden sus puntos</b> con su guión. Abre cualquier obra y <b>se ramifican sus conexiones</b>, directas e indirectas, a través del agua. Pasa el cursor para leer cada nodo. El fondo sube y baja como la marea, según Brathwaite.</div>
     <button id="entrar">Entrar en la corriente</button>
     <div style="margin-top:16px;font-family:var(--ff-mono);font-size:9.5px;letter-spacing:.6px;color:var(--gray)">Base conceptual: Brathwaite · Monahan — <a id="umarco" style="color:var(--orange);cursor:pointer;text-decoration:none">ver marco</a></div>
   </div></div>
@@ -289,8 +289,8 @@ function render(){
   vp=el("g",{id:"vp"}); svg.appendChild(vp); applyVP();
   computeBase();
   const hint=document.getElementById('hint');
-  if(state.view==="corriente"){ drawBasin(); hint.textContent="La cuenca vista desde el mar. Islas por su país; puntos continentales (naranja) por su ciudad, regiones en tensión con un centro no caribeño. Pasá el cursor sobre un punto para leerlo."; }
-  else hint.textContent="Constelación de los fenómenos que atraviesan la cuenca. Rueda: zoom · arrastra: desplaza · doble clic: reencuadra. Pasá el cursor sobre un punto para leerlo.";
+  if(state.view==="corriente"){ drawBasin(); hint.textContent="La cuenca vista desde el mar. Islas por su país; puntos continentales (naranja) por su ciudad, regiones en tensión con un centro no caribeño. Pasa el cursor sobre un punto para leerlo."; }
+  else hint.textContent="Constelación de los fenómenos que atraviesan la cuenca. Rueda: zoom · arrastra: desplaza · doble clic: reencuadra. Pasa el cursor sobre un punto para leerlo.";
   const eg=el("g"); vp.appendChild(eg);
   R.forEach(([a,b],i)=>{ const na=byId(a), nb=byId(b); if(!na||!nb||!visible(na)||!visible(nb))return;
     const type=isDiso(a,b)?"disonancia":"resonancia"; const friction=tradCode(na)!==tradCode(nb);
@@ -445,7 +445,7 @@ function renderTable(){
   const rows=tblRows();
   const cols=[["t","Obra"],["a","Autor"],["y","Año"],["k","Tipo"],["f","Fenómenos"],["l","Lugar"],["tr","Tradición"]];
   const foco = state.focusFen ? ` · filtrado por «${FEN[state.focusFen].label}»` : "";
-  let h=`<div class="tcap">Catálogo del atlas</div><div class="tsub">${rows.length} referencias${foco} · ordená por cualquier columna · abrí una fila para ver su ficha</div>`;
+  let h=`<div class="tcap">Catálogo del atlas</div><div class="tsub">${rows.length} referencias${foco} · ordena por cualquier columna · abre una fila para ver su ficha</div>`;
   h+=`<table><caption>Obras y manifestaciones del atlas «Con el agua de por medio», con su fenómeno, lugar y tradición. Cada fila enlaza a la ficha completa.</caption><thead><tr>`;
   cols.forEach(([k,lbl])=>{ const s = tblSort.col===k ? (tblSort.dir===1?"ascending":"descending") : "none"; h+=`<th scope="col" role="columnheader" aria-sort="${s}" data-col="${k}" tabindex="0">${lbl}</th>`; });
   h+=`</tr></thead><tbody>`;
