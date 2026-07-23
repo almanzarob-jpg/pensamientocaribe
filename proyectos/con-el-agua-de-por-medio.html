@@ -272,6 +272,7 @@
   </div>
   <div class="controls">
     <div class="grp"><label data-i18n="lblVista">Vista</label><div class="seg vista" id="viewSeg"><button data-v="corriente" class="on" data-i18n="vCorriente">Corriente</button><button data-v="constelacion" data-i18n="vConstelacion">Constelación</button><button data-v="tabla" data-i18n="vTabla">Tabla</button></div></div>
+    <div class="grp" id="zoomGrp"><label data-i18n="lblZoom">Zoom</label><div class="seg base"><button id="resetZoomBtn" data-i18n="resetBtn" data-i18n-title="resetTitle">⤢ Reencuadrar</button></div></div>
     <div class="grp"><label data-i18n="lblCapa">Capa</label><div class="seg capa" id="layerSeg"><button data-l="ambas" class="on" data-i18n="cAmbas">Ambas</button><button data-l="obra" data-i18n="cObra">Investigación</button><button data-l="manifestacion" data-i18n="cManif">Etnográfica</button></div></div>
     <div class="grp"><label data-i18n="lblMarea">Marea</label><div class="seg tide" id="tideSeg"><button data-tide="on" class="on" data-i18n="mFlujo">Flujo</button><button data-tide="off" data-i18n="mQuieta">Quieta</button></div></div>
     <div class="grp"><label data-i18n="lblBase">Base</label><div class="seg base"><button id="marcoBtn" data-i18n="marcoBtn">Marco conceptual</button></div></div>
@@ -352,6 +353,7 @@ const I18N = {
     lblMarea:"Marea", mFlujo:"Flujo", mQuieta:"Quieta",
     lblBase:"Base", marcoBtn:"Marco conceptual",
     lblModo:"Modo", presBtn:"Pantalla completa",
+    lblZoom:"Zoom", resetBtn:"⤢ Reencuadrar", resetTitle:"Vuelve al zoom y encuadre inicial de esta vista",
     lblIdioma:"Idioma",
     entrar:"Entrar en la corriente", umbralBase:"Base conceptual: Brathwaite · Monahan — ", verMarco:"ver marco",
     umbralP:"Ninguna orilla es una totalidad. El archipiélago no lo hacen las naciones: lo hacen las fuerzas que cruzan de una orilla a otra. Cada obra vive aquí en el fenómeno que la atraviesa; el país que la aloja queda en segundo plano.",
@@ -371,8 +373,8 @@ const I18N = {
     mc6p:"Almanza, R. (2026). <i>Atlas para una antropología archipiélica: con el agua de por medio</i> [conjunto de datos]. Zenodo. <a href=\"https://doi.org/10.5281/zenodo.21483569\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold)\">https://doi.org/10.5281/zenodo.21483569</a><br><span style=\"font-size:.85em; opacity:.75; font-style:italic\">Licencia <a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold)\">CC BY-NC-SA 4.0</a>: atribución, uso no comercial, compartir igual.</span>",
     presExit:"✕ salir",
     presHelp:"<span><b>1</b>corriente</span><span><b>2</b>constelación</span><span><b>M</b>marea</span><span><b>→</b>siguiente fenómeno</span><span><b>←</b>anterior</span><span><b>0</b>despejar</span><span><b>Esc</b>salir</span>",
-    hintCorriente:"La cuenca vista desde el mar. Islas por su país; puntos continentales (naranja) por su ciudad, regiones en tensión con un centro no caribeño. Pasa el cursor sobre un punto para leerlo.",
-    hintConstelacion:"Constelación de los fenómenos que atraviesan la cuenca. Rueda: zoom · arrastra: desplaza · doble clic: reencuadra. Pasa el cursor sobre un punto para leerlo.",
+    hintCorriente:"La cuenca vista desde el mar. Islas por su país; puntos continentales (naranja) por su ciudad, regiones en tensión con un centro no caribeño. Rueda: zoom · arrastra: desplaza · doble clic o botón «Reencuadrar»: vuelve al inicio. Pasa el cursor sobre un punto para leerlo.",
+    hintConstelacion:"Constelación de los fenómenos que atraviesan la cuenca. Rueda: zoom · arrastra: desplaza · doble clic o botón «Reencuadrar»: vuelve al inicio. Pasa el cursor sobre un punto para leerlo.",
     lgTitle:"referencias · clic en un fenómeno para iluminar",
     lgResearch:"investigación", lgEthno:"etnográfica", lgReson:"resonancia", lgDisso:"disonancia", lgFricc:"fricción epistémica",
     lgMarco:"Base conceptual: Brathwaite · Monahan →",
@@ -397,6 +399,7 @@ const I18N = {
     lblMarea:"Tide", mFlujo:"Flow", mQuieta:"Still",
     lblBase:"Base", marcoBtn:"Conceptual frame",
     lblModo:"Mode", presBtn:"Full screen",
+    lblZoom:"Zoom", resetBtn:"⤢ Recenter", resetTitle:"Return to this view's default zoom and framing",
     lblIdioma:"Language",
     entrar:"Enter the current", umbralBase:"Conceptual base: Brathwaite · Monahan — ", verMarco:"see frame",
     umbralP:"No shore is a totality. The archipelago is not made by nations: it is made by the forces that cross from one shore to another. Each work lives here in the phenomenon that runs through it; the country that hosts it stays in the background.",
@@ -416,8 +419,8 @@ const I18N = {
     mc6p:"Almanza, R. (2026). <i>Atlas para una antropología archipiélica: con el agua de por medio</i> [dataset]. Zenodo. <a href=\"https://doi.org/10.5281/zenodo.21483569\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold)\">https://doi.org/10.5281/zenodo.21483569</a><br><span style=\"font-size:.85em; opacity:.75; font-style:italic\">Licensed under <a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold)\">CC BY-NC-SA 4.0</a>: attribution, non-commercial, share-alike.</span>",
     presExit:"✕ exit",
     presHelp:"<span><b>1</b>current</span><span><b>2</b>constellation</span><span><b>M</b>tide</span><span><b>→</b>next phenomenon</span><span><b>←</b>previous</span><span><b>0</b>clear</span><span><b>Esc</b>exit</span>",
-    hintCorriente:"The basin seen from the sea. Islands by their country; continental points (orange) by their city, regions in tension with a non-Caribbean center. Hover over a point to read it.",
-    hintConstelacion:"Constellation of the phenomena that run through the basin. Wheel: zoom · drag: pan · double-click: recenter. Hover over a point to read it.",
+    hintCorriente:"The basin seen from the sea. Islands by their country; continental points (orange) by their city, regions in tension with a non-Caribbean center. Wheel: zoom · drag: pan · double-click or the «Recenter» button: back to start. Hover over a point to read it.",
+    hintConstelacion:"Constellation of the phenomena that run through the basin. Wheel: zoom · drag: pan · double-click or the «Recenter» button: back to start. Hover over a point to read it.",
     lgTitle:"references · click a phenomenon to illuminate",
     lgResearch:"research", lgEthno:"ethnographic", lgReson:"resonance", lgDisso:"dissonance", lgFricc:"epistemic friction",
     lgMarco:"Conceptual base: Brathwaite · Monahan →",
@@ -670,11 +673,14 @@ function renderTable(){
 }
 function switchView(v){
   state.view=v;
+  vpt={k:1,tx:0,ty:0}; /* cada vista tiene su propia geometría (mapa vs. grafo): el zoom/paneo de una no sirve en otra, así que se reinicia siempre al cambiar */
   const svg0=document.getElementById('stage'), tbl=document.getElementById('tabla'), lg=document.getElementById('legend');
-  if(v==="tabla"){ svg0.style.display="none"; document.getElementById('hint').style.display="none"; tbl.classList.add('show'); tbl.setAttribute('tabindex','-1'); renderTable(); tbl.focus(); }
-  else { svg0.style.display="block"; document.getElementById('hint').style.display=""; tbl.classList.remove('show'); render(); }
+  const zg=document.getElementById('zoomGrp');
+  if(v==="tabla"){ svg0.style.display="none"; document.getElementById('hint').style.display="none"; if(zg) zg.style.display="none"; tbl.classList.add('show'); tbl.setAttribute('tabindex','-1'); renderTable(); tbl.focus(); }
+  else { svg0.style.display="block"; document.getElementById('hint').style.display=""; if(zg) zg.style.display=""; tbl.classList.remove('show'); render(); }
 }
 document.getElementById('viewSeg').addEventListener('click',e=>{ if(e.target.dataset.v){[...e.currentTarget.children].forEach(b=>b.classList.remove('on'));e.target.classList.add('on');clearFocus();switchView(e.target.dataset.v);} });
+document.getElementById('resetZoomBtn').addEventListener('click',()=>{ vpt={k:1,tx:0,ty:0}; applyVP(); });
 document.getElementById('layerSeg').addEventListener('click',e=>{ if(e.target.dataset.l){[...e.currentTarget.children].forEach(b=>b.classList.remove('on'));e.target.classList.add('on');state.layer=e.target.dataset.l; state.view==="tabla"?renderTable():render();} });
 document.getElementById('tideSeg').addEventListener('click',e=>{ if(e.target.dataset.tide){[...e.currentTarget.children].forEach(b=>b.classList.remove('on'));e.target.classList.add('on');state.tide=e.target.dataset.tide==="on"; if(!state.tide) place(0);} });
 
@@ -754,6 +760,7 @@ function applyLang(){
   document.documentElement.lang = LANG;
   document.querySelectorAll('[data-i18n]').forEach(e=>{ const k=e.getAttribute('data-i18n'); if(I18N[LANG][k]!==undefined) e.textContent=I18N[LANG][k]; });
   document.querySelectorAll('[data-i18n-html]').forEach(e=>{ const k=e.getAttribute('data-i18n-html'); if(I18N[LANG][k]!==undefined) e.innerHTML=I18N[LANG][k]; });
+  document.querySelectorAll('[data-i18n-title]').forEach(e=>{ const k=e.getAttribute('data-i18n-title'); if(I18N[LANG][k]!==undefined) e.title=I18N[LANG][k]; });
   const lb=document.getElementById('langBtn'); if(lb) lb.textContent=t('langBtn');
   const openId=state.active, ff=state.focusFen;
   if(state.view==='tabla'){ renderTable(); } else { render(); }
