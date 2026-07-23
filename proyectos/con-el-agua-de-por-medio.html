@@ -36,6 +36,8 @@
   header{flex:0 0 auto; padding:18px 28px 14px; border-bottom:1px solid var(--line); display:flex; align-items:flex-end; justify-content:space-between; gap:24px; flex-wrap:wrap; background:linear-gradient(180deg,var(--bg-warm),var(--bg-deep)); position:relative;}
   header::after{content:"";position:absolute; left:28px; right:28px; bottom:0; height:2px;
     background:linear-gradient(90deg, var(--green-l) 0 64px, transparent 64px 76px, var(--gold) 76px 118px, transparent 118px);}
+  header .t .back{display:inline-flex; align-items:center; gap:5px; font-family:var(--ff-mono); font-size:10px; text-transform:uppercase; letter-spacing:1.4px; color:var(--gray); text-decoration:none; margin-bottom:9px; transition:color .15s}
+  header .t .back:hover, header .t .back:focus{color:var(--gold)}
   header .t h1{font-family:var(--ff-display); font-size:32px; margin:0; font-weight:700; letter-spacing:.3px; color:var(--cream)}
   header .t .sub{font-family:var(--ff-mono); color:var(--red); font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:3px; margin-top:8px}
   .controls{display:flex; gap:18px; align-items:flex-end; flex-wrap:wrap}
@@ -195,6 +197,7 @@
     header{flex-direction:column; align-items:stretch; padding:10px 12px 8px; gap:8px;}
     header::after{left:12px; right:12px;}
     header .t{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;}
+    header .t .back{font-size:8.5px; margin-bottom:5px}
     header .t h1{font-size:19px}
     header .t .sub{font-size:8px; letter-spacing:1.5px; margin-top:0}
     .controls{gap:0; flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none; padding-bottom:2px;}
@@ -267,6 +270,7 @@
 <a href="#main-content" class="skip-link" id="skipLink" data-i18n="skipLink">Saltar al contenido principal</a>
 <header>
   <div class="t">
+    <a href="../index.html#proyectos" class="back" data-i18n="backlink">&larr; Pensamiento Caribe</a>
     <h1>Con el agua de por medio</h1>
     <div class="sub" data-i18n="sub">Atlas para una antropología archipiélica</div>
   </div>
@@ -347,6 +351,7 @@ const fenGlosa = f => (LANG==='en' && FEN_EN[f] && FEN_EN[f].g) ? FEN_EN[f].g : 
 const I18N = {
   es:{
     skipLink:"Saltar al contenido principal",
+    backlink:"← Pensamiento Caribe",
     sub:"Atlas para una antropología archipiélica",
     lblVista:"Vista", vCorriente:"Corriente", vConstelacion:"Constelación", vTabla:"Tabla",
     lblCapa:"Capa", cAmbas:"Ambas", cObra:"Investigación", cManif:"Etnográfica",
@@ -393,6 +398,7 @@ const I18N = {
   },
   en:{
     skipLink:"Skip to main content",
+    backlink:"← Pensamiento Caribe",
     sub:"Atlas for an archipelagic anthropology",
     lblVista:"View", vCorriente:"Current", vConstelacion:"Constellation", vTabla:"Table",
     lblCapa:"Layer", cAmbas:"Both", cObra:"Research", cManif:"Ethnographic",
