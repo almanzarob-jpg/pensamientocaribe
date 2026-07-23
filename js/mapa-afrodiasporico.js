@@ -314,7 +314,7 @@
       });
 
       marker.on('click', function () { abrirPanelNodo(n); });
-      marker.bindTooltip(n.nombre, { className: 'caribe-tooltip', direction: 'top', offset: [0, -8] });
+      marker.bindTooltip(nombreDisp(n.nombre), { className: 'caribe-tooltip', direction: 'top', offset: [0, -8] });
 
       marker.on('mouseover', function () { this.setStyle({ fillOpacity: 1 }); this.setRadius(radius + 3); });
       marker.on('mouseout', function () { this.setStyle({ fillOpacity: esColombia ? 0.85 : 0.7 }); this.setRadius(radius); });
@@ -357,8 +357,11 @@
       linea.on('click', alSeleccionar);
       franjaClic.on('click', alSeleccionar);
 
-      linea.bindTooltip(r.titulo + ' · ' + r.anos, { className: 'caribe-tooltip', direction: 'top', sticky: true });
-      franjaClic.bindTooltip(r.titulo + ' · ' + r.anos, { className: 'caribe-tooltip', direction: 'top', sticky: true });
+      var esENTip = IDIOMA === 'en';
+      var tituloTip = (esENTip && r.titulo_en) ? r.titulo_en : r.titulo;
+      var anosTip = (esENTip && r.anos_en) ? r.anos_en : r.anos;
+      linea.bindTooltip(tituloTip + ' · ' + anosTip, { className: 'caribe-tooltip', direction: 'top', sticky: true });
+      franjaClic.bindTooltip(tituloTip + ' · ' + anosTip, { className: 'caribe-tooltip', direction: 'top', sticky: true });
 
       franjaClic.on('mouseover', function () { if (!tourActivo) linea.setStyle({ weight: 3.5, opacity: 0.95 }); });
       franjaClic.on('mouseout', function () { if (!tourActivo && linea !== arcoSeleccionado) linea.setStyle({ weight: 2, opacity: 0.65 }); });

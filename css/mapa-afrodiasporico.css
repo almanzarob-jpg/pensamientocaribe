@@ -9,6 +9,13 @@
   color: #E8935A;
 }
 
+/* Enlace de cambio de idioma: salmón para distinguirlo del texto del lede */
+.proyecto-lang-switch {
+  color: #E8935A;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
 /* Referencias APA: lista sin viñetas, con sangría francesa */
 .proyecto-cuerpo ul.apa-referencias {
   list-style: none;
