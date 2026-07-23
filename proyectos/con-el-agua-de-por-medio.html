@@ -78,7 +78,7 @@
   #tip .ta{font-family:var(--ff-mono); font-size:9.5px; letter-spacing:.4px; color:var(--gray); margin-top:4px}
   #tip .tf{font-family:var(--ff-mono); font-size:8.5px; text-transform:uppercase; letter-spacing:1px; margin-top:5px}
   /* panel */
-  #panel{position:absolute; top:14px; right:14px; width:352px; max-height:calc(100% - 28px); overflow:auto; background:var(--panel); border:1px solid var(--line); border-radius:3px; padding:22px 24px; box-shadow:0 16px 44px rgba(0,0,0,.55); transform:translateX(125%); transition:transform .3s cubic-bezier(.4,0,.2,1);}
+  #panel{position:absolute; top:14px; right:14px; width:352px; max-height:calc(100% - 28px); overflow:auto; background:var(--panel); border:1px solid var(--line); border-radius:3px; padding:22px 24px; box-shadow:0 16px 44px rgba(0,0,0,.55); transform:translateX(125%); transition:transform .3s cubic-bezier(.4,0,.2,1), opacity .3s, visibility .3s;}
   #panel.open{transform:none}
   #panel .close{float:right; cursor:pointer; color:var(--gray); font-size:20px; line-height:1; border:0; background:none}
   #panel .kind{font-family:var(--ff-mono); font-size:9.5px; text-transform:uppercase; letter-spacing:1.6px; color:var(--red)}
@@ -207,8 +207,8 @@
     #legend .grid{grid-template-columns:1fr 1fr}
     #guion{width:calc(100vw - 24px); left:12px; right:12px; transform:translateY(-14px); top:10px;}
     #guion.show{transform:none}
-    #panel{left:8px; right:8px; top:8px; width:auto; max-height:calc(100% - 16px); padding:18px 18px; transform:translateY(-120%);}
-    #panel.open{transform:none}
+    #panel{left:8px; right:8px; top:8px; width:auto; max-height:calc(100% - 16px); padding:18px 18px; transform:translateY(-16px); opacity:0; visibility:hidden;}
+    #panel.open{transform:none; opacity:1; visibility:visible;}
     #marco .mbox{max-width:calc(100vw - 24px); padding:22px 20px; max-height:90%}
     #marco h2{font-size:24px}
     .credit{display:none}
