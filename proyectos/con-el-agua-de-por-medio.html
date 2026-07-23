@@ -31,9 +31,9 @@
     --ff-mono:ui-monospace,'SFMono-Regular','Consolas',monospace;
   }
   *{box-sizing:border-box}
-  html,body{margin:0;height:100%}
-  body{background:var(--bg-deep); color:var(--cream); font-family:var(--ff-body); -webkit-font-smoothing:antialiased; overflow:hidden;}
-  header{padding:18px 28px 14px; border-bottom:1px solid var(--line); display:flex; align-items:flex-end; justify-content:space-between; gap:24px; flex-wrap:wrap; background:linear-gradient(180deg,var(--bg-warm),var(--bg-deep)); position:relative;}
+  html,body{margin:0;height:100%; height:100dvh; overscroll-behavior:none;}
+  body{background:var(--bg-deep); color:var(--cream); font-family:var(--ff-body); -webkit-font-smoothing:antialiased; overflow:hidden; display:flex; flex-direction:column;}
+  header{flex:0 0 auto; padding:18px 28px 14px; border-bottom:1px solid var(--line); display:flex; align-items:flex-end; justify-content:space-between; gap:24px; flex-wrap:wrap; background:linear-gradient(180deg,var(--bg-warm),var(--bg-deep)); position:relative;}
   header::after{content:"";position:absolute; left:28px; right:28px; bottom:0; height:2px;
     background:linear-gradient(90deg, var(--green-l) 0 64px, transparent 64px 76px, var(--gold) 76px 118px, transparent 118px);}
   header .t h1{font-family:var(--ff-display); font-size:32px; margin:0; font-weight:700; letter-spacing:.3px; color:var(--cream)}
@@ -56,8 +56,8 @@
   .seg.base{background:transparent; border-color:var(--red)}
   .seg.base button{color:var(--red); border-right:0; font-weight:600; letter-spacing:1.2px}
   .seg.base button:hover{background:var(--red); color:var(--cream)}
-  main{position:relative; height:calc(100% - 106px)}
-  #stage{width:100%; height:100%; display:block; cursor:grab}
+  main{position:relative; flex:1 1 auto; min-height:0;}
+  #stage{width:100%; height:100%; display:block; cursor:grab; touch-action:none;}
   #stage.grabbing{cursor:grabbing}
   .node circle.dot{transition:opacity .25s, r .2s}
   .halo{fill:none; stroke:var(--cream); opacity:0; transition:opacity .2s}
@@ -189,6 +189,34 @@
   body.presenting #presHelp{opacity:.4; pointer-events:auto}
   body.presenting #presHelp:hover{opacity:1}
   #presHelp b{color:var(--gold); font-weight:600; margin-right:4px}
+
+  /* ---------- móvil: el header apila en varias filas y ya no hay un número de px fijo que reservarle a main (ver body/header/main arriba); aquí se ajustan tamaños y se hacen táctiles los controles ---------- */
+  @media (max-width:780px){
+    header{padding:12px 14px 10px; gap:10px 16px;}
+    header .t h1{font-size:22px}
+    header .t .sub{font-size:9px; letter-spacing:2px; margin-top:4px}
+    .controls{gap:10px 14px}
+    .grp label{font-size:8px}
+    .seg button{padding:9px 11px; font-size:10px; min-height:38px}
+    #hint{display:none}
+    #legend{left:8px; right:8px; bottom:8px; max-width:none; padding:10px 12px; font-size:9px;}
+    #legend .grid{grid-template-columns:1fr 1fr}
+    #guion{width:calc(100vw - 24px); left:12px; right:12px; transform:translateY(-14px); top:10px;}
+    #guion.show{transform:none}
+    #panel{left:8px; right:8px; top:8px; width:auto; max-height:calc(100% - 16px); padding:18px 18px; transform:translateY(-120%);}
+    #panel.open{transform:none}
+    #marco .mbox{max-width:calc(100vw - 24px); padding:22px 20px; max-height:90%}
+    #marco h2{font-size:24px}
+    .credit{display:none}
+    #tip{max-width:220px}
+    #presHelp{font-size:8.5px; gap:8px 10px; left:8px; bottom:8px}
+    #presExit{right:8px; top:8px}
+  }
+  @media (max-width:780px) and (max-height:480px){
+    header{padding:8px 12px 6px}
+    header .t h1{font-size:18px}
+    header .t .sub{display:none}
+  }
 </style>
 <script type="application/ld+json">
 {
@@ -654,6 +682,29 @@ window.addEventListener('mousemove',ev=>{ if(!panning)return; if(Math.abs(ev.cli
 window.addEventListener('mouseup',()=>{ panning=false; svg.classList.remove('grabbing'); });
 svg.addEventListener('click',ev=>{ if(dragged){ dragged=false; return; } clearFocus(); });
 svg.addEventListener('dblclick',()=>{ vpt={k:1,tx:0,ty:0}; applyVP(); });
+
+/* ---------- táctil: un dedo desplaza, dos dedos hacen zoom (pellizco) ---------- */
+let pinching=false, pinchD0=1, pinchK0=1, pinchMX=0, pinchMY=0;
+function touchDist(t){ return Math.hypot(t[0].clientX-t[1].clientX, t[0].clientY-t[1].clientY); }
+function touchMid(t){ return [(t[0].clientX+t[1].clientX)/2, (t[0].clientY+t[1].clientY)/2]; }
+svg.addEventListener('touchstart',ev=>{
+  if(ev.touches.length===1){ pinching=false; panning=true; dragged=false; const t=ev.touches[0]; sx=t.clientX; sy=t.clientY; otx=vpt.tx; oty=vpt.ty; }
+  else if(ev.touches.length===2){ panning=false; pinching=true; dragged=true; pinchD0=touchDist(ev.touches)||1; pinchK0=vpt.k; const [mx,my]=touchMid(ev.touches); [pinchMX,pinchMY]=toVB(mx,my); }
+},{passive:true});
+svg.addEventListener('touchmove',ev=>{
+  if(pinching && ev.touches.length===2){ ev.preventDefault();
+    const d=touchDist(ev.touches)||1; const nk=Math.max(0.6,Math.min(7, pinchK0*(d/pinchD0)));
+    const f=nk/vpt.k; vpt.tx=pinchMX-(pinchMX-vpt.tx)*f; vpt.ty=pinchMY-(pinchMY-vpt.ty)*f; vpt.k=nk; applyVP();
+  } else if(panning && ev.touches.length===1){ ev.preventDefault();
+    const t=ev.touches[0]; if(Math.abs(t.clientX-sx)+Math.abs(t.clientY-sy)>3)dragged=true;
+    const r=svg.getBoundingClientRect(); vpt.tx=otx+(t.clientX-sx)/r.width*VW; vpt.ty=oty+(t.clientY-sy)/r.height*VH; applyVP();
+  }
+},{passive:false});
+svg.addEventListener('touchend',ev=>{
+  if(ev.touches.length===0){ panning=false; pinching=false; }
+  else if(ev.touches.length===1){ pinching=false; panning=true; dragged=true; const t=ev.touches[0]; sx=t.clientX; sy=t.clientY; otx=vpt.tx; oty=vpt.ty; }
+});
+svg.addEventListener('touchcancel',()=>{ panning=false; pinching=false; });
 
 /* ---------- modo presentación: pantalla negra, sin cromo, como un PowerPoint ---------- */
 function setView(v){ document.querySelectorAll('#viewSeg button').forEach(b=>b.classList.toggle('on', b.dataset.v===v)); clearFocus(); switchView(v); }
