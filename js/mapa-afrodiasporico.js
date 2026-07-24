@@ -421,21 +421,90 @@
       return '<p class="atlantico-panel-cancion-label"><a href="https://www.youtube.com/results?search_query=' + q + '" target="_blank" rel="noopener" style="color:inherit">&#9658; ' + t('Escuchar:', 'Listen:') + ' <em>' + c.titulo + '</em> &middot; ' + c.artista + '</a></p>';
     }
 
+    // ── Reproductor de YouTube con manejo de error 153/150 ──
+    // Algunos videos (sobre todo de sellos discográficos) restringen su
+    // reproducción a los dominios del propio dueño. Insertados como <iframe>
+    // simple eso rompe en silencio (error 153 dentro del reproductor). Por
+    // eso se carga la IFrame Player API de YouTube, que sí avisa el error,
+    // y si el video no puede sonar aquí se cambia por un enlace directo.
+    var ytEstadoAPI = 'ninguno'; // ninguno | cargando | lista | error
+    var ytColaAPI = [];
+
+    function prepararYouTubeAPI() {
+      if (ytEstadoAPI === 'lista' || ytEstadoAPI === 'error') {
+        var lista = ytEstadoAPI === 'lista';
+        ytColaAPI.forEach(function (fn) { fn(lista); });
+        ytColaAPI = [];
+        return;
+      }
+      if (ytEstadoAPI === 'cargando') return;
+      ytEstadoAPI = 'cargando';
+      var previo = window.onYouTubeIframeAPIReady;
+      window.onYouTubeIframeAPIReady = function () {
+        if (typeof previo === 'function') previo();
+        ytEstadoAPI = 'lista';
+        ytColaAPI.forEach(function (fn) { fn(true); });
+        ytColaAPI = [];
+      };
+      var tag = document.createElement('script');
+      tag.src = 'https://www.youtube.com/iframe_api';
+      tag.onerror = function () {
+        ytEstadoAPI = 'error';
+        ytColaAPI.forEach(function (fn) { fn(false); });
+        ytColaAPI = [];
+      };
+      document.head.appendChild(tag);
+    }
+
+    function conYouTubeAPI(cb) {
+      ytColaAPI.push(cb);
+      prepararYouTubeAPI();
+    }
+
+    function mostrarFallbackVideo(el, id) {
+      if (!el || !el.parentNode) return;
+      var aviso = document.createElement('div');
+      aviso.className = 'atlantico-video-fallback';
+      aviso.innerHTML =
+        '<p>' + t(
+          'Este video no se puede reproducir aquí: su propietario restringió los sitios donde se incrusta.',
+          "This video can't play here: its owner restricted the sites where it can be embedded."
+        ) + '</p>' +
+        '<a href="https://www.youtube.com/watch?v=' + id + '" target="_blank" rel="noopener">&#9658; ' +
+          t('Verlo en YouTube', 'Watch it on YouTube') +
+        '</a>';
+      el.parentNode.replaceChild(aviso, el);
+    }
+
     function activarVideos() {
       if (!panel || !panel.querySelectorAll) return;
       var facades = panel.querySelectorAll('.atlantico-video-facade');
       Array.prototype.forEach.call(facades, function (btn) {
         btn.addEventListener('click', function () {
           var id = btn.getAttribute('data-yt');
-          var marco = document.createElement('iframe');
-          marco.width = '100%';
-          marco.height = '200';
-          marco.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1';
-          marco.title = t('Reproductor de YouTube', 'YouTube player');
-          marco.setAttribute('frameborder', '0');
-          marco.setAttribute('allow', 'autoplay; encrypted-media; picture-in-picture');
-          marco.setAttribute('allowfullscreen', '');
-          if (btn.parentNode) btn.parentNode.replaceChild(marco, btn);
+          var envoltorio = document.createElement('div');
+          envoltorio.className = 'atlantico-video-cargando';
+          envoltorio.textContent = t('Cargando…', 'Loading…');
+          if (btn.parentNode) btn.parentNode.replaceChild(envoltorio, btn);
+
+          conYouTubeAPI(function (ok) {
+            if (!envoltorio.parentNode) return; // el panel ya cambió de contenido
+            if (!ok) { mostrarFallbackVideo(envoltorio, id); return; }
+            var contenedor = document.createElement('div');
+            envoltorio.parentNode.replaceChild(contenedor, envoltorio);
+            new YT.Player(contenedor, {
+              width: '100%',
+              height: '200',
+              videoId: id,
+              playerVars: { autoplay: 1, rel: 0 },
+              events: {
+                onError: function (e) {
+                  var ifr = (e.target && e.target.getIframe) ? e.target.getIframe() : null;
+                  mostrarFallbackVideo(ifr || contenedor, id);
+                }
+              }
+            });
+          });
         });
       });
     }
