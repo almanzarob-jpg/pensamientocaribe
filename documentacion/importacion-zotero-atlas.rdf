@@ -1,0 +1,1983 @@
+<rdf:RDF
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:z="http://www.zotero.org/namespaces/export#"
+ xmlns:dcterms="http://purl.org/dc/terms/"
+ xmlns:dc="http://purl.org/dc/elements/1.1/"
+ xmlns:foaf="http://xmlns.com/foaf/0.1/"
+ xmlns:bib="http://purl.org/net/biblio#">
+  <bib:Book rdf:about="#item_mintz">
+    <z:itemType>book</z:itemType>
+    <dc:title>Caribbean Transformations / Sweetness and Power</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Sidney W. Mintz</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1974–85</dc:date>
+    <dcterms:abstract>La plantación como matriz socioeconómica que precede a la nación y produce la modernidad caribeña. Fundación del comparatismo de área.</dcterms:abstract>
+    <dc:description>atlas-id: mintz
+relacion: trouillot | resonancia | Por corroborar.
+relacion: ortiz | disonancia | Economía política anglófona (Mintz) frente a transculturación cultural hispana (Ortiz): tensión de énfasis.</dc:description>
+    <dc:subject>fen:postplantacion</dc:subject>
+    <dc:subject>fen:capitalismo_racial</dc:subject>
+    <dc:subject>lugar:puertorico</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_trouillot">
+    <z:itemType>book</z:itemType>
+    <dc:title>The Caribbean Region: An Open Frontier</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Michel-Rolph Trouillot</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1992</dc:date>
+    <dcterms:abstract>El Caribe como frontera abierta que desborda las categorías de la antropología nacional. Texto-brújula del proyecto. Silenciando el pasado hace de la memoria un campo de poder.</dcterms:abstract>
+    <dc:description>atlas-id: trouillot
+relacion: casimir | resonancia | Comparten el fenómeno Colonialidad. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:colonialidad</dc:subject>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>lugar:haiti</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:francofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_casimir">
+    <z:itemType>book</z:itemType>
+    <dc:title>The Haitians: A Decolonial History</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Jean Casimir</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2020</dc:date>
+    <dcterms:abstract>El contra-plantación: los cautivos rehacen sociedad por fuera de la lógica de la hacienda. Pueblo soberano, lakou.</dcterms:abstract>
+    <dc:description>atlas-id: casimir</dc:description>
+    <dc:subject>fen:postplantacion</dc:subject>
+    <dc:subject>fen:colonialidad</dc:subject>
+    <dc:subject>lugar:haiti</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:francofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_price">
+    <z:itemType>book</z:itemType>
+    <dc:title>Maroon Societies</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Richard Price (ed.)</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1973</dc:date>
+    <dcterms:abstract>Comparatismo pionero del cimarronaje a escala de las Américas; base del campo.</dcterms:abstract>
+    <dc:description>atlas-id: price
+relacion: fouchard | resonancia | Comparten el fenómeno Cimarronaje / fuga. Por corroborar el vínculo directo.
+relacion: totumo | disonancia | Comparatismo académico del cimarronaje (Price) frente a la memoria local palenquera del Totumo.</dc:description>
+    <dc:subject>fen:cimarronaje</dc:subject>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>lugar:suriname</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_fouchard">
+    <z:itemType>book</z:itemType>
+    <dc:title>Les marrons de la liberté</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Jean Fouchard</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1972</dc:date>
+    <dcterms:abstract>El cimarronaje como motor de la Revolución haitiana. Rara vez citado junto a Price.</dcterms:abstract>
+    <dc:description>atlas-id: fouchard
+relacion: casimir | resonancia | Por corroborar.
+relacion: roberts | resonancia | Comparten el fenómeno Cimarronaje / fuga. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:cimarronaje</dc:subject>
+    <dc:subject>fen:soberanias</dc:subject>
+    <dc:subject>lugar:haiti</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:francofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_roberts">
+    <z:itemType>book</z:itemType>
+    <dc:title>Freedom as Marronage</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Neil Roberts</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2015</dc:date>
+    <dcterms:abstract>La libertad pensada como fuga y no como estado: cimarronaje sociogénico, agencia esclava.</dcterms:abstract>
+    <dc:description>atlas-id: roberts
+relacion: quintero | resonancia | Comparten el fenómeno Cimarronaje / fuga. Por corroborar el vínculo directo.
+relacion: fouchard | resonancia | Comparten el fenómeno Cimarronaje / fuga. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:cimarronaje</dc:subject>
+    <dc:subject>fen:soberanias</dc:subject>
+    <dc:subject>lugar:jamaica</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Document rdf:about="#item_totumo">
+    <z:itemType>document</z:itemType>
+    <dc:title>Palenque: el caso del Totumo</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>borrador / archivo</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date></dc:date>
+    <dcterms:abstract>Cimarronaje del Caribe seco colombiano: territorio, lengua palenquera, memoria.</dcterms:abstract>
+    <dc:description>atlas-id: totumo</dc:description>
+    <dc:subject>fen:cimarronaje</dc:subject>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>lugar:palenque</dc:subject>
+    <dc:subject>capa:manifestacion</dc:subject>
+    <dc:subject>trad:hispano</dc:subject>
+  </bib:Document>
+  <bib:Book rdf:about="#item_ortiz">
+    <z:itemType>book</z:itemType>
+    <dc:title>Contrapunteo cubano / Transculturación</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Fernando Ortiz</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1940</dc:date>
+    <dcterms:abstract>La transculturación: ni aculturación ni mestizaje, sino creación de lo nuevo. Antecede a Glissant.</dcterms:abstract>
+    <dc:description>atlas-id: ortiz
+relacion: glissant | resonancia | Comparten el fenómeno Creolización / oralitura. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:creolizacion</dc:subject>
+    <dc:subject>fen:postplantacion</dc:subject>
+    <dc:subject>lugar:cuba</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:hispano</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_glissant">
+    <z:itemType>book</z:itemType>
+    <dc:title>Poétique de la Relation / Le discours antillais</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Édouard Glissant</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1981–90</dc:date>
+    <dcterms:abstract>Relación, opacidad y errancia: el archipiélago como forma de pensar, no solo de habitar.</dcterms:abstract>
+    <dc:description>atlas-id: glissant
+relacion: brathwaite | resonancia | Comparten el fenómeno Creolización / oralitura. Por corroborar el vínculo directo.
+relacion: creolite | disonancia | La créolité de Bernabé, Chamoiseau y Confiant se distancia de la poética de la Relación de Glissant.</dc:description>
+    <dc:subject>fen:creolizacion</dc:subject>
+    <dc:subject>fen:colonialidad</dc:subject>
+    <dc:subject>lugar:martinica</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:francofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_brathwaite">
+    <z:itemType>book</z:itemType>
+    <dc:title>Nation Language / Tidalectics</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Kamau Brathwaite</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1984</dc:date>
+    <dcterms:abstract>La lengua-nación y la marea como temporalidad: ni progreso ni línea, sino vaivén. Principio de diseño de esta interfaz.</dcterms:abstract>
+    <dc:description>atlas-id: brathwaite</dc:description>
+    <dc:subject>fen:creolizacion</dc:subject>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>lugar:barbados</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_creolite">
+    <z:itemType>book</z:itemType>
+    <dc:title>Éloge de la créolité</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Bernabé, Chamoiseau, Confiant</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1989</dc:date>
+    <dcterms:abstract>Manifiesto de la creolidad; tensiona con la negritud de Césaire.</dcterms:abstract>
+    <dc:description>atlas-id: creolite</dc:description>
+    <dc:subject>fen:creolizacion</dc:subject>
+    <dc:subject>lugar:martinica</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:francofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_monahan">
+    <z:itemType>book</z:itemType>
+    <dc:title>Creolizing Practices of Freedom / The Creolizing Subject</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Michael Monahan</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2011–23</dc:date>
+    <dcterms:abstract>La fricción epistémica: la creolización no es fusión armónica sino roce productivo entre saberes. Da nombre al principio que ordena las corrientes de este atlas.</dcterms:abstract>
+    <dc:description>atlas-id: monahan
+relacion: glissant | disonancia | Monahan lee críticamente la fijación identitaria que atribuye a cierta recepción de Glissant.
+relacion: ortiz | resonancia | Comparten el fenómeno Creolización / oralitura. Por corroborar el vínculo directo.
+relacion: roberts | resonancia | Por corroborar.
+relacion: brathwaite | resonancia | Comparten el fenómeno Creolización / oralitura. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:creolizacion</dc:subject>
+    <dc:subject>fen:colonialidad</dc:subject>
+    <dc:subject>lugar:jamaica</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:compuesta</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_vete">
+    <z:itemType>book</z:itemType>
+    <dc:title>The Caribbean Oral Tradition</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Hanétha Vété-Congolo (ed.)</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2016</dc:date>
+    <dcterms:abstract>La oralidad interartística como archivo transinsular.</dcterms:abstract>
+    <dc:description>atlas-id: vete
+relacion: brathwaite | resonancia | Comparten el fenómeno Creolización / oralitura. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:creolizacion</dc:subject>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>lugar:guadalupe</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:francofono</dc:subject>
+  </bib:Book>
+  <bib:Document rdf:about="#item_chande">
+    <z:itemType>document</z:itemType>
+    <dc:title>Sonoridades del Chandé en el Caribe seco</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>borrador / archivo</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date></dc:date>
+    <dcterms:abstract>Oralitura y ritmo del Magdalena Grande como lengua-nación local.</dcterms:abstract>
+    <dc:description>atlas-id: chande
+relacion: vete | resonancia | Comparten el fenómeno Creolización / oralitura. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:creolizacion</dc:subject>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>lugar:santamarta</dc:subject>
+    <dc:subject>capa:manifestacion</dc:subject>
+    <dc:subject>trad:hispano</dc:subject>
+  </bib:Document>
+  <bib:Book rdf:about="#item_quintero">
+    <z:itemType>book</z:itemType>
+    <dc:title>Cuerpo y cultura: las músicas mulatas</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Ángel Quintero Rivera</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2009</dc:date>
+    <dcterms:abstract>Cimarronería sonora: el baile y el ritmo como subversión y creolización del cuerpo.</dcterms:abstract>
+    <dc:description>atlas-id: quintero
+relacion: chande | resonancia | Comparten el fenómeno Creolización / oralitura. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:creolizacion</dc:subject>
+    <dc:subject>fen:cimarronaje</dc:subject>
+    <dc:subject>lugar:puertorico</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:hispano</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_perezmorales">
+    <z:itemType>book</z:itemType>
+    <dc:title>Cartagena's Privateers</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Edgardo Pérez Morales</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2018</dc:date>
+    <dcterms:abstract>El puerto como zona de fuga, contrabando y violencia imperial, no solo de comercio.</dcterms:abstract>
+    <dc:description>atlas-id: perezmorales
+relacion: sherwood | resonancia | Comparten el fenómeno Violencias. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:violencias</dc:subject>
+    <dc:subject>fen:capitalismo_racial</dc:subject>
+    <dc:subject>lugar:cartagena</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:hispano</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_sherwood">
+    <z:itemType>book</z:itemType>
+    <dc:title>After Abolition: Britain and the Slave Trade</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Marika Sherwood</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2007</dc:date>
+    <dcterms:abstract>La trata sobrevive a su abolición formal; el capital racializado como continuidad.</dcterms:abstract>
+    <dc:description>atlas-id: sherwood
+relacion: mintz | disonancia | Continuidad de la trata tras la abolición (Sherwood) frente a la plantación como matriz ya clausurada (Mintz).</dc:description>
+    <dc:subject>fen:capitalismo_racial</dc:subject>
+    <dc:subject>fen:violencias</dc:subject>
+    <dc:subject>lugar:jamaica</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Document rdf:about="#item_geografiasnegras">
+    <z:itemType>document</z:itemType>
+    <dc:title>Geografías negras de la Provincia de Santa Marta</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>borrador propio</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date></dc:date>
+    <dcterms:abstract>Etnografía de la negritud portuaria samaria: barrio, memoria e invisibilización.</dcterms:abstract>
+    <dc:description>atlas-id: geografiasnegras
+relacion: totumo | resonancia | Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>fen:colonialidad</dc:subject>
+    <dc:subject>lugar:santamarta</dc:subject>
+    <dc:subject>capa:manifestacion</dc:subject>
+    <dc:subject>trad:hispano</dc:subject>
+  </bib:Document>
+  <bib:Book rdf:about="#item_cabrera">
+    <z:itemType>book</z:itemType>
+    <dc:title>El Monte</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Lydia Cabrera</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1954</dc:date>
+    <dcterms:abstract>Etnografía-archivo de la Regla de Palo y la santería; el monte como biblioteca viva y memoria ancestral.</dcterms:abstract>
+    <dc:description>atlas-id: cabrera
+relacion: tambu | resonancia | Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.
+relacion: chande | resonancia | Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>fen:creolizacion</dc:subject>
+    <dc:subject>lugar:cuba</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:hispano</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_tambu">
+    <z:itemType>book</z:itemType>
+    <dc:title>Tambú: Curaçao's African-Caribbean Ritual</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Nanette de Jong</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2012</dc:date>
+    <dcterms:abstract>Ritual y política de la memoria en el Caribe neerlandés, casi ausente del canon.</dcterms:abstract>
+    <dc:description>atlas-id: tambu</dc:description>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>fen:creolizacion</dc:subject>
+    <dc:subject>lugar:curazao</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:neerlandes</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_bonilla">
+    <z:itemType>book</z:itemType>
+    <dc:title>Non-Sovereign Futures</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Yarimar Bonilla</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2015</dc:date>
+    <dcterms:abstract>La soberanía como problema, no como meta: repensar la libertad tras la nación.</dcterms:abstract>
+    <dc:description>atlas-id: bonilla
+relacion: aftershocks | resonancia | Comparten el fenómeno Soberanías. Por corroborar el vínculo directo.
+relacion: ferdinand | resonancia | Comparten el fenómeno Colonialidad. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:soberanias</dc:subject>
+    <dc:subject>fen:colonialidad</dc:subject>
+    <dc:subject>lugar:guadalupe</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:francofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_lindskoog">
+    <z:itemType>book</z:itemType>
+    <dc:title>Detain and Punish: Haitian Refugees</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Carl Lindskoog</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2018</dc:date>
+    <dcterms:abstract>El refugiado haitiano como origen del régimen de detención migratoria estadounidense.</dcterms:abstract>
+    <dc:description>atlas-id: lindskoog
+relacion: bonilla | resonancia | Comparten el fenómeno Soberanías. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:violencias</dc:subject>
+    <dc:subject>fen:soberanias</dc:subject>
+    <dc:subject>lugar:haiti</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_ferdinand">
+    <z:itemType>book</z:itemType>
+    <dc:title>Une écologie décoloniale</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Malcom Ferdinand</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2019</dc:date>
+    <dcterms:abstract>El habitar caribeño desde el barco negrero: ecología y colonialidad en un mismo pliegue.</dcterms:abstract>
+    <dc:description>atlas-id: ferdinand
+relacion: beyondsun | resonancia | Comparten el fenómeno Catástrofes climáticas. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:catastrofes</dc:subject>
+    <dc:subject>fen:colonialidad</dc:subject>
+    <dc:subject>lugar:martinica</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:francofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_beyondsun">
+    <z:itemType>book</z:itemType>
+    <dc:title>Beyond Sun and Sand</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Baver &amp; Lynch (eds.)</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2006</dc:date>
+    <dcterms:abstract>Ambientalismos caribeños frente al modelo turístico del sol y la arena.</dcterms:abstract>
+    <dc:description>atlas-id: beyondsun</dc:description>
+    <dc:subject>fen:catastrofes</dc:subject>
+    <dc:subject>fen:capitalismo_racial</dc:subject>
+    <dc:subject>lugar:puertorico</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_aftershocks">
+    <z:itemType>book</z:itemType>
+    <dc:title>Aftershocks of Disaster (huracán María)</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Bonilla &amp; LeBrón (eds.)</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2019</dc:date>
+    <dcterms:abstract>El desastre como revelador político de la relación colonial, no como evento natural.</dcterms:abstract>
+    <dc:description>atlas-id: aftershocks
+relacion: lindskoog | resonancia | Comparten el fenómeno Soberanías. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:catastrofes</dc:subject>
+    <dc:subject>fen:soberanias</dc:subject>
+    <dc:subject>lugar:puertorico</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_rodney">
+    <z:itemType>book</z:itemType>
+    <dc:title>How Europe Underdeveloped Africa</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Walter Rodney</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1972</dc:date>
+    <dcterms:abstract>Subdesarrollo como producción histórica, no atraso; matriz del análisis de la dependencia.</dcterms:abstract>
+    <dc:description>atlas-id: rodney
+relacion: gudynas | resonancia | Comparten el fenómeno Capitalismo racial. Por corroborar el vínculo directo.
+relacion: casimir | resonancia | Comparten el fenómeno Colonialidad. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:capitalismo_racial</dc:subject>
+    <dc:subject>fen:colonialidad</dc:subject>
+    <dc:subject>lugar:guyana</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_araujo">
+    <z:itemType>book</z:itemType>
+    <dc:title>Reparations for Slavery and the Slave Trade</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Ana Lucia Araujo</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2017</dc:date>
+    <dcterms:abstract>La deuda de Haití, la compensación a los amos y la memoria pública de la esclavitud como economía moral.</dcterms:abstract>
+    <dc:description>atlas-id: araujo
+relacion: casimir | disonancia | Reparación de la deuda (Araujo) frente a la contra-plantación soberana que rehace mundo por fuera del Estado (Casimir).
+relacion: rodney | resonancia | Comparten el fenómeno Capitalismo racial. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:capitalismo_racial</dc:subject>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>lugar:haiti</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:compuesta</dc:subject>
+  </bib:Book>
+  <bib:Document rdf:about="#item_manoalzada">
+    <z:itemType>document</z:itemType>
+    <dc:title>A mano alzada: diáspora intelectual afrocolombiana</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>archivo</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2013</dc:date>
+    <dcterms:abstract>Memoria escrita de la diáspora intelectual negra del Caribe colombiano.</dcterms:abstract>
+    <dc:description>atlas-id: manoalzada</dc:description>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>fen:soberanias</dc:subject>
+    <dc:subject>lugar:cartagena</dc:subject>
+    <dc:subject>capa:manifestacion</dc:subject>
+    <dc:subject>trad:hispano</dc:subject>
+  </bib:Document>
+  <bib:Book rdf:about="#item_gudynas">
+    <z:itemType>book</z:itemType>
+    <dc:title>Extractivismos</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Eduardo Gudynas</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2015</dc:date>
+    <dcterms:abstract>Marco del extractivismo contemporáneo, extensible de la caña al turismo caribeño.</dcterms:abstract>
+    <dc:description>atlas-id: gudynas</dc:description>
+    <dc:subject>fen:capitalismo_racial</dc:subject>
+    <dc:subject>fen:catastrofes</dc:subject>
+    <dc:subject>lugar:veracruz</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:hispano</dc:subject>
+  </bib:Book>
+  <bib:Document rdf:about="#item_esquiva">
+    <z:itemType>document</z:itemType>
+    <dc:title>La esquiva promesa de desarrollo</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>archivo</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date></dc:date>
+    <dcterms:abstract>El desarrollo como promesa incumplida en comunidades afrodescendientes del Caribe.</dcterms:abstract>
+    <dc:description>atlas-id: esquiva
+relacion: rodney | resonancia | Comparten el fenómeno Capitalismo racial. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:capitalismo_racial</dc:subject>
+    <dc:subject>fen:violencias</dc:subject>
+    <dc:subject>lugar:cartagena</dc:subject>
+    <dc:subject>capa:manifestacion</dc:subject>
+    <dc:subject>trad:hispano</dc:subject>
+  </bib:Document>
+  <bib:Book rdf:about="#item_workercane">
+    <z:itemType>book</z:itemType>
+    <dc:title>Worker in the Cane: A Puerto Rican Life History</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Sidney W. Mintz</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1960</dc:date>
+    <dcterms:abstract>Historia de vida de un jornalero cañero puertorriqueño; la etnografía que funda el método biográfico en el estudio de la plantación.</dcterms:abstract>
+    <dc:description>atlas-id: workercane
+relacion: mintz | resonancia | Continuidad de autor (Mintz).
+relacion: steward | resonancia | Comparten el fenómeno Postplantación. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:postplantacion</dc:subject>
+    <dc:subject>fen:capitalismo_racial</dc:subject>
+    <dc:subject>lugar:puertorico</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_steward">
+    <z:itemType>book</z:itemType>
+    <dc:title>The People of Puerto Rico: A Study in Social Anthropology</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Julian Steward et al. (con Mintz, Wolf, Padilla Seda)</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1956</dc:date>
+    <dcterms:abstract>El estudio colectivo de ecología cultural que formó a Mintz; compara regiones de Puerto Rico según su régimen de cultivo.</dcterms:abstract>
+    <dc:description>atlas-id: steward
+relacion: olwigstjohn | resonancia | Comparten el fenómeno Postplantación. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:postplantacion</dc:subject>
+    <dc:subject>lugar:puertorico</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_olwigstjohn">
+    <z:itemType>book</z:itemType>
+    <dc:title>Cultural Adaptation and Resistance on St. John</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Karen Fog Olwig</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1985</dc:date>
+    <dcterms:abstract>Tres siglos de vida afrocaribeña en una isla que cambió de imperio sin que sus habitantes dejaran de rehacer comunidad.</dcterms:abstract>
+    <dc:description>atlas-id: olwigstjohn</dc:description>
+    <dc:subject>fen:postplantacion</dc:subject>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>lugar:stjohn</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_hagedorn">
+    <z:itemType>book</z:itemType>
+    <dc:title>Divine Utterances: The Performance of Afro-Cuban Santería</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Katherine J. Hagedorn</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2001</dc:date>
+    <dcterms:abstract>La santería como performance: el canto y el tambor como forma de conocimiento religioso, no solo su ilustración.</dcterms:abstract>
+    <dc:description>atlas-id: hagedorn
+relacion: cabrera | resonancia | Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.
+relacion: palmiengangas | resonancia | Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>fen:creolizacion</dc:subject>
+    <dc:subject>lugar:cuba</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_pricefirst">
+    <z:itemType>book</z:itemType>
+    <dc:title>First-Time: The Historical Vision of an Afro-American People</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Richard Price</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1983</dc:date>
+    <dcterms:abstract>La historia saramaka contada como los saramaka la cuentan; etnografía que toma en serio la memoria oral como archivo propio.</dcterms:abstract>
+    <dc:description>atlas-id: pricefirst
+relacion: price | resonancia | Continuidad de autor (Price).
+relacion: roberts | resonancia | Comparten el fenómeno Cimarronaje / fuga. Por corroborar el vínculo directo.
+relacion: travelstooy | resonancia | Continuidad de autor (Price).</dc:description>
+    <dc:subject>fen:cimarronaje</dc:subject>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>lugar:suriname</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_dunham">
+    <z:itemType>book</z:itemType>
+    <dc:title>Island Possessed</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Katherine Dunham</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1969</dc:date>
+    <dcterms:abstract>Memoria etnográfica y autobiográfica del vodou haitiano desde una antropóloga-bailarina negra; disputó con Hurston el terreno del mismo campo.</dcterms:abstract>
+    <dc:description>atlas-id: dunham
+relacion: tellmyhorse | disonancia | Dunham y Hurston compitieron por el mismo terreno etnográfico en Haití y Jamaica en los años treinta.
+relacion: cabrera | resonancia | Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>fen:creolizacion</dc:subject>
+    <dc:subject>lugar:haiti</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_friedemannlengua">
+    <z:itemType>book</z:itemType>
+    <dc:title>Lengua y sociedad en el Palenque de San Basilio</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Carlos Patiño Rosselli &amp; Nina S. de Friedemann</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1983</dc:date>
+    <dcterms:abstract>El estudio que fija la lengua palenquera como criollo con estatus propio, no como corrupción del español.</dcterms:abstract>
+    <dc:description>atlas-id: friedemannlengua
+relacion: escalante | resonancia | Comparten el fenómeno Cimarronaje / fuga. Por corroborar el vínculo directo.
+relacion: totumo | resonancia | Comparten el fenómeno Cimarronaje / fuga. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:creolizacion</dc:subject>
+    <dc:subject>fen:cimarronaje</dc:subject>
+    <dc:subject>lugar:palenque</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:hispano</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_mamalola">
+    <z:itemType>book</z:itemType>
+    <dc:title>Mama Lola: A Vodou Priestess in Brooklyn</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Karen McCarthy Brown</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1991</dc:date>
+    <dcterms:abstract>El vodou tal como se practica en la diáspora neoyorquina, lejos del templo haitiano de origen; la etnografía se escribe como varias voces trenzadas, la propia autora incluida.</dcterms:abstract>
+    <dc:description>atlas-id: mamalola
+relacion: tellmyhorse | resonancia | Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.
+relacion: cabrera | resonancia | Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.
+relacion: pricemars | resonancia | Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>fen:creolizacion</dc:subject>
+    <dc:subject>lugar:haiti</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_besson">
+    <z:itemType>book</z:itemType>
+    <dc:title>Martha Brae's Two Histories</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Jean Besson</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2002</dc:date>
+    <dcterms:abstract>Tenencia de tierra campesina jamaicana como forma de contrademanda frente a la plantación; parentesco y tierra como soberanía cotidiana.</dcterms:abstract>
+    <dc:description>atlas-id: besson
+relacion: truebornmaroons | resonancia | Por corroborar.
+relacion: mintz | resonancia | Comparten el fenómeno Postplantación. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:postplantacion</dc:subject>
+    <dc:subject>fen:soberanias</dc:subject>
+    <dc:subject>lugar:jamaica</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_taylor">
+    <z:itemType>book</z:itemType>
+    <dc:title>Nation Dance: Religion, Identity, and Cultural Difference in the Caribbean</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Patrick Taylor (ed.)</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2001</dc:date>
+    <dcterms:abstract>Volumen panantillano sobre religión afrocaribeña como forma de identidad, no solo de creencia.</dcterms:abstract>
+    <dc:description>atlas-id: taylor
+relacion: tambu | resonancia | Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.
+relacion: chevannes | resonancia | Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>fen:creolizacion</dc:subject>
+    <dc:subject>lugar:trinidad</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_peasantscapital">
+    <z:itemType>book</z:itemType>
+    <dc:title>Peasants and Capital: Dominica in the World Economy</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Michel-Rolph Trouillot</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1988</dc:date>
+    <dcterms:abstract>La etnografía de campo de Trouillot antes de Silenciando el pasado: cómo el campesinado dominiqués queda atado al mercado mundial del banano.</dcterms:abstract>
+    <dc:description>atlas-id: peasantscapital
+relacion: trouillot | resonancia | Continuidad de autor (Trouillot).
+relacion: rodney | resonancia | Comparten el fenómeno Capitalismo racial. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:postplantacion</dc:subject>
+    <dc:subject>fen:capitalismo_racial</dc:subject>
+    <dc:subject>lugar:dominica</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_chevannes">
+    <z:itemType>book</z:itemType>
+    <dc:title>Rastafari: Roots and Ideology</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Barry Chevannes</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1994</dc:date>
+    <dcterms:abstract>Historia social del rastafarismo como ideología de ruptura, escrita desde dentro de la academia jamaicana.</dcterms:abstract>
+    <dc:description>atlas-id: chevannes
+relacion: roberts | resonancia | Comparten el fenómeno Cimarronaje / fuga. Por corroborar el vínculo directo.
+relacion: truebornmaroons | resonancia | Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>fen:cimarronaje</dc:subject>
+    <dc:subject>lugar:jamaica</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_escalante">
+    <z:itemType>book</z:itemType>
+    <dc:title>El Palenque de San Basilio</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Aquiles Escalante</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1954</dc:date>
+    <dcterms:abstract>La primera etnografía académica de Palenque; abre el campo que Friedemann y Patiño Rosselli continuarán treinta años después.</dcterms:abstract>
+    <dc:description>atlas-id: escalante
+relacion: totumo | resonancia | Comparten el fenómeno Cimarronaje / fuga. Por corroborar el vínculo directo.
+relacion: price | resonancia | Comparten el fenómeno Cimarronaje / fuga. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:cimarronaje</dc:subject>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>lugar:palenque</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:hispano</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_rebeldestiny">
+    <z:itemType>book</z:itemType>
+    <dc:title>Rebel Destiny: Among the Bush Negroes of Dutch Guiana</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Melville &amp; Frances Herskovits</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1934</dc:date>
+    <dcterms:abstract>La primera etnografía de un pueblo cimarrón de las Américas; funda el campo que Price retomará setenta años después.</dcterms:abstract>
+    <dc:description>atlas-id: rebeldestiny
+relacion: price | resonancia | Comparten el fenómeno Cimarronaje / fuga. Por corroborar el vínculo directo.
+relacion: travelstooy | resonancia | Comparten el fenómeno Cimarronaje / fuga. Por corroborar el vínculo directo.
+relacion: pricemars | disonancia | La etnología haitiana de Price-Mars frente al encuadre estadounidense de Haití por los Herskovits. Por corroborar como choque puntual.</dc:description>
+    <dc:subject>fen:cimarronaje</dc:subject>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>lugar:suriname</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:neerlandes</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_tellmyhorse">
+    <z:itemType>book</z:itemType>
+    <dc:title>Tell My Horse: Voodoo and Life in Haiti and Jamaica</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Zora Neale Hurston</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1938</dc:date>
+    <dcterms:abstract>Etnografía en primera persona, mitad memoria mitad reportaje, escrita por una mujer negra iniciada en el propio rito que describe.</dcterms:abstract>
+    <dc:description>atlas-id: tellmyhorse</dc:description>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>fen:creolizacion</dc:subject>
+    <dc:subject>lugar:haiti</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_palmiengangas">
+    <z:itemType>book</z:itemType>
+    <dc:title>Thinking with Ngangas</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Stephan Palmié</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2013</dc:date>
+    <dcterms:abstract>El ritual afrocubano leído como forma de pensar la ciencia occidental, no como su objeto exótico.</dcterms:abstract>
+    <dc:description>atlas-id: palmiengangas
+relacion: palmiewizards | resonancia | Continuidad de autor (Palmié).</dc:description>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>fen:colonialidad</dc:subject>
+    <dc:subject>lugar:cuba</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_travelstooy">
+    <z:itemType>book</z:itemType>
+    <dc:title>Travels with Tooy: History, Memory, and the African American Imagination</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Richard Price</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2008</dc:date>
+    <dcterms:abstract>Veinticinco años después de First-Time, Price vuelve a Saramaka para pensar cómo la memoria ritual se hace historia.</dcterms:abstract>
+    <dc:description>atlas-id: travelstooy</dc:description>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>fen:cimarronaje</dc:subject>
+    <dc:subject>lugar:suriname</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_truebornmaroons">
+    <z:itemType>book</z:itemType>
+    <dc:title>True-Born Maroons</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Kenneth Bilby</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2005</dc:date>
+    <dcterms:abstract>Comparatismo del cimarronaje jamaicano frente al de Surinam: identidad maroon como tratado, no solo como origen.</dcterms:abstract>
+    <dc:description>atlas-id: truebornmaroons
+relacion: price | resonancia | Comparten el fenómeno Cimarronaje / fuga. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:cimarronaje</dc:subject>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>lugar:jamaica</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_palmiewizards">
+    <z:itemType>book</z:itemType>
+    <dc:title>Wizards and Scientists</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Stephan Palmié</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2002</dc:date>
+    <dcterms:abstract>Modernidad y tradición afrocubana como un mismo proceso, no como dos etapas sucesivas.</dcterms:abstract>
+    <dc:description>atlas-id: palmiewizards
+relacion: ortiz | resonancia | Por corroborar.
+relacion: cabrera | resonancia | Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>fen:colonialidad</dc:subject>
+    <dc:subject>lugar:cuba</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_pricemars">
+    <z:itemType>book</z:itemType>
+    <dc:title>Ainsi parla l'oncle</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Jean Price-Mars</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1928</dc:date>
+    <dcterms:abstract>El fundador de la etnología haitiana defiende el vodou y el campesinado frente al desprecio de sus propias élites; matriz del indigenismo caribeño.</dcterms:abstract>
+    <dc:description>atlas-id: pricemars
+relacion: trouillot | resonancia | Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.
+relacion: cabrera | resonancia | Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>fen:colonialidad</dc:subject>
+    <dc:subject>lugar:haiti</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:francofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_alabi">
+    <z:itemType>book</z:itemType>
+    <dc:title>Alabi's World</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Richard Price</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1990</dc:date>
+    <dcterms:abstract>Cuatro voces narran la vida de un capitán saramaka bajo la Corona holandesa: la soberanía cimarrona tramitada entre la fe morava y el poder colonial.</dcterms:abstract>
+    <dc:description>atlas-id: alabi
+relacion: pricefirst | resonancia | Continuidad de autor (Price).
+relacion: travelstooy | resonancia | Continuidad de autor (Price).
+relacion: rebeldestiny | resonancia | Comparten el fenómeno Cimarronaje / fuga. Por corroborar el vínculo directo.
+relacion: bonilla | resonancia | Comparten el fenómeno Soberanías. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:cimarronaje</dc:subject>
+    <dc:subject>fen:soberanias</dc:subject>
+    <dc:subject>lugar:suriname</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_exceptviolence">
+    <z:itemType>book</z:itemType>
+    <dc:title>Exceptional Violence: Embodied Citizenship in Transnational Jamaica</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Deborah A. Thomas</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2011</dc:date>
+    <dcterms:abstract>La violencia jamaicana funciona como forma de ciudadanía producida por la historia transnacional de la isla, no como excepción ni patología individual.</dcterms:abstract>
+    <dc:description>atlas-id: exceptviolence
+relacion: politicallife | resonancia | Continuidad de autor (Thomas).
+relacion: modernblackness | resonancia | Continuidad de autor (Thomas).
+relacion: lindskoog | resonancia | Comparten el fenómeno Violencias. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:violencias</dc:subject>
+    <dc:subject>fen:capitalismo_racial</dc:subject>
+    <dc:subject>lugar:jamaica</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_modernblackness">
+    <z:itemType>book</z:itemType>
+    <dc:title>Modern Blackness: Nationalism, Globalization, and the Politics of Culture in Jamaica</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Deborah A. Thomas</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2004</dc:date>
+    <dcterms:abstract>De la respetabilidad campesina a la negrura popular urbana: cómo cambia el ideal racial de nación bajo la globalización cultural.</dcterms:abstract>
+    <dc:description>atlas-id: modernblackness
+relacion: downtownladies | resonancia | Comparten el fenómeno Capitalismo racial. Por corroborar el vínculo directo.
+relacion: chevannes | resonancia | Por corroborar.</dc:description>
+    <dc:subject>fen:capitalismo_racial</dc:subject>
+    <dc:subject>fen:creolizacion</dc:subject>
+    <dc:subject>lugar:jamaica</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_citizenshipedge">
+    <z:itemType>book</z:itemType>
+    <dc:title>Citizenship on the Edge: Sex, Gender, Race</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Nancy J. Hirschmann &amp; Deborah A. Thomas (eds.)</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2019</dc:date>
+    <dcterms:abstract>Ciudadanía pensada desde sus márgenes raciales y sexuados; Thomas aporta el andamiaje jamaicano a un problema más amplio.</dcterms:abstract>
+    <dc:description>atlas-id: citizenshipedge
+relacion: politicallife | resonancia | Continuidad de autor (Thomas).
+relacion: bonilla | resonancia | Comparten el fenómeno Soberanías. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:cuerpo_erotica</dc:subject>
+    <dc:subject>fen:soberanias</dc:subject>
+    <dc:subject>lugar:jamaica</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:compuesta</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_politicallife">
+    <z:itemType>book</z:itemType>
+    <dc:title>Political Life in the Wake of the Plantation: Sovereignty, Witnessing, Repair</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Deborah A. Thomas</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2019</dc:date>
+    <dcterms:abstract>La incursión militar de 2010 en Tivoli Gardens leída como el presente de la plantación: soberanía suspendida, testimonio y reparación.</dcterms:abstract>
+    <dc:description>atlas-id: politicallife
+relacion: besson | resonancia | Comparten el fenómeno Postplantación. Por corroborar el vínculo directo.
+relacion: casimir | resonancia | Comparten el fenómeno Postplantación. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:postplantacion</dc:subject>
+    <dc:subject>fen:violencias</dc:subject>
+    <dc:subject>lugar:jamaica</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_downtownladies">
+    <z:itemType>book</z:itemType>
+    <dc:title>Downtown Ladies: Informal Commercial Importers, a Haitian Anthropologist, and Self-Making in Jamaica</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Gina Athena Ulysse</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2007</dc:date>
+    <dcterms:abstract>Comerciantes informales jamaicanas estudiadas por una antropóloga haitiana: el trabajo de campo mismo como cruce de tradiciones caribeñas.</dcterms:abstract>
+    <dc:description>atlas-id: downtownladies
+relacion: mamalola | resonancia | Comparten el fenómeno Creolización / oralitura. Por corroborar el vínculo directo.
+relacion: besson | resonancia | Por corroborar.</dc:description>
+    <dc:subject>fen:cuerpo_erotica</dc:subject>
+    <dc:subject>fen:capitalismo_racial</dc:subject>
+    <dc:subject>lugar:jamaica</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_reddock">
+    <z:itemType>book</z:itemType>
+    <dc:title>Women, Labour and Politics in Trinidad and Tobago: A History</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Rhoda Reddock</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1994</dc:date>
+    <dcterms:abstract>El trabajo femenino, indio y afrodescendiente, como motor invisibilizado de la economía política trinitense.</dcterms:abstract>
+    <dc:description>atlas-id: reddock
+relacion: callaloonation | resonancia | Por corroborar.
+relacion: rodney | resonancia | Comparten el fenómeno Capitalismo racial. Por corroborar el vínculo directo.
+relacion: downtownladies | resonancia | Mujeres y economía caribeña. Por corroborar.</dc:description>
+    <dc:subject>fen:cuerpo_erotica</dc:subject>
+    <dc:subject>fen:capitalismo_racial</dc:subject>
+    <dc:subject>lugar:trinidad</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_caribjourneys">
+    <z:itemType>book</z:itemType>
+    <dc:title>Caribbean Journeys: An Ethnography of Migration and Home in Three Family Networks</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Karen Fog Olwig</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2007</dc:date>
+    <dcterms:abstract>Tres redes familiares dispersas entre el Caribe, Norteamérica y Europa: el hogar como relación y no como lugar fijo.</dcterms:abstract>
+    <dc:description>atlas-id: caribjourneys
+relacion: globalculture | resonancia | Continuidad de autor (Olwig).
+relacion: olwigstjohn | resonancia | Continuidad de autor (Olwig).
+relacion: islandscity | resonancia | Comparten el fenómeno Soberanías. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:soberanias</dc:subject>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>lugar:nevis</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_globalculture">
+    <z:itemType>book</z:itemType>
+    <dc:title>Global Culture, Island Identity: Continuity and Change in the Afro-Caribbean Community of Nevis</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Karen Fog Olwig</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1993</dc:date>
+    <dcterms:abstract>Identidad insular que se sostiene precisamente por su circulación migratoria, no a pesar de ella.</dcterms:abstract>
+    <dc:description>atlas-id: globalculture
+relacion: besson | resonancia | Comparten el fenómeno Postplantación. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:postplantacion</dc:subject>
+    <dc:subject>fen:soberanias</dc:subject>
+    <dc:subject>lugar:nevis</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_islandscity">
+    <z:itemType>book</z:itemType>
+    <dc:title>Islands in the City: West Indian Migration to New York</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Nancy Foner (ed.)</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2001</dc:date>
+    <dcterms:abstract>La diáspora antillana anglófona en Nueva York como una extensión más de la cuenca, no como su ruptura.</dcterms:abstract>
+    <dc:description>atlas-id: islandscity
+relacion: dunham | resonancia | Por corroborar.</dc:description>
+    <dc:subject>fen:soberanias</dc:subject>
+    <dc:subject>fen:capitalismo_racial</dc:subject>
+    <dc:subject>lugar:jamaica</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_callaloonation">
+    <z:itemType>book</z:itemType>
+    <dc:title>Callaloo Nation: Metaphors of Race and Religious Identity among South Asians in Trinidad</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Aisha Khan</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2004</dc:date>
+    <dcterms:abstract>El Caribe indoantillano, descendiente de la indentura, piensa su mezcla racial con las mismas metáforas culinarias que Glissant piensa la Relación.</dcterms:abstract>
+    <dc:description>atlas-id: callaloonation
+relacion: monahan | resonancia | Comparten el fenómeno Creolización / oralitura. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:creolizacion</dc:subject>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>lugar:trinidad</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_reconfdominic">
+    <z:itemType>book</z:itemType>
+    <dc:title>Reconfiguring Dominicanness</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Kimberly Eison Simmons</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2002</dc:date>
+    <dcterms:abstract>La identidad racial dominicana disputada entre el discurso oficial hispanista y la reidentificación afrodescendiente.</dcterms:abstract>
+    <dc:description>atlas-id: reconfdominic
+relacion: cunin | disonancia | Dos modos de estudiar la racialización caribeña hispana (dominicana y colombiana) en tensión metodológica. Por corroborar.
+relacion: modernblackness | resonancia | Comparten el fenómeno Capitalismo racial. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:capitalismo_racial</dc:subject>
+    <dc:subject>fen:colonialidad</dc:subject>
+    <dc:subject>lugar:dominicana</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_cuijla">
+    <z:itemType>book</z:itemType>
+    <dc:title>Cuijla: Esbozo etnográfico de un pueblo negro</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Gonzalo Aguirre Beltrán</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1958</dc:date>
+    <dcterms:abstract>La etnografía fundacional de la negritud mexicana; nombra la Costa Chica como territorio afrodescendiente antes de que el Estado lo reconociera.</dcterms:abstract>
+    <dc:description>atlas-id: cuijla
+relacion: chocolatecorn | resonancia | Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.
+relacion: escalante | resonancia | Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:postplantacion</dc:subject>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>lugar:costachica</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:hispano</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_chocolatecorn">
+    <z:itemType>book</z:itemType>
+    <dc:title>Chocolate and Corn Flour: History, Race, and Place in the Making of Black Mexico</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Laura A. Lewis</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2012</dc:date>
+    <dcterms:abstract>Medio siglo después de Aguirre Beltrán, revisa la Costa Chica para mostrar cómo raza y lugar se hacen juntos, no uno tras otro.</dcterms:abstract>
+    <dc:description>atlas-id: chocolatecorn
+relacion: cunin | resonancia | Comparten el fenómeno Colonialidad. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:colonialidad</dc:subject>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>lugar:costachica</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_womenancestors">
+    <z:itemType>book</z:itemType>
+    <dc:title>Women and the Ancestors: Black Carib Kinship and Ritual</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Virginia Kerns</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1983</dc:date>
+    <dcterms:abstract>El parentesco garífuna organizado alrededor de las mujeres y el culto a los ancestros; el ritual como institución de continuidad, no de nostalgia.</dcterms:abstract>
+    <dc:description>atlas-id: womenancestors
+relacion: afrocentroam | resonancia | Por corroborar.
+relacion: chevannes | resonancia | Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:cuerpo_erotica</dc:subject>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>lugar:belize</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_afrocentroam">
+    <z:itemType>book</z:itemType>
+    <dc:title>Afro Central Americans in New York City: Garifuna Tales of Transnational Movements in Racialized Space</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Sarah England</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2006</dc:date>
+    <dcterms:abstract>Los garífunas no encajan ni en 'latino' ni en 'negro' en Nueva York: la diáspora fuerza categorías raciales que el propio Caribe ya había vuelto obsoletas.</dcterms:abstract>
+    <dc:description>atlas-id: afrocentroam
+relacion: islandscity | resonancia | Comparten el fenómeno Soberanías. Por corroborar el vínculo directo.
+relacion: reconfdominic | resonancia | Comparten el fenómeno Capitalismo racial. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:soberanias</dc:subject>
+    <dc:subject>fen:capitalismo_racial</dc:subject>
+    <dc:subject>lugar:belize</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_cunin">
+    <z:itemType>book</z:itemType>
+    <dc:title>Identidades a flor de piel: lo 'negro' entre apariencias y pertenencias</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Elisabeth Cunin</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2003</dc:date>
+    <dcterms:abstract>En Cartagena la negritud se negocia en la superficie del cuerpo: una antropóloga francesa hace fricción epistémica directa con el archivo hispano local.</dcterms:abstract>
+    <dc:description>atlas-id: cunin
+relacion: perezmorales | resonancia | Comparten el fenómeno Violencias. Por corroborar el vínculo directo.
+relacion: geografiasnegras | disonancia | Mirada francófona externa sobre la negritud caribeña colombiana (Cunin) frente a la etnografía local samaria.</dc:description>
+    <dc:subject>fen:colonialidad</dc:subject>
+    <dc:subject>fen:violencias</dc:subject>
+    <dc:subject>lugar:cartagena</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:francofono</dc:subject>
+  </bib:Book>
+  <bib:Document rdf:about="#item_figueroa">
+    <z:itemType>document</z:itemType>
+    <dc:title>Realismo mágico, vallenato y violencia política en el Caribe colombiano</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>José Antonio Figueroa</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date></dc:date>
+    <dcterms:abstract>El vallenato como archivo de la violencia política del Magdalena Grande, leído contra la lectura mágico-realista que la naturaliza.</dcterms:abstract>
+    <dc:description>atlas-id: figueroa
+relacion: chande | resonancia | Comparten el fenómeno Creolización / oralitura. Por corroborar el vínculo directo.
+relacion: totumo | resonancia | Por corroborar.
+relacion: cunin | resonancia | Comparten el fenómeno Violencias. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:violencias</dc:subject>
+    <dc:subject>fen:creolizacion</dc:subject>
+    <dc:subject>lugar:santamarta</dc:subject>
+    <dc:subject>capa:manifestacion</dc:subject>
+    <dc:subject>trad:hispano</dc:subject>
+  </bib:Document>
+  <bib:Book rdf:about="#item_tinsley">
+    <z:itemType>book</z:itemType>
+    <dc:title>Ezili's Mirrors: Imagining Black Queer Genders</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Omise'eke Natasha Tinsley</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2018</dc:date>
+    <dcterms:abstract>Ezili, la lwa del amor y el deseo, como espejo para imaginar géneros negros queer a través del vodou haitiano.</dcterms:abstract>
+    <dc:description>atlas-id: tinsley
+relacion: alexander | resonancia | Feminismo queer caribeño: deseo, memoria y lo sagrado como un mismo campo.
+relacion: mamalola | resonancia | Ambas leen a Ezili y el vodou desde el género. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:cuerpo_erotica</dc:subject>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>lugar:haiti</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_alexander">
+    <z:itemType>book</z:itemType>
+    <dc:title>Pedagogies of Crossing: Feminism, Sexual Politics, Memory, and the Sacred</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>M. Jacqui Alexander</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2005</dc:date>
+    <dcterms:abstract>Feminismo, política sexual, memoria y lo sagrado entrelazados: el placer y el rito como pedagogía descolonizadora.</dcterms:abstract>
+    <dc:description>atlas-id: alexander
+relacion: cabrera | resonancia | Lo sagrado afroatlántico como saber corporal. Por corroborar.
+relacion: womenancestors | resonancia | Mujeres, parentesco y ritual afrocaribeño. Por corroborar.</dc:description>
+    <dc:subject>fen:cuerpo_erotica</dc:subject>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>lugar:trinidad</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_curiel">
+    <z:itemType>book</z:itemType>
+    <dc:title>La Nación Heterosexual</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Ochy Curiel</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2013</dc:date>
+    <dcterms:abstract>El feminismo decolonial caribeño: la nación se funda como heterosexual y blanca. Género, raza y colonialidad son un mismo nudo.</dcterms:abstract>
+    <dc:description>atlas-id: curiel
+relacion: reddock | resonancia | Feminismo caribeño sobre nación, raza y trabajo. Por corroborar.
+relacion: reconfdominic | resonancia | Raza y género en la República Dominicana. Por corroborar.
+relacion: citizenshipedge | disonancia | El feminismo decolonial de Curiel tensiona los marcos liberales de ciudadanía de sexo y género (Hirschmann &amp; Thomas).</dc:description>
+    <dc:subject>fen:cuerpo_erotica</dc:subject>
+    <dc:subject>fen:colonialidad</dc:subject>
+    <dc:subject>lugar:dominicana</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:hispano</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_shellererotic">
+    <z:itemType>book</z:itemType>
+    <dc:title>Citizenship from Below: Erotic Agency and Caribbean Freedom</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Mimi Sheller</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2012</dc:date>
+    <dcterms:abstract>La libertad caribeña posesclavista reclamada desde la agencia erótica y corporal, no solo desde el derecho formal.</dcterms:abstract>
+    <dc:description>atlas-id: shellererotic
+relacion: bonilla | resonancia | Libertad y soberanía caribeñas repensadas más allá del Estado. Por corroborar.
+relacion: reddock | resonancia | Género, trabajo y libertad en el Caribe. Por corroborar.
+relacion: citizenshipedge | resonancia | Ciudadanía, sexo y género. Por corroborar.</dc:description>
+    <dc:subject>fen:cuerpo_erotica</dc:subject>
+    <dc:subject>fen:soberanias</dc:subject>
+    <dc:subject>lugar:jamaica</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_ramadan">
+    <z:itemType>book</z:itemType>
+    <dc:title>Constructing Spiritual Blackness: Rastafari in Puerto Rico</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Omar Ramadan-Santiago</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2021</dc:date>
+    <dcterms:abstract>Rastafaris puertorriqueños que construyen una negritud espiritual no nacional sino mundial, extendida hacia el Gran Caribe y África. La identidad negra que desborda la frontera del Estado.</dcterms:abstract>
+    <dc:description>atlas-id: ramadan
+relacion: chevannes | resonancia | Ambos estudian el rastafarismo como construcción de identidad negra. Por corroborar el vínculo directo.
+relacion: roberts | resonancia | Rastafarismo y negritud espiritual leídos como cimarronaje contemporáneo (Roberts). Por corroborar.
+relacion: bonilla | resonancia | Puerto Rico: una negritud y una libertad pensadas por fuera de la nación soberana (Ramadan-Santiago 2021; Bonilla 2015).</dc:description>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>fen:creolizacion</dc:subject>
+    <dc:subject>lugar:puertorico</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_islandfutures">
+    <z:itemType>book</z:itemType>
+    <dc:title>Island Futures: Caribbean Survival in the Anthropocene</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Mimi Sheller</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2020</dc:date>
+    <dcterms:abstract>El Antropoceno caribeño leído desde el régimen colonial de movilidad: el terremoto de Haití y los huracanes no son eventos naturales aislados sino la forma que toma hoy la extracción que empezó con la plantación.</dcterms:abstract>
+    <dc:description>atlas-id: islandfutures
+relacion: ferdinand | resonancia | Ambos piensan la catástrofe ambiental caribeña como continuación del régimen colonial y no como accidente de la naturaleza: Ferdinand desde el barco negrero, Sheller desde el régimen de movilidad del Antropoceno (Ferdinand 2019; Sheller 2020).
+relacion: aftershocks | resonancia | Comparten la tesis central de que el desastre revela la relación colonial en vez de ocultarla: el terremoto de Haití en Sheller, el huracán María en Bonilla y LeBrón (Sheller 2020; Bonilla y LeBrón 2019).
+relacion: shellererotic | resonancia | Misma autora: de la agencia corporal y erótica como forma de libertad poscolonial (2012) a la supervivencia insular como agencia frente al Antropoceno (2020), un mismo argumento sobre el cuerpo caribeño que se rehace hoy en clave ecológica.</dc:description>
+    <dc:subject>fen:catastrofes</dc:subject>
+    <dc:subject>fen:colonialidad</dc:subject>
+    <dc:subject>lugar:haiti</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_lara">
+    <z:itemType>book</z:itemType>
+    <dc:title>Queer Freedom: Black Sovereignty</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Ana-Maurine Lara</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2020</dc:date>
+    <dcterms:abstract>La soberanía negra pensada no desde el Estado sino desde el cuerpo queer: altares, agua, guerra y ceremonia como los verdaderos territorios de una libertad dominicana que la nación no alcanza a nombrar.</dcterms:abstract>
+    <dc:description>atlas-id: lara
+relacion: shellererotic | resonancia | Ambas piensan la libertad caribeña por fuera del Estado, desde el cuerpo: Lara como soberanía negra queer, Sheller como agencia erótica ciudadana (Lara 2020; Sheller 2012).
+relacion: curiel | resonancia | Las dos escriben sobre la nación dominicana como régimen heterosexual y racial que expulsa lo que no puede clasificar (Curiel; Lara 2020).
+relacion: bonilla | resonancia | Soberanía repensada fuera del molde estatal: Bonilla desde lo político-territorial, Lara desde el cuerpo y el ritual (Bonilla 2015; Lara 2020).
+relacion: reconfdominic | resonancia | Comparten el terreno de la identidad negra dominicana, una desde la disputa racial pública, otra desde la disidencia sexual (Simmons; Lara 2020).</dc:description>
+    <dc:subject>fen:cuerpo_erotica</dc:subject>
+    <dc:subject>fen:soberanias</dc:subject>
+    <dc:subject>lugar:dominicana</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_mintzarea">
+    <z:itemType>book</z:itemType>
+    <dc:title>El Caribe como área sociocultural</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Sidney W. Mintz</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1966</dc:date>
+    <dcterms:abstract>La definición fundacional del Caribe como unidad de estudio: no por geografía ni por lengua sino por una historia compartida de exterminio indígena, plantación esclavista y capitalismo agrario ultramarino. El propio texto que este atlas hereda y discute al proponer el fenómeno, y no el área, como unidad.</dcterms:abstract>
+    <dc:description>atlas-id: mintzarea
+relacion: mintz | resonancia | El área sociocultural que Mintz define en 1966 es la misma que pone a prueba en su propio trabajo de campo puertorriqueño (Mintz 1966; Mintz, Sweetness and Power).
+relacion: casimir | disonancia | Posible tensión entre la unidad de área definida desde la economía política de la plantación (Mintz) y la historia decolonial endógena de Casimir, que discute justamente ese tipo de marco impuesto desde fuera. Por corroborar.</dc:description>
+    <dc:subject>fen:postplantacion</dc:subject>
+    <dc:subject>fen:colonialidad</dc:subject>
+    <dc:subject>lugar:puertorico</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_gill">
+    <z:itemType>book</z:itemType>
+    <dc:title>Erotic Islands: Art and Activism in the Queer Caribbean</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Lyndon K. Gill</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2018</dc:date>
+    <dcterms:abstract>El eros como categoría política, sensual y espiritual a la vez, leído en el mas de Carnaval, el calypso y el activismo contra el estigma del VIH en Trinidad. Retoma a Audre Lorde para rehacer el método etnográfico desde el propio cuerpo del investigador.</dcterms:abstract>
+    <dc:description>atlas-id: gill
+relacion: alexander | resonancia | Ambos retoman a Audre Lorde para pensar lo erótico como categoría política-sensual-espiritual en el Caribe anglófono, con Trinidad como uno de sus centros (Alexander 2005; Gill 2018).
+relacion: tinsley | resonancia | Imaginación erótica negra y queer como método de conocimiento caribeño, una desde Haití y el Atlántico, otra desde Trinidad (Tinsley; Gill 2018).
+relacion: shellererotic | resonancia | Lo erótico como agencia política caribeña, no como esfera privada (Sheller 2012; Gill 2018).
+relacion: lara | resonancia | Ana-Maurine Lara reseñó Erotic Islands en New West Indian Guide (2019): un vínculo intelectual documentado, no inferido, entre ambas obras.</dc:description>
+    <dc:subject>fen:cuerpo_erotica</dc:subject>
+    <dc:subject>lugar:trinidad</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_deere">
+    <z:itemType>book</z:itemType>
+    <dc:title>The Invention of Order: On the Coloniality of Space</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Don Thomas Deere</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2025</dc:date>
+    <dcterms:abstract>La cuadrícula colonial como tecnología de poder anterior a la fábrica y el hospital foucaultianos: el archipiélago caribeño, leído con Glissant, ofrece el modelo espacial que resiste esa cuadrícula.</dcterms:abstract>
+    <dc:description>atlas-id: deere
+relacion: glissant | resonancia | El capítulo final de Deere, "Archipelagos of Resistance", construye su modelo espacial de resistencia directamente sobre la poética de la relación de Glissant (Deere 2025, cap. 4; Glissant).
+relacion: casimir | disonancia | Posible tensión entre la cuadrícula colonial como tecnología de poder (Deere) y la contra-plantación haitiana como formación endógena que la excede (Casimir). Por corroborar con lectura completa de ambos.</dc:description>
+    <dc:subject>fen:colonialidad</dc:subject>
+    <dc:subject>lugar:martinica</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:compuesta</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_abello">
+    <z:itemType>book</z:itemType>
+    <dc:title>La isla encallada: el Caribe colombiano en el archipiélago</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Alberto Abello Vives</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2015</dc:date>
+    <dcterms:abstract>Colombia como una isla varada dentro de su propia nación: el Caribe colombiano leído no desde la pereza que le atribuye el relato andino sino desde una economía cafetera que lo dejó fuera del reparto, capital que cruzó su litoral sin quedarse.</dcterms:abstract>
+    <dc:description>atlas-id: abello
+relacion: benitez | resonancia | Abello cita directamente La isla que se repite de Benítez Rojo para pensar el archipiélago caribeño sin centro fijo: una referencia textual verificable, no inferida (Abello Vives 2015, nota 21, p. 16-17 de Benítez Rojo).
+relacion: perezmorales | resonancia | Ambos anclan en Cartagena y el Gran Caribe la historia de una región colombiana integrada al mundo caribeño por el mar antes que por el Estado andino (Pérez Morales; Abello Vives 2015).</dc:description>
+    <dc:subject>fen:soberanias</dc:subject>
+    <dc:subject>fen:colonialidad</dc:subject>
+    <dc:subject>lugar:cartagena</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:hispano</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_benitez">
+    <z:itemType>book</z:itemType>
+    <dc:title>La isla que se repite / The Repeating Island</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Antonio Benítez Rojo</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1989</dc:date>
+    <dcterms:abstract>El Caribe como meta-archipiélago sin centro: la plantación como máquina originaria que produce, una y otra vez y con variaciones, la misma cultura del Caribe. Una lectura del Caribe por el caos y la repetición, no por la línea histórica.</dcterms:abstract>
+    <dc:description>atlas-id: benitez
+relacion: glissant | resonancia | Dos modelos hermanos y rivales del Caribe sin centro: la repetición caótica de la máquina de plantación en Benítez Rojo, la relación y el archipiélago en Glissant. Un diálogo clásico y muy citado del pensamiento caribeño (Benítez Rojo 1989; Glissant).
+relacion: ortiz | resonancia | La máquina de plantación de Benítez Rojo se piensa explícitamente desde el contrapunteo cubano de Ortiz entre azúcar y tabaco, misma tradición intelectual cubana (Benítez Rojo 1989; Ortiz).</dc:description>
+    <dc:subject>fen:creolizacion</dc:subject>
+    <dc:subject>fen:postplantacion</dc:subject>
+    <dc:subject>lugar:cuba</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:hispano</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_cesaire">
+    <z:itemType>book</z:itemType>
+    <dc:title>Discurso sobre el colonialismo</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Aimé Césaire</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1950</dc:date>
+    <dcterms:abstract>El colonialismo leído como la matriz que produce después el fascismo europeo: Europa no cae en la barbarie, la exporta primero a sus colonias y luego la recibe de vuelta. El texto que funda buena parte de la crítica anticolonial que ya circulaba en este atlas sin nombrarlo.</dcterms:abstract>
+    <dc:description>atlas-id: cesaire
+relacion: glissant | resonancia | Glissant parte de la negritud de Césaire y la desplaza hacia la relación y el archipiélago: una filiación y una ruptura documentadas, no inferidas (Césaire 1950; Glissant).
+relacion: fanon | resonancia | Fanon fue alumno de Césaire en el liceo de Fort-de-France antes de escribir sobre la experiencia colonial del cuerpo negro: una relación intelectual y biográfica directa (Césaire 1950; Fanon 1952).
+relacion: rodney | resonancia | Dos textos fundacionales de la crítica anticolonial que leen el colonialismo como estructura económica y civilizatoria, no como excepción moral (Césaire 1950; Rodney).</dc:description>
+    <dc:subject>fen:colonialidad</dc:subject>
+    <dc:subject>lugar:martinica</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:francofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_fanon">
+    <z:itemType>book</z:itemType>
+    <dc:title>Piel negra, máscaras blancas</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Frantz Fanon</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1952</dc:date>
+    <dcterms:abstract>La experiencia vivida del cuerpo negro bajo la mirada blanca —el "¡mira, un negro!" que fija y cosifica—, y el deseo racializado que atraviesa las relaciones íntimas entre colonizado y colonizador. Fanon psiquiatra antes que teórico político, pensando desde su propia Martinica antes de escribir sobre Argelia.</dcterms:abstract>
+    <dc:description>atlas-id: fanon
+relacion: monahan | resonancia | La experiencia vivida del cuerpo negro bajo la mirada blanca —el "mira, un negro" que fija y cosifica— es el punto de partida que la filosofía creolizante de Monahan hereda y discute (Fanon 1952; Monahan).
+relacion: alexander | resonancia | Ambos piensan el cuerpo racializado y su deseo como territorio político: Fanon desde el psicoanálisis de la mirada colonial, Alexander desde lo erótico-sagrado caribeño (Fanon 1952; Alexander).</dc:description>
+    <dc:subject>fen:colonialidad</dc:subject>
+    <dc:subject>fen:cuerpo_erotica</dc:subject>
+    <dc:subject>lugar:martinica</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:francofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_james">
+    <z:itemType>book</z:itemType>
+    <dc:title>The Black Jacobins: Toussaint L'Ouverture and the San Domingo Revolution</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>C.L.R. James</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1938</dc:date>
+    <dcterms:abstract>La revolución haitiana narrada como el acontecimiento que funda la modernidad negra, no como nota al pie de la Revolución Francesa. Un historiador trinitario que hace de Haití el centro y no la periferia: el atlas archipiélico en acto antes de que existiera el término.</dcterms:abstract>
+    <dc:description>atlas-id: james
+relacion: casimir | resonancia | Casimir escribe su historia decolonial de Haití en diálogo directo con el relato de James sobre la revolución como acontecimiento fundador, setenta años después (James 1938; Casimir).
+relacion: roberts | resonancia | Neil Roberts construye buena parte de Freedom as Marronage sobre el relato de James: la revolución haitiana como caso central de la libertad entendida como cimarronaje (James 1938; Roberts 2015).
+relacion: rodney | resonancia | James fue una influencia historiográfica y política directa sobre Rodney: dos historiadores marxistas del Caribe angloparlante pensando la relación entre raza, imperio y revolución (James 1938; Rodney).</dc:description>
+    <dc:subject>fen:cimarronaje</dc:subject>
+    <dc:subject>fen:soberanias</dc:subject>
+    <dc:subject>fen:colonialidad</dc:subject>
+    <dc:subject>lugar:haiti</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_trouillotsilencing">
+    <z:itemType>book</z:itemType>
+    <dc:title>Silenciando el pasado: el poder y la producción de la Historia</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Michel-Rolph Trouillot</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1995</dc:date>
+    <dcterms:abstract>Cómo se produce el silencio histórico: la revolución haitiana, el acontecimiento que Occidente no podía pensar en su propio momento, borrada después de la historia que se cuenta sobre la libertad moderna.</dcterms:abstract>
+    <dc:description>atlas-id: trouillotsilencing
+relacion: trouillot | resonancia | Mismo autor: el método historiográfico que Trouillot aplica a Dominica y al área caribeña en sus otros textos se vuelve aquí pregunta general sobre cómo se fabrica el silencio histórico (Trouillot 1995; Trouillot).
+relacion: james | resonancia | El capítulo central de Trouillot sobre la revolución haitiana como "acontecimiento impensable" discute de forma explícita el relato que James había narrado seis décadas antes (Trouillot 1995; James 1938).
+relacion: casimir | resonancia | Dos historiadores haitianos disputando, desde la historiografía, quién tiene autoridad para narrar a Haití (Trouillot 1995; Casimir).</dc:description>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>fen:colonialidad</dc:subject>
+    <dc:subject>lugar:haiti</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_brownreaper">
+    <z:itemType>book</z:itemType>
+    <dc:title>The Reaper's Garden: Death and Power in the World of Atlantic Slavery</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Vincent Brown</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2008</dc:date>
+    <dcterms:abstract>La mortandad de la plantación jamaiquina —la isla como tumba de europeos y africanos por igual— leída como tecnología de poder, no como estadística: los muertos también gobiernan a los vivos en el mundo esclavista atlántico.</dcterms:abstract>
+    <dc:description>atlas-id: brownreaper
+relacion: ferdinand | resonancia | Ambos leen la catástrofe caribeña —la mortandad esclavista, el naufragio ecológico— como tecnología de poder colonial y no como accidente natural (Brown 2008; Ferdinand 2019).
+relacion: islandfutures | resonancia | El mismo argumento sobre la catástrofe como forma de gobierno, aplicado a dos objetos distintos: la mortandad esclavista en Brown, el Antropoceno en Sheller (Brown 2008; Sheller 2020).</dc:description>
+    <dc:subject>fen:catastrofes</dc:subject>
+    <dc:subject>fen:violencias</dc:subject>
+    <dc:subject>lugar:jamaica</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_kempadoo">
+    <z:itemType>book</z:itemType>
+    <dc:title>Sexing the Caribbean: Gender, Race and Sexual Labor</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Kamala Kempadoo</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2004</dc:date>
+    <dcterms:abstract>El turismo sexual caribeño leído en su raíz colonial y esclavista, no como fenómeno reciente de la globalización: el cuerpo racializado como mercancía tiene una historia larga que el mercado actual repite con otro nombre.</dcterms:abstract>
+    <dc:description>atlas-id: kempadoo
+relacion: shellererotic | resonancia | Ambas piensan el cuerpo caribeño racializado como terreno donde se juega la libertad o su negación: el trabajo sexual en Kempadoo, la agencia erótica ciudadana en Sheller (Kempadoo 2004; Sheller 2012).
+relacion: gudynas | resonancia | Comparten el fenómeno Capitalismo racial. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:cuerpo_erotica</dc:subject>
+    <dc:subject>fen:capitalismo_racial</dc:subject>
+    <dc:subject>lugar:guyana</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_kingisland">
+    <z:itemType>book</z:itemType>
+    <dc:title>Island Bodies: Transgressive Sexualities in the Caribbean Imagination</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Rosamond S. King</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2014</dc:date>
+    <dcterms:abstract>Sexualidades disidentes leídas a través de las cuatro tradiciones lingüísticas del Caribe a la vez, cruzando literatura, música y cultura popular: uno de los pocos estudios que rehúsa encerrarse en un solo idioma imperial.</dcterms:abstract>
+    <dc:description>atlas-id: kingisland
+relacion: tinsley | resonancia | Ambas comparan sexualidades caribeñas disidentes cruzando fronteras lingüísticas imperiales en vez de encerrarse en una sola tradición (King 2014; Tinsley).
+relacion: gill | resonancia | El panorama comparado de King y el estudio de caso trinitario de Gill leen juntos lo erótico como territorio político caribeño (King 2014; Gill 2018).
+relacion: lara | resonancia | Cuerpos y sexualidades caribeñas que exceden la norma nacional y colonial, una desde el panorama regional, otra desde la República Dominicana en particular (King 2014; Lara 2020).</dc:description>
+    <dc:subject>fen:cuerpo_erotica</dc:subject>
+    <dc:subject>fen:creolizacion</dc:subject>
+    <dc:subject>lugar:trinidad</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:neerlandes</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_fuentesdispossessed">
+    <z:itemType>book</z:itemType>
+    <dc:title>Dispossessed Lives: Enslaved Women, Violence, and the Archive</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Marisa J. Fuentes</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2016</dc:date>
+    <dcterms:abstract>Las mujeres esclavizadas de Bridgetown leídas a contrapelo de un archivo colonial que las nombra solo como propiedad o como cuerpo castigado: un método para hacer historia con las fuentes que fueron diseñadas para borrarlas.</dcterms:abstract>
+    <dc:description>atlas-id: fuentesdispossessed
+relacion: exceptviolence | resonancia | Dos maneras de leer la violencia sobre el cuerpo caribeño racializado como forma de gobierno, una desde el archivo esclavista del siglo XVIII, otra desde la Jamaica contemporánea (Fuentes 2016; Thomas 2011).
+relacion: shellererotic | resonancia | Comparten el fenómeno Cuerpo y erótica. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:violencias</dc:subject>
+    <dc:subject>fen:cuerpo_erotica</dc:subject>
+    <dc:subject>lugar:barbados</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_bollandbelize">
+    <z:itemType>book</z:itemType>
+    <dc:title>The Formation of a Colonial Society: Belize, From Conquest to Crown Colony</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>O. Nigel Bolland</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1977</dc:date>
+    <dcterms:abstract>Belice como sociedad colonial forjada entre colonos madereros británicos, mayas y esclavos, y no como nota marginal del Caribe insular: la otra historia colonial del Caribe continental.</dcterms:abstract>
+    <dc:description>atlas-id: bollandbelize
+relacion: reddock | resonancia | Dos historias sociales del trabajo y la sociedad colonial en el Caribe británico, una en Belice, otra en Trinidad y Tobago, con método y período compartidos (Bolland 1977; Reddock).</dc:description>
+    <dc:subject>fen:colonialidad</dc:subject>
+    <dc:subject>fen:postplantacion</dc:subject>
+    <dc:subject>lugar:belize</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_hintzen">
+    <z:itemType>book</z:itemType>
+    <dc:title>The Costs of Regime Survival: Racial Mobilization, Elite Domination and Control of the State in Guyana and Trinidad</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Percy C. Hintzen</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1989</dc:date>
+    <dcterms:abstract>Cómo las élites poscoloniales de Guyana y Trinidad usan la movilización racial para sobrevivir en el poder: la soberanía nacional caribeña examinada no como logro sino como cálculo de supervivencia política.</dcterms:abstract>
+    <dc:description>atlas-id: hintzen
+relacion: rodney | resonancia | Dos guyaneses pensando raza, clase y poder de Estado en el Caribe poscolonial desde ángulos distintos: la movilización racial de las élites en Hintzen, el subdesarrollo estructural en Rodney (Hintzen 1989; Rodney).
+relacion: bonilla | resonancia | Comparten el fenómeno Soberanías. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:soberanias</dc:subject>
+    <dc:subject>fen:capitalismo_racial</dc:subject>
+    <dc:subject>lugar:guyana</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_rainforestwarriors">
+    <z:itemType>book</z:itemType>
+    <dc:title>Rainforest Warriors: Human Rights on Trial</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Richard Price</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2011</dc:date>
+    <dcterms:abstract>Los saramaka llevan al Estado de Surinam ante la Corte Interamericana de Derechos Humanos y ganan: el cimarronaje del siglo XVII vuelto litigio internacional del XXI, la misma comunidad que Price lleva medio siglo acompañando.</dcterms:abstract>
+    <dc:description>atlas-id: rainforestwarriors
+relacion: alabi | resonancia | Mismo autor y misma comunidad saramaka, medio siglo después: del mundo ritual de Alabi's World al litigio internacional de Rainforest Warriors (Price 1990; Price 2011).
+relacion: roberts | resonancia | El cimarronaje histórico que Roberts teoriza como libertad se vuelve aquí litigio de derechos humanos contemporáneo (Roberts 2015; Price 2011).</dc:description>
+    <dc:subject>fen:cimarronaje</dc:subject>
+    <dc:subject>fen:soberanias</dc:subject>
+    <dc:subject>lugar:suriname</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_quinnblackpower">
+    <z:itemType>book</z:itemType>
+    <dc:title>Black Power in the Caribbean</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Kate Quinn (ed.)</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2014</dc:date>
+    <dcterms:abstract>El Poder Negro caribeño de 1968-1970 leído región por región, desde la Revolución de Febrero en Trinidad hasta sus ecos en Jamaica, Guyana y Curazao: una radicalización pan-caribeña que la historiografía nacional suele contar isla por isla.</dcterms:abstract>
+    <dc:description>atlas-id: quinnblackpower
+relacion: rodney | resonancia | Walter Rodney fue él mismo una figura central del Poder Negro caribeño, expulsado de Jamaica en 1968 por ese activismo (Quinn 2014; Rodney).
+relacion: james | resonancia | C.L.R. James es una referencia intelectual constante para la generación del Poder Negro caribeño que este volumen reconstruye (Quinn 2014; James 1938).</dc:description>
+    <dc:subject>fen:soberanias</dc:subject>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>lugar:trinidad</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_russwurm">
+    <z:itemType>book</z:itemType>
+    <dc:title>The Struggles of John Brown Russwurm: The Life and Writings of a Pan-Africanist Pioneer, 1799-1851</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Winston James</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2010</dc:date>
+    <dcterms:abstract>El primer editor negro de un periódico en Estados Unidos nació en Port Antonio, Jamaica: una genealogía pan-africanista temprana que empieza en el Caribe y que la historia afroamericana suele contar como si empezara en Estados Unidos.</dcterms:abstract>
+    <dc:description>atlas-id: russwurm
+relacion: james | resonancia | Dos genealogías del pensamiento pan-africanista con raíz caribeña: Russwurm en el siglo XIX, James en el XX (James 2010; James 1938).</dc:description>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>fen:soberanias</dc:subject>
+    <dc:subject>lugar:jamaica</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_tackysrevolt">
+    <z:itemType>book</z:itemType>
+    <dc:title>Tacky's Revolt: The Story of an Atlantic Slave War</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Vincent Brown</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2020</dc:date>
+    <dcterms:abstract>La rebelión de Tacky de 1760 en Jamaica narrada como una guerra atlántica de verdad, con estrategia militar y redes africanas propias, no como un motín aislado que la plantación logró sofocar.</dcterms:abstract>
+    <dc:description>atlas-id: tackysrevolt
+relacion: brownreaper | resonancia | Mismo autor, mismo archivo jamaicano: de la mortandad esclavista como tecnología de poder a la guerra esclava como estrategia militar real (Brown 2008; Brown 2020).
+relacion: roberts | resonancia | La rebelión de Tacky es uno de los casos centrales en la teorización del cimarronaje como libertad (Roberts 2015; Brown 2020).</dc:description>
+    <dc:subject>fen:cimarronaje</dc:subject>
+    <dc:subject>fen:violencias</dc:subject>
+    <dc:subject>lugar:jamaica</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_helgnuncamas">
+    <z:itemType>book</z:itemType>
+    <dc:title>¡Nunca más esclavos! Una historia comparada de los esclavos que se liberaron en las Américas</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Aline Helg</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2016 / trad. esp. 2018</dc:date>
+    <dcterms:abstract>Cuatro siglos de esclavos que se liberaron a sí mismos en América, comparados a través de imperios y lenguas: el Caribe colombiano como uno de sus casos centrales, junto a Cuba, Brasil y Estados Unidos.</dcterms:abstract>
+    <dc:description>atlas-id: helgnuncamas
+relacion: rodney | resonancia | Dos historias comparadas de la liberación esclava y el subdesarrollo estructural que produjo la esclavitud en las Américas (Helg 2016; Rodney).
+relacion: abello | resonancia | El Caribe colombiano es uno de los casos centrales del estudio comparado de Helg sobre la liberación esclava (Helg 2016; Abello Vives 2015).</dc:description>
+    <dc:subject>fen:cimarronaje</dc:subject>
+    <dc:subject>fen:violencias</dc:subject>
+    <dc:subject>lugar:cartagena</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:hispano</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_robinsonmarxismo">
+    <z:itemType>book</z:itemType>
+    <dc:title>Marxismo negro: la formación de la tradición radical negra</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Cedric J. Robinson</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1983</dc:date>
+    <dcterms:abstract>El origen mismo del término capitalismo racial: el capitalismo europeo nunca dejó de ser racial desde su origen medieval, y la tradición radical negra no es una rama del marxismo sino una crítica a su ceguera racial.</dcterms:abstract>
+    <dc:description>atlas-id: robinsonmarxismo
+relacion: rodney | resonancia | Robinson cita explícitamente a Rodney como uno de los historiadores que fundan la tradición radical negra (Robinson 1983; Rodney).
+relacion: cesaire | resonancia | La crítica de Robinson al marxismo europeo por su ceguera racial dialoga directamente con la crítica de Césaire al humanismo europeo (Robinson 1983; Césaire 1950).
+relacion: kempadoo | resonancia | El marco del capitalismo racial que Robinson funda es el que Kempadoo aplica después al trabajo sexual caribeño (Robinson 1983; Kempadoo 2004).</dc:description>
+    <dc:subject>fen:capitalismo_racial</dc:subject>
+    <dc:subject>fen:colonialidad</dc:subject>
+    <dc:subject>lugar:jamaica</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:compuesta</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_bassiacuoso">
+    <z:itemType>book</z:itemType>
+    <dc:title>Un territorio acuoso: geografías marineras y el Gran Caribe transimperial de la Nueva Granada</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Ernesto Bassi</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2016 / trad. esp. 2021</dc:date>
+    <dcterms:abstract>Marineros, contrabandistas y corsarios que cruzan el Gran Caribe transimperial de la Nueva Granada sin reconocer las fronteras que las coronas dibujaron: el mismo territorio acuoso que este atlas intenta cartografiar por fenómeno y no por nación.</dcterms:abstract>
+    <dc:description>atlas-id: bassiacuoso
+relacion: abello | resonancia | Dos lecturas del Caribe colombiano como archipiélago y no como periferia andina, una desde la geografía marinera del XVIII-XIX, otra desde el presente (Bassi 2016; Abello Vives 2015).
+relacion: benitez | resonancia | Bassi construye su territorio acuoso en diálogo explícito con la isla que se repite de Benítez Rojo (Bassi 2016; Benítez Rojo 1989).
+relacion: perezmorales | resonancia | Ambos trabajan la Cartagena marinera y corsaria del Gran Caribe transimperial en el mismo período (Bassi 2016; Pérez Morales).</dc:description>
+    <dc:subject>fen:colonialidad</dc:subject>
+    <dc:subject>fen:soberanias</dc:subject>
+    <dc:subject>lugar:cartagena</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:hispano</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_rediker">
+    <z:itemType>book</z:itemType>
+    <dc:title>Barco de esclavos: una historia humana</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Marcus Rediker</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2007</dc:date>
+    <dcterms:abstract>El barco negrero leído como institución total y como el primer espacio moderno de mezcla forzada entre africanos de naciones distintas: la travesía misma como origen de una identidad diaspórica antes de tocar tierra caribeña.</dcterms:abstract>
+    <dc:description>atlas-id: rediker
+relacion: james | resonancia | El barco negrero como espacio de formación política antecede y prepara el terreno para acontecimientos como la revolución haitiana que narra James (Rediker 2007; James 1938).
+relacion: fuentesdispossessed | resonancia | Dos métodos para leer la violencia esclavista desde el archivo y desde el cuerpo, uno en el barco, otro en la ciudad esclavista (Rediker 2007; Fuentes 2016).</dc:description>
+    <dc:subject>fen:violencias</dc:subject>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>lugar:jamaica</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:compuesta</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_gosinenature">
+    <z:itemType>book</z:itemType>
+    <dc:title>Nature's Wild: Love, Sex, and Law in the Caribbean</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Andil Gosine</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2021</dc:date>
+    <dcterms:abstract>Las leyes coloniales contra la sodomía y la naturaleza "antinatural" leídas junto al arte y el deseo caribeños contemporáneos: el cuerpo queer caribeño como territorio que la ley colonial nunca dejó de vigilar.</dcterms:abstract>
+    <dc:description>atlas-id: gosinenature
+relacion: kingisland | resonancia | Ambos piensan las sexualidades caribeñas disidentes en su relación con la ley colonial, uno centrado en Trinidad, otro en panorama comparado (Gosine 2021; King 2014).
+relacion: gill | resonancia | Eros y cuerpo caribeño como categoría política con Trinidad como uno de sus centros compartidos (Gosine 2021; Gill 2018).</dc:description>
+    <dc:subject>fen:cuerpo_erotica</dc:subject>
+    <dc:subject>fen:colonialidad</dc:subject>
+    <dc:subject>lugar:trinidad</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_headleyreparaciones">
+    <z:itemType>book</z:itemType>
+    <dc:title>A Philosophical Investigation into the Possibility/Impossibility of Reparations for Caribbean Slavery: Assessing the Legal Challenges</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Clevis Headley</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2026</dc:date>
+    <dcterms:abstract>Es un artículo filosófico, no un libro: examina los obstáculos jurídicos reales que enfrenta el reclamo caribeño de reparaciones por la esclavitud, sin resolver la tensión entre lo justo y lo legalmente exigible.</dcterms:abstract>
+    <dc:description>atlas-id: headleyreparaciones
+relacion: araujo | resonancia | Dos aproximaciones al mismo problema —filosófico-legal en Headley, histórico en Araujo— sobre las reparaciones por la esclavitud caribeña (Headley 2026; Araujo).</dc:description>
+    <dc:subject>fen:capitalismo_racial</dc:subject>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>lugar:haiti</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:compuesta</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_jaffeconcrete">
+    <z:itemType>book</z:itemType>
+    <dc:title>Concrete Jungles: Urban Pollution and the Politics of Difference in the Caribbean</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Rivke Jaffe</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2016</dc:date>
+    <dcterms:abstract>La contaminación urbana —refinerías, basura, aguas negras— leída como política de la diferencia racial y de clase en dos ciudades caribeñas, no como simple falla de infraestructura.</dcterms:abstract>
+    <dc:description>atlas-id: jaffeconcrete
+relacion: tambu | resonancia | Comparten el anclaje curazoleño, reforzando el todavía delgado nodo neerlandés del atlas. Por corroborar el vínculo directo.
+relacion: modernblackness | resonancia | Ambos piensan la ciudad caribeña y la política de la diferencia racial en clave jamaicana contemporánea (Jaffe 2016; Thomas 2004).</dc:description>
+    <dc:subject>fen:capitalismo_racial</dc:subject>
+    <dc:subject>fen:violencias</dc:subject>
+    <dc:subject>lugar:curazao</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:neerlandes</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_pardomosquerahoffmann">
+    <z:itemType>book</z:itemType>
+    <dc:title>Afrodescendientes en las Américas: trayectorias sociales e identitarias. 150 años de la abolición de la esclavitud en Colombia</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Mauricio Pardo, Claudia Mosquera y Odile Hoffmann (eds.)</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2002</dc:date>
+    <dcterms:abstract>Ciento cincuenta años de la abolición colombiana leídos no como cierre sino como apertura de una identidad afrodescendiente todavía en disputa, comparada con otras trayectorias del continente.</dcterms:abstract>
+    <dc:description>atlas-id: pardomosquerahoffmann
+relacion: cunin | resonancia | Hoffmann y Cunin comparten el campo de los estudios afrocolombianos y la tensión entre negritud y mestizaje nacional (Pardo, Mosquera y Hoffmann 2002; Cunin).
+relacion: abello | resonancia | Ciento cincuenta años de abolición colombiana y el Caribe colombiano archipiélico son parte del mismo campo de estudios (Pardo, Mosquera y Hoffmann 2002; Abello Vives 2015).</dc:description>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>fen:capitalismo_racial</dc:subject>
+    <dc:subject>lugar:cartagena</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:hispano</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_scher">
+    <z:itemType>book</z:itemType>
+    <dc:title>Carnival and the Formation of a Caribbean Transnation</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Philip W. Scher</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2003</dc:date>
+    <dcterms:abstract>El Carnaval trinitario seguido de Puerto España a Brooklyn: una nación cultural que se rehace cada año fuera del territorio nacional, en los mas camps de la diáspora.</dcterms:abstract>
+    <dc:description>atlas-id: scher
+relacion: callaloonation | resonancia | El Carnaval trinitario es el escenario donde indocaribeños y afrocaribeños negocian su lugar en la nación, tema central de ambos libros (Scher 2003; Khan).
+relacion: alexander | resonancia | Carnaval, política transnacional y ciudadanía sexual trinitaria vistos desde dos ángulos distintos (Scher 2003; Alexander).</dc:description>
+    <dc:subject>fen:creolizacion</dc:subject>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>lugar:trinidad</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_hallafricanslouisiana">
+    <z:itemType>book</z:itemType>
+    <dc:title>Africans in Colonial Louisiana: The Development of Afro-Creole Culture in the Eighteenth Century</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Gwendolyn Midlo Hall</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1992</dc:date>
+    <dcterms:abstract>La cultura afrocriolla de Luisiana reconstruida desde el origen étnico africano preciso de cada persona esclavizada, archivo por archivo: Nueva Orleans como puerto del Gran Caribe y no como curiosidad exclusivamente estadounidense.</dcterms:abstract>
+    <dc:description>atlas-id: hallafricanslouisiana
+relacion: creolenieworleans | resonancia | Mismo archivo colonial de Luisiana, historia afrocriolla compartida desde dos métodos distintos (Hall 1992; Hirsch y Logsdon 1992).
+relacion: friedemannlengua | resonancia | Dos historias de formación de cultura afrocriolla desde el archivo colonial francés o español, Luisiana y Palenque (Hall 1992; Friedemann).</dc:description>
+    <dc:subject>fen:creolizacion</dc:subject>
+    <dc:subject>fen:postplantacion</dc:subject>
+    <dc:subject>lugar:nola</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:francofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_creolenieworleans">
+    <z:itemType>book</z:itemType>
+    <dc:title>Creole New Orleans: Race and Americanization</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Arnold R. Hirsch y Joseph Logsdon (eds.)</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1992</dc:date>
+    <dcterms:abstract>Cómo una ciudad franco-africana del Gran Caribe fue "americanizada" a la fuerza durante el siglo XIX: la desaparición administrativa de lo criollo como política racial deliberada, no como evolución natural.</dcterms:abstract>
+    <dc:description>atlas-id: creolenieworleans
+relacion: pricemars | resonancia | Criollización franco-caribeña comparada entre Luisiana y Haití, dos historias de la lengua y la raza bajo dominio francés (Hirsch y Logsdon 1992; Price-Mars).</dc:description>
+    <dc:subject>fen:creolizacion</dc:subject>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>lugar:nola</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:francofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_ramsaranlewis">
+    <z:itemType>book</z:itemType>
+    <dc:title>Caribbean Masala: Indian Identity in Guyana and Trinidad</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Dave Ramsaran y Linden F. Lewis</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2018</dc:date>
+    <dcterms:abstract>La identidad indocaribeña leída como creolización propia, no como enclave aislado del resto de la cuenca: mezcla, adaptación y resistencia desde 1838 hasta hoy en dos naciones distintas.</dcterms:abstract>
+    <dc:description>atlas-id: ramsaranlewis
+relacion: callaloonation | resonancia | Dos lecturas de la identidad indocaribeña, una comparando Guyana y Trinidad, otra centrada en Trinidad (Ramsaran y Lewis 2018; Khan).
+relacion: hintzen | resonancia | Movilización racial indo-afro en la política guyanesa y trinitaria, mismo terreno desde ángulos distintos (Ramsaran y Lewis 2018; Hintzen 1989).</dc:description>
+    <dc:subject>fen:creolizacion</dc:subject>
+    <dc:subject>fen:postplantacion</dc:subject>
+    <dc:subject>lugar:guyana</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_gonzalezsojourners">
+    <z:itemType>book</z:itemType>
+    <dc:title>Sojourners of the Caribbean: Ethnogenesis and Ethnohistory of the Garifuna</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Nancie L. González</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1988</dc:date>
+    <dcterms:abstract>La etnogénesis garífuna narrada desde el cimarronaje de San Vicente hasta el reasentamiento forzado en la costa centroamericana: un pueblo que nace de la fuga y no de un territorio originario fijo.</dcterms:abstract>
+    <dc:description>atlas-id: gonzalezsojourners
+relacion: womenancestors | resonancia | Dos etnografías fundacionales garífunas, una sobre etnogénesis, otra sobre parentesco ritual (González 1988; Kerns).
+relacion: afrocentroam | resonancia | Etnogénesis garífuna en el Caribe y su diáspora transnacional posterior en Nueva York (González 1988; England).</dc:description>
+    <dc:subject>fen:cimarronaje</dc:subject>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>lugar:belize</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_andersonblackindigenous">
+    <z:itemType>book</z:itemType>
+    <dc:title>Black and Indigenous: Garifuna Activism and Consumer Culture in Honduras</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Mark Anderson</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2009</dc:date>
+    <dcterms:abstract>El activismo garífuna hondureño obligado a elegir entre reconocerse indígena o negro para acceder a derechos legales, cuando su historia real desborda esa clasificación impuesta desde el Estado.</dcterms:abstract>
+    <dc:description>atlas-id: andersonblackindigenous
+relacion: afrocentroam | resonancia | Activismo garífuna hondureño y diáspora garífuna neoyorquina, mismo pueblo en dos escalas (Anderson 2009; England).
+relacion: gonzalezsojourners | resonancia | Mismo pueblo garífuna estudiado en generaciones distintas de la antropología, una en 1988, otra en 2009 (González 1988; Anderson 2009).</dc:description>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>fen:soberanias</dc:subject>
+    <dc:subject>lugar:belize</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_munrohaitirising">
+    <z:itemType>book</z:itemType>
+    <dc:title>Haiti Rising: Haitian History, Culture and the Earthquake of 2010</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Martin Munro (ed.)</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2010</dc:date>
+    <dcterms:abstract>Veinticuatro ensayos escritos en caliente tras el terremoto, cruzando historia, cultura y testimonio directo: Haití pensado en su propio momento de ruina, no reconstruido después desde la distancia.</dcterms:abstract>
+    <dc:description>atlas-id: munrohaitirising
+relacion: ulysseWhyHaiti | resonancia | Mismo acontecimiento, el terremoto de 2010, leído desde la historia colectiva y desde la crónica personal (Munro 2010; Ulysse 2015).
+relacion: islandfutures | resonancia | El terremoto de Haití y el Antropoceno caribeño comparten la tesis de que el desastre es forma política y no accidente (Munro 2010; Sheller 2020).</dc:description>
+    <dc:subject>fen:catastrofes</dc:subject>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>lugar:haiti</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:francofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_meniketinevis">
+    <z:itemType>book</z:itemType>
+    <dc:title>Sugar Cane Capitalism and Environmental Transformation: An Archaeology of Colonial Nevis, West Indies</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Marco G. Meniketti</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2015</dc:date>
+    <dcterms:abstract>Doce temporadas de excavación en Nevis muestran cómo la economía azucarera transformó literalmente el paisaje de la isla, dejando una huella ecológica que la arqueología puede leer siglos después.</dcterms:abstract>
+    <dc:description>atlas-id: meniketinevis
+relacion: globalculture | resonancia | Dos lecturas de Nevis, la arqueología de la plantación azucarera y la etnografía de la identidad insular contemporánea (Meniketti 2015; Olwig).</dc:description>
+    <dc:subject>fen:postplantacion</dc:subject>
+    <dc:subject>fen:catastrofes</dc:subject>
+    <dc:subject>lugar:nevis</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_handlerlangebarbados">
+    <z:itemType>book</z:itemType>
+    <dc:title>Plantation Slavery in Barbados: An Archaeological and Historical Investigation</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Jerome S. Handler y Frederick W. Lange</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1978</dc:date>
+    <dcterms:abstract>La vida esclavizada en Barbados reconstruida desde la arqueología física —huesos, enterramientos, objetos cotidianos— para un pueblo que dejó pocos registros escritos propios.</dcterms:abstract>
+    <dc:description>atlas-id: handlerlangebarbados
+relacion: sharpewake | resonancia | Comparten el anclaje en Barbados. Por corroborar el vínculo directo.</dc:description>
+    <dc:subject>fen:postplantacion</dc:subject>
+    <dc:subject>fen:violencias</dc:subject>
+    <dc:subject>lugar:barbados</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_kutzinskisugar">
+    <z:itemType>book</z:itemType>
+    <dc:title>Sugar's Secrets: Race and the Erotics of Cuban Nationalism</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Vera M. Kutzinski</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1993</dc:date>
+    <dcterms:abstract>La mulata como figura erótica nacional cubana leída como un modo de absorber y neutralizar la negritud dentro del relato de nación, no como simple objeto de deseo literario.</dcterms:abstract>
+    <dc:description>atlas-id: kutzinskisugar
+relacion: ortiz | resonancia | Sugar's Secrets dialoga directamente con el contrapunteo cubano de Ortiz entre azúcar, tabaco y raza (Kutzinski 1993; Ortiz).
+relacion: shellererotic | resonancia | Erótica y nación, el cuerpo racializado leído como texto político en dos claves distintas (Kutzinski 1993; Sheller 2012).</dc:description>
+    <dc:subject>fen:cuerpo_erotica</dc:subject>
+    <dc:subject>fen:capitalismo_racial</dc:subject>
+    <dc:subject>lugar:cuba</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_curtispleasures">
+    <z:itemType>book</z:itemType>
+    <dc:title>Pleasures and Perils: Girls' Sexuality in a Caribbean Consumer Culture</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Debra Curtis</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2009</dc:date>
+    <dcterms:abstract>Niñas de Nevis entre la moral cristiana, la salud pública y el deseo de consumo: la sexualidad temprana leída sin el tono de escándalo con que suele contarse desde fuera.</dcterms:abstract>
+    <dc:description>atlas-id: curtispleasures
+relacion: globalculture | resonancia | Comparten el anclaje en Nevis. Por corroborar el vínculo directo.
+relacion: kingisland | resonancia | Sexualidades caribeñas juveniles y panorama comparado de sexualidades transgresoras, dos escalas del mismo problema (Curtis 2009; King 2014).</dc:description>
+    <dc:subject>fen:cuerpo_erotica</dc:subject>
+    <dc:subject>lugar:nevis</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_bebelgislerleonora">
+    <z:itemType>book</z:itemType>
+    <dc:title>Léonora: The Buried Story of Guadeloupe</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Dany Bébel-Gisler</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1985 / trad. ingl. 1994</dc:date>
+    <dcterms:abstract>La historia enterrada de Guadalupe contada por una mujer campesina en su propia lengua: el criollo recogido como forma legítima de saber histórico, no como curiosidad folclórica.</dcterms:abstract>
+    <dc:description>atlas-id: bebelgislerleonora
+relacion: creolite | resonancia | La reivindicación de la lengua criolla como forma legítima de memoria y conocimiento, compartida entre Léonora y Éloge de la créolité (Bébel-Gisler 1985; Bernabé, Chamoiseau y Confiant).
+relacion: friedemannlengua | resonancia | Dos luchas por el reconocimiento de una lengua criolla frente al idioma imperial, en Guadalupe y en Palenque (Bébel-Gisler 1985; Friedemann).</dc:description>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>fen:creolizacion</dc:subject>
+    <dc:subject>lugar:guadalupe</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:francofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_ulysseWhyHaiti">
+    <z:itemType>book</z:itemType>
+    <dc:title>Why Haiti Needs New Narratives: A Post-Quake Chronicle</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Gina Athena Ulysse</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2015</dc:date>
+    <dcterms:abstract>Una antropóloga haitiana-estadounidense escribe desde adentro contra el relato mediático del terremoto de 2010 como caos sin agencia: Haití necesita otras historias, no otra intervención.</dcterms:abstract>
+    <dc:description>atlas-id: ulysseWhyHaiti
+relacion: downtownladies | resonancia | Misma autora, Haití narrado desde adentro tras el terremoto y la diáspora haitiana en Jamaica narrada desde el comercio informal (Ulysse 2015; Ulysse 2008).</dc:description>
+    <dc:subject>fen:catastrofes</dc:subject>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>lugar:haiti</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_sharpewake">
+    <z:itemType>book</z:itemType>
+    <dc:title>In the Wake: On Blackness and Being</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Christina Sharpe</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2016</dc:date>
+    <dcterms:abstract>La estela del barco negrero leída como clima permanente y no como pasado cerrado: la muerte negra prematura como algo estructural, normalizado, que sigue produciéndose hoy.</dcterms:abstract>
+    <dc:description>atlas-id: sharpewake
+relacion: exceptviolence | resonancia | La violencia antinegra como clima estructural y no como excepción es el argumento que comparten Sharpe y Thomas desde escalas distintas (Sharpe 2016; Thomas 2011).
+relacion: fuentesdispossessed | resonancia | La estela esclavista y el archivo violento como método compartido para leer el cuerpo negro caribeño (Sharpe 2016; Fuentes 2016).</dc:description>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>fen:violencias</dc:subject>
+    <dc:subject>lugar:barbados</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_ferrerfreedomsmirror">
+    <z:itemType>book</z:itemType>
+    <dc:title>Freedom's Mirror: Cuba and Haiti in the Age of Revolution</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Ada Ferrer</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2014</dc:date>
+    <dcterms:abstract>Cuba y Haití como espejos invertidos de la misma era revolucionaria: mientras Haití se liberaba de la esclavitud, Cuba la profundizaba aprovechando el vacío azucarero que dejó su vecina.</dcterms:abstract>
+    <dc:description>atlas-id: ferrerfreedomsmirror
+relacion: james | resonancia | Dos historias de la revolución haitiana en diálogo con la esclavitud cubana que se profundizó por su causa (Ferrer 2014; James 1938).
+relacion: casimir | resonancia | Cuba y Haití como espejos de la misma era revolucionaria, ambos piensan la revolución haitiana como bisagra regional (Ferrer 2014; Casimir).</dc:description>
+    <dc:subject>fen:colonialidad</dc:subject>
+    <dc:subject>fen:cimarronaje</dc:subject>
+    <dc:subject>lugar:cuba</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_deloughrey">
+    <z:itemType>book</z:itemType>
+    <dc:title>Allegories of the Anthropocene</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Elizabeth M. DeLoughrey</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2019</dc:date>
+    <dcterms:abstract>Piensa el archipiélago desde la era geológica humana: retoma explícitamente la tidaléctica de Brathwaite como método para leer el tiempo oceánico y la desproporción del daño climático colonial.</dcterms:abstract>
+    <dc:description>atlas-id: deloughrey
+relacion: brathwaite | resonancia | DeLoughrey retoma explícitamente la 'tidaléctica' de Brathwaite como método de este libro ('following the work of Kamau Brathwaite'). Cita directa, verificada en el texto.
+relacion: glissant | resonancia | Glissant aparece como interlocutor constante de la relación archipelágica (28 menciones verificadas en el texto); pendiente precisar el pasaje exacto.</dc:description>
+    <dc:subject>fen:catastrofes</dc:subject>
+    <dc:subject>fen:colonialidad</dc:subject>
+    <dc:subject>lugar:barbados</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_johnson_climatecuba">
+    <z:itemType>book</z:itemType>
+    <dc:title>Climate and Catastrophe in Cuba and the Atlantic World in the Age of Revolution</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Sherry Johnson</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2011</dc:date>
+    <dcterms:abstract>El huracán como acelerador político: muestra cómo el desastre climático reordenó el comercio y la política imperial cubana en la era de las revoluciones atlánticas.</dcterms:abstract>
+    <dc:description>atlas-id: johnson_climatecuba
+relacion: ortiz | resonancia | Johnson cita a Fernando Ortiz, Los negros esclavos, en su aparato bibliográfico. Cita verificada.</dc:description>
+    <dc:subject>fen:catastrofes</dc:subject>
+    <dc:subject>fen:colonialidad</dc:subject>
+    <dc:subject>lugar:cuba</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_allen_dikimanera">
+    <z:itemType>book</z:itemType>
+    <dc:title>Di ki manera? A Social History of Afro-Curaçaoans, 1863-1917</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Rose Mary Allen</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2007</dc:date>
+    <dcterms:abstract>Historia oral poscolonial curazoleña: documenta cómo la comunidad afrocurazoleña disputó, con sus propios términos culturales, el poder asimétrico del Estado, los antiguos amos y la Iglesia tras la abolición.</dcterms:abstract>
+    <dc:description>atlas-id: allen_dikimanera
+relacion: tambu | resonancia | Allen menciona el trabajo de Nanette de Jong sobre el tambú curazoleño (referencia puntual verificada); ambas comparten archivo etnográfico de Curazao.</dc:description>
+    <dc:subject>fen:postplantacion</dc:subject>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>lugar:curazao</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:neerlandes</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_vanderpijl_equaliberty">
+    <z:itemType>book</z:itemType>
+    <dc:title>Equaliberty in the Dutch Caribbean: Ways of Being Non/Sovereign</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Yvon van der Pijl y Francio Guadeloupe (eds.)</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2022</dc:date>
+    <dcterms:abstract>Extiende explícitamente el marco de la soberanía no-soberana de Bonilla al Caribe neerlandés: piensa Curazao como forma política que no aspira a la independencia clásica y aun así disputa poder.</dcterms:abstract>
+    <dc:description>atlas-id: vanderpijl_equaliberty
+relacion: bonilla | resonancia | El volumen retoma extensamente el marco de la soberanía no-soberana de Yarimar Bonilla (2010, 2015) para leer Curazao. Cita directa y extensa, verificada.
+relacion: jaffeconcrete | resonancia | Cita a Rivke Jaffe sobre Curazao (verificado por mención en el texto); pendiente precisar el pasaje.
+relacion: allen_dikimanera | resonancia | El volumen cita directamente a Rose Mary Allen y su Di ki manera? sobre la historia social afrocurazoleña. Cita verificada.</dc:description>
+    <dc:subject>fen:soberanias</dc:subject>
+    <dc:subject>fen:colonialidad</dc:subject>
+    <dc:subject>lugar:curazao</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:neerlandes</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_naveda_esclavoscordoba">
+    <z:itemType>book</z:itemType>
+    <dc:title>Esclavos negros en las haciendas azucareras de Córdoba, Veracruz, 1690-1830</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Adriana Naveda Chávez-Hita</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1987</dc:date>
+    <dcterms:abstract>El estudio fundacional del Caribe azucarero veracruzano, construido sobre archivo notarial y parroquial: corrobora y profundiza a Aguirre Beltrán desde el distrito cañero de Córdoba.</dcterms:abstract>
+    <dc:description>atlas-id: naveda_esclavoscordoba
+relacion: cuijla | resonancia | Naveda agradece y cita extensamente a Gonzalo Aguirre Beltrán, fundador de los estudios afromexicanos (20 menciones verificadas en el texto).</dc:description>
+    <dc:subject>fen:postplantacion</dc:subject>
+    <dc:subject>fen:violencias</dc:subject>
+    <dc:subject>lugar:veracruz</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:hispano</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_mohammed_generosrealidades">
+    <z:itemType>book</z:itemType>
+    <dc:title>Gendered Realities: Essays in Caribbean Feminist Thought</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Patricia Mohammed (ed.)</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2002</dc:date>
+    <dcterms:abstract>Reúne el pensamiento feminista caribeño en su propio terreno institucional (UWI), con Reddock entre sus interlocutoras directas: abre el corpus a una voz que piensa el género desde la experiencia indocaribeña, no solo afrocaribeña.</dcterms:abstract>
+    <dc:description>atlas-id: mohammed_generosrealidades
+relacion: reddock | resonancia | El volumen cita extensamente a Rhoda Reddock (16 menciones verificadas); ambas piensan el feminismo caribeño desde Trinidad y la UWI.</dc:description>
+    <dc:subject>fen:cuerpo_erotica</dc:subject>
+    <dc:subject>fen:creolizacion</dc:subject>
+    <dc:subject>lugar:trinidad</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_james_bannerethiopia">
+    <z:itemType>book</z:itemType>
+    <dc:title>Holding Aloft the Banner of Ethiopia: Caribbean Radicalism in Early Twentieth-Century America</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Winston James</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1998</dc:date>
+    <dcterms:abstract>El panorama completo del radicalismo caribeño migrante en Nueva York de entreguerras (Garvey, McKay, la Hermandad de Sangre Africana): amplía la biografía de Russwurm ya presente en el atlas.</dcterms:abstract>
+    <dc:description>atlas-id: james_bannerethiopia
+relacion: russwurm | resonancia | Continuidad de autor (Winston James).</dc:description>
+    <dc:subject>fen:soberanias</dc:subject>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>lugar:jamaica</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_schuller_killingkindness">
+    <z:itemType>book</z:itemType>
+    <dc:title>Killing with Kindness: Haiti, International Aid, and NGOs</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Mark Schuller</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2012</dc:date>
+    <dcterms:abstract>Etnografía crítica de la 'república de las ONG': cita directamente a Trouillot y a Gina Ulysse para pensar cómo la ayuda internacional administra la soberanía haitiana en vez de restituirla.</dcterms:abstract>
+    <dc:description>atlas-id: schuller_killingkindness
+relacion: trouillotsilencing | resonancia | Schuller cita a Trouillot para pensar la posición subordinada de Haití en el orden internacional. Cita verificada en el texto.
+relacion: ulysseWhyHaiti | resonancia | Schuller cita directamente a Gina Ulysse (2008) sobre la posición epistémica haitiana. Cita verificada.</dc:description>
+    <dc:subject>fen:soberanias</dc:subject>
+    <dc:subject>fen:capitalismo_racial</dc:subject>
+    <dc:subject>lugar:haiti</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:francofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_zips_nannysasafo">
+    <z:itemType>book</z:itemType>
+    <dc:title>Nanny's Asafo Warriors: The Jamaican Maroons' African Experience</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Werner Zips</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2011</dc:date>
+    <dcterms:abstract>Discute extensamente a Bilby para releer a Nanny, única Héroe Nacional femenina de Jamaica, contra la historiografía que reduce a los cimarrones a una élite militar que abandonó a los suyos.</dcterms:abstract>
+    <dc:description>atlas-id: zips_nannysasafo
+relacion: truebornmaroons | resonancia | Zips discute extensamente el argumento de Kenneth Bilby sobre la visión histórica cimarrona jamaicana (65 menciones verificadas en el texto).
+relacion: price | resonancia | Zips dialoga con la obra comparativa de Richard Price sobre sociedades cimarronas (mención verificada); pendiente precisar el pasaje.</dc:description>
+    <dc:subject>fen:cimarronaje</dc:subject>
+    <dc:subject>fen:memoria</dc:subject>
+    <dc:subject>lugar:jamaica</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_brereton_racerelationstrinidad">
+    <z:itemType>book</z:itemType>
+    <dc:title>Race Relations in Colonial Trinidad, 1870-1900</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Bridget Brereton</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1979</dc:date>
+    <dcterms:abstract>Historiografía fundacional de Trinidad poscolonial; Brereton se formó bajo la codirección doctoral de Neville A. T. Hall, el historiador del Caribe danés que este mismo lote incorpora.</dcterms:abstract>
+    <dc:description>atlas-id: brereton_racerelationstrinidad
+relacion: hall_slavesocietydanish | resonancia | Neville A. T. Hall fue co-director de la tesis doctoral de Bridget Brereton, según ella misma consigna en el libro. Vínculo biográfico e intelectual directo, verificado.</dc:description>
+    <dc:subject>fen:postplantacion</dc:subject>
+    <dc:subject>fen:colonialidad</dc:subject>
+    <dc:subject>lugar:trinidad</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_nixon_resistingparadise">
+    <z:itemType>book</z:itemType>
+    <dc:title>Resisting Paradise: Tourism, Diaspora, and Sexuality in Caribbean Culture</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Angelique V. Nixon</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2015</dc:date>
+    <dcterms:abstract>El turismo como economía erótica racializada: dialoga extensamente con Kempadoo y Sheller para mostrar cómo el cuerpo caribeño se vende como paraíso disponible.</dcterms:abstract>
+    <dc:description>atlas-id: nixon_resistingparadise
+relacion: kempadoo | resonancia | Nixon dialoga extensamente con el marco de Kempadoo sobre trabajo sexual y raza en el turismo caribeño (36 menciones verificadas).
+relacion: islandfutures | resonancia | Nixon cita a Mimi Sheller sobre el Caribe como paraíso consumible (19 menciones verificadas).</dc:description>
+    <dc:subject>fen:cuerpo_erotica</dc:subject>
+    <dc:subject>fen:capitalismo_racial</dc:subject>
+    <dc:subject>lugar:jamaica</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_schwartz_seaofstorms">
+    <z:itemType>book</z:itemType>
+    <dc:title>Sea of Storms: A History of Hurricanes in the Greater Caribbean from Columbus to Katrina</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Stuart B. Schwartz</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2015</dc:date>
+    <dcterms:abstract>La longue durée del huracán como problema político desde el siglo XVI: el eje más delgado del atlas gana aquí la profundidad histórica que hoy solo tiene desde el siglo XX.</dcterms:abstract>
+    <dc:description>atlas-id: schwartz_seaofstorms
+relacion: aftershocks | resonancia | Comparten el fenómeno Catástrofes climáticas y el lugar Puerto Rico. Por corroborar el vínculo textual directo: no se detectó cita cruzada explícita en el rastreo.</dc:description>
+    <dc:subject>fen:catastrofes</dc:subject>
+    <dc:subject>fen:colonialidad</dc:subject>
+    <dc:subject>lugar:puertorico</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_smith_sexcitizen">
+    <z:itemType>book</z:itemType>
+    <dc:title>Sex and the Citizen: Interrogating the Caribbean</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Faith Smith (ed.)</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2011</dc:date>
+    <dcterms:abstract>Antología que cruza sexualidad con ciudadanía política, con Kempadoo, Alexander y Reddock entre sus referencias centrales: sexualidad como pregunta de Estado, no solo de intimidad.</dcterms:abstract>
+    <dc:description>atlas-id: smith_sexcitizen
+relacion: kempadoo | resonancia | El volumen cita extensamente a Kempadoo (39 menciones verificadas) como referencia central de los estudios de sexualidad caribeña.
+relacion: alexander | resonancia | El volumen cita extensamente a M. Jacqui Alexander (42 menciones verificadas).</dc:description>
+    <dc:subject>fen:cuerpo_erotica</dc:subject>
+    <dc:subject>fen:soberanias</dc:subject>
+    <dc:subject>lugar:trinidad</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_hall_slavesocietydanish">
+    <z:itemType>book</z:itemType>
+    <dc:title>Slave Society in the Danish West Indies: St. Thomas, St. John and St. Croix</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Neville A. T. Hall (ed. B. W. Higman)</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1992</dc:date>
+    <dcterms:abstract>El estudio de referencia sobre el Caribe danés y la rebelión de 1733 en St. John; dialoga directamente con Olwig, hoy la única voz que el atlas tenía para esta isla.</dcterms:abstract>
+    <dc:description>atlas-id: hall_slavesocietydanish
+relacion: olwigstjohn | resonancia | Hall es citado y discutido en el estudio de Olwig sobre St. John; ambos comparten archivo colonial danés (10 menciones verificadas).</dc:description>
+    <dc:subject>fen:violencias</dc:subject>
+    <dc:subject>fen:cimarronaje</dc:subject>
+    <dc:subject>lugar:stjohn</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_knight_genesisnacionalismo">
+    <z:itemType>book</z:itemType>
+    <dc:title>The Caribbean: The Genesis of a Fragmented Nationalism</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Franklin W. Knight</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>1978</dc:date>
+    <dcterms:abstract>Síntesis histórica que cita explícitamente el comparatismo de área de Mintz; candidato a segundo texto-brújula del atlas, junto al Trouillot ya presente.</dcterms:abstract>
+    <dc:description>atlas-id: knight_genesisnacionalismo
+relacion: mintz | resonancia | Knight cita explícitamente el comparatismo de área de Sidney Mintz. Cita verificada.
+relacion: trouillot | resonancia | Comparten el fenómeno Colonialidad y la ambición de pensar el Caribe como región abierta más allá del Estado-nación. Por corroborar el vínculo textual directo.</dc:description>
+    <dc:subject>fen:colonialidad</dc:subject>
+    <dc:subject>fen:soberanias</dc:subject>
+    <dc:subject>lugar:jamaica</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_benedictykokken_haitiexception">
+    <z:itemType>book</z:itemType>
+    <dc:title>The Haiti Exception: Anthropology and the Predicaments of Development</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Alessandra Benedicty-Kokken, Kaiama L. Glover, Jhon Picard Byron y Mark Schuller (eds.)</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2016</dc:date>
+    <dcterms:abstract>El pensamiento de Trouillot, dicen sus propios editores, 'sostiene todo el volumen': examina por qué Haití se volvió el laboratorio permanente del desarrollo internacional.</dcterms:abstract>
+    <dc:description>atlas-id: benedictykokken_haitiexception
+relacion: trouillotsilencing | resonancia | Los propios editores afirman que el pensamiento de Trouillot 'sostiene todo el volumen' (115 menciones verificadas en el texto).
+relacion: ulysseWhyHaiti | resonancia | Gina Ulysse participó como discutidora del proyecto que dio origen al volumen (mención verificada en agradecimientos e introducción).</dc:description>
+    <dc:subject>fen:soberanias</dc:subject>
+    <dc:subject>fen:capitalismo_racial</dc:subject>
+    <dc:subject>lugar:haiti</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:francofono</dc:subject>
+  </bib:Book>
+  <bib:Book rdf:about="#item_klein_battleparadise">
+    <z:itemType>book</z:itemType>
+    <dc:title>The Battle for Paradise: Puerto Rico Takes on the Disaster Capitalists</dc:title>
+    <bib:authors><rdf:Seq><rdf:li><foaf:Person><foaf:surname>Naomi Klein</foaf:surname></foaf:Person></rdf:li></rdf:Seq></bib:authors>
+    <dc:date>2018</dc:date>
+    <dcterms:abstract>Entrevista directamente a Yarimar Bonilla para mostrar el 'shock doctrine' pos-María: el desastre no como excepción sino como oportunidad de despojo ya preparada por la deuda.</dcterms:abstract>
+    <dc:description>atlas-id: klein_battleparadise
+relacion: bonilla | resonancia | Klein entrevista directamente a Yarimar Bonilla para el capítulo sobre la doctrina del shock pos-María. Entrevista y cita directa, verificada.
+relacion: aftershocks | resonancia | Comparten fuente primaria: ambas obras se apoyan en el trabajo de Yarimar Bonilla sobre Puerto Rico pos-María.</dc:description>
+    <dc:subject>fen:catastrofes</dc:subject>
+    <dc:subject>fen:capitalismo_racial</dc:subject>
+    <dc:subject>lugar:puertorico</dc:subject>
+    <dc:subject>capa:obra</dc:subject>
+    <dc:subject>trad:anglofono</dc:subject>
+  </bib:Book>
+</rdf:RDF>
