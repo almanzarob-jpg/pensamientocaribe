@@ -141,7 +141,10 @@
         cancionHtml =
           '<div class="caribe-popup-cancion-player">' +
             '<p class="caribe-popup-cancion-label"><span class="caribe-popup-cancion-icon">&#9658;</span> <em>' + n.cancion.titulo + '</em> &middot; ' + n.cancion.artista + '</p>' +
-            '<iframe width="100%" height="120" src="https://www.youtube-nocookie.com/embed/' + n.cancion.youtubeId + '" title="' + n.cancion.titulo + '" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe>' +
+            '<button type="button" class="caribe-video-facade" data-yt="' + n.cancion.youtubeId + '" aria-label="Reproducir ' + n.cancion.titulo + '">' +
+              '<img src="https://i.ytimg.com/vi/' + n.cancion.youtubeId + '/hqdefault.jpg" alt="Miniatura: ' + n.cancion.titulo + '" loading="lazy">' +
+              '<span class="caribe-video-play">&#9658;</span>' +
+            '</button>' +
           '</div>';
       } else if (n.cancion) {
         var query = encodeURIComponent(n.cancion.titulo + ' ' + n.cancion.artista);
@@ -307,6 +310,96 @@
 
     // Recalcular tamaño cuando la sección entra en viewport (por animaciones)
     setTimeout(function () { map.invalidateSize(); }, 300);
+
+    // ── Reproductor de YouTube con manejo de error 153/150 ──
+    // Algunos videos restringen su reproducción a los dominios del propio
+    // dueño. Insertados como <iframe> simple eso rompe en silencio (error 153
+    // dentro del reproductor). Por eso se carga la IFrame Player API de
+    // YouTube, que sí avisa el error, y si el video no puede sonar aquí se
+    // cambia por un enlace directo. Los popups de Leaflet crean su contenido
+    // una sola vez y lo reusan, así que los botones se activan en popupopen
+    // marcando cada uno con data-bound para no duplicar el listener.
+    var ytEstadoAPI = 'ninguno'; // ninguno | cargando | lista | error
+    var ytColaAPI = [];
+
+    function prepararYouTubeAPI() {
+      if (ytEstadoAPI === 'lista' || ytEstadoAPI === 'error') {
+        var lista = ytEstadoAPI === 'lista';
+        ytColaAPI.forEach(function (fn) { fn(lista); });
+        ytColaAPI = [];
+        return;
+      }
+      if (ytEstadoAPI === 'cargando') return;
+      ytEstadoAPI = 'cargando';
+      var previo = window.onYouTubeIframeAPIReady;
+      window.onYouTubeIframeAPIReady = function () {
+        if (typeof previo === 'function') previo();
+        ytEstadoAPI = 'lista';
+        ytColaAPI.forEach(function (fn) { fn(true); });
+        ytColaAPI = [];
+      };
+      var tag = document.createElement('script');
+      tag.src = 'https://www.youtube.com/iframe_api';
+      tag.onerror = function () {
+        ytEstadoAPI = 'error';
+        ytColaAPI.forEach(function (fn) { fn(false); });
+        ytColaAPI = [];
+      };
+      document.head.appendChild(tag);
+    }
+
+    function conYouTubeAPI(cb) {
+      ytColaAPI.push(cb);
+      prepararYouTubeAPI();
+    }
+
+    function mostrarFallbackVideo(el, id) {
+      if (!el || !el.parentNode) return;
+      var aviso = document.createElement('div');
+      aviso.className = 'caribe-video-fallback';
+      aviso.innerHTML =
+        '<p>Este video no se puede reproducir aquí: su propietario restringió los sitios donde se incrusta.</p>' +
+        '<a href="https://www.youtube.com/watch?v=' + id + '" target="_blank" rel="noopener">&#9658; Verlo en YouTube</a>';
+      el.parentNode.replaceChild(aviso, el);
+    }
+
+    function activarVideosPopup(popupEl) {
+      if (!popupEl || !popupEl.querySelectorAll) return;
+      var facades = popupEl.querySelectorAll('.caribe-video-facade:not([data-bound])');
+      Array.prototype.forEach.call(facades, function (btn) {
+        btn.setAttribute('data-bound', '1');
+        btn.addEventListener('click', function () {
+          var id = btn.getAttribute('data-yt');
+          var envoltorio = document.createElement('div');
+          envoltorio.className = 'caribe-video-cargando';
+          envoltorio.textContent = 'Cargando…';
+          if (btn.parentNode) btn.parentNode.replaceChild(envoltorio, btn);
+
+          conYouTubeAPI(function (ok) {
+            if (!envoltorio.parentNode) return; // el popup ya se cerró
+            if (!ok) { mostrarFallbackVideo(envoltorio, id); return; }
+            var contenedor = document.createElement('div');
+            envoltorio.parentNode.replaceChild(contenedor, envoltorio);
+            new YT.Player(contenedor, {
+              width: '100%',
+              height: '120',
+              videoId: id,
+              playerVars: { autoplay: 1, rel: 0 },
+              events: {
+                onError: function (e) {
+                  var ifr = (e.target && e.target.getIframe) ? e.target.getIframe() : null;
+                  mostrarFallbackVideo(ifr || contenedor, id);
+                }
+              }
+            });
+          });
+        });
+      });
+    }
+
+    map.on('popupopen', function (e) {
+      activarVideosPopup(e.popup.getElement());
+    });
   }
 
   if (document.readyState === 'loading') {
