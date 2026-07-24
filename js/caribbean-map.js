@@ -65,6 +65,7 @@
       { nombre: 'Belice',             pais: 'Belice',                      lat: 17.1899, lng: -88.4976, categoria: 'Caribe centroamericano',     desc: 'Garífunas, creoles, mayas. Caribe continental anglófono enclavado entre Yucatán y Guatemala.', claves: ['Garífunas', 'Creoles', 'Pueblos mayas'], cultura: 'Punta · Brukdown · Paranda', cancion: { titulo: 'Sopa de Caracol', artista: 'Banda Blanca', youtubeId: 'iPiHKOAMGqk' } },
       { nombre: 'Ciudad de Panamá',   pais: 'Panamá',                      lat: 8.9824,  lng: -79.5199, categoria: 'Caribe centroamericano',     desc: 'Canal, geopolítica del paso interoceánico, comunidades afroantillanas.', claves: ['Canal interoceánico', 'Afroantillanos', 'Geopolítica'], cultura: 'Salsa (Rubén Blades) · Reggae en español · Congos', cancion: { titulo: 'Pedro Navaja', artista: 'Rubén Blades', youtubeId: 'mWauuXEpEbs' } },
       { nombre: 'Colón',              pais: 'Panamá',                      lat: 9.3592,  lng: -79.9014, categoria: 'Caribe centroamericano',     desc: 'Entrada caribeña al canal. Migración antillana al ferrocarril y al canal en el siglo XIX-XX.', claves: ['Migración antillana', 'Ferrocarril', 'Canal'], cultura: 'Congo (UNESCO) · Calipso panameño', cancion: { titulo: 'Native Woman', artista: 'Lord Cobra' } },
+      { nombre: 'Darién',             pais: 'Panamá',                      lat: 8.6671,  lng: -77.4206, categoria: 'Caribe centroamericano',     desc: 'Última orilla panameña antes de Colombia, entre selva guna, emberá y wounaan. Aquí Bayano fundó en 1552 uno de los primeros palenques cimarrones de América. Hoy el Tapón del Darién es el corredor migratorio más peligroso del continente: 520.085 cruces en 2023, apenas 3.091 en 2025.', claves: ['Palenque de Bayano (1552)', 'Frontera migrante', 'Pueblos guna, emberá y wounaan'], cultura: 'Cantos guna · saberes emberá y wounaan' },
       { nombre: 'Limón',              pais: 'Costa Rica',                  lat: 9.9907,  lng: -83.0350, categoria: 'Caribe centroamericano',     desc: 'Provincia afrocostarricense. Migración jamaiquina al banano y al ferrocarril.', claves: ['Afrocostarricenses', 'Migración jamaiquina', 'Banano'], cultura: 'Calypso limonense · Carnaval de Limón', cancion: { titulo: 'Cabin in the Wata', artista: 'Walter Ferguson', youtubeId: 'Xf7NP4lRvc8' } },
       { nombre: 'Bluefields',         pais: 'Nicaragua',                   lat: 12.0137, lng: -83.7635, categoria: 'Caribe centroamericano',     desc: 'Costa Caribe nicaragüense. Creoles, miskitos, autonomía y memoria de la Mosquitia.', claves: ['Mosquitia', 'Miskitos · Creoles', 'Autonomía'], cultura: 'Palo de Mayo · Country creole', cancion: { titulo: 'Mayo Ya', artista: 'tradicional palo de mayo' } },
       { nombre: 'Puerto Cortés',      pais: 'Honduras',                    lat: 15.8256, lng: -87.9297, categoria: 'Caribe centroamericano',     desc: 'Garífunas, plantación bananera, United Fruit Company.', claves: ['Garífunas', 'United Fruit Co.', 'Enclave bananero'], cultura: 'Punta garífuna · Paranda', cancion: { titulo: 'Wamada', artista: 'Aurelio Martínez' } },
@@ -185,8 +186,21 @@
     });
 
     // ── Líneas conceptuales: rutas marítimas conectando regiones ──
-    // Arco insular: Grandes y Pequeñas Antillas (animada)
-    var arcoInsular = [
+    // Ruta continua del Gran Caribe: de Cartagena, por el Darién y Centroamérica,
+    // hasta Cuba, y de ahí baja por todo el arco antillano hasta Trinidad (animada).
+    // Antes eran dos arcos sueltos (Antillas / Centroamérica); ahora es una sola
+    // línea sin cortes, con Darién y Cartagena incorporados en el extremo sur.
+    var rutaGranCaribe = [
+      [10.3910, -75.4794], // Cartagena de Indias
+      [8.6671,  -77.4206], // Darién
+      [9.3592,  -79.9014], // Colón
+      [9.9907,  -83.0350], // Limón
+      [12.0137, -83.7635], // Bluefields
+      [15.8256, -87.9297], // Puerto Cortés
+      [15.8283, -88.7500], // Livingston
+      [17.1899, -88.4976], // Belice
+      [18.5001, -88.2961], // Chetumal
+      [21.1619, -86.8515], // Cancún
       [23.1136, -82.3666], // La Habana
       [20.0169, -75.8302], // Santiago de Cuba
       [18.5944, -72.3074], // Port-au-Prince
@@ -202,29 +216,10 @@
       [12.0561, -61.7488], // St. George's
       [10.6549, -61.5019]  // Port of Spain
     ];
-    L.polyline(arcoInsular, {
+    L.polyline(rutaGranCaribe, {
       color: '#F07A16',
       weight: 1.6,
       opacity: 0.5,
-      dashArray: '4,8',
-      className: 'ruta-maritima'
-    }).addTo(map);
-
-    // Costa continental: Centroamérica (animada)
-    var costaCentro = [
-      [21.1619, -86.8515], // Cancún
-      [18.5001, -88.2961], // Chetumal
-      [17.1899, -88.4976], // Belice
-      [15.8283, -88.7500], // Livingston
-      [15.8256, -87.9297], // Puerto Cortés
-      [12.0137, -83.7635], // Bluefields
-      [9.9907,  -83.0350], // Limón
-      [9.3592,  -79.9014]  // Colón
-    ];
-    L.polyline(costaCentro, {
-      color: '#D83A2E',
-      weight: 1.6,
-      opacity: 0.45,
       dashArray: '4,8',
       className: 'ruta-maritima'
     }).addTo(map);
