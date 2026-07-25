@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Con el agua de por medio · atlas archipiélico del Gran Caribe</title>
-<meta name="description" content="Atlas para una antropología archipiélica: 134 obras y manifestaciones del Gran Caribe conectadas por diez fenómenos que atraviesan la cuenca, no por las naciones que las alojan. Basado en Brathwaite, Monahan, Walcott y Bassi.">
+<meta name="description" content="Atlas para una antropología archipiélica: 143 obras y manifestaciones del Gran Caribe conectadas por diez fenómenos que atraviesan la cuenca, no por las naciones que las alojan. Basado en Brathwaite, Monahan, Walcott y Bassi.">
 <link rel="canonical" href="https://pensamientocaribe.org/proyectos/con-el-agua-de-por-medio.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pensamiento Caribe">
@@ -12,11 +12,11 @@
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:url" content="https://pensamientocaribe.org/proyectos/con-el-agua-de-por-medio.html">
 <meta property="og:title" content="Con el agua de por medio · atlas archipiélico del Gran Caribe">
-<meta property="og:description" content="134 obras y manifestaciones del Gran Caribe conectadas por diez fenómenos que atraviesan la cuenca. Basado en Brathwaite, Monahan, Walcott y Bassi.">
+<meta property="og:description" content="143 obras y manifestaciones del Gran Caribe conectadas por diez fenómenos que atraviesan la cuenca. Basado en Brathwaite, Monahan, Walcott y Bassi.">
 <meta property="og:image" content="https://pensamientocaribe.org/assets/diagrama-antropologia-caribe.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Con el agua de por medio · atlas archipiélico del Gran Caribe">
-<meta name="twitter:description" content="134 obras y manifestaciones del Gran Caribe conectadas por diez fenómenos que atraviesan la cuenca, no por las naciones que las alojan.">
+<meta name="twitter:description" content="143 obras y manifestaciones del Gran Caribe conectadas por diez fenómenos que atraviesan la cuenca, no por las naciones que las alojan.">
 <meta name="twitter:image" content="https://pensamientocaribe.org/assets/diagrama-antropologia-caribe.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,6 +58,17 @@
   .seg.base{background:transparent; border-color:var(--red)}
   .seg.base button{color:var(--red); border-right:0; font-weight:600; letter-spacing:1.2px}
   .seg.base button:hover{background:var(--red); color:var(--cream)}
+  /* ---------- buscador por título y autor ---------- */
+  .buscador{display:flex; align-items:center; border:1px solid var(--line); border-radius:3px; background:rgba(255,255,255,.02); transition:border-color .15s}
+  .buscador:focus-within{border-color:var(--gold)}
+  .buscador input{font-family:var(--ff-mono); font-size:10.5px; letter-spacing:.6px; padding:7px 10px; width:180px; border:0; background:transparent; color:var(--cream); outline:none}
+  .buscador input::placeholder{color:var(--gray); opacity:.75; text-transform:none; letter-spacing:.4px}
+  .buscador .bclear{border:0; background:transparent; color:var(--gray); cursor:pointer; font-size:15px; line-height:1; padding:0 9px 2px; visibility:hidden}
+  .buscador.has .bclear{visibility:visible}
+  .buscador .bclear:hover{color:var(--red)}
+  .bcount{font-family:var(--ff-mono); font-size:9px; letter-spacing:1px; color:var(--gold); padding-right:9px; white-space:nowrap}
+  .bcount.nada{color:var(--red)}
+  .node.qhit circle.dot{stroke:var(--cream); stroke-width:2.2}
   main{position:relative; flex:1 1 auto; min-height:0;}
   #stage{width:100%; height:100%; display:block; cursor:grab; touch-action:none;}
   #stage.grabbing{cursor:grabbing}
@@ -205,6 +216,8 @@
     .grp{flex:0 0 auto; gap:3px; padding-right:12px;}
     .grp label{font-size:7.5px; letter-spacing:1px}
     .seg button{padding:8px 10px; font-size:9.5px; min-height:36px; letter-spacing:.5px}
+    .buscador input{width:132px; font-size:11px; padding:9px 9px; min-height:36px}
+    .bcount{font-size:8px; padding-right:7px}
     #hint{display:none}
     #legend{left:8px; right:8px; bottom:8px; max-width:none; padding:9px 11px; font-size:9px;}
     #legend .grid{grid-template-columns:1fr 1fr}
@@ -231,7 +244,7 @@
   "@type": "Dataset",
   "name": "Con el agua de por medio: atlas para una antropología archipiélica",
   "alternateName": "Con el agua de por medio: An Atlas for an Archipelagic Anthropology",
-  "description": "Atlas interactivo que conecta 134 obras y manifestaciones del Gran Caribe a través de diez fenómenos transversales (colonialidad, postplantación, capitalismo racial, catástrofes climáticas, soberanías, violencias, memoria y espiritualidad, cimarronaje, creolización, cuerpo y erótica), en lugar de organizarlas por país. Marco conceptual basado en Kamau Brathwaite, Michael Monahan, Derek Walcott y Ernesto Bassi.",
+  "description": "Atlas interactivo que conecta 143 obras y manifestaciones del Gran Caribe a través de diez fenómenos transversales (colonialidad, postplantación, capitalismo racial, catástrofes climáticas, soberanías, violencias, memoria y espiritualidad, cimarronaje, creolización, cuerpo y erótica), en lugar de organizarlas por país. Marco conceptual basado en Kamau Brathwaite, Michael Monahan, Derek Walcott y Ernesto Bassi.",
   "url": "https://pensamientocaribe.org/proyectos/con-el-agua-de-por-medio.html",
   "identifier": "https://doi.org/10.5281/zenodo.21483568",
   "sameAs": "https://doi.org/10.5281/zenodo.21483568",
@@ -276,6 +289,12 @@
   </div>
   <div class="controls">
     <div class="grp"><label data-i18n="lblVista">Vista</label><div class="seg vista" id="viewSeg"><button data-v="corriente" class="on" data-i18n="vCorriente">Corriente</button><button data-v="constelacion" data-i18n="vConstelacion">Constelación</button><button data-v="tabla" data-i18n="vTabla">Tabla</button></div></div>
+    <div class="grp"><label for="qbox" data-i18n="lblBuscar">Buscar</label>
+      <div class="buscador" id="buscador">
+        <input id="qbox" type="search" autocomplete="off" spellcheck="false" placeholder="título o autor…" data-i18n-ph="buscarPh" aria-describedby="qcount">
+        <span class="bcount" id="qcount" role="status" aria-live="polite"></span>
+        <button class="bclear" id="qclear" type="button" title="Limpiar" aria-label="Limpiar búsqueda">×</button>
+      </div></div>
     <div class="grp" id="zoomGrp"><label data-i18n="lblZoom">Zoom</label><div class="seg base"><button id="resetZoomBtn" data-i18n="resetBtn" data-i18n-title="resetTitle">⤢ Reencuadrar</button></div></div>
     <div class="grp"><label data-i18n="lblCapa">Capa</label><div class="seg capa" id="layerSeg"><button data-l="ambas" class="on" data-i18n="cAmbas">Ambas</button><button data-l="obra" data-i18n="cObra">Investigación</button><button data-l="manifestacion" data-i18n="cManif">Etnográfica</button></div></div>
     <div class="grp"><label data-i18n="lblMarea">Marea</label><div class="seg tide" id="tideSeg"><button data-tide="on" class="on" data-i18n="mFlujo">Flujo</button><button data-tide="off" data-i18n="mQuieta">Quieta</button></div></div>
@@ -317,7 +336,7 @@
     <div class="c" style="border-left-color:var(--green-l)"><div class="who" style="color:var(--green-l)" data-i18n="mc7who">Método</div><h3 data-i18n="mc7h">Cómo se construye este atlas</h3><p data-i18n-html="mc7p">Criterios de inclusión, regla de corroboración, flujo de trabajo y limitaciones declaradas del corpus: todo está publicado. <a href="metodologia-agua-de-por-medio.html" style="color:var(--green-l)">Leer la metodología completa →</a></p></div>
   </div></div>
 </main>
-<script src="../data/agua-de-por-medio/datos-atlas.js?v=20260722b"></script>
+<script src="../data/agua-de-por-medio/datos-atlas.js?v=20260725"></script>
 <script>
 /* Datos del atlas: se cargan desde datos-atlas.js (archivo editable y versionable) */
 if(typeof ATLAS==='undefined'){ document.body.innerHTML='<div style="color:#f2ead8;font-family:sans-serif;padding:48px;line-height:1.6">No se pudo cargar <b>datos-atlas.js</b>.<br>Colocá ese archivo en la misma carpeta que este HTML y volvé a abrirlo.</div>'; throw new Error('ATLAS ausente'); }
@@ -360,6 +379,7 @@ const I18N = {
     lblBase:"Base", marcoBtn:"Marco conceptual",
     lblModo:"Modo", presBtn:"Pantalla completa",
     lblZoom:"Zoom", resetBtn:"⤢ Reencuadrar", resetTitle:"Vuelve al zoom y encuadre inicial de esta vista",
+    lblBuscar:"Buscar", buscarPh:"título o autor…", buscarNada:"sin coincidencias", buscarUna:"1 obra", buscarN:"{n} obras",
     lblIdioma:"Idioma",
     entrar:"Entrar en la corriente", umbralBase:"Base conceptual: Brathwaite · Monahan — ", verMarco:"ver marco",
     umbralP:"Ninguna orilla es una totalidad. El archipiélago no lo hacen las naciones: lo hacen las fuerzas que cruzan de una orilla a otra. Cada obra vive aquí en el fenómeno que la atraviesa; el país que la aloja queda en segundo plano.",
@@ -409,6 +429,7 @@ const I18N = {
     lblBase:"Base", marcoBtn:"Conceptual frame",
     lblModo:"Mode", presBtn:"Full screen",
     lblZoom:"Zoom", resetBtn:"⤢ Recenter", resetTitle:"Return to this view's default zoom and framing",
+    lblBuscar:"Search", buscarPh:"title or author…", buscarNada:"no matches", buscarUna:"1 work", buscarN:"{n} works",
     lblIdioma:"Language",
     entrar:"Enter the current", umbralBase:"Conceptual base: Brathwaite · Monahan — ", verMarco:"see frame",
     umbralP:"No shore is a totality. The archipelago is not made by nations: it is made by the forces that cross from one shore to another. Each work lives here in the phenomenon that runs through it; the country that hosts it stays in the background.",
@@ -469,7 +490,31 @@ const NS="http://www.w3.org/2000/svg";
 const el=(n,at={})=>{const e=document.createElementNS(NS,n);for(const k in at)e.setAttribute(k,at[k]);return e;};
 const byId=id=>N.find(n=>n.id===id);
 const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-let state={view:"corriente",layer:"ambas",active:null, focusFen:null, tide:!reduced};
+let state={view:"corriente",layer:"ambas",active:null, focusFen:null, tide:!reduced, q:""};
+
+/* ---------- buscador por título y autor ----------
+   Filtra por texto sin acentos: «cesaire» encuentra «Césaire», «gomez» encuentra «Gómez».
+   En el mapa no elimina nodos, los atenúa: el lugar de cada obra sigue siendo información. */
+const sinTildes = s => (s||"").normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
+let QTERMS=[];
+function setQuery(v){
+  state.q=(v||"").trim();
+  QTERMS=sinTildes(state.q).split(/\s+/).filter(Boolean);
+  const box=document.getElementById('buscador'); if(box) box.classList.toggle('has', !!state.q);
+}
+function matchQ(n){
+  if(!QTERMS.length) return true;
+  const h=sinTildes(n.t+" "+n.a);
+  return QTERMS.every(w=>h.includes(w));
+}
+function qHits(){ return QTERMS.length ? N.filter(n=>visible(n)&&matchQ(n)) : []; }
+function updateQCount(){
+  const c=document.getElementById('qcount'); if(!c) return;
+  if(!QTERMS.length){ c.textContent=""; c.classList.remove('nada'); return; }
+  const k=qHits().length;
+  c.textContent = k===0 ? t('buscarNada') : k===1 ? t('buscarUna') : t('buscarN').replace('{n}',k);
+  c.classList.toggle('nada', k===0);
+}
 let VNODES=[], EDGES=[], CLUSTERS=[]; let hoverNode=null;
 let vpt={k:1,tx:0,ty:0}; let vp=null;
 function applyVP(){ if(vp) vp.setAttribute('transform',`translate(${vpt.tx},${vpt.ty}) scale(${vpt.k})`); }
@@ -579,21 +624,28 @@ function updateTip(){
 
 function refreshHi(){
   const fn=state.active, ff=state.focusFen; let nb=null; if(fn) nb=neighbors(fn);
+  /* la búsqueda solo atenúa cuando no hay una ficha abierta: al abrir una obra manda su constelación,
+     y al cerrarla se vuelve al recorte de la búsqueda, que queda escrita en el campo */
+  const qOn = !fn && QTERMS.length>0;
   VNODES.forEach(n=>{ let op=1, rmul=1, halo=0;
     if(fn){ if(n.id===fn){op=1;rmul=1.5;halo=1;} else if(nb.direct.has(n.id)){op=1;rmul=1.15;} else if(nb.indirect.has(n.id)){op=.5;} else op=.08; }
+    else if(qOn){ if(matchQ(n)){op=1;rmul=1.35;halo=1;} else op=.06; }
     else if(ff){ if(n.f.includes(ff)){op=1;rmul=n.f[0]===ff?1.25:1;} else op=.09; }
     n._c.style.opacity=op; n._c.setAttribute('r', n._c._r*rmul); n._halo.style.opacity=halo?.9:0; n._halo.style.stroke=col(n.f[0]);
+    n._g.classList.toggle('qhit', qOn && matchQ(n));
   });
   EDGES.forEach(e=>{ let op="";
     if(fn){ const a=e.na.id,b=e.nb.id; const touchF=(a===fn||b===fn); const bothDir=(a===fn||nb.direct.has(a))&&(b===fn||nb.direct.has(b)); const toInd=(nb.direct.has(a)&&nb.indirect.has(b))||(nb.direct.has(b)&&nb.indirect.has(a)); op=touchF?.82:bothDir?.42:toInd?.26:.04; }
+    else if(qOn){ const ha=matchQ(e.na), hb=matchQ(e.nb); op=(ha&&hb)?.7:(ha||hb)?.22:.03; }
     else if(ff){ op=(e.na.f.includes(ff)&&e.nb.f.includes(ff))?.65:.05; }
     e.p.style.strokeOpacity=op;
     if(e.marker) e.marker.style.strokeOpacity = (op==="")?.55 : Math.min(.7, op*1.1);
   });
   if(vp){
-    vp.querySelectorAll('.placelbl').forEach(t=>{ if(ff){ const has=N.some(n=>n.l===t._place && n.f.includes(ff)); t.style.opacity=has?1:.12; } else if(fn){ const has=N.some(n=>n.l===t._place && (n.id===fn||nb.direct.has(n.id))); t.style.opacity=has?1:.2; } else t.style.opacity=""; });
+    vp.querySelectorAll('.placelbl').forEach(t=>{ if(qOn){ const has=N.some(n=>n.l===t._place && visible(n) && matchQ(n)); t.style.opacity=has?1:.12; } else if(ff){ const has=N.some(n=>n.l===t._place && n.f.includes(ff)); t.style.opacity=has?1:.12; } else if(fn){ const has=N.some(n=>n.l===t._place && (n.id===fn||nb.direct.has(n.id))); t.style.opacity=has?1:.2; } else t.style.opacity=""; });
     vp.querySelectorAll('.clbl').forEach(t=>{ if(ff){ t.style.opacity=(t._fen===ff)?1:.25; } else t.style.opacity=""; });
   }
+  updateQCount();
 }
 
 function showGuion(f){ const g=document.getElementById('guion'); if(!f){ g.classList.remove('show'); return; } g.style.borderLeftColor=FEN[f].c; const gf=g.querySelector('.gf'); gf.textContent=fenLabel(f); gf.style.color=FEN[f].c; g.querySelector('.gt').textContent=fenGlosa(f); g.classList.add('show'); }
@@ -646,7 +698,7 @@ function loop(t){ place(t); requestAnimationFrame(loop); }
 /* ---------- VISTA TABLA (accesible, navegable por teclado y lectores de pantalla) ---------- */
 let tblSort={col:"t", dir:1};
 function tblRows(){
-  let rows=N.filter(n=>visible(n) && (!state.focusFen || n.f.includes(state.focusFen)));
+  let rows=N.filter(n=>visible(n) && (!state.focusFen || n.f.includes(state.focusFen)) && matchQ(n));
   const key=tblSort.col;
   rows.sort((a,b)=>{ let va,vb;
     if(key==="f"){ va=FEN[a.f[0]].label; vb=FEN[b.f[0]].label; }
@@ -660,7 +712,7 @@ function renderTable(){
   const cont=document.getElementById('tabla');
   const rows=tblRows();
   const cols=[["t",t('thObra')],["a",t('thAutor')],["y",t('thAno')],["k",t('thTipo')],["f",t('thFen')],["l",t('thLugar')],["tr",t('thTrad')]];
-  const foco = state.focusFen ? ` · ${t('tFiltro')} «${fenLabel(state.focusFen)}»` : "";
+  const foco = (state.focusFen ? ` · ${t('tFiltro')} «${fenLabel(state.focusFen)}»` : "") + (state.q ? ` · ${t('tFiltro')} «${state.q}»` : "");
   let h=`<div class="tcap">${t('tCap')}</div><div class="tsub">${rows.length} ${t('tRefs')}${foco} · ${t('tSort')}</div>`;
   h+=`<table><caption>${t('tCaption')}</caption><thead><tr>`;
   cols.forEach(([k,lbl])=>{ const s = tblSort.col===k ? (tblSort.dir===1?"ascending":"descending") : "none"; h+=`<th scope="col" role="columnheader" aria-sort="${s}" data-col="${k}" tabindex="0">${lbl}</th>`; });
@@ -692,6 +744,28 @@ function switchView(v){
 }
 document.getElementById('viewSeg').addEventListener('click',e=>{ if(e.target.dataset.v){[...e.currentTarget.children].forEach(b=>b.classList.remove('on'));e.target.classList.add('on');clearFocus();switchView(e.target.dataset.v);} });
 document.getElementById('resetZoomBtn').addEventListener('click',()=>{ vpt={k:1,tx:0,ty:0}; applyVP(); });
+
+/* ---------- buscador: eventos ---------- */
+const qbox=document.getElementById('qbox');
+function runQuery(){
+  setQuery(qbox.value);
+  if(state.view==="tabla"){ renderTable(); updateQCount(); }
+  else refreshHi();
+}
+function clearQuery(){ qbox.value=""; runQuery(); }
+qbox.addEventListener('input', runQuery);
+qbox.addEventListener('keydown', ev=>{
+  if(ev.key==='Escape'){ ev.stopPropagation(); clearQuery(); qbox.blur(); }
+  else if(ev.key==='Enter'){ ev.preventDefault(); const h=qHits(); if(h.length===1){ document.getElementById('umbral').classList.add('gone'); openPanel(h[0].id); qbox.blur(); } }
+});
+document.getElementById('qclear').addEventListener('click',()=>{ clearQuery(); qbox.focus(); });
+/* «/» enfoca el campo desde cualquier parte, salvo si ya se está escribiendo en otro */
+document.addEventListener('keydown', ev=>{
+  if(ev.key!=='/' || ev.metaKey || ev.ctrlKey || ev.altKey) return;
+  const a=document.activeElement, tag=a?a.tagName:'';
+  if(tag==='INPUT'||tag==='TEXTAREA'||(a&&a.isContentEditable)) return;
+  ev.preventDefault(); document.getElementById('umbral').classList.add('gone'); qbox.focus(); qbox.select();
+});
 document.getElementById('layerSeg').addEventListener('click',e=>{ if(e.target.dataset.l){[...e.currentTarget.children].forEach(b=>b.classList.remove('on'));e.target.classList.add('on');state.layer=e.target.dataset.l; state.view==="tabla"?renderTable():render();} });
 document.getElementById('tideSeg').addEventListener('click',e=>{ if(e.target.dataset.tide){[...e.currentTarget.children].forEach(b=>b.classList.remove('on'));e.target.classList.add('on');state.tide=e.target.dataset.tide==="on"; if(!state.tide) place(0);} });
 
@@ -772,6 +846,7 @@ function applyLang(){
   document.querySelectorAll('[data-i18n]').forEach(e=>{ const k=e.getAttribute('data-i18n'); if(I18N[LANG][k]!==undefined) e.textContent=I18N[LANG][k]; });
   document.querySelectorAll('[data-i18n-html]').forEach(e=>{ const k=e.getAttribute('data-i18n-html'); if(I18N[LANG][k]!==undefined) e.innerHTML=I18N[LANG][k]; });
   document.querySelectorAll('[data-i18n-title]').forEach(e=>{ const k=e.getAttribute('data-i18n-title'); if(I18N[LANG][k]!==undefined) e.title=I18N[LANG][k]; });
+  document.querySelectorAll('[data-i18n-ph]').forEach(e=>{ const k=e.getAttribute('data-i18n-ph'); if(I18N[LANG][k]!==undefined) e.placeholder=I18N[LANG][k]; });
   const lb=document.getElementById('langBtn'); if(lb) lb.textContent=t('langBtn');
   const openId=state.active, ff=state.focusFen;
   if(state.view==='tabla'){ renderTable(); } else { render(); }

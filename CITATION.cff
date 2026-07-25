@@ -41,15 +41,15 @@ license: "CC-BY-NC-SA-4.0"
 references:
   - type: dataset
     title: "Con el agua de por medio: atlas para una antropología archipiélica"
-    version: "1.1.0"
-    date-released: 2026-07-23
+    version: "1.2.0"
+    date-released: 2026-07-25
     doi: "10.5281/zenodo.21483568"
     url: "https://pensamientocaribe.org/proyectos/con-el-agua-de-por-medio.html"
     repository-code: "https://github.com/almanzarob-jpg/pensamientocaribe"
     license: "CC-BY-NC-SA-4.0"
     abstract: >-
-      Atlas interactivo que conecta 134 obras y manifestaciones del Gran
-      Caribe a través de 238 relaciones y diez fenómenos transversales
+      Atlas interactivo que conecta 143 obras y manifestaciones del Gran
+      Caribe a través de 289 relaciones y diez fenómenos transversales
       (colonialidad, postplantación, capitalismo racial, catástrofes
       climáticas, soberanías, violencias, memoria y espiritualidad,
       cimarronaje, creolización, cuerpo/género/erótica) en lugar de
