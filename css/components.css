@@ -2636,3 +2636,44 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* ══════════════════════════════════════════════════════════════
+   PROYECTOS HERMANOS
+   Los cuatro proyectos comparten marco, autor y vocabulario, y
+   hasta ahora funcionaban como sitios separados. Este bloque
+   los conecta desde el pie de cada uno.
+   ══════════════════════════════════════════════════════════════ */
+.hermanos {
+  margin-top: var(--space-2xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--c-border-green);
+}
+.hermanos__titulo {
+  font-family: var(--ff-mono); font-size: 0.72rem; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--c-gray); margin-bottom: var(--space-md);
+}
+.hermanos__lista {
+  list-style: none; margin: 0; padding: 0; display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(215px, 1fr)); gap: var(--space-sm);
+}
+.hermanos__lista a {
+  display: block; height: 100%; text-decoration: none;
+  border: 1px solid var(--c-border-green); border-radius: var(--radius-sm, 4px);
+  background: var(--c-surface-a); padding: 0.9rem 1rem;
+  transition: border-color 0.18s, transform 0.18s, background 0.18s;
+}
+.hermanos__lista a:hover { border-color: var(--c-green-light); transform: translateY(-2px); }
+.hermanos__lista a:focus-visible { outline: 2px solid var(--c-green-light); outline-offset: 2px; }
+.hermanos__k {
+  display: block; font-family: var(--ff-mono); font-size: 0.63rem; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--c-green-light); margin-bottom: 0.35rem;
+}
+.hermanos__n {
+  display: block; font-family: var(--ff-display); font-size: 1.12rem; line-height: 1.25;
+  color: var(--c-cream); margin-bottom: 0.3rem;
+}
+.hermanos__d { display: block; font-size: 0.82rem; line-height: 1.55; color: var(--c-gray); }
+.hermanos__lista li.actual a {
+  background: transparent; border-style: dashed; cursor: default; opacity: 0.55;
+}
+.hermanos__lista li.actual a:hover { transform: none; border-color: var(--c-border-green); }

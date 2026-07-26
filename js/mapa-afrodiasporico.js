@@ -5,15 +5,15 @@
    Inspirado en Errol L. Montes Pizarro (2018)
    ════════════════════════════════════════════════ */
 (function () {
-  // Fase 3 · datos declarativos: el mapa lee data/atlas/{nodes,edges}.json.
+  // Fase 3 · datos declarativos: el mapa lee data/vaiven-corrientes/{nodes,edges}.json.
   // El bloque inline de más abajo queda SOLO como fallback si el fetch falla
   // (p. ej. al abrir el HTML con file://). En el sitio publicado manda el JSON.
   var SCRIPT_SRC = (document.currentScript && document.currentScript.src) || '';
   var ATLAS = null;
 
   function loadAtlas(done) {
-    var base = SCRIPT_SRC.replace(/js\/[^\/?#]*(?:[?#].*)?$/, 'data/atlas/');
-    if (!/data\/atlas\/$/.test(base)) { done(); return; }
+    var base = SCRIPT_SRC.replace(/js\/[^\/?#]*(?:[?#].*)?$/, 'data/vaiven-corrientes/');
+    if (!/data\/vaiven-corrientes\/$/.test(base)) { done(); return; }
     Promise.all([
       fetch(base + 'nodes.json').then(function (r) { return r.ok ? r.json() : null; }),
       fetch(base + 'edges.json').then(function (r) { return r.ok ? r.json() : null; })

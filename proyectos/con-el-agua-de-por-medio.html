@@ -111,6 +111,21 @@
   #panel .rel a .via{color:var(--green-l); font-style:italic; font-size:11px}
   #panel .rel a .fu{display:block; font-size:11px; line-height:1.4; color:var(--gray); margin-top:3px; font-style:italic}
   #panel .rel a .fu.pc{color:var(--red); opacity:.85}
+  /* ── semáforo de corroboración: declara el estatus epistémico de cada corriente ── */
+  #panel .rel a .ev{display:inline-block; width:7px; height:7px; border-radius:50%; margin-right:7px; vertical-align:1px; flex:0 0 auto}
+  #panel .rel a .ev.ok{background:var(--green-l)}
+  #panel .rel a .ev.pc{background:var(--red)}
+  #panel .rel h3 .evn{float:right; font-size:8.5px; letter-spacing:.8px; color:var(--gray); text-transform:none; font-style:italic}
+  .seg.ev button:hover{background:rgba(63,138,53,.14)}
+  .seg.ev button.on{background:var(--green-l); color:#08110a; box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
+  .seg.ev button.on[data-ev="pc"]{background:var(--red); color:#2a0d0a}
+  #legend .corr{margin-top:9px; padding-top:9px; border-top:1px solid var(--line); font-family:var(--ff-mono); font-size:9px; letter-spacing:.5px; color:var(--gray); line-height:1.5}
+  #legend .corrbar{display:flex; height:5px; border-radius:3px; overflow:hidden; background:var(--line); margin:5px 0 5px}
+  #legend .corrbar i{display:block; height:100%}
+  #legend .corrbar i.ok{background:var(--green-l)}
+  #legend .corrbar i.pc{background:var(--red)}
+  #legend .corr a{color:var(--green-l); cursor:pointer; text-decoration:none; border-bottom:1px dotted rgba(63,138,53,.5)}
+  #legend .corr a:hover{color:var(--cream)}
   #panel .cita{margin-top:16px; padding-top:12px; border-top:1px solid var(--line)}
   #panel .cita .citalbl{display:block; font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1.4px; color:var(--gray); margin-bottom:6px}
   #panel .cita .apa{font-size:12px; line-height:1.5; color:var(--cream); background:rgba(201,162,77,.06); border-left:2px solid var(--gold); padding:8px 10px; border-radius:2px; margin-bottom:8px}
@@ -297,6 +312,7 @@
       </div></div>
     <div class="grp" id="zoomGrp"><label data-i18n="lblZoom">Zoom</label><div class="seg base"><button id="resetZoomBtn" data-i18n="resetBtn" data-i18n-title="resetTitle">⤢ Reencuadrar</button></div></div>
     <div class="grp"><label data-i18n="lblCapa">Capa</label><div class="seg capa" id="layerSeg"><button data-l="ambas" class="on" data-i18n="cAmbas">Ambas</button><button data-l="obra" data-i18n="cObra">Investigación</button><button data-l="manifestacion" data-i18n="cManif">Etnográfica</button></div></div>
+    <div class="grp"><label data-i18n="lblEvid">Evidencia</label><div class="seg ev" id="evSeg"><button data-ev="todas" class="on" data-i18n="eTodas">Todas</button><button data-ev="ok" data-i18n="eCorr">Corroboradas</button><button data-ev="pc" data-i18n="ePorCorr">Por corroborar</button></div></div>
     <div class="grp"><label data-i18n="lblMarea">Marea</label><div class="seg tide" id="tideSeg"><button data-tide="on" class="on" data-i18n="mFlujo">Flujo</button><button data-tide="off" data-i18n="mQuieta">Quieta</button></div></div>
     <div class="grp"><label data-i18n="lblBase">Base</label><div class="seg base"><button id="marcoBtn" data-i18n="marcoBtn">Marco conceptual</button></div></div>
     <div class="grp"><label data-i18n="lblModo">Modo</label><div class="seg base"><button id="presBtn" data-i18n="presBtn">Pantalla completa</button></div></div>
@@ -334,6 +350,7 @@
     <div class="c"><div class="who">Michael Monahan</div><h3 data-i18n="mc5h">Fricción epistémica</h3><p data-i18n-html="mc5p">Para Monahan, la creolización ocurre como <b>roce productivo entre saberes</b>, no como fusión suave: José Medina lo llama meta-lucidez, la capacidad de ver las lagunas del propio conocimiento cuando un marco establecido choca con lo que lo desestabiliza. Donde una corriente cruza entre tradiciones lingüísticas distintas (anglófona, francófona, hispana, neerlandesa), ese cruce que la academia mantuvo separado queda marcado en el mapa con un signo de fricción. El pensamiento archipiélico ocurre justo ahí, en el roce entre lenguas imperiales.<br><span style="font-size:.85em; opacity:.75; font-style:italic">Monahan, M. J. (2023). <i>Creolizing Practices of Freedom: Recognition and Dissonance</i>. Rowman &amp; Littlefield.</span></p></div>
     <div class="c" style="border-left-color:var(--gold)"><div class="who" style="color:var(--gold)" data-i18n="mc6who">Cómo citar el corpus</div><h3 data-i18n="mc6h">Dataset con DOI en Zenodo</h3><p data-i18n-html="mc6p">Almanza, R. (2026). <i>Atlas para una antropología archipiélica: con el agua de por medio</i> [conjunto de datos]. Zenodo. <a href="https://doi.org/10.5281/zenodo.21483568" target="_blank" rel="noopener" style="color:var(--gold)">https://doi.org/10.5281/zenodo.21483568</a><br><span style="font-size:.85em; opacity:.75; font-style:italic">Licencia <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" target="_blank" rel="noopener" style="color:var(--gold)">CC BY-NC-SA 4.0</a>: atribución, uso no comercial, compartir igual.</span></p></div>
     <div class="c" style="border-left-color:var(--green-l)"><div class="who" style="color:var(--green-l)" data-i18n="mc7who">Método</div><h3 data-i18n="mc7h">Cómo se construye este atlas</h3><p data-i18n-html="mc7p">Criterios de inclusión, regla de corroboración, flujo de trabajo y limitaciones declaradas del corpus: todo está publicado. <a href="metodologia-agua-de-por-medio.html" style="color:var(--green-l)">Leer la metodología completa →</a></p></div>
+    <div class="c" style="border-left-color:var(--orange)"><div class="who" style="color:var(--orange)" data-i18n="mc8who">Proyectos hermanos</div><h3 data-i18n="mc8h">Este atlas conversa con</h3><p data-i18n-html="mc8p">El corpus no está solo. La <a href="mas-ramas-que-raices.html" style="color:var(--orange)">cartografía sonora del Atlántico Negro</a> sigue las mismas travesías por vía de la música; el mapa de <a href="negrura-blanquitud-monumental.html" style="color:var(--orange)">la negrura frente a la blanquitud monumental</a> desarrolla los conceptos con que se leen varias de estas obras; y la <a href="../medios/cine-caribe.html" style="color:var(--orange)">filmoteca crítica</a> reúne el cine que piensa lo mismo en imágenes.</p></div>
   </div></div>
 </main>
 <script src="../data/agua-de-por-medio/datos-atlas.js?v=202607252"></script>
@@ -348,6 +365,12 @@ const R = RELS.map(r=>[r.a,r.b]);
 const relDe=(a,b)=>RELS.find(x=>(x.a===a&&x.b===b)||(x.a===b&&x.b===a));
 const isDiso=(a,b)=>{ const r=relDe(a,b); return !!r && r.tipo==='disonancia'; };
 const fuenteDe=(a,b)=>{ const r=relDe(a,b); return r?(r.fuente||''):''; };
+/* Una corriente está corroborada cuando declara una fuente que no sea la marca de pendiente.
+   El corpus distingue así dos estatutos: el vínculo documentado y el vínculo propuesto por el
+   investigador, que la interfaz no debe presentar como si fueran lo mismo. */
+const esCorr=(a,b)=>{ const fu=fuenteDe(a,b); return !!fu && !/corroborar/i.test(fu); };
+const CORR_OK = RELS.filter(r=>!!r.fuente && !/corroborar/i.test(r.fuente)).length;
+const CORR_PC = RELS.length - CORR_OK;
 const col = f => FEN[f].c;
 
 /* ==================== BILINGÜE ES / EN ==================== */
@@ -397,6 +420,8 @@ const I18N = {
     mc5p:"Para Monahan, la creolización ocurre como <b>roce productivo entre saberes</b>, no como fusión suave: José Medina lo llama meta-lucidez, la capacidad de ver las lagunas del propio conocimiento cuando un marco establecido choca con lo que lo desestabiliza. Donde una corriente cruza entre tradiciones lingüísticas distintas (anglófona, francófona, hispana, neerlandesa), ese cruce que la academia mantuvo separado queda marcado en el mapa con un signo de fricción. El pensamiento archipiélico ocurre justo ahí, en el roce entre lenguas imperiales.<br><span style=\"font-size:.85em; opacity:.75; font-style:italic\">Monahan, M. J. (2023). <i>Creolizing Practices of Freedom: Recognition and Dissonance</i>. Rowman &amp; Littlefield.</span>",
     mc7who:"Método", mc7h:"Cómo se construye este atlas",
     mc7p:"Criterios de inclusión, regla de corroboración, flujo de trabajo y limitaciones declaradas del corpus: todo está publicado. <a href=\"metodologia-agua-de-por-medio.html\" style=\"color:var(--green-l)\">Leer la metodología completa →</a>",
+    mc8who:"Proyectos hermanos", mc8h:"Este atlas conversa con",
+    mc8p:"El corpus no está solo. La <a href=\"mas-ramas-que-raices.html\" style=\"color:var(--orange)\">cartografía sonora del Atlántico Negro</a> sigue las mismas travesías por vía de la música; el mapa de <a href=\"negrura-blanquitud-monumental.html\" style=\"color:var(--orange)\">la negrura frente a la blanquitud monumental</a> desarrolla los conceptos con que se leen varias de estas obras; y la <a href=\"../medios/cine-caribe.html\" style=\"color:var(--orange)\">filmoteca crítica</a> reúne el cine que piensa lo mismo en imágenes.",
     mc6who:"Cómo citar el corpus", mc6h:"Dataset con DOI en Zenodo",
     mc6p:"Almanza, R. (2026). <i>Atlas para una antropología archipiélica: con el agua de por medio</i> [conjunto de datos]. Zenodo. <a href=\"https://doi.org/10.5281/zenodo.21483568\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold)\">https://doi.org/10.5281/zenodo.21483568</a><br><span style=\"font-size:.85em; opacity:.75; font-style:italic\">Licencia <a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold)\">CC BY-NC-SA 4.0</a>: atribución, uso no comercial, compartir igual.</span>",
     presExit:"✕ salir",
@@ -409,14 +434,18 @@ const I18N = {
     pKindObra:"Investigación", pKindManif:"Etnografía / manifestación",
     pNacion:"nación caribeña", pRegion:"región en tensión con",
     pRelDir:"Conexiones directas · dialoga con", pRelInd:"Conexiones indirectas · a dos orillas", pVia:"vía",
+    lblEvid:"Evidencia", eTodas:"Todas", eCorr:"Corroboradas", ePorCorr:"Por corroborar",
+    evOkT:"Corriente con fuente declarada", evPcT:"▲ Sin fuente declarada · vínculo propuesto por el investigador",
+    evNada:"Ninguna corriente de esta obra con el filtro de evidencia activo.",
+    lgCorr:"corrientes corroboradas", lgCorrVer:"ver solo estas",
     pCitaLbl:"Cómo citar esta ficha", pCitaEn:"En", pCitaBtn:"copiar cita", pCitaOk:"copiado",
     pProyecto:"Con el agua de por medio: atlas para una antropología archipiélica",
     tCap:"Catálogo del atlas", tRefs:"referencias", tFiltro:"filtrado por",
     tSort:"ordena por cualquier columna · abre una fila para ver su ficha",
     tCaption:"Obras y manifestaciones del atlas «Con el agua de por medio», con su fenómeno, lugar y tradición. Cada fila enlaza a la ficha completa.",
-    thObra:"Obra", thAutor:"Autor", thAno:"Año", thTipo:"Tipo", thFen:"Fenómenos", thLugar:"Lugar", thTrad:"Tradición",
+    thObra:"Obra", thAutor:"Autor", thAno:"Año", thTipo:"Tipo", thFen:"Fenómenos", thLugar:"Lugar", thTrad:"Tradición", thEvid:"Corrientes corroboradas",
     tKindObra:"Investigación", tKindManif:"Etnografía", tCiudad:"(ciudad)",
-    tNote:"Esta tabla es la versión accesible del atlas: se navega con el tabulador y la leen los lectores de pantalla. Los mismos datos alimentan las vistas Corriente y Constelación. Fuente de datos:",
+    tNote:"Esta tabla es la versión accesible del atlas: se navega con el tabulador y la leen los lectores de pantalla. Los mismos datos alimentan las vistas Corriente y Constelación. La columna de corrientes corroboradas indica cuántas de las conexiones de cada obra declaran una fuente y cuántas son vínculos propuestos por el investigador, todavía por corroborar. Fuente de datos:",
     langBtn:"EN"
   },
   en:{
@@ -447,6 +476,8 @@ const I18N = {
     mc5p:"For Monahan, creolization occurs as <b>productive friction between knowledges</b>, not as smooth fusion: philosopher José Medina calls this meta-lucidity, the capacity to see the gaps in one's own knowledge when an established framework collides with what unsettles it. Where a current crosses between distinct linguistic traditions (Anglophone, Francophone, Hispanic, Dutch), that crossing the academy kept apart is marked on the map with a friction sign. Archipelagic thought happens right there, in the rub between imperial tongues.<br><span style=\"font-size:.85em; opacity:.75; font-style:italic\">Monahan, M. J. (2023). <i>Creolizing Practices of Freedom: Recognition and Dissonance</i>. Rowman &amp; Littlefield.</span>",
     mc7who:"Method", mc7h:"How this atlas is built",
     mc7p:"Inclusion criteria, corroboration rule, workflow and declared limitations of the corpus: all published. <a href=\"metodologia-agua-de-por-medio-en.html\" style=\"color:var(--green-l)\">Read the full methodology →</a>",
+    mc8who:"Sibling projects", mc8h:"This atlas is in dialogue with",
+    mc8p:"The corpus does not stand alone. The <a href=\"mas-ramas-que-raices-en.html\" style=\"color:var(--orange)\">sonic cartography of the Black Atlantic</a> follows the same crossings through music; the map of <a href=\"negrura-blanquitud-monumental.html\" style=\"color:var(--orange)\">blackness against monumental whiteness</a> develops the concepts through which several of these works are read; and the <a href=\"../medios/cine-caribe.html\" style=\"color:var(--orange)\">critical film library</a> gathers the cinema that thinks the same questions in images.",
     mc6who:"How to cite the corpus", mc6h:"Dataset with DOI on Zenodo",
     mc6p:"Almanza, R. (2026). <i>Atlas para una antropología archipiélica: con el agua de por medio</i> [dataset]. Zenodo. <a href=\"https://doi.org/10.5281/zenodo.21483568\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold)\">https://doi.org/10.5281/zenodo.21483568</a><br><span style=\"font-size:.85em; opacity:.75; font-style:italic\">Licensed under <a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold)\">CC BY-NC-SA 4.0</a>: attribution, non-commercial, share-alike.</span>",
     presExit:"✕ exit",
@@ -459,14 +490,18 @@ const I18N = {
     pKindObra:"Research", pKindManif:"Ethnography / manifestation",
     pNacion:"Caribbean nation", pRegion:"region in tension with",
     pRelDir:"Direct connections · in dialogue with", pRelInd:"Indirect connections · across two shores", pVia:"via",
+    lblEvid:"Evidence", eTodas:"All", eCorr:"Corroborated", ePorCorr:"To be corroborated",
+    evOkT:"Current with a declared source", evPcT:"▲ No source declared · link proposed by the researcher",
+    evNada:"No current of this work matches the active evidence filter.",
+    lgCorr:"corroborated currents", lgCorrVer:"show only these",
     pCitaLbl:"How to cite this entry", pCitaEn:"In", pCitaBtn:"copy citation", pCitaOk:"copied",
     pProyecto:"Con el agua de por medio: An Atlas for an Archipelagic Anthropology",
     tCap:"Atlas catalogue", tRefs:"references", tFiltro:"filtered by",
     tSort:"sort by any column · open a row to see its entry",
     tCaption:"Works and manifestations of the atlas «Con el agua de por medio», with their phenomenon, place and tradition. Each row links to the full entry.",
-    thObra:"Work", thAutor:"Author", thAno:"Year", thTipo:"Type", thFen:"Phenomena", thLugar:"Place", thTrad:"Tradition",
+    thObra:"Work", thAutor:"Author", thAno:"Year", thTipo:"Type", thFen:"Phenomena", thLugar:"Place", thTrad:"Tradition", thEvid:"Corroborated currents",
     tKindObra:"Research", tKindManif:"Ethnography", tCiudad:"(city)",
-    tNote:"This table is the accessible version of the atlas: navigable by tab and read by screen readers. The same data feeds the Current and Constellation views. Data source:",
+    tNote:"This table is the accessible version of the atlas: navigable by tab and read by screen readers. The same data feeds the Current and Constellation views. The corroborated currents column shows how many of each work's connections declare a source and how many are links proposed by the researcher, still to be corroborated. Data source:",
     langBtn:"ES"
   }
 };
@@ -490,7 +525,7 @@ const NS="http://www.w3.org/2000/svg";
 const el=(n,at={})=>{const e=document.createElementNS(NS,n);for(const k in at)e.setAttribute(k,at[k]);return e;};
 const byId=id=>N.find(n=>n.id===id);
 const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-let state={view:"corriente",layer:"ambas",active:null, focusFen:null, tide:!reduced, q:""};
+let state={view:"corriente",layer:"ambas",active:null, focusFen:null, tide:!reduced, q:"", evid:"todas"};
 
 /* ---------- buscador por título y autor ----------
    Filtra por texto sin acentos: «cesaire» encuentra «Césaire», «gomez» encuentra «Gómez».
@@ -638,6 +673,12 @@ function refreshHi(){
     if(fn){ const a=e.na.id,b=e.nb.id; const touchF=(a===fn||b===fn); const bothDir=(a===fn||nb.direct.has(a))&&(b===fn||nb.direct.has(b)); const toInd=(nb.direct.has(a)&&nb.indirect.has(b))||(nb.direct.has(b)&&nb.indirect.has(a)); op=touchF?.82:bothDir?.42:toInd?.26:.04; }
     else if(qOn){ const ha=matchQ(e.na), hb=matchQ(e.nb); op=(ha&&hb)?.7:(ha||hb)?.22:.03; }
     else if(ff){ op=(e.na.f.includes(ff)&&e.nb.f.includes(ff))?.65:.05; }
+    /* El filtro de evidencia se aplica encima de cualquier otro recorte: apaga las corrientes
+       que no correspondan al estatuto pedido, sin alterar el resto de la lógica de foco. */
+    if(state.evid!=="todas"){
+      const ok=esCorr(e.na.id,e.nb.id);
+      if((state.evid==="ok")!==ok) op=(op===""?.035:Math.min(op,.035));
+    }
     e.p.style.strokeOpacity=op;
     if(e.marker) e.marker.style.strokeOpacity = (op==="")?.55 : Math.min(.7, op*1.1);
   });
@@ -658,13 +699,16 @@ function openPanel(id){
   const n=byId(id); const p=document.getElementById('panel'); const lu=L[n.l]; const {direct,indirect}=neighbors(id);
   const tags=n.f.map(f=>`<span class="tag" data-fen="${f}" style="background:${col(f)}">${fenLabel(f)}</span>`).join("");
   const lugar = lu[3]==="pais" ? `<div class="lugar pais">◈ ${lu[2]} · ${t('pNacion')}</div>` : `<div class="lugar ciudad">◆ ${lu[2]} · ${t('pRegion')} ${lu[4]}</div>`;
-  const dList=[...direct].map(x=>byId(x)).filter(Boolean).map(o=>{ const fu=fuenteDe(id,o.id); const diso=isDiso(id,o.id); const porcorr=/corroborar/i.test(fu);
-    return `<a data-go="${o.id}"><span class="rtitle">${diso?'⚡ ':''}${o.t}</span> <span class="r">— ${o.a}</span>${fu?`<span class="fu${porcorr?' pc':''}">${fu}</span>`:''}</a>`; }).join("");
+  const dAll=[...direct].map(x=>byId(x)).filter(Boolean);
+  const dShown=dAll.filter(o=>{ if(state.evid==="todas") return true; return esCorr(id,o.id)===(state.evid==="ok"); });
+  const dList=dShown.map(o=>{ const fu=fuenteDe(id,o.id); const diso=isDiso(id,o.id); const ok=esCorr(id,o.id);
+    return `<a data-go="${o.id}"><span class="ev ${ok?'ok':'pc'}" title="${ok?t('evOkT'):t('evPcT')}" aria-label="${ok?t('evOkT'):t('evPcT')}"></span><span class="rtitle">${diso?'⚡ ':''}${o.t}</span> <span class="r">— ${o.a}</span>${fu&&ok?`<span class="fu">${fu}</span>`:`<span class="fu pc">${t('evPcT')}</span>`}</a>`; }).join("");
+  const dCount = state.evid==="todas" ? `<span class="evn">${dAll.length}</span>` : `<span class="evn">${dShown.length} / ${dAll.length}</span>`;
   const iList=[...indirect].map(x=>{ const o=byId(x); if(!o)return""; let via=[...direct].find(d=>(ADJ[d]||[]).includes(x)); const vn=via?byId(via):null; const vname=vn?vn.a.replace(/\(.*/,'').split(',')[0].trim().split(' ').slice(-1)[0]:'…'; return `<a data-go="${o.id}">${o.t} <span class="via">— ${t('pVia')} ${vname}</span></a>`; }).join("");
   p.innerHTML=`<button class="close">×</button><div class="kind">${n.k==="obra"?t('pKindObra'):t('pKindManif')}</div>
     <h2>${n.t}</h2><div class="meta">${n.a}${n.y?" · "+n.y:""} · ${n.tr}</div>${lugar}
     <div class="tags">${tags}</div><p class="aporte">${n.ap}</p>
-    <div class="rel"><h3 class="dir">${t('pRelDir')}</h3>${dList||"<span style='font-size:12px;color:var(--gray)'>—</span>"}</div>
+    <div class="rel"><h3 class="dir">${t('pRelDir')}${dCount}</h3>${dList||`<span style='font-size:11.5px;color:var(--gray);font-style:italic'>${t('evNada')}</span>`}</div>
     ${iList?`<div class="rel"><h3 class="ind">${t('pRelInd')}</h3>${iList}</div>`:""}
     <div class="cita"><span class="citalbl">${t('pCitaLbl')}</span>
       <div class="apa" id="apacita">${n.a}${n.y?" ("+n.y+")":""}. <i>${n.t}</i>. ${t('pCitaEn')} <i>${t('pProyecto')}</i>, Centro de Pensamiento Caribe. ${location.origin+location.pathname}#${id}</div>
@@ -683,12 +727,15 @@ function buildLegend(){
   lg.innerHTML=`<div class="lgtitle">${total} ${t('lgTitle')}</div><div class="grid"></div>`+
     `<div class="keys"><span><i class="kob"></i>${t('lgResearch')} (${obras})</span><span><i class="kma"></i>${t('lgEthno')} (${manif})</span></div>`+
     `<div class="keys"><span><i class="kre"></i>${t('lgReson')}</span><span><i class="kdi"></i>${t('lgDisso')}</span><span><i class="kfr">✕</i>${t('lgFricc')}</span></div>`+
+    `<div class="corr"><div class="corrbar"><i class="ok" style="width:${(CORR_OK/RELS.length*100).toFixed(1)}%"></i><i class="pc" style="width:${(CORR_PC/RELS.length*100).toFixed(1)}%"></i></div>`+
+      `${CORR_OK} / ${RELS.length} ${t('lgCorr')} (${(CORR_OK/RELS.length*100).toFixed(0)} %) · <a id="corrLink">${t('lgCorrVer')}</a></div>`+
     `<div class="mlink"><a id="marcoLink">${t('lgMarco')}</a></div>`;
   const grid=lg.querySelector('.grid');
   Object.entries(FEN).forEach(([k,v])=>{ const d=document.createElement('div'); d.className="li"+(state.focusFen===k?" sel":"");
     const c=N.filter(n=>n.f.includes(k)).length;
     d.innerHTML=`<span class="sw" style="background:${v.c}"></span>${fenLabel(k)} <span style="opacity:.55">(${c})</span>`; d.onclick=()=>focusFen(k); grid.appendChild(d); });
   const ml=lg.querySelector('#marcoLink'); if(ml) ml.onclick=openMarco;
+  const cl=lg.querySelector('#corrLink'); if(cl) cl.onclick=()=>setEvid(state.evid==="ok"?"todas":"ok");
 }
 function openMarco(){ document.getElementById('marco').classList.add('show'); }
 function closeMarco(){ document.getElementById('marco').classList.remove('show'); }
@@ -697,6 +744,13 @@ function loop(t){ place(t); requestAnimationFrame(loop); }
 
 /* ---------- VISTA TABLA (accesible, navegable por teclado y lectores de pantalla) ---------- */
 let tblSort={col:"t", dir:1};
+/* Corrientes de una obra, con cuántas de ellas declaran fuente. Da a la vista accesible
+   la misma información que el semáforo del panel, en texto y no solo en color. */
+function evStats(id){ const rs=RELS.filter(r=>r.a===id||r.b===id);
+  const ok=rs.filter(r=>!!r.fuente && !/corroborar/i.test(r.fuente)).length; return {ok, tot:rs.length}; }
+function evCell(id){ const {ok,tot}=evStats(id); if(!tot) return '<span style="color:var(--gray)">—</span>';
+  const c = ok===tot?'var(--green-l)' : ok===0?'var(--red)' : 'var(--gold)';
+  return `<span style="color:${c};font-weight:600">${ok}</span><span style="color:var(--gray)"> / ${tot}</span>`; }
 function tblRows(){
   let rows=N.filter(n=>visible(n) && (!state.focusFen || n.f.includes(state.focusFen)) && matchQ(n));
   const key=tblSort.col;
@@ -711,7 +765,7 @@ function tblRows(){
 function renderTable(){
   const cont=document.getElementById('tabla');
   const rows=tblRows();
-  const cols=[["t",t('thObra')],["a",t('thAutor')],["y",t('thAno')],["k",t('thTipo')],["f",t('thFen')],["l",t('thLugar')],["tr",t('thTrad')]];
+  const cols=[["t",t('thObra')],["a",t('thAutor')],["y",t('thAno')],["k",t('thTipo')],["f",t('thFen')],["l",t('thLugar')],["tr",t('thTrad')],["ev",t('thEvid')]];
   const foco = (state.focusFen ? ` · ${t('tFiltro')} «${fenLabel(state.focusFen)}»` : "") + (state.q ? ` · ${t('tFiltro')} «${state.q}»` : "");
   let h=`<div class="tcap">${t('tCap')}</div><div class="tsub">${rows.length} ${t('tRefs')}${foco} · ${t('tSort')}</div>`;
   h+=`<table><caption>${t('tCaption')}</caption><thead><tr>`;
@@ -723,7 +777,8 @@ function renderTable(){
     h+=`<tr><td class="tit"><a href="#${n.id}" data-go="${n.id}">${n.t}</a></td>`+
        `<td>${n.a}</td><td>${n.y||"—"}</td>`+
        `<td class="${n.k==='obra'?'kind-o':'kind-m'}">${n.k==='obra'?t('tKindObra'):t('tKindManif')}</td>`+
-       `<td>${fen}</td><td>${lu[2]}${lu[3]==='ciudad'?' <span style="color:var(--gray)">'+t('tCiudad')+'</span>':''}</td><td>${n.tr}</td></tr>`;
+       `<td>${fen}</td><td>${lu[2]}${lu[3]==='ciudad'?' <span style="color:var(--gray)">'+t('tCiudad')+'</span>':''}</td><td>${n.tr}</td>`+
+       `<td>${evCell(n.id)}</td></tr>`;
   });
   h+=`</tbody></table>`;
   h+=`<p class="tnote">${t('tNote')} <a href="../data/agua-de-por-medio/datos-atlas.json">datos-atlas.json</a>.</p>`;
@@ -767,6 +822,8 @@ document.addEventListener('keydown', ev=>{
   ev.preventDefault(); document.getElementById('umbral').classList.add('gone'); qbox.focus(); qbox.select();
 });
 document.getElementById('layerSeg').addEventListener('click',e=>{ if(e.target.dataset.l){[...e.currentTarget.children].forEach(b=>b.classList.remove('on'));e.target.classList.add('on');state.layer=e.target.dataset.l; state.view==="tabla"?renderTable():render();} });
+document.getElementById('evSeg').addEventListener('click',e=>{ if(e.target.dataset.ev){[...e.currentTarget.children].forEach(b=>b.classList.remove('on'));e.target.classList.add('on');state.evid=e.target.dataset.ev; buildLegend(); refreshHi(); if(state.active) openPanel(state.active); if(state.view==="tabla") renderTable();} });
+function setEvid(v){ document.querySelectorAll('#evSeg button').forEach(b=>b.classList.toggle('on', b.dataset.ev===v)); state.evid=v; buildLegend(); refreshHi(); if(state.active) openPanel(state.active); if(state.view==="tabla") renderTable(); }
 document.getElementById('tideSeg').addEventListener('click',e=>{ if(e.target.dataset.tide){[...e.currentTarget.children].forEach(b=>b.classList.remove('on'));e.target.classList.add('on');state.tide=e.target.dataset.tide==="on"; if(!state.tide) place(0);} });
 
 function toVB(x,y){ const r=svg.getBoundingClientRect(); return [ (x-r.left)/r.width*VW, (y-r.top)/r.height*VH ]; }

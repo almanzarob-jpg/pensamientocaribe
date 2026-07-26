@@ -153,3 +153,51 @@
   .mapa-conceptual__svg { height: 540px; }
   .mapa-conceptual__panel { max-height: none; }
 }
+
+/* ══════════════════════════════════════════════════════════════
+   ÍNDICE NAVEGABLE
+   Segunda puerta de entrada al mismo marco conceptual. El grafo
+   sigue siendo la vista principal, pero deja de ser la única:
+   este árbol se recorre entero con el teclado y lo anuncia un
+   lector de pantalla, cosa que un SVG de nodos no hace.
+   ══════════════════════════════════════════════════════════════ */
+.mapa-vistas { display: flex; gap: 2px; margin-top: var(--space-sm); }
+.mapa-vista {
+  font-family: var(--ff-mono); font-size: 0.72rem; letter-spacing: 0.09em;
+  text-transform: uppercase; cursor: pointer; padding: 0.45rem 0.85rem;
+  background: transparent; color: var(--c-gray);
+  border: 1px solid var(--c-border-green); border-radius: 3px;
+  transition: color 0.18s, background 0.18s, border-color 0.18s;
+}
+.mapa-vista:hover { color: var(--c-cream); border-color: var(--c-green-light); }
+.mapa-vista:focus-visible { outline: 2px solid var(--c-green-light); outline-offset: 2px; }
+.mapa-vista.on { background: var(--c-green-light); color: var(--c-bg-deep); border-color: var(--c-green-light); }
+
+.mapa-arbol { position: absolute; inset: 0; overflow: auto; padding: var(--space-md); background: var(--c-bg-deep); }
+.mapa-arbol[hidden] { display: none; }
+.mapa-arbol__ayuda {
+  font-family: var(--ff-mono); font-size: 0.7rem; line-height: 1.7; letter-spacing: 0.04em;
+  color: var(--c-gray); border-left: 2px solid var(--c-green-light);
+  padding: 0.4rem 0 0.4rem 0.7rem; margin: 0 0 var(--space-md);
+}
+.mapa-arbol__ayuda b { color: var(--c-cream); font-weight: 600; }
+.mapa-arbol ul { list-style: none; margin: 0; padding-left: 1.05rem; border-left: 1px solid var(--c-border-green); }
+.mapa-arbol > .mapa-arbol__host > ul { padding-left: 0; border-left: 0; }
+.mapa-arbol li { margin: 1px 0; }
+.mapa-arbol__nodo {
+  display: flex; align-items: center; gap: 0.5rem; width: 100%; text-align: left;
+  background: transparent; border: 0; color: var(--c-cream);
+  font-family: var(--ff-body); font-size: 0.92rem; line-height: 1.35;
+  padding: 0.4rem 0.6rem; border-radius: 3px; cursor: pointer;
+  transition: background 0.15s, color 0.15s;
+}
+.mapa-arbol__nodo:hover { background: rgba(63, 138, 53, 0.12); }
+.mapa-arbol__nodo:focus-visible { outline: 2px solid var(--c-green-light); outline-offset: -1px; }
+.mapa-arbol__nodo[aria-selected="true"] { background: rgba(63, 138, 53, 0.2); box-shadow: inset 2px 0 0 var(--c-green-light); }
+.mapa-arbol__nodo .tw { font-family: var(--ff-mono); font-size: 0.62rem; color: var(--c-green-light); width: 0.75rem; flex: 0 0 auto; }
+.mapa-arbol__nodo.raiz { font-family: var(--ff-display); font-size: 1.12rem; font-weight: 600; }
+.mapa-arbol__nodo .nkids { font-family: var(--ff-mono); font-size: 0.62rem; color: var(--c-gray); margin-left: auto; flex: 0 0 auto; opacity: 0.7; }
+
+@media (max-width: 900px) {
+  .mapa-arbol { position: static; inset: auto; max-height: 540px; }
+}

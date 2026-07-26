@@ -132,6 +132,135 @@
       }
     }
 
+    /* ══════════ ÍNDICE NAVEGABLE ══════════
+       El grafo comunica la forma de la constelación; el árbol comunica su contenido a
+       quien no puede usar un ratón. Ambas vistas leen el mismo objeto de datos y
+       escriben en el mismo panel, así que no hay dos versiones del marco que mantener. */
+    var arbolHost = root.querySelector('.mapa-arbol__host');
+    var arbolWrap = root.querySelector('.mapa-arbol');
+    var arbolNodos = [];
+
+    function slugConcepto(s) {
+      return String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
+    }
+
+    function construirArbol() {
+      if (!arbolHost) return;
+      var html = '';
+      function nodoHTML(node, depth) {
+        var tieneHijos = !!(node.children && node.children.length);
+        var abierto = depth < 1;
+        var id = 'mc-' + node._id;
+        html += '<li>';
+        html += '<button type="button" class="mapa-arbol__nodo' + (depth === 0 ? ' raiz' : '') + '"'
+          + ' id="' + id + '" data-nid="' + node._id + '" role="treeitem" tabindex="-1"'
+          + ' aria-level="' + (depth + 1) + '" aria-selected="false"'
+          + (tieneHijos ? ' aria-expanded="' + abierto + '"' : '') + '>'
+          + '<span class="tw" aria-hidden="true">' + (tieneHijos ? (abierto ? '▾' : '▸') : '·') + '</span>'
+          + escapeHTML(node.label)
+          + (tieneHijos ? '<span class="nkids">' + node.children.length + '</span>' : '')
+          + '</button>';
+        if (tieneHijos) {
+          html += '<ul role="group" data-padre="' + node._id + '"' + (abierto ? '' : ' hidden') + '>';
+          node.children.forEach(function (c) { nodoHTML(c, depth + 1); });
+          html += '</ul>';
+        }
+        html += '</li>';
+      }
+      html += '<ul role="tree" aria-label="Conceptos del marco teórico">';
+      nodoHTML(data, 0);
+      html += '</ul>';
+      arbolHost.innerHTML = html;
+      arbolNodos = Array.prototype.slice.call(arbolHost.querySelectorAll('.mapa-arbol__nodo'));
+      if (arbolNodos.length) arbolNodos[0].tabIndex = 0;
+    }
+
+    function escapeHTML(s) {
+      return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+      });
+    }
+
+    function nodoPorId(id) {
+      var encontrado = null;
+      (function buscar(n) { if (encontrado) return; if (n._id === id) { encontrado = n; return; }
+        (n.children || []).forEach(buscar); })(data);
+      return encontrado;
+    }
+
+    function arbolVisibles() {
+      return arbolNodos.filter(function (b) { return b.offsetParent !== null; });
+    }
+
+    function arbolSeleccionar(btn) {
+      arbolNodos.forEach(function (x) { x.setAttribute('aria-selected', x === btn ? 'true' : 'false'); });
+      var n = nodoPorId(parseInt(btn.dataset.nid, 10));
+      if (n) {
+        selectNode(n);
+        try { history.replaceState(null, '', '#' + slugConcepto(n.label)); } catch (e) {}
+      }
+    }
+
+    function arbolEnfocar(btn) {
+      arbolNodos.forEach(function (x) { x.tabIndex = -1; });
+      btn.tabIndex = 0; btn.focus();
+      arbolSeleccionar(btn);
+    }
+
+    function arbolPlegar(btn, abrir) {
+      var ul = arbolHost.querySelector('ul[data-padre="' + btn.dataset.nid + '"]');
+      if (!ul) return;
+      if (abrir === undefined) abrir = ul.hasAttribute('hidden');
+      if (abrir) ul.removeAttribute('hidden'); else ul.setAttribute('hidden', '');
+      btn.setAttribute('aria-expanded', String(abrir));
+      var tw = btn.querySelector('.tw');
+      if (tw) tw.textContent = abrir ? '▾' : '▸';
+    }
+
+    if (arbolHost) {
+      construirArbol();
+      arbolHost.addEventListener('click', function (e) {
+        var b = e.target.closest('.mapa-arbol__nodo'); if (!b) return;
+        if (b.hasAttribute('aria-expanded')) arbolPlegar(b);
+        arbolEnfocar(b);
+      });
+      arbolHost.addEventListener('keydown', function (e) {
+        var b = document.activeElement;
+        if (!b || !b.classList || !b.classList.contains('mapa-arbol__nodo')) return;
+        var vis = arbolVisibles(), i = vis.indexOf(b);
+        if (e.key === 'ArrowDown') { e.preventDefault(); if (i < vis.length - 1) arbolEnfocar(vis[i + 1]); }
+        else if (e.key === 'ArrowUp') { e.preventDefault(); if (i > 0) arbolEnfocar(vis[i - 1]); }
+        else if (e.key === 'ArrowRight') { e.preventDefault();
+          if (b.getAttribute('aria-expanded') === 'false') arbolPlegar(b, true);
+          else if (b.getAttribute('aria-expanded') === 'true' && i < vis.length - 1) arbolEnfocar(vis[i + 1]); }
+        else if (e.key === 'ArrowLeft') { e.preventDefault();
+          if (b.getAttribute('aria-expanded') === 'true') arbolPlegar(b, false);
+          else if (i > 0) arbolEnfocar(vis[i - 1]); }
+        else if (e.key === 'Home') { e.preventDefault(); arbolEnfocar(vis[0]); }
+        else if (e.key === 'End') { e.preventDefault(); arbolEnfocar(vis[vis.length - 1]); }
+        else if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); arbolSeleccionar(b); }
+      });
+    }
+
+    var botonesVista = Array.prototype.slice.call(root.querySelectorAll('.mapa-vista'));
+    botonesVista.forEach(function (b) {
+      b.addEventListener('click', function () {
+        var v = b.dataset.vista;
+        botonesVista.forEach(function (x) {
+          var on = x === b;
+          x.classList.toggle('on', on);
+          x.setAttribute('aria-pressed', String(on));
+        });
+        var esArbol = v === 'indice';
+        if (arbolWrap) arbolWrap.hidden = !esArbol;
+        svg.style.visibility = esArbol ? 'hidden' : '';
+        var ctrl = root.querySelector('.mapa-conceptual__controles');
+        if (ctrl) ctrl.style.display = esArbol ? 'none' : '';
+        if (esArbol && arbolNodos.length) arbolNodos.filter(function (x) { return x.tabIndex === 0; })[0].focus();
+      });
+    });
+
     function render() {
       computeLayout();
       viewport.innerHTML = '';

@@ -5,6 +5,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>La negrura frente a la blanquitud monumental · Pensamiento Caribe</title>
   <meta name="description" content="Investigación filosófica que piensa la tensión entre negrura y blanquitud monumental, sus operadores conceptuales y su extensión algorítmica contemporánea.">
+  <link rel="canonical" href="https://pensamientocaribe.org/proyectos/negrura-blanquitud-monumental.html">
+  <meta name="author" content="Roberto Almanza Hernández">
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Pensamiento Caribe">
+  <meta property="og:locale" content="es_CO">
+  <meta property="og:url" content="https://pensamientocaribe.org/proyectos/negrura-blanquitud-monumental.html">
+  <meta property="og:title" content="La negrura frente a la blanquitud monumental">
+  <meta property="og:description" content="Negrura y blanquitud no son términos simétricos sino posiciones producidas por una historia de captura, despojo y monumentalización que hoy opera también por vía algorítmica. Mapa conceptual de treinta y tres conceptos, con Calibán y Juan Albañil como figuras de condensación.">
+  <meta property="og:image" content="https://pensamientocaribe.org/assets/diagrama-antropologia-caribe.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="La negrura frente a la blanquitud monumental">
+  <meta name="twitter:description" content="Mapa conceptual de la tensión entre negrura y blanquitud monumental, y su extensión hacia la blanquitud algorítmica.">
+  <meta name="twitter:image" content="https://pensamientocaribe.org/assets/diagrama-antropologia-caribe.jpg">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ResearchProject",
+    "name": "La negrura frente a la blanquitud monumental",
+    "description": "Investigación filosófica sobre la tensión constitutiva entre negrura y blanquitud monumental, los operadores conceptuales que la ponen en movimiento y su extensión contemporánea hacia la blanquitud algorítmica. Organiza su marco teórico en un mapa de treinta y tres conceptos articulados en ocho ramas.",
+    "url": "https://pensamientocaribe.org/proyectos/negrura-blanquitud-monumental.html",
+    "inLanguage": "es",
+    "startDate": "2026-01",
+    "founder": {
+      "@type": "Person",
+      "name": "Roberto Almanza Hernández",
+      "affiliation": { "@type": "CollegeOrUniversity", "name": "Universidad del Magdalena" }
+    },
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "Grupo de Investigación Pensamiento Caribe",
+      "url": "https://pensamientocaribe.org/"
+    },
+    "about": [
+      { "@type": "Thing", "name": "Negrura" },
+      { "@type": "Thing", "name": "Blanquitud monumental" },
+      { "@type": "Thing", "name": "Blanquitud algorítmica" },
+      { "@type": "Thing", "name": "Filosofía afrocaribeña" },
+      { "@type": "Thing", "name": "Calibán" },
+      { "@type": "Thing", "name": "Vidas negras" }
+    ],
+    "citation": [
+      "Hartman, S. (1997). Scenes of Subjection. Oxford University Press.",
+      "Moten, F. (2003). In the Break: The Aesthetics of the Black Radical Tradition. University of Minnesota Press.",
+      "Glissant, É. (1990). Poétique de la Relation. Gallimard.",
+      "Noble, S. U. (2018). Algorithms of Oppression. NYU Press.",
+      "Buolamwini, J. (2023). Unmasking AI. Random House."
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -154,6 +203,10 @@
             </p>
             <h3 class="mapa-conceptual__titulo">La negrura frente a la blanquitud monumental</h3>
             <p class="mapa-conceptual__autor">Roberto Almanza Hernández <span class="mapa-conceptual__sep">·</span> Universidad del Magdalena</p>
+            <div class="mapa-vistas" role="group" aria-label="Forma de recorrer el mapa">
+              <button type="button" class="mapa-vista on" data-vista="grafo" aria-pressed="true">Mapa</button>
+              <button type="button" class="mapa-vista" data-vista="indice" aria-pressed="false">Índice navegable</button>
+            </div>
           </div>
 
           <div class="mapa-conceptual__body">
@@ -165,6 +218,10 @@
                 <button type="button" class="mapa-zoom-in" aria-label="Acercar">+</button>
                 <button type="button" class="mapa-zoom-out" aria-label="Alejar">&minus;</button>
                 <button type="button" class="mapa-reset" aria-label="Centrar">&#9678;</button>
+              </div>
+              <div class="mapa-arbol" id="mapaArbol" hidden>
+                <p class="mapa-arbol__ayuda">Flechas <b>&uarr;</b> <b>&darr;</b> para moverte entre conceptos, <b>&rarr;</b> y <b>&larr;</b> para desplegar y plegar una rama, <b>Inicio</b> y <b>Fin</b> para ir a los extremos.</p>
+                <div class="mapa-arbol__host"></div>
               </div>
             </div>
 
@@ -181,6 +238,15 @@
         </div>
       </section>
 
+      <nav class="hermanos" aria-label="Otros proyectos del Centro de Pensamiento Caribe">
+        <p class="hermanos__titulo">Este proyecto conversa con</p>
+        <ul class="hermanos__lista">
+          <li><a href="con-el-agua-de-por-medio.html"><span class="hermanos__k">Atlas</span><span class="hermanos__n">Con el agua de por medio</span><span class="hermanos__d">Ciento cuarenta y cinco obras del pensamiento caribeño y las corrientes que las enlazan.</span></a></li>
+          <li><a href="mas-ramas-que-raices.html"><span class="hermanos__k">Cartografía sonora</span><span class="hermanos__n">Con el vaivén de las corrientes</span><span class="hermanos__d">Veintiséis rutas musicales de ida y vuelta entre el Gran Caribe y África, con su fuente y su canción.</span></a></li>
+          <li class="actual"><a aria-current="page"><span class="hermanos__k">Filosofía afrocaribeña</span><span class="hermanos__n">La negrura frente a la blanquitud monumental</span><span class="hermanos__d">Estás aquí.</span></a></li>
+          <li><a href="../medios/cine-caribe.html"><span class="hermanos__k">Filmoteca crítica</span><span class="hermanos__n">Cine y documental del Caribe</span><span class="hermanos__d">Veintidós obras catalogadas con su acceso declarado y su lectura desde las categorías del grupo.</span></a></li>
+        </ul>
+      </nav>
       <nav class="proyecto-footer-nav" aria-label="Navegación entre proyectos">
         <a href="mas-ramas-que-raices.html" class="btn btn--secondary">&larr; Proyecto anterior</a>
         <a href="../index.html#proyectos" class="btn btn--primary">Ver todos los proyectos</a>
