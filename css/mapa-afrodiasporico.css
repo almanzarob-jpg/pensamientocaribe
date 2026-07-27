@@ -318,3 +318,54 @@
 @media (min-width: 961px) {
   .atlantico-panel { display: block; }
 }
+
+/* ══════════════════════════════════════════════════════════════
+   LÍNEA DE TIEMPO DE LAS RUTAS
+   El mapa privilegia la geografía y por eso escondía la secuencia
+   histórica, que es donde se ve la tesis: más viajes de vuelta que
+   de ida. Esta franja la devuelve.
+   ══════════════════════════════════════════════════════════════ */
+.atlantico-tiempo {
+  margin-top: var(--space-lg);
+  border: 1px solid var(--c-border-green);
+  border-radius: var(--radius-md, 6px);
+  background: var(--c-surface-a);
+  padding: var(--space-md);
+}
+.atlantico-tiempo-cab { margin-bottom: var(--space-sm); }
+.atlantico-tiempo-titulo {
+  font-family: var(--ff-mono); font-size: 0.72rem; letter-spacing: 0.14em;
+  text-transform: uppercase; color: var(--c-green-light); margin: 0 0 0.35rem;
+}
+.atlantico-tiempo-sub {
+  font-size: 0.86rem; line-height: 1.6; color: var(--c-gray); margin: 0; max-width: 74ch;
+}
+.atlantico-tiempo-scroll { overflow-x: auto; overflow-y: hidden; }
+#atlantico-tiempo-svg { display: block; width: 100%; min-width: 760px; height: 132px; }
+.att-eje { stroke: var(--c-border-green); stroke-width: 1; }
+.att-tick { stroke: var(--c-border-green); stroke-width: 1; }
+.att-anio {
+  font-family: var(--ff-mono); font-size: 9px; letter-spacing: 0.08em; fill: var(--c-gray);
+}
+.att-epoca {
+  font-family: var(--ff-mono); font-size: 8.5px; letter-spacing: 0.1em;
+  text-transform: uppercase; opacity: 0.9;
+}
+.att-banda { opacity: 0.16; }
+.att-ruta { cursor: pointer; transition: r 0.15s, opacity 0.15s; }
+.att-ruta:hover { opacity: 1; }
+.att-ruta:focus { outline: none; }
+.att-ruta.on { stroke: var(--c-cream); stroke-width: 2; }
+.att-hit { cursor: pointer; fill: transparent; }
+.att-hit:focus-visible + .att-ruta,
+.att-hit:focus + .att-ruta { stroke: var(--c-cream); stroke-width: 2; }
+.att-lbl {
+  font-family: var(--ff-mono); font-size: 9px; fill: var(--c-cream);
+  opacity: 0; transition: opacity 0.15s; pointer-events: none;
+}
+.att-g:hover .att-lbl, .att-g.on .att-lbl { opacity: 1; }
+
+@media (max-width: 640px) {
+  .atlantico-tiempo { padding: var(--space-sm); }
+  .atlantico-tiempo-sub { font-size: 0.8rem; }
+}

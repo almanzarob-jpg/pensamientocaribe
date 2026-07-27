@@ -180,6 +180,7 @@
             <button class="filter-btn" data-layer="4">Retornos</button>
             <span style="flex: 1 1 auto;"></span>
             <button class="filter-btn filter-btn--travesia" data-action="travesia">&#9656; Iniciar la travesía</button>
+            <button class="filter-btn filter-btn--travesia" data-action="travesia-sonora" title="Recorre las veintiséis rutas en orden y encadena sus canciones">&#9835; Travesía con música</button>
             <button class="filter-btn" data-view="caribe">&#8598; Caribe</button>
             <button class="filter-btn" data-view="atlantico">&#9678; Atlántico</button>
             <button class="filter-btn" data-view="africa">&#8599; África</button>
@@ -188,6 +189,16 @@
           <div class="atlantico-layout">
             <div id="atlantico-leaflet-map" class="caribe-leaflet-map" role="application" aria-label="Mapa interactivo afrodiaspórico entre el Gran Caribe y África"></div>
             <aside id="atlantico-panel" class="atlantico-panel" aria-live="polite" aria-label="Panel de lectura del mapa"></aside>
+          </div>
+
+          <div id="atlantico-tiempo" class="atlantico-tiempo">
+            <div class="atlantico-tiempo-cab">
+              <p class="atlantico-tiempo-titulo">Las veintiséis rutas en el tiempo</p>
+              <p class="atlantico-tiempo-sub">El mapa dice dónde; esta franja dice cuándo. Cada marca es una ruta, en su año de partida y con el color de su época. Pulsa una para abrirla.</p>
+            </div>
+            <div class="atlantico-tiempo-scroll">
+              <svg id="atlantico-tiempo-svg" viewBox="0 0 1000 132" preserveAspectRatio="xMinYMid meet" role="group" aria-label="Línea de tiempo de las rutas"></svg>
+            </div>
           </div>
 
           <div class="caribe-mapa-legend">

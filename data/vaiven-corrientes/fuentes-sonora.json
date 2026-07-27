@@ -1,0 +1,488 @@
+{
+  "meta": {
+    "titulo": "Bibliografía de Con el vaivén de las corrientes",
+    "descripcion": "Referencias citadas en los puertos y las rutas del mapa sonoro. Generadas a partir del campo fuente en texto libre; los campos vacíos están pendientes de completar.",
+    "responsable": "Roberto Almanza Hernández",
+    "version": "0.1.0",
+    "fecha": "2026-07-25",
+    "referencias": 25,
+    "completas": 0
+  },
+  "referencias": [
+    {
+      "key": "MontesPizarro2018",
+      "citaOriginal": "Montes Pizarro 2018",
+      "autores": [
+        {
+          "apellido": "Montes Pizarro"
+        }
+      ],
+      "anio": "2018",
+      "titulo": "",
+      "tipo": "",
+      "editorial": "",
+      "lugar": "",
+      "doi": "",
+      "url": "",
+      "nota": "",
+      "usosEnElMapa": 11,
+      "estado": "por completar"
+    },
+    {
+      "key": "Adi2018",
+      "citaOriginal": "Adi 2018",
+      "autores": [
+        {
+          "apellido": "Adi"
+        }
+      ],
+      "anio": "2018",
+      "titulo": "",
+      "tipo": "",
+      "editorial": "",
+      "lugar": "",
+      "doi": "",
+      "url": "",
+      "nota": "",
+      "usosEnElMapa": 4,
+      "estado": "por completar"
+    },
+    {
+      "key": "Shain2018",
+      "citaOriginal": "Shain 2018",
+      "autores": [
+        {
+          "apellido": "Shain"
+        }
+      ],
+      "anio": "2018",
+      "titulo": "",
+      "tipo": "",
+      "editorial": "",
+      "lugar": "",
+      "doi": "",
+      "url": "",
+      "nota": "",
+      "usosEnElMapa": 4,
+      "estado": "por completar"
+    },
+    {
+      "key": "Jaji2014",
+      "citaOriginal": "Jaji 2014",
+      "autores": [
+        {
+          "apellido": "Jaji"
+        }
+      ],
+      "anio": "2014",
+      "titulo": "",
+      "tipo": "",
+      "editorial": "",
+      "lugar": "",
+      "doi": "",
+      "url": "",
+      "nota": "",
+      "usosEnElMapa": 2,
+      "estado": "por completar"
+    },
+    {
+      "key": "Bilby2011",
+      "citaOriginal": "Bilby 2011",
+      "autores": [
+        {
+          "apellido": "Bilby"
+        }
+      ],
+      "anio": "2011",
+      "titulo": "",
+      "tipo": "",
+      "editorial": "",
+      "lugar": "",
+      "doi": "",
+      "url": "",
+      "nota": "",
+      "usosEnElMapa": 1,
+      "estado": "por completar"
+    },
+    {
+      "key": "Bonacci2015",
+      "citaOriginal": "Bonacci 2015",
+      "autores": [
+        {
+          "apellido": "Bonacci"
+        }
+      ],
+      "anio": "2015",
+      "titulo": "",
+      "tipo": "",
+      "editorial": "",
+      "lugar": "",
+      "doi": "",
+      "url": "",
+      "nota": "",
+      "usosEnElMapa": 1,
+      "estado": "por completar"
+    },
+    {
+      "key": "Chudesokei2015",
+      "citaOriginal": "Chude-Sokei 2015",
+      "autores": [
+        {
+          "apellido": "Chude-Sokei"
+        }
+      ],
+      "anio": "2015",
+      "titulo": "",
+      "tipo": "",
+      "editorial": "",
+      "lugar": "",
+      "doi": "",
+      "url": "",
+      "nota": "",
+      "usosEnElMapa": 1,
+      "estado": "por completar"
+    },
+    {
+      "key": "Collins1994",
+      "citaOriginal": "Collins 1994",
+      "autores": [
+        {
+          "apellido": "Collins"
+        }
+      ],
+      "anio": "1994",
+      "titulo": "",
+      "tipo": "",
+      "editorial": "",
+      "lugar": "",
+      "doi": "",
+      "url": "",
+      "nota": "",
+      "usosEnElMapa": 1,
+      "estado": "por completar"
+    },
+    {
+      "key": "Cunin2003",
+      "citaOriginal": "Cunin 2003",
+      "autores": [
+        {
+          "apellido": "Cunin"
+        }
+      ],
+      "anio": "2003",
+      "titulo": "",
+      "tipo": "",
+      "editorial": "",
+      "lugar": "",
+      "doi": "",
+      "url": "",
+      "nota": "",
+      "usosEnElMapa": 1,
+      "estado": "por completar"
+    },
+    {
+      "key": "Cunin2006",
+      "citaOriginal": "Cunin 2006",
+      "autores": [
+        {
+          "apellido": "Cunin"
+        }
+      ],
+      "anio": "2006",
+      "titulo": "",
+      "tipo": "",
+      "editorial": "",
+      "lugar": "",
+      "doi": "",
+      "url": "",
+      "nota": "",
+      "usosEnElMapa": 1,
+      "estado": "por completar"
+    },
+    {
+      "key": "Denning2015",
+      "citaOriginal": "Denning 2015",
+      "autores": [
+        {
+          "apellido": "Denning"
+        }
+      ],
+      "anio": "2015",
+      "titulo": "",
+      "tipo": "",
+      "editorial": "",
+      "lugar": "",
+      "doi": "",
+      "url": "",
+      "nota": "",
+      "usosEnElMapa": 1,
+      "estado": "por completar"
+    },
+    {
+      "key": "Erlmann1991",
+      "citaOriginal": "Erlmann 1991",
+      "autores": [
+        {
+          "apellido": "Erlmann"
+        }
+      ],
+      "anio": "1991",
+      "titulo": "",
+      "tipo": "",
+      "editorial": "",
+      "lugar": "",
+      "doi": "",
+      "url": "",
+      "nota": "",
+      "usosEnElMapa": 1,
+      "estado": "por completar"
+    },
+    {
+      "key": "Ewens1991",
+      "citaOriginal": "Ewens 1991",
+      "autores": [
+        {
+          "apellido": "Ewens"
+        }
+      ],
+      "anio": "1991",
+      "titulo": "",
+      "tipo": "",
+      "editorial": "",
+      "lugar": "",
+      "doi": "",
+      "url": "",
+      "nota": "",
+      "usosEnElMapa": 1,
+      "estado": "por completar"
+    },
+    {
+      "key": "Gilroy1993",
+      "citaOriginal": "Gilroy 1993",
+      "autores": [
+        {
+          "apellido": "Gilroy"
+        }
+      ],
+      "anio": "1993",
+      "titulo": "",
+      "tipo": "",
+      "editorial": "",
+      "lugar": "",
+      "doi": "",
+      "url": "",
+      "nota": "",
+      "usosEnElMapa": 1,
+      "estado": "por completar"
+    },
+    {
+      "key": "GiraldoBarbosa2016",
+      "citaOriginal": "Giraldo Barbosa 2016",
+      "autores": [
+        {
+          "apellido": "Giraldo Barbosa"
+        }
+      ],
+      "anio": "2016",
+      "titulo": "",
+      "tipo": "",
+      "editorial": "",
+      "lugar": "",
+      "doi": "",
+      "url": "",
+      "nota": "",
+      "usosEnElMapa": 1,
+      "estado": "por completar"
+    },
+    {
+      "key": "Guilbault1993",
+      "citaOriginal": "Guilbault 1993",
+      "autores": [
+        {
+          "apellido": "Guilbault"
+        }
+      ],
+      "anio": "1993",
+      "titulo": "",
+      "tipo": "",
+      "editorial": "",
+      "lugar": "",
+      "doi": "",
+      "url": "",
+      "nota": "",
+      "usosEnElMapa": 1,
+      "estado": "por completar"
+    },
+    {
+      "key": "Hamilton2019",
+      "citaOriginal": "Hamilton 2019",
+      "autores": [
+        {
+          "apellido": "Hamilton"
+        }
+      ],
+      "anio": "2019",
+      "titulo": "",
+      "tipo": "",
+      "editorial": "",
+      "lugar": "",
+      "doi": "",
+      "url": "",
+      "nota": "",
+      "usosEnElMapa": 1,
+      "estado": "por completar"
+    },
+    {
+      "key": "Manuel1995",
+      "citaOriginal": "Manuel 1995",
+      "autores": [
+        {
+          "apellido": "Manuel"
+        }
+      ],
+      "anio": "1995",
+      "titulo": "",
+      "tipo": "",
+      "editorial": "",
+      "lugar": "",
+      "doi": "",
+      "url": "",
+      "nota": "",
+      "usosEnElMapa": 1,
+      "estado": "por completar"
+    },
+    {
+      "key": "Manuel1995",
+      "citaOriginal": "Manuel 1995 (Fania)",
+      "autores": [
+        {
+          "apellido": "Manuel"
+        }
+      ],
+      "anio": "1995",
+      "titulo": "",
+      "tipo": "",
+      "editorial": "",
+      "lugar": "",
+      "doi": "",
+      "url": "",
+      "nota": "Fania",
+      "usosEnElMapa": 1,
+      "estado": "por completar"
+    },
+    {
+      "key": "Matory2005",
+      "citaOriginal": "Matory 2005",
+      "autores": [
+        {
+          "apellido": "Matory"
+        }
+      ],
+      "anio": "2005",
+      "titulo": "",
+      "tipo": "",
+      "editorial": "",
+      "lugar": "",
+      "doi": "",
+      "url": "",
+      "nota": "",
+      "usosEnElMapa": 1,
+      "estado": "por completar"
+    },
+    {
+      "key": "QuinteroRivera1998",
+      "citaOriginal": "Quintero Rivera 1998",
+      "autores": [
+        {
+          "apellido": "Quintero Rivera"
+        }
+      ],
+      "anio": "1998",
+      "titulo": "",
+      "tipo": "",
+      "editorial": "",
+      "lugar": "",
+      "doi": "",
+      "url": "",
+      "nota": "",
+      "usosEnElMapa": 1,
+      "estado": "por completar"
+    },
+    {
+      "key": "Rohlehr1990",
+      "citaOriginal": "Rohlehr 1990",
+      "autores": [
+        {
+          "apellido": "Rohlehr"
+        }
+      ],
+      "anio": "1990",
+      "titulo": "",
+      "tipo": "",
+      "editorial": "",
+      "lugar": "",
+      "doi": "",
+      "url": "",
+      "nota": "",
+      "usosEnElMapa": 1,
+      "estado": "por completar"
+    },
+    {
+      "key": "Stewart2000",
+      "citaOriginal": "Stewart 2000",
+      "autores": [
+        {
+          "apellido": "Stewart"
+        }
+      ],
+      "anio": "2000",
+      "titulo": "",
+      "tipo": "",
+      "editorial": "",
+      "lugar": "",
+      "doi": "",
+      "url": "",
+      "nota": "",
+      "usosEnElMapa": 1,
+      "estado": "por completar"
+    },
+    {
+      "key": "VonEschen2004",
+      "citaOriginal": "Von Eschen 2004",
+      "autores": [
+        {
+          "apellido": "Von Eschen"
+        }
+      ],
+      "anio": "2004",
+      "titulo": "",
+      "tipo": "",
+      "editorial": "",
+      "lugar": "",
+      "doi": "",
+      "url": "",
+      "nota": "",
+      "usosEnElMapa": 1,
+      "estado": "por completar"
+    },
+    {
+      "key": "ZaireAlbumYFilmLiveInAfrica",
+      "citaOriginal": "Zaire 74: álbum y film Live in Africa",
+      "autores": [
+        {
+          "apellido": "Zaire 74: álbum y film Live in Africa"
+        }
+      ],
+      "anio": "",
+      "titulo": "",
+      "tipo": "",
+      "editorial": "",
+      "lugar": "",
+      "doi": "",
+      "url": "",
+      "nota": "",
+      "usosEnElMapa": 1,
+      "estado": "por completar"
+    }
+  ]
+}

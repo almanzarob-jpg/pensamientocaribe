@@ -649,6 +649,59 @@
       ], { paddingTopLeft: [60, 60], paddingBottomRight: [60, 60], maxZoom: 5, duration: 1.3 });
     }
 
+    /* ══════════ ESCUCHA ENCADENADA ══════════
+       Veinte de las veintiséis rutas traen canción, y hasta ahora cada una se abría
+       por separado. Con la escucha encadenada la travesía se vuelve una audición de
+       dos siglos: al terminar una pista, el mapa vuela al arco siguiente y sigue
+       sonando. Si el video no permite incrustarse, no se corta el recorrido: espera
+       unos segundos y pasa al siguiente. */
+    var escuchaEncadenada = false;
+    var reproductorTour = null;
+
+    function destruirReproductorTour() {
+      if (reproductorTour && typeof reproductorTour.destroy === 'function') {
+        try { reproductorTour.destroy(); } catch (e) {}
+      }
+      reproductorTour = null;
+    }
+
+    function siguientePaso() {
+      if (!tourActivo) return;
+      if (tourIdx < arcos.length - 1) irAPaso(tourIdx + 1);
+      else { escuchaEncadenada = false; abandonarTravesia(true); }
+    }
+
+    function sonarPaso(r) {
+      destruirReproductorTour();
+      if (!escuchaEncadenada) return;
+      var hueco = panel ? panel.querySelector('.atlantico-panel-player') : null;
+      var id = (r.cancion && r.cancion.youtubeId) ? r.cancion.youtubeId : null;
+      // rutas sin canción: no cortan la audición, se leen unos segundos y sigue
+      if (!id || !hueco) { setTimeout(function () { if (escuchaEncadenada) siguientePaso(); }, 3800); return; }
+      var etiqueta = hueco.querySelector('.atlantico-panel-cancion-label');
+      hueco.innerHTML = '';
+      if (etiqueta) hueco.appendChild(etiqueta);
+      var caja = document.createElement('div');
+      hueco.appendChild(caja);
+      var pasoAlEmpezar = tourIdx;
+      conYouTubeAPI(function (ok) {
+        if (!ok || !escuchaEncadenada || tourIdx !== pasoAlEmpezar) return;
+        if (!caja.parentNode) return;
+        reproductorTour = new YT.Player(caja, {
+          width: '100%', height: '200', videoId: id,
+          playerVars: { autoplay: 1, rel: 0 },
+          events: {
+            onStateChange: function (e) {
+              if (e.data === YT.PlayerState.ENDED && escuchaEncadenada && tourIdx === pasoAlEmpezar) siguientePaso();
+            },
+            onError: function () {
+              if (escuchaEncadenada && tourIdx === pasoAlEmpezar) setTimeout(siguientePaso, 1200);
+            }
+          }
+        });
+      });
+    }
+
     function irAPaso(i) {
       tourIdx = i;
       var arco = arcos[i];
@@ -658,16 +711,21 @@
       resaltarArco(arco);
       volarAArco(arco);
       abrirPanelRuta(arco.rutaData, arco, true);
+      marcarTiempo(i);
+      sonarPaso(arco.rutaData);
     }
 
-    function iniciarTravesia() {
+    function iniciarTravesia(conSonido) {
       aplicarEpoca('all');
       tourActivo = true;
+      escuchaEncadenada = conSonido === true;
       irAPaso(0);
     }
 
     function abandonarTravesia(volverVista) {
       tourActivo = false;
+      escuchaEncadenada = false;
+      destruirReproductorTour();
       restaurarArcos();
       if (volverVista) {
         map.flyTo([16, -32], 3, { duration: 1.2 });
@@ -676,7 +734,110 @@
     }
 
     var btnTravesia = document.querySelector('.caribe-mapa-filters .filter-btn[data-action="travesia"]');
-    if (btnTravesia) btnTravesia.addEventListener('click', iniciarTravesia);
+    if (btnTravesia) btnTravesia.addEventListener('click', function () { iniciarTravesia(false); });
+    var btnTravesiaSon = document.querySelector('.caribe-mapa-filters .filter-btn[data-action="travesia-sonora"]');
+    if (btnTravesiaSon) btnTravesiaSon.addEventListener('click', function () { iniciarTravesia(true); });
+
+    /* ══════════ LÍNEA DE TIEMPO ══════════
+       El mapa organiza las rutas por geografía y deja la secuencia histórica
+       ilegible. Aquí el eje es el año de partida: de un vistazo se ve que los
+       viajes de vuelta se acumulan, que es la tesis del proyecto. */
+    var tiempoSVG = document.getElementById('atlantico-tiempo-svg');
+    var marcasTiempo = [];
+
+    function anoInicio(r) {
+      var m = String(r.anos || '').match(/\d{4}/);
+      return m ? parseInt(m[0], 10) : null;
+    }
+
+    function svgEl(tag, attrs) {
+      var e = document.createElementNS('http://www.w3.org/2000/svg', tag);
+      for (var k in attrs) if (attrs.hasOwnProperty(k)) e.setAttribute(k, attrs[k]);
+      return e;
+    }
+
+    function construirTiempo() {
+      if (!tiempoSVG) return;
+      var W = 1000, H = 132, x0 = 46, x1 = W - 26, base = 86;
+      var aMin = 1790, aMax = 2030;
+      var escala = function (a) { return x0 + ((a - aMin) / (aMax - aMin)) * (x1 - x0); };
+      tiempoSVG.innerHTML = '';
+
+      // bandas de época, para leer el color sin memorizarlo
+      var rangos = { 1: [1795, 1900], 2: [1900, 1945], 3: [1945, 1980], 4: [1960, 2030] };
+      Object.keys(rangos).forEach(function (k) {
+        var r = rangos[k], xa = escala(r[0]), xb = escala(r[1]);
+        tiempoSVG.appendChild(svgEl('rect', {
+          x: xa, y: 20, width: Math.max(xb - xa, 2), height: 12,
+          fill: epocas[k].color, class: 'att-banda'
+        }));
+        var et = svgEl('text', { x: xa + 3, y: 16, class: 'att-epoca', fill: epocas[k].color });
+        et.textContent = epocaNombre(k);
+        tiempoSVG.appendChild(et);
+      });
+
+      tiempoSVG.appendChild(svgEl('path', { d: 'M ' + x0 + ',' + base + ' L ' + x1 + ',' + base, class: 'att-eje' }));
+      for (var a = 1800; a <= 2020; a += 20) {
+        var x = escala(a);
+        tiempoSVG.appendChild(svgEl('path', { d: 'M ' + x + ',' + base + ' L ' + x + ',' + (base + 6), class: 'att-tick' }));
+        var tx = svgEl('text', { x: x, y: base + 19, class: 'att-anio', 'text-anchor': 'middle' });
+        tx.textContent = a;
+        tiempoSVG.appendChild(tx);
+      }
+
+      // apilar las rutas que caen en el mismo tramo para que ninguna tape a otra
+      var ocupado = {};
+      marcasTiempo = [];
+      arcos.forEach(function (arco, i) {
+        var r = arco.rutaData;
+        var an = anoInicio(r);
+        if (an === null) return;
+        var x = escala(an);
+        var col = Math.round(x / 11);
+        ocupado[col] = (ocupado[col] || 0) + 1;
+        var y = base - 9 - (ocupado[col] - 1) * 12;
+
+        var g = svgEl('g', { class: 'att-g' });
+        var c = svgEl('circle', {
+          cx: x, cy: y, r: 5, class: 'att-ruta',
+          fill: epocas[r.epoca].color, 'fill-opacity': 0.85
+        });
+        var lbl = svgEl('text', { x: x, y: y - 9, class: 'att-lbl', 'text-anchor': 'middle' });
+        lbl.textContent = r.anos;
+        var hit = svgEl('circle', { cx: x, cy: y, r: 9, class: 'att-hit', tabindex: '0', role: 'button' });
+        var titulo = ((IDIOMA === 'en' && r.titulo_en) ? r.titulo_en : r.titulo);
+        hit.appendChild(svgEl('title')).textContent = titulo + ' · ' + r.anos;
+        hit.setAttribute('aria-label', titulo + ', ' + r.anos);
+
+        function abrir() {
+          if (tourActivo) abandonarTravesia(false);
+          if (!map.hasLayer(arco)) arco.addTo(map);
+          seleccionarArco(arco);
+          volarAArco(arco);
+          abrirPanelRuta(r, arco, false);
+          marcarTiempo(i);
+        }
+        hit.addEventListener('click', abrir);
+        hit.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); abrir(); }
+        });
+
+        g.appendChild(c); g.appendChild(lbl); g.appendChild(hit);
+        tiempoSVG.appendChild(g);
+        marcasTiempo.push({ g: g, c: c, idx: i });
+      });
+    }
+
+    function marcarTiempo(i) {
+      marcasTiempo.forEach(function (m) {
+        var on = m.idx === i;
+        m.g.classList.toggle('on', on);
+        m.c.setAttribute('r', on ? 7 : 5);
+        m.c.setAttribute('fill-opacity', on ? 1 : 0.85);
+      });
+    }
+
+    construirTiempo();
 
     panelIntro();
 

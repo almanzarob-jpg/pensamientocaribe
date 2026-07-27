@@ -151,6 +151,7 @@
             <button class="filter-btn" data-layer="4">Returns</button>
             <span style="flex: 1 1 auto;"></span>
             <button class="filter-btn filter-btn--travesia" data-action="travesia">&#9656; Start the journey</button>
+            <button class="filter-btn filter-btn--travesia" data-action="travesia-sonora" title="Travels the twenty-six routes in order and chains their songs">&#9835; Journey with music</button>
             <button class="filter-btn" data-view="caribe">&#8598; Caribbean</button>
             <button class="filter-btn" data-view="atlantico">&#9678; Atlantic</button>
             <button class="filter-btn" data-view="africa">&#8599; Africa</button>
@@ -159,6 +160,16 @@
           <div class="atlantico-layout">
             <div id="atlantico-leaflet-map" class="caribe-leaflet-map" role="application" aria-label="Interactive Afrodiasporic map between the Greater Caribbean and Africa" data-lang="en"></div>
             <aside id="atlantico-panel" class="atlantico-panel" aria-live="polite" aria-label="Map reading panel"></aside>
+          </div>
+
+          <div id="atlantico-tiempo" class="atlantico-tiempo">
+            <div class="atlantico-tiempo-cab">
+              <p class="atlantico-tiempo-titulo">The twenty-six routes in time</p>
+              <p class="atlantico-tiempo-sub">The map tells you where; this strip tells you when. Each mark is a route, placed at its departure year and colored by its era. Click one to open it.</p>
+            </div>
+            <div class="atlantico-tiempo-scroll">
+              <svg id="atlantico-tiempo-svg" viewBox="0 0 1000 132" preserveAspectRatio="xMinYMid meet" role="group" aria-label="Timeline of the routes"></svg>
+            </div>
           </div>
 
           <div class="caribe-mapa-legend">

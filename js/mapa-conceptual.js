@@ -120,6 +120,8 @@
       return 'M ' + x1 + ' ' + y1 + ' C ' + mx + ' ' + y1 + ', ' + mx + ' ' + y2 + ', ' + x2 + ' ' + y2;
     }
 
+    var panelCita = root.querySelector('.mapa-conceptual__panel-cita');
+
     function selectNode(node) {
       panelTitulo.textContent = node.label;
       panelDesc.textContent = node.description || 'Sin descripcion disponible.';
@@ -130,6 +132,27 @@
       } else {
         panelImgWrap.hidden = true;
       }
+      pintarCita(node);
+    }
+
+    /* Cada concepto tiene dirección propia: es lo que permite citarlo en un artículo
+       o enlazarlo desde un programa de curso sin remitir al mapa entero. */
+    function pintarCita(node) {
+      if (!panelCita) return;
+      var id = idDe(node);
+      var url = location.origin + location.pathname + '#' + id;
+      panelCita.innerHTML =
+        '<span class="mapa-conceptual__cita-lbl">Enlace citable de este concepto</span>' +
+        '<code class="mapa-conceptual__cita-url">' + url + '</code>' +
+        '<button type="button" class="mapa-conceptual__cita-btn">Copiar enlace</button>';
+      var b = panelCita.querySelector('.mapa-conceptual__cita-btn');
+      b.addEventListener('click', function () {
+        try {
+          navigator.clipboard.writeText(url);
+          b.textContent = 'Copiado';
+          setTimeout(function () { b.textContent = 'Copiar enlace'; }, 1400);
+        } catch (e) {}
+      });
     }
 
     /* ══════════ ÍNDICE NAVEGABLE ══════════
@@ -140,10 +163,14 @@
     var arbolWrap = root.querySelector('.mapa-arbol');
     var arbolNodos = [];
 
+    /* El identificador viaja en los datos (`id`), no se recalcula desde la etiqueta:
+       as\u00ed el enlace de un concepto sigue funcionando aunque ma\u00f1ana se reescriba su
+       t\u00edtulo. Solo cae al slug si el dato viene de una versi\u00f3n antigua sin `id`. */
     function slugConcepto(s) {
       return String(s).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '')
         .replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
     }
+    function idDe(nodo) { return nodo.id || slugConcepto(nodo.label); }
 
     function construirArbol() {
       if (!arbolHost) return;
@@ -198,7 +225,7 @@
       var n = nodoPorId(parseInt(btn.dataset.nid, 10));
       if (n) {
         selectNode(n);
-        try { history.replaceState(null, '', '#' + slugConcepto(n.label)); } catch (e) {}
+        try { history.replaceState(null, '', '#' + idDe(n)); } catch (e) {}
       }
     }
 
@@ -241,6 +268,33 @@
         else if (e.key === 'End') { e.preventDefault(); arbolEnfocar(vis[vis.length - 1]); }
         else if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); arbolSeleccionar(b); }
       });
+    }
+    window.addEventListener('hashchange', function () { abrirDesdeHash(); });
+
+    /* Si alguien llega con #opacidad-glissant desde una cita, abrimos ese concepto en
+       el índice y desplegamos la rama que lo contiene. */
+    function abrirDesdeHash() {
+      var id = (location.hash || '').replace(/^#/, '');
+      if (!id || !arbolNodos.length) return false;
+      var destino = null;
+      arbolNodos.forEach(function (b) {
+        var n = nodoPorId(parseInt(b.dataset.nid, 10));
+        if (n && idDe(n) === id) destino = b;
+      });
+      if (!destino) return false;
+      // desplegar los ancestros para que el nodo quede visible
+      var li = destino.parentNode;
+      while (li && li !== arbolHost) {
+        if (li.tagName === 'UL' && li.hasAttribute('hidden')) {
+          var padre = arbolHost.querySelector('.mapa-arbol__nodo[data-nid="' + li.dataset.padre + '"]');
+          if (padre) arbolPlegar(padre, true);
+        }
+        li = li.parentNode;
+      }
+      var indice = root.querySelector('.mapa-vista[data-vista="indice"]');
+      if (indice) indice.click();
+      arbolEnfocar(destino);
+      return true;
     }
 
     var botonesVista = Array.prototype.slice.call(root.querySelectorAll('.mapa-vista'));
@@ -421,14 +475,33 @@
     });
   }
 
+  /* El corpus vive en data/negrura/conceptos.json, que es el archivo citable y
+     depositable. El bloque JSON incrustado queda solo como respaldo para cuando la
+     página se abre con file:// y el fetch no puede resolverse. */
+  function normalizar(json) {
+    return (json && json.mapa) ? json.mapa : json;
+  }
+
   document.querySelectorAll('.mapa-conceptual').forEach(function (root) {
     var dataEl = root.querySelector('script[type="application/json"]') || document.getElementById('mapa-conceptual-data');
-    if (!dataEl) return;
-    try {
-      var data = JSON.parse(dataEl.textContent);
-      initMapa(root, data);
-    } catch (err) {
-      console.error('No se pudo leer el mapa conceptual', err);
+    var fuente = root.getAttribute('data-fuente');
+    var respaldo = null;
+    if (dataEl) {
+      try { respaldo = JSON.parse(dataEl.textContent); }
+      catch (err) { console.error('No se pudo leer el respaldo del mapa conceptual', err); }
     }
+
+    function arrancar(data, origen) {
+      if (!data) { console.error('Mapa conceptual sin datos'); return; }
+      root.setAttribute('data-origen-datos', origen);
+      initMapa(root, normalizar(data));
+    }
+
+    if (!fuente || typeof fetch !== 'function') { arrancar(respaldo, 'incrustado'); return; }
+
+    fetch(fuente, { cache: 'no-cache' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .then(function (d) { arrancar(d || respaldo, d ? 'externo' : 'incrustado'); })
+      .catch(function () { arrancar(respaldo, 'incrustado'); });
   });
 })();

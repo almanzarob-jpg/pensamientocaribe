@@ -41,20 +41,22 @@ license: "CC-BY-NC-SA-4.0"
 references:
   - type: dataset
     title: "Con el agua de por medio: atlas para una antropología archipiélica"
-    version: "1.2.0"
+    version: "1.3.0"
     date-released: 2026-07-25
     doi: "10.5281/zenodo.21483568"
     url: "https://pensamientocaribe.org/proyectos/con-el-agua-de-por-medio.html"
     repository-code: "https://github.com/almanzarob-jpg/pensamientocaribe"
     license: "CC-BY-NC-SA-4.0"
     abstract: >-
-      Atlas interactivo que conecta 143 obras y manifestaciones del Gran
-      Caribe a través de 289 relaciones y diez fenómenos transversales
+      Atlas interactivo que conecta 145 obras y manifestaciones del Gran
+      Caribe a través de 295 relaciones y diez fenómenos transversales
       (colonialidad, postplantación, capitalismo racial, catástrofes
       climáticas, soberanías, violencias, memoria y espiritualidad,
       cimarronaje, creolización, cuerpo/género/erótica) en lugar de
       organizarlas por país. Marco conceptual basado en Kamau Brathwaite,
-      Michael Monahan, Derek Walcott y Ernesto Bassi.
+      Michael Monahan, Derek Walcott y Ernesto Bassi. Cada relación declara
+      en la interfaz si su fuente está corroborada o si es un vínculo
+      propuesto por el investigador: 148 de las 295 están corroboradas.
     authors:
       - family-names: "Almanza Hernández"
         given-names: "Roberto"
@@ -67,3 +69,33 @@ references:
       - "colonialidad"
       - "cimarronaje"
       - "creolización"
+  # Pendiente de depósito: al publicarlo en Zenodo, añadir aquí el campo doi
+  # y el identificador, igual que en las dos entradas anteriores.
+  - type: dataset
+    title: "La negrura frente a la blanquitud monumental: constelación conceptual"
+    version: "1.0.0"
+    date-released: 2026-07-25
+    url: "https://pensamientocaribe.org/proyectos/negrura-blanquitud-monumental.html"
+    repository-code: "https://github.com/almanzarob-jpg/pensamientocaribe"
+    license: "CC-BY-NC-SA-4.0"
+    abstract: >-
+      Corpus conceptual de una investigación en filosofía afrocaribeña: 33
+      conceptos organizados en seis ramas que articulan la tensión entre
+      negrura y blanquitud monumental y su extensión contemporánea hacia la
+      blanquitud algorítmica. Cada concepto lleva su definición argumentada y
+      una dirección citable propia. Trabaja con Saidiya Hartman (captura y
+      carne), Fred Moten (fugitividad), Édouard Glissant (opacidad), Safiya
+      Umoja Noble y Joy Buolamwini (clasificación algorítmica), y con Calibán
+      y Juan Albañil como figuras de condensación.
+    authors:
+      - family-names: "Almanza Hernández"
+        given-names: "Roberto"
+        affiliation: "Universidad del Magdalena"
+      - name: "Grupo de Investigación Pensamiento Caribe, Universidad del Magdalena"
+    keywords:
+      - "filosofía afrocaribeña"
+      - "negrura"
+      - "blanquitud monumental"
+      - "blanquitud algorítmica"
+      - "Calibán"
+      - "vidas negras"

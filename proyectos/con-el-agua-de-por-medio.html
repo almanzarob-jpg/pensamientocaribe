@@ -133,6 +133,16 @@
   #panel .cita code{font-family:var(--ff-mono); font-size:10px; color:var(--gold); word-break:break-all; background:rgba(201,162,77,.08); padding:2px 5px; border-radius:2px; flex:1 1 60%}
   #panel .cita button{font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1px; padding:4px 9px; border:1px solid var(--line); background:transparent; color:var(--gray); cursor:pointer; border-radius:2px}
   #panel .cita button:hover{color:var(--cream); border-color:var(--gold)}
+  /* exportación bibliográfica: la ficha deja de ser solo lectura y pasa a alimentar
+     el gestor de referencias de quien la consulta */
+  #panel .bibrow{display:flex; align-items:center; gap:6px; flex-wrap:wrap; margin-top:9px; padding-top:9px; border-top:1px dashed var(--line)}
+  #panel .bibrow .biblbl{font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1.2px; color:var(--gray); flex:1 1 100%}
+  #panel .bibbtn{font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1px; padding:4px 10px; border:1px solid var(--gold-d); background:transparent; color:var(--gold); cursor:pointer; border-radius:2px}
+  #panel .bibbtn:hover{background:var(--gold); color:#211a06}
+  #panel .bibdoi{font-family:var(--ff-mono); font-size:9px; letter-spacing:1px; color:var(--green-l); text-decoration:none; border-bottom:1px dotted var(--green-l)}
+  .anolbl{font-family:var(--ff-mono); font-size:9px; letter-spacing:1.1px; fill:var(--gray)}
+  .anolbl.gold{fill:var(--gold-d)}
+  #panel .bibwarn{margin-top:8px; font-family:var(--ff-mono); font-size:9.5px; line-height:1.5; letter-spacing:.3px; color:var(--red); border-left:2px solid var(--red); padding:5px 8px; background:rgba(216,58,46,.06)}
   /* leyenda */
   #legend{position:absolute; left:16px; bottom:14px; background:rgba(10,11,8,.86); backdrop-filter:blur(3px); border:1px solid var(--line); border-radius:3px; padding:12px 15px; font-family:var(--ff-mono); font-size:10px; letter-spacing:.4px; color:var(--gray); max-width:370px}
   #legend .lgtitle{font-size:8.5px; text-transform:uppercase; letter-spacing:1.4px; color:var(--gray); opacity:.7; margin-bottom:8px}
@@ -303,7 +313,7 @@
     <div class="sub" data-i18n="sub">Atlas para una antropología archipiélica</div>
   </div>
   <div class="controls">
-    <div class="grp"><label data-i18n="lblVista">Vista</label><div class="seg vista" id="viewSeg"><button data-v="corriente" class="on" data-i18n="vCorriente">Corriente</button><button data-v="constelacion" data-i18n="vConstelacion">Constelación</button><button data-v="tabla" data-i18n="vTabla">Tabla</button></div></div>
+    <div class="grp"><label data-i18n="lblVista">Vista</label><div class="seg vista" id="viewSeg"><button data-v="corriente" class="on" data-i18n="vCorriente">Corriente</button><button data-v="constelacion" data-i18n="vConstelacion">Constelación</button><button data-v="cronologia" data-i18n="vCronologia">Cronología</button><button data-v="tabla" data-i18n="vTabla">Tabla</button></div></div>
     <div class="grp"><label for="qbox" data-i18n="lblBuscar">Buscar</label>
       <div class="buscador" id="buscador">
         <input id="qbox" type="search" autocomplete="off" spellcheck="false" placeholder="título o autor…" data-i18n-ph="buscarPh" aria-describedby="qcount">
@@ -369,6 +379,76 @@ const fuenteDe=(a,b)=>{ const r=relDe(a,b); return r?(r.fuente||''):''; };
    El corpus distingue así dos estatutos: el vínculo documentado y el vínculo propuesto por el
    investigador, que la interfaz no debe presentar como si fueran lo mismo. */
 const esCorr=(a,b)=>{ const fu=fuenteDe(a,b); return !!fu && !/corroborar/i.test(fu); };
+
+/* ==================== APARATO BIBLIOGRÁFICO ====================
+   Las obras traen los campos opcionales ed (editorial), isbn, doi, url y y0 (año
+   numérico). Mientras estén vacíos la exportación sigue funcionando con autor,
+   título y año, y declara que el registro está incompleto en lugar de fingir
+   que no lo está. */
+const BIB_CAMPOS = ['ed','isbn','doi','url'];
+const bibCompleta = n => BIB_CAMPOS.some(k=>n[k]);
+
+/* Año numérico: el corpus guarda el año como texto libre («1974–85», «c. 1920»).
+   Tomamos el primer año de cuatro cifras para poder ordenar y filtrar sin tocar
+   lo que el lector ve escrito. */
+function anoNum(n){
+  if(typeof n.y0==='number') return n.y0;
+  const m=String(n.y||'').match(/\d{4}/);
+  return m?parseInt(m[0],10):null;
+}
+
+function apellidoDe(a){
+  const primero=String(a||'').split(/[,;]| y | and /)[0].trim();
+  const partes=primero.replace(/\(.*?\)/g,'').trim().split(/\s+/);
+  return partes[partes.length-1]||'anon';
+}
+function claveBib(n){
+  const ap=apellidoDe(n.a).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-z0-9]/g,'');
+  return (ap||'anon')+(anoNum(n)||'sf');
+}
+function autoresBib(a){
+  return String(a||'').split(/\s*(?:;| y | and )\s*/).filter(Boolean);
+}
+
+function aBibTeX(n){
+  const tipo = n.k==='obra' ? (n.doi&&!n.isbn?'article':'book') : 'misc';
+  const L=['@'+tipo+'{'+claveBib(n)+','];
+  L.push('  author    = {'+autoresBib(n.a).join(' and ')+'},');
+  L.push('  title     = {'+n.t+'},');
+  if(anoNum(n)) L.push('  year      = {'+anoNum(n)+'},');
+  if(n.y && String(n.y)!==String(anoNum(n))) L.push('  note      = {'+t('bibPeriodo')+': '+n.y+'},');
+  if(n.ed)   L.push('  publisher = {'+n.ed+'},');
+  if(n.isbn) L.push('  isbn      = {'+n.isbn+'},');
+  if(n.doi)  L.push('  doi       = {'+n.doi+'},');
+  if(n.url)  L.push('  url       = {'+n.url+'},');
+  L.push('  keywords  = {'+n.f.map(f=>fenLabel(f)).join(', ')+'},');
+  L.push('}');
+  if(!bibCompleta(n)) L.push('% '+t('bibIncompleta'));
+  return L.join('\n');
+}
+
+function aRIS(n){
+  const L=['TY  - '+(n.k==='obra'?'BOOK':'GEN')];
+  autoresBib(n.a).forEach(x=>L.push('AU  - '+x));
+  L.push('TI  - '+n.t);
+  if(anoNum(n)) L.push('PY  - '+anoNum(n));
+  if(n.ed)   L.push('PB  - '+n.ed);
+  if(n.isbn) L.push('SN  - '+n.isbn);
+  if(n.doi)  L.push('DO  - '+n.doi);
+  if(n.url)  L.push('UR  - '+n.url);
+  n.f.forEach(f=>L.push('KW  - '+fenLabel(f)));
+  L.push('N1  - '+t('bibEn')+' '+t('pProyecto')+'. '+(bibCompleta(n)?'':t('bibIncompleta')));
+  L.push('ER  - ');
+  return L.join('\r\n')+'\r\n';
+}
+
+function bajar(nombre,texto,tipo){
+  try{
+    const b=new Blob([texto],{type:tipo}); const u=URL.createObjectURL(b);
+    const a=document.createElement('a'); a.href=u; a.download=nombre; a.click();
+    setTimeout(()=>URL.revokeObjectURL(u),1500);
+  }catch(e){}
+}
 const CORR_OK = RELS.filter(r=>!!r.fuente && !/corroborar/i.test(r.fuente)).length;
 const CORR_PC = RELS.length - CORR_OK;
 const col = f => FEN[f].c;
@@ -435,6 +515,11 @@ const I18N = {
     pNacion:"nación caribeña", pRegion:"región en tensión con",
     pRelDir:"Conexiones directas · dialoga con", pRelInd:"Conexiones indirectas · a dos orillas", pVia:"vía",
     lblEvid:"Evidencia", eTodas:"Todas", eCorr:"Corroboradas", ePorCorr:"Por corroborar",
+    bibLbl:"Exportar la referencia", bibPeriodo:"Periodo declarado", bibEn:"Ficha en",
+    bibIncompleta:"Registro sin editorial, ISBN ni DOI: completa esos campos antes de usarlo en una bibliografía formal.",
+    bibTodo:"descargar .bib de esta vista", bibRegistros:"registros",
+    vCronologia:"Cronología", cronoSinFecha:"sin fecha",
+    hintCronologia:"Las obras ordenadas por año de publicación, de 1880 a hoy. La altura de cada columna dice cuánto se publicó en ese momento; el color, sobre qué fenómeno. A la derecha, en dorado, las manifestaciones etnográficas sin fecha: son prácticas vivas, no obras fechadas. Rueda: zoom · arrastra: desplaza.",
     evOkT:"Corriente con fuente declarada", evPcT:"▲ Sin fuente declarada · vínculo propuesto por el investigador",
     evNada:"Ninguna corriente de esta obra con el filtro de evidencia activo.",
     lgCorr:"corrientes corroboradas", lgCorrVer:"ver solo estas",
@@ -491,6 +576,11 @@ const I18N = {
     pNacion:"Caribbean nation", pRegion:"region in tension with",
     pRelDir:"Direct connections · in dialogue with", pRelInd:"Indirect connections · across two shores", pVia:"via",
     lblEvid:"Evidence", eTodas:"All", eCorr:"Corroborated", ePorCorr:"To be corroborated",
+    bibLbl:"Export the reference", bibPeriodo:"Declared period", bibEn:"Entry in",
+    bibIncompleta:"Record without publisher, ISBN or DOI: complete those fields before using it in a formal bibliography.",
+    bibTodo:"download .bib of this view", bibRegistros:"records",
+    vCronologia:"Chronology", cronoSinFecha:"undated",
+    hintCronologia:"Works ordered by year of publication, from 1880 to today. The height of each column shows how much was published at that moment; the color, on which phenomenon. On the right, in gold, the undated ethnographic manifestations: they are living practices, not dated works. Wheel: zoom · drag: pan.",
     evOkT:"Current with a declared source", evPcT:"▲ No source declared · link proposed by the researcher",
     evNada:"No current of this work matches the active evidence filter.",
     lgCorr:"corroborated currents", lgCorrVer:"show only these",
@@ -550,7 +640,7 @@ function updateQCount(){
   c.textContent = k===0 ? t('buscarNada') : k===1 ? t('buscarUna') : t('buscarN').replace('{n}',k);
   c.classList.toggle('nada', k===0);
 }
-let VNODES=[], EDGES=[], CLUSTERS=[]; let hoverNode=null;
+let VNODES=[], EDGES=[], CLUSTERS=[]; let hoverNode=null; let CRONO=null;
 let vpt={k:1,tx:0,ty:0}; let vp=null;
 function applyVP(){ if(vp) vp.setAttribute('transform',`translate(${vpt.tx},${vpt.ty}) scale(${vpt.k})`); }
 
@@ -564,6 +654,24 @@ function computeBase(){
       arr.forEach((n,i)=>{ const rr = arr.length<=1?0 : 10.5*Math.sqrt(i+0.5); const ang=i*GOLD;
         n._bx=bx+Math.cos(ang)*rr; n._by=by+Math.sin(ang)*rr;});
     });
+  } else if(state.view==="cronologia"){
+    /* El atlas sostiene una tesis sobre el tiempo (la marea que va y vuelve) y hasta
+       ahora solo se dejaba leer en el espacio. Aquí el eje X es el año y cada obra se
+       apila en su columna. Las cinco manifestaciones sin fecha no se excluyen: van a
+       una banda propia, porque son prácticas vivas y no obras fechadas. */
+    const x0=PAD+40, x1=VW-PAD-70, base=VH/2+40;
+    const conAno=N.filter(n=>anoNum(n)!==null);
+    const aMin=1880, aMax=2030;
+    const escala=a=>x0+((a-aMin)/(aMax-aMin))*(x1-x0);
+    const columnas={};
+    conAno.forEach(n=>{ const a=anoNum(n); const c=Math.round(escala(a)/13)*13; (columnas[c]=columnas[c]||[]).push(n); });
+    Object.entries(columnas).forEach(([c,arr])=>{
+      arr.sort((p,q)=>anoNum(p)-anoNum(q));
+      arr.forEach((n,i)=>{ n._bx=+c; n._by=base-i*15.5; });
+    });
+    const sinAno=N.filter(n=>anoNum(n)===null);
+    sinAno.forEach((n,i)=>{ n._bx=x1+46; n._by=base-i*15.5; });
+    CRONO={x0,x1,base,aMin,aMax,escala,sinAno:sinAno.length};
   } else {
     const keys=Object.keys(FEN); const cx=VW/2, cy=VH/2; const Rk=270;
     keys.forEach((f,i)=>{
@@ -580,12 +688,33 @@ function computeBase(){
 }
 function visible(n){ return state.layer==="ambas" || n.k===state.layer; }
 
+function drawEjeTiempo(){
+  if(!CRONO) return;
+  const g=el("g",{class:"ejetiempo"});
+  const {x0,x1,base,aMin,aMax,escala,sinAno}=CRONO;
+  const linea=el("path",{d:`M ${x0-18},${base+16} L ${x1+18},${base+16}`, stroke:"var(--line)", "stroke-width":1, fill:"none"});
+  g.appendChild(linea);
+  for(let a=1900; a<=2020; a+=20){
+    const x=escala(a);
+    g.appendChild(el("path",{d:`M ${x},${base+11} L ${x},${base+21}`, stroke:"var(--line)", "stroke-width":1}));
+    const tx=el("text",{class:"anolbl", x:x, y:base+34, "text-anchor":"middle"}); tx.textContent=a; g.appendChild(tx);
+  }
+  if(sinAno){
+    const x=x1+46;
+    g.appendChild(el("path",{d:`M ${x-16},${base+16} L ${x+16},${base+16}`, stroke:"var(--gold-d)", "stroke-width":1, "stroke-dasharray":"2 3"}));
+    const s1=el("text",{class:"anolbl gold", x:x, y:base+34, "text-anchor":"middle"}); s1.textContent=t('cronoSinFecha'); g.appendChild(s1);
+    const s2=el("text",{class:"anolbl gold", x:x, y:base+46, "text-anchor":"middle"}); s2.textContent="("+sinAno+")"; g.appendChild(s2);
+  }
+  vp.appendChild(g);
+}
+
 function render(){
   svg.innerHTML=""; VNODES=[]; EDGES=[];
   vp=el("g",{id:"vp"}); svg.appendChild(vp); applyVP();
   computeBase();
   const hint=document.getElementById('hint');
   if(state.view==="corriente"){ drawBasin(); hint.textContent=t('hintCorriente'); }
+  else if(state.view==="cronologia"){ drawEjeTiempo(); hint.textContent=t('hintCronologia'); }
   else hint.textContent=t('hintConstelacion');
   const eg=el("g"); vp.appendChild(eg);
   R.forEach(([a,b],i)=>{ const na=byId(a), nb=byId(b); if(!na||!nb||!visible(na)||!visible(nb))return;
@@ -638,7 +767,9 @@ function place(t){
   if(state.view==="tabla") return;
   const ph=t*0.00045; const flowing=state.tide; const sway=flowing?7*Math.sin(ph*0.6):0;
   VNODES.forEach((n,idx)=>{ let dx=0,dy=0;
-    if(flowing){ if(state.view==="corriente"){ dx=sway+4.5*Math.sin(ph+n._bx*0.012); dy=3*Math.sin(ph*0.8+n._by*0.010+1.6); } else { dx=2.2*Math.sin(ph+idx*0.5); dy=2.2*Math.cos(ph*0.9+idx*0.5);} }
+    /* En cronología la posición codifica un año: si el nodo se mece, se lee mal.
+       La marea queda para las vistas donde el lugar es cualitativo. */
+    if(flowing && state.view!=="cronologia"){ if(state.view==="corriente"){ dx=sway+4.5*Math.sin(ph+n._bx*0.012); dy=3*Math.sin(ph*0.8+n._by*0.010+1.6); } else { dx=2.2*Math.sin(ph+idx*0.5); dy=2.2*Math.cos(ph*0.9+idx*0.5);} }
     n._x=n._bx+dx; n._y=n._by+dy; n._g.setAttribute('transform',`translate(${n._x},${n._y})`); });
   EDGES.forEach(e=>{ e.p.setAttribute('d', currentPath(e,ph,flowing)); e.p.setAttribute('stroke-dashoffset', flowing?(-t*0.03)%1000:0);
     if(e.marker){ const mx=(e.na._x+e.nb._x)/2, my=(e.na._y+e.nb._y)/2; const s=2.4+(flowing?1.1*(0.5+0.5*Math.sin(ph*3+e.ph)):0); const rot=flowing?ph*40+e.ph*30:0; const c=Math.cos(rot), si=Math.sin(rot);
@@ -712,12 +843,23 @@ function openPanel(id){
     ${iList?`<div class="rel"><h3 class="ind">${t('pRelInd')}</h3>${iList}</div>`:""}
     <div class="cita"><span class="citalbl">${t('pCitaLbl')}</span>
       <div class="apa" id="apacita">${n.a}${n.y?" ("+n.y+")":""}. <i>${n.t}</i>. ${t('pCitaEn')} <i>${t('pProyecto')}</i>, Centro de Pensamiento Caribe. ${location.origin+location.pathname}#${id}</div>
-      <div class="citarow"><code id="citaurl">${location.origin+location.pathname}#${id}</code><button id="citabtn">${t('pCitaBtn')}</button></div></div>`;
+      <div class="citarow"><code id="citaurl">${location.origin+location.pathname}#${id}</code><button id="citabtn">${t('pCitaBtn')}</button></div>
+      <div class="bibrow"><span class="biblbl">${t('bibLbl')}</span>
+        <button class="bibbtn" data-bib="bibtex">BibTeX</button><button class="bibbtn" data-bib="ris">RIS</button>
+        ${n.doi?`<a class="bibdoi" href="https://doi.org/${n.doi}" target="_blank" rel="noopener">doi ↗</a>`:''}
+      </div>
+      ${bibCompleta(n)?'':`<div class="bibwarn">${t('bibIncompleta')}</div>`}</div>`;
   p.classList.add('open');
   p.querySelector('.close').onclick=()=>clearFocus();
   p.querySelectorAll('[data-go]').forEach(a=>a.onclick=()=>openPanel(a.dataset.go));
   p.querySelectorAll('[data-fen]').forEach(tg=>tg.onclick=()=>focusFen(tg.dataset.fen));
   const cb=p.querySelector('#citabtn'); if(cb) cb.onclick=()=>{ try{ const txt=document.getElementById('apacita').textContent; navigator.clipboard.writeText(txt); cb.textContent=t('pCitaOk'); setTimeout(()=>cb.textContent=t('pCitaBtn'),1400); }catch(e){} };
+  p.querySelectorAll('[data-bib]').forEach(b=>b.onclick=()=>{
+    const obra=byId(id); if(!obra) return;
+    if(b.dataset.bib==='bibtex') bajar(claveBib(obra)+'.bib', aBibTeX(obra), 'application/x-bibtex');
+    else bajar(claveBib(obra)+'.ris', aRIS(obra), 'application/x-research-info-systems');
+    const antes=b.textContent; b.textContent=t('pCitaOk'); setTimeout(()=>b.textContent=antes,1400);
+  });
 }
 function clearFocus(){ state.active=null; state.focusFen=null; hoverNode=null; document.getElementById('panel').classList.remove('open'); showGuion(null); buildLegend(); refreshHi(); updateTip(); try{ history.replaceState(null,"",location.pathname); }catch(e){} }
 
@@ -781,13 +923,22 @@ function renderTable(){
        `<td>${evCell(n.id)}</td></tr>`;
   });
   h+=`</tbody></table>`;
-  h+=`<p class="tnote">${t('tNote')} <a href="../data/agua-de-por-medio/datos-atlas.json">datos-atlas.json</a>.</p>`;
+  h+=`<p class="tnote">${t('tNote')} <a href="../data/agua-de-por-medio/datos-atlas.json">datos-atlas.json</a>. `+
+     `<button id="bibTodo" class="bibbtn">${t('bibTodo')}</button></p>`;
   cont.innerHTML=h;
   cont.querySelectorAll('th[data-col]').forEach(th=>{
     const go=()=>{ const c=th.dataset.col; if(tblSort.col===c) tblSort.dir*=-1; else { tblSort.col=c; tblSort.dir=1; } renderTable(); };
     th.onclick=go; th.onkeydown=ev=>{ if(ev.key==="Enter"||ev.key===" "){ ev.preventDefault(); go(); } };
   });
   cont.querySelectorAll('a[data-go]').forEach(a=>a.onclick=ev=>{ ev.preventDefault(); openPanel(a.dataset.go); });
+  const bt=cont.querySelector('#bibTodo');
+  if(bt) bt.onclick=()=>{
+    /* exporta lo que el filtro tenga a la vista, no el corpus entero: si alguien
+       está mirando solo cimarronaje, eso es lo que se lleva */
+    const filas=tblRows();
+    const cab='% '+t('pProyecto')+'\n% '+filas.length+' '+t('bibRegistros')+' · '+new Date().toISOString().slice(0,10)+'\n\n';
+    bajar('atlas-agua-de-por-medio.bib', cab+filas.map(aBibTeX).join('\n\n')+'\n', 'application/x-bibtex');
+  };
 }
 function switchView(v){
   state.view=v;

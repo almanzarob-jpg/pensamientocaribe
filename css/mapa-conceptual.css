@@ -201,3 +201,26 @@
 @media (max-width: 900px) {
   .mapa-arbol { position: static; inset: auto; max-height: 540px; }
 }
+
+/* ───── enlace citable por concepto ───── */
+.mapa-conceptual__panel-cita {
+  border-top: 1px solid var(--c-border-green);
+  padding-top: var(--space-sm); margin-top: var(--space-sm);
+}
+.mapa-conceptual__cita-lbl {
+  display: block; font-family: var(--ff-mono); font-size: 0.62rem; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--c-gray); margin-bottom: 0.45rem;
+}
+.mapa-conceptual__cita-url {
+  display: block; font-family: var(--ff-mono); font-size: 0.68rem; line-height: 1.5;
+  color: var(--c-gray); word-break: break-all; background: var(--c-bg-deep);
+  border: 1px solid var(--c-border-green); border-radius: 3px;
+  padding: 0.45rem 0.6rem; margin-bottom: 0.5rem;
+}
+.mapa-conceptual__cita-btn {
+  font-family: var(--ff-mono); font-size: 0.62rem; letter-spacing: 0.09em;
+  text-transform: uppercase; cursor: pointer; background: transparent;
+  color: var(--c-gray); border: 1px solid var(--c-border-green);
+  border-radius: 3px; padding: 0.35rem 0.7rem; transition: color 0.18s, border-color 0.18s;
+}
+.mapa-conceptual__cita-btn:hover { color: var(--c-green-light); border-color: var(--c-green-light); }
