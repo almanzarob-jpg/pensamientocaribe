@@ -1,0 +1,9 @@
+
+# documentos administrativos, no van al sitio
+documentacion/*.doc
+
+# borrador administrativo, no va al sitio
+documentacion/Direccion de tesis.docx
+
+# tabla de revisión: se regenera con _cruzar_bibliografia.py
+data/negrura/fuentes-por-concepto.md

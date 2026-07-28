@@ -73,20 +73,24 @@ references:
   # y el identificador, igual que en las dos entradas anteriores.
   - type: dataset
     title: "La negrura frente a la blanquitud monumental: constelación conceptual"
-    version: "1.0.0"
-    date-released: 2026-07-25
-    url: "https://pensamientocaribe.org/proyectos/negrura-blanquitud-monumental.html"
+    version: "2.0.0"
+    date-released: 2026-07-27
+    url: "https://pensamientocaribe.org/proyectos/mapa-negrura.html"
     repository-code: "https://github.com/almanzarob-jpg/pensamientocaribe"
     license: "CC-BY-NC-SA-4.0"
     abstract: >-
-      Corpus conceptual de una investigación en filosofía afrocaribeña: 33
-      conceptos organizados en seis ramas que articulan la tensión entre
+      Corpus conceptual de una investigación en filosofía afrocaribeña: 69
+      conceptos organizados en ocho ramas que articulan la asimetría entre
       negrura y blanquitud monumental y su extensión contemporánea hacia la
-      blanquitud algorítmica. Cada concepto lleva su definición argumentada y
-      una dirección citable propia. Trabaja con Saidiya Hartman (captura y
-      carne), Fred Moten (fugitividad), Édouard Glissant (opacidad), Safiya
-      Umoja Noble y Joy Buolamwini (clasificación algorítmica), y con Calibán
-      y Juan Albañil como figuras de condensación.
+      blanquitud algorítmica. Cada concepto lleva su definición argumentada,
+      una dirección citable propia y su bibliografía asociada, con 104 obras
+      vinculadas mediante 263 relaciones. Trabaja con Frantz Fanon y Lewis
+      Gordon (zona del no-ser, sociogénesis), Saidiya Hartman (captura y
+      carne), Fred Moten (fugitividad), Édouard Glissant (opacidad), Charles
+      Mills (ignorancia blanca), Michael Monahan (creolización y política de
+      la pureza), Malcom Ferdinand y Pedro Lebrón Ortiz (cimarronería
+      analéctica), Shoshana Zuboff y Kate Crawford (extensión algorítmica), y
+      con Calibán y Juan Albañil como figuras de condensación.
     authors:
       - family-names: "Almanza Hernández"
         given-names: "Roberto"

@@ -244,3 +244,190 @@
   .proyecto-page { padding-top: 72px; }
   .proyecto-meta-bar { gap: var(--space-sm) var(--space-md); }
 }
+
+/* ════════════════════════════════════════════════
+   ENTRADA A UNA PIEZA INTERACTIVA
+   Bloque que antecede a un mapa, atlas o cartografía
+   que vive en su propia página a pantalla completa.
+   ════════════════════════════════════════════════ */
+.entrada-pieza {
+  max-width: 1100px;
+  margin: 0 auto var(--space-2xl);
+  padding: 0 var(--space-lg);
+}
+
+.entrada-pieza__caja {
+  border: 1px solid var(--c-border-green);
+  border-radius: var(--radius-md);
+  background:
+    radial-gradient(circle at 78% 22%, rgba(201, 162, 77, 0.10), transparent 58%),
+    radial-gradient(circle at 12% 82%, rgba(36, 95, 30, 0.16), transparent 60%),
+    var(--c-surface-a);
+  overflow: hidden;
+}
+
+.entrada-pieza__cuerpo {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: var(--space-lg);
+  padding: var(--space-lg);
+  align-items: center;
+}
+
+.entrada-pieza__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--ff-mono);
+  font-size: var(--fs-meta);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--c-orange);
+  margin-bottom: var(--space-sm);
+}
+
+.entrada-pieza__eyebrow::before {
+  content: "";
+  display: inline-block;
+  width: 26px;
+  height: 1px;
+  background: var(--c-orange);
+}
+
+.entrada-pieza__titulo {
+  font-family: var(--ff-display);
+  font-size: clamp(1.7rem, 3.2vw, 2.5rem);
+  line-height: 1.12;
+  color: var(--c-cream);
+  margin-bottom: var(--space-sm);
+  font-weight: var(--fw-semibold);
+}
+
+.entrada-pieza__titulo em { font-style: italic; color: #c9a24d; }
+
+.entrada-pieza__texto {
+  font-size: 1.02rem;
+  line-height: 1.75;
+  color: var(--c-gray);
+  margin-bottom: var(--space-md);
+  max-width: 52ch;
+}
+
+.entrada-pieza__cifras {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md) var(--space-lg);
+  padding: var(--space-md) 0;
+  border-top: 1px solid var(--c-border-green);
+  border-bottom: 1px solid var(--c-border-green);
+  margin-bottom: var(--space-md);
+}
+
+.entrada-pieza__cifra {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.entrada-pieza__cifra b {
+  font-family: var(--ff-display);
+  font-size: 2rem;
+  line-height: 1;
+  color: var(--c-cream);
+  font-weight: var(--fw-semibold);
+}
+
+.entrada-pieza__cifra span {
+  font-family: var(--ff-mono);
+  font-size: 0.74rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--c-gray);
+}
+
+.entrada-pieza__acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  align-items: center;
+}
+
+.entrada-pieza__vista {
+  border: 1px solid var(--c-border-green);
+  border-radius: var(--radius-sm);
+  background: rgba(5, 6, 4, 0.55);
+  padding: var(--space-sm);
+}
+
+.entrada-pieza__vista svg { display: block; width: 100%; height: auto; }
+
+.entrada-pieza__pie {
+  border-top: 1px solid var(--c-border-green);
+  padding: var(--space-sm) var(--space-lg);
+  font-family: var(--ff-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.06em;
+  color: var(--c-gray);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm) var(--space-md);
+  align-items: center;
+}
+
+.entrada-pieza__pie a { color: var(--c-orange); text-decoration: none; }
+.entrada-pieza__pie a:hover { text-decoration: underline; }
+
+/* ── ramas del marco, listadas en el cuerpo del proyecto ── */
+.ramas-marco {
+  list-style: none;
+  margin: var(--space-md) 0 var(--space-lg);
+  padding: 0;
+  display: grid;
+  gap: 2px;
+}
+
+.ramas-marco li {
+  display: grid;
+  grid-template-columns: 3px 1fr;
+  gap: var(--space-md);
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid rgba(36, 95, 30, 0.16);
+  margin: 0;
+}
+
+.ramas-marco li::before {
+  content: "";
+  background: var(--rama, var(--c-green-light));
+  border-radius: 2px;
+}
+
+.ramas-marco b {
+  display: block;
+  font-family: var(--ff-display);
+  font-size: 1.22rem;
+  font-weight: var(--fw-semibold);
+  color: var(--c-cream);
+  margin-bottom: 2px;
+}
+
+.ramas-marco span {
+  font-size: 0.98rem;
+  line-height: 1.66;
+  color: var(--c-gray);
+}
+
+.ramas-marco em {
+  font-family: var(--ff-mono);
+  font-style: normal;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--rama, var(--c-green-light));
+  margin-left: 0.5rem;
+  opacity: 0.85;
+}
+
+@media (max-width: 860px) {
+  .entrada-pieza__cuerpo { grid-template-columns: 1fr; }
+  .entrada-pieza__vista { order: -1; }
+}
