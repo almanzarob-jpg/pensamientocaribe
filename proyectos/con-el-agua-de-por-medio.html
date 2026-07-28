@@ -113,6 +113,9 @@
   #panel .rel a .via{color:var(--green-l); font-style:italic; font-size:11px}
   #panel .rel a .fu{display:block; font-size:11px; line-height:1.4; color:var(--gray); margin-top:3px; font-style:italic}
   #panel .rel a .fu.pc{color:var(--red); opacity:.85}
+  /* ── el reflujo: marca discreta junto a cada corriente sin fuente ── */
+  #panel .rel a .conoces{display:inline-block; font-family:var(--ff-mono); font-size:8.5px; letter-spacing:.9px; text-transform:lowercase; color:var(--orange); border:1px solid rgba(240,122,22,.35); border-radius:2px; padding:2px 6px; margin-top:4px; cursor:pointer; background:transparent}
+  #panel .rel a .conoces:hover{background:rgba(240,122,22,.16)}
   /* ── semáforo de corroboración: declara el estatus epistémico de cada corriente ── */
   #panel .rel a .ev{display:inline-block; width:7px; height:7px; border-radius:50%; margin-right:7px; vertical-align:1px; flex:0 0 auto}
   #panel .rel a .ev.ok{background:var(--green-l)}
@@ -162,6 +165,62 @@
   #legend .kfr{color:var(--cream);font-size:10px;line-height:1}
   #legend .mlink{margin-top:9px;padding-top:9px;border-top:1px solid var(--line)}
   #legend .mlink a{color:var(--orange);cursor:pointer;text-decoration:none;font-size:9.5px;letter-spacing:.6px}
+
+  /* ══ EL REFLUJO ══ la marea que vuelve: lo que el lector deja en la corriente.
+     La puerta no existe al cargar. Aparece en la leyenda cuando quien mira ya recorrió
+     el mapa (seis fichas o cuatro minutos). Filtra por atención, no por credenciales. */
+  #legend .puerta{display:none; margin-top:9px; padding-top:9px; border-top:1px solid var(--line); align-items:center; gap:8px; flex-wrap:wrap}
+  #legend .puerta.on{display:flex; animation:sube .9s ease}
+  @keyframes sube{from{opacity:0; transform:translateY(5px)} to{opacity:1; transform:none}}
+  #legend .puerta .marca{display:inline-block; width:20px; height:1px; background:var(--orange); flex:0 0 auto}
+  #legend .puerta a{color:var(--orange); cursor:pointer; text-decoration:none; font-size:9.5px; letter-spacing:.6px}
+  #legend .puerta a:hover{text-decoration:underline}
+
+  #reflujo{position:absolute; top:14px; right:14px; width:414px; max-width:calc(100% - 28px); max-height:calc(100% - 28px); overflow:auto; background:var(--panel); border:1px solid var(--line); border-radius:3px; padding:22px 24px 26px; box-shadow:0 16px 44px rgba(0,0,0,.55); transform:translateX(125%); transition:transform .3s cubic-bezier(.4,0,.2,1); z-index:7}
+  #reflujo.open{transform:none}
+  #reflujo .close{position:absolute; top:10px; right:12px; background:transparent; border:0; color:var(--gray); font-size:19px; line-height:1; cursor:pointer}
+  #reflujo .close:hover{color:var(--cream)}
+  #reflujo .tit{font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1.7px; color:var(--gold)}
+  #reflujo h2{font-family:var(--ff-display); font-weight:500; font-size:25px; margin:5px 0 6px; line-height:1.15}
+  #reflujo .lead{font-size:11.5px; color:var(--gray); line-height:1.65; margin:0 0 14px}
+  #reflujo .seg{flex-wrap:wrap; margin-bottom:2px}
+  #reflujo .seg button{padding:6px 9px; font-size:9px; letter-spacing:.6px}
+  #reflujo .seg button.on{background:var(--orange); color:#180a01}
+  #reflujo .seg button.on[data-rt="friccion"]{background:var(--red); color:#2a0d0a}
+  #reflujo .seg button.on[data-rt="corroboracion"]{background:var(--gold); color:#211a06}
+  #reflujo .f{margin-top:12px; position:relative}
+  #reflujo .f>label{display:block; font-family:var(--ff-mono); font-size:8.5px; text-transform:uppercase; letter-spacing:1.3px; color:var(--gray); margin-bottom:4px}
+  #reflujo .f>label .req{color:var(--orange)}
+  #reflujo input[type=text],#reflujo input[type=email],#reflujo textarea,#reflujo select{width:100%; background:var(--bg-deep); border:1px solid var(--line); border-radius:2px; color:var(--cream); font-family:var(--ff-body); font-size:12.5px; padding:8px 10px; line-height:1.5}
+  #reflujo textarea{min-height:78px; resize:vertical}
+  #reflujo input:focus,#reflujo textarea:focus,#reflujo select:focus{outline:0; border-color:var(--orange)}
+  #reflujo .hint{font-size:10.5px; color:var(--gray); line-height:1.5; margin-top:4px; font-style:italic}
+  #reflujo .cnt{font-family:var(--ff-mono); font-size:8.5px; color:var(--gray); text-align:right; margin-top:3px}
+  #reflujo .cnt.ok{color:var(--green-l)}
+  #reflujo .aclist{position:absolute; z-index:9; left:0; right:0; top:100%; background:var(--bg-deep); border:1px solid var(--orange); border-top:0; max-height:180px; overflow-y:auto}
+  #reflujo .aclist div{padding:6px 10px; font-size:12px; cursor:pointer; border-bottom:1px solid var(--line)}
+  #reflujo .aclist div:hover{background:rgba(240,122,22,.16)}
+  #reflujo .aclist small{display:block; color:var(--gray); font-size:10.5px}
+  #reflujo .chips{display:flex; flex-wrap:wrap; gap:5px}
+  #reflujo .chip{font-family:var(--ff-mono); font-size:8.5px; letter-spacing:.6px; text-transform:uppercase; padding:5px 7px; border:1px solid var(--line); border-radius:2px; cursor:pointer; color:var(--gray); background:transparent}
+  #reflujo .chip.on{color:var(--cream); border-color:var(--orange); background:rgba(240,122,22,.14)}
+  #reflujo .chip b{font-weight:400; opacity:.55; margin-left:4px}
+  #reflujo .relprev{background:var(--bg-deep); border:1px solid var(--line); border-left:2px solid var(--orange); padding:9px 11px; font-size:12.5px; line-height:1.5}
+  #reflujo .relprev.diso{border-left-color:var(--red)}
+  #reflujo .relprev .k{font-family:var(--ff-mono); font-size:8.5px; text-transform:uppercase; letter-spacing:1.2px; color:var(--gray); margin-top:5px}
+  #reflujo .divi{border-top:1px solid var(--line); margin-top:18px; padding-top:13px}
+  #reflujo .divi .dl{font-family:var(--ff-mono); font-size:8.5px; text-transform:uppercase; letter-spacing:1.5px; color:var(--gray); margin-bottom:6px}
+  #reflujo .check{display:flex; gap:8px; align-items:flex-start; font-size:11px; color:var(--gray); line-height:1.55; margin-top:9px; cursor:pointer}
+  #reflujo .check input{margin-top:2px; accent-color:var(--orange); width:auto}
+  #reflujo .envio{display:flex; gap:8px; margin-top:15px; flex-wrap:wrap}
+  #reflujo .envio button{font-family:var(--ff-mono); font-size:10px; text-transform:uppercase; letter-spacing:1.3px; padding:10px 15px; border:0; border-radius:2px; cursor:pointer; background:var(--orange); color:#180a01}
+  #reflujo .envio button.alt{background:transparent; color:var(--gray); border:1px solid var(--line)}
+  #reflujo .envio button.alt:hover{color:var(--cream); border-color:var(--gray)}
+  #reflujo .envio button:disabled{opacity:.3; cursor:not-allowed}
+  #reflujo .porque{font-size:10.5px; color:var(--red); margin-top:8px; line-height:1.5}
+  #reflujo .avisos{margin-top:13px; padding-top:11px; border-top:1px solid var(--line); font-size:10.5px; color:var(--gray); line-height:1.6}
+  #reflujo .hp{position:absolute; left:-9999px}
+  @media(max-width:760px){ #reflujo{width:calc(100% - 28px); top:8px; right:8px; left:8px; padding:18px 17px 22px} }
   #legend .mlink a:hover{color:var(--cream)}
   /* marco conceptual */
   #marco{position:absolute; inset:0; background:rgba(5,6,4,.95); backdrop-filter:blur(5px); z-index:22; display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity .35s}
@@ -342,6 +401,7 @@
   <button id="presExit" title="Salir del modo presentación (Esc)" data-i18n="presExit">✕ salir</button>
   <div id="presHelp" data-i18n-html="presHelp"><span><b>1</b>corriente</span><span><b>2</b>constelación</span><span><b>M</b>marea</span><span><b>→</b>siguiente fenómeno</span><span><b>←</b>anterior</span><span><b>0</b>despejar</span><span><b>Esc</b>salir</span></div>
   <aside id="panel"></aside>
+  <aside id="reflujo" aria-label="Dejar algo en la corriente" hidden></aside>
   <div id="umbral"><div class="box">
     <h2>Con el agua de por medio</h2>
     <div class="u-sub" data-i18n="sub">Atlas para una antropología archipiélica</div>
@@ -827,6 +887,7 @@ function focusFen(f){ state.active=null; document.getElementById('panel').classL
 
 function openPanel(id){
   if(!byId(id)) return;
+  rfVisita(id); /* el reflujo cuenta las fichas recorridas: en la sexta se abre la puerta */
   state.focusFen=null; showGuion(null); state.active=id; buildLegend(); refreshHi(); updateTip();
   if(location.hash!=="#"+id){ try{ history.replaceState(null,"","#"+id); }catch(e){} }
   const n=byId(id); const p=document.getElementById('panel'); const lu=L[n.l]; const {direct,indirect}=neighbors(id);
@@ -835,7 +896,7 @@ function openPanel(id){
   const dAll=[...direct].map(x=>byId(x)).filter(Boolean);
   const dShown=dAll.filter(o=>{ if(state.evid==="todas") return true; return esCorr(id,o.id)===(state.evid==="ok"); });
   const dList=dShown.map(o=>{ const fu=fuenteDe(id,o.id); const diso=isDiso(id,o.id); const ok=esCorr(id,o.id);
-    return `<a data-go="${o.id}"><span class="ev ${ok?'ok':'pc'}" title="${ok?t('evOkT'):t('evPcT')}" aria-label="${ok?t('evOkT'):t('evPcT')}"></span><span class="rtitle">${diso?'⚡ ':''}${o.t}</span> <span class="r">— ${o.a}</span>${fu&&ok?`<span class="fu">${fu}</span>`:`<span class="fu pc">${t('evPcT')}</span>`}</a>`; }).join("");
+    return `<a data-go="${o.id}"><span class="ev ${ok?'ok':'pc'}" title="${ok?t('evOkT'):t('evPcT')}" aria-label="${ok?t('evOkT'):t('evPcT')}"></span><span class="rtitle">${diso?'⚡ ':''}${o.t}</span> <span class="r">— ${o.a}</span>${fu&&ok?`<span class="fu">${fu}</span>`:`<span class="fu pc">${t('evPcT')}</span><span class="conoces" role="button" tabindex="0" data-rfa="${id}" data-rfb="${o.id}">${rf('conoces')}</span>`}</a>`; }).join("");
   const dCount = state.evid==="todas" ? `<span class="evn">${dAll.length}</span>` : `<span class="evn">${dShown.length} / ${dAll.length}</span>`;
   const iList=[...indirect].map(x=>{ const o=byId(x); if(!o)return""; let via=[...direct].find(d=>(ADJ[d]||[]).includes(x)); const vn=via?byId(via):null; const vname=vn?vn.a.replace(/\(.*/,'').split(',')[0].trim().split(' ').slice(-1)[0]:'…'; return `<a data-go="${o.id}">${o.t} <span class="via">— ${t('pVia')} ${vname}</span></a>`; }).join("");
   p.innerHTML=`<button class="close">×</button><div class="kind">${n.k==="obra"?t('pKindObra'):t('pKindManif')}</div>
@@ -854,6 +915,10 @@ function openPanel(id){
   p.classList.add('open');
   p.querySelector('.close').onclick=()=>clearFocus();
   p.querySelectorAll('[data-go]').forEach(a=>a.onclick=()=>openPanel(a.dataset.go));
+  p.querySelectorAll('.conoces').forEach(b=>{
+    const ir=ev=>{ ev.preventDefault(); ev.stopPropagation(); rfAbrir('corroboracion',{a:b.dataset.rfa,b:b.dataset.rfb}); };
+    b.onclick=ir; b.onkeydown=ev=>{ if(ev.key==='Enter'||ev.key===' ') ir(ev); };
+  });
   p.querySelectorAll('[data-fen]').forEach(tg=>tg.onclick=()=>focusFen(tg.dataset.fen));
   const cb=p.querySelector('#citabtn'); if(cb) cb.onclick=()=>{ try{ const txt=document.getElementById('apacita').textContent; navigator.clipboard.writeText(txt); cb.textContent=t('pCitaOk'); setTimeout(()=>cb.textContent=t('pCitaBtn'),1400); }catch(e){} };
   p.querySelectorAll('[data-bib]').forEach(b=>b.onclick=()=>{
@@ -873,13 +938,15 @@ function buildLegend(){
     `<div class="keys"><span><i class="kre"></i>${t('lgReson')}</span><span><i class="kdi"></i>${t('lgDisso')}</span><span><i class="kfr">✕</i>${t('lgFricc')}</span></div>`+
     `<div class="corr"><div class="corrbar"><i class="ok" style="width:${(CORR_OK/RELS.length*100).toFixed(1)}%"></i><i class="pc" style="width:${(CORR_PC/RELS.length*100).toFixed(1)}%"></i></div>`+
       `${CORR_OK} / ${RELS.length} ${t('lgCorr')} (${(CORR_OK/RELS.length*100).toFixed(0)} %) · <a id="corrLink">${t('lgCorrVer')}</a></div>`+
-    `<div class="mlink"><a id="marcoLink">${t('lgMarco')}</a></div>`;
+    `<div class="mlink"><a id="marcoLink">${t('lgMarco')}</a></div>`+
+    `<div class="puerta${rfAbierta()?' on':''}" ${rfAbierta()?'role="status"':''}><span class="marca"></span><span id="rfPuertaTxt">${rf('puerta').replace('{n}',RF_VISTAS.size)}</span> <a id="rfLink">${rf('puertaLink')}</a></div>`;
   const grid=lg.querySelector('.grid');
   Object.entries(FEN).forEach(([k,v])=>{ const d=document.createElement('div'); d.className="li"+(state.focusFen===k?" sel":"");
     const c=N.filter(n=>n.f.includes(k)).length;
     d.innerHTML=`<span class="sw" style="background:${v.c}"></span>${fenLabel(k)} <span style="opacity:.55">(${c})</span>`; d.onclick=()=>focusFen(k); grid.appendChild(d); });
   const ml=lg.querySelector('#marcoLink'); if(ml) ml.onclick=openMarco;
   const cl=lg.querySelector('#corrLink'); if(cl) cl.onclick=()=>setEvid(state.evid==="ok"?"todas":"ok");
+  const rl=lg.querySelector('#rfLink'); if(rl) rl.onclick=()=>rfAbrir();
 }
 function openMarco(){ document.getElementById('marco').classList.add('show'); }
 function closeMarco(){ document.getElementById('marco').classList.remove('show'); }
@@ -1041,6 +1108,7 @@ document.addEventListener('keydown',ev=>{
   else if(ev.key==='ArrowRight'||ev.key==='ArrowDown'){ ev.preventDefault(); presNext(); }
   else if(ev.key==='ArrowLeft'||ev.key==='ArrowUp'){ ev.preventDefault(); presPrev(); }
   else if(ev.key==='0'){ presClear(); }
+  else if(ev.key.toLowerCase()==='a'){ ev.preventDefault(); rfAbrir(); }
 });
 
 document.getElementById('entrar').onclick=()=>document.getElementById('umbral').classList.add('gone');
@@ -1048,6 +1116,305 @@ document.getElementById('marcoBtn').onclick=openMarco;
 document.getElementById('umarco').onclick=openMarco;
 document.querySelector('#marco .mclose').onclick=closeMarco;
 document.getElementById('marco').addEventListener('click',ev=>{ if(ev.target.id==='marco') closeMarco(); });
+
+/* ══════════ EL REFLUJO ══════════
+   La marealéctica de Brathwaite tiene dos tiempos y el atlas solo hacía uno: el que va
+   del corpus al lector. Esto es la vuelta. El corpus declara en la leyenda que la mitad
+   de sus corrientes no tiene fuente; aquí quien lee puede cerrar una de esas casillas.
+   Nada entra automáticamente: lo que sale de aquí es un bloque estructurado que se lee,
+   se decide y luego se ingiere a mano. */
+
+/* Salidas. El correo funciona en cualquier navegador sin depender de nada.
+   Para encender la ruta pública de GitHub basta poner aquí «usuario/repositorio»:
+   el repositorio debe tener la creación de issues abierta a cualquiera. */
+const RF_CFG = { github:"", correo:"cpensamientocaribe@gmail.com", umbral:6, minutos:4 };
+
+const RF_T = {
+  es:{
+    puerta:"has recorrido {n} fichas ·", puertaLink:"dejar algo en la corriente →",
+    conoces:"¿la conoces?",
+    tit:"El reflujo", h:"Dejar algo en la corriente",
+    lead:"De las {r} corrientes de este atlas, {p} siguen sin fuente. Esto no es una wiki: nada entra sin lectura editorial, y los aportes se revisan una vez al mes. Sin fuente verificable no hay envío.",
+    que:"Qué traes",
+    tObra:"Obra ausente", tCorriente:"Corriente", tFriccion:"Fricción", tCorrob:"Corroboración", tEnmienda:"Enmienda",
+    lTitulo:"Título", lAutoria:"Autoría", lAno:"Año o rango", lFen:"Fenómenos que atraviesa", lLugar:"Lugar", lTrad:"Tradición lingüística",
+    hFen:"El número es cuántas entradas tiene ya ese fenómeno. Estás proponiendo dentro de un campo poblado.",
+    hTrad:"Como aparece en el atlas: «neerlandés (Curazao)», «francófono (Haití)», «anglófono (Trinidad)».",
+    lA:"Entrada A", lB:"Entrada B", lUna:"Una entrada", lOtra:"La otra", lErr:"Entrada con el error",
+    acPh:"escribe un título o un autor…", acNada:"Sin coincidencias en las {n} entradas",
+    lRel:"Elige una corriente sin fuente", relEsperan:"— {n} esperando —", relCargada:"Llegaste desde la ficha: la corriente ya viene cargada.", lRelPre:"Corriente por corroborar", sinFuente:"sin fuente",
+    lQue:"Qué está mal", oAno:"Año", oAutoria:"Autoría", oTitulo:"Título", oLugar:"Lugar", oTrad:"Tradición lingüística", oOtro:"Otro",
+    aObra:"Qué hace esta obra que ninguna de las {n} presentes hace",
+    hObra:"No pedimos un resumen. Pedimos el hueco exacto que viene a llenar.",
+    aCorriente:"Qué continúa, amplifica o hereda una de la otra",
+    hCorriente:"Una resonancia no es «hablan de lo mismo»: es que una idea sigue viva en la otra sin fundirse con ella.",
+    aFriccion:"Sobre qué discrepan exactamente y en qué texto se ve",
+    hFriccion:"De {r} corrientes solo {d} son disonancias. El corpus está trazado casi todo en clave de eco: este es el aporte que más falta hace.",
+    aCorrob:"Qué dice ahí exactamente", hCorrob:"Cita la página. Buscamos la prueba del vínculo, no una opinión sobre él.",
+    aEnmienda:"Cuál es el dato correcto", hEnmienda:"Sé literal: qué dice el atlas y qué debería decir.",
+    lFuente:"Fuente verificable", phFuente:"DOI, ISBN, URL estable o cita con página",
+    hFuente:"Sin esto no se habilita el envío. Es la misma regla que el atlas se aplica a sí mismo.",
+    cMin:"{n} / 200 mínimo", cMax:"{n} / 600 máximo",
+    quien:"Quién lo deja", lNombre:"Nombre, tal como quieres ser citado", lMail:"Correo",
+    hMail:"Solo para responderte. No se publica nunca.", lFil:"Filiación · opcional", lOrcid:"ORCID · opcional",
+    anon:"Publicar como «aporte anónimo»: mi nombre no aparece en la marca de marea.",
+    okDatos:"Autorizo el tratamiento de estos datos para revisar el aporte y, si se acepta, publicar mi nombre en la marca de marea en la forma que elegí. Puedo pedir su eliminación escribiendo al grupo.",
+    bEnviar:"Dejar en la corriente", bGit:"por GitHub", bCopiar:"copiar el bloque", bCopiado:"copiado",
+    falta:"Falta {x}", faltaY:" y {n} cosa más.", faltaYn:" y {n} cosas más.",
+    fFuente:"la fuente verificable", fArgMin:"el argumento (mínimo 200 caracteres)", fArgMax:"recortar el argumento a 600 caracteres",
+    fTitulo:"el título", fAutoria:"la autoría", fFen:"al menos un fenómeno", fLugar:"el lugar", fTrad:"la tradición lingüística",
+    fDos:"elegir las dos entradas de la lista", fDistintas:"dos entradas distintas", fRel:"elegir la corriente",
+    fEntrada:"elegir la entrada de la lista", fQue:"qué está mal", fNombre:"tu nombre", fMail:"un correo válido", fOk:"la autorización de tratamiento de datos",
+    avisos:"Si entra al corpus, tu nombre queda junto al ítem exacto en la marca de marea y en el pie de la ficha. Cinco aportes aceptados te llevan a los <i>contributors</i> del próximo depósito en Zenodo.",
+    enviado:"Se abrió tu correo con el bloque listo. Si no se abrió, usa «copiar el bloque»."
+  },
+  en:{
+    puerta:"you have read {n} entries ·", puertaLink:"leave something in the current →",
+    conoces:"know this one?",
+    tit:"The returning tide", h:"Leave something in the current",
+    lead:"Of the {r} currents in this atlas, {p} still have no source. This is not a wiki: nothing enters without editorial reading, and contributions are reviewed once a month. No verifiable source, no submission.",
+    que:"What you bring",
+    tObra:"Missing work", tCorriente:"Current", tFriccion:"Friction", tCorrob:"Corroboration", tEnmienda:"Correction",
+    lTitulo:"Title", lAutoria:"Author", lAno:"Year or range", lFen:"Phenomena it runs through", lLugar:"Place", lTrad:"Linguistic tradition",
+    hFen:"The number is how many entries that phenomenon already holds. You are proposing into a populated field.",
+    hTrad:"As it appears in the atlas: «Dutch (Curaçao)», «francophone (Haiti)», «anglophone (Trinidad)».",
+    lA:"Entry A", lB:"Entry B", lUna:"One entry", lOtra:"The other", lErr:"Entry with the error",
+    acPh:"type a title or an author…", acNada:"No match among the {n} entries",
+    lRel:"Choose a current without a source", relEsperan:"— {n} waiting —", relCargada:"You came from the entry: the current is already loaded.", lRelPre:"Current awaiting corroboration", sinFuente:"no source",
+    lQue:"What is wrong", oAno:"Year", oAutoria:"Author", oTitulo:"Title", oLugar:"Place", oTrad:"Linguistic tradition", oOtro:"Other",
+    aObra:"What does this work do that none of the {n} present ones does",
+    hObra:"We are not asking for a summary. We are asking for the exact gap it fills.",
+    aCorriente:"What continues, amplifies or inherits from the other",
+    hCorriente:"A resonance is not «they talk about the same thing»: it is one idea still alive in the other without merging into it.",
+    aFriccion:"What exactly they disagree on, and in which text it shows",
+    hFriccion:"Of {r} currents only {d} are dissonances. The corpus is drawn almost entirely in the key of echo: this is the contribution most needed.",
+    aCorrob:"What it says there, exactly", hCorrob:"Cite the page. We want proof of the link, not an opinion about it.",
+    aEnmienda:"What the correct data is", hEnmienda:"Be literal: what the atlas says and what it should say.",
+    lFuente:"Verifiable source", phFuente:"DOI, ISBN, stable URL or citation with page",
+    hFuente:"Without this, submission stays disabled. It is the same rule the atlas applies to itself.",
+    cMin:"{n} / 200 minimum", cMax:"{n} / 600 maximum",
+    quien:"Who leaves it", lNombre:"Name, as you wish to be cited", lMail:"Email",
+    hMail:"Only to reply to you. Never published.", lFil:"Affiliation · optional", lOrcid:"ORCID · optional",
+    anon:"Publish as «anonymous contribution»: my name will not appear in the tidemark.",
+    okDatos:"I authorise the processing of this data to review the contribution and, if accepted, to publish my name in the tidemark in the form I chose. I may request its deletion by writing to the group.",
+    bEnviar:"Leave it in the current", bGit:"via GitHub", bCopiar:"copy the block", bCopiado:"copied",
+    falta:"Missing {x}", faltaY:" and {n} more thing.", faltaYn:" and {n} more things.",
+    fFuente:"the verifiable source", fArgMin:"the argument (200 characters minimum)", fArgMax:"trimming the argument to 600 characters",
+    fTitulo:"the title", fAutoria:"the author", fFen:"at least one phenomenon", fLugar:"the place", fTrad:"the linguistic tradition",
+    fDos:"choosing both entries from the list", fDistintas:"two different entries", fRel:"choosing the current",
+    fEntrada:"choosing the entry from the list", fQue:"what is wrong", fNombre:"your name", fMail:"a valid email", fOk:"the data processing authorisation",
+    avisos:"If it enters the corpus, your name stays beside the exact item in the tidemark and in the footer of the entry. Five accepted contributions take you to the <i>contributors</i> of the next Zenodo deposit.",
+    enviado:"Your mail client opened with the block ready. If it did not, use «copy the block»."
+  }
+};
+const rf = k => (RF_T[LANG] && RF_T[LANG][k]!==undefined) ? RF_T[LANG][k] : (RF_T.es[k]||"");
+
+const RF_PC = RELS.filter(r=>!esCorr(r.a,r.b));
+const RF_DISO = RELS.filter(r=>r.tipo==='disonancia').length;
+const RF_LS='atlas-reflujo-lector';
+let RF_VISTAS = new Set(); try{ RF_VISTAS = new Set(JSON.parse(localStorage.getItem(RF_LS)||'[]')); }catch(e){}
+let RF_TIEMPO=false, RF_TIPO='corroboracion', RF_REL=null, RF_FEN=new Set();
+setTimeout(()=>{ RF_TIEMPO=true; if(rfAbierta()) buildLegend(); }, RF_CFG.minutos*60*1000);
+
+/* La puerta se gana recorriendo, no con credenciales: seis fichas o cuatro minutos.
+   El enlace directo #reflujo la salta, para invitar a alguien sin obligarlo a recorrer. */
+function rfAbierta(){ return RF_VISTAS.size>=RF_CFG.umbral || RF_TIEMPO; }
+function rfVisita(id){
+  if(RF_VISTAS.has(id)) return;
+  const antes=rfAbierta(); RF_VISTAS.add(id);
+  try{ localStorage.setItem(RF_LS, JSON.stringify([...RF_VISTAS])); }catch(e){}
+  if(!antes && rfAbierta()) setTimeout(buildLegend,0);
+}
+function rfAbrir(tipo,rel){
+  if(tipo){ RF_TIPO=tipo; RF_REL=rel||null; }
+  const a=document.getElementById('reflujo');
+  a.hidden=false; rfPintar(); a.classList.add('open');
+  document.getElementById('panel').classList.remove('open');
+}
+function rfCerrar(){ document.getElementById('reflujo').classList.remove('open'); }
+
+const rfEsc = s => String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const rfV = id => { const e=document.getElementById(id); return e?e.value.trim():''; };
+const rfSub = (s,o) => Object.keys(o).reduce((x,k)=>x.split('{'+k+'}').join(o[k]), s);
+
+function rfPintar(){
+  const a=document.getElementById('reflujo');
+  const tipos=[['obra','tObra'],['corriente','tCorriente'],['friccion','tFriccion'],['corroboracion','tCorrob'],['enmienda','tEnmienda']];
+  a.innerHTML=`<button class="close" id="rfClose" aria-label="×">×</button>
+    <div class="tit">${rf('tit')}</div><h2>${rf('h')}</h2>
+    <p class="lead">${rfSub(rf('lead'),{r:RELS.length,p:RF_PC.length})}</p>
+    <div class="grp"><label style="font-family:var(--ff-mono);font-size:8.5px;text-transform:uppercase;letter-spacing:1.4px;color:var(--gray)">${rf('que')}</label>
+      <div class="seg" id="rfSeg">${tipos.map(([k,l])=>`<button type="button" data-rt="${k}"${RF_TIPO===k?' class="on"':''}>${rf(l)}</button>`).join('')}</div></div>
+    <form id="rfForm" novalidate autocomplete="off">
+      <input type="text" class="hp" id="rfHp" tabindex="-1" aria-hidden="true">
+      <div id="rfCampos"></div>
+      <div class="divi"><div class="dl">${rf('quien')}</div>
+        <div class="f"><label>${rf('lNombre')} <span class="req">·</span></label><input type="text" id="rfNombre" autocomplete="name"></div>
+        <div class="f"><label>${rf('lMail')} <span class="req">·</span></label><input type="email" id="rfMail" autocomplete="email"><div class="hint">${rf('hMail')}</div></div>
+        <div class="f"><label>${rf('lFil')}</label><input type="text" id="rfFil"></div>
+        <div class="f"><label>${rf('lOrcid')}</label><input type="text" id="rfOrcid" placeholder="0000-0000-0000-0000"></div>
+        <label class="check"><input type="checkbox" id="rfAnon"> ${rf('anon')}</label>
+        <label class="check"><input type="checkbox" id="rfOk"> ${rf('okDatos')}</label>
+      </div>
+      <div class="envio">
+        <button type="button" id="rfEnviar">${rf('bEnviar')}</button>
+        ${RF_CFG.github?`<button type="button" class="alt" id="rfGit">${rf('bGit')}</button>`:''}
+        <button type="button" class="alt" id="rfCopiar">${rf('bCopiar')}</button>
+      </div>
+      <div class="porque" id="rfPorque" role="status"></div>
+      <div class="avisos">${rf('avisos')}</div>
+    </form>`;
+  a.querySelector('#rfClose').onclick=rfCerrar;
+  a.querySelector('#rfSeg').onclick=ev=>{ const b=ev.target.closest('[data-rt]'); if(!b) return; RF_TIPO=b.dataset.rt; RF_REL=null; rfPintar(); };
+  a.querySelector('#rfEnviar').onclick=()=>rfEnviar('correo');
+  const g=a.querySelector('#rfGit'); if(g) g.onclick=()=>rfEnviar('github');
+  a.querySelector('#rfCopiar').onclick=ev=>rfCopiar(ev.target);
+  a.querySelectorAll('#rfNombre,#rfMail,#rfAnon,#rfOk').forEach(e=>e.addEventListener('input',rfValida));
+  a.querySelector('#rfOk').addEventListener('change',rfValida);
+  rfCampos();
+}
+
+function rfCampos(){
+  RF_FEN=new Set();
+  const arg=(k,lbl,hint)=>`<div class="f"><label>${lbl} <span class="req">·</span></label><textarea id="rfArg"></textarea><div class="hint">${hint}</div><div class="cnt" id="rfArgC">${rfSub(rf('cMin'),{n:0})}</div></div>`;
+  const fuente=()=>`<div class="f"><label>${rf('lFuente')} <span class="req">·</span></label><input type="text" id="rfFuente" placeholder="${rf('phFuente')}"><div class="hint">${rf('hFuente')}</div></div>`;
+  const txt=(id,lbl,hint)=>`<div class="f"><label>${lbl} <span class="req">·</span></label><input type="text" id="${id}">${hint?`<div class="hint">${hint}</div>`:''}</div>`;
+  const ac=(id,lbl)=>`<div class="f"><label>${lbl} <span class="req">·</span></label><input type="text" id="${id}" placeholder="${rf('acPh')}"><div class="aclist" hidden></div></div>`;
+  let h='';
+  if(RF_TIPO==='obra'){
+    h = txt('rfT',rf('lTitulo'))+txt('rfA',rf('lAutoria'))
+      + `<div class="f"><label>${rf('lAno')}</label><input type="text" id="rfY" placeholder="1974–85"></div>`
+      + `<div class="f"><label>${rf('lFen')} <span class="req">·</span></label><div class="chips" id="rfFenBox">`
+      + Object.keys(FEN).map(k=>`<button type="button" class="chip" data-fk="${k}">${rfEsc(fenLabel(k))}<b>${N.filter(n=>n.f.includes(k)).length}</b></button>`).join('')
+      + `</div><div class="hint">${rf('hFen')}</div></div>`
+      + `<div class="f"><label>${rf('lLugar')} <span class="req">·</span></label><select id="rfL"><option value="">—</option>`
+      + Object.keys(L).map(k=>`<option value="${k}">${rfEsc(L[k][2])}</option>`).join('')+`</select></div>`
+      + txt('rfTr',rf('lTrad'),rf('hTrad'))
+      + arg('rfArg',rfSub(rf('aObra'),{n:N.length}),rf('hObra')) + fuente();
+  } else if(RF_TIPO==='corriente' || RF_TIPO==='friccion'){
+    const fr = RF_TIPO==='friccion';
+    h = ac('rfAid', fr?rf('lUna'):rf('lA')) + ac('rfBid', fr?rf('lOtra'):rf('lB'))
+      + arg('rfArg', fr?rf('aFriccion'):rf('aCorriente'),
+            fr?rfSub(rf('hFriccion'),{r:RELS.length,d:RF_DISO}):rf('hCorriente'))
+      + fuente();
+  } else if(RF_TIPO==='corroboracion'){
+    if(RF_REL){
+      const A=byId(RF_REL.a), B=byId(RF_REL.b), r=relDe(RF_REL.a,RF_REL.b);
+      h = `<div class="f"><label>${rf('lRelPre')}</label>
+        <div class="relprev${r&&r.tipo==='disonancia'?' diso':''}">${rfEsc(A?A.t:RF_REL.a)} <span style="color:var(--gray)">—</span> ${rfEsc(B?B.t:RF_REL.b)}
+        <div class="k">${r?r.tipo:''} · ${rf('sinFuente')}</div></div>
+        <div class="hint">${rf('relCargada')}</div></div>`;
+    } else {
+      h = `<div class="f"><label>${rf('lRel')} <span class="req">·</span></label><select id="rfRel"><option value="">${rfSub(rf('relEsperan'),{n:RF_PC.length})}</option>`
+        + RF_PC.map((r,i)=>{ const A=byId(r.a),B=byId(r.b); return `<option value="${i}">${rfEsc((A?A.t:r.a)+' — '+(B?B.t:r.b))}</option>`; }).join('')
+        + `</select></div>`;
+    }
+    h += fuente() + arg('rfArg',rf('aCorrob'),rf('hCorrob'));
+  } else {
+    h = ac('rfAid',rf('lErr'))
+      + `<div class="f"><label>${rf('lQue')} <span class="req">·</span></label><select id="rfQue"><option value="">—</option>`
+      + ['oAno','oAutoria','oTitulo','oLugar','oTrad','oOtro'].map(k=>`<option>${rf(k)}</option>`).join('')+`</select></div>`
+      + arg('rfArg',rf('aEnmienda'),rf('hEnmienda')) + fuente();
+  }
+  const box=document.getElementById('rfCampos'); box.innerHTML=h;
+  box.querySelectorAll('.aclist').forEach(l=>rfAC(l.parentElement.querySelector('input'),l));
+  const fb=document.getElementById('rfFenBox');
+  if(fb) fb.onclick=ev=>{ const c=ev.target.closest('[data-fk]'); if(!c) return; const k=c.dataset.fk; c.classList.toggle('on'); RF_FEN.has(k)?RF_FEN.delete(k):RF_FEN.add(k); rfValida(); };
+  const ta=document.getElementById('rfArg');
+  if(ta) ta.addEventListener('input',()=>{ const n=ta.value.trim().length, c=document.getElementById('rfArgC');
+    c.textContent = n<200 ? rfSub(rf('cMin'),{n}) : rfSub(rf('cMax'),{n});
+    c.classList.toggle('ok', n>=200 && n<=600); rfValida(); });
+  box.querySelectorAll('input,select,textarea').forEach(e=>e.addEventListener('input',rfValida));
+  rfValida();
+}
+
+/* Autocompletado sobre el corpus: una corriente solo vale si sus dos extremos son
+   identificadores reales del atlas, no nombres tecleados de memoria. */
+function rfAC(inp,box){
+  if(!inp||!box) return;
+  inp.addEventListener('input',()=>{
+    const q=inp.value.trim().toLowerCase(); inp.dataset.rid='';
+    if(q.length<2){ box.hidden=true; rfValida(); return; }
+    const res=N.filter(o=>(o.t+' '+o.a).toLowerCase().includes(q)).slice(0,8);
+    box.innerHTML = res.length ? res.map(o=>`<div data-rid="${o.id}">${rfEsc(o.t)}<small>${rfEsc(o.a)}${o.y?' · '+o.y:''}</small></div>`).join('')
+                              : `<div style="color:var(--gray)">${rfSub(rf('acNada'),{n:N.length})}</div>`;
+    box.hidden=false; rfValida();
+  });
+  box.addEventListener('mousedown',ev=>{ const d=ev.target.closest('[data-rid]'); if(!d) return;
+    const o=byId(d.dataset.rid); inp.value=o?o.t:''; inp.dataset.rid=d.dataset.rid; box.hidden=true; rfValida(); });
+  inp.addEventListener('blur',()=>setTimeout(()=>{box.hidden=true;},160));
+}
+
+function rfFaltas(){
+  const f=[], arg=rfV('rfArg');
+  if(document.getElementById('rfFuente') && !rfV('rfFuente')) f.push(rf('fFuente'));
+  if(document.getElementById('rfArg')){ if(arg.length<200) f.push(rf('fArgMin')); else if(arg.length>600) f.push(rf('fArgMax')); }
+  if(RF_TIPO==='obra'){ if(!rfV('rfT'))f.push(rf('fTitulo')); if(!rfV('rfA'))f.push(rf('fAutoria'));
+    if(!RF_FEN.size)f.push(rf('fFen')); if(!rfV('rfL'))f.push(rf('fLugar')); if(!rfV('rfTr'))f.push(rf('fTrad')); }
+  if(RF_TIPO==='corriente'||RF_TIPO==='friccion'){ const a=document.getElementById('rfAid'), b=document.getElementById('rfBid');
+    if(!a||!b||!a.dataset.rid||!b.dataset.rid) f.push(rf('fDos'));
+    else if(a.dataset.rid===b.dataset.rid) f.push(rf('fDistintas')); }
+  if(RF_TIPO==='corroboracion' && !RF_REL && !rfV('rfRel')) f.push(rf('fRel'));
+  if(RF_TIPO==='enmienda'){ const a=document.getElementById('rfAid');
+    if(!a||!a.dataset.rid) f.push(rf('fEntrada')); if(!rfV('rfQue')) f.push(rf('fQue')); }
+  if(!rfV('rfNombre')) f.push(rf('fNombre'));
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(rfV('rfMail'))) f.push(rf('fMail'));
+  const ok=document.getElementById('rfOk'); if(!ok||!ok.checked) f.push(rf('fOk'));
+  return f;
+}
+function rfValida(){
+  const f=rfFaltas(), listo=f.length===0;
+  document.querySelectorAll('#reflujo .envio button').forEach(b=>{ if(b.id!=='rfCopiar') b.disabled=!listo; });
+  const p=document.getElementById('rfPorque');
+  if(p) p.textContent = listo ? '' : rfSub(rf('falta'),{x:f.slice(0,3).join(', ')}) + (f.length>3 ? rfSub(f.length-3===1?rf('faltaY'):rf('faltaYn'),{n:f.length-3}) : '.');
+  return listo;
+}
+
+/* Lo que sale es YAML deliberadamente: legible para quien lo recibe y directamente
+   ingestable por el script que lo inserta en datos-atlas.json. */
+function rfBloque(){
+  const rel = RF_REL || (RF_TIPO==='corroboracion' && rfV('rfRel')!=='' ? RF_PC[+rfV('rfRel')] : null);
+  const L2=['tipo: '+RF_TIPO];
+  if(RF_TIPO==='obra') L2.push('titulo: '+rfV('rfT'),'autoria: '+rfV('rfA'),'anio: '+(rfV('rfY')||'—'),
+      'fenomenos: '+[...RF_FEN].join(', '),'lugar: '+rfV('rfL'),'tradicion: '+rfV('rfTr'));
+  if(RF_TIPO==='corriente'||RF_TIPO==='friccion') L2.push('a: '+document.getElementById('rfAid').dataset.rid,
+      'b: '+document.getElementById('rfBid').dataset.rid, 'relacion: '+(RF_TIPO==='friccion'?'disonancia':'resonancia'));
+  if(RF_TIPO==='corroboracion'&&rel) L2.push('a: '+rel.a,'b: '+rel.b,'relacion: '+rel.tipo);
+  if(RF_TIPO==='enmienda') L2.push('entrada: '+document.getElementById('rfAid').dataset.rid,'campo: '+rfV('rfQue'));
+  L2.push('fuente: '+rfV('rfFuente'),'argumento: >','  '+rfV('rfArg').replace(/\n/g,'\n  '));
+  L2.push('credito: '+(document.getElementById('rfAnon').checked?'anonimo':rfV('rfNombre')));
+  if(rfV('rfFil')) L2.push('filiacion: '+rfV('rfFil'));
+  if(rfV('rfOrcid')) L2.push('orcid: '+rfV('rfOrcid'));
+  L2.push('contacto: '+rfV('rfMail'), 'corpus: '+(ATLAS.meta?ATLAS.meta.version:''), 'idioma: '+LANG);
+  return L2.join('\n');
+}
+function rfTitulo(){
+  const n=rf({obra:'tObra',corriente:'tCorriente',friccion:'tFriccion',corroboracion:'tCorrob',enmienda:'tEnmienda'}[RF_TIPO]);
+  if(RF_TIPO==='obra') return `[${n}] ${rfV('rfT')}`;
+  const rel = RF_REL || (RF_TIPO==='corroboracion' && rfV('rfRel')!=='' ? RF_PC[+rfV('rfRel')] : null);
+  if(rel){ const A=byId(rel.a),B=byId(rel.b); return `[${n}] ${A?A.t:rel.a} — ${B?B.t:rel.b}`; }
+  const a=document.getElementById('rfAid'), b=document.getElementById('rfBid');
+  if(a&&a.dataset.rid){ const A=byId(a.dataset.rid), B=(b&&b.dataset.rid)?byId(b.dataset.rid):null;
+    return `[${n}] ${A?A.t:''}${B?' — '+B.t:''}`; }
+  return `[${n}]`;
+}
+function rfEnviar(via){
+  if(!rfValida()) return;
+  if(document.getElementById('rfHp').value) { rfCerrar(); return; } /* campo trampa */
+  const asunto=rfTitulo(), cuerpo=rfBloque();
+  if(via==='github' && RF_CFG.github){
+    window.open('https://github.com/'+RF_CFG.github+'/issues/new?labels='+encodeURIComponent(RF_TIPO)
+      +'&title='+encodeURIComponent(asunto)+'&body='+encodeURIComponent('```yaml\n'+cuerpo+'\n```'),'_blank','noopener');
+  } else {
+    location.href='mailto:'+RF_CFG.correo+'?subject='+encodeURIComponent(asunto)+'&body='+encodeURIComponent(cuerpo);
+  }
+  const p=document.getElementById('rfPorque'); if(p){ p.style.color='var(--gold)'; p.textContent=rf('enviado'); }
+}
+function rfCopiar(btn){
+  const txt=rfTitulo()+'\n\n'+rfBloque();
+  try{ navigator.clipboard.writeText(txt); }catch(e){}
+  const antes=btn.textContent; btn.textContent=rf('bCopiado'); setTimeout(()=>btn.textContent=antes,1400);
+}
 
 /* ---------- conmutador de idioma ES / EN ---------- */
 function applyLang(){
@@ -1062,6 +1429,8 @@ function applyLang(){
   if(state.view==='tabla'){ renderTable(); } else { render(); }
   if(openId){ openPanel(openId); }
   else if(ff){ state.focusFen=ff; showGuion(ff); buildLegend(); refreshHi(); }
+  const rfa=document.getElementById('reflujo');
+  if(rfa && rfa.classList.contains('open')){ rfPintar(); } /* el reflujo también cambia de lengua */
 }
 document.getElementById('langBtn').onclick=()=>{ LANG = (LANG==='es') ? 'en' : 'es'; applyLang(); };
 
@@ -1069,8 +1438,14 @@ render();
 if(LANG==='en') applyLang();
 requestAnimationFrame(loop);
 /* enlace profundo: si la URL trae #idObra, abrir esa ficha y saltar el umbral */
-(function(){ const h=decodeURIComponent(location.hash.replace(/^#/,'')); if(h && byId(h)){ document.getElementById('umbral').classList.add('gone'); openPanel(h); } })();
-window.addEventListener('hashchange',()=>{ const h=decodeURIComponent(location.hash.replace(/^#/,'')); if(h && byId(h)) openPanel(h); });
+(function(){ const h=decodeURIComponent(location.hash.replace(/^#/,''));
+  if(h==='reflujo'){ document.getElementById('umbral').classList.add('gone'); rfAbrir(); return; }
+  if(h && byId(h)){ document.getElementById('umbral').classList.add('gone'); openPanel(h); } })();
+window.addEventListener('hashchange',()=>{ const h=decodeURIComponent(location.hash.replace(/^#/,''));
+  if(h==='reflujo'){ rfAbrir(); return; }
+  if(h && byId(h)) openPanel(h); });
+/* Esc cierra también el reflujo, coherente con el resto del atlas */
+document.addEventListener('keydown',ev=>{ if(ev.key==='Escape') rfCerrar(); });
 </script>
 </body>
 </html>
