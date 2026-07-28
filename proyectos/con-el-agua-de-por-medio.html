@@ -409,6 +409,7 @@
     <div class="how" data-i18n-html="umbralHow">Elige un fenómeno en la leyenda y <b>se encienden sus puntos</b> con su guión. Abre cualquier obra y <b>se ramifican sus conexiones</b>, directas e indirectas, a través del agua. Pasa el cursor para leer cada nodo. El fondo sube y baja como la marea, según Brathwaite.</div>
     <button id="entrar" data-i18n="entrar">Entrar en la corriente</button>
     <div style="margin-top:16px;font-family:var(--ff-mono);font-size:9.5px;letter-spacing:.6px;color:var(--gray)"><span data-i18n="umbralBase">Base conceptual: Brathwaite · Monahan — </span><a id="umarco" style="color:var(--orange);cursor:pointer;text-decoration:none" data-i18n="verMarco">ver marco</a></div>
+    <div style="margin-top:9px;font-family:var(--ff-mono);font-size:9.5px;letter-spacing:.6px;color:var(--gray)"><span data-i18n="umbralAporte">La mitad de las corrientes aún no tiene fuente. Este atlas recibe aportes — </span><a href="reflujo-guia.html" style="color:var(--gold);text-decoration:none" data-i18n="umbralAporteLink">el reflujo</a></div>
   </div></div>
 
   <div id="marco"><div class="mbox">
@@ -548,6 +549,7 @@ const I18N = {
     lblBuscar:"Buscar", buscarPh:"título o autor…", buscarNada:"sin coincidencias", buscarUna:"1 obra", buscarN:"{n} obras",
     lblIdioma:"Idioma",
     entrar:"Entrar en la corriente", umbralBase:"Base conceptual: Brathwaite · Monahan — ", verMarco:"ver marco",
+    umbralAporte:"La mitad de las corrientes aún no tiene fuente. Este atlas recibe aportes — ", umbralAporteLink:"el reflujo",
     umbralP:"Ninguna orilla es una totalidad. El archipiélago no lo hacen las naciones: lo hacen las fuerzas que cruzan de una orilla a otra. Cada obra vive aquí en el fenómeno que la atraviesa; el país que la aloja queda en segundo plano.",
     umbralHow:"Elige un fenómeno en la leyenda y <b>se encienden sus puntos</b> con su guión. Abre cualquier obra y <b>se ramifican sus conexiones</b>, directas e indirectas, a través del agua. Pasa el cursor para leer cada nodo. El fondo sube y baja como la marea, según Brathwaite.",
     marcoTit:"Marco conceptual", marcoSub:"cómo piensa este atlas · y cómo la forma encarna la teoría",
@@ -611,6 +613,7 @@ const I18N = {
     lblBuscar:"Search", buscarPh:"title or author…", buscarNada:"no matches", buscarUna:"1 work", buscarN:"{n} works",
     lblIdioma:"Language",
     entrar:"Enter the current", umbralBase:"Conceptual base: Brathwaite · Monahan — ", verMarco:"see frame",
+    umbralAporte:"Half the currents still have no source. This atlas takes contributions — ", umbralAporteLink:"the returning tide",
     umbralP:"No shore is a totality. The archipelago is not made by nations: it is made by the forces that cross from one shore to another. Each work lives here in the phenomenon that runs through it; the country that hosts it stays in the background.",
     umbralHow:"Choose a phenomenon in the legend and <b>its points light up</b> with their note. Open any work and <b>its connections branch out</b>, direct and indirect, across the water. Hover over each node to read it. The ground rises and falls like the tide, after Brathwaite.",
     marcoTit:"Conceptual frame", marcoSub:"how this atlas thinks · and how form embodies theory",
@@ -943,7 +946,7 @@ function buildLegend(){
     `<div class="keys"><span><i class="kre"></i>${t('lgReson')}</span><span><i class="kdi"></i>${t('lgDisso')}</span><span><i class="kfr">✕</i>${t('lgFricc')}</span></div>`+
     `<div class="corr"><div class="corrbar"><i class="ok" style="width:${(CORR_OK/RELS.length*100).toFixed(1)}%"></i><i class="pc" style="width:${(CORR_PC/RELS.length*100).toFixed(1)}%"></i></div>`+
       `${CORR_OK} / ${RELS.length} ${t('lgCorr')} (${(CORR_OK/RELS.length*100).toFixed(0)} %) · <a id="corrLink">${t('lgCorrVer')}</a></div>`+
-    `<div class="mlink"><a id="marcoLink">${t('lgMarco')}</a></div>`+
+    `<div class="mlink"><a id="marcoLink">${t('lgMarco')}</a> <span style="opacity:.4"> · </span><a href="reflujo-guia.html" style="color:var(--gold)">${rf('lgGuia')}</a></div>`+
     `<div class="puerta${rfAbierta()?' on':''}" ${rfAbierta()?'role="status"':''}><span class="marca"></span><span id="rfPuertaTxt">${rf('puerta').replace('{n}',RF_VISTAS.size)}</span> <a id="rfLink">${rf('puertaLink')}</a></div>`;
   const grid=lg.querySelector('.grid');
   Object.entries(FEN).forEach(([k,v])=>{ const d=document.createElement('div'); d.className="li"+(state.focusFen===k?" sel":"");
@@ -1136,7 +1139,7 @@ const RF_CFG = { github:"", correo:"cpensamientocaribe@gmail.com", umbral:6, min
 
 const RF_T = {
   es:{
-    puerta:"has recorrido {n} fichas ·", puertaLink:"dejar algo en la corriente →",
+    lgGuia:"el reflujo", puerta:"has recorrido {n} fichas ·", puertaLink:"dejar algo en la corriente →",
     conoces:"¿la conoces?",
     tit:"El reflujo", h:"Dejar algo en la corriente",
     lead:"De las {r} corrientes de este atlas, {p} siguen sin fuente. Esto no es una wiki: nada entra sin lectura editorial, y los aportes se revisan una vez al mes. Sin fuente verificable no hay envío.",
@@ -1174,7 +1177,7 @@ const RF_T = {
     enviado:"Se abrió tu correo con el bloque listo. Si no se abrió, usa «copiar el bloque»."
   },
   en:{
-    puerta:"you have read {n} entries ·", puertaLink:"leave something in the current →",
+    lgGuia:"the returning tide", puerta:"you have read {n} entries ·", puertaLink:"leave something in the current →",
     conoces:"know this one?",
     tit:"The returning tide", h:"Leave something in the current",
     lead:"Of the {r} currents in this atlas, {p} still have no source. This is not a wiki: nothing enters without editorial reading, and contributions are reviewed once a month. No verifiable source, no submission.",
