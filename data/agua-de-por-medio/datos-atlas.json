@@ -3,7 +3,7 @@
     "titulo": "Con el agua de por medio",
     "subtitulo": "Atlas para una antropología archipiélica",
     "responsable": "Centro de Pensamiento Caribe",
-    "version": "1.5.0",
+    "version": "1.7.0",
     "fecha": "2026-07-29"
   },
   "fenomenos": {
@@ -2475,6 +2475,62 @@
       "l": "bluefields",
       "tr": "anglófono (EE. UU./Nicaragua)",
       "ap": "La permanencia garífuna en Bluefields y Pearl Lagoon sostenida a la vez que la migración a Nueva York la dispersa. Etnografía colaborativa con la Universidad Centroamericana de Managua: la orilla nicaragüense del Gran Caribe, que casi nunca aparece en los mapas del archipiélago."
+    },
+    {
+      "id": "helglibertyequality",
+      "k": "obra",
+      "t": "Liberty and Equality in Caribbean Colombia, 1770-1835",
+      "a": "Aline Helg",
+      "y": "2004",
+      "f": [
+        "soberanias",
+        "colonialidad"
+      ],
+      "l": "cartagena",
+      "tr": "hispano (Suiza/Colombia)",
+      "ap": "Dos generaciones antes de ¡Nunca más esclavos!, Helg reconstruye el Caribe neogranadino desde la frontera colonial hasta la primera república: cómo la retórica de igualdad de la independencia convivió con la exclusión racial de facto. Reconoce explícitamente el trabajo de Múnera por haber sacado de la invisibilidad a líderes mulatos como Pedro Romero, artesano que organizó a la Cartagena de color contra España en 1811."
+    },
+    {
+      "id": "brathwaitearchipelago",
+      "k": "obra",
+      "t": "Caribbean Man in Space and Time",
+      "a": "Kamau Brathwaite",
+      "y": "1975 / reed. 2021",
+      "f": [
+        "creolizacion",
+        "colonialidad"
+      ],
+      "l": "barbados",
+      "tr": "anglófono (Barbados)",
+      "ap": "Quince años antes de Glissant, el mismo gesto: 'archipelago: fragments... the unity is submarine'. Brathwaite propone leer el Caribe no por fragmentos nacionales sino por la placa que los conecta por debajo, y formula la creolización como dialéctica de tiempo y espacio, no como mezcla consumada. Ensayo germinal del principio de diseño de este atlas."
+    },
+    {
+      "id": "muneraelfracaso",
+      "k": "obra",
+      "t": "El fracaso de la nación: región, clase y raza en el Caribe colombiano (1717-1821)",
+      "a": "Alfonso Múnera",
+      "y": "1998",
+      "f": [
+        "soberanias",
+        "colonialidad"
+      ],
+      "l": "cartagena",
+      "tr": "hispano (Colombia)",
+      "ap": "El relato que faltaba en el eje: la independencia no como empresa de criollos ilustrados sino como conflicto regional entre las élites de Cartagena y Bogotá, con la participación decisiva de negros y mulatos costeños que Múnera reconstruye a partir de fragmentos, porque el ejército realista quemó el archivo cartagenero al reconquistar la ciudad en 1815. Pedro Romero y Pedro Medrana, líderes populares casi sin rastro documental, emergen aquí como agentes políticos y no como comparsa de la gesta criolla."
+    },
+    {
+      "id": "saetheridentidades",
+      "k": "obra",
+      "t": "Identidades e independencia en Santa Marta y Riohacha, 1750-1850",
+      "a": "Steinar A. Sæther",
+      "y": "2005 / ed. ICANH 2012",
+      "f": [
+        "soberanias",
+        "colonialidad"
+      ],
+      "l": "santamarta",
+      "tr": "hispano (Noruega/Colombia)",
+      "ap": "El reverso de Múnera: si en Cartagena los comunes de color identificaron independencia con igualdad, en Santa Marta los indios tributarios sostuvieron el bando realista hasta 1820. Sæther retoma la tesis de Múnera para objetarle que no explica esa asimetría, y muestra que la composición racial de las dos ciudades no bastaba para predecir su política: la costa caribeña deja de ser un bloque y se vuelve dos historias."
     }
   ],
   "relaciones": [
@@ -4493,6 +4549,90 @@
       "b": "andersonblackindigenous",
       "tipo": "resonancia",
       "fuente": "Los dos leen la identidad garífuna como negociación entre lo negro y lo indígena frente al Estado centroamericano. Por corroborar el vínculo directo."
+    },
+    {
+      "a": "helglibertyequality",
+      "b": "helgnuncamas",
+      "tipo": "resonancia",
+      "fuente": "Misma autora: este libro de 2004 sobre el Caribe neogranadino (1770-1835) precede y alimenta el comparativismo continental de ¡Nunca más esclavos! (2016)."
+    },
+    {
+      "a": "helglibertyequality",
+      "b": "abello",
+      "tipo": "resonancia",
+      "fuente": "Comparten el fenómeno Soberanías/Colonialidad sobre el Caribe colombiano excluido del relato nacional andino. Por corroborar el vínculo directo."
+    },
+    {
+      "a": "helglibertyequality",
+      "b": "bassiacuoso",
+      "tipo": "resonancia",
+      "fuente": "Comparten el fenómeno Colonialidad y el territorio del Gran Caribe neogranadino. Por corroborar el vínculo directo."
+    },
+    {
+      "a": "helglibertyequality",
+      "b": "castrogomezhybris",
+      "tipo": "resonancia",
+      "fuente": "Comparten geografía (Nueva Granada) y fenómeno Colonialidad, leídos por raza y por ciencia/Ilustración respectivamente. Por corroborar el vínculo directo."
+    },
+    {
+      "a": "brathwaitearchipelago",
+      "b": "brathwaite",
+      "tipo": "resonancia",
+      "fuente": "Mismo autor: 'the unity is submarine' y el archipiélago de fragmentos de este ensayo de 1975 anteceden en una década a la tidaléctica de Nation Language/Tidalectics (1984). Continuidad verificada en el texto."
+    },
+    {
+      "a": "brathwaitearchipelago",
+      "b": "trouillot",
+      "tipo": "resonancia",
+      "fuente": "Comparten el problema del Caribe como fragmentos/archipiélago que desborda la antropología nacional. Por corroborar el vínculo directo."
+    },
+    {
+      "a": "brathwaitearchipelago",
+      "b": "glissant",
+      "tipo": "resonancia",
+      "fuente": "Comparten el fenómeno Creolización/oralitura y la figura del archipiélago, en lenguas distintas. Por corroborar el vínculo directo."
+    },
+    {
+      "a": "muneraelfracaso",
+      "b": "helglibertyequality",
+      "tipo": "resonancia",
+      "fuente": "Cita directa cruzada, verificada en ambos textos: Helg reconoce que 'thanks to the work of Múnera, some mulatto leaders... such as Pedro Romero... have begun to achieve the historical visibility they deserve', y el propio libro de Múnera reconstruye a Romero y Medrana a partir de fragmentos documentales dispersos."
+    },
+    {
+      "a": "muneraelfracaso",
+      "b": "saetheridentidades",
+      "tipo": "disonancia",
+      "fuente": "Cita directa verificada: Sæther retoma la tesis de Múnera sobre los comunes cartageneros ('de acuerdo con Múnera, la población de color de la ciudad llegó a identificar independencia con igualdad', El fracaso 173-215) y le objeta explícitamente: 'Múnera no trata de explicar por qué los comunes de Cartagena querían la independencia' (p. 191)."
+    },
+    {
+      "a": "saetheridentidades",
+      "b": "helglibertyequality",
+      "tipo": "resonancia",
+      "fuente": "Cita directa verificada: Sæther remite a Helg junto con Múnera sobre la composición racial de los comunes costeños ('Junto con la versión de Múnera, puede verse, por ejemplo, Helg (1-30)', p. 191, n. 264)."
+    },
+    {
+      "a": "muneraelfracaso",
+      "b": "abello",
+      "tipo": "resonancia",
+      "fuente": "Comparten el fenómeno Soberanías/Colonialidad y la tesis del Caribe colombiano excluido del relato nacional andino. Por corroborar el vínculo directo."
+    },
+    {
+      "a": "muneraelfracaso",
+      "b": "bassiacuoso",
+      "tipo": "resonancia",
+      "fuente": "Comparten el fenómeno Colonialidad y el territorio del Gran Caribe neogranadino en el mismo período. Por corroborar el vínculo directo."
+    },
+    {
+      "a": "saetheridentidades",
+      "b": "abello",
+      "tipo": "resonancia",
+      "fuente": "Comparten el fenómeno Soberanías/Colonialidad sobre el Caribe colombiano frente al relato nacional andino. Por corroborar el vínculo directo."
+    },
+    {
+      "a": "saetheridentidades",
+      "b": "figueroa",
+      "tipo": "resonancia",
+      "fuente": "Comparten el nodo Santa Marta y el problema de la violencia política regional, en distintos períodos. Por corroborar el vínculo directo."
     }
   ]
 }
