@@ -1,4 +1,14 @@
 (function () {
+  /* Dónde aterrizan los formularios del sitio.
+     El endpoint viejo `formspree.io/correo@dominio` dejó de existir cuando Formspree
+     pasó a identificadores de formulario, así que el contacto llevaba meses fallando
+     en silencio: el visitante veía un aviso de error y el mensaje no llegaba a nadie.
+     Mientras no haya identificador nuevo, el formulario redacta el correo en el cliente
+     del visitante, que funciona sin depender de ningún servicio. Para volver al envío
+     en segundo plano basta con poner aquí el `formspree.io/f/xxxxxx`. */
+  var ENDPOINT = '';
+  var CORREO = 'cpensamientocaribe@gmail.com';
+
   var toast = document.getElementById('toast');
   var toastDefaultText = toast ? toast.textContent : '';
   var toastTimer;
@@ -48,9 +58,24 @@
 
       if (!valid) return;
 
+      if (!ENDPOINT) {
+        var nombre = nameField ? nameField.value.trim() : '';
+        var correo = emailField ? emailField.value.trim() : '';
+        var asuntoF = contactForm.querySelector('[name="subject"]');
+        var mensajeF = contactForm.querySelector('[name="message"], textarea');
+        var asunto = (asuntoF && asuntoF.value.trim()) || ('Mensaje de ' + (nombre || 'la web'));
+        var cuerpo = (mensajeF ? mensajeF.value.trim() : '') +
+          '\n\n— ' + nombre + (correo ? ' · ' + correo : '');
+        window.location.href = 'mailto:' + CORREO +
+          '?subject=' + encodeURIComponent(asunto) +
+          '&body=' + encodeURIComponent(cuerpo);
+        showToast('Se abrió tu correo con el mensaje listo. Si no se abrió, escríbenos a ' + CORREO + '.');
+        return;
+      }
+
       if (submitBtn) submitBtn.disabled = true;
 
-      fetch(contactForm.action, {
+      fetch(ENDPOINT, {
         method: 'POST',
         body: new FormData(contactForm),
         headers: { 'Accept': 'application/json' }

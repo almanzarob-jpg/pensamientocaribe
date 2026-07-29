@@ -194,6 +194,34 @@
     const ul = document.getElementById('vacios');
     if (ul) ul.innerHTML = li.map(x => '<li>' + x + '</li>').join('');
   })();
+
+  /* Los asientos los escribe reflujo.py al ingerir cada aporte aceptado.
+     Si el archivo aún no existe o no se puede leer, se queda el aviso honesto
+     de que el registro está vacío: preferible a una lista fantasma. */
+  (function(){
+    if (typeof fetch !== 'function') return;
+    const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g,
+      c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+    fetch('../data/agua-de-por-medio/creditos.json')
+      .then(r => r.ok ? r.json() : [])
+      .then(function (cs) {
+        if (!Array.isArray(cs) || !cs.length) return;
+        const cont = document.getElementById('asientos');
+        cont.innerHTML = cs.slice().reverse().map(function (c) {
+          const quien = c.orcid
+            ? esc(c.quien) + ' <a href="https://orcid.org/' + esc(c.orcid) + '" rel="noopener">ORCID</a>'
+            : esc(c.quien);
+          const que = c.ancla
+            ? '<a href="con-el-agua-de-por-medio.html#' + esc(c.ancla) + '">' + esc(c.que) + '</a>'
+            : esc(c.que);
+          return '<p><strong>' + esc(c.verbo) + '</strong> · ' + quien + ' · ' + que +
+                 '<br><small>' + esc(c.fuente) + ' · ' + esc(c.fecha) + '</small></p>';
+        }).join('');
+        const n = document.getElementById('mAportes');
+        if (n) n.textContent = cs.length;
+      })
+      .catch(function () {});
+  })();
   </script>
   <script src="../js/interactions.js"></script>
 </body>
