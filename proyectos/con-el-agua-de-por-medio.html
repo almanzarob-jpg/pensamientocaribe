@@ -255,6 +255,10 @@
   /* vista tabla accesible */
   #tabla{position:absolute; inset:0; overflow:auto; padding:20px 26px 60px; display:none}
   #tabla.show{display:block}
+  /* leyenda anclada: dentro de #tabla deja de ser un overlay flotante y pasa a ser
+     una franja fija al inicio del listado, en el flujo normal del documento */
+  #legend.docked{position:static; max-width:none; width:100%; margin:0 0 22px; backdrop-filter:none; background:rgba(255,255,255,.03)}
+  #legend.docked .grid{grid-template-columns:repeat(auto-fill,minmax(180px,1fr))}
   #tabla .tcap{font-family:var(--ff-display); font-size:22px; color:var(--cream); margin:2px 0 4px}
   #tabla .tsub{font-family:var(--ff-mono); font-size:10px; text-transform:uppercase; letter-spacing:1.4px; color:var(--gray); margin-bottom:16px}
   #tabla table{border-collapse:collapse; width:100%; font-size:13.5px}
@@ -392,7 +396,7 @@
 </header>
 <main id="main-content">
   <svg id="stage" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid meet"></svg>
-  <section id="tabla" aria-label="Catálogo del atlas en tabla accesible"></section>
+  <section id="tabla" aria-label="Catálogo del atlas en tabla accesible"><div id="tablaBody"></div></section>
   <div id="tip"></div>
   <div id="hint"></div>
   <div id="guion"><div class="gf"></div><div class="gt"></div></div>
@@ -982,7 +986,7 @@ function tblRows(){
   return rows;
 }
 function renderTable(){
-  const cont=document.getElementById('tabla');
+  const cont=document.getElementById('tablaBody');
   const rows=tblRows();
   const cols=[["t",t('thObra')],["a",t('thAutor')],["y",t('thAno')],["k",t('thTipo')],["f",t('thFen')],["l",t('thLugar')],["tr",t('thTrad')],["ev",t('thEvid')]];
   const foco = (state.focusFen ? ` · ${t('tFiltro')} «${fenLabel(state.focusFen)}»` : "") + (state.q ? ` · ${t('tFiltro')} «${state.q}»` : "");
@@ -1017,13 +1021,31 @@ function renderTable(){
     bajar('atlas-agua-de-por-medio.bib', cab+filas.map(aBibTeX).join('\n\n')+'\n', 'application/x-bibtex');
   };
 }
+/* La leyenda flota sobre el mapa (esquina inferior izquierda), pero en la vista Tabla
+   ese mismo recuadro flotante quedaba encima del listado —tapaba filas al hacer scroll
+   porque la leyenda es un overlay fijo y la tabla se desplaza por debajo de él—.
+   En vez de ocultarla (se perdería el filtro por fenómeno, único ahí), se la ancla
+   dentro de #tabla como una franja normal del documento: ya no flota, así que nunca
+   puede superponerse a nada, y conserva su función de filtro. Al volver al mapa,
+   se restituye a su lugar y posición originales. */
+let legendHome=null;
+function dockLegendInTable(){
+  const lg=document.getElementById('legend'), tbl=document.getElementById('tabla'), body=document.getElementById('tablaBody');
+  if(lg.parentNode!==tbl){ legendHome={parent:lg.parentNode, next:lg.nextSibling}; tbl.insertBefore(lg, body); }
+  lg.classList.add('docked');
+}
+function undockLegend(){
+  const lg=document.getElementById('legend');
+  if(legendHome && lg.parentNode!==legendHome.parent){ legendHome.parent.insertBefore(lg, legendHome.next); }
+  lg.classList.remove('docked');
+}
 function switchView(v){
   state.view=v;
   vpt={k:1,tx:0,ty:0}; /* cada vista tiene su propia geometría (mapa vs. grafo): el zoom/paneo de una no sirve en otra, así que se reinicia siempre al cambiar */
   const svg0=document.getElementById('stage'), tbl=document.getElementById('tabla'), lg=document.getElementById('legend');
   const zg=document.getElementById('zoomGrp');
-  if(v==="tabla"){ svg0.style.display="none"; document.getElementById('hint').style.display="none"; if(zg) zg.style.display="none"; tbl.classList.add('show'); tbl.setAttribute('tabindex','-1'); renderTable(); tbl.focus(); }
-  else { svg0.style.display="block"; document.getElementById('hint').style.display=""; if(zg) zg.style.display=""; tbl.classList.remove('show'); render(); }
+  if(v==="tabla"){ svg0.style.display="none"; document.getElementById('hint').style.display="none"; if(zg) zg.style.display="none"; dockLegendInTable(); tbl.classList.add('show'); tbl.setAttribute('tabindex','-1'); renderTable(); tbl.focus(); }
+  else { svg0.style.display="block"; document.getElementById('hint').style.display=""; if(zg) zg.style.display=""; undockLegend(); tbl.classList.remove('show'); render(); }
 }
 document.getElementById('viewSeg').addEventListener('click',e=>{ if(e.target.dataset.v){[...e.currentTarget.children].forEach(b=>b.classList.remove('on'));e.target.classList.add('on');clearFocus();switchView(e.target.dataset.v);} });
 document.getElementById('resetZoomBtn').addEventListener('click',()=>{ vpt={k:1,tx:0,ty:0}; applyVP(); });
