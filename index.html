@@ -30,6 +30,7 @@
   <link rel="stylesheet" href="css/layout.css?v=19">
   <link rel="stylesheet" href="css/components.css?v=41">
   <link rel="stylesheet" href="css/animations.css?v=15">
+  <link rel="stylesheet" href="css/pregon.css?v=1">
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
 
   <!-- Google tag (gtag.js) -->
@@ -99,6 +100,7 @@
           <button class="nav-group-label" type="button" aria-haspopup="true" aria-expanded="false">Medios <span class="nav-caret"></span></button>
           <div class="nav-dropdown">
             <div class="nav-dropdown-panel">
+              <a href="pregon/">Pregón de esquina</a>
               <a href="#noticias">Noticias</a>
               <a href="#medios">Videos y pódcast</a>
               <a href="#filmoteca">Filmoteca crítica</a>
@@ -144,7 +146,8 @@
       <div class="nav-m-group">
         <button class="nav-m-label" type="button" aria-expanded="false">Medios <span class="nav-caret"></span></button>
         <div class="nav-m-sub">
-          <a href="#noticias">Noticias</a>
+          <a href="pregon/">Pregón de esquina</a>
+              <a href="#noticias">Noticias</a>
           <a href="#medios">Videos y pódcast</a>
           <a href="#filmoteca">Filmoteca crítica</a>
         </div>
@@ -1245,6 +1248,76 @@
       <span class="separator-line"></span>
     </div>
 
+    <!-- ════════ PREGÓN DE ESQUINA ════════ -->
+    <section class="section" id="pregon">
+      <p class="section-label reveal">Columnas</p>
+      <h2 class="section-title reveal">Pregón <em>de esquina</em></h2>
+      <p class="section-subtitle reveal">Lo que el grupo piensa en voz alta sobre los debates de su campo y las noticias del día.</p>
+
+      <div class="pregon-banner reveal">
+      <div class="pregon-ondas" aria-hidden="true">
+        <svg viewBox="0 0 1160 460" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMaxYMax slice" focusable="false">
+          <defs>
+            <radialGradient id="pgBrilloPortada" cx="100%" cy="100%" r="102%">
+              <stop offset="0%" stop-color="#f07a16" stop-opacity="0.36"/>
+              <stop offset="36%" stop-color="#d83a2e" stop-opacity="0.09"/>
+              <stop offset="100%" stop-color="#f07a16" stop-opacity="0"/>
+            </radialGradient>
+          </defs>
+          <rect width="1160" height="460" fill="url(#pgBrilloPortada)"/>
+          <g>
+            <circle class="pg-eco" cx="1160" cy="460" r="25" stroke="#f07a16" stroke-opacity="0.4"/>
+            <circle class="pg-onda" cx="1160" cy="460" r="40" stroke="#f07a16" style="--op:0.95;--w:5.4px;--d:0.0s"/>
+            <circle class="pg-eco" cx="1160" cy="460" r="181" stroke="#ee661f" stroke-opacity="0.36"/>
+            <circle class="pg-onda" cx="1160" cy="460" r="196" stroke="#ee661f" style="--op:0.85;--w:2.2px;--d:0.375s"/>
+            <circle class="pg-eco" cx="1160" cy="460" r="337" stroke="#dd4a2c" stroke-opacity="0.32"/>
+            <circle class="pg-onda" cx="1160" cy="460" r="352" stroke="#dd4a2c" style="--op:0.75;--w:2.2px;--d:0.75s"/>
+            <circle class="pg-eco" cx="1160" cy="460" r="545" stroke="#d8503c" stroke-opacity="0.27"/>
+            <circle class="pg-onda" cx="1160" cy="460" r="560" stroke="#d8503c" style="--op:0.65;--w:2.2px;--d:1.25s"/>
+            <circle class="pg-eco" cx="1160" cy="460" r="649" stroke="#c98b4b" stroke-opacity="0.23"/>
+            <circle class="pg-onda" cx="1160" cy="460" r="664" stroke="#c98b4b" style="--op:0.55;--w:2.2px;--d:1.5s"/>
+            <circle class="pg-eco" cx="1160" cy="460" r="857" stroke="#caa14a" stroke-opacity="0.19"/>
+            <circle class="pg-onda" cx="1160" cy="460" r="872" stroke="#caa14a" style="--op:0.45;--w:5.4px;--d:2.0s"/>
+            <circle class="pg-eco" cx="1160" cy="460" r="1013" stroke="#8f8a44" stroke-opacity="0.15"/>
+            <circle class="pg-onda" cx="1160" cy="460" r="1028" stroke="#8f8a44" style="--op:0.35;--w:2.2px;--d:2.375s"/>
+            <circle class="pg-eco" cx="1160" cy="460" r="1169" stroke="#4f8a3a" stroke-opacity="0.1"/>
+            <circle class="pg-onda" cx="1160" cy="460" r="1184" stroke="#4f8a3a" style="--op:0.25;--w:2.2px;--d:2.75s"/>
+            <circle class="pg-eco" cx="1160" cy="460" r="1377" stroke="#347a2c" stroke-opacity="0.06"/>
+            <circle class="pg-onda" cx="1160" cy="460" r="1392" stroke="#347a2c" style="--op:0.15;--w:2.2px;--d:3.25s"/>
+          </g>
+          <circle class="pg-boca" cx="1160" cy="460" r="24"/>
+          <circle class="pg-boca pg-boca--halo" cx="1160" cy="460" r="52"/>
+        </svg>
+      </div>
+      <div class="pregon-velo" aria-hidden="true"></div>
+
+        <div class="pregon-banner-cuerpo">
+          <p class="pregon-kicker">Columnas del grupo</p>
+          <h3>El coro va escrito.<em>El soneo no.</em></h3>
+          <p>Ismael Rivera trabajaba de albañil y aprendió a sonear cantando en las esquinas de la calle Calma, en Santurce, mucho antes de que Benny Moré lo bautizara Sonero Mayor. En la música caribeña la esquina es el examen: ahí se prueba si algo suena.</p>
+          <p>Aquí el grupo suelta lo que no le cabe en un artículo indexado. Un libro que fastidió, una noticia que pide respuesta, una discusión de pasillo que merecía escribirse. Con firma, con fuente y sin esperar dictamen.</p>
+          <div class="pregon-banner-ctas">
+            <a href="pregon/" class="btn btn--primary">Entrar a la sección <span class="btn-arrow">&rarr;</span></a>
+            <a href="mailto:cpensamientocaribe@gmail.com" class="btn btn--secondary">Proponer una columna</a>
+          </div>
+        </div>
+      </div>
+
+      <!--
+        Las tres columnas más recientes van aquí, dentro de .pregon-grid.
+        La plantilla de la ficha está comentada en pregon/index.html.
+      -->
+      <div class="pregon-grid" id="pregon-grid-portada"></div>
+    </section>
+
+    <div class="separator" aria-hidden="true">
+      <span class="separator-line"></span>
+      <span class="separator-dot"></span>
+      <span class="separator-line"></span>
+      <span class="separator-dot"></span>
+      <span class="separator-line"></span>
+    </div>
+
     <!-- ════════ NOTICIAS ════════ -->
     <section class="section" id="noticias">
       <p class="section-label reveal">Actualidad</p>
@@ -2287,6 +2360,7 @@
             <li><a href="#lineas">Líneas de investigación</a></li>
             <li><a href="#proyectos">Proyectos</a></li>
             <li><a href="#semillero">Semillero Eleguá</a></li>
+            <li><a href="pregon/">Pregón de esquina</a></li>
             <li><a href="#publicaciones">Publicaciones</a></li>
             <li><a href="#eventos">Eventos</a></li>
             <li><a href="#equipo">Equipo</a></li>

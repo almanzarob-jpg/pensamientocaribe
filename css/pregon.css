@@ -1,0 +1,436 @@
+/* ═══════════════════════════════════════════════════════════════
+   PREGÓN DE ESQUINA
+   Columnas del grupo. Toda la imagen es una sola figura: ondas
+   sonoras que salen de la esquina inferior derecha y se abren
+   sobre el bloque. No están repartidas a intervalos iguales: cada
+   radio cae donde cae su golpe en la clave 3-2, de modo que la
+   síncopa se lee en el espaciado antes de que nada se mueva.
+   Franja superior y filos en madera: la paleta de la casa con el
+   calor de las carátulas de salsa de los setenta.
+   ═══════════════════════════════════════════════════════════════ */
+
+:root {
+  --pg-madera: #b8763c;
+  --pg-madera-luz: #e3ad6c;
+  --pg-madera-sombra: #71411d;
+}
+
+/* ─── Ondas del pregón ──────────────────────────────────────────
+   Salen de la esquina inferior derecha. El radio de cada onda cae
+   donde cae su golpe dentro de la clave 3-2, así que la síncopa se
+   ve en el espaciado aunque nada se mueva; la animación solo hace
+   viajar el brillo hacia afuera, en ese mismo orden.
+   ─────────────────────────────────────────────────────────────── */
+
+.pregon-ondas {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.pregon-ondas svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.pregon-ondas circle { fill: none; }
+
+.pregon-ondas .pg-eco { stroke-width: 1; }
+
+.pregon-ondas .pg-onda {
+  stroke-width: var(--w);
+  stroke-opacity: var(--op);
+  animation: pgOnda 4s linear infinite;
+  animation-delay: var(--d);
+}
+
+@keyframes pgOnda {
+  0%          { stroke-opacity: var(--op); stroke-width: var(--w); }
+  2%          { stroke-opacity: 1; stroke-width: calc(var(--w) * 2.4); }
+  16%, 100%   { stroke-opacity: var(--op); stroke-width: var(--w); }
+}
+
+.pregon-ondas .pg-boca {
+  fill: var(--c-orange);
+  stroke: none;
+  /* Sin esto el escalado en SVG toma como origen el 0,0 del lienzo
+     y la boca se desplaza en vez de latir en su sitio. */
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: pgBoca 4s linear infinite;
+}
+
+.pregon-ondas .pg-boca--halo { opacity: 0.26; }
+
+@keyframes pgBoca {
+  0%        { transform: scale(1.3); }
+  6%, 100%  { transform: scale(1); }
+}
+
+/* Velo: mantiene legible la columna de texto sobre las ondas. */
+.pregon-velo {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  pointer-events: none;
+  z-index: 1;
+  background: linear-gradient(105deg,
+    rgba(10, 12, 8, 0.92) 0%,
+    rgba(10, 12, 8, 0.72) 40%,
+    rgba(10, 12, 8, 0) 78%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pregon-ondas .pg-onda,
+  .pregon-ondas .pg-boca { animation: none; }
+}
+
+/* ─── Banner de la portada ───────────────────────────────────── */
+
+.pregon-banner {
+  position: relative;
+  isolation: isolate;
+  margin-top: var(--space-xl);
+  padding: clamp(2rem, 4vw, 3.4rem) clamp(1.6rem, 3.5vw, 3.4rem) clamp(2.2rem, 4vw, 3.4rem);
+  min-height: clamp(300px, 34vw, 430px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px solid var(--c-border-orange);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(150deg, var(--c-surface-b) 0%, var(--c-surface-a) 100%);
+  overflow: hidden;
+}
+
+.pregon-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(90deg,
+    var(--c-green) 0%, var(--c-green) 22%,
+    var(--c-orange) 22%, var(--c-orange) 58%,
+    var(--c-red) 58%, var(--c-red) 84%,
+    #caa14a 84%, #caa14a 100%);
+  opacity: 0.9;
+}
+
+.pregon-banner-cuerpo {
+  position: relative;
+  z-index: 2;
+  max-width: 62ch;
+}
+
+.pregon-kicker {
+  font-family: 'Oswald', var(--ff-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-meta);
+  text-transform: uppercase;
+  letter-spacing: 0.28em;
+  color: var(--c-orange);
+  margin-bottom: var(--space-sm);
+}
+
+.pregon-banner h3,
+.pregon-hero h1 {
+  font-family: var(--ff-display);
+  font-weight: var(--fw-regular);
+  line-height: 1.04;
+  letter-spacing: -0.012em;
+  color: var(--c-cream);
+}
+
+.pregon-banner h3 {
+  font-size: clamp(2rem, 3.8vw, 3.2rem);
+  margin-bottom: var(--space-md);
+}
+
+.pregon-banner h3 em,
+.pregon-hero h1 em {
+  display: block;
+  font-style: italic;
+  color: var(--c-orange);
+}
+
+.pregon-banner p {
+  color: var(--c-gray);
+  font-size: var(--fs-small);
+  line-height: 1.72;
+  max-width: 58ch;
+}
+
+.pregon-banner p + p { margin-top: var(--space-sm); }
+
+.pregon-banner-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  align-items: center;
+  margin-top: var(--space-lg);
+}
+
+/* ─── Fichas de columna ──────────────────────────────────────── */
+
+.pregon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+}
+
+.pregon-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-md) var(--space-md) var(--space-sm);
+  background: var(--c-surface-a);
+  border: 1px solid var(--c-border-green);
+  border-radius: var(--radius-sm);
+  transition: border-color var(--transition-base),
+              transform var(--transition-base),
+              box-shadow var(--transition-base);
+}
+
+/* Filo de madera a la izquierda, como el canto de un palo. */
+.pregon-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+  background: linear-gradient(180deg, var(--pg-madera-luz), var(--pg-madera-sombra));
+  opacity: 0.55;
+  transition: opacity var(--transition-base);
+}
+
+.pregon-card:hover,
+.pregon-card:focus-within {
+  border-color: rgba(240, 122, 22, 0.4);
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+}
+
+.pregon-card:hover::before,
+.pregon-card:focus-within::before { opacity: 1; }
+
+.pregon-card-cabeza {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-sm);
+}
+
+.pregon-card-num {
+  font-family: 'Oswald', var(--ff-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-meta);
+  letter-spacing: 0.16em;
+  color: var(--c-orange);
+}
+
+.pregon-card-tema {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-meta);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--pg-madera);
+}
+
+.pregon-card h3 {
+  font-family: var(--ff-display);
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-medium);
+  line-height: 1.24;
+  margin-bottom: var(--space-xs);
+}
+
+.pregon-card h3 a { color: inherit; text-decoration: none; }
+
+/* Toda la ficha queda pulsable sin duplicar el enlace en el lector de pantalla. */
+.pregon-card h3 a::after { content: ""; position: absolute; inset: 0; }
+
+.pregon-card-dek {
+  font-size: var(--fs-small);
+  color: var(--c-gray);
+  line-height: 1.7;
+  margin-bottom: var(--space-md);
+}
+
+.pregon-card-pie {
+  margin-top: auto;
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--c-border-green);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs) var(--space-sm);
+  font-family: var(--ff-mono);
+  font-size: var(--fs-meta);
+  color: var(--c-gray);
+  opacity: 0.75;
+}
+
+.pregon-card-firma { color: var(--c-cream); opacity: 0.9; }
+
+/* ─── Plancha de sección sin columnas todavía ────────────────── */
+
+.pregon-vacio {
+  margin-top: var(--space-xl);
+  padding: clamp(1.6rem, 3.5vw, 2.8rem);
+  border: 1px solid var(--c-border-orange);
+  border-left: 3px solid var(--pg-madera);
+  border-radius: var(--radius-sm);
+  background: rgba(184, 118, 60, 0.05);
+}
+
+.pregon-vacio p {
+  max-width: 58ch;
+  color: var(--c-gray);
+  font-size: var(--fs-small);
+  line-height: 1.74;
+}
+
+.pregon-vacio p:first-of-type {
+  font-family: var(--ff-display);
+  font-size: var(--fs-h3);
+  font-style: italic;
+  color: var(--c-cream);
+  opacity: 0.92;
+  margin-bottom: var(--space-sm);
+}
+
+/* ─── Página propia de la sección ────────────────────────────── */
+
+.pregon-page {
+  min-height: 100vh;
+  padding-top: calc(var(--nav-height) + var(--space-lg));
+}
+
+.pregon-hero {
+  position: relative;
+  isolation: isolate;
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: clamp(2rem, 4vw, 3.4rem) clamp(1.6rem, 4vw, 3.4rem) clamp(2.4rem, 5vw, 4rem);
+  min-height: clamp(340px, 38vw, 500px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+}
+
+.pregon-hero-cuerpo {
+  position: relative;
+  z-index: 2;
+  max-width: 64ch;
+}
+
+.pregon-breadcrumb {
+  display: inline-block;
+  align-self: flex-start;
+  font-family: var(--ff-mono);
+  font-size: var(--fs-meta);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--c-gray);
+  text-decoration: none;
+  margin-bottom: var(--space-md);
+  transition: color var(--transition-base);
+}
+
+.pregon-breadcrumb:hover { color: var(--c-orange); }
+
+.pregon-hero h1 {
+  font-size: clamp(2.4rem, 5vw, 4.4rem);
+  margin-bottom: var(--space-md);
+}
+
+.pregon-lede {
+  font-size: var(--fs-body);
+  line-height: 1.72;
+  color: var(--c-gray);
+  max-width: 60ch;
+}
+
+.pregon-lede + .pregon-lede { margin-top: var(--space-sm); }
+
+.pregon-lede strong {
+  font-weight: var(--fw-regular);
+  color: var(--c-cream);
+  opacity: 0.92;
+}
+
+.pregon-reglas {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: 0 clamp(1.2rem, 4vw, 3rem);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-md);
+}
+
+.pregon-regla { padding: var(--space-md) 0 0; border-top: 2px solid var(--pg-madera); }
+.pregon-regla:nth-child(2) { border-top-color: var(--c-orange); }
+.pregon-regla:nth-child(3) { border-top-color: var(--c-red); }
+
+.pregon-regla-label {
+  font-family: 'Oswald', var(--ff-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-meta);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--c-cream);
+  margin-bottom: var(--space-xs);
+}
+
+.pregon-regla p {
+  font-size: var(--fs-small);
+  color: var(--c-gray);
+  line-height: 1.72;
+}
+
+.pregon-listado {
+  max-width: var(--content-max);
+  margin: 0 auto;
+  padding: clamp(2.5rem, 5vw, 4.5rem) clamp(1.2rem, 4vw, 3rem) clamp(3rem, 6vw, 6rem);
+}
+
+.pregon-listado > h2 {
+  font-family: var(--ff-display);
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-regular);
+  margin-bottom: var(--space-xs);
+}
+
+.pregon-listado-nota {
+  font-size: var(--fs-small);
+  color: var(--c-gray);
+  max-width: 62ch;
+  line-height: 1.72;
+}
+
+/* ─── Pantalla estrecha ──────────────────────────────────────── */
+
+@media (max-width: 860px) {
+  .pregon-banner,
+  .pregon-hero { min-height: 0; }
+  /* En vertical el velo tapa desde abajo, que es por donde entra el texto. */
+  .pregon-velo {
+    background: linear-gradient(168deg,
+      rgba(10, 12, 8, 0.94) 0%,
+      rgba(10, 12, 8, 0.8) 46%,
+      rgba(10, 12, 8, 0.34) 100%);
+  }
+}
+
+@media (max-width: 720px) {
+  .pregon-banner-ctas .btn { width: 100%; justify-content: center; }
+  .pregon-grid { grid-template-columns: 1fr; }
+}

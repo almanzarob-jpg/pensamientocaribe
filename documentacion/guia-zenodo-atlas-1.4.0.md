@@ -2,7 +2,11 @@
 
 > **Depositada el 29 de julio de 2026.** DOI de versión: `10.5281/zenodo.21679251`. El DOI de concepto sigue siendo `10.5281/zenodo.21483568`. Subieron los archivos correctos: `datos-atlas.json` (145 kB) y `reflujo.py`. El sitio ya apunta al DOI nuevo en `CITATION.cff`, en las dos metodologías y en la ficha «Cómo citar el corpus» del atlas.
 >
-> **Quedaron cuatro campos sin editar en el formulario**, y se corrigen con el botón *Edit* del registro publicado, sin crear otra versión: el campo *Version* sigue vacío (debe decir `1.4.0`), la descripción es todavía la de la 1.2.0 y no menciona las 154 obras ni las 313 relaciones, las palabras clave siguen siendo ATLAS / ANTROPOLOGÍA / ARCHIPIÉLICA / HISTORIA, y la autoría no incluye al grupo. El texto listo para pegar está más abajo.
+> **El depósito quedó completo y correcto tras la edición del 29 de julio.** El registro muestra «Published July 29, 2026 | Version 1.4.0», autoría de Almanza, Roberto (Project leader) con ORCID, el grupo como *Contributor* con rol *Research group*, licencia CC BY-NC-SA 4.0 y los archivos `datos-atlas.json` y `reflujo.py`.
+>
+> Dos correcciones a lo que esta guía decía antes, para que no induzca a error en la próxima ronda. Primera: pedí añadir el grupo como *Creator* y quedó como *Contributor* con rol *Research group*, que en el modelo de datos de Zenodo es la opción más precisa; no hay nada que arreglar ahí. Segunda: dije que la descripción «seguía siendo la de la 1.2.0», lo cual es cierto pero engañoso, porque esa descripción nunca declaró cifras y por tanto no afirma nada falso.
+>
+> Lo único que mejoraría el registro es añadir a la descripción las cifras de la versión y las entradas nuevas, para que se pueda distinguir de las anteriores sin abrir el archivo. Es opcional. El texto está más abajo, en «Descripción, lista para pegar». Las palabras clave en mayúsculas son cosméticas.
 
 
 Sustituye a `guia-zenodo-atlas-agua-de-por-medio.md`, que quedó escrita para la 1.1.0. Este archivo lo ejecutas tú desde el Mac: Zenodo exige sesión con tu cuenta y el sandbox no puede entrar. De este lado ya está todo listo.

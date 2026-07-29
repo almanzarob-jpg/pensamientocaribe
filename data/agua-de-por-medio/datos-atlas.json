@@ -3,7 +3,7 @@
     "titulo": "Con el agua de por medio",
     "subtitulo": "Atlas para una antropología archipiélica",
     "responsable": "Centro de Pensamiento Caribe",
-    "version": "1.4.0",
+    "version": "1.5.0",
     "fecha": "2026-07-29"
   },
   "fenomenos": {
@@ -223,6 +223,13 @@
       -61.8,
       "Antigua",
       "pais"
+    ],
+    "bluefields": [
+      12.01,
+      -83.76,
+      "Bluefields",
+      "ciudad",
+      "el Pacífico nicaragüense · Nicaragua"
     ]
   },
   "obras": [
@@ -2379,6 +2386,95 @@
       "l": "santamarta",
       "tr": "hispano (Colombia)",
       "ap": "Rastrea la filosofía afrocaribeña del siglo XX desde el Caribe colombiano, orilla que suele quedar fuera del canon anglófono y francófono del campo. Es la posición de enunciación desde la que se construye este atlas."
+    },
+    {
+      "id": "goldbergabolition",
+      "k": "obra",
+      "t": "Abolition Time: Grammars of Law, Poetics of Justice",
+      "a": "Jess A. Goldberg",
+      "y": "2024",
+      "f": [
+        "violencias",
+        "memoria"
+      ],
+      "l": "guyana",
+      "tr": "anglófono (EE. UU./Guyana)",
+      "ap": "El derecho no tiene gramática para nombrar la masacre del Zong, y la literatura sí tiene poética para excederla. Leyendo a NourbeSe Philip, a Fred D'Aguiar y a David Dabydeen, Goldberg sostiene que la abolición no es una fecha cumplida sino un tiempo todavía por abrir."
+    },
+    {
+      "id": "hurboncomprendre",
+      "k": "obra",
+      "t": "Comprendre Haïti: essai sur l'État, la nation, la culture",
+      "a": "Laënnec Hurbon",
+      "y": "1987",
+      "f": [
+        "colonialidad",
+        "soberanias",
+        "memoria"
+      ],
+      "l": "haiti",
+      "tr": "francófono (Haití)",
+      "ap": "El Estado duvalierista no como desvío de la nación haitiana sino como la forma en que esa nación quedó capturada por su propia herencia colonial. El vudú y la cultura popular aparecen aquí como el terreno donde se juega la captura, no como folclor que ilustrarla."
+    },
+    {
+      "id": "rifkinfictions",
+      "k": "obra",
+      "t": "Fictions of Land and Flesh: Blackness, Indigeneity, Speculation",
+      "a": "Mark Rifkin",
+      "y": "2019",
+      "f": [
+        "soberanias",
+        "cimarronaje",
+        "memoria"
+      ],
+      "l": "jamaica",
+      "tr": "anglófono (EE. UU./Jamaica)",
+      "ap": "Contra la equivalencia cómoda entre negritud e indigeneidad. La relación con la tierra que reclama la soberanía indígena y la que abre la fuga cimarrona no son la misma, y tratarlas como si lo fueran desactiva las dos. El capítulo sobre la matriz cimarrona lee a los maroons jamaiquinos junto a la ficción especulativa de Nalo Hopkinson."
+    },
+    {
+      "id": "whiteheadtiger",
+      "k": "obra",
+      "t": "Lords of the Tiger Spirit: A History of the Caribs in Colonial Venezuela and Guyana, 1498–1820",
+      "a": "Neil L. Whitehead",
+      "y": "1988",
+      "f": [
+        "colonialidad",
+        "violencias",
+        "memoria"
+      ],
+      "l": "guyana",
+      "tr": "anglófono (R. U./Guyana)",
+      "ap": "Tres siglos de historia caribe en el corredor Orinoco–Trinidad–Guayana, reconstruidos como estrategia política indígena y no como telón de fondo de la conquista. «Caribe» deja de ser el nombre que puso Europa y vuelve a ser el de un sujeto con cálculo propio."
+    },
+    {
+      "id": "olsencartagena",
+      "k": "obra",
+      "t": "Slavery and Salvation in Colonial Cartagena de Indias",
+      "a": "Margaret M. Olsen",
+      "y": "2004",
+      "f": [
+        "colonialidad",
+        "violencias",
+        "memoria"
+      ],
+      "l": "cartagena",
+      "tr": "anglófono (EE. UU./Colombia)",
+      "ap": "Lee el De instauranda Aethiopum salute de Alonso de Sandoval como texto colonial y no como ventana transparente al puerto negrero. La misión jesuita de Cartagena produjo el archivo desde el cual todavía se lee la esclavitud en el Caribe hispano, y esa producción tiene sus propias reglas."
+    },
+    {
+      "id": "cosgrovegarifuna",
+      "k": "obra",
+      "t": "Surviving the Americas: Garifuna Persistence from Nicaragua to New York City",
+      "a": "Cosgrove, Idiáquez, Bent & Gorvetzian",
+      "y": "2021",
+      "f": [
+        "memoria",
+        "soberanias",
+        "capitalismo_racial"
+      ],
+      "l": "bluefields",
+      "tr": "anglófono (EE. UU./Nicaragua)",
+      "ap": "La permanencia garífuna en Bluefields y Pearl Lagoon sostenida a la vez que la migración a Nueva York la dispersa. Etnografía colaborativa con la Universidad Centroamericana de Managua: la orilla nicaragüense del Gran Caribe, que casi nunca aparece en los mapas del archipiélago."
     }
   ],
   "relaciones": [
@@ -4259,6 +4355,144 @@
       "b": "monahan",
       "tipo": "resonancia",
       "fuente": "Por corroborar."
+    },
+    {
+      "a": "goldbergabolition",
+      "b": "sharpewake",
+      "tipo": "resonancia",
+      "fuente": "Goldberg abre el libro con un epígrafe de Sharpe («Black studies: in the wake») y construye sobre In the Wake su noción de trabajo abolicionista de la estela. Cita verificada en el ejemplar de la biblioteca del grupo."
+    },
+    {
+      "a": "goldbergabolition",
+      "b": "glissant",
+      "tipo": "resonancia",
+      "fuente": "Cita Poetics of Relation (trad. Betsy Wing, Michigan, 1997) en la lectura de Turner de Dabydeen. Cita verificada en el ejemplar de la biblioteca del grupo."
+    },
+    {
+      "a": "hurboncomprendre",
+      "b": "trouillothaitistate",
+      "tipo": "resonancia",
+      "fuente": "Hurbon declara que retoma el concepto de Trouillot en Les racines historiques de l'État duvaliérien (Deschamps, 1986), obra hermana de Haiti: State Against Nation. Cita verificada en el ejemplar de la biblioteca del grupo."
+    },
+    {
+      "a": "hurboncomprendre",
+      "b": "pricemars",
+      "tipo": "resonancia",
+      "fuente": "«Il y a quelque cinquante ans, Jean Price-Mars, dans un ouvrage célèbre, Ainsi parla l'oncle (1928), proposait déjà un vaste réexamen de la vie…». Cita verificada en el ejemplar de la biblioteca del grupo."
+    },
+    {
+      "a": "hurboncomprendre",
+      "b": "firmin",
+      "tipo": "resonancia",
+      "fuente": "Vínculo indirecto: Hurbon cita el Anténor Firmin póstumo de Price-Mars (1978), no la obra de Firmin. Por corroborar la lectura directa."
+    },
+    {
+      "a": "hurboncomprendre",
+      "b": "casimir",
+      "tipo": "resonancia",
+      "fuente": "Ambos leen la nación haitiana como formación popular frente al Estado, con cuarenta años de por medio. Por corroborar el vínculo directo."
+    },
+    {
+      "a": "rifkinfictions",
+      "b": "roberts",
+      "tipo": "disonancia",
+      "fuente": "Rifkin sitúa Freedom as Marronage entre los relatos de «indigenización negra en las Américas» y remite acto seguido a la crítica de ese relato (Byrd, Jackson, Díaz, Newton). El desacuerdo es sobre si el cimarronaje produce o no una relación indígena con la tierra. Cita verificada en el ejemplar de la biblioteca del grupo."
+    },
+    {
+      "a": "rifkinfictions",
+      "b": "truebornmaroons",
+      "tipo": "resonancia",
+      "fuente": "«See Bilby, True-Born Maroons, 27», en el capítulo sobre la matriz cimarrona. Cita verificada en el ejemplar de la biblioteca del grupo."
+    },
+    {
+      "a": "rifkinfictions",
+      "b": "bonilla",
+      "tipo": "resonancia",
+      "fuente": "«Bonilla, Non-Sovereign Futures, 11». Cita verificada en el ejemplar de la biblioteca del grupo."
+    },
+    {
+      "a": "rifkinfictions",
+      "b": "wilderfreedomtime",
+      "tipo": "resonancia",
+      "fuente": "«Wilder, Freedom Time, 88–89». Cita verificada en el ejemplar de la biblioteca del grupo."
+    },
+    {
+      "a": "rifkinfictions",
+      "b": "sharpewake",
+      "tipo": "resonancia",
+      "fuente": "Cita In the Wake entre las obras sobre plasticidad y porosidad de la negritud. Cita verificada en el ejemplar de la biblioteca del grupo."
+    },
+    {
+      "a": "rifkinfictions",
+      "b": "branddoor",
+      "tipo": "resonancia",
+      "fuente": "«In A Map to the Door of No Return, Dionne Brand characterizes histories of enchattelment and fungibility as a rupture in history». Cita verificada en el ejemplar de la biblioteca del grupo."
+    },
+    {
+      "a": "rifkinfictions",
+      "b": "glissant",
+      "tipo": "resonancia",
+      "fuente": "Discute la opacidad de Poétique de la Relation citando la traducción de Wing. Cita verificada en el ejemplar de la biblioteca del grupo."
+    },
+    {
+      "a": "whiteheadtiger",
+      "b": "mintz",
+      "tipo": "disonancia",
+      "fuente": "Mintz funda la región en la plantación; Whitehead reconstruye tres siglos de política caribe indígena que la preceden y la condicionan. El desacuerdo es sobre dónde empieza el Caribe. Vínculo temático: Whitehead no cita a Mintz, por corroborar el contacto directo."
+    },
+    {
+      "a": "whiteheadtiger",
+      "b": "gonzalezsojourners",
+      "tipo": "resonancia",
+      "fuente": "Los dos tratan la etnogénesis como proceso y no como origen: González en los garífuna, Whitehead en los caribes insulares y continentales. Por corroborar el vínculo directo."
+    },
+    {
+      "a": "whiteheadtiger",
+      "b": "rifkinfictions",
+      "tipo": "resonancia",
+      "fuente": "Ambos introducen la cuestión indígena en un archivo que se lee casi solo en clave afrodiaspórica. Por corroborar el vínculo directo."
+    },
+    {
+      "a": "olsencartagena",
+      "b": "escalante",
+      "tipo": "resonancia",
+      "fuente": "Olsen cita El palenque de San Basilio (2ª ed., Barranquilla, 1979) y El negro en Colombia (1964) en su bibliografía. Cita verificada en el ejemplar de la biblioteca del grupo."
+    },
+    {
+      "a": "olsencartagena",
+      "b": "price",
+      "tipo": "resonancia",
+      "fuente": "Cita Maroon Societies (Price ed., 2ª ed., Johns Hopkins, 1979) y el capítulo «Palenques in Colombia» de Escalante que ese volumen contiene. Cita verificada en el ejemplar de la biblioteca del grupo."
+    },
+    {
+      "a": "olsencartagena",
+      "b": "trouillotsilencing",
+      "tipo": "resonancia",
+      "fuente": "Las dos leen el archivo colonial como acto de producción y no como depósito. Por corroborar el vínculo directo."
+    },
+    {
+      "a": "cosgrovegarifuna",
+      "b": "afrocentroam",
+      "tipo": "resonancia",
+      "fuente": "«Sarah England, Afro-Central Americans in New York City: Garifuna Tales of Transnational Movements…». Cita verificada en el ejemplar de la biblioteca del grupo."
+    },
+    {
+      "a": "cosgrovegarifuna",
+      "b": "womenancestors",
+      "tipo": "resonancia",
+      "fuente": "«Virginia Kerns, Women and the Ancestors: Black Carib Kinship and Ritual, 20», citada repetidamente en la línea de tiempo. Cita verificada en el ejemplar de la biblioteca del grupo."
+    },
+    {
+      "a": "cosgrovegarifuna",
+      "b": "gonzalezsojourners",
+      "tipo": "resonancia",
+      "fuente": "Continúan la etnohistoria garífuna de González hacia la Costa Caribe nicaragüense y la diáspora neoyorquina. Por corroborar el vínculo directo."
+    },
+    {
+      "a": "cosgrovegarifuna",
+      "b": "andersonblackindigenous",
+      "tipo": "resonancia",
+      "fuente": "Los dos leen la identidad garífuna como negociación entre lo negro y lo indígena frente al Estado centroamericano. Por corroborar el vínculo directo."
     }
   ]
 }
