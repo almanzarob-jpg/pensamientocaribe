@@ -3,8 +3,8 @@
     "titulo": "Con el agua de por medio",
     "subtitulo": "Atlas para una antropología archipiélica",
     "responsable": "Centro de Pensamiento Caribe",
-    "version": "1.9.0",
-    "fecha": "2026-07-29"
+    "version": "1.11.0",
+    "fecha": "2026-07-30"
   },
   "fenomenos": {
     "colonialidad": {
@@ -2545,6 +2545,34 @@
       "l": "cartagena",
       "tr": "hispano (Colombia)",
       "ap": "Compartir la autoridad investigativa con las y los campesinos activistas de la ANUC como método: la Rosca de Investigación y Acción Social de Fals Borda frente al positivismo académico en las Sabanas del Caribe colombiano."
+    },
+    {
+      "id": "reysinningcristorey",
+      "k": "obra",
+      "t": "Cristo Rey, un espacio para permanecer en el tiempo",
+      "a": "Édgar Rey Sinning",
+      "y": "1998 / ed. corr. y ampliada 2020 / relanzada 2025",
+      "f": [
+        "memoria",
+        "colonialidad"
+      ],
+      "l": "santamarta",
+      "tr": "hispano (Colombia)",
+      "ap": "Etnografía del barrio Cristo Rey que rastrea la presencia negra libre en Santa Marta hasta 1525, antes de la fundación de Cartagena: la memoria afrodescendiente de la ciudad, no solo de sus palenques o sus plantaciones."
+    },
+    {
+      "id": "hurbondictadura",
+      "k": "obra",
+      "t": "Culture et dictature en Haïti: l'imaginaire sous contrôle",
+      "a": "Laënnec Hurbon",
+      "y": "1979",
+      "f": [
+        "soberanias",
+        "violencias"
+      ],
+      "l": "haiti",
+      "tr": "francófono (Haití)",
+      "ap": "El duvalierismo leído como control del imaginario cultural, no solo del aparato de Estado: el mismo objeto histórico que Trouillot narra desde la formación estatal, aquí desde la fabricación del consentimiento simbólico."
     }
   ],
   "relaciones": [
@@ -4623,6 +4651,84 @@
       "b": "figueroa",
       "tipo": "resonancia",
       "fuente": "Comparten el nodo Santa Marta y el problema de la violencia política regional, en distintos períodos. Por corroborar el vínculo directo."
+    },
+    {
+      "a": "zonabananera",
+      "b": "peasantscapital",
+      "tipo": "resonancia",
+      "fuente": "El artículo cita a Trouillot (2025, Peasants and Capital) para explicar cómo la economía bananera articula campesinado y capital transnacional en paisajes fragmentados: la Zona Bananera como variante continental del mismo proceso que Trouillot describe para Dominica."
+    },
+    {
+      "a": "zonabananera",
+      "b": "bassiacuoso",
+      "tipo": "resonancia",
+      "fuente": "Cita explícita a Bassi (2021): la movilidad afrocaribeña de la Zona Bananera —ríos, ferrocarril, puertos— rehace territorio por fuera de las fronteras estatales, como el Gran Caribe transimperial de Bassi."
+    },
+    {
+      "a": "zonabananera",
+      "b": "glissant",
+      "tipo": "resonancia",
+      "fuente": "Cita a Glissant (vía Drabinski) para las 'astillas de la memoria': el silencio de los descendientes yumecas frente al pasado se lee con la poética de la relación, no como origen fijo sino como ruptura y reconexión."
+    },
+    {
+      "a": "zonabananera",
+      "b": "abello",
+      "tipo": "resonancia",
+      "fuente": "Cita directa a Abello (La isla encallada) sobre el Caribe bananero de García Márquez: las plantaciones de Aracataca como modelo real de Macondo, el mismo enclave de la UFC que el artículo documenta como archivo vivo de las vidas negras."
+    },
+    {
+      "a": "zonabananera",
+      "b": "rediker",
+      "tipo": "resonancia",
+      "fuente": "Cita a Rediker (2014) junto con Scott para pensar el mar y el barco como infraestructura de movilidad y deshumanización: el mismo mar que trajo a los antillanos de habla inglesa a construir el ferrocarril bananero."
+    },
+    {
+      "a": "rappaportcobarde",
+      "b": "trouillotsilencing",
+      "tipo": "resonancia",
+      "fuente": "Rappaport organiza el análisis del método de Fals Borda alrededor de los cuatro momentos de producción de la historia de Trouillot (creación de hechos, archivos, narraciones, historia retrospectiva): marco estructural, no cita de paso."
+    },
+    {
+      "a": "reysinningcristorey",
+      "b": "zonabananera",
+      "tipo": "resonancia",
+      "fuente": "El libro documenta cómo 'el negocio bananero' de las tres primeras décadas del siglo XX causó la llegada de los yumecas y el nacimiento de barrios negros como El Ancón y Pescaíto en Santa Marta: mismo proceso histórico que estudia Zonabananera, enclave vecino de la misma UFC. Por corroborar el vínculo directo entre los dos textos."
+    },
+    {
+      "a": "reysinningcristorey",
+      "b": "saetheridentidades",
+      "tipo": "resonancia",
+      "fuente": "Cita directa a Sæther (2005) para discutir la esclavitud urbana y la composición racial de Santa Marta y Riohacha en el período colonial tardío: mismo nodo geográfico e histórico que cataloga Sæther."
+    },
+    {
+      "a": "hurbondictadura",
+      "b": "hurboncomprendre",
+      "tipo": "resonancia",
+      "fuente": "Continuidad de autor (Hurbon): del control del imaginario bajo Duvalier (1979) a la síntesis sobre Estado, nación y cultura (1987)."
+    },
+    {
+      "a": "hurbondictadura",
+      "b": "trouillothaitistate",
+      "tipo": "resonancia",
+      "fuente": "Comparten el objeto histórico —el duvalierismo— desde ángulos distintos: el control del imaginario cultural (Hurbon) y la formación del Estado poscolonial (Trouillot). Por corroborar el vínculo directo."
+    },
+    {
+      "a": "reysinningcristorey",
+      "b": "escalante",
+      "tipo": "resonancia",
+      "fuente": "El prólogo ubica el libro dentro de los 'cuatro momentos' de los estudios afrocolombianos y cita a Aquiles Escalante (1954) como fundador del primer momento etnográfico: la misma pieza fundacional sobre San Basilio que abre este corpus."
+    },
+    {
+      "a": "reysinningcristorey",
+      "b": "helglibertyequality",
+      "tipo": "resonancia",
+      "fuente": "Cita la traducción española del libro de Helg (Libertad e igualdad en el Caribe colombiano, 1770-1835) para el análisis de la esclavitud urbana samaria: misma obra que Liberty and Equality in Caribbean Colombia."
+    },
+    {
+      "a": "reysinningcristorey",
+      "b": "cunin",
+      "tipo": "resonancia",
+      "fuente": "Cita a Cunin (2003) entre los historiadores de la esclavitud y la composición racial de Santa Marta: mismo año y autora del estudio sobre identidades negras en Cartagena ya catalogado."
     }
   ]
 }
