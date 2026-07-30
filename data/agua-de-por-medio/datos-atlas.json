@@ -3,7 +3,7 @@
     "titulo": "Con el agua de por medio",
     "subtitulo": "Atlas para una antropología archipiélica",
     "responsable": "Centro de Pensamiento Caribe",
-    "version": "1.7.0",
+    "version": "1.9.0",
     "fecha": "2026-07-29"
   },
   "fenomenos": {
@@ -320,8 +320,8 @@
     {
       "id": "totumo",
       "k": "manifestacion",
-      "t": "Palenque: el caso del Totumo",
-      "a": "borrador / archivo",
+      "t": "Los acuerdos y la idealización del palenque en la provincia de Cartagena: el caso del Totumo (1714-1767)",
+      "a": "Dolcey Romero Jaramillo",
       "y": "",
       "f": [
         "cimarronaje",
@@ -469,20 +469,6 @@
       "l": "jamaica",
       "tr": "anglófono (R.U.)",
       "ap": "La trata sobrevive a su abolición formal; el capital racializado como continuidad."
-    },
-    {
-      "id": "geografiasnegras",
-      "k": "manifestacion",
-      "t": "Geografías negras de la Provincia de Santa Marta",
-      "a": "borrador propio",
-      "y": "",
-      "f": [
-        "memoria",
-        "colonialidad"
-      ],
-      "l": "santamarta",
-      "tr": "hispano (Colombia)",
-      "ap": "Etnografía de la negritud portuaria samaria: barrio, memoria e invisibilización."
     },
     {
       "id": "cabrera",
@@ -2531,6 +2517,34 @@
       "l": "santamarta",
       "tr": "hispano (Noruega/Colombia)",
       "ap": "El reverso de Múnera: si en Cartagena los comunes de color identificaron independencia con igualdad, en Santa Marta los indios tributarios sostuvieron el bando realista hasta 1820. Sæther retoma la tesis de Múnera para objetarle que no explica esa asimetría, y muestra que la composición racial de las dos ciudades no bastaba para predecir su política: la costa caribeña deja de ser un bloque y se vuelve dos historias."
+    },
+    {
+      "id": "zonabananera",
+      "k": "obra",
+      "t": "Las geografías negras en la Zona Bananera: algunas cuestiones de método para encarar las vidas negras del Caribe colombiano",
+      "a": "Roberto Almanza y Margarita Granados Castellanos",
+      "y": "2026",
+      "f": [
+        "capitalismo_racial",
+        "memoria"
+      ],
+      "l": "santamarta",
+      "tr": "hispano (Colombia)",
+      "ap": "Piel, voz y rostro como registros de una memoria política que hace de la Zona Bananera —enclave del capitalismo racial bananero, no solo escenario de plantación— un archivo vivo de las vidas negras."
+    },
+    {
+      "id": "rappaportcobarde",
+      "k": "obra",
+      "t": "El cobarde no hace historia: Orlando Fals Borda y los inicios de la investigación-acción participativa",
+      "a": "Joanne Rappaport",
+      "y": "2021",
+      "f": [
+        "soberanias",
+        "memoria"
+      ],
+      "l": "cartagena",
+      "tr": "hispano (Colombia)",
+      "ap": "Compartir la autoridad investigativa con las y los campesinos activistas de la ANUC como método: la Rosca de Investigación y Acción Social de Fals Borda frente al positivismo académico en las Sabanas del Caribe colombiano."
     }
   ],
   "relaciones": [
@@ -2647,12 +2661,6 @@
       "b": "vete",
       "tipo": "resonancia",
       "fuente": "Comparten el fenómeno Creolización / oralitura. Por corroborar el vínculo directo."
-    },
-    {
-      "a": "geografiasnegras",
-      "b": "totumo",
-      "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo."
     },
     {
       "a": "esquiva",
@@ -3133,12 +3141,6 @@
       "b": "perezmorales",
       "tipo": "resonancia",
       "fuente": "Comparten el fenómeno Violencias. Por corroborar el vínculo directo."
-    },
-    {
-      "a": "cunin",
-      "b": "geografiasnegras",
-      "tipo": "disonancia",
-      "fuente": "Mirada francófona externa sobre la negritud caribeña colombiana (Cunin) frente a la etnografía local samaria."
     },
     {
       "a": "figueroa",
@@ -4263,12 +4265,6 @@
       "fuente": "Por corroborar."
     },
     {
-      "a": "manoalzada",
-      "b": "geografiasnegras",
-      "tipo": "resonancia",
-      "fuente": "Por corroborar."
-    },
-    {
       "a": "firmin",
       "b": "pricemars",
       "tipo": "resonancia",
@@ -4391,12 +4387,6 @@
     {
       "a": "zapataarbol",
       "b": "escalante",
-      "tipo": "resonancia",
-      "fuente": "Por corroborar."
-    },
-    {
-      "a": "zapataarbol",
-      "b": "geografiasnegras",
       "tipo": "resonancia",
       "fuente": "Por corroborar."
     },
