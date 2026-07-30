@@ -3,7 +3,7 @@
     "titulo": "Con el agua de por medio",
     "subtitulo": "Atlas para una antropología archipiélica",
     "responsable": "Centro de Pensamiento Caribe",
-    "version": "1.11.0",
+    "version": "1.12.0",
     "fecha": "2026-07-30"
   },
   "fenomenos": {
@@ -2573,6 +2573,48 @@
       "l": "haiti",
       "tr": "francófono (Haití)",
       "ap": "El duvalierismo leído como control del imaginario cultural, no solo del aparato de Estado: el mismo objeto histórico que Trouillot narra desde la formación estatal, aquí desde la fabricación del consentimiento simbólico."
+    },
+    {
+      "id": "lizcanocarnaval",
+      "k": "obra",
+      "t": "Leyendo el carnaval: miradas desde Barranquilla, Bahía y Barcelona",
+      "a": "Martha Lizcano Angarita y Danny González Cueto (comps.)",
+      "y": "2009",
+      "f": [
+        "creolizacion",
+        "memoria"
+      ],
+      "l": "barranquilla",
+      "tr": "hispano (Colombia)",
+      "ap": "Compilación que piensa el carnaval como fenómeno transatlántico leyendo juntas Barranquilla, Salvador de Bahía y Barcelona: el mismo mecanismo de mestizaje ritual puesto a circular por tres orillas distintas. Primera obra que ancla al atlas en Barranquilla, lugar que hasta ahora no tenía ninguna obra propia."
+    },
+    {
+      "id": "sangbenvolviendo",
+      "k": "obra",
+      "t": "Volviendo al Caribe",
+      "a": "Mukien Adriana Sang Ben",
+      "y": "2020",
+      "f": [
+        "postplantacion",
+        "soberanias"
+      ],
+      "l": "santamarta",
+      "tr": "hispano (Rep. Dominicana/Colombia)",
+      "ap": "Ensayo panorámico de una historiadora dominicana que fundó estudios caribeños en Santo Domingo: la plantación como origen, la integración regional como promesa incumplida, y el archipiélago recorrido en primera persona. Publicado por la Universidad del Magdalena, dialoga en extenso con Glissant y reivindica a Hurbon como lectura que le cambió la comprensión de Haití."
+    },
+    {
+      "id": "chicamusicaafricana",
+      "k": "obra",
+      "t": "¿Dónde hay música africana? Cultura picotera y Festival Internacional de Música del Caribe en Cartagena",
+      "a": "Ricardo Chica Geliz y Adrián Fajardo Martínez",
+      "y": "2024",
+      "f": [
+        "creolizacion",
+        "memoria"
+      ],
+      "l": "cartagena",
+      "tr": "hispano (Colombia)",
+      "ap": "Etnografía del picó cartagenero y del Festival Internacional de Música del Caribe (1983-1994) construida sobre testimonios de administradores y coleccionistas, no sobre el canon académico caribeñista: un circuito sur-sur con África que las industrias culturales del norte nunca mediaron."
     }
   ],
   "relaciones": [
@@ -4729,6 +4771,54 @@
       "b": "cunin",
       "tipo": "resonancia",
       "fuente": "Cita a Cunin (2003) entre los historiadores de la esclavitud y la composición racial de Santa Marta: mismo año y autora del estudio sobre identidades negras en Cartagena ya catalogado."
+    },
+    {
+      "a": "lizcanocarnaval",
+      "b": "ortiz",
+      "tipo": "resonancia",
+      "fuente": "Cita literalmente Contrapunteo cubano del tabaco y el azúcar (ed. 1983) en nota al pie para fundamentar el precedente de la 'cultura híbrida' que el carnaval escenifica: misma obra catalogada."
+    },
+    {
+      "a": "lizcanocarnaval",
+      "b": "scher",
+      "tipo": "resonancia",
+      "fuente": "Por corroborar. Ambas leen el carnaval caribeño como transnación cultural que se rehace ritualmente cada año; no hay cita cruzada directa localizada."
+    },
+    {
+      "a": "sangbenvolviendo",
+      "b": "glissant",
+      "tipo": "resonancia",
+      "fuente": "Cita y glosa en extenso Poétique de la Relation (1990) y Le Discours antillais (1981) -las dos obras que integran la ficha de Glissant en este corpus- a propósito del acriollamiento y la especificidad caribeña frente al Mediterráneo."
+    },
+    {
+      "a": "sangbenvolviendo",
+      "b": "hurboncomprendre",
+      "tipo": "resonancia",
+      "fuente": "Testimonio directo: 'Tuve la grata ocasión de conocer a Laenne Hurbon, autor del libro Comprender Haití, una obra que me impactó; en 2012 publiqué una serie de artículos sobre el libro.' Mismo título catalogado."
+    },
+    {
+      "a": "sangbenvolviendo",
+      "b": "brathwaite",
+      "tipo": "resonancia",
+      "fuente": "Por corroborar. Reproduce en varias páginas el coloquio Brathwaite-Glissant de 1991 sobre 'lenguaje-nación' (vía la antología de Salto, 2010), concepto que da título a la ficha de Brathwaite en este corpus, pero sin citar directamente su obra primaria."
+    },
+    {
+      "a": "sangbenvolviendo",
+      "b": "cesaire",
+      "tipo": "resonancia",
+      "fuente": "Por corroborar. Contrasta la negritud de Césaire con la síntesis de Glissant citando un poema suyo, no Discurso sobre el colonialismo; el vínculo temático es explícito, el textual no se localizó."
+    },
+    {
+      "a": "chicamusicaafricana",
+      "b": "sonicbodies",
+      "tipo": "resonancia",
+      "fuente": "Por corroborar. El picó cartagenero y el sound system jamaicano comparten el mismo objeto -el equipo de sonido como forma de conocimiento corporal y circuito de circulación sur-sur- sin que el libro cite a Henriques."
+    },
+    {
+      "a": "chicamusicaafricana",
+      "b": "quintero",
+      "tipo": "resonancia",
+      "fuente": "Por corroborar. Comparten el baile y la escucha popular caribeña como práctica corporal de apropiación cultural; el libro se apoya en testimonios de administradores de picós, no en Quintero Rivera."
     }
   ]
 }
