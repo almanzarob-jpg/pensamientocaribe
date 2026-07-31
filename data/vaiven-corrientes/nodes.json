@@ -210,8 +210,12 @@
       "Picó as heritage"
     ],
     "cultura_en": "Cumbia · Salsa · Picó's African music",
-    "fuente": "",
-    "zoteroKeys": []
+    "fuente": "Giraldo Barbosa 2016 · Montes Pizarro 2018 · FUKAFRA et al. 2026",
+    "zoteroKeys": [
+      "GiraldoBarbosa2016",
+      "MontesPizarro2018",
+      "FUKAFRA2026"
+    ]
   },
   {
     "id": "cartagena-de-indias",
@@ -238,8 +242,14 @@
       "World Picó, 2024"
     ],
     "cultura_en": "Champeta · Bullerengue · Terapia",
-    "fuente": "",
-    "zoteroKeys": []
+    "fuente": "Cunin 2003 · Cunin 2006 · Giraldo Barbosa 2016 · Montes Pizarro 2018 · FUKAFRA et al. 2026",
+    "zoteroKeys": [
+      "Cunin2003",
+      "Cunin2006",
+      "GiraldoBarbosa2016",
+      "MontesPizarro2018",
+      "FUKAFRA2026"
+    ]
   },
   {
     "id": "san-basilio-de-palenque",
@@ -267,8 +277,37 @@
       "Palenquero language"
     ],
     "cultura_en": "Champeta criolla · Lumbalú · Palenquero sextet",
-    "fuente": "",
-    "zoteroKeys": []
+    "fuente": "Cunin 2003 · Montes Pizarro 2018",
+    "zoteroKeys": [
+      "Cunin2003",
+      "MontesPizarro2018"
+    ]
+  },
+  {
+    "id": "santa-marta",
+    "nombre": "Santa Marta",
+    "pais": "Colombia",
+    "lat": 11.2404,
+    "lng": -74.199,
+    "categoria": "Caribe colombiano",
+    "desc": "Tercera perla del corredor picotero, junto a Barranquilla y Cartagena. Aquí uno de los hermanos Ariza —pariente del barranquillero Marco T. Barros Ariza, que documentó la fabricación criolla de los primeros picós en 1939— fundó el picó El Último Hit. Desde 2018 ASOPIMARTA reclama, junto a sus pares de las otras dos ciudades, el reconocimiento del picó como patrimonio cultural inmaterial; ya en 2002 Matilde Maestre Rivera había impugnado el plan de desarrollo «Santa Marta 500 años» por negar la cultura negra de la ciudad.",
+    "claves": [
+      "El Último Hit",
+      "ASOPIMARTA",
+      "Corredor de las tres perlas"
+    ],
+    "cultura": "Picó · Música africana",
+    "desc_en": "Third pearl of the picotero corridor, alongside Barranquilla and Cartagena. Here one of the Ariza brothers — related to Barranquilla's Marco T. Barros Ariza, who documented the homegrown manufacture of the first picós in 1939 — founded the picó El Último Hit. Since 2018 ASOPIMARTA has joined its counterparts in the other two cities in demanding recognition of the picó as intangible cultural heritage; as early as 2002, Matilde Maestre Rivera had already challenged the \"Santa Marta 500 años\" development plan for denying the city's Black culture.",
+    "claves_en": [
+      "El Último Hit",
+      "ASOPIMARTA",
+      "Corridor of the three pearls"
+    ],
+    "cultura_en": "Picó · African music",
+    "fuente": "FUKAFRA et al. 2026",
+    "zoteroKeys": [
+      "FUKAFRA2026"
+    ]
   },
   {
     "id": "charlotte-amalie",
@@ -662,7 +701,10 @@
       "Stereomodernism"
     ],
     "cultura_en": "Marabi · Mbube · Isicathamiya · South African jazz",
-    "fuente": "",
-    "zoteroKeys": []
+    "fuente": "Erlmann 1991 · Jaji 2014",
+    "zoteroKeys": [
+      "Erlmann1991",
+      "Jaji2014"
+    ]
   }
 ]

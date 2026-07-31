@@ -464,6 +464,36 @@
     ]
   },
   {
+    "id": "e29",
+    "source": "paris",
+    "target": "dakar",
+    "source_nombre": "París",
+    "target_nombre": "Dakar",
+    "epoca": 3,
+    "curva": 0.2,
+    "titulo": "Présence Africaine llega a Dakar",
+    "anos": "1947–1966",
+    "desc": "La négritude se pensó en París desde 1947, cuando Alioune Diop fundó ahí la revista y editorial Présence Africaine, punto de encuentro de Césaire, Senghor y Damas con estudiantes africanos y antillanos. Esa conversación parisina culminó en 1966 con el Festival Mundial de Artes Negras de Dakar, convocado por el propio Senghor: la idea escrita en París se volvió allí fiesta continental.",
+    "claves": [
+      "Présence Africaine, 1947",
+      "Alioune Diop",
+      "FESMAN 1966"
+    ],
+    "fuente": "Shain 2018 · Gilroy 1993",
+    "titulo_en": "Présence Africaine reaches Dakar",
+    "anos_en": "1947–1966",
+    "desc_en": "Négritude was thought through in Paris starting in 1947, when Alioune Diop founded the journal and publishing house Présence Africaine there, a meeting ground for Césaire, Senghor, and Damas with African and Antillean students. That Parisian conversation culminated in 1966 with the First World Festival of Negro Arts in Dakar, convened by Senghor himself: the idea written in Paris became, there, a continental celebration.",
+    "claves_en": [
+      "Présence Africaine, 1947",
+      "Alioune Diop",
+      "FESMAN, 1966"
+    ],
+    "zoteroKeys": [
+      "Shain2018",
+      "Gilroy1993"
+    ]
+  },
+  {
     "id": "e15",
     "source": "kingston",
     "target": "adis-abeba",
@@ -626,6 +656,36 @@
     ]
   },
   {
+    "id": "e27",
+    "source": "puerto-principe",
+    "target": "fort-de-france",
+    "source_nombre": "Puerto Príncipe",
+    "target_nombre": "Fort-de-France",
+    "epoca": 3,
+    "curva": 0.2,
+    "titulo": "Konpa direk: la raíz de la cadence",
+    "anos": "1955–1967",
+    "desc": "En 1955 Nemours Jean-Baptiste bautizó en Puerto Príncipe el konpa direk. De esa cadencia haitiana salió toda una familia rítmica antillana: Guilbault y Manuel documentan cómo Gordon Henderson y su grupo Exile One —de músicos dominiqueses, radicado en Guadalupe desde 1972— la retomaron como cadence-lypso, y cómo esa cadence llegó hasta Martinica, donde se cruzó con la biguine y germinó lo que después sería el zouk.",
+    "claves": [
+      "Konpa direk, 1955",
+      "Nemours Jean-Baptiste",
+      "Raíz de la cadence"
+    ],
+    "fuente": "Guilbault 1993 · Manuel 1995",
+    "titulo_en": "Konpa direk: the root of cadence",
+    "anos_en": "1955–1967",
+    "desc_en": "In 1955 Nemours Jean-Baptiste christened konpa direk in Port-au-Prince. That Haitian cadence gave rise to a whole Antillean rhythmic family: Guilbault and Manuel document how Gordon Henderson and his group Exile One — mainly Dominican musicians, based in Guadeloupe from 1972 — took it up as cadence-lypso, and how that cadence reached Martinique, where it crossed with biguine and seeded what would later become zouk.",
+    "claves_en": [
+      "Konpa direk, 1955",
+      "Nemours Jean-Baptiste",
+      "Cadence's root"
+    ],
+    "zoteroKeys": [
+      "Guilbault1993",
+      "Manuel1995"
+    ]
+  },
+  {
     "id": "e20",
     "source": "brazzaville",
     "target": "fort-de-france",
@@ -658,6 +718,35 @@
     "zoteroKeys": [
       "MontesPizarro2018",
       "Stewart2000"
+    ]
+  },
+  {
+    "id": "e28",
+    "source": "nueva-york",
+    "target": "barranquilla",
+    "source_nombre": "Nueva York",
+    "target_nombre": "Barranquilla",
+    "epoca": 4,
+    "curva": 0.3,
+    "titulo": "La salsa de los picós",
+    "anos": "1960–1980",
+    "desc": "Contreras Hernández documenta, con el vocabulario propio del gremio (el «mundo picotero», el disco «pegado»), cómo los picós de Barranquilla y Cartagena masificaron entre obreros y jóvenes la salsa que llegaba en disco desde Nueva York —la misma salsa que en esos años cargó el estigma de «música de mariguaneros». La palabra «Salsa» que este mapa asigna a Barranquilla tiene aquí su respaldo documental.",
+    "claves": [
+      "Mundo picotero",
+      "El disco «pegado»",
+      "Estigma y clase"
+    ],
+    "fuente": "Contreras 2015",
+    "titulo_en": "The picós' salsa",
+    "anos_en": "1960–1980",
+    "desc_en": "Contreras Hernández documents, using the picotero guild's own vocabulary (the \"mundo picotero,\" the \"pegado\" record), how the picós of Barranquilla and Cartagena spread among workers and young people the salsa arriving on record from New York — the same salsa that in those years carried the stigma of \"music for potheads.\" The word \"Salsa\" this map assigns to Barranquilla finds its documentary support here.",
+    "claves_en": [
+      "Picotero world",
+      "The \"pegado\" record",
+      "Stigma and class"
+    ],
+    "zoteroKeys": [
+      "Contreras2015"
     ]
   },
   {
@@ -860,6 +949,35 @@
     ],
     "zoteroKeys": [
       "MontesPizarro2018"
+    ]
+  },
+  {
+    "id": "e30",
+    "source": "barranquilla",
+    "target": "santa-marta",
+    "source_nombre": "Barranquilla",
+    "target_nombre": "Santa Marta",
+    "epoca": 4,
+    "curva": 0.3,
+    "titulo": "El corredor de las tres perlas",
+    "anos": "2018–2026",
+    "desc": "Desde 2018, picoteros de Barranquilla, Cartagena y Santa Marta buscan, cada uno por su cuenta, que el Ministerio de las Culturas reconozca el picó como patrimonio cultural inmaterial. En 2026, FUKAFRA y las asociaciones de las tres ciudades —ASOBAILES, ASOPICAR, ASOPIMARTA— unieron esos esfuerzos bajo un solo nombre: el corredor cultural picotero de las tres perlas.",
+    "claves": [
+      "Picó como patrimonio, 2018",
+      "FUKAFRA · ASOBAILES · ASOPICAR · ASOPIMARTA",
+      "Corredor de las tres perlas"
+    ],
+    "fuente": "FUKAFRA et al. 2026",
+    "titulo_en": "The corridor of the three pearls",
+    "anos_en": "2018–2026",
+    "desc_en": "Since 2018, picoteros in Barranquilla, Cartagena, and Santa Marta have each sought, on their own, to have the Ministry of Cultures recognize the picó as intangible cultural heritage. In 2026, FUKAFRA and the three cities' associations — ASOBAILES, ASOPICAR, ASOPIMARTA — joined those efforts under one name: the picotero cultural corridor of the three pearls.",
+    "claves_en": [
+      "Picó as heritage, 2018",
+      "FUKAFRA · ASOBAILES · ASOPICAR · ASOPIMARTA",
+      "Corridor of the three pearls"
+    ],
+    "zoteroKeys": [
+      "FUKAFRA2026"
     ]
   }
 ]

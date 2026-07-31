@@ -1,33 +1,14 @@
 {
   "meta": {
     "titulo": "Bibliografía de Con el vaivén de las corrientes",
-    "descripcion": "Referencias citadas en los puertos y las rutas del mapa sonoro. Generadas a partir del campo fuente en texto libre; los campos vacíos están pendientes de completar.",
+    "descripcion": "Referencias citadas en los puertos y las rutas del mapa sonoro. usosEnElMapa cuenta ahora las apariciones en zoteroKeys tanto de nodes.json como de edges.json (antes solo contaba aristas). Los campos bibliográficos vacíos están pendientes de completar.",
     "responsable": "Roberto Almanza Hernández",
-    "version": "0.1.0",
-    "fecha": "2026-07-25",
-    "referencias": 25,
-    "completas": 0
+    "version": "0.2.0",
+    "fecha": "2026-07-31",
+    "referencias": 26,
+    "completas": 2
   },
   "referencias": [
-    {
-      "key": "MontesPizarro2018",
-      "citaOriginal": "Montes Pizarro 2018",
-      "autores": [
-        {
-          "apellido": "Montes Pizarro"
-        }
-      ],
-      "anio": "2018",
-      "titulo": "",
-      "tipo": "",
-      "editorial": "",
-      "lugar": "",
-      "doi": "",
-      "url": "",
-      "nota": "",
-      "usosEnElMapa": 11,
-      "estado": "por completar"
-    },
     {
       "key": "Adi2018",
       "citaOriginal": "Adi 2018",
@@ -45,44 +26,6 @@
       "url": "",
       "nota": "",
       "usosEnElMapa": 4,
-      "estado": "por completar"
-    },
-    {
-      "key": "Shain2018",
-      "citaOriginal": "Shain 2018",
-      "autores": [
-        {
-          "apellido": "Shain"
-        }
-      ],
-      "anio": "2018",
-      "titulo": "",
-      "tipo": "",
-      "editorial": "",
-      "lugar": "",
-      "doi": "",
-      "url": "",
-      "nota": "",
-      "usosEnElMapa": 4,
-      "estado": "por completar"
-    },
-    {
-      "key": "Jaji2014",
-      "citaOriginal": "Jaji 2014",
-      "autores": [
-        {
-          "apellido": "Jaji"
-        }
-      ],
-      "anio": "2014",
-      "titulo": "",
-      "tipo": "",
-      "editorial": "",
-      "lugar": "",
-      "doi": "",
-      "url": "",
-      "nota": "",
-      "usosEnElMapa": 2,
       "estado": "por completar"
     },
     {
@@ -162,6 +105,26 @@
       "estado": "por completar"
     },
     {
+      "key": "Contreras2015",
+      "citaOriginal": "Contreras 2015",
+      "autores": [
+        {
+          "apellido": "Contreras Hernández",
+          "nombre": "Nicolás Ramón"
+        }
+      ],
+      "anio": "2015",
+      "titulo": "La salsa en el Caribe colombiano: con clave, bongó y mucho picó",
+      "tipo": "artículo inédito",
+      "editorial": "",
+      "lugar": "",
+      "doi": "",
+      "url": "",
+      "nota": "Fecha estimada por los metadatos del archivo (creado 2015-07-29); el texto no declara año de publicación. Citado como «Contreras H. N., 2015» en Bases epistémicas de la propuesta Picó (FUKAFRA et al., 2026).",
+      "usosEnElMapa": 1,
+      "estado": "por completar"
+    },
+    {
       "key": "Cunin2003",
       "citaOriginal": "Cunin 2003",
       "autores": [
@@ -177,7 +140,7 @@
       "doi": "",
       "url": "",
       "nota": "",
-      "usosEnElMapa": 1,
+      "usosEnElMapa": 3,
       "estado": "por completar"
     },
     {
@@ -196,7 +159,7 @@
       "doi": "",
       "url": "",
       "nota": "",
-      "usosEnElMapa": 1,
+      "usosEnElMapa": 2,
       "estado": "por completar"
     },
     {
@@ -234,7 +197,7 @@
       "doi": "",
       "url": "",
       "nota": "",
-      "usosEnElMapa": 1,
+      "usosEnElMapa": 2,
       "estado": "por completar"
     },
     {
@@ -257,6 +220,25 @@
       "estado": "por completar"
     },
     {
+      "key": "FUKAFRA2026",
+      "citaOriginal": "FUKAFRA et al. 2026",
+      "autores": [
+        {
+          "apellido": "Fundación Cultural Afroamericana (FUKAFRA), ASOPIMARTA, ASOBAILES, ASOPICAR"
+        }
+      ],
+      "anio": "2026",
+      "titulo": "Bases epistémicas de la propuesta Picó: Patrimonio Cultural Inmaterial de la Humanidad",
+      "tipo": "documento de propuesta patrimonial",
+      "editorial": "",
+      "lugar": "Santa Marta / Cartagena / Barranquilla",
+      "doi": "",
+      "url": "",
+      "nota": "Presentada ante el Ministerio de las Culturas por la Fundación Cultural Afroamericana (FUKAFRA), la Asociación de Pikoteros de Santa Marta (ASOPIMARTA), ASOBAILES (Barranquilla) y la Asociación de Picoteros de Cartagena (ASOPICAR).",
+      "usosEnElMapa": 4,
+      "estado": "por completar"
+    },
+    {
       "key": "Gilroy1993",
       "citaOriginal": "Gilroy 1993",
       "autores": [
@@ -272,7 +254,7 @@
       "doi": "",
       "url": "",
       "nota": "",
-      "usosEnElMapa": 1,
+      "usosEnElMapa": 2,
       "estado": "por completar"
     },
     {
@@ -291,7 +273,7 @@
       "doi": "",
       "url": "",
       "nota": "",
-      "usosEnElMapa": 1,
+      "usosEnElMapa": 3,
       "estado": "por completar"
     },
     {
@@ -310,7 +292,7 @@
       "doi": "",
       "url": "",
       "nota": "",
-      "usosEnElMapa": 1,
+      "usosEnElMapa": 2,
       "estado": "por completar"
     },
     {
@@ -333,6 +315,25 @@
       "estado": "por completar"
     },
     {
+      "key": "Jaji2014",
+      "citaOriginal": "Jaji 2014",
+      "autores": [
+        {
+          "apellido": "Jaji"
+        }
+      ],
+      "anio": "2014",
+      "titulo": "",
+      "tipo": "",
+      "editorial": "",
+      "lugar": "",
+      "doi": "",
+      "url": "",
+      "nota": "",
+      "usosEnElMapa": 3,
+      "estado": "por completar"
+    },
+    {
       "key": "Manuel1995",
       "citaOriginal": "Manuel 1995",
       "autores": [
@@ -347,27 +348,8 @@
       "lugar": "",
       "doi": "",
       "url": "",
-      "nota": "",
-      "usosEnElMapa": 1,
-      "estado": "por completar"
-    },
-    {
-      "key": "Manuel1995",
-      "citaOriginal": "Manuel 1995 (Fania)",
-      "autores": [
-        {
-          "apellido": "Manuel"
-        }
-      ],
-      "anio": "1995",
-      "titulo": "",
-      "tipo": "",
-      "editorial": "",
-      "lugar": "",
-      "doi": "",
-      "url": "",
-      "nota": "Fania",
-      "usosEnElMapa": 1,
+      "nota": "Incluye también la cita \"Manuel 1995 (Fania)\" en la arista Zaire 74.",
+      "usosEnElMapa": 3,
       "estado": "por completar"
     },
     {
@@ -387,6 +369,25 @@
       "url": "",
       "nota": "",
       "usosEnElMapa": 1,
+      "estado": "por completar"
+    },
+    {
+      "key": "MontesPizarro2018",
+      "citaOriginal": "Montes Pizarro 2018",
+      "autores": [
+        {
+          "apellido": "Montes Pizarro"
+        }
+      ],
+      "anio": "2018",
+      "titulo": "",
+      "tipo": "",
+      "editorial": "",
+      "lugar": "",
+      "doi": "",
+      "url": "",
+      "nota": "",
+      "usosEnElMapa": 14,
       "estado": "por completar"
     },
     {
@@ -425,6 +426,25 @@
       "url": "",
       "nota": "",
       "usosEnElMapa": 1,
+      "estado": "por completar"
+    },
+    {
+      "key": "Shain2018",
+      "citaOriginal": "Shain 2018",
+      "autores": [
+        {
+          "apellido": "Shain"
+        }
+      ],
+      "anio": "2018",
+      "titulo": "",
+      "tipo": "",
+      "editorial": "",
+      "lugar": "",
+      "doi": "",
+      "url": "",
+      "nota": "",
+      "usosEnElMapa": 5,
       "estado": "por completar"
     },
     {
