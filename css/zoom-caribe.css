@@ -1,0 +1,224 @@
+/* ══════════════════════════════════════════════════════════════════════
+   ZOOM CARIBE · gramática única de controles para las piezas cartográficas
+   de Pensamiento Caribe (atlas SVG y mapa Leaflet).
+
+   Criterio: el cromo del sitio es monoespaciado, de trazo fino y esquinas
+   casi rectas. Los controles de zoom heredan eso en lugar de importar la
+   estética redondeada de Leaflet. El indicador de escala se dibuja como
+   un fader de consola: el gesto de mezcla, en un proyecto sobre sound
+   systems, no es un adorno arbitrario.
+   ══════════════════════════════════════════════════════════════════════ */
+
+.zc {
+  position: absolute;
+  right: 14px;
+  bottom: 14px;
+  z-index: 900;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  font-family: var(--ff-mono, ui-monospace, monospace);
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Cuando la pieza vive dentro de un contenedor con panel lateral, el
+   grupo se corre para no quedar debajo de la atribución de los mapas. */
+.zc--sube { bottom: 34px; }
+
+.zc-grupo {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background: rgba(9, 12, 7, 0.82);
+  border: 1px solid var(--c-border-green, rgba(36, 95, 30, 0.25));
+  border-radius: 2px;
+  box-shadow: 0 6px 22px rgba(0, 0, 0, 0.45);
+  overflow: hidden;
+}
+
+@supports (backdrop-filter: blur(8px)) or (-webkit-backdrop-filter: blur(8px)) {
+  .zc-grupo {
+    background: rgba(9, 12, 7, 0.62);
+    -webkit-backdrop-filter: blur(9px) saturate(1.1);
+    backdrop-filter: blur(9px) saturate(1.1);
+  }
+}
+
+/* ── Botón ───────────────────────────────────────────────────────────── */
+.zc-btn {
+  appearance: none;
+  -webkit-appearance: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  padding: 0;
+  margin: 0;
+  border: 0;
+  background: transparent;
+  color: var(--c-cream, #f2ead8);
+  font-family: inherit;
+  font-size: 15px;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.16s ease, color 0.16s ease, opacity 0.2s ease;
+}
+
+.zc-btn:hover { background: rgba(36, 95, 30, 0.28); color: var(--c-green-light, #3f8a35); }
+.zc-btn:active { background: rgba(36, 95, 30, 0.42); }
+
+.zc-btn:focus-visible {
+  outline: 2px solid var(--c-orange, #f07a16);
+  outline-offset: -2px;
+  background: rgba(240, 122, 22, 0.14);
+}
+
+/* Al llegar al tope el botón se apaga en vez de seguir prometiendo. */
+.zc-btn[disabled],
+.zc-btn[aria-disabled='true'] {
+  opacity: 0.26;
+  cursor: default;
+  pointer-events: none;
+}
+
+.zc-btn--reset svg { display: block; }
+@media (pointer: coarse) { .zc-btn--reset svg { width: 17px; height: 17px; } }
+
+/* ── Fader: dónde está la escala dentro de su recorrido ──────────────── */
+.zc-riel {
+  position: relative;
+  height: 52px;
+  margin: 2px 0;
+  border-top: 1px solid var(--c-border-green, rgba(36, 95, 30, 0.25));
+  border-bottom: 1px solid var(--c-border-green, rgba(36, 95, 30, 0.25));
+}
+
+.zc-riel::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 8px;
+  bottom: 8px;
+  width: 1px;
+  transform: translateX(-50%);
+  background: rgba(242, 234, 216, 0.2);
+}
+
+.zc-marca {
+  position: absolute;
+  left: 50%;
+  width: 15px;
+  height: 2px;
+  transform: translate(-50%, -50%);
+  background: var(--c-green-light, #3f8a35);
+  box-shadow: 0 0 5px rgba(63, 138, 53, 0.65);
+  transition: top 0.18s cubic-bezier(0.4, 0, 0.2, 1), background 0.2s ease;
+}
+
+.zc.is-moviendo .zc-marca { background: var(--c-orange, #f07a16); box-shadow: 0 0 6px rgba(240, 122, 22, 0.7); }
+
+/* ── Lectura numérica: aparece al mover, se va sola ──────────────────── */
+.zc-lectura {
+  position: absolute;
+  right: calc(100% + 8px);
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 3px 8px;
+  border: 1px solid var(--c-border-green, rgba(36, 95, 30, 0.25));
+  border-radius: 2px;
+  background: rgba(9, 12, 7, 0.9);
+  color: var(--c-gray, #b9b09f);
+  font-size: 10.5px;
+  letter-spacing: 0.7px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.22s ease;
+}
+
+.zc.is-moviendo .zc-lectura { opacity: 1; }
+
+/* ── Velo de pista: solo cuando el gesto fue el equivocado ───────────── */
+.zc-velo {
+  position: absolute;
+  inset: 0;
+  z-index: 950;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  text-align: center;
+  background: rgba(5, 6, 4, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.18s ease, visibility 0.18s;
+}
+
+@supports (backdrop-filter: blur(2px)) {
+  .zc-velo { background: rgba(5, 6, 4, 0.44); -webkit-backdrop-filter: blur(2.5px); backdrop-filter: blur(2.5px); }
+}
+
+.zc-velo.is-visible { opacity: 1; visibility: visible; }
+
+.zc-velo span {
+  font-family: var(--ff-mono, ui-monospace, monospace);
+  font-size: 13px;
+  letter-spacing: 1.1px;
+  line-height: 1.6;
+  color: var(--c-cream, #f2ead8);
+  border: 1px solid rgba(242, 234, 216, 0.18);
+  border-left: 2px solid var(--c-green-light, #3f8a35);
+  border-radius: 2px;
+  padding: 12px 20px;
+  background: rgba(9, 12, 7, 0.86);
+}
+
+.zc-velo kbd {
+  font-family: inherit;
+  font-size: 0.94em;
+  color: var(--c-orange, #f07a16);
+  border: 1px solid rgba(240, 122, 22, 0.4);
+  border-radius: 2px;
+  padding: 1px 5px;
+  margin: 0 1px;
+}
+
+/* ── Aviso accesible, invisible en pantalla ──────────────────────────── */
+.zc-sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ── Anillo de foco del lienzo ───────────────────────────────────────── */
+.zc-lienzo:focus { outline: none; }
+.zc-lienzo:focus-visible {
+  outline: 2px solid var(--c-orange, #f07a16);
+  outline-offset: -3px;
+}
+
+/* ── Punteros gruesos: zonas táctiles de 44px, sin estados de hover ──── */
+@media (pointer: coarse) {
+  .zc { right: 11px; bottom: 11px; gap: 11px; }
+  .zc-btn { width: 46px; height: 46px; font-size: 17px; }
+  .zc-riel { height: 46px; }
+  .zc-btn:hover { background: transparent; color: var(--c-cream, #f2ead8); }
+  .zc-lectura { font-size: 11px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .zc-marca, .zc-lectura, .zc-velo, .zc-btn { transition: none; }
+}
+
+/* Los controles nativos de Leaflet se retiran: el módulo los reemplaza. */
+.zc-host .leaflet-control-zoom { display: none !important; }

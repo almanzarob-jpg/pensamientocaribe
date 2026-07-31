@@ -23,6 +23,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/zoom-caribe.css">
 <style>
   :root{
     --bg-deep:#050604; --bg-warm:#0a0b08; --panel:#11130d;
@@ -73,6 +74,12 @@
   .node.qhit circle.dot{stroke:var(--cream); stroke-width:2.2}
   main{position:relative; flex:1 1 auto; min-height:0;}
   #stage{width:100%; height:100%; display:block; cursor:grab; touch-action:none;}
+  /* El grupo de controles se aparta cuando el panel de lectura entra por
+     la derecha. Se usa una variable para que el desplazamiento lateral y el
+     centrado vertical de móvil convivan en una sola transformación. */
+  main{--zc-x:0px; --zc-y:0px}
+  main:has(#panel.open){--zc-x:-372px}
+  .zc{transform:translate(var(--zc-x),var(--zc-y)); transition:transform .3s cubic-bezier(.4,0,.2,1), opacity .2s ease}
   #stage.grabbing{cursor:grabbing}
   .node circle.dot{transition:opacity .25s, r .2s}
   .halo{fill:none; stroke:var(--cream); opacity:0; transition:opacity .2s}
@@ -321,6 +328,14 @@
     #tip{max-width:220px}
     #presHelp{font-size:8.5px; gap:8px 10px; left:8px; bottom:8px}
     #presExit{right:8px; top:8px}
+    /* La leyenda ocupa todo el borde inferior en móvil, así que los controles
+       dejan la esquina y se anclan a media altura sobre el costado derecho.
+       Aquí el panel entra desde arriba y cubre la pieza: los controles se
+       retiran mientras está abierto en vez de apartarse de lado. */
+    main{--zc-y:-50%}
+    main:has(#panel.open){--zc-x:0px}
+    .zc{bottom:auto; top:50%}
+    main:has(#panel.open) .zc{opacity:0; pointer-events:none}
   }
   @media (max-width:780px) and (max-height:480px){
     header{padding:8px 12px 6px}
@@ -431,6 +446,7 @@
     <div class="c" style="border-left-color:var(--gold)"><div class="who" style="color:var(--gold)" data-i18n="mc9who">El reflujo</div><h3 data-i18n="mc9h">Cómo entra lo que llega de fuera</h3><p data-i18n-html="mc9p">Más de la mitad de las corrientes de este atlas declara no tener fuente todavía, y el corpus registra veinte resonancias por cada fricción. Ninguna de las dos cosas se corrige desde un solo escritorio. Quien recorre el mapa puede <b>proponer una obra ausente, trazar una corriente, señalar una fricción, corroborar un vínculo o enmendar un dato</b>, siempre con fuente verificable y argumento: la misma regla que el atlas se aplica a sí mismo. Nada entra sin lectura editorial. La puerta aparece sola bajo la leyenda cuando ya se han recorrido seis fichas, y cada corriente sin fuente lleva al lado la marca «¿la conoces?».<br><span style="font-size:.85em; opacity:.8"><a href="#reflujo" onclick="closeMarco();rfAbrir();return false;" style="color:var(--gold)">Dejar algo en la corriente →</a> &nbsp;·&nbsp; <a href="reflujo-guia.html" style="color:var(--gold)">leer la guía de uso</a></span></p></div>
   </div></div>
 </main>
+<script src="../js/zoom-caribe.js"></script>
 <script src="../data/agua-de-por-medio/datos-atlas.js?v=202607301"></script>
 <script>
 /* Datos del atlas: se cargan desde datos-atlas.js (archivo editable y versionable) */
@@ -1046,9 +1062,11 @@ function switchView(v){
   const zg=document.getElementById('zoomGrp');
   if(v==="tabla"){ svg0.style.display="none"; document.getElementById('hint').style.display="none"; if(zg) zg.style.display="none"; dockLegendInTable(); tbl.classList.add('show'); tbl.setAttribute('tabindex','-1'); renderTable(); tbl.focus(); }
   else { svg0.style.display="block"; document.getElementById('hint').style.display=""; if(zg) zg.style.display=""; undockLegend(); tbl.classList.remove('show'); render(); }
+  if(zc) zc.elementos.caja.style.display = (v==="tabla") ? "none" : "";
+  if(zc) zc.sincronizar();
 }
 document.getElementById('viewSeg').addEventListener('click',e=>{ if(e.target.dataset.v){[...e.currentTarget.children].forEach(b=>b.classList.remove('on'));e.target.classList.add('on');clearFocus();switchView(e.target.dataset.v);} });
-document.getElementById('resetZoomBtn').addEventListener('click',()=>{ vpt={k:1,tx:0,ty:0}; applyVP(); });
+document.getElementById('resetZoomBtn').addEventListener('click',()=>{ vpt={k:1,tx:0,ty:0}; applyVP(); if(zc) zc.sincronizar(); });
 
 /* ---------- buscador: eventos ---------- */
 const qbox=document.getElementById('qbox');
@@ -1077,36 +1095,88 @@ function setEvid(v){ document.querySelectorAll('#evSeg button').forEach(b=>b.cla
 document.getElementById('tideSeg').addEventListener('click',e=>{ if(e.target.dataset.tide){[...e.currentTarget.children].forEach(b=>b.classList.remove('on'));e.target.classList.add('on');state.tide=e.target.dataset.tide==="on"; if(!state.tide) place(0);} });
 
 function toVB(x,y){ const r=svg.getBoundingClientRect(); return [ (x-r.left)/r.width*VW, (y-r.top)/r.height*VH ]; }
-svg.addEventListener('wheel',ev=>{ ev.preventDefault(); const [mx,my]=toVB(ev.clientX,ev.clientY); const factor=ev.deltaY<0?1.12:1/1.12; const nk=Math.max(0.6,Math.min(7,vpt.k*factor)); const f=nk/vpt.k; vpt.tx=mx-(mx-vpt.tx)*f; vpt.ty=my-(my-vpt.ty)*f; vpt.k=nk; applyVP(); },{passive:false});
+
+/* ---------- zoom y paneo: el árbitro de gestos vive en js/zoom-caribe.js ----------
+   Aquí solo queda el adaptador, es decir, cómo se traduce «acércate a este
+   punto» a la geometría de este SVG concreto. */
+const ZMIN=0.6, ZMAX=7;
+
+/* El grafo no puede irse de la pantalla: siempre queda dentro al menos una
+   cuarta parte de su caja. Antes se podía arrastrar hasta perderlo de vista y
+   la única salida era reencuadrar. */
+function clampVP(){
+  const bx=VW*0.25, by=VH*0.25;
+  vpt.tx=Math.min(VW-bx, Math.max(bx-VW*vpt.k, vpt.tx));
+  vpt.ty=Math.min(VH-by, Math.max(by-VH*vpt.k, vpt.ty));
+}
+const _applyVP=applyVP;
+applyVP=function(){ clampVP(); _applyVP(); };
+
+const zcMotor = {
+  escala(){ return vpt.k; },
+  limites(){ return [ZMIN, ZMAX]; },
+  aplicar(k, cx, cy){
+    k=Math.max(ZMIN, Math.min(ZMAX, k));
+    const r0=svg.getBoundingClientRect();
+    let mx, my;
+    if(cx===undefined || !r0.width || !r0.height){ mx=VW/2; my=VH/2; }
+    else { [mx,my]=toVB(cx,cy); }
+    const f=k/vpt.k;
+    vpt.tx=mx-(mx-vpt.tx)*f;
+    vpt.ty=my-(my-vpt.ty)*f;
+    vpt.k=k;
+    applyVP();
+  },
+  panear(dx,dy){
+    const r=svg.getBoundingClientRect();
+    /* Si el lienzo mide cero —vista de tabla, pieza oculta, antes de maquetar—
+       dividir aquí deja vpt en NaN y el encuadre no vuelve nunca. */
+    if(!r.width || !r.height) return;
+    vpt.tx+=dx/r.width*VW; vpt.ty+=dy/r.height*VH;
+    applyVP();
+  },
+  recentrar(){ vpt={k:1,tx:0,ty:0}; applyVP(); }
+};
+
+let zc=null;
+function montarZoom(){
+  if(zc) zc.destruir();
+  zc = ZoomCaribe.montar({
+    host: document.getElementById('main-content'),
+    lienzo: svg,
+    motor: zcMotor,
+    idioma: (typeof LANG!=='undefined' && LANG==='en') ? 'en' : 'es',
+    duenaDeLaVentana: true,  /* ocupa la ventana entera: no hay página que ceder */
+    unDedoPanea: true,       /* y por lo mismo el dedo puede desplazar el grafo */
+    dobleClic: false         /* el doble clic se maneja abajo, junto al arrastre */
+  });
+}
+
+/* ---------- arrastre con el ratón ---------- */
 let panning=false, dragged=false, sx=0, sy=0, otx=0, oty=0;
-svg.addEventListener('mousedown',ev=>{ panning=true; dragged=false; sx=ev.clientX; sy=ev.clientY; otx=vpt.tx; oty=vpt.ty; svg.classList.add('grabbing'); });
-window.addEventListener('mousemove',ev=>{ if(!panning)return; if(Math.abs(ev.clientX-sx)+Math.abs(ev.clientY-sy)>3)dragged=true; const r=svg.getBoundingClientRect(); vpt.tx=otx+(ev.clientX-sx)/r.width*VW; vpt.ty=oty+(ev.clientY-sy)/r.height*VH; applyVP(); });
+svg.addEventListener('mousedown',ev=>{
+  if(ev.button!==0) return;          /* el clic derecho abre el menú, no panea */
+  panning=true; dragged=false; sx=ev.clientX; sy=ev.clientY;
+  otx=vpt.tx; oty=vpt.ty; svg.classList.add('grabbing');
+});
+window.addEventListener('mousemove',ev=>{
+  if(!panning)return;
+  if(Math.abs(ev.clientX-sx)+Math.abs(ev.clientY-sy)>3)dragged=true;
+  const r=svg.getBoundingClientRect();
+  vpt.tx=otx+(ev.clientX-sx)/r.width*VW; vpt.ty=oty+(ev.clientY-sy)/r.height*VH;
+  applyVP();
+});
 window.addEventListener('mouseup',()=>{ panning=false; svg.classList.remove('grabbing'); });
 svg.addEventListener('click',ev=>{ if(dragged){ dragged=false; return; } clearFocus(); });
-svg.addEventListener('dblclick',()=>{ vpt={k:1,tx:0,ty:0}; applyVP(); });
 
-/* ---------- táctil: un dedo desplaza, dos dedos hacen zoom (pellizco) ---------- */
-let pinching=false, pinchD0=1, pinchK0=1, pinchMX=0, pinchMY=0;
-function touchDist(t){ return Math.hypot(t[0].clientX-t[1].clientX, t[0].clientY-t[1].clientY); }
-function touchMid(t){ return [(t[0].clientX+t[1].clientX)/2, (t[0].clientY+t[1].clientY)/2]; }
-svg.addEventListener('touchstart',ev=>{
-  if(ev.touches.length===1){ pinching=false; panning=true; dragged=false; const t=ev.touches[0]; sx=t.clientX; sy=t.clientY; otx=vpt.tx; oty=vpt.ty; }
-  else if(ev.touches.length===2){ panning=false; pinching=true; dragged=true; pinchD0=touchDist(ev.touches)||1; pinchK0=vpt.k; const [mx,my]=touchMid(ev.touches); [pinchMX,pinchMY]=toVB(mx,my); }
-},{passive:true});
-svg.addEventListener('touchmove',ev=>{
-  if(pinching && ev.touches.length===2){ ev.preventDefault();
-    const d=touchDist(ev.touches)||1; const nk=Math.max(0.6,Math.min(7, pinchK0*(d/pinchD0)));
-    const f=nk/vpt.k; vpt.tx=pinchMX-(pinchMX-vpt.tx)*f; vpt.ty=pinchMY-(pinchMY-vpt.ty)*f; vpt.k=nk; applyVP();
-  } else if(panning && ev.touches.length===1){ ev.preventDefault();
-    const t=ev.touches[0]; if(Math.abs(t.clientX-sx)+Math.abs(t.clientY-sy)>3)dragged=true;
-    const r=svg.getBoundingClientRect(); vpt.tx=otx+(t.clientX-sx)/r.width*VW; vpt.ty=oty+(t.clientY-sy)/r.height*VH; applyVP();
-  }
-},{passive:false});
-svg.addEventListener('touchend',ev=>{
-  if(ev.touches.length===0){ panning=false; pinching=false; }
-  else if(ev.touches.length===1){ pinching=false; panning=true; dragged=true; const t=ev.touches[0]; sx=t.clientX; sy=t.clientY; otx=vpt.tx; oty=vpt.ty; }
+/* Doble clic: acercar anclado al cursor. Con Alt, alejar. Antes reencuadraba,
+   que es lo contrario de lo que espera cualquiera que haya usado un mapa. */
+svg.addEventListener('dblclick',ev=>{
+  ev.preventDefault();
+  const k=vpt.k;
+  zcMotor.aplicar(ev.altKey ? k/1.55 : k*1.55, ev.clientX, ev.clientY);
+  if(zc) zc.sincronizar();
 });
-svg.addEventListener('touchcancel',()=>{ panning=false; pinching=false; });
 
 /* ---------- modo presentación: pantalla negra, sin cromo, como un PowerPoint ---------- */
 function setView(v){ document.querySelectorAll('#viewSeg button').forEach(b=>b.classList.toggle('on', b.dataset.v===v)); clearFocus(); switchView(v); }
@@ -1466,9 +1536,10 @@ function applyLang(){
   const rfa=document.getElementById('reflujo');
   if(rfa && rfa.classList.contains('open')){ rfPintar(); } /* el reflujo también cambia de lengua */
 }
-document.getElementById('langBtn').onclick=()=>{ LANG = (LANG==='es') ? 'en' : 'es'; applyLang(); };
+document.getElementById('langBtn').onclick=()=>{ LANG = (LANG==='es') ? 'en' : 'es'; applyLang(); montarZoom(); };
 
 render();
+montarZoom();
 if(LANG==='en') applyLang();
 requestAnimationFrame(loop);
 /* enlace profundo: si la URL trae #idObra, abrir esa ficha y saltar el umbral */

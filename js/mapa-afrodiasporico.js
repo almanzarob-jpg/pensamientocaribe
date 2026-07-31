@@ -38,13 +38,28 @@
       zoom: 3,
       minZoom: 2,
       maxZoom: 9,
+      /* Los gestos los arbitra js/zoom-caribe.js: la rueda sola le pertenece a
+         la página, el pellizco y el doble clic pasan por el mismo módulo que
+         el atlas. Aquí se apagan los manejadores nativos que competirían. */
       scrollWheelZoom: false,
-      zoomControl: true,
+      touchZoom: false,
+      doubleClickZoom: false,
+      keyboard: false,   /* el teclado también lo lleva el módulo, para que
+                            «+» no dispare dos veces el mismo acercamiento */
+      zoomControl: false,
+      zoomSnap: 0,
       attributionControl: true,
       worldCopyJump: false,
       maxBounds: [[-30, -125], [65, 70]],
       maxBoundsViscosity: 0.8
     });
+
+    /* Con puntero grueso el arrastre de un dedo se cede a la página: el mapa
+       mide 480 px de alto dentro de un artículo largo y atraparlo dejaba al
+       lector rodeándolo con el pulgar para poder seguir bajando. Dos dedos
+       mueven y acercan, que es la convención que la gente ya trae aprendida. */
+    var punteroGrueso = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
+    if (punteroGrueso && map.dragging) map.dragging.disable();
 
     // Sin prefijo de Leaflet en la atribución (solo créditos de los mapas)
     if (map.attributionControl) map.attributionControl.setPrefix(false);
@@ -947,10 +962,42 @@
       });
     }
 
-    // Scroll-wheel zoom solo con foco
-    container.addEventListener('click', function () { map.scrollWheelZoom.enable(); });
-    container.addEventListener('mouseleave', function () { map.scrollWheelZoom.disable(); });
+    /* ── Controles de zoom: mismo módulo, misma gramática que el atlas ── */
+    if (window.ZoomCaribe) {
+      var zc = ZoomCaribe.montar({
+        host: container,
+        lienzo: container,
+        idioma: IDIOMA,
+        modoEscala: 'aditiva',   /* Leaflet cuenta niveles, no factores */
+        subir: true,             /* deja libre la línea de atribución */
+        motor: {
+          escala: function () { return map.getZoom(); },
+          limites: function () { return [map.getMinZoom(), map.getMaxZoom()]; },
+          aplicar: function (z, cx, cy) {
+            var lo = map.getMinZoom(), hi = map.getMaxZoom();
+            z = Math.max(lo, Math.min(hi, z));
+            if (cx === undefined) { map.setZoom(z, { animate: false }); return; }
+            var r = container.getBoundingClientRect();
+            map.setZoomAround(L.point(cx - r.left, cy - r.top), z, { animate: false });
+          },
+          panear: function (dx, dy) { map.panBy([-dx, -dy], { animate: false }); },
+          recentrar: function () { map.setView([16, -32], 3, { animate: false }); }
+        }
+      });
+      /* El fader también se mueve cuando el zoom lo cambia otra cosa: la
+         travesía guiada, la línea de tiempo o el clic sobre un puerto. */
+      if (zc) map.on('zoom zoomend moveend', function () { zc.sincronizar(); });
+    }
 
+    /* Al rotar el teléfono o cambiar el ancho, Leaflet queda mal dimensionado
+       si nadie se lo dice. Antes solo había un aviso único a los 300 ms. */
+    var relojMedida = null;
+    function remedir() {
+      clearTimeout(relojMedida);
+      relojMedida = setTimeout(function () { map.invalidateSize(); }, 180);
+    }
+    window.addEventListener('resize', remedir);
+    window.addEventListener('orientationchange', remedir);
     setTimeout(function () { map.invalidateSize(); }, 300);
   }
 
