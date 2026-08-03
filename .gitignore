@@ -1,9 +1,77 @@
+# ═══════════════════════════════════════════════════════════════
+# Datos personales y documentos administrativos
+#
+# Regla invertida a proposito. Antes se ignoraban unos pocos
+# archivos de documentacion/ y se publicaba el resto: asi fue como
+# un contrato firmado termino publicado en GitHub Pages. Ahora se
+# ignora todo salvo lo que se readmite explicitamente, de modo que
+# un descuido futuro deje fuera un archivo metodologico (molesto
+# pero inocuo) en lugar de publicar un documento con datos
+# personales.
+#
+# Al anadir un archivo nuevo a documentacion/ que deba publicarse,
+# hay que readmitirlo aqui abajo. Es deliberado.
+# ═══════════════════════════════════════════════════════════════
+documentacion/*
 
-# documentos administrativos, no van al sitio
-documentacion/*.doc
+# Metodologia del atlas y de la cartografia sonora
+!documentacion/guia-metodologica-*
+!documentacion/metodologia-*
+!documentacion/guia-zenodo-*
+!documentacion/prompt-notebooklm-*
+!documentacion/importacion-zotero-*
+!documentacion/corpus-atlas-*
+!documentacion/hoja-relaciones-atlas-*
+!documentacion/lista-atlas-id-*
+!documentacion/ficha-tecnica-minciencias-*
 
-# borrador administrativo, no va al sitio
-documentacion/Direccion de tesis.docx
+# Propuesta institucional. Revisar en la proxima fase, al dividir
+# documentacion/ entre lo metodologico publico y lo administrativo
+# privado, si debe seguir siendo publica.
+!documentacion/Propuesta Cajamag.docx
 
-# tabla de revisión: se regenera con _cruzar_bibliografia.py
+# ═══════════════════════════════════════════════════════════════
+# Contratos y documentos con datos personales, en cualquier ruta
+# ═══════════════════════════════════════════════════════════════
+*[Cc]ontrato*[Ff]irmado*
+*[Hh]oja[ _-]de[ _-]vida*
+*[Cc]urriculum*
+*[Cc]edula*
+*[Nn]omina*
+
+# ═══════════════════════════════════════════════════════════════
+# Archivos temporales de Office
+# Los que empiezan por ~$ guardan el nombre del propietario del
+# documento. Uno de ellos entro en el repositorio junto al contrato.
+# ═══════════════════════════════════════════════════════════════
+~$*
+.~lock.*
+
+# ═══════════════════════════════════════════════════════════════
+# Sistema operativo y editores
+# ═══════════════════════════════════════════════════════════════
+.DS_Store
+._*
+Thumbs.db
+.vscode/
+.idea/
+
+# ═══════════════════════════════════════════════════════════════
+# Secretos: hoy no hay ninguno en los 108 commits, y conviene
+# que siga siendo asi
+# ═══════════════════════════════════════════════════════════════
+.env
+.env.*
+*.pem
+*.key
+*.p12
+.netrc
+credentials*
+secrets.*
+
+# ═══════════════════════════════════════════════════════════════
+# Datos generados y respaldos que el historial de git ya cubre
+# ═══════════════════════════════════════════════════════════════
 data/negrura/fuentes-por-concepto.md
+data/**/.respaldo-siembra/
+*.backup.json

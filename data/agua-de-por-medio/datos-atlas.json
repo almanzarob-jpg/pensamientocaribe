@@ -3,8 +3,8 @@
     "titulo": "Con el agua de por medio",
     "subtitulo": "Atlas para una antropología archipiélica",
     "responsable": "Centro de Pensamiento Caribe",
-    "version": "1.13.0",
-    "fecha": "2026-07-31"
+    "version": "1.14.0",
+    "fecha": "2026-08-03"
   },
   "fenomenos": {
     "colonialidad": {
@@ -230,6 +230,13 @@
       "Bluefields",
       "ciudad",
       "el Pacífico nicaragüense · Nicaragua"
+    ],
+    "panama": [
+      9.36,
+      -79.9,
+      "Panamá",
+      "ciudad",
+      "el istmo panameño · Panamá"
     ]
   },
   "obras": [
@@ -2824,6 +2831,265 @@
       "l": "cartagena",
       "tr": "comparado (cuenca completa)",
       "ap": "La fiebre amarilla y la malaria como actores de la historia militar del Gran Caribe: España retuvo sus colonias más tiempo que sus rivales por ecología, no solo por estrategia. El sitio de Cartagena de 1741 es uno de sus casos centrales. Cita en extenso a Stuart Schwartz sobre demografía esclava e inmunidad al mosquito, aunque por un trabajo de 1985 distinto al que el atlas ya cataloga."
+    },
+    {
+      "id": "lassoerased",
+      "k": "obra",
+      "t": "Erased: The Untold Story of the Panama Canal",
+      "a": "Marixa Lasso",
+      "y": "2019",
+      "f": [
+        "colonialidad",
+        "capitalismo_racial",
+        "memoria"
+      ],
+      "l": "panama",
+      "tr": "anglófono (EE.UU./Colombia)",
+      "ap": "El despojo de los pueblos negros panameños por la Zona del Canal, borrados de la narrativa oficial que celebra la obra de ingeniería. Llena un vacío casi total del atlas sobre Panamá."
+    },
+    {
+      "id": "floresvillalobos",
+      "k": "obra",
+      "t": "The Silver Women: How Black Women's Labor Made the Panama Canal",
+      "a": "Joan Flores-Villalobos",
+      "y": "2022",
+      "f": [
+        "postplantacion",
+        "capitalismo_racial",
+        "violencias"
+      ],
+      "l": "panama",
+      "tr": "anglófono (EE.UU.)",
+      "ap": "El trabajo reproductivo y sexual de las mujeres antillanas migrantes sostuvo la fuerza laboral del Canal; la paga en 'plata' frente al 'oro' de los blancos estadounidenses como arquitectura racial del salario."
+    },
+    {
+      "id": "corinealdipanama",
+      "k": "obra",
+      "t": "Panama in Black: Afro-Caribbean World Making in the Twentieth Century",
+      "a": "Kaysha Corinealdi",
+      "y": "2022",
+      "f": [
+        "colonialidad",
+        "soberanias",
+        "memoria"
+      ],
+      "l": "panama",
+      "tr": "anglófono (EE.UU.)",
+      "ap": "La comunidad antillana de Panamá construyendo soberanía diaspórica propia —prensa, escuela, organización política— más allá de la lectura que solo la ve como mano de obra del Canal."
+    },
+    {
+      "id": "kahnislands",
+      "k": "obra",
+      "t": "Islands of Sovereignty: Haitian Migration and the Borders of Empire",
+      "a": "Jeffrey S. Kahn",
+      "y": "2019",
+      "f": [
+        "soberanias",
+        "colonialidad",
+        "violencias"
+      ],
+      "l": "haiti",
+      "tr": "anglófono (EE.UU.)",
+      "ap": "La frontera marítima como tecnología jurídica que produce la 'ilegalidad' haitiana antes de que el migrante llegue a tierra. Migración e imperio leídos desde el derecho, no solo desde la etnografía del desplazamiento."
+    },
+    {
+      "id": "dubuissonhaiti",
+      "k": "obra",
+      "t": "Reclaiming Haiti's Futures",
+      "a": "Darlène Elizabeth Dubuisson",
+      "y": "2024",
+      "f": [
+        "memoria",
+        "soberanias",
+        "colonialidad"
+      ],
+      "l": "haiti",
+      "tr": "anglófono (EE.UU.)",
+      "ap": "Intelectuales haitianos retornados que rehacen el futuro del país contra el guion de la 'ayuda' internacional y la anticipación catastrofista con que Occidente narra a Haití."
+    },
+    {
+      "id": "pinedashipwrecked",
+      "k": "obra",
+      "t": "Shipwrecked Identities: Navigating Race on Nicaragua's Mosquito Coast",
+      "a": "Baron L. Pineda",
+      "y": "2006",
+      "f": [
+        "colonialidad",
+        "creolizacion"
+      ],
+      "l": "bluefields",
+      "tr": "anglófono (EE.UU.)",
+      "ap": "Las identidades criollas y miskitas de la Costa de Mosquitos como categorías raciales en disputa, no esencias étnicas fijas. Profundiza un nodo del atlas que solo tenía a McNeill del lado ecológico."
+    },
+    {
+      "id": "stoutafterlove",
+      "k": "obra",
+      "t": "After Love: Queer Intimacy and Erotic Economies in Post-Soviet Cuba",
+      "a": "Noelle M. Stout",
+      "y": "2014",
+      "f": [
+        "cuerpo_erotica",
+        "capitalismo_racial"
+      ],
+      "l": "cuba",
+      "tr": "anglófono (EE.UU.)",
+      "ap": "El deseo y el afecto como economía en la Cuba post-soviética: la erótica no como excepción a la sobrevivencia material sino como parte de ella. Ángulo del cuerpo y la intimidad ausente del corpus cubano previo."
+    },
+    {
+      "id": "wirtzperforming",
+      "k": "obra",
+      "t": "Performing Afro-Cuba: Image, Voice, Spectacle in the Making of Race and History",
+      "a": "Kristina Wirtz",
+      "y": "2014",
+      "f": [
+        "creolizacion",
+        "memoria"
+      ],
+      "l": "cuba",
+      "tr": "anglófono (EE.UU.)",
+      "ap": "La 'afrocubanidad' como actuación semiótica —performance ritual, folclórico y turístico— que produce la raza en vez de solo representarla."
+    },
+    {
+      "id": "belisodelirium",
+      "k": "obra",
+      "t": "Excited Delirium: Race, Police Violence, and the Invention of a Disease",
+      "a": "Aisha M. Beliso-De Jesús",
+      "y": "2024",
+      "f": [
+        "violencias",
+        "cuerpo_erotica"
+      ],
+      "l": "cuba",
+      "tr": "anglófono (EE.UU.)",
+      "ap": "Una antropóloga formada en santería cubana rastrea cómo la policía estadounidense inventó un diagnóstico médico para justificar la violencia racial. El cuerpo religioso afrocubano como llave para leer la necropolítica en otro lugar."
+    },
+    {
+      "id": "garciapenaborders",
+      "k": "obra",
+      "t": "The Borders of Dominicanidad: Race, Nation, and Archives of Contradiction",
+      "a": "Lorgia García-Peña",
+      "y": "2016",
+      "f": [
+        "colonialidad",
+        "memoria",
+        "violencias"
+      ],
+      "l": "dominicana",
+      "tr": "anglófono (EE.UU.)",
+      "ap": "La dominicanidad como archivo contradictorio que necesita negar la negrura para narrarse a sí misma. Dialoga directamente con la Masacre de 1937 ya presente en el corpus."
+    },
+    {
+      "id": "godreauscripts",
+      "k": "obra",
+      "t": "Scripts of Blackness: Race, Cultural Nationalism, and U.S. Colonialism in Puerto Rico",
+      "a": "Isar P. Godreau",
+      "y": "2015",
+      "f": [
+        "colonialidad",
+        "creolizacion"
+      ],
+      "l": "puertorico",
+      "tr": "anglófono (EE.UU.)",
+      "ap": "El nacionalismo cultural puertorriqueño necesita una negrura administrada —folclórica, festiva, del pasado— para sostener el mestizaje como guion oficial."
+    },
+    {
+      "id": "castorspiritual",
+      "k": "obra",
+      "t": "Spiritual Citizenship: Transnational Pathways from Black Power to Ifá in Trinidad",
+      "a": "N. Fadeke Castor",
+      "y": "2017",
+      "f": [
+        "memoria",
+        "soberanias"
+      ],
+      "l": "trinidad",
+      "tr": "anglófono (EE.UU.)",
+      "ap": "La ruta de Trinidad al Black Power hacia la religión yoruba/ifá como ciudadanía espiritual: la diáspora rehaciendo pertenencia por fuera del Estado-nación."
+    },
+    {
+      "id": "alvarezboro",
+      "k": "obra",
+      "t": "“Esto es el boro”: vidas en la periferia",
+      "a": "William Álvarez Álvarez",
+      "y": "2023",
+      "f": [
+        "violencias",
+        "postplantacion"
+      ],
+      "l": "cartagena",
+      "tr": "hispanófono (Colombia)",
+      "ap": "Tres años de etnografía sobre pandillas y necropolítica en un barrio afrocaribeño de Cartagena (Rafael Núñez/Olaya Herrera). Vacío real del corpus: no había nada sobre violencia urbana contemporánea en el Caribe colombiano."
+    },
+    {
+      "id": "londonoargonauts",
+      "k": "obra",
+      "t": "The Argonauts of West Caribbean: Tradition of Canoes of Taganga",
+      "a": "Wilhelm Londoño Díaz",
+      "y": "2025",
+      "f": [
+        "memoria",
+        "creolizacion"
+      ],
+      "l": "santamarta",
+      "tr": "hispanófono (Colombia)",
+      "ap": "La canoa de Taganga como tecnología y tradición de navegación indígena que antecede y desborda al Estado-nación. Encaja casi literalmente con el título del proyecto."
+    },
+    {
+      "id": "crawfordturtlemen",
+      "k": "obra",
+      "t": "The Last Turtlemen of the Caribbean: Waterscapes of Labor, Conservation, and Boundary Making",
+      "a": "Sharika D. Crawford",
+      "y": "2020",
+      "f": [
+        "capitalismo_racial",
+        "soberanias",
+        "catastrofes"
+      ],
+      "l": "bluefields",
+      "tr": "anglófono (EE.UU.)",
+      "ap": "La pesca de tortuga como frontera marítima disputada entre imperios y luego entre Estados: el agua como límite que se hace y deshace con el trabajo, no solo con el tratado."
+    },
+    {
+      "id": "stewardpuertorico",
+      "k": "obra",
+      "t": "The People of Puerto Rico: A Study in Social Anthropology",
+      "a": "Julian H. Steward, Robert A. Manners, Eric R. Wolf, Elena Padilla Seda, Sidney W. Mintz, Raymond L. Scheele",
+      "y": "1956",
+      "f": [
+        "postplantacion",
+        "capitalismo_racial"
+      ],
+      "l": "puertorico",
+      "tr": "anglófono (EE.UU.)",
+      "ap": "El proyecto colectivo del que salió Mintz: distintas zonas de Puerto Rico –plantación azucarera, café, tabaco, ciudad– estudiadas como tipos de economía que producen distintas formas de sociedad. Clásico fundacional del área ausente del corpus pese a que sí está su coautor más célebre."
+    },
+    {
+      "id": "mitchellalibi",
+      "k": "obra",
+      "t": "The Alibi of Capital: How We Broke the Earth to Steal the Future on the Promise of a Better Tomorrow",
+      "a": "Timothy Mitchell",
+      "y": "2026",
+      "f": [
+        "capitalismo_racial",
+        "colonialidad"
+      ],
+      "l": "haiti",
+      "tr": "anglófono (Reino Unido/EE.UU.)",
+      "ap": "Historia global del capital que no es un libro caribeño —su eje es Egipto y el petróleo— pero hace de la plantación azucarera del Caribe y de la Revolución Haitiana una bisagra estructural en el origen del capitalismo moderno, citando a Cedric Robinson como autoridad. Entra con esa salvedad declarada, no como obra centrada en la cuenca."
+    },
+    {
+      "id": "allenvenceremos",
+      "k": "obra",
+      "t": "¡Venceremos? The Erotics of Black Self-Making in Cuba",
+      "a": "Jafari S. Allen",
+      "y": "2011",
+      "f": [
+        "cuerpo_erotica",
+        "memoria"
+      ],
+      "l": "cuba",
+      "tr": "anglófono (EE.UU.)",
+      "ap": "El erotismo negro cubano como método de autoconstrucción política, no solo objeto de estudio. Candidata no identificada en el cruce inicial —quedaba escondida por homonimia con otra Allen ya sembrada— y encontrada al verificar una cita cruzada con Stout."
     }
   ],
   "relaciones": [
@@ -5226,6 +5492,180 @@
       "b": "schwartz_seaofstorms",
       "tipo": "resonancia",
       "fuente": "Cita a Schwartz repetidamente («Schwartz 1985:188») pero por un trabajo distinto al catalogado (Sugar Plantations in the Formation of Brazilian Society, no Sea of Storms). Por corroborar el título exacto."
+    },
+    {
+      "a": "lassoerased",
+      "b": "james",
+      "tipo": "resonancia",
+      "fuente": "Cita el libro por su título y año exactos al narrar cómo «C. L. R. James (in 1938)... James wrote The Black Jacobins» conecta la Revolución Haitiana con la francesa."
+    },
+    {
+      "a": "floresvillalobos",
+      "b": "lassoerased",
+      "tipo": "resonancia",
+      "fuente": "Cita el libro por su título exacto: «Marixa Lasso, Erased: The Untold Story of the Panama Canal (Cambridge, MA: Harvard University Press, 2019)», Lasso, Erased, 32, 49-50."
+    },
+    {
+      "a": "floresvillalobos",
+      "b": "corinealdipanama",
+      "tipo": "resonancia",
+      "fuente": "Cita el libro por su título exacto, entonces inédito: «the forthcoming work of Kaysha Corinealdi, Panama in Black: Afro-Caribbean...»."
+    },
+    {
+      "a": "floresvillalobos",
+      "b": "lightfoot",
+      "tipo": "resonancia",
+      "fuente": "Cita el libro por su título exacto: «Natasha Lightfoot, Troubling Freedom: Antigua and the Aftermath of British Emancipation (Durham, NC: Duke University Press, 2015)»."
+    },
+    {
+      "a": "floresvillalobos",
+      "b": "fuentesdispossessed",
+      "tipo": "resonancia",
+      "fuente": "Cita el libro por su título exacto y lo declara metodológicamente influyente: «Marisa Fuentes, Dispossessed Lives: Enslaved Women, Violence, and the Archive»."
+    },
+    {
+      "a": "corinealdipanama",
+      "b": "lassoerased",
+      "tipo": "resonancia",
+      "fuente": "Cita el libro por su título exacto: «Lasso, Erased, 32, 49-50»."
+    },
+    {
+      "a": "kahnislands",
+      "b": "schuller_killingkindness",
+      "tipo": "resonancia",
+      "fuente": "Cita el libro por su título exacto en bibliografía: «Schuller, Mark. 2012. Killing with Kindness: Haiti, International Aid, and NGOs»."
+    },
+    {
+      "a": "kahnislands",
+      "b": "hurbondictadura",
+      "tipo": "resonancia",
+      "fuente": "Cita a «sociólogo Laënnec Hurbon (1979)» con año que coincide de forma inequívoca con la única obra de Hurbon de 1979 del corpus (Culture et dictature en Haïti)."
+    },
+    {
+      "a": "dubuissonhaiti",
+      "b": "casimir",
+      "tipo": "resonancia",
+      "fuente": "Cita «(see Casimir 2020...)» con año que coincide de forma exacta con la obra catalogada (The Haitians: A Decolonial History, 2020)."
+    },
+    {
+      "a": "dubuissonhaiti",
+      "b": "firmin",
+      "tipo": "resonancia",
+      "fuente": "Cita el título original en francés con año exacto: «Anténor Firmin published De l'égalité des races Humaines (Anthropologie positive)», 1885."
+    },
+    {
+      "a": "dubuissonhaiti",
+      "b": "sharpewake",
+      "tipo": "resonancia",
+      "fuente": "Cita el libro por su título y concepto exactos: «Christina Sharpe (2016, 2) terms 'the wake'... Sharpe (2016, 15) adds, 'Living in the wake...'»."
+    },
+    {
+      "a": "pinedashipwrecked",
+      "b": "bollandbelize",
+      "tipo": "resonancia",
+      "fuente": "Cita con año exacto: «(Bolland 1977, 40)» y «(Bolland 1977, 4)», coincide con la única obra de Bolland de 1977 del corpus."
+    },
+    {
+      "a": "pinedashipwrecked",
+      "b": "gonzalezsojourners",
+      "tipo": "resonancia",
+      "fuente": "Cita con año exacto y tema coincidente: «Anthropologist Nancie Gonzalez, who conducted fieldwork among the Garifuna...» (Gonzalez 1988), mismo año que Sojourners of the Caribbean."
+    },
+    {
+      "a": "stoutafterlove",
+      "b": "kempadoo",
+      "tipo": "resonancia",
+      "fuente": "Cita con año exacto: «Kamala Kempadoo (2004) has argued», coincide con Sexing the Caribbean (2004)."
+    },
+    {
+      "a": "stoutafterlove",
+      "b": "palmiewizards",
+      "tipo": "resonancia",
+      "fuente": "Cita con año exacto: «Stephan Palmié... (2002: 282)» y «Palmié (2002)», coincide con Wizards and Scientists (2002)."
+    },
+    {
+      "a": "stoutafterlove",
+      "b": "allenvenceremos",
+      "tipo": "resonancia",
+      "fuente": "Cita el libro por su título exacto en bibliografía: «Allen, Jafari Sinclaire. 2011. ¡Venceremos? The Erotics of Black Self-Making in Cuba»."
+    },
+    {
+      "a": "wirtzperforming",
+      "b": "hagedorn",
+      "tipo": "resonancia",
+      "fuente": "Cita con año exacto y mismo tema: «Katherine Hagedorn (2001) describes how the company sought to police its dancers...», coincide con Divine Utterances (2001)."
+    },
+    {
+      "a": "wirtzperforming",
+      "b": "cabrera",
+      "tipo": "resonancia",
+      "fuente": "Cita el libro por su título exacto: «Lydia Cabrera (1993) famously described in her book El monte»."
+    },
+    {
+      "a": "garciapenaborders",
+      "b": "trouillotsilencing",
+      "tipo": "resonancia",
+      "fuente": "Cita el libro por su título exacto: «In Silencing the Past, Trouillot insists on the relationship between power and the production of history»."
+    },
+    {
+      "a": "garciapenaborders",
+      "b": "prestolmasacre",
+      "tipo": "resonancia",
+      "fuente": "Cita el libro por su título exacto: «un testimonio El masacre se pasa a pie by Freddy Prestol Castillo (Santo Domingo, 1973)»."
+    },
+    {
+      "a": "stewardpuertorico",
+      "b": "mintz",
+      "tipo": "resonancia",
+      "fuente": "Coautoría directa: Sidney W. Mintz figura como investigador del mismo proyecto («Dr. Sidney W. Mintz, then of Columbia University»), no como cita externa."
+    },
+    {
+      "a": "mitchellalibi",
+      "b": "robinsonmarxismo",
+      "tipo": "resonancia",
+      "fuente": "Cita el libro por su título original en inglés como autoridad: «Cedric Robinson, Black Marxism: The Making of the Black Radical Tradition», mismo texto catalogado en su edición en español."
+    },
+    {
+      "a": "londonoargonauts",
+      "b": "rappaportcobarde",
+      "tipo": "resonancia",
+      "fuente": "Cita el libro por su título exacto en inglés: «Rappaport, J. (2020). Cowards Don't Make History: Orlando Fals Borda and the Origins of Participatory Action Research», misma obra catalogada en su edición en español."
+    },
+    {
+      "a": "crawfordturtlemen",
+      "b": "schwartz_seaofstorms",
+      "tipo": "resonancia",
+      "fuente": "Cita el libro por su título exacto en notas: «Schwartz, Sea of Storms»."
+    },
+    {
+      "a": "crawfordturtlemen",
+      "b": "johnson_climatecuba",
+      "tipo": "resonancia",
+      "fuente": "Cita el libro por su título exacto en notas: «Johnson, Climate and Catastrophe [in Cuba]»."
+    },
+    {
+      "a": "alvarezboro",
+      "b": "chicamusicaafricana",
+      "tipo": "resonancia",
+      "fuente": "Comparten lugar (Cartagena) y el eje de la vida afrocaribeña contemporánea en la ciudad —violencia y marginalidad de un lado, cultura picotera del otro, en barrios contiguos. Por corroborar el vínculo directo."
+    },
+    {
+      "a": "belisodelirium",
+      "b": "palmiengangas",
+      "tipo": "resonancia",
+      "fuente": "Comparten lugar (Cuba) y el eje del cuerpo religioso afrocubano: la autora se formó en santería cubana antes de escribir sobre violencia policial. Por corroborar el vínculo directo."
+    },
+    {
+      "a": "castorspiritual",
+      "b": "james",
+      "tipo": "resonancia",
+      "fuente": "Comparten el fenómeno Soberanías: el libro rastrea explícitamente la ruta del Black Power trinitario a la religión ifá, linaje intelectual que reclama a C.L.R. James. Por corroborar el vínculo directo."
+    },
+    {
+      "a": "godreauscripts",
+      "b": "zambrana",
+      "tipo": "resonancia",
+      "fuente": "Comparten lugar (Puerto Rico) y el fenómeno Colonialidad: ambas leen la administración colonial estadounidense sobre la isla desde ángulos distintos (raza cultural vs. deuda). Por corroborar el vínculo directo."
     }
   ]
 }
