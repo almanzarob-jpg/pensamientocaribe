@@ -383,6 +383,25 @@
   .pub-action { align-items: flex-start; min-width: 0; margin-top: var(--space-xs); }
 }
 
+/* ─── Marca de idioma ────────────────────────────────────────────
+   Cuatro destinos de la portada inglesa no tienen version traducida:
+   publicaciones, equipo, Semana Antirracista y efemerides. El enlace
+   lleva al contenido en espanol y lo dice, en vez de fingir que hay
+   version inglesa o de esconder el contenido. */
+.lang-nota {
+  display: inline-block;
+  margin-left: 0.4em;
+  font-family: var(--ff-mono);
+  font-size: var(--fs-meta);
+  color: var(--c-gray);
+  border: 1px solid var(--c-divider-green);
+  border-radius: var(--radius-xs);
+  padding: 1px 6px;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+.btn .lang-nota { color: inherit; opacity: 0.75; border-color: currentColor; }
+
 /* ─── Enlace de catálogo, común a varios bloques ─────────────── */
 .ver-todo {
   display: inline-flex;
