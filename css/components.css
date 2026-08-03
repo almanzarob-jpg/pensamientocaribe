@@ -280,6 +280,20 @@
 }
 
 /* ── Buttons ── */
+/* Ruta de navegacion en paginas internas · Fase 2
+   Landmark propio con el camino de vuelta. Mismo patron que la ruta de
+   migas del atlas, resuelta en la Fase 1. */
+.migas-pagina {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-small);
+  color: var(--c-gray);
+  margin-bottom: var(--space-md);
+}
+.migas-pagina a { color: var(--c-gray); padding: 3px 2px; border-radius: 3px; }
+.migas-pagina a:hover { color: var(--c-orange); }
+.migas-pagina a:focus-visible { outline: 2px solid var(--c-orange); outline-offset: 2px; }
+.migas-pagina [aria-current="page"] { color: var(--c-cream); opacity: 0.8; }
+
 /* Botones · Fase 1 de la auditoria
    Antes: 13.1px minimo, mayusculas sostenidas, letter-spacing 0.12em y
    altura resultante de ~37px (y ~27px en --small). El informe pide
