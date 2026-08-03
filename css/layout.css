@@ -11,11 +11,26 @@
 }
 
 /* ── 3D canvas + vignette ── */
+/* Fondo cartografico. Sustituye al canvas de three.js, que descargaba
+   ~600 KB para dibujar particulas aleatorias y mantenia un bucle de
+   animacion permanente incluso con prefers-reduced-motion activo.
+   La trama se genera desde los 41 nodos reales del Gran Caribe con
+   js/generar-trama.py. Al ser una imagen estatica, no hay animacion
+   que detener: el respeto por reduced-motion es estructural. */
 .canvas-wrap {
   position: fixed;
   inset: 0;
   z-index: 0;
   pointer-events: none;
+  background-image: url('../assets/trama-gran-caribe.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.5;
+}
+@media (max-width: 900px) {
+  /* En movil la trama compite con el texto en un ancho menor. */
+  .canvas-wrap { opacity: 0.32; }
 }
 
 .canvas-wrap canvas {
