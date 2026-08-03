@@ -138,18 +138,43 @@
   height: clamp(380px, calc(100vh - var(--nav-height) - 5rem), 700px);
 }
 
-/* El panel acompaña el desplazamiento y nunca sobrepasa el alto visible. */
+/* El panel acompaña el desplazamiento y nunca sobrepasa el alto visible.
+   Reparto interno: la lista de capas se queda con el espacio sobrante y
+   se desplaza dentro de sí misma; los dos resúmenes plegables quedan
+   anclados abajo. Sin esto, las once capas miden 462 px en un panel de
+   442 y «cómo leer el mapa» vuelve a caer bajo el pliegue, que es
+   justamente el defecto que este trabajo corrige. */
 .atlas__panel {
   min-width: 0;
   position: sticky;
   top: calc(var(--nav-height) + var(--space-sm));
   max-height: calc(100vh - var(--nav-height) - 5rem);
-  overflow-y: auto;
-  overscroll-behavior: contain;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
-  padding-right: 4px;
+  gap: var(--space-xs);
+}
+
+.atlas__capas {
+  flex: 1 1 auto;
+  min-height: 5rem;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.atlas__leyenda,
+.atlas__panel .mapa-tabla {
+  flex: 0 0 auto;
+  border-top: 1px solid var(--c-divider-green);
+}
+
+/* Al desplegarse, la leyenda tampoco puede empujar fuera lo demás. */
+.atlas__leyenda[open] {
+  flex: 0 1 auto;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 .atlas__rotulo {
@@ -166,9 +191,12 @@
 .atlas .caribe-mapa-filters {
   display: flex;
   flex-direction: column;
-  gap: 4px;
+  gap: 3px;
   margin-bottom: 0;
   justify-content: flex-start;
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 .atlas .caribe-mapa-filters .filter-btn {
@@ -176,8 +204,10 @@
   justify-content: flex-start;
   text-align: left;
   white-space: normal;
-  min-height: 34px;
+  min-height: 32px;
+  padding: 5px 12px;
   letter-spacing: 0.08em;
+  flex: 0 0 auto;
 }
 
 .atlas__leyenda > summary,
