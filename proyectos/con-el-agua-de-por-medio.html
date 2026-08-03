@@ -41,6 +41,18 @@
     background:linear-gradient(90deg, var(--green-l) 0 64px, transparent 64px 76px, var(--gold) 76px 118px, transparent 118px);}
   header .t .back{display:inline-flex; align-items:center; gap:5px; font-family:var(--ff-mono); font-size:10px; text-transform:uppercase; letter-spacing:1.4px; color:var(--gray); text-decoration:none; margin-bottom:9px; transition:color .15s}
   header .t .back:hover, header .t .back:focus{color:var(--gold)}
+  /* Ruta de navegación: landmark propio con el camino de vuelta al sitio.
+     Reemplaza al enlace suelto .back, que quedaba fuera de todo landmark.
+     La página está anclada al viewport (body overflow:hidden), así que la
+     navegación vive en la cabecera; un pie de página sería inalcanzable. */
+  header .t .migas{display:flex; align-items:center; flex-wrap:wrap; gap:6px; margin-bottom:9px;
+    font-family:var(--ff-mono); font-size:11.5px; text-transform:uppercase; letter-spacing:1.2px; line-height:1.5}
+  header .t .migas a{display:inline-flex; align-items:center; gap:5px; color:var(--gray); text-decoration:none;
+    padding:3px 2px; border-radius:3px; transition:color .15s}
+  header .t .migas a:hover{color:var(--gold)}
+  header .t .migas a:focus-visible{outline:2px solid var(--gold); outline-offset:2px; color:var(--gold)}
+  header .t .migas .sep{color:var(--line); user-select:none}
+  header .t .migas [aria-current="page"]{color:var(--cream); opacity:.75}
   header .t h1{font-family:var(--ff-display); font-size:32px; margin:0; font-weight:700; letter-spacing:.3px; color:var(--cream)}
   header .t .sub{font-family:var(--ff-mono); color:var(--red); font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:3px; margin-top:8px}
   .controls{display:flex; gap:18px; align-items:flex-end; flex-wrap:wrap}
@@ -388,7 +400,13 @@
 <a href="#main-content" class="skip-link" id="skipLink" data-i18n="skipLink">Saltar al contenido principal</a>
 <header>
   <div class="t">
-    <a href="../index.html#proyectos" class="back" data-i18n="backlink">&larr; Pensamiento Caribe</a>
+    <nav class="migas" aria-label="Ruta de navegación" id="migas">
+      <a href="../index.html" data-i18n="migaInicio">&larr; Pensamiento Caribe</a>
+      <span class="sep" aria-hidden="true">/</span>
+      <a href="../index.html#proyectos" data-i18n="migaProyectos">Proyectos</a>
+      <span class="sep" aria-hidden="true">/</span>
+      <span aria-current="page" data-i18n="migaActual">Con el agua de por medio</span>
+    </nav>
     <h1>Con el agua de por medio</h1>
     <div class="sub" data-i18n="sub">Atlas para una antropología archipiélica</div>
   </div>
@@ -559,6 +577,8 @@ const I18N = {
   es:{
     skipLink:"Saltar al contenido principal",
     backlink:"← Pensamiento Caribe",
+    migaInicio:"← Pensamiento Caribe", migaProyectos:"Proyectos", migaActual:"Con el agua de por medio",
+    migaAria:"Ruta de navegación",
     sub:"Atlas para una antropología archipiélica",
     lblVista:"Vista", vCorriente:"Corriente", vConstelacion:"Constelación", vTabla:"Tabla",
     lblCapa:"Capa", cAmbas:"Ambas", cObra:"Investigación", cManif:"Etnográfica",
@@ -623,6 +643,8 @@ const I18N = {
   en:{
     skipLink:"Skip to main content",
     backlink:"← Pensamiento Caribe",
+    migaInicio:"← Pensamiento Caribe", migaProyectos:"Projects", migaActual:"With Water in Between",
+    migaAria:"Breadcrumb",
     sub:"Atlas for an archipelagic anthropology",
     lblVista:"View", vCorriente:"Current", vConstelacion:"Constellation", vTabla:"Table",
     lblCapa:"Layer", cAmbas:"Both", cObra:"Research", cManif:"Ethnographic",
@@ -1529,6 +1551,7 @@ function applyLang(){
   document.querySelectorAll('[data-i18n-title]').forEach(e=>{ const k=e.getAttribute('data-i18n-title'); if(I18N[LANG][k]!==undefined) e.title=I18N[LANG][k]; });
   document.querySelectorAll('[data-i18n-ph]').forEach(e=>{ const k=e.getAttribute('data-i18n-ph'); if(I18N[LANG][k]!==undefined) e.placeholder=I18N[LANG][k]; });
   const lb=document.getElementById('langBtn'); if(lb) lb.textContent=t('langBtn');
+  const mg=document.getElementById('migas'); if(mg) mg.setAttribute('aria-label', t('migaAria'));
   const openId=state.active, ff=state.focusFen;
   if(state.view==='tabla'){ renderTable(); } else { render(); }
   if(openId){ openPanel(openId); }
