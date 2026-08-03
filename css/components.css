@@ -280,19 +280,34 @@
 }
 
 /* ── Buttons ── */
+/* Botones · Fase 1 de la auditoria
+   Antes: 13.1px minimo, mayusculas sostenidas, letter-spacing 0.12em y
+   altura resultante de ~37px (y ~27px en --small). El informe pide
+   16-17px, prohibe las mayusculas en botones y pide 44px de alto.
+   Se conserva la familia mono, que da el registro cartografico. */
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: var(--space-xs);
   font-family: var(--ff-mono);
-  font-size: var(--fs-meta);
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
-  padding: 0.75rem 1.5rem;
+  font-size: var(--fs-action);
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+  min-height: var(--target-min);
+  padding: 0.6rem 1.5rem;
   border-radius: var(--radius-sm);
   transition: all var(--transition-base);
   position: relative;
   overflow: hidden;
+}
+/* Foco propio del boton: el global usa naranja, que sobre el relleno
+   verde del boton primario se distingue peor. La crema garantiza
+   contraste en los tres tipos de boton. */
+.btn:focus-visible {
+  outline: 2px solid var(--c-cream);
+  outline-offset: 2px;
 }
 
 .btn--primary {
@@ -302,8 +317,8 @@
 }
 
 .btn--primary:hover {
-  background: var(--c-green-light);
-  border-color: var(--c-green-light);
+  background: var(--c-green-hover);
+  border-color: var(--c-green-hover);
   color: var(--c-cream);
   box-shadow: 0 0 20px rgba(63, 138, 53, 0.2);
 }
@@ -319,9 +334,11 @@
   color: var(--c-orange);
 }
 
+/* Compacto en anchura, no en alto: el objetivo tactil se mantiene. */
 .btn--small {
-  padding: 0.45rem 1rem;
-  font-size: calc(var(--fs-meta) - 0.04rem);
+  padding: 0.4rem 1rem;
+  font-size: var(--fs-small);
+  min-height: var(--target-min);
 }
 
 .btn-arrow {

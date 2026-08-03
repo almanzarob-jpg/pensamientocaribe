@@ -8,6 +8,11 @@
   --c-cream: #f2ead8;
   --c-gray: #b9b09f;
   --c-gold: #c9a24d;
+  /* Verde de interaccion. --c-green-light da 3.58:1 con crema y falla AA:
+     el boton empeoraba al pasar el cursor. Este verde queda al 59% del
+     camino entre --c-green y --c-green-light: sigue siendo visiblemente
+     mas claro que el reposo, y cumple 4.53:1. */
+  --c-green-hover: #34782c;
   --c-surface-a: rgba(12, 16, 10, 0.72);
   --c-surface-b: rgba(22, 28, 18, 0.64);
 
@@ -43,6 +48,14 @@
   --fs-body: clamp(1.05rem, 1.15vw, 1.18rem);
   --fs-small: clamp(0.98rem, 1.05vw, 1.08rem);
   --fs-meta: clamp(0.82rem, 0.9vw, 0.92rem);
+  /* Texto de accion (botones y enlaces de accion). --fs-meta bajaba a
+     13.1px, por debajo del minimo legible: se reservaba para metadatos
+     y termino gobernando todos los botones del sitio. */
+  --fs-action: clamp(0.95rem, 1vw, 1rem);
+
+  /* Objetivo tactil. WCAG 2.2 (2.5.8) exige 24px; 44px es el tamano
+     comodo que pide el informe de rediseno. */
+  --target-min: 44px;
 
   --fw-regular: 400;
   --fw-medium: 500;
