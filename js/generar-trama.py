@@ -57,14 +57,30 @@ def proyectar(lat, lng):
     return round(x, 1), round(y, 1)
 
 
+ESPERADOS = 43
+
+
 def leer_nodos():
+    """Lee los nodos del atlas.
+
+    El nombre puede ir entre comillas simples o dobles: dos nodos llevan
+    apostrofo —"St. George's" y "St. John's"— y por eso en el codigo estan
+    entrecomillados con dobles. Una expresion que solo buscara comillas
+    simples los saltaba, y esa fue la causa de que la trama se dibujara con
+    41 nodos y de que el sitio afirmara «41 nodos» donde hay 43.
+    """
     src = open(ORIGEN, encoding='utf-8').read()
     patron = re.compile(
-        r"\{\s*nombre:\s*'([^']+)'.*?lat:\s*(-?[\d.]+),\s*lng:\s*(-?[\d.]+),"
-        r"\s*categoria:\s*'([^']+)'", re.S)
-    return [{'n': m.group(1), 'lat': float(m.group(2)),
-             'lng': float(m.group(3)), 'cat': m.group(4)}
-            for m in patron.finditer(src)]
+        r"""\{\s*nombre:\s*(?:'([^']+)'|"([^"]+)").*?"""
+        r"""lat:\s*(-?[\d.]+),\s*lng:\s*(-?[\d.]+),\s*categoria:\s*'([^']+)'""",
+        re.S)
+    nodos = [{'n': m.group(1) or m.group(2), 'lat': float(m.group(3)),
+              'lng': float(m.group(4)), 'cat': m.group(5)}
+             for m in patron.finditer(src)]
+
+    if len(nodos) != ESPERADOS:
+        sys.exit(f'ABORTA: esperaba {ESPERADOS} nodos, encontre {len(nodos)}')
+    return nodos
 
 
 def generar():

@@ -1,6 +1,6 @@
 /* ════════════════════════════════════════════════
    MAPA INTERACTIVO DEL GRAN CARIBE
-   Leaflet + cartografía oscura sobria + 42 nodos
+   Leaflet + cartografía oscura sobria + 43 nodos
    ════════════════════════════════════════════════ */
 (function () {
   function init() {
