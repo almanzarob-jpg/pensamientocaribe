@@ -326,8 +326,14 @@
   margin: var(--space-lg) 0;
 }
 .perfil-f2 { text-align: center; }
+/* Diez de los doce retratos son verticales (proporcion 0.67 a 0.80).
+   Con object-fit:cover y recorte cuadrado centrado se pierde entre el
+   20 % y el 33 % del alto, repartido arriba y abajo: es decir, la
+   cabeza. Subir el punto de anclaje al 22 % conserva el rostro en los
+   doce sin descuadrar los dos apaisados. */
 .perfil-f2 img {
   width: 100%; aspect-ratio: 1; object-fit: cover;
+  object-position: center 22%;
   border-radius: var(--radius-sm);
   border: 1px solid var(--c-border-green);
   margin-bottom: var(--space-xs);
