@@ -342,6 +342,47 @@
 .perfil-f2 p { font-family: var(--ff-mono); font-size: var(--fs-meta); color: var(--c-gray); }
 .comunidad-f2__ctas { display: flex; flex-wrap: wrap; gap: var(--space-sm); }
 
+/* ─── Columna de acción de las publicaciones ─────────────────────
+   32 de las 54 fichas no tienen enlace externo: capitulos, poesia y
+   casi toda la prensa. La columna quedaba vacia y abria un hueco.
+   Ahora todas llevan boton de citar, y el enlace externo aparece
+   ademas donde existe. */
+.pub-action {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+  min-width: 8.5rem;
+}
+.pub-enlace {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-small);
+  color: var(--c-orange);
+  white-space: nowrap;
+}
+.pub-enlace:focus-visible { outline: 2px solid var(--c-orange); outline-offset: 3px; }
+
+.pub-citar {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-meta);
+  color: var(--c-gray);
+  background: transparent;
+  border: 1px solid var(--c-border-green);
+  border-radius: var(--radius-sm);
+  padding: 6px 12px;
+  min-height: 32px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: color var(--transition-base), border-color var(--transition-base);
+}
+.pub-citar:hover { color: var(--c-cream); border-color: var(--c-green-light); }
+.pub-citar:focus-visible { outline: 2px solid var(--c-orange); outline-offset: 2px; }
+.pub-citar[data-copiada] { color: var(--c-green-light); border-color: var(--c-green-light); }
+
+@media (max-width: 675px) {
+  .pub-action { align-items: flex-start; min-width: 0; margin-top: var(--space-xs); }
+}
+
 /* ─── Enlace de catálogo, común a varios bloques ─────────────── */
 .ver-todo {
   display: inline-flex;
