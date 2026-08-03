@@ -1,0 +1,371 @@
+/* ═══════════════════════════════════════════════════════════════
+   FASE 2 · Bloques de la portada editorial
+   Solo lo nuevo o reorganizado. Todo lo demas hereda de reset.css,
+   layout.css, components.css y animations.css. Ningun token de
+   color, tipografia o espaciado se redefine aqui.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* ─── 1 · Hero con mapa ──────────────────────────────────────────
+   Composición asimétrica: texto a la izquierda, mapa a la derecha.
+   En movil el texto va primero y el mapa despues, sin encogerlo
+   hasta volverlo ilegible. */
+.hero-f2 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr);
+  gap: clamp(2rem, 4vw, 4rem);
+  align-items: center;
+  min-height: min(88vh, 780px);
+  padding: calc(var(--nav-height) + var(--space-xl)) clamp(1rem, 4vw, 3rem) var(--space-2xl);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+.hero-f2__texto { min-width: 0; }
+.hero-f2__lema {
+  font-family: var(--ff-display);
+  font-style: italic;
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  color: var(--c-orange);
+  margin-bottom: var(--space-sm);
+}
+.hero-f2 h1 {
+  font-size: var(--fs-hero);
+  line-height: 1.05;
+  margin-bottom: var(--space-md);
+}
+.hero-f2__sub {
+  font-size: var(--fs-body);
+  color: var(--c-gray);
+  line-height: 1.65;
+  max-width: 46ch;
+  margin-bottom: var(--space-lg);
+}
+.hero-f2__ctas { display: flex; flex-wrap: wrap; gap: var(--space-sm); }
+
+/* El mapa del hero: presencia real, no fondo */
+.hero-f2__mapa {
+  position: relative;
+  min-width: 0;
+  border: 1px solid var(--c-border-green);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--c-surface-a);
+  aspect-ratio: 4 / 3;
+}
+.hero-f2__mapa img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.9;
+}
+.hero-f2__mapa figcaption {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  padding: var(--space-sm) var(--space-md);
+  background: linear-gradient(180deg, transparent, rgba(5, 6, 4, 0.92) 55%);
+  font-family: var(--ff-mono);
+  font-size: var(--fs-meta);
+  color: var(--c-gray);
+}
+
+/* ─── 2 · Cuatro dimensiones ─────────────────────────────────── */
+.dimensiones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+.dimension {
+  position: relative;
+  padding: var(--space-md);
+  background: var(--c-surface-a);
+  border: 1px solid var(--c-border-green);
+  border-radius: var(--radius-sm);
+}
+.dimension__num {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-meta);
+  color: var(--c-gold);
+  letter-spacing: 0.12em;
+  display: block;
+  margin-bottom: var(--space-xs);
+}
+.dimension h3 {
+  font-size: var(--fs-h3);
+  margin-bottom: var(--space-xs);
+}
+.dimension p {
+  font-size: var(--fs-small);
+  color: var(--c-gray);
+  line-height: 1.6;
+}
+.dimension__estado {
+  display: inline-block;
+  margin-top: var(--space-sm);
+  font-family: var(--ff-mono);
+  font-size: var(--fs-meta);
+  color: var(--c-gray);
+  opacity: 0.8;
+}
+
+/* ─── 3 · Bloque del mapa, ampliado ──────────────────────────────
+   El mapa pasa de franja a bloque principal: ocupa el ancho y la
+   leyenda se despliega al lado en vez de comprimirse debajo. */
+.mapa-f2 { max-width: 1400px; margin: 0 auto; padding: var(--space-3xl) clamp(1rem, 4vw, 3rem); }
+.mapa-f2__cuerpo {
+  display: grid;
+  grid-template-columns: minmax(0, 2.1fr) minmax(0, 1fr);
+  gap: var(--space-lg);
+  align-items: start;
+  margin-top: var(--space-lg);
+}
+.mapa-f2__lienzo {
+  min-width: 0;
+  height: clamp(420px, 56vh, 640px);
+  border: 1px solid var(--c-border-green);
+  border-radius: var(--radius-md);
+  background: var(--c-surface-a);
+  overflow: hidden;
+}
+/* Leaflet necesita altura explícita en su contenedor: sin esto el mapa
+   se instancia pero no se dibuja. */
+.mapa-f2__lienzo #caribe-leaflet-map { width: 100%; height: 100%; }
+.mapa-f2__lienzo img { width: 100%; height: 100%; object-fit: cover; }
+
+/* Los once filtros por capa, encima del mapa */
+.mapa-f2 .caribe-mapa-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  margin-top: var(--space-lg);
+}
+.mapa-f2__aparte { min-width: 0; }
+.mapa-f2__leyenda {
+  font-size: var(--fs-small);
+  color: var(--c-gray);
+  line-height: 1.7;
+}
+.mapa-f2__leyenda strong { color: var(--c-cream); font-weight: var(--fw-medium); }
+.mapa-f2__ctas { display: flex; flex-wrap: wrap; gap: var(--space-sm); margin-top: var(--space-md); }
+
+/* Equivalente textual de los nodos: exigido por el informe */
+.mapa-tabla { margin-top: var(--space-md); }
+.mapa-tabla summary {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-small);
+  color: var(--c-orange);
+  cursor: pointer;
+  padding: var(--space-xs) 0;
+}
+.mapa-tabla summary:focus-visible { outline: 2px solid var(--c-orange); outline-offset: 3px; }
+.mapa-tabla table { width: 100%; border-collapse: collapse; margin-top: var(--space-sm); font-size: var(--fs-meta); }
+.mapa-tabla th, .mapa-tabla td {
+  text-align: left;
+  padding: 6px 8px;
+  border-bottom: 1px solid var(--c-divider-green);
+  color: var(--c-gray);
+}
+.mapa-tabla th { color: var(--c-cream); font-family: var(--ff-mono); font-weight: var(--fw-medium); }
+
+/* ─── 4 · Manifiesto con presencia ───────────────────────────── */
+.manifiesto-f2 {
+  max-width: var(--content-narrow);
+  margin: 0 auto;
+  padding: var(--space-3xl) clamp(1rem, 4vw, 3rem);
+  text-align: center;
+}
+.manifiesto-f2__cita {
+  font-family: var(--ff-display);
+  font-size: clamp(1.5rem, 2.8vw, 2.3rem);
+  font-style: italic;
+  line-height: 1.35;
+  color: var(--c-cream);
+  margin-bottom: var(--space-lg);
+}
+.manifiesto-f2__cita em { color: var(--c-orange); font-style: italic; }
+.manifiesto-f2__texto {
+  font-size: var(--fs-body);
+  color: var(--c-gray);
+  line-height: 1.75;
+  max-width: 62ch;
+  margin: 0 auto var(--space-lg);
+  text-align: left;
+}
+
+/* ─── 5 · Líneas, tarjetas breves ────────────────────────────── */
+.lineas-f2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+.linea-f2 {
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-md);
+  background: var(--c-surface-a);
+  border: 1px solid var(--c-border-green);
+  border-radius: var(--radius-sm);
+}
+.linea-f2 h3 { font-size: var(--fs-h3); margin-bottom: var(--space-xs); }
+.linea-f2 p { font-size: var(--fs-small); color: var(--c-gray); line-height: 1.6; margin-bottom: var(--space-md); }
+.linea-f2 a { margin-top: auto; font-family: var(--ff-mono); font-size: var(--fs-small); color: var(--c-orange); }
+.linea-f2 a:focus-visible { outline: 2px solid var(--c-orange); outline-offset: 3px; }
+
+/* ─── 6 · Proyectos destacados ───────────────────────────────── */
+.proyectos-f2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+.proyecto-f2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: var(--space-md);
+  background: var(--c-surface-a);
+  border: 1px solid var(--c-border-green);
+  border-radius: var(--radius-sm);
+}
+.proyecto-f2__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs) var(--space-sm);
+  font-family: var(--ff-mono);
+  font-size: var(--fs-meta);
+  color: var(--c-gray);
+  margin-bottom: var(--space-sm);
+}
+.proyecto-f2__estado { color: var(--c-green-light); }
+.proyecto-f2__territorio { color: var(--c-gold); }
+.proyecto-f2 h3 { font-size: var(--fs-h3); line-height: 1.25; margin-bottom: var(--space-xs); }
+.proyecto-f2 h3 a { color: inherit; }
+.proyecto-f2 h3 a::after { content: ""; position: absolute; inset: 0; }
+.proyecto-f2 p { font-size: var(--fs-small); color: var(--c-gray); line-height: 1.6; margin-bottom: var(--space-md); }
+.proyecto-f2__accion { margin-top: auto; font-family: var(--ff-mono); font-size: var(--fs-small); color: var(--c-orange); }
+
+/* ─── 7 · Recursos ───────────────────────────────────────────── */
+.recursos-f2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+.recurso-f2 {
+  padding: var(--space-md);
+  background: var(--c-surface-a);
+  border: 1px solid var(--c-border-green);
+  border-left: 3px solid var(--c-gold);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.recurso-f2 h3 { font-size: var(--fs-h3); margin-bottom: var(--space-xs); }
+.recurso-f2 p { font-size: var(--fs-small); color: var(--c-gray); line-height: 1.6; }
+.recurso-f2 a { font-family: var(--ff-mono); font-size: var(--fs-small); color: var(--c-orange); }
+
+/* ─── 8 · Semana Antirracista, sintetizada ───────────────────── */
+.semana-f2 {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.1fr);
+  gap: var(--space-lg);
+  align-items: center;
+  margin-top: var(--space-lg);
+  padding: var(--space-lg);
+  background: var(--c-surface-b);
+  border: 1px solid var(--c-border-red);
+  border-radius: var(--radius-md);
+}
+.semana-f2__media { min-width: 0; border-radius: var(--radius-sm); overflow: hidden; }
+.semana-f2__media img { width: 100%; height: 100%; object-fit: cover; }
+.semana-f2 p { font-size: var(--fs-small); color: var(--c-gray); line-height: 1.65; margin-bottom: var(--space-md); }
+.semana-f2__ctas { display: flex; flex-wrap: wrap; gap: var(--space-sm); }
+
+/* ─── 9 · Pregón, tres piezas ────────────────────────────────── */
+.pregon-f2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+.pregon-f2__pieza {
+  position: relative;
+  padding: var(--space-md);
+  background: var(--c-surface-a);
+  border: 1px solid var(--c-border-green);
+  border-left: 3px solid var(--c-wood, #b8763c);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.pregon-f2__meta {
+  display: flex; flex-wrap: wrap; gap: var(--space-xs) var(--space-sm);
+  font-family: var(--ff-mono); font-size: var(--fs-meta); color: var(--c-gray);
+  margin-bottom: var(--space-xs);
+}
+.pregon-f2__pieza h3 { font-size: var(--fs-h3); line-height: 1.25; margin-bottom: var(--space-xs); }
+.pregon-f2__pieza p { font-size: var(--fs-small); color: var(--c-gray); line-height: 1.6; }
+
+/* ─── 10 · Publicaciones, seis ───────────────────────────────── */
+.pubs-f2 { margin-top: var(--space-lg); }
+.pub-f2 {
+  display: grid;
+  grid-template-columns: 4.5rem minmax(0, 1fr);
+  gap: var(--space-md);
+  padding: var(--space-md) 0;
+  border-bottom: 1px solid var(--c-divider-green);
+}
+.pub-f2__anio { font-family: var(--ff-mono); font-size: var(--fs-small); color: var(--c-gold); }
+.pub-f2 h3 { font-size: var(--fs-h3); line-height: 1.3; margin-bottom: 4px; }
+.pub-f2__autor { font-size: var(--fs-small); color: var(--c-cream); opacity: 0.85; }
+.pub-f2__fuente { font-family: var(--ff-mono); font-size: var(--fs-meta); color: var(--c-gray); display: block; margin-top: 4px; }
+
+/* ─── 11 · Comunidad ─────────────────────────────────────────── */
+.comunidad-f2 { margin-top: var(--space-lg); }
+.comunidad-f2__intro { font-size: var(--fs-body); color: var(--c-gray); line-height: 1.7; max-width: 62ch; }
+.comunidad-f2__perfiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: var(--space-md);
+  margin: var(--space-lg) 0;
+}
+.perfil-f2 { text-align: center; }
+.perfil-f2 img {
+  width: 100%; aspect-ratio: 1; object-fit: cover;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--c-border-green);
+  margin-bottom: var(--space-xs);
+}
+.perfil-f2 h3 { font-size: var(--fs-small); line-height: 1.3; }
+.perfil-f2 p { font-family: var(--ff-mono); font-size: var(--fs-meta); color: var(--c-gray); }
+.comunidad-f2__ctas { display: flex; flex-wrap: wrap; gap: var(--space-sm); }
+
+/* ─── Enlace de catálogo, común a varios bloques ─────────────── */
+.ver-todo {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-top: var(--space-lg);
+  font-family: var(--ff-mono);
+  font-size: var(--fs-action);
+  color: var(--c-orange);
+  border-bottom: 1px solid var(--c-border-orange);
+  padding-bottom: 2px;
+  min-height: var(--target-min);
+}
+.ver-todo:focus-visible { outline: 2px solid var(--c-orange); outline-offset: 3px; }
+
+/* ─── Responsive ─────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .hero-f2 { grid-template-columns: 1fr; min-height: auto; padding-top: calc(var(--nav-height) + var(--space-lg)); }
+  .hero-f2__mapa { aspect-ratio: 3 / 2; }
+  .mapa-f2__cuerpo { grid-template-columns: 1fr; }
+  .mapa-f2__lienzo { min-height: 380px; }
+  .semana-f2 { grid-template-columns: 1fr; }
+  .semana-f2__media { order: -1; max-height: 220px; }
+}
+@media (max-width: 500px) {
+  .hero-f2__mapa { aspect-ratio: 1; }
+  .mapa-f2__lienzo { min-height: 300px; }
+  .pub-f2 { grid-template-columns: 1fr; gap: var(--space-xs); }
+  .comunidad-f2__perfiles { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* El sitio ya respeta prefers-reduced-motion en animations.css.
+   El prototipo no anade ninguna animacion propia. */
