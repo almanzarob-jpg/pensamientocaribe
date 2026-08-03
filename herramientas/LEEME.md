@@ -31,7 +31,7 @@ Es decir: esta herramienta es la única forma de volver a generar o modificar la
 Necesita servirse por HTTP, no abrirse con doble clic: carga D3 y tipografías desde CDN, y el protocolo `file://` bloquea parte de eso.
 
 ```bash
-cd ~/Pagina/pensamiento-caribe
+cd ~/"Pagina copia"/pensamiento-caribe
 python3 server.py
 ```
 
@@ -64,7 +64,7 @@ Cuatro pasos. El tamaño importa: el informe de rediseño pide 1200×630 px para
 3. Convertir a JPG en 1200×630 y sustituir el archivo:
 
    ```bash
-   cd ~/Pagina/pensamiento-caribe
+   cd ~/"Pagina copia"/pensamiento-caribe
    # respaldo antes de sustituir
    cp assets/diagrama-antropologia-caribe.jpg \
       assets/diagrama-antropologia-caribe.jpg.anterior
