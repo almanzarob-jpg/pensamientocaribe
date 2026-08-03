@@ -115,7 +115,7 @@
     var(--c-green) 0%, var(--c-green) 22%,
     var(--c-orange) 22%, var(--c-orange) 58%,
     var(--c-red) 58%, var(--c-red) 84%,
-    #caa14a 84%, #caa14a 100%);
+    var(--c-gold) 84%, var(--c-gold) 100%);
   opacity: 0.9;
 }
 

@@ -303,7 +303,7 @@
   font-weight: var(--fw-semibold);
 }
 
-.entrada-pieza__titulo em { font-style: italic; color: #c9a24d; }
+.entrada-pieza__titulo em { font-style: italic; color: var(--c-gold); }
 
 .entrada-pieza__texto {
   font-size: 1.02rem;
