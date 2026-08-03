@@ -7,11 +7,30 @@
   --c-red: #d83a2e;
   --c-cream: #f2ead8;
   --c-gray: #b9b09f;
+  --c-gold: #c9a24d;
   --c-surface-a: rgba(12, 16, 10, 0.72);
   --c-surface-b: rgba(22, 28, 18, 0.64);
-  --c-border-green: rgba(36, 95, 30, 0.25);
-  --c-border-orange: rgba(240, 122, 22, 0.2);
-  --c-border-red: rgba(216, 58, 46, 0.18);
+
+  /* Bordes de componente · WCAG 2.2 · 1.4.11 (contraste no textual, 3:1)
+     Delimitan tarjetas, botones y campos. Los valores anteriores
+     (alfa 0.18-0.25) daban 1.14-1.28:1 sobre el fondo real: los bordes
+     eran imperceptibles y las tarjetas no se leian como objetos.
+     El matiz no cambia; sube la opacidad. La base del verde pasa de
+     --c-green a --c-green-light porque #245f1e no alcanza 3:1 sobre
+     #050604 ni a opacidad total (maximo 2.64:1).
+     Verificado contra los tres fondos reales del sitio:
+       verde   3.20 (bg) · 3.13 (surface-a) · 3.06 (surface-b)
+       naranja 3.15 (bg) · 3.13 (surface-a) · 3.09 (surface-b)
+       rojo    3.25 (bg) · 3.17 (surface-a) · 3.05 (surface-b) */
+  --c-border-green: rgba(63, 138, 53, 0.77);
+  --c-border-orange: rgba(240, 122, 22, 0.60);
+  --c-border-red: rgba(216, 58, 46, 0.82);
+
+  /* Divisores decorativos: no delimitan ningun componente, asi que no
+     les aplica el minimo de 3:1. Conservan el peso visual original. */
+  --c-divider-green: rgba(63, 138, 53, 0.22);
+  --c-divider-orange: rgba(240, 122, 22, 0.20);
+  --c-divider-red: rgba(216, 58, 46, 0.18);
 
   --ff-display: 'Cormorant Garamond', 'Georgia', serif;
   --ff-body: 'Inter', system-ui, -apple-system, sans-serif;
