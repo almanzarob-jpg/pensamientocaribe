@@ -1,14 +1,29 @@
-/* ── Scroll reveal ── */
+/* ── Scroll reveal ──
+   Red de seguridad: en el sitio publicado se detectaron 30 de 30 elementos
+   `.reveal` que nunca recibían la clase `.visible` y quedaban en opacidad 0,
+   incluido el bloque del mapa. Una animación de scroll no puede ser la razón
+   de que un contenido sea invisible.
+
+   `reveal-red` devuelve la opacidad a los 3,5 s ocurra lo que ocurra: si el
+   observador no llega, si el hilo principal se satura o si el JS no carga.
+   Cuando el observador sí funciona, `.visible` cancela la animación y manda
+   la transición de siempre, así que el efecto no cambia. */
 .reveal {
   opacity: 0;
   transform: translateY(28px);
   transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
               transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  animation: reveal-red 0.4s linear 3.5s forwards;
 }
 
 .reveal.visible {
   opacity: 1;
   transform: translateY(0);
+  animation: none;
+}
+
+@keyframes reveal-red {
+  to { opacity: 1; transform: translateY(0); }
 }
 
 .reveal-delay-1 { transition-delay: 0.1s; }
@@ -134,6 +149,7 @@
   .reveal {
     opacity: 1;
     transform: none;
+    animation: none;
   }
 
   .hero-badge,
