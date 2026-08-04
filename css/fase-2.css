@@ -142,20 +142,36 @@
    cartografía los controles van dentro del lienzo, como los botones de
    zoom, para que el mapa se lea como un objeto único y no como una
    imagen con una barra de herramientas delante. */
+/* Dónde ponerla se decidió midiendo, no por gusto. Se probaron las cuatro
+   esquinas con la caja abierta: tapaban entre 6 y 12 nodos, porque el atlas
+   puebla toda la cuenca. Una tira de una sola fila a lo ancho, en cambio,
+   tapa exactamente uno: La Habana. La banda superior del mapa es mar
+   abierto sobre el Golfo, el único hueco real que tiene la cartografía. */
 .atlas__barra {
   position: absolute;
   top: var(--space-sm);
   left: var(--space-sm);
+  right: var(--space-sm);
   z-index: 550;
-  max-width: min(30rem, calc(100% - 2 * var(--space-sm) - 46px));
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  height: 56px;                 /* 44 de objetivo tactil + 6 de aire arriba y abajo */
+  overflow: hidden;
   background: rgba(5, 6, 4, 0.86);
   backdrop-filter: blur(3px);
   border: 1px solid var(--c-border-green);
   border-radius: var(--radius-sm);
   margin: 0;
+  width: auto;
+  max-width: none;
 }
 
+/* Plegada, la tira se encoge a la etiqueta: una pastilla que no tapa nada. */
+.atlas__barra:not([open]) { right: auto; }
+
 .atlas__barra > summary {
+  flex: 0 0 auto;
   font-family: var(--ff-mono);
   font-size: var(--fs-meta);
   text-transform: uppercase;
@@ -180,24 +196,29 @@
 
 .atlas__barra > summary:focus-visible { outline: 2px solid var(--c-orange); outline-offset: 2px; }
 
-/* Rejilla compacta: once capas en dos o tres columnas ocupan 3 filas, no
-   11. Cabe dentro del mapa sin taparlo. */
+/* Una sola fila que se desliza. Nunca dos: dos filas pasan de tapar un
+   nodo a tapar cuatro, y la rejilla de tres columnas tapaba nueve. */
 .atlas .caribe-mapa-filters {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
-  gap: 4px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 5px;
   margin: 0;
-  padding: 0 var(--space-sm) var(--space-sm);
-  max-height: 40vh;
-  overflow-y: auto;
-  overscroll-behavior: contain;
+  padding: 0 var(--space-sm) 0 0;
+  height: 100%;
+  min-width: 0;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
 }
 
 .atlas .caribe-mapa-filters .filter-btn {
-  min-height: 34px;             /* dentro del mapa, la lista es densa */
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  min-height: 44px;             /* WCAG 2.5.8 · objetivo cómodo */
   padding: 4px 10px;
   white-space: nowrap;
-  justify-content: flex-start;
   font-size: 11px;
   letter-spacing: 0.06em;
 }
