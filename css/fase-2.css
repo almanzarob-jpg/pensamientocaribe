@@ -798,3 +798,208 @@
   min-height: 24px;
 }
 .ficha__cancion:focus-visible { outline: 2px solid var(--c-orange); outline-offset: 2px; }
+
+/* ═══════════════════════════════════════════════════════════════
+   FASE 3 · Cartografías del Gran Caribe
+   Los 43 nodos del atlas, desplegados como texto. Hasta ahora sus
+   482 palabras y 124 claves solo existían dentro del JavaScript:
+   ni buscador ni lector de pantalla llegaban a ellas.
+   ═══════════════════════════════════════════════════════════════ */
+
+/* Índice de regiones, al principio */
+.carto-indice {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: var(--space-lg) 0 var(--space-md);
+}
+
+.carto-indice__enlace {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 44px;             /* WCAG 2.5.8 */
+  padding: 6px 12px;
+  font-family: var(--ff-mono);
+  font-size: var(--fs-meta);
+  color: var(--c-gray);
+  border: 1px solid var(--c-border-green);
+  border-radius: var(--radius-sm);
+  text-decoration: none;
+}
+
+.carto-indice__enlace:hover { color: var(--c-cream); border-color: var(--c-border-orange); }
+.carto-indice__enlace:focus-visible { outline: 2px solid var(--c-orange); outline-offset: 2px; }
+.carto-indice__n { color: var(--c-gold); }
+
+/* El punto de color nunca va solo: siempre acompaña al nombre de la
+   región, para no cifrar información únicamente en el color. */
+.carto-punto {
+  width: 9px; height: 9px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 1px solid rgba(245, 237, 221, 0.35);
+  display: inline-block;
+}
+
+.carto-nota {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-meta);
+  color: var(--c-gray);
+  border-left: 3px solid var(--c-divider-green);
+  padding: var(--space-xs) var(--space-sm);
+  margin-bottom: var(--space-xl);
+  max-width: 68ch;
+}
+
+/* ── Regiones ── */
+.carto-region { margin-top: var(--space-2xl); scroll-margin-top: calc(var(--nav-height) + 1rem); }
+
+.carto-region__titulo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: var(--fs-h3);
+  padding-bottom: var(--space-xs);
+  border-bottom: 1px solid var(--c-divider-green);
+}
+
+.carto-region__titulo .carto-punto { width: 11px; height: 11px; }
+
+.carto-region__n {
+  margin-left: auto;
+  font-family: var(--ff-mono);
+  font-size: var(--fs-meta);
+  color: var(--c-gray);
+  white-space: nowrap;
+}
+
+/* ── Fichas ── */
+.carto-nodos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+  gap: var(--space-md);
+  margin-top: var(--space-md);
+}
+
+.carto-nodo {
+  padding: var(--space-md);
+  background: var(--c-surface-a);
+  border: 1px solid var(--c-border-green);
+  border-radius: var(--radius-sm);
+  /* La barra fija mide 200 px: sin esto, saltar a un ancla deja la
+     ficha debajo de ella. */
+  scroll-margin-top: calc(var(--nav-height) + 1rem);
+}
+
+.carto-nodo:target {
+  border-color: var(--c-orange);
+  box-shadow: 0 0 0 1px var(--c-orange);
+}
+
+.carto-nodo__nombre {
+  font-family: var(--ff-display);
+  font-size: 1.15rem;
+  color: var(--c-cream);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.carto-nodo__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  font-family: var(--ff-mono);
+  font-size: var(--fs-meta);
+  margin: 4px 0 var(--space-sm);
+}
+
+.carto-nodo__pais { color: var(--c-gold); text-transform: uppercase; letter-spacing: 0.1em; }
+.carto-nodo__coord { color: var(--c-gray); opacity: 0.85; }
+
+.carto-nodo__desc {
+  font-size: var(--fs-small);
+  color: var(--c-gray);
+  line-height: 1.65;
+  margin: 0 0 var(--space-sm);
+}
+
+.carto-nodo__rotulo {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-meta);
+  letter-spacing: 0.14em;
+  color: var(--c-green-light);
+  margin: var(--space-sm) 0 5px;
+}
+
+.carto-claves {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.carto-claves li {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-meta);
+  color: var(--c-cream);
+  padding: 4px 9px;
+  border: 1px solid var(--c-border-green);
+  border-radius: var(--radius-xs);
+}
+
+.carto-nodo__cultura {
+  font-size: var(--fs-meta);
+  color: var(--c-gray);
+  margin: 0;
+}
+
+.carto-nodo__cancion {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-meta);
+  color: var(--c-orange);
+  display: inline-block;
+  min-height: 24px;
+}
+
+.carto-nodo__mapa {
+  display: inline-block;
+  margin-top: var(--space-sm);
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--c-divider-green);
+  width: 100%;
+  font-family: var(--ff-mono);
+  font-size: var(--fs-meta);
+  color: var(--c-gray);
+  min-height: 24px;
+}
+
+.carto-nodo__mapa:hover { color: var(--c-orange); }
+
+@media (max-width: 600px) {
+  .carto-nodos { grid-template-columns: 1fr; }
+  .carto-region__n { margin-left: 0; width: 100%; }
+  .carto-region__titulo { flex-wrap: wrap; }
+}
+
+/* Enlace a la ficha completa, dentro de la ficha del mapa */
+.caribe-popup-ficha {
+  display: inline-block;
+  margin-top: var(--space-xs);
+  font-family: var(--ff-mono);
+  font-size: var(--fs-meta);
+  color: var(--c-orange);
+  min-height: 24px;
+}
+.ficha .caribe-popup-ficha { grid-column: 1; }
+
+.mapa-tabla__ir { margin-top: var(--space-sm); }
+.mapa-tabla__ir a {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-meta);
+  color: var(--c-orange);
+  min-height: 24px;
+  display: inline-block;
+}

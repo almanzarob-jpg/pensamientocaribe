@@ -1,97 +1,281 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://pensamientocaribe.org/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pensamientocaribe.org/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pensamientocaribe.org/index-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pensamientocaribe.org/"/>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://pensamientocaribe.org/pregon/</loc>
-    <lastmod>2026-07-29</lastmod>
+    <loc>https://pensamientocaribe.org/cartografias/</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://pensamientocaribe.org/medios/cine-caribe.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://pensamientocaribe.org/proyectos/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://pensamientocaribe.org/proyectos/cartografias-negras.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pensamientocaribe.org/proyectos/espacios-libres-racismo.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pensamientocaribe.org/proyectos/mas-ramas-que-raices.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pensamientocaribe.org/proyectos/mas-ramas-que-raices-en.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://pensamientocaribe.org/proyectos/mi-barrio-es-historia.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://pensamientocaribe.org/proyectos/negrura-blanquitud-monumental.html</loc>
-    <lastmod>2026-07-27</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://pensamientocaribe.org/proyectos/zona-bananera.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
+    <lastmod>2026-08-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pensamientocaribe.org/proyectos/cartografias-negras.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pensamientocaribe.org/proyectos/cartografias-negras-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pensamientocaribe.org/proyectos/cartografias-negras.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://pensamientocaribe.org/proyectos/con-el-agua-de-por-medio.html</loc>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>monthly</changefreq>
+    <lastmod>2026-08-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pensamientocaribe.org/proyectos/espacios-libres-racismo.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pensamientocaribe.org/proyectos/espacios-libres-racismo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pensamientocaribe.org/proyectos/espacios-libres-racismo-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pensamientocaribe.org/proyectos/espacios-libres-racismo.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pensamientocaribe.org/proyectos/marca-de-marea.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pensamientocaribe.org/proyectos/marca-de-marea.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pensamientocaribe.org/proyectos/marca-de-marea.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pensamientocaribe.org/proyectos/mas-ramas-que-raices.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pensamientocaribe.org/proyectos/mas-ramas-que-raices.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pensamientocaribe.org/proyectos/mas-ramas-que-raices-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pensamientocaribe.org/proyectos/mas-ramas-que-raices.html"/>
+    <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://pensamientocaribe.org/proyectos/metodologia-agua-de-por-medio.html</loc>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
+    <lastmod>2026-08-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pensamientocaribe.org/proyectos/metodologia-agua-de-por-medio.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pensamientocaribe.org/proyectos/metodologia-agua-de-por-medio-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pensamientocaribe.org/proyectos/metodologia-agua-de-por-medio.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pensamientocaribe.org/proyectos/mi-barrio-es-historia.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pensamientocaribe.org/proyectos/mi-barrio-es-historia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pensamientocaribe.org/proyectos/mi-barrio-es-historia-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pensamientocaribe.org/proyectos/mi-barrio-es-historia.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pensamientocaribe.org/proyectos/negrura-blanquitud-monumental.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pensamientocaribe.org/proyectos/negrura-blanquitud-monumental.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pensamientocaribe.org/proyectos/negrura-blanquitud-monumental-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pensamientocaribe.org/proyectos/negrura-blanquitud-monumental.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://pensamientocaribe.org/proyectos/reflujo-guia.html</loc>
-    <lastmod>2026-07-30</lastmod>
+    <lastmod>2026-08-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pensamientocaribe.org/proyectos/reflujo-guia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pensamientocaribe.org/proyectos/reflujo-guia-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pensamientocaribe.org/proyectos/reflujo-guia.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pensamientocaribe.org/proyectos/zona-bananera.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pensamientocaribe.org/proyectos/zona-bananera.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pensamientocaribe.org/proyectos/zona-bananera-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pensamientocaribe.org/proyectos/zona-bananera.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pensamientocaribe.org/publicaciones/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://pensamientocaribe.org/equipo/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pensamientocaribe.org/manifiesto/antropologia-del-caribe-colombiano.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pensamientocaribe.org/manifiesto/antropologia-del-caribe-colombiano.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pensamientocaribe.org/manifiesto/antropologia-del-caribe-colombiano-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pensamientocaribe.org/manifiesto/antropologia-del-caribe-colombiano.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pensamientocaribe.org/pregon/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pensamientocaribe.org/pregon/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pensamientocaribe.org/pregon/index-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pensamientocaribe.org/pregon/"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pensamientocaribe.org/proyectos/cartografias-negras-en.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pensamientocaribe.org/proyectos/cartografias-negras.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pensamientocaribe.org/proyectos/cartografias-negras-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pensamientocaribe.org/proyectos/cartografias-negras.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pensamientocaribe.org/proyectos/espacios-libres-racismo-en.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pensamientocaribe.org/proyectos/espacios-libres-racismo.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pensamientocaribe.org/proyectos/espacios-libres-racismo-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pensamientocaribe.org/proyectos/espacios-libres-racismo.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pensamientocaribe.org/proyectos/mas-ramas-que-raices-en.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pensamientocaribe.org/proyectos/mas-ramas-que-raices.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pensamientocaribe.org/proyectos/mas-ramas-que-raices-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pensamientocaribe.org/proyectos/mas-ramas-que-raices.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pensamientocaribe.org/proyectos/metodologia-agua-de-por-medio-en.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pensamientocaribe.org/proyectos/metodologia-agua-de-por-medio.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pensamientocaribe.org/proyectos/metodologia-agua-de-por-medio-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pensamientocaribe.org/proyectos/metodologia-agua-de-por-medio.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pensamientocaribe.org/proyectos/mi-barrio-es-historia-en.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pensamientocaribe.org/proyectos/mi-barrio-es-historia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pensamientocaribe.org/proyectos/mi-barrio-es-historia-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pensamientocaribe.org/proyectos/mi-barrio-es-historia.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pensamientocaribe.org/proyectos/negrura-blanquitud-monumental-en.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pensamientocaribe.org/proyectos/negrura-blanquitud-monumental.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pensamientocaribe.org/proyectos/negrura-blanquitud-monumental-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pensamientocaribe.org/proyectos/negrura-blanquitud-monumental.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pensamientocaribe.org/proyectos/reflujo-guia-en.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pensamientocaribe.org/proyectos/reflujo-guia.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pensamientocaribe.org/proyectos/reflujo-guia-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pensamientocaribe.org/proyectos/reflujo-guia.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pensamientocaribe.org/proyectos/zona-bananera-en.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pensamientocaribe.org/proyectos/zona-bananera.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pensamientocaribe.org/proyectos/zona-bananera-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pensamientocaribe.org/proyectos/zona-bananera.html"/>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pensamientocaribe.org/semana-antirracista/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://pensamientocaribe.org/efemerides/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pensamientocaribe.org/manifiesto/antropologia-del-caribe-colombiano-en.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pensamientocaribe.org/manifiesto/antropologia-del-caribe-colombiano.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pensamientocaribe.org/manifiesto/antropologia-del-caribe-colombiano-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pensamientocaribe.org/manifiesto/antropologia-del-caribe-colombiano.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pensamientocaribe.org/medios/cine-caribe.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pensamientocaribe.org/medios/cine-caribe.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pensamientocaribe.org/medios/cine-caribe-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pensamientocaribe.org/medios/cine-caribe.html"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pensamientocaribe.org/pregon/index-en.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pensamientocaribe.org/pregon/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pensamientocaribe.org/pregon/index-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pensamientocaribe.org/pregon/"/>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://pensamientocaribe.org/medios/cine-caribe-en.html</loc>
+    <lastmod>2026-08-03</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pensamientocaribe.org/medios/cine-caribe.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pensamientocaribe.org/medios/cine-caribe-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pensamientocaribe.org/medios/cine-caribe.html"/>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://pensamientocaribe.org/proyectos/reflujo-guia-en.html</loc>
-    <lastmod>2026-07-30</lastmod>
+    <loc>https://pensamientocaribe.org/index-en.html</loc>
+    <lastmod>2026-08-04</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://pensamientocaribe.org/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://pensamientocaribe.org/index-en.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://pensamientocaribe.org/"/>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://pensamientocaribe.org/proyectos/marca-de-marea.html</loc>
-    <lastmod>2026-07-30</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
+    <loc>https://pensamientocaribe.org/accesibilidad/</loc>
+    <lastmod>2026-08-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://pensamientocaribe.org/proyectos/metodologia-agua-de-por-medio-en.html</loc>
-    <lastmod>2026-07-30</lastmod>
+    <loc>https://pensamientocaribe.org/privacidad/</loc>
+    <lastmod>2026-08-04</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  <url>
-    <loc>https://pensamientocaribe.org/manifiesto/antropologia-del-caribe-colombiano.html</loc>
-    <lastmod>2026-07-22</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.3</priority>
   </url>
 </urlset>

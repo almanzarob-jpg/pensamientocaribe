@@ -7,6 +7,15 @@
     var container = document.getElementById('caribe-leaflet-map');
     if (!container || typeof L === 'undefined') return;
 
+
+    // Ancla estable derivada del nombre, igual que la que genera
+    // generar-cartografias.py: sin tildes ni signos.
+    function anclaNodo(nombre) {
+      return nombre.toLowerCase()
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+        .replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+    }
+
     // ── Configuración inicial ──
     var map = L.map('caribe-leaflet-map', {
       center: [15.5, -75.5],
@@ -167,6 +176,10 @@
           culturaHtml +
           cancionHtml +
           tagsHtml +
+          // Enlace a la ficha completa del nodo. Las 482 palabras del atlas
+          // ya no viven solo aqui: /cartografias/ las despliega para leer,
+          // citar y encontrar en un buscador.
+          '<a class="caribe-popup-ficha" href="/cartografias/#' + anclaNodo(n.nombre) + '">Ficha completa &rarr;</a>' +
         '</div>';
 
       var popupMaxWidth = (n.cancion && n.cancion.youtubeId) ? 320 : 300;

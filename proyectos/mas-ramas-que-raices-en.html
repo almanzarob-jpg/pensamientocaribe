@@ -1,206 +1,230 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>With the Ebb and Flow of the Currents · Sonic Cartographies of the Black Atlantic · Pensamiento Caribe</title>
-  <meta name="description" content="With the ebb and flow of the currents: sonic cartographies of the Black Atlantic. An interactive map connecting the Greater Caribbean and Africa through music, Blackness, and pan-Africanism.">
-  <link rel="canonical" href="https://pensamientocaribe.org/proyectos/mas-ramas-que-raices-en.html">
-  <link rel="alternate" hreflang="es" href="https://pensamientocaribe.org/proyectos/mas-ramas-que-raices.html">
-  <link rel="alternate" hreflang="en" href="https://pensamientocaribe.org/proyectos/mas-ramas-que-raices-en.html">
-  <link rel="alternate" hreflang="x-default" href="https://pensamientocaribe.org/proyectos/mas-ramas-que-raices.html">
-  <meta property="og:type" content="website">
-  <meta property="og:site_name" content="Pensamiento Caribe">
-  <meta property="og:locale" content="en_US">
-  <meta property="og:locale:alternate" content="es_CO">
-  <meta property="og:url" content="https://pensamientocaribe.org/proyectos/mas-ramas-que-raices-en.html">
-  <meta property="og:title" content="With the Ebb and Flow of the Currents · Sonic Cartographies of the Black Atlantic">
-  <meta property="og:description" content="An interactive map connecting the Greater Caribbean and Africa through music, Blackness, and pan-Africanism. Twenty-six routes, twenty-four ports, each with its academic source and sound recording.">
-  <meta property="og:image" content="https://pensamientocaribe.org/assets/diagrama-antropologia-caribe.jpg">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="With the Ebb and Flow of the Currents · Sonic Cartographies of the Black Atlantic">
-  <meta name="twitter:description" content="An interactive map connecting the Greater Caribbean and Africa through music, Blackness, and pan-Africanism.">
-  <meta name="twitter:image" content="https://pensamientocaribe.org/assets/diagrama-antropologia-caribe.jpg">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
-  <link rel="stylesheet" href="../css/reset.css?v=99">
-  <link rel="stylesheet" href="../css/layout.css">
-  <link rel="stylesheet" href="../css/components.css">
-  <link rel="stylesheet" href="../css/animations.css">
-  <link rel="stylesheet" href="../css/proyecto.css">
-  <link rel="stylesheet" href="../css/mapa-afrodiasporico.css">
-  <link rel="stylesheet" href="../css/zoom-caribe.css">
-</head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>With the Ebb and Flow of the Currents · Sonic Cartographies of the Black Atlantic · Pensamiento Caribe</title>
+<meta content="With the ebb and flow of the currents: sonic cartographies of the Black Atlantic. An interactive map connecting the Greater Caribbean and Africa through music, Blackness, and pan-Africanism." name="description"/>
+<link href="https://pensamientocaribe.org/proyectos/mas-ramas-que-raices-en.html" rel="canonical"/>
+<link href="https://pensamientocaribe.org/proyectos/mas-ramas-que-raices.html" hreflang="es" rel="alternate"/>
+<link href="https://pensamientocaribe.org/proyectos/mas-ramas-que-raices-en.html" hreflang="en" rel="alternate"/>
+<link href="https://pensamientocaribe.org/proyectos/mas-ramas-que-raices.html" hreflang="x-default" rel="alternate"/>
+<meta content="website" property="og:type"/>
+<meta content="Pensamiento Caribe" property="og:site_name"/>
+<meta content="en_US" property="og:locale"/>
+<meta content="es_CO" property="og:locale:alternate"/>
+<meta content="https://pensamientocaribe.org/proyectos/mas-ramas-que-raices-en.html" property="og:url"/>
+<meta content="With the Ebb and Flow of the Currents · Sonic Cartographies of the Black Atlantic" property="og:title"/>
+<meta content="An interactive map connecting the Greater Caribbean and Africa through music, Blackness, and pan-Africanism. Twenty-six routes, twenty-four ports, each with its academic source and sound recording." property="og:description"/>
+<meta content="https://pensamientocaribe.org/assets/diagrama-antropologia-caribe.jpg" property="og:image"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="With the Ebb and Flow of the Currents · Sonic Cartographies of the Black Atlantic" name="twitter:title"/>
+<meta content="An interactive map connecting the Greater Caribbean and Africa through music, Blackness, and pan-Africanism." name="twitter:description"/>
+<meta content="https://pensamientocaribe.org/assets/diagrama-antropologia-caribe.jpg" name="twitter:image"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&amp;family=Oswald:wght@400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet"/>
+<link href="../css/reset.css?v=99" rel="stylesheet"/>
+<link href="../css/layout.css" rel="stylesheet"/>
+<link href="../css/components.css" rel="stylesheet"/>
+<link href="../css/animations.css" rel="stylesheet"/>
+<link href="../css/proyecto.css" rel="stylesheet"/>
+<link href="../css/mapa-afrodiasporico.css" rel="stylesheet"/>
+<link href="../css/zoom-caribe.css" rel="stylesheet"/>
+<script data-generado="fase-3" type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "ResearchProject",
+   "name": "With the ebb and flow of the currents, sonic cartographies of the Black Atlantic",
+   "inLanguage": "en",
+   "url": "https://pensamientocaribe.org/proyectos/mas-ramas-que-raices-en.html",
+   "description": "With the ebb and flow of the currents: sonic cartographies of the Black Atlantic. An interactive map connecting the Greater Caribbean and Africa through music, Blackness, and pan-Africanism.",
+   "parentOrganization": {
+    "@id": "https://pensamientocaribe.org/#organizacion"
+   }
+  },
+  {
+   "@type": "BreadcrumbList",
+   "itemListElement": [
+    {
+     "@type": "ListItem",
+     "position": 1,
+     "name": "Inicio",
+     "item": "https://pensamientocaribe.org/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 2,
+     "name": "Proyectos",
+     "item": "https://pensamientocaribe.org/proyectos/"
+    },
+    {
+     "@type": "ListItem",
+     "position": 3,
+     "name": "With the ebb and flow of the currents, sonic cartographies of the Black Atlantic",
+     "item": "https://pensamientocaribe.org/proyectos/mas-ramas-que-raices-en.html"
+    }
+   ]
+  }
+ ]
+}</script></head>
 <body>
-  <a href="#main-content" class="skip-link">Skip to main content</a>
-  <div class="fallback-bg" aria-hidden="true"></div>
-  <div class="vignette" aria-hidden="true"></div>
-
-  <div class="page-content">
-    <nav class="site-nav" aria-label="Main navigation">
-      <a href="../index-en.html" class="nav-brand">
-        <img src="../assets/logo-pensamiento-caribe.png" alt="Pensamiento Caribe Research Group" onerror="this.style.display='none'">
-      </a>
-      <div class="nav-links">
-        <div class="nav-group">
-          <button class="nav-group-label" type="button" aria-haspopup="true" aria-expanded="false">Research <span class="nav-caret"></span></button>
-          <div class="nav-dropdown">
-            <div class="nav-dropdown-panel">
-              <a href="../manifiesto/antropologia-del-caribe-colombiano-en.html">Manifesto</a>
-              <a href="../index-en.html#lineas">Research lines</a>
-              <a href="../index-en.html#proyectos">Projects</a>
-              <a href="../index-en.html#publicaciones">Publications</a>
-            </div>
-          </div>
-        </div>
-        <div class="nav-group">
-          <button class="nav-group-label" type="button" aria-haspopup="true" aria-expanded="false">Community <span class="nav-caret"></span></button>
-          <div class="nav-dropdown">
-            <div class="nav-dropdown-panel">
-              <a href="../index-en.html#semillero">Semillero</a>
-              <a href="../index-en.html#equipo">Team</a>
-              <a href="../index-en.html#redes">Networks</a>
-            </div>
-          </div>
-        </div>
-        <div class="nav-group">
-          <button class="nav-group-label" type="button" aria-haspopup="true" aria-expanded="false">Agenda <span class="nav-caret"></span></button>
-          <div class="nav-dropdown">
-            <div class="nav-dropdown-panel">
-              <a href="../index-en.html#eventos">Events</a>
-              <a href="../index-en.html#semana-antirracista">Anti-racist Week</a>
-              <a href="../index-en.html#efemerides">Commemorative dates</a>
-            </div>
-          </div>
-        </div>
-        <div class="nav-group">
-          <button class="nav-group-label" type="button" aria-haspopup="true" aria-expanded="false">Media <span class="nav-caret"></span></button>
-          <div class="nav-dropdown">
-            <div class="nav-dropdown-panel">
-              <a href="../pregon/index-en.html">Pregón de esquina</a>
-              <a href="../index-en.html#noticias">News</a>
-              <a href="../index-en.html#medios">Media</a>
-            </div>
-          </div>
-        </div>
-        <a href="../index-en.html#contacto" class="nav-single">Contact</a>
-      </div>
-      <button class="nav-toggle" aria-label="Open menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </nav>
-
-    <div class="nav-mobile-overlay" aria-label="Mobile menu">
-      <div class="nav-m-group">
-        <button class="nav-m-label" type="button" aria-expanded="false">Research <span class="nav-caret"></span></button>
-        <div class="nav-m-sub">
-          <a href="../manifiesto/antropologia-del-caribe-colombiano-en.html">Manifesto</a>
-          <a href="../index-en.html#lineas">Research lines</a>
-          <a href="../index-en.html#proyectos">Projects</a>
-          <a href="../index-en.html#publicaciones">Publications</a>
-        </div>
-      </div>
-      <div class="nav-m-group">
-        <button class="nav-m-label" type="button" aria-expanded="false">Community <span class="nav-caret"></span></button>
-        <div class="nav-m-sub">
-          <a href="../index-en.html#semillero">Semillero</a>
-          <a href="../index-en.html#equipo">Team</a>
-          <a href="../index-en.html#redes">Networks</a>
-        </div>
-      </div>
-      <div class="nav-m-group">
-        <button class="nav-m-label" type="button" aria-expanded="false">Agenda <span class="nav-caret"></span></button>
-        <div class="nav-m-sub">
-          <a href="../index-en.html#eventos">Events</a>
-          <a href="../index-en.html#semana-antirracista">Anti-racist Week</a>
-          <a href="../index-en.html#efemerides">Commemorative dates</a>
-        </div>
-      </div>
-      <div class="nav-m-group">
-        <button class="nav-m-label" type="button" aria-expanded="false">Media <span class="nav-caret"></span></button>
-        <div class="nav-m-sub">
-          <a href="../pregon/index-en.html">Pregón de esquina</a>
-              <a href="../index-en.html#noticias">News</a>
-          <a href="../index-en.html#medios">Media</a>
-        </div>
-      </div>
-      <a href="../index-en.html#contacto" class="nav-m-single">Contact</a>
-    </div>
-
-    <main id="main-content" class="proyecto-page">
-      <header class="proyecto-hero">
-        <a href="../index-en.html#proyectos" class="proyecto-breadcrumb">&larr; Projects</a>
-        <p class="proyecto-cat">Interactive sonic cartography<span class="proyecto-status">Research-creation</span></p>
-        <h1 class="proyecto-title">With the ebb and flow of the currents, <em>sonic cartographies</em> of the Black Atlantic</h1>
-        <p class="proyecto-lede">An interactive map that follows the ebb and flow of the currents between the Greater Caribbean and Africa: music, Blackness, and pan-Africanism. Twenty-six routes there and back, twenty-four ports, four eras. Each route cites its source, and the guided journey travels the ocean from 1795 to today. <a href="mas-ramas-que-raices.html" class="proyecto-lang-switch">Versión en español &rarr;</a></p>
-
-        <div class="proyecto-meta-bar">
-          <div class="proyecto-meta-item"><span class="proyecto-meta-label">Direction</span><span class="proyecto-meta-value">Roberto Almanza Hernández</span></div><div class="proyecto-meta-item"><span class="proyecto-meta-label">Inspiration</span><span class="proyecto-meta-value">Errol L. Montes Pizarro (2018)</span></div><div class="proyecto-meta-item"><span class="proyecto-meta-label">Territory</span><span class="proyecto-meta-value">Greater Caribbean · Africa · Diaspora</span></div><div class="proyecto-meta-item"><span class="proyecto-meta-label">Method</span><span class="proyecto-meta-value">Sonic cartography</span></div><div class="proyecto-meta-item"><span class="proyecto-meta-label">Keywords</span><span class="proyecto-meta-value">Music · Blackness · Pan-Africanism</span></div>
-        </div>
-      </header>
-
-      <!-- ════════ INTERACTIVE MAP ════════ -->
-      <section class="section section--wide" id="atlantico-mapa" style="padding-top: 0;">
-        <div class="caribe-mapa-wrap reveal">
-          <div class="caribe-mapa-filters" role="group" aria-label="Filter map eras">
-            <button class="filter-btn is-active" data-layer="all">All eras</button>
-            <button class="filter-btn" data-layer="1">Founding crossings</button>
-            <button class="filter-btn" data-layer="2">Ports &amp; pan-African awakening</button>
-            <button class="filter-btn" data-layer="3">Independence</button>
-            <button class="filter-btn" data-layer="4">Returns</button>
-            <span style="flex: 1 1 auto;"></span>
-            <button class="filter-btn filter-btn--travesia" data-action="travesia">&#9656; Start the journey</button>
-            <button class="filter-btn filter-btn--travesia" data-action="travesia-sonora" title="Travels the twenty-six routes in order and chains their songs">&#9835; Journey with music</button>
-            <button class="filter-btn" data-view="caribe">&#8598; Caribbean</button>
-            <button class="filter-btn" data-view="atlantico">&#9678; Atlantic</button>
-            <button class="filter-btn" data-view="africa">&#8599; Africa</button>
-          </div>
-
-          <div class="atlantico-layout">
-            <div id="atlantico-leaflet-map" class="caribe-leaflet-map" role="application" aria-label="Interactive Afrodiasporic map between the Greater Caribbean and Africa" data-lang="en"></div>
-            <aside id="atlantico-panel" class="atlantico-panel" aria-live="polite" aria-label="Map reading panel"></aside>
-          </div>
-
-          <div id="atlantico-tiempo" class="atlantico-tiempo">
-            <div class="atlantico-tiempo-cab">
-              <p class="atlantico-tiempo-titulo">The twenty-six routes in time</p>
-              <p class="atlantico-tiempo-sub">The map tells you where; this strip tells you when. Each mark is a route, placed at its departure year and colored by its era. Click one to open it.</p>
-            </div>
-            <div class="atlantico-tiempo-scroll">
-              <svg id="atlantico-tiempo-svg" viewBox="0 0 1000 132" preserveAspectRatio="xMinYMid meet" role="group" aria-label="Timeline of the routes"></svg>
-            </div>
-          </div>
-
-          <div class="caribe-mapa-legend">
-            <p class="legend-title">Conceptual legend</p>
-            <p class="legend-text">This map draws the <strong>Black Atlantic</strong> (with Paul Gilroy) as a unity of culture and struggle that no nation contains. Each node is a port where Blackness thought and sounded; each arc is a musical route there and back. The thesis comes from Errol L. Montes Pizarro: the relationship between the Caribbean and Africa is not that of a root with its distant copies, but that of a tree with <strong>more branches than roots</strong> — the gumbe that returned to Freetown, the son that became Congolese rumba, the soukous that became champeta. Click the arcs to read each route and hear its music; filter by era to follow the order of history. The <strong>Colombian Caribbean</strong> appears highlighted as the group's shore of enunciation.</p>
-            <div id="atlantico-legend-swatches" class="legend-swatches" role="group" aria-label="Map eras"></div>
-          </div>
-        </div>
-      </section>
-
-      <article class="proyecto-cuerpo">
-        <h2>About this cartography</h2>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<div aria-hidden="true" class="fallback-bg"></div>
+<div aria-hidden="true" class="vignette"></div>
+<div class="page-content">
+<nav aria-label="Main navigation" class="site-nav">
+<a class="nav-brand" href="../index-en.html">
+<img alt="Pensamiento Caribe Research Group" onerror="this.style.display='none'" src="../assets/logo-pensamiento-caribe.png"/>
+</a>
+<div class="nav-links">
+<div class="nav-group">
+<button aria-expanded="false" aria-haspopup="true" class="nav-group-label" type="button">Research <span class="nav-caret"></span></button>
+<div class="nav-dropdown">
+<div class="nav-dropdown-panel">
+<a href="../manifiesto/antropologia-del-caribe-colombiano-en.html">Manifesto</a>
+<a href="../index-en.html#lineas">Research lines</a>
+<a href="../index-en.html#proyectos">Projects</a>
+<a href="../index-en.html#publicaciones">Publications</a>
+</div>
+</div>
+</div>
+<div class="nav-group">
+<button aria-expanded="false" aria-haspopup="true" class="nav-group-label" type="button">Community <span class="nav-caret"></span></button>
+<div class="nav-dropdown">
+<div class="nav-dropdown-panel">
+<a href="../index-en.html#semillero">Semillero</a>
+<a href="../index-en.html#equipo">Team</a>
+<a href="../index-en.html#redes">Networks</a>
+</div>
+</div>
+</div>
+<div class="nav-group">
+<button aria-expanded="false" aria-haspopup="true" class="nav-group-label" type="button">Agenda <span class="nav-caret"></span></button>
+<div class="nav-dropdown">
+<div class="nav-dropdown-panel">
+<a href="../index-en.html#eventos">Events</a>
+<a href="../index-en.html#semana-antirracista">Anti-racist Week</a>
+<a href="../index-en.html#efemerides">Commemorative dates</a>
+</div>
+</div>
+</div>
+<div class="nav-group">
+<button aria-expanded="false" aria-haspopup="true" class="nav-group-label" type="button">Media <span class="nav-caret"></span></button>
+<div class="nav-dropdown">
+<div class="nav-dropdown-panel">
+<a href="../pregon/index-en.html">Pregón de esquina</a>
+<a href="../index-en.html#noticias">News</a>
+<a href="../index-en.html#medios">Media</a>
+</div>
+</div>
+</div>
+<a class="nav-single" href="../index-en.html#contacto">Contact</a>
+</div>
+<button aria-label="Open menu" class="nav-toggle">
+<span></span>
+<span></span>
+<span></span>
+</button>
+</nav>
+<div aria-label="Mobile menu" class="nav-mobile-overlay">
+<div class="nav-m-group">
+<button aria-expanded="false" class="nav-m-label" type="button">Research <span class="nav-caret"></span></button>
+<div class="nav-m-sub">
+<a href="../manifiesto/antropologia-del-caribe-colombiano-en.html">Manifesto</a>
+<a href="../index-en.html#lineas">Research lines</a>
+<a href="../index-en.html#proyectos">Projects</a>
+<a href="../index-en.html#publicaciones">Publications</a>
+</div>
+</div>
+<div class="nav-m-group">
+<button aria-expanded="false" class="nav-m-label" type="button">Community <span class="nav-caret"></span></button>
+<div class="nav-m-sub">
+<a href="../index-en.html#semillero">Semillero</a>
+<a href="../index-en.html#equipo">Team</a>
+<a href="../index-en.html#redes">Networks</a>
+</div>
+</div>
+<div class="nav-m-group">
+<button aria-expanded="false" class="nav-m-label" type="button">Agenda <span class="nav-caret"></span></button>
+<div class="nav-m-sub">
+<a href="../index-en.html#eventos">Events</a>
+<a href="../index-en.html#semana-antirracista">Anti-racist Week</a>
+<a href="../index-en.html#efemerides">Commemorative dates</a>
+</div>
+</div>
+<div class="nav-m-group">
+<button aria-expanded="false" class="nav-m-label" type="button">Media <span class="nav-caret"></span></button>
+<div class="nav-m-sub">
+<a href="../pregon/index-en.html">Pregón de esquina</a>
+<a href="../index-en.html#noticias">News</a>
+<a href="../index-en.html#medios">Media</a>
+</div>
+</div>
+<a class="nav-m-single" href="../index-en.html#contacto">Contact</a>
+</div>
+<main class="proyecto-page" id="main-content">
+<header class="proyecto-hero">
+<a class="proyecto-breadcrumb" href="../index-en.html#proyectos">← Projects</a>
+<p class="proyecto-cat">Interactive sonic cartography<span class="proyecto-status">Research-creation</span></p>
+<h1 class="proyecto-title">With the ebb and flow of the currents, <em>sonic cartographies</em> of the Black Atlantic</h1>
+<p class="proyecto-lede">An interactive map that follows the ebb and flow of the currents between the Greater Caribbean and Africa: music, Blackness, and pan-Africanism. Twenty-six routes there and back, twenty-four ports, four eras. Each route cites its source, and the guided journey travels the ocean from 1795 to today. <a class="proyecto-lang-switch" href="mas-ramas-que-raices.html">Versión en español →</a></p>
+<div class="proyecto-meta-bar">
+<div class="proyecto-meta-item"><span class="proyecto-meta-label">Direction</span><span class="proyecto-meta-value">Roberto Almanza Hernández</span></div><div class="proyecto-meta-item"><span class="proyecto-meta-label">Inspiration</span><span class="proyecto-meta-value">Errol L. Montes Pizarro (2018)</span></div><div class="proyecto-meta-item"><span class="proyecto-meta-label">Territory</span><span class="proyecto-meta-value">Greater Caribbean · Africa · Diaspora</span></div><div class="proyecto-meta-item"><span class="proyecto-meta-label">Method</span><span class="proyecto-meta-value">Sonic cartography</span></div><div class="proyecto-meta-item"><span class="proyecto-meta-label">Keywords</span><span class="proyecto-meta-value">Music · Blackness · Pan-Africanism</span></div>
+</div>
+</header>
+<!-- ════════ INTERACTIVE MAP ════════ -->
+<section class="section section--wide" id="atlantico-mapa" style="padding-top: 0;">
+<div class="caribe-mapa-wrap reveal">
+<div aria-label="Filter map eras" class="caribe-mapa-filters" role="group">
+<button class="filter-btn is-active" data-layer="all">All eras</button>
+<button class="filter-btn" data-layer="1">Founding crossings</button>
+<button class="filter-btn" data-layer="2">Ports &amp; pan-African awakening</button>
+<button class="filter-btn" data-layer="3">Independence</button>
+<button class="filter-btn" data-layer="4">Returns</button>
+<span style="flex: 1 1 auto;"></span>
+<button class="filter-btn filter-btn--travesia" data-action="travesia">▸ Start the journey</button>
+<button class="filter-btn filter-btn--travesia" data-action="travesia-sonora" title="Travels the twenty-six routes in order and chains their songs">♫ Journey with music</button>
+<button class="filter-btn" data-view="caribe">↖ Caribbean</button>
+<button class="filter-btn" data-view="atlantico">◎ Atlantic</button>
+<button class="filter-btn" data-view="africa">↗ Africa</button>
+</div>
+<div class="atlantico-layout">
+<div aria-label="Interactive Afrodiasporic map between the Greater Caribbean and Africa" class="caribe-leaflet-map" data-lang="en" id="atlantico-leaflet-map" role="application"></div>
+<aside aria-label="Map reading panel" aria-live="polite" class="atlantico-panel" id="atlantico-panel"></aside>
+</div>
+<div class="atlantico-tiempo" id="atlantico-tiempo">
+<div class="atlantico-tiempo-cab">
+<p class="atlantico-tiempo-titulo">The twenty-six routes in time</p>
+<p class="atlantico-tiempo-sub">The map tells you where; this strip tells you when. Each mark is a route, placed at its departure year and colored by its era. Click one to open it.</p>
+</div>
+<div class="atlantico-tiempo-scroll">
+<svg aria-label="Timeline of the routes" id="atlantico-tiempo-svg" preserveaspectratio="xMinYMid meet" role="group" viewbox="0 0 1000 132"></svg>
+</div>
+</div>
+<div class="caribe-mapa-legend">
+<p class="legend-title">Conceptual legend</p>
+<p class="legend-text">This map draws the <strong>Black Atlantic</strong> (with Paul Gilroy) as a unity of culture and struggle that no nation contains. Each node is a port where Blackness thought and sounded; each arc is a musical route there and back. The thesis comes from Errol L. Montes Pizarro: the relationship between the Caribbean and Africa is not that of a root with its distant copies, but that of a tree with <strong>more branches than roots</strong> — the gumbe that returned to Freetown, the son that became Congolese rumba, the soukous that became champeta. Click the arcs to read each route and hear its music; filter by era to follow the order of history. The <strong>Colombian Caribbean</strong> appears highlighted as the group's shore of enunciation.</p>
+<div aria-label="Map eras" class="legend-swatches" id="atlantico-legend-swatches" role="group"></div>
+</div>
+</div>
+</section>
+<article class="proyecto-cuerpo">
+<h2>About this cartography</h2>
 <p>Colonial maps drew the Atlantic as distance: Africa on one side, frozen in time; the Americas on the other, as the destination of the slave trade. This map argues the opposite. Between the Greater Caribbean and Africa there was, and still is, a circuit of musical exchange that was never fully severed. That sonic evidence counts as historical and political evidence. The sea that archived dispossession also holds the archive of relation.</p>
-
-        <h2>The thesis: more branches than roots</h2>
+<h2>The thesis: more branches than roots</h2>
 <blockquote>The genres of popular African music that have circulated most widely are precisely those with the deepest Afrodiasporic connections.</blockquote>
 <p>The observation is Errol L. Montes Pizarro's, from <em>Más ramas que raíces</em> (Ediciones Callejón, 2018), the book that gave rise to this map. His argument dismantles the metaphor of the root. Jamaican gumbe reached Freetown in 1800 and fathered new musics. Cuban son, heard on 78 rpm records, was recognized in the two Congos as memory of their own and became Congolese rumba. That rumba returned to the Caribbean with Ry-Co Jazz, and soukous landed in Cartagena's picós transformed into champeta. The image that does justice to that history is not the single root: it is the branching, with its grafts and its shoots sprouting where no one planted them. With Glissant: relation before filiation.</p>
-
-        <h2>Music, Blackness, pan-Africanism</h2>
+<h2>Music, Blackness, pan-Africanism</h2>
 <p>The map interweaves three threads that history never separated. Political pan-Africanism was, to a considerable degree, the work of Caribbean people: Blyden of St. Thomas, Sylvester Williams and Padmore of Trinidad, Garvey of Jamaica, Sylvain of Haiti, Césaire and Fanon of Martinique. That literate current traveled through the same ports as the drums and the records. And there was, too, as Montes Pizarro proposes, a <em>soundtrack of grassroots pan-Africanism</em>: songs that crossed the ocean without congresses or manifestos, carried by kru sailors, Antillean soldiers, and picó collectors. Blackness is the common ground of both currents: a shared historical experience that turned into a power of cultural invention.</p>
-
-        <h2>The four eras</h2>
+<h2>The four eras</h2>
 <p>The map's layers follow a historical order. <strong>Founding crossings (1795–1900):</strong> deported Maroons carry gumbe to Freetown, Blyden founds literary pan-Africanism from Liberia, and the Jubilee Singers' spirituals land in South Africa. <strong>Ports and the pan-African awakening (1900–1945):</strong> palmwine music weaves together the west coast, Antillean regiments plant calypso, Garvey founds the UNIA, and GV records carry son to central Africa and Dakar, while négritude germinates in the Afro-Cuban clubs of Paris. <strong>Independence and alternative modernities (1945–1980):</strong> Congolese rumba supplies the anthem of decolonization, Guinea makes son a matter of state, Dakar sings salsa in Wolof, Armstrong brings Nkrumah to tears in Accra, Fania sings with Celia Cruz in Kinshasa on the eve of Ali–Foreman, pan-African festivals gather the diaspora, Rastafari looks toward Ethiopia, and Fela fuses the branches into Afrobeat. <strong>Returns and the contemporary (1960–now):</strong> Africa plays in the Antilles, African records become "African music" in the picós, San Basilio de Palenque answers back with champeta criolla, cadence finds an echo in Cabo Verde, Africando records with both shores in the same studio, and Afrobeats converses with dancehall in real time.</p>
-
-        <h2>How to read the map</h2>
+<h2>How to read the map</h2>
 <p>The arcs are not arrows of origin and destination: they are dialogues, readable in both directions. That reversibility is the argument. Clicking a route reveals its history, the source behind it, and, where a recording exists, a song to hear it by. The ports tell what was thought and what sounded there. The route that closes the map — the radio link between San Juan and Barranquilla — is a reminder that this cartography includes us too: shared listening is a pan-African method.</p>
-
-        <h2>Minimal glossary</h2>
+<h2>Minimal glossary</h2>
 <p><strong>Black Atlantic.</strong> Paul Gilroy's concept (1993) for the cultural and political unity the diaspora wove across and beyond nations. Its symbol is the ship: "a living, microcultural, micropolitical system in motion," carrying people, pamphlets, books, records, and choirs. This map draws that ocean.</p>
 <p><strong>More branches than roots.</strong> Errol Montes Pizarro's thesis (2018): the African musics with the widest circulation are precisely those with the deepest Afrodiasporic connections. Against the metaphor of the single root, the branching: grafts, returns, lateral growth.</p>
 <p><strong>Négritude.</strong> A movement founded by Césaire, Senghor, and Damas in 1930s Paris: a rejection of assimilation, an identification with Blackness, and a celebration of African civilization. Shain (2018) documents that it germinated, among other places, in the Afro-Cuban music clubs of Montmartre.</p>
@@ -209,11 +233,9 @@
 <p><strong>Grassroots pan-Africanism.</strong> The pan-Africanism that traveled without congresses or manifestos: kru sailors, Antillean soldiers, picó collectors. Montes Pizarro (2018) proposes that this everyday pan-Africanism had its own soundtrack, and that songs like «Everybody Loves Saturday Night» no longer have a shore of origin.</p>
 <p><strong>Picó.</strong> A sound machine of the Colombian Caribbean, built with homegrown technology in Barranquilla from 1939 onward (confirmed by the memoirs of Alfredo de la Espriella and Marco T. Barros Ariza, and by a 1947 newspaper notice for the picó El Lago Azul, named after a Sindo Garay bolero): from the start, it was an accomplice of the Greater Caribbean's stigmatized musics. It is not a copy of the Jamaican sound system, though Henriques (2011) helps read it as a form of knowledge: it is its own ethnotechnological phenomenon (the concept belongs to Nicolás Contreras Hernández), with distinct sound aesthetics — the low-frequency <em>meke</em> of Cartagena, centered in Torices and Crisanto Luque, and the high-frequency <em>brillo</em> of Barranquilla, formed in the boliche district. Before "African music," the picotero world had already made salsa a mass phenomenon in the Colombian Caribbean, in decades when that music carried social and ethnic stigma (Contreras, unpublished). Since 2018, the picotero associations of the "three pearls" (Santa Marta, Barranquilla, and Cartagena) have pushed for its recognition as intangible cultural heritage, a proposal submitted to Colombia's Ministry of Culture in 2024 with support from the Centro de Pensamiento Caribe.</p>
 <p><strong>Mulata musics.</strong> Ángel Quintero Rivera's category for Caribbean musics that freely combine composition and improvisation, melody and rhythm. In them the drum survives in disguise ("the melodization of rhythms and marooned ethnicity"), and dance functions as subversion: a bodily knowledge that literate hierarchies could never domesticate (Quintero Rivera, 1998; 2009).</p>
-
-        <h2>How to cite</h2>
-<p>This map is a work of research-creation and can be cited as a whole or route by route: every route and every port has its own link (opening one changes the browser address, and the panel offers a button to copy the direct link). Version 1.0 was archived on Zenodo with a permanent DOI: <a href="https://doi.org/10.5281/zenodo.21435772" target="_blank" rel="noopener">10.5281/zenodo.21435772</a>. Suggested citation: Almanza Hernández, Roberto (dir.), <em>Con el vaivén de las corrientes: cartografías sonoras del Atlántico Negro</em> [With the ebb and flow of the currents: sonic cartographies of the Black Atlantic], interactive map, version 1.0, Grupo de Investigación Pensamiento Caribe, Universidad del Magdalena, 2026, DOI: 10.5281/zenodo.21435772. To cite a single route, add its title and its direct link. The work is versioned: substantive changes are recorded in the site's public repository and on Zenodo.</p>
-
-        <h2>Sources</h2>
+<h2>How to cite</h2>
+<p>This map is a work of research-creation and can be cited as a whole or route by route: every route and every port has its own link (opening one changes the browser address, and the panel offers a button to copy the direct link). Version 1.0 was archived on Zenodo with a permanent DOI: <a href="https://doi.org/10.5281/zenodo.21435772" rel="noopener" target="_blank">10.5281/zenodo.21435772</a>. Suggested citation: Almanza Hernández, Roberto (dir.), <em>Con el vaivén de las corrientes: cartografías sonoras del Atlántico Negro</em> [With the ebb and flow of the currents: sonic cartographies of the Black Atlantic], interactive map, version 1.0, Grupo de Investigación Pensamiento Caribe, Universidad del Magdalena, 2026, DOI: 10.5281/zenodo.21435772. To cite a single route, add its title and its direct link. The work is versioned: substantive changes are recorded in the site's public repository and on Zenodo.</p>
+<h2>Sources</h2>
 <p>Each route on the map names, in its own panel, the source behind it. References in APA format:</p>
 <ul class="apa-referencias">
 <li>Adi, H. (2018). <em>Pan-Africanism: A history</em>. Bloomsbury Academic.</li>
@@ -250,18 +272,17 @@
 <li>Von Eschen, P. M. (2004). <em>Satchmo blows up the world</em>. Harvard University Press.</li>
 <li>White, B. W. (2008). <em>Rumba rules</em>. Duke University Press.</li>
 </ul>
-      </article>
-
-      <nav class="proyecto-footer-nav" aria-label="Navigation between projects">
-        <a href="con-el-agua-de-por-medio.html" class="btn btn--secondary">&larr; Previous project</a>
-        <a href="../index-en.html#proyectos" class="btn btn--primary">View all projects</a>
-        <a href="negrura-blanquitud-monumental-en.html" class="btn btn--secondary">Next project &rarr;</a>
-      </nav>
-    </main>
-  </div>
-  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-  <script src="../js/zoom-caribe.js"></script>
-  <script src="../js/mapa-afrodiasporico.js"></script>
-  <script src="../js/interactions.js?v=3"></script>
+</article>
+<nav aria-label="Navigation between projects" class="proyecto-footer-nav">
+<a class="btn btn--secondary" href="con-el-agua-de-por-medio.html">← Previous project</a>
+<a class="btn btn--primary" href="../index-en.html#proyectos">View all projects</a>
+<a class="btn btn--secondary" href="negrura-blanquitud-monumental-en.html">Next project →</a>
+</nav>
+</main>
+</div>
+<script crossorigin="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<script src="../js/zoom-caribe.js"></script>
+<script src="../js/mapa-afrodiasporico.js"></script>
+<script src="../js/interactions.js?v=3"></script>
 </body>
 </html>
