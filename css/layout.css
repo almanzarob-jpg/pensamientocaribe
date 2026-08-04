@@ -80,13 +80,37 @@
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--c-border-green);
-  transition: background var(--transition-base), border-color var(--transition-base);
+  transition: background var(--transition-base), border-color var(--transition-base),
+              height var(--transition-base);
 }
 
+/* ── La barra al leer ──
+   `interactions.js` ya ponia esta clase al pasar de 80 px de desplazamiento,
+   pero solo cambiaba el fondo. Aqui pasa ademas a su altura compacta.
+
+   Por que encoge en vez de ser siempre baja: quien llega ve el logo entero y
+   la marca completa; quien ya esta leyendo no los necesita del mismo tamano
+   y si necesita la pantalla. En un portatil de 13 pulgadas la barra alta se
+   comia mas de una cuarta parte del alto util en las 35 paginas.
+
+   Solo cambia la altura de la propia barra, nunca `--nav-height`. Esa
+   variable gobierna el `padding-top` del contenido: si cambiara al
+   desplazarse, el texto saltaria bajo el cursor mientras se lee.
+
+   Si el JavaScript falla, la clase no se anade y la barra se queda alta.
+   Se pierde el espacio, no la navegacion. */
 .site-nav.scrolled {
+  height: var(--nav-height-compacta);
   background: rgba(5, 6, 4, 0.94);
   border-bottom-color: var(--c-border-orange);
 }
+
+/* 56 px y no 44: el logo es un lockup: marca mas rotulo «Pensamiento
+   Caribe» en dos lineas, dentro del propio PNG (800x369). A 44 px cada
+   linea del rotulo cae a unos 7 px y deja de leerse. A 56 px ocupa 121 px
+   de ancho y sigue cabiendo de sobra en una barra de 76: la legibilidad
+   no cuesta un pixel de altura. */
+.site-nav.scrolled .nav-brand img { height: 56px; }
 
 .nav-brand {
   display: flex;
@@ -95,9 +119,22 @@
   flex-shrink: 0;
 }
 
+/* El logo acompana a la barra: si la barra baja y el logo no, deja de caber.
+   El rotulo «Pensamiento Caribe» va dentro del propio PNG, asi que reducirlo
+   reduce tambien ese texto; por eso el suelo en reposo son 56 px y no menos. */
 .nav-brand img {
   height: 90px;
   width: auto;
+  transition: height var(--transition-base);
+}
+
+@media (max-width: 1100px) {
+  .nav-brand img { height: 72px; }
+}
+
+@media (max-width: 700px) {
+  .nav-brand img { height: 56px; }
+  .site-nav.scrolled .nav-brand img { height: 40px; }
 }
 
 .nav-brand-text {
@@ -846,9 +883,10 @@
 }
 
 @media (max-width: 500px) {
-  :root {
-    --nav-height: 60px;
-  }
+  /* `--nav-height` ya no se fija aqui. Antes saltaba de 200 a 60 px en este
+     punto: la misma barra de 200 px servia a una tableta de 768 que a un
+     monitor de 1600, y a los 500 caia de golpe. La escala esta ahora en
+     reset.css, junto a la definicion de la variable. */
 
   .grid-lines {
     grid-template-columns: 1fr;

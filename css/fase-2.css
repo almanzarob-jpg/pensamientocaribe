@@ -853,7 +853,11 @@
 }
 
 /* ── Regiones ── */
-.carto-region { margin-top: var(--space-2xl); scroll-margin-top: calc(var(--nav-height) + 1rem); }
+/* Margen de ancla contra la barra COMPACTA, no contra la de reposo: al
+   saltar a un ancla ya estas desplazado, asi que la barra que tapa mide
+   `--nav-height-compacta`. Con la altura de reposo el destino quedaba mas
+   de cien pixeles por debajo del borde, con una franja vacia encima. */
+.carto-region { margin-top: var(--space-2xl); scroll-margin-top: calc(var(--nav-height-compacta) + 1rem); }
 
 .carto-region__titulo {
   display: flex;
@@ -899,9 +903,9 @@
   background: var(--c-surface-a);
   border: 1px solid var(--c-border-green);
   border-radius: var(--radius-sm);
-  /* La barra fija mide 200 px: sin esto, saltar a un ancla deja la
-     ficha debajo de ella. */
-  scroll-margin-top: calc(var(--nav-height) + 1rem);
+  /* Sin esto, saltar a un ancla deja la ficha debajo de la barra fija.
+     Se mide contra la barra compacta porque al saltar ya estas desplazado. */
+  scroll-margin-top: calc(var(--nav-height-compacta) + 1rem);
 }
 
 .carto-nodo:target {

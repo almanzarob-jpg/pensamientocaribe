@@ -81,9 +81,29 @@
   --transition-base: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --transition-slow: 0.55s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
-  --nav-height: 200px;
+  /* La barra tiene dos alturas.
+     `--nav-height` es la de reposo: la que ve quien llega. Gobierna tambien
+     el `padding-top` del contenido, asi que NO debe cambiar al desplazarse;
+     si cambiara, el contenido daria un salto bajo el cursor.
+     `--nav-height-compacta` es la de lectura, a la que encoge la barra al
+     pasar de 80 px. Es la que deben usar los `scroll-margin-top`: cuando
+     saltas a un ancla ya estas desplazado, asi que la barra que tapa es
+     esta y no la alta. */
+  --nav-height: 168px;
+  --nav-height-compacta: 76px;
   --content-max: 1200px;
   --content-narrow: 820px;
+}
+
+/* La barra en reposo se ajusta al ancho en vez de saltar de 200 a 60 px a
+   los 500, que dejaba la misma barra de 200 px en una tableta de 768 que en
+   un monitor de 1600. */
+@media (max-width: 1100px) {
+  :root { --nav-height: 132px; --nav-height-compacta: 68px; }
+}
+
+@media (max-width: 700px) {
+  :root { --nav-height: 96px;  --nav-height-compacta: 60px; }
 }
 
 *,
@@ -96,6 +116,22 @@
 
 html {
   scroll-behavior: smooth;
+
+  /* Reserva para la barra fija en CUALQUIER desplazamiento automatico.
+     Sin esto, un destino sin `scroll-margin-top` propio aterriza debajo de
+     la barra y queda tapado. Afectaba a todos los enlaces del menu que
+     apuntan a la portada —#lineas, #agenda, #semillero, #redes, #contacto—,
+     a la tabulacion con teclado y a la busqueda dentro de la pagina.
+
+     Se pone en `html` y no ficha por ficha porque cubre de una vez todos
+     los destinos del sitio, incluidos los que aun no existen. Los dos
+     `scroll-margin-top` de cartografias se mantienen: son mas especificos
+     y anaden su propio aire.
+
+     Se mide contra la barra compacta: al saltar a un ancla ya estas
+     desplazado, asi que la barra que tapa es esa. */
+  scroll-padding-top: calc(var(--nav-height-compacta) + 1rem);
+
   -webkit-text-size-adjust: 100%;
   text-size-adjust: 100%;
 }
