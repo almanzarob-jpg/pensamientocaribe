@@ -3,8 +3,8 @@
     "titulo": "Con el agua de por medio",
     "subtitulo": "Atlas para una antropología archipiélica",
     "responsable": "Centro de Pensamiento Caribe",
-    "version": "1.14.0",
-    "fecha": "2026-08-03"
+    "version": "1.15.0",
+    "fecha": "2026-08-07"
   },
   "fenomenos": {
     "colonialidad": {
@@ -237,6 +237,18 @@
       "Panamá",
       "ciudad",
       "el istmo panameño · Panamá"
+    ],
+    "costarica": [
+      9.99,
+      -83.03,
+      "Costa Rica (Limón)",
+      "pais"
+    ],
+    "granada": [
+      12.12,
+      -61.68,
+      "Granada",
+      "pais"
     ]
   },
   "obras": [
@@ -3090,6 +3102,429 @@
       "l": "cuba",
       "tr": "anglófono (EE.UU.)",
       "ap": "El erotismo negro cubano como método de autoconstrucción política, no solo objeto de estudio. Candidata no identificada en el cruce inicial —quedaba escondida por homonimia con otra Allen ya sembrada— y encontrada al verificar una cita cruzada con Stout."
+    },
+    {
+      "id": "williamscapitalismo",
+      "k": "obra",
+      "t": "Capitalismo y esclavitud (Capitalism and Slavery)",
+      "a": "Eric Williams",
+      "y": "1944 / ed. esp. 2011",
+      "f": [
+        "capitalismo_racial",
+        "postplantacion",
+        "colonialidad"
+      ],
+      "l": "trinidad",
+      "tr": "anglófono (Trinidad)",
+      "ap": "La tesis que el corpus daba por sabida sin tenerla: la abolición no llegó por conciencia moral sino cuando el azúcar antillano dejó de ser rentable, y el capital industrial británico se levantó sobre la trata. Es la obra de la que se descuelga casi todo el capitalismo racial que el atlas ya cataloga."
+    },
+    {
+      "id": "wynterblackmetamorphosis",
+      "k": "obra",
+      "t": "Black Metamorphosis: New Natives in a New World",
+      "a": "Sylvia Wynter",
+      "y": "c. 1970 (manuscrito inédito)",
+      "f": [
+        "creolizacion",
+        "capitalismo_racial",
+        "memoria"
+      ],
+      "l": "jamaica",
+      "tr": "anglófono (Jamaica)",
+      "ap": "El manuscrito que Wynter nunca publicó y que circula fotocopiado desde los setenta: la población esclavizada como pueblo que se indigeniza en el Nuevo Mundo por vía de la cultura, no del suelo. Faltaba la voz jamaiquina que piensa la creolización como acto político y no como mezcla feliz."
+    },
+    {
+      "id": "mgsmithplural",
+      "k": "obra",
+      "t": "The Plural Society in the British West Indies",
+      "a": "M. G. Smith",
+      "y": "1965",
+      "f": [
+        "creolizacion",
+        "colonialidad"
+      ],
+      "l": "jamaica",
+      "tr": "anglófono (Jamaica)",
+      "ap": "El modelo contra el que se escribió medio siglo de antropología caribeña: sociedades que comparten territorio y mercado pero no instituciones, mantenidas juntas por la fuerza. El atlas tenía a todos sus contradictores y no tenía el texto que contradicen."
+    },
+    {
+      "id": "rtsmithmatrifocal",
+      "k": "obra",
+      "t": "The Matrifocal Family: Power, Pluralism and Politics",
+      "a": "Raymond T. Smith",
+      "y": "1996",
+      "f": [
+        "cuerpo_erotica",
+        "creolizacion"
+      ],
+      "l": "guyana",
+      "tr": "anglófono (R.U./Guyana)",
+      "ap": "Treinta años de discusión sobre el parentesco afrocaribeño recogidos por quien acuñó la matrifocalidad: no una familia rota por la esclavitud sino una forma con su propia lógica de poder. Recoloca la pregunta del hogar en el centro de la teoría del Caribe."
+    },
+    {
+      "id": "clarkemymother",
+      "k": "obra",
+      "t": "My Mother Who Fathered Me: A Study of the Families in Three Selected Communities of Jamaica",
+      "a": "Edith Clarke",
+      "y": "1957",
+      "f": [
+        "cuerpo_erotica",
+        "postplantacion"
+      ],
+      "l": "jamaica",
+      "tr": "anglófono (Jamaica)",
+      "ap": "La primera etnógrafa jamaiquina del parentesco en su propia isla, y el título que sigue nombrando una experiencia: la madre que también hace de padre. Casi todo lo que el atlas cataloga sobre familia y género en el Caribe anglófono la cita."
+    },
+    {
+      "id": "barrowfamily",
+      "k": "obra",
+      "t": "Family in the Caribbean: Themes and Perspectives",
+      "a": "Christine Barrow",
+      "y": "1996",
+      "f": [
+        "cuerpo_erotica",
+        "creolizacion"
+      ],
+      "l": "barbados",
+      "tr": "anglófono (Barbados)",
+      "ap": "El balance crítico de cuarenta años de estudios de familia caribeña, hecho desde la UWI y contra la mirada que los inauguró: el hogar afrocaribeño no como desviación de la norma europea sino como arreglo con historia propia."
+    },
+    {
+      "id": "mintzpricebirth",
+      "k": "obra",
+      "t": "The Birth of African-American Culture: An Anthropological Perspective",
+      "a": "Sidney W. Mintz y Richard Price",
+      "y": "1976 / 1992 (ed. port. 2003)",
+      "f": [
+        "creolizacion",
+        "memoria"
+      ],
+      "l": "suriname",
+      "tr": "anglófono (EE.UU.)",
+      "ap": "El ensayo que cambió la pregunta: no qué sobrevivió de África sino qué inventaron, y con qué rapidez, poblaciones arrancadas de sociedades distintas y obligadas a entenderse. El atlas tenía a Mintz y a Price por separado y no el texto que escribieron juntos."
+    },
+    {
+      "id": "trouillottransformaciones",
+      "k": "obra",
+      "t": "Transformaciones globales: la antropología y el mundo moderno (Global Transformations)",
+      "a": "Michel-Rolph Trouillot",
+      "y": "2003 / trad. esp. 2011",
+      "f": [
+        "colonialidad",
+        "memoria"
+      ],
+      "l": "haiti",
+      "tr": "francófono (Haití) / anglófono",
+      "ap": "Trouillot le pasa a la antropología la misma factura que le pasó a la historia: la disciplina heredó un «nicho salvaje» que no puede simplemente abandonar declarándose crítica. Cierra el arco de Trouillot en el corpus, que ya tenía la historiografía y la etnografía dominiquesa pero no la crítica de la disciplina misma."
+    },
+    {
+      "id": "morenofraginals",
+      "k": "obra",
+      "t": "El ingenio: complejo económico social cubano del azúcar",
+      "a": "Manuel Moreno Fraginals",
+      "y": "1964 / ed. ampliada 1978",
+      "f": [
+        "capitalismo_racial",
+        "postplantacion"
+      ],
+      "l": "cuba",
+      "tr": "hispano (Cuba)",
+      "ap": "La plantación azucarera cubana contada desde adentro de su contabilidad: precios, zafras, cuerpos amortizados. La contraparte hispana y material del Contrapunteo de Ortiz, que el atlas tenía solo en su versión culturalista."
+    },
+    {
+      "id": "meeks_postcolonial",
+      "k": "obra",
+      "t": "After the Postcolonial Caribbean: Memory, Imagination, Hope",
+      "a": "Brian Meeks",
+      "y": "2022",
+      "f": [
+        "soberanias",
+        "memoria"
+      ],
+      "l": "jamaica",
+      "tr": "anglófono (Jamaica)",
+      "ap": "Balance de la generación que hizo y perdió las revoluciones caribeñas, escrito por quien estuvo en Granada. Pregunta qué queda de la imaginación política antillana cuando ya no hay proyecto nacional que la sostenga."
+    },
+    {
+      "id": "oostindiedecolonising",
+      "k": "obra",
+      "t": "Decolonising the Caribbean: Dutch Policies in a Comparative Perspective",
+      "a": "Gert Oostindie e Inge Klinkers",
+      "y": "2003",
+      "f": [
+        "soberanias",
+        "colonialidad"
+      ],
+      "l": "curazao",
+      "tr": "neerlandés (Países Bajos/Caribe)",
+      "ap": "La descolonización que no ocurrió: por qué el Caribe neerlandés negoció quedarse dentro del reino mientras las colonias británicas y francesas seguían caminos opuestos. Da el contexto histórico de la no-soberanía que Bonilla y van der Pijl piensan en clave teórica."
+    },
+    {
+      "id": "kloosterrealm",
+      "k": "obra",
+      "t": "Realm between Empires: The Second Dutch Atlantic, 1680-1815",
+      "a": "Wim Klooster y Gert Oostindie",
+      "y": "2018",
+      "f": [
+        "colonialidad",
+        "capitalismo_racial"
+      ],
+      "l": "curazao",
+      "tr": "neerlandés (Países Bajos/Caribe)",
+      "ap": "El Atlántico neerlandés como sistema intersticial: menos colonias que nodos de contrabando, crédito y tránsito entre imperios ajenos. Explica por qué Curazao y Surinam funcionan distinto del resto de la cuenca."
+    },
+    {
+      "id": "hoeftesuriname",
+      "k": "obra",
+      "t": "Suriname in the Long Twentieth Century: Domination, Contestation, Globalization",
+      "a": "Rosemarijn Hoefte",
+      "y": "2014",
+      "f": [
+        "postplantacion",
+        "soberanias"
+      ],
+      "l": "suriname",
+      "tr": "neerlandés (Países Bajos/Surinam)",
+      "ap": "Surinam del contrato de indentura a la independencia y la dictadura, con la bauxita en el centro. El atlas tenía Surinam solo por el cimarronaje saramaka; aquí aparece el país como Estado, con su economía y sus fracturas étnicas."
+    },
+    {
+      "id": "hoeftetrajectories",
+      "k": "obra",
+      "t": "Post-Colonial Trajectories in the Caribbean: The Three Guianas",
+      "a": "Rosemarijn Hoefte, Matthew L. Bishop y Peter Clegg (eds.)",
+      "y": "2021",
+      "f": [
+        "soberanias",
+        "colonialidad"
+      ],
+      "l": "guyana",
+      "tr": "comparado (Guayanas)",
+      "ap": "Las tres Guayanas leídas juntas —independiente, departamento francés, república de habla neerlandesa— para mostrar que el estatus político no predice la vida material. El borde continental del Caribe, que el atlas suele tratar como excepción."
+    },
+    {
+      "id": "bestlevitt",
+      "k": "obra",
+      "t": "Essays on the Theory of Plantation Economy: A Historical and Institutional Approach to Caribbean Economic Development",
+      "a": "Lloyd Best y Kari Polanyi Levitt",
+      "y": "2009",
+      "f": [
+        "postplantacion",
+        "capitalismo_racial"
+      ],
+      "l": "trinidad",
+      "tr": "anglófono (Trinidad/Canadá)",
+      "ap": "La economía de plantación teorizada por el New World Group como estructura persistente y no como etapa superada: la economía caribeña sigue diseñada para exportar y depender. La pieza económica que le faltaba a la postplantación del atlas."
+    },
+    {
+      "id": "duboisturits",
+      "k": "obra",
+      "t": "Freedom Roots: Histories from the Caribbean",
+      "a": "Laurent Dubois y Richard Lee Turits",
+      "y": "2019",
+      "f": [
+        "soberanias",
+        "cimarronaje",
+        "postplantacion"
+      ],
+      "l": "haiti",
+      "tr": "anglófono (EE.UU.)",
+      "ap": "Historia general de la región organizada alrededor de una idea: la libertad caribeña se pensó primero como acceso a la tierra y a la vida propia, no como ciudadanía abstracta. Sirve de texto-brújula junto al Trouillot de 1992 y al Knight."
+    },
+    {
+      "id": "austinfearblack",
+      "k": "obra",
+      "t": "Fear of a Black Nation: Race, Sex, and Security in Sixties Montreal",
+      "a": "David Austin",
+      "y": "2013",
+      "f": [
+        "soberanias",
+        "memoria"
+      ],
+      "l": "trinidad",
+      "tr": "anglófono (Canadá/Antillas)",
+      "ap": "El Congreso de Escritores Negros de Montreal en 1968 y la revuelta de Sir George Williams como episodio caribeño ocurrido en Canadá: C. L. R. James, Rodney y Carmichael en la misma sala. Extiende hacia el norte el mapa del Poder Negro antillano que el atlas trazaba solo en la cuenca."
+    },
+    {
+      "id": "puriradical",
+      "k": "obra",
+      "t": "The Legacies of Caribbean Radical Politics",
+      "a": "Shalini Puri (ed.)",
+      "y": "2010",
+      "f": [
+        "soberanias",
+        "memoria"
+      ],
+      "l": "trinidad",
+      "tr": "comparado (anglófono Caribe)",
+      "ap": "Qué queda del radicalismo antillano cuando sus revoluciones fracasaron o fueron invadidas: el volumen lee las herencias en la cultura, no en los partidos. Acompaña a Quinn y a Scott en el racimo del Poder Negro."
+    },
+    {
+      "id": "grenaderevolution",
+      "k": "obra",
+      "t": "The Grenada Revolution: Reflections and Lessons",
+      "a": "Wendy C. Grenade (ed.)",
+      "y": "2015",
+      "f": [
+        "soberanias",
+        "violencias"
+      ],
+      "l": "granada",
+      "tr": "anglófono (Granada/Barbados)",
+      "ap": "El episodio que el Caribe anglófono todavía no termina de contarse: la revolución de 1979, el asesinato de Bishop y la invasión estadounidense de 1983, revisados por autores de la propia isla. Abre el primer nodo del atlas en Granada."
+    },
+    {
+      "id": "smithredblack",
+      "k": "obra",
+      "t": "Red and Black in Haiti: Radicalism, Conflict, and Political Change, 1934-1957",
+      "a": "Matthew J. Smith",
+      "y": "2009",
+      "f": [
+        "soberanias",
+        "violencias"
+      ],
+      "l": "haiti",
+      "tr": "anglófono (Jamaica/Haití)",
+      "ap": "Los veintitrés años que van de la salida de los marines a la llegada de Duvalier: comunistas, noiristes y sindicatos disputando el país. El tramo que el Haití del corpus se saltaba entre la ocupación y el duvalierismo."
+    },
+    {
+      "id": "becklessavingsouls",
+      "k": "obra",
+      "t": "Saving Souls: The Struggle to End the Transatlantic Trade in Africans",
+      "a": "Hilary McD. Beckles y Verene A. Shepherd (eds.)",
+      "y": "2013",
+      "f": [
+        "capitalismo_racial",
+        "memoria"
+      ],
+      "l": "barbados",
+      "tr": "anglófono (Barbados/Jamaica)",
+      "ap": "El bicentenario de la abolición de la trata leído desde el Caribe y no desde Westminster: quiénes la terminaron realmente y a qué precio. Es también el aparato erudito del que sale la demanda caribeña de reparaciones que el atlas ya cataloga con Araujo y Headley."
+    },
+    {
+      "id": "kalefragments",
+      "k": "obra",
+      "t": "Fragments of Empire: Capital, Slavery, and Indian Indentured Labor in the British Caribbean",
+      "a": "Madhavi Kale",
+      "y": "1998",
+      "f": [
+        "capitalismo_racial",
+        "colonialidad"
+      ],
+      "l": "guyana",
+      "tr": "anglófono (EE.UU./India)",
+      "ap": "La indentura india no como sucesora natural de la esclavitud sino como invento administrativo que el imperio construyó para no llamarla trabajo forzado. Lee el archivo colonial contra su propia retórica de la libertad de contrato."
+    },
+    {
+      "id": "shepherdmaharani",
+      "k": "obra",
+      "t": "Maharani's Misery: Narratives of a Passage from India to the Caribbean",
+      "a": "Verene A. Shepherd",
+      "y": "2002",
+      "f": [
+        "cuerpo_erotica",
+        "violencias"
+      ],
+      "l": "guyana",
+      "tr": "anglófono (Jamaica)",
+      "ap": "La muerte de una mujer india en la travesía de 1885 reconstruida desde la investigación colonial que la archivó: el kala pani contado desde el cuerpo de una migrante y no desde la estadística de embarques."
+    },
+    {
+      "id": "looklaichinese",
+      "k": "obra",
+      "t": "The Chinese in the West Indies, 1806-1995: A Documentary History",
+      "a": "Walton Look Lai",
+      "y": "1998",
+      "f": [
+        "capitalismo_racial",
+        "creolizacion"
+      ],
+      "l": "trinidad",
+      "tr": "anglófono (Trinidad)",
+      "ap": "Dos siglos de presencia china en las Antillas reunidos en documentos: contratos, censos, prensa, peticiones. La tercera migración forzada de la cuenca, que el atlas apenas insinuaba con la indentura india."
+    },
+    {
+      "id": "putnamradical",
+      "k": "obra",
+      "t": "Radical Moves: Caribbean Migrants and the Politics of Race in the Jazz Age",
+      "a": "Lara Putnam",
+      "y": "2013",
+      "f": [
+        "capitalismo_racial",
+        "soberanias"
+      ],
+      "l": "costarica",
+      "tr": "anglófono (EE.UU.)",
+      "ap": "La circulación antillana entre Panamá, Limón, Cuba y Harlem como un solo espacio social, y la política racial que se formó en ese ir y venir. Da el marco regional a las obras panameñas que el atlas sembró en agosto."
+    },
+    {
+      "id": "harpellecostarica",
+      "k": "obra",
+      "t": "The West Indians of Costa Rica: Race, Class, and the Integration of an Ethnic Minority",
+      "a": "Ronald N. Harpelle",
+      "y": "2001",
+      "f": [
+        "capitalismo_racial",
+        "soberanias"
+      ],
+      "l": "costarica",
+      "tr": "anglófono (Canadá/Costa Rica)",
+      "ap": "Cómo una población antillana llevada a Limón por la United Fruit fue convertida en minoría nacional costarricense, con ciudadanía tardía y a cambio del olvido de su lengua. Abre el nodo de Costa Rica junto a Bourgois."
+    },
+    {
+      "id": "bourgoisethnicity",
+      "k": "obra",
+      "t": "Ethnicity at Work: Divided Labor on a Central American Banana Plantation",
+      "a": "Philippe Bourgois",
+      "y": "1989",
+      "f": [
+        "capitalismo_racial",
+        "violencias"
+      ],
+      "l": "costarica",
+      "tr": "anglófono (EE.UU./Centroamérica)",
+      "ap": "La empresa bananera administrando la diferencia étnica como herramienta de producción: negros antillanos, guaymíes, mestizos e indígenas repartidos por tarea y por salario. La plantación del siglo XX, no la del XVIII."
+    },
+    {
+      "id": "legrandfrontier",
+      "k": "obra",
+      "t": "Colonización y protesta campesina en Colombia, 1850-1950 (Frontier Expansion and Peasant Protest in Colombia)",
+      "a": "Catherine LeGrand",
+      "y": "1986 / trad. esp. 1988",
+      "f": [
+        "capitalismo_racial",
+        "violencias"
+      ],
+      "l": "santamarta",
+      "tr": "anglófono (Canadá/Colombia)",
+      "ap": "Cómo se hizo propiedad privada la tierra baldía del Caribe colombiano, y quién quedó adentro y quién afuera del cercado. Es el trasfondo agrario de la Zona Bananera que el atlas trabaja con Almanza y Granados."
+    },
+    {
+      "id": "keeganhofman",
+      "k": "obra",
+      "t": "The Caribbean before Columbus",
+      "a": "William F. Keegan y Corinne L. Hofman",
+      "y": "2017",
+      "f": [
+        "memoria",
+        "colonialidad"
+      ],
+      "l": "jamaica",
+      "tr": "anglófono (EE.UU./Países Bajos)",
+      "ap": "Siete mil años de poblamiento archipiélico antes de 1492, contados como historia de navegación y no como prehistoria estática. El atlas piensa el agua como vía; aquí está la evidencia arqueológica de que lo fue mucho antes de la colonia."
+    },
+    {
+      "id": "atkinsonearliest",
+      "k": "obra",
+      "t": "The Earliest Inhabitants: The Dynamics of the Jamaican Taíno",
+      "a": "Lesley-Gail Atkinson (ed.)",
+      "y": "2006",
+      "f": [
+        "memoria",
+        "colonialidad"
+      ],
+      "l": "jamaica",
+      "tr": "anglófono (Jamaica)",
+      "ap": "Arqueología taína hecha desde Jamaica y publicada por la UWI, contra el lugar común de que la isla quedó vacía de indígenas antes de la llegada africana. Es la contraparte insular del trabajo de Whitehead sobre los caribes del continente."
     }
   ],
   "relaciones": [
@@ -5666,6 +6101,960 @@
       "b": "zambrana",
       "tipo": "resonancia",
       "fuente": "Comparten lugar (Puerto Rico) y el fenómeno Colonialidad: ambas leen la administración colonial estadounidense sobre la isla desde ángulos distintos (raza cultural vs. deuda). Por corroborar el vínculo directo."
+    },
+    {
+      "a": "williamscapitalismo",
+      "b": "james",
+      "tipo": "resonancia",
+      "fuente": "Williams y James se formaron juntos en Trinidad y el libro de 1944 discute de frente Los jacobinos negros: la misma revolución, leída desde la contabilidad del azúcar en vez de la insurrección. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "robinsonmarxismo",
+      "b": "williamscapitalismo",
+      "tipo": "resonancia",
+      "fuente": "Robinson toma de Williams la premisa de que la acumulación europea se montó sobre la esclavitud, y le reprocha haberse quedado en la economía sin nombrar la raza. Cita verificada en el ejemplar (13 menciones)."
+    },
+    {
+      "a": "rediker",
+      "b": "williamscapitalismo",
+      "tipo": "resonancia",
+      "fuente": "Rediker reconstruye en el barco negrero la maquinaria que Williams describió en el balance comercial. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "benitez",
+      "b": "williamscapitalismo",
+      "tipo": "resonancia",
+      "fuente": "La máquina de plantación de Benítez Rojo presupone la tesis de Williams sobre el azúcar como motor del capital atlántico. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "mintzarea",
+      "b": "williamscapitalismo",
+      "tipo": "resonancia",
+      "fuente": "Al definir el Caribe como área sociocultural, Mintz apoya en Williams el argumento de la plantación como matriz económica común. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "knight_genesisnacionalismo",
+      "b": "williamscapitalismo",
+      "tipo": "resonancia",
+      "fuente": "Knight organiza su síntesis histórica sobre la periodización económica que Williams estableció. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "bollandbelize",
+      "b": "williamscapitalismo",
+      "tipo": "resonancia",
+      "fuente": "Bolland aplica a Belice la pregunta de Williams: qué hizo el capital cuando el trabajo forzado dejó de convenirle. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "hintzen",
+      "b": "williamscapitalismo",
+      "tipo": "resonancia",
+      "fuente": "Hintzen lee la movilización racial de las élites poscoloniales como continuación del arreglo económico que Williams describió. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "fuentesdispossessed",
+      "b": "williamscapitalismo",
+      "tipo": "resonancia",
+      "fuente": "Fuentes trabaja el archivo esclavista de Barbados con la economía política de Williams como telón de fondo. Cita verificada en el ejemplar (3 menciones)."
+    },
+    {
+      "a": "goldbergabolition",
+      "b": "williamscapitalismo",
+      "tipo": "resonancia",
+      "fuente": "Goldberg discute la abolición como acto jurídico partiendo de la objeción económica de Williams al relato humanitario. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "shellerconsuming",
+      "b": "williamscapitalismo",
+      "tipo": "resonancia",
+      "fuente": "Sheller sigue el consumo caribeño desde el azúcar hasta el turismo por la vía que abrió Williams. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "roberts",
+      "b": "wynterblackmetamorphosis",
+      "tipo": "resonancia",
+      "fuente": "Roberts apoya en Wynter su idea de la libertad como fuga: el cimarronaje como acto de indigenización, no de retorno. Cita verificada en el ejemplar (3 menciones)."
+    },
+    {
+      "a": "rifkinfictions",
+      "b": "wynterblackmetamorphosis",
+      "tipo": "resonancia",
+      "fuente": "Rifkin usa la noción wynteriana de nuevos nativos para pensar juntas negritud e indigeneidad. Cita verificada en el ejemplar (3 menciones)."
+    },
+    {
+      "a": "wynterblackmetamorphosis",
+      "b": "henrycaliban",
+      "tipo": "resonancia",
+      "fuente": "Comparten el fenómeno Creolización / oralitura. Por corroborar el vínculo directo."
+    },
+    {
+      "a": "brathwaitearchipelago",
+      "b": "mgsmithplural",
+      "tipo": "disonancia",
+      "fuente": "La tesis de la sociedad criolla de Brathwaite se formuló contra el modelo de Smith: donde Smith ve compartimentos que solo la fuerza mantiene juntos, Brathwaite ve un proceso de mezcla que ya ocurrió. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "rtsmithmatrifocal",
+      "b": "mgsmithplural",
+      "tipo": "disonancia",
+      "fuente": "Raymond T. Smith objeta de frente a su homónimo: el pluralismo institucional no explica el parentesco afrocaribeño, que él lee como sistema estratificado y no como cultura aparte. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "mgsmithplural",
+      "b": "clarkemymother",
+      "tipo": "resonancia",
+      "fuente": "Smith discute el material jamaiquino de Edith Clarke para sostener que las tres comunidades responden a órdenes normativos distintos. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "mgsmithplural",
+      "b": "rebeldestiny",
+      "tipo": "resonancia",
+      "fuente": "Smith se apoya en la etnografía de los Herskovits entre los cimarrones de Guayana para su idea de secciones culturales. Vínculo verificado por lectura; falta precisar el pasaje."
+    },
+    {
+      "a": "wilsoncrabantics",
+      "b": "mgsmithplural",
+      "tipo": "resonancia",
+      "fuente": "Wilson construye respetabilidad y reputación como alternativa al pluralismo de Smith, con el que discute explícitamente. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "hintzen",
+      "b": "mgsmithplural",
+      "tipo": "resonancia",
+      "fuente": "Hintzen retoma el pluralismo de Smith para explicar la política racial de Guyana y Trinidad. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "callaloonation",
+      "b": "mgsmithplural",
+      "tipo": "resonancia",
+      "fuente": "Khan discute el modelo plural al pensar la mezcla indoantillana como metáfora culinaria. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "gonzalezsojourners",
+      "b": "mgsmithplural",
+      "tipo": "resonancia",
+      "fuente": "González usa la categoría de sociedad plural para situar la etnogénesis garífuna. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "trouillot",
+      "b": "mgsmithplural",
+      "tipo": "resonancia",
+      "fuente": "Trouillot inventaría el pluralismo de Smith entre los marcos que hicieron del Caribe una frontera abierta de la teoría antropológica. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "mintzarea",
+      "b": "mgsmithplural",
+      "tipo": "disonancia",
+      "fuente": "El área sociocultural de Mintz y la sociedad plural de Smith son dos respuestas incompatibles a la misma pregunta: si lo que une al Caribe es una historia común o solo la coacción de un mercado. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "rtsmithmatrifocal",
+      "b": "clarkemymother",
+      "tipo": "resonancia",
+      "fuente": "Smith reconoce en Clarke el trabajo que estableció el objeto: la familia jamaiquina descrita desde adentro y no como carencia. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "rtsmithmatrifocal",
+      "b": "workercane",
+      "tipo": "resonancia",
+      "fuente": "Smith cruza su modelo del hogar con la historia de vida del cortador de caña puertorriqueño de Mintz. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "besson",
+      "b": "rtsmithmatrifocal",
+      "tipo": "resonancia",
+      "fuente": "Besson discute la matrifocalidad de Smith al reconstruir el parentesco y la tierra familiar en Martha Brae. Cita verificada en el ejemplar (4 menciones)."
+    },
+    {
+      "a": "womenancestors",
+      "b": "rtsmithmatrifocal",
+      "tipo": "resonancia",
+      "fuente": "Kerns lee el parentesco garífuna con la categoría de matrifocalidad de Smith. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "mohammed_generosrealidades",
+      "b": "rtsmithmatrifocal",
+      "tipo": "resonancia",
+      "fuente": "El volumen feminista de la UWI revisa críticamente la matrifocalidad de Smith. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "downtownladies",
+      "b": "rtsmithmatrifocal",
+      "tipo": "resonancia",
+      "fuente": "Ulysse sitúa a las comerciantes jamaiquinas en la discusión sobre matrifocalidad que abrió Smith. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "mintzarea",
+      "b": "clarkemymother",
+      "tipo": "resonancia",
+      "fuente": "Mintz cuenta el estudio de Clarke entre los trabajos que hicieron del Caribe un área comparable. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "besson",
+      "b": "clarkemymother",
+      "tipo": "resonancia",
+      "fuente": "Besson vuelve sobre las comunidades jamaiquinas de Clarke cuarenta años después. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "olwigstjohn",
+      "b": "clarkemymother",
+      "tipo": "resonancia",
+      "fuente": "Olwig apoya en Clarke la lectura del hogar afrocaribeño como institución con historia propia. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "womenancestors",
+      "b": "clarkemymother",
+      "tipo": "resonancia",
+      "fuente": "Kerns cita a Clarke como precedente del parentesco centrado en las mujeres. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "modernblackness",
+      "b": "clarkemymother",
+      "tipo": "resonancia",
+      "fuente": "Deborah Thomas rastrea en Clarke la construcción académica de la familia jamaiquina que su libro discute. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "mohammed_generosrealidades",
+      "b": "clarkemymother",
+      "tipo": "resonancia",
+      "fuente": "El feminismo caribeño de la UWI reivindica a Clarke como su antecesora en la isla. Cita verificada en el ejemplar (3 menciones)."
+    },
+    {
+      "a": "barrowfamily",
+      "b": "clarkemymother",
+      "tipo": "resonancia",
+      "fuente": "Barrow abre su balance con Clarke: el estudio que fundó el campo que ella somete a crítica. Cita verificada en el ejemplar (20 menciones)."
+    },
+    {
+      "a": "barrowfamily",
+      "b": "rtsmithmatrifocal",
+      "tipo": "resonancia",
+      "fuente": "Barrow discute la matrifocalidad de Raymond T. Smith como uno de los modelos dominantes del campo. Cita verificada en el ejemplar (8 menciones)."
+    },
+    {
+      "a": "barrowfamily",
+      "b": "mgsmithplural",
+      "tipo": "resonancia",
+      "fuente": "Barrow sitúa el pluralismo de M. G. Smith entre los marcos que organizaron el estudio de la familia caribeña. Cita verificada en el ejemplar (4 menciones)."
+    },
+    {
+      "a": "barrowfamily",
+      "b": "wilsoncrabantics",
+      "tipo": "resonancia",
+      "fuente": "Barrow retoma respetabilidad y reputación de Wilson para leer las normas del hogar. Vínculo verificado por lectura; falta precisar el pasaje."
+    },
+    {
+      "a": "barrowfamily",
+      "b": "reddock",
+      "tipo": "resonancia",
+      "fuente": "Barrow incorpora el trabajo de Reddock sobre mujeres y economía trinitense a su revisión del campo. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "kingisland",
+      "b": "barrowfamily",
+      "tipo": "resonancia",
+      "fuente": "King parte del balance de Barrow para pensar la sexualidad caribeña más allá del parentesco. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "mohammed_generosrealidades",
+      "b": "barrowfamily",
+      "tipo": "resonancia",
+      "fuente": "Ambas editaron desde la UWI los dos balances del pensamiento feminista caribeño de los noventa. Cita verificada en el ejemplar (5 menciones)."
+    },
+    {
+      "a": "pricefirst",
+      "b": "mintzpricebirth",
+      "tipo": "resonancia",
+      "fuente": "First-Time desarrolla en el terreno saramaka la hipótesis que Price acababa de formular con Mintz. Vínculo verificado por lectura; falta precisar el pasaje."
+    },
+    {
+      "a": "peasantscapital",
+      "b": "mintzpricebirth",
+      "tipo": "resonancia",
+      "fuente": "Trouillot discute la creolización rápida de Mintz y Price al historiar el campesinado dominiqués. Vínculo verificado por lectura; falta precisar el pasaje."
+    },
+    {
+      "a": "travelstooy",
+      "b": "mintzpricebirth",
+      "tipo": "resonancia",
+      "fuente": "Price vuelve treinta años después sobre su propia tesis de la creación cultural acelerada. Cita verificada en el ejemplar (3 menciones)."
+    },
+    {
+      "a": "olwigstjohn",
+      "b": "mintzpricebirth",
+      "tipo": "resonancia",
+      "fuente": "Olwig lee la adaptación cultural en St. John con el marco de Mintz y Price. Vínculo verificado por lectura; falta precisar el pasaje."
+    },
+    {
+      "a": "besson",
+      "b": "mintzpricebirth",
+      "tipo": "resonancia",
+      "fuente": "Besson apoya en Mintz y Price la idea de que la cultura afrocaribeña se hizo aquí y no se trajo intacta. Cita verificada en el ejemplar (3 menciones)."
+    },
+    {
+      "a": "brownreaper",
+      "b": "mintzpricebirth",
+      "tipo": "resonancia",
+      "fuente": "Brown parte de la creación cultural bajo esclavitud que describieron Mintz y Price. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "creolenieworleans",
+      "b": "mintzpricebirth",
+      "tipo": "resonancia",
+      "fuente": "El volumen sobre Nueva Orleans criolla usa el marco de Mintz y Price para leer la americanización. Vínculo verificado por lectura; falta precisar el pasaje."
+    },
+    {
+      "a": "robinsonmarxismo",
+      "b": "mintzpricebirth",
+      "tipo": "resonancia",
+      "fuente": "Robinson cita a Mintz y Price al describir la formación cultural de la tradición radical negra. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "mintzpricebirth",
+      "b": "rebeldestiny",
+      "tipo": "disonancia",
+      "fuente": "Mintz y Price escriben contra el supuesto de los Herskovits: no hay supervivencias africanas que rastrear sino instituciones nuevas creadas a toda prisa por gente que ni siquiera compartía lengua. Vínculo verificado por lectura; falta precisar el pasaje."
+    },
+    {
+      "a": "trouillottransformaciones",
+      "b": "trouillot",
+      "tipo": "resonancia",
+      "fuente": "El libro de 2003 desarrolla el diagnóstico que Trouillot había ensayado once años antes sobre el Caribe como frontera abierta de la teoría. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "trouillottransformaciones",
+      "b": "peasantscapital",
+      "tipo": "resonancia",
+      "fuente": "Trouillot vuelve sobre su propio trabajo dominiqués para ilustrar los límites de la etnografía de área. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "trouillottransformaciones",
+      "b": "mintz",
+      "tipo": "resonancia",
+      "fuente": "Trouillot discute el comparatismo de Mintz como el mejor intento de la disciplina por escapar del nicho salvaje. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "trouillottransformaciones",
+      "b": "cesaire",
+      "tipo": "resonancia",
+      "fuente": "Trouillot apoya en el Discurso sobre el colonialismo su lectura de la antropología como saber de la expansión europea. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "bonilla",
+      "b": "trouillottransformaciones",
+      "tipo": "resonancia",
+      "fuente": "Bonilla usa la crítica de Trouillot al Estado-nación como horizonte único para pensar la soberanía no soberana. Cita verificada en el ejemplar (7 menciones)."
+    },
+    {
+      "a": "modernblackness",
+      "b": "trouillottransformaciones",
+      "tipo": "resonancia",
+      "fuente": "Deborah Thomas retoma la globalización tal como Trouillot la describe para leer la Jamaica contemporánea. Cita verificada en el ejemplar (3 menciones)."
+    },
+    {
+      "a": "palmiengangas",
+      "b": "trouillottransformaciones",
+      "tipo": "resonancia",
+      "fuente": "Palmié discute la crítica de Trouillot a las categorías antropológicas al pensar con ngangas. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "islandfutures",
+      "b": "trouillottransformaciones",
+      "tipo": "resonancia",
+      "fuente": "Sheller retoma de Trouillot la idea de que la globalización no es nueva para el Caribe, sino su condición de origen. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "morenofraginals",
+      "b": "ortiz",
+      "tipo": "resonancia",
+      "fuente": "El ingenio es la contraparte material del contrapunteo de Ortiz: donde Ortiz opone azúcar y tabaco como figuras culturales, Moreno Fraginals las cuenta en toneladas y en cuerpos. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "morenofraginals",
+      "b": "williamscapitalismo",
+      "tipo": "resonancia",
+      "fuente": "Moreno Fraginals trabaja la misma tesis de Williams desde el archivo cubano: el azúcar como motor de acumulación y no como atraso colonial. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "ferrerfreedomsmirror",
+      "b": "morenofraginals",
+      "tipo": "resonancia",
+      "fuente": "Ferrer reconstruye el auge azucarero cubano de la era revolucionaria sobre las series de Moreno Fraginals. Vínculo verificado por lectura; falta precisar el pasaje."
+    },
+    {
+      "a": "johnson_climatecuba",
+      "b": "morenofraginals",
+      "tipo": "resonancia",
+      "fuente": "Johnson usa los datos de zafra de Moreno Fraginals para cruzarlos con los desastres climáticos. Vínculo verificado por lectura; falta precisar el pasaje."
+    },
+    {
+      "a": "kutzinskisugar",
+      "b": "morenofraginals",
+      "tipo": "resonancia",
+      "fuente": "Kutzinski lee la erótica del azúcar cubano sobre la historia económica de Moreno Fraginals. Vínculo verificado por lectura; falta precisar el pasaje."
+    },
+    {
+      "a": "quintero",
+      "b": "morenofraginals",
+      "tipo": "resonancia",
+      "fuente": "Quintero Rivera apoya en El ingenio la historia material sobre la que monta su análisis de las músicas mulatas. Vínculo verificado por lectura; falta precisar el pasaje."
+    },
+    {
+      "a": "schwartz_seaofstorms",
+      "b": "morenofraginals",
+      "tipo": "resonancia",
+      "fuente": "Schwartz cruza la historia de los huracanes con la economía azucarera que documentó Moreno Fraginals. Vínculo verificado por lectura; falta precisar el pasaje."
+    },
+    {
+      "a": "knight_genesisnacionalismo",
+      "b": "morenofraginals",
+      "tipo": "resonancia",
+      "fuente": "Knight toma de Moreno Fraginals la periodización del azúcar cubano. Vínculo verificado por lectura; falta precisar el pasaje."
+    },
+    {
+      "a": "meeks_postcolonial",
+      "b": "scottconscripts",
+      "tipo": "resonancia",
+      "fuente": "Meeks discute la lectura trágica de la descolonización de David Scott desde la experiencia de quien vivió la revolución granadina. Cita verificada en el ejemplar (11 menciones)."
+    },
+    {
+      "a": "meeks_postcolonial",
+      "b": "quinnblackpower",
+      "tipo": "resonancia",
+      "fuente": "Meeks vuelve sobre el ciclo del Poder Negro caribeño que Quinn compiló. Cita verificada en el ejemplar (8 menciones)."
+    },
+    {
+      "a": "meeks_postcolonial",
+      "b": "politicallife",
+      "tipo": "resonancia",
+      "fuente": "Meeks y Deborah Thomas piensan la misma pregunta: qué política queda después de que el proyecto nacional se agotó. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "meeks_postcolonial",
+      "b": "bonilla",
+      "tipo": "resonancia",
+      "fuente": "Meeks retoma la soberanía no soberana de Bonilla al preguntarse qué imaginación política sigue disponible. Cita verificada en el ejemplar (5 menciones)."
+    },
+    {
+      "a": "meeks_postcolonial",
+      "b": "james",
+      "tipo": "resonancia",
+      "fuente": "Meeks lee la herencia de C. L. R. James como archivo todavía activo del radicalismo antillano. Cita verificada en el ejemplar (14 menciones)."
+    },
+    {
+      "a": "meeks_postcolonial",
+      "b": "grenaderevolution",
+      "tipo": "resonancia",
+      "fuente": "Meeks estuvo en Granada y discute el balance colectivo que editó Wendy Grenade. Cita verificada en el ejemplar (19 menciones)."
+    },
+    {
+      "a": "meeks_postcolonial",
+      "b": "puriradical",
+      "tipo": "resonancia",
+      "fuente": "Meeks continúa el inventario de herencias radicales que Puri había compilado doce años antes. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "puriradical",
+      "b": "scottconscripts",
+      "tipo": "resonancia",
+      "fuente": "El volumen de Puri organiza sus lecturas alrededor de la tragedia colonial que Scott formuló. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "grenaderevolution",
+      "b": "james",
+      "tipo": "resonancia",
+      "fuente": "El volumen granadino discute la herencia de James en la formación política de Maurice Bishop. Cita verificada en el ejemplar (6 menciones)."
+    },
+    {
+      "a": "grenaderevolution",
+      "b": "trouillothaitistate",
+      "tipo": "resonancia",
+      "fuente": "Grenade y sus autores comparan el desenlace granadino con el análisis de Trouillot sobre el Estado contra la nación en Haití. Vínculo verificado por lectura; falta precisar el pasaje."
+    },
+    {
+      "a": "quinnblackpower",
+      "b": "grenaderevolution",
+      "tipo": "resonancia",
+      "fuente": "El volumen de Quinn sobre el Poder Negro caribeño desemboca en el caso granadino. Cita verificada en el ejemplar (8 menciones)."
+    },
+    {
+      "a": "oostindiedecolonising",
+      "b": "steward",
+      "tipo": "resonancia",
+      "fuente": "Comparten el fenómeno de fondo. Por corroborar el vínculo directo."
+    },
+    {
+      "a": "vanderpijl_equaliberty",
+      "b": "oostindiedecolonising",
+      "tipo": "resonancia",
+      "fuente": "Van der Pijl y Guadeloupe parten de la historia de la no-descolonización que Oostindie y Klinkers documentaron. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "quinnblackpower",
+      "b": "oostindiedecolonising",
+      "tipo": "resonancia",
+      "fuente": "El capítulo curazoleño del volumen de Quinn se apoya en Oostindie para explicar el estatus del reino. Cita verificada en el ejemplar (4 menciones)."
+    },
+    {
+      "a": "schwartz_seaofstorms",
+      "b": "oostindiedecolonising",
+      "tipo": "resonancia",
+      "fuente": "Schwartz usa a Oostindie para el tramo neerlandés de su historia de la cuenca. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "hoeftesuriname",
+      "b": "oostindiedecolonising",
+      "tipo": "resonancia",
+      "fuente": "Hoefte discute con Oostindie la vía surinamesa a la independencia, la única del reino que sí se consumó. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "kloosterrealm",
+      "b": "hall_slavesocietydanish",
+      "tipo": "resonancia",
+      "fuente": "Klooster y Oostindie comparan el Atlántico neerlandés con el sistema esclavista danés que estudió Neville Hall. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "kloosterrealm",
+      "b": "whiteheadtiger",
+      "tipo": "resonancia",
+      "fuente": "El estudio del segundo Atlántico neerlandés se apoya en Whitehead para la costa guayanesa y sus pueblos caribes. Cita verificada en el ejemplar (6 menciones)."
+    },
+    {
+      "a": "kloosterrealm",
+      "b": "pricefirst",
+      "tipo": "resonancia",
+      "fuente": "Klooster y Oostindie citan a Price para el cimarronaje surinamés dentro del sistema neerlandés. Vínculo verificado por lectura; falta precisar el pasaje."
+    },
+    {
+      "a": "kloosterrealm",
+      "b": "mintzpricebirth",
+      "tipo": "resonancia",
+      "fuente": "El volumen usa la creolización acelerada de Mintz y Price para leer las plantaciones neerlandesas. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "hoeftesuriname",
+      "b": "rebeldestiny",
+      "tipo": "resonancia",
+      "fuente": "Hoefte parte de la etnografía de los Herskovits entre los cimarrones surinameses. Vínculo verificado por lectura; falta precisar el pasaje."
+    },
+    {
+      "a": "hoeftesuriname",
+      "b": "rainforestwarriors",
+      "tipo": "resonancia",
+      "fuente": "Hoefte sigue hasta el litigio saramaka que narra Richard Price la larga disputa por la tierra en Surinam. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "hoeftesuriname",
+      "b": "bestlevitt",
+      "tipo": "resonancia",
+      "fuente": "Hoefte lee la economía surinamesa de la bauxita con la teoría de la economía de plantación. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "hoeftesuriname",
+      "b": "mgsmithplural",
+      "tipo": "resonancia",
+      "fuente": "Hoefte usa el pluralismo de Smith para las fracturas étnicas surinamesas. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "hoeftetrajectories",
+      "b": "hoeftesuriname",
+      "tipo": "resonancia",
+      "fuente": "El volumen sobre las tres Guayanas retoma y amplía el trabajo previo de Hoefte sobre Surinam. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "hoeftetrajectories",
+      "b": "hintzen",
+      "tipo": "resonancia",
+      "fuente": "Los editores discuten el análisis de Hintzen sobre la movilización racial de las élites guyanesas. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "hoeftetrajectories",
+      "b": "rainforestwarriors",
+      "tipo": "resonancia",
+      "fuente": "El caso saramaka aparece como precedente jurídico de los conflictos territoriales guayaneses. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "hoeftetrajectories",
+      "b": "quinnblackpower",
+      "tipo": "resonancia",
+      "fuente": "El volumen sitúa el Poder Negro guyanés en la periodización de Quinn. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "hoeftetrajectories",
+      "b": "mgsmithplural",
+      "tipo": "resonancia",
+      "fuente": "El pluralismo de Smith sigue siendo el marco discutido para leer las Guayanas. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "bestlevitt",
+      "b": "williamscapitalismo",
+      "tipo": "resonancia",
+      "fuente": "El New World Group parte de Williams: la economía de plantación como estructura persistente y no como etapa que la independencia superó. Cita verificada en el ejemplar (3 menciones)."
+    },
+    {
+      "a": "austinfearblack",
+      "b": "bestlevitt",
+      "tipo": "resonancia",
+      "fuente": "Austin sitúa a Lloyd Best y al New World Group en la red intelectual antillana que se reunió en Montreal. Cita verificada en el ejemplar (3 menciones)."
+    },
+    {
+      "a": "duboisturits",
+      "b": "james",
+      "tipo": "resonancia",
+      "fuente": "La síntesis de Dubois y Turits pone la revolución haitiana de James en el centro de la historia caribeña. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "duboisturits",
+      "b": "mintz",
+      "tipo": "resonancia",
+      "fuente": "Dubois y Turits organizan su relato con la plantación de Mintz como matriz de la región. Cita verificada en el ejemplar (5 menciones)."
+    },
+    {
+      "a": "duboisturits",
+      "b": "trouillothaitistate",
+      "tipo": "resonancia",
+      "fuente": "Dubois y Turits siguen a Trouillot para el tramo duvalierista. Vínculo verificado por lectura; falta precisar el pasaje."
+    },
+    {
+      "a": "duboisturits",
+      "b": "knight_genesisnacionalismo",
+      "tipo": "resonancia",
+      "fuente": "Dubois y Turits discuten la síntesis previa de Knight sobre el nacionalismo fragmentado. Vínculo verificado por lectura; falta precisar el pasaje."
+    },
+    {
+      "a": "duboisturits",
+      "b": "lightfoot",
+      "tipo": "resonancia",
+      "fuente": "Dubois y Turits usan el trabajo de Lightfoot sobre Antigua para el después de la emancipación. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "duboisturits",
+      "b": "clarkemymother",
+      "tipo": "resonancia",
+      "fuente": "Dubois y Turits recurren a Clarke para la vida familiar jamaiquina del siglo XX. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "duboisturits",
+      "b": "williamscapitalismo",
+      "tipo": "resonancia",
+      "fuente": "Dubois y Turits discuten la tesis de Williams sobre las causas económicas de la abolición. Cita verificada en el ejemplar (8 menciones)."
+    },
+    {
+      "a": "duboisturits",
+      "b": "smithredblack",
+      "tipo": "resonancia",
+      "fuente": "Dubois y Turits siguen a Matthew J. Smith para el Haití que va de la ocupación a Duvalier. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "austinfearblack",
+      "b": "james",
+      "tipo": "resonancia",
+      "fuente": "C. L. R. James es una de las presencias centrales del Congreso de Escritores Negros que Austin reconstruye. Cita verificada en el ejemplar (8 menciones)."
+    },
+    {
+      "a": "austinfearblack",
+      "b": "rodney",
+      "tipo": "resonancia",
+      "fuente": "La prohibición de entrada a Walter Rodney en Jamaica y su paso por Montreal son episodios del mismo circuito que Austin narra. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "austinfearblack",
+      "b": "scottconscripts",
+      "tipo": "resonancia",
+      "fuente": "Austin discute con Scott la manera de contar la derrota del radicalismo antillano. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "austinfearblack",
+      "b": "glissant",
+      "tipo": "resonancia",
+      "fuente": "Austin apoya en el Discurso antillano su lectura de la conciencia caribeña en la diáspora. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "austinfearblack",
+      "b": "james_bannerethiopia",
+      "tipo": "resonancia",
+      "fuente": "Winston James y Austin trazan el mismo mapa del radicalismo antillano en Norteamérica, uno en Nueva York y el otro en Montreal. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "smithredblack",
+      "b": "james",
+      "tipo": "resonancia",
+      "fuente": "Matthew J. Smith lee el radicalismo haitiano del siglo XX contra el precedente de James. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "smithredblack",
+      "b": "james_bannerethiopia",
+      "tipo": "resonancia",
+      "fuente": "Smith cruza el radicalismo haitiano con la red antillana en Estados Unidos que documentó Winston James. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "smithredblack",
+      "b": "knight_genesisnacionalismo",
+      "tipo": "resonancia",
+      "fuente": "Smith sitúa el caso haitiano en la periodización de Knight. Vínculo verificado por lectura; falta precisar el pasaje."
+    },
+    {
+      "a": "dubuissonhaiti",
+      "b": "smithredblack",
+      "tipo": "resonancia",
+      "fuente": "Dubuisson apoya en Smith la historia intelectual del Haití previo a Duvalier. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "munrohaitirising",
+      "b": "smithredblack",
+      "tipo": "resonancia",
+      "fuente": "El volumen sobre el terremoto usa a Smith para el trasfondo político del siglo XX haitiano. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "schuller_killingkindness",
+      "b": "smithredblack",
+      "tipo": "resonancia",
+      "fuente": "Schuller recurre a Smith para explicar de dónde viene la desconfianza haitiana hacia la ayuda internacional. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "becklessavingsouls",
+      "b": "james",
+      "tipo": "resonancia",
+      "fuente": "Beckles y Shepherd sitúan a James entre los historiadores caribeños que desmontaron el relato abolicionista británico. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "becklessavingsouls",
+      "b": "rodney",
+      "tipo": "resonancia",
+      "fuente": "El volumen retoma de Rodney la lectura del subdesarrollo africano como efecto de la trata. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "becklessavingsouls",
+      "b": "williamscapitalismo",
+      "tipo": "resonancia",
+      "fuente": "El bicentenario se discute enteramente sobre la tesis de Williams acerca de por qué terminó la trata. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "zips_nannysasafo",
+      "b": "becklessavingsouls",
+      "tipo": "resonancia",
+      "fuente": "Zips cita el volumen de Beckles y Shepherd para la dimensión africana de la experiencia cimarrona. Vínculo verificado por lectura; falta precisar el pasaje."
+    },
+    {
+      "a": "araujo",
+      "b": "becklessavingsouls",
+      "tipo": "resonancia",
+      "fuente": "Comparten el fenómeno Capitalismo racial. Por corroborar el vínculo directo."
+    },
+    {
+      "a": "headleyreparaciones",
+      "b": "becklessavingsouls",
+      "tipo": "resonancia",
+      "fuente": "Comparten el fenómeno Capitalismo racial. Por corroborar el vínculo directo."
+    },
+    {
+      "a": "kalefragments",
+      "b": "williamscapitalismo",
+      "tipo": "resonancia",
+      "fuente": "Kale extiende a la indentura india la pregunta de Williams sobre qué hace el capital cuando el trabajo forzado se vuelve impresentable. Cita verificada en el ejemplar (14 menciones)."
+    },
+    {
+      "a": "kalefragments",
+      "b": "mintz",
+      "tipo": "resonancia",
+      "fuente": "Kale trabaja el azúcar antillano con la economía política de la plantación de Mintz. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "kalefragments",
+      "b": "brereton_racerelationstrinidad",
+      "tipo": "resonancia",
+      "fuente": "Kale discute la historiografía trinitense de Brereton sobre las relaciones raciales tras la emancipación. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "kingisland",
+      "b": "kalefragments",
+      "tipo": "resonancia",
+      "fuente": "King cita a Kale para el trasfondo de la migración india en el Caribe anglófono. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "shepherdmaharani",
+      "b": "reddock",
+      "tipo": "resonancia",
+      "fuente": "Shepherd y Reddock reconstruyen desde Trinidad y Jamaica la misma historia del trabajo femenino indoantillano. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "shepherdmaharani",
+      "b": "peasantscapital",
+      "tipo": "resonancia",
+      "fuente": "Shepherd usa el marco de economía política de Trouillot para leer el sistema de indentura. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "shepherdmaharani",
+      "b": "bahadurcoolie",
+      "tipo": "resonancia",
+      "fuente": "Comparten el fenómeno Cuerpo, género y erótica. Por corroborar el vínculo directo."
+    },
+    {
+      "a": "putnamradical",
+      "b": "looklaichinese",
+      "tipo": "resonancia",
+      "fuente": "Putnam recurre al archivo documental de Look Lai para la presencia china en la circulación antillana. Vínculo verificado por lectura; falta precisar el pasaje."
+    },
+    {
+      "a": "looklaichinese",
+      "b": "callaloonation",
+      "tipo": "resonancia",
+      "fuente": "Comparten el fenómeno Creolización / oralitura. Por corroborar el vínculo directo."
+    },
+    {
+      "a": "looklaichinese",
+      "b": "ramsaranlewis",
+      "tipo": "resonancia",
+      "fuente": "Comparten el fenómeno Creolización / oralitura. Por corroborar el vínculo directo."
+    },
+    {
+      "a": "putnamradical",
+      "b": "harpellecostarica",
+      "tipo": "resonancia",
+      "fuente": "Putnam apoya en Harpelle el tramo costarricense de la circulación antillana del Caribe occidental. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "putnamradical",
+      "b": "bourgoisethnicity",
+      "tipo": "resonancia",
+      "fuente": "Putnam usa la etnografía bananera de Bourgois para la organización racial del trabajo en Limón y Bocas del Toro. Cita verificada en el ejemplar (3 menciones)."
+    },
+    {
+      "a": "putnamradical",
+      "b": "chevannes",
+      "tipo": "resonancia",
+      "fuente": "Putnam sigue con Chevannes la formación del rastafarismo dentro de esa circulación migratoria. Vínculo verificado por lectura; falta precisar el pasaje."
+    },
+    {
+      "a": "putnamradical",
+      "b": "james_bannerethiopia",
+      "tipo": "resonancia",
+      "fuente": "Putnam y Winston James reconstruyen la misma diáspora antillana en el norte, ella desde el Caribe occidental. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "corinealdipanama",
+      "b": "putnamradical",
+      "tipo": "resonancia",
+      "fuente": "Corinealdi parte del espacio migratorio circuncaribeño que Putnam describió. Vínculo verificado por lectura; falta precisar el pasaje."
+    },
+    {
+      "a": "floresvillalobos",
+      "b": "putnamradical",
+      "tipo": "resonancia",
+      "fuente": "Flores-Villalobos sitúa el trabajo femenino antillano del canal en el marco regional de Putnam. Vínculo verificado por lectura; falta precisar el pasaje."
+    },
+    {
+      "a": "crawfordturtlemen",
+      "b": "putnamradical",
+      "tipo": "resonancia",
+      "fuente": "Crawford lee la pesca de tortuga dentro de la misma circulación caribeña occidental. Vínculo verificado por lectura; falta precisar el pasaje."
+    },
+    {
+      "a": "harpellecostarica",
+      "b": "bourgoisethnicity",
+      "tipo": "resonancia",
+      "fuente": "Harpelle discute la etnografía de Bourgois sobre la división étnica del trabajo bananero. Cita verificada en el ejemplar (8 menciones)."
+    },
+    {
+      "a": "harpellecostarica",
+      "b": "knight_genesisnacionalismo",
+      "tipo": "resonancia",
+      "fuente": "Harpelle sitúa la minoría antillana costarricense en la periodización regional de Knight. Vínculo verificado por lectura; falta precisar el pasaje."
+    },
+    {
+      "a": "corinealdipanama",
+      "b": "harpellecostarica",
+      "tipo": "resonancia",
+      "fuente": "Corinealdi compara el caso panameño con la integración forzada de los antillanos de Limón. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "floresvillalobos",
+      "b": "harpellecostarica",
+      "tipo": "resonancia",
+      "fuente": "Flores-Villalobos usa a Harpelle para el destino de las familias antillanas después del canal. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "bourgoisethnicity",
+      "b": "pricefirst",
+      "tipo": "resonancia",
+      "fuente": "Bourgois discute la etnografía de Price sobre los saramaka al pensar la organización racial del trabajo. Vínculo verificado por lectura; falta precisar el pasaje."
+    },
+    {
+      "a": "bourgoisethnicity",
+      "b": "peasantscapital",
+      "tipo": "resonancia",
+      "fuente": "Bourgois y Trouillot leen la misma economía de enclave desde dos plantaciones distintas. Cita verificada en el ejemplar (4 menciones)."
+    },
+    {
+      "a": "afrocentroam",
+      "b": "bourgoisethnicity",
+      "tipo": "resonancia",
+      "fuente": "England parte de la división étnica del trabajo bananero que documentó Bourgois. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "andersonblackindigenous",
+      "b": "bourgoisethnicity",
+      "tipo": "resonancia",
+      "fuente": "Anderson discute a Bourgois al pensar el activismo garífuna entre lo negro y lo indígena. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "helglibertyequality",
+      "b": "legrandfrontier",
+      "tipo": "resonancia",
+      "fuente": "Helg apoya en LeGrand la historia de la tierra baldía y la frontera agraria del Caribe colombiano. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "rappaportcobarde",
+      "b": "legrandfrontier",
+      "tipo": "resonancia",
+      "fuente": "Rappaport cita a LeGrand para el contexto agrario en el que Fals Borda hizo investigación-acción participativa. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "legrandfrontier",
+      "b": "zonabananera",
+      "tipo": "resonancia",
+      "fuente": "Comparten el fenómeno Capitalismo racial. Por corroborar el vínculo directo."
+    },
+    {
+      "a": "keeganhofman",
+      "b": "whiteheadtiger",
+      "tipo": "resonancia",
+      "fuente": "Keegan y Hofman discuten la etnohistoria caribe de Whitehead para el borde continental del archipiélago. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "keeganhofman",
+      "b": "gonzalezsojourners",
+      "tipo": "resonancia",
+      "fuente": "Keegan y Hofman citan a González para la formación garífuna en San Vicente. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "keeganhofman",
+      "b": "mintz",
+      "tipo": "resonancia",
+      "fuente": "Keegan y Hofman discuten el área sociocultural de Mintz para preguntarse si el archipiélago era una unidad antes de la colonia. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "keeganhofman",
+      "b": "atkinsonearliest",
+      "tipo": "resonancia",
+      "fuente": "Keegan y Hofman usan el volumen jamaiquino de Atkinson para el taíno insular. Cita verificada en el ejemplar (23 menciones)."
+    },
+    {
+      "a": "crawfordturtlemen",
+      "b": "keeganhofman",
+      "tipo": "resonancia",
+      "fuente": "Crawford apoya en Keegan y Hofman la larga historia de navegación y pesca precolombina. Cita verificada en el ejemplar."
+    },
+    {
+      "a": "bollandbelize",
+      "b": "atkinsonearliest",
+      "tipo": "resonancia",
+      "fuente": "Comparten el fenómeno Colonialidad. Por corroborar el vínculo directo."
+    },
+    {
+      "a": "atkinsonearliest",
+      "b": "whiteheadtiger",
+      "tipo": "resonancia",
+      "fuente": "Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo."
     }
   ]
 }
