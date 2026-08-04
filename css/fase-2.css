@@ -129,12 +129,30 @@
   display: block;
 }
 
-/* ── Barra de capas, plegable ── */
+/* ── Capas: control dentro del lienzo ──────────────────────────────
+   Estaban en una caja con borde encima del mapa. Dos problemas.
+
+   Uno medido: la regla del panel lateral seguía en esta hoja, después de
+   la nueva y con la misma especificidad, así que ganaba `column` y las
+   once capas se apilaban. La barra medía 448 px contra un mapa de 419.
+   El control era más alto que la cartografía.
+
+   Otro de composición, que es el de fondo: una caja con borde apilada
+   sobre el mapa lo convierte en la segunda cosa que se ve. En una
+   cartografía los controles van dentro del lienzo, como los botones de
+   zoom, para que el mapa se lea como un objeto único y no como una
+   imagen con una barra de herramientas delante. */
 .atlas__barra {
+  position: absolute;
+  top: var(--space-sm);
+  left: var(--space-sm);
+  z-index: 550;
+  max-width: min(30rem, calc(100% - 2 * var(--space-sm) - 46px));
+  background: rgba(5, 6, 4, 0.86);
+  backdrop-filter: blur(3px);
   border: 1px solid var(--c-border-green);
   border-radius: var(--radius-sm);
-  background: var(--c-surface-a);
-  margin-bottom: var(--space-sm);
+  margin: 0;
 }
 
 .atlas__barra > summary {
@@ -144,34 +162,49 @@
   letter-spacing: 0.16em;
   color: var(--c-green-light);
   cursor: pointer;
-  padding: 0 var(--space-md);
+  padding: 0 var(--space-sm);
   min-height: 44px;
   display: flex;
   align-items: center;
+  gap: 8px;
+  white-space: nowrap;
 }
+
+.atlas__barra > summary::after {
+  content: '▾';
+  font-size: 0.75em;
+  opacity: 0.8;
+}
+
+.atlas__barra[open] > summary::after { content: '▴'; }
 
 .atlas__barra > summary:focus-visible { outline: 2px solid var(--c-orange); outline-offset: 2px; }
 
-/* Una tira que se desliza, nunca once filas apiladas. */
+/* Rejilla compacta: once capas en dos o tres columnas ocupan 3 filas, no
+   11. Cabe dentro del mapa sin taparlo. */
 .atlas .caribe-mapa-filters {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  overscroll-behavior-x: contain;
-  scroll-snap-type: x proximity;
-  gap: 6px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr));
+  gap: 4px;
   margin: 0;
-  padding: 0 var(--space-md) var(--space-sm);
-  justify-content: flex-start;
+  padding: 0 var(--space-sm) var(--space-sm);
+  max-height: 40vh;
+  overflow-y: auto;
+  overscroll-behavior: contain;
 }
 
 .atlas .caribe-mapa-filters .filter-btn {
-  flex: 0 0 auto;
-  scroll-snap-align: start;
+  min-height: 34px;             /* dentro del mapa, la lista es densa */
+  padding: 4px 10px;
   white-space: nowrap;
-  min-height: 44px;             /* WCAG 2.5.8 · objetivo cómodo */
+  justify-content: flex-start;
+  font-size: 11px;
+  letter-spacing: 0.06em;
 }
+
+/* Los controles de zoom de Leaflet se apartan de las capas */
+.atlas__lienzo .leaflet-top.leaflet-left { margin-left: 0; }
+.atlas__lienzo .leaflet-control-zoom { margin-top: 60px !important; }
 
 /* ── Lienzo: el mapa a ancho completo, con la ficha superpuesta ── */
 .atlas__lienzo {
@@ -298,29 +331,6 @@
 
 
 
-/* En columna estrecha las once capas se leen como lista, no como una
-   nube de etiquetas: cada una ocupa su renglón y se alinea a la izquierda. */
-.atlas .caribe-mapa-filters {
-  display: flex;
-  flex-direction: column;
-  gap: 3px;
-  margin-bottom: 0;
-  justify-content: flex-start;
-  min-height: 0;
-  overflow-y: auto;
-  overscroll-behavior: contain;
-}
-
-.atlas .caribe-mapa-filters .filter-btn {
-  width: 100%;
-  justify-content: flex-start;
-  text-align: left;
-  white-space: normal;
-  min-height: 32px;
-  padding: 5px 12px;
-  letter-spacing: 0.08em;
-  flex: 0 0 auto;
-}
 
 .atlas__leyenda > summary,
 .atlas > .mapa-tabla > summary {

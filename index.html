@@ -32,7 +32,7 @@
 <link href="css/components.css?v=41" rel="stylesheet"/>
 <link href="css/animations.css?v=15" rel="stylesheet"/>
 <link href="css/pregon.css?v=1" rel="stylesheet"/>
-<link href="css/fase-2.css?v=3" rel="stylesheet"/>
+<link href="css/fase-2.css?v=4" rel="stylesheet"/>
 <link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet"/>
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EG1GHXLZYM"></script>
@@ -191,7 +191,7 @@
 <h2 class="section-title">El <em>Gran Caribe</em>: una relación de orillas</h2>
 <p class="section-subtitle">El borde costero que configura el mar Caribe forma una unidad geográfica, histórica y política. El Caribe Colombiano es una orilla de ese todo mayor. Una constelación de territorios articulada por el mar.</p>
 </div>
-<div class="atlas"><details class="atlas__barra" open=""><summary>Capas del mapa</summary><div aria-label="Filtrar capas del mapa" class="caribe-mapa-filters" role="group">
+<div class="atlas"><div class="atlas__lienzo"><div aria-label="Mapa interactivo del Gran Caribe" class="caribe-leaflet-map" id="caribe-leaflet-map"></div><details class="atlas__barra" open=""><summary>Capas del mapa</summary><div aria-label="Filtrar capas del mapa" class="caribe-mapa-filters" role="group">
 <button class="filter-btn is-active" data-layer="all" type="button">Todas las capas</button>
 <button class="filter-btn" data-layer="Caribe Colombiano" type="button">Caribe Colombiano</button>
 <button class="filter-btn" data-layer="Caribe insular colombiano" type="button">Insular colombiano</button>
@@ -203,7 +203,7 @@
 <button class="filter-btn" data-layer="Golfo de México" type="button">Golfo de México</button>
 <button class="filter-btn" data-layer="Guyanas" type="button">Guyanas</button>
 <button class="filter-btn" data-layer="Caribe suroriental" type="button">Suroriental</button>
-</div></details><div class="atlas__lienzo"><div aria-label="Mapa interactivo del Gran Caribe" class="caribe-leaflet-map" id="caribe-leaflet-map"></div><p class="atlas__pista">Selecciona un nodo del mapa para ver su ficha.</p><article aria-label="Ficha del territorio seleccionado" class="ficha" hidden=""><div class="ficha__cabecera"><div class="ficha__titulos"><h3 class="ficha__nombre"></h3><p class="ficha__meta"><span class="ficha__territorio"></span><span class="ficha__region"></span></p></div><button aria-label="Cerrar la ficha" class="ficha__cerrar" type="button">×</button></div><div class="ficha__cuerpo"><div class="ficha__col"><p class="ficha__desc"></p></div><div class="ficha__col"><p class="ficha__rotulo">Claves de pensamiento</p><div class="ficha__claves"></div></div><div class="ficha__col"><p class="ficha__rotulo">Formas culturales</p><p class="ficha__cultura"></p></div></div></article></div><details class="atlas__leyenda"><summary>Cómo leer el mapa</summary><div class="caribe-mapa-legend">
+</div></details><p class="atlas__pista">Selecciona un nodo del mapa para ver su ficha.</p><article aria-label="Ficha del territorio seleccionado" class="ficha" hidden=""><div class="ficha__cabecera"><div class="ficha__titulos"><h3 class="ficha__nombre"></h3><p class="ficha__meta"><span class="ficha__territorio"></span><span class="ficha__region"></span></p></div><button aria-label="Cerrar la ficha" class="ficha__cerrar" type="button">×</button></div><div class="ficha__cuerpo"><div class="ficha__col"><p class="ficha__desc"></p></div><div class="ficha__col"><p class="ficha__rotulo">Claves de pensamiento</p><div class="ficha__claves"></div></div><div class="ficha__col"><p class="ficha__rotulo">Formas culturales</p><p class="ficha__cultura"></p></div></div></article></div><details class="atlas__leyenda"><summary>Cómo leer el mapa</summary><div class="caribe-mapa-legend">
 <p class="legend-text">Este mapa es el territorio que habita nuestro logo: la región que delimita el mar Caribe. Cada nodo es un puerto, ciudad o territorio del Gran Caribe; las capas agrupan regiones por su lugar en la unidad caribeña: archipiélagos, costas continentales, Guyanas y Golfo. El mapa dibuja un <strong>pensar archipiélico</strong>, con Édouard Glissant: islas y orillas que se relacionan sin fundirse, una poética de la relación, sobre un <strong>mar histórico</strong>, con Derek Walcott: <em>«the sea is history»</em>, el mar como archivo de la trata, las travesías y las resistencias. <strong>El Caribe Colombiano</strong> aparece destacado como orilla de enunciación del grupo. Haz clic en cada punto para ver su leyenda: historia, cultura popular, figuras y claves de pensamiento.</p>
 <div aria-label="Regiones del Gran Caribe" class="legend-swatches" id="caribe-legend-swatches" role="group"></div>
 </div></details><details class="mapa-tabla">

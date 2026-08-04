@@ -33,7 +33,7 @@
 <link href="css/components.css?v=41" rel="stylesheet"/>
 <link href="css/animations.css?v=15" rel="stylesheet"/>
 <link href="css/pregon.css?v=1" rel="stylesheet"/>
-<link href="css/fase-2.css?v=3" rel="stylesheet"/>
+<link href="css/fase-2.css?v=4" rel="stylesheet"/>
 <link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet"/>
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EG1GHXLZYM"></script>
@@ -192,7 +192,7 @@
 <h2 class="section-title">The <em>Greater Caribbean</em>: a relation of shores</h2>
 <p class="section-subtitle">The coastal border that shapes the Caribbean Sea forms a geographic, historical, and political unit. The Colombian Caribbean is one shore of that larger whole: a constellation of territories joined by the sea.</p>
 </div>
-<div class="atlas"><details class="atlas__barra" open=""><summary>Map layers</summary><div aria-label="Filter map layers" class="caribe-mapa-filters" role="group">
+<div class="atlas"><div class="atlas__lienzo"><div aria-label="Interactive map of the Greater Caribbean" class="caribe-leaflet-map" id="caribe-leaflet-map"></div><details class="atlas__barra" open=""><summary>Map layers</summary><div aria-label="Filter map layers" class="caribe-mapa-filters" role="group">
 <button class="filter-btn is-active" data-layer="all" type="button">All layers</button>
 <button class="filter-btn" data-layer="Caribe Colombiano" type="button">Colombian Caribbean</button>
 <button class="filter-btn" data-layer="Caribe insular colombiano" type="button">Colombian insular</button>
@@ -204,7 +204,7 @@
 <button class="filter-btn" data-layer="Golfo de México" type="button">Gulf of Mexico</button>
 <button class="filter-btn" data-layer="Guyanas" type="button">Guianas</button>
 <button class="filter-btn" data-layer="Caribe suroriental" type="button">Southeastern</button>
-</div></details><div class="atlas__lienzo"><div aria-label="Interactive map of the Greater Caribbean" class="caribe-leaflet-map" id="caribe-leaflet-map"></div><p class="atlas__pista">Select a node on the map to see its entry.</p><article aria-label="Entry for the selected territory" class="ficha" hidden=""><div class="ficha__cabecera"><div class="ficha__titulos"><h3 class="ficha__nombre"></h3><p class="ficha__meta"><span class="ficha__territorio"></span><span class="ficha__region"></span></p></div><button aria-label="Close the entry" class="ficha__cerrar" type="button">×</button></div><div class="ficha__cuerpo"><div class="ficha__col"><p class="ficha__desc"></p></div><div class="ficha__col"><p class="ficha__rotulo">Keys to thought</p><div class="ficha__claves"></div></div><div class="ficha__col"><p class="ficha__rotulo">Cultural forms</p><p class="ficha__cultura"></p></div></div></article></div><details class="atlas__leyenda"><summary>How to read the map</summary><div class="caribe-mapa-legend">
+</div></details><p class="atlas__pista">Select a node on the map to see its entry.</p><article aria-label="Entry for the selected territory" class="ficha" hidden=""><div class="ficha__cabecera"><div class="ficha__titulos"><h3 class="ficha__nombre"></h3><p class="ficha__meta"><span class="ficha__territorio"></span><span class="ficha__region"></span></p></div><button aria-label="Close the entry" class="ficha__cerrar" type="button">×</button></div><div class="ficha__cuerpo"><div class="ficha__col"><p class="ficha__desc"></p></div><div class="ficha__col"><p class="ficha__rotulo">Keys to thought</p><div class="ficha__claves"></div></div><div class="ficha__col"><p class="ficha__rotulo">Cultural forms</p><p class="ficha__cultura"></p></div></div></article></div><details class="atlas__leyenda"><summary>How to read the map</summary><div class="caribe-mapa-legend">
 <p class="legend-text">This map is the territory that our logo inhabits: the region bounded by the Caribbean Sea. Each node is a port, city, or territory of the Greater Caribbean; the layers group regions by their place in the Caribbean unity: archipelagos, continental coasts, the Guianas, and the Gulf. The map draws an <strong>archipelagic way of thinking</strong>, with Édouard Glissant: islands and shores that relate without merging, a poetics of relation, over a <strong>historical sea</strong>, with Derek Walcott: <em>«the sea is history»</em>, the sea as an archive of the slave trade, the crossings, and the forms of resistance. <strong>The Colombian Caribbean</strong> appears highlighted as the group's shore of enunciation. Click each point to see its legend: history, popular culture, figures, and keys to thought.</p>
 <div aria-label="Regions of the Greater Caribbean" class="legend-swatches" id="caribe-legend-swatches" role="group"></div>
 </div></details><details class="mapa-tabla">
