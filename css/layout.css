@@ -146,16 +146,20 @@
 /* ── La marca de idioma en el menu ──
    Ocho destinos no tienen version inglesa y el menu ingles los enlaza al
    espanol marcandolos «(ES)». La marca debe leerse como una nota al margen,
-   no competir con la etiqueta: mas pequena, en el gris de texto secundario y
-   sin el subrayado ni el color del enlace que la contiene.
+   no competir con la etiqueta: mas pequena y mas apagada.
 
-   No se usa `opacity` baja: rebajaria el contraste por debajo del minimo. El
-   gris ya esta medido en 9,45:1 sobre el fondo. */
+   El color importa aqui. La primera version usaba `--c-gray`, que es
+   exactamente el color que ya tienen los enlaces del desplegable: medido en
+   pantalla, marca y etiqueta salian del mismo `rgb(185,176,159)` y la unica
+   diferencia era el tamano. Con `--c-gray-dim` se separan de verdad.
+
+   No se usa `opacity` baja: rebajaria el contraste sin control. El tono esta
+   elegido con el calculo hecho, 5,41:1 sobre el fondo. */
 .nav-lang-nota {
   font-size: 0.78em;
   font-weight: var(--fw-regular);
   letter-spacing: 0.04em;
-  color: var(--c-gray);
+  color: var(--c-gray-dim);
   white-space: nowrap;
 }
 
@@ -253,12 +257,23 @@
   border: 1px solid var(--c-border-green);
   border-radius: var(--radius-sm);
   padding: 8px 0;
+  /* El panel se ajusta a su entrada mas larga en vez de forzar cortes.
+     Con `min-width: 190px` fijo, diez de las dieciocho entradas partian en
+     dos o mas lineas —«Who has contributed to the atlas» llegaba a cinco—
+     porque las etiquetas en mayusculas y espaciadas ocupan mucho. El tope
+     evita que una etiqueta larga empuje el panel fuera de la pantalla. */
   min-width: 190px;
+  width: max-content;
+  max-width: min(20rem, 80vw);
   box-shadow: 0 14px 34px rgba(0, 0, 0, 0.5);
 }
 
 .nav-dropdown-panel a {
   display: block;
+  /* Sin esto el enlace se parte y su ancho de contenido pasa a ser el de la
+     palabra mas larga, con lo que el `max-content` del panel no crece y las
+     etiquetas siguen cortandose. El tope del panel evita el desbordamiento. */
+  white-space: nowrap;
   padding: 10px 24px;
   font-family: 'Oswald', sans-serif;
   font-size: 0.98rem;

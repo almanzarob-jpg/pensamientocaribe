@@ -7,6 +7,12 @@
   --c-red: #d83a2e;
   --c-cream: #f2ead8;
   --c-gray: #b9b09f;
+  /* Gris apagado para notas al margen dentro de texto que ya usa --c-gray,
+     como la marca «(ES)» del menu ingles. No es un color de marca nuevo:
+     es el mismo gris rebajado hasta separarse a la vista sin caer del
+     minimo. Contraste sobre --c-bg-deep: 5,41:1, por encima del 4,5 que
+     exige AA para texto pequeno. Por debajo de #7d766c ya no cumple. */
+  --c-gray-dim: #8a8377;
   --c-gold: #c9a24d;
   /* Verde de interaccion. --c-green-light da 3.58:1 con crema y falla AA:
      el boton empeoraba al pasar el cursor. Este verde queda al 59% del
