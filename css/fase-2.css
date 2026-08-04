@@ -210,10 +210,14 @@
 .atlas__pista[hidden] { display: none; }
 
 /* ── Ficha del nodo, panel inferior ── */
+/* El tope es el 30 % que fija el encargo. Conviene saber lo que cuesta: el
+   contenido de una ficha mide entre 180 y 330 px según el nodo, así que en
+   escritorio se lee con un desplazamiento corto dentro del panel. Subirlo al
+   36 % lo evitaba, pero incumplía el límite. */
 .ficha {
   position: absolute;
   left: 0; right: 0; bottom: 0;
-  max-height: 36%;
+  max-height: 30%;
   overflow-y: auto;
   overscroll-behavior: contain;
   background: rgba(5, 6, 4, 0.96);

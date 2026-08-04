@@ -90,6 +90,12 @@
     for (var i = 0; i < nodos.length; i++) {
       var el = nodos[i];
       if (el.getAttribute('data-listo')) continue;
+
+      // Solo los nodos entran en el recorrido del tabulador. Las dos
+      // polilineas de las rutas maritimas tambien son «interactivas» para
+      // Leaflet, pero no llevan nombre ni abren nada: pararse en ellas seria
+      // dar dos paradas mudas a quien navega con teclado.
+      if (!el.getAttribute('aria-label')) continue;
       el.setAttribute('data-listo', '1');
       el.setAttribute('tabindex', '0');
       el.setAttribute('role', 'button');

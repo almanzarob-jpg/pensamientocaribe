@@ -200,6 +200,17 @@
 
       marker.categoria = n.categoria;
       marker.addTo(map);
+
+      // Nombre accesible. Leaflet dibuja los nodos como <path> sin rol ni
+      // nombre: un lector de pantalla anuncia «gráfico» y nada mas. Se pone
+      // aqui porque es donde se conocen los datos del nodo; el rol y el
+      // tabindex los anade atlas-ficha.js. Incluye la region para que la
+      // pertenencia no dependa solo del color del relleno.
+      var elMarcador = marker.getElement();
+      if (elMarcador) {
+        elMarcador.setAttribute('aria-label', n.nombre + ' · ' + n.pais + ' · ' + n.categoria);
+      }
+
       allMarkers.push(marker);
     });
 
