@@ -286,7 +286,7 @@
   display: flex;
   align-items: center;
   gap: var(--space-sm);
-  padding: 8px var(--space-md);
+  padding: 4px var(--space-md);
   border-bottom: 1px solid var(--c-divider-green);
   position: sticky;
   top: 0;
@@ -323,13 +323,68 @@
 .ficha__cerrar:hover { color: var(--c-cream); border-color: var(--c-border-orange); }
 .ficha__cerrar:focus-visible { outline: 2px solid var(--c-orange); outline-offset: 2px; }
 
-.ficha__cuerpo { padding: var(--space-sm) var(--space-md) var(--space-md); }
+.ficha__cuerpo { padding: var(--space-xs) var(--space-md) var(--space-sm); }
 
-/* El cuerpo recibe el mismo contenido que antes iba al globo. Su encabezado
-   se oculta porque la cabecera de la ficha ya nombra el nodo. */
-.ficha .caribe-popup-head { display: none; }
-.ficha .caribe-popup { max-width: none; }
-.ficha .caribe-popup-desc { max-width: 68ch; }
+/* ── El contenido del nodo, dentro de la ficha ─────────────────────
+   Llega el mismo HTML que antes iba al globo, pensado para una caja de
+   320 px. Volcado tal cual en una ficha de 1250 se descompone: la
+   descripción se estira a un renglón ilegible y el reproductor, que es
+   `width: 100%` con proporción 16:9, pasa de 320×180 a 1250×703 dentro de
+   una banda de 186. Se despliega y aplasta todo lo demás.
+
+   Aquí se reparte en tres columnas y el video recupera su tamaño. */
+.ficha .caribe-popup {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr) minmax(0, 0.85fr);
+  gap: var(--space-md);
+  align-items: start;
+  max-width: none;
+}
+
+/* La cabecera de la ficha ya nombra el nodo: repetirlo dentro sobra. */
+.ficha .caribe-popup-head,
+.ficha .caribe-popup-title,
+.ficha .caribe-popup-country { display: none; }
+
+.ficha .caribe-popup-desc {
+  grid-column: 1;
+  max-width: 62ch;              /* renglón de lectura, no ancho de pantalla */
+}
+
+/* Una fila, tres columnas. Antes cultura y claves compartían la columna 2 y
+   el grid abría una segunda fila: 46 + 73 px que no cabían en la banda. */
+.ficha .caribe-popup-tags {
+  grid-column: 2;
+  grid-row: 1;
+  margin-top: 0;
+  align-content: start;
+}
+
+.ficha .caribe-popup-cultura {
+  grid-column: 3;
+  grid-row: 1;
+  margin-top: 0;
+}
+
+/* La canción es una línea con enlace, no un reproductor. */
+.ficha .caribe-popup-cancion {
+  grid-column: 3;
+  grid-row: 1;
+  align-self: end;
+  margin-top: 0;
+}
+
+
+
+/* Bajo 900 px la ficha ya no se superpone: una columna y el video acotado
+   para que no se coma la pantalla del teléfono. */
+@media (max-width: 900px) {
+  .ficha .caribe-popup { grid-template-columns: 1fr; gap: var(--space-sm); }
+  .ficha .caribe-popup-desc,
+  .ficha .caribe-popup-cultura,
+  .ficha .caribe-popup-tags,
+  .ficha .caribe-popup-cancion { grid-column: 1; grid-row: auto; }
+}
 
 .nodo-activo { filter: drop-shadow(0 0 6px var(--c-orange)); }
 
@@ -698,3 +753,48 @@
 
 /* El sitio ya respeta prefers-reduced-motion en animations.css.
    El prototipo no anade ninguna animacion propia. */
+
+/* ── Catálogo filtrado por línea de investigación ────────────────── */
+.pub-linea-activa {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-meta);
+  color: var(--c-gray);
+  border-left: 3px solid var(--c-green-light);
+  padding: var(--space-xs) var(--space-sm);
+  margin: var(--space-sm) 0 0;
+  background: var(--c-surface-a);
+}
+.pub-linea-activa[hidden] { display: none; }
+.pub-linea-activa strong { color: var(--c-cream); font-weight: var(--fw-medium); }
+.pub-linea-quitar {
+  font: inherit;
+  color: var(--c-orange);
+  background: none;
+  border: 0;
+  padding: 4px 0;
+  min-height: 24px;
+  cursor: pointer;
+  text-decoration: underline;
+}
+.pub-linea-quitar:focus-visible { outline: 2px solid var(--c-orange); outline-offset: 2px; }
+
+/* Entre 900 y 1200 px la columna de la descripción se estrecha a 47
+   caracteres y el texto crece a lo alto. Se aprietan las claves para
+   devolverle renglón. */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .ficha .caribe-popup { grid-template-columns: minmax(0, 1.9fr) minmax(0, 1fr) minmax(0, 0.8fr); }
+  .ficha .caribe-popup-tags { gap: 3px; }
+  .ficha .caribe-popup-tags > * { font-size: 10px; padding: 2px 6px; }
+}
+
+/* La canción, compacta */
+.ficha__cancion {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: var(--space-xs);
+  font-size: var(--fs-meta);
+  color: var(--c-orange);
+  min-height: 24px;
+}
+.ficha__cancion:focus-visible { outline: 2px solid var(--c-orange); outline-offset: 2px; }

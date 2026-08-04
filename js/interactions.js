@@ -108,6 +108,14 @@
     var pubFilterPills = document.querySelectorAll('.pub-filter-pill');
     var activeTipos = new Set();
 
+    // Línea de investigación, si se llega desde la portada con ?linea=…
+    // Los botones de las seis líneas apuntan aquí, y hasta ahora los siete
+    // llevaban al catálogo entero sin filtrar.
+    var lineaActiva = '';
+    try {
+      lineaActiva = new URLSearchParams(window.location.search).get('linea') || '';
+    } catch (e) { lineaActiva = ''; }
+
     function filterPubs() {
       var query = pubSearchInput.value.trim().toLowerCase();
       var visibleCount = 0;
@@ -115,13 +123,40 @@
         var entry = pubEntries[p];
         var matchesQuery = !query || entry.textContent.toLowerCase().indexOf(query) !== -1;
         var matchesTipo = activeTipos.size === 0 || activeTipos.has(entry.getAttribute('data-tipo'));
-        var matches = matchesQuery && matchesTipo;
+        // Una publicación puede pertenecer a dos líneas: el atributo las
+        // guarda separadas por espacio.
+        var lineas = (entry.getAttribute('data-linea') || '').split(' ');
+        var matchesLinea = !lineaActiva || lineas.indexOf(lineaActiva) !== -1;
+        var matches = matchesQuery && matchesTipo && matchesLinea;
         entry.hidden = !matches;
         if (matches) visibleCount++;
       }
       if (pubEmpty) pubEmpty.hidden = visibleCount !== 0;
-      var filtering = !!query || activeTipos.size > 0;
+      var filtering = !!query || activeTipos.size > 0 || !!lineaActiva;
       if (pubCount) pubCount.textContent = filtering ? visibleCount + ' / ' + pubEntries.length : '';
+    }
+
+    // Aviso de que el catálogo llega filtrado, con salida para verlo entero.
+    if (lineaActiva) {
+      var rotulo = document.getElementById('pub-linea-activa');
+      var nombre = document.querySelector('[data-linea-nombre="' + lineaActiva + '"]');
+      if (rotulo) {
+        rotulo.hidden = false;
+        var texto = rotulo.querySelector('.pub-linea-texto');
+        if (texto) {
+          texto.textContent = nombre ? nombre.textContent : lineaActiva;
+        }
+        var quitar = rotulo.querySelector('.pub-linea-quitar');
+        if (quitar) {
+          quitar.addEventListener('click', function () {
+            lineaActiva = '';
+            rotulo.hidden = true;
+            history.replaceState(null, '', window.location.pathname);
+            filterPubs();
+          });
+        }
+      }
+      filterPubs();
     }
 
     pubSearchInput.addEventListener('input', filterPubs);
