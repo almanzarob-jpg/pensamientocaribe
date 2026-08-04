@@ -28,7 +28,11 @@ documentacion/*
 # Propuesta institucional. Revisar en la proxima fase, al dividir
 # documentacion/ entre lo metodologico publico y lo administrativo
 # privado, si debe seguir siendo publica.
-!documentacion/Propuesta Cajamag.docx
+# Retirada el 3 de agosto de 2026. Estaba en la lista blanca y por eso seguia
+# publicandose en pensamientocaribe.org/documentacion/. Es una propuesta a una
+# entidad externa: puede llevar presupuestos, nombres y condiciones no
+# destinados a difusion. El archivo sigue en el disco, fuera del repositorio.
+# !documentacion/Propuesta Cajamag.docx
 
 # ═══════════════════════════════════════════════════════════════
 # Contratos y documentos con datos personales, en cualquier ruta
