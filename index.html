@@ -27,12 +27,12 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&amp;family=Oswald:wght@400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="css/reset.css?v=17" rel="stylesheet"/>
+<link href="css/reset.css?v=99" rel="stylesheet"/>
 <link href="css/layout.css?v=19" rel="stylesheet"/>
 <link href="css/components.css?v=41" rel="stylesheet"/>
 <link href="css/animations.css?v=15" rel="stylesheet"/>
 <link href="css/pregon.css?v=1" rel="stylesheet"/>
-<link href="css/fase-2.css?v=1" rel="stylesheet"/>
+<link href="css/fase-2.css?v=2" rel="stylesheet"/>
 <link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet"/>
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EG1GHXLZYM"></script>
@@ -81,7 +81,6 @@
 <button aria-expanded="false" aria-haspopup="true" class="nav-group-label" type="button">Circular <span class="nav-caret"></span></button>
 <div class="nav-dropdown"><div class="nav-dropdown-panel">
 <a href="pregon/">Pregón de esquina</a>
-<a href="#agenda">Agenda y novedades</a>
 <a href="semana-antirracista/">Semana Antirracista</a>
 </div></div>
 </div>
@@ -121,7 +120,6 @@
 <button aria-expanded="false" class="nav-m-label" type="button">Circular <span class="nav-caret"></span></button>
 <div class="nav-m-sub">
 <a href="pregon/">Pregón de esquina</a>
-<a href="#agenda">Agenda y novedades</a>
 <a href="semana-antirracista/">Semana Antirracista</a>
 </div>
 </div>
@@ -193,7 +191,7 @@
 <h2 class="section-title">El <em>Gran Caribe</em>: una relación de orillas</h2>
 <p class="section-subtitle">El borde costero que configura el mar Caribe forma una unidad geográfica, histórica y política. El Caribe Colombiano es una orilla de ese todo mayor. Una constelación de territorios articulada por el mar.</p>
 </div>
-<div class="atlas"><div class="atlas__lienzo"><div aria-label="Mapa interactivo del Gran Caribe" class="caribe-leaflet-map" id="caribe-leaflet-map"></div></div><div aria-label="Controles y leyenda del mapa" class="atlas__panel" role="complementary"><div class="atlas__capas"><p class="atlas__rotulo">Capas</p><div aria-label="Filtrar capas del mapa" class="caribe-mapa-filters" role="group">
+<div class="atlas"><details class="atlas__barra" open=""><summary>Capas del mapa</summary><div aria-label="Filtrar capas del mapa" class="caribe-mapa-filters" role="group">
 <button class="filter-btn is-active" data-layer="all" type="button">Todas las capas</button>
 <button class="filter-btn" data-layer="Caribe Colombiano" type="button">Caribe Colombiano</button>
 <button class="filter-btn" data-layer="Caribe insular colombiano" type="button">Insular colombiano</button>
@@ -205,7 +203,7 @@
 <button class="filter-btn" data-layer="Golfo de México" type="button">Golfo de México</button>
 <button class="filter-btn" data-layer="Guyanas" type="button">Guyanas</button>
 <button class="filter-btn" data-layer="Caribe suroriental" type="button">Suroriental</button>
-</div></div><details class="atlas__leyenda"><summary>Cómo leer el mapa</summary><div class="caribe-mapa-legend">
+</div></details><div class="atlas__lienzo"><div aria-label="Mapa interactivo del Gran Caribe" class="caribe-leaflet-map" id="caribe-leaflet-map"></div><p class="atlas__pista">Selecciona un nodo del mapa para ver su ficha.</p><article aria-label="Ficha del territorio seleccionado" class="ficha" hidden=""><div class="ficha__cabecera"><div class="ficha__titulos"><h3 class="ficha__nombre"></h3><p class="ficha__meta"><span class="ficha__territorio"></span><span class="ficha__region"></span></p></div><button aria-label="Cerrar la ficha" class="ficha__cerrar" type="button">×</button></div><div class="ficha__cuerpo"><div class="ficha__col"><p class="ficha__desc"></p></div><div class="ficha__col"><p class="ficha__rotulo">Claves de pensamiento</p><div class="ficha__claves"></div></div><div class="ficha__col"><p class="ficha__rotulo">Formas culturales</p><p class="ficha__cultura"></p></div></div></article></div><details class="atlas__leyenda"><summary>Cómo leer el mapa</summary><div class="caribe-mapa-legend">
 <p class="legend-text">Este mapa es el territorio que habita nuestro logo: la región que delimita el mar Caribe. Cada nodo es un puerto, ciudad o territorio del Gran Caribe; las capas agrupan regiones por su lugar en la unidad caribeña: archipiélagos, costas continentales, Guyanas y Golfo. El mapa dibuja un <strong>pensar archipiélico</strong>, con Édouard Glissant: islas y orillas que se relacionan sin fundirse, una poética de la relación, sobre un <strong>mar histórico</strong>, con Derek Walcott: <em>«the sea is history»</em>, el mar como archivo de la trata, las travesías y las resistencias. <strong>El Caribe Colombiano</strong> aparece destacado como orilla de enunciación del grupo. Haz clic en cada punto para ver su leyenda: historia, cultura popular, figuras y claves de pensamiento.</p>
 <div aria-label="Regiones del Gran Caribe" class="legend-swatches" id="caribe-legend-swatches" role="group"></div>
 </div></details><details class="mapa-tabla">
@@ -226,7 +224,7 @@
 <tr><td>Caribe suroriental</td><td>1</td></tr>
 </tbody>
 </table>
-</details></div></div>
+</details><p aria-live="polite" class="sr-only" id="atlas-vivo" role="status"></p></div>
 </section>
 <div aria-hidden="true" class="separator">
 <span class="separator-line"></span><span class="separator-dot"></span>
@@ -248,32 +246,32 @@
 <article class="linea-f2">
 <h3>Antropología del Caribe</h3>
 <p>Estudia el Caribe como formación histórica, cultural y política, atendiendo a sus territorios, movilidades, memorias, desigualdades y formas de vida.</p>
-<a href="publicaciones/">Conocer la línea →</a>
+<a href="publicaciones/">Ver publicaciones relacionadas <span class="btn-arrow">→</span></a>
 </article>
 <article class="linea-f2">
 <h3>Filosofía afrocaribeña</h3>
 <p>Explora tradiciones de pensamiento negro y afrocaribeño, sus críticas a la modernidad racial y sus formas de imaginar libertad, humanidad y mundo.</p>
-<a href="publicaciones/">Ver investigaciones →</a>
+<a href="publicaciones/">Ver publicaciones relacionadas <span class="btn-arrow">→</span></a>
 </article>
 <article class="linea-f2">
 <h3>Teoría crítica de la raza y antirracismo</h3>
 <p>Analiza la producción histórica de la raza, las formas contemporáneas del racismo y las prácticas intelectuales, pedagógicas y políticas del antirracismo.</p>
-<a href="publicaciones/">Conocer la línea →</a>
+<a href="publicaciones/">Ver publicaciones relacionadas <span class="btn-arrow">→</span></a>
 </article>
 <article class="linea-f2">
 <h3>Geografías negras y territorio</h3>
 <p>Investiga las relaciones entre racialización, espacio, territorio, ciudad, paisaje, despojo y producción de lugares negros en el Caribe Colombiano.</p>
-<a href="publicaciones/">Explorar publicaciones relacionadas →</a>
+<a href="publicaciones/">Ver publicaciones relacionadas <span class="btn-arrow">→</span></a>
 </article>
 <article class="linea-f2">
 <h3>Capitalismo racial, plantación y modernidad caribeña</h3>
 <p>Examina la plantación, el trabajo racializado, la acumulación, el extractivismo y las infraestructuras históricas que han configurado la modernidad caribeña.</p>
-<a href="publicaciones/">Conocer la línea →</a>
+<a href="publicaciones/">Ver publicaciones relacionadas <span class="btn-arrow">→</span></a>
 </article>
 <article class="linea-f2">
 <h3>Culturas populares y expresiones afrocaribeñas</h3>
 <p>Estudia las formas expresivas, festivas, musicales, corporales, narrativas y estéticas mediante las cuales las comunidades afrocaribeñas producen memoria, pertenencia, crítica social y presencia histórica.</p>
-<a href="publicaciones/">Ver investigaciones →</a>
+<a href="publicaciones/">Ver publicaciones relacionadas <span class="btn-arrow">→</span></a>
 </article>
 </div>
 </section>
@@ -381,7 +379,7 @@
 <article class="pub-f2">
 <span class="pub-f2__anio">2026</span>
 <div>
-<h3>Gramáticas e iconografías populares: el Picó y la tradición picotera en Santa Marta</h3>
+<h3><a href="publicaciones/#pub-gramaticas-e-iconografias-populares-el-pico-y-la-tra">Gramáticas e iconografías populares: el Picó y la tradición picotera en Santa Marta</a></h3>
 <p class="pub-f2__autor">Juan Carlos Gómez Blanco</p>
 <span class="pub-f2__fuente">Capítulo de libro · en Raíces, Resistencias y Territorios: 500 años de experiencia afro en Santa Marta · Editorial Unimagdalena</span>
 </div>
@@ -389,7 +387,7 @@
 <article class="pub-f2">
 <span class="pub-f2__anio">2026</span>
 <div>
-<h3>El Picó en el performance cultural afrocaribeño</h3>
+<h3><a href="publicaciones/#pub-el-pico-en-el-performance-cultural-afrocaribeno">El Picó en el performance cultural afrocaribeño</a></h3>
 <p class="pub-f2__autor">Juan Carlos Gómez Blanco</p>
 <span class="pub-f2__fuente">Artículo de reflexión · Nueva Revista Colombiana del Folclor No. 34 · Patronato Colombiano de Artes y Ciencias</span>
 </div>
@@ -397,7 +395,7 @@
 <article class="pub-f2">
 <span class="pub-f2__anio">2026</span>
 <div>
-<h3>Delia y el compás de las aguas</h3>
+<h3><a href="publicaciones/#pub-delia-y-el-compas-de-las-aguas">Delia y el compás de las aguas</a></h3>
 <p class="pub-f2__autor">Rosa María Chamorro Cuello</p>
 <span class="pub-f2__fuente">Texto · GACETA</span>
 </div>
@@ -405,7 +403,7 @@
 <article class="pub-f2">
 <span class="pub-f2__anio">2024</span>
 <div>
-<h3>El Club Negro de Colombia</h3>
+<h3><a href="publicaciones/#pub-el-club-negro-de-colombia">El Club Negro de Colombia</a></h3>
 <p class="pub-f2__autor">Rosa María Chamorro Cuello</p>
 <span class="pub-f2__fuente">Texto · Archivo General de la Nación de Colombia &amp; Ministerio de las Culturas, las Artes y los Saberes</span>
 </div>
@@ -413,7 +411,7 @@
 <article class="pub-f2">
 <span class="pub-f2__anio">2024</span>
 <div>
-<h3>Origen y realidad de la afrocolombianidad</h3>
+<h3><a href="publicaciones/#pub-origen-y-realidad-de-la-afrocolombianidad">Origen y realidad de la afrocolombianidad</a></h3>
 <p class="pub-f2__autor">Rosa María Chamorro Cuello</p>
 <span class="pub-f2__fuente">Texto · Las2Orillas</span>
 </div>
@@ -421,32 +419,13 @@
 <article class="pub-f2">
 <span class="pub-f2__anio">2024</span>
 <div>
-<h3>Las Estrellas son Negras. Invocación a Arnoldo Palacios en los cien años de su natalicio</h3>
+<h3><a href="publicaciones/#pub-las-estrellas-son-negras-invocacion-a-arnoldo-palaci">Las Estrellas son Negras. Invocación a Arnoldo Palacios en los cien años de su natalicio</a></h3>
 <p class="pub-f2__autor">Rosa María Chamorro Cuello</p>
 <span class="pub-f2__fuente">Texto · Chocó 7 Días</span>
 </div>
 </article>
 </div>
 <a class="ver-todo" href="publicaciones/">Consultar las 54 publicaciones →</a>
-</section>
-<section class="section" id="agenda">
-<p class="section-label reveal">Actualidad</p>
-<h2 class="section-title reveal">Agenda y <em>novedades</em></h2>
-<p class="section-subtitle reveal">Encuentros, seminarios, conversatorios y procesos formativos abiertos, junto con anuncios, convocatorias y novedades del grupo y del Semillero Eleguá.</p>
-<div class="pregon-f2">
-<article class="pregon-f2__pieza">
-<h3>Lanzamiento del Grupo de Investigación Pensamiento Caribe</h3>
-<p>Próximamente</p>
-</article>
-<article class="pregon-f2__pieza">
-<h3>Convocatoria al Semillero de Investigación Eleguá 2026</h3>
-<p>Próximamente</p>
-</article>
-<article class="pregon-f2__pieza">
-<h3>Nuevos artículos en proceso editorial</h3>
-<p>Próximamente</p>
-</article>
-</div>
 </section>
 <section class="section" id="comunidad">
 <p class="section-label reveal">Vínculo</p>
@@ -455,64 +434,28 @@
 <p class="comunidad-f2__intro">Catorce investigadoras e investigadores, el Semillero Eleguá y tres redes aliadas: el Grupo de Trabajo de CLACSO sobre antirracismo y afrodescendencia en el Sur Global, GLEFAS y Malunga. El trabajo se hace con comunidades, no sobre ellas: los talleres de cartografía social, las memorias barriales y los archivos sonoros salen de procesos colectivos.</p>
 <div class="comunidad-f2__perfiles">
 <article class="perfil-f2">
-<img alt="Roberto Almanza Hernández" height="300" loading="lazy" src="assets/roberto-almanza.jpeg" width="300"/>
-<h3>Roberto Almanza Hernández</h3>
-<p></p>
-</article>
-<article class="perfil-f2">
-<img alt="Margarita Granados" height="300" loading="lazy" src="assets/img/margarita.jpg" width="300"/>
-<h3>Margarita Granados</h3>
-<p></p>
-</article>
-<article class="perfil-f2">
 <img alt="Caridad Brito Ballesteros" height="300" loading="lazy" src="assets/img/caridad.jpeg" width="300"/>
 <h3>Caridad Brito Ballesteros</h3>
-<p></p>
-</article>
-<article class="perfil-f2">
-<img alt="Juan Carlos Gómez Blanco" height="300" loading="lazy" src="assets/img/juan-carlos-gomez.jpg" width="300"/>
-<h3>Juan Carlos Gómez Blanco</h3>
-<p></p>
 </article>
 <article class="perfil-f2">
 <img alt="Deibys Carrasquilla Baza" height="300" loading="lazy" src="assets/img/carrasquilla.jpeg" width="300"/>
 <h3>Deibys Carrasquilla Baza</h3>
-<p></p>
-</article>
-<article class="perfil-f2">
-<img alt="Rosa María Chamorro Cuello" height="300" loading="lazy" src="assets/img/rosa-chamorro.jpeg" width="300"/>
-<h3>Rosa María Chamorro Cuello</h3>
-<p></p>
 </article>
 <article class="perfil-f2">
 <img alt="Demetrio Ribeiro De Andrade" height="300" loading="lazy" src="assets/img/demetrio.jpeg" width="300"/>
 <h3>Demetrio Ribeiro De Andrade</h3>
-<p></p>
 </article>
 <article class="perfil-f2">
 <img alt="Dakna Davraiskí Alvarado Maestre" height="300" loading="lazy" src="assets/img/dakna.jpeg" width="300"/>
 <h3>Dakna Davraiskí Alvarado Maestre</h3>
-<p></p>
 </article>
 <article class="perfil-f2">
 <img alt="Dayana Granados Hernández" height="300" loading="lazy" src="assets/img/dayana.png" width="300"/>
 <h3>Dayana Granados Hernández</h3>
-<p></p>
 </article>
 <article class="perfil-f2">
 <img alt="Everleidis Tatiana Dávila Sanabria" height="300" loading="lazy" src="assets/img/everleidis.jpeg" width="300"/>
 <h3>Everleidis Tatiana Dávila Sanabria</h3>
-<p></p>
-</article>
-<article class="perfil-f2">
-<img alt="Natalia Mindiola Montero" height="300" loading="lazy" src="assets/img/natalia.jpeg" width="300"/>
-<h3>Natalia Mindiola Montero</h3>
-<p></p>
-</article>
-<article class="perfil-f2">
-<img alt="Oliver Poveda Pozo" height="300" loading="lazy" src="assets/img/oliver.jpeg" width="300"/>
-<h3>Oliver Poveda Pozo</h3>
-<p></p>
 </article>
 </div>
 <div class="comunidad-f2__ctas">
@@ -524,7 +467,6 @@
 <section class="section" id="semillero">
 <p class="section-label reveal">Formación</p>
 <h2 class="section-title reveal">Semillero de Investigación <em>Eleguá</em></h2>
-<p class="section-subtitle reveal"></p>
 <div class="recursos-f2">
 <article class="recurso-f2">
 <h3>Formación investigativa</h3>
@@ -543,9 +485,7 @@
 <section class="cta-final reveal" id="contacto">
 <p class="cta-final-title">“Pensar desde nuestra orilla es escuchar el Caribe como archivo vivo, herida abierta y horizonte de <em>imaginación política</em>.”</p>
 <p class="cta-final-sub">Pensamiento Caribe abre un espacio para pensar, investigar y acompañar críticamente las vidas, territorios y luchas del Caribe Colombiano.</p>
-<form action="mailto:cpensamientocaribe@gmail.com" class="form-contact" enctype="text/plain" id="contact-form" method="POST" novalidate="" style="margin: 0 auto var(--space-xl);">
-<input name="_subject" type="hidden" value="Nuevo mensaje desde pensamientocaribe.org"/>
-<input autocomplete="off" name="_gotcha" style="display:none" tabindex="-1" type="text"/>
+<form class="form-contact" id="contact-form" novalidate="" style="margin: 0 auto var(--space-xl);"><p class="form-aviso">Este formulario no envía nada por sí mismo: abre tu programa de correo con el mensaje redactado, y tú decides si lo envías. No guardamos los datos que escribes aquí. <a href="privacidad/">Cómo tratamos los datos</a>.</p>
 <div class="form-row">
 <div class="form-field">
 <label for="contact-name">Nombre</label>
@@ -609,7 +549,7 @@
 <li><a href="mailto:cpensamientocaribe@gmail.com">cpensamientocaribe@gmail.com</a></li>
 <li><a href="https://www.instagram.com/cpcaribe" rel="noopener" target="_blank">Instagram: @cpcaribe</a></li>
 <li><a href="proyectos/metodologia-agua-de-por-medio.html">Cómo citar el atlas</a></li>
-<li><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" rel="noopener" target="_blank">Licencia CC BY-NC-SA 4.0</a></li>
+<li><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" rel="noopener" target="_blank">Licencia CC BY-NC-SA 4.0</a><span aria-hidden="true" class="footer-sep"> · </span><a href="accesibilidad/">Accesibilidad</a><span aria-hidden="true" class="footer-sep"> · </span><a href="privacidad/">Privacidad</a><span aria-hidden="true" class="footer-sep"> · </span><a href="privacidad/#tratamiento">Tratamiento de datos</a></li>
 </ul>
 </div>
 </div>
@@ -620,15 +560,14 @@
 </footer>
 </div>
 <!-- Toast -->
-<div aria-live="polite" class="toast" id="toast" role="alert">
-    Gracias. Tu mensaje ha sido registrado como solicitud de contacto.
-  </div>
+<div aria-live="polite" class="toast" id="toast" role="status"></div>
 <!-- Scripts -->
 <script crossorigin="" defer="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script defer="" src="js/interactions.js?v=2"></script>
-<script defer="" src="js/caribbean-map.js?v=4"></script>
+<script defer="" src="js/caribbean-map.js?v=5"></script>
+<script defer="" src="js/atlas-ficha.js?v=1"></script>
 <script src="js/lineas.js?v=3"></script>
-<script defer="" src="js/forms.js?v=2"></script>
+<script defer="" src="js/forms.js?v=3"></script>
 <script>
     // ── Efemérides lightbox ──
     (function () {

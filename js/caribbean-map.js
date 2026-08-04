@@ -170,7 +170,22 @@
         '</div>';
 
       var popupMaxWidth = (n.cancion && n.cancion.youtubeId) ? 320 : 300;
-      marker.bindPopup(popupHtml, { className: 'caribe-popup-wrap', maxWidth: popupMaxWidth });
+      // Si la pagina trae panel inferior, el contenido va alli en vez de a un
+      // globo sobre el mapa: se ve entero, no tapa la cartografia y lo puede
+      // leer un lector de pantalla sin pelear con el foco de Leaflet. Donde no
+      // hay panel —el resto de las paginas— sigue funcionando el popup.
+      var hayFicha = !!document.querySelector('.atlas__lienzo .ficha');
+
+      if (!hayFicha) {
+        marker.bindPopup(popupHtml, { className: 'caribe-popup-wrap', maxWidth: popupMaxWidth });
+      } else {
+        marker.on('click', function () {
+          document.dispatchEvent(new CustomEvent('atlas:seleccion', {
+            detail: { nodo: n, html: popupHtml, color: color, marcador: marker }
+          }));
+        });
+      }
+
       marker.bindTooltip(n.nombre, { className: 'caribe-tooltip', direction: 'top', offset: [0, -8] });
 
       // Crecimiento al pasar el cursor

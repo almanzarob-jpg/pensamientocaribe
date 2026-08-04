@@ -28,12 +28,12 @@
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&amp;family=Oswald:wght@400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
-<link href="css/reset.css?v=17" rel="stylesheet"/>
+<link href="css/reset.css?v=99" rel="stylesheet"/>
 <link href="css/layout.css?v=19" rel="stylesheet"/>
 <link href="css/components.css?v=41" rel="stylesheet"/>
 <link href="css/animations.css?v=15" rel="stylesheet"/>
 <link href="css/pregon.css?v=1" rel="stylesheet"/>
-<link href="css/fase-2.css?v=1" rel="stylesheet"/>
+<link href="css/fase-2.css?v=2" rel="stylesheet"/>
 <link crossorigin="" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" rel="stylesheet"/>
 <!-- Google tag (gtag.js) -->
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-EG1GHXLZYM"></script>
@@ -82,7 +82,6 @@
 <button aria-expanded="false" aria-haspopup="true" class="nav-group-label" type="button">Circulate <span class="nav-caret"></span></button>
 <div class="nav-dropdown"><div class="nav-dropdown-panel">
 <a href="pregon/index-en.html">Pregón de esquina</a>
-<a href="#agenda">Agenda and news</a>
 <a href="semana-antirracista/" hreflang="es">Anti-racist Week</a>
 </div></div>
 </div>
@@ -122,7 +121,6 @@
 <button aria-expanded="false" class="nav-m-label" type="button">Circulate <span class="nav-caret"></span></button>
 <div class="nav-m-sub">
 <a href="pregon/index-en.html">Pregón de esquina</a>
-<a href="#agenda">Agenda and news</a>
 <a href="semana-antirracista/" hreflang="es">Anti-racist Week</a>
 </div>
 </div>
@@ -194,7 +192,7 @@
 <h2 class="section-title">The <em>Greater Caribbean</em>: a relation of shores</h2>
 <p class="section-subtitle">The coastal border that shapes the Caribbean Sea forms a geographic, historical, and political unit. The Colombian Caribbean is one shore of that larger whole: a constellation of territories joined by the sea.</p>
 </div>
-<div class="atlas"><div class="atlas__lienzo"><div aria-label="Interactive map of the Greater Caribbean" class="caribe-leaflet-map" id="caribe-leaflet-map"></div></div><div aria-label="Map controls and legend" class="atlas__panel" role="complementary"><div class="atlas__capas"><p class="atlas__rotulo">Layers</p><div aria-label="Filter map layers" class="caribe-mapa-filters" role="group">
+<div class="atlas"><details class="atlas__barra" open=""><summary>Map layers</summary><div aria-label="Filter map layers" class="caribe-mapa-filters" role="group">
 <button class="filter-btn is-active" data-layer="all" type="button">All layers</button>
 <button class="filter-btn" data-layer="Caribe Colombiano" type="button">Colombian Caribbean</button>
 <button class="filter-btn" data-layer="Caribe insular colombiano" type="button">Colombian insular</button>
@@ -206,7 +204,7 @@
 <button class="filter-btn" data-layer="Golfo de México" type="button">Gulf of Mexico</button>
 <button class="filter-btn" data-layer="Guyanas" type="button">Guianas</button>
 <button class="filter-btn" data-layer="Caribe suroriental" type="button">Southeastern</button>
-</div></div><details class="atlas__leyenda"><summary>How to read the map</summary><div class="caribe-mapa-legend">
+</div></details><div class="atlas__lienzo"><div aria-label="Interactive map of the Greater Caribbean" class="caribe-leaflet-map" id="caribe-leaflet-map"></div><p class="atlas__pista">Select a node on the map to see its entry.</p><article aria-label="Entry for the selected territory" class="ficha" hidden=""><div class="ficha__cabecera"><div class="ficha__titulos"><h3 class="ficha__nombre"></h3><p class="ficha__meta"><span class="ficha__territorio"></span><span class="ficha__region"></span></p></div><button aria-label="Close the entry" class="ficha__cerrar" type="button">×</button></div><div class="ficha__cuerpo"><div class="ficha__col"><p class="ficha__desc"></p></div><div class="ficha__col"><p class="ficha__rotulo">Keys to thought</p><div class="ficha__claves"></div></div><div class="ficha__col"><p class="ficha__rotulo">Cultural forms</p><p class="ficha__cultura"></p></div></div></article></div><details class="atlas__leyenda"><summary>How to read the map</summary><div class="caribe-mapa-legend">
 <p class="legend-text">This map is the territory that our logo inhabits: the region bounded by the Caribbean Sea. Each node is a port, city, or territory of the Greater Caribbean; the layers group regions by their place in the Caribbean unity: archipelagos, continental coasts, the Guianas, and the Gulf. The map draws an <strong>archipelagic way of thinking</strong>, with Édouard Glissant: islands and shores that relate without merging, a poetics of relation, over a <strong>historical sea</strong>, with Derek Walcott: <em>«the sea is history»</em>, the sea as an archive of the slave trade, the crossings, and the forms of resistance. <strong>The Colombian Caribbean</strong> appears highlighted as the group's shore of enunciation. Click each point to see its legend: history, popular culture, figures, and keys to thought.</p>
 <div aria-label="Regions of the Greater Caribbean" class="legend-swatches" id="caribe-legend-swatches" role="group"></div>
 </div></details><details class="mapa-tabla">
@@ -227,7 +225,7 @@
 <tr><td>South-eastern Caribbean</td><td>1</td></tr>
 </tbody>
 </table>
-</details></div></div>
+</details><p aria-live="polite" class="sr-only" id="atlas-vivo" role="status"></p></div>
 </section>
 <div aria-hidden="true" class="separator">
 <span class="separator-line"></span><span class="separator-dot"></span>
@@ -249,32 +247,32 @@
 <article class="linea-f2">
 <h3>Anthropology of the Caribbean</h3>
 <p>Studies the Caribbean as a historical, cultural, and political formation, attending to its territories, mobilities, memories, inequalities, and forms of life.</p>
-<a href="publicaciones/" hreflang="es">Explore this line →</a>
+<a href="publicaciones/" hreflang="es">See related publications <span class="btn-arrow">→</span></a>
 </article>
 <article class="linea-f2">
 <h3>Afro-Caribbean philosophy</h3>
 <p>Explores traditions of Black and Afro-Caribbean thought, their critiques of racial modernity, and their ways of imagining freedom, humanity, and world.</p>
-<a href="publicaciones/" hreflang="es">See research →</a>
+<a href="publicaciones/" hreflang="es">See related publications <span class="btn-arrow">→</span></a>
 </article>
 <article class="linea-f2">
 <h3>Critical race theory and antiracism</h3>
 <p>Analyzes the historical production of race, the contemporary forms of racism, and the intellectual, pedagogical, and political practices of antiracism.</p>
-<a href="publicaciones/" hreflang="es">Explore this line →</a>
+<a href="publicaciones/" hreflang="es">See related publications <span class="btn-arrow">→</span></a>
 </article>
 <article class="linea-f2">
 <h3>Black geographies and territory</h3>
 <p>Investigates the relations between racialization, space, territory, city, landscape, dispossession, and the production of Black places in the Colombian Caribbean.</p>
-<a href="publicaciones/" hreflang="es">Related publications →</a>
+<a href="publicaciones/" hreflang="es">See related publications <span class="btn-arrow">→</span></a>
 </article>
 <article class="linea-f2">
 <h3>Racial capitalism, the plantation, and Caribbean modernity</h3>
 <p>Examines the plantation, racialized labor, accumulation, extractivism, and the historical infrastructures that have shaped Caribbean modernity.</p>
-<a href="publicaciones/" hreflang="es">Explore this line →</a>
+<a href="publicaciones/" hreflang="es">See related publications <span class="btn-arrow">→</span></a>
 </article>
 <article class="linea-f2">
 <h3>Popular cultures and Afro-Caribbean expressions</h3>
 <p>Studies the expressive, festive, musical, bodily, narrative, and aesthetic forms through which Afro-Caribbean communities produce memory, belonging, social critique, and historical presence.</p>
-<a href="publicaciones/" hreflang="es">See research →</a>
+<a href="publicaciones/" hreflang="es">See related publications <span class="btn-arrow">→</span></a>
 </article>
 </div>
 </section>
@@ -382,7 +380,7 @@
 <article class="pub-f2">
 <span class="pub-f2__anio">2026</span>
 <div>
-<h3>Gramáticas e iconografías populares: el Picó y la tradición picotera en Santa Marta</h3>
+<h3><a href="publicaciones/#pub-gramaticas-e-iconografias-populares-el-pico-y-la-tra">Gramáticas e iconografías populares: el Picó y la tradición picotera en Santa Marta</a></h3>
 <p class="pub-f2__autor">Juan Carlos Gómez Blanco</p>
 <span class="pub-f2__fuente">Book chapter · in Raíces, Resistencias y Territorios: 500 años de experiencia afro en Santa Marta · Editorial Unimagdalena</span>
 </div>
@@ -390,7 +388,7 @@
 <article class="pub-f2">
 <span class="pub-f2__anio">2026</span>
 <div>
-<h3>El Picó en el performance cultural afrocaribeño</h3>
+<h3><a href="publicaciones/#pub-el-pico-en-el-performance-cultural-afrocaribeno">El Picó en el performance cultural afrocaribeño</a></h3>
 <p class="pub-f2__autor">Juan Carlos Gómez Blanco</p>
 <span class="pub-f2__fuente">Reflection article · Nueva Revista Colombiana del Folclor No. 34 · Patronato Colombiano de Artes y Ciencias</span>
 </div>
@@ -398,7 +396,7 @@
 <article class="pub-f2">
 <span class="pub-f2__anio">2026</span>
 <div>
-<h3>Delia y el compás de las aguas</h3>
+<h3><a href="publicaciones/#pub-delia-y-el-compas-de-las-aguas">Delia y el compás de las aguas</a></h3>
 <p class="pub-f2__autor">Rosa María Chamorro Cuello</p>
 <span class="pub-f2__fuente">Text · GACETA</span>
 </div>
@@ -406,7 +404,7 @@
 <article class="pub-f2">
 <span class="pub-f2__anio">2024</span>
 <div>
-<h3>El Club Negro de Colombia</h3>
+<h3><a href="publicaciones/#pub-el-club-negro-de-colombia">El Club Negro de Colombia</a></h3>
 <p class="pub-f2__autor">Rosa María Chamorro Cuello</p>
 <span class="pub-f2__fuente">Text · Archivo General de la Nación de Colombia &amp; Ministerio de las Culturas, las Artes y los Saberes</span>
 </div>
@@ -414,7 +412,7 @@
 <article class="pub-f2">
 <span class="pub-f2__anio">2024</span>
 <div>
-<h3>Origen y realidad de la afrocolombianidad</h3>
+<h3><a href="publicaciones/#pub-origen-y-realidad-de-la-afrocolombianidad">Origen y realidad de la afrocolombianidad</a></h3>
 <p class="pub-f2__autor">Rosa María Chamorro Cuello</p>
 <span class="pub-f2__fuente">Text · Las2Orillas</span>
 </div>
@@ -422,32 +420,13 @@
 <article class="pub-f2">
 <span class="pub-f2__anio">2024</span>
 <div>
-<h3>Las Estrellas son Negras. Invocación a Arnoldo Palacios en los cien años de su natalicio</h3>
+<h3><a href="publicaciones/#pub-las-estrellas-son-negras-invocacion-a-arnoldo-palaci">Las Estrellas son Negras. Invocación a Arnoldo Palacios en los cien años de su natalicio</a></h3>
 <p class="pub-f2__autor">Rosa María Chamorro Cuello</p>
 <span class="pub-f2__fuente">Text · Chocó 7 Días</span>
 </div>
 </article>
 </div>
 <a class="ver-todo" href="publicaciones/" hreflang="es">Consult all 54 publications → <span class="lang-nota" lang="es">in Spanish</span></a>
-</section>
-<section class="section" id="agenda">
-<p class="section-label reveal">Current affairs</p>
-<h2 class="section-title reveal">Agenda and <em>news</em></h2>
-<p class="section-subtitle reveal">Gatherings, seminars, and open training processes, together with announcements, calls, and news from the group and the Eleguá Seedbed.</p>
-<div class="pregon-f2">
-<article class="pregon-f2__pieza">
-<h3>Launch of the Pensamiento Caribe Research Group</h3>
-<p>Coming soon</p>
-</article>
-<article class="pregon-f2__pieza">
-<h3>Call for the Eleguá Research Seedbed 2026</h3>
-<p>Coming soon</p>
-</article>
-<article class="pregon-f2__pieza">
-<h3>New articles in editorial process</h3>
-<p>Coming soon</p>
-</article>
-</div>
 </section>
 <section class="section" id="comunidad">
 <p class="section-label reveal">Bond</p>
@@ -456,64 +435,28 @@
 <p class="comunidad-f2__intro">Fourteen researchers, the Eleguá Seedbed, and three allied networks: the CLACSO Working Group on antiracism and Afro-descendance in the Global South, GLEFAS, and Malunga. The work is done with communities, not about them: the social cartography workshops, the neighbourhood memories, and the sound archives come out of collective processes.</p>
 <div class="comunidad-f2__perfiles">
 <article class="perfil-f2">
-<img alt="Roberto Almanza Hernández" height="300" loading="lazy" src="assets/roberto-almanza.jpeg" width="300"/>
-<h3>Roberto Almanza Hernández</h3>
-<p></p>
-</article>
-<article class="perfil-f2">
-<img alt="Margarita Granados" height="300" loading="lazy" src="assets/img/margarita.jpg" width="300"/>
-<h3>Margarita Granados</h3>
-<p></p>
-</article>
-<article class="perfil-f2">
 <img alt="Caridad Brito Ballesteros" height="300" loading="lazy" src="assets/img/caridad.jpeg" width="300"/>
 <h3>Caridad Brito Ballesteros</h3>
-<p></p>
-</article>
-<article class="perfil-f2">
-<img alt="Juan Carlos Gómez Blanco" height="300" loading="lazy" src="assets/img/juan-carlos-gomez.jpg" width="300"/>
-<h3>Juan Carlos Gómez Blanco</h3>
-<p></p>
 </article>
 <article class="perfil-f2">
 <img alt="Deibys Carrasquilla Baza" height="300" loading="lazy" src="assets/img/carrasquilla.jpeg" width="300"/>
 <h3>Deibys Carrasquilla Baza</h3>
-<p></p>
-</article>
-<article class="perfil-f2">
-<img alt="Rosa María Chamorro Cuello" height="300" loading="lazy" src="assets/img/rosa-chamorro.jpeg" width="300"/>
-<h3>Rosa María Chamorro Cuello</h3>
-<p></p>
 </article>
 <article class="perfil-f2">
 <img alt="Demetrio Ribeiro De Andrade" height="300" loading="lazy" src="assets/img/demetrio.jpeg" width="300"/>
 <h3>Demetrio Ribeiro De Andrade</h3>
-<p></p>
 </article>
 <article class="perfil-f2">
 <img alt="Dakna Davraiskí Alvarado Maestre" height="300" loading="lazy" src="assets/img/dakna.jpeg" width="300"/>
 <h3>Dakna Davraiskí Alvarado Maestre</h3>
-<p></p>
 </article>
 <article class="perfil-f2">
 <img alt="Dayana Granados Hernández" height="300" loading="lazy" src="assets/img/dayana.png" width="300"/>
 <h3>Dayana Granados Hernández</h3>
-<p></p>
 </article>
 <article class="perfil-f2">
 <img alt="Everleidis Tatiana Dávila Sanabria" height="300" loading="lazy" src="assets/img/everleidis.jpeg" width="300"/>
 <h3>Everleidis Tatiana Dávila Sanabria</h3>
-<p></p>
-</article>
-<article class="perfil-f2">
-<img alt="Natalia Mindiola Montero" height="300" loading="lazy" src="assets/img/natalia.jpeg" width="300"/>
-<h3>Natalia Mindiola Montero</h3>
-<p></p>
-</article>
-<article class="perfil-f2">
-<img alt="Oliver Poveda Pozo" height="300" loading="lazy" src="assets/img/oliver.jpeg" width="300"/>
-<h3>Oliver Poveda Pozo</h3>
-<p></p>
 </article>
 </div>
 <div class="comunidad-f2__ctas">
@@ -525,7 +468,6 @@
 <section class="section" id="semillero">
 <p class="section-label reveal">Training</p>
 <h2 class="section-title reveal">Eleguá Research <em>Seedbed</em></h2>
-<p class="section-subtitle reveal"></p>
 <div class="recursos-f2">
 <article class="recurso-f2">
 <h3>Research training</h3>
@@ -544,9 +486,7 @@
 <section class="cta-final reveal" id="contacto">
 <p class="cta-final-title">“Thinking from our shore means listening to the Caribbean as a living archive, an open wound, and a horizon of <em>political imagination</em>.”</p>
 <p class="cta-final-sub">Pensamiento Caribe opens a space to think, research, and critically accompany the lives, territories, and struggles of the Colombian Caribbean.</p>
-<form action="mailto:cpensamientocaribe@gmail.com" class="form-contact" enctype="text/plain" id="contact-form" method="POST" novalidate="" style="margin: 0 auto var(--space-xl);">
-<input name="_subject" type="hidden" value="New message from pensamientocaribe.org"/>
-<input autocomplete="off" name="_gotcha" style="display:none" tabindex="-1" type="text"/>
+<form class="form-contact" id="contact-form" novalidate="" style="margin: 0 auto var(--space-xl);"><p class="form-aviso">This form does not send anything on its own: it opens your mail client with the message ready, and you decide whether to send it. We do not store what you type here. <a href="privacidad/">How we handle data</a>.</p>
 <div class="form-row">
 <div class="form-field">
 <label for="contact-name">Name</label>
@@ -610,7 +550,7 @@
 <li><a href="mailto:cpensamientocaribe@gmail.com">cpensamientocaribe@gmail.com</a></li>
 <li><a href="https://www.instagram.com/cpcaribe" rel="noopener" target="_blank">Instagram: @cpcaribe</a></li>
 <li><a href="proyectos/metodologia-agua-de-por-medio-en.html">How to cite the atlas</a></li>
-<li><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="noopener" target="_blank">CC BY-NC-SA 4.0 licence</a></li>
+<li><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en" rel="noopener" target="_blank">CC BY-NC-SA 4.0 licence</a><span aria-hidden="true" class="footer-sep"> · </span><a href="accesibilidad/">Accessibility</a><span aria-hidden="true" class="footer-sep"> · </span><a href="privacidad/">Privacy</a><span aria-hidden="true" class="footer-sep"> · </span><a href="privacidad/#tratamiento">Data handling</a></li>
 </ul>
 </div>
 </div>
@@ -621,15 +561,14 @@
 </footer>
 </div>
 <!-- Toast -->
-<div aria-live="polite" class="toast" id="toast" role="alert">
-    Thank you. Your message has been recorded as a contact request.
-  </div>
+<div aria-live="polite" class="toast" id="toast" role="status"></div>
 <!-- Scripts -->
 <script crossorigin="" defer="" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script defer="" src="js/interactions.js?v=2"></script>
-<script defer="" src="js/caribbean-map.js?v=4"></script>
+<script defer="" src="js/caribbean-map.js?v=5"></script>
+<script defer="" src="js/atlas-ficha.js?v=1"></script>
 <script src="js/lineas.js?v=3"></script>
-<script defer="" src="js/forms.js?v=2"></script>
+<script defer="" src="js/forms.js?v=3"></script>
 <script>
     // ── Efemérides lightbox ──
     (function () {

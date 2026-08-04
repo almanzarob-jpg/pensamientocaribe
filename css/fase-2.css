@@ -118,16 +118,167 @@
    la condición para que los filtros sirvieran de algo. */
 /* La sección que lo contiene ya aporta el ancho máximo de 1400 y el
    relleno lateral. Repetirlos aquí estrecharía el atlas respecto de su
-   propio encabezado. */
+   propio encabezado.
+
+   Fase 2.1: el panel lateral se retira. Ganaba que todo cupiera en pantalla,
+   pero a costa de dejar el mapa en 442 px y la lectura en una columna de
+   21 rem. Ahora el mapa toma el ancho entero y la ficha entra por la base
+   solo cuando hay un nodo elegido. */
 .atlas {
   margin-top: var(--space-lg);
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 21rem;
-  gap: clamp(1.25rem, 2.5vw, 2rem);
-  align-items: start;
+  display: block;
 }
 
-.atlas__lienzo { min-width: 0; }
+/* ── Barra de capas, plegable ── */
+.atlas__barra {
+  border: 1px solid var(--c-border-green);
+  border-radius: var(--radius-sm);
+  background: var(--c-surface-a);
+  margin-bottom: var(--space-sm);
+}
+
+.atlas__barra > summary {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-meta);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--c-green-light);
+  cursor: pointer;
+  padding: 0 var(--space-md);
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+
+.atlas__barra > summary:focus-visible { outline: 2px solid var(--c-orange); outline-offset: 2px; }
+
+/* Una tira que se desliza, nunca once filas apiladas. */
+.atlas .caribe-mapa-filters {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  gap: 6px;
+  margin: 0;
+  padding: 0 var(--space-md) var(--space-sm);
+  justify-content: flex-start;
+}
+
+.atlas .caribe-mapa-filters .filter-btn {
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+  white-space: nowrap;
+  min-height: 44px;             /* WCAG 2.5.8 · objetivo cómodo */
+}
+
+/* ── Lienzo: el mapa a ancho completo, con la ficha superpuesta ── */
+.atlas__lienzo {
+  position: relative;
+  min-width: 0;
+  border: 1px solid var(--c-border-green);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+/* La barra de navegación es fija y mide 200 px. El alto se calcula
+   descontándola, para que el mapa entero quepa en lo visible. */
+.atlas__lienzo .caribe-leaflet-map {
+  height: clamp(380px, calc(100vh - var(--nav-height) - 5rem), 700px);
+  border: 0;
+  border-radius: 0;
+}
+
+.atlas__pista {
+  position: absolute;
+  left: 50%; bottom: var(--space-md);
+  transform: translateX(-50%);
+  max-width: 32rem;
+  text-align: center;
+  padding: 10px 18px;
+  font-size: var(--fs-small);
+  color: var(--c-cream);
+  background: rgba(5, 6, 4, 0.9);
+  border: 1px solid var(--c-border-green);
+  border-radius: var(--radius-sm);
+  pointer-events: none;
+  z-index: 500;
+  margin: 0;
+}
+
+.atlas__pista[hidden] { display: none; }
+
+/* ── Ficha del nodo, panel inferior ── */
+.ficha {
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  max-height: 36%;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  background: rgba(5, 6, 4, 0.96);
+  border-top: 2px solid var(--ficha-acento, var(--c-green-light));
+  color: var(--c-gray);
+  z-index: 600;
+}
+
+.ficha[hidden] { display: none; }
+
+.ficha__cabecera {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: 8px var(--space-md);
+  border-bottom: 1px solid var(--c-divider-green);
+  position: sticky;
+  top: 0;
+  background: inherit;
+}
+
+.ficha__titulos { min-width: 0; flex: 1 1 auto; }
+
+.ficha__nombre {
+  font-family: var(--ff-display);
+  font-size: 1.1rem;
+  color: var(--c-cream);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.ficha__meta { font-family: var(--ff-mono); font-size: var(--fs-meta); margin: 2px 0 0; }
+.ficha__territorio { color: var(--c-gold); text-transform: uppercase; letter-spacing: 0.1em; }
+.ficha__territorio:not(:empty)::after { content: ' · '; color: var(--c-gray); }
+.ficha__region { color: var(--c-gray); }
+
+.ficha__cerrar {
+  flex: 0 0 auto;
+  width: 44px; height: 44px;
+  display: grid; place-items: center;
+  font-size: 1.2rem; line-height: 1;
+  color: var(--c-gray);
+  background: transparent;
+  border: 1px solid var(--c-border-green);
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+}
+
+.ficha__cerrar:hover { color: var(--c-cream); border-color: var(--c-border-orange); }
+.ficha__cerrar:focus-visible { outline: 2px solid var(--c-orange); outline-offset: 2px; }
+
+.ficha__cuerpo { padding: var(--space-sm) var(--space-md) var(--space-md); }
+
+/* El cuerpo recibe el mismo contenido que antes iba al globo. Su encabezado
+   se oculta porque la cabecera de la ficha ya nombra el nodo. */
+.ficha .caribe-popup-head { display: none; }
+.ficha .caribe-popup { max-width: none; }
+.ficha .caribe-popup-desc { max-width: 68ch; }
+
+.nodo-activo { filter: drop-shadow(0 0 6px var(--c-orange)); }
+
+.leaflet-interactive:focus-visible {
+  outline: 3px solid var(--c-orange);
+  outline-offset: 2px;
+}
 
 /* Leaflet necesita altura explícita: sin esto el mapa se instancia pero no
    se dibuja. La barra de navegación es fija y mide 200 px, casi un tercio
@@ -138,53 +289,10 @@
   height: clamp(380px, calc(100vh - var(--nav-height) - 5rem), 700px);
 }
 
-/* El panel acompaña el desplazamiento y nunca sobrepasa el alto visible.
-   Reparto interno: la lista de capas se queda con el espacio sobrante y
-   se desplaza dentro de sí misma; los dos resúmenes plegables quedan
-   anclados abajo. Sin esto, las once capas miden 462 px en un panel de
-   442 y «cómo leer el mapa» vuelve a caer bajo el pliegue, que es
-   justamente el defecto que este trabajo corrige. */
-.atlas__panel {
-  min-width: 0;
-  position: sticky;
-  top: calc(var(--nav-height) + var(--space-sm));
-  max-height: calc(100vh - var(--nav-height) - 5rem);
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-xs);
-}
 
-.atlas__capas {
-  flex: 1 1 auto;
-  min-height: 5rem;
-  display: flex;
-  flex-direction: column;
-  min-width: 0;
-}
 
-.atlas__leyenda,
-.atlas__panel .mapa-tabla {
-  flex: 0 0 auto;
-  border-top: 1px solid var(--c-divider-green);
-}
 
-/* Al desplegarse, la leyenda tampoco puede empujar fuera lo demás. */
-.atlas__leyenda[open] {
-  flex: 0 1 auto;
-  min-height: 0;
-  overflow-y: auto;
-  overscroll-behavior: contain;
-}
 
-.atlas__rotulo {
-  font-family: var(--ff-mono);
-  font-size: var(--fs-meta);
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  color: var(--c-green-light);
-  margin-bottom: var(--space-xs);
-}
 
 /* En columna estrecha las once capas se leen como lista, no como una
    nube de etiquetas: cada una ocupa su renglón y se alinea a la izquierda. */
@@ -211,7 +319,7 @@
 }
 
 .atlas__leyenda > summary,
-.atlas__panel .mapa-tabla > summary {
+.atlas > .mapa-tabla > summary {
   font-family: var(--ff-mono);
   font-size: var(--fs-meta);
   text-transform: uppercase;
@@ -223,7 +331,7 @@
 }
 
 .atlas__leyenda > summary:focus-visible,
-.atlas__panel .mapa-tabla > summary:focus-visible {
+.atlas > .mapa-tabla > summary:focus-visible {
   outline: 2px solid var(--c-orange);
   outline-offset: 3px;
 }
@@ -244,32 +352,28 @@
    de apilarse en seis u ocho filas: se convierten en una tira que se
    desliza en horizontal. Así el mapa y sus capas siguen cabiendo juntos. */
 @media (max-width: 900px) {
-  .atlas {
-    grid-template-columns: 1fr;
-    gap: var(--space-sm);
+  /* El mapa se acorta y la ficha deja de superponerse: baja debajo, entera.
+     Con 340 px de mapa, un panel encima taparia mas de la mitad. */
+  .atlas__lienzo .caribe-leaflet-map { height: clamp(340px, 52vh, 480px); }
+  .atlas__lienzo { overflow: visible; border: 0; }
+  .atlas__lienzo .caribe-leaflet-map {
+    border: 1px solid var(--c-border-green);
+    border-radius: var(--radius-md);
   }
-  .atlas__panel {
+  .ficha {
     position: static;
     max-height: none;
-    overflow: visible;
-    padding-right: 0;
+    margin-top: var(--space-sm);
+    border: 1px solid var(--c-border-green);
+    border-top-width: 2px;
+    border-radius: var(--radius-md);
   }
-  .atlas__lienzo .caribe-leaflet-map { height: clamp(340px, 52vh, 480px); }
-
-  .atlas .caribe-mapa-filters {
-    flex-direction: row;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    overscroll-behavior-x: contain;
-    scroll-snap-type: x proximity;
-    gap: 6px;
-    padding-bottom: 6px;
-  }
-  .atlas .caribe-mapa-filters .filter-btn {
-    width: auto;
-    flex: 0 0 auto;
-    white-space: nowrap;
-    scroll-snap-align: start;
+  .ficha__cuerpo { padding-bottom: var(--space-sm); }
+  .atlas__pista {
+    position: static;
+    transform: none;
+    max-width: none;
+    margin-top: var(--space-sm);
   }
   .atlas .legend-swatches { grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); }
 }
@@ -548,14 +652,11 @@
 @media (max-width: 900px) {
   .hero-f2 { grid-template-columns: 1fr; min-height: auto; padding-top: calc(var(--nav-height) + var(--space-lg)); }
   .hero-f2__mapa { aspect-ratio: 3 / 2; }
-  .mapa-f2__cuerpo { grid-template-columns: 1fr; }
-  .mapa-f2__lienzo { min-height: 380px; }
   .semana-f2 { grid-template-columns: 1fr; }
   .semana-f2__media { order: -1; max-height: 220px; }
 }
 @media (max-width: 500px) {
   .hero-f2__mapa { aspect-ratio: 1; }
-  .mapa-f2__lienzo { min-height: 300px; }
   .pub-f2 { grid-template-columns: 1fr; gap: var(--space-xs); }
   .comunidad-f2__perfiles { grid-template-columns: repeat(2, 1fr); }
 }

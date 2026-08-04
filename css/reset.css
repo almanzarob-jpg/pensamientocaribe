@@ -162,6 +162,22 @@ button {
   border-radius: var(--radius-xs);
 }
 
+/* Texto solo para lectores de pantalla. El sitio no tenía esta clase y la
+   necesita al menos la región que anuncia la ficha del atlas: sin ella el
+   texto del anuncio se dibuja en mitad de la página. */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
 .skip-link {
   position: absolute;
   left: 1rem;
