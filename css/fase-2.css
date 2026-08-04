@@ -875,11 +875,23 @@
 }
 
 /* ── Fichas ── */
+/* El numero de columnas se fija por tramo en vez de dejarlo a `auto-fill`.
+   Con `minmax(19rem, 1fr)` la pantalla ancha abria cuatro columnas de 308 px:
+   33 caracteres por linea, menos que en un movil de 375 px. La pantalla mas
+   grande daba la lectura mas estrecha. Tres columnas dejan unos 53. */
 .carto-nodos {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr));
+  grid-template-columns: 1fr;
   gap: var(--space-md);
   margin-top: var(--space-md);
+}
+
+@media (min-width: 700px) {
+  .carto-nodos { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (min-width: 1200px) {
+  .carto-nodos { grid-template-columns: repeat(3, minmax(0, 1fr)); }
 }
 
 .carto-nodo {
@@ -922,6 +934,10 @@
   color: var(--c-gray);
   line-height: 1.65;
   margin: 0 0 var(--space-sm);
+  /* Red de seguridad: pase lo que pase con el ancho de la ficha, la linea
+     no pasa de una medida legible. Sin esto, una sola columna en tableta
+     daria lineas de casi noventa caracteres. */
+  max-width: 62ch;
 }
 
 .carto-nodo__rotulo {

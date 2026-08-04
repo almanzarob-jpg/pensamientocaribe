@@ -146,6 +146,15 @@
     transition-duration: 0.01ms !important;
   }
 
+  /* El desplazamiento suave tambien es movimiento, y no lo apagaba ninguna
+     de las reglas de arriba: `scroll-behavior` no es una animacion ni una
+     transicion. En una pagina larga —cartografias mide unos 11.000 px— un
+     salto de ancla recorre toda esa distancia animado. Quien pidio menos
+     movimiento debe llegar de golpe. */
+  html {
+    scroll-behavior: auto !important;
+  }
+
   .reveal {
     opacity: 1;
     transform: none;
