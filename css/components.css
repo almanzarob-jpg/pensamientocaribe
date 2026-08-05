@@ -1210,12 +1210,23 @@
   margin-bottom: 4px;
 }
 
+/* Aqui no hay una etiqueta corta, hay una referencia bibliografica: 22 de
+   las 54 pasan de 40 caracteres y la mayor llega a 149, con titulo de
+   libro, revista y editorial dentro. En un sitio academico, una cita en
+   versales pierde justo lo que la hace legible como cita: la mayuscula
+   inicial y la cursiva del titulo. Hay cinco `em` ahi dentro que las
+   mayusculas aplanaban. */
 .pub-type {
-  font-family: var(--ff-mono);
-  font-size: var(--fs-meta);
-  text-transform: uppercase;
-  letter-spacing: 0.12em;
+  font-family: var(--ff-body);
+  font-size: 0.88rem;
+  text-transform: none;
+  letter-spacing: normal;
+  line-height: 1.5;
   color: var(--c-green-light);
+}
+
+.pub-type em {
+  font-style: italic;
 }
 
 .pub-action {
@@ -1311,11 +1322,29 @@
   margin-bottom: 2px;
 }
 
-.card-member p {
-  font-family: var(--ff-mono);
-  font-size: var(--fs-meta);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+/* La biografia es prosa, no un rotulo.
+   Esta regla alcanzaba a TODOS los parrafos de la ficha, pero el cargo ya
+   tiene la suya propia e identica en `.card-member-role`: era un resto de
+   cuando el cargo no tenia clase, y lo unico que seguia tocando era la
+   biografia. Trece fichas, hasta 669 caracteres cada una, en mayusculas,
+   monoespaciada de 13 px y columna de 28 caracteres. Tres penalizaciones
+   a la vez: las mayusculas borran la silueta de la palabra, la
+   monoespaciada iguala los anchos y la columna corta el ritmo.
+   Se le devuelve tipografia de lectura. */
+/* Se retira `.card-member p`, que ponia en versales todos los parrafos de
+   la ficha. El cargo ya tiene su propia regla identica en
+   `.card-member-role`, asi que esta solo alcanzaba a la biografia.
+
+   No basta con anadir una regla nueva para la biografia: `.card-member p`
+   suma clase mas elemento y gana por especificidad a `.card-member-bio`,
+   que es solo una clase. Comprobado en el navegador antes de darlo por
+   hecho: inyectando la regla nueva, el texto seguia en mayusculas. Hay que
+   quitar la vieja, no taparla. */
+.card-member-bio {
+  font-family: var(--ff-body);
+  font-size: 0.94rem;
+  letter-spacing: normal;
+  line-height: 1.6;
   color: var(--c-gray);
 }
 
