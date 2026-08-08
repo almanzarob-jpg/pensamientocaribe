@@ -2,10 +2,11 @@
 
 Este paquete aplica el dictamen académico aprobado el 8 de agosto de 2026 al lote piloto. Trabaja sobre el corpus 1.15.0 —233 entradas y 588 relaciones—, pero no modifica `datos-atlas.json`, `datos-atlas.js` ni la interfaz pública.
 
-La transición contiene ahora dos capas separadas y reversibles:
+La transición contiene ahora tres capas separadas y reversibles:
 
 - `P00`: piloto de arquitectura, con 10 registros heredados, nueve nodos efectivos y una redirección.
 - `S01`: primer lote editorial, con 11 entradas, 12 relaciones revisadas y cinco dependencias ya examinadas en `P00`.
+- `A01`: primer tramo de candidaturas únicas, con 18 entradas y 14 relaciones revisadas.
 
 ## Resultado intelectual
 
@@ -25,6 +26,7 @@ La transición contiene ahora dos capas separadas y reversibles:
 - Se añade el mecanismo `segmentación étnico-racial del trabajo`.
 - Las relaciones pueden declarar `componente_a` y `componente_b`; el validador comprueba que cada identificador pertenezca al nodo extremo correspondiente.
 - Un lote puede revisar relaciones con nodos de lotes aprobados previamente mediante una lista explícita de `dependencias`.
+- Una fricción solo se acepta cuando la relación está corroborada, confirma una disonancia y registra evidencia localizable y argumento editorial.
 
 ## Dictamen S01
 
@@ -34,6 +36,14 @@ La transición contiene ahora dos capas separadas y reversibles:
 - Cuatro relaciones quedan corroboradas y ocho permanecen por corroborar.
 - S01 no crea nodos, no altera identificadores heredados y no carga sus correcciones en el corpus público.
 
+## Dictamen A01
+
+- Doce candidaturas únicas se confirman y seis se redirigen por el argumento central de cada obra.
+- `downtownladies` y `reddock` pasan a postplantación, trabajo y desposesión; `shepherdmaharani` a rutas, diásporas y territorios acuosos; `fuentesdispossessed` a memorias, espiritualidades y archivos vivos; `hall_slavesocietydanish` y `morenofraginals` a trata, esclavización y plantación.
+- Se registran, sin sobrescribir el corpus heredado, las correcciones de fecha de `downtownladies` (2008), `shellerconsuming` (2003) y `floresvillalobos` (2023).
+- Cuatro relaciones quedan corroboradas y diez permanecen por corroborar.
+- `R0558 shepherdmaharani–reddock` cambia de resonancia a disonancia y declara una fricción documentada.
+
 ## Archivos
 
 - `catalogos-atlas-2.json`: vocabularios controlados y reglas de transición.
@@ -41,6 +51,8 @@ La transición contiene ahora dos capas separadas y reversibles:
 - `piloto-generado.json`: salida reproducible que conserva intactos los campos heredados.
 - `lotes/s01-config.json`: decisiones aprobadas para las 11 entradas y 12 relaciones de S01.
 - `lotes/s01-generado.json`: capa S01 reproducible, separada del corpus público.
+- `lotes/a01-config.json`: decisiones aprobadas para las 18 entradas y 14 relaciones de A01.
+- `lotes/a01-generado.json`: capa A01 reproducible, separada del corpus público.
 - `scripts/generar-piloto-atlas-2.mjs`: genera la capa piloto separada.
 - `scripts/validar-piloto-atlas-2.mjs`: valida herencia, clasificación, temporalidades, orillas, operaciones, redirecciones y relaciones.
 
@@ -53,6 +65,8 @@ node scripts/generar-piloto-atlas-2.mjs
 node scripts/validar-piloto-atlas-2.mjs
 node scripts/generar-piloto-atlas-2.mjs data/agua-de-por-medio/datos-atlas.json data/agua-de-por-medio/atlas-2/lotes/s01-config.json data/agua-de-por-medio/atlas-2/catalogos-atlas-2.json data/agua-de-por-medio/atlas-2/lotes/s01-generado.json
 node scripts/validar-piloto-atlas-2.mjs data/agua-de-por-medio/datos-atlas.json data/agua-de-por-medio/atlas-2/lotes/s01-generado.json data/agua-de-por-medio/atlas-2/catalogos-atlas-2.json data/agua-de-por-medio/atlas-2/lotes/s01-config.json
+node scripts/generar-piloto-atlas-2.mjs data/agua-de-por-medio/datos-atlas.json data/agua-de-por-medio/atlas-2/lotes/a01-config.json data/agua-de-por-medio/atlas-2/catalogos-atlas-2.json data/agua-de-por-medio/atlas-2/lotes/a01-generado.json
+node scripts/validar-piloto-atlas-2.mjs data/agua-de-por-medio/datos-atlas.json data/agua-de-por-medio/atlas-2/lotes/a01-generado.json data/agua-de-por-medio/atlas-2/catalogos-atlas-2.json data/agua-de-por-medio/atlas-2/lotes/a01-config.json
 git diff --check
 git status --short
 ```
@@ -61,4 +75,4 @@ El resultado esperado es `0 error(es), 0 advertencia(s)`.
 
 ## Límite
 
-La aprobación alcanza P00, S01 y las correcciones del esquema de transición. No autoriza todavía la migración de los lotes siguientes, la escritura sobre `datos-atlas.json`/`datos-atlas.js` ni la fusión con `main`.
+La aprobación alcanza P00, S01, A01 y las correcciones del esquema de transición. No autoriza todavía la migración de los lotes siguientes, la escritura sobre `datos-atlas.json`/`datos-atlas.js` ni la fusión con `main`.

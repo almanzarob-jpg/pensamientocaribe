@@ -174,7 +174,15 @@ for (const [index, item] of relations.entries()) {
   if (item?.migracion2?.id_transicion && item.migracion2.id_transicion !== sourceRecord?.id) error("ID_RELACION", `relaciones[${index}] declara un identificador de transición que no coincide con el orden del corpus.`);
   if (!relation || !allowedRelationIds.has(relation.a) || !allowedRelationIds.has(relation.b)) error("RELACION", `relaciones[${index}] conecta un extremo fuera del lote o sus dependencias.`);
   if (relation && !batchEntryIds.has(relation.a) && !batchEntryIds.has(relation.b)) error("RELACION", `relaciones[${index}] no toca ninguna entrada del lote actual.`);
-  if (item?.migracion2?.friccion?.hay !== false) error("FRICCION", `relaciones[${index}] infiere fricción sin argumento editorial.`);
+  const friction = item?.migracion2?.friccion;
+  if (typeof friction?.hay !== "boolean") {
+    error("FRICCION", `relaciones[${index}] no declara la fricción como booleano.`);
+  } else if (friction.hay) {
+    if (item?.migracion2?.estado !== "corroborada") error("FRICCION", `relaciones[${index}] declara fricción sin corroborar la relación.`);
+    if (item?.migracion2?.tipo_confirmado !== "disonancia") error("FRICCION", `relaciones[${index}] declara fricción sin confirmar una disonancia.`);
+    if (!nonEmpty(friction.argumento)) error("FRICCION", `relaciones[${index}] declara fricción sin argumento editorial.`);
+    if (!nonEmpty(item?.migracion2?.evidencia)) error("FRICCION", `relaciones[${index}] declara fricción sin evidencia localizable.`);
+  }
   if (typeof item?.migracion2?.cruce_linguistico !== "boolean") error("CRUCE", `relaciones[${index}] no declara el cruce lingüístico como booleano.`);
   if (!relationStates.has(item?.migracion2?.estado)) error("CORROBORACION", `relaciones[${index}] no declara un estado válido.`);
   if (item?.migracion2?.estado === "por_corroborar" && item?.migracion2?.tipo_confirmado !== null) error("CORROBORACION", `relaciones[${index}] no puede confirmar tipo mientras está por corroborar.`);

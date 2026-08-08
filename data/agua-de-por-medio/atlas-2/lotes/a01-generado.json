@@ -1,0 +1,1766 @@
+{
+  "meta": {
+    "titulo": "Atlas 2.0 · lote A01 de candidaturas únicas",
+    "lote": "A01",
+    "version": "lote-a01.1",
+    "esquema": "2.0-lotes.1",
+    "generado": "2026-08-08",
+    "aprobacion": {
+      "estado": "aprobado",
+      "fecha": "2026-08-08",
+      "responsable": "Dirección académica de Pensamiento Caribe",
+      "alcance": "Dictamen A01 de 18 entradas y 14 relaciones; no modifica el corpus público, los DOI, la interfaz ni main."
+    },
+    "corpus_fuente": "1.15.0",
+    "corpus_fuente_sha256": "dd750b80b789118fa3e215cc16a67fe7b65ad06c7d0838cc31ae0bde8103f2a4",
+    "recuentos_fuente": {
+      "entradas": 233,
+      "relaciones": 588,
+      "lugares": 30
+    },
+    "recuentos_lote": {
+      "registros_heredados": 18,
+      "nodos_efectivos": 18,
+      "redirecciones": 0,
+      "relaciones_revisadas": 14
+    },
+    "regla": "Los campos heredados f, l, tr y y se conservan sin cambios. Una candidatura preliminar no se presenta como corriente confirmada.",
+    "modifica_corpus_publico": false
+  },
+  "catalogos": "catalogos-atlas-2.json",
+  "entradas": [
+    {
+      "heredado": {
+        "id": "stoutafterlove",
+        "k": "obra",
+        "t": "After Love: Queer Intimacy and Erotic Economies in Post-Soviet Cuba",
+        "a": "Noelle M. Stout",
+        "y": "2014",
+        "f": [
+          "cuerpo_erotica",
+          "capitalismo_racial"
+        ],
+        "l": "cuba",
+        "tr": "anglófono (EE.UU.)",
+        "ap": "El deseo y el afecto como economía en la Cuba post-soviética: la erótica no como excepción a la sobrevivencia material sino como parte de ella. Ángulo del cuerpo y la intimidad ausente del corpus cubano previo."
+      },
+      "migracion2": {
+        "id": "stoutafterlove",
+        "decision_aprobada": "confirmar_candidatura",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "migración",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "confirmada",
+          "fundamento": "La intimidad queer, el deseo y las economías eróticas organizan el argumento; la transformación económica es secundaria.",
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        },
+        "corriente_confirmada": "cuerpos_parentescos_eroticas",
+        "corrientes_secundarias": [
+          "postplantacion_trabajo_desposesion"
+        ],
+        "lenguas_publicacion": [
+          "inglés"
+        ],
+        "operaciones": [
+          "producir etnografía",
+          "documentar una práctica"
+        ],
+        "orillas": [
+          {
+            "tipo": "región",
+            "label": "La Habana/Cuba",
+            "funcion": "territorio estudiado"
+          }
+        ],
+        "temporalidades": {
+          "publicacion": {
+            "valor": 2014,
+            "era": "EC",
+            "precision": "exacta"
+          },
+          "periodo_estudiado": {
+            "inicio": {
+              "valor": 2002,
+              "era": "EC",
+              "precision": "aproximada"
+            },
+            "fin": {
+              "valor": 2014,
+              "era": "EC",
+              "precision": "aproximada"
+            },
+            "precision": "aproximada"
+          }
+        },
+        "fuentes_revision": [
+          "https://www.noellestout.com/wp-content/uploads/2019/08/N-Stout-After-Love-Intro.pdf"
+        ],
+        "pendientes": [],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ]
+      }
+    },
+    {
+      "heredado": {
+        "id": "downtownladies",
+        "k": "obra",
+        "t": "Downtown Ladies: Informal Commercial Importers, a Haitian Anthropologist, and Self-Making in Jamaica",
+        "a": "Gina Athena Ulysse",
+        "y": "2007",
+        "f": [
+          "cuerpo_erotica",
+          "capitalismo_racial"
+        ],
+        "l": "jamaica",
+        "tr": "anglófono (EE.UU./Haití)",
+        "ap": "Comerciantes informales jamaicanas estudiadas por una antropóloga haitiana: el trabajo de campo mismo como cruce de tradiciones caribeñas."
+      },
+      "migracion2": {
+        "id": "downtownladies",
+        "decision_aprobada": "corregir_corriente_y_fecha",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "corrección bibliográfica",
+          "migración",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "confirmada",
+          "fundamento": "El centro es el trabajo informal transnacional y la autonomía económica de comerciantes; género y cuerpo importan, pero no organizan por sí solos el libro.",
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        },
+        "corriente_confirmada": "postplantacion_trabajo_desposesion",
+        "corrientes_secundarias": [
+          "rutas_diasporas_territorios_acuosos",
+          "cuerpos_parentescos_eroticas"
+        ],
+        "lenguas_publicacion": [
+          "inglés"
+        ],
+        "correcciones_aprobadas": {
+          "y": "2008"
+        },
+        "operaciones": [
+          "producir etnografía",
+          "seguir una ruta",
+          "confrontar una categoría"
+        ],
+        "orillas": [
+          {
+            "tipo": "región",
+            "label": "Kingston/Jamaica",
+            "funcion": "territorio estudiado"
+          },
+          {
+            "tipo": "región",
+            "label": "Kingston–Miami",
+            "funcion": "lugar de circulación"
+          }
+        ],
+        "temporalidades": {
+          "publicacion": {
+            "valor": 2008,
+            "era": "EC",
+            "precision": "exacta"
+          },
+          "periodo_estudiado": {
+            "inicio": {
+              "valor": 1970,
+              "era": "EC",
+              "precision": "aproximada"
+            },
+            "fin": {
+              "valor": 2008,
+              "era": "EC",
+              "precision": "aproximada"
+            },
+            "precision": "aproximada"
+          }
+        },
+        "fuentes_revision": [
+          "https://press.uchicago.edu/ucp/books/book/chicago/D/bo5530708.html"
+        ],
+        "pendientes": [],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ]
+      }
+    },
+    {
+      "heredado": {
+        "id": "nixon_resistingparadise",
+        "k": "obra",
+        "t": "Resisting Paradise: Tourism, Diaspora, and Sexuality in Caribbean Culture",
+        "a": "Angelique V. Nixon",
+        "y": "2015",
+        "f": [
+          "cuerpo_erotica",
+          "capitalismo_racial"
+        ],
+        "l": "jamaica",
+        "tr": "anglófono (Bahamas/Trinidad)",
+        "ap": "El turismo como economía erótica racializada: dialoga extensamente con Kempadoo y Sheller para mostrar cómo el cuerpo caribeño se vende como paraíso disponible."
+      },
+      "migracion2": {
+        "id": "nixon_resistingparadise",
+        "decision_aprobada": "confirmar_candidatura",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "migración",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "confirmada",
+          "fundamento": "La producción cultural y sexual del paraíso articula el libro; turismo y diáspora funcionan como economías y rutas secundarias.",
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        },
+        "corriente_confirmada": "cuerpos_parentescos_eroticas",
+        "corrientes_secundarias": [
+          "postplantacion_trabajo_desposesion",
+          "rutas_diasporas_territorios_acuosos"
+        ],
+        "lenguas_publicacion": [
+          "inglés"
+        ],
+        "operaciones": [
+          "confrontar una categoría",
+          "comparar orillas",
+          "intervenir políticamente"
+        ],
+        "orillas": [
+          {
+            "tipo": "región",
+            "label": "Caribe anglófono y diáspora",
+            "funcion": "espacio diaspórico"
+          }
+        ],
+        "temporalidades": {
+          "publicacion": {
+            "valor": 2015,
+            "era": "EC",
+            "precision": "exacta"
+          }
+        },
+        "fuentes_revision": [
+          "https://academic.oup.com/mississippi-scholarship-online/book/23832"
+        ],
+        "pendientes": [],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ]
+      }
+    },
+    {
+      "heredado": {
+        "id": "kempadoo",
+        "k": "obra",
+        "t": "Sexing the Caribbean: Gender, Race and Sexual Labor",
+        "a": "Kamala Kempadoo",
+        "y": "2004",
+        "f": [
+          "cuerpo_erotica",
+          "capitalismo_racial"
+        ],
+        "l": "guyana",
+        "tr": "anglófono (Guyana/Canadá)",
+        "ap": "El turismo sexual caribeño leído en su raíz colonial y esclavista, no como fenómeno reciente de la globalización: el cuerpo racializado como mercancía tiene una historia larga que el mercado actual repite con otro nombre."
+      },
+      "migracion2": {
+        "id": "kempadoo",
+        "decision_aprobada": "confirmar_candidatura",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "migración",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "confirmada",
+          "fundamento": "Género, raza y trabajo sexual se estudian desde cuerpos y relaciones eróticas racializadas; turismo y mercado quedan como dimensión económica.",
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        },
+        "corriente_confirmada": "cuerpos_parentescos_eroticas",
+        "corrientes_secundarias": [
+          "postplantacion_trabajo_desposesion"
+        ],
+        "lenguas_publicacion": [
+          "inglés"
+        ],
+        "operaciones": [
+          "producir etnografía",
+          "reconstruir un archivo",
+          "confrontar una categoría"
+        ],
+        "orillas": [
+          {
+            "tipo": "cuenca",
+            "label": "Gran Caribe",
+            "funcion": "territorio comparado"
+          }
+        ],
+        "temporalidades": {
+          "publicacion": {
+            "valor": 2004,
+            "era": "EC",
+            "precision": "exacta"
+          }
+        },
+        "fuentes_revision": [
+          "https://www.routledge.com/Sexing-the-Caribbean-Gender-Race-and-Sexual-Labor/Kempadoo/p/book/9780415935043"
+        ],
+        "pendientes": [],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ]
+      }
+    },
+    {
+      "heredado": {
+        "id": "kutzinskisugar",
+        "k": "obra",
+        "t": "Sugar's Secrets: Race and the Erotics of Cuban Nationalism",
+        "a": "Vera M. Kutzinski",
+        "y": "1993",
+        "f": [
+          "cuerpo_erotica",
+          "capitalismo_racial"
+        ],
+        "l": "cuba",
+        "tr": "anglófono (EE.UU.)",
+        "ap": "La mulata como figura erótica nacional cubana leída como un modo de absorber y neutralizar la negritud dentro del relato de nación, no como simple objeto de deseo literario."
+      },
+      "migracion2": {
+        "id": "kutzinskisugar",
+        "decision_aprobada": "confirmar_candidatura",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "migración",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "confirmada",
+          "fundamento": "La figura erótica racializada organiza la crítica del nacionalismo cubano; nación y soberanía son la dimensión secundaria.",
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        },
+        "corriente_confirmada": "cuerpos_parentescos_eroticas",
+        "corrientes_secundarias": [
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "lenguas_publicacion": [
+          "inglés"
+        ],
+        "operaciones": [
+          "reconstruir un archivo",
+          "confrontar una categoría",
+          "teorizar"
+        ],
+        "orillas": [
+          {
+            "tipo": "región",
+            "label": "Cuba",
+            "funcion": "territorio estudiado"
+          }
+        ],
+        "temporalidades": {
+          "publicacion": {
+            "valor": 1993,
+            "era": "EC",
+            "precision": "exacta"
+          }
+        },
+        "fuentes_revision": [
+          "https://www.upress.virginia.edu/title/2635/"
+        ],
+        "pendientes": [],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ]
+      }
+    },
+    {
+      "heredado": {
+        "id": "reddock",
+        "k": "obra",
+        "t": "Women, Labour and Politics in Trinidad and Tobago: A History",
+        "a": "Rhoda Reddock",
+        "y": "1994",
+        "f": [
+          "cuerpo_erotica",
+          "capitalismo_racial"
+        ],
+        "l": "trinidad",
+        "tr": "anglófono (Trinidad)",
+        "ap": "El trabajo femenino, indio y afrodescendiente, como motor invisibilizado de la economía política trinitense."
+      },
+      "migracion2": {
+        "id": "reddock",
+        "decision_aprobada": "corregir_corriente",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "migración",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "confirmada",
+          "fundamento": "Trabajo, empleo y participación política de las mujeres constituyen la arquitectura histórica del libro; género atraviesa esa economía política.",
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        },
+        "corriente_confirmada": "postplantacion_trabajo_desposesion",
+        "corrientes_secundarias": [
+          "cuerpos_parentescos_eroticas"
+        ],
+        "lenguas_publicacion": [
+          "inglés"
+        ],
+        "operaciones": [
+          "reconstruir un archivo",
+          "teorizar",
+          "documentar una práctica"
+        ],
+        "orillas": [
+          {
+            "tipo": "región",
+            "label": "Trinidad y Tobago",
+            "funcion": "territorio estudiado"
+          }
+        ],
+        "temporalidades": {
+          "publicacion": {
+            "valor": 1994,
+            "era": "EC",
+            "precision": "exacta"
+          }
+        },
+        "fuentes_revision": [
+          "https://books.google.com/books/about/Women_Labour_and_Politics_in_Trinidad_an.html?id=tGTPswEACAAJ"
+        ],
+        "pendientes": [],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ]
+      }
+    },
+    {
+      "heredado": {
+        "id": "shepherdmaharani",
+        "k": "obra",
+        "t": "Maharani's Misery: Narratives of a Passage from India to the Caribbean",
+        "a": "Verene A. Shepherd",
+        "y": "2002",
+        "f": [
+          "cuerpo_erotica",
+          "violencias"
+        ],
+        "l": "guyana",
+        "tr": "anglófono (Jamaica)",
+        "ap": "La muerte de una mujer india en la travesía de 1885 reconstruida desde la investigación colonial que la archivó: el kala pani contado desde el cuerpo de una migrante y no desde la estadística de embarques."
+      },
+      "migracion2": {
+        "id": "shepherdmaharani",
+        "decision_aprobada": "corregir_corriente",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "migración",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "confirmada",
+          "fundamento": "La travesía y el traslado de trabajo contratado desde India al Caribe organizan el libro; explotación laboral y género son secundarios.",
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        },
+        "corriente_confirmada": "rutas_diasporas_territorios_acuosos",
+        "corrientes_secundarias": [
+          "postplantacion_trabajo_desposesion",
+          "cuerpos_parentescos_eroticas"
+        ],
+        "lenguas_publicacion": [
+          "inglés"
+        ],
+        "operaciones": [
+          "reconstruir un archivo",
+          "seguir una ruta",
+          "confrontar una categoría"
+        ],
+        "orillas": [
+          {
+            "tipo": "región",
+            "label": "Ruta India–Guyana",
+            "funcion": "lugar de circulación"
+          }
+        ],
+        "temporalidades": {
+          "publicacion": {
+            "valor": 2002,
+            "era": "EC",
+            "precision": "exacta"
+          },
+          "periodo_estudiado": {
+            "inicio": {
+              "valor": 1885,
+              "era": "EC",
+              "precision": "exacta"
+            },
+            "fin": {
+              "valor": 1885,
+              "era": "EC",
+              "precision": "exacta"
+            },
+            "precision": "exacta"
+          }
+        },
+        "fuentes_revision": [
+          "https://books.google.tt/books?id=vJsqzkNmPI8C&printsec=copyright&source=gbs_pub_info_r"
+        ],
+        "pendientes": [],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ]
+      }
+    },
+    {
+      "heredado": {
+        "id": "gill",
+        "k": "obra",
+        "t": "Erotic Islands: Art and Activism in the Queer Caribbean",
+        "a": "Lyndon K. Gill",
+        "y": "2018",
+        "f": [
+          "cuerpo_erotica"
+        ],
+        "l": "trinidad",
+        "tr": "anglófono (Trinidad/EE.UU.)",
+        "ap": "El eros como categoría política, sensual y espiritual a la vez, leído en el mas de Carnaval, el calypso y el activismo contra el estigma del VIH en Trinidad. Retoma a Audre Lorde para rehacer el método etnográfico desde el propio cuerpo del investigador."
+      },
+      "migracion2": {
+        "id": "gill",
+        "decision_aprobada": "confirmar_candidatura",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "migración",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "confirmada",
+          "fundamento": "El eros es teoría, método y práctica política; arte, espiritualidad y memoria queer amplían la corriente sin desplazarla.",
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        },
+        "corriente_confirmada": "cuerpos_parentescos_eroticas",
+        "corrientes_secundarias": [
+          "memorias_espiritualidades_archivos_vivos"
+        ],
+        "lenguas_publicacion": [
+          "inglés"
+        ],
+        "operaciones": [
+          "producir etnografía",
+          "escuchar",
+          "intervenir políticamente"
+        ],
+        "orillas": [
+          {
+            "tipo": "región",
+            "label": "Trinidad y Tobago",
+            "funcion": "territorio estudiado"
+          }
+        ],
+        "temporalidades": {
+          "publicacion": {
+            "valor": 2018,
+            "era": "EC",
+            "precision": "exacta"
+          }
+        },
+        "fuentes_revision": [
+          "https://www.dukeupress.edu/erotic-islands"
+        ],
+        "pendientes": [],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ]
+      }
+    },
+    {
+      "heredado": {
+        "id": "curtispleasures",
+        "k": "obra",
+        "t": "Pleasures and Perils: Girls' Sexuality in a Caribbean Consumer Culture",
+        "a": "Debra Curtis",
+        "y": "2009",
+        "f": [
+          "cuerpo_erotica"
+        ],
+        "l": "nevis",
+        "tr": "anglófono (EE.UU.)",
+        "ap": "Niñas de Nevis entre la moral cristiana, la salud pública y el deseo de consumo: la sexualidad temprana leída sin el tono de escándalo con que suele contarse desde fuera."
+      },
+      "migracion2": {
+        "id": "curtispleasures",
+        "decision_aprobada": "confirmar_candidatura",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "migración",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "confirmada",
+          "fundamento": "Sexualidad, coerción, consentimiento y placer estructuran la etnografía; consumo y desigualdad económica son secundarios.",
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        },
+        "corriente_confirmada": "cuerpos_parentescos_eroticas",
+        "corrientes_secundarias": [
+          "postplantacion_trabajo_desposesion"
+        ],
+        "lenguas_publicacion": [
+          "inglés"
+        ],
+        "operaciones": [
+          "producir etnografía",
+          "documentar una práctica",
+          "confrontar una categoría"
+        ],
+        "orillas": [
+          {
+            "tipo": "región",
+            "label": "Nevis",
+            "funcion": "territorio estudiado"
+          }
+        ],
+        "temporalidades": {
+          "publicacion": {
+            "valor": 2009,
+            "era": "EC",
+            "precision": "exacta"
+          }
+        },
+        "fuentes_revision": [
+          "https://www.rutgersuniversitypress.org/pleasures-and-perils/9780813544304"
+        ],
+        "pendientes": [],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ]
+      }
+    },
+    {
+      "heredado": {
+        "id": "fuentesdispossessed",
+        "k": "obra",
+        "t": "Dispossessed Lives: Enslaved Women, Violence, and the Archive",
+        "a": "Marisa J. Fuentes",
+        "y": "2016",
+        "f": [
+          "violencias",
+          "cuerpo_erotica"
+        ],
+        "l": "barbados",
+        "tr": "anglófono (EE.UU.)",
+        "ap": "Las mujeres esclavizadas de Bridgetown leídas a contrapelo de un archivo colonial que las nombra solo como propiedad o como cuerpo castigado: un método para hacer historia con las fuentes que fueron diseñadas para borrarlas."
+      },
+      "migracion2": {
+        "id": "fuentesdispossessed",
+        "decision_aprobada": "corregir_corriente",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "migración",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "confirmada",
+          "fundamento": "La crítica de la forma y violencia del archivo organiza la producción de conocimiento; esclavización y cuerpos de mujeres son campos sustantivos secundarios.",
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        },
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "corrientes_secundarias": [
+          "trata_esclavizacion_plantacion",
+          "cuerpos_parentescos_eroticas"
+        ],
+        "lenguas_publicacion": [
+          "inglés"
+        ],
+        "operaciones": [
+          "reconstruir un archivo",
+          "fabular ante el silencio",
+          "confrontar una categoría"
+        ],
+        "orillas": [
+          {
+            "tipo": "región",
+            "label": "Bridgetown/Barbados",
+            "funcion": "territorio estudiado"
+          }
+        ],
+        "temporalidades": {
+          "publicacion": {
+            "valor": 2016,
+            "era": "EC",
+            "precision": "exacta"
+          },
+          "periodo_estudiado": {
+            "inicio": {
+              "valor": 1700,
+              "era": "EC",
+              "precision": "aproximada"
+            },
+            "fin": {
+              "valor": 1799,
+              "era": "EC",
+              "precision": "aproximada"
+            },
+            "precision": "aproximada"
+          }
+        },
+        "fuentes_revision": [
+          "https://www.jstor.org/stable/j.ctt1c5chbv"
+        ],
+        "pendientes": [],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ]
+      }
+    },
+    {
+      "heredado": {
+        "id": "belisodelirium",
+        "k": "obra",
+        "t": "Excited Delirium: Race, Police Violence, and the Invention of a Disease",
+        "a": "Aisha M. Beliso-De Jesús",
+        "y": "2024",
+        "f": [
+          "violencias",
+          "cuerpo_erotica"
+        ],
+        "l": "cuba",
+        "tr": "anglófono (EE.UU.)",
+        "ap": "Una antropóloga formada en santería cubana rastrea cómo la policía estadounidense inventó un diagnóstico médico para justificar la violencia racial. El cuerpo religioso afrocubano como llave para leer la necropolítica en otro lugar."
+      },
+      "migracion2": {
+        "id": "belisodelirium",
+        "decision_aprobada": "confirmar_candidatura_con_nota_diasporica",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "migración",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "confirmada",
+          "fundamento": "El cuerpo racializado convertido en diagnóstico y objeto de violencia estatal organiza el libro; la conexión caribeña es diaspórica y religiosa, no territorial.",
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        },
+        "corriente_confirmada": "cuerpos_parentescos_eroticas",
+        "corrientes_secundarias": [
+          "soberanias_fronteras_ocupaciones",
+          "memorias_espiritualidades_archivos_vivos"
+        ],
+        "lenguas_publicacion": [
+          "inglés"
+        ],
+        "operaciones": [
+          "producir etnografía",
+          "reconstruir un archivo",
+          "confrontar una categoría"
+        ],
+        "orillas": [
+          {
+            "tipo": "región",
+            "label": "Estados Unidos",
+            "funcion": "territorio estudiado"
+          },
+          {
+            "tipo": "región",
+            "label": "Religiones afrocubanas",
+            "funcion": "espacio diaspórico"
+          }
+        ],
+        "temporalidades": {
+          "publicacion": {
+            "valor": 2024,
+            "era": "EC",
+            "precision": "exacta"
+          }
+        },
+        "fuentes_revision": [
+          "https://www.dukeupress.edu/excited-delirium"
+        ],
+        "pendientes": [
+          "conservar_nota_diasporica_explicita"
+        ],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ]
+      }
+    },
+    {
+      "heredado": {
+        "id": "helgnuncamas",
+        "k": "obra",
+        "t": "¡Nunca más esclavos! Una historia comparada de los esclavos que se liberaron en las Américas",
+        "a": "Aline Helg",
+        "y": "2016 / trad. esp. 2018",
+        "f": [
+          "cimarronaje",
+          "violencias"
+        ],
+        "l": "cartagena",
+        "tr": "hispano (Suiza/Colombia)",
+        "ap": "Cuatro siglos de esclavos que se liberaron a sí mismos en América, comparados a través de imperios y lenguas: el Caribe colombiano como uno de sus casos centrales, junto a Cuba, Brasil y Estados Unidos."
+      },
+      "migracion2": {
+        "id": "helgnuncamas",
+        "decision_aprobada": "confirmar_candidatura",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "migración",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "confirmada",
+          "fundamento": "Las estrategias mediante las cuales personas esclavizadas se liberaron articulan la comparación; el régimen esclavista es el contexto secundario.",
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        },
+        "corriente_confirmada": "fugas_cimarronajes_emancipaciones",
+        "corrientes_secundarias": [
+          "trata_esclavizacion_plantacion"
+        ],
+        "lenguas_publicacion": [
+          "francés",
+          "español"
+        ],
+        "operaciones": [
+          "comparar orillas",
+          "reconstruir un archivo",
+          "seguir una ruta"
+        ],
+        "orillas": [
+          {
+            "tipo": "cuenca",
+            "label": "Américas y Caribe",
+            "funcion": "territorio comparado"
+          }
+        ],
+        "temporalidades": {
+          "publicacion": {
+            "valor": 2016,
+            "era": "EC",
+            "precision": "exacta"
+          },
+          "traduccion_es": {
+            "valor": 2018,
+            "era": "EC",
+            "precision": "exacta"
+          },
+          "periodo_estudiado": {
+            "inicio": {
+              "valor": 1500,
+              "era": "EC",
+              "precision": "aproximada"
+            },
+            "fin": {
+              "valor": 1899,
+              "era": "EC",
+              "precision": "aproximada"
+            },
+            "precision": "aproximada"
+          }
+        },
+        "fuentes_revision": [
+          "https://www.fondodeculturaeconomica.com/Ficha/9786071665041/F"
+        ],
+        "pendientes": [],
+        "lenguas_publicacion_candidatas": [
+          "francés",
+          "español"
+        ]
+      }
+    },
+    {
+      "heredado": {
+        "id": "tackysrevolt",
+        "k": "obra",
+        "t": "Tacky's Revolt: The Story of an Atlantic Slave War",
+        "a": "Vincent Brown",
+        "y": "2020",
+        "f": [
+          "cimarronaje",
+          "violencias"
+        ],
+        "l": "jamaica",
+        "tr": "anglófono (EE.UU.)",
+        "ap": "La rebelión de Tacky de 1760 en Jamaica narrada como una guerra atlántica de verdad, con estrategia militar y redes africanas propias, no como un motín aislado que la plantación logró sofocar."
+      },
+      "migracion2": {
+        "id": "tackysrevolt",
+        "decision_aprobada": "confirmar_candidatura",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "migración",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "confirmada",
+          "fundamento": "La insurrección es narrada como guerra atlántica con estrategia y redes propias; esclavización y rutas atlánticas son secundarias.",
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        },
+        "corriente_confirmada": "fugas_cimarronajes_emancipaciones",
+        "corrientes_secundarias": [
+          "trata_esclavizacion_plantacion",
+          "rutas_diasporas_territorios_acuosos"
+        ],
+        "lenguas_publicacion": [
+          "inglés"
+        ],
+        "operaciones": [
+          "reconstruir un archivo",
+          "cartografiar",
+          "narrar"
+        ],
+        "orillas": [
+          {
+            "tipo": "cuenca",
+            "label": "Jamaica y Atlántico africano",
+            "funcion": "territorio comparado"
+          }
+        ],
+        "temporalidades": {
+          "publicacion": {
+            "valor": 2020,
+            "era": "EC",
+            "precision": "exacta"
+          },
+          "periodo_estudiado": {
+            "inicio": {
+              "valor": 1760,
+              "era": "EC",
+              "precision": "exacta"
+            },
+            "fin": {
+              "valor": 1760,
+              "era": "EC",
+              "precision": "exacta"
+            },
+            "precision": "exacta"
+          }
+        },
+        "fuentes_revision": [
+          "https://www.jstor.org/stable/j.ctv2d8qwr4"
+        ],
+        "pendientes": [],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ]
+      }
+    },
+    {
+      "heredado": {
+        "id": "hall_slavesocietydanish",
+        "k": "obra",
+        "t": "Slave Society in the Danish West Indies: St. Thomas, St. John and St. Croix",
+        "a": "Neville A. T. Hall (ed. B. W. Higman)",
+        "y": "1992",
+        "f": [
+          "violencias",
+          "cimarronaje"
+        ],
+        "l": "stjohn",
+        "tr": "anglófono / danés (Caribe danés)",
+        "ap": "El estudio de referencia sobre el Caribe danés y la rebelión de 1733 en St. John; dialoga directamente con Olwig, hoy la única voz que el atlas tenía para esta isla."
+      },
+      "migracion2": {
+        "id": "hall_slavesocietydanish",
+        "decision_aprobada": "corregir_corriente",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "migración",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "confirmada",
+          "fundamento": "El libro define la esclavitud como fundamento de toda la sociedad colonial; rebeliones y emancipación son capítulos de esa arquitectura, no el principio ordenador.",
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        },
+        "corriente_confirmada": "trata_esclavizacion_plantacion",
+        "corrientes_secundarias": [
+          "fugas_cimarronajes_emancipaciones",
+          "postplantacion_trabajo_desposesion"
+        ],
+        "lenguas_publicacion": [
+          "inglés",
+          "danés"
+        ],
+        "operaciones": [
+          "reconstruir un archivo",
+          "comparar orillas",
+          "documentar una práctica"
+        ],
+        "orillas": [
+          {
+            "tipo": "región",
+            "label": "St. Thomas, St. John y St. Croix",
+            "funcion": "territorio estudiado"
+          }
+        ],
+        "temporalidades": {
+          "publicacion": {
+            "valor": 1992,
+            "era": "EC",
+            "precision": "exacta"
+          },
+          "periodo_estudiado": {
+            "inicio": {
+              "valor": 1671,
+              "era": "EC",
+              "precision": "exacta"
+            },
+            "fin": {
+              "valor": 1848,
+              "era": "EC",
+              "precision": "exacta"
+            },
+            "precision": "exacta"
+          }
+        },
+        "fuentes_revision": [
+          "https://www.uwipress.com/9789764100294/slave-society-in-the-danish-west-indies/"
+        ],
+        "pendientes": [],
+        "lenguas_publicacion_candidatas": [
+          "inglés",
+          "danés"
+        ]
+      }
+    },
+    {
+      "heredado": {
+        "id": "morenofraginals",
+        "k": "obra",
+        "t": "El ingenio: complejo económico social cubano del azúcar",
+        "a": "Manuel Moreno Fraginals",
+        "y": "1964 / ed. ampliada 1978",
+        "f": [
+          "capitalismo_racial",
+          "postplantacion"
+        ],
+        "l": "cuba",
+        "tr": "hispano (Cuba)",
+        "ap": "La plantación azucarera cubana contada desde adentro de su contabilidad: precios, zafras, cuerpos amortizados. La contraparte hispana y material del Contrapunteo de Ortiz, que el atlas tenía solo en su versión culturalista."
+      },
+      "migracion2": {
+        "id": "morenofraginals",
+        "decision_aprobada": "corregir_corriente",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "migración",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "confirmada",
+          "fundamento": "El objeto es el complejo azucarero esclavista; postplantación describe mejor la persistencia posterior que el núcleo histórico del libro.",
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        },
+        "corriente_confirmada": "trata_esclavizacion_plantacion",
+        "corrientes_secundarias": [
+          "postplantacion_trabajo_desposesion"
+        ],
+        "lenguas_publicacion": [
+          "español"
+        ],
+        "operaciones": [
+          "reconstruir un archivo",
+          "teorizar",
+          "elaborar un concepto"
+        ],
+        "orillas": [
+          {
+            "tipo": "región",
+            "label": "Cuba",
+            "funcion": "territorio estudiado"
+          }
+        ],
+        "temporalidades": {
+          "publicacion": {
+            "valor": 1964,
+            "era": "EC",
+            "precision": "exacta"
+          },
+          "periodo_estudiado": {
+            "inicio": {
+              "valor": 1760,
+              "era": "EC",
+              "precision": "exacta"
+            },
+            "fin": {
+              "valor": 1860,
+              "era": "EC",
+              "precision": "exacta"
+            },
+            "precision": "exacta"
+          }
+        },
+        "fuentes_revision": [
+          "https://www.historians.org/perspectives-article/manuel-moreno-fraginals-1920-2001-october-2001/"
+        ],
+        "pendientes": [
+          "registrar_edicion_ampliada_1978_como_manifestacion_bibliografica"
+        ],
+        "lenguas_publicacion_candidatas": [
+          "español"
+        ]
+      }
+    },
+    {
+      "heredado": {
+        "id": "floresvillalobos",
+        "k": "obra",
+        "t": "The Silver Women: How Black Women's Labor Made the Panama Canal",
+        "a": "Joan Flores-Villalobos",
+        "y": "2022",
+        "f": [
+          "postplantacion",
+          "capitalismo_racial",
+          "violencias"
+        ],
+        "l": "panama",
+        "tr": "anglófono (EE.UU.)",
+        "ap": "El trabajo reproductivo y sexual de las mujeres antillanas migrantes sostuvo la fuerza laboral del Canal; la paga en 'plata' frente al 'oro' de los blancos estadounidenses como arquitectura racial del salario."
+      },
+      "migracion2": {
+        "id": "floresvillalobos",
+        "decision_aprobada": "confirmar_corriente_y_corregir_fecha",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "corrección bibliográfica",
+          "migración",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "confirmada",
+          "fundamento": "El trabajo reproductivo de mujeres migrantes sostiene la infraestructura imperial y la fuerza laboral; diáspora, intimidad y parentesco son secundarios.",
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        },
+        "corriente_confirmada": "postplantacion_trabajo_desposesion",
+        "corrientes_secundarias": [
+          "rutas_diasporas_territorios_acuosos",
+          "cuerpos_parentescos_eroticas"
+        ],
+        "lenguas_publicacion": [
+          "inglés"
+        ],
+        "correcciones_aprobadas": {
+          "y": "2023"
+        },
+        "operaciones": [
+          "reconstruir un archivo",
+          "seguir una ruta",
+          "confrontar una categoría"
+        ],
+        "orillas": [
+          {
+            "tipo": "región",
+            "label": "Ruta Antillas–Panamá",
+            "funcion": "lugar de circulación"
+          },
+          {
+            "tipo": "región",
+            "label": "Zona del Canal",
+            "funcion": "territorio estudiado"
+          }
+        ],
+        "temporalidades": {
+          "publicacion": {
+            "valor": 2023,
+            "era": "EC",
+            "precision": "exacta"
+          },
+          "periodo_estudiado": {
+            "inicio": {
+              "valor": 1904,
+              "era": "EC",
+              "precision": "exacta"
+            },
+            "fin": {
+              "valor": 1914,
+              "era": "EC",
+              "precision": "exacta"
+            },
+            "precision": "exacta"
+          }
+        },
+        "fuentes_revision": [
+          "https://www.pennpress.org/9781512823639/the-silver-women/"
+        ],
+        "pendientes": [],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ]
+      }
+    },
+    {
+      "heredado": {
+        "id": "shellerconsuming",
+        "k": "obra",
+        "t": "Consuming the Caribbean: From Arawaks to Zombies",
+        "a": "Mimi Sheller",
+        "y": "2011",
+        "f": [
+          "postplantacion",
+          "capitalismo_racial"
+        ],
+        "l": "jamaica",
+        "tr": "anglófono (EE.UU./Caribe)",
+        "ap": "El turismo y el consumo cultural caribeños leídos como continuación directa de la economía de plantación: del azúcar esclavista al 'zombi' turístico, Europa y Norteamérica siguen consumiendo el Caribe que alguna vez saquearon."
+      },
+      "migracion2": {
+        "id": "shellerconsuming",
+        "decision_aprobada": "confirmar_corriente_y_corregir_fecha",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "corrección bibliográfica",
+          "migración",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "confirmada",
+          "fundamento": "La explotación colonial persiste en consumo, turismo y conocimiento; movilidades y discursos de creolización son secundarios.",
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        },
+        "corriente_confirmada": "postplantacion_trabajo_desposesion",
+        "corrientes_secundarias": [
+          "rutas_diasporas_territorios_acuosos",
+          "creolizaciones_traducciones_opacidades"
+        ],
+        "lenguas_publicacion": [
+          "inglés"
+        ],
+        "correcciones_aprobadas": {
+          "y": "2003"
+        },
+        "operaciones": [
+          "reconstruir un archivo",
+          "teorizar",
+          "seguir una ruta"
+        ],
+        "orillas": [
+          {
+            "tipo": "cuenca",
+            "label": "Gran Caribe, Europa y Norteamérica",
+            "funcion": "territorio comparado"
+          }
+        ],
+        "temporalidades": {
+          "publicacion": {
+            "valor": 2003,
+            "era": "EC",
+            "precision": "exacta"
+          }
+        },
+        "fuentes_revision": [
+          "https://books.google.com/books/about/Consuming_the_Caribbean.html?id=3FxyylqUig8C"
+        ],
+        "pendientes": [],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ]
+      }
+    },
+    {
+      "heredado": {
+        "id": "bestlevitt",
+        "k": "obra",
+        "t": "Essays on the Theory of Plantation Economy: A Historical and Institutional Approach to Caribbean Economic Development",
+        "a": "Lloyd Best y Kari Polanyi Levitt",
+        "y": "2009",
+        "f": [
+          "postplantacion",
+          "capitalismo_racial"
+        ],
+        "l": "trinidad",
+        "tr": "anglófono (Trinidad/Canadá)",
+        "ap": "La economía de plantación teorizada por el New World Group como estructura persistente y no como etapa superada: la economía caribeña sigue diseñada para exportar y depender. La pieza económica que le faltaba a la postplantación del atlas."
+      },
+      "migracion2": {
+        "id": "bestlevitt",
+        "decision_aprobada": "confirmar_candidatura",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "migración",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "confirmada",
+          "fundamento": "La economía de plantación se teoriza como estructura persistente de dependencia; subordinación metropolitana y soberanía económica son secundarias.",
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        },
+        "corriente_confirmada": "postplantacion_trabajo_desposesion",
+        "corrientes_secundarias": [
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "lenguas_publicacion": [
+          "inglés"
+        ],
+        "operaciones": [
+          "teorizar",
+          "elaborar un concepto",
+          "confrontar una categoría"
+        ],
+        "orillas": [
+          {
+            "tipo": "cuenca",
+            "label": "Caribe anglófono",
+            "funcion": "territorio estudiado"
+          }
+        ],
+        "temporalidades": {
+          "publicacion": {
+            "valor": 2009,
+            "era": "EC",
+            "precision": "exacta"
+          }
+        },
+        "fuentes_revision": [
+          "https://utpdistribution.com/9789766402112/essays-on-the-theory-of-plantation-economy/"
+        ],
+        "pendientes": [],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ]
+      }
+    }
+  ],
+  "relaciones_lote": [
+    {
+      "heredada": {
+        "a": "reddock",
+        "b": "downtownladies",
+        "tipo": "resonancia",
+        "fuente": "Mujeres y economía caribeña. Por corroborar."
+      },
+      "migracion2": {
+        "id_transicion": "R0113",
+        "decision_aprobada": "conservar_hipotesis",
+        "estado": "por_corroborar",
+        "tipo_candidato": "resonancia",
+        "tipo_confirmado": null,
+        "friccion": {
+          "hay": false
+        },
+        "cruce_linguistico": false,
+        "fundamento": "La afinidad entre mujeres, trabajo y economía política es fuerte, pero no se documentó cita, recepción o circulación entre estas dos obras.",
+        "extremos_efectivos": {
+          "a": "reddock",
+          "b": "downtownladies"
+        },
+        "revision": {
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        }
+      }
+    },
+    {
+      "heredada": {
+        "a": "kutzinskisugar",
+        "b": "ortiz",
+        "tipo": "resonancia",
+        "fuente": "Sugar's Secrets dialoga directamente con el contrapunteo cubano de Ortiz entre azúcar, tabaco y raza (Kutzinski 1993; Ortiz)."
+      },
+      "migracion2": {
+        "id_transicion": "R0198",
+        "decision_aprobada": "conservar_y_degradar",
+        "estado": "por_corroborar",
+        "tipo_candidato": "resonancia",
+        "tipo_confirmado": null,
+        "friccion": {
+          "hay": false
+        },
+        "cruce_linguistico": true,
+        "fundamento": "La relación conceptual es plausible y Ortiz aparece en el horizonte del libro, pero falta el pasaje que vincule esta obra concreta con Contrapunteo.",
+        "extremos_efectivos": {
+          "a": "kutzinskisugar",
+          "b": "ortiz"
+        },
+        "revision": {
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        }
+      }
+    },
+    {
+      "heredada": {
+        "a": "nixon_resistingparadise",
+        "b": "kempadoo",
+        "tipo": "resonancia",
+        "fuente": "Nixon dialoga extensamente con el marco de Kempadoo sobre trabajo sexual y raza en el turismo caribeño (36 menciones verificadas)."
+      },
+      "migracion2": {
+        "id_transicion": "R0224",
+        "decision_aprobada": "conservar_y_degradar",
+        "estado": "por_corroborar",
+        "tipo_candidato": "resonancia",
+        "tipo_confirmado": null,
+        "friccion": {
+          "hay": false
+        },
+        "cruce_linguistico": false,
+        "fundamento": "La cifra heredada de menciones no sustituye páginas. Un elogio de Kempadoo al libro de Nixon tampoco demuestra por sí solo diálogo textual.",
+        "extremos_efectivos": {
+          "a": "nixon_resistingparadise",
+          "b": "kempadoo"
+        },
+        "revision": {
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        }
+      }
+    },
+    {
+      "heredada": {
+        "a": "shellerconsuming",
+        "b": "mintz",
+        "tipo": "resonancia",
+        "fuente": "El argumento central del libro se construye explícitamente sobre Mintz: la autora declara que ‘draws on the work of Sidney Mintz’ para narrar el ‘diente dulce’ europeo, y cierra con ‘in consuming the Caribbean, to extend the argument, Europe was itself transformed’ (Sheller 2011, citando Mintz 1985)."
+      },
+      "migracion2": {
+        "id_transicion": "R0289",
+        "decision_aprobada": "conservar_y_degradar",
+        "estado": "por_corroborar",
+        "tipo_candidato": "resonancia",
+        "tipo_confirmado": null,
+        "friccion": {
+          "hay": false
+        },
+        "cruce_linguistico": false,
+        "fundamento": "El parentesco con la historia del azúcar de Mintz es sólido, pero la fuente heredada no identifica páginas ni la obra específica del nodo compuesto.",
+        "extremos_efectivos": {
+          "a": "shellerconsuming",
+          "b": "mintz"
+        },
+        "revision": {
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        }
+      }
+    },
+    {
+      "heredada": {
+        "a": "shellerconsuming",
+        "b": "kempadoo",
+        "tipo": "resonancia",
+        "fuente": "Sheller retoma el argumento de Kempadoo sobre el turismo sexual caribeño como ‘racismos encarnados’ y mercancía corporal racializada, aunque la cita puntual remite a su volumen editado Sun, Sex and Gold (1999) y no a Sexing the Caribbean (2004) (Sheller 2011)."
+      },
+      "migracion2": {
+        "id_transicion": "R0292",
+        "decision_aprobada": "desvincular_referencia_erronea",
+        "estado": "por_corroborar",
+        "tipo_candidato": "resonancia",
+        "tipo_confirmado": null,
+        "friccion": {
+          "hay": false
+        },
+        "cruce_linguistico": false,
+        "fundamento": "La cita verificable de Sheller es Sun, Sex and Gold (1999), no Sexing the Caribbean (2004). No puede corroborarse una relación obra-a-obra con el nodo actual.",
+        "extremos_efectivos": {
+          "a": "shellerconsuming",
+          "b": "kempadoo"
+        },
+        "revision": {
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        }
+      }
+    },
+    {
+      "heredada": {
+        "a": "floresvillalobos",
+        "b": "fuentesdispossessed",
+        "tipo": "resonancia",
+        "fuente": "Cita el libro por su título exacto y lo declara metodológicamente influyente: «Marisa Fuentes, Dispossessed Lives: Enslaved Women, Violence, and the Archive»."
+      },
+      "migracion2": {
+        "id_transicion": "R0405",
+        "decision_aprobada": "conservar_y_degradar",
+        "estado": "por_corroborar",
+        "tipo_candidato": "resonancia",
+        "tipo_confirmado": null,
+        "friccion": {
+          "hay": false
+        },
+        "cruce_linguistico": false,
+        "fundamento": "La influencia metodológica es verosímil y aparece en trabajos previos de Flores-Villalobos, pero falta página en The Silver Women.",
+        "extremos_efectivos": {
+          "a": "floresvillalobos",
+          "b": "fuentesdispossessed"
+        },
+        "revision": {
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        }
+      }
+    },
+    {
+      "heredada": {
+        "a": "stoutafterlove",
+        "b": "kempadoo",
+        "tipo": "resonancia",
+        "fuente": "Cita con año exacto: «Kamala Kempadoo (2004) has argued», coincide con Sexing the Caribbean (2004)."
+      },
+      "migracion2": {
+        "id_transicion": "R0414",
+        "decision_aprobada": "conservar",
+        "estado": "corroborada",
+        "tipo_candidato": "resonancia",
+        "tipo_confirmado": "resonancia",
+        "friccion": {
+          "hay": false
+        },
+        "cruce_linguistico": false,
+        "evidencia": "F14 · Stout (2014), introducción, pp. 12-13",
+        "fundamento": "Stout cita Kempadoo 2004 al situar turismo sexual, desigualdad y colonialidad en el Caribe, y distingue luego la trayectoria socialista cubana.",
+        "extremos_efectivos": {
+          "a": "stoutafterlove",
+          "b": "kempadoo"
+        },
+        "revision": {
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        }
+      }
+    },
+    {
+      "heredada": {
+        "a": "fuentesdispossessed",
+        "b": "williamscapitalismo",
+        "tipo": "resonancia",
+        "fuente": "Fuentes trabaja el archivo esclavista de Barbados con la economía política de Williams como telón de fondo. Cita verificada en el ejemplar (3 menciones)."
+      },
+      "migracion2": {
+        "id_transicion": "R0438",
+        "decision_aprobada": "conservar_con_alcance_limitado",
+        "estado": "corroborada",
+        "tipo_candidato": "resonancia",
+        "tipo_confirmado": "resonancia",
+        "friccion": {
+          "hay": false
+        },
+        "cruce_linguistico": false,
+        "evidencia": "F19 · Fuentes (2016), pp. 129-132; notas pp. 200-203",
+        "fundamento": "Fuentes inscribe a Williams en la historia del debate sobre abolición y capitalismo. Se corrobora la cita, no una dependencia teórica total.",
+        "extremos_efectivos": {
+          "a": "fuentesdispossessed",
+          "b": "williamscapitalismo"
+        },
+        "revision": {
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        }
+      }
+    },
+    {
+      "heredada": {
+        "a": "shellerconsuming",
+        "b": "williamscapitalismo",
+        "tipo": "resonancia",
+        "fuente": "Sheller sigue el consumo caribeño desde el azúcar hasta el turismo por la vía que abrió Williams. Cita verificada en el ejemplar."
+      },
+      "migracion2": {
+        "id_transicion": "R0440",
+        "decision_aprobada": "conservar_y_degradar",
+        "estado": "por_corroborar",
+        "tipo_candidato": "resonancia",
+        "tipo_confirmado": null,
+        "friccion": {
+          "hay": false
+        },
+        "cruce_linguistico": false,
+        "fundamento": "El libro desarrolla la relación entre consumo del Caribe y modernidad occidental, pero falta localizar la referencia precisa a Capitalism and Slavery.",
+        "extremos_efectivos": {
+          "a": "shellerconsuming",
+          "b": "williamscapitalismo"
+        },
+        "revision": {
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        }
+      }
+    },
+    {
+      "heredada": {
+        "a": "morenofraginals",
+        "b": "ortiz",
+        "tipo": "resonancia",
+        "fuente": "El ingenio es la contraparte material del contrapunteo de Ortiz: donde Ortiz opone azúcar y tabaco como figuras culturales, Moreno Fraginals las cuenta en toneladas y en cuerpos. Cita verificada en el ejemplar."
+      },
+      "migracion2": {
+        "id_transicion": "R0490",
+        "decision_aprobada": "conservar_y_degradar",
+        "estado": "por_corroborar",
+        "tipo_candidato": "resonancia",
+        "tipo_confirmado": null,
+        "friccion": {
+          "hay": false
+        },
+        "cruce_linguistico": false,
+        "fundamento": "La formulación “contraparte material” es una interpretación editorial valiosa, no una relación textual corroborada sin páginas.",
+        "extremos_efectivos": {
+          "a": "morenofraginals",
+          "b": "ortiz"
+        },
+        "revision": {
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        }
+      }
+    },
+    {
+      "heredada": {
+        "a": "morenofraginals",
+        "b": "williamscapitalismo",
+        "tipo": "resonancia",
+        "fuente": "Moreno Fraginals trabaja la misma tesis de Williams desde el archivo cubano: el azúcar como motor de acumulación y no como atraso colonial. Cita verificada en el ejemplar."
+      },
+      "migracion2": {
+        "id_transicion": "R0491",
+        "decision_aprobada": "conservar_y_degradar",
+        "estado": "por_corroborar",
+        "tipo_candidato": "resonancia",
+        "tipo_confirmado": null,
+        "friccion": {
+          "hay": false
+        },
+        "cruce_linguistico": true,
+        "fundamento": "La afinidad entre azúcar, esclavitud y acumulación no basta; falta la cita concreta de Williams en El ingenio.",
+        "extremos_efectivos": {
+          "a": "morenofraginals",
+          "b": "williamscapitalismo"
+        },
+        "revision": {
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        }
+      }
+    },
+    {
+      "heredada": {
+        "a": "kutzinskisugar",
+        "b": "morenofraginals",
+        "tipo": "resonancia",
+        "fuente": "Kutzinski lee la erótica del azúcar cubano sobre la historia económica de Moreno Fraginals. Vínculo verificado por lectura; falta precisar el pasaje."
+      },
+      "migracion2": {
+        "id_transicion": "R0494",
+        "decision_aprobada": "conservar_y_degradar",
+        "estado": "por_corroborar",
+        "tipo_candidato": "resonancia",
+        "tipo_confirmado": null,
+        "friccion": {
+          "hay": false
+        },
+        "cruce_linguistico": true,
+        "fundamento": "La fuente heredada reconoce que falta precisar el pasaje. La relación debe permanecer por corroborar hasta localizarlo.",
+        "extremos_efectivos": {
+          "a": "kutzinskisugar",
+          "b": "morenofraginals"
+        },
+        "revision": {
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        }
+      }
+    },
+    {
+      "heredada": {
+        "a": "bestlevitt",
+        "b": "williamscapitalismo",
+        "tipo": "resonancia",
+        "fuente": "El New World Group parte de Williams: la economía de plantación como estructura persistente y no como etapa que la independencia superó. Cita verificada en el ejemplar (3 menciones)."
+      },
+      "migracion2": {
+        "id_transicion": "R0527",
+        "decision_aprobada": "conservar_con_alcance_limitado",
+        "estado": "corroborada",
+        "tipo_candidato": "resonancia",
+        "tipo_confirmado": "resonancia",
+        "friccion": {
+          "hay": false
+        },
+        "cruce_linguistico": false,
+        "evidencia": "F20 · Best y Levitt (2009), p. 116 n. 23",
+        "fundamento": "La obra cita Capitalism and Slavery en su arquitectura histórica. Se registra resonancia bibliográfica, sin afirmar que toda la teoría derive de Williams.",
+        "extremos_efectivos": {
+          "a": "bestlevitt",
+          "b": "williamscapitalismo"
+        },
+        "revision": {
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        }
+      }
+    },
+    {
+      "heredada": {
+        "a": "shepherdmaharani",
+        "b": "reddock",
+        "tipo": "resonancia",
+        "fuente": "Shepherd y Reddock reconstruyen desde Trinidad y Jamaica la misma historia del trabajo femenino indoantillano. Cita verificada en el ejemplar."
+      },
+      "migracion2": {
+        "id_transicion": "R0558",
+        "decision_aprobada": "cambiar_a_disonancia_y_declarar_friccion",
+        "estado": "corroborada",
+        "tipo_candidato": "resonancia",
+        "tipo_confirmado": "disonancia",
+        "friccion": {
+          "hay": true,
+          "argumento": "Shepherd reconoce la tesis de Reddock y discute su oposición simple entre esclavitud y libertad mediante comparación histórica y datos de género."
+        },
+        "cruce_linguistico": false,
+        "evidencia": "F21 · Shepherd (2002), introducción, pp. xvii-xix",
+        "fundamento": "Shepherd reconoce la tesis de Reddock sobre “freedom denied”, pero cuestiona el binarismo esclavitud/libertad y exige comparación y datos de género: diferencia productiva argumentada.",
+        "extremos_efectivos": {
+          "a": "shepherdmaharani",
+          "b": "reddock"
+        },
+        "revision": {
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        }
+      }
+    }
+  ]
+}
