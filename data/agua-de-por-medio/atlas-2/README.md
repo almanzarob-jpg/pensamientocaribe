@@ -2,11 +2,12 @@
 
 Este paquete aplica el dictamen académico aprobado el 8 de agosto de 2026 al lote piloto. Trabaja sobre el corpus 1.15.0 —233 entradas y 588 relaciones—, pero no modifica `datos-atlas.json`, `datos-atlas.js` ni la interfaz pública.
 
-La transición contiene ahora tres capas separadas y reversibles:
+La transición contiene ahora cuatro capas separadas y reversibles:
 
 - `P00`: piloto de arquitectura, con 10 registros heredados, nueve nodos efectivos y una redirección.
 - `S01`: primer lote editorial, con 11 entradas, 12 relaciones revisadas y cinco dependencias ya examinadas en `P00`.
 - `A01`: primer tramo de candidaturas únicas, con 18 entradas y 14 relaciones revisadas.
+- `A02`: segundo tramo de candidaturas únicas, con 18 entradas y 14 relaciones revisadas.
 
 ## Resultado intelectual
 
@@ -44,6 +45,15 @@ La transición contiene ahora tres capas separadas y reversibles:
 - Cuatro relaciones quedan corroboradas y diez permanecen por corroborar.
 - `R0558 shepherdmaharani–reddock` cambia de resonancia a disonancia y declara una fricción documentada.
 
+## Dictamen A02
+
+- Siete candidaturas se confirman, diez se redirigen por su argumento central y `gudynas` queda pendiente de elegibilidad territorial.
+- `handlerlangebarbados` pasa a trata, esclavización y plantación; `brownreaper` a memorias, espiritualidades y archivos vivos; `klein_battleparadise` a postplantación, trabajo y desposesión.
+- `putnamradical`, `harpellecostarica`, `afrocentroam`, `mahlertricontinental` e `islandscity` pasan a rutas, diásporas y territorios acuosos.
+- Se registran tres correcciones bibliográficas sin sobrescribir el corpus heredado: `gudynas`, `beyondsun` y `benedictykokken_haitiexception`.
+- Tres relaciones quedan corroboradas con páginas y once permanecen por corroborar.
+- No se declara ninguna fricción; `R0150 kempadoo–gudynas` conserva únicamente la marca de cruce lingüístico y su extremo `gudynas` permanece bloqueado.
+
 ## Archivos
 
 - `catalogos-atlas-2.json`: vocabularios controlados y reglas de transición.
@@ -53,6 +63,8 @@ La transición contiene ahora tres capas separadas y reversibles:
 - `lotes/s01-generado.json`: capa S01 reproducible, separada del corpus público.
 - `lotes/a01-config.json`: decisiones aprobadas para las 18 entradas y 14 relaciones de A01.
 - `lotes/a01-generado.json`: capa A01 reproducible, separada del corpus público.
+- `lotes/a02-config.json`: decisiones aprobadas para las 18 entradas y 14 relaciones de A02.
+- `lotes/a02-generado.json`: capa A02 reproducible, separada del corpus público.
 - `scripts/generar-piloto-atlas-2.mjs`: genera la capa piloto separada.
 - `scripts/validar-piloto-atlas-2.mjs`: valida herencia, clasificación, temporalidades, orillas, operaciones, redirecciones y relaciones.
 
@@ -67,6 +79,8 @@ node scripts/generar-piloto-atlas-2.mjs data/agua-de-por-medio/datos-atlas.json 
 node scripts/validar-piloto-atlas-2.mjs data/agua-de-por-medio/datos-atlas.json data/agua-de-por-medio/atlas-2/lotes/s01-generado.json data/agua-de-por-medio/atlas-2/catalogos-atlas-2.json data/agua-de-por-medio/atlas-2/lotes/s01-config.json
 node scripts/generar-piloto-atlas-2.mjs data/agua-de-por-medio/datos-atlas.json data/agua-de-por-medio/atlas-2/lotes/a01-config.json data/agua-de-por-medio/atlas-2/catalogos-atlas-2.json data/agua-de-por-medio/atlas-2/lotes/a01-generado.json
 node scripts/validar-piloto-atlas-2.mjs data/agua-de-por-medio/datos-atlas.json data/agua-de-por-medio/atlas-2/lotes/a01-generado.json data/agua-de-por-medio/atlas-2/catalogos-atlas-2.json data/agua-de-por-medio/atlas-2/lotes/a01-config.json
+node scripts/generar-piloto-atlas-2.mjs data/agua-de-por-medio/datos-atlas.json data/agua-de-por-medio/atlas-2/lotes/a02-config.json data/agua-de-por-medio/atlas-2/catalogos-atlas-2.json data/agua-de-por-medio/atlas-2/lotes/a02-generado.json
+node scripts/validar-piloto-atlas-2.mjs data/agua-de-por-medio/datos-atlas.json data/agua-de-por-medio/atlas-2/lotes/a02-generado.json data/agua-de-por-medio/atlas-2/catalogos-atlas-2.json data/agua-de-por-medio/atlas-2/lotes/a02-config.json
 git diff --check
 git status --short
 ```
@@ -75,4 +89,4 @@ El resultado esperado es `0 error(es), 0 advertencia(s)`.
 
 ## Límite
 
-La aprobación alcanza P00, S01, A01 y las correcciones del esquema de transición. No autoriza todavía la migración de los lotes siguientes, la escritura sobre `datos-atlas.json`/`datos-atlas.js` ni la fusión con `main`.
+La aprobación alcanza P00, S01, A01, A02 y las correcciones del esquema de transición. No autoriza todavía la migración de los lotes siguientes, la escritura sobre `datos-atlas.json`/`datos-atlas.js` ni la fusión con `main`.

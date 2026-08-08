@@ -1,0 +1,1783 @@
+{
+  "meta": {
+    "titulo": "Atlas 2.0 · lote A02 de candidaturas únicas",
+    "lote": "A02",
+    "version": "lote-a02.1",
+    "esquema": "2.0-lotes.1",
+    "generado": "2026-08-08",
+    "aprobacion": {
+      "estado": "aprobado",
+      "fecha": "2026-08-08",
+      "responsable": "Dirección académica de Pensamiento Caribe",
+      "alcance": "Dictamen A02 de 18 entradas y 14 relaciones; no modifica el corpus público, los DOI, la interfaz ni main."
+    },
+    "corpus_fuente": "1.15.0",
+    "corpus_fuente_sha256": "dd750b80b789118fa3e215cc16a67fe7b65ad06c7d0838cc31ae0bde8103f2a4",
+    "recuentos_fuente": {
+      "entradas": 233,
+      "relaciones": 588,
+      "lugares": 30
+    },
+    "recuentos_lote": {
+      "registros_heredados": 18,
+      "nodos_efectivos": 18,
+      "redirecciones": 0,
+      "relaciones_revisadas": 14
+    },
+    "regla": "Los campos heredados f, l, tr y y se conservan sin cambios. Una candidatura preliminar no se presenta como corriente confirmada.",
+    "modifica_corpus_publico": false
+  },
+  "catalogos": "catalogos-atlas-2.json",
+  "entradas": [
+    {
+      "heredado": {
+        "id": "peasantscapital",
+        "k": "obra",
+        "t": "Peasants and Capital: Dominica in the World Economy",
+        "a": "Michel-Rolph Trouillot",
+        "y": "1988",
+        "f": [
+          "postplantacion",
+          "capitalismo_racial"
+        ],
+        "l": "dominica",
+        "tr": "anglófono (Haití/EE.UU.)",
+        "ap": "La etnografía de campo de Trouillot antes de Silenciando el pasado: cómo el campesinado dominiqués queda atado al mercado mundial del banano."
+      },
+      "migracion2": {
+        "id": "peasantscapital",
+        "decision_aprobada": "confirmar_candidatura",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "migración",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "confirmada",
+          "fundamento": "El argumento explica cómo el campesinado dominicano se articula con capital, mercado bananero y sistema mundial; soberanía y dependencia quedan como dimensión secundaria.",
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        },
+        "corriente_confirmada": "postplantacion_trabajo_desposesion",
+        "corrientes_secundarias": [
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "lenguas_publicacion": [
+          "inglés"
+        ],
+        "operaciones": [
+          "producir etnografía",
+          "teorizar",
+          "reconstruir un archivo"
+        ],
+        "orillas": [
+          {
+            "tipo": "región",
+            "label": "Dominica",
+            "funcion": "territorio estudiado"
+          }
+        ],
+        "temporalidades": {
+          "publicacion": {
+            "valor": 1988,
+            "era": "EC",
+            "precision": "exacta"
+          },
+          "periodo_estudiado": {
+            "inicio": {
+              "valor": 1945,
+              "era": "EC",
+              "precision": "aproximada"
+            },
+            "fin": {
+              "valor": 1988,
+              "era": "EC",
+              "precision": "aproximada"
+            },
+            "precision": "aproximada"
+          }
+        },
+        "fuentes_revision": [
+          "https://press.uchicago.edu/ucp/books/book/distributed/P/bo245011917.html"
+        ],
+        "pendientes": [],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ]
+      }
+    },
+    {
+      "heredado": {
+        "id": "workercane",
+        "k": "obra",
+        "t": "Worker in the Cane: A Puerto Rican Life History",
+        "a": "Sidney W. Mintz",
+        "y": "1960",
+        "f": [
+          "postplantacion",
+          "capitalismo_racial"
+        ],
+        "l": "puertorico",
+        "tr": "anglófono (EE.UU.)",
+        "ap": "Historia de vida de un jornalero cañero puertorriqueño; la etnografía que funda el método biográfico en el estudio de la plantación."
+      },
+      "migracion2": {
+        "id": "workercane",
+        "decision_aprobada": "confirmar_candidatura",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "migración",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "confirmada",
+          "fundamento": "La historia de vida de Don Taso organiza una lectura del trabajo cañero y la proletarización; la plantación azucarera es su arquitectura histórica secundaria.",
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        },
+        "corriente_confirmada": "postplantacion_trabajo_desposesion",
+        "corrientes_secundarias": [
+          "trata_esclavizacion_plantacion"
+        ],
+        "lenguas_publicacion": [
+          "inglés"
+        ],
+        "operaciones": [
+          "producir testimonio",
+          "producir etnografía",
+          "narrar",
+          "documentar una práctica"
+        ],
+        "orillas": [
+          {
+            "tipo": "región",
+            "label": "Puerto Rico",
+            "funcion": "territorio estudiado"
+          }
+        ],
+        "temporalidades": {
+          "publicacion": {
+            "valor": 1960,
+            "era": "EC",
+            "precision": "exacta"
+          },
+          "periodo_estudiado": {
+            "inicio": {
+              "valor": 1900,
+              "era": "EC",
+              "precision": "aproximada"
+            },
+            "fin": {
+              "valor": 1960,
+              "era": "EC",
+              "precision": "aproximada"
+            },
+            "precision": "aproximada"
+          }
+        },
+        "fuentes_revision": [
+          "https://sidneymintz.net/caribbean.php"
+        ],
+        "pendientes": [],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ]
+      }
+    },
+    {
+      "heredado": {
+        "id": "handlerlangebarbados",
+        "k": "obra",
+        "t": "Plantation Slavery in Barbados: An Archaeological and Historical Investigation",
+        "a": "Jerome S. Handler y Frederick W. Lange",
+        "y": "1978",
+        "f": [
+          "postplantacion",
+          "violencias"
+        ],
+        "l": "barbados",
+        "tr": "anglófono (EE.UU.)",
+        "ap": "La vida esclavizada en Barbados reconstruida desde la arqueología física —huesos, enterramientos, objetos cotidianos— para un pueblo que dejó pocos registros escritos propios."
+      },
+      "migracion2": {
+        "id": "handlerlangebarbados",
+        "decision_aprobada": "corregir_corriente",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "migración",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "confirmada",
+          "fundamento": "El régimen esclavista de plantación y su cultura material organizan la obra; memoria, entierro y archivo material sostienen una secundaria C9.",
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        },
+        "corriente_confirmada": "trata_esclavizacion_plantacion",
+        "corrientes_secundarias": [
+          "memorias_espiritualidades_archivos_vivos"
+        ],
+        "lenguas_publicacion": [
+          "inglés"
+        ],
+        "operaciones": [
+          "reconstruir un archivo",
+          "documentar una práctica",
+          "comparar orillas"
+        ],
+        "orillas": [
+          {
+            "tipo": "región",
+            "label": "Barbados",
+            "funcion": "territorio estudiado"
+          },
+          {
+            "tipo": "región",
+            "label": "Newton/Barbados",
+            "funcion": "territorio estudiado"
+          }
+        ],
+        "temporalidades": {
+          "publicacion": {
+            "valor": 1978,
+            "era": "EC",
+            "precision": "exacta"
+          }
+        },
+        "fuentes_revision": [
+          "https://books.google.com/books/about/Plantation_Slavery_in_Barbados.html?id=Bf5pAAAAIAAJ"
+        ],
+        "pendientes": [],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ]
+      }
+    },
+    {
+      "heredado": {
+        "id": "politicallife",
+        "k": "obra",
+        "t": "Political Life in the Wake of the Plantation: Sovereignty, Witnessing, Repair",
+        "a": "Deborah A. Thomas",
+        "y": "2019",
+        "f": [
+          "postplantacion",
+          "violencias"
+        ],
+        "l": "jamaica",
+        "tr": "anglófono (Jamaica/EE.UU.)",
+        "ap": "La incursión militar de 2010 en Tivoli Gardens leída como el presente de la plantación: soberanía suspendida, testimonio y reparación."
+      },
+      "migracion2": {
+        "id": "politicallife",
+        "decision_aprobada": "confirmar_candidatura",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "migración",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "confirmada",
+          "fundamento": "Las lógicas postplantación articulan trabajo, ciudadanía y violencia estatal; soberanía y memoria de la incursión son secundarias sustantivas.",
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        },
+        "corriente_confirmada": "postplantacion_trabajo_desposesion",
+        "corrientes_secundarias": [
+          "soberanias_fronteras_ocupaciones",
+          "memorias_espiritualidades_archivos_vivos"
+        ],
+        "lenguas_publicacion": [
+          "inglés"
+        ],
+        "operaciones": [
+          "producir etnografía",
+          "reconstruir un archivo",
+          "intervenir políticamente",
+          "confrontar una categoría"
+        ],
+        "orillas": [
+          {
+            "tipo": "región",
+            "label": "Kingston/Jamaica",
+            "funcion": "territorio estudiado"
+          }
+        ],
+        "temporalidades": {
+          "publicacion": {
+            "valor": 2019,
+            "era": "EC",
+            "precision": "exacta"
+          },
+          "periodo_estudiado": {
+            "inicio": {
+              "valor": 2010,
+              "era": "EC",
+              "precision": "exacta"
+            },
+            "fin": {
+              "valor": 2010,
+              "era": "EC",
+              "precision": "exacta"
+            },
+            "precision": "exacta"
+          }
+        },
+        "fuentes_revision": [
+          "https://www.dukeupress.edu/political-life-in-the-wake-of-the-plantation"
+        ],
+        "pendientes": [],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ]
+      }
+    },
+    {
+      "heredado": {
+        "id": "gudynas",
+        "k": "obra",
+        "t": "Extractivismos",
+        "a": "Eduardo Gudynas",
+        "y": "2015",
+        "f": [
+          "capitalismo_racial",
+          "catastrofes"
+        ],
+        "l": "veracruz",
+        "tr": "hispano (América Latina)",
+        "ap": "Marco del extractivismo contemporáneo, extensible de la caña al turismo caribeño."
+      },
+      "migracion2": {
+        "id": "gudynas",
+        "decision_aprobada": "bloquear_por_alcance_y_corregir_bibliografia",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "corrección bibliográfica",
+          "migración",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "pendiente_revision_con_texto",
+          "fundamento": "La obra es pertinente para ecología política, pero la fuente consultada no demuestra un caso u orilla admisible del Atlas. No se asigna corriente hasta resolver elegibilidad. Título completo: Extractivismos. Ecología, economía y política de un modo de entender el desarrollo y la Naturaleza.",
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        },
+        "corrientes_candidatas": [
+          "huracanes_ecologias_materialidades_vivas"
+        ],
+        "corrientes_secundarias": [],
+        "lenguas_publicacion": [
+          "español"
+        ],
+        "correcciones_aprobadas": {
+          "t": "Extractivismos. Ecología, economía y política de un modo de entender el desarrollo y la Naturaleza"
+        },
+        "operaciones": [
+          "teorizar",
+          "elaborar un concepto",
+          "intervenir políticamente"
+        ],
+        "orillas": [
+          {
+            "tipo": "región",
+            "label": "América Latina",
+            "funcion": "territorio comparado"
+          }
+        ],
+        "temporalidades": {
+          "publicacion": {
+            "valor": 2015,
+            "era": "EC",
+            "precision": "exacta"
+          }
+        },
+        "fuentes_revision": [
+          "https://gudynas.com/wp-content/uploads/GudynasExtractivismosEcologiaPoliticaBo15Anuncio.pdf"
+        ],
+        "pendientes": [
+          "demostrar_orilla_admisible_del_gran_caribe_o_veracruz",
+          "resolver_elegibilidad_antes_de_confirmar_corriente"
+        ],
+        "elegibilidad_atlas": {
+          "estado": "bloqueada_por_alcance",
+          "fundamento": "La obra es pertinente para ecología política, pero la fuente consultada no demuestra un caso u orilla admisible del Atlas. No se asigna corriente hasta resolver elegibilidad. Título completo: Extractivismos. Ecología, economía y política de un modo de entender el desarrollo y la Naturaleza."
+        },
+        "lenguas_publicacion_candidatas": [
+          "español"
+        ]
+      }
+    },
+    {
+      "heredado": {
+        "id": "beyondsun",
+        "k": "obra",
+        "t": "Beyond Sun and Sand",
+        "a": "Baver & Lynch (eds.)",
+        "y": "2006",
+        "f": [
+          "catastrofes",
+          "capitalismo_racial"
+        ],
+        "l": "puertorico",
+        "tr": "anglófono (EE.UU./PR)",
+        "ap": "Ambientalismos caribeños frente al modelo turístico del sol y la arena."
+      },
+      "migracion2": {
+        "id": "beyondsun",
+        "decision_aprobada": "confirmar_candidatura_y_corregir_bibliografia",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "corrección bibliográfica",
+          "migración",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "confirmada",
+          "fundamento": "Los ambientalismos caribeños organizan el volumen. Corregir a Beyond Sun and Sand: Caribbean Environmentalisms y registrar como editoras a Sherrie L. Baver y Barbara Deutsch Lynch.",
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        },
+        "corriente_confirmada": "huracanes_ecologias_materialidades_vivas",
+        "corrientes_secundarias": [
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "lenguas_publicacion": [
+          "inglés"
+        ],
+        "correcciones_aprobadas": {
+          "t": "Beyond Sun and Sand: Caribbean Environmentalisms",
+          "a": "Sherrie L. Baver y Barbara Deutsch Lynch (eds.)"
+        },
+        "operaciones": [
+          "comparar orillas",
+          "teorizar",
+          "intervenir políticamente"
+        ],
+        "orillas": [
+          {
+            "tipo": "cuenca",
+            "label": "Caribe insular y continental",
+            "funcion": "territorio comparado"
+          }
+        ],
+        "temporalidades": {
+          "publicacion": {
+            "valor": 2006,
+            "era": "EC",
+            "precision": "exacta"
+          }
+        },
+        "fuentes_revision": [
+          "https://www.loc.gov/item/hlas-bi2009000039/"
+        ],
+        "pendientes": [],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ]
+      }
+    },
+    {
+      "heredado": {
+        "id": "goffedarklab",
+        "k": "obra",
+        "t": "Dark Laboratory: On Columbus, the Caribbean, and the Origins of the Climate Crisis",
+        "a": "Tao Leigh Goffe",
+        "y": "2025",
+        "f": [
+          "catastrofes",
+          "capitalismo_racial"
+        ],
+        "l": "jamaica",
+        "tr": "anglófono (Jamaica/EE.UU.)",
+        "ap": "1492 como el laboratorio donde empieza la crisis climática, no como su prehistoria. Goffe pone negritud e indentura asiática en el mismo relato geológico, que es justo el cruce que a catástrofes y capitalismo racial les faltaba para dejar de leerse por separado."
+      },
+      "migracion2": {
+        "id": "goffedarklab",
+        "decision_aprobada": "confirmar_candidatura",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "migración",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "confirmada",
+          "fundamento": "La crisis climática caribeña se explica mediante historias coloniales, raciales y extractivas; invasión y plantación son genealogías secundarias.",
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        },
+        "corriente_confirmada": "huracanes_ecologias_materialidades_vivas",
+        "corrientes_secundarias": [
+          "invasiones_mundos_indigenas",
+          "trata_esclavizacion_plantacion"
+        ],
+        "lenguas_publicacion": [
+          "inglés"
+        ],
+        "operaciones": [
+          "reconstruir un archivo",
+          "teorizar",
+          "confrontar una categoría"
+        ],
+        "orillas": [
+          {
+            "tipo": "cuenca",
+            "label": "Gran Caribe",
+            "funcion": "territorio comparado"
+          }
+        ],
+        "temporalidades": {
+          "publicacion": {
+            "valor": 2025,
+            "era": "EC",
+            "precision": "exacta"
+          },
+          "periodo_estudiado": {
+            "inicio": {
+              "valor": 1492,
+              "era": "EC",
+              "precision": "aproximada"
+            },
+            "fin": {
+              "valor": 2025,
+              "era": "EC",
+              "precision": "aproximada"
+            },
+            "precision": "aproximada"
+          }
+        },
+        "fuentes_revision": [
+          "https://www.penguinrandomhouse.com/books/725301/dark-laboratory-by-tao-leigh-goffe/"
+        ],
+        "pendientes": [],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ]
+      }
+    },
+    {
+      "heredado": {
+        "id": "klein_battleparadise",
+        "k": "obra",
+        "t": "The Battle for Paradise: Puerto Rico Takes on the Disaster Capitalists",
+        "a": "Naomi Klein",
+        "y": "2018",
+        "f": [
+          "catastrofes",
+          "capitalismo_racial"
+        ],
+        "l": "puertorico",
+        "tr": "anglófono (Canadá) / hispanófono (Puerto Rico)",
+        "ap": "Entrevista directamente a Yarimar Bonilla para mostrar el 'shock doctrine' pos-María: el desastre no como excepción sino como oportunidad de despojo ya preparada por la deuda."
+      },
+      "migracion2": {
+        "id": "klein_battleparadise",
+        "decision_aprobada": "corregir_corriente",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "migración",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "confirmada",
+          "fundamento": "El centro es el capitalismo del desastre, la privatización y la desposesión post-María; ecología del huracán y soberanía son cruces secundarios.",
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        },
+        "corriente_confirmada": "postplantacion_trabajo_desposesion",
+        "corrientes_secundarias": [
+          "huracanes_ecologias_materialidades_vivas",
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "lenguas_publicacion": [
+          "inglés"
+        ],
+        "operaciones": [
+          "reconstruir un archivo",
+          "teorizar",
+          "intervenir políticamente"
+        ],
+        "orillas": [
+          {
+            "tipo": "región",
+            "label": "Puerto Rico",
+            "funcion": "territorio estudiado"
+          }
+        ],
+        "temporalidades": {
+          "publicacion": {
+            "valor": 2018,
+            "era": "EC",
+            "precision": "exacta"
+          },
+          "periodo_estudiado": {
+            "inicio": {
+              "valor": 2017,
+              "era": "EC",
+              "precision": "aproximada"
+            },
+            "fin": {
+              "valor": 2018,
+              "era": "EC",
+              "precision": "aproximada"
+            },
+            "precision": "aproximada"
+          }
+        },
+        "fuentes_revision": [
+          "https://www.haymarketbooks.org/books/1235-the-battle-for-paradise"
+        ],
+        "pendientes": [],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ]
+      }
+    },
+    {
+      "heredado": {
+        "id": "brownreaper",
+        "k": "obra",
+        "t": "The Reaper's Garden: Death and Power in the World of Atlantic Slavery",
+        "a": "Vincent Brown",
+        "y": "2008",
+        "f": [
+          "catastrofes",
+          "violencias"
+        ],
+        "l": "jamaica",
+        "tr": "anglófono (EE.UU.)",
+        "ap": "La mortandad de la plantación jamaiquina —la isla como tumba de europeos y africanos por igual— leída como tecnología de poder, no como estadística: los muertos también gobiernan a los vivos en el mundo esclavista atlántico."
+      },
+      "migracion2": {
+        "id": "brownreaper",
+        "decision_aprobada": "corregir_corriente",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "migración",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "confirmada",
+          "fundamento": "La muerte, los rituales mortuorios y la política espiritual organizan el argumento; esclavización y plantación constituyen la arquitectura secundaria.",
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        },
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "corrientes_secundarias": [
+          "trata_esclavizacion_plantacion"
+        ],
+        "lenguas_publicacion": [
+          "inglés"
+        ],
+        "operaciones": [
+          "reconstruir un archivo",
+          "preservar una memoria",
+          "confrontar una categoría"
+        ],
+        "orillas": [
+          {
+            "tipo": "región",
+            "label": "Jamaica",
+            "funcion": "territorio estudiado"
+          },
+          {
+            "tipo": "cuenca",
+            "label": "Atlántico esclavista",
+            "funcion": "territorio comparado"
+          }
+        ],
+        "temporalidades": {
+          "publicacion": {
+            "valor": 2008,
+            "era": "EC",
+            "precision": "exacta"
+          },
+          "periodo_estudiado": {
+            "inicio": {
+              "valor": 1700,
+              "era": "EC",
+              "precision": "aproximada"
+            },
+            "fin": {
+              "valor": 1839,
+              "era": "EC",
+              "precision": "aproximada"
+            },
+            "precision": "aproximada"
+          }
+        },
+        "fuentes_revision": [
+          "https://www.hup.harvard.edu/books/9780674057128"
+        ],
+        "pendientes": [],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ]
+      }
+    },
+    {
+      "heredado": {
+        "id": "putnamradical",
+        "k": "obra",
+        "t": "Radical Moves: Caribbean Migrants and the Politics of Race in the Jazz Age",
+        "a": "Lara Putnam",
+        "y": "2013",
+        "f": [
+          "capitalismo_racial",
+          "soberanias"
+        ],
+        "l": "costarica",
+        "tr": "anglófono (EE.UU.)",
+        "ap": "La circulación antillana entre Panamá, Limón, Cuba y Harlem como un solo espacio social, y la política racial que se formó en ese ir y venir. Da el marco regional a las obras panameñas que el atlas sembró en agosto."
+      },
+      "migracion2": {
+        "id": "putnamradical",
+        "decision_aprobada": "corregir_corriente",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "migración",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "confirmada",
+          "fundamento": "Las movilidades caribeñas y la circulación de ideas políticas organizan el libro; soberanía y fronteras son consecuencias secundarias.",
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        },
+        "corriente_confirmada": "rutas_diasporas_territorios_acuosos",
+        "corrientes_secundarias": [
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "lenguas_publicacion": [
+          "inglés"
+        ],
+        "operaciones": [
+          "reconstruir un archivo",
+          "seguir una ruta",
+          "comparar orillas"
+        ],
+        "orillas": [
+          {
+            "tipo": "región",
+            "label": "Caribe–Centroamérica–Estados Unidos–Europa",
+            "funcion": "lugar de circulación"
+          }
+        ],
+        "temporalidades": {
+          "publicacion": {
+            "valor": 2013,
+            "era": "EC",
+            "precision": "exacta"
+          },
+          "periodo_estudiado": {
+            "inicio": {
+              "valor": 1919,
+              "era": "EC",
+              "precision": "aproximada"
+            },
+            "fin": {
+              "valor": 1939,
+              "era": "EC",
+              "precision": "aproximada"
+            },
+            "precision": "aproximada"
+          }
+        },
+        "fuentes_revision": [
+          "https://uncpress.org/9780807872857/radical-moves/"
+        ],
+        "pendientes": [],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ]
+      }
+    },
+    {
+      "heredado": {
+        "id": "harpellecostarica",
+        "k": "obra",
+        "t": "The West Indians of Costa Rica: Race, Class, and the Integration of an Ethnic Minority",
+        "a": "Ronald N. Harpelle",
+        "y": "2001",
+        "f": [
+          "capitalismo_racial",
+          "soberanias"
+        ],
+        "l": "costarica",
+        "tr": "anglófono (Canadá/Costa Rica)",
+        "ap": "Cómo una población antillana llevada a Limón por la United Fruit fue convertida en minoría nacional costarricense, con ciudadanía tardía y a cambio del olvido de su lengua. Abre el nodo de Costa Rica junto a Bourgois."
+      },
+      "migracion2": {
+        "id": "harpellecostarica",
+        "decision_aprobada": "corregir_corriente",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "migración",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "confirmada",
+          "fundamento": "La migración antillana y su asentamiento en Costa Rica estructuran el libro; trabajo bananero y fronteras nacionales son secundarios.",
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        },
+        "corriente_confirmada": "rutas_diasporas_territorios_acuosos",
+        "corrientes_secundarias": [
+          "postplantacion_trabajo_desposesion",
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "lenguas_publicacion": [
+          "inglés"
+        ],
+        "operaciones": [
+          "reconstruir un archivo",
+          "seguir una ruta",
+          "producir etnografía"
+        ],
+        "orillas": [
+          {
+            "tipo": "región",
+            "label": "Antillas–Limón/Costa Rica",
+            "funcion": "lugar de circulación"
+          },
+          {
+            "tipo": "región",
+            "label": "Limón/Costa Rica",
+            "funcion": "destino migratorio"
+          }
+        ],
+        "temporalidades": {
+          "publicacion": {
+            "valor": 2001,
+            "era": "EC",
+            "precision": "exacta"
+          },
+          "periodo_estudiado": {
+            "inicio": {
+              "valor": 1900,
+              "era": "EC",
+              "precision": "exacta"
+            },
+            "fin": {
+              "valor": 1950,
+              "era": "EC",
+              "precision": "exacta"
+            },
+            "precision": "exacta"
+          }
+        },
+        "fuentes_revision": [
+          "https://books.google.co.ls/books?id=0uA7_v7YsaMC"
+        ],
+        "pendientes": [],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ]
+      }
+    },
+    {
+      "heredado": {
+        "id": "afrocentroam",
+        "k": "obra",
+        "t": "Afro Central Americans in New York City: Garifuna Tales of Transnational Movements in Racialized Space",
+        "a": "Sarah England",
+        "y": "2006",
+        "f": [
+          "soberanias",
+          "capitalismo_racial"
+        ],
+        "l": "belize",
+        "tr": "anglófono (EE.UU./Honduras)",
+        "ap": "Los garífunas no encajan ni en 'latino' ni en 'negro' en Nueva York: la diáspora fuerza categorías raciales que el propio Caribe ya había vuelto obsoletas."
+      },
+      "migracion2": {
+        "id": "afrocentroam",
+        "decision_aprobada": "corregir_corriente",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "migración",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "confirmada",
+          "fundamento": "La vida social y política garífuna se produce a través de la migración transnacional; ciudadanía, racialización y parentesco son dimensiones secundarias.",
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        },
+        "corriente_confirmada": "rutas_diasporas_territorios_acuosos",
+        "corrientes_secundarias": [
+          "soberanias_fronteras_ocupaciones",
+          "cuerpos_parentescos_eroticas"
+        ],
+        "lenguas_publicacion": [
+          "inglés"
+        ],
+        "operaciones": [
+          "producir etnografía",
+          "seguir una ruta",
+          "documentar una práctica"
+        ],
+        "orillas": [
+          {
+            "tipo": "región",
+            "label": "Honduras–Nueva York",
+            "funcion": "espacio diaspórico"
+          }
+        ],
+        "temporalidades": {
+          "publicacion": {
+            "valor": 2006,
+            "era": "EC",
+            "precision": "exacta"
+          }
+        },
+        "fuentes_revision": [
+          "https://floridapress.org/9780813080147/afro-central-americans-in-new-york-city/"
+        ],
+        "pendientes": [],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ]
+      }
+    },
+    {
+      "heredado": {
+        "id": "mahlertricontinental",
+        "k": "obra",
+        "t": "From the Tricontinental to the Global South: Race, Radicalism, and Transnational Solidarity",
+        "a": "Anne Garland Mahler",
+        "y": "2018",
+        "f": [
+          "soberanias",
+          "capitalismo_racial"
+        ],
+        "l": "cuba",
+        "tr": "anglófono (EE.UU.)",
+        "ap": "La Habana, 1966: la Tricontinental construye una crítica del capitalismo global desde la raza, y de ahí sale buena parte de lo que hoy se llama Sur Global. Es el nodo que conecta por debajo a Rodney, al Black Power caribeño y al panafricanismo de Winston James."
+      },
+      "migracion2": {
+        "id": "mahlertricontinental",
+        "decision_aprobada": "corregir_corriente",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "migración",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "confirmada",
+          "fundamento": "La circulación de lenguajes, imágenes y solidaridad antiimperial desde la Tricontinental organiza el estudio; soberanía y traducción política son secundarias.",
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        },
+        "corriente_confirmada": "rutas_diasporas_territorios_acuosos",
+        "corrientes_secundarias": [
+          "soberanias_fronteras_ocupaciones",
+          "creolizaciones_traducciones_opacidades"
+        ],
+        "lenguas_publicacion": [
+          "inglés"
+        ],
+        "operaciones": [
+          "reconstruir un archivo",
+          "seguir una ruta",
+          "teorizar"
+        ],
+        "orillas": [
+          {
+            "tipo": "región",
+            "label": "La Habana/Cuba",
+            "funcion": "lugar de producción intelectual"
+          },
+          {
+            "tipo": "región",
+            "label": "Sur Global",
+            "funcion": "lugar de circulación"
+          }
+        ],
+        "temporalidades": {
+          "publicacion": {
+            "valor": 2018,
+            "era": "EC",
+            "precision": "exacta"
+          },
+          "periodo_estudiado": {
+            "inicio": {
+              "valor": 1966,
+              "era": "EC",
+              "precision": "aproximada"
+            },
+            "fin": {
+              "valor": 2018,
+              "era": "EC",
+              "precision": "aproximada"
+            },
+            "precision": "aproximada"
+          }
+        },
+        "fuentes_revision": [
+          "https://www.dukeupress.edu/from-the-tricontinental-to-the-global-south"
+        ],
+        "pendientes": [],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ]
+      }
+    },
+    {
+      "heredado": {
+        "id": "islandscity",
+        "k": "obra",
+        "t": "Islands in the City: West Indian Migration to New York",
+        "a": "Nancy Foner (ed.)",
+        "y": "2001",
+        "f": [
+          "soberanias",
+          "capitalismo_racial"
+        ],
+        "l": "jamaica",
+        "tr": "anglófono (EE.UU./Antillas)",
+        "ap": "La diáspora antillana anglófona en Nueva York como una extensión más de la cuenca, no como su ruptura."
+      },
+      "migracion2": {
+        "id": "islandscity",
+        "decision_aprobada": "corregir_corriente",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "migración",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "confirmada",
+          "fundamento": "El volumen compara migraciones caribeñas y formaciones transnacionales en Nueva York; ciudadanía, raza y parentesco son cruces secundarios.",
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        },
+        "corriente_confirmada": "rutas_diasporas_territorios_acuosos",
+        "corrientes_secundarias": [
+          "soberanias_fronteras_ocupaciones",
+          "cuerpos_parentescos_eroticas"
+        ],
+        "lenguas_publicacion": [
+          "inglés"
+        ],
+        "operaciones": [
+          "producir etnografía",
+          "seguir una ruta",
+          "comparar orillas"
+        ],
+        "orillas": [
+          {
+            "tipo": "región",
+            "label": "Caribe–Nueva York",
+            "funcion": "espacio diaspórico"
+          }
+        ],
+        "temporalidades": {
+          "publicacion": {
+            "valor": 2001,
+            "era": "EC",
+            "precision": "exacta"
+          }
+        },
+        "fuentes_revision": [
+          "https://www.ucpress.edu/books/islands-in-the-city/paper"
+        ],
+        "pendientes": [],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ]
+      }
+    },
+    {
+      "heredado": {
+        "id": "schuller_killingkindness",
+        "k": "obra",
+        "t": "Killing with Kindness: Haiti, International Aid, and NGOs",
+        "a": "Mark Schuller",
+        "y": "2012",
+        "f": [
+          "soberanias",
+          "capitalismo_racial"
+        ],
+        "l": "haiti",
+        "tr": "anglófono (EE.UU.) / francófono (Haití)",
+        "ap": "Etnografía crítica de la 'república de las ONG': cita directamente a Trouillot y a Gina Ulysse para pensar cómo la ayuda internacional administra la soberanía haitiana en vez de restituirla."
+      },
+      "migracion2": {
+        "id": "schuller_killingkindness",
+        "decision_aprobada": "confirmar_candidatura",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "migración",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "confirmada",
+          "fundamento": "El poder de ONG, donantes y Estado organiza la crítica del régimen de ayuda; desigualdad y desposesión son una dimensión secundaria.",
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        },
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "corrientes_secundarias": [
+          "postplantacion_trabajo_desposesion"
+        ],
+        "lenguas_publicacion": [
+          "inglés"
+        ],
+        "operaciones": [
+          "producir etnografía",
+          "intervenir políticamente",
+          "confrontar una categoría"
+        ],
+        "orillas": [
+          {
+            "tipo": "región",
+            "label": "Haití",
+            "funcion": "territorio estudiado"
+          },
+          {
+            "tipo": "región",
+            "label": "Circuito transnacional de ONG",
+            "funcion": "lugar de circulación"
+          }
+        ],
+        "temporalidades": {
+          "publicacion": {
+            "valor": 2012,
+            "era": "EC",
+            "precision": "exacta"
+          }
+        },
+        "fuentes_revision": [
+          "https://www.jstor.org/stable/j.ctt5hjfmg"
+        ],
+        "pendientes": [],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ]
+      }
+    },
+    {
+      "heredado": {
+        "id": "hintzen",
+        "k": "obra",
+        "t": "The Costs of Regime Survival: Racial Mobilization, Elite Domination and Control of the State in Guyana and Trinidad",
+        "a": "Percy C. Hintzen",
+        "y": "1989",
+        "f": [
+          "soberanias",
+          "capitalismo_racial"
+        ],
+        "l": "guyana",
+        "tr": "anglófono (Guyana/Trinidad)",
+        "ap": "Cómo las élites poscoloniales de Guyana y Trinidad usan la movilización racial para sobrevivir en el poder: la soberanía nacional caribeña examinada no como logro sino como cálculo de supervivencia política."
+      },
+      "migracion2": {
+        "id": "hintzen",
+        "decision_aprobada": "confirmar_candidatura",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "migración",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "confirmada",
+          "fundamento": "La supervivencia del régimen, el Estado y la movilización racial organizan el argumento; economía política y clase son secundarias.",
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        },
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "corrientes_secundarias": [
+          "postplantacion_trabajo_desposesion"
+        ],
+        "lenguas_publicacion": [
+          "inglés"
+        ],
+        "operaciones": [
+          "reconstruir un archivo",
+          "teorizar",
+          "confrontar una categoría"
+        ],
+        "orillas": [
+          {
+            "tipo": "región",
+            "label": "Guyana",
+            "funcion": "territorio estudiado"
+          }
+        ],
+        "temporalidades": {
+          "publicacion": {
+            "valor": 1989,
+            "era": "EC",
+            "precision": "exacta"
+          }
+        },
+        "fuentes_revision": [
+          "https://www.cambridge.org/core/books/costs-of-regime-survival/political-and-economic-costs-of-regime-survival/D411E9A0783C0731C05FE9071F6BBA20"
+        ],
+        "pendientes": [],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ]
+      }
+    },
+    {
+      "heredado": {
+        "id": "benedictykokken_haitiexception",
+        "k": "obra",
+        "t": "The Haiti Exception: Anthropology and the Predicaments of Development",
+        "a": "Alessandra Benedicty-Kokken, Kaiama L. Glover, Jhon Picard Byron y Mark Schuller (eds.)",
+        "y": "2016",
+        "f": [
+          "soberanias",
+          "capitalismo_racial"
+        ],
+        "l": "haiti",
+        "tr": "francófono (Haití) / anglófono",
+        "ap": "El pensamiento de Trouillot, dicen sus propios editores, 'sostiene todo el volumen': examina por qué Haití se volvió el laboratorio permanente del desarrollo internacional."
+      },
+      "migracion2": {
+        "id": "benedictykokken_haitiexception",
+        "decision_aprobada": "corregir_corriente_y_bibliografia",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "corrección bibliográfica",
+          "migración",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "confirmada",
+          "fundamento": "La obra interroga cómo la narrativa antropológica produce la excepcionalidad haitiana: representación, traducción y opacidad son el principio ordenador. Corregir el título a The Haiti Exception: Anthropology and the Predicament of Narrative.",
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        },
+        "corriente_confirmada": "creolizaciones_traducciones_opacidades",
+        "corrientes_secundarias": [
+          "soberanias_fronteras_ocupaciones",
+          "memorias_espiritualidades_archivos_vivos"
+        ],
+        "lenguas_publicacion": [
+          "inglés"
+        ],
+        "correcciones_aprobadas": {
+          "t": "The Haiti Exception: Anthropology and the Predicament of Narrative"
+        },
+        "operaciones": [
+          "reconstruir un archivo",
+          "teorizar",
+          "confrontar una categoría"
+        ],
+        "orillas": [
+          {
+            "tipo": "región",
+            "label": "Haití",
+            "funcion": "territorio estudiado"
+          },
+          {
+            "tipo": "región",
+            "label": "Antropología transatlántica",
+            "funcion": "lugar de circulación"
+          }
+        ],
+        "temporalidades": {
+          "publicacion": {
+            "valor": 2016,
+            "era": "EC",
+            "precision": "exacta"
+          }
+        },
+        "fuentes_revision": [
+          "https://www.liverpooluniversitypress.co.uk/doi/book/10.3828/9781781382998"
+        ],
+        "pendientes": [],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ]
+      }
+    },
+    {
+      "heredado": {
+        "id": "hazareesingh",
+        "k": "obra",
+        "t": "Black Spartacus: The Epic Life of Toussaint Louverture",
+        "a": "Sudhir Hazareesingh",
+        "y": "2020",
+        "f": [
+          "soberanias",
+          "violencias"
+        ],
+        "l": "haiti",
+        "tr": "comparado (Mauricio/Reino Unido)",
+        "ap": "Biografía de Toussaint Louverture con archivo nuevo: cartas suyas nunca antes traducidas. Sitúa a Césaire como heredero directo de esa figura y cita Les marrons de la liberté de Fouchard con su título exacto."
+      },
+      "migracion2": {
+        "id": "hazareesingh",
+        "decision_aprobada": "corregir_corriente",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "migración",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "confirmada",
+          "fundamento": "La biografía se organiza alrededor de revolución, emancipación y estrategia de Toussaint; soberanía y memoria política funcionan como secundarias.",
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        },
+        "corriente_confirmada": "fugas_cimarronajes_emancipaciones",
+        "corrientes_secundarias": [
+          "soberanias_fronteras_ocupaciones",
+          "memorias_espiritualidades_archivos_vivos"
+        ],
+        "lenguas_publicacion": [
+          "inglés"
+        ],
+        "operaciones": [
+          "reconstruir un archivo",
+          "narrar",
+          "preservar una memoria"
+        ],
+        "orillas": [
+          {
+            "tipo": "región",
+            "label": "Saint-Domingue/Haití",
+            "funcion": "territorio estudiado"
+          },
+          {
+            "tipo": "cuenca",
+            "label": "Atlántico revolucionario",
+            "funcion": "territorio comparado"
+          }
+        ],
+        "temporalidades": {
+          "publicacion": {
+            "valor": 2020,
+            "era": "EC",
+            "precision": "exacta"
+          }
+        },
+        "fuentes_revision": [
+          "https://us.macmillan.com/books/9781250780416/blackspartacus/"
+        ],
+        "pendientes": [],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ]
+      }
+    }
+  ],
+  "relaciones_lote": [
+    {
+      "heredada": {
+        "a": "workercane",
+        "b": "mintz",
+        "tipo": "resonancia",
+        "fuente": "Continuidad de autor (Mintz)."
+      },
+      "migracion2": {
+        "id_transicion": "R0033",
+        "decision_aprobada": "conservar_y_degradar",
+        "estado": "por_corroborar",
+        "tipo_candidato": "resonancia",
+        "tipo_confirmado": null,
+        "friccion": {
+          "hay": false
+        },
+        "cruce_linguistico": false,
+        "fundamento": "La continuidad de autoría no demuestra por sí sola una relación obra-a-obra; falta localizar el pasaje o la referencia específica.",
+        "extremos_efectivos": {
+          "a": "workercane",
+          "b": "mintz"
+        },
+        "revision": {
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        }
+      }
+    },
+    {
+      "heredada": {
+        "a": "workercane",
+        "b": "steward",
+        "tipo": "resonancia",
+        "fuente": "Comparten el fenómeno Postplantación. Por corroborar el vínculo directo."
+      },
+      "migracion2": {
+        "id_transicion": "R0034",
+        "decision_aprobada": "conservar_hipotesis",
+        "estado": "por_corroborar",
+        "tipo_candidato": "resonancia",
+        "tipo_confirmado": null,
+        "friccion": {
+          "hay": false
+        },
+        "cruce_linguistico": false,
+        "fundamento": "La genealogía antropológica es plausible, pero no hay todavía fuente primaria ni páginas.",
+        "extremos_efectivos": {
+          "a": "workercane",
+          "b": "steward"
+        },
+        "revision": {
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        }
+      }
+    },
+    {
+      "heredada": {
+        "a": "afrocentroam",
+        "b": "islandscity",
+        "tipo": "resonancia",
+        "fuente": "Comparten el fenómeno Soberanías. Por corroborar el vínculo directo."
+      },
+      "migracion2": {
+        "id_transicion": "R0097",
+        "decision_aprobada": "conservar_hipotesis",
+        "estado": "por_corroborar",
+        "tipo_candidato": "resonancia",
+        "tipo_confirmado": null,
+        "friccion": {
+          "hay": false
+        },
+        "cruce_linguistico": false,
+        "fundamento": "Comparten migración caribeña a Nueva York, pero la afinidad temática no sustituye una relación textual documentada.",
+        "extremos_efectivos": {
+          "a": "afrocentroam",
+          "b": "islandscity"
+        },
+        "revision": {
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        }
+      }
+    },
+    {
+      "heredada": {
+        "a": "kempadoo",
+        "b": "gudynas",
+        "tipo": "resonancia",
+        "fuente": "Comparten el fenómeno Capitalismo racial. Por corroborar el vínculo directo."
+      },
+      "migracion2": {
+        "id_transicion": "R0150",
+        "decision_aprobada": "conservar_hipotesis_y_bloquear_extremo",
+        "estado": "por_corroborar",
+        "tipo_candidato": "resonancia",
+        "tipo_confirmado": null,
+        "friccion": {
+          "hay": false
+        },
+        "cruce_linguistico": true,
+        "fundamento": "El cruce entre sexualidad, turismo y extractivismo requiere páginas en ambas obras; además, gudynas queda bloqueada por alcance territorial. El cruce lingüístico no constituye fricción.",
+        "extremos_efectivos": {
+          "a": "kempadoo",
+          "b": "gudynas"
+        },
+        "revision": {
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        }
+      }
+    },
+    {
+      "heredada": {
+        "a": "tackysrevolt",
+        "b": "brownreaper",
+        "tipo": "resonancia",
+        "fuente": "Mismo autor, mismo archivo jamaicano: de la mortandad esclavista como tecnología de poder a la guerra esclava como estrategia militar real (Brown 2008; Brown 2020)."
+      },
+      "migracion2": {
+        "id_transicion": "R0164",
+        "decision_aprobada": "conservar_y_degradar",
+        "estado": "por_corroborar",
+        "tipo_candidato": "resonancia",
+        "tipo_confirmado": null,
+        "friccion": {
+          "hay": false
+        },
+        "cruce_linguistico": false,
+        "fundamento": "La misma autoría y el archivo jamaicano compartido sostienen una hipótesis, pero no una relación corroborada sin páginas.",
+        "extremos_efectivos": {
+          "a": "tackysrevolt",
+          "b": "brownreaper"
+        },
+        "revision": {
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        }
+      }
+    },
+    {
+      "heredada": {
+        "a": "hintzen",
+        "b": "williamscapitalismo",
+        "tipo": "resonancia",
+        "fuente": "Hintzen lee la movilización racial de las élites poscoloniales como continuación del arreglo económico que Williams describió. Cita verificada en el ejemplar."
+      },
+      "migracion2": {
+        "id_transicion": "R0437",
+        "decision_aprobada": "conservar_y_degradar",
+        "estado": "por_corroborar",
+        "tipo_candidato": "resonancia",
+        "tipo_confirmado": null,
+        "friccion": {
+          "hay": false
+        },
+        "cruce_linguistico": false,
+        "fundamento": "El plan remite a un ejemplar verificado, pero no registra páginas; la regla 2.0 exige el pasaje localizable.",
+        "extremos_efectivos": {
+          "a": "hintzen",
+          "b": "williamscapitalismo"
+        },
+        "revision": {
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        }
+      }
+    },
+    {
+      "heredada": {
+        "a": "shepherdmaharani",
+        "b": "peasantscapital",
+        "tipo": "resonancia",
+        "fuente": "Shepherd usa el marco de economía política de Trouillot para leer el sistema de indentura. Cita verificada en el ejemplar."
+      },
+      "migracion2": {
+        "id_transicion": "R0559",
+        "decision_aprobada": "conservar_y_degradar",
+        "estado": "por_corroborar",
+        "tipo_candidato": "resonancia",
+        "tipo_confirmado": null,
+        "friccion": {
+          "hay": false
+        },
+        "cruce_linguistico": false,
+        "fundamento": "La economía política del trabajo y la ruralidad caribeña es una afinidad fuerte, pero falta evidencia textual con páginas.",
+        "extremos_efectivos": {
+          "a": "shepherdmaharani",
+          "b": "peasantscapital"
+        },
+        "revision": {
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        }
+      }
+    },
+    {
+      "heredada": {
+        "a": "putnamradical",
+        "b": "harpellecostarica",
+        "tipo": "resonancia",
+        "fuente": "Putnam apoya en Harpelle el tramo costarricense de la circulación antillana del Caribe occidental. Cita verificada en el ejemplar."
+      },
+      "migracion2": {
+        "id_transicion": "R0564",
+        "decision_aprobada": "conservar_con_alcance_citacional",
+        "estado": "corroborada",
+        "tipo_candidato": "resonancia",
+        "tipo_confirmado": "resonancia",
+        "friccion": {
+          "hay": false
+        },
+        "cruce_linguistico": false,
+        "evidencia": "F23 · Putnam, pp. 104-108; n. 121, pp. 260-261, remite a Harpelle pp. 71-73, 86-87 y 133",
+        "fundamento": "Putnam usa a Harpelle para reconstruir trabajo, conflicto racial y política de la población antillana en Costa Rica; se corrobora una resonancia citacional e historiográfica.",
+        "extremos_efectivos": {
+          "a": "putnamradical",
+          "b": "harpellecostarica"
+        },
+        "revision": {
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        }
+      }
+    },
+    {
+      "heredada": {
+        "a": "putnamradical",
+        "b": "bourgoisethnicity",
+        "tipo": "resonancia",
+        "fuente": "Putnam usa la etnografía bananera de Bourgois para la organización racial del trabajo en Limón y Bocas del Toro. Cita verificada en el ejemplar (3 menciones)."
+      },
+      "migracion2": {
+        "id_transicion": "R0565",
+        "decision_aprobada": "conservar_con_alcance_citacional",
+        "estado": "corroborada",
+        "tipo_candidato": "resonancia",
+        "tipo_confirmado": "resonancia",
+        "friccion": {
+          "hay": false
+        },
+        "cruce_linguistico": false,
+        "evidencia": "F23 · Putnam, pp. 16-18, n. 28 p. 243; pp. 94-98, n. 71 p. 258",
+        "fundamento": "Putnam dialoga con Bourgois al tratar etnicidad, trabajo bananero y conflicto en Centroamérica; la relación queda limitada a los pasajes citados.",
+        "extremos_efectivos": {
+          "a": "putnamradical",
+          "b": "bourgoisethnicity"
+        },
+        "revision": {
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        }
+      }
+    },
+    {
+      "heredada": {
+        "a": "floresvillalobos",
+        "b": "putnamradical",
+        "tipo": "resonancia",
+        "fuente": "Flores-Villalobos sitúa el trabajo femenino antillano del canal en el marco regional de Putnam. Vínculo verificado por lectura; falta precisar el pasaje."
+      },
+      "migracion2": {
+        "id_transicion": "R0569",
+        "decision_aprobada": "conservar_y_degradar",
+        "estado": "por_corroborar",
+        "tipo_candidato": "resonancia",
+        "tipo_confirmado": null,
+        "friccion": {
+          "hay": false
+        },
+        "cruce_linguistico": false,
+        "fundamento": "La relación metodológica es verosímil, pero la fuente disponible no identifica el pasaje en The Silver Women.",
+        "extremos_efectivos": {
+          "a": "floresvillalobos",
+          "b": "putnamradical"
+        },
+        "revision": {
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        }
+      }
+    },
+    {
+      "heredada": {
+        "a": "harpellecostarica",
+        "b": "bourgoisethnicity",
+        "tipo": "resonancia",
+        "fuente": "Harpelle discute la etnografía de Bourgois sobre la división étnica del trabajo bananero. Cita verificada en el ejemplar (8 menciones)."
+      },
+      "migracion2": {
+        "id_transicion": "R0571",
+        "decision_aprobada": "conservar_con_alcance_citacional",
+        "estado": "corroborada",
+        "tipo_candidato": "resonancia",
+        "tipo_confirmado": "resonancia",
+        "friccion": {
+          "hay": false
+        },
+        "cruce_linguistico": false,
+        "evidencia": "F24 · Harpelle, introducción pp. xv-xvi; p. 196 n. 3; pp. 204-205, nn. 47 y 59",
+        "fundamento": "Harpelle cita y discute a Bourgois al situar etnicidad, enclave bananero y relaciones de clase en Limón; se corrobora el vínculo bibliográfico y argumental.",
+        "extremos_efectivos": {
+          "a": "harpellecostarica",
+          "b": "bourgoisethnicity"
+        },
+        "revision": {
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        }
+      }
+    },
+    {
+      "heredada": {
+        "a": "floresvillalobos",
+        "b": "harpellecostarica",
+        "tipo": "resonancia",
+        "fuente": "Flores-Villalobos usa a Harpelle para el destino de las familias antillanas después del canal. Cita verificada en el ejemplar."
+      },
+      "migracion2": {
+        "id_transicion": "R0574",
+        "decision_aprobada": "conservar_y_degradar",
+        "estado": "por_corroborar",
+        "tipo_candidato": "resonancia",
+        "tipo_confirmado": null,
+        "friccion": {
+          "hay": false
+        },
+        "cruce_linguistico": false,
+        "fundamento": "El contexto de mujeres antillanas, ferrocarril y enclave costarricense es compartido, pero faltan páginas en The Silver Women.",
+        "extremos_efectivos": {
+          "a": "floresvillalobos",
+          "b": "harpellecostarica"
+        },
+        "revision": {
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        }
+      }
+    },
+    {
+      "heredada": {
+        "a": "bourgoisethnicity",
+        "b": "peasantscapital",
+        "tipo": "resonancia",
+        "fuente": "Bourgois y Trouillot leen la misma economía de enclave desde dos plantaciones distintas. Cita verificada en el ejemplar (4 menciones)."
+      },
+      "migracion2": {
+        "id_transicion": "R0576",
+        "decision_aprobada": "conservar_y_degradar",
+        "estado": "por_corroborar",
+        "tipo_candidato": "resonancia",
+        "tipo_confirmado": null,
+        "friccion": {
+          "hay": false
+        },
+        "cruce_linguistico": false,
+        "fundamento": "La economía política de enclave y campesinado permite formular la hipótesis, pero no se registró fuente primaria con páginas.",
+        "extremos_efectivos": {
+          "a": "bourgoisethnicity",
+          "b": "peasantscapital"
+        },
+        "revision": {
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        }
+      }
+    },
+    {
+      "heredada": {
+        "a": "afrocentroam",
+        "b": "bourgoisethnicity",
+        "tipo": "resonancia",
+        "fuente": "England parte de la división étnica del trabajo bananero que documentó Bourgois. Cita verificada en el ejemplar."
+      },
+      "migracion2": {
+        "id_transicion": "R0577",
+        "decision_aprobada": "conservar_y_degradar",
+        "estado": "por_corroborar",
+        "tipo_candidato": "resonancia",
+        "tipo_confirmado": null,
+        "friccion": {
+          "hay": false
+        },
+        "cruce_linguistico": false,
+        "fundamento": "La comparación entre etnicidad, migración y Centroamérica es pertinente, pero la relación heredada carece de pasaje verificable.",
+        "extremos_efectivos": {
+          "a": "afrocentroam",
+          "b": "bourgoisethnicity"
+        },
+        "revision": {
+          "responsable": "Dirección académica de Pensamiento Caribe",
+          "fecha": "2026-08-08"
+        }
+      }
+    }
+  ]
+}
