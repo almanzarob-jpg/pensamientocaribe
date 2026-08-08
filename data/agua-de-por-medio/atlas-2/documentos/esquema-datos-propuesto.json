@@ -1,0 +1,296 @@
+{
+  "_nota": "Esquema técnico final de la Etapa 1, presentado para autorizar el lote piloto. No se ha aplicado a datos-atlas.js ni a datos-atlas.json. Los campos antiguos (f, l, tr, y) se conservan durante toda la transición para permitir reversión y comparación, tal como exige el punto 5.2 de la propuesta.",
+  "_version_esquema": "1.1-final-etapa-1",
+  "_fecha": "2026-08-08",
+
+  "_dos_vias": {
+    "migracion_corpus_heredado": "Revisión de las 203 entradas actuales contra la taxonomía nueva. Cuando la taxonomía anterior permite derivar un destino, la entrada recibe una candidatura preliminar sujeta a confirmación editorial. Ninguna corriente tiene que recibir entradas por esta vía.",
+    "siembra_dirigida": "Incorporación de obras nuevas aportadas por la dirección académica. Entran directamente con este esquema y no pasan por migración. Es la vía por la que se constituyen C1, C2 y C5, que no tienen correspondencia directa en la taxonomía anterior.",
+    "regla_de_clasificacion": "Una obra entra en una corriente porque esa corriente organiza su argumento. El reparto numérico entre corrientes no es criterio de clasificación en ninguna de las dos vías."
+  },
+
+  "meta": {
+    "titulo": "Con el agua de por medio",
+    "subtitulo": "Atlas para una antropología archipiélica",
+    "responsable": "Centro de Pensamiento Caribe",
+    "version": "2.0.0-borrador",
+    "fecha": "pendiente",
+    "esquema": "2.0",
+    "_cambio": "El campo esquema es nuevo. Permite que el compilador, el validador y la página sepan qué modelo están leyendo, y que una versión antigua del corpus siga siendo legible."
+  },
+
+  "_distinciones_conceptuales": {
+    "fenomeno": "Unidad abierta de investigación: proceso histórico, material, cultural o epistémico que una obra permite seguir.",
+    "corriente": "Recorrido relacional y anclaje principal de navegación; no define la identidad de una obra.",
+    "marca": "Dimensión analítica transversal y combinable.",
+    "remolino": "Concentración territorial, histórica o coyuntural de un fenómeno; se implementará cuando existan datos suficientes.",
+    "operacion_epistemica": "Modo en que una obra produce conocimiento.",
+    "orilla": "Posición territorial y epistémica desde la cual una entrada participa en el atlas.",
+    "friccion_epistemica": "Afirmación editorial perteneciente a una relación entre obras, nunca una marca de entrada.",
+    "cruce_linguistico": "Dato derivado de las lenguas de publicación de los extremos de una relación; no demuestra fricción."
+  },
+
+  "fenomenos": {
+    "_forma": "catálogo abierto y curado: clave -> objeto",
+    "_criterio_ingreso": "Un fenómeno se incorpora cuando permite seguir un proceso entre obras, orillas o temporalidades y su pertinencia puede fundamentarse. No es una taxonomía cerrada ni una casilla temática.",
+    "_transicion": "El campo fenomenos es opcional durante la migración para no invalidar P00, S01, A01 ni A02. Se completa en una pasada editorial específica y será obligatorio antes de publicar 2.0.0.",
+    "_ejemplos_no_exhaustivos": {
+      "plantacion": { "label": "Plantación", "label_en": "Plantation" },
+      "cimarronaje": { "label": "Cimarronaje", "label_en": "Marronage" },
+      "migracion": { "label": "Migración", "label_en": "Migration" },
+      "ocupacion": { "label": "Ocupación", "label_en": "Occupation" },
+      "creolizacion": { "label": "Creolización", "label_en": "Creolization" },
+      "huracan": { "label": "Huracán", "label_en": "Hurricane" },
+      "archivo": { "label": "Archivo", "label_en": "Archive" },
+      "parentesco": { "label": "Parentesco", "label_en": "Kinship" }
+    }
+  },
+
+  "corrientes": {
+    "_forma": "clave -> objeto",
+    "_ejemplo": {
+      "invasiones_mundos_indigenas": {
+        "n": 1,
+        "label": "Invasiones, colonialidades y mundos indígenas",
+        "label_en": "Invasions, colonialities and indigenous worlds",
+        "c": "#c65a3f",
+        "pregunta": "¿Qué mundos y conocimientos existían antes de la ocupación europea y cómo persistieron, se transformaron o reaparecieron?",
+        "guion": "50 a 90 palabras. Presenta una pregunta, describe una fuerza relacional, evita la definición totalizante, señala una tensión e invita a recorrer obras y orillas.",
+        "guion_en": "traducción del anterior",
+        "provisional": true,
+        "correspondencia_taxonomia_anterior": "sin correspondencia directa",
+        "_correspondencia_taxonomia_anterior": "con correspondencia | sin correspondencia directa. C1, C2 y C5 llevan 'sin correspondencia directa': no existían en la taxonomía anterior y se constituyen por siembra bibliográfica dirigida. El valor es informativo y no autoriza ninguna redistribución de entradas heredadas para poblarlas."
+      }
+    },
+    "_nota_color": "Diez corrientes exigen diez colores distinguibles entre sí y sobre el fondo crema, con contraste suficiente para daltonismo. La paleta actual ya tiene diez y puede reutilizarse casi entera, pero la correspondencia categoría-color cambia y hay que rehacerla a conciencia, no por herencia."
+  },
+
+  "marcas": {
+    "_forma": "clave -> objeto. Combinables, atraviesan varias corrientes, nunca son corriente principal.",
+    "capitalismo_racial": {
+      "label": "Capitalismo racial",
+      "requiere": "mecanismo",
+      "mecanismos": ["plantación", "trabajo contratado", "deuda", "enclave", "extracción", "turismo", "zona franca", "crédito", "propiedad", "seguro", "otro (declarar)"]
+    },
+    "colonialidad": { "label": "Colonialidad" },
+    "racializacion": { "label": "Racialización" },
+    "genero": { "label": "Género" },
+    "clase_trabajo": { "label": "Clase y trabajo" },
+    "memoria": { "label": "Memoria" },
+    "violencias": {
+      "label": "Violencias",
+      "requiere": "tipo",
+      "tipos": ["esclavista", "colonial", "estatal", "policial", "racial", "sexual", "ambiental", "epistémica", "archivística", "militar", "fronteriza"]
+    }
+  },
+
+  "operaciones": [
+    "reconstruir un archivo", "producir etnografía", "teorizar", "fabular ante el silencio",
+    "narrar", "cartografiar", "escuchar", "traducir", "seguir una ruta", "comparar orillas",
+    "preservar una memoria", "elaborar un concepto", "documentar una práctica",
+    "intervenir políticamente", "confrontar una categoría", "producir testimonio"
+  ],
+
+  "funciones_orilla": [
+    "territorio estudiado", "lugar de producción intelectual", "destino migratorio",
+    "lugar de circulación", "territorio comparado", "espacio diaspórico"
+  ],
+
+  "tipos_ruta": [
+    "navegación indígena", "trata", "fuga", "migración laboral", "exilio", "refugio",
+    "deportación", "retorno", "circulación intelectual", "circulación musical",
+    "circulación religiosa", "comercio", "ruta imperial", "ruta marítima", "conexión portuaria"
+  ],
+
+  "procedencias": {
+    "_forma": "vocabulario cerrado. Campo obligatorio en toda entrada.",
+    "_criterio": "La procedencia registra lo que la entrada es, no cómo entró al corpus. Cuando el campo k y la naturaleza real de la entrada discrepan, la procedencia sigue a la naturaleza real y el campo k se corrige. Por eso totumo y figueroa, marcadas hoy como manifestación, son corpus heredado: son obras de investigación con autoría identificada.",
+    "corpus heredado": "Obra de investigación que estaba en el corpus antes de la reforma. 200 entradas.",
+    "siembra nueva": "Obra aportada por la dirección académica para constituir una corriente. Entra directamente con este esquema.",
+    "aporte externo": "Llegó por el reflujo y superó la revisión editorial.",
+    "manifestación": "Práctica, registro o material cultural que no es obra de investigación con autoría. 3 entradas, las tres con procedencia sin verificar.",
+    "pendiente de incorporación": "Identificada por la dirección académica y todavía no cargada. Aparece en la matriz sin datos completos."
+  },
+
+  "procesos": {
+    "_forma": "vocabulario cerrado. Una entrada puede llevar más de uno.",
+    "migración": "La taxonomía anterior permite derivar una candidatura preliminar única. 51 entradas.",
+    "reclasificación": "Exige lectura editorial porque la taxonomía anterior no permite derivar un destino único. 152 entradas.",
+    "siembra": "Alta directa con este esquema, sin paso por la taxonomía anterior.",
+    "corrección bibliográfica": "Enmienda de metadatos: fecha, autoría, tipo de entrada o clasificación lingüística. 8 entradas.",
+    "fusión": "Dos entradas que son la misma obra. 2 entradas.",
+    "división": "Una entrada que reúne varias obras bajo un identificador. 6 entradas."
+  },
+
+  "_combinaciones_prohibidas": [
+    "procedencia 'siembra nueva' con proceso 'migración' o 'reclasificación': no pasó por la taxonomía anterior.",
+    "procedencia 'corpus heredado' o 'manifestación' con proceso 'siembra': ya estaba en el corpus.",
+    "procedencia 'pendiente de incorporación' con cualquier proceso distinto de 'siembra'.",
+    "proceso 'fusión' y 'división' en la misma entrada."
+  ],
+
+  "obra_ejemplo": {
+    "id": "bassiacuoso",
+    "_comentario_id": "Los identificadores no cambian nunca. Son la base de los enlaces citables ya publicados y de las relaciones.",
+
+    "procedencia": "corpus heredado",
+    "_procedencia": "Registra lo que la entrada es. Cuando discrepa del campo k heredado, manda la procedencia y el campo k se corrige.",
+
+    "procedencia_verificada": true,
+    "_procedencia_verificada": "Falso cuando la entrada carece de autoría identificable y por tanto qué es no puede afirmarse. Hoy son tres: chande, manoalzada y esquiva. El validador rechaza que una entrada con procedencia sin verificar pase a estado confirmada.",
+
+    "proceso": ["reclasificación"],
+    "_proceso": "Lista. Registra por qué vía llegó esta entrada al esquema nuevo y qué operaciones editoriales requirió.",
+
+    "k": "obra",
+    "_k": "obra | manifestacion. Requiere criterio escrito: hoy dos de las cinco manifestaciones son artículos académicos con autoría.",
+
+    "t": "Un territorio acuoso: geografías marineras y el Gran Caribe",
+    "a": "Ernesto Bassi",
+
+    "y": "2016 / trad. esp. 2021",
+    "_y": "CAMPO ANTIGUO. Se conserva sin tocar durante toda la transición.",
+
+    "f": ["soberanias", "colonialidad"],
+    "_f": "CAMPO ANTIGUO. Se conserva sin tocar durante toda la transición.",
+
+    "l": "cartagena",
+    "_l": "CAMPO ANTIGUO. Se conserva sin tocar durante toda la transición.",
+
+    "tr": "anglófono (EE.UU./Colombia)",
+    "_tr": "CAMPO ANTIGUO. Se conserva sin tocar durante toda la transición.",
+
+    "corriente": "rutas_diasporas_acuosos",
+    "_corriente": "Una sola. La que organiza el argumento central de la obra, no la que aparece con más frecuencia en ella y nunca la que necesite entradas.",
+
+    "corriente_candidata": "soberanias_fronteras",
+    "_corriente_candidata": "Candidatura preliminar derivada de la taxonomía anterior, sujeta a confirmación editorial. Se conserva junto a la corriente confirmada para poder auditar en qué casos la lectura corrigió a la derivación. Ausente en las entradas de siembra.",
+
+    "corrientes_sec": ["soberanias_fronteras"],
+    "_corrientes_sec": "Máximo dos, y solo cuando la obra las desarrolla de manera sustantiva.",
+
+    "fenomenos": [
+      {
+        "id": "migracion",
+        "fundamento": "La obra reconstruye desplazamientos y circulaciones marítimas que articulan las geografías del Gran Caribe.",
+        "estado": "confirmado"
+      }
+    ],
+    "_fenomenos": "Lista de asociaciones fundamentadas con el catálogo abierto. Estado: propuesto | confirmado. Opcional durante la migración; obligatorio antes de publicar 2.0.0.",
+
+    "marcas": [
+      { "m": "colonialidad" },
+      { "m": "violencias", "tipo": "fronteriza" }
+    ],
+    "_marcas": "Las marcas que exigen tipo o mecanismo no se aceptan sin él. Es una regla del validador, no una recomendación.",
+
+    "operaciones": ["cartografiar", "reconstruir un archivo", "comparar orillas"],
+
+    "orillas": [
+      { "lugar": "cartagena", "funcion": "territorio estudiado" },
+      { "lugar": "jamaica", "funcion": "territorio comparado" },
+      { "lugar": "eeuu", "funcion": "lugar de producción intelectual" }
+    ],
+    "_orillas": "Sustituye progresivamente a l. Cada orilla remite a una clave del catálogo de lugares. El validador rechaza claves inexistentes.",
+
+    "rutas": [
+      {
+        "tipo": "conexión portuaria",
+        "origen": "cartagena",
+        "destino": "jamaica",
+        "fuente": "Bassi (2016), cap. 2, pp. 45-78.",
+        "estado": "corroborada"
+      }
+    ],
+    "_rutas": "Solo cuando la obra documenta efectivamente la circulación. Sin fuente no se registra. No se dibujan trayectorias exactas si la fuente solo da origen y destino.",
+
+    "lengua_publicacion": "inglés",
+    "_lengua_publicacion": "Vocabulario cerrado: inglés, español, francés, neerlandés, criollo (especificar), portugués, danés, otro. Sustituye a la primera mitad de tr.",
+
+    "temporalidades": {
+      "publicacion": 2016,
+      "traduccion_es": 2021,
+      "periodo_estudiado": [1760, 1860],
+      "acontecimientos": [],
+      "persistencias": [],
+      "incierta": false
+    },
+    "_temporalidades": "Sustituye a y. La cronología podrá alternar entre publicación y periodo estudiado, que es lo que hace marealéctica la vista.",
+
+    "ap": "Texto del aporte al atlas. No cambia.",
+
+    "revision": {
+      "estado": "confirmada",
+      "_estado": "pendiente_revision_con_texto | candidatura_preliminar | confirmada | revisada",
+      "_estado_nota": "candidatura_preliminar es el estado por defecto de toda entrada heredada mientras no haya confirmación editorial. Ninguna entrada llega a la página publicada en ese estado sin declararlo.",
+      "responsable": "RA",
+      "fecha": "2026-08-07",
+      "fundamento": "Lectura completa del capítulo 2. La obra organiza su argumento alrededor de la circulación marítima, y la soberanía aparece como consecuencia. La candidatura preliminar apuntaba a soberanías; la lectura la corrigió.",
+      "_fundamento": "Obligatorio en toda entrada cuyo estado pase de candidatura_preliminar a confirmada, y en toda entrada de siembra."
+    }
+  },
+
+  "relacion_ejemplo": {
+    "a": "saetheridentidades",
+    "b": "muneraelfracaso",
+    "tipo": "disonancia",
+    "_tipo": "resonancia | disonancia. Sin cambios.",
+
+    "friccion": {
+      "hay": true,
+      "clase": "desestabilización de una categoría",
+      "_clase": "crítica explícita | incompatibilidad conceptual | desestabilización de una categoría | conflicto entre epistemologías | objeción documentada | diferencia productiva argumentada",
+      "argumento": "Sæther objeta de frente la tesis de Múnera sobre los pardos de Cartagena como sujeto político de la independencia."
+    },
+    "_friccion": "CAMBIO MAYOR. Hoy la fricción se calcula comparando el campo tr de los dos extremos, y sale positiva en 189 de 429 relaciones sin ningún argumento. A partir de aquí es una afirmación editorial que se declara o no existe.",
+
+    "cruce_linguistico": false,
+    "_cruce_linguistico": "Lo que hoy se dibuja como fricción y solo es diferencia de lengua pasa aquí. Se deriva de lengua_publicacion, no se escribe a mano.",
+
+    "fuente": "Sæther (2005), pp. 210-214.",
+    "paginas": "210-214",
+    "estado": "corroborada",
+    "_estado": "corroborada | por_corroborar. Se deriva del campo fuente actual: 'Por corroborar' -> por_corroborar.",
+    "nota": "Nota editorial libre."
+  },
+
+  "lugar_ejemplo": {
+    "cartagena": {
+      "lat": 10.4,
+      "lng": -75.5,
+      "label": "Cartagena",
+      "tipo": "ciudad"
+    },
+    "_nota": "El array actual [lat, lng, label, tipo] funciona y no hay razón fuerte para cambiarlo. Si se cambia, se toca el compilador, la página y el validador a la vez. Recomendación: dejarlo como está en esta reforma."
+  },
+
+  "_reglas_del_validador": [
+    "Procedencia ausente o fuera del vocabulario cerrado.",
+    "Entrada con procedencia_verificada en falso que pase a estado confirmada.",
+    "Entrada sin autoría identificable con procedencia_verificada en verdadero.",
+    "Proceso ausente, vacío o con algún valor fuera del vocabulario cerrado.",
+    "Combinación prohibida de procedencia y proceso, según _combinaciones_prohibidas.",
+    "Entrada en estado candidatura_preliminar sin corriente_candidata.",
+    "Entrada en estado confirmada sin fundamento escrito.",
+    "Entrada de siembra con corriente_candidata: no pasó por la taxonomía anterior.",
+    "Identificador duplicado o inexistente.",
+    "Corriente principal ausente, inexistente o repetida.",
+    "Más de dos corrientes secundarias.",
+    "Corriente secundaria igual a la principal.",
+    "Fenómeno inexistente en el catálogo o asociación sin fundamento.",
+    "Entrada publicada en 2.0.0 sin al menos un fenómeno confirmado.",
+    "Marca que exige tipo o mecanismo sin declararlo.",
+    "Orilla con lugar inexistente o función fuera del vocabulario.",
+    "Ruta sin origen, destino o fuente.",
+    "Relación hacia un identificador inexistente.",
+    "Relación corroborada sin fuente.",
+    "Fricción declarada sin clase o sin argumento.",
+    "Fecha mal formada o periodo estudiado invertido.",
+    "Campo antiguo presente sin su equivalente migrado.",
+    "Operación epistémica fuera del vocabulario.",
+    "Traducción al inglés ausente en corriente, fenómeno, marca u operación.",
+    "Entrada marcada manifestacion con autoría personal identificada.",
+    "Título con separador ' / ' sin decisión registrada sobre su división.",
+    "Recuento de entradas y relaciones distinto al de la versión anterior sin nota de versión que lo explique."
+  ]
+}
