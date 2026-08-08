@@ -1,0 +1,590 @@
+{
+  "meta": {
+    "titulo": "Atlas 2.0 · lote piloto de 10 entradas",
+    "version": "piloto-10.1",
+    "esquema": "2.0-piloto.1",
+    "generado": "2026-08-08T04:22:08.871Z",
+    "corpus_fuente": "1.15.0",
+    "corpus_fuente_sha256": "dd750b80b789118fa3e215cc16a67fe7b65ad06c7d0838cc31ae0bde8103f2a4",
+    "recuentos_fuente": {
+      "entradas": 233,
+      "relaciones": 588,
+      "lugares": 30
+    },
+    "regla": "Los campos heredados f, l, tr y y se conservan sin cambios. Una candidatura preliminar no se presenta como corriente confirmada.",
+    "modifica_corpus_publico": false
+  },
+  "catalogos": "catalogos-atlas-2.json",
+  "entradas": [
+    {
+      "heredado": {
+        "id": "mintz",
+        "k": "obra",
+        "t": "Caribbean Transformations / Sweetness and Power",
+        "a": "Sidney W. Mintz",
+        "y": "1974–85",
+        "f": [
+          "postplantacion",
+          "capitalismo_racial"
+        ],
+        "l": "puertorico",
+        "tr": "anglófono (EE.UU.)",
+        "ap": "La plantación como matriz socioeconómica que precede a la nación y produce la modernidad caribeña. Fundación del comparatismo de área."
+      },
+      "migracion2": {
+        "id": "mintz",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "división",
+          "migración"
+        ],
+        "revision": {
+          "estado": "candidatura_preliminar",
+          "responsable": null,
+          "fecha": null,
+          "fundamento": null
+        },
+        "corriente_candidata": "postplantacion_trabajo_desposesion",
+        "marcas_por_revisar": [
+          "capitalismo_racial"
+        ],
+        "pendientes": [
+          "obras_componentes",
+          "mecanismo_capitalismo_racial",
+          "operaciones",
+          "orillas",
+          "temporalidades"
+        ],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ],
+        "temporalidades_candidatas": {
+          "valor_heredado": "1974–85",
+          "publicacion": null,
+          "requiere_revision": true
+        }
+      }
+    },
+    {
+      "heredado": {
+        "id": "price",
+        "k": "obra",
+        "t": "Maroon Societies",
+        "a": "Richard Price (ed.)",
+        "y": "1973",
+        "f": [
+          "cimarronaje",
+          "memoria"
+        ],
+        "l": "suriname",
+        "tr": "anglófono (EE.UU./Surinam)",
+        "ap": "Comparatismo pionero del cimarronaje a escala de las Américas; base del campo."
+      },
+      "migracion2": {
+        "id": "price",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "pendiente_revision_con_texto",
+          "responsable": null,
+          "fecha": null,
+          "fundamento": null
+        },
+        "corrientes_candidatas": [
+          "fugas_cimarronajes_emancipaciones",
+          "memorias_espiritualidades_archivos_vivos"
+        ],
+        "pendientes": [
+          "corriente_principal",
+          "operaciones",
+          "orillas",
+          "temporalidades"
+        ],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ],
+        "temporalidades_candidatas": {
+          "valor_heredado": "1973",
+          "publicacion": 1973,
+          "requiere_revision": false
+        }
+      }
+    },
+    {
+      "heredado": {
+        "id": "totumo",
+        "k": "manifestacion",
+        "t": "Los acuerdos y la idealización del palenque en la provincia de Cartagena: el caso del Totumo (1714-1767)",
+        "a": "Dolcey Romero Jaramillo",
+        "y": "",
+        "f": [
+          "cimarronaje",
+          "memoria"
+        ],
+        "l": "palenque",
+        "tr": "hispano (Colombia)",
+        "ap": "Cimarronaje del Caribe seco colombiano: territorio, lengua palenquera, memoria."
+      },
+      "migracion2": {
+        "id": "totumo",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "corrección bibliográfica",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "pendiente_revision_con_texto",
+          "responsable": null,
+          "fecha": null,
+          "fundamento": null
+        },
+        "corrientes_candidatas": [
+          "fugas_cimarronajes_emancipaciones",
+          "memorias_espiritualidades_archivos_vivos"
+        ],
+        "correcciones_propuestas": {
+          "k": "obra"
+        },
+        "pendientes": [
+          "año",
+          "corriente_principal",
+          "operaciones",
+          "orillas",
+          "temporalidades"
+        ],
+        "lenguas_publicacion_candidatas": [
+          "español"
+        ],
+        "temporalidades_candidatas": {
+          "valor_heredado": "",
+          "publicacion": null,
+          "requiere_revision": true
+        }
+      }
+    },
+    {
+      "heredado": {
+        "id": "chande",
+        "k": "manifestacion",
+        "t": "Sonoridades del Chandé en el Caribe seco",
+        "a": "borrador / archivo",
+        "y": "",
+        "f": [
+          "creolizacion",
+          "memoria"
+        ],
+        "l": "santamarta",
+        "tr": "hispano (Colombia)",
+        "ap": "Oralitura y ritmo del Magdalena Grande como lengua-nación local."
+      },
+      "migracion2": {
+        "id": "chande",
+        "procedencia": "manifestación",
+        "procedencia_verificada": false,
+        "proceso": [
+          "corrección bibliográfica",
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "pendiente_revision_con_texto",
+          "responsable": null,
+          "fecha": null,
+          "fundamento": null
+        },
+        "corrientes_candidatas": [
+          "creolizaciones_traducciones_opacidades",
+          "memorias_espiritualidades_archivos_vivos"
+        ],
+        "pendientes": [
+          "autoría",
+          "año",
+          "naturaleza_de_la_entrada",
+          "corriente_principal",
+          "operaciones",
+          "orillas",
+          "temporalidades"
+        ],
+        "lenguas_publicacion_candidatas": [
+          "español"
+        ],
+        "temporalidades_candidatas": {
+          "valor_heredado": "",
+          "publicacion": null,
+          "requiere_revision": true
+        }
+      }
+    },
+    {
+      "heredado": {
+        "id": "steward",
+        "k": "obra",
+        "t": "The People of Puerto Rico: A Study in Social Anthropology",
+        "a": "Julian Steward et al. (con Mintz, Wolf, Padilla Seda)",
+        "y": "1956",
+        "f": [
+          "postplantacion"
+        ],
+        "l": "puertorico",
+        "tr": "anglófono (EE.UU.)",
+        "ap": "El estudio colectivo de ecología cultural que formó a Mintz; compara regiones de Puerto Rico según su régimen de cultivo."
+      },
+      "migracion2": {
+        "id": "steward",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "fusión",
+          "migración"
+        ],
+        "revision": {
+          "estado": "candidatura_preliminar",
+          "responsable": null,
+          "fecha": null,
+          "fundamento": null
+        },
+        "corriente_candidata": "postplantacion_trabajo_desposesion",
+        "fusion_candidata_con": "stewardpuertorico",
+        "pendientes": [
+          "identificador_superviviente",
+          "redistribucion_relaciones",
+          "operaciones",
+          "orillas",
+          "temporalidades"
+        ],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ],
+        "temporalidades_candidatas": {
+          "valor_heredado": "1956",
+          "publicacion": 1956,
+          "requiere_revision": false
+        }
+      }
+    },
+    {
+      "heredado": {
+        "id": "stewardpuertorico",
+        "k": "obra",
+        "t": "The People of Puerto Rico: A Study in Social Anthropology",
+        "a": "Julian H. Steward, Robert A. Manners, Eric R. Wolf, Elena Padilla Seda, Sidney W. Mintz, Raymond L. Scheele",
+        "y": "1956",
+        "f": [
+          "postplantacion",
+          "capitalismo_racial"
+        ],
+        "l": "puertorico",
+        "tr": "anglófono (EE.UU.)",
+        "ap": "El proyecto colectivo del que salió Mintz: distintas zonas de Puerto Rico –plantación azucarera, café, tabaco, ciudad– estudiadas como tipos de economía que producen distintas formas de sociedad. Clásico fundacional del área ausente del corpus pese a que sí está su coautor más célebre."
+      },
+      "migracion2": {
+        "id": "stewardpuertorico",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "fusión",
+          "migración"
+        ],
+        "revision": {
+          "estado": "candidatura_preliminar",
+          "responsable": null,
+          "fecha": null,
+          "fundamento": null
+        },
+        "corriente_candidata": "postplantacion_trabajo_desposesion",
+        "fusion_candidata_con": "steward",
+        "marcas_por_revisar": [
+          "capitalismo_racial"
+        ],
+        "pendientes": [
+          "identificador_superviviente",
+          "redistribucion_relaciones",
+          "mecanismo_capitalismo_racial",
+          "operaciones",
+          "orillas",
+          "temporalidades"
+        ],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ],
+        "temporalidades_candidatas": {
+          "valor_heredado": "1956",
+          "publicacion": 1956,
+          "requiere_revision": false
+        }
+      }
+    },
+    {
+      "heredado": {
+        "id": "bassiacuoso",
+        "k": "obra",
+        "t": "Un territorio acuoso: geografías marineras y el Gran Caribe transimperial de la Nueva Granada",
+        "a": "Ernesto Bassi",
+        "y": "2016 / trad. esp. 2021",
+        "f": [
+          "colonialidad",
+          "soberanias"
+        ],
+        "l": "cartagena",
+        "tr": "hispano (Colombia)",
+        "ap": "Marineros, contrabandistas y corsarios que cruzan el Gran Caribe transimperial de la Nueva Granada sin reconocer las fronteras que las coronas dibujaron: el mismo territorio acuoso que este atlas intenta cartografiar por fenómeno y no por nación."
+      },
+      "migracion2": {
+        "id": "bassiacuoso",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "pendiente_revision_con_texto",
+          "responsable": null,
+          "fecha": null,
+          "fundamento": null
+        },
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "rutas_diasporas_territorios_acuosos"
+        ],
+        "marcas_por_revisar": [
+          "colonialidad"
+        ],
+        "pendientes": [
+          "corriente_principal",
+          "operaciones",
+          "orillas",
+          "rutas",
+          "temporalidades"
+        ],
+        "lenguas_publicacion_candidatas": [
+          "español"
+        ],
+        "temporalidades_candidatas": {
+          "valor_heredado": "2016 / trad. esp. 2021",
+          "publicacion": null,
+          "requiere_revision": true
+        }
+      }
+    },
+    {
+      "heredado": {
+        "id": "williamscapitalismo",
+        "k": "obra",
+        "t": "Capitalismo y esclavitud (Capitalism and Slavery)",
+        "a": "Eric Williams",
+        "y": "1944 / ed. esp. 2011",
+        "f": [
+          "capitalismo_racial",
+          "postplantacion",
+          "colonialidad"
+        ],
+        "l": "trinidad",
+        "tr": "anglófono (Trinidad)",
+        "ap": "La tesis que el corpus daba por sabida sin tenerla: la abolición no llegó por conciencia moral sino cuando el azúcar antillano dejó de ser rentable, y el capital industrial británico se levantó sobre la trata. Es la obra de la que se descuelga casi todo el capitalismo racial que el atlas ya cataloga."
+      },
+      "migracion2": {
+        "id": "williamscapitalismo",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "pendiente_revision_con_texto",
+          "responsable": null,
+          "fecha": null,
+          "fundamento": null
+        },
+        "corrientes_candidatas": [
+          "postplantacion_trabajo_desposesion",
+          "trata_esclavizacion_plantacion"
+        ],
+        "marcas_por_revisar": [
+          "capitalismo_racial",
+          "colonialidad"
+        ],
+        "pendientes": [
+          "corriente_principal",
+          "mecanismo_capitalismo_racial",
+          "operaciones",
+          "orillas",
+          "temporalidades"
+        ],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ],
+        "temporalidades_candidatas": {
+          "valor_heredado": "1944 / ed. esp. 2011",
+          "publicacion": null,
+          "requiere_revision": true
+        }
+      }
+    },
+    {
+      "heredado": {
+        "id": "keeganhofman",
+        "k": "obra",
+        "t": "The Caribbean before Columbus",
+        "a": "William F. Keegan y Corinne L. Hofman",
+        "y": "2017",
+        "f": [
+          "memoria",
+          "colonialidad"
+        ],
+        "l": "jamaica",
+        "tr": "anglófono (EE.UU./Países Bajos)",
+        "ap": "Siete mil años de poblamiento archipiélico antes de 1492, contados como historia de navegación y no como prehistoria estática. El atlas piensa el agua como vía; aquí está la evidencia arqueológica de que lo fue mucho antes de la colonia."
+      },
+      "migracion2": {
+        "id": "keeganhofman",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "pendiente_revision_con_texto",
+          "responsable": null,
+          "fecha": null,
+          "fundamento": null
+        },
+        "corrientes_candidatas": [
+          "invasiones_mundos_indigenas",
+          "memorias_espiritualidades_archivos_vivos"
+        ],
+        "marcas_por_revisar": [
+          "colonialidad",
+          "memoria"
+        ],
+        "pendientes": [
+          "corriente_principal",
+          "operaciones",
+          "orillas",
+          "temporalidades"
+        ],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ],
+        "temporalidades_candidatas": {
+          "valor_heredado": "2017",
+          "publicacion": 2017,
+          "requiere_revision": false
+        }
+      }
+    },
+    {
+      "heredado": {
+        "id": "bourgoisethnicity",
+        "k": "obra",
+        "t": "Ethnicity at Work: Divided Labor on a Central American Banana Plantation",
+        "a": "Philippe Bourgois",
+        "y": "1989",
+        "f": [
+          "capitalismo_racial",
+          "violencias"
+        ],
+        "l": "costarica",
+        "tr": "anglófono (EE.UU./Centroamérica)",
+        "ap": "La empresa bananera administrando la diferencia étnica como herramienta de producción: negros antillanos, guaymíes, mestizos e indígenas repartidos por tarea y por salario. La plantación del siglo XX, no la del XVIII."
+      },
+      "migracion2": {
+        "id": "bourgoisethnicity",
+        "procedencia": "corpus heredado",
+        "procedencia_verificada": true,
+        "proceso": [
+          "reclasificación"
+        ],
+        "revision": {
+          "estado": "pendiente_revision_con_texto",
+          "responsable": null,
+          "fecha": null,
+          "fundamento": null
+        },
+        "corrientes_candidatas": [],
+        "marcas_por_revisar": [
+          "capitalismo_racial",
+          "violencias"
+        ],
+        "pendientes": [
+          "corriente_principal",
+          "mecanismo_capitalismo_racial",
+          "tipo_violencia",
+          "operaciones",
+          "orillas",
+          "temporalidades"
+        ],
+        "lenguas_publicacion_candidatas": [
+          "inglés"
+        ],
+        "temporalidades_candidatas": {
+          "valor_heredado": "1989",
+          "publicacion": 1989,
+          "requiere_revision": false
+        }
+      }
+    }
+  ],
+  "relaciones_entre_entradas_piloto": [
+    {
+      "heredada": {
+        "a": "price",
+        "b": "totumo",
+        "tipo": "disonancia",
+        "fuente": "Comparatismo académico del cimarronaje (Price) frente a la memoria local palenquera del Totumo."
+      },
+      "migracion2": {
+        "estado": "corroborada",
+        "cruce_linguistico": null,
+        "friccion": {
+          "hay": false
+        },
+        "pendientes": [
+          "verificar_lenguas_de_publicacion",
+          "revisar_si_hay_friccion_argumentada"
+        ]
+      }
+    },
+    {
+      "heredada": {
+        "a": "stewardpuertorico",
+        "b": "mintz",
+        "tipo": "resonancia",
+        "fuente": "Coautoría directa: Sidney W. Mintz figura como investigador del mismo proyecto («Dr. Sidney W. Mintz, then of Columbia University»), no como cita externa."
+      },
+      "migracion2": {
+        "estado": "corroborada",
+        "cruce_linguistico": null,
+        "friccion": {
+          "hay": false
+        },
+        "pendientes": [
+          "verificar_lenguas_de_publicacion",
+          "revisar_si_hay_friccion_argumentada"
+        ]
+      }
+    },
+    {
+      "heredada": {
+        "a": "keeganhofman",
+        "b": "mintz",
+        "tipo": "resonancia",
+        "fuente": "Keegan y Hofman discuten el área sociocultural de Mintz para preguntarse si el archipiélago era una unidad antes de la colonia. Cita verificada en el ejemplar."
+      },
+      "migracion2": {
+        "estado": "corroborada",
+        "cruce_linguistico": null,
+        "friccion": {
+          "hay": false
+        },
+        "pendientes": [
+          "verificar_lenguas_de_publicacion",
+          "revisar_si_hay_friccion_argumentada"
+        ]
+      }
+    }
+  ]
+}

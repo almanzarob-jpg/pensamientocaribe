@@ -1,0 +1,106 @@
+{
+  "version": "piloto-10.1",
+  "corpus_objetivo": "1.15.0",
+  "criterio_seleccion": "Diez casos que prueban una migración normal y los principales riesgos editoriales sin convertir candidaturas en clasificaciones confirmadas.",
+  "entradas": [
+    {
+      "id": "mintz",
+      "procedencia": "corpus heredado",
+      "procedencia_verificada": true,
+      "proceso": ["división", "migración"],
+      "revision": { "estado": "candidatura_preliminar" },
+      "corriente_candidata": "postplantacion_trabajo_desposesion",
+      "marcas_por_revisar": ["capitalismo_racial"],
+      "pendientes": ["obras_componentes", "mecanismo_capitalismo_racial", "operaciones", "orillas", "temporalidades"]
+    },
+    {
+      "id": "price",
+      "procedencia": "corpus heredado",
+      "procedencia_verificada": true,
+      "proceso": ["reclasificación"],
+      "revision": { "estado": "pendiente_revision_con_texto" },
+      "corrientes_candidatas": ["fugas_cimarronajes_emancipaciones", "memorias_espiritualidades_archivos_vivos"],
+      "pendientes": ["corriente_principal", "operaciones", "orillas", "temporalidades"]
+    },
+    {
+      "id": "totumo",
+      "procedencia": "corpus heredado",
+      "procedencia_verificada": true,
+      "proceso": ["corrección bibliográfica", "reclasificación"],
+      "revision": { "estado": "pendiente_revision_con_texto" },
+      "corrientes_candidatas": ["fugas_cimarronajes_emancipaciones", "memorias_espiritualidades_archivos_vivos"],
+      "correcciones_propuestas": { "k": "obra" },
+      "pendientes": ["año", "corriente_principal", "operaciones", "orillas", "temporalidades"]
+    },
+    {
+      "id": "chande",
+      "procedencia": "manifestación",
+      "procedencia_verificada": false,
+      "proceso": ["corrección bibliográfica", "reclasificación"],
+      "revision": { "estado": "pendiente_revision_con_texto" },
+      "corrientes_candidatas": ["creolizaciones_traducciones_opacidades", "memorias_espiritualidades_archivos_vivos"],
+      "pendientes": ["autoría", "año", "naturaleza_de_la_entrada", "corriente_principal", "operaciones", "orillas", "temporalidades"]
+    },
+    {
+      "id": "steward",
+      "procedencia": "corpus heredado",
+      "procedencia_verificada": true,
+      "proceso": ["fusión", "migración"],
+      "revision": { "estado": "candidatura_preliminar" },
+      "corriente_candidata": "postplantacion_trabajo_desposesion",
+      "fusion_candidata_con": "stewardpuertorico",
+      "pendientes": ["identificador_superviviente", "redistribucion_relaciones", "operaciones", "orillas", "temporalidades"]
+    },
+    {
+      "id": "stewardpuertorico",
+      "procedencia": "corpus heredado",
+      "procedencia_verificada": true,
+      "proceso": ["fusión", "migración"],
+      "revision": { "estado": "candidatura_preliminar" },
+      "corriente_candidata": "postplantacion_trabajo_desposesion",
+      "fusion_candidata_con": "steward",
+      "marcas_por_revisar": ["capitalismo_racial"],
+      "pendientes": ["identificador_superviviente", "redistribucion_relaciones", "mecanismo_capitalismo_racial", "operaciones", "orillas", "temporalidades"]
+    },
+    {
+      "id": "bassiacuoso",
+      "procedencia": "corpus heredado",
+      "procedencia_verificada": true,
+      "proceso": ["reclasificación"],
+      "revision": { "estado": "pendiente_revision_con_texto" },
+      "corrientes_candidatas": ["soberanias_fronteras_ocupaciones", "rutas_diasporas_territorios_acuosos"],
+      "marcas_por_revisar": ["colonialidad"],
+      "pendientes": ["corriente_principal", "operaciones", "orillas", "rutas", "temporalidades"]
+    },
+    {
+      "id": "williamscapitalismo",
+      "procedencia": "corpus heredado",
+      "procedencia_verificada": true,
+      "proceso": ["reclasificación"],
+      "revision": { "estado": "pendiente_revision_con_texto" },
+      "corrientes_candidatas": ["postplantacion_trabajo_desposesion", "trata_esclavizacion_plantacion"],
+      "marcas_por_revisar": ["capitalismo_racial", "colonialidad"],
+      "pendientes": ["corriente_principal", "mecanismo_capitalismo_racial", "operaciones", "orillas", "temporalidades"]
+    },
+    {
+      "id": "keeganhofman",
+      "procedencia": "corpus heredado",
+      "procedencia_verificada": true,
+      "proceso": ["reclasificación"],
+      "revision": { "estado": "pendiente_revision_con_texto" },
+      "corrientes_candidatas": ["invasiones_mundos_indigenas", "memorias_espiritualidades_archivos_vivos"],
+      "marcas_por_revisar": ["colonialidad", "memoria"],
+      "pendientes": ["corriente_principal", "operaciones", "orillas", "temporalidades"]
+    },
+    {
+      "id": "bourgoisethnicity",
+      "procedencia": "corpus heredado",
+      "procedencia_verificada": true,
+      "proceso": ["reclasificación"],
+      "revision": { "estado": "pendiente_revision_con_texto" },
+      "corrientes_candidatas": [],
+      "marcas_por_revisar": ["capitalismo_racial", "violencias"],
+      "pendientes": ["corriente_principal", "mecanismo_capitalismo_racial", "tipo_violencia", "operaciones", "orillas", "temporalidades"]
+    }
+  ]
+}
