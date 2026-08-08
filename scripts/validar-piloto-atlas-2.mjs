@@ -18,18 +18,59 @@ const currentIds = new Set(Object.keys(catalogs.corrientes));
 const provenances = new Set(catalogs.procedencias);
 const processes = new Set(catalogs.procesos);
 const states = new Set(catalogs.estados_revision);
+const relationStates = new Set(catalogs.estados_relacion);
+const operations = new Set(catalogs.operaciones);
+const shores = new Set(catalogs.tipos_orilla);
+const shoreFunctions = new Set(catalogs.funciones_orilla);
+const eras = new Set(catalogs.eras_temporales);
+const precisions = new Set(catalogs.precisiones_temporales);
+const racialCapitalismMechanisms = new Set(catalogs.mecanismos_capitalismo_racial);
 const errors = [];
 const warnings = [];
 const error = (code, message) => errors.push({ code, message });
 const warn = (code, message) => warnings.push({ code, message });
 const nonEmpty = (value) => typeof value === "string" && value.trim().length > 0;
 
+function validateDate(value, where) {
+  if (value === null) return;
+  if (!value || !Number.isInteger(value.valor) || value.valor < 1) error("FECHA", `${where}: valor temporal inválido.`);
+  if (!eras.has(value?.era)) error("FECHA", `${where}: era temporal inválida.`);
+  if (!precisions.has(value?.precision)) error("FECHA", `${where}: precisión temporal inválida.`);
+}
+
+function comparableDate(value) {
+  if (!value) return null;
+  return value.era === "AEC" ? -value.valor : value.valor;
+}
+
+function validateTemporalities(value, where) {
+  if (!value || typeof value !== "object") return;
+  for (const key of ["publicacion", "traduccion_es"]) {
+    if (key in value) validateDate(value[key], `${where}.${key}`);
+  }
+  if (value.periodo_estudiado) {
+    const period = value.periodo_estudiado;
+    validateDate(period.inicio, `${where}.periodo_estudiado.inicio`);
+    validateDate(period.fin, `${where}.periodo_estudiado.fin`);
+    if (period.precision && !precisions.has(period.precision)) error("FECHA", `${where}: precisión del periodo inválida.`);
+    const start = comparableDate(period.inicio);
+    const end = comparableDate(period.fin);
+    if (start !== null && end !== null && start > end) error("FECHA", `${where}: periodo estudiado invertido.`);
+  }
+}
+
 if (pilot.meta?.modifica_corpus_publico !== false) error("META", "El piloto debe declarar que no modifica el corpus público.");
+if (pilot.meta?.aprobacion?.estado !== "aprobado" || !nonEmpty(pilot.meta?.aprobacion?.responsable) || !/^\d{4}-\d{2}-\d{2}$/.test(pilot.meta?.aprobacion?.fecha || "")) {
+  error("APROBACION", "El piloto debe registrar aprobación, responsable y fecha.");
+}
 if (pilot.meta?.corpus_fuente !== source.meta?.version) error("VERSION", "La versión fuente del piloto no coincide con el corpus.");
 if (pilot.meta?.recuentos_fuente?.entradas !== source.obras.length || pilot.meta?.recuentos_fuente?.relaciones !== source.relaciones.length) {
   error("RECUENTOS", "Los recuentos fuente del piloto no coinciden con el corpus actual.");
 }
 if (!Array.isArray(pilot.entradas) || pilot.entradas.length !== 10) error("TAMANO", "El lote piloto debe contener exactamente 10 entradas.");
+if (pilot.meta?.recuentos_piloto?.nodos_efectivos !== 9 || pilot.meta?.recuentos_piloto?.redirecciones !== 1) {
+  error("TAMANO", "El dictamen aprobado debe producir nueve nodos efectivos y una redirección.");
+}
 
 const seen = new Set();
 for (const [index, item] of (pilot.entradas || []).entries()) {
@@ -42,6 +83,7 @@ for (const [index, item] of (pilot.entradas || []).entries()) {
   if (!sourceWorks.has(id)) error("ID_INEXISTENTE", `${id} no existe en el corpus fuente.`);
   else if (!isDeepStrictEqual(item.heredado, sourceWorks.get(id))) error("HERENCIA", `${id}: los campos heredados fueron alterados.`);
   if (!migration || typeof migration !== "object") { error("MIGRACION", `${id}: falta migracion2.`); continue; }
+  const isRedirect = migration.accion_entidad === "redireccion";
   if (!provenances.has(migration.procedencia)) error("PROCEDENCIA", `${id}: procedencia fuera del vocabulario.`);
   if (!Array.isArray(migration.proceso) || migration.proceso.length === 0 || migration.proceso.some((value) => !processes.has(value))) {
     error("PROCESO", `${id}: proceso vacío o fuera del vocabulario.`);
@@ -56,19 +98,58 @@ for (const [index, item] of (pilot.entradas || []).entries()) {
   if ((state === "candidatura_preliminar" || state === "pendiente_revision_con_texto") && migration.corriente_confirmada) {
     error("CONFIRMACION_PREMATURA", `${id}: una entrada pendiente no puede llevar corriente confirmada.`);
   }
-  if ((state === "confirmada" || state === "revisada") && (!migration.corriente_confirmada || !nonEmpty(migration.revision?.fundamento))) {
+  if ((state === "confirmada" || state === "revisada") && !isRedirect && (!migration.corriente_confirmada || !nonEmpty(migration.revision?.fundamento))) {
     error("CONFIRMACION", `${id}: la confirmación exige corriente y fundamento.`);
   }
+  if ((state === "confirmada" || state === "revisada") && (!nonEmpty(migration.revision?.responsable) || !/^\d{4}-\d{2}-\d{2}$/.test(migration.revision?.fecha || ""))) {
+    error("CONFIRMACION", `${id}: la decisión exige responsable y fecha.`);
+  }
   if (migration.procedencia_verificada === false && (state === "confirmada" || state === "revisada")) error("PROCEDENCIA", `${id}: no puede confirmarse con procedencia sin verificar.`);
-  if (!Array.isArray(migration.pendientes) || migration.pendientes.length === 0) warn("SIN_PENDIENTES", `${id}: el piloto no declara campos pendientes.`);
+  if (!Array.isArray(migration.pendientes)) error("PENDIENTES", `${id}: pendientes debe ser una lista explícita, incluso si está vacía.`);
   if (!Array.isArray(migration.lenguas_publicacion_candidatas) || migration.lenguas_publicacion_candidatas.length === 0) warn("LENGUA", `${id}: no se derivó ninguna lengua candidata desde tr.`);
+  if (isRedirect) {
+    if (!nonEmpty(migration.redirige_a) || !sourceWorks.has(migration.redirige_a) || migration.redirige_a === id) error("REDIRECCION", `${id}: destino de redirección inválido.`);
+    if (!migration.proceso.includes("fusión")) error("REDIRECCION", `${id}: una redirección por duplicado debe declarar fusión.`);
+  } else if (migration.redirige_a) {
+    error("REDIRECCION", `${id}: solo una redirección puede declarar redirige_a.`);
+  }
+  const secondary = migration.corrientes_secundarias || [];
+  if (!Array.isArray(secondary) || secondary.length > 2 || secondary.some((value) => !currentIds.has(value) || value === migration.corriente_confirmada)) {
+    error("CORRIENTES_SECUNDARIAS", `${id}: corrientes secundarias inválidas.`);
+  }
+  if (migration.operaciones && (!Array.isArray(migration.operaciones) || migration.operaciones.some((value) => !operations.has(value)))) {
+    error("OPERACIONES", `${id}: operación epistémica fuera del vocabulario.`);
+  }
+  for (const [shoreIndex, shore] of (migration.orillas || []).entries()) {
+    if (!shores.has(shore.tipo)) error("ORILLA", `${id}.orillas[${shoreIndex}]: tipo inválido.`);
+    if (!shoreFunctions.has(shore.funcion)) error("ORILLA", `${id}.orillas[${shoreIndex}]: función inválida.`);
+    if (shore.tipo === "punto" && !nonEmpty(shore.lugar)) error("ORILLA", `${id}.orillas[${shoreIndex}]: un punto exige identificador de lugar.`);
+    if (shore.tipo !== "punto" && !nonEmpty(shore.label)) error("ORILLA", `${id}.orillas[${shoreIndex}]: una región o cuenca exige etiqueta.`);
+  }
+  for (const [markIndex, mark] of (migration.marcas || []).entries()) {
+    if (!catalogs.marcas.includes(mark.m)) error("MARCA", `${id}.marcas[${markIndex}]: marca inválida.`);
+    if (mark.m === "capitalismo_racial" && !racialCapitalismMechanisms.has(mark.mecanismo)) error("MARCA", `${id}.marcas[${markIndex}]: mecanismo de capitalismo racial inválido.`);
+  }
+  validateTemporalities(migration.temporalidades, id);
+  for (const [componentIndex, component] of (migration.obras_componentes || []).entries()) {
+    if (!nonEmpty(component.id_componente) || !nonEmpty(component.titulo)) error("COMPONENTE", `${id}.obras_componentes[${componentIndex}]: faltan identificador o título.`);
+    validateDate(component.publicacion, `${id}.obras_componentes[${componentIndex}].publicacion`);
+    if (component.corriente !== null && !currentIds.has(component.corriente)) error("COMPONENTE", `${id}.obras_componentes[${componentIndex}]: corriente inválida.`);
+  }
 }
 
+const effectiveIds = new Set((pilot.entradas || []).filter((item) => item.migracion2?.accion_entidad !== "redireccion").map((item) => item.heredado.id));
 for (const [index, item] of (pilot.relaciones_entre_entradas_piloto || []).entries()) {
   const relation = item?.heredada;
   if (!relation || !seen.has(relation.a) || !seen.has(relation.b)) error("RELACION", `relaciones[${index}] no conecta dos entradas del piloto.`);
   if (item?.migracion2?.friccion?.hay !== false) error("FRICCION", `relaciones[${index}] infiere fricción sin argumento editorial.`);
-  if (item?.migracion2?.cruce_linguistico !== null) error("CRUCE", `relaciones[${index}] fija el cruce antes de verificar lenguas de publicación.`);
+  if (typeof item?.migracion2?.cruce_linguistico !== "boolean") error("CRUCE", `relaciones[${index}] no declara el cruce lingüístico como booleano.`);
+  if (!relationStates.has(item?.migracion2?.estado)) error("CORROBORACION", `relaciones[${index}] no declara un estado válido.`);
+  if (item?.migracion2?.estado === "por_corroborar" && item?.migracion2?.tipo_confirmado !== null) error("CORROBORACION", `relaciones[${index}] no puede confirmar tipo mientras está por corroborar.`);
+  if (item?.migracion2?.estado === "corroborada" && !nonEmpty(item?.migracion2?.tipo_confirmado)) error("CORROBORACION", `relaciones[${index}] corroborada sin tipo confirmado.`);
+  if (!nonEmpty(item?.migracion2?.fundamento)) error("RELACION", `relaciones[${index}] no registra fundamento.`);
+  const effective = item?.migracion2?.extremos_efectivos;
+  if (!effectiveIds.has(effective?.a) || !effectiveIds.has(effective?.b)) error("REDIRECCION", `relaciones[${index}] apunta a un nodo retirado o inexistente.`);
 }
 
 console.log(`[INFO] Corpus fuente ${source.meta.version}: ${source.obras.length} entradas y ${source.relaciones.length} relaciones.`);

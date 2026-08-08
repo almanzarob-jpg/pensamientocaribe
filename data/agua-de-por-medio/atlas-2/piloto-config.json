@@ -1,106 +1,293 @@
 {
-  "version": "piloto-10.1",
+  "version": "piloto-10.2",
   "corpus_objetivo": "1.15.0",
-  "criterio_seleccion": "Diez casos que prueban una migración normal y los principales riesgos editoriales sin convertir candidaturas en clasificaciones confirmadas.",
+  "criterio_seleccion": "Diez registros heredados que prueban nueve nodos efectivos, una redirección, decisiones confirmadas y un caso que debe permanecer pendiente.",
+  "aprobacion": {
+    "estado": "aprobado",
+    "fecha": "2026-08-08",
+    "responsable": "Dirección académica de Pensamiento Caribe",
+    "alcance": "Lote piloto y arquitectura de transición; no autoriza la migración masiva ni modifica el corpus público."
+  },
   "entradas": [
     {
       "id": "mintz",
+      "decision_aprobada": "mantener_pendiente",
       "procedencia": "corpus heredado",
       "procedencia_verificada": true,
       "proceso": ["división", "migración"],
-      "revision": { "estado": "candidatura_preliminar" },
-      "corriente_candidata": "postplantacion_trabajo_desposesion",
-      "marcas_por_revisar": ["capitalismo_racial"],
-      "pendientes": ["obras_componentes", "mecanismo_capitalismo_racial", "operaciones", "orillas", "temporalidades"]
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "fundamento": "El nodo reúne dos obras con argumentos diferentes; no se confirma una corriente única hasta revisar cada componente."
+      },
+      "obras_componentes": [
+        {
+          "id_componente": "mintz-caribbean-transformations",
+          "titulo": "Caribbean Transformations",
+          "publicacion": { "valor": 1974, "era": "EC", "precision": "exacta" },
+          "corriente": null,
+          "estado_corriente": "pendiente_revision_con_texto"
+        },
+        {
+          "id_componente": "mintz-sweetness-and-power",
+          "titulo": "Sweetness and Power: The Place of Sugar in Modern History",
+          "publicacion": { "valor": 1985, "era": "EC", "precision": "exacta" },
+          "corriente": null,
+          "estado_corriente": "pendiente_revision_con_texto"
+        }
+      ],
+      "pendientes": ["corriente_por_componente", "mecanismo_capitalismo_racial", "operaciones", "orillas"]
     },
     {
       "id": "price",
+      "decision_aprobada": "confirmar",
       "procedencia": "corpus heredado",
       "procedencia_verificada": true,
       "proceso": ["reclasificación"],
-      "revision": { "estado": "pendiente_revision_con_texto" },
-      "corrientes_candidatas": ["fugas_cimarronajes_emancipaciones", "memorias_espiritualidades_archivos_vivos"],
-      "pendientes": ["corriente_principal", "operaciones", "orillas", "temporalidades"]
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El volumen organiza una comparación hemisférica de comunidades cimarronas y combina fuentes históricas y estudios antropológicos."
+      },
+      "corriente_confirmada": "fugas_cimarronajes_emancipaciones",
+      "corrientes_secundarias": [],
+      "correcciones_aprobadas": {
+        "t": "Maroon Societies: Rebel Slave Communities in the Americas",
+        "a": "Richard Price (ed.)",
+        "y": "1973"
+      },
+      "operaciones": ["reconstruir un archivo", "comparar orillas"],
+      "temporalidades": { "publicacion": { "valor": 1973, "era": "EC", "precision": "exacta" } },
+      "fuentes_revision": ["https://search.worldcat.org/oclc/805137?tab=details", "https://www.press.jhu.edu/books/title/1940/maroon-societies"],
+      "pendientes": ["orillas"]
     },
     {
       "id": "totumo",
+      "decision_aprobada": "confirmar_con_correccion",
       "procedencia": "corpus heredado",
       "procedencia_verificada": true,
       "proceso": ["corrección bibliográfica", "reclasificación"],
-      "revision": { "estado": "pendiente_revision_con_texto" },
-      "corrientes_candidatas": ["fugas_cimarronajes_emancipaciones", "memorias_espiritualidades_archivos_vivos"],
-      "correcciones_propuestas": { "k": "obra" },
-      "pendientes": ["año", "corriente_principal", "operaciones", "orillas", "temporalidades"]
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El artículo reconstruye acuerdos entre cimarrones y autoridades coloniales y cuestiona la idealización del palenque como libertad absoluta."
+      },
+      "corriente_confirmada": "fugas_cimarronajes_emancipaciones",
+      "corrientes_secundarias": [],
+      "correcciones_aprobadas": {
+        "k": "obra",
+        "y": "2020",
+        "referencia": "Historia Caribe 15(37), 215-247",
+        "doi": "10.15648/hc.37.2020.9"
+      },
+      "operaciones": ["reconstruir un archivo", "confrontar una categoría"],
+      "temporalidades": {
+        "publicacion": { "valor": 2020, "era": "EC", "precision": "exacta" },
+        "periodo_estudiado": {
+          "inicio": { "valor": 1714, "era": "EC", "precision": "exacta" },
+          "fin": { "valor": 1767, "era": "EC", "precision": "exacta" }
+        }
+      },
+      "fuentes_revision": ["https://revistas.uniatlantico.edu.co/index.php/Historia_Caribe/article/view/2403", "https://doi.org/10.15648/hc.37.2020.9"],
+      "pendientes": ["orillas"]
     },
     {
       "id": "chande",
-      "procedencia": "manifestación",
-      "procedencia_verificada": false,
+      "decision_aprobada": "confirmar_con_correccion",
+      "procedencia": "corpus heredado",
+      "procedencia_verificada": true,
       "proceso": ["corrección bibliográfica", "reclasificación"],
-      "revision": { "estado": "pendiente_revision_con_texto" },
-      "corrientes_candidatas": ["creolizaciones_traducciones_opacidades", "memorias_espiritualidades_archivos_vivos"],
-      "pendientes": ["autoría", "año", "naturaleza_de_la_entrada", "corriente_principal", "operaciones", "orillas", "temporalidades"]
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El texto comprende el Chandé como pensamiento, saber y memoria mediante diálogo comunitario y respeto por el silencio de sabedoras y sabedores."
+      },
+      "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+      "corrientes_secundarias": ["creolizaciones_traducciones_opacidades"],
+      "correcciones_aprobadas": {
+        "k": "obra",
+        "t": "Un silencio que habla: Las sonoridades narradas del Chandé en el Caribe seco colombiano",
+        "a": "Ernell Villa y Wilmer Villa",
+        "y": "2016",
+        "doi": "10.15648/cl.24.2016.6"
+      },
+      "operaciones": ["producir etnografía", "escuchar", "preservar una memoria", "documentar una práctica", "teorizar"],
+      "orillas": [
+        { "tipo": "punto", "lugar": "laloma-elpaso-cesar", "label": "La Loma, El Paso, Cesar", "funcion": "territorio estudiado", "coordenadas_pendientes": true }
+      ],
+      "temporalidades": { "publicacion": { "valor": 2016, "era": "EC", "precision": "exacta" } },
+      "fuentes_revision": ["https://dialnet.unirioja.es/descarga/articulo/5888296.pdf", "https://doi.org/10.15648/cl.24.2016.6"],
+      "pendientes": ["fechas_del_trabajo_de_campo", "duracion_historica", "coordenadas_orilla"]
     },
     {
       "id": "steward",
+      "decision_aprobada": "fusionar_y_confirmar",
       "procedencia": "corpus heredado",
       "procedencia_verificada": true,
       "proceso": ["fusión", "migración"],
-      "revision": { "estado": "candidatura_preliminar" },
-      "corriente_candidata": "postplantacion_trabajo_desposesion",
-      "fusion_candidata_con": "stewardpuertorico",
-      "pendientes": ["identificador_superviviente", "redistribucion_relaciones", "operaciones", "orillas", "temporalidades"]
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La obra compara subculturas puertorriqueñas configuradas por entornos y regímenes económicos locales; el identificador más antiguo conserva los enlaces citables."
+      },
+      "corriente_confirmada": "postplantacion_trabajo_desposesion",
+      "corrientes_secundarias": [],
+      "fusiona": ["stewardpuertorico"],
+      "correcciones_aprobadas": {
+        "a": "Julian H. Steward, Robert A. Manners, Eric R. Wolf, Elena Padilla Seda, Sidney W. Mintz y Raymond L. Scheele",
+        "y": "1956"
+      },
+      "operaciones": ["producir etnografía", "comparar orillas", "teorizar"],
+      "temporalidades": { "publicacion": { "valor": 1956, "era": "EC", "precision": "exacta" } },
+      "fuentes_revision": ["https://eric.ed.gov/?id=ED019306", "https://files.archon.library.illinois.edu/uasfa/1502021.pdf"],
+      "pendientes": ["orillas"]
     },
     {
       "id": "stewardpuertorico",
+      "decision_aprobada": "fusionar_y_redirigir",
       "procedencia": "corpus heredado",
       "procedencia_verificada": true,
       "proceso": ["fusión", "migración"],
-      "revision": { "estado": "candidatura_preliminar" },
-      "corriente_candidata": "postplantacion_trabajo_desposesion",
-      "fusion_candidata_con": "steward",
-      "marcas_por_revisar": ["capitalismo_racial"],
-      "pendientes": ["identificador_superviviente", "redistribucion_relaciones", "mecanismo_capitalismo_racial", "operaciones", "orillas", "temporalidades"]
+      "revision": {
+        "estado": "revisada",
+        "fundamento": "Es la misma obra que steward; sus metadatos y relaciones se conservan mediante fusión y redirección."
+      },
+      "accion_entidad": "redireccion",
+      "redirige_a": "steward",
+      "fuentes_revision": ["https://books.google.com/books/about/The_People_of_Puerto_Rico.html?id=UVkf0gEACAAJ", "https://files.archon.library.illinois.edu/uasfa/1502021.pdf"],
+      "pendientes": []
     },
     {
       "id": "bassiacuoso",
+      "decision_aprobada": "confirmar",
       "procedencia": "corpus heredado",
       "procedencia_verificada": true,
       "proceso": ["reclasificación"],
-      "revision": { "estado": "pendiente_revision_con_texto" },
-      "corrientes_candidatas": ["soberanias_fronteras_ocupaciones", "rutas_diasporas_territorios_acuosos"],
-      "marcas_por_revisar": ["colonialidad"],
-      "pendientes": ["corriente_principal", "operaciones", "orillas", "rutas", "temporalidades"]
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La obra organiza su argumento alrededor de circulaciones marítimas, geografías vividas y un Gran Caribe transimperial."
+      },
+      "corriente_confirmada": "rutas_diasporas_territorios_acuosos",
+      "corrientes_secundarias": ["soberanias_fronteras_ocupaciones"],
+      "manifestaciones_bibliograficas": [
+        { "titulo": "An Aqueous Territory", "lengua": "inglés", "publicacion": { "valor": 2016, "era": "EC", "precision": "exacta" } },
+        { "titulo": "Un territorio acuoso", "lengua": "español", "publicacion": { "valor": 2021, "era": "EC", "precision": "exacta" }, "traductora": "María José Montoya" }
+      ],
+      "operaciones": ["reconstruir un archivo", "cartografiar", "seguir una ruta", "comparar orillas", "teorizar"],
+      "orillas": [
+        { "tipo": "cuenca", "label": "Gran Caribe", "funcion": "territorio estudiado" }
+      ],
+      "temporalidades": {
+        "publicacion": { "valor": 2016, "era": "EC", "precision": "exacta" },
+        "traduccion_es": { "valor": 2021, "era": "EC", "precision": "exacta" },
+        "periodo_estudiado": {
+          "inicio": { "valor": 1760, "era": "EC", "precision": "exacta" },
+          "fin": { "valor": 1860, "era": "EC", "precision": "exacta" }
+        }
+      },
+      "fuentes_revision": ["https://www.dukeupress.edu/an-aqueous-territory", "https://editorial.uninorte.edu.co/gpd-un-territorio-acuoso-9789587891669.html"],
+      "pendientes": ["rutas_con_paginas"]
     },
     {
       "id": "williamscapitalismo",
+      "decision_aprobada": "confirmar",
       "procedencia": "corpus heredado",
       "procedencia_verificada": true,
       "proceso": ["reclasificación"],
-      "revision": { "estado": "pendiente_revision_con_texto" },
-      "corrientes_candidatas": ["postplantacion_trabajo_desposesion", "trata_esclavizacion_plantacion"],
-      "marcas_por_revisar": ["capitalismo_racial", "colonialidad"],
-      "pendientes": ["corriente_principal", "mecanismo_capitalismo_racial", "operaciones", "orillas", "temporalidades"]
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El libro sitúa la trata y la esclavización antillana en la formación del capitalismo británico y discute la abolición desde la transformación económica."
+      },
+      "corriente_confirmada": "trata_esclavizacion_plantacion",
+      "corrientes_secundarias": ["postplantacion_trabajo_desposesion"],
+      "marcas": [
+        { "m": "capitalismo_racial", "mecanismo": "acumulación esclavista" },
+        { "m": "colonialidad" }
+      ],
+      "operaciones": ["reconstruir un archivo", "teorizar", "confrontar una categoría"],
+      "temporalidades": { "publicacion": { "valor": 1944, "era": "EC", "precision": "exacta" } },
+      "fuentes_revision": ["https://uncpress.org/9781469663685/capitalism-and-slavery-third-edition/", "https://glc.yale.edu/sites/default/files/pdf/capatlism_and_slavery.pdf"],
+      "pendientes": ["periodo_estudiado_normalizado"]
     },
     {
       "id": "keeganhofman",
+      "decision_aprobada": "confirmar_con_ajuste_de_esquema",
       "procedencia": "corpus heredado",
       "procedencia_verificada": true,
       "proceso": ["reclasificación"],
-      "revision": { "estado": "pendiente_revision_con_texto" },
-      "corrientes_candidatas": ["invasiones_mundos_indigenas", "memorias_espiritualidades_archivos_vivos"],
-      "marcas_por_revisar": ["colonialidad", "memoria"],
-      "pendientes": ["corriente_principal", "operaciones", "orillas", "temporalidades"]
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La síntesis arqueológica reconstruye poblamientos, redes interinsulares y mundos indígenas anteriores a la ocupación europea."
+      },
+      "corriente_confirmada": "invasiones_mundos_indigenas",
+      "corrientes_secundarias": ["rutas_diasporas_territorios_acuosos"],
+      "marcas_por_revisar": ["colonialidad"],
+      "operaciones": ["cartografiar", "comparar orillas", "interpretar materialidades"],
+      "orillas": [
+        { "tipo": "región", "label": "Archipiélago del Caribe", "funcion": "territorio estudiado" }
+      ],
+      "temporalidades": {
+        "publicacion": { "valor": 2017, "era": "EC", "precision": "exacta" },
+        "periodo_estudiado": {
+          "inicio": null,
+          "fin": { "valor": 1492, "era": "EC", "precision": "exacta" },
+          "precision": "aproximada",
+          "descripcion": "Milenios anteriores a 1492; el inicio exacto debe extraerse del ejemplar antes de cargarlo."
+        }
+      },
+      "fuentes_revision": ["https://global.oup.com/academic/product/the-caribbean-before-columbus-9780190605247", "https://academic.oup.com/book/11404/chapter/160078399"],
+      "pendientes": ["inicio_periodo_estudiado_con_era"]
     },
     {
       "id": "bourgoisethnicity",
+      "decision_aprobada": "confirmar_con_ajuste_de_catalogo",
       "procedencia": "corpus heredado",
       "procedencia_verificada": true,
       "proceso": ["reclasificación"],
-      "revision": { "estado": "pendiente_revision_con_texto" },
-      "corrientes_candidatas": [],
-      "marcas_por_revisar": ["capitalismo_racial", "violencias"],
-      "pendientes": ["corriente_principal", "mecanismo_capitalismo_racial", "tipo_violencia", "operaciones", "orillas", "temporalidades"]
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La obra muestra cómo una empresa bananera transnacional organiza la división étnica del trabajo y reproduce jerarquías raciales y de clase en Costa Rica y Panamá."
+      },
+      "corriente_confirmada": "postplantacion_trabajo_desposesion",
+      "corrientes_secundarias": [],
+      "marcas": [
+        { "m": "capitalismo_racial", "mecanismo": "segmentación étnico-racial del trabajo" }
+      ],
+      "marcas_por_revisar": ["violencias"],
+      "operaciones": ["producir etnografía", "reconstruir un archivo", "teorizar"],
+      "orillas": [
+        { "tipo": "región", "label": "Costa Rica", "funcion": "territorio estudiado" },
+        { "tipo": "región", "label": "Panamá", "funcion": "territorio estudiado" }
+      ],
+      "temporalidades": { "publicacion": { "valor": 1989, "era": "EC", "precision": "exacta" } },
+      "fuentes_revision": ["https://www.philippebourgois.net/articles/Bourgois%201989%20Ethnicity%20at%20Work.pdf", "https://read.dukeupress.edu/hahr/article/70/2/349/146510/Ethnicity-at-Work-Divided-Labor-on-a-Central"],
+      "pendientes": ["periodos_historicos", "fechas_trabajo_de_campo", "tipo_de_violencia"]
+    }
+  ],
+  "relaciones": [
+    {
+      "a": "price",
+      "b": "totumo",
+      "estado": "por_corroborar",
+      "tipo_candidato": "disonancia",
+      "tipo_confirmado": null,
+      "friccion": { "hay": false },
+      "cruce_linguistico": true,
+      "fundamento": "La cadena heredada es una interpretación editorial sin páginas ni vínculo textual directo."
+    },
+    {
+      "a": "stewardpuertorico",
+      "b": "mintz",
+      "redirigir_a": { "a": "steward", "b": "mintz" },
+      "estado": "corroborada",
+      "tipo_confirmado": "resonancia",
+      "friccion": { "hay": false },
+      "cruce_linguistico": false,
+      "fundamento": "La coautoría es un vínculo directo; después de la fusión la relación queda steward-mintz."
+    },
+    {
+      "a": "keeganhofman",
+      "b": "mintz",
+      "estado": "corroborada",
+      "tipo_confirmado": "resonancia",
+      "friccion": { "hay": false },
+      "cruce_linguistico": false,
+      "fundamento": "La cita a Mintz está verificada en el ejemplar; no hay evidencia de fricción."
     }
   ]
 }

@@ -1,8 +1,9 @@
 {
-  "version_esquema": "2.0-piloto.1",
-  "fecha": "2026-08-07",
+  "version_esquema": "2.0-piloto.2",
+  "fecha": "2026-08-08",
   "regla_clasificacion": "Una obra entra en una corriente porque esa corriente organiza su argumento. El reparto numérico no es criterio de clasificación.",
   "regla_transicion": "Los campos heredados f, l, tr y y se conservan sin cambios. Una candidatura preliminar no se presenta como corriente confirmada.",
+  "regla_relaciones": "Toda relación declara estado de corroboración de forma explícita. El generador no lo deduce de una cadena libre.",
   "corrientes": {
     "invasiones_mundos_indigenas": { "n": 1, "label": "Invasiones, colonialidades y mundos indígenas", "label_en": "Invasions, colonialities and Indigenous worlds", "provisional": true },
     "trata_esclavizacion_plantacion": { "n": 2, "label": "Trata, esclavización y plantación", "label_en": "Slave trade, enslavement and plantation", "provisional": true },
@@ -18,14 +19,48 @@
   "procedencias": ["corpus heredado", "siembra nueva", "aporte externo", "manifestación", "pendiente de incorporación"],
   "procesos": ["migración", "reclasificación", "siembra", "corrección bibliográfica", "fusión", "división"],
   "estados_revision": ["pendiente_revision_con_texto", "candidatura_preliminar", "confirmada", "revisada"],
+  "estados_relacion": ["corroborada", "por_corroborar"],
   "marcas": ["capitalismo_racial", "colonialidad", "racializacion", "genero", "clase_trabajo", "memoria", "violencias", "friccion_epistemica"],
-  "operaciones": ["reconstruir un archivo", "producir etnografía", "teorizar", "fabular ante el silencio", "narrar", "cartografiar", "escuchar", "traducir", "seguir una ruta", "comparar orillas", "preservar una memoria", "elaborar un concepto", "documentar una práctica", "intervenir políticamente", "confrontar una categoría", "producir testimonio"],
+  "mecanismos_capitalismo_racial": ["plantación", "trabajo contratado", "deuda", "enclave", "extracción", "turismo", "zona franca", "crédito", "propiedad", "seguro", "acumulación esclavista", "segmentación étnico-racial del trabajo", "otro (declarar)"],
+  "operaciones": ["reconstruir un archivo", "producir etnografía", "teorizar", "fabular ante el silencio", "narrar", "cartografiar", "escuchar", "traducir", "seguir una ruta", "comparar orillas", "preservar una memoria", "elaborar un concepto", "documentar una práctica", "intervenir políticamente", "confrontar una categoría", "producir testimonio", "interpretar materialidades"],
+  "operaciones_en": {
+    "reconstruir un archivo": "reconstruct an archive",
+    "producir etnografía": "produce ethnography",
+    "teorizar": "theorize",
+    "fabular ante el silencio": "fabulate before archival silence",
+    "narrar": "narrate",
+    "cartografiar": "map",
+    "escuchar": "listen",
+    "traducir": "translate",
+    "seguir una ruta": "follow a route",
+    "comparar orillas": "compare shores",
+    "preservar una memoria": "preserve a memory",
+    "elaborar un concepto": "develop a concept",
+    "documentar una práctica": "document a practice",
+    "intervenir políticamente": "intervene politically",
+    "confrontar una categoría": "confront a category",
+    "producir testimonio": "produce testimony",
+    "interpretar materialidades": "interpret materialities"
+  },
   "funciones_orilla": ["territorio estudiado", "lugar de producción intelectual", "destino migratorio", "lugar de circulación", "territorio comparado", "espacio diaspórico"],
+  "tipos_orilla": ["punto", "región", "cuenca"],
   "lenguas_publicacion": ["inglés", "español", "francés", "neerlandés", "criollo", "portugués", "danés", "otro"],
+  "eras_temporales": ["AEC", "EC"],
+  "precisiones_temporales": ["exacta", "aproximada", "rango_estimado", "desconocida"],
   "reglas_estado": {
     "candidatura_preliminar": "Exige una corriente_candidata única, pero prohíbe corriente_confirmada.",
     "pendiente_revision_con_texto": "Puede registrar corrientes_candidatas, pero prohíbe corriente_confirmada.",
     "confirmada": "Exige corriente_confirmada, responsable, fecha y fundamento.",
     "revisada": "Exige corriente_confirmada, responsable, fecha y fundamento. Se usa para una confirmación revisada posteriormente."
+  },
+  "reglas_temporalidad": {
+    "fecha": "Objeto con valor entero, era AEC o EC y precisión explícita.",
+    "periodo": "Objeto con inicio y fin; admite un extremo desconocido, pero nunca invierte el orden dentro de una misma era.",
+    "componentes": "Las entradas compuestas declaran temporalidades por obra componente."
+  },
+  "reglas_orilla": {
+    "punto": "Remite a una clave del catálogo de lugares cuando existen coordenadas verificadas.",
+    "región": "Declara una escala territorial sin inventar una coordenada central.",
+    "cuenca": "Declara un espacio acuoso o hidrográfico sin convertirlo en punto."
   }
 }

@@ -17,6 +17,11 @@ const atlas = JSON.parse(sourceText);
 const config = readJson(configPath);
 const catalogs = readJson(catalogPath);
 const works = new Map(atlas.obras.map((work) => [work.id, work]));
+const approval = config.aprobacion;
+
+if (approval?.estado !== "aprobado" || !approval.fecha || !approval.responsable) {
+  throw new Error("El piloto corregido exige aprobación, fecha y responsable explícitos.");
+}
 
 const languageMap = [
   [/angl[oó]fono/i, "inglés"],
@@ -44,42 +49,69 @@ const selected = config.entradas.map((migration) => {
   const publication = simplePublicationYear(legacy.y);
   const migrated = structuredClone(migration);
   migrated.lenguas_publicacion_candidatas = languages;
-  migrated.temporalidades_candidatas = {
-    valor_heredado: legacy.y,
-    publicacion: publication,
-    requiere_revision: publication === null,
-  };
+  if (!migrated.temporalidades) {
+    migrated.temporalidades_candidatas = {
+      valor_heredado: legacy.y,
+      publicacion: publication,
+      requiere_revision: publication === null,
+    };
+  }
   migrated.revision = {
     ...migrated.revision,
-    responsable: null,
-    fecha: null,
-    fundamento: null,
+    responsable: approval.responsable,
+    fecha: approval.fecha,
   };
   return { heredado: structuredClone(legacy), migracion2: migrated };
 });
 
 const pilotIds = new Set(selected.map((item) => item.heredado.id));
+const relationKey = (a, b) => `${a}::${b}`;
+const relationDecisions = new Map();
+for (const decision of config.relaciones || []) {
+  const direct = relationKey(decision.a, decision.b);
+  const reverse = relationKey(decision.b, decision.a);
+  if (relationDecisions.has(direct) || relationDecisions.has(reverse)) {
+    throw new Error(`Decisión de relación duplicada: ${decision.a}–${decision.b}.`);
+  }
+  relationDecisions.set(direct, decision);
+  relationDecisions.set(reverse, decision);
+}
 const relations = atlas.relaciones
   .filter((relation) => pilotIds.has(relation.a) && pilotIds.has(relation.b))
-  .map((relation) => ({
-    heredada: structuredClone(relation),
-    migracion2: {
-      estado: /por corroborar/i.test(relation.fuente || "") ? "por_corroborar" : "corroborada",
-      cruce_linguistico: null,
-      friccion: { hay: false },
-      pendientes: ["verificar_lenguas_de_publicacion", "revisar_si_hay_friccion_argumentada"],
-    },
-  }));
+  .map((relation) => {
+    const decision = relationDecisions.get(relationKey(relation.a, relation.b));
+    if (!decision) {
+      throw new Error(`Falta estado explícito para la relación ${relation.a}–${relation.b}.`);
+    }
+    const migrated = structuredClone(decision);
+    delete migrated.a;
+    delete migrated.b;
+    const effective = migrated.redirigir_a || { a: relation.a, b: relation.b };
+    delete migrated.redirigir_a;
+    migrated.extremos_efectivos = effective;
+    migrated.revision = {
+      responsable: approval.responsable,
+      fecha: approval.fecha,
+    };
+    return { heredada: structuredClone(relation), migracion2: migrated };
+  });
 
 const output = {
   meta: {
     titulo: "Atlas 2.0 · lote piloto de 10 entradas",
     version: config.version,
     esquema: catalogs.version_esquema,
-    generado: new Date().toISOString(),
+    generado: approval.fecha,
+    aprobacion: structuredClone(approval),
     corpus_fuente: atlas.meta.version,
     corpus_fuente_sha256: crypto.createHash("sha256").update(sourceText).digest("hex"),
     recuentos_fuente: { entradas: atlas.obras.length, relaciones: atlas.relaciones.length, lugares: Object.keys(atlas.lugares).length },
+    recuentos_piloto: {
+      registros_heredados: selected.length,
+      nodos_efectivos: selected.filter((item) => item.migracion2.accion_entidad !== "redireccion").length,
+      redirecciones: selected.filter((item) => item.migracion2.accion_entidad === "redireccion").length,
+      relaciones_internas: relations.length
+    },
     regla: catalogs.regla_transicion,
     modifica_corpus_publico: false
   },
