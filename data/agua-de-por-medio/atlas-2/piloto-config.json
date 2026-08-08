@@ -1,5 +1,9 @@
 {
   "version": "piloto-10.2",
+  "lote": "P00",
+  "titulo": "Atlas 2.0 · lote piloto P00 de 10 entradas",
+  "campo_relaciones": "relaciones_entre_entradas_piloto",
+  "dependencias": [],
   "corpus_objetivo": "1.15.0",
   "criterio_seleccion": "Diez registros heredados que prueban nueve nodos efectivos, una redirección, decisiones confirmadas y un caso que debe permanecer pendiente.",
   "aprobacion": {

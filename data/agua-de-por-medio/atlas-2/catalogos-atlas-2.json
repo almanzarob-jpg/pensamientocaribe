@@ -1,5 +1,5 @@
 {
-  "version_esquema": "2.0-piloto.2",
+  "version_esquema": "2.0-lotes.1",
   "fecha": "2026-08-08",
   "regla_clasificacion": "Una obra entra en una corriente porque esa corriente organiza su argumento. El reparto numérico no es criterio de clasificación.",
   "regla_transicion": "Los campos heredados f, l, tr y y se conservan sin cambios. Una candidatura preliminar no se presenta como corriente confirmada.",
@@ -20,6 +20,7 @@
   "procesos": ["migración", "reclasificación", "siembra", "corrección bibliográfica", "fusión", "división"],
   "estados_revision": ["pendiente_revision_con_texto", "candidatura_preliminar", "confirmada", "revisada"],
   "estados_relacion": ["corroborada", "por_corroborar"],
+  "tipos_relacion": ["resonancia", "disonancia"],
   "marcas": ["capitalismo_racial", "colonialidad", "racializacion", "genero", "clase_trabajo", "memoria", "violencias", "friccion_epistemica"],
   "mecanismos_capitalismo_racial": ["plantación", "trabajo contratado", "deuda", "enclave", "extracción", "turismo", "zona franca", "crédito", "propiedad", "seguro", "acumulación esclavista", "segmentación étnico-racial del trabajo", "otro (declarar)"],
   "operaciones": ["reconstruir un archivo", "producir etnografía", "teorizar", "fabular ante el silencio", "narrar", "cartografiar", "escuchar", "traducir", "seguir una ruta", "comparar orillas", "preservar una memoria", "elaborar un concepto", "documentar una práctica", "intervenir políticamente", "confrontar una categoría", "producir testimonio", "interpretar materialidades"],
@@ -57,6 +58,11 @@
     "fecha": "Objeto con valor entero, era AEC o EC y precisión explícita.",
     "periodo": "Objeto con inicio y fin; admite un extremo desconocido, pero nunca invierte el orden dentro de una misma era.",
     "componentes": "Las entradas compuestas declaran temporalidades por obra componente."
+  },
+  "reglas_relacion_componentes": {
+    "componente_a": "Identificador opcional de una obra componente perteneciente al extremo efectivo a.",
+    "componente_b": "Identificador opcional de una obra componente perteneciente al extremo efectivo b.",
+    "validacion": "Cuando se declara, el componente debe existir dentro de obras_componentes del nodo extremo correspondiente."
   },
   "reglas_orilla": {
     "punto": "Remite a una clave del catálogo de lugares cuando existen coordenadas verificadas.",

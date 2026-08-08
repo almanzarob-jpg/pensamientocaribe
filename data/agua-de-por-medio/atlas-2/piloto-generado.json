@@ -1,8 +1,9 @@
 {
   "meta": {
-    "titulo": "Atlas 2.0 · lote piloto de 10 entradas",
+    "titulo": "Atlas 2.0 · lote piloto P00 de 10 entradas",
+    "lote": "P00",
     "version": "piloto-10.2",
-    "esquema": "2.0-piloto.2",
+    "esquema": "2.0-lotes.1",
     "generado": "2026-08-08",
     "aprobacion": {
       "estado": "aprobado",
@@ -17,10 +18,17 @@
       "relaciones": 588,
       "lugares": 30
     },
+    "recuentos_lote": {
+      "registros_heredados": 10,
+      "nodos_efectivos": 9,
+      "redirecciones": 1,
+      "relaciones_revisadas": 3
+    },
     "recuentos_piloto": {
       "registros_heredados": 10,
       "nodos_efectivos": 9,
       "redirecciones": 1,
+      "relaciones_revisadas": 3,
       "relaciones_internas": 3
     },
     "regla": "Los campos heredados f, l, tr y y se conservan sin cambios. Una candidatura preliminar no se presenta como corriente confirmada.",

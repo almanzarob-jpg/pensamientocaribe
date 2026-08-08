@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 
+import crypto from "node:crypto";
 import fs from "node:fs";
 import path from "node:path";
 import { isDeepStrictEqual } from "node:util";
@@ -9,10 +10,13 @@ const args = process.argv.slice(2);
 const sourcePath = path.resolve(root, args[0] || "data/agua-de-por-medio/datos-atlas.json");
 const pilotPath = path.resolve(root, args[1] || "data/agua-de-por-medio/atlas-2/piloto-generado.json");
 const catalogPath = path.resolve(root, args[2] || "data/agua-de-por-medio/atlas-2/catalogos-atlas-2.json");
+const configPath = path.resolve(root, args[3] || "data/agua-de-por-medio/atlas-2/piloto-config.json");
 
-const source = JSON.parse(fs.readFileSync(sourcePath, "utf8"));
+const sourceText = fs.readFileSync(sourcePath, "utf8");
+const source = JSON.parse(sourceText);
 const pilot = JSON.parse(fs.readFileSync(pilotPath, "utf8"));
 const catalogs = JSON.parse(fs.readFileSync(catalogPath, "utf8"));
+const config = JSON.parse(fs.readFileSync(configPath, "utf8"));
 const sourceWorks = new Map(source.obras.map((work) => [work.id, work]));
 const currentIds = new Set(Object.keys(catalogs.corrientes));
 const provenances = new Set(catalogs.procedencias);
@@ -25,6 +29,13 @@ const shoreFunctions = new Set(catalogs.funciones_orilla);
 const eras = new Set(catalogs.eras_temporales);
 const precisions = new Set(catalogs.precisiones_temporales);
 const racialCapitalismMechanisms = new Set(catalogs.mecanismos_capitalismo_racial);
+const relationTypes = new Set(catalogs.tipos_relacion);
+const relations = pilot.relaciones_lote || pilot.relaciones_entre_entradas_piloto || [];
+const relationKey = (a, b) => `${a}::${b}`;
+const sourceRelations = new Map(source.relaciones.map((relation, index) => [relationKey(relation.a, relation.b), {
+  relation,
+  id: `R${String(index + 1).padStart(4, "0")}`
+}]));
 const errors = [];
 const warnings = [];
 const error = (code, message) => errors.push({ code, message });
@@ -59,17 +70,22 @@ function validateTemporalities(value, where) {
   }
 }
 
-if (pilot.meta?.modifica_corpus_publico !== false) error("META", "El piloto debe declarar que no modifica el corpus público.");
+if (pilot.meta?.modifica_corpus_publico !== false) error("META", "El lote debe declarar que no modifica el corpus público.");
 if (pilot.meta?.aprobacion?.estado !== "aprobado" || !nonEmpty(pilot.meta?.aprobacion?.responsable) || !/^\d{4}-\d{2}-\d{2}$/.test(pilot.meta?.aprobacion?.fecha || "")) {
-  error("APROBACION", "El piloto debe registrar aprobación, responsable y fecha.");
+  error("APROBACION", "El lote debe registrar aprobación, responsable y fecha.");
 }
-if (pilot.meta?.corpus_fuente !== source.meta?.version) error("VERSION", "La versión fuente del piloto no coincide con el corpus.");
+if (pilot.meta?.corpus_fuente !== source.meta?.version) error("VERSION", "La versión fuente del lote no coincide con el corpus.");
+if (config.corpus_objetivo !== source.meta?.version) error("VERSION", "La configuración no apunta a la versión del corpus suministrado.");
+if (pilot.meta?.corpus_fuente_sha256 !== crypto.createHash("sha256").update(sourceText).digest("hex")) error("HUELLA", "La huella del corpus fuente no coincide con la registrada al generar el lote.");
 if (pilot.meta?.recuentos_fuente?.entradas !== source.obras.length || pilot.meta?.recuentos_fuente?.relaciones !== source.relaciones.length) {
-  error("RECUENTOS", "Los recuentos fuente del piloto no coinciden con el corpus actual.");
+  error("RECUENTOS", "Los recuentos fuente del lote no coinciden con el corpus actual.");
 }
-if (!Array.isArray(pilot.entradas) || pilot.entradas.length !== 10) error("TAMANO", "El lote piloto debe contener exactamente 10 entradas.");
-if (pilot.meta?.recuentos_piloto?.nodos_efectivos !== 9 || pilot.meta?.recuentos_piloto?.redirecciones !== 1) {
-  error("TAMANO", "El dictamen aprobado debe producir nueve nodos efectivos y una redirección.");
+if (pilot.meta?.lote !== (config.lote || "P00")) error("LOTE", "El identificador del lote no coincide con su configuración.");
+if (!Array.isArray(pilot.entradas) || pilot.entradas.length !== config.entradas?.length) error("TAMANO", "El lote no contiene las entradas declaradas en su configuración.");
+const expectedEffective = (config.entradas || []).filter((item) => item.accion_entidad !== "redireccion").length;
+const expectedRedirects = (config.entradas || []).filter((item) => item.accion_entidad === "redireccion").length;
+if (pilot.meta?.recuentos_lote?.nodos_efectivos !== expectedEffective || pilot.meta?.recuentos_lote?.redirecciones !== expectedRedirects) {
+  error("TAMANO", "Los recuentos efectivos del lote no coinciden con la configuración aprobada.");
 }
 
 const seen = new Set();
@@ -78,7 +94,7 @@ for (const [index, item] of (pilot.entradas || []).entries()) {
   const migration = item?.migracion2;
   const where = `entradas[${index}]`;
   if (!nonEmpty(id)) { error("ID", `${where} no tiene id heredado.`); continue; }
-  if (seen.has(id)) error("ID_DUPLICADO", `${id} aparece más de una vez en el piloto.`);
+  if (seen.has(id)) error("ID_DUPLICADO", `${id} aparece más de una vez en el lote.`);
   seen.add(id);
   if (!sourceWorks.has(id)) error("ID_INEXISTENTE", `${id} no existe en el corpus fuente.`);
   else if (!isDeepStrictEqual(item.heredado, sourceWorks.get(id))) error("HERENCIA", `${id}: los campos heredados fueron alterados.`);
@@ -138,22 +154,46 @@ for (const [index, item] of (pilot.entradas || []).entries()) {
   }
 }
 
-const effectiveIds = new Set((pilot.entradas || []).filter((item) => item.migracion2?.accion_entidad !== "redireccion").map((item) => item.heredado.id));
-for (const [index, item] of (pilot.relaciones_entre_entradas_piloto || []).entries()) {
+const batchEntryIds = new Set((pilot.entradas || []).map((item) => item.heredado.id));
+const dependencyIds = new Set(config.dependencias || []);
+const allowedRelationIds = new Set([...batchEntryIds, ...dependencyIds]);
+const redirectIds = new Set((pilot.entradas || []).filter((item) => item.migracion2?.accion_entidad === "redireccion").map((item) => item.heredado.id));
+const effectiveIds = new Set([...allowedRelationIds].filter((id) => !redirectIds.has(id)));
+for (const item of pilot.entradas || []) {
+  if (item.migracion2?.redirige_a) effectiveIds.add(item.migracion2.redirige_a);
+}
+const componentsByNode = new Map((pilot.entradas || []).map((item) => [
+  item.heredado.id,
+  new Set((item.migracion2?.obras_componentes || []).map((component) => component.id_componente))
+]));
+if (relations.length !== (config.relaciones || []).length) error("RELACION", "El número de relaciones generadas no coincide con la configuración.");
+for (const [index, item] of relations.entries()) {
   const relation = item?.heredada;
-  if (!relation || !seen.has(relation.a) || !seen.has(relation.b)) error("RELACION", `relaciones[${index}] no conecta dos entradas del piloto.`);
+  const sourceRecord = relation ? sourceRelations.get(relationKey(relation.a, relation.b)) : null;
+  if (!sourceRecord || !isDeepStrictEqual(relation, sourceRecord.relation)) error("HERENCIA_RELACION", `relaciones[${index}] no conserva exactamente la relación heredada.`);
+  if (item?.migracion2?.id_transicion && item.migracion2.id_transicion !== sourceRecord?.id) error("ID_RELACION", `relaciones[${index}] declara un identificador de transición que no coincide con el orden del corpus.`);
+  if (!relation || !allowedRelationIds.has(relation.a) || !allowedRelationIds.has(relation.b)) error("RELACION", `relaciones[${index}] conecta un extremo fuera del lote o sus dependencias.`);
+  if (relation && !batchEntryIds.has(relation.a) && !batchEntryIds.has(relation.b)) error("RELACION", `relaciones[${index}] no toca ninguna entrada del lote actual.`);
   if (item?.migracion2?.friccion?.hay !== false) error("FRICCION", `relaciones[${index}] infiere fricción sin argumento editorial.`);
   if (typeof item?.migracion2?.cruce_linguistico !== "boolean") error("CRUCE", `relaciones[${index}] no declara el cruce lingüístico como booleano.`);
   if (!relationStates.has(item?.migracion2?.estado)) error("CORROBORACION", `relaciones[${index}] no declara un estado válido.`);
   if (item?.migracion2?.estado === "por_corroborar" && item?.migracion2?.tipo_confirmado !== null) error("CORROBORACION", `relaciones[${index}] no puede confirmar tipo mientras está por corroborar.`);
   if (item?.migracion2?.estado === "corroborada" && !nonEmpty(item?.migracion2?.tipo_confirmado)) error("CORROBORACION", `relaciones[${index}] corroborada sin tipo confirmado.`);
+  if (item?.migracion2?.tipo_confirmado !== null && !relationTypes.has(item?.migracion2?.tipo_confirmado)) error("RELACION_TIPO", `relaciones[${index}] declara un tipo confirmado fuera del vocabulario.`);
+  if (item?.migracion2?.tipo_candidato && !relationTypes.has(item?.migracion2?.tipo_candidato)) error("RELACION_TIPO", `relaciones[${index}] declara un tipo candidato fuera del vocabulario.`);
   if (!nonEmpty(item?.migracion2?.fundamento)) error("RELACION", `relaciones[${index}] no registra fundamento.`);
   const effective = item?.migracion2?.extremos_efectivos;
   if (!effectiveIds.has(effective?.a) || !effectiveIds.has(effective?.b)) error("REDIRECCION", `relaciones[${index}] apunta a un nodo retirado o inexistente.`);
+  for (const side of ["a", "b"]) {
+    const componentId = item?.migracion2?.[`componente_${side}`];
+    if (!componentId) continue;
+    const nodeId = effective?.[side];
+    if (!componentsByNode.get(nodeId)?.has(componentId)) error("COMPONENTE_RELACION", `relaciones[${index}] refiere ${componentId}, que no pertenece al extremo ${nodeId}.`);
+  }
 }
 
 console.log(`[INFO] Corpus fuente ${source.meta.version}: ${source.obras.length} entradas y ${source.relaciones.length} relaciones.`);
-console.log(`[INFO] Piloto: ${pilot.entradas?.length || 0} entradas y ${pilot.relaciones_entre_entradas_piloto?.length || 0} relaciones internas.`);
+console.log(`[INFO] Lote ${pilot.meta?.lote || "sin_id"}: ${pilot.entradas?.length || 0} entradas y ${relations.length} relaciones revisadas.`);
 for (const item of warnings) console.log(`[ADVERTENCIA ${item.code}] ${item.message}`);
 for (const item of errors) console.log(`[ERROR ${item.code}] ${item.message}`);
 console.log(`\nResultado: ${errors.length} error(es), ${warnings.length} advertencia(s).`);
