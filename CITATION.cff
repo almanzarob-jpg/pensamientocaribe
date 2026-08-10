@@ -41,29 +41,29 @@ license: "CC-BY-NC-SA-4.0"
 references:
   - type: dataset
     title: "Con el agua de por medio: atlas para una antropología archipiélica"
-    version: "1.14.0"
-    date-released: 2026-08-03
+    version: "1.15.0"
+    date-released: 2026-08-10
     doi: "10.5281/zenodo.21483568"
     identifiers:
       - type: doi
         value: "10.5281/zenodo.21483568"
         description: "DOI de concepto: apunta siempre a la versión más reciente"
       - type: doi
-        value: "10.5281/zenodo.21775402"
-        description: "DOI archivado en Zenodo para la versión 1.14.0"
+        value: "10.5281/zenodo.21875688"
+        description: "DOI archivado en Zenodo para la versión 1.15.0"
     url: "https://pensamientocaribe.org/proyectos/con-el-agua-de-por-medio.html"
     repository-code: "https://github.com/almanzarob-jpg/pensamientocaribe"
     license: "CC-BY-NC-SA-4.0"
     abstract: >-
-      Atlas interactivo que conecta 203 obras y manifestaciones del Gran
-      Caribe a través de 429 relaciones y diez fenómenos transversales
+      Atlas interactivo que conecta 233 obras y manifestaciones del Gran
+      Caribe a través de 588 relaciones y diez fenómenos transversales
       (colonialidad, postplantación, capitalismo racial, catástrofes
       climáticas, soberanías, violencias, memoria y espiritualidad,
       cimarronaje, creolización, cuerpo/género/erótica) en lugar de
       organizarlas por país. Marco conceptual basado en Kamau Brathwaite,
       Michael Monahan, Derek Walcott y Ernesto Bassi. Cada relación declara
       en la interfaz si su fuente está corroborada o si es un vínculo
-      propuesto por el investigador: 233 de las 429 están corroboradas. Desde
+      propuesto por el investigador: 382 de las 588 están corroboradas. Desde
       julio de 2026 el corpus recibe aportes externos con la misma regla de
       corroboración, acreditados en la marca de marea del sitio. La versión
       1.14.0 añadió diecinueve obras, entre ellas el primer nodo panameño del
