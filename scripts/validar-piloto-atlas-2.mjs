@@ -7,7 +7,10 @@ import { isDeepStrictEqual } from "node:util";
 
 const root = process.cwd();
 const args = process.argv.slice(2);
-const sourcePath = path.resolve(root, args[0] || "data/agua-de-por-medio/datos-atlas.json");
+// Las capas cerradas se validan contra la instantánea del corpus del que salieron,
+// no contra el corpus vivo. Validarlas contra un corpus que sigue moviéndose las
+// rompía en cuanto se aprobara cualquier fusión, división o corrección posterior.
+const sourcePath = path.resolve(root, args[0] || "data/agua-de-por-medio/instantaneas/datos-atlas-1.15.0.json");
 const pilotPath = path.resolve(root, args[1] || "data/agua-de-por-medio/atlas-2/piloto-generado.json");
 const catalogPath = path.resolve(root, args[2] || "data/agua-de-por-medio/atlas-2/catalogos-atlas-2.json");
 const configPath = path.resolve(root, args[3] || "data/agua-de-por-medio/atlas-2/piloto-config.json");

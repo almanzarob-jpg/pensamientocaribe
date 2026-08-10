@@ -3,9 +3,8 @@
     "titulo": "Con el agua de por medio",
     "subtitulo": "Atlas para una antropología archipiélica",
     "responsable": "Centro de Pensamiento Caribe",
-    "version": "1.16.0",
-    "fecha": "2026-08-10",
-    "nota_version": "1.16.0 ejecuta la fusión aprobada en el dictamen P00: stewardpuertorico se retira y redirige a steward, que era la misma obra de 1956 registrada dos veces. El corpus pasa de 233 a 232 entradas. Las 588 relaciones se conservan: la única relación de la entrada retirada se reasigna al identificador superviviente. steward recibe la autoría completa corregida en P00."
+    "version": "1.15.0",
+    "fecha": "2026-08-07"
   },
   "fenomenos": {
     "colonialidad": {
@@ -676,7 +675,7 @@
       "id": "steward",
       "k": "obra",
       "t": "The People of Puerto Rico: A Study in Social Anthropology",
-      "a": "Julian H. Steward, Robert A. Manners, Eric R. Wolf, Elena Padilla Seda, Sidney W. Mintz y Raymond L. Scheele",
+      "a": "Julian Steward et al. (con Mintz, Wolf, Padilla Seda)",
       "y": "1956",
       "f": [
         "postplantacion"
@@ -3061,6 +3060,20 @@
       "l": "bluefields",
       "tr": "anglófono (EE.UU.)",
       "ap": "La pesca de tortuga como frontera marítima disputada entre imperios y luego entre Estados: el agua como límite que se hace y deshace con el trabajo, no solo con el tratado."
+    },
+    {
+      "id": "stewardpuertorico",
+      "k": "obra",
+      "t": "The People of Puerto Rico: A Study in Social Anthropology",
+      "a": "Julian H. Steward, Robert A. Manners, Eric R. Wolf, Elena Padilla Seda, Sidney W. Mintz, Raymond L. Scheele",
+      "y": "1956",
+      "f": [
+        "postplantacion",
+        "capitalismo_racial"
+      ],
+      "l": "puertorico",
+      "tr": "anglófono (EE.UU.)",
+      "ap": "El proyecto colectivo del que salió Mintz: distintas zonas de Puerto Rico –plantación azucarera, café, tabaco, ciudad– estudiadas como tipos de economía que producen distintas formas de sociedad. Clásico fundacional del área ausente del corpus pese a que sí está su coautor más célebre."
     },
     {
       "id": "mitchellalibi",
@@ -6036,7 +6049,7 @@
       "fuente": "Cita el libro por su título exacto: «un testimonio El masacre se pasa a pie by Freddy Prestol Castillo (Santo Domingo, 1973)»."
     },
     {
-      "a": "steward",
+      "a": "stewardpuertorico",
       "b": "mintz",
       "tipo": "resonancia",
       "fuente": "Coautoría directa: Sidney W. Mintz figura como investigador del mismo proyecto («Dr. Sidney W. Mintz, then of Columbia University»), no como cita externa."
@@ -7043,8 +7056,5 @@
       "tipo": "resonancia",
       "fuente": "Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo."
     }
-  ],
-  "redirecciones": {
-    "stewardpuertorico": "steward"
-  }
+  ]
 }
