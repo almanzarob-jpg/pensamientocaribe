@@ -38,15 +38,23 @@ const V = {
 };
 V.porCorroborar = R.filter((r) => /por corroborar/i.test(String(r.fuente || ""))).length;
 V.corroboradas = V.relaciones - V.porCorroborar;
-const lenguas = { anglofonas: 0, hispanas: 0, francofonas: 0, neerlandesas: 0 };
-O.forEach((o) => {
-  const s = sinTildes(o.tr);
-  if (/anglofon|ingles/.test(s)) lenguas.anglofonas++;
-  if (/hispanofon|hispano|espanol/.test(s)) lenguas.hispanas++;
-  if (/francofon|frances/.test(s)) lenguas.francofonas++;
-  if (/neerland|holandes/.test(s)) lenguas.neerlandesas++;
-});
-Object.assign(V, lenguas);
+// Mismo criterio que marca-de-marea.html, y por la misma razón: el campo tr tiene
+// la forma «lengua (lugar, trayectoria o corpus estudiado)», así que la lengua se
+// lee fuera del paréntesis. Contar por la cadena entera hacía que una obra hispana
+// sobre Colombia y Francia figurara como francófona. Si los dos criterios divergen,
+// el sitio y su comprobador dicen cosas distintas, que es peor que no comprobar.
+const desc = (tr) => String(tr || "").replace(/\([^)]*\)/g, " ");
+const LENGUAS = {
+  anglofonas: /angl[oó]fon|ingl[eé]s/i,
+  hispanas: /hispan[oó]|espa[nñ]ol/i,
+  francofonas: /franc[oó]fon|franc[eé]s/i,
+  neerlandesas: /neerland/i,
+  danesas: /dan[eé]s/i,
+};
+for (const [clave, re] of Object.entries(LENGUAS)) {
+  V[clave] = O.filter((o) => re.test(desc(o.tr))).length;
+}
+V.sinLengua = O.filter((o) => !Object.values(LENGUAS).some((re) => re.test(desc(o.tr)))).length;
 
 // --------------------------------------------------------------- afirmaciones
 // Cada regla: archivo, patrón con un grupo capturado, y el valor que debe tener.
@@ -61,9 +69,11 @@ const reglas = [
   ["proyectos/marca-de-marea.html", /registra (\d+) disonancias/, "disonancias"],
   ["proyectos/marca-de-marea.html", /frente a (\d+) resonancias/, "resonancias"],
   ["proyectos/marca-de-marea.html", /(\d+) obras anglófonas/, "anglofonas"],
+  ["proyectos/marca-de-marea.html", /(\d+) entradas no declaran lengua/, "sinLengua"],
   ["proyectos/marca-de-marea.html", /anglófonas, (\d+) hispanas/, "hispanas"],
   ["proyectos/marca-de-marea.html", /hispanas, (\d+) francófonas/, "francofonas"],
   ["proyectos/marca-de-marea.html", /francófonas, (\d+) neerlandesas/, "neerlandesas"],
+  ["proyectos/marca-de-marea.html", /neerlandesas, (\d+) danesa/, "danesas"],
   ["proyectos/marca-de-marea.html", /(\d+) entradas frente a (?:\d+) obras de investigación/, "manifestaciones"],
   ["proyectos/marca-de-marea.html", /entradas frente a (\d+) obras de investigación/, "obras"],
   ["proyectos/reflujo-guia.html", /entre (\d+) obras/, "entradas"],
@@ -105,7 +115,7 @@ for (const [archivo, patron, clave] of reglas) {
 // ------------------------------------------------------------------- informe
 console.log(`Corpus v${V.version}: ${V.entradas} entradas (${V.obras} obras, ${V.manifestaciones} manifestaciones), ` +
   `${V.relaciones} relaciones (${V.corroboradas} corroboradas, ${V.porCorroborar} por corroborar), ${V.lugares} lugares.`);
-console.log(`Reparto por lengua: ${V.anglofonas} anglófonas, ${V.hispanas} hispanas, ${V.francofonas} francófonas, ${V.neerlandesas} neerlandesas.\n`);
+console.log(`Lengua de publicación declarada: ${V.anglofonas} anglófonas, ${V.hispanas} hispanas, ${V.francofonas} francófonas, ${V.neerlandesas} neerlandesas, ${V.danesas} danesa(s); ${V.sinLengua} sin declarar.\n`);
 console.log(`Afirmaciones comprobadas: ${comprobadas.length}`);
 errores.forEach((e) => console.log(e));
 console.log(`\nResultado: ${errores.length} desfase(s).`);

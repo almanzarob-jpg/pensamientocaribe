@@ -712,7 +712,11 @@ const t = k => (I18N[LANG] && I18N[LANG][k]!==undefined) ? I18N[LANG][k] : (I18N
 /* Tradiciones lingüísticas declaradas en el campo heredado `tr`.
    Un cruce lingüístico registra fronteras imperiales; no demuestra fricción epistémica. */
 function tradCodes(n){
-  const s=sinTildes(n.tr||"");
+  /* El paréntesis de tr guarda lugar, trayectoria o corpus estudiado, no lengua.
+     Leerlo como lengua hacía que «anglófono (EE.UU./Surinam neerlandés)» contara
+     como neerlandesa y que «comparado (anglófono Caribe)» contara como anglófona:
+     el topónimo imperial decidía la lengua de la obra. Se vacía antes de leer. */
+  const s=sinTildes(String(n.tr||"").replace(/\([^)]*\)/g," "));
   const codes=[];
   if(/neerland|holandes/.test(s)) codes.push("neer");
   if(/francofon|frances/.test(s)) codes.push("fra");

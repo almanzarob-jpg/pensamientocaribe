@@ -144,7 +144,8 @@
         <ul id="vacios">
           <li>206 de 588 corrientes esperan fuente verificada.</li>
           <li>El corpus registra 20 disonancias frente a 568 resonancias.</li>
-          <li>Por tradición lingüística: 155 obras anglófonas, 44 hispanas, 23 francófonas, 9 neerlandesas, 2 danesas.</li>
+          <li>Por lengua de publicación declarada: 152 obras anglófonas, 43 hispanas, 22 francófonas, 7 neerlandesas, 1 danesa.</li>
+          <li>18 entradas no declaran lengua de publicación: su descriptor dice «comparado» y nombra un método o un corpus, no una lengua.</li>
           <li>La capa etnográfica tiene 5 entradas frente a 227 obras de investigación.</li>
         </ul>
 <p>El desbalance entre resonancia y disonancia es el que más dice de quien traza el mapa. Un pensamiento tan dado a la polémica no produce veinte desacuerdos entre 588 vínculos: lo que describe esa cifra es que reconocer una herencia es más fácil que verificar una tensión. Marcar una fricción que el atlas no registra es, hoy, el aporte que más falta hace.</p>
@@ -180,8 +181,21 @@
     const corr = f => !!f && !/corroborar/i.test(f);
     const pend = R.filter(r => !corr(r.fuente)).length;
     const diso = R.filter(r => r.tipo === 'disonancia').length;
-    const trad = {'anglófonas':/angl/i, 'hispanas':/hispan/i, 'francófonas':/franc/i, 'neerlandesas':/neerland/i, 'danesas':/dan[eé]s/i};
-    const cuenta = re => O.filter(o => re.test(o.tr || '')).length;
+    /* El campo tr tiene la forma «lengua (lugar, trayectoria o corpus estudiado)».
+       La lengua vive fuera del paréntesis. Contar por la cadena entera hacía que
+       «hispano (Colombia/Francia)» figurara como francófona y que «antes colonia
+       danesa» figurara como danesa: el topónimo imperial se tragaba la obra. Se
+       vacía el paréntesis y se exige la forma adjetival de la lengua. */
+    const desc = tr => String(tr || '').replace(/\([^)]*\)/g, ' ');
+    const trad = {
+      'anglófonas':   /angl[oó]fon|ingl[eé]s/i,
+      'hispanas':     /hispan[oó]|espa[nñ]ol/i,
+      'francófonas':  /franc[oó]fon|franc[eé]s/i,
+      'neerlandesas': /neerland/i,
+      'danesas':      /dan[eé]s/i
+    };
+    const cuenta = re => O.filter(o => re.test(desc(o.tr))).length;
+    const sinLengua = O.filter(o => !Object.keys(trad).some(k => trad[k].test(desc(o.tr)))).length;
     const etno = O.filter(o => o.k !== 'obra').length;
     const set = (id, v) => { const e = document.getElementById(id); if (e) e.textContent = v; };
     set('mPend', pend + ' de ' + R.length);
@@ -190,7 +204,11 @@
     const li = [
       pend + ' de ' + R.length + ' corrientes esperan fuente verificada.',
       'El corpus registra ' + diso + ' disonancias frente a ' + (R.length - diso) + ' resonancias.',
-      'Por tradición lingüística: ' + Object.keys(trad).map(k => cuenta(trad[k]) + ' obras ' + k).join(', ') + '.',
+      'Por lengua de publicación declarada: ' + Object.keys(trad).map(k => {
+        const n = cuenta(trad[k]);
+        return n === 1 ? '1 obra ' + k.replace(/s$/, '') : n + ' obras ' + k;
+      }).join(', ') + '.',
+      sinLengua + ' entradas no declaran lengua de publicación: su descriptor dice «comparado» y nombra un método o un corpus, no una lengua.',
       'La capa etnográfica tiene ' + etno + ' entradas frente a ' + (O.length - etno) + ' obras de investigación.'
     ];
     const ul = document.getElementById('vacios');
