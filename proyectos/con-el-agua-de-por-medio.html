@@ -104,6 +104,10 @@
   .placelbl.pais{fill:var(--gray); opacity:.85}
   .placelbl.ciudad{fill:var(--orange); opacity:.9}
   .clbl{font-family:var(--ff-mono); font-size:10.5px; text-transform:uppercase; letter-spacing:1.4px; font-weight:600; pointer-events:none; transition:opacity .25s}
+  /* banda del tiempo de lo ocurrido: la barra del periodo y el reflujo que la une
+     con su año de publicación. Siguen el mismo foco que los nodos y las corrientes. */
+  .periodo{transition:opacity .25s}
+  .reflujo{transition:stroke-opacity .25s, stroke-width .25s; pointer-events:none}
   /* tooltip flotante (siempre nítido) */
   #tip{position:absolute; left:0; top:0; pointer-events:none; z-index:16; background:rgba(17,19,13,.97); border:1px solid var(--line); border-left:3px solid var(--cream); border-radius:3px; padding:8px 12px; width:max-content; max-width:290px; opacity:0; transform:translate(-50%,calc(-100% - 15px)); transition:opacity .12s; box-shadow:0 10px 26px rgba(0,0,0,.55)}
   #tip.show{opacity:1}
@@ -428,7 +432,7 @@
   </div>
 </header>
 <main id="main-content">
-  <svg id="stage" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid meet"></svg>
+  <svg id="stage" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid meet"><defs><linearGradient id="difuminaPeriodo" x1="0" x2="1"><stop offset="0" stop-color="#3f8a35" stop-opacity="0"/><stop offset="1" stop-color="#3f8a35" stop-opacity=".95"/></linearGradient></defs></svg>
   <section id="tabla" aria-label="Catálogo del atlas en tabla accesible"><div id="tablaBody"></div></section>
   <div id="tip"></div>
   <div id="hint"></div>
@@ -466,6 +470,8 @@
 </main>
 <script src="../js/zoom-caribe.js"></script>
 <script src="../data/agua-de-por-medio/datos-atlas.js?v=202608071"></script>
+<!-- Capa de temporalidad. Aditiva: si falta, la cronología funciona como siempre. -->
+<script src="../data/agua-de-por-medio/datos-temporalidad.js?v=202608101"></script>
 <script>
 /* Datos del atlas: se cargan desde datos-atlas.js (archivo editable y versionable) */
 if(typeof ATLAS==='undefined'){ document.body.innerHTML='<div style="color:#f2ead8;font-family:sans-serif;padding:48px;line-height:1.6">No se pudo cargar <b>datos-atlas.js</b>.<br>Colocá ese archivo en la misma carpeta que este HTML y volvé a abrirlo.</div>'; throw new Error('ATLAS ausente'); }
@@ -626,7 +632,9 @@ const I18N = {
     bibIncompleta:"Registro sin editorial, ISBN ni DOI: completa esos campos antes de usarlo en una bibliografía formal.",
     bibTodo:"descargar .bib de esta vista", bibRegistros:"registros",
     vCronologia:"Cronología", cronoSinFecha:"sin fecha",
-    hintCronologia:"Las entradas ordenadas por año de publicación, de 1880 a hoy. La altura de cada columna dice cuánto se publicó en ese momento; el color, sobre qué fenómeno. A la derecha, en dorado, aparecen las entradas cuya fecha sigue pendiente de verificación. Rueda: zoom · arrastra: desplaza.",
+    cronoEjeHecho:"TIEMPO DE LO OCURRIDO · CINCO SIGLOS",
+    cronoNotaPeriodo:"{n} de {t} entradas declaran el periodo que estudian",
+    hintCronologia:"Dos reglas que no miden lo mismo. Abajo, el tiempo de la escritura: cada entrada en su año de publicación, de 1880 a hoy, y la altura de la columna dice cuánto se publicó entonces. Arriba, el tiempo de lo ocurrido: cinco siglos, con la barra del periodo que cada obra estudia. La curva roja es lo que hay entre el hecho y el libro; donde no hay curva, la obra se escribió dentro del tiempo que observa. A la derecha, en dorado, las entradas cuya fecha sigue pendiente. Rueda: zoom · arrastra: desplaza.",
     evOkT:"Corriente con fuente declarada", evPcT:"▲ Sin fuente declarada · vínculo propuesto por el investigador",
     evNada:"Ninguna corriente de esta obra con el filtro de evidencia activo.",
     lgCorr:"corrientes corroboradas", lgCorrVer:"ver solo estas",
@@ -692,7 +700,9 @@ const I18N = {
     bibIncompleta:"Record without publisher, ISBN or DOI: complete those fields before using it in a formal bibliography.",
     bibTodo:"download .bib of this view", bibRegistros:"records",
     vCronologia:"Chronology", cronoSinFecha:"undated",
-    hintCronologia:"Entries ordered by year of publication, from 1880 to today. The height of each column shows how much was published at that moment; the color, on which phenomenon. On the right, in gold, are entries whose dates still await verification. Wheel: zoom · drag: pan.",
+    cronoEjeHecho:"TIME OF WHAT HAPPENED · FIVE CENTURIES",
+    cronoNotaPeriodo:"{n} of {t} entries declare the period they study",
+    hintCronologia:"Two rulers that do not measure the same thing. Below, the time of writing: each entry at its year of publication, from 1880 to today, the column height showing how much was published then. Above, the time of what happened: five centuries, with a bar for the period each work studies. The red curve is what lies between the event and the book; where there is no curve, the work was written inside the time it observes. On the right, in gold, entries whose dates still await verification. Wheel: zoom · drag: pan.",
     evOkT:"Current with a declared source", evPcT:"▲ No source declared · link proposed by the researcher",
     evNada:"No current of this work matches the active evidence filter.",
     lgCorr:"corroborated currents", lgCorrVer:"show only these",
@@ -790,19 +800,36 @@ function computeBase(){
        ahora solo se dejaba leer en el espacio. Aquí el eje X es el año y cada obra se
        apila en su columna. Las cinco manifestaciones sin fecha no se excluyen: van a
        una banda propia, porque son prácticas vivas y no obras fechadas. */
-    const x0=PAD+40, x1=VW-PAD-70, base=VH/2+40;
+    const x0=PAD+40, x1=VW-PAD-70, base=VH-140;
     const conAno=N.filter(n=>anoNum(n)!==null);
     const aMin=1880, aMax=2030;
     const escala=a=>x0+((a-aMin)/(aMax-aMin))*(x1-x0);
     const columnas={};
     conAno.forEach(n=>{ const a=anoNum(n); const c=Math.round(escala(a)/13)*13; (columnas[c]=columnas[c]||[]).push(n); });
+    /* El paso se ajusta a la columna más alta. Con un paso fijo, la columna de 2020
+       —veintiséis entradas— se salía por arriba del encuadre y quedaba cortada. */
+    const masAlta=Math.max(1, ...Object.values(columnas).map(a=>a.length));
+    const TECHO=232; /* deja libre la banda del tiempo de lo ocurrido */
+    const paso=Math.min(15.5, (base-TECHO)/Math.max(1, masAlta-1));
     Object.entries(columnas).forEach(([c,arr])=>{
       arr.sort((p,q)=>anoNum(p)-anoNum(q));
-      arr.forEach((n,i)=>{ n._bx=+c; n._by=base-i*15.5; });
+      arr.forEach((n,i)=>{ n._bx=+c; n._by=base-i*paso; });
     });
     const sinAno=N.filter(n=>anoNum(n)===null);
-    sinAno.forEach((n,i)=>{ n._bx=x1+46; n._by=base-i*15.5; });
-    CRONO={x0,x1,base,aMin,aMax,escala,sinAno:sinAno.length};
+    sinAno.forEach((n,i)=>{ n._bx=x1+46; n._by=base-i*paso; });
+    /* Segunda regla, arriba: el tiempo de lo ocurrido. No mide lo mismo que la de
+       abajo y por eso no comparte escala. Un libro de 2020 sobre 1760 dibuja un
+       reflujo que cruza las dos bandas; una etnografía escrita dentro del tiempo
+       que observa no dibuja ninguno. Esa diferencia es la tesis, no un adorno. */
+    const TP = (typeof TEMPORALIDAD!=="undefined" && TEMPORALIDAD) || {};
+    const tMin=1450, tMax=2030, ejeT=196;
+    const escalaT=a=>x0+((a-tMin)/(tMax-tMin))*(x1-x0);
+    const conPeriodo=N.filter(n=>TP[n.id] && TP[n.id].fin!=null)
+      .sort((p,q)=>{const A=TP[p.id],B=TP[q.id]; return (A.ini??(A.fin-300))-(B.ini??(B.fin-300));});
+    const pasoT=conPeriodo.length ? (ejeT-56)/conPeriodo.length : 0;
+    conPeriodo.forEach((n,i)=>{ n._ty=52+i*pasoT; });
+    CRONO={x0,x1,base,aMin,aMax,escala,sinAno:sinAno.length,
+           tMin,tMax,ejeT,escalaT,conPeriodo,TP};
   } else {
     const keys=Object.keys(FEN); const cx=VW/2, cy=VH/2; const Rk=270;
     keys.forEach((f,i)=>{
@@ -835,6 +862,35 @@ function drawEjeTiempo(){
     g.appendChild(el("path",{d:`M ${x-16},${base+16} L ${x+16},${base+16}`, stroke:"var(--gold-d)", "stroke-width":1, "stroke-dasharray":"2 3"}));
     const s1=el("text",{class:"anolbl gold", x:x, y:base+34, "text-anchor":"middle"}); s1.textContent=t('cronoSinFecha'); g.appendChild(s1);
     const s2=el("text",{class:"anolbl gold", x:x, y:base+46, "text-anchor":"middle"}); s2.textContent="("+sinAno+")"; g.appendChild(s2);
+  }
+  /* ── banda del tiempo de lo ocurrido ─────────────────────────────────────── */
+  const {escalaT,ejeT,conPeriodo,TP}=CRONO;
+  if(conPeriodo && conPeriodo.length){
+    const rot=el("text",{class:"anolbl gold", x:x0, y:30}); rot.textContent=t('cronoEjeHecho'); g.appendChild(rot);
+    for(let a=1500; a<=2000; a+=100){
+      const x=escalaT(a);
+      g.appendChild(el("path",{d:`M ${x},40 L ${x},${ejeT}`, stroke:"var(--line)", "stroke-width":1, opacity:.28}));
+      const tx=el("text",{class:"anolbl", x:x, y:ejeT+15, "text-anchor":"middle"}); tx.textContent=a; g.appendChild(tx);
+    }
+    g.appendChild(el("path",{d:`M ${x0-14},${ejeT+3} L ${x1+14},${ejeT+3}`, stroke:"var(--gold-d)", "stroke-width":1, fill:"none", opacity:.5}));
+    conPeriodo.forEach(n=>{
+      const p=TP[n.id], y=n._ty;
+      const bx0 = p.ini==null ? escalaT(CRONO.tMin) : escalaT(p.ini);
+      const bx1 = escalaT(p.fin);
+      /* Un inicio que no se pudo fijar no se dibuja como si empezara en 1450:
+         la barra se desvanece, que es lo que «milenios anteriores» significa. */
+      const barra=el("rect",{class:"periodo", x:bx0, y:y-2.7, width:Math.max(3,bx1-bx0), height:5.4, rx:2.2,
+        fill: p.ini==null ? "url(#difuminaPeriodo)" : col(n.f[0]), opacity:.9});
+      barra._id=n.id; g.appendChild(barra);
+      const c=el("path",{class:"reflujo", fill:"none", stroke:"var(--red)", "stroke-width":1, "stroke-opacity":.32,
+        d:`M ${bx1} ${y} C ${bx1} ${y+90}, ${n._bx} ${n._by-90}, ${n._bx} ${n._by}`});
+      c._id=n.id; g.appendChild(c);
+    });
+    /* La nota va en la misma línea del rótulo del eje, en el extremo opuesto: si se
+       pone bajo el eje choca con las etiquetas de año. */
+    const nota=el("text",{class:"anolbl", x:x1+14, y:30, "text-anchor":"end", opacity:.7});
+    nota.textContent=t('cronoNotaPeriodo').replace('{n}', conPeriodo.length).replace('{t}', N.length);
+    g.appendChild(nota);
   }
   vp.appendChild(g);
 }
@@ -947,6 +1003,23 @@ function refreshHi(){
   if(vp){
     vp.querySelectorAll('.placelbl').forEach(t=>{ if(qOn){ const has=N.some(n=>n.l===t._place && visible(n) && matchQ(n)); t.style.opacity=has?1:.12; } else if(ff){ const has=N.some(n=>n.l===t._place && n.f.includes(ff)); t.style.opacity=has?1:.12; } else if(fn){ const has=N.some(n=>n.l===t._place && (n.id===fn||nb.direct.has(n.id))); t.style.opacity=has?1:.2; } else t.style.opacity=""; });
     vp.querySelectorAll('.clbl').forEach(t=>{ if(ff){ t.style.opacity=(t._fen===ff)?1:.25; } else t.style.opacity=""; });
+    /* El reflujo y su barra siguen el mismo foco que el resto: tenues cuando se ven
+       las veinticuatro a la vez, encendidos cuando se señala una obra. Sin esto la
+       banda superior se lee como una maraña y el argumento se pierde. */
+    vp.querySelectorAll('.reflujo').forEach(c=>{
+      let op=.32;
+      if(fn) op = (c._id===fn) ? .95 : (nb.direct.has(c._id) ? .4 : .05);
+      else if(qOn) op = matchQ(byId(c._id)||{t:'',a:''}) ? .8 : .05;
+      else if(ff){ const n=byId(c._id); op = (n && n.f.includes(ff)) ? .7 : .05; }
+      c.style.strokeOpacity=op; c.style.strokeWidth = (fn && c._id===fn) ? 1.8 : 1;
+    });
+    vp.querySelectorAll('.periodo').forEach(b=>{
+      let op=.9;
+      if(fn) op = (b._id===fn) ? 1 : (nb.direct.has(b._id) ? .6 : .12);
+      else if(qOn) op = matchQ(byId(b._id)||{t:'',a:''}) ? 1 : .1;
+      else if(ff){ const n=byId(b._id); op = (n && n.f.includes(ff)) ? 1 : .12; }
+      b.style.opacity=op;
+    });
   }
   updateQCount();
 }
