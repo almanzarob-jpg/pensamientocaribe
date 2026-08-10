@@ -1,0 +1,393 @@
+{
+  "version_catalogo": "0.1.0-borrador",
+  "fecha": "2026-08-10",
+  "estado": "borrador para dictamen académico; no se ha aplicado al corpus publicado",
+  "que_es_un_fenomeno": "Proceso histórico, material, cultural o epistémico que atraviesa la cuenca del Gran Caribe y permanece abierto a investigación. No es una categoría temática ni un resumen del contenido: nombra aquello que la obra permite seguir.",
+  "relacion_con_las_corrientes": "Capa fina. Las diez corrientes siguen siendo el anclaje de navegación y el origen del color del nodo. Un fenómeno se asocia a una o varias corrientes y nunca las sustituye. Un fenómeno puede cruzar corrientes: esa es su razón de ser.",
+
+  "reglas": [
+    "El campo heredado f y el catálogo fenomenos de datos-atlas.json no se tocan. Esta capa es aditiva y vive en archivos separados.",
+    "Un fenómeno se asigna por lectura de la obra o de una fuente que documente su argumento. Nunca por el título, el subtítulo ni el resumen editorial.",
+    "Cada asignación declara fundamento y localización. Sin fundamento, la asignación queda en estado propuesto y no se integra.",
+    "El reparto numérico entre fenómenos no es criterio de asignación. Un fenómeno con dos entradas se declara delgado; no se rellena.",
+    "Entre dos y cuatro fenómenos por entrada. Menos de dos suele indicar lectura incompleta; más de cuatro suele indicar que se está resumiendo la obra en vez de nombrar lo que permite seguir.",
+    "El campo no_confundir_con es vinculante: si la entrada encaja mejor en el fenómeno vecino, se usa el vecino.",
+    "El catálogo es abierto. Proponer un fenómeno nuevo exige tres entradas ancla del corpus que lo sostengan y una razón de por qué ninguno de los existentes lo cubre.",
+    "Un fenómeno se retira cuando queda por debajo de dos entradas ancla tras una pasada editorial completa."
+  ],
+
+  "familias": {
+    "archivo": "Archivo, silencio y disputa historiográfica",
+    "ritual": "Ritual, espiritualidad y saber corporal",
+    "fuga": "Fuga, autonomía y etnogénesis",
+    "regimen": "Régimen colonial y estatus político",
+    "trabajo": "Trabajo, capital y despojo",
+    "ecologia": "Ecología, desastre y materialidades vivas",
+    "lengua": "Lengua, mezcla y opacidad",
+    "cuerpo": "Cuerpo, parentesco y deseo",
+    "indigena": "Mundos indígenas",
+    "circulacion": "Circulación política y diáspora"
+  },
+
+  "fenomenos": {
+    "silencio_de_archivo": {
+      "familia": "archivo",
+      "label": "Silencio de archivo",
+      "label_en": "Archival silence",
+      "glosa": "La producción activa del olvido. El archivo no omite por descuido: omite porque el poder decide qué puede constar. Incluye el borrado administrativo y la imposibilidad de narrar un acontecimiento en su propio momento.",
+      "corrientes": ["memorias_espiritualidades_archivos_vivos", "invasiones_mundos_indigenas", "trata_esclavizacion_plantacion"],
+      "criterio": "La obra tematiza el silencio, el borrado o la producción documental misma como problema, no solo trabaja con archivos.",
+      "no_confundir_con": "oralidad_como_archivo (que aporta una fuente alternativa) ni revision_historiografica (que discute un relato, no su condición de posibilidad).",
+      "anclas": ["trouillotsilencing", "fischer", "lassoerased", "garciapenaborders", "olsencartagena"]
+    },
+    "oralidad_como_archivo": {
+      "familia": "archivo",
+      "label": "Oralidad y testimonio como archivo",
+      "label_en": "Orality and testimony as archive",
+      "glosa": "La palabra dicha, cantada o recordada con estatuto de fuente histórica y no de ilustración. Oralitura, historia oral, testimonio directo.",
+      "corrientes": ["memorias_espiritualidades_archivos_vivos", "creolizaciones_traducciones_opacidades"],
+      "criterio": "La obra construye su evidencia principal sobre relato oral o testimonio, y lo argumenta como decisión metodológica.",
+      "no_confundir_con": "religion_afroatlantica: que la fuente sea un especialista ritual no convierte la obra en un estudio de la religión.",
+      "anclas": ["pricefirst", "bebelgislerleonora", "allen_dikimanera", "prestolmasacre", "vete"]
+    },
+    "revision_historiografica": {
+      "familia": "archivo",
+      "label": "Revisión historiográfica",
+      "label_en": "Historiographical revision",
+      "glosa": "Relectura de un acontecimiento contra el relato que la disciplina consolidó sobre él. Discute con una historiografía nombrada, no con el sentido común.",
+      "corrientes": ["memorias_espiritualidades_archivos_vivos", "soberanias_fronteras_ocupaciones"],
+      "criterio": "La obra identifica el relato que corrige y argumenta contra él con fuentes.",
+      "no_confundir_con": "silencio_de_archivo, que trata sobre lo que no llegó a escribirse.",
+      "anclas": ["scottconscripts", "muneraelfracaso", "zips_nannysasafo", "becklessavingsouls"]
+    },
+
+    "ritual_como_conocimiento": {
+      "familia": "ritual",
+      "label": "Ritual como forma de conocimiento",
+      "label_en": "Ritual as a form of knowledge",
+      "glosa": "La práctica ritual leída como epistemología con reglas propias, capaz de pensar sobre la ciencia occidental y no solo de ser pensada por ella.",
+      "corrientes": ["memorias_espiritualidades_archivos_vivos", "creolizaciones_traducciones_opacidades"],
+      "criterio": "La obra atribuye al ritual capacidad teórica explícita, no solo función social o simbólica.",
+      "no_confundir_con": "religion_afroatlantica, que documenta la formación histórica de una tradición.",
+      "anclas": ["palmiengangas", "gomezexperiential", "palmiewizards", "hagedorn"]
+    },
+    "religion_afroatlantica": {
+      "familia": "ritual",
+      "label": "Religión afroatlántica",
+      "label_en": "Afro-Atlantic religion",
+      "glosa": "Formación histórica y social de vodou, santería, regla de palo, abakuá, rastafari, tambú y sus vecinos, incluida su circulación diaspórica.",
+      "corrientes": ["memorias_espiritualidades_archivos_vivos"],
+      "criterio": "La obra reconstruye la historia, la organización o la transmisión de una tradición religiosa determinada.",
+      "no_confundir_con": "ritual_como_conocimiento ni con sonido_y_escucha cuando el objeto es el tambor y no el culto.",
+      "anclas": ["cabrera", "mamalola", "millerbassey", "chevannes", "tambu", "taylor"]
+    },
+    "sonido_y_escucha": {
+      "familia": "ritual",
+      "label": "Sonido y escucha",
+      "label_en": "Sound and listening",
+      "glosa": "El sonido como forma de conocimiento corporal y como técnica de organización social: sound system, picó, tambor, oralitura sonora.",
+      "corrientes": ["creolizaciones_traducciones_opacidades", "memorias_espiritualidades_archivos_vivos"],
+      "criterio": "La obra trata el sonido como saber o como institución, no como género musical ni como ambientación.",
+      "no_confundir_con": "fiesta_y_performance_publico, que se ocupa del acontecimiento festivo y su público.",
+      "anclas": ["sonicbodies", "chicamusicaafricana", "schweitzerbata", "chande"]
+    },
+    "fiesta_y_performance_publico": {
+      "familia": "ritual",
+      "label": "Fiesta y performance público",
+      "label_en": "Festival and public performance",
+      "glosa": "Carnaval, festival y espectáculo folclórico como maquinaria que produce raza y nación en vez de solo representarlas.",
+      "corrientes": ["creolizaciones_traducciones_opacidades", "cuerpos_parentescos_eroticas"],
+      "criterio": "La obra analiza el acontecimiento público y su administración estatal, turística o mediática.",
+      "no_confundir_con": "sonido_y_escucha.",
+      "anclas": ["scher", "lizcanocarnaval", "wirtzperforming", "godreauscripts"]
+    },
+
+    "cimarronaje_territorial": {
+      "familia": "fuga",
+      "label": "Cimarronaje territorial",
+      "label_en": "Territorial marronage",
+      "glosa": "Palenques, quilombos y territorios constituidos por la fuga, con sus tratados, sus lenguas y su gobierno propio.",
+      "corrientes": ["fugas_cimarronajes_emancipaciones"],
+      "criterio": "La obra trabaja una comunidad cimarrona determinada o su comparatismo, con territorio identificable.",
+      "no_confundir_con": "contraplantacion, que no exige fuga ni territorio autónomo.",
+      "anclas": ["escalante", "totumo", "rebeldestiny", "truebornmaroons", "price"]
+    },
+    "etnogenesis": {
+      "familia": "fuga",
+      "label": "Etnogénesis",
+      "label_en": "Ethnogenesis",
+      "glosa": "Pueblos que nacen del desplazamiento forzado o de la fuga y no de un territorio de origen continuo. Incluye la pregunta por qué se inventó, y con qué rapidez, entre poblaciones arrancadas de sociedades distintas.",
+      "corrientes": ["fugas_cimarronajes_emancipaciones", "rutas_diasporas_territorios_acuosos", "creolizaciones_traducciones_opacidades"],
+      "criterio": "La obra reconstruye la formación de un pueblo o de una cultura como proceso, con periodización.",
+      "no_confundir_con": "teoria_de_la_creolizacion, que es la elaboración conceptual del mismo problema.",
+      "anclas": ["gonzalezsojourners", "cosgrovegarifuna", "mintzpricebirth", "womenancestors"]
+    },
+    "contraplantacion": {
+      "familia": "fuga",
+      "label": "Contraplantación",
+      "label_en": "Counter-plantation",
+      "glosa": "Rehacer sociedad por fuera de la lógica de la hacienda sin salir necesariamente de su territorio: lakou, conuco, comunidad campesina negra, vida cotidiana como sustracción.",
+      "corrientes": ["postplantacion_trabajo_desposesion", "fugas_cimarronajes_emancipaciones"],
+      "criterio": "La obra documenta formas de vida que se organizan contra la plantación sin constituirse en fuga armada ni en territorio separado.",
+      "no_confundir_con": "cimarronaje_territorial.",
+      "anclas": ["casimir", "olwigstjohn", "cuijla"]
+    },
+
+    "estatus_no_soberano": {
+      "familia": "regimen",
+      "label": "Estatus no soberano",
+      "label_en": "Non-sovereign status",
+      "glosa": "La soberanía como problema y no como meta: departamentos, reinos, estados libres asociados y descolonizaciones que no ocurrieron.",
+      "corrientes": ["soberanias_fronteras_ocupaciones"],
+      "criterio": "La obra trabaja el estatus político formal de un territorio y sus efectos sobre la vida ordinaria.",
+      "no_confundir_con": "independencia_y_conflicto_regional, que trata el momento de ruptura.",
+      "anclas": ["bonilla", "vanderpijl_equaliberty", "oostindiedecolonising", "hoeftetrajectories", "grosfoguelcolonial"]
+    },
+    "independencia_y_conflicto_regional": {
+      "familia": "regimen",
+      "label": "Independencia y conflicto regional",
+      "label_en": "Independence and regional conflict",
+      "glosa": "La independencia leída como disputa interna entre regiones, clases y castas de color, y no como gesta de élites ilustradas.",
+      "corrientes": ["soberanias_fronteras_ocupaciones", "fugas_cimarronajes_emancipaciones"],
+      "criterio": "La obra reconstruye el conflicto social dentro del proceso independentista.",
+      "no_confundir_con": "estatus_no_soberano.",
+      "anclas": ["muneraelfracaso", "saetheridentidades", "helglibertyequality", "james", "ferrerfreedomsmirror"]
+    },
+    "deuda_como_tecnologia_colonial": {
+      "familia": "regimen",
+      "label": "Deuda como tecnología colonial",
+      "label_en": "Debt as colonial technology",
+      "glosa": "La deuda pública, la indemnización a los amos y la reparación impaga como formas jurídicas y contables de prolongar el dominio.",
+      "corrientes": ["postplantacion_trabajo_desposesion", "soberanias_fronteras_ocupaciones"],
+      "criterio": "La obra trata un dispositivo financiero o jurídico determinado y su genealogía colonial.",
+      "no_confundir_con": "segmentacion_racial_del_trabajo.",
+      "anclas": ["zambrana", "araujo", "headleyreparaciones"]
+    },
+    "frontera_y_regimen_migratorio": {
+      "familia": "regimen",
+      "label": "Frontera y régimen migratorio",
+      "label_en": "Border and migration regime",
+      "glosa": "La frontera —marítima, terrestre o administrativa— como tecnología que produce ilegalidad y decide quién puede moverse.",
+      "corrientes": ["soberanias_fronteras_ocupaciones", "rutas_diasporas_territorios_acuosos"],
+      "criterio": "La obra analiza el dispositivo fronterizo o migratorio, no solo el desplazamiento de personas.",
+      "no_confundir_con": "diaspora_y_hogar_disperso.",
+      "anclas": ["kahnislands", "martinezsanmiguel", "prestolmasacre"]
+    },
+    "critica_del_saber_colonial": {
+      "familia": "regimen",
+      "label": "Crítica del saber colonial",
+      "label_en": "Critique of colonial knowledge",
+      "glosa": "La ciencia, la Ilustración, el urbanismo y la propia disciplina antropológica como dispositivos de poder y no como recepción neutral.",
+      "corrientes": ["invasiones_mundos_indigenas", "creolizaciones_traducciones_opacidades"],
+      "criterio": "La obra toma un aparato de conocimiento como objeto y muestra su función en el orden colonial.",
+      "no_confundir_con": "filosofia_afrocaribena, que constituye un campo en positivo.",
+      "anclas": ["castrogomezhybris", "cesaire", "deere", "trouillottransformaciones"]
+    },
+
+    "plantacion_y_secuela": {
+      "familia": "trabajo",
+      "label": "Plantación y su secuela",
+      "label_en": "Plantation and its aftermath",
+      "glosa": "La plantación como matriz socioeconómica de la región y sus mutaciones posteriores a la abolición.",
+      "corrientes": ["trata_esclavizacion_plantacion", "postplantacion_trabajo_desposesion"],
+      "criterio": "La obra trabaja el régimen de plantación o su continuidad institucional con evidencia económica o social.",
+      "no_confundir_con": "enclave_y_extractivismo, que es una forma espacial posterior y distinta.",
+      "anclas": ["williamscapitalismo", "mintzarea", "brereton_racerelationstrinidad", "morenofraginals"]
+    },
+    "indentura_y_trabajo_importado": {
+      "familia": "trabajo",
+      "label": "Indentura y trabajo importado",
+      "label_en": "Indenture and imported labour",
+      "glosa": "La indentura india y china como invento administrativo del imperio, y las poblaciones que produjo.",
+      "corrientes": ["postplantacion_trabajo_desposesion", "rutas_diasporas_territorios_acuosos"],
+      "criterio": "La obra trabaja el régimen de indentura o la formación social que resultó de él.",
+      "no_confundir_con": "plantacion_y_secuela: la indentura no es la continuación natural de la esclavitud, y así lo exige la literatura.",
+      "anclas": ["kalefragments", "shepherdmaharani", "callaloonation", "looklaichinese"]
+    },
+    "enclave_y_extractivismo": {
+      "familia": "trabajo",
+      "label": "Enclave y extractivismo",
+      "label_en": "Enclave and extractivism",
+      "glosa": "Zona bananera, zona del canal, mina y puerto como formas espaciales donde el capital organiza territorio y raza a la vez.",
+      "corrientes": ["postplantacion_trabajo_desposesion", "soberanias_fronteras_ocupaciones"],
+      "criterio": "La obra trabaja un enclave identificable y su régimen laboral y territorial.",
+      "no_confundir_con": "plantacion_y_secuela.",
+      "anclas": ["zonabananera", "lassoerased", "bourgoisethnicity", "corinealdipanama"]
+    },
+    "segmentacion_racial_del_trabajo": {
+      "familia": "trabajo",
+      "label": "Segmentación racial del trabajo",
+      "label_en": "Racial segmentation of labour",
+      "glosa": "La raza como principio de división y jerarquía del trabajo, mecanismo concreto por el que acumulación y racialización se articulan.",
+      "corrientes": ["postplantacion_trabajo_desposesion", "trata_esclavizacion_plantacion"],
+      "criterio": "La obra documenta el mecanismo, no solo afirma que existe capitalismo racial.",
+      "no_confundir_con": "formacion_racial_nacional, que opera en el discurso del Estado.",
+      "anclas": ["bourgoisethnicity", "robinsonmarxismo", "harpellecostarica"]
+    },
+    "turismo_y_economia_de_la_mirada": {
+      "familia": "trabajo",
+      "label": "Turismo y economía de la mirada",
+      "label_en": "Tourism and the economy of the gaze",
+      "glosa": "El visitante como figura moral y económica, y la isla convertida en paisaje consumible.",
+      "corrientes": ["postplantacion_trabajo_desposesion", "creolizaciones_traducciones_opacidades"],
+      "criterio": "La obra analiza la relación turística desde la orilla que la recibe.",
+      "no_confundir_con": "fiesta_y_performance_publico.",
+      "anclas": ["kincaidsmallplace", "shellerconsuming"]
+    },
+
+    "huracan_como_politica": {
+      "familia": "ecologia",
+      "label": "Huracán como política",
+      "label_en": "Hurricane as politics",
+      "glosa": "El desastre climático como acelerador y revelador político, con historia larga y no como acontecimiento excepcional.",
+      "corrientes": ["huracanes_ecologias_materialidades_vivas"],
+      "criterio": "La obra trabaja un desastre o una serie de desastres y sus efectos institucionales.",
+      "no_confundir_con": "narrativa_del_desastre, que se ocupa de quién lo cuenta.",
+      "anclas": ["schwartz_seaofstorms", "johnson_climatecuba", "munrohaitirising"]
+    },
+    "ecologia_colonial": {
+      "familia": "ecologia",
+      "label": "Ecología colonial",
+      "label_en": "Colonial ecology",
+      "glosa": "El pliegue entre régimen colonial y régimen ecológico: quién habita, quién contamina y quién queda expuesto.",
+      "corrientes": ["huracanes_ecologias_materialidades_vivas", "invasiones_mundos_indigenas"],
+      "criterio": "La obra piensa juntas la relación colonial y la relación ambiental, no una como contexto de la otra.",
+      "no_confundir_con": "huracan_como_politica.",
+      "anclas": ["ferdinand", "deloughrey", "islandfutures", "johnsonbelize"]
+    },
+    "enfermedad_y_biopolitica": {
+      "familia": "ecologia",
+      "label": "Enfermedad y biopolítica",
+      "label_en": "Disease and biopolitics",
+      "glosa": "El patógeno, la cura y el cuerpo enfermo como actores históricos y como campo de saber en disputa.",
+      "corrientes": ["huracanes_ecologias_materialidades_vivas", "memorias_espiritualidades_archivos_vivos"],
+      "criterio": "La obra otorga agencia histórica a la enfermedad o trabaja el saber sobre el cuerpo como archivo.",
+      "no_confundir_con": "ritual_como_conocimiento cuando el objeto es la curación ritual: pueden coexistir, y entonces se declaran ambos.",
+      "anclas": ["mcneillmosquito", "gomezexperiential"]
+    },
+    "narrativa_del_desastre": {
+      "familia": "ecologia",
+      "label": "Narrativa del desastre",
+      "label_en": "Disaster narrative",
+      "glosa": "Quién narra la ruina, con qué guion y con qué efectos sobre la ayuda, la soberanía y la imagen del país.",
+      "corrientes": ["huracanes_ecologias_materialidades_vivas", "memorias_espiritualidades_archivos_vivos"],
+      "criterio": "La obra critica explícitamente el relato dominante sobre un desastre.",
+      "no_confundir_con": "huracan_como_politica.",
+      "anclas": ["ulysseWhyHaiti", "dubuissonhaiti"]
+    },
+
+    "lengua_nacion_y_criollo": {
+      "familia": "lengua",
+      "label": "Lengua-nación y criollo",
+      "label_en": "Nation language and creole",
+      "glosa": "El criollo y la lengua-nación como lengua plena y como teoría del tiempo y de la forma, no como desviación del estándar.",
+      "corrientes": ["creolizaciones_traducciones_opacidades"],
+      "criterio": "La obra trabaja la lengua como objeto y le atribuye capacidad teórica o política.",
+      "no_confundir_con": "teoria_de_la_creolizacion.",
+      "anclas": ["brathwaite", "bebelgislerleonora", "vete"]
+    },
+    "teoria_de_la_creolizacion": {
+      "familia": "lengua",
+      "label": "Teoría de la creolización",
+      "label_en": "Theory of creolization",
+      "glosa": "La mezcla elaborada como concepto: relación, opacidad, fricción, pluralismo, indigenización. Incluye los modelos contra los que se escribió el campo.",
+      "corrientes": ["creolizaciones_traducciones_opacidades"],
+      "criterio": "La obra propone o discute un modelo general de la mezcla, con nombre propio.",
+      "no_confundir_con": "etnogenesis, que reconstruye un caso.",
+      "anclas": ["glissant", "monahan", "mgsmithplural", "wynterblackmetamorphosis"]
+    },
+    "filosofia_afrocaribena": {
+      "familia": "lengua",
+      "label": "Filosofía afrocaribeña",
+      "label_en": "Afro-Caribbean philosophy",
+      "glosa": "La constitución del campo filosófico afrocaribeño como campo: sus corrientes, su canon y sus orillas excluidas.",
+      "corrientes": ["creolizaciones_traducciones_opacidades", "memorias_espiritualidades_archivos_vivos"],
+      "criterio": "La obra interviene en la delimitación del campo o en su historia, no solo se inscribe en él.",
+      "no_confundir_con": "critica_del_saber_colonial.",
+      "anclas": ["henrycaliban", "almanzaorilla", "firmin", "monahan"]
+    },
+
+    "erotica_negra": {
+      "familia": "cuerpo",
+      "label": "Erótica negra",
+      "label_en": "Black erotics",
+      "glosa": "El deseo y el placer como método político de autoconstrucción, no como objeto de estudio ni como desviación.",
+      "corrientes": ["cuerpos_parentescos_eroticas"],
+      "criterio": "La obra atribuye al erotismo una función epistémica o política explícita.",
+      "no_confundir_con": "nacion_heterosexual, que se ocupa de la norma y no del deseo.",
+      "anclas": ["allenvenceremos", "tinsley", "alexander"]
+    },
+    "nacion_heterosexual": {
+      "familia": "cuerpo",
+      "label": "Nación heterosexual",
+      "label_en": "Heterosexual nation",
+      "glosa": "La fundación sexual y racial del Estado-nación caribeño y su aparato jurídico contra lo que declara antinatural.",
+      "corrientes": ["cuerpos_parentescos_eroticas", "soberanias_fronteras_ocupaciones"],
+      "criterio": "La obra trabaja la norma sexual como dispositivo estatal o jurídico.",
+      "no_confundir_con": "erotica_negra.",
+      "anclas": ["curiel", "gosinenature"]
+    },
+    "parentesco_y_organizacion_domestica": {
+      "familia": "cuerpo",
+      "label": "Parentesco y organización doméstica",
+      "label_en": "Kinship and domestic organization",
+      "glosa": "Matrifocalidad, familia extensa, culto a los ancestros y el hogar como institución de continuidad.",
+      "corrientes": ["cuerpos_parentescos_eroticas", "memorias_espiritualidades_archivos_vivos"],
+      "criterio": "La obra trabaja la organización del parentesco como objeto central.",
+      "no_confundir_con": "diaspora_y_hogar_disperso, donde el hogar se define por la distancia.",
+      "anclas": ["clarkemymother", "rtsmithmatrifocal", "barrowfamily", "womenancestors"]
+    },
+
+    "mundos_indigenas_precoloniales": {
+      "familia": "indigena",
+      "label": "Mundos indígenas precoloniales",
+      "label_en": "Pre-colonial Indigenous worlds",
+      "glosa": "Poblamiento, navegación y sociedad archipiélica antes de 1492, contados como historia y no como prehistoria estática.",
+      "corrientes": ["invasiones_mundos_indigenas", "rutas_diasporas_territorios_acuosos"],
+      "criterio": "La obra trabaja el periodo anterior a la invasión con evidencia arqueológica o etnohistórica.",
+      "no_confundir_con": "indigeneidad_en_disputa.",
+      "anclas": ["keeganhofman", "atkinsonearliest", "londonoargonauts"]
+    },
+    "indigeneidad_en_disputa": {
+      "familia": "indigena",
+      "label": "Indigeneidad en disputa",
+      "label_en": "Contested indigeneity",
+      "glosa": "La identidad indígena como reclamo contemporáneo, y la tensión entre soberanía indígena y fuga cimarrona, que no son la misma relación con la tierra.",
+      "corrientes": ["invasiones_mundos_indigenas", "soberanias_fronteras_ocupaciones"],
+      "criterio": "La obra trabaja la disputa por el reconocimiento en el presente o su historia política.",
+      "no_confundir_con": "mundos_indigenas_precoloniales.",
+      "anclas": ["felicianosantos", "rifkinfictions", "andersonblackindigenous", "whiteheadtiger"]
+    },
+
+    "radicalismo_negro_transnacional": {
+      "familia": "circulacion",
+      "label": "Radicalismo negro transnacional",
+      "label_en": "Transnational Black radicalism",
+      "glosa": "Poder Negro, panafricanismo y circulación militante entre el Caribe, Norteamérica, Europa y África, con sus herencias y sus derrotas.",
+      "corrientes": ["soberanias_fronteras_ocupaciones", "rutas_diasporas_territorios_acuosos"],
+      "criterio": "La obra sigue una organización, un acontecimiento o una red militante identificable.",
+      "no_confundir_con": "independencia_y_conflicto_regional.",
+      "anclas": ["quinnblackpower", "james_bannerethiopia", "austinfearblack", "puriradical", "russwurm"]
+    },
+    "diaspora_y_hogar_disperso": {
+      "familia": "circulacion",
+      "label": "Diáspora y hogar disperso",
+      "label_en": "Diaspora and dispersed home",
+      "glosa": "El hogar como relación sostenida a distancia y no como lugar fijo: redes familiares, remesas, ritual y pertenencia fuera del Estado-nación.",
+      "corrientes": ["rutas_diasporas_territorios_acuosos", "memorias_espiritualidades_archivos_vivos"],
+      "criterio": "La obra trabaja la relación entre origen y destino como vínculo activo, no como pérdida.",
+      "no_confundir_con": "frontera_y_regimen_migratorio.",
+      "anclas": ["caribjourneys", "mamalola", "castorspiritual", "scher"]
+    },
+    "formacion_racial_nacional": {
+      "familia": "circulacion",
+      "label": "Formación racial nacional",
+      "label_en": "National racial formation",
+      "glosa": "Cómo un Estado administra la negrura —negándola, folclorizándola o fijándola en el pasado— para poder narrarse a sí mismo.",
+      "corrientes": ["creolizaciones_traducciones_opacidades", "soberanias_fronteras_ocupaciones"],
+      "criterio": "La obra analiza el discurso oficial o la política cultural de un Estado sobre la raza.",
+      "no_confundir_con": "segmentacion_racial_del_trabajo, que opera en el mercado y no en el discurso.",
+      "anclas": ["reconfdominic", "godreauscripts", "cunin", "pinedashipwrecked", "garciapenaborders"]
+    }
+  }
+}

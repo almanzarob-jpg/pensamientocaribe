@@ -40,7 +40,7 @@ La transición contiene ahora cuatro capas separadas y reversibles:
 ## Dictamen A01
 
 - Doce candidaturas únicas se confirman y seis se redirigen por el argumento central de cada obra.
-- `downtownladies` y `reddock` pasan a postplantación, trabajo y desposesión; `shepherdmaharani` a rutas, diásporas y territorios acuosos; `fuentesdispossessed` a memorias, espiritualidades y archivos vivos; `hall_slavesocietydanish` y `morenofraginals` a trata, esclavización y plantación.
+- `downtownladies` y `reddock` pasan a postplantación, trabajo y desposesión; `shepherdmaharani` a rutas, diásporas y territorios acuosos; `fuentesdispossessed` a espiritualidades, rituales y archivos vivos; `hall_slavesocietydanish` y `morenofraginals` a trata, esclavización y plantación.
 - Se registran, sin sobrescribir el corpus heredado, las correcciones de fecha de `downtownladies` (2008), `shellerconsuming` (2003) y `floresvillalobos` (2023).
 - Cuatro relaciones quedan corroboradas y diez permanecen por corroborar.
 - `R0558 shepherdmaharani–reddock` cambia de resonancia a disonancia y declara una fricción documentada.
@@ -48,7 +48,7 @@ La transición contiene ahora cuatro capas separadas y reversibles:
 ## Dictamen A02
 
 - Siete candidaturas se confirman, diez se redirigen por su argumento central y `gudynas` queda pendiente de elegibilidad territorial.
-- `handlerlangebarbados` pasa a trata, esclavización y plantación; `brownreaper` a memorias, espiritualidades y archivos vivos; `klein_battleparadise` a postplantación, trabajo y desposesión.
+- `handlerlangebarbados` pasa a trata, esclavización y plantación; `brownreaper` a espiritualidades, rituales y archivos vivos; `klein_battleparadise` a postplantación, trabajo y desposesión.
 - `putnamradical`, `harpellecostarica`, `afrocentroam`, `mahlertricontinental` e `islandscity` pasan a rutas, diásporas y territorios acuosos.
 - Se registran tres correcciones bibliográficas sin sobrescribir el corpus heredado: `gudynas`, `beyondsun` y `benedictykokken_haitiexception`.
 - Tres relaciones quedan corroboradas con páginas y once permanecen por corroborar.

@@ -1,0 +1,121 @@
+{
+  "lote": "F01",
+  "nombre": "Prueba del catálogo de fenómenos sobre muestra estratificada",
+  "fecha": "2026-08-10",
+  "catalogo": "catalogo-fenomenos.json v0.1.0-borrador",
+  "base": "datos-atlas.json v1.15.0 · 233 obras · 588 relaciones",
+  "limite": "Capa aditiva de prueba. No modifica f, ni fenomenos, ni datos-atlas.json, ni la interfaz. Ninguna asignación está confirmada.",
+  "criterio_de_muestreo": "26 entradas elegidas para tensionar el catálogo, no para representarlo: 14 de las que hoy cargan memoria, 15 de las que cargan colonialidad, las 4 de catastrofes que cruzan con esas dos, y 3 de las treinta entradas nuevas de v1.15.0. La muestra sobrerrepresenta a propósito las etiquetas grandes, porque son las que hay que probar.",
+  "estado_general": "propuesto",
+  "nota_sobre_el_fundamento": "El fundamento de esta ronda se apoya en el campo ap del propio corpus y en el título, que es evidencia interna y no fuente bibliográfica. Bajo la regla de corroboración del atlas eso alcanza para proponer y no para confirmar. Ninguna fila puede pasar a confirmada sin lectura de la obra o fuente localizable con página.",
+
+  "asignaciones": [
+    { "id": "trouillotsilencing", "f_heredado": ["memoria", "colonialidad"],
+      "fenomenos_asignados": ["silencio_de_archivo", "revision_historiografica", "critica_del_saber_colonial"],
+      "fundamento": "El argumento central es cómo se produce el silencio histórico, no qué ocurrió. La revolución haitiana funciona como caso de un mecanismo general de la producción documental.", "estado": "propuesto" },
+
+    { "id": "fischer", "f_heredado": ["memoria", "colonialidad"],
+      "fenomenos_asignados": ["silencio_de_archivo", "revision_historiografica"],
+      "fundamento": "La tesis de la desmentida es una afirmación sobre el reconocimiento y la negación simultáneos dentro del pensamiento moderno; discute explícitamente con Trouillot.", "estado": "propuesto" },
+
+    { "id": "lassoerased", "f_heredado": ["colonialidad", "capitalismo_racial", "memoria"],
+      "fenomenos_asignados": ["silencio_de_archivo", "enclave_y_extractivismo"],
+      "fundamento": "El borrado narrativo de los pueblos negros panameños es inseparable del régimen espacial de la Zona del Canal. Las dos cosas son el argumento, no una el contexto de la otra.", "estado": "propuesto" },
+
+    { "id": "pricefirst", "f_heredado": ["cimarronaje", "memoria"],
+      "fenomenos_asignados": ["oralidad_como_archivo", "cimarronaje_territorial"],
+      "fundamento": "La decisión metodológica declarada es contar la historia saramaka como los saramaka la cuentan: la memoria oral con estatuto de archivo propio.", "estado": "propuesto" },
+
+    { "id": "cabrera", "f_heredado": ["memoria", "creolizacion"],
+      "fenomenos_asignados": ["religion_afroatlantica", "ritual_como_conocimiento", "oralidad_como_archivo"],
+      "fundamento": "El monte como biblioteca viva reúne las tres cosas: tradición religiosa documentada, atribución de capacidad teórica al ritual y construcción de la evidencia sobre palabra dicha.", "estado": "propuesto" },
+
+    { "id": "mamalola", "f_heredado": ["memoria", "creolizacion"],
+      "fenomenos_asignados": ["religion_afroatlantica", "diaspora_y_hogar_disperso"],
+      "fundamento": "El vodou practicado en Brooklyn y lejos del templo haitiano de origen: la tradición y su sostenimiento a distancia son el mismo objeto.", "estado": "propuesto" },
+
+    { "id": "sonicbodies", "f_heredado": ["creolizacion", "cuerpo_erotica", "memoria"],
+      "fenomenos_asignados": ["sonido_y_escucha", "ritual_como_conocimiento"],
+      "fundamento": "El sound system tratado como forma de conocimiento corporal y no como género musical. La negrura aparece como régimen de sensibilidad.", "estado": "propuesto" },
+
+    { "id": "zonabananera", "f_heredado": ["capitalismo_racial", "memoria"],
+      "fenomenos_asignados": ["enclave_y_extractivismo", "oralidad_como_archivo", "segmentacion_racial_del_trabajo"],
+      "fundamento": "La Zona Bananera nombrada como enclave del capitalismo racial y no como escenario, con piel, voz y rostro como registros de archivo.", "estado": "propuesto" },
+
+    { "id": "quinnblackpower", "f_heredado": ["soberanias", "memoria"],
+      "fenomenos_asignados": ["radicalismo_negro_transnacional", "revision_historiografica"],
+      "fundamento": "El Poder Negro caribeño de 1968-1970 leído región por región como radicalización pan-caribeña, contra su tratamiento como episodio nacional aislado.", "estado": "propuesto" },
+
+    { "id": "caribjourneys", "f_heredado": ["soberanias", "memoria"],
+      "fenomenos_asignados": ["diaspora_y_hogar_disperso", "parentesco_y_organizacion_domestica"],
+      "fundamento": "Tres redes familiares dispersas y el hogar definido como relación y no como lugar fijo.", "estado": "propuesto" },
+
+    { "id": "keeganhofman", "f_heredado": ["memoria", "colonialidad"],
+      "fenomenos_asignados": ["mundos_indigenas_precoloniales"],
+      "fundamento": "Siete mil años de poblamiento archipiélico contados como historia de navegación. Un solo fenómeno: la entrada no sostiene un segundo sin forzarlo.", "estado": "propuesto",
+      "alerta": "Queda por debajo del mínimo de dos fenómenos. O la lectura completa aporta un segundo o la regla del mínimo necesita excepción declarada." },
+
+    { "id": "felicianosantos", "f_heredado": ["memoria", "colonialidad"],
+      "fenomenos_asignados": ["indigeneidad_en_disputa", "formacion_racial_nacional"],
+      "fundamento": "La identidad taína disputada en el habla cotidiana y no solo en el archivo, dentro del marco racial puertorriqueño.", "estado": "propuesto" },
+
+    { "id": "bonilla", "f_heredado": ["soberanias", "colonialidad"],
+      "fenomenos_asignados": ["estatus_no_soberano"],
+      "fundamento": "La soberanía planteada como problema y no como meta. Caso central del fenómeno.", "estado": "propuesto",
+      "alerta": "Un solo fenómeno. Verificar en lectura si el trabajo sindical guadalupeño sostiene además segmentacion_racial_del_trabajo." },
+
+    { "id": "muneraelfracaso", "f_heredado": ["soberanias", "colonialidad"],
+      "fenomenos_asignados": ["independencia_y_conflicto_regional", "revision_historiografica"],
+      "fundamento": "La independencia como conflicto regional y de castas de color contra el relato de la empresa criolla ilustrada.", "estado": "propuesto" },
+
+    { "id": "saetheridentidades", "f_heredado": ["soberanias", "colonialidad"],
+      "fenomenos_asignados": ["independencia_y_conflicto_regional", "formacion_racial_nacional"],
+      "fundamento": "El reverso de Múnera: en Santa Marta los comunes de color no identificaron independencia con igualdad. La comparación entre dos formaciones regionales es el argumento.", "estado": "propuesto" },
+
+    { "id": "zambrana", "f_heredado": ["colonialidad", "capitalismo_racial"],
+      "fenomenos_asignados": ["deuda_como_tecnologia_colonial", "estatus_no_soberano"],
+      "fundamento": "La Junta de Control Fiscal impuesta tras la quiebra de 2015 leída como heredera de una lógica jurídica colonial.", "estado": "propuesto" },
+
+    { "id": "kahnislands", "f_heredado": ["soberanias", "colonialidad", "violencias"],
+      "fenomenos_asignados": ["frontera_y_regimen_migratorio", "estatus_no_soberano"],
+      "fundamento": "La frontera marítima como tecnología jurídica que produce la ilegalidad haitiana antes de que el migrante llegue a tierra.", "estado": "propuesto" },
+
+    { "id": "ferdinand", "f_heredado": ["catastrofes", "colonialidad"],
+      "fenomenos_asignados": ["ecologia_colonial"],
+      "fundamento": "Ecología y colonialidad puestas en un mismo pliegue desde el barco negrero. Es la definición misma del fenómeno.", "estado": "propuesto",
+      "alerta": "Un solo fenómeno. Candidato a segundo: teoria_de_la_creolizacion, pendiente de lectura." },
+
+    { "id": "schwartz_seaofstorms", "f_heredado": ["catastrofes", "colonialidad"],
+      "fenomenos_asignados": ["huracan_como_politica", "ecologia_colonial"],
+      "fundamento": "La longue durée del huracán como problema político desde el siglo XVI, con efectos institucionales rastreados.", "estado": "propuesto" },
+
+    { "id": "ulysseWhyHaiti", "f_heredado": ["catastrofes", "memoria"],
+      "fenomenos_asignados": ["narrativa_del_desastre", "huracan_como_politica"],
+      "fundamento": "Escribe contra el relato mediático del terremoto de 2010 como caos sin agencia: el objeto es el guion, no el sismo.", "estado": "propuesto" },
+
+    { "id": "mcneillmosquito", "f_heredado": ["catastrofes", "colonialidad"],
+      "fenomenos_asignados": ["enfermedad_y_biopolitica", "ecologia_colonial"],
+      "fundamento": "La fiebre amarilla y la malaria tratadas como actores de la historia militar del Gran Caribe.", "estado": "propuesto" },
+
+    { "id": "glissant", "f_heredado": ["creolizacion", "colonialidad"],
+      "fenomenos_asignados": ["teoria_de_la_creolizacion", "lengua_nacion_y_criollo"],
+      "fundamento": "Relación, opacidad y errancia como modelo general de la mezcla, y el archipiélago como forma de pensar.", "estado": "propuesto",
+      "alerta": "Entrada compuesta con dos obras bajo un identificador. La asignación deberá repartirse por obra componente cuando S01 lo permita." },
+
+    { "id": "henrycaliban", "f_heredado": ["creolizacion", "colonialidad"],
+      "fenomenos_asignados": ["filosofia_afrocaribena", "teoria_de_la_creolizacion"],
+      "fundamento": "Funda el campo como campo y distingue sus corrientes historicista y poeticista: interviene en la delimitación, no solo se inscribe.", "estado": "propuesto" },
+
+    { "id": "curiel", "f_heredado": ["cuerpo_erotica", "colonialidad"],
+      "fenomenos_asignados": ["nacion_heterosexual", "critica_del_saber_colonial"],
+      "fundamento": "La nación fundada como heterosexual y blanca, con género, raza y colonialidad como un mismo dispositivo.", "estado": "propuesto" },
+
+    { "id": "allenvenceremos", "f_heredado": ["cuerpo_erotica", "memoria"],
+      "fenomenos_asignados": ["erotica_negra", "formacion_racial_nacional"],
+      "fundamento": "El erotismo negro cubano como método de autoconstrucción política dentro del marco racial del Estado cubano.", "estado": "propuesto" },
+
+    { "id": "kalefragments", "f_heredado": ["capitalismo_racial", "colonialidad"],
+      "fenomenos_asignados": ["indentura_y_trabajo_importado", "revision_historiografica"],
+      "fundamento": "La indentura como invento administrativo del imperio y no como sucesora natural de la esclavitud: la corrección de ese relato es la tesis.", "estado": "propuesto" }
+  ]
+}

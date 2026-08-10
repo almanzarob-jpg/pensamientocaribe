@@ -1,29 +1,143 @@
 {
-  "version_esquema": "2.0-lotes.1",
-  "fecha": "2026-08-08",
+  "version_esquema": "2.0-lotes.2",
+  "fecha": "2026-08-10",
   "regla_clasificacion": "Una obra entra en una corriente porque esa corriente organiza su argumento. El reparto numérico no es criterio de clasificación.",
   "regla_transicion": "Los campos heredados f, l, tr y y se conservan sin cambios. Una candidatura preliminar no se presenta como corriente confirmada.",
   "regla_relaciones": "Toda relación declara estado de corroboración de forma explícita. El generador no lo deduce de una cadena libre.",
   "corrientes": {
-    "invasiones_mundos_indigenas": { "n": 1, "label": "Invasiones, colonialidades y mundos indígenas", "label_en": "Invasions, colonialities and Indigenous worlds", "provisional": true },
-    "trata_esclavizacion_plantacion": { "n": 2, "label": "Trata, esclavización y plantación", "label_en": "Slave trade, enslavement and plantation", "provisional": true },
-    "fugas_cimarronajes_emancipaciones": { "n": 3, "label": "Fugas, cimarronajes y emancipaciones", "label_en": "Flight, marronage and emancipations", "provisional": true },
-    "postplantacion_trabajo_desposesion": { "n": 4, "label": "Postplantación, trabajo y desposesión", "label_en": "Post-plantation, labor and dispossession", "provisional": true },
-    "rutas_diasporas_territorios_acuosos": { "n": 5, "label": "Rutas, diásporas y territorios acuosos", "label_en": "Routes, diasporas and aqueous territories", "provisional": true },
-    "huracanes_ecologias_materialidades_vivas": { "n": 6, "label": "Huracanes, ecologías y materialidades vivas", "label_en": "Hurricanes, ecologies and living materialities", "provisional": true },
-    "soberanias_fronteras_ocupaciones": { "n": 7, "label": "Soberanías, fronteras y ocupaciones", "label_en": "Sovereignties, borders and occupations", "provisional": true },
-    "creolizaciones_traducciones_opacidades": { "n": 8, "label": "Creolizaciones, traducciones y opacidades", "label_en": "Creolizations, translations and opacities", "provisional": true },
-    "memorias_espiritualidades_archivos_vivos": { "n": 9, "label": "Memorias, espiritualidades y archivos vivos", "label_en": "Memories, spiritualities and living archives", "provisional": true },
-    "cuerpos_parentescos_eroticas": { "n": 10, "label": "Cuerpos, parentescos y eróticas", "label_en": "Bodies, kinships and erotics", "provisional": true }
+    "invasiones_mundos_indigenas": {
+      "n": 1,
+      "label": "Invasiones y mundos indígenas",
+      "label_en": "Invasions and Indigenous worlds",
+      "provisional": true
+    },
+    "trata_esclavizacion_plantacion": {
+      "n": 2,
+      "label": "Trata, esclavización y plantación",
+      "label_en": "Slave trade, enslavement and plantation",
+      "provisional": true
+    },
+    "fugas_cimarronajes_emancipaciones": {
+      "n": 3,
+      "label": "Fugas, cimarronajes y emancipaciones",
+      "label_en": "Flight, marronage and emancipations",
+      "provisional": true
+    },
+    "postplantacion_trabajo_desposesion": {
+      "n": 4,
+      "label": "Postplantación, trabajo y desposesión",
+      "label_en": "Post-plantation, labor and dispossession",
+      "provisional": true
+    },
+    "rutas_diasporas_territorios_acuosos": {
+      "n": 5,
+      "label": "Rutas, diásporas y territorios acuosos",
+      "label_en": "Routes, diasporas and aqueous territories",
+      "provisional": true
+    },
+    "huracanes_ecologias_materialidades_vivas": {
+      "n": 6,
+      "label": "Huracanes, ecologías y materialidades vivas",
+      "label_en": "Hurricanes, ecologies and living materialities",
+      "provisional": true
+    },
+    "soberanias_fronteras_ocupaciones": {
+      "n": 7,
+      "label": "Soberanías, fronteras y ocupaciones",
+      "label_en": "Sovereignties, borders and occupations",
+      "provisional": true
+    },
+    "creolizaciones_traducciones_opacidades": {
+      "n": 8,
+      "label": "Creolizaciones, traducciones y opacidades",
+      "label_en": "Creolizations, translations and opacities",
+      "provisional": true
+    },
+    "memorias_espiritualidades_archivos_vivos": {
+      "n": 9,
+      "label": "Espiritualidades, rituales y archivos vivos",
+      "label_en": "Spiritualities, rituals and living archives",
+      "provisional": true
+    },
+    "cuerpos_parentescos_eroticas": {
+      "n": 10,
+      "label": "Cuerpos, parentescos y eróticas",
+      "label_en": "Bodies, kinships and erotics",
+      "provisional": true
+    }
   },
-  "procedencias": ["corpus heredado", "siembra nueva", "aporte externo", "manifestación", "pendiente de incorporación"],
-  "procesos": ["migración", "reclasificación", "siembra", "corrección bibliográfica", "fusión", "división"],
-  "estados_revision": ["pendiente_revision_con_texto", "candidatura_preliminar", "confirmada", "revisada"],
-  "estados_relacion": ["corroborada", "por_corroborar"],
-  "tipos_relacion": ["resonancia", "disonancia"],
-  "marcas": ["capitalismo_racial", "colonialidad", "racializacion", "genero", "clase_trabajo", "memoria", "violencias", "friccion_epistemica"],
-  "mecanismos_capitalismo_racial": ["plantación", "trabajo contratado", "deuda", "enclave", "extracción", "turismo", "zona franca", "crédito", "propiedad", "seguro", "acumulación esclavista", "segmentación étnico-racial del trabajo", "otro (declarar)"],
-  "operaciones": ["reconstruir un archivo", "producir etnografía", "teorizar", "fabular ante el silencio", "narrar", "cartografiar", "escuchar", "traducir", "seguir una ruta", "comparar orillas", "preservar una memoria", "elaborar un concepto", "documentar una práctica", "intervenir políticamente", "confrontar una categoría", "producir testimonio", "interpretar materialidades"],
+  "procedencias": [
+    "corpus heredado",
+    "siembra nueva",
+    "aporte externo",
+    "manifestación",
+    "pendiente de incorporación"
+  ],
+  "procesos": [
+    "migración",
+    "reclasificación",
+    "siembra",
+    "corrección bibliográfica",
+    "fusión",
+    "división"
+  ],
+  "estados_revision": [
+    "pendiente_revision_con_texto",
+    "candidatura_preliminar",
+    "confirmada",
+    "revisada"
+  ],
+  "estados_relacion": [
+    "corroborada",
+    "por_corroborar"
+  ],
+  "tipos_relacion": [
+    "resonancia",
+    "disonancia"
+  ],
+  "marcas": [
+    "capitalismo_racial",
+    "colonialidad",
+    "racializacion",
+    "genero",
+    "clase_trabajo",
+    "memoria",
+    "violencias"
+  ],
+  "mecanismos_capitalismo_racial": [
+    "plantación",
+    "trabajo contratado",
+    "deuda",
+    "enclave",
+    "extracción",
+    "turismo",
+    "zona franca",
+    "crédito",
+    "propiedad",
+    "seguro",
+    "acumulación esclavista",
+    "segmentación étnico-racial del trabajo",
+    "otro (declarar)"
+  ],
+  "operaciones": [
+    "reconstruir un archivo",
+    "producir etnografía",
+    "teorizar",
+    "fabular ante el silencio",
+    "narrar",
+    "cartografiar",
+    "escuchar",
+    "traducir",
+    "seguir una ruta",
+    "comparar orillas",
+    "preservar una memoria",
+    "elaborar un concepto",
+    "documentar una práctica",
+    "intervenir políticamente",
+    "confrontar una categoría",
+    "producir testimonio",
+    "interpretar materialidades"
+  ],
   "operaciones_en": {
     "reconstruir un archivo": "reconstruct an archive",
     "producir etnografía": "produce ethnography",
@@ -43,11 +157,39 @@
     "producir testimonio": "produce testimony",
     "interpretar materialidades": "interpret materialities"
   },
-  "funciones_orilla": ["territorio estudiado", "lugar de producción intelectual", "destino migratorio", "lugar de circulación", "territorio comparado", "espacio diaspórico"],
-  "tipos_orilla": ["punto", "región", "cuenca"],
-  "lenguas_publicacion": ["inglés", "español", "francés", "neerlandés", "criollo", "portugués", "danés", "otro"],
-  "eras_temporales": ["AEC", "EC"],
-  "precisiones_temporales": ["exacta", "aproximada", "rango_estimado", "desconocida"],
+  "funciones_orilla": [
+    "territorio estudiado",
+    "lugar de producción intelectual",
+    "destino migratorio",
+    "lugar de circulación",
+    "territorio comparado",
+    "espacio diaspórico"
+  ],
+  "tipos_orilla": [
+    "punto",
+    "región",
+    "cuenca"
+  ],
+  "lenguas_publicacion": [
+    "inglés",
+    "español",
+    "francés",
+    "neerlandés",
+    "criollo",
+    "portugués",
+    "danés",
+    "otro"
+  ],
+  "eras_temporales": [
+    "AEC",
+    "EC"
+  ],
+  "precisiones_temporales": [
+    "exacta",
+    "aproximada",
+    "rango_estimado",
+    "desconocida"
+  ],
   "reglas_estado": {
     "candidatura_preliminar": "Exige una corriente_candidata única, pero prohíbe corriente_confirmada.",
     "pendiente_revision_con_texto": "Puede registrar corrientes_candidatas, pero prohíbe corriente_confirmada.",
@@ -68,5 +210,7 @@
     "punto": "Remite a una clave del catálogo de lugares cuando existen coordenadas verificadas.",
     "región": "Declara una escala territorial sin inventar una coordenada central.",
     "cuenca": "Declara un espacio acuoso o hidrográfico sin convertirlo en punto."
-  }
+  },
+  "regla_niveles": "Tres niveles que no se mezclan. Corriente: recorrido que organiza el argumento de una obra. Marca transversal: dimensión que puede aparecer en varias corrientes. Fricción: propiedad argumentada de una relación entre obras, nunca una marca de entrada. Ninguna palabra puede nombrar a la vez un nivel y otro: por eso colonialidad y memoria se conservan como marcas y salen del nombre de las corrientes 1 y 9.",
+  "nota_renombramiento": "10 de agosto de 2026: se renombraron las etiquetas de las corrientes 1 y 9 para retirar colonialidades y memorias, que ya eran marcas. Las claves no se tocaron, porque están escritas en piloto-config, s01, a01 y a02, y la regla 3 de la memoria operativa prohíbe reabrir capas cerradas. La clave memorias_espiritualidades_archivos_vivos conserva por eso una palabra que su etiqueta ya no usa."
 }

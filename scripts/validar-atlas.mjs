@@ -479,6 +479,27 @@ if (atlas && validateTopLevel(atlas)) {
   if (editorial.idsNoCanonicos.length) {
     report.warn("ID_FORMATO", `Identificadores fuera de minúsculas ASCII: ${listIds(editorial.idsNoCanonicos)}. No deben renombrarse sin redirección.`);
   }
+
+  // Dos identificadores distintos para la misma obra. ID_DUPLICADO solo mira el
+  // identificador, así que un duplicado real como steward/stewardpuertorico pasaba
+  // sin una sola advertencia pese a estar catalogado como incidencia de severidad alta.
+  const porTitulo = new Map();
+  (atlas.obras || []).forEach((work) => {
+    if (!isNonEmptyString(work.t) || !isNonEmptyString(work.id)) return;
+    const clave = work.t
+      .normalize("NFD")
+      .replace(/[̀-ͯ]/g, "")
+      .toLowerCase()
+      .replace(/[^a-z0-9]+/g, " ")
+      .trim();
+    if (!porTitulo.has(clave)) porTitulo.set(clave, []);
+    porTitulo.get(clave).push(work.id);
+  });
+  const titulosRepetidos = [...porTitulo.values()].filter((ids) => ids.length > 1);
+  if (titulosRepetidos.length) {
+    const detalle = titulosRepetidos.map((ids) => ids.join(" = ")).join("; ");
+    report.warn("TITULO_DUPLICADO", `Entradas distintas con el mismo título: ${detalle}. Exigen fusión y redirección del ancla superviviente antes de publicar.`);
+  }
   if (editorial.sinFecha.length) report.warn("FECHA_PENDIENTE", `Entradas sin año: ${listIds(editorial.sinFecha)}.`);
   if (editorial.autoriasPendientes.length) report.warn("AUTORIA_PENDIENTE", `Autorías no identificadas: ${listIds(editorial.autoriasPendientes)}.`);
   if (editorial.manifestacionesConAutoria.length) {
