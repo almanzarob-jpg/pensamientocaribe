@@ -80,3 +80,6 @@ secrets.*
 data/negrura/fuentes-por-concepto.md
 data/**/.respaldo-siembra/
 *.backup.json
+
+# Copias que deja aplicar-fusion-steward.mjs; el histórico de git ya guarda la versión previa
+*.anterior

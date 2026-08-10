@@ -23,6 +23,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
+import os from "node:os";
 
 const raiz = process.cwd();
 const RUTA_JS = path.join(raiz, "data/agua-de-por-medio/datos-atlas.js");
@@ -111,9 +112,14 @@ if (simular) {
   process.exit(0);
 }
 
-fs.copyFileSync(RUTA_JS, RUTA_JS + ".anterior");
-fs.copyFileSync(RUTA_JSON, RUTA_JSON + ".anterior");
+// Las copias van fuera del repositorio a propósito. La primera versión las
+// dejaba junto al corpus y un «git add -A» las publicó: 580 kB de corpus viejo
+// servidos en el sitio junto al vigente. El histórico de git ya es el respaldo.
+const respaldo = path.join(os.tmpdir(), "atlas-respaldo-" + Date.now());
+fs.mkdirSync(respaldo, { recursive: true });
+fs.copyFileSync(RUTA_JS, path.join(respaldo, "datos-atlas.js"));
+fs.copyFileSync(RUTA_JSON, path.join(respaldo, "datos-atlas.json"));
 fs.writeFileSync(RUTA_JS, cabecera + marca + JSON.stringify(atlas) + "\n", "utf8");
 fs.writeFileSync(RUTA_JSON, JSON.stringify(atlas, null, 2) + "\n", "utf8");
-console.log("\nEscritos datos-atlas.js y datos-atlas.json. Copias previas en *.anterior");
+console.log("\nEscritos datos-atlas.js y datos-atlas.json. Copias previas en " + respaldo);
 console.log("Ahora: python3 data/agua-de-por-medio/sincronizar.py --check && node scripts/validar-atlas.mjs");
