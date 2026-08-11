@@ -2,10 +2,10 @@
   "meta": {
     "titulo": "Con el agua de por medio",
     "subtitulo": "Atlas para una antropología archipiélica",
-    "responsable": "Centro de Pensamiento Caribe",
-    "version": "1.16.0",
-    "fecha": "2026-08-10",
-    "nota_version": "1.16.0 ejecuta la fusión aprobada en el dictamen P00: stewardpuertorico se retira y redirige a steward, que era la misma obra de 1956 registrada dos veces. El corpus pasa de 233 a 232 entradas. Las 588 relaciones se conservan: la única relación de la entrada retirada se reasigna al identificador superviviente. steward recibe la autoría completa corregida en P00."
+    "responsable": "Grupo de Investigación Pensamiento Caribe",
+    "version": "1.16.1",
+    "fecha": "2026-08-11",
+    "nota_version": "1.16.1 ejecuta la Etapa 2 del plan operativo: unifica la denominación institucional como Grupo de Investigación Pensamiento Caribe en el corpus, reclasifica totumo y figueroa como obras de investigación (procedencia corpus heredado, procedencia_verificada true) y declara chande, manoalzada y esquiva con procedencia manifestación y procedencia_verificada false, sin inventar autoría ni año. Ninguna entrada ni relación se agrega o retira; solo cambian los campos meta.responsable, k, procedencia y procedencia_verificada de las cinco entradas nombradas."
   },
   "fenomenos": {
     "colonialidad": {
@@ -339,7 +339,7 @@
     },
     {
       "id": "totumo",
-      "k": "manifestacion",
+      "k": "obra",
       "t": "Los acuerdos y la idealización del palenque en la provincia de Cartagena: el caso del Totumo (1714-1767)",
       "a": "Dolcey Romero Jaramillo",
       "y": "",
@@ -349,7 +349,9 @@
       ],
       "l": "palenque",
       "tr": "hispano (Colombia)",
-      "ap": "Cimarronaje del Caribe seco colombiano: territorio, lengua palenquera, memoria."
+      "ap": "Cimarronaje del Caribe seco colombiano: territorio, lengua palenquera, memoria.",
+      "procedencia": "corpus heredado",
+      "procedencia_verificada": true
     },
     {
       "id": "ortiz",
@@ -446,7 +448,9 @@
       ],
       "l": "santamarta",
       "tr": "hispano (Colombia)",
-      "ap": "Oralitura y ritmo del Magdalena Grande como lengua-nación local."
+      "ap": "Oralitura y ritmo del Magdalena Grande como lengua-nación local.",
+      "procedencia": "manifestación",
+      "procedencia_verificada": false
     },
     {
       "id": "quintero",
@@ -628,7 +632,9 @@
       ],
       "l": "cartagena",
       "tr": "hispano (Colombia)",
-      "ap": "Memoria escrita de la diáspora intelectual negra del Caribe colombiano."
+      "ap": "Memoria escrita de la diáspora intelectual negra del Caribe colombiano.",
+      "procedencia": "manifestación",
+      "procedencia_verificada": false
     },
     {
       "id": "gudynas",
@@ -656,7 +662,9 @@
       ],
       "l": "cartagena",
       "tr": "hispano (Colombia)",
-      "ap": "El desarrollo como promesa incumplida en comunidades afrodescendientes del Caribe."
+      "ap": "El desarrollo como promesa incumplida en comunidades afrodescendientes del Caribe.",
+      "procedencia": "manifestación",
+      "procedencia_verificada": false
     },
     {
       "id": "workercane",
@@ -1177,7 +1185,7 @@
     },
     {
       "id": "figueroa",
-      "k": "manifestacion",
+      "k": "obra",
       "t": "Realismo mágico, vallenato y violencia política en el Caribe colombiano",
       "a": "José Antonio Figueroa",
       "y": "",
@@ -1187,7 +1195,9 @@
       ],
       "l": "santamarta",
       "tr": "hispano (Colombia)",
-      "ap": "El vallenato como archivo de la violencia política del Magdalena Grande, leído contra la lectura mágico-realista que la naturaliza."
+      "ap": "El vallenato como archivo de la violencia política del Magdalena Grande, leído contra la lectura mágico-realista que la naturaliza.",
+      "procedencia": "corpus heredado",
+      "procedencia_verificada": true
     },
     {
       "id": "tinsley",
