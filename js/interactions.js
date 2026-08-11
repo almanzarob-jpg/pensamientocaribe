@@ -175,4 +175,52 @@
       });
     }
   }
+
+  // ── Efemérides: zoom de lectura al señalar la pieza ──
+  // El toque/clic alterna el estado; hover y foco de teclado quedan
+  // cubiertos solo con CSS. Una sola tarjeta abierta a la vez; Escape
+  // y un clic fuera de la grilla la cierran.
+  var efemeridesGrids = document.querySelectorAll('.efemerides-grid');
+  if (efemeridesGrids.length) {
+    var closeAllZoom = function (except) {
+      var open = document.querySelectorAll('.efemeride-card.is-zoomed');
+      for (var z = 0; z < open.length; z++) {
+        if (open[z] !== except) {
+          open[z].classList.remove('is-zoomed');
+          open[z].setAttribute('aria-pressed', 'false');
+        }
+      }
+    };
+
+    var toggleZoom = function (card) {
+      var willOpen = !card.classList.contains('is-zoomed');
+      closeAllZoom(willOpen ? card : null);
+      card.classList.toggle('is-zoomed', willOpen);
+      card.setAttribute('aria-pressed', willOpen ? 'true' : 'false');
+    };
+
+    for (var g = 0; g < efemeridesGrids.length; g++) {
+      efemeridesGrids[g].addEventListener('click', function (e) {
+        var card = e.target.closest('.efemeride-card');
+        if (!card) return;
+        toggleZoom(card);
+      });
+
+      efemeridesGrids[g].addEventListener('keydown', function (e) {
+        if (e.key !== 'Enter' && e.key !== ' ') return;
+        var card = e.target.closest('.efemeride-card');
+        if (!card) return;
+        e.preventDefault();
+        toggleZoom(card);
+      });
+    }
+
+    document.addEventListener('click', function (e) {
+      if (!e.target.closest('.efemeride-card')) closeAllZoom();
+    });
+
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeAllZoom();
+    });
+  }
 })();
