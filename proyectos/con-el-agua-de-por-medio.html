@@ -34,7 +34,7 @@
     --ff-mono:ui-monospace,'SFMono-Regular','Consolas',monospace;
   }
   *{box-sizing:border-box}
-  html,body{margin:0;height:100%; height:100dvh; overscroll-behavior:none;}
+  html,body{margin:0;height:100%; height:100dvh; overscroll-behavior:none; overflow-x:hidden;}
   body{background:var(--bg-deep); color:var(--cream); font-family:var(--ff-body); -webkit-font-smoothing:antialiased; overflow:hidden; display:flex; flex-direction:column;}
   header{flex:0 0 auto; padding:18px 28px 14px; border-bottom:1px solid var(--line); display:flex; align-items:flex-end; justify-content:space-between; gap:24px; flex-wrap:wrap; background:linear-gradient(180deg,var(--bg-warm),var(--bg-deep)); position:relative;}
   header::after{content:"";position:absolute; left:28px; right:28px; bottom:0; height:2px;
@@ -68,11 +68,45 @@
   .seg.vista button.on{background:var(--green-l); color:#08110a; box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
   .seg.capa button:hover{background:rgba(201,162,77,.14)}
   .seg.capa button.on{background:var(--gold); color:#211a06; box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
-  .seg.tide button:hover{background:rgba(240,122,22,.14)}
-  .seg.tide button.on{background:var(--orange); color:var(--bg-deep); box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
+  .seg.lengua button:hover{background:rgba(74,157,176,.16)}
+  .seg.lengua button.on{background:#4a9db0; color:#04181c; box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
   .seg.base{background:transparent; border-color:var(--red)}
   .seg.base button{color:var(--red); border-right:0; font-weight:600; letter-spacing:1.2px}
-  .seg.base button:hover{background:var(--red); color:var(--cream)}
+  /* rojo más oscuro solo en este estado :hover (no se toca --red, que sigue
+     usándose como texto/acento en el resto del sitio): cream sobre --red daba
+     3.84:1, por debajo de AA 4.5:1; este tono da 5.87:1 */
+  .seg.base button:hover{background:#a8281f; color:var(--cream)}
+  .seg.base button[aria-pressed="true"]{background:#a8281f; color:var(--cream)}
+  #filtrosBtn{position:relative}
+  #filtrosBtn.activo::after{content:""; position:absolute; top:4px; right:5px; width:6px; height:6px; border-radius:50%; background:var(--gold)}
+  /* etiquetas de filtros activos, siempre visibles y removibles con un toque */
+  .chips{flex:1 0 100%; display:flex; flex-wrap:wrap; gap:6px; margin-top:2px}
+  .chips:empty{display:none; margin:0}
+  /* 32px de alto: por debajo del ideal de 44px, pero deliberado — son etiquetas
+     compactas y removibles (como un chip de filtro de Gmail o Material), separadas
+     entre sí por gap:6px como espaciado equivalente contra el toque accidental */
+  .chip{display:inline-flex; align-items:center; gap:6px; min-height:32px; font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:.7px; padding:8px 12px; border:1px solid var(--gold-d); border-radius:16px; background:rgba(201,162,77,.12); color:var(--gold); cursor:pointer}
+  /* --gold-d con #211a06 daba 3.51:1; --gold (ya usado así en .seg.capa.on) da 7.21:1 */
+  .chip:hover{background:var(--gold); color:#211a06}
+  .chip span{opacity:.75; font-size:11px; line-height:1}
+  /* paneles laterales plegables (Filtros, Información) */
+  .panelLateral{position:absolute; top:14px; right:14px; z-index:17; width:300px; max-height:calc(100% - 28px); overflow:auto; background:var(--panel); border:1px solid var(--line); border-radius:3px; padding:20px 22px; box-shadow:0 16px 44px rgba(0,0,0,.55)}
+  .panelLateral[hidden]{display:none}
+  .panelLateral h2{font-family:var(--ff-display); font-size:19px; margin:0 0 16px; font-weight:600; padding-right:20px}
+  .panelLateral .grp{margin-bottom:16px; align-items:flex-start}
+  .panelLateral .grp:last-child{margin-bottom:0}
+  .panelLateral .seg{flex-wrap:wrap}
+  .panelCerrar{position:absolute; top:0; right:0; width:44px; height:44px; display:flex; align-items:center; justify-content:center; background:transparent; border:0; color:var(--gray); font-size:19px; line-height:1; cursor:pointer}
+  .panelCerrar:hover{color:var(--cream)}
+  .chkLbl{display:flex; align-items:flex-start; gap:8px; font-size:12px; color:var(--gray); line-height:1.5; cursor:pointer}
+  .chkLbl input{margin-top:2px; accent-color:var(--orange); width:auto}
+  #panelInfo a{color:var(--gold); text-decoration:none; font-family:var(--ff-mono); font-size:10.5px; text-transform:uppercase; letter-spacing:1px}
+  #panelInfo a:hover{text-decoration:underline}
+  /* leyenda compacta siempre visible + leyenda completa plegable encima de ella */
+  #legendBar{position:absolute; left:16px; bottom:14px; z-index:14; display:flex; align-items:center; gap:10px; background:rgba(10,11,8,.86); backdrop-filter:blur(3px); border:1px solid var(--line); border-radius:3px; padding:8px 12px; font-family:var(--ff-mono); font-size:9.5px; letter-spacing:.4px; color:var(--gray)}
+  #legendBarTxt{white-space:nowrap}
+  #legendBtn{min-height:44px; display:inline-flex; align-items:center; font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:.8px; padding:0 14px; border:1px solid var(--line); background:transparent; color:var(--gold); cursor:pointer; border-radius:2px; white-space:nowrap}
+  #legendBtn:hover{border-color:var(--gold-d); color:var(--cream)}
   /* ---------- buscador por título y autor ---------- */
   .buscador{display:flex; align-items:center; border:1px solid var(--line); border-radius:3px; background:rgba(255,255,255,.02); transition:border-color .15s}
   .buscador:focus-within{border-color:var(--gold)}
@@ -95,6 +129,12 @@
   #stage.grabbing{cursor:grabbing}
   .node circle.dot{transition:opacity .25s, r .2s}
   .halo{fill:none; stroke:var(--cream); opacity:0; transition:opacity .2s}
+  /* Etapa 6, Cronología en modo Investigado: sin inventar una posición en el
+     eje del periodo estudiado, estas entradas se atenúan en su sitio de
+     siempre (el eje de publicación) — visibles, no ocultas, pero claramente
+     fuera de foco mientras el modo activo es ese. */
+  .node.sindato circle.dot{opacity:.32}
+  .node.sindato:hover circle.dot, .node.sindato:focus-visible circle.dot{opacity:.85}
   .edge{fill:none; stroke:var(--orange); stroke-opacity:.4; stroke-width:1.3; stroke-linecap:round; stroke-dasharray:1.5 6; transition:stroke-opacity .25s}
   .edge.disonancia{stroke:var(--red)}
   .fricc{pointer-events:none}
@@ -118,7 +158,7 @@
   /* panel */
   #panel{position:absolute; top:14px; right:14px; width:352px; max-height:calc(100% - 28px); overflow:auto; background:var(--panel); border:1px solid var(--line); border-radius:3px; padding:22px 24px; box-shadow:0 16px 44px rgba(0,0,0,.55); transform:translateX(125%); transition:transform .3s cubic-bezier(.4,0,.2,1), opacity .3s, visibility .3s;}
   #panel.open{transform:none}
-  #panel .close{float:right; cursor:pointer; color:var(--gray); font-size:20px; line-height:1; border:0; background:none}
+  #panel .close{float:right; width:44px; height:44px; margin:-11px -12px 0 0; display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--gray); font-size:20px; line-height:1; border:0; background:none}
   #panel .kind{font-family:var(--ff-mono); font-size:9.5px; text-transform:uppercase; letter-spacing:1.6px; color:var(--red)}
   #panel h2{font-family:var(--ff-display); font-size:24px; margin:8px 0 3px; font-weight:600; line-height:1.2}
   #panel .meta{font-size:12.5px; color:var(--gray); font-style:italic; margin-bottom:6px}
@@ -152,8 +192,8 @@
   #legend .corrbar i{display:block; height:100%}
   #legend .corrbar i.ok{background:var(--green-l)}
   #legend .corrbar i.pc{background:var(--red)}
-  #legend .corr a{color:var(--green-l); cursor:pointer; text-decoration:none; border-bottom:1px dotted rgba(63,138,53,.5)}
-  #legend .corr a:hover{color:var(--cream)}
+  #legend .corr a, #legend .corr [role="button"]{color:var(--green-l); cursor:pointer; text-decoration:none; border-bottom:1px dotted rgba(63,138,53,.5)}
+  #legend .corr a:hover, #legend .corr [role="button"]:hover{color:var(--cream)}
   #panel .cita{margin-top:16px; padding-top:12px; border-top:1px solid var(--line)}
   #panel .cita .citalbl{display:block; font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1.4px; color:var(--gray); margin-bottom:6px}
   #panel .cita .apa{font-size:12px; line-height:1.5; color:var(--cream); background:rgba(201,162,77,.06); border-left:2px solid var(--gold); padding:8px 10px; border-radius:2px; margin-bottom:8px}
@@ -168,14 +208,48 @@
   #panel .bibbtn{font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1px; padding:4px 10px; border:1px solid var(--gold-d); background:transparent; color:var(--gold); cursor:pointer; border-radius:2px}
   #panel .bibbtn:hover{background:var(--gold); color:#211a06}
   #panel .bibdoi{font-family:var(--ff-mono); font-size:9px; letter-spacing:1px; color:var(--green-l); text-decoration:none; border-bottom:1px dotted var(--green-l)}
+  #panel .btnIndMapa{float:right; font-family:var(--ff-mono); font-size:8.5px; text-transform:none; letter-spacing:.6px; padding:9px 10px; border:1px solid var(--line); background:transparent; color:var(--gray); cursor:pointer; border-radius:2px; min-height:40px}
+  #panel .btnIndMapa:hover{border-color:var(--gold-d); color:var(--gold)}
+  #panel .btnIndMapa[aria-pressed="true"]{background:var(--gold-d); color:#211a06; border-color:var(--gold-d)}
   .anolbl{font-family:var(--ff-mono); font-size:9px; letter-spacing:1.1px; fill:var(--gray)}
   .anolbl.gold{fill:var(--gold-d)}
   #panel .bibwarn{margin-top:8px; font-family:var(--ff-mono); font-size:9.5px; line-height:1.5; letter-spacing:.3px; color:var(--red); border-left:2px solid var(--red); padding:5px 8px; background:rgba(216,58,46,.06)}
-  /* leyenda */
-  #legend{position:absolute; left:16px; bottom:14px; background:rgba(10,11,8,.86); backdrop-filter:blur(3px); border:1px solid var(--line); border-radius:3px; padding:12px 15px; font-family:var(--ff-mono); font-size:10px; letter-spacing:.4px; color:var(--gray); max-width:370px}
+  /* Etapa 6: bloque del esquema 2.0, plegado por defecto (revelado progresivo) */
+  #panel .e20{margin-top:16px; border-top:1px solid var(--line); padding-top:12px}
+  #panel .e20 summary{cursor:pointer; font-family:var(--ff-mono); font-size:9.5px; text-transform:uppercase; letter-spacing:1.2px; color:var(--gray); display:flex; align-items:center; gap:8px; min-height:32px}
+  #panel .e20 summary:hover{color:var(--cream)}
+  #panel .e20 summary::-webkit-details-marker{color:var(--gray)}
+  /* Etapa 6: la insignia de estado se usa tanto en la ficha (#panel) como en la
+     columna Estado (2.0) de la tabla accesible — por eso no queda anclada a #panel. */
+  .e20-badge{font-size:8.5px; letter-spacing:.6px; padding:2px 8px; border-radius:9px; text-transform:none; white-space:nowrap}
+  .e20-badge.e20-pendiente{color:var(--gray); background:rgba(185,176,159,.12); border:1px solid var(--line)}
+  .e20-badge.e20-preliminar{color:var(--gold); background:rgba(201,162,77,.14); border:1px solid var(--gold-d)}
+  .e20-badge.e20-confirmada{color:var(--green-l); background:rgba(63,138,53,.14); border:1px solid var(--green-l)}
+  #panel .e20-body{margin-top:10px; display:flex; flex-direction:column; gap:11px}
+  #panel .e20-f{font-size:12px; line-height:1.5}
+  #panel .e20-l{display:block; font-family:var(--ff-mono); font-size:8.5px; text-transform:uppercase; letter-spacing:1.1px; color:var(--gray); opacity:.75; margin-bottom:3px}
+  #panel .e20-f p{margin:0; color:var(--cream)}
+  .e20-vacio{color:var(--gray) !important; font-style:italic}
+  #panel .e20-chips{display:flex; flex-wrap:wrap; gap:5px}
+  #panel .e20-chip{font-family:var(--ff-mono); font-size:9px; letter-spacing:.5px; padding:3px 8px; border-radius:9px; border:1px solid var(--line); color:var(--cream); background:rgba(255,255,255,.03)}
+  #panel .e20-flag{color:var(--red); font-style:italic; font-size:11px}
+  #panel .e20-fundamento{color:var(--gray); font-style:italic; font-size:11px}
+  #panel .e20-rutas{margin:0; padding-left:16px}
+  #panel .e20-rutas li{margin-bottom:6px}
+  #panel .e20-nota{margin:4px 0 0; font-size:10.5px; line-height:1.5; color:var(--gray); font-style:italic}
+  /* leyenda: franja compacta siempre visible (#legendBar) + panel plegable con el detalle */
+  #legend{position:absolute; left:16px; bottom:58px; z-index:16; background:rgba(10,11,8,.86); backdrop-filter:blur(3px); border:1px solid var(--line); border-radius:3px; padding:12px 15px; font-family:var(--ff-mono); font-size:10px; letter-spacing:.4px; color:var(--gray); max-width:370px; max-height:calc(100% - 100px); overflow:auto}
+  #legend[hidden]{display:none}
+  /* 36px: la leyenda es un panel angosto (12/15px de relleno); 44px chocaría con el
+     título "N entradas". Se prioriza no tapar contenido sobre el ideal estricto. */
+  #legend .panelCerrar{top:2px; right:4px; width:36px; height:36px; font-size:16px}
+  #legend.docked .panelCerrar{display:none}
   #legend .lgtitle{font-size:8.5px; text-transform:uppercase; letter-spacing:1.4px; color:var(--gray); opacity:.7; margin-bottom:8px}
   #legend .grid{display:grid; grid-template-columns:1fr 1fr; gap:5px 16px}
-  #legend .li{display:flex; align-items:center; gap:7px; cursor:pointer; padding:2px 4px; margin:-2px -4px; border-radius:3px; transition:background .15s}
+  /* objetivo táctil de la fila: ~30px con padding:7px, por debajo de 44px por la
+     misma razón que .chip — grilla densa de hasta 10 corrientes; gap:5px del grid
+     como espaciado equivalente */
+  #legend .li{display:flex; align-items:center; gap:7px; cursor:pointer; padding:7px 4px; margin:-7px -4px; border-radius:3px; transition:background .15s}
   #legend .li:hover{background:rgba(242,234,216,.06)}
   #legend .li.sel{background:rgba(240,122,22,.15)}
   #legend .sw{width:9px; height:9px; border-radius:50%; flex:none}
@@ -187,7 +261,7 @@
   #legend .kdi{width:15px;height:0;border-top:2px dashed var(--red)}
   #legend .kfr{color:var(--cream);font-size:10px;line-height:1}
   #legend .mlink{margin-top:9px;padding-top:9px;border-top:1px solid var(--line)}
-  #legend .mlink a{color:var(--orange);cursor:pointer;text-decoration:none;font-size:9.5px;letter-spacing:.6px}
+  #legend .mlink a, #legend .mlink [role="button"]{color:var(--orange);cursor:pointer;text-decoration:none;font-size:9.5px;letter-spacing:.6px}
 
   /* ══ EL REFLUJO ══ la marea que vuelve: lo que el lector deja en la corriente.
      La puerta no existe al cargar. Aparece en la leyenda cuando quien mira ya recorrió
@@ -196,12 +270,12 @@
   #legend .puerta.on{display:flex; animation:sube .9s ease}
   @keyframes sube{from{opacity:0; transform:translateY(5px)} to{opacity:1; transform:none}}
   #legend .puerta .marca{display:inline-block; width:20px; height:1px; background:var(--orange); flex:0 0 auto}
-  #legend .puerta a{color:var(--orange); cursor:pointer; text-decoration:none; font-size:9.5px; letter-spacing:.6px}
-  #legend .puerta a:hover{text-decoration:underline}
+  #legend .puerta a, #legend .puerta [role="button"]{color:var(--orange); cursor:pointer; text-decoration:none; font-size:9.5px; letter-spacing:.6px}
+  #legend .puerta a:hover, #legend .puerta [role="button"]:hover{text-decoration:underline}
 
   #reflujo{position:absolute; top:14px; right:14px; z-index:21; width:414px; max-width:calc(100% - 28px); max-height:calc(100% - 28px); overflow:auto; background:var(--panel); border:1px solid var(--line); border-radius:3px; padding:22px 24px 26px; box-shadow:0 16px 44px rgba(0,0,0,.55); transform:translateX(125%); transition:transform .3s cubic-bezier(.4,0,.2,1)}
   #reflujo.open{transform:none}
-  #reflujo .close{position:absolute; top:10px; right:12px; background:transparent; border:0; color:var(--gray); font-size:19px; line-height:1; cursor:pointer}
+  #reflujo .close{position:absolute; top:0; right:0; width:44px; height:44px; display:flex; align-items:center; justify-content:center; background:transparent; border:0; color:var(--gray); font-size:19px; line-height:1; cursor:pointer}
   #reflujo .close:hover{color:var(--cream)}
   #reflujo .tit{font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1.7px; color:var(--gold)}
   #reflujo h2{font-family:var(--ff-display); font-weight:500; font-size:25px; margin:5px 0 6px; line-height:1.15}
@@ -249,7 +323,7 @@
   #marco{position:absolute; inset:0; background:rgba(5,6,4,.95); backdrop-filter:blur(5px); z-index:22; display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity .35s}
   #marco.show{opacity:1; pointer-events:auto}
   #marco .mbox{max-width:760px; max-height:86%; overflow:auto; padding:34px 40px; background:var(--panel); border:1px solid var(--line); border-radius:4px; box-shadow:0 20px 60px rgba(0,0,0,.6)}
-  #marco .mclose{float:right; cursor:pointer; color:var(--gray); font-size:24px; border:0; background:none; line-height:1}
+  #marco .mclose{float:right; width:44px; height:44px; margin:-14px -16px 0 0; display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--gray); font-size:24px; border:0; background:none; line-height:1}
   #marco h2{font-family:var(--ff-display); font-size:30px; font-weight:700; margin:0 0 3px}
   #marco .msub{font-family:var(--ff-mono); font-size:9.5px; text-transform:uppercase; letter-spacing:2px; color:var(--red); margin-bottom:22px}
   #marco .c{margin-bottom:19px; padding-left:16px; border-left:2px solid var(--line)}
@@ -260,6 +334,15 @@
   #hint{position:absolute; left:16px; top:14px; font-size:12px; color:var(--gray); font-style:italic; max-width:240px; line-height:1.5}
   .skip-link{position:absolute; left:1rem; top:-100px; z-index:9999; background:var(--orange); color:var(--bg-deep); font-family:var(--ff-mono); font-size:.85rem; font-weight:600; letter-spacing:.02em; padding:.8rem 1.4rem; border-radius:4px; text-decoration:none; transition:top .2s ease}
   .skip-link:focus{top:1rem}
+  /* texto presente para lectores de pantalla, invisible en pantalla; nunca display:none
+     (eso lo saca del árbol de accesibilidad) */
+  .visually-hidden{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0}
+  /* foco visible consistente en todo el documento, incluidos los nodos del SVG */
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible,
+  [tabindex]:focus-visible, .node:focus-visible, [role="button"]:focus-visible{
+    outline:2px solid var(--gold); outline-offset:2px;
+  }
+  .node:focus-visible .dot{stroke:var(--cream); stroke-width:2.4}
   #guion{position:absolute; left:50%; top:16px; transform:translateX(-50%) translateY(-14px); width:min(580px,74vw); background:rgba(17,19,13,.95); border:1px solid var(--line); border-left-width:3px; border-radius:3px; padding:13px 22px; opacity:0; pointer-events:none; transition:opacity .3s, transform .3s;}
   #guion.show{opacity:1; transform:translateX(-50%) translateY(0)}
   #guion .gf{font-family:var(--ff-mono); font-size:10px; text-transform:uppercase; letter-spacing:1.6px; margin-bottom:5px}
@@ -280,7 +363,7 @@
   #tabla.show{display:block}
   /* leyenda anclada: dentro de #tabla deja de ser un overlay flotante y pasa a ser
      una franja fija al inicio del listado, en el flujo normal del documento */
-  #legend.docked{position:static; max-width:none; width:100%; margin:0 0 22px; backdrop-filter:none; background:rgba(255,255,255,.03)}
+  #legend.docked{position:static; max-width:none; max-height:none; width:100%; margin:0 0 22px; backdrop-filter:none; background:rgba(255,255,255,.03)}
   #legend.docked .grid{grid-template-columns:repeat(auto-fill,minmax(180px,1fr))}
   #tabla .tcap{font-family:var(--ff-display); font-size:22px; color:var(--cream); margin:2px 0 4px}
   #tabla .tsub{font-family:var(--ff-mono); font-size:10px; text-transform:uppercase; letter-spacing:1.4px; color:var(--gray); margin-bottom:16px}
@@ -299,12 +382,31 @@
   #tabla td .kind-o{color:var(--gray)} #tabla td .kind-m{color:var(--orange)}
   #tabla .tnote{margin-top:22px; font-size:12px; color:var(--gray); font-style:italic; line-height:1.6; max-width:760px}
   #tabla .tnote a{color:var(--gold)}
+  /* Etapa 6: selector de columnas — plegado por defecto, expone las diez
+     columnas posibles sin forzar a nadie a desplazarse de más ni perder de
+     vista las que ya tenía visibles */
+  #tabla .tcolsel{margin-bottom:14px; max-width:560px}
+  #tabla .tcolsel summary{cursor:pointer; font-family:var(--ff-mono); font-size:10px; text-transform:uppercase; letter-spacing:1.2px; color:var(--gray); min-height:32px; display:flex; align-items:center; list-style:none}
+  #tabla .tcolsel summary::-webkit-details-marker{display:none}
+  #tabla .tcolsel summary::before{content:"▸ "; color:var(--gold-d)}
+  #tabla .tcolsel[open] summary::before{content:"▾ "}
+  #tabla .tcolsel summary:hover{color:var(--cream)}
+  #tabla .tcolsel fieldset{border:1px solid var(--line); border-radius:2px; margin:8px 0 0; padding:12px 14px; display:flex; flex-wrap:wrap; gap:8px 18px}
+  #tabla .tcolsel legend{font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1.2px; color:var(--gray); padding:0 4px}
+  #tabla .tcolopt{display:flex; align-items:center; gap:6px; font-size:12.5px; color:var(--cream); cursor:pointer; min-height:32px}
+  #tabla .tcolopt input{width:16px; height:16px; accent-color:var(--gold-d); cursor:pointer}
+  #tabla .tcolopt.esencial{color:var(--gray); cursor:default}
+  #tabla .tcolopt.esencial input{cursor:default}
+  #tabla .tcolnota{font-size:10px; opacity:.75}
   /* modo presentación: pantalla negra, solo el mapa/constelación, sin cromo de interfaz */
   body.presenting{background:#000}
   body.presenting #stage{background:#000}
   body.presenting header{display:none}
   body.presenting main{height:100%}
   body.presenting #legend{display:none}
+  body.presenting #legendBar{display:none}
+  body.presenting .panelLateral{display:none}
+  body.presenting .chips{display:none}
   body.presenting #hint{display:none}
   body.presenting .credit{display:none}
   body.presenting #tabla{display:none !important}
@@ -324,20 +426,31 @@
     header .t .back{font-size:8.5px; margin-bottom:5px}
     header .t h1{font-size:19px}
     header .t .sub{font-size:8px; letter-spacing:1.5px; margin-top:0}
-    .controls{gap:0; flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none; padding-bottom:2px;}
+    /* min-width:0 es obligatorio: sin él, un hijo flex en columna nunca se encoge
+       por debajo del ancho de su contenido y overflow-x:auto no llega a activarse
+       — el header entero (y el body) se ensanchaba a 851px en un viewport de 375px,
+       lo que Etapa 5 detectó al enfocar un control fuera de esa franja: el navegador
+       desplazaba TODA la página en vez de solo la franja de controles. */
+    .controls{gap:0; flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none; padding-bottom:2px; min-width:0; max-width:100%;}
     .controls::-webkit-scrollbar{display:none}
     .grp{flex:0 0 auto; gap:3px; padding-right:12px;}
     .grp label{font-size:7.5px; letter-spacing:1px}
-    .seg button{padding:8px 10px; font-size:9.5px; min-height:36px; letter-spacing:.5px}
-    .buscador input{width:132px; font-size:11px; padding:9px 9px; min-height:36px}
+    .seg button{padding:8px 10px; font-size:9.5px; min-height:44px; letter-spacing:.5px}
+    .buscador input{width:132px; font-size:11px; padding:9px 9px; min-height:44px}
     .bcount{font-size:8px; padding-right:7px}
     #hint{display:none}
-    #legend{left:8px; right:8px; bottom:8px; max-width:none; padding:9px 11px; font-size:9px;}
+    .chips{padding:0 2px}
+    #legendBar{left:8px; right:8px; bottom:8px; max-width:none; justify-content:space-between}
+    #legend{left:8px; right:8px; bottom:56px; max-width:none; max-height:calc(100% - 130px); padding:9px 11px; font-size:9px;}
     #legend .grid{grid-template-columns:1fr 1fr}
     #guion{width:calc(100vw - 24px); left:12px; right:12px; transform:translateY(-14px); top:10px;}
     #guion.show{transform:none}
     #panel{left:8px; right:8px; top:8px; width:auto; max-height:calc(100% - 16px); padding:18px 18px; transform:translateY(-16px); opacity:0; visibility:hidden;}
     #panel.open{transform:none; opacity:1; visibility:visible;}
+    /* filtros e información pasan de panel lateral a hoja inferior en móvil */
+    .panelLateral{left:0; right:0; top:auto; bottom:0; width:auto; max-height:76vh; border-radius:10px 10px 0 0; padding:18px 18px 24px; box-shadow:0 -12px 30px rgba(0,0,0,.5)}
+    .panelLateral .grp{margin-bottom:18px}
+    .seg.lengua button, .seg.capa button, .seg.ev button{padding:8px 10px; font-size:9.5px; min-height:44px}
     #marco .mbox{max-width:calc(100vw - 24px); padding:22px 20px; max-height:90%}
     #marco h2{font-size:24px}
     .credit{display:none}
@@ -385,7 +498,7 @@
   ],
   "publisher": {
     "@type": "Organization",
-    "name": "Centro de Pensamiento Caribe",
+    "name": "Grupo de Investigación Pensamiento Caribe",
     "url": "https://pensamientocaribe.org/"
   },
   "license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
@@ -415,7 +528,8 @@
     <div class="sub" data-i18n="sub">Atlas para una antropología archipiélica</div>
   </div>
   <div class="controls">
-    <div class="grp"><label data-i18n="lblVista">Vista</label><div class="seg vista" id="viewSeg"><button data-v="corriente" class="on" data-i18n="vCorriente">Corriente</button><button data-v="constelacion" data-i18n="vConstelacion">Constelación</button><button data-v="cronologia" data-i18n="vCronologia">Cronología</button><button data-v="tabla" data-i18n="vTabla">Tabla</button></div></div>
+    <div class="grp"><label id="lblVistaId" data-i18n="lblVista">Vista</label><div class="seg vista" id="viewSeg" role="group" aria-labelledby="lblVistaId"><button type="button" data-v="corriente" class="on" aria-pressed="true" data-i18n="vCorriente">Corriente</button><button type="button" data-v="constelacion" aria-pressed="false" data-i18n="vConstelacion">Constelación</button><button type="button" data-v="cronologia" aria-pressed="false" data-i18n="vCronologia">Cronología</button><button type="button" data-v="tabla" aria-pressed="false" data-i18n="vTabla">Tabla</button></div></div>
+    <div class="grp" id="cronoGrp" style="display:none"><label id="lblCronoModoId" data-i18n="lblCronoModo">Eje temporal</label><div class="seg vista" id="cronoSeg" role="group" aria-labelledby="lblCronoModoId"><button type="button" data-cm="publicacion" class="on" aria-pressed="true" data-i18n="cmPublicacion">Publicación</button><button type="button" data-cm="investigado" aria-pressed="false" data-i18n="cmInvestigado">Investigado</button><button type="button" data-cm="combinada" aria-pressed="false" data-i18n="cmCombinada">Combinada</button></div></div>
     <div class="grp"><label for="qbox" data-i18n="lblBuscar">Buscar</label>
       <div class="buscador" id="buscador">
         <input id="qbox" type="search" autocomplete="off" spellcheck="false" placeholder="título o autor…" data-i18n-ph="buscarPh" aria-describedby="qcount">
@@ -423,39 +537,68 @@
         <button class="bclear" id="qclear" type="button" title="Limpiar" aria-label="Limpiar búsqueda">×</button>
       </div></div>
     <div class="grp" id="zoomGrp"><label data-i18n="lblZoom">Zoom</label><div class="seg base"><button id="resetZoomBtn" data-i18n="resetBtn" data-i18n-title="resetTitle">⤢ Reencuadrar</button></div></div>
-    <div class="grp"><label data-i18n="lblCapa">Capa</label><div class="seg capa" id="layerSeg"><button data-l="ambas" class="on" data-i18n="cAmbas">Ambas</button><button data-l="obra" data-i18n="cObra">Obras</button><button data-l="manifestacion" data-i18n="cManif">Manifestaciones culturales</button></div></div>
-    <div class="grp"><label data-i18n="lblEvid">Evidencia</label><div class="seg ev" id="evSeg"><button data-ev="todas" class="on" data-i18n="eTodas">Todas</button><button data-ev="ok" data-i18n="eCorr">Corroboradas</button><button data-ev="pc" data-i18n="ePorCorr">Por corroborar</button></div></div>
-    <div class="grp"><label data-i18n="lblMarea">Marea</label><div class="seg tide" id="tideSeg"><button data-tide="on" class="on" data-i18n="mFlujo">Flujo</button><button data-tide="off" data-i18n="mQuieta">Quieta</button></div></div>
-    <div class="grp"><label data-i18n="lblBase">Base</label><div class="seg base"><button id="marcoBtn" data-i18n="marcoBtn">Marco conceptual</button></div></div>
-    <div class="grp"><label data-i18n="lblModo">Modo</label><div class="seg base"><button id="presBtn" data-i18n="presBtn">Pantalla completa</button></div></div>
+    <div class="grp"><div class="seg base"><button id="filtrosBtn" type="button" aria-expanded="false" aria-controls="panelFiltros" data-i18n-title="btnFiltrosAbrir" data-i18n="lblFiltros">Filtros</button></div></div>
+    <div class="grp"><div class="seg base"><button id="infoBtn" type="button" aria-expanded="false" aria-controls="panelInfo" data-i18n-title="btnInfoAbrir" data-i18n="lblInfo">Información</button></div></div>
     <div class="grp"><label data-i18n="lblIdioma">Idioma</label><div class="seg base" style="border-color:var(--gold)"><button id="langBtn" style="color:var(--gold)">EN</button></div></div>
   </div>
+  <div class="chips" id="chipsActivos" role="group" aria-label="Filtros activos"></div>
 </header>
 <main id="main-content">
-  <svg id="stage" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid meet"><defs><linearGradient id="difuminaPeriodo" x1="0" x2="1"><stop offset="0" stop-color="#3f8a35" stop-opacity="0"/><stop offset="1" stop-color="#3f8a35" stop-opacity=".95"/></linearGradient></defs></svg>
+  <p id="mapaInstrucciones" class="visually-hidden" data-i18n="mapaInstrucciones">Mapa interactivo con las obras y manifestaciones culturales del atlas. Use las flechas para moverse entre ellas, Intro o espacio para abrir su ficha, Inicio o Fin para ir al primero o al último, y Escape para cerrar la ficha abierta.</p>
+  <svg id="stage" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid meet" role="group" aria-label="Mapa interactivo del atlas" aria-describedby="mapaInstrucciones"><defs><linearGradient id="difuminaPeriodo" x1="0" x2="1"><stop offset="0" stop-color="#3f8a35" stop-opacity="0"/><stop offset="1" stop-color="#3f8a35" stop-opacity=".95"/></linearGradient></defs></svg>
   <section id="tabla" aria-label="Catálogo del atlas en tabla accesible"><div id="tablaBody"></div></section>
   <div id="tip"></div>
   <div id="hint"></div>
   <div id="guion"><div class="gf"></div><div class="gt"></div></div>
-  <div id="legend"></div>
-  <div class="credit">Centro de Pensamiento Caribe<br>siembra desde el archivo · boceto de investigación<br><a href="https://doi.org/10.5281/zenodo.21483568" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none">DOI 10.5281/zenodo.21483568</a></div>
+  <div id="legendBar"><span id="legendBarTxt"></span><button type="button" id="legendBtn" aria-expanded="false" aria-controls="legend" data-i18n="legendAbrir">Ver leyenda completa</button></div>
+  <div id="legend" hidden>
+    <button type="button" id="legendCerrar" class="panelCerrar" data-i18n-title="legendCerrar" aria-label="Cerrar leyenda">×</button>
+    <div id="legendBody"></div>
+  </div>
+  <aside id="panelFiltros" class="panelLateral" aria-label="Filtros" hidden>
+    <button type="button" id="filtrosCerrar" class="panelCerrar" data-i18n-title="btnFiltrosCerrar" aria-label="Cerrar filtros">×</button>
+    <h2 data-i18n="lblFiltros">Filtros</h2>
+    <div class="grp"><label id="lblCapaId" data-i18n="lblCapa">Capa</label><div class="seg capa" id="layerSeg" role="group" aria-labelledby="lblCapaId"><button type="button" data-l="ambas" class="on" aria-pressed="true" data-i18n="cAmbas">Ambas</button><button type="button" data-l="obra" aria-pressed="false" data-i18n="cObra">Obras</button><button type="button" data-l="manifestacion" aria-pressed="false" data-i18n="cManif">Manifestaciones culturales</button></div></div>
+    <div class="grp"><label id="lblEvidId" data-i18n="lblEvid">Evidencia</label><div class="seg ev" id="evSeg" role="group" aria-labelledby="lblEvidId"><button type="button" data-ev="todas" class="on" aria-pressed="true" data-i18n="eTodas">Todas</button><button type="button" data-ev="ok" aria-pressed="false" data-i18n="eCorr">Corroboradas</button><button type="button" data-ev="pc" aria-pressed="false" data-i18n="ePorCorr">Por corroborar</button></div></div>
+    <div class="grp"><label id="lblLenguaId" data-i18n="lblLengua">Lengua</label><div class="seg lengua" id="lenguaSeg" role="group" aria-labelledby="lblLenguaId">
+      <button type="button" data-len="todas" class="on" aria-pressed="true" data-i18n="lenTodas">Todas</button>
+      <button type="button" data-len="ang" aria-pressed="false" data-i18n="lenAng">Anglófona</button>
+      <button type="button" data-len="his" aria-pressed="false" data-i18n="lenHis">Hispanófona</button>
+      <button type="button" data-len="fra" aria-pressed="false" data-i18n="lenFra">Francófona</button>
+      <button type="button" data-len="neer" aria-pressed="false" data-i18n="lenNeer">Neerlandesa</button>
+      <button type="button" data-len="crio" aria-pressed="false" data-i18n="lenCrio">Criolla</button>
+      <button type="button" data-len="sin" aria-pressed="false" data-i18n="lenSin">Sin declarar</button>
+    </div></div>
+    <div class="grp"><label data-i18n="lblMovimiento">Movimiento</label><div class="seg base"><button id="movBtn" type="button" aria-pressed="true" data-i18n="movOn">Animación: activada</button></div></div>
+    <div class="grp"><label class="chkLbl"><input type="checkbox" id="indChk"> <span data-i18n="indCheckLbl">Mostrar también las indirectas en el mapa</span></label></div>
+  </aside>
+  <aside id="panelInfo" class="panelLateral" aria-label="Información" hidden>
+    <button type="button" id="infoCerrar" class="panelCerrar" data-i18n-title="btnInfoCerrar" aria-label="Cerrar información">×</button>
+    <h2 data-i18n="lblInfo">Información</h2>
+    <div class="grp"><div class="seg base"><button id="comoUsarBtn" type="button" data-i18n="iComoUsar">Cómo usar</button></div></div>
+    <div class="grp"><div class="seg base"><button id="marcoBtn" data-i18n="marcoBtn">Marco conceptual</button></div></div>
+    <div class="grp"><div class="seg base"><a id="metodologiaLink" href="metodologia-agua-de-por-medio.html" data-i18n="iMetodologia">Metodología completa</a></div></div>
+    <div class="grp"><div class="seg base"><button id="presBtn" data-i18n="presBtn">Pantalla completa</button></div></div>
+  </aside>
+  <div class="credit">Grupo de Investigación Pensamiento Caribe<br>siembra desde el archivo · boceto de investigación<br><a href="https://doi.org/10.5281/zenodo.21483568" target="_blank" rel="noopener" style="color:var(--gold);text-decoration:none">DOI 10.5281/zenodo.21483568</a></div>
   <button id="presExit" title="Salir del modo presentación (Esc)" data-i18n="presExit">✕ salir</button>
   <div id="presHelp" data-i18n-html="presHelp"><span><b>1</b>corriente</span><span><b>2</b>constelación</span><span><b>M</b>marea</span><span><b>→</b>siguiente fenómeno</span><span><b>←</b>anterior</span><span><b>0</b>despejar</span><span><b>Esc</b>salir</span></div>
-  <aside id="panel"></aside>
-  <aside id="reflujo" aria-label="Dejar algo en la corriente" hidden></aside>
+  <aside id="panel" inert></aside>
+  <aside id="reflujo" inert></aside>
   <div id="umbral"><div class="box">
     <h2>Con el agua de por medio</h2>
     <div class="u-sub" data-i18n="sub">Atlas para una antropología archipiélica</div>
     <p data-i18n-html="umbralP">Ninguna orilla es una totalidad. El archipiélago no lo hacen las naciones: lo hacen las fuerzas que cruzan de una orilla a otra. Cada obra vive aquí en el fenómeno que la atraviesa; el país que la aloja queda en segundo plano.</p>
-    <div class="how" data-i18n-html="umbralHow">Elige un fenómeno en la leyenda y <b>se encienden sus puntos</b> con su guión. Abre cualquier obra y <b>se ramifican sus conexiones</b>, directas e indirectas, a través del agua. Pasa el cursor para leer cada nodo. El fondo sube y baja como la marea, según Brathwaite.</div>
+    <div class="how" data-i18n-html="umbralHow">Elige un fenómeno en la leyenda y <b>se encienden sus puntos</b> con su guión. Abre cualquier obra y <b>se ramifican sus conexiones</b>, directas e indirectas, a través del agua. Pasa el cursor, toca o navega con tabulador para leer cada nodo. El fondo sube y baja como la marea, según Brathwaite.</div>
     <button id="entrar" data-i18n="entrar">Entrar en la corriente</button>
-    <div style="margin-top:16px;font-family:var(--ff-mono);font-size:9.5px;letter-spacing:.6px;color:var(--gray)"><span data-i18n="umbralBase">Base conceptual: Brathwaite · Monahan — </span><a id="umarco" style="color:var(--orange);cursor:pointer;text-decoration:none" data-i18n="verMarco">ver marco</a></div>
+    <label class="chkLbl u-skip"><input type="checkbox" id="umbralSkip"> <span data-i18n="umbralNoMostrar">No volver a mostrar esta introducción</span></label>
+    <div style="margin-top:16px;font-family:var(--ff-mono);font-size:9.5px;letter-spacing:.6px;color:var(--gray)"><span data-i18n="umbralBase">Base conceptual: Brathwaite · Monahan — </span><a id="umarco" href="#marco" style="color:var(--orange);cursor:pointer;text-decoration:none" data-i18n="verMarco">ver marco</a></div>
     <div style="margin-top:9px;font-family:var(--ff-mono);font-size:9.5px;letter-spacing:.6px;color:var(--gray)"><span data-i18n="umbralAporte">206 de 588 relaciones (35,0 %) siguen por corroborar. Este atlas recibe aportes — </span><a href="reflujo-guia.html" style="color:var(--gold);text-decoration:none" data-i18n="umbralAporteLink">el reflujo</a></div>
   </div></div>
 
-  <div id="marco"><div class="mbox">
-    <button class="mclose">×</button>
-    <h2 data-i18n="marcoTit">Marco conceptual</h2>
+  <div id="marco" role="dialog" aria-modal="true" aria-labelledby="marcoTitId" inert><div class="mbox">
+    <button class="mclose" data-i18n-title="cerrarMarco" aria-label="Cerrar marco conceptual">×</button>
+    <h2 id="marcoTitId" data-i18n="marcoTit">Marco conceptual</h2>
     <div class="msub" data-i18n="marcoSub">cómo piensa este atlas · y cómo la forma encarna la teoría</div>
     <div class="c"><div class="who" data-i18n="mc1who">Premisa</div><h3 data-i18n="mc1h">Antropología archipiélica</h3><p data-i18n-html="mc1p">Contra la antropología continental y nacional, que toma el territorio delimitado como contenedor, aquí la unidad de análisis es el <b>fenómeno que atraviesa</b> la cuenca, no el lugar que lo aloja. Cartagena se entiende mejor junto a Nueva Orleans y Paramaribo que junto a Bogotá. Por eso el mapa premia el eje marítimo, horizontal, y no deja leer ninguna orilla como totalidad autosuficiente.</p></div>
     <div class="c"><div class="who">Kamau Brathwaite</div><h3 data-i18n="mc2h">Conexión submarina</h3><p data-i18n-html="mc2p">«The unity is submarine»: lo que une a las islas corre por debajo de la superficie, en la raíz común del agua. En el atlas, <b>las corrientes de relación cumplen esa función</b>: son la estructura del mapa, no su decoración. La tierra separa; el mar, por debajo, conecta.</p></div>
@@ -487,6 +630,26 @@ const fuenteDe=(a,b)=>{ const r=relDe(a,b); return r?(r.fuente||''):''; };
    El corpus distingue así dos estatutos: el vínculo documentado y el vínculo propuesto por el
    investigador, que la interfaz no debe presentar como si fueran lo mismo. */
 const esCorr=(a,b)=>{ const fu=fuenteDe(a,b); return !!fu && !/corroborar/i.test(fu); };
+
+/* ==================== ESQUEMA 2.0 (Etapa 6) ====================
+   El esquema 2.0 está aprobado pero casi no se ha aplicado al corpus: de 232
+   entradas, solo 5 tienen procedencia y ninguna tiene revision.estado, marcas,
+   operaciones, lengua_publicacion ni temporalidades estructuradas. Estas funciones
+   nunca inventan un valor: si el campo no está, declaran «pendiente» o «sin dato».
+   Regla de estado de asignación (mecánica, no editorial — no lee el contenido de
+   la entrada, solo qué campos del esquema nuevo ya tiene declarados):
+     confirmada  → revision.estado es «confirmada» o «revisada»
+     preliminar  → hay procedencia declarada, o revision.estado es una candidatura
+     pendiente   → cualquier otro caso (hoy, la inmensa mayoría del corpus) */
+function estado20(n){
+  const rev = n.revision && n.revision.estado;
+  if(rev==='confirmada' || rev==='revisada') return 'confirmada';
+  if(rev==='candidatura_preliminar' || rev==='pendiente_revision_con_texto') return 'preliminar';
+  if(n.procedencia) return 'preliminar';
+  return 'pendiente';
+}
+const MARCAS_7 = ['capitalismo_racial','colonialidad','racializacion','genero','clase_trabajo','memoria','violencias'];
+function marcaDe(n,clave){ return (n.marcas||[]).find(m=>m.m===clave) || null; }
 
 /* ==================== APARATO BIBLIOGRÁFICO ====================
    Las obras traen los campos opcionales ed (editorial), isbn, doi, url y y0 (año
@@ -587,6 +750,7 @@ const I18N = {
     migaAria:"Ruta de navegación",
     sub:"Atlas para una antropología archipiélica",
     lblVista:"Vista", vCorriente:"Corriente", vConstelacion:"Constelación", vTabla:"Tabla",
+    lblCronoModo:"Eje temporal", cmPublicacion:"Publicación", cmInvestigado:"Investigado", cmCombinada:"Combinada",
     lblCapa:"Capa", cAmbas:"Ambas", cObra:"Obras", cManif:"Manifestaciones culturales",
     lblMarea:"Marea", mFlujo:"Flujo", mQuieta:"Quieta",
     lblBase:"Base", marcoBtn:"Marco conceptual",
@@ -597,7 +761,7 @@ const I18N = {
     entrar:"Entrar en la corriente", umbralBase:"Base conceptual: Brathwaite · Monahan — ", verMarco:"ver marco",
     umbralAporte:"206 de 588 relaciones (35,0 %) siguen por corroborar. Este atlas recibe aportes — ", umbralAporteLink:"el reflujo",
     umbralP:"Ninguna orilla es una totalidad. El archipiélago no lo hacen las naciones: lo hacen las fuerzas que cruzan de una orilla a otra. Cada obra vive aquí en el fenómeno que la atraviesa; el país que la aloja queda en segundo plano.",
-    umbralHow:"Elige un fenómeno en la leyenda y <b>se encienden sus puntos</b> con su guión. Abre cualquier obra y <b>se ramifican sus conexiones</b>, directas e indirectas, a través del agua. Pasa el cursor para leer cada nodo. El fondo sube y baja como la marea, según Brathwaite.",
+    umbralHow:"Elige un fenómeno en la leyenda y <b>se encienden sus puntos</b> con su guión. Abre cualquier obra y <b>se ramifican sus conexiones</b>, directas e indirectas, a través del agua. Pasa el cursor, toca o navega con tabulador para leer cada nodo. El fondo sube y baja como la marea, según Brathwaite.",
     marcoTit:"Marco conceptual", marcoSub:"cómo piensa este atlas · y cómo la forma encarna la teoría",
     mc1who:"Premisa", mc1h:"Antropología archipiélica",
     mc1p:"Contra la antropología continental y nacional, que toma el territorio delimitado como contenedor, aquí la unidad de análisis es el <b>fenómeno que atraviesa</b> la cuenca, no el lugar que lo aloja. Cartagena se entiende mejor junto a Nueva Orleans y Paramaribo que junto a Bogotá. Por eso el mapa premia el eje marítimo, horizontal, y no deja leer ninguna orilla como totalidad autosuficiente.",
@@ -619,22 +783,50 @@ const I18N = {
     mc6p:"Almanza, R. (2026). <i>Atlas para una antropología archipiélica: con el agua de por medio</i> [conjunto de datos]. Zenodo. <a href=\"https://doi.org/10.5281/zenodo.21483568\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold)\">https://doi.org/10.5281/zenodo.21483568</a><br><span style=\"font-size:.85em; opacity:.75; font-style:italic\">Versión depositada 1.15.0 · corpus vivo 1.16.0 · <a href=\"https://doi.org/10.5281/zenodo.21875688\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold)\">DOI de esta versión</a> · Licencia <a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold)\">CC BY-NC-SA 4.0</a>: atribución, uso no comercial, compartir igual.</span>",
     presExit:"✕ salir",
     presHelp:"<span><b>1</b>corriente</span><span><b>2</b>constelación</span><span><b>M</b>marea</span><span><b>→</b>siguiente fenómeno</span><span><b>←</b>anterior</span><span><b>0</b>despejar</span><span><b>Esc</b>salir</span>",
-    hintCorriente:"La cuenca vista desde el mar. Islas por su país; puntos continentales (naranja) por su ciudad, regiones en tensión con un centro no caribeño. Rueda: zoom · arrastra: desplaza · doble clic o botón «Reencuadrar»: vuelve al inicio. Pasa el cursor sobre un punto para leerlo.",
-    hintConstelacion:"Constelación de los fenómenos que atraviesan la cuenca. Rueda: zoom · arrastra: desplaza · doble clic o botón «Reencuadrar»: vuelve al inicio. Pasa el cursor sobre un punto para leerlo.",
+    hintCorriente:"La cuenca vista desde el mar. Islas por su país; puntos continentales (naranja) por su ciudad, regiones en tensión con un centro no caribeño. Selecciona una corriente en la leyenda o una obra en el mapa para ver sus relaciones. Rueda: zoom · arrastra: desplaza · doble clic o botón «Reencuadrar»: vuelve al inicio. Pasa el cursor sobre un punto para leerlo.",
+    hintConstelacion:"Constelación de los fenómenos que atraviesan la cuenca. Selecciona una corriente en la leyenda o una obra en el mapa para ver sus relaciones. Rueda: zoom · arrastra: desplaza · doble clic o botón «Reencuadrar»: vuelve al inicio. Pasa el cursor sobre un punto para leerlo.",
     lgTitle:"referencias · clic en un fenómeno para iluminar",
     lgResearch:"obras", lgEthno:"manifestaciones culturales", lgReson:"resonancia", lgDisso:"disonancia", lgFricc:"cruce lingüístico",
     lgMarco:"Base conceptual: Brathwaite · Monahan →",
     pKindObra:"Obra", pKindManif:"Manifestación cultural",
     pNacion:"nación caribeña", pRegion:"región en tensión con",
     pRelDir:"Conexiones directas · dialoga con", pRelInd:"Conexiones indirectas · a dos orillas", pVia:"vía",
+    mostrarIndirectasMapa:"mostrar en el mapa", ocultarIndirectasMapa:"ocultar del mapa",
     lblEvid:"Evidencia", eTodas:"Todas", eCorr:"Corroboradas", ePorCorr:"Por corroborar",
+    lblFiltros:"Filtros", btnFiltrosAbrir:"Abrir filtros", btnFiltrosCerrar:"Cerrar filtros",
+    lblInfo:"Información", btnInfoAbrir:"Abrir información", btnInfoCerrar:"Cerrar información",
+    iComoUsar:"Cómo usar", iMetodologia:"Metodología completa", iModo:"Modo presentación",
+    lblLengua:"Lengua", lenTodas:"Todas", lenAng:"Anglófona", lenHis:"Hispanófona", lenFra:"Francófona", lenNeer:"Neerlandesa", lenCrio:"Criolla", lenSin:"Sin declarar",
+    lblMovimiento:"Movimiento", movOn:"Animación: activada", movOff:"Animación: en pausa",
+    lblIndirectas:"Conexiones indirectas", indCheckLbl:"Mostrar también las indirectas en el mapa",
+    chipQuitarAria:"Quitar filtro: {label}", chipTipo:"Tipo", chipEvid:"Evidencia", chipLengua:"Lengua", chipMov:"Movimiento", chipInd:"Indirectas",
+    legendBarTpl:"{n} entradas · {r} relaciones visibles · {p}% corroborado",
+    legendAbrir:"Ver leyenda completa", legendCerrar:"Cerrar leyenda",
+    umbralNoMostrar:"No volver a mostrar esta introducción",
+    mapaAria:"Mapa interactivo del atlas",
+    mapaInstrucciones:"Mapa interactivo con las obras y manifestaciones culturales del atlas. Use las flechas para moverse entre ellas, Intro o espacio para abrir su ficha, Inicio o Fin para ir al primero o al último, y Escape para cerrar la ficha abierta.",
+    cerrarFicha:"Cerrar ficha", cerrarMarco:"Cerrar marco conceptual", cerrarReflujo:"Cerrar el reflujo",
+    e20Titulo:"Esquema 2.0", e20EstadoConfirmada:"confirmada", e20EstadoPreliminar:"preliminar", e20EstadoPendiente:"pendiente",
+    e20Corriente:"Corriente principal", e20CorrientePendiente:"pendiente de asignación",
+    e20Marcas:"Marcas transversales", e20MarcasPendiente:"pendientes de asignación",
+    e20Operaciones:"Operaciones epistémicas", e20OperacionesPendiente:"pendientes de asignación",
+    e20Procedencia:"Procedencia", e20ProcedenciaPendiente:"pendiente de migración al esquema 2.0",
+    e20SinVerificar:"sin verificar", e20Proceso:"Proceso", e20Responsable:"Responsable",
+    e20Lengua:"Lengua de publicación", e20Temporalidad:"Temporalidad",
+    e20Publicacion:"Publicación", e20Traduccion:"Traducción al español", e20Periodo:"Periodo estudiado",
+    e20HeredadoPrefijo:"Aún expresado de forma combinada en el campo heredado",
+    e20Rutas:"Rutas documentadas",
+    e20Nota:"Estos campos pertenecen al esquema 2.0, ya validado, que se está aplicando entrada por entrada. Lo que aparece «pendiente» no está perdido: todavía no se migró.",
+    e20m_capitalismo_racial:"Capitalismo racial", e20m_colonialidad:"Colonialidad", e20m_racializacion:"Racialización",
+    e20m_genero:"Género", e20m_clase_trabajo:"Clase y trabajo", e20m_memoria:"Memoria", e20m_violencias:"Violencias",
     bibLbl:"Exportar la referencia", bibPeriodo:"Periodo declarado", bibEn:"Ficha en",
     bibIncompleta:"Registro sin editorial, ISBN ni DOI: completa esos campos antes de usarlo en una bibliografía formal.",
     bibTodo:"descargar .bib de esta vista", bibRegistros:"registros",
     vCronologia:"Cronología", cronoSinFecha:"sin fecha",
     cronoEjeHecho:"TIEMPO DE LO OCURRIDO · CINCO SIGLOS",
     cronoNotaPeriodo:"{n} de {t} entradas declaran el periodo que estudian",
-    hintCronologia:"Dos reglas que no miden lo mismo. Abajo, el tiempo de la escritura: cada entrada en su año de publicación, de 1880 a hoy, y la altura de la columna dice cuánto se publicó entonces. Arriba, el tiempo de lo ocurrido: cinco siglos, con la barra del periodo que cada obra estudia. La curva roja es lo que hay entre el hecho y el libro; donde no hay curva, la obra se escribió dentro del tiempo que observa. A la derecha, en dorado, las entradas cuya fecha sigue pendiente. Rueda: zoom · arrastra: desplaza.",
+    cronoSinPeriodo:"{n} de {t} entradas no tienen periodo estudiado registrado todavía — quedan atenuadas en el mapa, no ocultas",
+    hintCronologia:"Dos reglas que no miden lo mismo. Abajo, el tiempo de la escritura: cada entrada en su año de publicación, de 1880 a hoy, y la altura de la columna dice cuánto se publicó entonces. Arriba, el tiempo de lo ocurrido: cinco siglos, con la barra del periodo que cada obra estudia. La curva roja es lo que hay entre el hecho y el libro; donde no hay curva, la obra se escribió dentro del tiempo que observa. A la derecha, en dorado, las entradas cuya fecha sigue pendiente. El eje temporal (arriba de la vista) elige qué se ve: solo publicación, solo lo investigado, o ambos cruzados. Rueda: zoom · arrastra: desplaza.",
     evOkT:"Corriente con fuente declarada", evPcT:"▲ Sin fuente declarada · vínculo propuesto por el investigador",
     evNada:"Ninguna corriente de esta obra con el filtro de evidencia activo.",
     lgCorr:"corrientes corroboradas", lgCorrVer:"ver solo estas",
@@ -644,8 +836,11 @@ const I18N = {
     tSort:"ordena por cualquier columna · abre una fila para ver su ficha",
     tCaption:"Obras y manifestaciones del atlas «Con el agua de por medio», con su fenómeno, lugar y tradición. Cada fila enlaza a la ficha completa.",
     thObra:"Obra", thAutor:"Autor", thAno:"Año", thTipo:"Tipo", thFen:"Fenómenos", thLugar:"Lugar", thTrad:"Tradición", thEvid:"Corrientes corroboradas",
+    thEstado:"Estado (2.0)", thProcedencia:"Procedencia",
     tKindObra:"Obra", tKindManif:"Manifestación cultural", tCiudad:"(ciudad)",
-    tNote:"Esta tabla es la versión accesible del atlas: se navega con el tabulador y la leen los lectores de pantalla. Los mismos datos alimentan las vistas Corriente y Constelación. La columna de corrientes corroboradas indica cuántas de las conexiones de cada obra declaran una fuente y cuántas son vínculos propuestos por el investigador, todavía por corroborar. Fuente de datos:",
+    tNote:"Esta tabla es la versión accesible del atlas: se navega con el tabulador y la leen los lectores de pantalla. Los mismos datos alimentan las vistas Corriente y Constelación. La columna de corrientes corroboradas indica cuántas de las conexiones de cada obra declaran una fuente y cuántas son vínculos propuestos por el investigador, todavía por corroborar. La columna Estado (2.0) resume si esa entrada ya migró al esquema propuesto en 2026: pendiente, preliminar o confirmada. Fuente de datos:",
+    tColBtn:"Columnas", tColTitulo:"Columnas visibles", tColEsencial:"esencial, siempre visible",
+    tColCerrar:"Cerrar el selector de columnas",
     langBtn:"EN"
   },
   en:{
@@ -655,6 +850,7 @@ const I18N = {
     migaAria:"Breadcrumb",
     sub:"Atlas for an archipelagic anthropology",
     lblVista:"View", vCorriente:"Current", vConstelacion:"Constellation", vTabla:"Table",
+    lblCronoModo:"Time axis", cmPublicacion:"Publication", cmInvestigado:"Studied", cmCombinada:"Combined",
     lblCapa:"Layer", cAmbas:"Both", cObra:"Works", cManif:"Cultural manifestations",
     lblMarea:"Tide", mFlujo:"Flow", mQuieta:"Still",
     lblBase:"Base", marcoBtn:"Conceptual frame",
@@ -665,7 +861,7 @@ const I18N = {
     entrar:"Enter the current", umbralBase:"Conceptual base: Brathwaite · Monahan — ", verMarco:"see frame",
     umbralAporte:"206 of 588 relations (35.0%) remain to be corroborated. This atlas takes contributions — ", umbralAporteLink:"the returning tide",
     umbralP:"No shore is a totality. The archipelago is not made by nations: it is made by the forces that cross from one shore to another. Each work lives here in the phenomenon that runs through it; the country that hosts it stays in the background.",
-    umbralHow:"Choose a phenomenon in the legend and <b>its points light up</b> with their note. Open any work and <b>its connections branch out</b>, direct and indirect, across the water. Hover over each node to read it. The ground rises and falls like the tide, after Brathwaite.",
+    umbralHow:"Choose a phenomenon in the legend and <b>its points light up</b> with their note. Open any work and <b>its connections branch out</b>, direct and indirect, across the water. Hover, tap, or tab to a node to read it. The ground rises and falls like the tide, after Brathwaite.",
     marcoTit:"Conceptual frame", marcoSub:"how this atlas thinks · and how form embodies theory",
     mc1who:"Premise", mc1h:"Archipelagic anthropology",
     mc1p:"Against continental and national anthropology, which takes the bounded territory as a container, here the unit of analysis is the <b>phenomenon that runs through</b> the basin, not the place that hosts it. Cartagena is better understood alongside New Orleans and Paramaribo than alongside Bogotá. That is why the map favors the maritime, horizontal axis, and refuses to let any single shore be read as a self-sufficient totality.",
@@ -687,22 +883,50 @@ const I18N = {
     mc6p:"Almanza, R. (2026). <i>Atlas para una antropología archipiélica: con el agua de por medio</i> [dataset]. Zenodo. <a href=\"https://doi.org/10.5281/zenodo.21483568\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold)\">https://doi.org/10.5281/zenodo.21483568</a><br><span style=\"font-size:.85em; opacity:.75; font-style:italic\">Licensed under <a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold)\">CC BY-NC-SA 4.0</a>: attribution, non-commercial, share-alike.</span>",
     presExit:"✕ exit",
     presHelp:"<span><b>1</b>current</span><span><b>2</b>constellation</span><span><b>M</b>tide</span><span><b>→</b>next phenomenon</span><span><b>←</b>previous</span><span><b>0</b>clear</span><span><b>Esc</b>exit</span>",
-    hintCorriente:"The basin seen from the sea. Islands by their country; continental points (orange) by their city, regions in tension with a non-Caribbean center. Wheel: zoom · drag: pan · double-click or the «Recenter» button: back to start. Hover over a point to read it.",
-    hintConstelacion:"Constellation of the phenomena that run through the basin. Wheel: zoom · drag: pan · double-click or the «Recenter» button: back to start. Hover over a point to read it.",
+    hintCorriente:"The basin seen from the sea. Islands by their country; continental points (orange) by their city, regions in tension with a non-Caribbean center. Select a current in the legend or a work on the map to see its relations. Wheel: zoom · drag: pan · double-click or the «Recenter» button: back to start. Hover over a point to read it.",
+    hintConstelacion:"Constellation of the phenomena that run through the basin. Select a current in the legend or a work on the map to see its relations. Wheel: zoom · drag: pan · double-click or the «Recenter» button: back to start. Hover over a point to read it.",
     lgTitle:"references · click a phenomenon to illuminate",
     lgResearch:"works", lgEthno:"cultural manifestations", lgReson:"resonance", lgDisso:"dissonance", lgFricc:"linguistic crossing",
     lgMarco:"Conceptual base: Brathwaite · Monahan →",
     pKindObra:"Work", pKindManif:"Cultural manifestation",
     pNacion:"Caribbean nation", pRegion:"region in tension with",
     pRelDir:"Direct connections · in dialogue with", pRelInd:"Indirect connections · across two shores", pVia:"via",
+    mostrarIndirectasMapa:"show on map", ocultarIndirectasMapa:"hide from map",
     lblEvid:"Evidence", eTodas:"All", eCorr:"Corroborated", ePorCorr:"To be corroborated",
+    lblFiltros:"Filters", btnFiltrosAbrir:"Open filters", btnFiltrosCerrar:"Close filters",
+    lblInfo:"Information", btnInfoAbrir:"Open information", btnInfoCerrar:"Close information",
+    iComoUsar:"How to use it", iMetodologia:"Full methodology", iModo:"Presentation mode",
+    lblLengua:"Language", lenTodas:"All", lenAng:"Anglophone", lenHis:"Hispanophone", lenFra:"Francophone", lenNeer:"Dutch-language", lenCrio:"Creole", lenSin:"Undeclared",
+    lblMovimiento:"Motion", movOn:"Animation: on", movOff:"Animation: paused",
+    lblIndirectas:"Indirect connections", indCheckLbl:"Also show indirect connections on the map",
+    chipQuitarAria:"Remove filter: {label}", chipTipo:"Type", chipEvid:"Evidence", chipLengua:"Language", chipMov:"Motion", chipInd:"Indirect",
+    legendBarTpl:"{n} entries · {r} visible relations · {p}% corroborated",
+    legendAbrir:"See full legend", legendCerrar:"Close legend",
+    umbralNoMostrar:"Do not show this introduction again",
+    mapaAria:"Interactive map of the atlas",
+    mapaInstrucciones:"Interactive map with the atlas's works and cultural manifestations. Use the arrow keys to move between them, Enter or space to open its entry, Home or End to go to the first or last one, and Escape to close the open entry.",
+    cerrarFicha:"Close entry", cerrarMarco:"Close conceptual framework", cerrarReflujo:"Close the reflux",
+    e20Titulo:"2.0 schema", e20EstadoConfirmada:"confirmed", e20EstadoPreliminar:"preliminary", e20EstadoPendiente:"pending",
+    e20Corriente:"Main current", e20CorrientePendiente:"pending assignment",
+    e20Marcas:"Cross-cutting marks", e20MarcasPendiente:"pending assignment",
+    e20Operaciones:"Epistemic operations", e20OperacionesPendiente:"pending assignment",
+    e20Procedencia:"Provenance", e20ProcedenciaPendiente:"pending migration to the 2.0 schema",
+    e20SinVerificar:"unverified", e20Proceso:"Process", e20Responsable:"Responsible",
+    e20Lengua:"Language of publication", e20Temporalidad:"Temporality",
+    e20Publicacion:"Publication", e20Traduccion:"Spanish translation", e20Periodo:"Period studied",
+    e20HeredadoPrefijo:"Still expressed jointly in the legacy field",
+    e20Rutas:"Documented routes",
+    e20Nota:"These fields belong to the already-validated 2.0 schema, which is being applied entry by entry. What shows as \"pending\" isn't lost — it just hasn't been migrated yet.",
+    e20m_capitalismo_racial:"Racial capitalism", e20m_colonialidad:"Coloniality", e20m_racializacion:"Racialization",
+    e20m_genero:"Gender", e20m_clase_trabajo:"Class and labor", e20m_memoria:"Memory", e20m_violencias:"Violences",
     bibLbl:"Export the reference", bibPeriodo:"Declared period", bibEn:"Entry in",
     bibIncompleta:"Record without publisher, ISBN or DOI: complete those fields before using it in a formal bibliography.",
     bibTodo:"download .bib of this view", bibRegistros:"records",
     vCronologia:"Chronology", cronoSinFecha:"undated",
     cronoEjeHecho:"TIME OF WHAT HAPPENED · FIVE CENTURIES",
     cronoNotaPeriodo:"{n} of {t} entries declare the period they study",
-    hintCronologia:"Two rulers that do not measure the same thing. Below, the time of writing: each entry at its year of publication, from 1880 to today, the column height showing how much was published then. Above, the time of what happened: five centuries, with a bar for the period each work studies. The red curve is what lies between the event and the book; where there is no curve, the work was written inside the time it observes. On the right, in gold, entries whose dates still await verification. Wheel: zoom · drag: pan.",
+    cronoSinPeriodo:"{n} of {t} entries have no studied period on record yet — they are dimmed on the map, not hidden",
+    hintCronologia:"Two rulers that do not measure the same thing. Below, the time of writing: each entry at its year of publication, from 1880 to today, the column height showing how much was published then. Above, the time of what happened: five centuries, with a bar for the period each work studies. The red curve is what lies between the event and the book; where there is no curve, the work was written inside the time it observes. On the right, in gold, entries whose dates still await verification. The time axis control (above the view) chooses what shows: publication only, studied period only, or both crossed. Wheel: zoom · drag: pan.",
     evOkT:"Current with a declared source", evPcT:"▲ No source declared · link proposed by the researcher",
     evNada:"No current of this work matches the active evidence filter.",
     lgCorr:"corroborated currents", lgCorrVer:"show only these",
@@ -712,8 +936,11 @@ const I18N = {
     tSort:"sort by any column · open a row to see its entry",
     tCaption:"Works and manifestations of the atlas «Con el agua de por medio», with their phenomenon, place and tradition. Each row links to the full entry.",
     thObra:"Work", thAutor:"Author", thAno:"Year", thTipo:"Type", thFen:"Phenomena", thLugar:"Place", thTrad:"Tradition", thEvid:"Corroborated currents",
+    thEstado:"Status (2.0)", thProcedencia:"Provenance",
     tKindObra:"Work", tKindManif:"Cultural manifestation", tCiudad:"(city)",
-    tNote:"This table is the accessible version of the atlas: navigable by tab and read by screen readers. The same data feeds the Current and Constellation views. The corroborated currents column shows how many of each work's connections declare a source and how many are links proposed by the researcher, still to be corroborated. Data source:",
+    tNote:"This table is the accessible version of the atlas: navigable by tab and read by screen readers. The same data feeds the Current and Constellation views. The corroborated currents column shows how many of each work's connections declare a source and how many are links proposed by the researcher, still to be corroborated. The Status (2.0) column summarizes whether that entry has migrated to the schema proposed in 2026: pending, preliminary, or confirmed. Data source:",
+    tColBtn:"Columns", tColTitulo:"Visible columns", tColEsencial:"essential, always visible",
+    tColCerrar:"Close the column selector",
     langBtn:"ES"
   }
 };
@@ -756,7 +983,9 @@ const NS="http://www.w3.org/2000/svg";
 const el=(n,at={})=>{const e=document.createElementNS(NS,n);for(const k in at)e.setAttribute(k,at[k]);return e;};
 const byId=id=>N.find(n=>n.id===id);
 const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-let state={view:"corriente",layer:"ambas",active:null, focusFen:null, tide:!reduced, q:"", evid:"todas"};
+let mareaGuardada=null; try{ mareaGuardada=localStorage.getItem('pc_marea'); }catch(e){}
+const tideInicial = mareaGuardada==='off' ? false : mareaGuardada==='on' ? true : !reduced;
+let state={view:"corriente",layer:"ambas",active:null, focusFen:null, tide:tideInicial, q:"", evid:"todas", showIndirect:false, lengua:"todas", cronoModo:"publicacion"};
 
 /* ---------- buscador por título y autor ----------
    Filtra por texto sin acentos: «cesaire» encuentra «Césaire», «gomez» encuentra «Gómez».
@@ -781,7 +1010,8 @@ function updateQCount(){
   c.textContent = k===0 ? t('buscarNada') : k===1 ? t('buscarUna') : t('buscarN').replace('{n}',k);
   c.classList.toggle('nada', k===0);
 }
-let VNODES=[], EDGES=[], CLUSTERS=[]; let hoverNode=null; let CRONO=null;
+let VNODES=[], EDGES=[], CLUSTERS=[]; let hoverNode=null; let CRONO=null; let egGroup=null;
+let rovingId=null; /* id del único nodo del mapa que es parada de Tab (tabulación itinerante) */
 let vpt={k:1,tx:0,ty:0}; let vp=null;
 function applyVP(){ if(vp) vp.setAttribute('transform',`translate(${vpt.tx},${vpt.ty}) scale(${vpt.k})`); }
 
@@ -844,12 +1074,24 @@ function computeBase(){
   }
   N.forEach(n=>{n._x=n._bx; n._y=n._by;});
 }
-function visible(n){ return state.layer==="ambas" || n.k===state.layer; }
+function visible(n){
+  if(state.layer!=="ambas" && n.k!==state.layer) return false;
+  if(state.lengua && state.lengua!=="todas"){
+    const codes=tradCodes(n);
+    if(state.lengua==="sin"){ if(codes.size) return false; }
+    else if(!codes.has(state.lengua)) return false;
+  }
+  return true;
+}
 
 function drawEjeTiempo(){
   if(!CRONO) return;
+  const modo = state.cronoModo || "publicacion";
   const g=el("g",{class:"ejetiempo"});
   const {x0,x1,base,aMin,aMax,escala,sinAno}=CRONO;
+  /* Eje de publicación (abajo): la posición de cada punto en el mapa —dónde
+     está su marca— siempre corresponde a este eje, en los tres modos. Lo que
+     cambia entre modos es qué más se dibuja encima. */
   const linea=el("path",{d:`M ${x0-18},${base+16} L ${x1+18},${base+16}`, stroke:"var(--line)", "stroke-width":1, fill:"none"});
   g.appendChild(linea);
   for(let a=1900; a<=2020; a+=20){
@@ -863,9 +1105,9 @@ function drawEjeTiempo(){
     const s1=el("text",{class:"anolbl gold", x:x, y:base+34, "text-anchor":"middle"}); s1.textContent=t('cronoSinFecha'); g.appendChild(s1);
     const s2=el("text",{class:"anolbl gold", x:x, y:base+46, "text-anchor":"middle"}); s2.textContent="("+sinAno+")"; g.appendChild(s2);
   }
-  /* ── banda del tiempo de lo ocurrido ─────────────────────────────────────── */
+  /* ── banda del tiempo de lo ocurrido: solo en Investigado y Combinada ────── */
   const {escalaT,ejeT,conPeriodo,TP}=CRONO;
-  if(conPeriodo && conPeriodo.length){
+  if(modo!=="publicacion" && conPeriodo && conPeriodo.length){
     const rot=el("text",{class:"anolbl gold", x:x0, y:30}); rot.textContent=t('cronoEjeHecho'); g.appendChild(rot);
     for(let a=1500; a<=2000; a+=100){
       const x=escalaT(a);
@@ -882,9 +1124,14 @@ function drawEjeTiempo(){
       const barra=el("rect",{class:"periodo", x:bx0, y:y-2.7, width:Math.max(3,bx1-bx0), height:5.4, rx:2.2,
         fill: p.ini==null ? "url(#difuminaPeriodo)" : col(n.f[0]), opacity:.9});
       barra._id=n.id; g.appendChild(barra);
-      const c=el("path",{class:"reflujo", fill:"none", stroke:"var(--red)", "stroke-width":1, "stroke-opacity":.32,
-        d:`M ${bx1} ${y} C ${bx1} ${y+90}, ${n._bx} ${n._by-90}, ${n._bx} ${n._by}`});
-      c._id=n.id; g.appendChild(c);
+      /* La curva de reflujo —lo que cruza entre el hecho y el libro— solo
+         tiene sentido cuando también se ve el eje de abajo: es la lectura
+         propia de Combinada, no de Investigado a solas. */
+      if(modo==="combinada"){
+        const c=el("path",{class:"reflujo", fill:"none", stroke:"var(--red)", "stroke-width":1, "stroke-opacity":.32,
+          d:`M ${bx1} ${y} C ${bx1} ${y+90}, ${n._bx} ${n._by-90}, ${n._bx} ${n._by}`});
+        c._id=n.id; g.appendChild(c);
+      }
     });
     /* La nota va en la misma línea del rótulo del eje, en el extremo opuesto: si se
        pone bajo el eje choca con las etiquetas de año. */
@@ -892,7 +1139,79 @@ function drawEjeTiempo(){
     nota.textContent=t('cronoNotaPeriodo').replace('{n}', conPeriodo.length).replace('{t}', N.length);
     g.appendChild(nota);
   }
+  /* Investigado declara sin rodeos lo que este modo no puede mostrar: la
+     mayoría del corpus todavía no tiene periodo estudiado registrado. No se
+     inventa una posición para esas entradas en el eje de arriba —eso sería
+     inferir un dato académico que nadie verificó— y tampoco se las esconde:
+     siguen ahí abajo, atenuadas, y el conteo lo dice en la propia vista. */
+  if(modo==="investigado"){
+    const sinPeriodo = N.length - (conPeriodo ? conPeriodo.length : 0);
+    const av=el("text",{class:"anolbl gold", x:(x0+x1)/2, y:base+58, "text-anchor":"middle"});
+    av.textContent=t('cronoSinPeriodo').replace('{n}', sinPeriodo).replace('{t}', N.length);
+    g.appendChild(av);
+  }
   vp.appendChild(g);
+}
+
+/* ---------- estado inicial sin relaciones (Etapa 3) ----------
+   Con nada seleccionado no existe ninguna arista en el SVG: no se ocultan
+   con opacidad, no se crean. Al seleccionar una corriente aparecen solo las
+   relaciones entre obras de esa corriente; al abrir una obra aparecen sus
+   conexiones directas, y las indirectas quedan detrás de un control propio
+   en la ficha. Restablecer vuelve a cero relaciones. */
+function relevantPairs(){
+  if(state.active){
+    const fn=state.active; const nbrs=neighbors(fn); const out=[];
+    R.forEach(([a,b],i)=>{
+      const touchF=(a===fn||b===fn);
+      if(touchF){ out.push({a,b,i}); return; }
+      if(!state.showIndirect) return;
+      const bothDir=nbrs.direct.has(a)&&nbrs.direct.has(b);
+      const toInd=(nbrs.direct.has(a)&&nbrs.indirect.has(b))||(nbrs.direct.has(b)&&nbrs.indirect.has(a));
+      if(bothDir||toInd) out.push({a,b,i});
+    });
+    return out;
+  }
+  if(state.focusFen){
+    const ff=state.focusFen; const out=[];
+    R.forEach(([a,b],i)=>{ const na=byId(a), nb2=byId(b); if(na&&nb2&&na.f.includes(ff)&&nb2.f.includes(ff)) out.push({a,b,i}); });
+    return out;
+  }
+  return [];
+}
+function buildEdgeElements(pairs){
+  egGroup.innerHTML=""; EDGES=[];
+  pairs.forEach(({a,b,i})=>{ const na=byId(a), nb=byId(b); if(!na||!nb||!visible(na)||!visible(nb))return;
+    const type=isDiso(a,b)?"disonancia":"resonancia"; const linguisticCrossing=cruceLinguistico(na,nb);
+    const p=el("path",{class:"edge "+type}); egGroup.appendChild(p);
+    let marker=null; if(linguisticCrossing){ marker=el("path",{class:"fricc", stroke:"var(--cream)", "stroke-width":1.1, fill:"none"}); egGroup.appendChild(marker); }
+    EDGES.push({na,nb,p,ph:i*0.7,type,linguisticCrossing,marker}); });
+}
+function syncEdges(){ if(egGroup) buildEdgeElements(relevantPairs()); }
+
+/* ==================== Etapa 5: tabulación itinerante del mapa ====================
+   Los 232 nodos del SVG no pueden ser 232 paradas de Tab: solo UNO es focusable a la
+   vez (tabindex=0); el resto queda en tabindex=-1. Las flechas mueven ese único foco
+   entre nodos visibles; Tab sigue de largo hacia el siguiente control de la página. */
+function accessibleNameFor(n){
+  return n.t + ' — ' + n.a + (n.y ? ', ' + n.y : '');
+}
+function setRoving(node, {mover=false}={}){
+  if(!node) return;
+  if(rovingId && rovingId!==node.id){ const prev=byId(rovingId); if(prev && prev._g) prev._g.setAttribute('tabindex','-1'); }
+  node._g.setAttribute('tabindex','0');
+  rovingId=node.id;
+  if(mover){ hoverNode=node; updateTip(); node._g.focus(); }
+}
+function moverRoving(delta){
+  if(!VNODES.length) return;
+  const actual=rovingId?VNODES.findIndex(n=>n.id===rovingId):-1;
+  const i=actual<0 ? 0 : (actual+delta+VNODES.length)%VNODES.length;
+  setRoving(VNODES[i], {mover:true});
+}
+function irAExtremo(fin){
+  if(!VNODES.length) return;
+  setRoving(fin?VNODES[VNODES.length-1]:VNODES[0], {mover:true});
 }
 
 function render(){
@@ -903,12 +1222,8 @@ function render(){
   if(state.view==="corriente"){ drawBasin(); hint.textContent=t('hintCorriente'); }
   else if(state.view==="cronologia"){ drawEjeTiempo(); hint.textContent=t('hintCronologia'); }
   else hint.textContent=t('hintConstelacion');
-  const eg=el("g"); vp.appendChild(eg);
-  R.forEach(([a,b],i)=>{ const na=byId(a), nb=byId(b); if(!na||!nb||!visible(na)||!visible(nb))return;
-    const type=isDiso(a,b)?"disonancia":"resonancia"; const linguisticCrossing=cruceLinguistico(na,nb);
-    const p=el("path",{class:"edge "+type}); eg.appendChild(p);
-    let marker=null; if(linguisticCrossing){ marker=el("path",{class:"fricc", stroke:"var(--cream)", "stroke-width":1.1, fill:"none"}); eg.appendChild(marker); }
-    EDGES.push({na,nb,p,ph:i*0.7,type,linguisticCrossing,marker}); });
+  egGroup=el("g"); vp.appendChild(egGroup);
+  buildEdgeElements(relevantPairs());
   if(state.view==="corriente"){
     const pg=el("g");
     Object.entries(L).forEach(([k,v])=>{ if(!N.some(n=>n.l===k && visible(n)))return; const t=el("text",{class:"placelbl "+v[3], x:px(v[1])+14, y:py(v[0])+4}); t.textContent=v[2]; t._place=k; pg.appendChild(t); });
@@ -918,18 +1233,40 @@ function render(){
     CLUSTERS.forEach(c=>{ const tx=el("text",{class:"clbl", x:c.x, y:c.y, "text-anchor":"middle", fill:FEN[c.f].c}); tx.textContent=fenLabel(c.f); tx._fen=c.f; cg.appendChild(tx); });
     vp.appendChild(cg);
   }
+  const rovingPrevio=rovingId; rovingId=null;
   N.forEach(n=>{
     if(!visible(n))return;
-    const g=el("g",{class:"node"}); const r=n.k==="obra"?7:6.5;
+    const g=el("g",{class:"node", role:"button", tabindex:"-1", "aria-label":accessibleNameFor(n)}); const r=n.k==="obra"?7:6.5;
+    /* En Cronología/Investigado, las entradas sin periodo estudiado se atenúan
+       en vez de fingir una posición que nadie verificó (ver drawEjeTiempo). */
+    if(state.view==="cronologia" && state.cronoModo==="investigado" && CRONO){
+      const tieneP = CRONO.TP && CRONO.TP[n.id] && CRONO.TP[n.id].fin!=null;
+      if(!tieneP) g.classList.add('sindato');
+    }
     const halo=el("circle",{class:"halo", r:r+6, "stroke-width":1.5});
     const hit=el("circle",{r:16, fill:"transparent"});
     const c=el("circle",{class:"dot", r:r, fill:n.k==="obra"?col(n.f[0]):"var(--bg-deep)", stroke:col(n.f[0]), "stroke-width":n.k==="obra"?1.2:2.6}); c._r=r;
     g.appendChild(halo); g.appendChild(hit); g.appendChild(c); g.style.cursor="pointer";
     g.addEventListener('mouseenter',()=>{ hoverNode=n; updateTip(); });
     g.addEventListener('mouseleave',()=>{ if(hoverNode===n) hoverNode=null; updateTip(); });
+    g.addEventListener('focus',()=>{ hoverNode=n; updateTip(); });
+    g.addEventListener('blur',()=>{ if(hoverNode===n) hoverNode=null; updateTip(); });
     g.addEventListener('click',ev=>{ ev.stopPropagation(); openPanel(n.id); });
+    g.addEventListener('keydown',ev=>{
+      switch(ev.key){
+        case 'Enter': case ' ': ev.preventDefault(); openPanel(n.id); break;
+        case 'ArrowRight': case 'ArrowDown': ev.preventDefault(); moverRoving(1); break;
+        case 'ArrowLeft': case 'ArrowUp': ev.preventDefault(); moverRoving(-1); break;
+        case 'Home': ev.preventDefault(); irAExtremo(false); break;
+        case 'End': ev.preventDefault(); irAExtremo(true); break;
+        case 'Escape': if(state.active===n.id){ ev.stopPropagation(); clearFocus(); } break;
+      }
+    });
     vp.appendChild(g); n._g=g; n._c=c; n._halo=halo; VNODES.push(n);
   });
+  /* conserva el nodo que tenía el foco itinerante si sigue visible; si no, cae en el primero */
+  const siguePresente = rovingPrevio && VNODES.some(n=>n.id===rovingPrevio);
+  if(VNODES.length) setRoving(siguePresente?byId(rovingPrevio):VNODES[0]);
   buildLegend(); refreshHi(); place(0);
 }
 
@@ -1025,12 +1362,101 @@ function refreshHi(){
 }
 
 function showGuion(f){ const g=document.getElementById('guion'); if(!f){ g.classList.remove('show'); return; } g.style.borderLeftColor=FEN[f].c; const gf=g.querySelector('.gf'); gf.textContent=fenLabel(f); gf.style.color=FEN[f].c; g.querySelector('.gt').textContent=fenGlosa(f); g.classList.add('show'); }
-function focusFen(f){ state.active=null; document.getElementById('panel').classList.remove('open'); state.focusFen=(state.focusFen===f)?null:f; showGuion(state.focusFen); buildLegend(); refreshHi(); updateTip(); if(state.view==="tabla") renderTable(); }
+/* Etapa 5: la ficha (#panel) es un panel lateral no modal (el mapa sigue operable
+   detrás). Se le da foco inicial al abrir y se devuelve al elemento que la abrió —
+   nodo del mapa, ítem de la leyenda o enlace de la tabla— al cerrarla. inert la saca
+   del árbol de accesibilidad y del orden de tabulación mientras está cerrada. */
+function ocultarFicha(){
+  const p=document.getElementById('panel');
+  if(!p.classList.contains('open')) return;
+  p.classList.remove('open'); p.setAttribute('inert','');
+  if(p._retornoFoco && document.contains(p._retornoFoco)) p._retornoFoco.focus();
+  p._retornoFoco=null;
+}
+function focusFen(f){ state.active=null; ocultarFicha(); state.focusFen=(state.focusFen===f)?null:f; syncEdges(); showGuion(state.focusFen); buildLegend(); refreshHi(); updateTip(); if(state.view==="tabla") renderTable(); }
+
+/* ==================== Etapa 6: bloque del esquema 2.0 en la ficha ====================
+   Revelado progresivo: es un <details> plegado por defecto (no compite con el aporte
+   ni las relaciones, que son la lectura principal). Cada campo que no existe en la
+   entrada se declara «pendiente» o «sin dato» — nunca se sustituye por el campo
+   heredado sin decirlo, y nunca se inventa un valor que la entrada no declara. */
+function esquema20Html(n){
+  const est=estado20(n);
+  const badge=`<span class="e20-badge e20-${est}">${t('e20Estado'+est.charAt(0).toUpperCase()+est.slice(1))}</span>`;
+
+  const marcasConDato=MARCAS_7.map(k=>marcaDe(n,k)).filter(Boolean);
+  const marcasHtml = marcasConDato.length
+    ? `<div class="e20-chips">${marcasConDato.map(m=>{
+        const lbl=t('e20m_'+m.m);
+        const preci=m.tipo?` · ${m.tipo}`:(m.mecanismo?` · ${m.mecanismo}`:'');
+        return `<span class="e20-chip">${lbl}${preci}</span>`;
+      }).join('')}</div>`
+    : `<p class="e20-vacio">${t('e20MarcasPendiente')}</p>`;
+
+  const operacionesHtml = (n.operaciones && n.operaciones.length)
+    ? `<p>${n.operaciones.join(' · ')}</p>`
+    : `<p class="e20-vacio">${t('e20OperacionesPendiente')}</p>`;
+
+  const corrienteHtml = n.corriente
+    ? `<p>${n.corriente}</p>`
+    : `<p class="e20-vacio">${t('e20CorrientePendiente')}</p>`;
+
+  let procedenciaHtml;
+  if(n.procedencia){
+    const verif = n.procedencia_verificada===false ? ` <span class="e20-flag">(${t('e20SinVerificar')})</span>` : '';
+    const proceso = (n.proceso && n.proceso.length) ? `<br>${t('e20Proceso')}: ${n.proceso.join(', ')}` : '';
+    const rev=n.revision;
+    const revHtml = rev ? `<br>${t('e20Responsable')}: ${rev.responsable||'—'} · ${rev.fecha||'—'}${rev.fundamento?`<br><span class="e20-fundamento">${rev.fundamento}</span>`:''}` : '';
+    procedenciaHtml = `<p>${n.procedencia}${verif}${proceso}${revHtml}</p>`;
+  } else {
+    procedenciaHtml = `<p class="e20-vacio">${t('e20ProcedenciaPendiente')}</p>`;
+  }
+
+  const lenguaHtml = n.lengua_publicacion
+    ? `<p>${n.lengua_publicacion}</p>`
+    : `<p class="e20-vacio">${t('e20HeredadoPrefijo')} <code>tr</code>: «${n.tr}»</p>`;
+
+  const tempo=n.temporalidades;
+  const tp=(typeof TEMPORALIDAD!=="undefined" && TEMPORALIDAD && TEMPORALIDAD[n.id]) || null;
+  let temporalidadHtml;
+  if(tempo){
+    const partes=[];
+    if(tempo.publicacion) partes.push(`${t('e20Publicacion')}: ${tempo.publicacion}`);
+    if(tempo.traduccion_es) partes.push(`${t('e20Traduccion')}: ${tempo.traduccion_es}`);
+    if(tempo.periodo_estudiado && tempo.periodo_estudiado.length===2) partes.push(`${t('e20Periodo')}: ${tempo.periodo_estudiado[0]}–${tempo.periodo_estudiado[1]}`);
+    temporalidadHtml=`<p>${partes.join('<br>')}</p>`;
+  } else {
+    const periodoExtra = tp ? `<br>${t('e20Periodo')}: ${tp.ini!=null?tp.ini:'…'}–${tp.fin}${tp.prec?` (${tp.prec})`:''}` : '';
+    temporalidadHtml = `<p class="e20-vacio">${t('e20HeredadoPrefijo')} <code>y</code>: «${n.y||'—'}»${periodoExtra}</p>`;
+  }
+
+  const rutasCon = (n.rutas||[]).filter(r=>r.fuente);
+  const rutasHtml = rutasCon.length
+    ? `<ul class="e20-rutas">${rutasCon.map(r=>`<li>${r.tipo}: ${r.origen} → ${r.destino}${r.estado==='corroborada'?'':` (${t('evPcT')})`}<br><span class="e20-fundamento">${r.fuente}</span></li>`).join('')}</ul>`
+    : '';
+
+  return `<details class="e20">
+    <summary>${t('e20Titulo')} ${badge}</summary>
+    <div class="e20-body">
+      <div class="e20-f"><span class="e20-l">${t('e20Corriente')}</span>${corrienteHtml}</div>
+      <div class="e20-f"><span class="e20-l">${t('e20Marcas')}</span>${marcasHtml}</div>
+      <div class="e20-f"><span class="e20-l">${t('e20Operaciones')}</span>${operacionesHtml}</div>
+      <div class="e20-f"><span class="e20-l">${t('e20Procedencia')}</span>${procedenciaHtml}</div>
+      <div class="e20-f"><span class="e20-l">${t('e20Lengua')}</span>${lenguaHtml}</div>
+      <div class="e20-f"><span class="e20-l">${t('e20Temporalidad')}</span>${temporalidadHtml}</div>
+      ${rutasHtml?`<div class="e20-f"><span class="e20-l">${t('e20Rutas')}</span>${rutasHtml}</div>`:''}
+      <p class="e20-nota">${t('e20Nota')}</p>
+    </div>
+  </details>`;
+}
 
 function openPanel(id){
   if(!byId(id)) return;
   rfVisita(id); /* el reflujo cuenta las fichas recorridas: en la sexta se abre la puerta */
-  state.focusFen=null; showGuion(null); state.active=id; buildLegend(); refreshHi(); updateTip();
+  const p0=document.getElementById('panel');
+  const yaAbierta=p0.classList.contains('open');
+  if(!yaAbierta){ p0._retornoFoco=document.activeElement; p0.removeAttribute('inert'); }
+  state.focusFen=null; showGuion(null); state.active=id; syncEdges(); buildLegend(); refreshHi(); updateTip();
   if(location.hash!=="#"+id){ try{ history.replaceState(null,"","#"+id); }catch(e){} }
   const n=byId(id); const p=document.getElementById('panel'); const lu=L[n.l]; const {direct,indirect}=neighbors(id);
   const tags=n.f.map(f=>`<span class="tag" data-fen="${f}" style="background:${col(f)}">${fenLabel(f)}</span>`).join("");
@@ -1038,30 +1464,35 @@ function openPanel(id){
   const dAll=[...direct].map(x=>byId(x)).filter(Boolean);
   const dShown=dAll.filter(o=>{ if(state.evid==="todas") return true; return esCorr(id,o.id)===(state.evid==="ok"); });
   const dList=dShown.map(o=>{ const fu=fuenteDe(id,o.id); const diso=isDiso(id,o.id); const ok=esCorr(id,o.id);
-    return `<a data-go="${o.id}"><span class="ev ${ok?'ok':'pc'}" title="${ok?t('evOkT'):t('evPcT')}" aria-label="${ok?t('evOkT'):t('evPcT')}"></span><span class="rtitle">${diso?'⚡ ':''}${o.t}</span> <span class="r">— ${o.a}</span>${fu&&ok?`<span class="fu">${fu}</span>`:`<span class="fu pc">${t('evPcT')}</span><span class="conoces" role="button" tabindex="0" data-rfa="${id}" data-rfb="${o.id}">${rf('conoces')}</span>`}</a>`; }).join("");
+    return `<a href="#${o.id}" data-go="${o.id}"><span class="ev ${ok?'ok':'pc'}" title="${ok?t('evOkT'):t('evPcT')}" aria-label="${ok?t('evOkT'):t('evPcT')}"></span><span class="rtitle">${diso?'⚡ ':''}${o.t}</span> <span class="r">— ${o.a}</span>${fu&&ok?`<span class="fu">${fu}</span>`:`<span class="fu pc">${t('evPcT')}</span><span class="conoces" role="button" tabindex="0" data-rfa="${id}" data-rfb="${o.id}">${rf('conoces')}</span>`}</a>`; }).join("");
   const dCount = state.evid==="todas" ? `<span class="evn">${dAll.length}</span>` : `<span class="evn">${dShown.length} / ${dAll.length}</span>`;
-  const iList=[...indirect].map(x=>{ const o=byId(x); if(!o)return""; let via=[...direct].find(d=>(ADJ[d]||[]).includes(x)); const vn=via?byId(via):null; const vname=vn?vn.a.replace(/\(.*/,'').split(',')[0].trim().split(' ').slice(-1)[0]:'…'; return `<a data-go="${o.id}">${o.t} <span class="via">— ${t('pVia')} ${vname}</span></a>`; }).join("");
-  p.innerHTML=`<button class="close">×</button><div class="kind">${n.k==="obra"?t('pKindObra'):t('pKindManif')}</div>
-    <h2>${n.t}</h2><div class="meta">${n.a}${n.y?" · "+n.y:""} · ${n.tr}</div>${lugar}
+  const iList=[...indirect].map(x=>{ const o=byId(x); if(!o)return""; let via=[...direct].find(d=>(ADJ[d]||[]).includes(x)); const vn=via?byId(via):null; const vname=vn?vn.a.replace(/\(.*/,'').split(',')[0].trim().split(' ').slice(-1)[0]:'…'; return `<a href="#${o.id}" data-go="${o.id}">${o.t} <span class="via">— ${t('pVia')} ${vname}</span></a>`; }).join("");
+  p.setAttribute('role','dialog'); p.setAttribute('aria-labelledby','panelTitId');
+  p.innerHTML=`<button class="close" aria-label="${t('cerrarFicha')}">×</button><div class="kind">${n.k==="obra"?t('pKindObra'):t('pKindManif')}</div>
+    <h2 id="panelTitId">${n.t}</h2><div class="meta">${n.a}${n.y?" · "+n.y:""} · ${n.tr}</div>${lugar}
     <div class="tags">${tags}</div><p class="aporte">${n.ap}</p>
     <div class="rel"><h3 class="dir">${t('pRelDir')}${dCount}</h3>${dList||`<span style='font-size:11.5px;color:var(--gray);font-style:italic'>${t('evNada')}</span>`}</div>
-    ${iList?`<div class="rel"><h3 class="ind">${t('pRelInd')}</h3>${iList}</div>`:""}
+    ${iList?`<div class="rel"><h3 class="ind">${t('pRelInd')}<button type="button" class="btnIndMapa" id="toggleIndirectasMapa" aria-pressed="${state.showIndirect?'true':'false'}">${state.showIndirect?t('ocultarIndirectasMapa'):t('mostrarIndirectasMapa')}</button></h3>${iList}</div>`:""}
     <div class="cita"><span class="citalbl">${t('pCitaLbl')}</span>
-      <div class="apa" id="apacita">${n.a}${n.y?" ("+n.y+")":""}. <i>${n.t}</i>. ${t('pCitaEn')} <i>${t('pProyecto')}</i>, Centro de Pensamiento Caribe. ${location.origin+location.pathname}#${id}</div>
+      <div class="apa" id="apacita">${n.a}${n.y?" ("+n.y+")":""}. <i>${n.t}</i>. ${t('pCitaEn')} <i>${t('pProyecto')}</i>, Grupo de Investigación Pensamiento Caribe. ${location.origin+location.pathname}#${id}</div>
       <div class="citarow"><code id="citaurl">${location.origin+location.pathname}#${id}</code><button id="citabtn">${t('pCitaBtn')}</button></div>
       <div class="bibrow"><span class="biblbl">${t('bibLbl')}</span>
         <button class="bibbtn" data-bib="bibtex">BibTeX</button><button class="bibbtn" data-bib="ris">RIS</button>
         ${n.doi?`<a class="bibdoi" href="https://doi.org/${n.doi}" target="_blank" rel="noopener">doi ↗</a>`:''}
       </div>
-      ${bibCompleta(n)?'':`<div class="bibwarn">${t('bibIncompleta')}</div>`}</div>`;
+      ${bibCompleta(n)?'':`<div class="bibwarn">${t('bibIncompleta')}</div>`}</div>
+    ${esquema20Html(n)}`;
   p.classList.add('open');
+  if(!yaAbierta) p.querySelector('.close').focus();
   p.querySelector('.close').onclick=()=>clearFocus();
-  p.querySelectorAll('[data-go]').forEach(a=>a.onclick=()=>openPanel(a.dataset.go));
+  p.querySelectorAll('[data-go]').forEach(a=>a.onclick=ev=>{ ev.preventDefault(); openPanel(a.dataset.go); });
   p.querySelectorAll('.conoces').forEach(b=>{
     const ir=ev=>{ ev.preventDefault(); ev.stopPropagation(); rfAbrir('corroboracion',{a:b.dataset.rfa,b:b.dataset.rfb}); };
     b.onclick=ir; b.onkeydown=ev=>{ if(ev.key==='Enter'||ev.key===' ') ir(ev); };
   });
   p.querySelectorAll('[data-fen]').forEach(tg=>tg.onclick=()=>focusFen(tg.dataset.fen));
+  const tib=p.querySelector('#toggleIndirectasMapa');
+  if(tib) tib.onclick=()=>setShowIndirect(!state.showIndirect);
   const cb=p.querySelector('#citabtn'); if(cb) cb.onclick=()=>{ try{ const txt=document.getElementById('apacita').textContent; navigator.clipboard.writeText(txt); cb.textContent=t('pCitaOk'); setTimeout(()=>cb.textContent=t('pCitaBtn'),1400); }catch(e){} };
   p.querySelectorAll('[data-bib]').forEach(b=>b.onclick=()=>{
     const obra=byId(id); if(!obra) return;
@@ -1070,28 +1501,64 @@ function openPanel(id){
     const antes=b.textContent; b.textContent=t('pCitaOk'); setTimeout(()=>b.textContent=antes,1400);
   });
 }
-function clearFocus(){ state.active=null; state.focusFen=null; hoverNode=null; document.getElementById('panel').classList.remove('open'); showGuion(null); buildLegend(); refreshHi(); updateTip(); try{ history.replaceState(null,"",location.pathname); }catch(e){} }
+function clearFocus(){ state.active=null; state.focusFen=null; hoverNode=null; ocultarFicha(); syncEdges(); showGuion(null); buildLegend(); refreshHi(); updateTip(); try{ history.replaceState(null,"",location.pathname); }catch(e){} }
 
 function buildLegend(){
-  const lg=document.getElementById('legend');
+  const lg=document.getElementById('legendBody');
   const total=N.length, obras=N.filter(n=>n.k==="obra").length, manif=total-obras;
+  const barTxt=document.getElementById('legendBarTxt');
+  if(barTxt){
+    const visN=N.filter(visible).length, pct=RELS.length?(CORR_OK/RELS.length*100):0;
+    barTxt.textContent = t('legendBarTpl').replace('{n}',visN).replace('{r}',EDGES.length).replace('{p}',pct.toFixed(0));
+  }
   lg.innerHTML=`<div class="lgtitle">${total} ${t('lgTitle')}</div><div class="grid"></div>`+
     `<div class="keys"><span><i class="kob"></i>${t('lgResearch')} (${obras})</span><span><i class="kma"></i>${t('lgEthno')} (${manif})</span></div>`+
     `<div class="keys"><span><i class="kre"></i>${t('lgReson')}</span><span><i class="kdi"></i>${t('lgDisso')}</span><span><i class="kfr">✕</i>${t('lgFricc')}</span></div>`+
     `<div class="corr"><div class="corrbar"><i class="ok" style="width:${(CORR_OK/RELS.length*100).toFixed(1)}%"></i><i class="pc" style="width:${(CORR_PC/RELS.length*100).toFixed(1)}%"></i></div>`+
-      `${CORR_OK} / ${RELS.length} ${t('lgCorr')} (${(CORR_OK/RELS.length*100).toFixed(0)} %) · <a id="corrLink">${t('lgCorrVer')}</a></div>`+
-    `<div class="mlink"><a id="marcoLink">${t('lgMarco')}</a> <span style="opacity:.4"> · </span><a href="reflujo-guia.html" style="color:var(--gold)">${rf('lgGuia')}</a></div>`+
-    `<div class="puerta${rfAbierta()?' on':''}" ${rfAbierta()?'role="status"':''}><span class="marca"></span><span id="rfPuertaTxt">${rf('puerta').replace('{n}',RF_VISTAS.size)}</span> <a id="rfLink">${rf('puertaLink')}</a></div>`;
+      `${CORR_OK} / ${RELS.length} ${t('lgCorr')} (${(CORR_OK/RELS.length*100).toFixed(0)} %) · <span id="corrLink" role="button" tabindex="0">${t('lgCorrVer')}</span></div>`+
+    `<div class="mlink"><span id="marcoLink" role="button" tabindex="0">${t('lgMarco')}</span> <span style="opacity:.4"> · </span><a href="reflujo-guia.html" style="color:var(--gold)">${rf('lgGuia')}</a></div>`+
+    `<div class="puerta${rfAbierta()?' on':''}" ${rfAbierta()?'role="status"':''}><span class="marca"></span><span id="rfPuertaTxt">${rf('puerta').replace('{n}',RF_VISTAS.size)}</span> <span id="rfLink" role="button" tabindex="0">${rf('puertaLink')}</span></div>`;
   const grid=lg.querySelector('.grid');
-  Object.entries(FEN).forEach(([k,v])=>{ const d=document.createElement('div'); d.className="li"+(state.focusFen===k?" sel":"");
+  Object.entries(FEN).forEach(([k,v])=>{ const d=document.createElement('div'); const sel=state.focusFen===k; d.className="li"+(sel?" sel":"");
+    d.setAttribute('role','button'); d.setAttribute('tabindex','0'); d.setAttribute('aria-pressed', sel?'true':'false');
     const c=N.filter(n=>n.f.includes(k)).length;
-    d.innerHTML=`<span class="sw" style="background:${v.c}"></span>${fenLabel(k)} <span style="opacity:.55">(${c})</span>`; d.onclick=()=>focusFen(k); grid.appendChild(d); });
-  const ml=lg.querySelector('#marcoLink'); if(ml) ml.onclick=openMarco;
-  const cl=lg.querySelector('#corrLink'); if(cl) cl.onclick=()=>setEvid(state.evid==="ok"?"todas":"ok");
-  const rl=lg.querySelector('#rfLink'); if(rl) rl.onclick=()=>rfAbrir();
+    d.setAttribute('aria-label', fenLabel(k)+' ('+c+')');
+    d.innerHTML=`<span class="sw" style="background:${v.c}"></span>${fenLabel(k)} <span style="opacity:.55">(${c})</span>`;
+    const ir=()=>focusFen(k);
+    d.onclick=ir; d.onkeydown=ev=>{ if(ev.key==='Enter'||ev.key===' '){ ev.preventDefault(); ir(); } };
+    grid.appendChild(d); });
+  const activarBoton=(el,fn)=>{ if(!el) return; el.onclick=fn; el.onkeydown=ev=>{ if(ev.key==='Enter'||ev.key===' '){ ev.preventDefault(); fn(); } }; };
+  activarBoton(lg.querySelector('#marcoLink'), openMarco);
+  activarBoton(lg.querySelector('#corrLink'), ()=>setEvid(state.evid==="ok"?"todas":"ok"));
+  activarBoton(lg.querySelector('#rfLink'), ()=>rfAbrir());
 }
-function openMarco(){ document.getElementById('marco').classList.add('show'); }
-function closeMarco(){ document.getElementById('marco').classList.remove('show'); }
+/* Etapa 5: #marco sí es un modal en sentido estricto (overlay a pantalla completa,
+   bloquea el resto de la página): foco inicial, trampa de Tab mientras esté abierto
+   y devolución del foco a quien lo abrió. */
+function focosDe(cont){ return [...cont.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])')]; }
+function openMarco(){
+  const m=document.getElementById('marco');
+  if(m.classList.contains('show')) return;
+  m._retornoFoco=document.activeElement;
+  m.removeAttribute('inert'); m.classList.add('show');
+  const fs=focosDe(m); if(fs.length) fs[0].focus();
+}
+function closeMarco(){
+  const m=document.getElementById('marco');
+  if(!m.classList.contains('show')) return;
+  m.classList.remove('show'); m.setAttribute('inert','');
+  if(m._retornoFoco && document.contains(m._retornoFoco)) m._retornoFoco.focus();
+  m._retornoFoco=null;
+}
+document.getElementById('marco').addEventListener('keydown', ev=>{
+  const m=document.getElementById('marco');
+  if(ev.key==='Escape'){ ev.stopPropagation(); closeMarco(); return; }
+  if(ev.key!=='Tab') return;
+  const fs=focosDe(m); if(!fs.length) return;
+  const first=fs[0], last=fs[fs.length-1];
+  if(ev.shiftKey && document.activeElement===first){ ev.preventDefault(); last.focus(); }
+  else if(!ev.shiftKey && document.activeElement===last){ ev.preventDefault(); first.focus(); }
+});
 
 function loop(t){ place(t); requestAnimationFrame(loop); }
 
@@ -1104,6 +1571,10 @@ function evStats(id){ const rs=RELS.filter(r=>r.a===id||r.b===id);
 function evCell(id){ const {ok,tot}=evStats(id); if(!tot) return '<span style="color:var(--gray)">—</span>';
   const c = ok===tot?'var(--green-l)' : ok===0?'var(--red)' : 'var(--gold)';
   return `<span style="color:${c};font-weight:600">${ok}</span><span style="color:var(--gray)"> / ${tot}</span>`; }
+/* Etapa 6: rango de orden para la columna Estado (2.0) — pendiente antes que
+   preliminar antes que confirmada, así ordenar por estado agrupa primero lo
+   que más falta por migrar, que es la información operativa útil. */
+const ESTADO20_RANGO = { pendiente: 0, preliminar: 1, confirmada: 2 };
 function tblRows(){
   let rows=N.filter(n=>visible(n) && (!state.focusFen || n.f.includes(state.focusFen)) && matchQ(n));
   const key=tblSort.col;
@@ -1111,28 +1582,75 @@ function tblRows(){
     if(key==="f"){ va=FEN[a.f[0]].label; vb=FEN[b.f[0]].label; }
     else if(key==="l"){ va=L[a.l][2]; vb=L[b.l][2]; }
     else if(key==="k"){ va=a.k; vb=b.k; }
+    else if(key==="estado20"){ va=ESTADO20_RANGO[estado20(a)]; vb=ESTADO20_RANGO[estado20(b)]; }
+    else if(key==="procedencia"){ va=(a.procedencia||"").toLowerCase(); vb=(b.procedencia||"").toLowerCase(); }
     else { va=(a[key]||"").toString().toLowerCase(); vb=(b[key]||"").toString().toLowerCase(); }
     return va<vb?-1*tblSort.dir : va>vb?1*tblSort.dir : 0; });
   return rows;
 }
+/* columnas de la tabla accesible. Las esenciales (t/y/k/estado20) cuentan la
+   historia mínima de cada fila — qué es, cuándo, de qué tipo, en qué punto de
+   la migración al esquema 2.0 — y no se pueden ocultar. El resto es opcional
+   y se recuerda por sesión en localStorage; así la tabla no fuerza siempre
+   las diez columnas completas, pero nadie pierde lo que ya tenía visible. */
+const TBL_COLS = [
+  ["t","thObra",true], ["a","thAutor",false], ["y","thAno",true], ["k","thTipo",true],
+  ["estado20","thEstado",true], ["procedencia","thProcedencia",false],
+  ["f","thFen",false], ["l","thLugar",false], ["tr","thTrad",false], ["ev","thEvid",false]
+];
+const TBL_COLS_LS = "pc_tblcols";
+let tblColsVisibles = null;
+function tblColsInit(){
+  if(tblColsVisibles) return tblColsVisibles;
+  const porDefecto = new Set(TBL_COLS.filter(([k,l,es])=>es || ["a","f","ev"].includes(k)).map(([k])=>k));
+  try{
+    const guardado = JSON.parse(localStorage.getItem(TBL_COLS_LS)||"null");
+    if(Array.isArray(guardado)) tblColsVisibles = new Set(guardado);
+    else tblColsVisibles = porDefecto;
+  }catch(e){ tblColsVisibles = porDefecto; }
+  TBL_COLS.forEach(([k,l,es])=>{ if(es) tblColsVisibles.add(k); }); /* las esenciales nunca se pierden, aunque el guardado sea viejo */
+  return tblColsVisibles;
+}
+function tblColsGuardar(){
+  try{ localStorage.setItem(TBL_COLS_LS, JSON.stringify([...tblColsVisibles])); }catch(e){}
+}
+function estadoCell(n){
+  const est=estado20(n);
+  return `<span class="e20-badge e20-${est}">${t('e20Estado'+est.charAt(0).toUpperCase()+est.slice(1))}</span>`;
+}
+function procCell(n){
+  return n.procedencia ? n.procedencia : `<span class="e20-vacio">${t('e20ProcedenciaPendiente')}</span>`;
+}
+function tdPara(k,n){
+  switch(k){
+    case "t": return `<td class="tit"><a href="#${n.id}" data-go="${n.id}">${n.t}</a></td>`;
+    case "a": return `<td>${n.a}</td>`;
+    case "y": return `<td>${n.y||"—"}</td>`;
+    case "k": return `<td class="${n.k==='obra'?'kind-o':'kind-m'}">${n.k==='obra'?t('tKindObra'):t('tKindManif')}</td>`;
+    case "estado20": return `<td>${estadoCell(n)}</td>`;
+    case "procedencia": return `<td>${procCell(n)}</td>`;
+    case "f": return `<td>${n.f.map(f=>`<span class="fenchip" style="background:${col(f)}"></span>${fenLabel(f)}`).join(" · ")}</td>`;
+    case "l": { const lu=L[n.l]; return `<td>${lu[2]}${lu[3]==='ciudad'?' <span style="color:var(--gray)">'+t('tCiudad')+'</span>':''}</td>`; }
+    case "tr": return `<td>${n.tr}</td>`;
+    case "ev": return `<td>${evCell(n.id)}</td>`;
+    default: return `<td></td>`;
+  }
+}
 function renderTable(){
   const cont=document.getElementById('tablaBody');
   const rows=tblRows();
-  const cols=[["t",t('thObra')],["a",t('thAutor')],["y",t('thAno')],["k",t('thTipo')],["f",t('thFen')],["l",t('thLugar')],["tr",t('thTrad')],["ev",t('thEvid')]];
+  const visibles=tblColsInit();
+  const cols=TBL_COLS.filter(([k])=>visibles.has(k)).map(([k,lbl])=>[k,t(lbl)]);
   const foco = (state.focusFen ? ` · ${t('tFiltro')} «${fenLabel(state.focusFen)}»` : "") + (state.q ? ` · ${t('tFiltro')} «${state.q}»` : "");
   let h=`<div class="tcap">${t('tCap')}</div><div class="tsub">${rows.length} ${t('tRefs')}${foco} · ${t('tSort')}</div>`;
+  h+=`<details class="tcolsel"><summary>${t('tColBtn')} (${cols.length}/${TBL_COLS.length})</summary>`+
+     `<fieldset><legend>${t('tColTitulo')}</legend>`+
+     TBL_COLS.map(([k,lbl,es])=>`<label class="tcolopt${es?' esencial':''}"><input type="checkbox" data-col="${k}" ${visibles.has(k)?'checked':''} ${es?'disabled':''}>${t(lbl)}${es?` <span class="tcolnota">(${t('tColEsencial')})</span>`:""}</label>`).join("")+
+     `</fieldset></details>`;
   h+=`<table><caption>${t('tCaption')}</caption><thead><tr>`;
   cols.forEach(([k,lbl])=>{ const s = tblSort.col===k ? (tblSort.dir===1?"ascending":"descending") : "none"; h+=`<th scope="col" role="columnheader" aria-sort="${s}" data-col="${k}" tabindex="0">${lbl}</th>`; });
   h+=`</tr></thead><tbody>`;
-  rows.forEach(n=>{
-    const fen=n.f.map(f=>`<span class="fenchip" style="background:${col(f)}"></span>${fenLabel(f)}`).join(" · ");
-    const lu=L[n.l];
-    h+=`<tr><td class="tit"><a href="#${n.id}" data-go="${n.id}">${n.t}</a></td>`+
-       `<td>${n.a}</td><td>${n.y||"—"}</td>`+
-       `<td class="${n.k==='obra'?'kind-o':'kind-m'}">${n.k==='obra'?t('tKindObra'):t('tKindManif')}</td>`+
-       `<td>${fen}</td><td>${lu[2]}${lu[3]==='ciudad'?' <span style="color:var(--gray)">'+t('tCiudad')+'</span>':''}</td><td>${n.tr}</td>`+
-       `<td>${evCell(n.id)}</td></tr>`;
-  });
+  rows.forEach(n=>{ h+=`<tr>${cols.map(([k])=>tdPara(k,n)).join("")}</tr>`; });
   h+=`</tbody></table>`;
   h+=`<p class="tnote">${t('tNote')} <a href="../data/agua-de-por-medio/datos-atlas.json">datos-atlas.json</a>. `+
      `<button id="bibTodo" class="bibbtn">${t('bibTodo')}</button></p>`;
@@ -1142,6 +1660,16 @@ function renderTable(){
     th.onclick=go; th.onkeydown=ev=>{ if(ev.key==="Enter"||ev.key===" "){ ev.preventDefault(); go(); } };
   });
   cont.querySelectorAll('a[data-go]').forEach(a=>a.onclick=ev=>{ ev.preventDefault(); openPanel(a.dataset.go); });
+  cont.querySelectorAll('.tcolopt input[data-col]').forEach(cb=>{
+    cb.addEventListener('change',()=>{
+      const k=cb.dataset.col;
+      if(cb.checked) visibles.add(k); else visibles.delete(k);
+      tblColsGuardar();
+      const abierto=cont.querySelector('.tcolsel'); const eraAbierto = abierto && abierto.open;
+      renderTable();
+      const de2=cont.querySelector('.tcolsel'); if(de2 && eraAbierto) de2.open=true;
+    });
+  });
   const bt=cont.querySelector('#bibTodo');
   if(bt) bt.onclick=()=>{
     /* exporta lo que el filtro tenga a la vista, no el corpus entero: si alguien
@@ -1162,24 +1690,44 @@ let legendHome=null;
 function dockLegendInTable(){
   const lg=document.getElementById('legend'), tbl=document.getElementById('tabla'), body=document.getElementById('tablaBody');
   if(lg.parentNode!==tbl){ legendHome={parent:lg.parentNode, next:lg.nextSibling}; tbl.insertBefore(lg, body); }
-  lg.classList.add('docked');
+  lg.classList.add('docked'); lg.hidden=false;
+  const btn=document.getElementById('legendBtn'); if(btn) btn.setAttribute('aria-expanded','true');
 }
 function undockLegend(){
   const lg=document.getElementById('legend');
   if(legendHome && lg.parentNode!==legendHome.parent){ legendHome.parent.insertBefore(lg, legendHome.next); }
-  lg.classList.remove('docked');
+  lg.classList.remove('docked'); lg.hidden=true;
+  const btn=document.getElementById('legendBtn'); if(btn) btn.setAttribute('aria-expanded','false');
 }
 function switchView(v){
   state.view=v;
   vpt={k:1,tx:0,ty:0}; /* cada vista tiene su propia geometría (mapa vs. grafo): el zoom/paneo de una no sirve en otra, así que se reinicia siempre al cambiar */
   const svg0=document.getElementById('stage'), tbl=document.getElementById('tabla'), lg=document.getElementById('legend');
   const zg=document.getElementById('zoomGrp');
-  if(v==="tabla"){ svg0.style.display="none"; document.getElementById('hint').style.display="none"; if(zg) zg.style.display="none"; dockLegendInTable(); tbl.classList.add('show'); tbl.setAttribute('tabindex','-1'); renderTable(); tbl.focus(); }
-  else { svg0.style.display="block"; document.getElementById('hint').style.display=""; if(zg) zg.style.display=""; undockLegend(); tbl.classList.remove('show'); render(); }
+  const lb=document.getElementById('legendBar');
+  const cr=document.querySelector('.credit');
+  const cg=document.getElementById('cronoGrp');
+  /* .credit está fijo en la esquina inferior derecha de <main>, sobre el lienzo
+     vacío del mapa; en vista Tabla el contenido real llega hasta ahí y quedaba
+     tapado por ese crédito decorativo — se oculta solo en esa vista, igual que
+     el resto del cromo propio del mapa (hint, zoomGrp, legendBar). */
+  if(v==="tabla"){ svg0.style.display="none"; document.getElementById('hint').style.display="none"; if(zg) zg.style.display="none"; if(lb) lb.style.display="none"; if(cr) cr.style.display="none"; if(cg) cg.style.display="none"; dockLegendInTable(); tbl.classList.add('show'); tbl.setAttribute('tabindex','-1'); renderTable(); tbl.focus(); }
+  else { svg0.style.display="block"; document.getElementById('hint').style.display=""; if(zg) zg.style.display=""; if(lb) lb.style.display=""; if(cr) cr.style.display=""; if(cg) cg.style.display=(v==="cronologia"?"":"none"); undockLegend(); tbl.classList.remove('show'); render(); }
   if(zc) zc.elementos.caja.style.display = (v==="tabla") ? "none" : "";
   if(zc) zc.sincronizar();
 }
-document.getElementById('viewSeg').addEventListener('click',e=>{ if(e.target.dataset.v){[...e.currentTarget.children].forEach(b=>b.classList.remove('on'));e.target.classList.add('on');clearFocus();switchView(e.target.dataset.v);} });
+document.getElementById('viewSeg').addEventListener('click',e=>{ if(e.target.dataset.v){[...e.currentTarget.children].forEach(b=>{b.classList.remove('on');b.setAttribute('aria-pressed','false');});e.target.classList.add('on');e.target.setAttribute('aria-pressed','true');clearFocus();switchView(e.target.dataset.v);} });
+/* Etapa 6: el eje temporal de la vista Cronología tiene tres lecturas posibles.
+   Publicación es la predeterminada (la que ya existía); Investigado aísla el
+   periodo estudiado y declara, sin rodeos, cuántas entradas todavía no lo
+   tienen registrado; Combinada —la más completa, pero no la de entrada— cruza
+   ambas con la curva de reflujo. */
+function setCronoModo(v){
+  document.querySelectorAll('#cronoSeg button').forEach(b=>{const on=b.dataset.cm===v; b.classList.toggle('on',on); b.setAttribute('aria-pressed', on?'true':'false');});
+  state.cronoModo=v;
+  if(state.view==="cronologia") render();
+}
+document.getElementById('cronoSeg').addEventListener('click',e=>{ if(e.target.dataset.cm) setCronoModo(e.target.dataset.cm); });
 document.getElementById('resetZoomBtn').addEventListener('click',()=>{ vpt={k:1,tx:0,ty:0}; applyVP(); if(zc) zc.sincronizar(); });
 
 /* ---------- buscador: eventos ---------- */
@@ -1203,10 +1751,39 @@ document.addEventListener('keydown', ev=>{
   if(tag==='INPUT'||tag==='TEXTAREA'||(a&&a.isContentEditable)) return;
   ev.preventDefault(); document.getElementById('umbral').classList.add('gone'); qbox.focus(); qbox.select();
 });
-document.getElementById('layerSeg').addEventListener('click',e=>{ if(e.target.dataset.l){[...e.currentTarget.children].forEach(b=>b.classList.remove('on'));e.target.classList.add('on');state.layer=e.target.dataset.l; state.view==="tabla"?renderTable():render();} });
-document.getElementById('evSeg').addEventListener('click',e=>{ if(e.target.dataset.ev){[...e.currentTarget.children].forEach(b=>b.classList.remove('on'));e.target.classList.add('on');state.evid=e.target.dataset.ev; buildLegend(); refreshHi(); if(state.active) openPanel(state.active); if(state.view==="tabla") renderTable();} });
-function setEvid(v){ document.querySelectorAll('#evSeg button').forEach(b=>b.classList.toggle('on', b.dataset.ev===v)); state.evid=v; buildLegend(); refreshHi(); if(state.active) openPanel(state.active); if(state.view==="tabla") renderTable(); }
-document.getElementById('tideSeg').addEventListener('click',e=>{ if(e.target.dataset.tide){[...e.currentTarget.children].forEach(b=>b.classList.remove('on'));e.target.classList.add('on');state.tide=e.target.dataset.tide==="on"; if(!state.tide) place(0);} });
+/* ---------- filtros (Etapa 4): cada uno es una preferencia que persiste
+   entre selecciones; solo la selección misma (obra/corriente) se restablece.
+   Las etiquetas de #chipsActivos y el punto sobre «Filtros» reflejan el
+   mismo estado, nunca una cuenta aparte. ---------- */
+function setLayer(v){ document.querySelectorAll('#layerSeg button').forEach(b=>{const on=b.dataset.l===v; b.classList.toggle('on',on); b.setAttribute('aria-pressed',on?'true':'false');}); state.layer=v; state.view==="tabla"?renderTable():render(); renderChips(); }
+document.getElementById('layerSeg').addEventListener('click',e=>{ if(e.target.dataset.l) setLayer(e.target.dataset.l); });
+function setEvid(v){ document.querySelectorAll('#evSeg button').forEach(b=>{const on=b.dataset.ev===v; b.classList.toggle('on',on); b.setAttribute('aria-pressed',on?'true':'false');}); state.evid=v; buildLegend(); refreshHi(); if(state.active) openPanel(state.active); if(state.view==="tabla") renderTable(); renderChips(); }
+document.getElementById('evSeg').addEventListener('click',e=>{ if(e.target.dataset.ev) setEvid(e.target.dataset.ev); });
+function setLengua(v){ document.querySelectorAll('#lenguaSeg button').forEach(b=>{const on=b.dataset.len===v; b.classList.toggle('on',on); b.setAttribute('aria-pressed',on?'true':'false');}); state.lengua=v; state.view==="tabla"?renderTable():render(); renderChips(); }
+document.getElementById('lenguaSeg').addEventListener('click',e=>{ if(e.target.dataset.len) setLengua(e.target.dataset.len); });
+function setShowIndirect(v){
+  state.showIndirect=!!v; syncEdges(); refreshHi();
+  const chk=document.getElementById('indChk'); if(chk) chk.checked=state.showIndirect;
+  const tib=document.getElementById('toggleIndirectasMapa');
+  if(tib){ tib.setAttribute('aria-pressed', state.showIndirect?'true':'false'); tib.textContent = state.showIndirect?t('ocultarIndirectasMapa'):t('mostrarIndirectasMapa'); }
+  renderChips();
+}
+document.getElementById('indChk').addEventListener('change', e=>setShowIndirect(e.target.checked));
+function renderChips(){
+  const box=document.getElementById('chipsActivos'); if(!box) return;
+  const chips=[];
+  if(state.layer!=="ambas") chips.push({txt:t('chipTipo')+': '+(state.layer==='obra'?t('cObra'):t('cManif')), reset:()=>setLayer('ambas')});
+  if(state.evid!=="todas") chips.push({txt:t('chipEvid')+': '+(state.evid==='ok'?t('eCorr'):t('ePorCorr')), reset:()=>setEvid('todas')});
+  if(state.lengua && state.lengua!=="todas"){
+    const map={ang:'lenAng',his:'lenHis',fra:'lenFra',neer:'lenNeer',crio:'lenCrio',sin:'lenSin'};
+    chips.push({txt:t('chipLengua')+': '+t(map[state.lengua]), reset:()=>setLengua('todas')});
+  }
+  if(!state.tide) chips.push({txt:t('chipMov')+': '+t('movOff'), reset:()=>setTide(true)});
+  if(state.showIndirect) chips.push({txt:t('chipInd'), reset:()=>setShowIndirect(false)});
+  box.innerHTML = chips.map((c,i)=>`<button type="button" class="chip" data-i="${i}" aria-label="${t('chipQuitarAria').replace('{label}',c.txt)}">${c.txt} <span aria-hidden="true">×</span></button>`).join("");
+  [...box.querySelectorAll('.chip')].forEach((btn,i)=>btn.onclick=chips[i].reset);
+  const fb=document.getElementById('filtrosBtn'); if(fb) fb.classList.toggle('activo', chips.length>0);
+}
 
 function toVB(x,y){ const r=svg.getBoundingClientRect(); return [ (x-r.left)/r.width*VW, (y-r.top)/r.height*VH ]; }
 
@@ -1293,10 +1870,48 @@ svg.addEventListener('dblclick',ev=>{
 });
 
 /* ---------- modo presentación: pantalla negra, sin cromo, como un PowerPoint ---------- */
-function setView(v){ document.querySelectorAll('#viewSeg button').forEach(b=>b.classList.toggle('on', b.dataset.v===v)); clearFocus(); switchView(v); }
-function setTide(on){ document.querySelectorAll('#tideSeg button').forEach(b=>b.classList.toggle('on', (b.dataset.tide==="on")===on)); state.tide=on; if(!on) place(0); }
+function setView(v){ document.querySelectorAll('#viewSeg button').forEach(b=>{const on=b.dataset.v===v; b.classList.toggle('on',on); b.setAttribute('aria-pressed',on?'true':'false');}); clearFocus(); switchView(v); }
+function setTide(on){
+  state.tide=on;
+  const b=document.getElementById('movBtn');
+  if(b){ b.setAttribute('aria-pressed', on?'true':'false'); b.textContent = on?t('movOn'):t('movOff'); }
+  if(!on) place(0);
+  try{ localStorage.setItem('pc_marea', on?'on':'off'); }catch(e){}
+  renderChips();
+}
+document.getElementById('movBtn').addEventListener('click', ()=>setTide(!state.tide));
+
+/* ---------- paneles laterales: Filtros, Información y Leyenda comparten el
+   mismo patrón «disclosure» (no modal): el botón que abre queda con
+   aria-expanded, el panel usa hidden, Escape o su botón de cierre lo
+   devuelven a hidden y el foco regresa siempre al botón que lo abrió. ---------- */
+const PANELES_LATERALES = [['panelFiltros','filtrosBtn'],['panelInfo','infoBtn'],['legend','legendBtn']];
+function cerrarPanelLateral(id, btnId){
+  const p=document.getElementById(id), b=document.getElementById(btnId);
+  if(!p || p.hidden) return;
+  p.hidden=true; if(b) b.setAttribute('aria-expanded','false');
+  if(p._retornoFoco){ p._retornoFoco.focus(); p._retornoFoco=null; }
+}
+function cerrarPanelesLaterales(excepto){ PANELES_LATERALES.forEach(([id])=>{ if(id!==excepto) cerrarPanelLateral(id, PANELES_LATERALES.find(x=>x[0]===id)[1]); }); }
+function abrirPanelLateral(id, btnId){
+  cerrarPanelesLaterales(id);
+  const p=document.getElementById(id), b=document.getElementById(btnId);
+  if(!p || !b) return;
+  p.hidden=false; b.setAttribute('aria-expanded','true'); p._retornoFoco=b;
+  const primero=p.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
+  if(primero) primero.focus();
+}
+PANELES_LATERALES.forEach(([id,btnId])=>{
+  const b=document.getElementById(btnId);
+  if(b) b.addEventListener('click',()=>{ const p=document.getElementById(id); if(p.hidden) abrirPanelLateral(id,btnId); else cerrarPanelLateral(id,btnId); });
+  const p=document.getElementById(id);
+  if(p) p.addEventListener('keydown', ev=>{ if(ev.key==='Escape'){ ev.stopPropagation(); cerrarPanelLateral(id,btnId); } });
+});
+document.getElementById('filtrosCerrar').addEventListener('click',()=>cerrarPanelLateral('panelFiltros','filtrosBtn'));
+document.getElementById('infoCerrar').addEventListener('click',()=>cerrarPanelLateral('panelInfo','infoBtn'));
+document.getElementById('legendCerrar').addEventListener('click',()=>cerrarPanelLateral('legend','legendBtn'));
 const fenKeys=Object.keys(FEN); let presIdx=-1;
-function presSetFen(f){ state.active=null; document.getElementById('panel').classList.remove('open'); state.focusFen=f; showGuion(f); buildLegend(); refreshHi(); updateTip(); if(state.view==="tabla") renderTable(); }
+function presSetFen(f){ state.active=null; ocultarFicha(); state.focusFen=f; showGuion(f); buildLegend(); refreshHi(); updateTip(); if(state.view==="tabla") renderTable(); }
 function presNext(){ presIdx=(presIdx+1)%fenKeys.length; presSetFen(fenKeys[presIdx]); }
 function presPrev(){ presIdx=(presIdx-1+fenKeys.length)%fenKeys.length; presSetFen(fenKeys[presIdx]); }
 function presClear(){ presIdx=-1; presSetFen(null); }
@@ -1325,9 +1940,16 @@ document.addEventListener('keydown',ev=>{
   else if(ev.key.toLowerCase()==='a'){ ev.preventDefault(); rfAbrir(); }
 });
 
-document.getElementById('entrar').onclick=()=>document.getElementById('umbral').classList.add('gone');
+document.getElementById('entrar').onclick=()=>{
+  document.getElementById('umbral').classList.add('gone');
+  try{ if(document.getElementById('umbralSkip').checked) localStorage.setItem('pc_umbral_visto','1'); }catch(e){}
+};
 document.getElementById('marcoBtn').onclick=openMarco;
-document.getElementById('umarco').onclick=openMarco;
+document.getElementById('umarco').onclick=ev=>{ ev.preventDefault(); openMarco(); };
+document.getElementById('comoUsarBtn').onclick=()=>{
+  cerrarPanelLateral('panelInfo','infoBtn');
+  document.getElementById('umbral').classList.remove('gone');
+};
 document.querySelector('#marco .mclose').onclick=closeMarco;
 document.getElementById('marco').addEventListener('click',ev=>{ if(ev.target.id==='marco') closeMarco(); });
 
@@ -1446,10 +2068,19 @@ function rfAbrir(tipo,rel){
   const um=document.getElementById('umbral'); if(um) um.classList.add('gone');
   closeMarco();
   const a=document.getElementById('reflujo');
-  a.hidden=false; rfPintar(); a.classList.add('open');
-  document.getElementById('panel').classList.remove('open');
+  const yaAbierto=a.classList.contains('open');
+  if(!yaAbierto){ a._retornoFoco=document.activeElement; a.removeAttribute('inert'); }
+  rfPintar(); a.classList.add('open');
+  if(!yaAbierto){ const primero=a.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'); if(primero) primero.focus(); }
+  ocultarFicha();
 }
-function rfCerrar(){ document.getElementById('reflujo').classList.remove('open'); }
+function rfCerrar(){
+  const a=document.getElementById('reflujo');
+  if(!a.classList.contains('open')) return;
+  a.classList.remove('open'); a.setAttribute('inert','');
+  if(a._retornoFoco && document.contains(a._retornoFoco)) a._retornoFoco.focus();
+  a._retornoFoco=null;
+}
 
 const rfEsc = s => String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const rfV = id => { const e=document.getElementById(id); return e?e.value.trim():''; };
@@ -1458,8 +2089,9 @@ const rfSub = (s,o) => Object.keys(o).reduce((x,k)=>x.split('{'+k+'}').join(o[k]
 function rfPintar(){
   const a=document.getElementById('reflujo');
   const tipos=[['obra','tObra'],['corriente','tCorriente'],['friccion','tFriccion'],['corroboracion','tCorrob'],['enmienda','tEnmienda']];
-  a.innerHTML=`<button class="close" id="rfClose" aria-label="×">×</button>
-    <div class="tit">${rf('tit')}</div><h2>${rf('h')}</h2>
+  a.setAttribute('role','dialog'); a.setAttribute('aria-labelledby','rfTitId');
+  a.innerHTML=`<button class="close" id="rfClose" aria-label="${t('cerrarReflujo')}">×</button>
+    <div class="tit">${rf('tit')}</div><h2 id="rfTitId">${rf('h')}</h2>
     <p class="lead">${rfSub(rf('lead'),{r:RELS.length,p:RF_PC.length})}</p>
     <div class="grp"><label style="font-family:var(--ff-mono);font-size:8.5px;text-transform:uppercase;letter-spacing:1.4px;color:var(--gray)">${rf('que')}</label>
       <div class="seg" id="rfSeg">${tipos.map(([k,l])=>`<button type="button" data-rt="${k}"${RF_TIPO===k?' class="on"':''}>${rf(l)}</button>`).join('')}</div></div>
@@ -1644,6 +2276,8 @@ function applyLang(){
   document.querySelectorAll('[data-i18n-ph]').forEach(e=>{ const k=e.getAttribute('data-i18n-ph'); if(I18N[LANG][k]!==undefined) e.placeholder=I18N[LANG][k]; });
   const lb=document.getElementById('langBtn'); if(lb) lb.textContent=t('langBtn');
   const mg=document.getElementById('migas'); if(mg) mg.setAttribute('aria-label', t('migaAria'));
+  if(svg) svg.setAttribute('aria-label', t('mapaAria'));
+  const mc=document.querySelector('#marco .mclose'); if(mc) mc.setAttribute('aria-label', t('cerrarMarco'));
   const openId=state.active, ff=state.focusFen;
   if(state.view==='tabla'){ renderTable(); } else { render(); }
   if(openId){ openPanel(openId); }
@@ -1655,6 +2289,8 @@ document.getElementById('langBtn').onclick=()=>{ LANG = (LANG==='es') ? 'en' : '
 
 render();
 montarZoom();
+setTide(state.tide); /* sincroniza el botón de movimiento y las etiquetas de filtros activos con el estado inicial */
+try{ if(localStorage.getItem('pc_umbral_visto')==='1') document.getElementById('umbral').classList.add('gone'); }catch(e){}
 if(LANG==='en') applyLang();
 requestAnimationFrame(loop);
 /* Redirecciones de identificadores fusionados: un enlace ya citado no puede romperse
