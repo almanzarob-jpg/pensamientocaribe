@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Vista previa · Atlas 2.0 · Con el agua de por medio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg-deep:#0b0d09; --bg:#050604; --cream:#f2ead8; --gray:#b9b09f; --line:rgba(185,176,159,.22);
+  --gold:#c9a24d; --gold-d:#8f7434; --green-l:#7fbf6f; --green:#3f8a35; --red:#d83a2e; --orange:#f07a16;
+  --ff-d:'Cormorant Garamond',Georgia,serif; --ff-b:'Inter',system-ui,sans-serif; --ff-m:'JetBrains Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+html,body{margin:0; overflow-x:hidden}
+body{background:var(--bg-deep); color:var(--cream); font-family:var(--ff-b); line-height:1.6;
+  background-image:radial-gradient(ellipse at 15% -10%, rgba(63,138,53,.10), transparent 55%), radial-gradient(ellipse at 90% 0%, rgba(201,162,77,.07), transparent 45%);}
+.skip-link{position:absolute; left:-999px; top:0; background:var(--gold); color:#211a06; padding:10px 16px; z-index:100; font-family:var(--ff-m); font-size:13px; text-decoration:none}
+.skip-link:focus{left:8px; top:8px}
+.wrap{max-width:1180px; margin:0 auto; padding:2.6rem 1.4rem 5rem}
+h1{font-family:var(--ff-d); font-weight:600; font-size:clamp(1.9rem,4vw,3rem); margin:0 0 .3rem; letter-spacing:-.01em}
+h1 em{font-style:italic; color:var(--gold)}
+.sub{color:var(--gray); max-width:70ch; font-size:1rem; margin:0}
+.rule{height:1px; background:linear-gradient(90deg,var(--green),rgba(63,138,53,0)); margin:1.4rem 0 1.8rem}
+/* aviso editorial: fijo al inicio, siempre visible, no descartable */
+.aviso{border:1px solid var(--gold-d); background:rgba(201,162,77,.08); border-radius:10px; padding:1.1rem 1.3rem; margin-bottom:1.8rem; font-size:.94rem; color:var(--cream)}
+.aviso b{color:var(--gold)}
+.aviso .cifra{font-family:var(--ff-m); color:var(--gold)}
+h2{font-family:var(--ff-d); font-weight:600; font-size:clamp(1.3rem,2.2vw,1.7rem); margin:2.6rem 0 .6rem}
+h2 .n{font-family:var(--ff-m); font-size:.68rem; letter-spacing:.14em; color:var(--gold); margin-right:.6rem; vertical-align:middle}
+.lead{color:var(--gray); font-size:.92rem; max-width:76ch; margin:0 0 1.1rem}
+/* estadísticas */
+.stats{display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:.8rem; margin:1rem 0}
+.stat{background:rgba(22,28,18,.5); border:1px solid var(--line); border-radius:9px; padding:.9rem 1rem}
+.stat .big{font-family:var(--ff-d); font-size:2rem; color:var(--gold); line-height:1}
+.stat .lbl{font-size:.72rem; color:var(--gray); letter-spacing:.03em; margin-top:.3rem}
+/* barras de estado / proceso / procedencia */
+.bars{margin:.6rem 0}
+.bar{display:grid; grid-template-columns:170px 1fr 3.2rem; align-items:center; gap:.7rem; margin-bottom:.4rem; font-size:.85rem}
+.bar .nm{color:var(--gray); text-align:right; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.bar .tr{background:rgba(255,255,255,.05); border-radius:3px; height:14px; overflow:hidden}
+.bar .fl{height:100%; border-radius:3px; background:var(--gold-d); transition:width .5s ease}
+.bar .vl{font-family:var(--ff-m); font-size:.78rem; color:var(--gray); text-align:right}
+.nota-corrientes{font-size:.82rem; color:var(--gray); font-style:italic; margin-top:.5rem; max-width:70ch}
+/* controles */
+.controles{display:flex; flex-wrap:wrap; gap:.7rem; align-items:flex-end; margin:1rem 0 1.2rem}
+.grp{display:flex; flex-direction:column; gap:.3rem}
+.grp label{font-family:var(--ff-m); font-size:.66rem; text-transform:uppercase; letter-spacing:.1em; color:var(--gray)}
+.grp input[type="search"], .grp select{background:var(--bg-deep); border:1px solid var(--line); color:var(--cream); font-family:var(--ff-b); font-size:.88rem; padding:8px 10px; border-radius:6px; min-height:44px}
+.grp select{cursor:pointer}
+.grp input:focus, .grp select:focus{outline:2px solid var(--gold); outline-offset:1px}
+#resCount{font-family:var(--ff-m); font-size:.78rem; color:var(--gray); align-self:center}
+/* tabla accesible */
+table{border-collapse:collapse; width:100%; font-size:.87rem; margin-top:.6rem}
+caption{text-align:left; color:var(--gray); font-size:.8rem; font-style:italic; margin-bottom:.6rem}
+th{font-family:var(--ff-m); font-size:.66rem; text-transform:uppercase; letter-spacing:.08em; text-align:left; color:var(--gray); border-bottom:2px solid var(--line); padding:8px 10px; cursor:pointer; user-select:none; position:sticky; top:0; background:var(--bg-deep)}
+th:hover{color:var(--cream)}
+th[aria-sort="ascending"]::after{content:" \25B2"; color:var(--gold)}
+th[aria-sort="descending"]::after{content:" \25BC"; color:var(--gold)}
+td{padding:9px 10px; border-bottom:1px solid var(--line); vertical-align:top}
+tbody tr:hover, tbody tr:focus-within{background:rgba(242,234,216,.04)}
+td.tit a{color:var(--cream); text-decoration:none; font-weight:500}
+td.tit a:hover, td.tit a:focus{color:var(--gold); text-decoration:underline; outline:2px solid var(--gold); outline-offset:2px}
+.badge{font-size:.68rem; letter-spacing:.02em; padding:2px 9px; border-radius:9px; white-space:nowrap; display:inline-block}
+.badge.pendiente_revision_con_texto{color:var(--gray); background:rgba(185,176,159,.12); border:1px solid var(--line)}
+.badge.candidatura_preliminar{color:var(--gold); background:rgba(201,162,77,.14); border:1px solid var(--gold-d)}
+.badge.confirmada{color:var(--green-l); background:rgba(63,138,53,.16); border:1px solid var(--green-l)}
+.badge.revisada{color:#8fd1e0; background:rgba(63,138,138,.16); border:1px solid #4a9aa8}
+.vacio{color:var(--gray); font-style:italic}
+.lotepill{font-family:var(--ff-m); font-size:.66rem; letter-spacing:.06em; color:var(--gray); border:1px solid var(--line); border-radius:4px; padding:1px 6px}
+/* ficha: panel lateral no modal */
+#ficha{position:fixed; inset:0 0 0 auto; width:min(560px,92vw); background:var(--bg-deep); border-left:1px solid var(--gold-d); box-shadow:-18px 0 40px rgba(0,0,0,.5); padding:1.6rem 1.6rem 3rem; overflow-y:auto; transform:translateX(102%); transition:transform .28s ease; z-index:40}
+#ficha.open{transform:translateX(0)}
+#ficha[inert]{visibility:hidden}
+#ficha:not([inert]){visibility:visible}
+#ficha h3{font-family:var(--ff-d); font-size:1.5rem; margin:.2rem 0 .1rem}
+#ficha .au{color:var(--gray); font-size:.86rem; margin-bottom:.2rem}
+#ficha .close{position:absolute; top:14px; right:14px; width:40px; height:40px; background:transparent; border:1px solid var(--line); color:var(--gray); font-size:1.3rem; cursor:pointer; border-radius:6px}
+#ficha .close:hover{color:var(--cream); border-color:var(--gold)}
+#ficha dl{margin:1.2rem 0 0}
+#ficha .campo{margin-bottom:1rem; font-size:.88rem}
+#ficha .campo .l{display:block; font-family:var(--ff-m); font-size:.64rem; text-transform:uppercase; letter-spacing:.09em; color:var(--gray); opacity:.8; margin-bottom:.25rem}
+#ficha .campo p, #ficha .campo ul{margin:0; color:var(--cream)}
+#ficha .campo ul{padding-left:1.1rem}
+#ficha .chip{display:inline-block; font-size:.76rem; padding:.16rem .55rem; border-radius:4px; margin:.15rem .25rem .15rem 0; border:1px solid var(--gold-d); color:var(--gold); background:rgba(201,162,77,.08)}
+#ficha a{color:var(--gold-d)}
+#ficha a:hover{color:var(--gold)}
+#overlay{position:fixed; inset:0; background:rgba(0,0,0,.5); opacity:0; pointer-events:none; transition:opacity .25s; z-index:35}
+#overlay.open{opacity:1; pointer-events:auto}
+.tnote{margin-top:1.6rem; font-size:.8rem; color:var(--gray); line-height:1.6; max-width:74ch}
+footer{margin-top:3.5rem; padding-top:1.2rem; border-top:1px solid var(--line); font-size:.78rem; color:var(--gray)}
+:focus-visible{outline:2px solid var(--gold); outline-offset:2px}
+#estadoCarga{font-family:var(--ff-m); font-size:.85rem; color:var(--gray)}
+#estadoCarga.error{color:var(--red)}
+@media (prefers-reduced-motion: reduce){ *{transition:none !important} }
+@media (max-width:640px){
+  .bar{grid-template-columns:100px 1fr 2.6rem; font-size:.78rem}
+  #ficha{width:100vw}
+  table, thead, tbody, th, td, tr{display:block}
+  thead{display:none}
+  tbody tr{border:1px solid var(--line); border-radius:8px; margin-bottom:.7rem; padding:.6rem .7rem}
+  td{border:0; padding:.3rem 0}
+  td::before{content:attr(data-lbl); display:block; font-family:var(--ff-m); font-size:.62rem; text-transform:uppercase; letter-spacing:.08em; color:var(--gray); margin-bottom:.15rem}
+}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Saltar al contenido principal</a>
+<div class="wrap" id="main">
+  <h1>Vista previa · <em>Atlas 2.0</em></h1>
+  <p class="sub">Con el agua de por medio · atlas para una antropología archipiélica</p>
+  <div class="rule"></div>
+
+  <div class="aviso" role="note">
+    <b>Vista de desarrollo del Atlas 2.0.</b> Presenta únicamente las entradas procesadas en los lotes P00, S01, A01 y A02:
+    <span class="cifra" id="avisoCifra">cargando…</span>.
+    Este conjunto parcial no representa todavía el corpus completo, no ofrece una distribución definitiva entre corrientes
+    y no sustituye la versión pública del Atlas.
+  </div>
+
+  <p id="estadoCarga" role="status" aria-live="polite">Cargando los lotes P00, S01, A01 y A02…</p>
+
+  <div id="contenido" hidden>
+
+    <h2><span class="n">01</span>Qué hay cargado</h2>
+    <p class="lead">Cifras generadas automáticamente a partir de los cuatro lotes, no escritas a mano.</p>
+    <div class="stats" id="statsGrales"></div>
+
+    <h3 style="font-family:var(--ff-b); font-size:.82rem; text-transform:uppercase; letter-spacing:.08em; color:var(--gray); margin:1.6rem 0 .5rem">Por estado de revisión</h3>
+    <div class="bars" id="barsEstado"></div>
+    <h3 style="font-family:var(--ff-b); font-size:.82rem; text-transform:uppercase; letter-spacing:.08em; color:var(--gray); margin:1.6rem 0 .5rem">Por procedencia</h3>
+    <div class="bars" id="barsProcedencia"></div>
+    <h3 style="font-family:var(--ff-b); font-size:.82rem; text-transform:uppercase; letter-spacing:.08em; color:var(--gray); margin:1.6rem 0 .5rem">Por proceso <span style="font-weight:400; font-style:italic; opacity:.75">(una entrada puede llevar más de uno)</span></h3>
+    <div class="bars" id="barsProceso"></div>
+
+    <h2><span class="n">02</span>Corrientes</h2>
+    <p class="lead">Reparto de las corrientes confirmadas o candidatas entre las entradas cargadas. No es la distribución del corpus: es la de esta muestra parcial de 57 entradas, y varias corrientes —sobre todo las que se constituyen por siembra dirigida— pueden aparecer vacías o casi vacías sin que eso diga nada sobre su estado final.</p>
+    <div class="bars" id="barsCorriente"></div>
+
+    <h2><span class="n">03</span>Catálogo cargado</h2>
+    <p class="lead">Ordena por cualquier columna. Abre una fila para ver su ficha completa, con procedencia, proceso, marcas, operaciones, orillas, temporalidad y fuentes de revisión.</p>
+    <div class="controles">
+      <div class="grp"><label for="qbox">Buscar</label><input type="search" id="qbox" placeholder="título o autor…" autocomplete="off"></div>
+      <div class="grp"><label for="fLote">Lote</label><select id="fLote"><option value="">Todos</option></select></div>
+      <div class="grp"><label for="fEstado">Estado</label><select id="fEstado"><option value="">Todos</option></select></div>
+      <span id="resCount" role="status" aria-live="polite"></span>
+    </div>
+    <table id="tabla">
+      <caption>57 entradas del corpus heredado revisadas en los lotes P00, S01, A01 y A02 del Atlas 2.0. Cada fila enlaza a su ficha completa.</caption>
+      <thead><tr>
+        <th scope="col" role="columnheader" aria-sort="none" data-col="t" tabindex="0">Obra</th>
+        <th scope="col" role="columnheader" aria-sort="none" data-col="lote" tabindex="0">Lote</th>
+        <th scope="col" role="columnheader" aria-sort="none" data-col="estado" tabindex="0">Estado</th>
+        <th scope="col" role="columnheader" aria-sort="none" data-col="procedencia" tabindex="0">Procedencia</th>
+        <th scope="col" role="columnheader" aria-sort="none" data-col="corriente" tabindex="0">Corriente</th>
+        <th scope="col" role="columnheader" aria-sort="none" data-col="lengua" tabindex="0">Lengua</th>
+      </tr></thead>
+      <tbody id="tbody"></tbody>
+    </table>
+
+    <p class="tnote">Fuente de datos: <code>piloto-generado.json</code>, <code>lotes/s01-generado.json</code>, <code>lotes/a01-generado.json</code>, <code>lotes/a02-generado.json</code>, validados contra <code>catalogos-atlas-2.json</code> (esquema <span id="verEsquema">—</span>). Esta página no escribe ni modifica ninguno de esos archivos: solo los lee. No consume <code>datos-atlas.js</code> ni <code>datos-atlas.json</code>, y no está enlazada desde ninguna página pública del sitio.</p>
+  </div>
+
+  <footer>
+    Página de desarrollo, fuera de la navegación pública. Necesita servirse por HTTP (por ejemplo <code>python3 server.py</code> o <code>python3 -m http.server</code> desde la raíz del repositorio) — abierta con doble clic (<code>file://</code>), la carga de los JSON no funciona en la mayoría de navegadores.
+  </footer>
+</div>
+
+<div id="overlay"></div>
+<aside id="ficha" inert aria-labelledby="fichaTit" role="dialog"></aside>
+
+<script>
+"use strict";
+const RUTAS = [
+  ["P00", "./piloto-generado.json"],
+  ["S01", "./lotes/s01-generado.json"],
+  ["A01", "./lotes/a01-generado.json"],
+  ["A02", "./lotes/a02-generado.json"],
+];
+const $ = (s, c) => (c || document).querySelector(s);
+const el = (tag, attrs) => { const e = document.createElement(tag); if (attrs) for (const k in attrs) e.setAttribute(k, attrs[k]); return e; };
+
+let ENTRADAS = []; // {heredado, migracion2, _lote}
+let CATALOGOS = null;
+let state = { q: "", lote: "", estado: "", sort: { col: "t", dir: 1 } };
+
+async function cargarTodo() {
+  const estadoEl = $("#estadoCarga");
+  try {
+    const catRes = await fetch("./catalogos-atlas-2.json");
+    if (!catRes.ok) throw new Error("catalogos-atlas-2.json: " + catRes.status);
+    CATALOGOS = await catRes.json();
+
+    for (const [lote, ruta] of RUTAS) {
+      const r = await fetch(ruta);
+      if (!r.ok) throw new Error(ruta + ": " + r.status);
+      const data = await r.json();
+      (data.entradas || []).forEach((it) => ENTRADAS.push({ heredado: it.heredado, migracion2: it.migracion2, _lote: lote }));
+    }
+
+    estadoEl.hidden = true;
+    $("#contenido").hidden = false;
+    $("#verEsquema").textContent = CATALOGOS.version_esquema || "—";
+    render();
+  } catch (err) {
+    estadoEl.classList.add("error");
+    estadoEl.textContent = "No se pudo cargar la vista previa: " + err.message + ". Esta página necesita servirse por HTTP (no file://); revisa la nota al final.";
+  }
+}
+
+function corrienteLabel(clave) {
+  if (!clave) return null;
+  const c = CATALOGOS.corrientes && CATALOGOS.corrientes[clave];
+  return c ? c.label : clave;
+}
+function estadoLabelEs(estado) {
+  const map = {
+    pendiente_revision_con_texto: "pendiente de revisión",
+    candidatura_preliminar: "candidatura preliminar",
+    confirmada: "confirmada",
+    revisada: "revisada",
+  };
+  return map[estado] || estado || "sin declarar";
+}
+
+function statsGenerales() {
+  const porLote = {}, porEstado = {}, porProcedencia = {}, porProceso = {}, porCorriente = {};
+  ENTRADAS.forEach((it) => {
+    const m = it.migracion2;
+    porLote[it._lote] = (porLote[it._lote] || 0) + 1;
+    const est = (m.revision && m.revision.estado) || "(sin declarar)";
+    porEstado[est] = (porEstado[est] || 0) + 1;
+    const proc = m.procedencia || "(sin declarar)";
+    porProcedencia[proc] = (porProcedencia[proc] || 0) + 1;
+    (m.proceso || []).forEach((p) => { porProceso[p] = (porProceso[p] || 0) + 1; });
+    const corr = m.corriente_confirmada || m.corriente_candidata;
+    if (corr) porCorriente[corr] = (porCorriente[corr] || 0) + 1;
+  });
+  return { porLote, porEstado, porProcedencia, porProceso, porCorriente };
+}
+
+function barra(cont, entradas, total, formatearEtiqueta) {
+  cont.innerHTML = "";
+  entradas.sort((a, b) => b[1] - a[1]).forEach(([clave, n]) => {
+    const fila = el("div", { class: "bar" });
+    const nm = el("span", { class: "nm" }); nm.textContent = formatearEtiqueta ? formatearEtiqueta(clave) : clave;
+    const tr = el("span", { class: "tr" });
+    const fl = el("span", { class: "fl" }); fl.style.width = Math.max(3, (n / total) * 100) + "%";
+    tr.appendChild(fl);
+    const vl = el("span", { class: "vl" }); vl.textContent = n;
+    fila.appendChild(nm); fila.appendChild(tr); fila.appendChild(vl);
+    cont.appendChild(fila);
+  });
+}
+
+function renderStats() {
+  const { porLote, porEstado, porProcedencia, porProceso, porCorriente } = statsGenerales();
+  const total = ENTRADAS.length;
+  $("#avisoCifra").textContent = total + " entradas, " + Object.keys(porLote).length + " lotes";
+
+  const sg = $("#statsGrales"); sg.innerHTML = "";
+  const cifras = [["Entradas cargadas", total], ["Lotes", Object.keys(porLote).length],
+    ["Confirmadas / revisadas", (porEstado.confirmada || 0) + (porEstado.revisada || 0)],
+    ["Pendientes de revisión", porEstado.pendiente_revision_con_texto || 0]];
+  cifras.forEach(([lbl, n]) => {
+    const c = el("div", { class: "stat" });
+    const big = el("div", { class: "big" }); big.textContent = n;
+    const l = el("div", { class: "lbl" }); l.textContent = lbl;
+    c.appendChild(big); c.appendChild(l); sg.appendChild(c);
+  });
+
+  barra($("#barsEstado"), Object.entries(porEstado), total, estadoLabelEs);
+  barra($("#barsProcedencia"), Object.entries(porProcedencia), total, (x) => x);
+  barra($("#barsProceso"), Object.entries(porProceso), total, (x) => x);
+  const totalCorr = Object.values(porCorriente).reduce((a, b) => a + b, 0) || 1;
+  barra($("#barsCorriente"), Object.entries(porCorriente), totalCorr, (clave) => corrienteLabel(clave) || clave);
+
+  const selLote = $("#fLote");
+  Object.keys(porLote).sort().forEach((l) => { const o = el("option", { value: l }); o.textContent = l; selLote.appendChild(o); });
+  const selEstado = $("#fEstado");
+  (CATALOGOS.estados_revision || Object.keys(porEstado)).forEach((e) => { const o = el("option", { value: e }); o.textContent = estadoLabelEs(e); selEstado.appendChild(o); });
+}
+
+function filasFiltradas() {
+  let rows = ENTRADAS.filter((it) => {
+    const m = it.migracion2, h = it.heredado;
+    if (state.lote && it._lote !== state.lote) return false;
+    if (state.estado && (m.revision && m.revision.estado) !== state.estado) return false;
+    if (state.q) {
+      const q = state.q.toLowerCase();
+      const hay = (h.t || "").toLowerCase().includes(q) || (h.a || "").toLowerCase().includes(q);
+      if (!hay) return false;
+    }
+    return true;
+  });
+  const { col, dir } = state.sort;
+  rows.sort((ra, rb) => {
+    let va, vb;
+    if (col === "t") { va = ra.heredado.t || ""; vb = rb.heredado.t || ""; }
+    else if (col === "lote") { va = ra._lote; vb = rb._lote; }
+    else if (col === "estado") { va = (ra.migracion2.revision && ra.migracion2.revision.estado) || ""; vb = (rb.migracion2.revision && rb.migracion2.revision.estado) || ""; }
+    else if (col === "procedencia") { va = ra.migracion2.procedencia || ""; vb = rb.migracion2.procedencia || ""; }
+    else if (col === "corriente") { va = corrienteLabel(ra.migracion2.corriente_confirmada || ra.migracion2.corriente_candidata) || ""; vb = corrienteLabel(rb.migracion2.corriente_confirmada || rb.migracion2.corriente_candidata) || ""; }
+    else if (col === "lengua") { va = (ra.migracion2.lenguas_publicacion || ra.migracion2.lenguas_publicacion_candidatas || []).join(","); vb = (rb.migracion2.lenguas_publicacion || rb.migracion2.lenguas_publicacion_candidatas || []).join(","); }
+    va = String(va).toLowerCase(); vb = String(vb).toLowerCase();
+    return va < vb ? -1 * dir : va > vb ? 1 * dir : 0;
+  });
+  return rows;
+}
+
+function celdaCorriente(m) {
+  if (m.corriente_confirmada) return corrienteLabel(m.corriente_confirmada);
+  if (m.corriente_candidata) return corrienteLabel(m.corriente_candidata) + " (candidata)";
+  return null;
+}
+
+function renderTabla() {
+  const rows = filasFiltradas();
+  $("#resCount").textContent = rows.length + " de " + ENTRADAS.length + " entradas";
+  const tbody = $("#tbody"); tbody.innerHTML = "";
+  rows.forEach((it) => {
+    const m = it.migracion2, h = it.heredado;
+    const estado = (m.revision && m.revision.estado) || "(sin declarar)";
+    const corr = celdaCorriente(m);
+    const lengua = (m.lenguas_publicacion || m.lenguas_publicacion_candidatas || []);
+    const tr = el("tr");
+    tr.innerHTML =
+      '<td class="tit" data-lbl="Obra"><a href="#' + h.id + '" data-go="' + h.id + '">' + h.t + "</a></td>" +
+      '<td data-lbl="Lote"><span class="lotepill">' + it._lote + "</span></td>" +
+      '<td data-lbl="Estado"><span class="badge ' + estado + '">' + estadoLabelEs(estado) + "</span></td>" +
+      '<td data-lbl="Procedencia">' + (m.procedencia || '<span class="vacio">sin declarar</span>') + "</td>" +
+      '<td data-lbl="Corriente">' + (corr || '<span class="vacio">pendiente de asignación</span>') + "</td>" +
+      '<td data-lbl="Lengua">' + (lengua.length ? lengua.join(", ") : '<span class="vacio">sin declarar</span>') + "</td>";
+    tbody.appendChild(tr);
+  });
+  tbody.querySelectorAll("a[data-go]").forEach((a) => a.addEventListener("click", (ev) => { ev.preventDefault(); abrirFicha(a.dataset.go); }));
+}
+
+function render() { renderStats(); renderTabla(); }
+
+$("#qbox").addEventListener("input", (e) => { state.q = e.target.value; renderTabla(); });
+$("#fLote").addEventListener("change", (e) => { state.lote = e.target.value; renderTabla(); });
+$("#fEstado").addEventListener("change", (e) => { state.estado = e.target.value; renderTabla(); });
+$("#tabla thead").addEventListener("click", (e) => {
+  const th = e.target.closest("th[data-col]"); if (!th) return;
+  const c = th.dataset.col;
+  if (state.sort.col === c) state.sort.dir *= -1; else state.sort = { col: c, dir: 1 };
+  document.querySelectorAll("#tabla th[data-col]").forEach((h) => h.setAttribute("aria-sort", h === th ? (state.sort.dir === 1 ? "ascending" : "descending") : "none"));
+  renderTabla();
+});
+$("#tabla thead").addEventListener("keydown", (e) => {
+  if (e.key === "Enter" || e.key === " ") { const th = e.target.closest("th[data-col]"); if (th) { e.preventDefault(); th.click(); } }
+});
+
+// ---- ficha lateral, no modal, con devolución de foco ----
+let retornoFoco = null;
+function campo(label, contenidoHtml) {
+  return '<div class="campo"><span class="l">' + label + "</span>" + contenidoHtml + "</div>";
+}
+function listaOVacio(arr, formatear, vacioTxt) {
+  if (!arr || !arr.length) return '<p class="vacio">' + (vacioTxt || "pendiente de asignación") + "</p>";
+  return "<ul>" + arr.map((x) => "<li>" + formatear(x) + "</li>").join("") + "</ul>";
+}
+function abrirFicha(id) {
+  const it = ENTRADAS.find((e) => e.heredado.id === id);
+  if (!it) return;
+  const m = it.migracion2, h = it.heredado;
+  retornoFoco = document.activeElement;
+  const f = $("#ficha");
+  f.removeAttribute("inert");
+
+  const marcasHtml = listaOVacio(m.marcas, (mk) => {
+    let extra = "";
+    if (mk.mecanismo) extra = " — " + mk.mecanismo;
+    if (mk.tipo) extra = " — " + mk.tipo;
+    return (CATALOGOS.marcas && CATALOGOS.marcas.includes(mk.m) ? mk.m : mk.m) + extra;
+  });
+  const operacionesHtml = listaOVacio(m.operaciones, (o) => o);
+  const orillasHtml = listaOVacio(m.orillas, (o) => (o.label || o.lugar || "—") + " · " + o.funcion);
+  const fuentesHtml = listaOVacio(m.fuentes_revision, (u) => /^https?:\/\//.test(u) ? '<a href="' + u + '" target="_blank" rel="noopener">' + u + "</a>" : u, "sin fuentes registradas");
+  const pendientesHtml = m.pendientes && m.pendientes.length ? listaOVacio(m.pendientes, (p) => p) : '<p class="vacio">sin pendientes declarados</p>';
+
+  let temporalidadHtml;
+  const fechaTxt = (d) => d ? d.valor + " " + d.era + (d.precision ? " (" + d.precision + ")" : "") : null;
+  if (m.temporalidades) {
+    const t = m.temporalidades;
+    const partes = [];
+    if (t.publicacion) partes.push("Publicación: " + fechaTxt(t.publicacion));
+    if (t.periodo_estudiado) partes.push("Periodo estudiado: " + fechaTxt(t.periodo_estudiado.inicio) + " – " + fechaTxt(t.periodo_estudiado.fin));
+    temporalidadHtml = partes.length ? "<p>" + partes.join("<br>") + "</p>" : '<p class="vacio">pendiente de asignación</p>';
+  } else if (m.temporalidades_candidatas) {
+    temporalidadHtml = '<p class="vacio">Aún expresado en el campo heredado <code>y</code>: «' + (m.temporalidades_candidatas.valor_heredado || "—") + "». Candidata sin confirmar.</p>";
+  } else {
+    temporalidadHtml = '<p class="vacio">pendiente de asignación</p>';
+  }
+
+  const redireccionHtml = m.accion_entidad === "redireccion"
+    ? '<div class="campo"><span class="l">Redirección</span><p>Esta entrada se fusiona y redirige a <a href="#' + m.redirige_a + '">' + m.redirige_a + "</a>.</p></div>"
+    : "";
+
+  f.innerHTML =
+    '<button type="button" class="close" aria-label="Cerrar ficha">×</button>' +
+    '<h3 id="fichaTit">' + h.t + "</h3>" +
+    '<div class="au">' + h.a + (h.y ? " · " + h.y : "") + '</div>' +
+    '<span class="lotepill">' + it._lote + "</span> " +
+    '<span class="badge ' + ((m.revision && m.revision.estado) || "") + '">' + estadoLabelEs(m.revision && m.revision.estado) + "</span>" +
+    redireccionHtml +
+    campo("Procedencia", "<p>" + (m.procedencia || '<span class="vacio">sin declarar</span>') + (m.procedencia_verificada === false ? ' <span class="vacio">(sin verificar)</span>' : "") + "</p>") +
+    campo("Proceso", listaOVacio(m.proceso, (p) => p)) +
+    campo("Corriente", "<p>" + (celdaCorriente(m) || '<span class="vacio">pendiente de asignación</span>') + "</p>" +
+      (m.corrientes_secundarias && m.corrientes_secundarias.length ? "<p>Secundarias: " + m.corrientes_secundarias.map(corrienteLabel).join(", ") + "</p>" : "")) +
+    campo("Marcas transversales", marcasHtml) +
+    campo("Operaciones epistémicas", operacionesHtml) +
+    campo("Orillas", orillasHtml) +
+    campo("Temporalidad", temporalidadHtml) +
+    campo("Lengua de publicación", "<p>" + ((m.lenguas_publicacion || m.lenguas_publicacion_candidatas || []).join(", ") || '<span class="vacio">sin declarar</span>') + "</p>") +
+    campo("Fundamento de la revisión", "<p>" + (m.revision && m.revision.fundamento ? m.revision.fundamento : '<span class="vacio">sin registrar</span>') + "</p>" +
+      (m.revision && m.revision.responsable ? "<p>" + m.revision.responsable + (m.revision.fecha ? " · " + m.revision.fecha : "") + "</p>" : "")) +
+    campo("Fuentes de la revisión", fuentesHtml) +
+    campo("Pendientes declarados", pendientesHtml);
+
+  f.classList.add("open");
+  $("#overlay").classList.add("open");
+  f.querySelector(".close").focus();
+}
+function cerrarFicha() {
+  const f = $("#ficha");
+  if (!f.classList.contains("open")) return;
+  f.classList.remove("open");
+  $("#overlay").classList.remove("open");
+  f.setAttribute("inert", "");
+  if (retornoFoco && document.contains(retornoFoco)) retornoFoco.focus();
+  retornoFoco = null;
+}
+$("#overlay").addEventListener("click", cerrarFicha);
+document.addEventListener("keydown", (e) => { if (e.key === "Escape") cerrarFicha(); });
+$("#ficha").addEventListener("click", (e) => { if (e.target.closest(".close")) cerrarFicha(); });
+$("#ficha").addEventListener("click", (e) => {
+  const a = e.target.closest("a[href^='#']");
+  if (a && ENTRADAS.some((it) => it.heredado.id === a.getAttribute("href").slice(1))) { e.preventDefault(); abrirFicha(a.getAttribute("href").slice(1)); }
+});
+
+cargarTodo();
+</script>
+</body>
+</html>
