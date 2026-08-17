@@ -280,7 +280,7 @@ Este dictamen:
 - no convierte ninguna lectura autorizada en candidatura ni en clasificación;
 - no ejecuta ni autoriza siembra;
 - no modifica `datos-atlas.json`, `catalogos-atlas-2.json`, `catalogo-fenomenos.json` ni ningún archivo de lote (piloto, S01, A01, A02; ni `*-config.json` ni `*-generado.json`; tampoco F01 ni TP01);
-- no fija criterio definitivo para las fronteras C1/C10, C4/C10, C6/C10, C7/C10 ni C8/C10 — quedan abiertas, sin evidencia nueva que las module;
+- no fija criterio definitivo para las fronteras C1/C10, C4/C10, C6/C10, C7/C10 ni C8/C10 — permanecen abiertas porque la evidencia disponible no autoriza en este dictamen un criterio académico adicional;
 - no reabre C3/C10 ni C5/C10, ya fijadas desde `dictamen-academico-c3.md` y `dictamen-academico-c5.md`;
 - no reabre C1–C9;
 - no reclasifica ninguna de las 14 entradas ya confirmadas de C10, ni corrige retroactivamente su registro en los lotes A01/A02;
@@ -313,7 +313,7 @@ El único archivo nuevo de esta tarea es `dictamen-academico-c10.md`. No se toc�
 - [x] Control «candidaturas activas = 0» — verificado en el apartado 5: las 7 son candidaturas ya resueltas, no activas.
 - [x] Control «territorio ≠ lengua» — verificado en el apartado 13: la afirmación corregida separa ambas variables explícitamente.
 - [x] Revisión completa de fronteras — apartados 6, 7, 8 y 16 (provisional, ratificada por antecedente, abierta, y abierta sin caso).
-- [x] Confirmación de que no se ejecutó ninguna lectura autorizada — `quintero`, `gomezexperiential` y las 41 entradas restantes del universo/anclas siguen sin clasificar; este dictamen no las tocó.
+- [x] Se confirmó que no se ejecutó ninguna de las lecturas autorizadas: las 28 entradas del universo exploratorio permanecen sin procesar; dentro de ese universo se encuentran las lecturas priorizadas de `quintero`, `gomezexperiential` y las anclas de fenómeno correspondientes. Ninguna fue clasificada en esta tarea.
 - [x] Confirmación de que no se inició ninguna fase posterior del Atlas 2.0 — apartados 14 y 18.
 - [x] Revisión integral del diff — un solo archivo nuevo, verificado abajo.
 
