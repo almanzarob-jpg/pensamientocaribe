@@ -24,454 +24,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/zoom-caribe.css">
-<style>
-  :root{
-    --bg-deep:#050604; --bg-warm:#0a0b08; --panel:#11130d;
-    --green:#245f1e; --green-l:#3f8a35; --orange:#f07a16; --red:#d83a2e; --gold:#c9a24d; --gold-d:#8a6c2c;
-    --cream:#f2ead8; --gray:#b9b09f; --line:#2c2e24;
-    --ff-display:'Cormorant Garamond',Georgia,serif;
-    --ff-body:'Inter',system-ui,sans-serif;
-    --ff-mono:ui-monospace,'SFMono-Regular','Consolas',monospace;
-  }
-  *{box-sizing:border-box}
-  html,body{margin:0;height:100%; height:100dvh; overscroll-behavior:none; overflow-x:hidden;}
-  body{background:var(--bg-deep); color:var(--cream); font-family:var(--ff-body); -webkit-font-smoothing:antialiased; overflow:hidden; display:flex; flex-direction:column;}
-  header{flex:0 0 auto; padding:18px 28px 14px; border-bottom:1px solid var(--line); display:flex; align-items:flex-end; justify-content:space-between; gap:24px; flex-wrap:wrap; background:linear-gradient(180deg,var(--bg-warm),var(--bg-deep)); position:relative;}
-  header::after{content:"";position:absolute; left:28px; right:28px; bottom:0; height:2px;
-    background:linear-gradient(90deg, var(--green-l) 0 64px, transparent 64px 76px, var(--gold) 76px 118px, transparent 118px);}
-  header .t .back{display:inline-flex; align-items:center; gap:5px; font-family:var(--ff-mono); font-size:10px; text-transform:uppercase; letter-spacing:1.4px; color:var(--gray); text-decoration:none; margin-bottom:9px; transition:color .15s}
-  header .t .back:hover, header .t .back:focus{color:var(--gold)}
-  /* Ruta de navegación: landmark propio con el camino de vuelta al sitio.
-     Reemplaza al enlace suelto .back, que quedaba fuera de todo landmark.
-     La página está anclada al viewport (body overflow:hidden), así que la
-     navegación vive en la cabecera; un pie de página sería inalcanzable. */
-  header .t .migas{display:flex; align-items:center; flex-wrap:wrap; gap:6px; margin-bottom:9px;
-    font-family:var(--ff-mono); font-size:11.5px; text-transform:uppercase; letter-spacing:1.2px; line-height:1.5}
-  header .t .migas a{display:inline-flex; align-items:center; gap:5px; color:var(--gray); text-decoration:none;
-    padding:3px 2px; border-radius:3px; transition:color .15s}
-  header .t .migas a:hover{color:var(--gold)}
-  header .t .migas a:focus-visible{outline:2px solid var(--gold); outline-offset:2px; color:var(--gold)}
-  header .t .migas .sep{color:var(--line); user-select:none}
-  header .t .migas [aria-current="page"]{color:var(--cream); opacity:.75}
-  header .t h1{font-family:var(--ff-display); font-size:32px; margin:0; font-weight:700; letter-spacing:.3px; color:var(--cream)}
-  header .t .sub{font-family:var(--ff-mono); color:var(--red); font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:3px; margin-top:8px}
-  .controls{display:flex; gap:18px; align-items:flex-end; flex-wrap:wrap}
-  .grp{display:flex; flex-direction:column; gap:6px}
-  .grp label{font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1.6px; color:var(--gray)}
-  .seg{display:flex; border:1px solid var(--line); border-radius:3px; overflow:hidden; background:rgba(255,255,255,.02)}
-  .seg button{font-family:var(--ff-mono); font-size:10.5px; text-transform:uppercase; letter-spacing:1px; padding:7px 13px; border:0; cursor:pointer; background:transparent; color:var(--gray); border-right:1px solid var(--line); transition:background .15s,color .15s;}
-  .seg button:last-child{border-right:0}
-  .seg button:hover{color:var(--cream)}
-  .seg button.on{background:var(--cream); color:var(--bg-deep)}
-  /* cada grupo de filtro con su propio acento, para leerse de un vistazo */
-  .seg.vista button:hover{background:rgba(63,138,53,.16)}
-  .seg.vista button.on{background:var(--green-l); color:#08110a; box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
-  .seg.capa button:hover{background:rgba(201,162,77,.14)}
-  .seg.capa button.on{background:var(--gold); color:#211a06; box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
-  .seg.lengua button:hover{background:rgba(74,157,176,.16)}
-  .seg.lengua button.on{background:#4a9db0; color:#04181c; box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
-  .seg.base{background:transparent; border-color:var(--red)}
-  .seg.base button{color:var(--red); border-right:0; font-weight:600; letter-spacing:1.2px}
-  /* rojo más oscuro solo en este estado :hover (no se toca --red, que sigue
-     usándose como texto/acento en el resto del sitio): cream sobre --red daba
-     3.84:1, por debajo de AA 4.5:1; este tono da 5.87:1 */
-  .seg.base button:hover{background:#a8281f; color:var(--cream)}
-  .seg.base button[aria-pressed="true"]{background:#a8281f; color:var(--cream)}
-  #filtrosBtn{position:relative}
-  #filtrosBtn.activo::after{content:""; position:absolute; top:4px; right:5px; width:6px; height:6px; border-radius:50%; background:var(--gold)}
-  /* etiquetas de filtros activos, siempre visibles y removibles con un toque */
-  .chips{flex:1 0 100%; display:flex; flex-wrap:wrap; gap:6px; margin-top:2px}
-  .chips:empty{display:none; margin:0}
-  /* 32px de alto: por debajo del ideal de 44px, pero deliberado — son etiquetas
-     compactas y removibles (como un chip de filtro de Gmail o Material), separadas
-     entre sí por gap:6px como espaciado equivalente contra el toque accidental */
-  .chip{display:inline-flex; align-items:center; gap:6px; min-height:32px; font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:.7px; padding:8px 12px; border:1px solid var(--gold-d); border-radius:16px; background:rgba(201,162,77,.12); color:var(--gold); cursor:pointer}
-  /* --gold-d con #211a06 daba 3.51:1; --gold (ya usado así en .seg.capa.on) da 7.21:1 */
-  .chip:hover{background:var(--gold); color:#211a06}
-  .chip span{opacity:.75; font-size:11px; line-height:1}
-  /* paneles laterales plegables (Filtros, Información) */
-  .panelLateral{position:absolute; top:14px; right:14px; z-index:17; width:300px; max-height:calc(100% - 28px); overflow:auto; background:var(--panel); border:1px solid var(--line); border-radius:3px; padding:20px 22px; box-shadow:0 16px 44px rgba(0,0,0,.55)}
-  .panelLateral[hidden]{display:none}
-  .panelLateral h2{font-family:var(--ff-display); font-size:19px; margin:0 0 16px; font-weight:600; padding-right:20px}
-  .panelLateral .grp{margin-bottom:16px; align-items:flex-start}
-  .panelLateral .grp:last-child{margin-bottom:0}
-  .panelLateral .seg{flex-wrap:wrap}
-  .panelCerrar{position:absolute; top:0; right:0; width:44px; height:44px; display:flex; align-items:center; justify-content:center; background:transparent; border:0; color:var(--gray); font-size:19px; line-height:1; cursor:pointer}
-  .panelCerrar:hover{color:var(--cream)}
-  .chkLbl{display:flex; align-items:flex-start; gap:8px; font-size:12px; color:var(--gray); line-height:1.5; cursor:pointer}
-  .chkLbl input{margin-top:2px; accent-color:var(--orange); width:auto}
-  #panelInfo a{color:var(--gold); text-decoration:none; font-family:var(--ff-mono); font-size:10.5px; text-transform:uppercase; letter-spacing:1px}
-  #panelInfo a:hover{text-decoration:underline}
-  /* leyenda compacta siempre visible + leyenda completa plegable encima de ella */
-  #legendBar{position:absolute; left:16px; bottom:14px; z-index:14; display:flex; align-items:center; gap:10px; background:rgba(10,11,8,.86); backdrop-filter:blur(3px); border:1px solid var(--line); border-radius:3px; padding:8px 12px; font-family:var(--ff-mono); font-size:9.5px; letter-spacing:.4px; color:var(--gray)}
-  #legendBarTxt{white-space:nowrap}
-  #legendBtn{min-height:44px; display:inline-flex; align-items:center; font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:.8px; padding:0 14px; border:1px solid var(--line); background:transparent; color:var(--gold); cursor:pointer; border-radius:2px; white-space:nowrap}
-  #legendBtn:hover{border-color:var(--gold-d); color:var(--cream)}
-  /* ---------- buscador por título y autor ---------- */
-  .buscador{display:flex; align-items:center; border:1px solid var(--line); border-radius:3px; background:rgba(255,255,255,.02); transition:border-color .15s}
-  .buscador:focus-within{border-color:var(--gold)}
-  .buscador input{font-family:var(--ff-mono); font-size:10.5px; letter-spacing:.6px; padding:7px 10px; width:180px; border:0; background:transparent; color:var(--cream); outline:none}
-  .buscador input::placeholder{color:var(--gray); opacity:.75; text-transform:none; letter-spacing:.4px}
-  .buscador .bclear{border:0; background:transparent; color:var(--gray); cursor:pointer; font-size:15px; line-height:1; padding:0 9px 2px; visibility:hidden}
-  .buscador.has .bclear{visibility:visible}
-  .buscador .bclear:hover{color:var(--red)}
-  .bcount{font-family:var(--ff-mono); font-size:9px; letter-spacing:1px; color:var(--gold); padding-right:9px; white-space:nowrap}
-  .bcount.nada{color:var(--red)}
-  .node.qhit circle.dot{stroke:var(--cream); stroke-width:2.2}
-  main{position:relative; flex:1 1 auto; min-height:0;}
-  #stage{width:100%; height:100%; display:block; cursor:grab; touch-action:none;}
-  /* El grupo de controles se aparta cuando el panel de lectura entra por
-     la derecha. Se usa una variable para que el desplazamiento lateral y el
-     centrado vertical de móvil convivan en una sola transformación. */
-  main{--zc-x:0px; --zc-y:0px}
-  main:has(#panel.open){--zc-x:-372px}
-  .zc{transform:translate(var(--zc-x),var(--zc-y)); transition:transform .3s cubic-bezier(.4,0,.2,1), opacity .2s ease}
-  #stage.grabbing{cursor:grabbing}
-  .node circle.dot{transition:opacity .25s, r .2s}
-  .halo{fill:none; stroke:var(--cream); opacity:0; transition:opacity .2s}
-  /* Etapa 6, Cronología en modo Investigado: sin inventar una posición en el
-     eje del periodo estudiado, estas entradas se atenúan en su sitio de
-     siempre (el eje de publicación) — visibles, no ocultas, pero claramente
-     fuera de foco mientras el modo activo es ese. */
-  .node.sindato circle.dot{opacity:.32}
-  .node.sindato:hover circle.dot, .node.sindato:focus-visible circle.dot{opacity:.85}
-  .edge{fill:none; stroke:var(--orange); stroke-opacity:.4; stroke-width:1.3; stroke-linecap:round; stroke-dasharray:1.5 6; transition:stroke-opacity .25s}
-  .edge.disonancia{stroke:var(--red)}
-  .fricc{pointer-events:none}
-  .coast{fill:none; stroke:var(--green-l); stroke-opacity:.16; stroke-width:1}
-  .tideband{fill:none; stroke:#4a9db0; stroke-opacity:.07}
-  .placelbl{font-family:var(--ff-mono); font-size:10px; letter-spacing:.6px; pointer-events:none; transition:opacity .25s}
-  .placelbl.pais{fill:var(--gray); opacity:.85}
-  .placelbl.ciudad{fill:var(--orange); opacity:.9}
-  .clbl{font-family:var(--ff-mono); font-size:10.5px; text-transform:uppercase; letter-spacing:1.4px; font-weight:600; pointer-events:none; transition:opacity .25s}
-  /* banda del tiempo de lo ocurrido: la barra del periodo y el reflujo que la une
-     con su año de publicación. Siguen el mismo foco que los nodos y las corrientes. */
-  .periodo{transition:opacity .25s}
-  .reflujo{transition:stroke-opacity .25s, stroke-width .25s; pointer-events:none}
-  /* tooltip flotante (siempre nítido) */
-  #tip{position:absolute; left:0; top:0; pointer-events:none; z-index:16; background:rgba(17,19,13,.97); border:1px solid var(--line); border-left:3px solid var(--cream); border-radius:3px; padding:8px 12px; width:max-content; max-width:290px; opacity:0; transform:translate(-50%,calc(-100% - 15px)); transition:opacity .12s; box-shadow:0 10px 26px rgba(0,0,0,.55)}
-  #tip.show{opacity:1}
-  #tip.below{transform:translate(-50%,18px)}
-  #tip .tt{font-family:var(--ff-display); font-size:16px; line-height:1.22; color:var(--cream); font-weight:600}
-  #tip .ta{font-family:var(--ff-mono); font-size:9.5px; letter-spacing:.4px; color:var(--gray); margin-top:4px}
-  #tip .tf{font-family:var(--ff-mono); font-size:8.5px; text-transform:uppercase; letter-spacing:1px; margin-top:5px}
-  /* panel */
-  #panel{position:absolute; top:14px; right:14px; width:352px; max-height:calc(100% - 28px); overflow:auto; background:var(--panel); border:1px solid var(--line); border-radius:3px; padding:22px 24px; box-shadow:0 16px 44px rgba(0,0,0,.55); transform:translateX(125%); transition:transform .3s cubic-bezier(.4,0,.2,1), opacity .3s, visibility .3s;}
-  #panel.open{transform:none}
-  #panel .close{float:right; width:44px; height:44px; margin:-11px -12px 0 0; display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--gray); font-size:20px; line-height:1; border:0; background:none}
-  #panel .kind{font-family:var(--ff-mono); font-size:9.5px; text-transform:uppercase; letter-spacing:1.6px; color:var(--red)}
-  #panel h2{font-family:var(--ff-display); font-size:24px; margin:8px 0 3px; font-weight:600; line-height:1.2}
-  #panel .meta{font-size:12.5px; color:var(--gray); font-style:italic; margin-bottom:6px}
-  #panel .lugar{font-family:var(--ff-mono); font-size:10.5px; letter-spacing:.5px; margin-bottom:12px}
-  #panel .lugar.pais{color:var(--green-l)} #panel .lugar.ciudad{color:var(--orange)}
-  #panel .tags{display:flex; flex-wrap:wrap; gap:6px; margin:10px 0 12px}
-  #panel .tag{font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:.8px; padding:4px 10px; border-radius:11px; color:var(--bg-deep); cursor:pointer}
-  #panel .aporte{font-size:14px; line-height:1.55; margin:0 0 14px}
-  #panel .rel h3{font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1.4px; margin:14px 0 6px; border-top:1px solid var(--line); padding-top:12px}
-  #panel .rel h3.dir{color:var(--orange)} #panel .rel h3.ind{color:var(--gray)}
-  #panel .rel a{display:block; font-size:13px; color:var(--cream); text-decoration:none; padding:5px 0; cursor:pointer; border-bottom:1px dotted var(--line)}
-  #panel .rel a:hover{color:var(--orange)}
-  #panel .rel a .rtitle{color:var(--cream)}
-  #panel .rel a .r{color:var(--gray); font-style:italic; font-size:11px}
-  #panel .rel a .via{color:var(--green-l); font-style:italic; font-size:11px}
-  #panel .rel a .fu{display:block; font-size:11px; line-height:1.4; color:var(--gray); margin-top:3px; font-style:italic}
-  #panel .rel a .fu.pc{color:var(--red); opacity:.85}
-  /* ── el reflujo: marca discreta junto a cada corriente sin fuente ── */
-  #panel .rel a .conoces{display:inline-block; font-family:var(--ff-mono); font-size:8.5px; letter-spacing:.9px; text-transform:lowercase; color:var(--orange); border:1px solid rgba(240,122,22,.35); border-radius:2px; padding:2px 6px; margin-top:4px; cursor:pointer; background:transparent}
-  #panel .rel a .conoces:hover{background:rgba(240,122,22,.16)}
-  /* ── semáforo de corroboración: declara el estatus epistémico de cada corriente ── */
-  #panel .rel a .ev{display:inline-block; width:7px; height:7px; border-radius:50%; margin-right:7px; vertical-align:1px; flex:0 0 auto}
-  #panel .rel a .ev.ok{background:var(--green-l)}
-  #panel .rel a .ev.pc{background:var(--red)}
-  #panel .rel h3 .evn{float:right; font-size:8.5px; letter-spacing:.8px; color:var(--gray); text-transform:none; font-style:italic}
-  .seg.ev button:hover{background:rgba(63,138,53,.14)}
-  .seg.ev button.on{background:var(--green-l); color:#08110a; box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
-  .seg.ev button.on[data-ev="pc"]{background:var(--red); color:#2a0d0a}
-  #legend .corr{margin-top:9px; padding-top:9px; border-top:1px solid var(--line); font-family:var(--ff-mono); font-size:9px; letter-spacing:.5px; color:var(--gray); line-height:1.5}
-  #legend .corrbar{display:flex; height:5px; border-radius:3px; overflow:hidden; background:var(--line); margin:5px 0 5px}
-  #legend .corrbar i{display:block; height:100%}
-  #legend .corrbar i.ok{background:var(--green-l)}
-  #legend .corrbar i.pc{background:var(--red)}
-  #legend .corr a, #legend .corr [role="button"]{color:var(--green-l); cursor:pointer; text-decoration:none; border-bottom:1px dotted rgba(63,138,53,.5)}
-  #legend .corr a:hover, #legend .corr [role="button"]:hover{color:var(--cream)}
-  #panel .cita{margin-top:16px; padding-top:12px; border-top:1px solid var(--line)}
-  #panel .cita .citalbl{display:block; font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1.4px; color:var(--gray); margin-bottom:6px}
-  #panel .cita .apa{font-size:12px; line-height:1.5; color:var(--cream); background:rgba(201,162,77,.06); border-left:2px solid var(--gold); padding:8px 10px; border-radius:2px; margin-bottom:8px}
-  #panel .cita .citarow{display:flex; align-items:center; gap:6px; flex-wrap:wrap}
-  #panel .cita code{font-family:var(--ff-mono); font-size:10px; color:var(--gold); word-break:break-all; background:rgba(201,162,77,.08); padding:2px 5px; border-radius:2px; flex:1 1 60%}
-  #panel .cita button{font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1px; padding:4px 9px; border:1px solid var(--line); background:transparent; color:var(--gray); cursor:pointer; border-radius:2px}
-  #panel .cita button:hover{color:var(--cream); border-color:var(--gold)}
-  /* exportación bibliográfica: la ficha deja de ser solo lectura y pasa a alimentar
-     el gestor de referencias de quien la consulta */
-  #panel .bibrow{display:flex; align-items:center; gap:6px; flex-wrap:wrap; margin-top:9px; padding-top:9px; border-top:1px dashed var(--line)}
-  #panel .bibrow .biblbl{font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1.2px; color:var(--gray); flex:1 1 100%}
-  #panel .bibbtn{font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1px; padding:4px 10px; border:1px solid var(--gold-d); background:transparent; color:var(--gold); cursor:pointer; border-radius:2px}
-  #panel .bibbtn:hover{background:var(--gold); color:#211a06}
-  #panel .bibdoi{font-family:var(--ff-mono); font-size:9px; letter-spacing:1px; color:var(--green-l); text-decoration:none; border-bottom:1px dotted var(--green-l)}
-  #panel .btnIndMapa{float:right; font-family:var(--ff-mono); font-size:8.5px; text-transform:none; letter-spacing:.6px; padding:9px 10px; border:1px solid var(--line); background:transparent; color:var(--gray); cursor:pointer; border-radius:2px; min-height:40px}
-  #panel .btnIndMapa:hover{border-color:var(--gold-d); color:var(--gold)}
-  #panel .btnIndMapa[aria-pressed="true"]{background:var(--gold-d); color:#211a06; border-color:var(--gold-d)}
-  .anolbl{font-family:var(--ff-mono); font-size:9px; letter-spacing:1.1px; fill:var(--gray)}
-  .anolbl.gold{fill:var(--gold-d)}
-  #panel .bibwarn{margin-top:8px; font-family:var(--ff-mono); font-size:9.5px; line-height:1.5; letter-spacing:.3px; color:var(--red); border-left:2px solid var(--red); padding:5px 8px; background:rgba(216,58,46,.06)}
-  /* Etapa 6: bloque del esquema 2.0, plegado por defecto (revelado progresivo) */
-  #panel .e20{margin-top:16px; border-top:1px solid var(--line); padding-top:12px}
-  #panel .e20 summary{cursor:pointer; font-family:var(--ff-mono); font-size:9.5px; text-transform:uppercase; letter-spacing:1.2px; color:var(--gray); display:flex; align-items:center; gap:8px; min-height:32px}
-  #panel .e20 summary:hover{color:var(--cream)}
-  #panel .e20 summary::-webkit-details-marker{color:var(--gray)}
-  /* Etapa 6: la insignia de estado se usa tanto en la ficha (#panel) como en la
-     columna Estado (2.0) de la tabla accesible — por eso no queda anclada a #panel. */
-  .e20-badge{font-size:8.5px; letter-spacing:.6px; padding:2px 8px; border-radius:9px; text-transform:none; white-space:nowrap}
-  .e20-badge.e20-pendiente{color:var(--gray); background:rgba(185,176,159,.12); border:1px solid var(--line)}
-  .e20-badge.e20-preliminar{color:var(--gold); background:rgba(201,162,77,.14); border:1px solid var(--gold-d)}
-  .e20-badge.e20-confirmada{color:var(--green-l); background:rgba(63,138,53,.14); border:1px solid var(--green-l)}
-  #panel .e20-body{margin-top:10px; display:flex; flex-direction:column; gap:11px}
-  #panel .e20-f{font-size:12px; line-height:1.5}
-  #panel .e20-l{display:block; font-family:var(--ff-mono); font-size:8.5px; text-transform:uppercase; letter-spacing:1.1px; color:var(--gray); opacity:.75; margin-bottom:3px}
-  #panel .e20-f p{margin:0; color:var(--cream)}
-  .e20-vacio{color:var(--gray) !important; font-style:italic}
-  #panel .e20-chips{display:flex; flex-wrap:wrap; gap:5px}
-  #panel .e20-chip{font-family:var(--ff-mono); font-size:9px; letter-spacing:.5px; padding:3px 8px; border-radius:9px; border:1px solid var(--line); color:var(--cream); background:rgba(255,255,255,.03)}
-  #panel .e20-flag{color:var(--red); font-style:italic; font-size:11px}
-  #panel .e20-fundamento{color:var(--gray); font-style:italic; font-size:11px}
-  #panel .e20-rutas{margin:0; padding-left:16px}
-  #panel .e20-rutas li{margin-bottom:6px}
-  #panel .e20-nota{margin:4px 0 0; font-size:10.5px; line-height:1.5; color:var(--gray); font-style:italic}
-  /* leyenda: franja compacta siempre visible (#legendBar) + panel plegable con el detalle */
-  #legend{position:absolute; left:16px; bottom:58px; z-index:16; background:rgba(10,11,8,.86); backdrop-filter:blur(3px); border:1px solid var(--line); border-radius:3px; padding:12px 15px; font-family:var(--ff-mono); font-size:10px; letter-spacing:.4px; color:var(--gray); max-width:370px; max-height:calc(100% - 100px); overflow:auto}
-  #legend[hidden]{display:none}
-  /* 36px: la leyenda es un panel angosto (12/15px de relleno); 44px chocaría con el
-     título "N entradas". Se prioriza no tapar contenido sobre el ideal estricto. */
-  #legend .panelCerrar{top:2px; right:4px; width:36px; height:36px; font-size:16px}
-  #legend.docked .panelCerrar{display:none}
-  #legend .lgtitle{font-size:8.5px; text-transform:uppercase; letter-spacing:1.4px; color:var(--gray); opacity:.7; margin-bottom:8px}
-  #legend .grid{display:grid; grid-template-columns:1fr 1fr; gap:5px 16px}
-  /* objetivo táctil de la fila: ~30px con padding:7px, por debajo de 44px por la
-     misma razón que .chip — grilla densa de hasta 10 corrientes; gap:5px del grid
-     como espaciado equivalente */
-  #legend .li{display:flex; align-items:center; gap:7px; cursor:pointer; padding:7px 4px; margin:-7px -4px; border-radius:3px; transition:background .15s}
-  #legend .li:hover{background:rgba(242,234,216,.06)}
-  #legend .li.sel{background:rgba(240,122,22,.15)}
-  #legend .sw{width:9px; height:9px; border-radius:50%; flex:none}
-  #legend .keys{display:flex; gap:14px; margin-top:9px; padding-top:9px; border-top:1px solid var(--line); font-size:9px; color:var(--gray); flex-wrap:wrap}
-  #legend .keys span{display:flex; align-items:center; gap:5px}
-  #legend .kob{width:9px;height:9px;border-radius:50%;background:var(--gray)}
-  #legend .kma{width:9px;height:9px;border-radius:50%;border:2px solid var(--gray);background:transparent}
-  #legend .kre{width:15px;height:0;border-top:2px solid var(--orange)}
-  #legend .kdi{width:15px;height:0;border-top:2px dashed var(--red)}
-  #legend .kfr{color:var(--cream);font-size:10px;line-height:1}
-  #legend .mlink{margin-top:9px;padding-top:9px;border-top:1px solid var(--line)}
-  #legend .mlink a, #legend .mlink [role="button"]{color:var(--orange);cursor:pointer;text-decoration:none;font-size:9.5px;letter-spacing:.6px}
-
-  /* ══ EL REFLUJO ══ la marea que vuelve: lo que el lector deja en la corriente.
-     La puerta no existe al cargar. Aparece en la leyenda cuando quien mira ya recorrió
-     el mapa (seis fichas o cuatro minutos). Filtra por atención, no por credenciales. */
-  #legend .puerta{display:none; margin-top:9px; padding-top:9px; border-top:1px solid var(--line); align-items:center; gap:8px; flex-wrap:wrap}
-  #legend .puerta.on{display:flex; animation:sube .9s ease}
-  @keyframes sube{from{opacity:0; transform:translateY(5px)} to{opacity:1; transform:none}}
-  #legend .puerta .marca{display:inline-block; width:20px; height:1px; background:var(--orange); flex:0 0 auto}
-  #legend .puerta a, #legend .puerta [role="button"]{color:var(--orange); cursor:pointer; text-decoration:none; font-size:9.5px; letter-spacing:.6px}
-  #legend .puerta a:hover, #legend .puerta [role="button"]:hover{text-decoration:underline}
-
-  #reflujo{position:absolute; top:14px; right:14px; z-index:21; width:414px; max-width:calc(100% - 28px); max-height:calc(100% - 28px); overflow:auto; background:var(--panel); border:1px solid var(--line); border-radius:3px; padding:22px 24px 26px; box-shadow:0 16px 44px rgba(0,0,0,.55); transform:translateX(125%); transition:transform .3s cubic-bezier(.4,0,.2,1)}
-  #reflujo.open{transform:none}
-  #reflujo .close{position:absolute; top:0; right:0; width:44px; height:44px; display:flex; align-items:center; justify-content:center; background:transparent; border:0; color:var(--gray); font-size:19px; line-height:1; cursor:pointer}
-  #reflujo .close:hover{color:var(--cream)}
-  #reflujo .tit{font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1.7px; color:var(--gold)}
-  #reflujo h2{font-family:var(--ff-display); font-weight:500; font-size:25px; margin:5px 0 6px; line-height:1.15}
-  #reflujo .lead{font-size:11.5px; color:var(--gray); line-height:1.65; margin:0 0 14px}
-  #reflujo .seg{flex-wrap:wrap; margin-bottom:2px}
-  #reflujo .seg button{padding:6px 9px; font-size:9px; letter-spacing:.6px}
-  #reflujo .seg button.on{background:var(--orange); color:#180a01}
-  #reflujo .seg button.on[data-rt="friccion"]{background:var(--red); color:#2a0d0a}
-  #reflujo .seg button.on[data-rt="corroboracion"]{background:var(--gold); color:#211a06}
-  #reflujo .f{margin-top:12px; position:relative}
-  #reflujo .f>label{display:block; font-family:var(--ff-mono); font-size:8.5px; text-transform:uppercase; letter-spacing:1.3px; color:var(--gray); margin-bottom:4px}
-  #reflujo .f>label .req{color:var(--orange)}
-  #reflujo input[type=text],#reflujo input[type=email],#reflujo textarea,#reflujo select{width:100%; background:var(--bg-deep); border:1px solid var(--line); border-radius:2px; color:var(--cream); font-family:var(--ff-body); font-size:12.5px; padding:8px 10px; line-height:1.5}
-  #reflujo textarea{min-height:78px; resize:vertical}
-  #reflujo input:focus,#reflujo textarea:focus,#reflujo select:focus{outline:0; border-color:var(--orange)}
-  #reflujo .hint{font-size:10.5px; color:var(--gray); line-height:1.5; margin-top:4px; font-style:italic}
-  #reflujo .cnt{font-family:var(--ff-mono); font-size:8.5px; color:var(--gray); text-align:right; margin-top:3px}
-  #reflujo .cnt.ok{color:var(--green-l)}
-  #reflujo .aclist{position:absolute; z-index:9; left:0; right:0; top:100%; background:var(--bg-deep); border:1px solid var(--orange); border-top:0; max-height:180px; overflow-y:auto}
-  #reflujo .aclist div{padding:6px 10px; font-size:12px; cursor:pointer; border-bottom:1px solid var(--line)}
-  #reflujo .aclist div:hover{background:rgba(240,122,22,.16)}
-  #reflujo .aclist small{display:block; color:var(--gray); font-size:10.5px}
-  #reflujo .chips{display:flex; flex-wrap:wrap; gap:5px}
-  #reflujo .chip{font-family:var(--ff-mono); font-size:8.5px; letter-spacing:.6px; text-transform:uppercase; padding:5px 7px; border:1px solid var(--line); border-radius:2px; cursor:pointer; color:var(--gray); background:transparent}
-  #reflujo .chip.on{color:var(--cream); border-color:var(--orange); background:rgba(240,122,22,.14)}
-  #reflujo .chip b{font-weight:400; opacity:.55; margin-left:4px}
-  #reflujo .relprev{background:var(--bg-deep); border:1px solid var(--line); border-left:2px solid var(--orange); padding:9px 11px; font-size:12.5px; line-height:1.5}
-  #reflujo .relprev.diso{border-left-color:var(--red)}
-  #reflujo .relprev .k{font-family:var(--ff-mono); font-size:8.5px; text-transform:uppercase; letter-spacing:1.2px; color:var(--gray); margin-top:5px}
-  #reflujo .divi{border-top:1px solid var(--line); margin-top:18px; padding-top:13px}
-  #reflujo .divi .dl{font-family:var(--ff-mono); font-size:8.5px; text-transform:uppercase; letter-spacing:1.5px; color:var(--gray); margin-bottom:6px}
-  #reflujo .check{display:flex; gap:8px; align-items:flex-start; font-size:11px; color:var(--gray); line-height:1.55; margin-top:9px; cursor:pointer}
-  #reflujo .check input{margin-top:2px; accent-color:var(--orange); width:auto}
-  #reflujo .envio{display:flex; gap:8px; margin-top:15px; flex-wrap:wrap}
-  #reflujo .envio button{font-family:var(--ff-mono); font-size:10px; text-transform:uppercase; letter-spacing:1.3px; padding:10px 15px; border:0; border-radius:2px; cursor:pointer; background:var(--orange); color:#180a01}
-  #reflujo .envio button.alt{background:transparent; color:var(--gray); border:1px solid var(--line)}
-  #reflujo .envio button.alt:hover{color:var(--cream); border-color:var(--gray)}
-  #reflujo .envio button:disabled{opacity:.3; cursor:not-allowed}
-  #reflujo .porque{font-size:10.5px; color:var(--red); margin-top:8px; line-height:1.5}
-  #reflujo .avisos{margin-top:13px; padding-top:11px; border-top:1px solid var(--line); font-size:10.5px; color:var(--gray); line-height:1.6}
-  #reflujo .hp{position:absolute; left:-9999px}
-  @media(max-width:760px){ #reflujo{width:calc(100% - 28px); top:8px; right:8px; left:8px; padding:18px 17px 22px} }
-  #legend .mlink a:hover{color:var(--cream)}
-  /* marco conceptual */
-  #marco{position:absolute; inset:0; background:rgba(5,6,4,.95); backdrop-filter:blur(5px); z-index:22; display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity .35s}
-  #marco.show{opacity:1; pointer-events:auto}
-  #marco .mbox{max-width:760px; max-height:86%; overflow:auto; padding:34px 40px; background:var(--panel); border:1px solid var(--line); border-radius:4px; box-shadow:0 20px 60px rgba(0,0,0,.6)}
-  #marco .mclose{float:right; width:44px; height:44px; margin:-14px -16px 0 0; display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--gray); font-size:24px; border:0; background:none; line-height:1}
-  #marco h2{font-family:var(--ff-display); font-size:30px; font-weight:700; margin:0 0 3px}
-  #marco .msub{font-family:var(--ff-mono); font-size:9.5px; text-transform:uppercase; letter-spacing:2px; color:var(--red); margin-bottom:22px}
-  #marco .c{margin-bottom:19px; padding-left:16px; border-left:2px solid var(--line)}
-  #marco .c h3{font-family:var(--ff-display); font-size:20px; margin:0 0 3px; font-weight:600; color:var(--cream)}
-  #marco .c .who{font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1.2px; color:var(--orange); margin-bottom:5px}
-  #marco .c p{font-size:13.5px; line-height:1.55; color:var(--gray); margin:0}
-  #marco .c p b{color:var(--cream); font-weight:500}
-  #hint{position:absolute; left:16px; top:14px; font-size:12px; color:var(--gray); font-style:italic; max-width:240px; line-height:1.5}
-  .skip-link{position:absolute; left:1rem; top:-100px; z-index:9999; background:var(--orange); color:var(--bg-deep); font-family:var(--ff-mono); font-size:.85rem; font-weight:600; letter-spacing:.02em; padding:.8rem 1.4rem; border-radius:4px; text-decoration:none; transition:top .2s ease}
-  .skip-link:focus{top:1rem}
-  /* texto presente para lectores de pantalla, invisible en pantalla; nunca display:none
-     (eso lo saca del árbol de accesibilidad) */
-  .visually-hidden{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0}
-  /* foco visible consistente en todo el documento, incluidos los nodos del SVG */
-  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible,
-  [tabindex]:focus-visible, .node:focus-visible, [role="button"]:focus-visible{
-    outline:2px solid var(--gold); outline-offset:2px;
-  }
-  .node:focus-visible .dot{stroke:var(--cream); stroke-width:2.4}
-  #guion{position:absolute; left:50%; top:16px; transform:translateX(-50%) translateY(-14px); width:min(580px,74vw); background:rgba(17,19,13,.95); border:1px solid var(--line); border-left-width:3px; border-radius:3px; padding:13px 22px; opacity:0; pointer-events:none; transition:opacity .3s, transform .3s;}
-  #guion.show{opacity:1; transform:translateX(-50%) translateY(0)}
-  #guion .gf{font-family:var(--ff-mono); font-size:10px; text-transform:uppercase; letter-spacing:1.6px; margin-bottom:5px}
-  #guion .gt{font-family:var(--ff-display); font-size:17px; line-height:1.4; color:var(--cream)}
-  .credit{position:absolute; right:16px; bottom:12px; font-family:var(--ff-mono); font-size:9px; letter-spacing:.8px; text-transform:uppercase; color:var(--gray); opacity:.5; text-align:right; line-height:1.7}
-  #umbral{position:absolute; inset:0; background:rgba(5,6,4,.94); backdrop-filter:blur(4px); display:flex; align-items:center; justify-content:center; z-index:20; transition:opacity .5s}
-  #umbral.gone{opacity:0; pointer-events:none}
-  #umbral .box{max-width:640px; padding:0 30px; text-align:center}
-  #umbral h2{font-family:var(--ff-display); font-size:36px; font-weight:700; margin:0 0 4px}
-  #umbral .u-sub{font-family:var(--ff-mono); font-size:10px; text-transform:uppercase; letter-spacing:2.4px; color:var(--red); margin-bottom:22px}
-  #umbral p{font-size:15px; line-height:1.65; color:var(--cream); margin:0 0 16px}
-  #umbral .how{font-size:13px; line-height:1.6; color:var(--gray); margin-bottom:26px}
-  #umbral .how b{color:var(--orange); font-weight:600}
-  #umbral button{font-family:var(--ff-mono); font-size:12px; text-transform:uppercase; letter-spacing:1.6px; padding:12px 28px; background:var(--orange); color:var(--bg-deep); border:0; border-radius:2px; cursor:pointer}
-  #umbral button:hover{background:var(--cream)}
-  /* vista tabla accesible */
-  #tabla{position:absolute; inset:0; overflow:auto; padding:20px 26px 60px; display:none}
-  #tabla.show{display:block}
-  /* leyenda anclada: dentro de #tabla deja de ser un overlay flotante y pasa a ser
-     una franja fija al inicio del listado, en el flujo normal del documento */
-  #legend.docked{position:static; max-width:none; max-height:none; width:100%; margin:0 0 22px; backdrop-filter:none; background:rgba(255,255,255,.03)}
-  #legend.docked .grid{grid-template-columns:repeat(auto-fill,minmax(180px,1fr))}
-  #tabla .tcap{font-family:var(--ff-display); font-size:22px; color:var(--cream); margin:2px 0 4px}
-  #tabla .tsub{font-family:var(--ff-mono); font-size:10px; text-transform:uppercase; letter-spacing:1.4px; color:var(--gray); margin-bottom:16px}
-  #tabla table{border-collapse:collapse; width:100%; font-size:13.5px}
-  #tabla caption{text-align:left; color:var(--gray); font-size:12px; font-style:italic; margin-bottom:10px}
-  #tabla th{font-family:var(--ff-mono); font-size:9.5px; text-transform:uppercase; letter-spacing:1px; text-align:left; color:var(--gray); border-bottom:2px solid var(--line); padding:8px 12px; position:sticky; top:0; background:var(--bg-deep); cursor:pointer; user-select:none}
-  #tabla th:hover{color:var(--cream)}
-  #tabla th[aria-sort="ascending"]::after{content:" ▲"; color:var(--gold)}
-  #tabla th[aria-sort="descending"]::after{content:" ▼"; color:var(--gold)}
-  #tabla td{padding:9px 12px; border-bottom:1px solid var(--line); vertical-align:top; color:var(--cream)}
-  #tabla tbody tr{cursor:pointer; transition:background .12s}
-  #tabla tbody tr:hover, #tabla tbody tr:focus-within{background:rgba(242,234,216,.05)}
-  #tabla td.tit a{color:var(--cream); text-decoration:none; font-weight:500}
-  #tabla td.tit a:hover, #tabla td.tit a:focus{color:var(--gold); text-decoration:underline; outline:2px solid var(--gold); outline-offset:2px}
-  #tabla td .fenchip{display:inline-block; width:9px; height:9px; border-radius:50%; margin-right:5px; vertical-align:middle}
-  #tabla td .kind-o{color:var(--gray)} #tabla td .kind-m{color:var(--orange)}
-  #tabla .tnote{margin-top:22px; font-size:12px; color:var(--gray); font-style:italic; line-height:1.6; max-width:760px}
-  #tabla .tnote a{color:var(--gold)}
-  /* Etapa 6: selector de columnas — plegado por defecto, expone las diez
-     columnas posibles sin forzar a nadie a desplazarse de más ni perder de
-     vista las que ya tenía visibles */
-  #tabla .tcolsel{margin-bottom:14px; max-width:560px}
-  #tabla .tcolsel summary{cursor:pointer; font-family:var(--ff-mono); font-size:10px; text-transform:uppercase; letter-spacing:1.2px; color:var(--gray); min-height:32px; display:flex; align-items:center; list-style:none}
-  #tabla .tcolsel summary::-webkit-details-marker{display:none}
-  #tabla .tcolsel summary::before{content:"▸ "; color:var(--gold-d)}
-  #tabla .tcolsel[open] summary::before{content:"▾ "}
-  #tabla .tcolsel summary:hover{color:var(--cream)}
-  #tabla .tcolsel fieldset{border:1px solid var(--line); border-radius:2px; margin:8px 0 0; padding:12px 14px; display:flex; flex-wrap:wrap; gap:8px 18px}
-  #tabla .tcolsel legend{font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1.2px; color:var(--gray); padding:0 4px}
-  #tabla .tcolopt{display:flex; align-items:center; gap:6px; font-size:12.5px; color:var(--cream); cursor:pointer; min-height:32px}
-  #tabla .tcolopt input{width:16px; height:16px; accent-color:var(--gold-d); cursor:pointer}
-  #tabla .tcolopt.esencial{color:var(--gray); cursor:default}
-  #tabla .tcolopt.esencial input{cursor:default}
-  #tabla .tcolnota{font-size:10px; opacity:.75}
-  /* modo presentación: pantalla negra, solo el mapa/constelación, sin cromo de interfaz */
-  body.presenting{background:#000}
-  body.presenting #stage{background:#000}
-  body.presenting header{display:none}
-  body.presenting main{height:100%}
-  body.presenting #legend{display:none}
-  body.presenting #legendBar{display:none}
-  body.presenting .panelLateral{display:none}
-  body.presenting .chips{display:none}
-  body.presenting #hint{display:none}
-  body.presenting .credit{display:none}
-  body.presenting #tabla{display:none !important}
-  #presExit{position:fixed; right:16px; top:16px; z-index:30; font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1.4px; padding:7px 13px; background:rgba(0,0,0,.55); color:var(--gray); border:1px solid var(--line); border-radius:2px; cursor:pointer; opacity:0; pointer-events:none; transition:opacity .25s;}
-  body.presenting #presExit{opacity:.3; pointer-events:auto}
-  body.presenting #presExit:hover{opacity:1; color:var(--cream); border-color:var(--gold)}
-  #presHelp{position:fixed; left:16px; bottom:16px; z-index:30; font-family:var(--ff-mono); font-size:9.5px; letter-spacing:.6px; padding:9px 13px; background:rgba(0,0,0,.55); border:1px solid var(--line); border-radius:2px; color:var(--gray); opacity:0; pointer-events:none; transition:opacity .25s; display:flex; gap:14px; flex-wrap:wrap;}
-  body.presenting #presHelp{opacity:.4; pointer-events:auto}
-  body.presenting #presHelp:hover{opacity:1}
-  #presHelp b{color:var(--gold); font-weight:600; margin-right:4px}
-
-  /* ---------- móvil: el header apilaba los 6 grupos de controles en 4 filas y se comía el 44% de la pantalla. Aquí el título se compacta y los controles pasan a UNA sola fila horizontal deslizable, devolviéndole al mapa la mayor parte del alto. ---------- */
-  @media (max-width:780px){
-    header{flex-direction:column; align-items:stretch; padding:10px 12px 8px; gap:8px;}
-    header::after{left:12px; right:12px;}
-    header .t{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;}
-    header .t .back{font-size:8.5px; margin-bottom:5px}
-    header .t h1{font-size:19px}
-    header .t .sub{font-size:8px; letter-spacing:1.5px; margin-top:0}
-    /* min-width:0 es obligatorio: sin él, un hijo flex en columna nunca se encoge
-       por debajo del ancho de su contenido y overflow-x:auto no llega a activarse
-       — el header entero (y el body) se ensanchaba a 851px en un viewport de 375px,
-       lo que Etapa 5 detectó al enfocar un control fuera de esa franja: el navegador
-       desplazaba TODA la página en vez de solo la franja de controles. */
-    .controls{gap:0; flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch; scrollbar-width:none; padding-bottom:2px; min-width:0; max-width:100%;}
-    .controls::-webkit-scrollbar{display:none}
-    .grp{flex:0 0 auto; gap:3px; padding-right:12px;}
-    .grp label{font-size:7.5px; letter-spacing:1px}
-    .seg button{padding:8px 10px; font-size:9.5px; min-height:44px; letter-spacing:.5px}
-    .buscador input{width:132px; font-size:11px; padding:9px 9px; min-height:44px}
-    .bcount{font-size:8px; padding-right:7px}
-    #hint{display:none}
-    .chips{padding:0 2px}
-    #legendBar{left:8px; right:8px; bottom:8px; max-width:none; justify-content:space-between}
-    #legend{left:8px; right:8px; bottom:56px; max-width:none; max-height:calc(100% - 130px); padding:9px 11px; font-size:9px;}
-    #legend .grid{grid-template-columns:1fr 1fr}
-    #guion{width:calc(100vw - 24px); left:12px; right:12px; transform:translateY(-14px); top:10px;}
-    #guion.show{transform:none}
-    #panel{left:8px; right:8px; top:8px; width:auto; max-height:calc(100% - 16px); padding:18px 18px; transform:translateY(-16px); opacity:0; visibility:hidden;}
-    #panel.open{transform:none; opacity:1; visibility:visible;}
-    /* filtros e información pasan de panel lateral a hoja inferior en móvil */
-    .panelLateral{left:0; right:0; top:auto; bottom:0; width:auto; max-height:76vh; border-radius:10px 10px 0 0; padding:18px 18px 24px; box-shadow:0 -12px 30px rgba(0,0,0,.5)}
-    .panelLateral .grp{margin-bottom:18px}
-    .seg.lengua button, .seg.capa button, .seg.ev button{padding:8px 10px; font-size:9.5px; min-height:44px}
-    #marco .mbox{max-width:calc(100vw - 24px); padding:22px 20px; max-height:90%}
-    #marco h2{font-size:24px}
-    .credit{display:none}
-    #tip{max-width:220px}
-    #presHelp{font-size:8.5px; gap:8px 10px; left:8px; bottom:8px}
-    #presExit{right:8px; top:8px}
-    /* La leyenda ocupa todo el borde inferior en móvil, así que los controles
-       dejan la esquina y se anclan a media altura sobre el costado derecho.
-       Aquí el panel entra desde arriba y cubre la pieza: los controles se
-       retiran mientras está abierto en vez de apartarse de lado. */
-    main{--zc-y:-50%}
-    main:has(#panel.open){--zc-x:0px}
-    .zc{bottom:auto; top:50%}
-    main:has(#panel.open) .zc{opacity:0; pointer-events:none}
-  }
-  @media (max-width:780px) and (max-height:480px){
-    header{padding:8px 12px 6px}
-    header .t h1{font-size:17px}
-    header .t .sub{display:none}
-  }
-</style>
+<link rel="stylesheet" href="../css/con-el-agua-de-por-medio.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -530,13 +83,14 @@
   <div class="controls">
     <div class="grp"><label id="lblVistaId" data-i18n="lblVista">Vista</label><div class="seg vista" id="viewSeg" role="group" aria-labelledby="lblVistaId"><button type="button" data-v="corriente" class="on" aria-pressed="true" data-i18n="vCorriente">Corriente</button><button type="button" data-v="constelacion" aria-pressed="false" data-i18n="vConstelacion">Constelación</button><button type="button" data-v="cronologia" aria-pressed="false" data-i18n="vCronologia">Cronología</button><button type="button" data-v="tabla" aria-pressed="false" data-i18n="vTabla">Tabla</button></div></div>
     <div class="grp" id="cronoGrp" style="display:none"><label id="lblCronoModoId" data-i18n="lblCronoModo">Eje temporal</label><div class="seg vista" id="cronoSeg" role="group" aria-labelledby="lblCronoModoId"><button type="button" data-cm="publicacion" class="on" aria-pressed="true" data-i18n="cmPublicacion">Publicación</button><button type="button" data-cm="investigado" aria-pressed="false" data-i18n="cmInvestigado">Investigado</button><button type="button" data-cm="combinada" aria-pressed="false" data-i18n="cmCombinada">Combinada</button></div></div>
-    <div class="grp"><label for="qbox" data-i18n="lblBuscar">Buscar</label>
+    <div class="grp familia"><label for="qbox" data-i18n="lblBuscar">Buscar</label>
       <div class="buscador" id="buscador">
         <input id="qbox" type="search" autocomplete="off" spellcheck="false" placeholder="título o autor…" data-i18n-ph="buscarPh" aria-describedby="qcount">
         <span class="bcount" id="qcount" role="status" aria-live="polite"></span>
         <button class="bclear" id="qclear" type="button" title="Limpiar" aria-label="Limpiar búsqueda">×</button>
       </div></div>
-    <div class="grp" id="zoomGrp"><label data-i18n="lblZoom">Zoom</label><div class="seg base"><button id="resetZoomBtn" data-i18n="resetBtn" data-i18n-title="resetTitle">⤢ Reencuadrar</button></div></div>
+    <div class="grp familia" id="zoomGrp"><label data-i18n="lblZoom">Zoom</label><div class="seg base"><button id="resetZoomBtn" data-i18n="resetBtn" data-i18n-title="resetTitle">⤢ Reencuadrar</button></div></div>
+    <div class="grp familia"><div class="seg base"><button id="recorridosBtn" type="button" aria-expanded="false" aria-controls="panelRecorridos" data-i18n-title="btnRecorridosAbrir" data-i18n="lblRecorridos">Recorridos</button></div></div>
     <div class="grp"><div class="seg base"><button id="filtrosBtn" type="button" aria-expanded="false" aria-controls="panelFiltros" data-i18n-title="btnFiltrosAbrir" data-i18n="lblFiltros">Filtros</button></div></div>
     <div class="grp"><div class="seg base"><button id="infoBtn" type="button" aria-expanded="false" aria-controls="panelInfo" data-i18n-title="btnInfoAbrir" data-i18n="lblInfo">Información</button></div></div>
     <div class="grp"><label data-i18n="lblIdioma">Idioma</label><div class="seg base" style="border-color:var(--gold)"><button id="langBtn" style="color:var(--gold)">EN</button></div></div>
@@ -555,6 +109,13 @@
     <button type="button" id="legendCerrar" class="panelCerrar" data-i18n-title="legendCerrar" aria-label="Cerrar leyenda">×</button>
     <div id="legendBody"></div>
   </div>
+  <aside id="panelRecorridos" class="panelLateral" aria-label="Recorridos" hidden>
+    <button type="button" id="recorridosCerrar" class="panelCerrar" data-i18n-title="btnRecorridosCerrar" aria-label="Cerrar recorridos">×</button>
+    <h2 data-i18n="lblRecorridos">Recorridos</h2>
+    <p class="recNota" data-i18n="recProvisional">Denominaciones provisionales, en revisión académica.</p>
+    <div class="grp"><div class="seg recSeg" id="recSeg" role="group" aria-label="Recorridos C1 a C10"></div></div>
+    <p class="recNota recPie" data-i18n="recPie">El Atlas sigue en investigación: las obras fuera del recorrido elegido no desaparecen, se atenúan.</p>
+  </aside>
   <aside id="panelFiltros" class="panelLateral" aria-label="Filtros" hidden>
     <button type="button" id="filtrosCerrar" class="panelCerrar" data-i18n-title="btnFiltrosCerrar" aria-label="Cerrar filtros">×</button>
     <h2 data-i18n="lblFiltros">Filtros</h2>
@@ -571,6 +132,10 @@
     </div></div>
     <div class="grp"><label data-i18n="lblMovimiento">Movimiento</label><div class="seg base"><button id="movBtn" type="button" aria-pressed="true" data-i18n="movOn">Animación: activada</button></div></div>
     <div class="grp"><label class="chkLbl"><input type="checkbox" id="indChk"> <span data-i18n="indCheckLbl">Mostrar también las indirectas en el mapa</span></label></div>
+    <!-- Carril A · 24-08-2026: «Limpiar filtros» no existía como acción única. Había que
+         deshacer cada filtro por separado o quitar los chips uno a uno. Aparece solo
+         cuando hay algo que limpiar, para no añadir cromo inerte. -->
+    <div class="grp" id="limpiarGrp" hidden><div class="seg base"><button id="limpiarFiltrosBtn" type="button" data-i18n="limpiarFiltros">Limpiar filtros</button></div></div>
   </aside>
   <aside id="panelInfo" class="panelLateral" aria-label="Información" hidden>
     <button type="button" id="infoCerrar" class="panelCerrar" data-i18n-title="btnInfoCerrar" aria-label="Cerrar información">×</button>
@@ -612,7 +177,7 @@
   </div></div>
 </main>
 <script src="../js/zoom-caribe.js"></script>
-<script src="../data/agua-de-por-medio/datos-atlas.js?v=202608071"></script>
+<script src="../data/agua-de-por-medio/datos-atlas.js?v=202608251"></script>
 <!-- Capa de temporalidad. Aditiva: si falta, la cronología funciona como siempre. -->
 <script src="../data/agua-de-por-medio/datos-temporalidad.js?v=202608101"></script>
 <script>
@@ -647,6 +212,77 @@ function estado20(n){
   if(rev==='candidatura_preliminar' || rev==='pendiente_revision_con_texto') return 'preliminar';
   if(n.procedencia) return 'preliminar';
   return 'pendiente';
+}
+/* ══════════ Fase 5C · Recorridos C1–C10 ══════════
+   Las denominaciones se transcriben literalmente del catálogo vigente
+   (data/agua-de-por-medio/atlas-2/catalogos-atlas-2.json), que la interfaz no puede
+   cargar porque la página no hace peticiones de red. No se reconstruyen de memoria,
+   no se abrevian y no se renombran.
+
+   Incidencia académica registrada y no resuelta aquí: el dictamen de C1 aprueba
+   «Mundos indígenas, invasiones y persistencias», denominación que su propio documento
+   declara «pendiente de incorporación al catálogo». La interfaz muestra la del catálogo
+   y no anticipa esa incorporación.
+
+   Estas funciones solo LEEN los campos sincronizados en la Fase 5B. Ninguna asigna,
+   completa ni infiere recorridos. */
+const RECORRIDOS = [
+  {c:"c1",  es:"Invasiones, despojos y mundos indígenas",              en:"Invasions, dispossessions and Indigenous worlds"},
+  {c:"c2",  es:"Trata, esclavización y plantación",                    en:"Slave trade, enslavement and plantation"},
+  {c:"c3",  es:"Fugas, cimarronajes y emancipaciones",                 en:"Flight, marronage and emancipations"},
+  {c:"c4",  es:"Postplantación, trabajo y desposesión",                en:"Post-plantation, labor and dispossession"},
+  {c:"c5",  es:"Rutas, diásporas y territorios acuosos",               en:"Routes, diasporas and aqueous territories"},
+  {c:"c6",  es:"Huracanes, ecologías y materialidades vivas",          en:"Hurricanes, ecologies and living materialities"},
+  {c:"c7",  es:"Soberanías, fronteras y ocupaciones",                  en:"Sovereignties, borders and occupations"},
+  {c:"c8",  es:"Creolizaciones, traducciones y opacidades",            en:"Creolizations, translations and opacities"},
+  {c:"c9",  es:"Archivos vivos, espiritualidades y saberes transmitidos", en:"Living archives, spiritualities and transmitted knowledges"},
+  {c:"c10", es:"Cuerpos, parentescos y eróticas",                      en:"Bodies, kinships and erotics"},
+];
+const REC_POR_CLAVE = Object.fromEntries(RECORRIDOS.map(r=>[r.c,r]));
+const recCod = c => (c||"").toUpperCase();
+const recDen = c => { const r=REC_POR_CLAVE[c]; return r ? (LANG==='en'?r.en:r.es) : ""; };
+const recEtiqueta = c => `${recCod(c)} · ${recDen(c)}`;
+
+/* Grado de pertenencia de una obra a un recorrido, sin convertirlo en diez cajas:
+     2 · estructurante — recorrido principal, o recorrido de una arquitectura especial
+     1 · secundario   — declarado en recorridos_sec
+     0 · fuera                                                                        */
+function recGrado(n, r){
+  if(!r) return 0;
+  if(r==='pendiente')   return n.estado_recorrido==='pendiente'   ? 2 : 0;
+  if(r==='sin_evaluar') return n.estado_recorrido==='sin_evaluar' ? 2 : 0;
+  if(n.recorrido===r) return 2;
+  const a=n.arquitectura_recorrido;
+  if(a && Array.isArray(a.recorridos) && a.recorridos.includes(r)) return 2;
+  if(Array.isArray(n.recorridos_sec) && n.recorridos_sec.includes(r)) return 1;
+  return 0;
+}
+/* Arquitectura de la obra, tal como la escribió la Fase 5B. No se reinterpreta. */
+function recArquitectura(n){
+  const a=n.arquitectura_recorrido;
+  if(a && a.tipo==='frontera_constitutiva')   return {tipo:'frontera', recorridos:a.recorridos||[]};
+  if(a && a.tipo==='sintesis_multicorriente') return {tipo:'sintesis', recorridos:a.recorridos||[]};
+  return null;
+}
+/* Texto compacto para la vista Tabla: C4 · C10 + C4 · C1 ↔ C3 · C3 · C5 · C7 */
+function recTextoCompacto(n){
+  const arq=recArquitectura(n);
+  if(arq) return arq.recorridos.map(recCod).join(arq.tipo==='frontera' ? ' ↔ ' : ' · ');
+  if(n.recorrido){
+    const sec=(n.recorridos_sec||[]).map(recCod);
+    return recCod(n.recorrido) + (sec.length ? ' + ' + sec.join(' + ') : '');
+  }
+  if(n.estado_recorrido==='pendiente')   return t('recPendiente');
+  if(n.estado_recorrido==='sin_evaluar') return t('recSinEval');
+  return '—';
+}
+/* Rango de ordenación de la columna Recorrido: primero C1…C10, luego arquitecturas,
+   luego pendientes y sin evaluar. */
+function recRango(n){
+  if(n.recorrido) return parseInt(n.recorrido.slice(1),10);
+  if(n.arquitectura_recorrido) return 50;
+  if(n.estado_recorrido==='pendiente') return 90;
+  return 99;
 }
 const MARCAS_7 = ['capitalismo_racial','colonialidad','racializacion','genero','clase_trabajo','memoria','violencias'];
 function marcaDe(n,clave){ return (n.marcas||[]).find(m=>m.m===clave) || null; }
@@ -752,6 +388,20 @@ const I18N = {
     lblVista:"Vista", vCorriente:"Corriente", vConstelacion:"Constelación", vTabla:"Tabla",
     lblCronoModo:"Eje temporal", cmPublicacion:"Publicación", cmInvestigado:"Investigado", cmCombinada:"Combinada",
     lblCapa:"Capa", cAmbas:"Ambas", cObra:"Obras", cManif:"Manifestaciones culturales",
+    /* Fase 5C · Recorridos C1–C10. Las diez denominaciones se transcriben literalmente
+       de data/agua-de-por-medio/atlas-2/catalogos-atlas-2.json, que es la fuente canónica
+       vigente, y coinciden con los dictámenes académicos salvo en C1, cuya denominación
+       aprobada en dictamen sigue pendiente de incorporación al catálogo. */
+    lblRecorridos:"Recorridos", btnRecorridosAbrir:"Consultar los recorridos C1–C10", btnRecorridosCerrar:"Cerrar recorridos",
+    recTodos:"Todos los recorridos", recPendientes:"Pendientes", recSinEvaluar:"Sin evaluar",
+    recProvisional:"Denominaciones provisionales, en revisión académica.",
+    recPie:"El Atlas sigue en investigación: las obras fuera del recorrido elegido no desaparecen, se atenúan.",
+    recPrincipal:"Recorrido principal", recTambien:"También dialoga con",
+    recFrontera:"Frontera constitutiva", recSintesis:"Síntesis multicorriente",
+    recClasif:"Clasificación de recorrido", recPendiente:"Pendiente", recSinEval:"Sin evaluar",
+    recEstado:"Estado del recorrido", recEstConfirmado:"confirmado", recEstPendiente:"pendiente", recEstSinEvaluar:"sin evaluar",
+    recFuente:"Decidido en", recBloque:"Recorridos", thRecorrido:"Recorrido", chipRecorrido:"Recorrido",
+    recDesglose:"{e} estructurantes · {s} como recorrido secundario",
     lblMarea:"Marea", mFlujo:"Flujo", mQuieta:"Quieta",
     lblBase:"Base", marcoBtn:"Marco conceptual",
     lblModo:"Modo", presBtn:"Pantalla completa",
@@ -801,12 +451,18 @@ const I18N = {
     lblIndirectas:"Conexiones indirectas", indCheckLbl:"Mostrar también las indirectas en el mapa",
     chipQuitarAria:"Quitar filtro: {label}", chipTipo:"Tipo", chipEvid:"Evidencia", chipLengua:"Lengua", chipMov:"Movimiento", chipInd:"Indirectas",
     legendBarTpl:"{n} entradas · {r} relaciones visibles · {p}% corroborado",
+    legendBarReposo:"{n} entradas · {R} relaciones, visibles al elegir una obra o un fenómeno · {p}% corroborado",
     legendAbrir:"Ver leyenda completa", legendCerrar:"Cerrar leyenda",
     umbralNoMostrar:"No volver a mostrar esta introducción",
     mapaAria:"Mapa interactivo del atlas",
     mapaInstrucciones:"Mapa interactivo con las obras y manifestaciones culturales del atlas. Use las flechas para moverse entre ellas, Intro o espacio para abrir su ficha, Inicio o Fin para ir al primero o al último, y Escape para cerrar la ficha abierta.",
     cerrarFicha:"Cerrar ficha", cerrarMarco:"Cerrar marco conceptual", cerrarReflujo:"Cerrar el reflujo",
     e20Titulo:"Esquema 2.0", e20EstadoConfirmada:"confirmada", e20EstadoPreliminar:"preliminar", e20EstadoPendiente:"pendiente",
+    limpiarFiltros:"Limpiar filtros",
+    curLbl:"Estado de la curaduría",
+    curGlosa_confirmada:"Esta entrada tiene decisión académica formal registrada en el expediente del atlas.",
+    curGlosa_preliminar:"Esta entrada está en revisión: declara procedencia o candidatura, pero todavía no tiene decisión definitiva.",
+    curGlosa_pendiente:"Esta entrada forma parte del corpus, pero su clasificación en el sistema de corrientes todavía no ha sido decidida. El atlas no la presenta como si lo estuviera.",
     e20Corriente:"Corriente principal", e20CorrientePendiente:"pendiente de asignación",
     e20Marcas:"Marcas transversales", e20MarcasPendiente:"pendientes de asignación",
     e20Operaciones:"Operaciones epistémicas", e20OperacionesPendiente:"pendientes de asignación",
@@ -852,6 +508,16 @@ const I18N = {
     lblVista:"View", vCorriente:"Current", vConstelacion:"Constellation", vTabla:"Table",
     lblCronoModo:"Time axis", cmPublicacion:"Publication", cmInvestigado:"Studied", cmCombinada:"Combined",
     lblCapa:"Layer", cAmbas:"Both", cObra:"Works", cManif:"Cultural manifestations",
+    lblRecorridos:"Itineraries", btnRecorridosAbrir:"Browse itineraries C1–C10", btnRecorridosCerrar:"Close itineraries",
+    recTodos:"All itineraries", recPendientes:"Pending", recSinEvaluar:"Not assessed",
+    recProvisional:"Provisional denominations, under academic review.",
+    recPie:"The Atlas is still under research: works outside the chosen itinerary are dimmed, not removed.",
+    recPrincipal:"Main itinerary", recTambien:"Also converses with",
+    recFrontera:"Constitutive boundary", recSintesis:"Multi-itinerary synthesis",
+    recClasif:"Itinerary classification", recPendiente:"Pending", recSinEval:"Not assessed",
+    recEstado:"Itinerary status", recEstConfirmado:"confirmed", recEstPendiente:"pending", recEstSinEvaluar:"not assessed",
+    recFuente:"Decided in", recBloque:"Itineraries", thRecorrido:"Itinerary", chipRecorrido:"Itinerary",
+    recDesglose:"{e} structural · {s} as secondary itinerary",
     lblMarea:"Tide", mFlujo:"Flow", mQuieta:"Still",
     lblBase:"Base", marcoBtn:"Conceptual frame",
     lblModo:"Mode", presBtn:"Full screen",
@@ -901,12 +567,18 @@ const I18N = {
     lblIndirectas:"Indirect connections", indCheckLbl:"Also show indirect connections on the map",
     chipQuitarAria:"Remove filter: {label}", chipTipo:"Type", chipEvid:"Evidence", chipLengua:"Language", chipMov:"Motion", chipInd:"Indirect",
     legendBarTpl:"{n} entries · {r} visible relations · {p}% corroborated",
+    legendBarReposo:"{n} entries · {R} relations, shown when you pick a work or a phenomenon · {p}% corroborated",
     legendAbrir:"See full legend", legendCerrar:"Close legend",
     umbralNoMostrar:"Do not show this introduction again",
     mapaAria:"Interactive map of the atlas",
     mapaInstrucciones:"Interactive map with the atlas's works and cultural manifestations. Use the arrow keys to move between them, Enter or space to open its entry, Home or End to go to the first or last one, and Escape to close the open entry.",
     cerrarFicha:"Close entry", cerrarMarco:"Close conceptual framework", cerrarReflujo:"Close the reflux",
     e20Titulo:"2.0 schema", e20EstadoConfirmada:"confirmed", e20EstadoPreliminar:"preliminary", e20EstadoPendiente:"pending",
+    limpiarFiltros:"Clear filters",
+    curLbl:"Curation status",
+    curGlosa_confirmada:"This entry has a formal scholarly decision recorded in the atlas file.",
+    curGlosa_preliminar:"This entry is under review: it declares provenance or a candidacy, but has no final decision yet.",
+    curGlosa_pendiente:"This entry belongs to the corpus, but its place in the system of currents has not been decided. The atlas does not present it as if it had been.",
     e20Corriente:"Main current", e20CorrientePendiente:"pending assignment",
     e20Marcas:"Cross-cutting marks", e20MarcasPendiente:"pending assignment",
     e20Operaciones:"Epistemic operations", e20OperacionesPendiente:"pending assignment",
@@ -985,22 +657,38 @@ const byId=id=>N.find(n=>n.id===id);
 const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 let mareaGuardada=null; try{ mareaGuardada=localStorage.getItem('pc_marea'); }catch(e){}
 const tideInicial = mareaGuardada==='off' ? false : mareaGuardada==='on' ? true : !reduced;
-let state={view:"corriente",layer:"ambas",active:null, focusFen:null, tide:tideInicial, q:"", evid:"todas", showIndirect:false, lengua:"todas", cronoModo:"publicacion"};
+let state={view:"corriente",layer:"ambas",active:null, focusFen:null, tide:tideInicial, q:"", evid:"todas", showIndirect:false, lengua:"todas", cronoModo:"publicacion", recorrido:null};
 
 /* ---------- buscador por título y autor ----------
    Filtra por texto sin acentos: «cesaire» encuentra «Césaire», «gomez» encuentra «Gómez».
    En el mapa no elimina nodos, los atenúa: el lugar de cada obra sigue siendo información. */
 const sinTildes = s => (s||"").normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase();
 let QTERMS=[];
+/* Fase 5C · la consulta puede además nombrar un recorrido, por código («c4») o por
+   denominación («rutas, diásporas»). Cuando lo hace, sus obras se SUMAN a los aciertos
+   bibliográficos en vez de sustituirlos: ninguna búsqueda que antes encontraba algo
+   deja de encontrarlo. */
+let QREC=null;
+function recDeConsulta(q){
+  const s=sinTildes(q).trim();
+  if(!s) return null;
+  const cod=s.match(/^c\s*([1-9]|10)$/);
+  if(cod) return 'c'+cod[1];
+  if(s.length<5) return null;
+  const hits=RECORRIDOS.filter(r=>sinTildes(r.es).includes(s) || sinTildes(r.en).includes(s));
+  return hits.length===1 ? hits[0].c : null;
+}
 function setQuery(v){
   state.q=(v||"").trim();
   QTERMS=sinTildes(state.q).split(/\s+/).filter(Boolean);
+  QREC=recDeConsulta(state.q);
   const box=document.getElementById('buscador'); if(box) box.classList.toggle('has', !!state.q);
 }
 function matchQ(n){
   if(!QTERMS.length) return true;
   const h=sinTildes(n.t+" "+n.a);
-  return QTERMS.every(w=>h.includes(w));
+  if(QTERMS.every(w=>h.includes(w))) return true;
+  return QREC ? recGrado(n, QREC)>0 : false;
 }
 function qHits(){ return QTERMS.length ? N.filter(n=>visible(n)&&matchQ(n)) : []; }
 function updateQCount(){
@@ -1013,6 +701,54 @@ function updateQCount(){
 let VNODES=[], EDGES=[], CLUSTERS=[]; let hoverNode=null; let CRONO=null; let egGroup=null;
 let rovingId=null; /* id del único nodo del mapa que es parada de Tab (tabulación itinerante) */
 let vpt={k:1,tx:0,ty:0}; let vp=null;
+
+/* ── Fase 4A · encuadre inicial del mapa ──────────────────────────────────
+   Medido antes de tocar nada: en 390×648 el elemento del mapa mide 648 px de alto
+   pero el archipiélago ocupaba 127, el 20 %. La causa no es el zoom sino la
+   proporción: el contenido mide 982×389 unidades (2,52:1) y un teléfono es 0,60:1.
+   Ninguna forma de encuadrar un rectángulo apaisado dentro de uno vertical llena
+   las dos dimensiones; para ganar tamaño hay que mostrar menos cuenca a la vez.
+   La solución es una ventana de viewBox más estrecha en móvil, centrada en el
+   contenido y con la proporción del elemento, de modo que no quede banda negra.
+   No se toca px(), py(), la proyección ni ninguna coordenada: cambia qué parte del
+   mismo lienzo se ve al entrar, y el paneo alcanza el resto. «Reencuadrar» vuelve
+   a esta ventana, no a la de escritorio. */
+const VB_ESCRITORIO=[0,0,VW,VH];
+const OCUPACION_OBJETIVO=0.40;  /* del alto del elemento que debe llevar mapa */
+function cajaContenido(){
+  const xs=[], ys=[];
+  N.forEach(n=>{ if(n._bx!=null && n._by!=null && visible(n)){ xs.push(n._bx); ys.push(n._by); } });
+  if(!xs.length) return null;
+  return [Math.min(...xs), Math.min(...ys), Math.max(...xs), Math.max(...ys)];
+}
+function encuadrarMapa(){
+  if(!svg) return;
+  const r=svg.getBoundingClientRect();
+  const movil = window.matchMedia('(max-width:780px)').matches;
+  if(!movil || !r.width || !r.height || state.view!=='corriente'){
+    svg.setAttribute('viewBox', VB_ESCRITORIO.join(' '));
+    return;
+  }
+  const c=cajaContenido();
+  if(!c){ svg.setAttribute('viewBox', VB_ESCRITORIO.join(' ')); return; }
+  const [x0,y0,x1,y1]=c;
+  const anchoC=x1-x0, altoC=y1-y0;
+  if(anchoC<=0 || altoC<=0){ svg.setAttribute('viewBox', VB_ESCRITORIO.join(' ')); return; }
+  /* escala que deja OCUPACION_OBJETIVO del alto ocupado por contenido */
+  const s = OCUPACION_OBJETIVO*r.height/altoC;
+  let vbW = r.width/s;
+  /* nunca ampliar más allá de la cuenca entera ni recortar por debajo de un tercio */
+  vbW = Math.max(anchoC/3, Math.min(vbW, VW));
+  const vbH = vbW*r.height/r.width;
+  /* Centro de masa de las entradas visibles, no centro de la caja. La cuenca va de
+     Veracruz a Surinam, pero el corpus se concentra en el arco insular: abrir por el
+     centro geometrico dejaria media ventana sobre mar vacio. El criterio es el mismo
+     que ordena las etiquetas, donde esta el atlas. */
+  let sx=0, sy=0, nn=0;
+  N.forEach(o=>{ if(o._bx!=null && o._by!=null && visible(o)){ sx+=o._bx; sy+=o._by; nn++; } });
+  const cx = nn ? sx/nn : (x0+x1)/2, cy = nn ? sy/nn : (y0+y1)/2;
+  svg.setAttribute('viewBox', [ (cx-vbW/2).toFixed(1), (cy-vbH/2).toFixed(1), vbW.toFixed(1), vbH.toFixed(1) ].join(' '));
+}
 function applyVP(){ if(vp) vp.setAttribute('transform',`translate(${vpt.tx},${vpt.ty}) scale(${vpt.k})`); }
 
 const GOLD = 2.399963; // ángulo áureo: reparte nodos en espiral orgánica, como un arrecife, sin que se encimen
@@ -1268,6 +1004,7 @@ function render(){
   const siguePresente = rovingPrevio && VNODES.some(n=>n.id===rovingPrevio);
   if(VNODES.length) setRoving(siguePresente?byId(rovingPrevio):VNODES[0]);
   buildLegend(); refreshHi(); place(0);
+  encuadrarMapa(); _kPrevio=null; ajustarEtiquetas();
 }
 
 function drawBasin(){
@@ -1302,7 +1039,14 @@ function place(t){
   updateTip();
 }
 
-function screenXY(n){ const vx=vpt.tx+n._x*vpt.k, vy=vpt.ty+n._y*vpt.k; const r=svg.getBoundingClientRect(); return [vx/VW*r.width, vy/VH*r.height]; }
+/* Fase 4A: la posición del globo informativo se toma de la caja real del nodo, no
+   de una regla de tres sobre el elemento, por la misma razón que toVB. */
+function screenXY(n){
+  const r=svg.getBoundingClientRect();
+  if(n._g){ const b=n._g.getBoundingClientRect(); if(b.width||b.height) return [b.left+b.width/2-r.left, b.top+b.height/2-r.top]; }
+  const vx=vpt.tx+n._x*vpt.k, vy=vpt.ty+n._y*vpt.k;
+  return [vx/VW*r.width, vy/VH*r.height];
+}
 function updateTip(){
   const n = hoverNode || (state.active?byId(state.active):null);
   if(!n || !n._g || !visible(n)){ tip.classList.remove('show'); tip._for=null; return; }
@@ -1313,7 +1057,7 @@ function updateTip(){
 }
 
 function refreshHi(){
-  const fn=state.active, ff=state.focusFen; let nb=null; if(fn) nb=neighbors(fn);
+  const fn=state.active, ff=state.focusFen, fr=state.recorrido; let nb=null; if(fn) nb=neighbors(fn);
   /* la búsqueda solo atenúa cuando no hay una ficha abierta: al abrir una obra manda su constelación,
      y al cerrarla se vuelve al recorte de la búsqueda, que queda escrita en el campo */
   const qOn = !fn && QTERMS.length>0;
@@ -1321,6 +1065,10 @@ function refreshHi(){
     if(fn){ if(n.id===fn){op=1;rmul=1.5;halo=1;} else if(nb.direct.has(n.id)){op=1;rmul=1.15;} else if(nb.indirect.has(n.id)){op=.5;} else op=.08; }
     else if(qOn){ if(matchQ(n)){op=1;rmul=1.35;halo=1;} else op=.06; }
     else if(ff){ if(n.f.includes(ff)){op=1;rmul=n.f[0]===ff?1.25:1;} else op=.09; }
+    /* Fase 5C · el recorrido seleccionado atenúa, no borra, y distingue tres grados:
+       estructurante, secundario y fuera de foco. Reutiliza la gramática visual del
+       foco por fenómeno, sin paleta nueva ni geometría nueva. */
+    else if(fr){ const g=recGrado(n,fr); if(g===2){op=1;rmul=1.25;} else if(g===1){op=.5;rmul=1.05;} else op=.09; }
     n._c.style.opacity=op; n._c.setAttribute('r', n._c._r*rmul); n._halo.style.opacity=halo?.9:0; n._halo.style.stroke=col(n.f[0]);
     n._g.classList.toggle('qhit', qOn && matchQ(n));
   });
@@ -1328,6 +1076,7 @@ function refreshHi(){
     if(fn){ const a=e.na.id,b=e.nb.id; const touchF=(a===fn||b===fn); const bothDir=(a===fn||nb.direct.has(a))&&(b===fn||nb.direct.has(b)); const toInd=(nb.direct.has(a)&&nb.indirect.has(b))||(nb.direct.has(b)&&nb.indirect.has(a)); op=touchF?.82:bothDir?.42:toInd?.26:.04; }
     else if(qOn){ const ha=matchQ(e.na), hb=matchQ(e.nb); op=(ha&&hb)?.7:(ha||hb)?.22:.03; }
     else if(ff){ op=(e.na.f.includes(ff)&&e.nb.f.includes(ff))?.65:.05; }
+    else if(fr){ const ga=recGrado(e.na,fr), gb=recGrado(e.nb,fr); op=(ga&&gb)?.6:(ga||gb)?.2:.04; }
     /* El filtro de evidencia se aplica encima de cualquier otro recorte: apaga las corrientes
        que no correspondan al estatuto pedido, sin alterar el resto de la lógica de foco. */
     if(state.evid!=="todas"){
@@ -1338,7 +1087,7 @@ function refreshHi(){
     if(e.marker) e.marker.style.strokeOpacity = (op==="")?.55 : Math.min(.7, op*1.1);
   });
   if(vp){
-    vp.querySelectorAll('.placelbl').forEach(t=>{ if(qOn){ const has=N.some(n=>n.l===t._place && visible(n) && matchQ(n)); t.style.opacity=has?1:.12; } else if(ff){ const has=N.some(n=>n.l===t._place && n.f.includes(ff)); t.style.opacity=has?1:.12; } else if(fn){ const has=N.some(n=>n.l===t._place && (n.id===fn||nb.direct.has(n.id))); t.style.opacity=has?1:.2; } else t.style.opacity=""; });
+    vp.querySelectorAll('.placelbl').forEach(t=>{ if(qOn){ const has=N.some(n=>n.l===t._place && visible(n) && matchQ(n)); t.style.opacity=has?1:.12; } else if(ff){ const has=N.some(n=>n.l===t._place && n.f.includes(ff)); t.style.opacity=has?1:.12; } else if(fr){ const has=N.some(n=>n.l===t._place && recGrado(n,fr)>0); t.style.opacity=has?1:.12; } else if(fn){ const has=N.some(n=>n.l===t._place && (n.id===fn||nb.direct.has(n.id))); t.style.opacity=has?1:.2; } else t.style.opacity=""; });
     vp.querySelectorAll('.clbl').forEach(t=>{ if(ff){ t.style.opacity=(t._fen===ff)?1:.25; } else t.style.opacity=""; });
     /* El reflujo y su barra siguen el mismo foco que el resto: tenues cuando se ven
        las veinticuatro a la vez, encendidos cuando se señala una obra. Sin esto la
@@ -1348,6 +1097,7 @@ function refreshHi(){
       if(fn) op = (c._id===fn) ? .95 : (nb.direct.has(c._id) ? .4 : .05);
       else if(qOn) op = matchQ(byId(c._id)||{t:'',a:''}) ? .8 : .05;
       else if(ff){ const n=byId(c._id); op = (n && n.f.includes(ff)) ? .7 : .05; }
+      else if(fr){ const n=byId(c._id); op = (n && recGrado(n,fr)>0) ? .7 : .05; }
       c.style.strokeOpacity=op; c.style.strokeWidth = (fn && c._id===fn) ? 1.8 : 1;
     });
     vp.querySelectorAll('.periodo').forEach(b=>{
@@ -1355,6 +1105,7 @@ function refreshHi(){
       if(fn) op = (b._id===fn) ? 1 : (nb.direct.has(b._id) ? .6 : .12);
       else if(qOn) op = matchQ(byId(b._id)||{t:'',a:''}) ? 1 : .1;
       else if(ff){ const n=byId(b._id); op = (n && n.f.includes(ff)) ? 1 : .12; }
+      else if(fr){ const n=byId(b._id); op = (n && recGrado(n,fr)>0) ? 1 : .12; }
       b.style.opacity=op;
     });
   }
@@ -1370,7 +1121,8 @@ function ocultarFicha(){
   const p=document.getElementById('panel');
   if(!p.classList.contains('open')) return;
   p.classList.remove('open'); p.setAttribute('inert','');
-  if(p._retornoFoco && document.contains(p._retornoFoco)) p._retornoFoco.focus();
+  /* Carril A · 24-08-2026: al devolver el foco ocurría lo mismo que al abrir. */
+  if(p._retornoFoco && document.contains(p._retornoFoco)) p._retornoFoco.focus({preventScroll:true});
   p._retornoFoco=null;
 }
 function focusFen(f){ state.active=null; ocultarFicha(); state.focusFen=(state.focusFen===f)?null:f; syncEdges(); showGuion(state.focusFen); buildLegend(); refreshHi(); updateTip(); if(state.view==="tabla") renderTable(); }
@@ -1380,6 +1132,47 @@ function focusFen(f){ state.active=null; ocultarFicha(); state.focusFen=(state.f
    ni las relaciones, que son la lectura principal). Cada campo que no existe en la
    entrada se declara «pendiente» o «sin dato» — nunca se sustituye por el campo
    heredado sin decirlo, y nunca se inventa un valor que la entrada no declara. */
+/* Fase 5C · bloque discreto de la ficha. Se adapta a los cinco casos del contrato y
+   no crea campos vacíos: lo que la obra no declara, no se dibuja. */
+function recorridosHtml(n){
+  const linea=(cod,den)=>`<span class="rec-cod">${cod}</span><span class="rec-den">${den}</span>`;
+  const arq=recArquitectura(n);
+  let cuerpo='';
+
+  if(arq){
+    const sep = arq.tipo==='frontera' ? ' ↔ ' : ' · ';
+    cuerpo += `<div class="rec-f"><span class="rec-l">${arq.tipo==='frontera'?t('recFrontera'):t('recSintesis')}</span>`+
+              `<p class="rec-arq">${arq.recorridos.map(recCod).join(sep)}</p>`+
+              `<ul class="rec-lista">${arq.recorridos.map(c=>`<li>${linea(recCod(c),recDen(c))}</li>`).join('')}</ul></div>`;
+    if((n.recorridos_sec||[]).length){
+      cuerpo += `<div class="rec-f"><span class="rec-l">${t('recTambien')}</span>`+
+                `<ul class="rec-lista">${n.recorridos_sec.map(c=>`<li>${linea(recCod(c),recDen(c))}</li>`).join('')}</ul></div>`;
+    }
+  } else if(n.recorrido){
+    cuerpo += `<div class="rec-f"><span class="rec-l">${t('recPrincipal')}</span>`+
+              `<ul class="rec-lista"><li>${linea(recCod(n.recorrido),recDen(n.recorrido))}</li></ul></div>`;
+    if((n.recorridos_sec||[]).length){
+      cuerpo += `<div class="rec-f"><span class="rec-l">${t('recTambien')}</span>`+
+                `<ul class="rec-lista">${n.recorridos_sec.map(c=>`<li>${linea(recCod(c),recDen(c))}</li>`).join('')}</ul></div>`;
+    }
+  } else if(n.estado_recorrido==='pendiente' || n.estado_recorrido==='sin_evaluar'){
+    const cual = n.estado_recorrido==='pendiente' ? t('recPendiente') : t('recSinEval');
+    cuerpo += `<div class="rec-f"><span class="rec-l">${t('recClasif')}</span><p class="rec-estado">${cual}</p></div>`;
+  } else {
+    return '';
+  }
+
+  /* §10 · «confirmado» califica al recorrido, no a la obra entera. */
+  if(n.estado_recorrido){
+    const mapa={confirmado:'recEstConfirmado', pendiente:'recEstPendiente', sin_evaluar:'recEstSinEvaluar'};
+    const clave=mapa[n.estado_recorrido];
+    if(clave) cuerpo += `<p class="rec-meta">${t('recEstado')}: ${t(clave)}</p>`;
+  }
+  if((n.fuente_recorrido||[]).length){
+    cuerpo += `<p class="rec-meta rec-fuente">${t('recFuente')}: ${n.fuente_recorrido.join(' · ')}</p>`;
+  }
+  return `<div class="rec-block"><h3 class="rec-h">${t('recBloque')}</h3>${cuerpo}</div>`;
+}
 function esquema20Html(n){
   const est=estado20(n);
   const badge=`<span class="e20-badge e20-${est}">${t('e20Estado'+est.charAt(0).toUpperCase()+est.slice(1))}</span>`;
@@ -1435,7 +1228,17 @@ function esquema20Html(n){
     ? `<ul class="e20-rutas">${rutasCon.map(r=>`<li>${r.tipo}: ${r.origen} → ${r.destino}${r.estado==='corroborada'?'':` (${t('evPcT')})`}<br><span class="e20-fundamento">${r.fuente}</span></li>`).join('')}</ul>`
     : '';
 
-  return `<details class="e20">
+  /* Carril A · 24-08-2026: el estado de la curaduría vivía dentro del <details> plegado,
+     invisible salvo que alguien lo desplegara. Esta zona lo antepone como síntesis; el
+     bloque detallado sigue debajo, íntegro. El dato es el que ya calculaba estado20():
+     no se inventa ninguna categoría nueva ni se toca el corpus. */
+  const curaduria = `<div class="curaduria cur-${est}">
+    <span class="cur-l">${t('curLbl')}</span>
+    <span class="e20-badge e20-${est}">${t('e20Estado'+est.charAt(0).toUpperCase()+est.slice(1))}</span>
+    <p class="cur-g">${t('curGlosa_'+est)}</p>
+  </div>`;
+
+  return curaduria + `<details class="e20">
     <summary>${t('e20Titulo')} ${badge}</summary>
     <div class="e20-body">
       <div class="e20-f"><span class="e20-l">${t('e20Corriente')}</span>${corrienteHtml}</div>
@@ -1481,9 +1284,15 @@ function openPanel(id){
         ${n.doi?`<a class="bibdoi" href="https://doi.org/${n.doi}" target="_blank" rel="noopener">doi ↗</a>`:''}
       </div>
       ${bibCompleta(n)?'':`<div class="bibwarn">${t('bibIncompleta')}</div>`}</div>
+    ${recorridosHtml(n)}
     ${esquema20Html(n)}`;
   p.classList.add('open');
-  if(!yaAbierta) p.querySelector('.close').focus();
+  /* Carril A · 24-08-2026: focus() sin más hacía que el navegador desplazara el panel
+     hasta ponerlo a la vista, y como <body> tiene overflow:hidden pero sigue siendo
+     desplazable por código, arrastraba toda la página 504 px a la izquierda: el
+     encabezado y el mapa se salían de cuadro y quedaba una franja negra a la derecha.
+     La causa es el desplazamiento implícito del foco, así que se corrige ahí. */
+  if(!yaAbierta) p.querySelector('.close').focus({preventScroll:true});
   p.querySelector('.close').onclick=()=>clearFocus();
   p.querySelectorAll('[data-go]').forEach(a=>a.onclick=ev=>{ ev.preventDefault(); openPanel(a.dataset.go); });
   p.querySelectorAll('.conoces').forEach(b=>{
@@ -1509,7 +1318,12 @@ function buildLegend(){
   const barTxt=document.getElementById('legendBarTxt');
   if(barTxt){
     const visN=N.filter(visible).length, pct=RELS.length?(CORR_OK/RELS.length*100):0;
-    barTxt.textContent = t('legendBarTpl').replace('{n}',visN).replace('{r}',EDGES.length).replace('{p}',pct.toFixed(0));
+    /* Fase 4A: en reposo la barra decía «0 relaciones visibles», que se lee como si
+       el atlas no tuviera ninguna, cuando tiene 588 y solo espera una selección
+       para dibujarlas. La cifra real no cambia: cambia lo que la frase declara. */
+    barTxt.textContent = EDGES.length===0
+      ? t('legendBarReposo').replace('{n}',visN).replace('{R}',RELS.length).replace('{p}',pct.toFixed(0))
+      : t('legendBarTpl').replace('{n}',visN).replace('{r}',EDGES.length).replace('{p}',pct.toFixed(0));
   }
   lg.innerHTML=`<div class="lgtitle">${total} ${t('lgTitle')}</div><div class="grid"></div>`+
     `<div class="keys"><span><i class="kob"></i>${t('lgResearch')} (${obras})</span><span><i class="kma"></i>${t('lgEthno')} (${manif})</span></div>`+
@@ -1576,12 +1390,13 @@ function evCell(id){ const {ok,tot}=evStats(id); if(!tot) return '<span style="c
    que más falta por migrar, que es la información operativa útil. */
 const ESTADO20_RANGO = { pendiente: 0, preliminar: 1, confirmada: 2 };
 function tblRows(){
-  let rows=N.filter(n=>visible(n) && (!state.focusFen || n.f.includes(state.focusFen)) && matchQ(n));
+  let rows=N.filter(n=>visible(n) && (!state.focusFen || n.f.includes(state.focusFen)) && (!state.recorrido || recGrado(n,state.recorrido)>0) && matchQ(n));
   const key=tblSort.col;
   rows.sort((a,b)=>{ let va,vb;
     if(key==="f"){ va=FEN[a.f[0]].label; vb=FEN[b.f[0]].label; }
     else if(key==="l"){ va=L[a.l][2]; vb=L[b.l][2]; }
     else if(key==="k"){ va=a.k; vb=b.k; }
+    else if(key==="rec"){ va=recRango(a); vb=recRango(b); }
     else if(key==="estado20"){ va=ESTADO20_RANGO[estado20(a)]; vb=ESTADO20_RANGO[estado20(b)]; }
     else if(key==="procedencia"){ va=(a.procedencia||"").toLowerCase(); vb=(b.procedencia||"").toLowerCase(); }
     else { va=(a[key]||"").toString().toLowerCase(); vb=(b[key]||"").toString().toLowerCase(); }
@@ -1595,6 +1410,7 @@ function tblRows(){
    las diez columnas completas, pero nadie pierde lo que ya tenía visible. */
 const TBL_COLS = [
   ["t","thObra",true], ["a","thAutor",false], ["y","thAno",true], ["k","thTipo",true],
+  ["rec","thRecorrido",true],
   ["estado20","thEstado",true], ["procedencia","thProcedencia",false],
   ["f","thFen",false], ["l","thLugar",false], ["tr","thTrad",false], ["ev","thEvid",false]
 ];
@@ -1627,6 +1443,7 @@ function tdPara(k,n){
     case "a": return `<td>${n.a}</td>`;
     case "y": return `<td>${n.y||"—"}</td>`;
     case "k": return `<td class="${n.k==='obra'?'kind-o':'kind-m'}">${n.k==='obra'?t('tKindObra'):t('tKindManif')}</td>`;
+    case "rec": return `<td class="rec-td">${recTextoCompacto(n)}</td>`;
     case "estado20": return `<td>${estadoCell(n)}</td>`;
     case "procedencia": return `<td>${procCell(n)}</td>`;
     case "f": return `<td>${n.f.map(f=>`<span class="fenchip" style="background:${col(f)}"></span>${fenLabel(f)}`).join(" · ")}</td>`;
@@ -1729,6 +1546,14 @@ function setCronoModo(v){
 }
 document.getElementById('cronoSeg').addEventListener('click',e=>{ if(e.target.dataset.cm) setCronoModo(e.target.dataset.cm); });
 document.getElementById('resetZoomBtn').addEventListener('click',()=>{ vpt={k:1,tx:0,ty:0}; applyVP(); if(zc) zc.sincronizar(); });
+/* Fase 4A: girar el teléfono o cambiar el tamaño de la ventana cruza el umbral de
+   780 px en los dos sentidos; el encuadre y la descongestión se rehacen entonces. */
+(function reencuadrarAlRedimensionar(){
+  let tid=null;
+  const rehacer=()=>{ clearTimeout(tid); tid=setTimeout(()=>{ encuadrarMapa(); _kPrevio=null; ajustarEtiquetas(); }, 150); };
+  window.addEventListener('resize', rehacer);
+  window.addEventListener('orientationchange', rehacer);
+})();
 
 /* ---------- buscador: eventos ---------- */
 const qbox=document.getElementById('qbox');
@@ -1769,6 +1594,17 @@ function setShowIndirect(v){
   renderChips();
 }
 document.getElementById('indChk').addEventListener('change', e=>setShowIndirect(e.target.checked));
+document.getElementById('limpiarFiltrosBtn').addEventListener('click', limpiarFiltros);
+
+/* Carril A · 24-08-2026: el degradado del borde derecho anuncia que la franja de
+   controles continúa. Cuando ya no continúa, sobra: recortaría el último control. */
+(function marcarFinDeFranja(){
+  const c=document.querySelector('.controls'); if(!c) return;
+  const revisar=()=>c.classList.toggle('alFinal', c.scrollLeft + c.clientWidth >= c.scrollWidth - 2);
+  c.addEventListener('scroll', revisar, {passive:true});
+  window.addEventListener('resize', revisar);
+  revisar();
+})();
 function renderChips(){
   const box=document.getElementById('chipsActivos'); if(!box) return;
   const chips=[];
@@ -1778,14 +1614,94 @@ function renderChips(){
     const map={ang:'lenAng',his:'lenHis',fra:'lenFra',neer:'lenNeer',crio:'lenCrio',sin:'lenSin'};
     chips.push({txt:t('chipLengua')+': '+t(map[state.lengua]), reset:()=>setLengua('todas')});
   }
+  if(state.recorrido){
+    const nombre = state.recorrido==='pendiente' ? t('recPendientes')
+                 : state.recorrido==='sin_evaluar' ? t('recSinEvaluar')
+                 : recEtiqueta(state.recorrido);
+    chips.push({txt:t('chipRecorrido')+': '+nombre, reset:()=>setRecorrido(null)});
+  }
   if(!state.tide) chips.push({txt:t('chipMov')+': '+t('movOff'), reset:()=>setTide(true)});
   if(state.showIndirect) chips.push({txt:t('chipInd'), reset:()=>setShowIndirect(false)});
   box.innerHTML = chips.map((c,i)=>`<button type="button" class="chip" data-i="${i}" aria-label="${t('chipQuitarAria').replace('{label}',c.txt)}">${c.txt} <span aria-hidden="true">×</span></button>`).join("");
   [...box.querySelectorAll('.chip')].forEach((btn,i)=>btn.onclick=chips[i].reset);
   const fb=document.getElementById('filtrosBtn'); if(fb) fb.classList.toggle('activo', chips.length>0);
+  /* Carril A · 24-08-2026: el mismo cálculo que decide los chips decide si hay algo que
+     limpiar. Se reutiliza en vez de duplicar la lista de filtros, para que añadir una
+     dimensión nueva más adelante no obligue a tocar dos sitios. */
+  FILTROS_ACTIVOS = chips;
+  const lg=document.getElementById('limpiarGrp'); if(lg) lg.hidden = chips.length===0;
+}
+let FILTROS_ACTIVOS = [];
+/* Fase 5C · doce opciones en una sola columna: el universo completo, los diez
+   recorridos y las dos formas de consultar lo que todavía no está clasificado.
+   En móvil el panel es la hoja inferior que ya usan Filtros e Información, de modo
+   que no aparecen diez botones permanentes en la barra. */
+function buildRecSeg(){
+  const seg=document.getElementById('recSeg'); if(!seg) return;
+  /* El número no dice «obras clasificadas en C4»: dice cuántas entradas quedan
+     enfocadas al elegir ese recorrido, estructurantes y secundarias juntas. Se
+     desglosa en el título accesible para que la cifra no se lea como una caja. */
+  const cuenta=r=>{
+    const e=N.filter(n=>recGrado(n,r)===2).length;
+    const s=N.filter(n=>recGrado(n,r)===1).length;
+    return {n:e+s, e, s};
+  };
+  const opciones=[{v:'', lbl:t('recTodos'), c:{n:N.length,e:N.length,s:0}}]
+    .concat(RECORRIDOS.map(r=>({v:r.c, lbl:recEtiqueta(r.c), c:cuenta(r.c)})))
+    .concat([{v:'pendiente', lbl:t('recPendientes'), c:cuenta('pendiente')},
+             {v:'sin_evaluar', lbl:t('recSinEvaluar'), c:cuenta('sin_evaluar')}]);
+  seg.innerHTML=opciones.map(o=>{
+    const on=(state.recorrido||'')===o.v;
+    const detalle = o.c.s ? t('recDesglose').replace('{e}',o.c.e).replace('{s}',o.c.s) : '';
+    const aria = `${o.lbl} · ${o.c.n}${detalle?' · '+detalle:''}`;
+    return `<button type="button" data-rec="${o.v}" class="${on?'on':''}" aria-pressed="${on?'true':'false'}" aria-label="${aria}" title="${aria}">`+
+           `<span class="recTxt">${o.lbl}</span><span class="recN">${o.c.n}</span></button>`;
+  }).join('');
+  seg.querySelectorAll('button').forEach(b=>b.onclick=()=>setRecorrido(b.dataset.rec||null));
+}
+function setRecorrido(v){
+  state.recorrido = v || null;
+  state.active=null; ocultarFicha();
+  buildRecSeg();
+  syncEdges(); buildLegend();
+  if(state.view==="tabla") renderTable(); else refreshHi();
+  updateTip(); renderChips();
+  const rb=document.getElementById('recorridosBtn'); if(rb) rb.classList.toggle('activo', !!state.recorrido);
+}
+function limpiarFiltros(){
+  /* copia: cada reset vuelve a llamar a renderChips(), que reescribe FILTROS_ACTIVOS */
+  [...FILTROS_ACTIVOS].forEach(c=>c.reset());
+  if(state.recorrido) setRecorrido(null);
+  clearQuery();
+  /* El fenómeno seleccionado en la leyenda no genera chip, pero restringe lo que el mapa
+     dibuja y lo que la tabla lista. Si no se soltara aquí, seguiría filtrando en silencio
+     después de «Limpiar filtros». focusFen alterna, así que llamarlo con el fenómeno
+     activo es exactamente soltarlo, con toda su cadena de refresco. */
+  if(state.focusFen) focusFen(state.focusFen);
 }
 
-function toVB(x,y){ const r=svg.getBoundingClientRect(); return [ (x-r.left)/r.width*VW, (y-r.top)/r.height*VH ]; }
+/* ── Fase 4A · geometría del puntero ──────────────────────────────────────
+   La versión anterior repartía el ancho del elemento entre VW y su alto entre VH,
+   lo que solo sería exacto si el viewBox llenara el elemento. Con
+   preserveAspectRatio="xMidYMid meet" casi nunca lo llena: en 1440×708 el mapa se
+   dibuja en 1327 px y sobran 56 px a cada lado, y en 390×648 se dibuja en una
+   banda de 208 px de alto. Es decir, el error ya existía antes de esta fase, en
+   escritorio y en móvil, y afectaba al zoom anclado al cursor y al paneo.
+   getScreenCTM() es la matriz que el propio navegador usa para dibujar: incluye
+   viewBox y preserveAspectRatio, y por tanto es exacta con cualquier encuadre. */
+function ctmMapa(){ return svg.getScreenCTM(); }
+function toVB(x,y){
+  const m=ctmMapa();
+  if(!m) return [VW/2, VH/2];
+  const pt=svg.createSVGPoint(); pt.x=x; pt.y=y;
+  const q=pt.matrixTransform(m.inverse());
+  return [q.x, q.y];
+}
+/* píxeles de pantalla → unidades de viewBox, para el paneo */
+function escalaPantalla(){
+  const m=ctmMapa();
+  return (m && m.a && m.d) ? [m.a, m.d] : [1,1];
+}
 
 /* ---------- zoom y paneo: el árbitro de gestos vive en js/zoom-caribe.js ----------
    Aquí solo queda el adaptador, es decir, cómo se traduce «acércate a este
@@ -1795,13 +1711,61 @@ const ZMIN=0.6, ZMAX=7;
 /* El grafo no puede irse de la pantalla: siempre queda dentro al menos una
    cuarta parte de su caja. Antes se podía arrastrar hasta perderlo de vista y
    la única salida era reencuadrar. */
+/* ── Fase 4A · etiquetas geográficas ──────────────────────────────────────
+   Dos problemas distintos, y el segundo explicaba por qué el primero no se
+   arreglaba solo. (a) En el arco antillano varios topónimos se pisaban desde el
+   encuadre inicial. (b) Las etiquetas viven dentro de #vp, que lleva scale(k), así
+   que al acercar crecían en la misma proporción que el mapa: el solapamiento era
+   invariante y hacer zoom no lo deshacía nunca, cosa que ningún mapa hace.
+   Se corrige (b) contraescalando el cuerpo de letra, de modo que la etiqueta
+   conserve su tamaño en pantalla mientras los lugares se separan, y (a) con una
+   pasada de descongestión que oculta la etiqueta de menor prioridad de cada par
+   que colisiona. Al acercar, las que se habían retirado reaparecen solas.
+   La prioridad es cartográfica y funcional, no de tamaño ni de renombre: pesa
+   primero cuántas entradas del atlas ancla ese lugar, porque una orilla que
+   sostiene veinte obras es la que el lector necesita nombrar para leer el mapa, y
+   desempata la condición de país sobre la de ciudad, que es la que orienta.
+   Las ocultas salen con display:none y por tanto también del árbol de
+   accesibilidad: su contenido ya viaja en el aria-label de cada nodo. */
+const ETI_CUERPO=10;      /* px, el mismo valor que declara .placelbl en el CSS */
+const ETI_MARGEN=1.5;     /* holgura entre cajas, en unidades de viewBox */
+function prioridadLugar(clave){
+  const n=N.filter(o=>o.l===clave && visible(o)).length;
+  const tipo=(L[clave] && L[clave][3]==='pais') ? 0.5 : 0;
+  return n+tipo;
+}
+function ajustarEtiquetas(){
+  if(!vp || state.view!=='corriente') return;
+  const etis=[...vp.querySelectorAll('text.placelbl')];
+  if(!etis.length) return;
+  const cuerpo=ETI_CUERPO/Math.max(vpt.k,0.0001);
+  etis.forEach(e=>{ e.style.fontSize=cuerpo.toFixed(2)+'px'; e.style.display=''; });
+  const ordenadas=etis
+    .map(e=>({e, p:prioridadLugar(e._place), nombre:e.textContent}))
+    .sort((a,b)=> b.p-a.p || a.nombre.localeCompare(b.nombre));
+  const puestas=[];
+  const solapan=(a,b)=> !(a.x2+ETI_MARGEN<b.x1 || b.x2+ETI_MARGEN<a.x1 || a.y2+ETI_MARGEN<b.y1 || b.y2+ETI_MARGEN<a.y1);
+  ordenadas.forEach(o=>{
+    let bb; try{ bb=o.e.getBBox(); }catch(err){ return; }
+    const caja={x1:bb.x, y1:bb.y, x2:bb.x+bb.width, y2:bb.y+bb.height};
+    if(puestas.some(q=>solapan(caja,q))){ o.e.style.display='none'; }
+    else puestas.push(caja);
+  });
+}
+
 function clampVP(){
   const bx=VW*0.25, by=VH*0.25;
   vpt.tx=Math.min(VW-bx, Math.max(bx-VW*vpt.k, vpt.tx));
   vpt.ty=Math.min(VH-by, Math.max(by-VH*vpt.k, vpt.ty));
 }
 const _applyVP=applyVP;
-applyVP=function(){ clampVP(); _applyVP(); };
+let _kPrevio=null;
+applyVP=function(){
+  clampVP(); _applyVP();
+  /* el paneo desplaza todas las etiquetas por igual y no altera qué se solapa con
+     qué: la descongestión solo hay que rehacerla cuando cambia la escala */
+  if(vpt.k!==_kPrevio){ _kPrevio=vpt.k; ajustarEtiquetas(); }
+};
 
 const zcMotor = {
   escala(){ return vpt.k; },
@@ -1823,7 +1787,11 @@ const zcMotor = {
     /* Si el lienzo mide cero —vista de tabla, pieza oculta, antes de maquetar—
        dividir aquí deja vpt en NaN y el encuadre no vuelve nunca. */
     if(!r.width || !r.height) return;
-    vpt.tx+=dx/r.width*VW; vpt.ty+=dy/r.height*VH;
+    /* Fase 4A: la conversión usa la escala real de dibujo, no el tamaño del
+       elemento. Con el encuadre móvil el arrastre vertical iba tres veces
+       más lento que el dedo. */
+    const [sx0,sy0]=escalaPantalla();
+    vpt.tx+=dx/sx0; vpt.ty+=dy/sy0;
     applyVP();
   },
   recentrar(){ vpt={k:1,tx:0,ty:0}; applyVP(); }
@@ -1853,8 +1821,8 @@ svg.addEventListener('mousedown',ev=>{
 window.addEventListener('mousemove',ev=>{
   if(!panning)return;
   if(Math.abs(ev.clientX-sx)+Math.abs(ev.clientY-sy)>3)dragged=true;
-  const r=svg.getBoundingClientRect();
-  vpt.tx=otx+(ev.clientX-sx)/r.width*VW; vpt.ty=oty+(ev.clientY-sy)/r.height*VH;
+  const [sx0,sy0]=escalaPantalla();
+  vpt.tx=otx+(ev.clientX-sx)/sx0; vpt.ty=oty+(ev.clientY-sy)/sy0;
   applyVP();
 });
 window.addEventListener('mouseup',()=>{ panning=false; svg.classList.remove('grabbing'); });
@@ -1885,7 +1853,7 @@ document.getElementById('movBtn').addEventListener('click', ()=>setTide(!state.t
    mismo patrón «disclosure» (no modal): el botón que abre queda con
    aria-expanded, el panel usa hidden, Escape o su botón de cierre lo
    devuelven a hidden y el foco regresa siempre al botón que lo abrió. ---------- */
-const PANELES_LATERALES = [['panelFiltros','filtrosBtn'],['panelInfo','infoBtn'],['legend','legendBtn']];
+const PANELES_LATERALES = [['panelRecorridos','recorridosBtn'],['panelFiltros','filtrosBtn'],['panelInfo','infoBtn'],['legend','legendBtn']];
 function cerrarPanelLateral(id, btnId){
   const p=document.getElementById(id), b=document.getElementById(btnId);
   if(!p || p.hidden) return;
@@ -1901,12 +1869,14 @@ function abrirPanelLateral(id, btnId){
   const primero=p.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
   if(primero) primero.focus();
 }
+buildRecSeg();
 PANELES_LATERALES.forEach(([id,btnId])=>{
   const b=document.getElementById(btnId);
   if(b) b.addEventListener('click',()=>{ const p=document.getElementById(id); if(p.hidden) abrirPanelLateral(id,btnId); else cerrarPanelLateral(id,btnId); });
   const p=document.getElementById(id);
   if(p) p.addEventListener('keydown', ev=>{ if(ev.key==='Escape'){ ev.stopPropagation(); cerrarPanelLateral(id,btnId); } });
 });
+document.getElementById('recorridosCerrar').addEventListener('click',()=>cerrarPanelLateral('panelRecorridos','recorridosBtn'));
 document.getElementById('filtrosCerrar').addEventListener('click',()=>cerrarPanelLateral('panelFiltros','filtrosBtn'));
 document.getElementById('infoCerrar').addEventListener('click',()=>cerrarPanelLateral('panelInfo','infoBtn'));
 document.getElementById('legendCerrar').addEventListener('click',()=>cerrarPanelLateral('legend','legendBtn'));
@@ -2306,6 +2276,32 @@ window.addEventListener('hashchange',()=>{ const h=resolverId(decodeURIComponent
   if(h && byId(h)) openPanel(h); });
 /* Esc cierra también el reflujo, coherente con el resto del atlas */
 document.addEventListener('keydown',ev=>{ if(ev.key==='Escape') rfCerrar(); });
+
+/* ── Fase 4A · Escape: una sola escalera, al final de la cadena ────────────
+   Antes, Escape solo cerraba la ficha desde el manejador del nodo del mapa
+   (state.active===n.id). Con el foco dentro de #panel —al navegar por un enlace
+   de conexiones, o sobre el badge, el <summary> o un botón interno— ese
+   manejador no se alcanzaba y la ficha se quedaba abierta.
+   Este oyente vive en document y corre en fase de burbuja, de modo que cualquier
+   manejador más específico que ya funcione (marco, buscador, panel lateral, nodo
+   del mapa) lo preempta con stopPropagation y conserva su comportamiento. Solo
+   actúa cuando nadie más lo hizo, y entonces cierra el contexto superior activo
+   en el orden que fija la instrucción: modal, ficha, panel lateral. */
+document.addEventListener('keydown', ev=>{
+  if(ev.key!=='Escape' || ev.defaultPrevented) return;
+  /* el modo presentación y el reflujo tienen su propio oyente en document y no
+     detienen la propagación: si alguno está activo, la escalera no interviene */
+  if(document.body.classList.contains('presenting')) return;
+  const rf=document.getElementById('reflujo');
+  if(rf && rf.classList.contains('open')) return;
+  const marco=document.getElementById('marco');
+  if(marco && marco.classList.contains('show')){ closeMarco(); return; }
+  if(document.getElementById('panel').classList.contains('open')){ clearFocus(); return; }
+  for(const [id,btnId] of PANELES_LATERALES){
+    const pl=document.getElementById(id);
+    if(pl && !pl.hidden){ cerrarPanelLateral(id,btnId); return; }
+  }
+});
 </script>
 </body>
 </html>

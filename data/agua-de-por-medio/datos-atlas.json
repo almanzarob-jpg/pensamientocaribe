@@ -265,7 +265,20 @@
       ],
       "l": "puertorico",
       "tr": "anglófono (EE.UU.)",
-      "ap": "La plantación como matriz socioeconómica que precede a la nación y produce la modernidad caribeña. Fundación del comparatismo de área."
+      "ap": "La plantación como matriz socioeconómica que precede a la nación y produce la modernidad caribeña. Fundación del comparatismo de área.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "fundamento": "El nodo reúne dos obras con argumentos diferentes; no se confirma una corriente única hasta revisar cada componente.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "piloto-generado.json"
+      ]
     },
     {
       "id": "trouillot",
@@ -279,7 +292,11 @@
       ],
       "l": "haiti",
       "tr": "francófono (Haití)",
-      "ap": "El Caribe como frontera abierta que desborda las categorías de la antropología nacional. Texto-brújula del proyecto. Silenciando el pasado hace de la memoria un campo de poder."
+      "ap": "El Caribe como frontera abierta que desborda las categorías de la antropología nacional. Texto-brújula del proyecto. Silenciando el pasado hace de la memoria un campo de poder.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "casimir",
@@ -293,7 +310,11 @@
       ],
       "l": "haiti",
       "tr": "francófono (Haití)",
-      "ap": "El contra-plantación: los cautivos rehacen sociedad por fuera de la lógica de la hacienda. Pueblo soberano, lakou."
+      "ap": "El contra-plantación: los cautivos rehacen sociedad por fuera de la lógica de la hacienda. Pueblo soberano, lakou.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "price",
@@ -307,7 +328,20 @@
       ],
       "l": "suriname",
       "tr": "anglófono (EE.UU./Surinam)",
-      "ap": "Comparatismo pionero del cimarronaje a escala de las Américas; base del campo."
+      "ap": "Comparatismo pionero del cimarronaje a escala de las Américas; base del campo.",
+      "recorrido": "c3",
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El volumen organiza una comparación hemisférica de comunidades cimarronas y combina fuentes históricas y estudios antropológicos.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "piloto-generado.json"
+      ]
     },
     {
       "id": "fouchard",
@@ -321,7 +355,11 @@
       ],
       "l": "haiti",
       "tr": "francófono (Haití)",
-      "ap": "El cimarronaje como motor de la Revolución haitiana. Rara vez citado junto a Price."
+      "ap": "El cimarronaje como motor de la Revolución haitiana. Rara vez citado junto a Price.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "roberts",
@@ -335,7 +373,11 @@
       ],
       "l": "jamaica",
       "tr": "anglófono (Antillas)",
-      "ap": "La libertad pensada como fuga y no como estado: cimarronaje sociogénico, agencia esclava."
+      "ap": "La libertad pensada como fuga y no como estado: cimarronaje sociogénico, agencia esclava.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "totumo",
@@ -351,7 +393,20 @@
       "tr": "hispano (Colombia)",
       "ap": "Cimarronaje del Caribe seco colombiano: territorio, lengua palenquera, memoria.",
       "procedencia": "corpus heredado",
-      "procedencia_verificada": true
+      "procedencia_verificada": true,
+      "recorrido": "c3",
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El artículo reconstruye acuerdos entre cimarrones y autoridades coloniales y cuestiona la idealización del palenque como libertad absoluta.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "piloto-generado.json"
+      ]
     },
     {
       "id": "ortiz",
@@ -365,7 +420,22 @@
       ],
       "l": "cuba",
       "tr": "hispano (Cuba)",
-      "ap": "La transculturación: ni aculturación ni mestizaje, sino creación de lo nuevo. Antecede a Glissant."
+      "ap": "La transculturación: ni aculturación ni mestizaje, sino creación de lo nuevo. Antecede a Glissant.",
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c4"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La ficha heredada confundía la obra con el concepto que el libro elabora. Transculturación se registra como aporte conceptual, no como segundo título.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "s01-generado.json"
+      ]
     },
     {
       "id": "glissant",
@@ -379,7 +449,22 @@
       ],
       "l": "martinica",
       "tr": "francófono (Martinica)",
-      "ap": "Relación, opacidad y errancia: el archipiélago como forma de pensar, no solo de habitar."
+      "ap": "Relación, opacidad y errancia: el archipiélago como forma de pensar, no solo de habitar.",
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c7"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Le Discours antillais y Poétique de la Relation son libros diferentes pero convergen en una arquitectura de antillanidad, relación, opacidad y crítica colonial.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "s01-generado.json"
+      ]
     },
     {
       "id": "brathwaite",
@@ -393,7 +478,22 @@
       ],
       "l": "barbados",
       "tr": "anglófono (Barbados)",
-      "ap": "La lengua-nación y la marea como temporalidad: ni progreso ni línea, sino vaivén. Principio de diseño de esta interfaz."
+      "ap": "La lengua-nación y la marea como temporalidad: ni progreso ni línea, sino vaivén. Principio de diseño de esta interfaz.",
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c9"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Nation language pertenece a History of the Voice; tidalectics no es una segunda obra de 1984 y queda pendiente de una ficha bibliográfica propia.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "s01-generado.json"
+      ]
     },
     {
       "id": "creolite",
@@ -406,7 +506,11 @@
       ],
       "l": "martinica",
       "tr": "francófono (Martinica)",
-      "ap": "Manifiesto de la creolidad; tensiona con la negritud de Césaire."
+      "ap": "Manifiesto de la creolidad; tensiona con la negritud de Césaire.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "monahan",
@@ -420,7 +524,20 @@
       ],
       "l": "jamaica",
       "tr": "comparado (filosofía afrocaribe)",
-      "ap": "La fricción epistémica: la creolización no es fusión armónica sino roce productivo entre saberes. Da nombre al principio que ordena las corrientes de este atlas."
+      "ap": "La fricción epistémica: la creolización no es fusión armónica sino roce productivo entre saberes. Da nombre al principio que ordena las corrientes de este atlas.",
+      "recorrido": "c8",
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El nodo reúne dos libros distintos que convergen en una filosofía creolizante; el identificador se conserva como contenedor para no romper relaciones citables.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "s01-generado.json"
+      ]
     },
     {
       "id": "vete",
@@ -434,7 +551,11 @@
       ],
       "l": "guadalupe",
       "tr": "francófono (Guadalupe)",
-      "ap": "La oralidad interartística como archivo transinsular."
+      "ap": "La oralidad interartística como archivo transinsular.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "chande",
@@ -450,7 +571,16 @@
       "tr": "hispano (Colombia)",
       "ap": "Oralitura y ritmo del Magdalena Grande como lengua-nación local.",
       "procedencia": "manifestación",
-      "procedencia_verificada": false
+      "procedencia_verificada": false,
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c8"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "piloto-generado.json"
+      ]
     },
     {
       "id": "quintero",
@@ -464,7 +594,18 @@
       ],
       "l": "puertorico",
       "tr": "hispano (Puerto Rico)",
-      "ap": "Cimarronería sonora: el baile y el ritmo como subversión y creolización del cuerpo."
+      "ap": "Cimarronería sonora: el baile y el ritmo como subversión y creolización del cuerpo.",
+      "recorrido": "c10",
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "C10 principal, sin C3 secundaria"
+      },
+      "fuente_recorrido": [
+        "dictamen-academico-bloque-1-etapa-2-3.md"
+      ]
     },
     {
       "id": "perezmorales",
@@ -478,7 +619,25 @@
       ],
       "l": "cartagena",
       "tr": "hispano (Colombia)",
-      "ap": "El puerto como zona de fuga, contrabando y violencia imperial, no solo de comercio."
+      "ap": "El puerto como zona de fuga, contrabando y violencia imperial, no solo de comercio.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": {
+        "tipo": "sintesis_multicorriente",
+        "recorridos": [
+          "c3",
+          "c5",
+          "c7"
+        ]
+      },
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "síntesis multicorriente: C3, C5 y C7 estructurantes, sin principal"
+      },
+      "fuente_recorrido": [
+        "dictamen-academico-bloque-4-etapa-2-3.md"
+      ]
     },
     {
       "id": "sherwood",
@@ -492,7 +651,18 @@
       ],
       "l": "jamaica",
       "tr": "anglófono (R.U.)",
-      "ap": "La trata sobrevive a su abolición formal; el capital racializado como continuidad."
+      "ap": "La trata sobrevive a su abolición formal; el capital racializado como continuidad.",
+      "recorrido": "c2",
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "C2 principal, sin C4 ni C5 secundaria"
+      },
+      "fuente_recorrido": [
+        "dictamen-academico-bloque-4-etapa-2-3.md"
+      ]
     },
     {
       "id": "cabrera",
@@ -506,7 +676,11 @@
       ],
       "l": "cuba",
       "tr": "hispano (Cuba)",
-      "ap": "Etnografía-archivo de la Regla de Palo y la santería; el monte como biblioteca viva y memoria ancestral."
+      "ap": "Etnografía-archivo de la Regla de Palo y la santería; el monte como biblioteca viva y memoria ancestral.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "tambu",
@@ -520,7 +694,11 @@
       ],
       "l": "curazao",
       "tr": "neerlandés (Curaçao)",
-      "ap": "Ritual y política de la memoria en el Caribe neerlandés, casi ausente del canon."
+      "ap": "Ritual y política de la memoria en el Caribe neerlandés, casi ausente del canon.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "bonilla",
@@ -534,7 +712,11 @@
       ],
       "l": "guadalupe",
       "tr": "francófono/anglófono (Guadalupe–PR)",
-      "ap": "La soberanía como problema, no como meta: repensar la libertad tras la nación."
+      "ap": "La soberanía como problema, no como meta: repensar la libertad tras la nación.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "lindskoog",
@@ -548,7 +730,11 @@
       ],
       "l": "haiti",
       "tr": "anglófono (EE.UU.)",
-      "ap": "El refugiado haitiano como origen del régimen de detención migratoria estadounidense."
+      "ap": "El refugiado haitiano como origen del régimen de detención migratoria estadounidense.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "ferdinand",
@@ -562,7 +748,11 @@
       ],
       "l": "martinica",
       "tr": "francófono (Martinica)",
-      "ap": "El habitar caribeño desde el barco negrero: ecología y colonialidad en un mismo pliegue."
+      "ap": "El habitar caribeño desde el barco negrero: ecología y colonialidad en un mismo pliegue.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "beyondsun",
@@ -576,7 +766,22 @@
       ],
       "l": "puertorico",
       "tr": "anglófono (EE.UU./PR)",
-      "ap": "Ambientalismos caribeños frente al modelo turístico del sol y la arena."
+      "ap": "Ambientalismos caribeños frente al modelo turístico del sol y la arena.",
+      "recorrido": "c6",
+      "recorridos_sec": [
+        "c7"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Los ambientalismos caribeños organizan el volumen. Corregir a Beyond Sun and Sand: Caribbean Environmentalisms y registrar como editoras a Sherrie L. Baver y Barbara Deutsch Lynch.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "a02-generado.json"
+      ]
     },
     {
       "id": "aftershocks",
@@ -590,7 +795,11 @@
       ],
       "l": "puertorico",
       "tr": "anglófono (PR)",
-      "ap": "El desastre como revelador político de la relación colonial, no como evento natural."
+      "ap": "El desastre como revelador político de la relación colonial, no como evento natural.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "rodney",
@@ -604,7 +813,11 @@
       ],
       "l": "guyana",
       "tr": "anglófono (Guyana)",
-      "ap": "Subdesarrollo como producción histórica, no atraso; matriz del análisis de la dependencia."
+      "ap": "Subdesarrollo como producción histórica, no atraso; matriz del análisis de la dependencia.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "araujo",
@@ -618,7 +831,11 @@
       ],
       "l": "haiti",
       "tr": "comparado (transnacional)",
-      "ap": "La deuda de Haití, la compensación a los amos y la memoria pública de la esclavitud como economía moral."
+      "ap": "La deuda de Haití, la compensación a los amos y la memoria pública de la esclavitud como economía moral.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "manoalzada",
@@ -634,7 +851,16 @@
       "tr": "hispano (Colombia)",
       "ap": "Memoria escrita de la diáspora intelectual negra del Caribe colombiano.",
       "procedencia": "manifestación",
-      "procedencia_verificada": false
+      "procedencia_verificada": false,
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c5"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "s01-generado.json"
+      ]
     },
     {
       "id": "gudynas",
@@ -648,7 +874,20 @@
       ],
       "l": "veracruz",
       "tr": "hispano (América Latina)",
-      "ap": "Marco del extractivismo contemporáneo, extensible de la caña al turismo caribeño."
+      "ap": "Marco del extractivismo contemporáneo, extensible de la caña al turismo caribeño.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "fundamento": "La obra es pertinente para ecología política, pero la fuente consultada no demuestra un caso u orilla admisible del Atlas. No se asigna corriente hasta resolver elegibilidad. Título completo: Extractivismos. Ecología, economía y política de un modo de entender el desarrollo y la Naturaleza.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "a02-generado.json"
+      ]
     },
     {
       "id": "esquiva",
@@ -664,7 +903,16 @@
       "tr": "hispano (Colombia)",
       "ap": "El desarrollo como promesa incumplida en comunidades afrodescendientes del Caribe.",
       "procedencia": "manifestación",
-      "procedencia_verificada": false
+      "procedencia_verificada": false,
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c4"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "s01-generado.json"
+      ]
     },
     {
       "id": "workercane",
@@ -678,7 +926,22 @@
       ],
       "l": "puertorico",
       "tr": "anglófono (EE.UU.)",
-      "ap": "Historia de vida de un jornalero cañero puertorriqueño; la etnografía que funda el método biográfico en el estudio de la plantación."
+      "ap": "Historia de vida de un jornalero cañero puertorriqueño; la etnografía que funda el método biográfico en el estudio de la plantación.",
+      "recorrido": "c4",
+      "recorridos_sec": [
+        "c2"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La historia de vida de Don Taso organiza una lectura del trabajo cañero y la proletarización; la plantación azucarera es su arquitectura histórica secundaria.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "a02-generado.json"
+      ]
     },
     {
       "id": "steward",
@@ -691,7 +954,20 @@
       ],
       "l": "puertorico",
       "tr": "anglófono (EE.UU.)",
-      "ap": "El estudio colectivo de ecología cultural que formó a Mintz; compara regiones de Puerto Rico según su régimen de cultivo."
+      "ap": "El estudio colectivo de ecología cultural que formó a Mintz; compara regiones de Puerto Rico según su régimen de cultivo.",
+      "recorrido": "c4",
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La obra compara subculturas puertorriqueñas configuradas por entornos y regímenes económicos locales; el identificador más antiguo conserva los enlaces citables.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "piloto-generado.json"
+      ]
     },
     {
       "id": "olwigstjohn",
@@ -705,7 +981,11 @@
       ],
       "l": "stjohn",
       "tr": "anglófono (hoy EE.UU., antes colonia danesa)",
-      "ap": "Tres siglos de vida afrocaribeña en una isla que cambió de imperio sin que sus habitantes dejaran de rehacer comunidad."
+      "ap": "Tres siglos de vida afrocaribeña en una isla que cambió de imperio sin que sus habitantes dejaran de rehacer comunidad.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "hagedorn",
@@ -719,7 +999,11 @@
       ],
       "l": "cuba",
       "tr": "anglófono (EE.UU.)",
-      "ap": "La santería como performance: el canto y el tambor como forma de conocimiento religioso, no solo su ilustración."
+      "ap": "La santería como performance: el canto y el tambor como forma de conocimiento religioso, no solo su ilustración.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "pricefirst",
@@ -733,7 +1017,24 @@
       ],
       "l": "suriname",
       "tr": "anglófono (EE.UU./Surinam)",
-      "ap": "La historia saramaka contada como los saramaka la cuentan; etnografía que toma en serio la memoria oral como archivo propio."
+      "ap": "La historia saramaka contada como los saramaka la cuentan; etnografía que toma en serio la memoria oral como archivo propio.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": {
+        "tipo": "frontera_constitutiva",
+        "recorridos": [
+          "c3",
+          "c9"
+        ]
+      },
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "frontera constitutiva C3/C9: sin principal ni secundaria"
+      },
+      "fuente_recorrido": [
+        "dictamen-academico-bloque-2-etapa-2-3.md"
+      ]
     },
     {
       "id": "dunham",
@@ -747,7 +1048,11 @@
       ],
       "l": "haiti",
       "tr": "anglófono (EE.UU.)",
-      "ap": "Memoria etnográfica y autobiográfica del vodou haitiano desde una antropóloga-bailarina negra; disputó con Hurston el terreno del mismo campo."
+      "ap": "Memoria etnográfica y autobiográfica del vodou haitiano desde una antropóloga-bailarina negra; disputó con Hurston el terreno del mismo campo.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "friedemannlengua",
@@ -761,7 +1066,11 @@
       ],
       "l": "palenque",
       "tr": "hispano (Colombia)",
-      "ap": "El estudio que fija la lengua palenquera como criollo con estatus propio, no como corrupción del español."
+      "ap": "El estudio que fija la lengua palenquera como criollo con estatus propio, no como corrupción del español.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "mamalola",
@@ -775,7 +1084,11 @@
       ],
       "l": "haiti",
       "tr": "anglófono (EE.UU., diáspora en Brooklyn)",
-      "ap": "El vodou tal como se practica en la diáspora neoyorquina, lejos del templo haitiano de origen; la etnografía se escribe como varias voces trenzadas, la propia autora incluida."
+      "ap": "El vodou tal como se practica en la diáspora neoyorquina, lejos del templo haitiano de origen; la etnografía se escribe como varias voces trenzadas, la propia autora incluida.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "besson",
@@ -789,7 +1102,11 @@
       ],
       "l": "jamaica",
       "tr": "anglófono (Jamaica/R.U.)",
-      "ap": "Tenencia de tierra campesina jamaicana como forma de contrademanda frente a la plantación; parentesco y tierra como soberanía cotidiana."
+      "ap": "Tenencia de tierra campesina jamaicana como forma de contrademanda frente a la plantación; parentesco y tierra como soberanía cotidiana.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "taylor",
@@ -803,7 +1120,11 @@
       ],
       "l": "trinidad",
       "tr": "anglófono (Trinidad)",
-      "ap": "Volumen panantillano sobre religión afrocaribeña como forma de identidad, no solo de creencia."
+      "ap": "Volumen panantillano sobre religión afrocaribeña como forma de identidad, no solo de creencia.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "peasantscapital",
@@ -817,7 +1138,22 @@
       ],
       "l": "dominica",
       "tr": "anglófono (Haití/EE.UU.)",
-      "ap": "La etnografía de campo de Trouillot antes de Silenciando el pasado: cómo el campesinado dominiqués queda atado al mercado mundial del banano."
+      "ap": "La etnografía de campo de Trouillot antes de Silenciando el pasado: cómo el campesinado dominiqués queda atado al mercado mundial del banano.",
+      "recorrido": "c4",
+      "recorridos_sec": [
+        "c7"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El argumento explica cómo el campesinado dominicano se articula con capital, mercado bananero y sistema mundial; soberanía y dependencia quedan como dimensión secundaria.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "a02-generado.json"
+      ]
     },
     {
       "id": "chevannes",
@@ -831,7 +1167,18 @@
       ],
       "l": "jamaica",
       "tr": "anglófono (Jamaica)",
-      "ap": "Historia social del rastafarismo como ideología de ruptura, escrita desde dentro de la academia jamaicana."
+      "ap": "Historia social del rastafarismo como ideología de ruptura, escrita desde dentro de la academia jamaicana.",
+      "recorrido": "c9",
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "C9 principal, sin C3 secundaria"
+      },
+      "fuente_recorrido": [
+        "dictamen-academico-bloque-2-etapa-2-3.md"
+      ]
     },
     {
       "id": "escalante",
@@ -845,7 +1192,11 @@
       ],
       "l": "palenque",
       "tr": "hispano (Colombia)",
-      "ap": "La primera etnografía académica de Palenque; abre el campo que Friedemann y Patiño Rosselli continuarán treinta años después."
+      "ap": "La primera etnografía académica de Palenque; abre el campo que Friedemann y Patiño Rosselli continuarán treinta años después.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "rebeldestiny",
@@ -859,7 +1210,11 @@
       ],
       "l": "suriname",
       "tr": "anglófono (EE.UU./Surinam neerlandés)",
-      "ap": "La primera etnografía de un pueblo cimarrón de las Américas; funda el campo que Price retomará setenta años después."
+      "ap": "La primera etnografía de un pueblo cimarrón de las Américas; funda el campo que Price retomará setenta años después.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "tellmyhorse",
@@ -873,7 +1228,11 @@
       ],
       "l": "haiti",
       "tr": "anglófono (EE.UU.)",
-      "ap": "Etnografía en primera persona, mitad memoria mitad reportaje, escrita por una mujer negra iniciada en el propio rito que describe."
+      "ap": "Etnografía en primera persona, mitad memoria mitad reportaje, escrita por una mujer negra iniciada en el propio rito que describe.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "palmiengangas",
@@ -887,7 +1246,11 @@
       ],
       "l": "cuba",
       "tr": "anglófono (EE.UU.)",
-      "ap": "El ritual afrocubano leído como forma de pensar la ciencia occidental, no como su objeto exótico."
+      "ap": "El ritual afrocubano leído como forma de pensar la ciencia occidental, no como su objeto exótico.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "travelstooy",
@@ -901,7 +1264,18 @@
       ],
       "l": "suriname",
       "tr": "anglófono (EE.UU./Surinam)",
-      "ap": "Veinticinco años después de First-Time, Price vuelve a Saramaka para pensar cómo la memoria ritual se hace historia."
+      "ap": "Veinticinco años después de First-Time, Price vuelve a Saramaka para pensar cómo la memoria ritual se hace historia.",
+      "recorrido": "c9",
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "C9 principal, sin C3 secundaria"
+      },
+      "fuente_recorrido": [
+        "dictamen-academico-bloque-2-etapa-2-3.md"
+      ]
     },
     {
       "id": "truebornmaroons",
@@ -915,7 +1289,11 @@
       ],
       "l": "jamaica",
       "tr": "anglófono (Jamaica/EE.UU.)",
-      "ap": "Comparatismo del cimarronaje jamaicano frente al de Surinam: identidad maroon como tratado, no solo como origen."
+      "ap": "Comparatismo del cimarronaje jamaicano frente al de Surinam: identidad maroon como tratado, no solo como origen.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "palmiewizards",
@@ -929,7 +1307,11 @@
       ],
       "l": "cuba",
       "tr": "anglófono (EE.UU.)",
-      "ap": "Modernidad y tradición afrocubana como un mismo proceso, no como dos etapas sucesivas."
+      "ap": "Modernidad y tradición afrocubana como un mismo proceso, no como dos etapas sucesivas.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "pricemars",
@@ -943,7 +1325,20 @@
       ],
       "l": "haiti",
       "tr": "francófono (Haití)",
-      "ap": "El fundador de la etnología haitiana defiende el vodou y el campesinado frente al desprecio de sus propias élites; matriz del indigenismo caribeño."
+      "ap": "El fundador de la etnología haitiana defiende el vodou y el campesinado frente al desprecio de sus propias élites; matriz del indigenismo caribeño.",
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c8"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "decisión de Dirección Académica con lectura documentada"
+      },
+      "fuente_recorrido": [
+        "decision-academica-pricemars-p2-etapa-2-3f.md"
+      ]
     },
     {
       "id": "alabi",
@@ -957,7 +1352,20 @@
       ],
       "l": "suriname",
       "tr": "anglófono (EE.UU./Surinam)",
-      "ap": "Cuatro voces narran la vida de un capitán saramaka bajo la Corona holandesa: la soberanía cimarrona tramitada entre la fe morava y el poder colonial."
+      "ap": "Cuatro voces narran la vida de un capitán saramaka bajo la Corona holandesa: la soberanía cimarrona tramitada entre la fe morava y el poder colonial.",
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c3"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "C7 principal / C3 secundaria"
+      },
+      "fuente_recorrido": [
+        "dictamen-academico-bloque-3-etapa-2-3.md"
+      ]
     },
     {
       "id": "exceptviolence",
@@ -971,7 +1379,20 @@
       ],
       "l": "jamaica",
       "tr": "anglófono (Jamaica/EE.UU.)",
-      "ap": "La violencia jamaicana funciona como forma de ciudadanía producida por la historia transnacional de la isla, no como excepción ni patología individual."
+      "ap": "La violencia jamaicana funciona como forma de ciudadanía producida por la historia transnacional de la isla, no como excepción ni patología individual.",
+      "recorrido": "c4",
+      "recorridos_sec": [
+        "c5"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "C4 principal / C5 secundaria (C2 descartada)"
+      },
+      "fuente_recorrido": [
+        "dictamen-academico-bloque-4-etapa-2-3.md"
+      ]
     },
     {
       "id": "modernblackness",
@@ -985,7 +1406,11 @@
       ],
       "l": "jamaica",
       "tr": "anglófono (Jamaica/EE.UU.)",
-      "ap": "De la respetabilidad campesina a la negrura popular urbana: cómo cambia el ideal racial de nación bajo la globalización cultural."
+      "ap": "De la respetabilidad campesina a la negrura popular urbana: cómo cambia el ideal racial de nación bajo la globalización cultural.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "citizenshipedge",
@@ -999,7 +1424,11 @@
       ],
       "l": "jamaica",
       "tr": "comparado (teoría política y etnografía)",
-      "ap": "Ciudadanía pensada desde sus márgenes raciales y sexuados; Thomas aporta el andamiaje jamaicano a un problema más amplio."
+      "ap": "Ciudadanía pensada desde sus márgenes raciales y sexuados; Thomas aporta el andamiaje jamaicano a un problema más amplio.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "politicallife",
@@ -1013,7 +1442,23 @@
       ],
       "l": "jamaica",
       "tr": "anglófono (Jamaica/EE.UU.)",
-      "ap": "La incursión militar de 2010 en Tivoli Gardens leída como el presente de la plantación: soberanía suspendida, testimonio y reparación."
+      "ap": "La incursión militar de 2010 en Tivoli Gardens leída como el presente de la plantación: soberanía suspendida, testimonio y reparación.",
+      "recorrido": "c4",
+      "recorridos_sec": [
+        "c7",
+        "c9"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Las lógicas postplantación articulan trabajo, ciudadanía y violencia estatal; soberanía y memoria de la incursión son secundarias sustantivas.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "a02-generado.json"
+      ]
     },
     {
       "id": "downtownladies",
@@ -1027,7 +1472,23 @@
       ],
       "l": "jamaica",
       "tr": "anglófono (EE.UU./Haití)",
-      "ap": "Comerciantes informales jamaicanas estudiadas por una antropóloga haitiana: el trabajo de campo mismo como cruce de tradiciones caribeñas."
+      "ap": "Comerciantes informales jamaicanas estudiadas por una antropóloga haitiana: el trabajo de campo mismo como cruce de tradiciones caribeñas.",
+      "recorrido": "c4",
+      "recorridos_sec": [
+        "c5",
+        "c10"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El centro es el trabajo informal transnacional y la autonomía económica de comerciantes; género y cuerpo importan, pero no organizan por sí solos el libro.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "a01-generado.json"
+      ]
     },
     {
       "id": "reddock",
@@ -1041,7 +1502,22 @@
       ],
       "l": "trinidad",
       "tr": "anglófono (Trinidad)",
-      "ap": "El trabajo femenino, indio y afrodescendiente, como motor invisibilizado de la economía política trinitense."
+      "ap": "El trabajo femenino, indio y afrodescendiente, como motor invisibilizado de la economía política trinitense.",
+      "recorrido": "c4",
+      "recorridos_sec": [
+        "c10"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Trabajo, empleo y participación política de las mujeres constituyen la arquitectura histórica del libro; género atraviesa esa economía política.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "a01-generado.json"
+      ]
     },
     {
       "id": "caribjourneys",
@@ -1055,7 +1531,11 @@
       ],
       "l": "nevis",
       "tr": "anglófono (Dinamarca/Caribe)",
-      "ap": "Tres redes familiares dispersas entre el Caribe, Norteamérica y Europa: el hogar como relación y no como lugar fijo."
+      "ap": "Tres redes familiares dispersas entre el Caribe, Norteamérica y Europa: el hogar como relación y no como lugar fijo.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "globalculture",
@@ -1069,7 +1549,11 @@
       ],
       "l": "nevis",
       "tr": "anglófono (Dinamarca/Caribe)",
-      "ap": "Identidad insular que se sostiene precisamente por su circulación migratoria, no a pesar de ella."
+      "ap": "Identidad insular que se sostiene precisamente por su circulación migratoria, no a pesar de ella.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "islandscity",
@@ -1083,7 +1567,23 @@
       ],
       "l": "jamaica",
       "tr": "anglófono (EE.UU./Antillas)",
-      "ap": "La diáspora antillana anglófona en Nueva York como una extensión más de la cuenca, no como su ruptura."
+      "ap": "La diáspora antillana anglófona en Nueva York como una extensión más de la cuenca, no como su ruptura.",
+      "recorrido": "c5",
+      "recorridos_sec": [
+        "c7",
+        "c10"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El volumen compara migraciones caribeñas y formaciones transnacionales en Nueva York; ciudadanía, raza y parentesco son cruces secundarios.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "a02-generado.json"
+      ]
     },
     {
       "id": "callaloonation",
@@ -1097,7 +1597,11 @@
       ],
       "l": "trinidad",
       "tr": "anglófono (Trinidad/EE.UU.)",
-      "ap": "El Caribe indoantillano, descendiente de la indentura, piensa su mezcla racial con las mismas metáforas culinarias que Glissant piensa la Relación."
+      "ap": "El Caribe indoantillano, descendiente de la indentura, piensa su mezcla racial con las mismas metáforas culinarias que Glissant piensa la Relación.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "reconfdominic",
@@ -1111,7 +1615,11 @@
       ],
       "l": "dominicana",
       "tr": "anglófono (EE.UU./Rep. Dominicana)",
-      "ap": "La identidad racial dominicana disputada entre el discurso oficial hispanista y la reidentificación afrodescendiente."
+      "ap": "La identidad racial dominicana disputada entre el discurso oficial hispanista y la reidentificación afrodescendiente.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "cuijla",
@@ -1125,7 +1633,11 @@
       ],
       "l": "costachica",
       "tr": "hispano (México)",
-      "ap": "La etnografía fundacional de la negritud mexicana; nombra la Costa Chica como territorio afrodescendiente antes de que el Estado lo reconociera."
+      "ap": "La etnografía fundacional de la negritud mexicana; nombra la Costa Chica como territorio afrodescendiente antes de que el Estado lo reconociera.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "chocolatecorn",
@@ -1139,7 +1651,11 @@
       ],
       "l": "costachica",
       "tr": "anglófono (EE.UU./México)",
-      "ap": "Medio siglo después de Aguirre Beltrán, revisa la Costa Chica para mostrar cómo raza y lugar se hacen juntos, no uno tras otro."
+      "ap": "Medio siglo después de Aguirre Beltrán, revisa la Costa Chica para mostrar cómo raza y lugar se hacen juntos, no uno tras otro.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "womenancestors",
@@ -1153,7 +1669,20 @@
       ],
       "l": "belize",
       "tr": "anglófono (EE.UU./Belice)",
-      "ap": "El parentesco garífuna organizado alrededor de las mujeres y el culto a los ancestros; el ritual como institución de continuidad, no de nostalgia."
+      "ap": "El parentesco garífuna organizado alrededor de las mujeres y el culto a los ancestros; el ritual como institución de continuidad, no de nostalgia.",
+      "recorrido": "c10",
+      "recorridos_sec": [
+        "c9"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "decisión de Dirección Académica con lectura documentada"
+      },
+      "fuente_recorrido": [
+        "decision-academica-womenancestors-p2-etapa-2-3f.md"
+      ]
     },
     {
       "id": "afrocentroam",
@@ -1167,7 +1696,23 @@
       ],
       "l": "belize",
       "tr": "anglófono (EE.UU./Honduras)",
-      "ap": "Los garífunas no encajan ni en 'latino' ni en 'negro' en Nueva York: la diáspora fuerza categorías raciales que el propio Caribe ya había vuelto obsoletas."
+      "ap": "Los garífunas no encajan ni en 'latino' ni en 'negro' en Nueva York: la diáspora fuerza categorías raciales que el propio Caribe ya había vuelto obsoletas.",
+      "recorrido": "c5",
+      "recorridos_sec": [
+        "c7",
+        "c10"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La vida social y política garífuna se produce a través de la migración transnacional; ciudadanía, racialización y parentesco son dimensiones secundarias.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "a02-generado.json"
+      ]
     },
     {
       "id": "cunin",
@@ -1181,7 +1726,11 @@
       ],
       "l": "cartagena",
       "tr": "francófono (Francia/Colombia)",
-      "ap": "En Cartagena la negritud se negocia en la superficie del cuerpo: una antropóloga francesa hace fricción epistémica directa con el archivo hispano local."
+      "ap": "En Cartagena la negritud se negocia en la superficie del cuerpo: una antropóloga francesa hace fricción epistémica directa con el archivo hispano local.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "figueroa",
@@ -1197,7 +1746,22 @@
       "tr": "hispano (Colombia)",
       "ap": "El vallenato como archivo de la violencia política del Magdalena Grande, leído contra la lectura mágico-realista que la naturaliza.",
       "procedencia": "corpus heredado",
-      "procedencia_verificada": true
+      "procedencia_verificada": true,
+      "recorrido": "c4",
+      "recorridos_sec": [
+        "c8"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El argumento central vincula tradicionalismo cultural, poderes locales, violencia contra el campesinado y bloqueo de la modernización agraria; la creolización queda como dimensión secundaria.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "s01-generado.json"
+      ]
     },
     {
       "id": "tinsley",
@@ -1211,7 +1775,11 @@
       ],
       "l": "haiti",
       "tr": "anglófono (EE.UU./Caribe)",
-      "ap": "Ezili, la lwa del amor y el deseo, como espejo para imaginar géneros negros queer a través del vodou haitiano."
+      "ap": "Ezili, la lwa del amor y el deseo, como espejo para imaginar géneros negros queer a través del vodou haitiano.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "alexander",
@@ -1225,7 +1793,11 @@
       ],
       "l": "trinidad",
       "tr": "anglófono (Trinidad)",
-      "ap": "Feminismo, política sexual, memoria y lo sagrado entrelazados: el placer y el rito como pedagogía descolonizadora."
+      "ap": "Feminismo, política sexual, memoria y lo sagrado entrelazados: el placer y el rito como pedagogía descolonizadora.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "curiel",
@@ -1239,7 +1811,11 @@
       ],
       "l": "dominicana",
       "tr": "hispano (Rep. Dominicana/Colombia)",
-      "ap": "El feminismo decolonial caribeño: la nación se funda como heterosexual y blanca. Género, raza y colonialidad son un mismo nudo."
+      "ap": "El feminismo decolonial caribeño: la nación se funda como heterosexual y blanca. Género, raza y colonialidad son un mismo nudo.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "shellererotic",
@@ -1253,7 +1829,11 @@
       ],
       "l": "jamaica",
       "tr": "anglófono (EE.UU./Caribe)",
-      "ap": "La libertad caribeña posesclavista reclamada desde la agencia erótica y corporal, no solo desde el derecho formal."
+      "ap": "La libertad caribeña posesclavista reclamada desde la agencia erótica y corporal, no solo desde el derecho formal.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "ramadan",
@@ -1267,7 +1847,11 @@
       ],
       "l": "puertorico",
       "tr": "anglófono (EE.UU./Puerto Rico)",
-      "ap": "Rastafaris puertorriqueños que construyen una negritud espiritual no nacional sino mundial, extendida hacia el Gran Caribe y África. La identidad negra que desborda la frontera del Estado."
+      "ap": "Rastafaris puertorriqueños que construyen una negritud espiritual no nacional sino mundial, extendida hacia el Gran Caribe y África. La identidad negra que desborda la frontera del Estado.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "islandfutures",
@@ -1281,7 +1865,11 @@
       ],
       "l": "haiti",
       "tr": "anglófono (EE.UU./Caribe)",
-      "ap": "El Antropoceno caribeño leído desde el régimen colonial de movilidad: el terremoto de Haití y los huracanes no son eventos naturales aislados sino la forma que toma hoy la extracción que empezó con la plantación."
+      "ap": "El Antropoceno caribeño leído desde el régimen colonial de movilidad: el terremoto de Haití y los huracanes no son eventos naturales aislados sino la forma que toma hoy la extracción que empezó con la plantación.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "lara",
@@ -1295,7 +1883,11 @@
       ],
       "l": "dominicana",
       "tr": "anglófono (EE.UU./Rep. Dominicana)",
-      "ap": "La soberanía negra pensada no desde el Estado sino desde el cuerpo queer: altares, agua, guerra y ceremonia como los verdaderos territorios de una libertad dominicana que la nación no alcanza a nombrar."
+      "ap": "La soberanía negra pensada no desde el Estado sino desde el cuerpo queer: altares, agua, guerra y ceremonia como los verdaderos territorios de una libertad dominicana que la nación no alcanza a nombrar.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "mintzarea",
@@ -1309,7 +1901,20 @@
       ],
       "l": "puertorico",
       "tr": "anglófono (EE.UU.)",
-      "ap": "La definición fundacional del Caribe como unidad de estudio: no por geografía ni por lengua sino por una historia compartida de exterminio indígena, plantación esclavista y capitalismo agrario ultramarino. El propio texto que este atlas hereda y discute al proponer el fenómeno, y no el área, como unidad."
+      "ap": "La definición fundacional del Caribe como unidad de estudio: no por geografía ni por lengua sino por una historia compartida de exterminio indígena, plantación esclavista y capitalismo agrario ultramarino. El propio texto que este atlas hereda y discute al proponer el fenómeno, y no el área, como unidad.",
+      "recorrido": "c2",
+      "recorridos_sec": [
+        "c4"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "decisión de Dirección Académica con lectura documentada"
+      },
+      "fuente_recorrido": [
+        "decision-academica-mintzarea-p2-etapa-2-3f.md"
+      ]
     },
     {
       "id": "gill",
@@ -1322,7 +1927,22 @@
       ],
       "l": "trinidad",
       "tr": "anglófono (Trinidad/EE.UU.)",
-      "ap": "El eros como categoría política, sensual y espiritual a la vez, leído en el mas de Carnaval, el calypso y el activismo contra el estigma del VIH en Trinidad. Retoma a Audre Lorde para rehacer el método etnográfico desde el propio cuerpo del investigador."
+      "ap": "El eros como categoría política, sensual y espiritual a la vez, leído en el mas de Carnaval, el calypso y el activismo contra el estigma del VIH en Trinidad. Retoma a Audre Lorde para rehacer el método etnográfico desde el propio cuerpo del investigador.",
+      "recorrido": "c10",
+      "recorridos_sec": [
+        "c9"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El eros es teoría, método y práctica política; arte, espiritualidad y memoria queer amplían la corriente sin desplazarla.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "a01-generado.json"
+      ]
     },
     {
       "id": "deere",
@@ -1335,7 +1955,11 @@
       ],
       "l": "martinica",
       "tr": "comparado (teoría decolonial americana)",
-      "ap": "La cuadrícula colonial como tecnología de poder anterior a la fábrica y el hospital foucaultianos: el archipiélago caribeño, leído con Glissant, ofrece el modelo espacial que resiste esa cuadrícula."
+      "ap": "La cuadrícula colonial como tecnología de poder anterior a la fábrica y el hospital foucaultianos: el archipiélago caribeño, leído con Glissant, ofrece el modelo espacial que resiste esa cuadrícula.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "abello",
@@ -1349,7 +1973,11 @@
       ],
       "l": "cartagena",
       "tr": "hispano (Colombia)",
-      "ap": "Colombia como una isla varada dentro de su propia nación: el Caribe colombiano leído no desde la pereza que le atribuye el relato andino sino desde una economía cafetera que lo dejó fuera del reparto, capital que cruzó su litoral sin quedarse."
+      "ap": "Colombia como una isla varada dentro de su propia nación: el Caribe colombiano leído no desde la pereza que le atribuye el relato andino sino desde una economía cafetera que lo dejó fuera del reparto, capital que cruzó su litoral sin quedarse.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "benitez",
@@ -1363,7 +1991,22 @@
       ],
       "l": "cuba",
       "tr": "hispano (Cuba)",
-      "ap": "El Caribe como meta-archipiélago sin centro: la plantación como máquina originaria que produce, una y otra vez y con variaciones, la misma cultura del Caribe. Una lectura del Caribe por el caos y la repetición, no por la línea histórica."
+      "ap": "El Caribe como meta-archipiélago sin centro: la plantación como máquina originaria que produce, una y otra vez y con variaciones, la misma cultura del Caribe. Una lectura del Caribe por el caos y la repetición, no por la línea histórica.",
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c4"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La isla que se repite y The Repeating Island son la obra original y su traducción inglesa, no dos obras independientes.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "s01-generado.json"
+      ]
     },
     {
       "id": "cesaire",
@@ -1376,7 +2019,11 @@
       ],
       "l": "martinica",
       "tr": "francófono (Martinica)",
-      "ap": "El colonialismo leído como la matriz que produce después el fascismo europeo: Europa no cae en la barbarie, la exporta primero a sus colonias y luego la recibe de vuelta. El texto que funda buena parte de la crítica anticolonial que ya circulaba en este atlas sin nombrarlo."
+      "ap": "El colonialismo leído como la matriz que produce después el fascismo europeo: Europa no cae en la barbarie, la exporta primero a sus colonias y luego la recibe de vuelta. El texto que funda buena parte de la crítica anticolonial que ya circulaba en este atlas sin nombrarlo.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "fanon",
@@ -1390,7 +2037,11 @@
       ],
       "l": "martinica",
       "tr": "francófono (Martinica/Francia)",
-      "ap": "La experiencia vivida del cuerpo negro bajo la mirada blanca —el \"¡mira, un negro!\" que fija y cosifica—, y el deseo racializado que atraviesa las relaciones íntimas entre colonizado y colonizador. Fanon psiquiatra antes que teórico político, pensando desde su propia Martinica antes de escribir sobre Argelia."
+      "ap": "La experiencia vivida del cuerpo negro bajo la mirada blanca —el \"¡mira, un negro!\" que fija y cosifica—, y el deseo racializado que atraviesa las relaciones íntimas entre colonizado y colonizador. Fanon psiquiatra antes que teórico político, pensando desde su propia Martinica antes de escribir sobre Argelia.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "james",
@@ -1405,7 +2056,20 @@
       ],
       "l": "haiti",
       "tr": "anglófono (Trinidad)",
-      "ap": "La revolución haitiana narrada como el acontecimiento que funda la modernidad negra, no como nota al pie de la Revolución Francesa. Un historiador trinitario que hace de Haití el centro y no la periferia: el atlas archipiélico en acto antes de que existiera el término."
+      "ap": "La revolución haitiana narrada como el acontecimiento que funda la modernidad negra, no como nota al pie de la Revolución Francesa. Un historiador trinitario que hace de Haití el centro y no la periferia: el atlas archipiélico en acto antes de que existiera el término.",
+      "recorrido": "c3",
+      "recorridos_sec": [
+        "c7"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "C3 principal / C7 secundaria"
+      },
+      "fuente_recorrido": [
+        "dictamen-academico-bloque-3-etapa-2-3.md"
+      ]
     },
     {
       "id": "trouillotsilencing",
@@ -1419,7 +2083,11 @@
       ],
       "l": "haiti",
       "tr": "anglófono (EE.UU./Haití)",
-      "ap": "Cómo se produce el silencio histórico: la revolución haitiana, el acontecimiento que Occidente no podía pensar en su propio momento, borrada después de la historia que se cuenta sobre la libertad moderna."
+      "ap": "Cómo se produce el silencio histórico: la revolución haitiana, el acontecimiento que Occidente no podía pensar en su propio momento, borrada después de la historia que se cuenta sobre la libertad moderna.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "brownreaper",
@@ -1433,7 +2101,22 @@
       ],
       "l": "jamaica",
       "tr": "anglófono (EE.UU.)",
-      "ap": "La mortandad de la plantación jamaiquina —la isla como tumba de europeos y africanos por igual— leída como tecnología de poder, no como estadística: los muertos también gobiernan a los vivos en el mundo esclavista atlántico."
+      "ap": "La mortandad de la plantación jamaiquina —la isla como tumba de europeos y africanos por igual— leída como tecnología de poder, no como estadística: los muertos también gobiernan a los vivos en el mundo esclavista atlántico.",
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c2"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La muerte, los rituales mortuorios y la política espiritual organizan el argumento; esclavización y plantación constituyen la arquitectura secundaria.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "a02-generado.json"
+      ]
     },
     {
       "id": "kempadoo",
@@ -1447,7 +2130,22 @@
       ],
       "l": "guyana",
       "tr": "anglófono (Guyana/Canadá)",
-      "ap": "El turismo sexual caribeño leído en su raíz colonial y esclavista, no como fenómeno reciente de la globalización: el cuerpo racializado como mercancía tiene una historia larga que el mercado actual repite con otro nombre."
+      "ap": "El turismo sexual caribeño leído en su raíz colonial y esclavista, no como fenómeno reciente de la globalización: el cuerpo racializado como mercancía tiene una historia larga que el mercado actual repite con otro nombre.",
+      "recorrido": "c10",
+      "recorridos_sec": [
+        "c4"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Género, raza y trabajo sexual se estudian desde cuerpos y relaciones eróticas racializadas; turismo y mercado quedan como dimensión económica.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "a01-generado.json"
+      ]
     },
     {
       "id": "kingisland",
@@ -1461,7 +2159,11 @@
       ],
       "l": "trinidad",
       "tr": "comparado (anglófono/francófono/hispano/neerlandés)",
-      "ap": "Sexualidades disidentes leídas a través de las cuatro tradiciones lingüísticas del Caribe a la vez, cruzando literatura, música y cultura popular: uno de los pocos estudios que rehúsa encerrarse en un solo idioma imperial."
+      "ap": "Sexualidades disidentes leídas a través de las cuatro tradiciones lingüísticas del Caribe a la vez, cruzando literatura, música y cultura popular: uno de los pocos estudios que rehúsa encerrarse en un solo idioma imperial.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "fuentesdispossessed",
@@ -1475,7 +2177,23 @@
       ],
       "l": "barbados",
       "tr": "anglófono (EE.UU.)",
-      "ap": "Las mujeres esclavizadas de Bridgetown leídas a contrapelo de un archivo colonial que las nombra solo como propiedad o como cuerpo castigado: un método para hacer historia con las fuentes que fueron diseñadas para borrarlas."
+      "ap": "Las mujeres esclavizadas de Bridgetown leídas a contrapelo de un archivo colonial que las nombra solo como propiedad o como cuerpo castigado: un método para hacer historia con las fuentes que fueron diseñadas para borrarlas.",
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c2",
+        "c10"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La crítica de la forma y violencia del archivo organiza la producción de conocimiento; esclavización y cuerpos de mujeres son campos sustantivos secundarios.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "a01-generado.json"
+      ]
     },
     {
       "id": "bollandbelize",
@@ -1489,7 +2207,11 @@
       ],
       "l": "belize",
       "tr": "anglófono (Belice/R.U.)",
-      "ap": "Belice como sociedad colonial forjada entre colonos madereros británicos, mayas y esclavos, y no como nota marginal del Caribe insular: la otra historia colonial del Caribe continental."
+      "ap": "Belice como sociedad colonial forjada entre colonos madereros británicos, mayas y esclavos, y no como nota marginal del Caribe insular: la otra historia colonial del Caribe continental.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "hintzen",
@@ -1503,7 +2225,22 @@
       ],
       "l": "guyana",
       "tr": "anglófono (Guyana/Trinidad)",
-      "ap": "Cómo las élites poscoloniales de Guyana y Trinidad usan la movilización racial para sobrevivir en el poder: la soberanía nacional caribeña examinada no como logro sino como cálculo de supervivencia política."
+      "ap": "Cómo las élites poscoloniales de Guyana y Trinidad usan la movilización racial para sobrevivir en el poder: la soberanía nacional caribeña examinada no como logro sino como cálculo de supervivencia política.",
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c4"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La supervivencia del régimen, el Estado y la movilización racial organizan el argumento; economía política y clase son secundarias.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "a02-generado.json"
+      ]
     },
     {
       "id": "rainforestwarriors",
@@ -1517,7 +2254,20 @@
       ],
       "l": "suriname",
       "tr": "anglófono (EE.UU./Surinam)",
-      "ap": "Los saramaka llevan al Estado de Surinam ante la Corte Interamericana de Derechos Humanos y ganan: el cimarronaje del siglo XVII vuelto litigio internacional del XXI, la misma comunidad que Price lleva medio siglo acompañando."
+      "ap": "Los saramaka llevan al Estado de Surinam ante la Corte Interamericana de Derechos Humanos y ganan: el cimarronaje del siglo XVII vuelto litigio internacional del XXI, la misma comunidad que Price lleva medio siglo acompañando.",
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c3"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "C7 principal / C3 secundaria"
+      },
+      "fuente_recorrido": [
+        "dictamen-academico-bloque-3-etapa-2-3.md"
+      ]
     },
     {
       "id": "quinnblackpower",
@@ -1531,7 +2281,11 @@
       ],
       "l": "trinidad",
       "tr": "comparado (anglófono Caribe)",
-      "ap": "El Poder Negro caribeño de 1968-1970 leído región por región, desde la Revolución de Febrero en Trinidad hasta sus ecos en Jamaica, Guyana y Curazao: una radicalización pan-caribeña que la historiografía nacional suele contar isla por isla."
+      "ap": "El Poder Negro caribeño de 1968-1970 leído región por región, desde la Revolución de Febrero en Trinidad hasta sus ecos en Jamaica, Guyana y Curazao: una radicalización pan-caribeña que la historiografía nacional suele contar isla por isla.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "russwurm",
@@ -1545,7 +2299,11 @@
       ],
       "l": "jamaica",
       "tr": "anglófono (Jamaica/EE.UU.)",
-      "ap": "El primer editor negro de un periódico en Estados Unidos nació en Port Antonio, Jamaica: una genealogía pan-africanista temprana que empieza en el Caribe y que la historia afroamericana suele contar como si empezara en Estados Unidos."
+      "ap": "El primer editor negro de un periódico en Estados Unidos nació en Port Antonio, Jamaica: una genealogía pan-africanista temprana que empieza en el Caribe y que la historia afroamericana suele contar como si empezara en Estados Unidos.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "tackysrevolt",
@@ -1559,7 +2317,23 @@
       ],
       "l": "jamaica",
       "tr": "anglófono (EE.UU.)",
-      "ap": "La rebelión de Tacky de 1760 en Jamaica narrada como una guerra atlántica de verdad, con estrategia militar y redes africanas propias, no como un motín aislado que la plantación logró sofocar."
+      "ap": "La rebelión de Tacky de 1760 en Jamaica narrada como una guerra atlántica de verdad, con estrategia militar y redes africanas propias, no como un motín aislado que la plantación logró sofocar.",
+      "recorrido": "c3",
+      "recorridos_sec": [
+        "c2",
+        "c5"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La insurrección es narrada como guerra atlántica con estrategia y redes propias; esclavización y rutas atlánticas son secundarias.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "a01-generado.json"
+      ]
     },
     {
       "id": "helgnuncamas",
@@ -1573,7 +2347,22 @@
       ],
       "l": "cartagena",
       "tr": "hispano (Suiza/Colombia)",
-      "ap": "Cuatro siglos de esclavos que se liberaron a sí mismos en América, comparados a través de imperios y lenguas: el Caribe colombiano como uno de sus casos centrales, junto a Cuba, Brasil y Estados Unidos."
+      "ap": "Cuatro siglos de esclavos que se liberaron a sí mismos en América, comparados a través de imperios y lenguas: el Caribe colombiano como uno de sus casos centrales, junto a Cuba, Brasil y Estados Unidos.",
+      "recorrido": "c3",
+      "recorridos_sec": [
+        "c2"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Las estrategias mediante las cuales personas esclavizadas se liberaron articulan la comparación; el régimen esclavista es el contexto secundario.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "a01-generado.json"
+      ]
     },
     {
       "id": "robinsonmarxismo",
@@ -1587,7 +2376,11 @@
       ],
       "l": "jamaica",
       "tr": "comparado (transnacional)",
-      "ap": "El origen mismo del término capitalismo racial: el capitalismo europeo nunca dejó de ser racial desde su origen medieval, y la tradición radical negra no es una rama del marxismo sino una crítica a su ceguera racial."
+      "ap": "El origen mismo del término capitalismo racial: el capitalismo europeo nunca dejó de ser racial desde su origen medieval, y la tradición radical negra no es una rama del marxismo sino una crítica a su ceguera racial.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "bassiacuoso",
@@ -1601,7 +2394,22 @@
       ],
       "l": "cartagena",
       "tr": "hispano (Colombia)",
-      "ap": "Marineros, contrabandistas y corsarios que cruzan el Gran Caribe transimperial de la Nueva Granada sin reconocer las fronteras que las coronas dibujaron: el mismo territorio acuoso que este atlas intenta cartografiar por fenómeno y no por nación."
+      "ap": "Marineros, contrabandistas y corsarios que cruzan el Gran Caribe transimperial de la Nueva Granada sin reconocer las fronteras que las coronas dibujaron: el mismo territorio acuoso que este atlas intenta cartografiar por fenómeno y no por nación.",
+      "recorrido": "c5",
+      "recorridos_sec": [
+        "c7"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La obra organiza su argumento alrededor de circulaciones marítimas, geografías vividas y un Gran Caribe transimperial.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "piloto-generado.json"
+      ]
     },
     {
       "id": "rediker",
@@ -1615,7 +2423,11 @@
       ],
       "l": "jamaica",
       "tr": "comparado (transnacional)",
-      "ap": "El barco negrero leído como institución total y como el primer espacio moderno de mezcla forzada entre africanos de naciones distintas: la travesía misma como origen de una identidad diaspórica antes de tocar tierra caribeña."
+      "ap": "El barco negrero leído como institución total y como el primer espacio moderno de mezcla forzada entre africanos de naciones distintas: la travesía misma como origen de una identidad diaspórica antes de tocar tierra caribeña.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "gosinenature",
@@ -1629,7 +2441,11 @@
       ],
       "l": "trinidad",
       "tr": "anglófono (Trinidad/Canadá)",
-      "ap": "Las leyes coloniales contra la sodomía y la naturaleza \"antinatural\" leídas junto al arte y el deseo caribeños contemporáneos: el cuerpo queer caribeño como territorio que la ley colonial nunca dejó de vigilar."
+      "ap": "Las leyes coloniales contra la sodomía y la naturaleza \"antinatural\" leídas junto al arte y el deseo caribeños contemporáneos: el cuerpo queer caribeño como territorio que la ley colonial nunca dejó de vigilar.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "headleyreparaciones",
@@ -1643,7 +2459,11 @@
       ],
       "l": "haiti",
       "tr": "comparado (transnacional)",
-      "ap": "Es un artículo filosófico, no un libro: examina los obstáculos jurídicos reales que enfrenta el reclamo caribeño de reparaciones por la esclavitud, sin resolver la tensión entre lo justo y lo legalmente exigible."
+      "ap": "Es un artículo filosófico, no un libro: examina los obstáculos jurídicos reales que enfrenta el reclamo caribeño de reparaciones por la esclavitud, sin resolver la tensión entre lo justo y lo legalmente exigible.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "jaffeconcrete",
@@ -1657,7 +2477,18 @@
       ],
       "l": "curazao",
       "tr": "neerlandés/anglófono (Curazao/Jamaica)",
-      "ap": "La contaminación urbana —refinerías, basura, aguas negras— leída como política de la diferencia racial y de clase en dos ciudades caribeñas, no como simple falla de infraestructura."
+      "ap": "La contaminación urbana —refinerías, basura, aguas negras— leída como política de la diferencia racial y de clase en dos ciudades caribeñas, no como simple falla de infraestructura.",
+      "recorrido": "c6",
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "C6 principal, sin secundaria confirmada; C4 queda como hipótesis abierta"
+      },
+      "fuente_recorrido": [
+        "dictamen-academico-bloque-4-etapa-2-3.md"
+      ]
     },
     {
       "id": "pardomosquerahoffmann",
@@ -1671,7 +2502,11 @@
       ],
       "l": "cartagena",
       "tr": "hispano (Colombia/Francia)",
-      "ap": "Ciento cincuenta años de la abolición colombiana leídos no como cierre sino como apertura de una identidad afrodescendiente todavía en disputa, comparada con otras trayectorias del continente."
+      "ap": "Ciento cincuenta años de la abolición colombiana leídos no como cierre sino como apertura de una identidad afrodescendiente todavía en disputa, comparada con otras trayectorias del continente.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "scher",
@@ -1685,7 +2520,11 @@
       ],
       "l": "trinidad",
       "tr": "anglófono (Trinidad/EE.UU.)",
-      "ap": "El Carnaval trinitario seguido de Puerto España a Brooklyn: una nación cultural que se rehace cada año fuera del territorio nacional, en los mas camps de la diáspora."
+      "ap": "El Carnaval trinitario seguido de Puerto España a Brooklyn: una nación cultural que se rehace cada año fuera del territorio nacional, en los mas camps de la diáspora.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "hallafricanslouisiana",
@@ -1699,7 +2538,11 @@
       ],
       "l": "nola",
       "tr": "francófono/anglófono (Luisiana)",
-      "ap": "La cultura afrocriolla de Luisiana reconstruida desde el origen étnico africano preciso de cada persona esclavizada, archivo por archivo: Nueva Orleans como puerto del Gran Caribe y no como curiosidad exclusivamente estadounidense."
+      "ap": "La cultura afrocriolla de Luisiana reconstruida desde el origen étnico africano preciso de cada persona esclavizada, archivo por archivo: Nueva Orleans como puerto del Gran Caribe y no como curiosidad exclusivamente estadounidense.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "creolenieworleans",
@@ -1713,7 +2556,11 @@
       ],
       "l": "nola",
       "tr": "francófono/anglófono (Luisiana)",
-      "ap": "Cómo una ciudad franco-africana del Gran Caribe fue \"americanizada\" a la fuerza durante el siglo XIX: la desaparición administrativa de lo criollo como política racial deliberada, no como evolución natural."
+      "ap": "Cómo una ciudad franco-africana del Gran Caribe fue \"americanizada\" a la fuerza durante el siglo XIX: la desaparición administrativa de lo criollo como política racial deliberada, no como evolución natural.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "ramsaranlewis",
@@ -1727,7 +2574,11 @@
       ],
       "l": "guyana",
       "tr": "anglófono (Guyana/Trinidad)",
-      "ap": "La identidad indocaribeña leída como creolización propia, no como enclave aislado del resto de la cuenca: mezcla, adaptación y resistencia desde 1838 hasta hoy en dos naciones distintas."
+      "ap": "La identidad indocaribeña leída como creolización propia, no como enclave aislado del resto de la cuenca: mezcla, adaptación y resistencia desde 1838 hasta hoy en dos naciones distintas.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "gonzalezsojourners",
@@ -1741,7 +2592,20 @@
       ],
       "l": "belize",
       "tr": "anglófono (Belice/Honduras)",
-      "ap": "La etnogénesis garífuna narrada desde el cimarronaje de San Vicente hasta el reasentamiento forzado en la costa centroamericana: un pueblo que nace de la fuga y no de un territorio originario fijo."
+      "ap": "La etnogénesis garífuna narrada desde el cimarronaje de San Vicente hasta el reasentamiento forzado en la costa centroamericana: un pueblo que nace de la fuga y no de un territorio originario fijo.",
+      "recorrido": "c5",
+      "recorridos_sec": [
+        "c3"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "C5 principal / C3 secundaria (C1 descartada)"
+      },
+      "fuente_recorrido": [
+        "dictamen-academico-bloque-1-etapa-2-3.md"
+      ]
     },
     {
       "id": "andersonblackindigenous",
@@ -1755,7 +2619,21 @@
       ],
       "l": "belize",
       "tr": "anglófono (Honduras)",
-      "ap": "El activismo garífuna hondureño obligado a elegir entre reconocerse indígena o negro para acceder a derechos legales, cuando su historia real desborda esa clasificación impuesta desde el Estado."
+      "ap": "El activismo garífuna hondureño obligado a elegir entre reconocerse indígena o negro para acceder a derechos legales, cuando su historia real desborda esa clasificación impuesta desde el Estado.",
+      "recorrido": "c1",
+      "recorridos_sec": [
+        "c7",
+        "c10"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "decisión de Dirección Académica con lectura documentada"
+      },
+      "fuente_recorrido": [
+        "decision-academica-andersonblackindigenous-p2-etapa-2-3f.md"
+      ]
     },
     {
       "id": "munrohaitirising",
@@ -1769,7 +2647,11 @@
       ],
       "l": "haiti",
       "tr": "anglófono/francófono (Haití)",
-      "ap": "Veinticuatro ensayos escritos en caliente tras el terremoto, cruzando historia, cultura y testimonio directo: Haití pensado en su propio momento de ruina, no reconstruido después desde la distancia."
+      "ap": "Veinticuatro ensayos escritos en caliente tras el terremoto, cruzando historia, cultura y testimonio directo: Haití pensado en su propio momento de ruina, no reconstruido después desde la distancia.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "meniketinevis",
@@ -1783,7 +2665,11 @@
       ],
       "l": "nevis",
       "tr": "anglófono (EE.UU.)",
-      "ap": "Doce temporadas de excavación en Nevis muestran cómo la economía azucarera transformó literalmente el paisaje de la isla, dejando una huella ecológica que la arqueología puede leer siglos después."
+      "ap": "Doce temporadas de excavación en Nevis muestran cómo la economía azucarera transformó literalmente el paisaje de la isla, dejando una huella ecológica que la arqueología puede leer siglos después.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "handlerlangebarbados",
@@ -1797,7 +2683,22 @@
       ],
       "l": "barbados",
       "tr": "anglófono (EE.UU.)",
-      "ap": "La vida esclavizada en Barbados reconstruida desde la arqueología física —huesos, enterramientos, objetos cotidianos— para un pueblo que dejó pocos registros escritos propios."
+      "ap": "La vida esclavizada en Barbados reconstruida desde la arqueología física —huesos, enterramientos, objetos cotidianos— para un pueblo que dejó pocos registros escritos propios.",
+      "recorrido": "c2",
+      "recorridos_sec": [
+        "c9"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El régimen esclavista de plantación y su cultura material organizan la obra; memoria, entierro y archivo material sostienen una secundaria C9.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "a02-generado.json"
+      ]
     },
     {
       "id": "kutzinskisugar",
@@ -1811,7 +2712,22 @@
       ],
       "l": "cuba",
       "tr": "anglófono (EE.UU.)",
-      "ap": "La mulata como figura erótica nacional cubana leída como un modo de absorber y neutralizar la negritud dentro del relato de nación, no como simple objeto de deseo literario."
+      "ap": "La mulata como figura erótica nacional cubana leída como un modo de absorber y neutralizar la negritud dentro del relato de nación, no como simple objeto de deseo literario.",
+      "recorrido": "c10",
+      "recorridos_sec": [
+        "c7"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La figura erótica racializada organiza la crítica del nacionalismo cubano; nación y soberanía son la dimensión secundaria.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "a01-generado.json"
+      ]
     },
     {
       "id": "curtispleasures",
@@ -1824,7 +2740,22 @@
       ],
       "l": "nevis",
       "tr": "anglófono (EE.UU.)",
-      "ap": "Niñas de Nevis entre la moral cristiana, la salud pública y el deseo de consumo: la sexualidad temprana leída sin el tono de escándalo con que suele contarse desde fuera."
+      "ap": "Niñas de Nevis entre la moral cristiana, la salud pública y el deseo de consumo: la sexualidad temprana leída sin el tono de escándalo con que suele contarse desde fuera.",
+      "recorrido": "c10",
+      "recorridos_sec": [
+        "c4"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Sexualidad, coerción, consentimiento y placer estructuran la etnografía; consumo y desigualdad económica son secundarios.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "a01-generado.json"
+      ]
     },
     {
       "id": "bebelgislerleonora",
@@ -1838,7 +2769,11 @@
       ],
       "l": "guadalupe",
       "tr": "francófono (Guadalupe)",
-      "ap": "La historia enterrada de Guadalupe contada por una mujer campesina en su propia lengua: el criollo recogido como forma legítima de saber histórico, no como curiosidad folclórica."
+      "ap": "La historia enterrada de Guadalupe contada por una mujer campesina en su propia lengua: el criollo recogido como forma legítima de saber histórico, no como curiosidad folclórica.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "ulysseWhyHaiti",
@@ -1852,7 +2787,11 @@
       ],
       "l": "haiti",
       "tr": "anglófono (EE.UU./Haití)",
-      "ap": "Una antropóloga haitiana-estadounidense escribe desde adentro contra el relato mediático del terremoto de 2010 como caos sin agencia: Haití necesita otras historias, no otra intervención."
+      "ap": "Una antropóloga haitiana-estadounidense escribe desde adentro contra el relato mediático del terremoto de 2010 como caos sin agencia: Haití necesita otras historias, no otra intervención.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "sharpewake",
@@ -1866,7 +2805,11 @@
       ],
       "l": "barbados",
       "tr": "anglófono (Canadá/Barbados)",
-      "ap": "La estela del barco negrero leída como clima permanente y no como pasado cerrado: la muerte negra prematura como algo estructural, normalizado, que sigue produciéndose hoy."
+      "ap": "La estela del barco negrero leída como clima permanente y no como pasado cerrado: la muerte negra prematura como algo estructural, normalizado, que sigue produciéndose hoy.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "ferrerfreedomsmirror",
@@ -1880,7 +2823,11 @@
       ],
       "l": "cuba",
       "tr": "anglófono (EE.UU.)",
-      "ap": "Cuba y Haití como espejos invertidos de la misma era revolucionaria: mientras Haití se liberaba de la esclavitud, Cuba la profundizaba aprovechando el vacío azucarero que dejó su vecina."
+      "ap": "Cuba y Haití como espejos invertidos de la misma era revolucionaria: mientras Haití se liberaba de la esclavitud, Cuba la profundizaba aprovechando el vacío azucarero que dejó su vecina.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "deloughrey",
@@ -1894,7 +2841,11 @@
       ],
       "l": "barbados",
       "tr": "anglófono (EE.UU./Caribe)",
-      "ap": "Piensa el archipiélago desde la era geológica humana: retoma explícitamente la tidaléctica de Brathwaite como método para leer el tiempo oceánico y la desproporción del daño climático colonial."
+      "ap": "Piensa el archipiélago desde la era geológica humana: retoma explícitamente la tidaléctica de Brathwaite como método para leer el tiempo oceánico y la desproporción del daño climático colonial.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "johnson_climatecuba",
@@ -1908,7 +2859,11 @@
       ],
       "l": "cuba",
       "tr": "anglófono (EE.UU.)",
-      "ap": "El huracán como acelerador político: muestra cómo el desastre climático reordenó el comercio y la política imperial cubana en la era de las revoluciones atlánticas."
+      "ap": "El huracán como acelerador político: muestra cómo el desastre climático reordenó el comercio y la política imperial cubana en la era de las revoluciones atlánticas.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "allen_dikimanera",
@@ -1922,7 +2877,11 @@
       ],
       "l": "curazao",
       "tr": "neerlandófono (Curazao)",
-      "ap": "Historia oral poscolonial curazoleña: documenta cómo la comunidad afrocurazoleña disputó, con sus propios términos culturales, el poder asimétrico del Estado, los antiguos amos y la Iglesia tras la abolición."
+      "ap": "Historia oral poscolonial curazoleña: documenta cómo la comunidad afrocurazoleña disputó, con sus propios términos culturales, el poder asimétrico del Estado, los antiguos amos y la Iglesia tras la abolición.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "vanderpijl_equaliberty",
@@ -1936,7 +2895,11 @@
       ],
       "l": "curazao",
       "tr": "neerlandófono (Curazao) / anglófono",
-      "ap": "Extiende explícitamente el marco de la soberanía no-soberana de Bonilla al Caribe neerlandés: piensa Curazao como forma política que no aspira a la independencia clásica y aun así disputa poder."
+      "ap": "Extiende explícitamente el marco de la soberanía no-soberana de Bonilla al Caribe neerlandés: piensa Curazao como forma política que no aspira a la independencia clásica y aun así disputa poder.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "naveda_esclavoscordoba",
@@ -1950,7 +2913,22 @@
       ],
       "l": "veracruz",
       "tr": "hispanófono (México)",
-      "ap": "El estudio fundacional del Caribe azucarero veracruzano, construido sobre archivo notarial y parroquial: corrobora y profundiza a Aguirre Beltrán desde el distrito cañero de Córdoba."
+      "ap": "El estudio fundacional del Caribe azucarero veracruzano, construido sobre archivo notarial y parroquial: corrobora y profundiza a Aguirre Beltrán desde el distrito cañero de Córdoba.",
+      "recorrido": "c2",
+      "recorridos_sec": [
+        "c4"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El estudio se organiza alrededor de la esclavitud negra y el sistema azucarero de Córdoba durante los siglos XVII a XIX; la postplantación queda como persistencia secundaria.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "s01-generado.json"
+      ]
     },
     {
       "id": "mohammed_generosrealidades",
@@ -1964,7 +2942,11 @@
       ],
       "l": "trinidad",
       "tr": "anglófono (Trinidad)",
-      "ap": "Reúne el pensamiento feminista caribeño en su propio terreno institucional (UWI), con Reddock entre sus interlocutoras directas: abre el corpus a una voz que piensa el género desde la experiencia indocaribeña, no solo afrocaribeña."
+      "ap": "Reúne el pensamiento feminista caribeño en su propio terreno institucional (UWI), con Reddock entre sus interlocutoras directas: abre el corpus a una voz que piensa el género desde la experiencia indocaribeña, no solo afrocaribeña.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "james_bannerethiopia",
@@ -1978,7 +2960,11 @@
       ],
       "l": "jamaica",
       "tr": "anglófono (Jamaica/EE.UU.)",
-      "ap": "El panorama completo del radicalismo caribeño migrante en Nueva York de entreguerras (Garvey, McKay, la Hermandad de Sangre Africana): amplía la biografía de Russwurm ya presente en el atlas."
+      "ap": "El panorama completo del radicalismo caribeño migrante en Nueva York de entreguerras (Garvey, McKay, la Hermandad de Sangre Africana): amplía la biografía de Russwurm ya presente en el atlas.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "schuller_killingkindness",
@@ -1992,7 +2978,22 @@
       ],
       "l": "haiti",
       "tr": "anglófono (EE.UU.) / francófono (Haití)",
-      "ap": "Etnografía crítica de la 'república de las ONG': cita directamente a Trouillot y a Gina Ulysse para pensar cómo la ayuda internacional administra la soberanía haitiana en vez de restituirla."
+      "ap": "Etnografía crítica de la 'república de las ONG': cita directamente a Trouillot y a Gina Ulysse para pensar cómo la ayuda internacional administra la soberanía haitiana en vez de restituirla.",
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c4"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El poder de ONG, donantes y Estado organiza la crítica del régimen de ayuda; desigualdad y desposesión son una dimensión secundaria.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "a02-generado.json"
+      ]
     },
     {
       "id": "zips_nannysasafo",
@@ -2006,7 +3007,11 @@
       ],
       "l": "jamaica",
       "tr": "anglófono (Jamaica) / alemán (Austria)",
-      "ap": "Discute extensamente a Bilby para releer a Nanny, única Héroe Nacional femenina de Jamaica, contra la historiografía que reduce a los cimarrones a una élite militar que abandonó a los suyos."
+      "ap": "Discute extensamente a Bilby para releer a Nanny, única Héroe Nacional femenina de Jamaica, contra la historiografía que reduce a los cimarrones a una élite militar que abandonó a los suyos.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "brereton_racerelationstrinidad",
@@ -2020,7 +3025,11 @@
       ],
       "l": "trinidad",
       "tr": "anglófono (Trinidad)",
-      "ap": "Historiografía fundacional de Trinidad poscolonial; Brereton se formó bajo la codirección doctoral de Neville A. T. Hall, el historiador del Caribe danés que este mismo lote incorpora."
+      "ap": "Historiografía fundacional de Trinidad poscolonial; Brereton se formó bajo la codirección doctoral de Neville A. T. Hall, el historiador del Caribe danés que este mismo lote incorpora.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "nixon_resistingparadise",
@@ -2034,7 +3043,23 @@
       ],
       "l": "jamaica",
       "tr": "anglófono (Bahamas/Trinidad)",
-      "ap": "El turismo como economía erótica racializada: dialoga extensamente con Kempadoo y Sheller para mostrar cómo el cuerpo caribeño se vende como paraíso disponible."
+      "ap": "El turismo como economía erótica racializada: dialoga extensamente con Kempadoo y Sheller para mostrar cómo el cuerpo caribeño se vende como paraíso disponible.",
+      "recorrido": "c10",
+      "recorridos_sec": [
+        "c4",
+        "c5"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La producción cultural y sexual del paraíso articula el libro; turismo y diáspora funcionan como economías y rutas secundarias.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "a01-generado.json"
+      ]
     },
     {
       "id": "schwartz_seaofstorms",
@@ -2048,7 +3073,27 @@
       ],
       "l": "puertorico",
       "tr": "anglófono (EE.UU.)",
-      "ap": "La longue durée del huracán como problema político desde el siglo XVI: el eje más delgado del atlas gana aquí la profundidad histórica que hoy solo tiene desde el siglo XX."
+      "ap": "La longue durée del huracán como problema político desde el siglo XVI: el eje más delgado del atlas gana aquí la profundidad histórica que hoy solo tiene desde el siglo XX.",
+      "recorrido": null,
+      "recorridos_sec": [
+        "c2",
+        "c4"
+      ],
+      "arquitectura_recorrido": {
+        "tipo": "frontera_constitutiva",
+        "recorridos": [
+          "c6",
+          "c7"
+        ]
+      },
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "FRONTERA_CONSTITUTIVA C6/C7"
+      },
+      "fuente_recorrido": [
+        "decision-academica-schwartz_seaofstorms-p2-etapa-2-3f.md"
+      ]
     },
     {
       "id": "smith_sexcitizen",
@@ -2062,7 +3107,11 @@
       ],
       "l": "trinidad",
       "tr": "anglófono (Belice/Trinidad)",
-      "ap": "Antología que cruza sexualidad con ciudadanía política, con Kempadoo, Alexander y Reddock entre sus referencias centrales: sexualidad como pregunta de Estado, no solo de intimidad."
+      "ap": "Antología que cruza sexualidad con ciudadanía política, con Kempadoo, Alexander y Reddock entre sus referencias centrales: sexualidad como pregunta de Estado, no solo de intimidad.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "hall_slavesocietydanish",
@@ -2076,7 +3125,23 @@
       ],
       "l": "stjohn",
       "tr": "anglófono / danés (Caribe danés)",
-      "ap": "El estudio de referencia sobre el Caribe danés y la rebelión de 1733 en St. John; dialoga directamente con Olwig, hoy la única voz que el atlas tenía para esta isla."
+      "ap": "El estudio de referencia sobre el Caribe danés y la rebelión de 1733 en St. John; dialoga directamente con Olwig, hoy la única voz que el atlas tenía para esta isla.",
+      "recorrido": "c2",
+      "recorridos_sec": [
+        "c3",
+        "c4"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El libro define la esclavitud como fundamento de toda la sociedad colonial; rebeliones y emancipación son capítulos de esa arquitectura, no el principio ordenador.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "a01-generado.json"
+      ]
     },
     {
       "id": "knight_genesisnacionalismo",
@@ -2090,7 +3155,11 @@
       ],
       "l": "jamaica",
       "tr": "anglófono (Jamaica/EE.UU.)",
-      "ap": "Síntesis histórica que cita explícitamente el comparatismo de área de Mintz; candidato a segundo texto-brújula del atlas, junto al Trouillot ya presente."
+      "ap": "Síntesis histórica que cita explícitamente el comparatismo de área de Mintz; candidato a segundo texto-brújula del atlas, junto al Trouillot ya presente.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "benedictykokken_haitiexception",
@@ -2104,7 +3173,23 @@
       ],
       "l": "haiti",
       "tr": "francófono (Haití) / anglófono",
-      "ap": "El pensamiento de Trouillot, dicen sus propios editores, 'sostiene todo el volumen': examina por qué Haití se volvió el laboratorio permanente del desarrollo internacional."
+      "ap": "El pensamiento de Trouillot, dicen sus propios editores, 'sostiene todo el volumen': examina por qué Haití se volvió el laboratorio permanente del desarrollo internacional.",
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c7",
+        "c9"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La obra interroga cómo la narrativa antropológica produce la excepcionalidad haitiana: representación, traducción y opacidad son el principio ordenador. Corregir el título a The Haiti Exception: Anthropology and the Predicament of Narrative.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "a02-generado.json"
+      ]
     },
     {
       "id": "klein_battleparadise",
@@ -2118,7 +3203,23 @@
       ],
       "l": "puertorico",
       "tr": "anglófono (Canadá) / hispanófono (Puerto Rico)",
-      "ap": "Entrevista directamente a Yarimar Bonilla para mostrar el 'shock doctrine' pos-María: el desastre no como excepción sino como oportunidad de despojo ya preparada por la deuda."
+      "ap": "Entrevista directamente a Yarimar Bonilla para mostrar el 'shock doctrine' pos-María: el desastre no como excepción sino como oportunidad de despojo ya preparada por la deuda.",
+      "recorrido": "c4",
+      "recorridos_sec": [
+        "c6",
+        "c7"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El centro es el capitalismo del desastre, la privatización y la desposesión post-María; ecología del huracán y soberanía son cruces secundarios.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "a02-generado.json"
+      ]
     },
     {
       "id": "trouillothaitistate",
@@ -2132,7 +3233,11 @@
       ],
       "l": "haiti",
       "tr": "anglófono (Haití/EE.UU.)",
-      "ap": "El cuarto Trouillot del atlas, y el que faltaba. Aquí el Estado haitiano no es heredero de 1804 sino su adversario: el duvalierismo como aparato de terror montado contra la nación, no como desvío patológico. Le da a soberanías y violencias el registro estatal que no tenían."
+      "ap": "El cuarto Trouillot del atlas, y el que faltaba. Aquí el Estado haitiano no es heredero de 1804 sino su adversario: el duvalierismo como aparato de terror montado contra la nación, no como desvío patológico. Le da a soberanías y violencias el registro estatal que no tenían.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "kincaidsmallplace",
@@ -2146,7 +3251,11 @@
       ],
       "l": "antigua",
       "tr": "anglófono (Antigua/EE.UU.)",
-      "ap": "El turismo mirado desde la orilla que lo recibe: el visitante como figura moral y no como dato económico. Antigua entra al atlas por su texto más incómodo, escrito sin aparato ni bibliografía, y por eso mismo difícil de citar y difícil de refutar."
+      "ap": "El turismo mirado desde la orilla que lo recibe: el visitante como figura moral y no como dato económico. Antigua entra al atlas por su texto más incómodo, escrito sin aparato ni bibliografía, y por eso mismo difícil de citar y difícil de refutar.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "wilsoncrabantics",
@@ -2160,7 +3269,11 @@
       ],
       "l": "sanandres",
       "tr": "anglófono (Nueva Zelanda/Providencia)",
-      "ap": "Respetabilidad y reputación: dos sistemas de valor en tensión, uno heredado de la norma colonial, el otro igualitario y local, que Wilson sitúa en el centro de la vida social caribeña. El canasto de cangrejos —la nivelación social, la competencia masculina en Providencia— le da cuerpo a esa dialéctica y funda un marco propio para pensar identidad y cultura popular en el archipiélago."
+      "ap": "Respetabilidad y reputación: dos sistemas de valor en tensión, uno heredado de la norma colonial, el otro igualitario y local, que Wilson sitúa en el centro de la vida social caribeña. El canasto de cangrejos —la nivelación social, la competencia masculina en Providencia— le da cuerpo a esa dialéctica y funda un marco propio para pensar identidad y cultura popular en el archipiélago.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "gomezexperiential",
@@ -2174,7 +3287,20 @@
       ],
       "l": "cartagena",
       "tr": "anglófono (Colombia/EE.UU.)",
-      "ap": "En el Caribe del siglo XVII hubo una revolución epistemológica y la hicieron especialistas rituales de origen africano. El saber sobre el cuerpo y la curación como archivo propio, no como superstición residual: el eslabón histórico entre Cartagena y lo que Palmié lee en el ritual cubano."
+      "ap": "En el Caribe del siglo XVII hubo una revolución epistemológica y la hicieron especialistas rituales de origen africano. El saber sobre el cuerpo y la curación como archivo propio, no como superstición residual: el eslabón histórico entre Cartagena y lo que Palmié lee en el ritual cubano.",
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c5"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "C9 principal / C5 secundaria"
+      },
+      "fuente_recorrido": [
+        "decision-academica-gomezexperiential-cierre-p1-etapa-2-3.md"
+      ]
     },
     {
       "id": "goffedarklab",
@@ -2188,7 +3314,23 @@
       ],
       "l": "jamaica",
       "tr": "anglófono (Jamaica/EE.UU.)",
-      "ap": "1492 como el laboratorio donde empieza la crisis climática, no como su prehistoria. Goffe pone negritud e indentura asiática en el mismo relato geológico, que es justo el cruce que a catástrofes y capitalismo racial les faltaba para dejar de leerse por separado."
+      "ap": "1492 como el laboratorio donde empieza la crisis climática, no como su prehistoria. Goffe pone negritud e indentura asiática en el mismo relato geológico, que es justo el cruce que a catástrofes y capitalismo racial les faltaba para dejar de leerse por separado.",
+      "recorrido": "c6",
+      "recorridos_sec": [
+        "c1",
+        "c2"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La crisis climática caribeña se explica mediante historias coloniales, raciales y extractivas; invasión y plantación son genealogías secundarias.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "a02-generado.json"
+      ]
     },
     {
       "id": "wilderfreedomtime",
@@ -2202,7 +3344,11 @@
       ],
       "l": "martinica",
       "tr": "anglófono (EE.UU./Francia)",
-      "ap": "Césaire y Senghor no pedían la independencia nacional: proponían federaciones posnacionales que la historiografía descartó como tibieza. Wilder devuelve esa apuesta al presente y le da profundidad histórica al problema que Bonilla formula desde el Caribe no soberano de hoy."
+      "ap": "Césaire y Senghor no pedían la independencia nacional: proponían federaciones posnacionales que la historiografía descartó como tibieza. Wilder devuelve esa apuesta al presente y le da profundidad histórica al problema que Bonilla formula desde el Caribe no soberano de hoy.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "bogueslammingreader",
@@ -2216,7 +3362,11 @@
       ],
       "l": "barbados",
       "tr": "anglófono (Barbados/Jamaica)",
-      "ap": "Lamming leído como práctica intelectual insurgente y no como literatura: descolonizar exige inventar una lengua propia para desmontar el terror mental que dejó la colonia. Barbados tenía a Brathwaite y a Sharpe; le faltaba el otro polo de su misma tradición."
+      "ap": "Lamming leído como práctica intelectual insurgente y no como literatura: descolonizar exige inventar una lengua propia para desmontar el terror mental que dejó la colonia. Barbados tenía a Brathwaite y a Sharpe; le faltaba el otro polo de su misma tradición.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "mahlertricontinental",
@@ -2230,7 +3380,23 @@
       ],
       "l": "cuba",
       "tr": "anglófono (EE.UU.)",
-      "ap": "La Habana, 1966: la Tricontinental construye una crítica del capitalismo global desde la raza, y de ahí sale buena parte de lo que hoy se llama Sur Global. Es el nodo que conecta por debajo a Rodney, al Black Power caribeño y al panafricanismo de Winston James."
+      "ap": "La Habana, 1966: la Tricontinental construye una crítica del capitalismo global desde la raza, y de ahí sale buena parte de lo que hoy se llama Sur Global. Es el nodo que conecta por debajo a Rodney, al Black Power caribeño y al panafricanismo de Winston James.",
+      "recorrido": "c5",
+      "recorridos_sec": [
+        "c7",
+        "c8"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La circulación de lenguajes, imágenes y solidaridad antiimperial desde la Tricontinental organiza el estudio; soberanía y traducción política son secundarias.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "a02-generado.json"
+      ]
     },
     {
       "id": "castrogomezhybris",
@@ -2243,7 +3409,11 @@
       ],
       "l": "cartagena",
       "tr": "hispano (Colombia)",
-      "ap": "La Ilustración neogranadina como dispositivo de poder y no como recepción tardía: la ciencia criolla se articula con la limpieza de sangre para producir blancura. Sostiene por el lado historiográfico la colonialidad del espacio que Deere trabaja por el lado conceptual."
+      "ap": "La Ilustración neogranadina como dispositivo de poder y no como recepción tardía: la ciencia criolla se articula con la limpieza de sangre para producir blancura. Sostiene por el lado historiográfico la colonialidad del espacio que Deere trabaja por el lado conceptual.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "firmin",
@@ -2257,7 +3427,11 @@
       ],
       "l": "haiti",
       "tr": "francófono (Haití)",
-      "ap": "Ciencia positivista antirracista escrita desde Haití: Firmin refuta la jerarquía de razas de Gobineau ante la propia Sociedad de Antropología de París en 1884, casi medio siglo antes de que la antropología académica reconociera a un antropólogo negro caribeño en su canon."
+      "ap": "Ciencia positivista antirracista escrita desde Haití: Firmin refuta la jerarquía de razas de Gobineau ante la propia Sociedad de Antropología de París en 1884, casi medio siglo antes de que la antropología académica reconociera a un antropólogo negro caribeño en su canon.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "shellerconsuming",
@@ -2271,7 +3445,23 @@
       ],
       "l": "jamaica",
       "tr": "anglófono (EE.UU./Caribe)",
-      "ap": "El turismo y el consumo cultural caribeños leídos como continuación directa de la economía de plantación: del azúcar esclavista al 'zombi' turístico, Europa y Norteamérica siguen consumiendo el Caribe que alguna vez saquearon."
+      "ap": "El turismo y el consumo cultural caribeños leídos como continuación directa de la economía de plantación: del azúcar esclavista al 'zombi' turístico, Europa y Norteamérica siguen consumiendo el Caribe que alguna vez saquearon.",
+      "recorrido": "c4",
+      "recorridos_sec": [
+        "c5",
+        "c8"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La explotación colonial persiste en consumo, turismo y conocimiento; movilidades y discursos de creolización son secundarios.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "a01-generado.json"
+      ]
     },
     {
       "id": "henrycaliban",
@@ -2285,7 +3475,11 @@
       ],
       "l": "antigua",
       "tr": "anglófono (Antigua/EE.UU.)",
-      "ap": "Funda el campo como campo: distingue las corrientes historicista y poeticista de la filosofía afrocaribeña y lee a Calibán como razón propia, no derivada. Sostiene que la filosofía caribeña vive como saber subtextual, en el clima existencial antes que en el tratado."
+      "ap": "Funda el campo como campo: distingue las corrientes historicista y poeticista de la filosofía afrocaribeña y lee a Calibán como razón propia, no derivada. Sostiene que la filosofía caribeña vive como saber subtextual, en el clima existencial antes que en el tratado.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "lebroncimarronaje",
@@ -2299,7 +3493,11 @@
       ],
       "l": "puertorico",
       "tr": "hispano (Puerto Rico)",
-      "ap": "Convierte el cimarronaje en categoría filosófica y no en episodio histórico: la huida como praxis de mundo y no como reacción. Escrito en español desde Puerto Rico, desplaza el eje anglófono desde el que suele leerse la marronage."
+      "ap": "Convierte el cimarronaje en categoría filosófica y no en episodio histórico: la huida como praxis de mundo y no como reacción. Escrito en español desde Puerto Rico, desplaza el eje anglófono desde el que suele leerse la marronage.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "sonicbodies",
@@ -2314,7 +3512,11 @@
       ],
       "l": "jamaica",
       "tr": "anglófono (Jamaica/R.U.)",
-      "ap": "El sound system jamaicano como forma de conocimiento corporal y no como género musical. La negrura aparece aquí como régimen de sensibilidad: resonancia e inmersión frente a la distancia crítica del ojo."
+      "ap": "El sound system jamaicano como forma de conocimiento corporal y no como género musical. La negrura aparece aquí como régimen de sensibilidad: resonancia e inmersión frente a la distancia crítica del ojo.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "yountaesecular",
@@ -2328,7 +3530,11 @@
       ],
       "l": "martinica",
       "tr": "comparado (transnacional)",
-      "ap": "La secularización no hizo desaparecer la religión: la transmutó en ideología del Estado-nación y del mercado. Lee a Glissant, Césaire y Fanon para proponer un desencantamiento decolonial que rompa el hechizo del orden del Hombre."
+      "ap": "La secularización no hizo desaparecer la religión: la transmutó en ideología del Estado-nación y del mercado. Lee a Glissant, Césaire y Fanon para proponer un desencantamiento decolonial que rompa el hechizo del orden del Hombre.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "branddoor",
@@ -2342,7 +3548,11 @@
       ],
       "l": "trinidad",
       "tr": "anglófono (Trinidad/Canadá)",
-      "ap": "Piensa la pertenencia desde la puerta sin retorno: un origen que no se recupera y que sin embargo organiza la vida diaspórica. Ensayo antes que monografía, y por eso escribe el archivo desde la pérdida en vez de describirlo."
+      "ap": "Piensa la pertenencia desde la puerta sin retorno: un origen que no se recupera y que sin embargo organiza la vida diaspórica. Ensayo antes que monografía, y por eso escribe el archivo desde la pérdida en vez de describirlo.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "grosfoguelcolonial",
@@ -2357,7 +3567,11 @@
       ],
       "l": "puertorico",
       "tr": "hispano (Puerto Rico)",
-      "ap": "Lee la condición colonial puertorriqueña como posición dentro del sistema-mundo y no como anomalía nacional. Compara migraciones caribeñas para mostrar que la subordinación es estructural y no un rezago por superar."
+      "ap": "Lee la condición colonial puertorriqueña como posición dentro del sistema-mundo y no como anomalía nacional. Compara migraciones caribeñas para mostrar que la subordinación es estructural y no un rezago por superar.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "bahadurcoolie",
@@ -2372,7 +3586,11 @@
       ],
       "l": "guyana",
       "tr": "anglófono (Guyana/EE.UU.)",
-      "ap": "El trabajo por contrato indio en la Guyana poscolonial, seguido desde la experiencia de las mujeres. La postplantación deja de ser solo economía y se vuelve régimen sexual y de parentesco."
+      "ap": "El trabajo por contrato indio en la Guyana poscolonial, seguido desde la experiencia de las mujeres. La postplantación deja de ser solo economía y se vuelve régimen sexual y de parentesco.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "zapataarbol",
@@ -2387,7 +3605,11 @@
       ],
       "l": "cartagena",
       "tr": "hispano (Colombia)",
-      "ap": "Africanía como categoría propia del Caribe colombiano, formulada en primera persona y desde dentro. Piensa el mestizaje sin disolver la herencia africana en él, que es la operación que la antropología nacional suele hacer."
+      "ap": "Africanía como categoría propia del Caribe colombiano, formulada en primera persona y desde dentro. Piensa el mestizaje sin disolver la herencia africana en él, que es la operación que la antropología nacional suele hacer.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "almanzaorilla",
@@ -2401,7 +3623,11 @@
       ],
       "l": "santamarta",
       "tr": "hispano (Colombia)",
-      "ap": "Rastrea la filosofía afrocaribeña del siglo XX desde el Caribe colombiano, orilla que suele quedar fuera del canon anglófono y francófono del campo. Es la posición de enunciación desde la que se construye este atlas."
+      "ap": "Rastrea la filosofía afrocaribeña del siglo XX desde el Caribe colombiano, orilla que suele quedar fuera del canon anglófono y francófono del campo. Es la posición de enunciación desde la que se construye este atlas.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "goldbergabolition",
@@ -2415,7 +3641,11 @@
       ],
       "l": "guyana",
       "tr": "anglófono (EE. UU./Guyana)",
-      "ap": "El derecho no tiene gramática para nombrar la masacre del Zong, y la literatura sí tiene poética para excederla. Leyendo a NourbeSe Philip, a Fred D'Aguiar y a David Dabydeen, Goldberg sostiene que la abolición no es una fecha cumplida sino un tiempo todavía por abrir."
+      "ap": "El derecho no tiene gramática para nombrar la masacre del Zong, y la literatura sí tiene poética para excederla. Leyendo a NourbeSe Philip, a Fred D'Aguiar y a David Dabydeen, Goldberg sostiene que la abolición no es una fecha cumplida sino un tiempo todavía por abrir.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "hurboncomprendre",
@@ -2430,7 +3660,11 @@
       ],
       "l": "haiti",
       "tr": "francófono (Haití)",
-      "ap": "El Estado duvalierista no como desvío de la nación haitiana sino como la forma en que esa nación quedó capturada por su propia herencia colonial. El vudú y la cultura popular aparecen aquí como el terreno donde se juega la captura, no como folclor que ilustrarla."
+      "ap": "El Estado duvalierista no como desvío de la nación haitiana sino como la forma en que esa nación quedó capturada por su propia herencia colonial. El vudú y la cultura popular aparecen aquí como el terreno donde se juega la captura, no como folclor que ilustrarla.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "rifkinfictions",
@@ -2445,7 +3679,24 @@
       ],
       "l": "jamaica",
       "tr": "anglófono (EE. UU./Jamaica)",
-      "ap": "Contra la equivalencia cómoda entre negritud e indigeneidad. La relación con la tierra que reclama la soberanía indígena y la que abre la fuga cimarrona no son la misma, y tratarlas como si lo fueran desactiva las dos. El capítulo sobre la matriz cimarrona lee a los maroons jamaiquinos junto a la ficción especulativa de Nalo Hopkinson."
+      "ap": "Contra la equivalencia cómoda entre negritud e indigeneidad. La relación con la tierra que reclama la soberanía indígena y la que abre la fuga cimarrona no son la misma, y tratarlas como si lo fueran desactiva las dos. El capítulo sobre la matriz cimarrona lee a los maroons jamaiquinos junto a la ficción especulativa de Nalo Hopkinson.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": {
+        "tipo": "frontera_constitutiva",
+        "recorridos": [
+          "c1",
+          "c3"
+        ]
+      },
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "frontera constitutiva C1/C3: sin principal ni secundaria"
+      },
+      "fuente_recorrido": [
+        "dictamen-academico-bloque-1-etapa-2-3.md"
+      ]
     },
     {
       "id": "whiteheadtiger",
@@ -2460,7 +3711,24 @@
       ],
       "l": "guyana",
       "tr": "anglófono (R. U./Guyana)",
-      "ap": "Tres siglos de historia caribe en el corredor Orinoco–Trinidad–Guayana, reconstruidos como estrategia política indígena y no como telón de fondo de la conquista. «Caribe» deja de ser el nombre que puso Europa y vuelve a ser el de un sujeto con cálculo propio."
+      "ap": "Tres siglos de historia caribe en el corredor Orinoco–Trinidad–Guayana, reconstruidos como estrategia política indígena y no como telón de fondo de la conquista. «Caribe» deja de ser el nombre que puso Europa y vuelve a ser el de un sujeto con cálculo propio.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": {
+        "tipo": "frontera_constitutiva",
+        "recorridos": [
+          "c1",
+          "c7"
+        ]
+      },
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "FRONTERA_CONSTITUTIVA C1/C7"
+      },
+      "fuente_recorrido": [
+        "decision-academica-whiteheadtiger-p2-etapa-2-3f.md"
+      ]
     },
     {
       "id": "olsencartagena",
@@ -2475,7 +3743,11 @@
       ],
       "l": "cartagena",
       "tr": "anglófono (EE. UU./Colombia)",
-      "ap": "Lee el De instauranda Aethiopum salute de Alonso de Sandoval como texto colonial y no como ventana transparente al puerto negrero. La misión jesuita de Cartagena produjo el archivo desde el cual todavía se lee la esclavitud en el Caribe hispano, y esa producción tiene sus propias reglas."
+      "ap": "Lee el De instauranda Aethiopum salute de Alonso de Sandoval como texto colonial y no como ventana transparente al puerto negrero. La misión jesuita de Cartagena produjo el archivo desde el cual todavía se lee la esclavitud en el Caribe hispano, y esa producción tiene sus propias reglas.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "cosgrovegarifuna",
@@ -2490,7 +3762,21 @@
       ],
       "l": "bluefields",
       "tr": "anglófono (EE. UU./Nicaragua)",
-      "ap": "La permanencia garífuna en Bluefields y Pearl Lagoon sostenida a la vez que la migración a Nueva York la dispersa. Etnografía colaborativa con la Universidad Centroamericana de Managua: la orilla nicaragüense del Gran Caribe, que casi nunca aparece en los mapas del archipiélago."
+      "ap": "La permanencia garífuna en Bluefields y Pearl Lagoon sostenida a la vez que la migración a Nueva York la dispersa. Etnografía colaborativa con la Universidad Centroamericana de Managua: la orilla nicaragüense del Gran Caribe, que casi nunca aparece en los mapas del archipiélago.",
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c5",
+        "c1"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "decisión de Dirección Académica con lectura documentada"
+      },
+      "fuente_recorrido": [
+        "decision-academica-cosgrovegarifuna-p2-etapa-2-3f.md"
+      ]
     },
     {
       "id": "helglibertyequality",
@@ -2504,7 +3790,11 @@
       ],
       "l": "cartagena",
       "tr": "hispano (Suiza/Colombia)",
-      "ap": "Dos generaciones antes de ¡Nunca más esclavos!, Helg reconstruye el Caribe neogranadino desde la frontera colonial hasta la primera república: cómo la retórica de igualdad de la independencia convivió con la exclusión racial de facto. Reconoce explícitamente el trabajo de Múnera por haber sacado de la invisibilidad a líderes mulatos como Pedro Romero, artesano que organizó a la Cartagena de color contra España en 1811."
+      "ap": "Dos generaciones antes de ¡Nunca más esclavos!, Helg reconstruye el Caribe neogranadino desde la frontera colonial hasta la primera república: cómo la retórica de igualdad de la independencia convivió con la exclusión racial de facto. Reconoce explícitamente el trabajo de Múnera por haber sacado de la invisibilidad a líderes mulatos como Pedro Romero, artesano que organizó a la Cartagena de color contra España en 1811.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "brathwaitearchipelago",
@@ -2518,7 +3808,11 @@
       ],
       "l": "barbados",
       "tr": "anglófono (Barbados)",
-      "ap": "Quince años antes de Glissant, el mismo gesto: 'archipelago: fragments... the unity is submarine'. Brathwaite propone leer el Caribe no por fragmentos nacionales sino por la placa que los conecta por debajo, y formula la creolización como dialéctica de tiempo y espacio, no como mezcla consumada. Ensayo germinal del principio de diseño de este atlas."
+      "ap": "Quince años antes de Glissant, el mismo gesto: 'archipelago: fragments... the unity is submarine'. Brathwaite propone leer el Caribe no por fragmentos nacionales sino por la placa que los conecta por debajo, y formula la creolización como dialéctica de tiempo y espacio, no como mezcla consumada. Ensayo germinal del principio de diseño de este atlas.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "muneraelfracaso",
@@ -2532,7 +3826,11 @@
       ],
       "l": "cartagena",
       "tr": "hispano (Colombia)",
-      "ap": "El relato que faltaba en el eje: la independencia no como empresa de criollos ilustrados sino como conflicto regional entre las élites de Cartagena y Bogotá, con la participación decisiva de negros y mulatos costeños que Múnera reconstruye a partir de fragmentos, porque el ejército realista quemó el archivo cartagenero al reconquistar la ciudad en 1815. Pedro Romero y Pedro Medrana, líderes populares casi sin rastro documental, emergen aquí como agentes políticos y no como comparsa de la gesta criolla."
+      "ap": "El relato que faltaba en el eje: la independencia no como empresa de criollos ilustrados sino como conflicto regional entre las élites de Cartagena y Bogotá, con la participación decisiva de negros y mulatos costeños que Múnera reconstruye a partir de fragmentos, porque el ejército realista quemó el archivo cartagenero al reconquistar la ciudad en 1815. Pedro Romero y Pedro Medrana, líderes populares casi sin rastro documental, emergen aquí como agentes políticos y no como comparsa de la gesta criolla.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "saetheridentidades",
@@ -2546,7 +3844,11 @@
       ],
       "l": "santamarta",
       "tr": "hispano (Noruega/Colombia)",
-      "ap": "El reverso de Múnera: si en Cartagena los comunes de color identificaron independencia con igualdad, en Santa Marta los indios tributarios sostuvieron el bando realista hasta 1820. Sæther retoma la tesis de Múnera para objetarle que no explica esa asimetría, y muestra que la composición racial de las dos ciudades no bastaba para predecir su política: la costa caribeña deja de ser un bloque y se vuelve dos historias."
+      "ap": "El reverso de Múnera: si en Cartagena los comunes de color identificaron independencia con igualdad, en Santa Marta los indios tributarios sostuvieron el bando realista hasta 1820. Sæther retoma la tesis de Múnera para objetarle que no explica esa asimetría, y muestra que la composición racial de las dos ciudades no bastaba para predecir su política: la costa caribeña deja de ser un bloque y se vuelve dos historias.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "zonabananera",
@@ -2560,7 +3862,11 @@
       ],
       "l": "santamarta",
       "tr": "hispano (Colombia)",
-      "ap": "Piel, voz y rostro como registros de una memoria política que hace de la Zona Bananera —enclave del capitalismo racial bananero, no solo escenario de plantación— un archivo vivo de las vidas negras."
+      "ap": "Piel, voz y rostro como registros de una memoria política que hace de la Zona Bananera —enclave del capitalismo racial bananero, no solo escenario de plantación— un archivo vivo de las vidas negras.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "rappaportcobarde",
@@ -2574,7 +3880,11 @@
       ],
       "l": "cartagena",
       "tr": "hispano (Colombia)",
-      "ap": "Compartir la autoridad investigativa con las y los campesinos activistas de la ANUC como método: la Rosca de Investigación y Acción Social de Fals Borda frente al positivismo académico en las Sabanas del Caribe colombiano."
+      "ap": "Compartir la autoridad investigativa con las y los campesinos activistas de la ANUC como método: la Rosca de Investigación y Acción Social de Fals Borda frente al positivismo académico en las Sabanas del Caribe colombiano.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "reysinningcristorey",
@@ -2588,7 +3898,11 @@
       ],
       "l": "santamarta",
       "tr": "hispano (Colombia)",
-      "ap": "Etnografía del barrio Cristo Rey que rastrea la presencia negra libre en Santa Marta hasta 1525, antes de la fundación de Cartagena: la memoria afrodescendiente de la ciudad, no solo de sus palenques o sus plantaciones."
+      "ap": "Etnografía del barrio Cristo Rey que rastrea la presencia negra libre en Santa Marta hasta 1525, antes de la fundación de Cartagena: la memoria afrodescendiente de la ciudad, no solo de sus palenques o sus plantaciones.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "hurbondictadura",
@@ -2602,7 +3916,11 @@
       ],
       "l": "haiti",
       "tr": "francófono (Haití)",
-      "ap": "El duvalierismo leído como control del imaginario cultural, no solo del aparato de Estado: el mismo objeto histórico que Trouillot narra desde la formación estatal, aquí desde la fabricación del consentimiento simbólico."
+      "ap": "El duvalierismo leído como control del imaginario cultural, no solo del aparato de Estado: el mismo objeto histórico que Trouillot narra desde la formación estatal, aquí desde la fabricación del consentimiento simbólico.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "lizcanocarnaval",
@@ -2616,7 +3934,11 @@
       ],
       "l": "barranquilla",
       "tr": "hispano (Colombia)",
-      "ap": "Compilación que piensa el carnaval como fenómeno transatlántico leyendo juntas Barranquilla, Salvador de Bahía y Barcelona: el mismo mecanismo de mestizaje ritual puesto a circular por tres orillas distintas. Primera obra que ancla al atlas en Barranquilla, lugar que hasta ahora no tenía ninguna obra propia."
+      "ap": "Compilación que piensa el carnaval como fenómeno transatlántico leyendo juntas Barranquilla, Salvador de Bahía y Barcelona: el mismo mecanismo de mestizaje ritual puesto a circular por tres orillas distintas. Primera obra que ancla al atlas en Barranquilla, lugar que hasta ahora no tenía ninguna obra propia.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "sangbenvolviendo",
@@ -2630,7 +3952,11 @@
       ],
       "l": "santamarta",
       "tr": "hispano (Rep. Dominicana/Colombia)",
-      "ap": "Ensayo panorámico de una historiadora dominicana que fundó estudios caribeños en Santo Domingo: la plantación como origen, la integración regional como promesa incumplida, y el archipiélago recorrido en primera persona. Publicado por la Universidad del Magdalena, dialoga en extenso con Glissant y reivindica a Hurbon como lectura que le cambió la comprensión de Haití."
+      "ap": "Ensayo panorámico de una historiadora dominicana que fundó estudios caribeños en Santo Domingo: la plantación como origen, la integración regional como promesa incumplida, y el archipiélago recorrido en primera persona. Publicado por la Universidad del Magdalena, dialoga en extenso con Glissant y reivindica a Hurbon como lectura que le cambió la comprensión de Haití.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "chicamusicaafricana",
@@ -2644,7 +3970,11 @@
       ],
       "l": "cartagena",
       "tr": "hispano (Colombia)",
-      "ap": "Etnografía del picó cartagenero y del Festival Internacional de Música del Caribe (1983-1994) construida sobre testimonios de administradores y coleccionistas, no sobre el canon académico caribeñista: un circuito sur-sur con África que las industrias culturales del norte nunca mediaron."
+      "ap": "Etnografía del picó cartagenero y del Festival Internacional de Música del Caribe (1983-1994) construida sobre testimonios de administradores y coleccionistas, no sobre el canon académico caribeñista: un circuito sur-sur con África que las industrias culturales del norte nunca mediaron.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "zambrana",
@@ -2658,7 +3988,11 @@
       ],
       "l": "puertorico",
       "tr": "hispano (Puerto Rico)",
-      "ap": "La deuda pública como tecnología colonial: la Junta de Control Fiscal impuesta tras la quiebra de 2015 hereda la lógica de la hacienda sin necesitar plantación ni bandera. Zambrana piensa las protestas del verano de 2019 desde Fanon y desde Bonilla, a quien reconoce como interlocutora directa del libro."
+      "ap": "La deuda pública como tecnología colonial: la Junta de Control Fiscal impuesta tras la quiebra de 2015 hereda la lógica de la hacienda sin necesitar plantación ni bandera. Zambrana piensa las protestas del verano de 2019 desde Fanon y desde Bonilla, a quien reconoce como interlocutora directa del libro.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "martinezsanmiguel",
@@ -2672,7 +4006,11 @@
       ],
       "l": "puertorico",
       "tr": "hispano (Puerto Rico/comparado)",
-      "ap": "La migración intracolonial —puertorriqueña hacia Nueva York, dominicana hacia San Juan— leída como forma ordinaria del poder colonial contemporáneo, no como su excepción. Dedica un capítulo entero a cruzar a Fanon con Piri Thomas y otro a Césaire con Muñoz Marín, y cita a Grosfoguel por el título exacto de su libro."
+      "ap": "La migración intracolonial —puertorriqueña hacia Nueva York, dominicana hacia San Juan— leída como forma ordinaria del poder colonial contemporáneo, no como su excepción. Dedica un capítulo entero a cruzar a Fanon con Piri Thomas y otro a Césaire con Muñoz Marín, y cita a Grosfoguel por el título exacto de su libro.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "archipelagicthinking",
@@ -2686,7 +4024,11 @@
       ],
       "l": "puertorico",
       "tr": "comparado (métodos comparados)",
-      "ap": "El volumen que da nombre al método que este atlas ya practicaba sin declararlo: pensar el Caribe como archipiélago relacional en vez de área delimitada por lengua imperial o frontera nacional. Organiza el libro alrededor de Glissant, con Elizabeth DeLoughrey entre las colaboradoras que lo escriben."
+      "ap": "El volumen que da nombre al método que este atlas ya practicaba sin declararlo: pensar el Caribe como archipiélago relacional en vez de área delimitada por lengua imperial o frontera nacional. Organiza el libro alrededor de Glissant, con Elizabeth DeLoughrey entre las colaboradoras que lo escriben.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "brownetropic",
@@ -2699,7 +4041,11 @@
       ],
       "l": "trinidad",
       "tr": "anglófono (Trinidad/EE.UU.)",
-      "ap": "El habla y el gesto trinitario leídos como retórica, no como folclore ni como desvío del inglés estándar. Abre varios capítulos con epígrafes de Glissant tomados de El discurso antillano, la misma obra que el atlas ya cataloga."
+      "ap": "El habla y el gesto trinitario leídos como retórica, no como folclore ni como desvío del inglés estándar. Abre varios capítulos con epígrafes de Glissant tomados de El discurso antillano, la misma obra que el atlas ya cataloga.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "lightfoot",
@@ -2713,7 +4059,20 @@
       ],
       "l": "antigua",
       "tr": "anglófono (comparado)",
-      "ap": "Qué significó en realidad la emancipación de 1834 para la gente libre y pobre de Antigua, más allá de la fecha que la celebra. Cita a Jamaica Kincaid como epígrafe y la nombra en el cuerpo del texto —'el ensayo célebre de Kincaid sobre la Antigua poscolonial'—, el mismo libro y la misma isla que el atlas ya cataloga."
+      "ap": "Qué significó en realidad la emancipación de 1834 para la gente libre y pobre de Antigua, más allá de la fecha que la celebra. Cita a Jamaica Kincaid como epígrafe y la nombra en el cuerpo del texto —'el ensayo célebre de Kincaid sobre la Antigua poscolonial'—, el mismo libro y la misma isla que el atlas ya cataloga.",
+      "recorrido": "c4",
+      "recorridos_sec": [
+        "c3"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "C4 principal / C3 secundaria (C2 descartada)"
+      },
+      "fuente_recorrido": [
+        "dictamen-academico-bloque-1-etapa-2-3.md"
+      ]
     },
     {
       "id": "fischer",
@@ -2727,7 +4086,11 @@
       ],
       "l": "haiti",
       "tr": "comparado",
-      "ap": "La tesis de la desmentida: la Revolución haitiana fue reconocida y negada a la vez por el pensamiento moderno que dice fundarse en la libertad. Discute en detalle Silenciando el pasado de Trouillot y cita dos veces Wizards and Scientists de Palmié, ambos catalogados con el mismo título."
+      "ap": "La tesis de la desmentida: la Revolución haitiana fue reconocida y negada a la vez por el pensamiento moderno que dice fundarse en la libertad. Discute en detalle Silenciando el pasado de Trouillot y cita dos veces Wizards and Scientists de Palmié, ambos catalogados con el mismo título.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "felicianosantos",
@@ -2741,7 +4104,21 @@
       ],
       "l": "puertorico",
       "tr": "hispano (Puerto Rico/EE.UU.)",
-      "ap": "Cómo se disputa hoy, en el habla cotidiana y no solo en el archivo, la identidad taína en Puerto Rico. Cita a Bonilla y LeBrón por el año y la autoría exactos de su libro sobre los huracanes de 2017."
+      "ap": "Cómo se disputa hoy, en el habla cotidiana y no solo en el archivo, la identidad taína en Puerto Rico. Cita a Bonilla y LeBrón por el año y la autoría exactos de su libro sobre los huracanes de 2017.",
+      "recorrido": "c1",
+      "recorridos_sec": [
+        "c7",
+        "c9"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "decisión de Dirección Académica con lectura documentada"
+      },
+      "fuente_recorrido": [
+        "decision-academica-felicianosantos-p2-etapa-2-3f.md"
+      ]
     },
     {
       "id": "prestolmasacre",
@@ -2755,7 +4132,11 @@
       ],
       "l": "dominicana",
       "tr": "hispano (República Dominicana)",
-      "ap": "Testimonio directo de un funcionario dominicano en la frontera durante la matanza de 1937 contra la población haitiana: la fuente primaria con la que discute toda la historiografía posterior. Hasta esta entrada el atlas no tenía ninguna obra sobre el episodio de violencia racial de Estado más citado del Caribe insular después de la Revolución haitiana."
+      "ap": "Testimonio directo de un funcionario dominicano en la frontera durante la matanza de 1937 contra la población haitiana: la fuente primaria con la que discute toda la historiografía posterior. Hasta esta entrada el atlas no tenía ninguna obra sobre el episodio de violencia racial de Estado más citado del Caribe insular después de la Revolución haitiana.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "hazareesingh",
@@ -2769,7 +4150,23 @@
       ],
       "l": "haiti",
       "tr": "comparado (Mauricio/Reino Unido)",
-      "ap": "Biografía de Toussaint Louverture con archivo nuevo: cartas suyas nunca antes traducidas. Sitúa a Césaire como heredero directo de esa figura y cita Les marrons de la liberté de Fouchard con su título exacto."
+      "ap": "Biografía de Toussaint Louverture con archivo nuevo: cartas suyas nunca antes traducidas. Sitúa a Césaire como heredero directo de esa figura y cita Les marrons de la liberté de Fouchard con su título exacto.",
+      "recorrido": "c3",
+      "recorridos_sec": [
+        "c7",
+        "c9"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La biografía se organiza alrededor de revolución, emancipación y estrategia de Toussaint; soberanía y memoria política funcionan como secundarias.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "a02-generado.json"
+      ]
     },
     {
       "id": "johnsonbelize",
@@ -2783,7 +4180,11 @@
       ],
       "l": "belize",
       "tr": "anglófono (comparado)",
-      "ap": "Naturaleza y raza pensadas juntas en Belice, donde la ecología política explica la criollización tanto como la historia social. Cita repetidamente a Bolland, ya presente en el atlas, para fechar el esclavismo colonial desde 1724."
+      "ap": "Naturaleza y raza pensadas juntas en Belice, donde la ecología política explica la criollización tanto como la historia social. Cita repetidamente a Bolland, ya presente en el atlas, para fechar el esclavismo colonial desde 1724.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "millerbassey",
@@ -2797,7 +4198,11 @@
       ],
       "l": "cuba",
       "tr": "comparado (transatlántico)",
-      "ap": "La sociedad secreta Abakuá rastreada desde el Calabar, en el actual Nigeria, hasta su trasplante en Cuba: de los pocos estudios que documentan ese vínculo con archivo y no solo con hipótesis. El propio Miller declara que recurre 'a lo largo de todo este estudio' a Lydia Cabrera, y nombra El Monte entre sus obras fundacionales."
+      "ap": "La sociedad secreta Abakuá rastreada desde el Calabar, en el actual Nigeria, hasta su trasplante en Cuba: de los pocos estudios que documentan ese vínculo con archivo y no solo con hipótesis. El propio Miller declara que recurre 'a lo largo de todo este estudio' a Lydia Cabrera, y nombra El Monte entre sus obras fundacionales.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "schweitzerbata",
@@ -2811,7 +4216,11 @@
       ],
       "l": "cuba",
       "tr": "anglófono (EE.UU./Cuba)",
-      "ap": "El tambor batá como forma de conocimiento transmitida de maestro a discípulo, no como pieza de folclore para ilustrar un capítulo sobre religión. Reconoce a Fernando Ortiz como la autoridad fundacional del campo, aunque por obras distintas a la que el atlas cataloga."
+      "ap": "El tambor batá como forma de conocimiento transmitida de maestro a discípulo, no como pieza de folclore para ilustrar un capítulo sobre religión. Reconoce a Fernando Ortiz como la autoridad fundacional del campo, aunque por obras distintas a la que el atlas cataloga.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "mendozaraices",
@@ -2825,7 +4234,11 @@
       ],
       "l": "santamarta",
       "tr": "hispano (Colombia)",
-      "ap": "Medio milenio de presencia afro en Santa Marta, compilado por catorce autores entre ellos Edgar Rey Sinning, que firma la presentación, y Roberto Almanza junto con Margarita Granados Castellanos, que aportan el capítulo sobre las geografías negras de la Zona Bananera. El propio libro cita a Rey Sinning por el título exacto de su obra ya catalogada."
+      "ap": "Medio milenio de presencia afro en Santa Marta, compilado por catorce autores entre ellos Edgar Rey Sinning, que firma la presentación, y Roberto Almanza junto con Margarita Granados Castellanos, que aportan el capítulo sobre las geografías negras de la Zona Bananera. El propio libro cita a Rey Sinning por el título exacto de su obra ya catalogada.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "scottconscripts",
@@ -2839,7 +4252,11 @@
       ],
       "l": "haiti",
       "tr": "comparado",
-      "ap": "Relee Los jacobinos negros contra el relato triunfal de la descolonización: no como romance sino como tragedia. James no es para Scott un antecedente que superar sino la pregunta que sigue abierta —'conectar la historia de Toussaint Louverture con las historias vitales de nuestro propio tiempo'—, y discute en detalle Silenciando el pasado de Trouillot."
+      "ap": "Relee Los jacobinos negros contra el relato triunfal de la descolonización: no como romance sino como tragedia. James no es para Scott un antecedente que superar sino la pregunta que sigue abierta —'conectar la historia de Toussaint Louverture con las historias vitales de nuestro propio tiempo'—, y discute en detalle Silenciando el pasado de Trouillot.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "mcneillmosquito",
@@ -2853,7 +4270,11 @@
       ],
       "l": "cartagena",
       "tr": "comparado (cuenca completa)",
-      "ap": "La fiebre amarilla y la malaria como actores de la historia militar del Gran Caribe: España retuvo sus colonias más tiempo que sus rivales por ecología, no solo por estrategia. El sitio de Cartagena de 1741 es uno de sus casos centrales. Cita en extenso a Stuart Schwartz sobre demografía esclava e inmunidad al mosquito, aunque por un trabajo de 1985 distinto al que el atlas ya cataloga."
+      "ap": "La fiebre amarilla y la malaria como actores de la historia militar del Gran Caribe: España retuvo sus colonias más tiempo que sus rivales por ecología, no solo por estrategia. El sitio de Cartagena de 1741 es uno de sus casos centrales. Cita en extenso a Stuart Schwartz sobre demografía esclava e inmunidad al mosquito, aunque por un trabajo de 1985 distinto al que el atlas ya cataloga.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "lassoerased",
@@ -2868,7 +4289,11 @@
       ],
       "l": "panama",
       "tr": "anglófono (EE.UU./Colombia)",
-      "ap": "El despojo de los pueblos negros panameños por la Zona del Canal, borrados de la narrativa oficial que celebra la obra de ingeniería. Llena un vacío casi total del atlas sobre Panamá."
+      "ap": "El despojo de los pueblos negros panameños por la Zona del Canal, borrados de la narrativa oficial que celebra la obra de ingeniería. Llena un vacío casi total del atlas sobre Panamá.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "floresvillalobos",
@@ -2883,7 +4308,23 @@
       ],
       "l": "panama",
       "tr": "anglófono (EE.UU.)",
-      "ap": "El trabajo reproductivo y sexual de las mujeres antillanas migrantes sostuvo la fuerza laboral del Canal; la paga en 'plata' frente al 'oro' de los blancos estadounidenses como arquitectura racial del salario."
+      "ap": "El trabajo reproductivo y sexual de las mujeres antillanas migrantes sostuvo la fuerza laboral del Canal; la paga en 'plata' frente al 'oro' de los blancos estadounidenses como arquitectura racial del salario.",
+      "recorrido": "c4",
+      "recorridos_sec": [
+        "c5",
+        "c10"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El trabajo reproductivo de mujeres migrantes sostiene la infraestructura imperial y la fuerza laboral; diáspora, intimidad y parentesco son secundarios.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "a01-generado.json"
+      ]
     },
     {
       "id": "corinealdipanama",
@@ -2898,7 +4339,11 @@
       ],
       "l": "panama",
       "tr": "anglófono (EE.UU.)",
-      "ap": "La comunidad antillana de Panamá construyendo soberanía diaspórica propia —prensa, escuela, organización política— más allá de la lectura que solo la ve como mano de obra del Canal."
+      "ap": "La comunidad antillana de Panamá construyendo soberanía diaspórica propia —prensa, escuela, organización política— más allá de la lectura que solo la ve como mano de obra del Canal.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "kahnislands",
@@ -2913,7 +4358,11 @@
       ],
       "l": "haiti",
       "tr": "anglófono (EE.UU.)",
-      "ap": "La frontera marítima como tecnología jurídica que produce la 'ilegalidad' haitiana antes de que el migrante llegue a tierra. Migración e imperio leídos desde el derecho, no solo desde la etnografía del desplazamiento."
+      "ap": "La frontera marítima como tecnología jurídica que produce la 'ilegalidad' haitiana antes de que el migrante llegue a tierra. Migración e imperio leídos desde el derecho, no solo desde la etnografía del desplazamiento.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "dubuissonhaiti",
@@ -2928,7 +4377,11 @@
       ],
       "l": "haiti",
       "tr": "anglófono (EE.UU.)",
-      "ap": "Intelectuales haitianos retornados que rehacen el futuro del país contra el guion de la 'ayuda' internacional y la anticipación catastrofista con que Occidente narra a Haití."
+      "ap": "Intelectuales haitianos retornados que rehacen el futuro del país contra el guion de la 'ayuda' internacional y la anticipación catastrofista con que Occidente narra a Haití.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "pinedashipwrecked",
@@ -2942,7 +4395,25 @@
       ],
       "l": "bluefields",
       "tr": "anglófono (EE.UU.)",
-      "ap": "Las identidades criollas y miskitas de la Costa de Mosquitos como categorías raciales en disputa, no esencias étnicas fijas. Profundiza un nodo del atlas que solo tenía a McNeill del lado ecológico."
+      "ap": "Las identidades criollas y miskitas de la Costa de Mosquitos como categorías raciales en disputa, no esencias étnicas fijas. Profundiza un nodo del atlas que solo tenía a McNeill del lado ecológico.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": {
+        "tipo": "sintesis_multicorriente",
+        "recorridos": [
+          "c1",
+          "c4",
+          "c7"
+        ]
+      },
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "SINTESIS_MULTICORRIENTE C1/C4/C7"
+      },
+      "fuente_recorrido": [
+        "decision-academica-pinedashipwrecked-p2-etapa-2-3f.md"
+      ]
     },
     {
       "id": "stoutafterlove",
@@ -2956,7 +4427,22 @@
       ],
       "l": "cuba",
       "tr": "anglófono (EE.UU.)",
-      "ap": "El deseo y el afecto como economía en la Cuba post-soviética: la erótica no como excepción a la sobrevivencia material sino como parte de ella. Ángulo del cuerpo y la intimidad ausente del corpus cubano previo."
+      "ap": "El deseo y el afecto como economía en la Cuba post-soviética: la erótica no como excepción a la sobrevivencia material sino como parte de ella. Ángulo del cuerpo y la intimidad ausente del corpus cubano previo.",
+      "recorrido": "c10",
+      "recorridos_sec": [
+        "c4"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La intimidad queer, el deseo y las economías eróticas organizan el argumento; la transformación económica es secundaria.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "a01-generado.json"
+      ]
     },
     {
       "id": "wirtzperforming",
@@ -2970,7 +4456,11 @@
       ],
       "l": "cuba",
       "tr": "anglófono (EE.UU.)",
-      "ap": "La 'afrocubanidad' como actuación semiótica —performance ritual, folclórico y turístico— que produce la raza en vez de solo representarla."
+      "ap": "La 'afrocubanidad' como actuación semiótica —performance ritual, folclórico y turístico— que produce la raza en vez de solo representarla.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "belisodelirium",
@@ -2984,7 +4474,23 @@
       ],
       "l": "cuba",
       "tr": "anglófono (EE.UU.)",
-      "ap": "Una antropóloga formada en santería cubana rastrea cómo la policía estadounidense inventó un diagnóstico médico para justificar la violencia racial. El cuerpo religioso afrocubano como llave para leer la necropolítica en otro lugar."
+      "ap": "Una antropóloga formada en santería cubana rastrea cómo la policía estadounidense inventó un diagnóstico médico para justificar la violencia racial. El cuerpo religioso afrocubano como llave para leer la necropolítica en otro lugar.",
+      "recorrido": "c10",
+      "recorridos_sec": [
+        "c7",
+        "c9"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El cuerpo racializado convertido en diagnóstico y objeto de violencia estatal organiza el libro; la conexión caribeña es diaspórica y religiosa, no territorial.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "a01-generado.json"
+      ]
     },
     {
       "id": "garciapenaborders",
@@ -2999,7 +4505,11 @@
       ],
       "l": "dominicana",
       "tr": "anglófono (EE.UU.)",
-      "ap": "La dominicanidad como archivo contradictorio que necesita negar la negrura para narrarse a sí misma. Dialoga directamente con la Masacre de 1937 ya presente en el corpus."
+      "ap": "La dominicanidad como archivo contradictorio que necesita negar la negrura para narrarse a sí misma. Dialoga directamente con la Masacre de 1937 ya presente en el corpus.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "godreauscripts",
@@ -3013,7 +4523,11 @@
       ],
       "l": "puertorico",
       "tr": "anglófono (EE.UU.)",
-      "ap": "El nacionalismo cultural puertorriqueño necesita una negrura administrada —folclórica, festiva, del pasado— para sostener el mestizaje como guion oficial."
+      "ap": "El nacionalismo cultural puertorriqueño necesita una negrura administrada —folclórica, festiva, del pasado— para sostener el mestizaje como guion oficial.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "castorspiritual",
@@ -3027,7 +4541,11 @@
       ],
       "l": "trinidad",
       "tr": "anglófono (EE.UU.)",
-      "ap": "La ruta de Trinidad al Black Power hacia la religión yoruba/ifá como ciudadanía espiritual: la diáspora rehaciendo pertenencia por fuera del Estado-nación."
+      "ap": "La ruta de Trinidad al Black Power hacia la religión yoruba/ifá como ciudadanía espiritual: la diáspora rehaciendo pertenencia por fuera del Estado-nación.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "alvarezboro",
@@ -3041,7 +4559,20 @@
       ],
       "l": "cartagena",
       "tr": "hispanófono (Colombia)",
-      "ap": "Tres años de etnografía sobre pandillas y necropolítica en un barrio afrocaribeño de Cartagena (Rafael Núñez/Olaya Herrera). Vacío real del corpus: no había nada sobre violencia urbana contemporánea en el Caribe colombiano."
+      "ap": "Tres años de etnografía sobre pandillas y necropolítica en un barrio afrocaribeño de Cartagena (Rafael Núñez/Olaya Herrera). Vacío real del corpus: no había nada sobre violencia urbana contemporánea en el Caribe colombiano.",
+      "recorrido": "c4",
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La etnografía explica precariedad, segregación étnico-racial, violencia urbana y marginación sociopolítica estructural en una periferia afrocaribeña de Cartagena.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "s01-generado.json"
+      ]
     },
     {
       "id": "londonoargonauts",
@@ -3055,7 +4586,23 @@
       ],
       "l": "santamarta",
       "tr": "hispanófono (Colombia)",
-      "ap": "La canoa de Taganga como tecnología y tradición de navegación indígena que antecede y desborda al Estado-nación. Encaja casi literalmente con el título del proyecto."
+      "ap": "La canoa de Taganga como tecnología y tradición de navegación indígena que antecede y desborda al Estado-nación. Encaja casi literalmente con el título del proyecto.",
+      "recorrido": "c5",
+      "recorridos_sec": [
+        "c1",
+        "c4"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La navegación, las canoas, los intercambios y la costa como red de puertos organizan el libro; la persistencia indígena y el despojo litoral funcionan como corrientes secundarias.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "s01-generado.json"
+      ]
     },
     {
       "id": "crawfordturtlemen",
@@ -3070,7 +4617,11 @@
       ],
       "l": "bluefields",
       "tr": "anglófono (EE.UU.)",
-      "ap": "La pesca de tortuga como frontera marítima disputada entre imperios y luego entre Estados: el agua como límite que se hace y deshace con el trabajo, no solo con el tratado."
+      "ap": "La pesca de tortuga como frontera marítima disputada entre imperios y luego entre Estados: el agua como límite que se hace y deshace con el trabajo, no solo con el tratado.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "mitchellalibi",
@@ -3084,7 +4635,11 @@
       ],
       "l": "haiti",
       "tr": "anglófono (Reino Unido/EE.UU.)",
-      "ap": "Historia global del capital que no es un libro caribeño —su eje es Egipto y el petróleo— pero hace de la plantación azucarera del Caribe y de la Revolución Haitiana una bisagra estructural en el origen del capitalismo moderno, citando a Cedric Robinson como autoridad. Entra con esa salvedad declarada, no como obra centrada en la cuenca."
+      "ap": "Historia global del capital que no es un libro caribeño —su eje es Egipto y el petróleo— pero hace de la plantación azucarera del Caribe y de la Revolución Haitiana una bisagra estructural en el origen del capitalismo moderno, citando a Cedric Robinson como autoridad. Entra con esa salvedad declarada, no como obra centrada en la cuenca.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "allenvenceremos",
@@ -3098,7 +4653,11 @@
       ],
       "l": "cuba",
       "tr": "anglófono (EE.UU.)",
-      "ap": "El erotismo negro cubano como método de autoconstrucción política, no solo objeto de estudio. Candidata no identificada en el cruce inicial —quedaba escondida por homonimia con otra Allen ya sembrada— y encontrada al verificar una cita cruzada con Stout."
+      "ap": "El erotismo negro cubano como método de autoconstrucción política, no solo objeto de estudio. Candidata no identificada en el cruce inicial —quedaba escondida por homonimia con otra Allen ya sembrada— y encontrada al verificar una cita cruzada con Stout.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "williamscapitalismo",
@@ -3113,7 +4672,22 @@
       ],
       "l": "trinidad",
       "tr": "anglófono (Trinidad)",
-      "ap": "La tesis que el corpus daba por sabida sin tenerla: la abolición no llegó por conciencia moral sino cuando el azúcar antillano dejó de ser rentable, y el capital industrial británico se levantó sobre la trata. Es la obra de la que se descuelga casi todo el capitalismo racial que el atlas ya cataloga."
+      "ap": "La tesis que el corpus daba por sabida sin tenerla: la abolición no llegó por conciencia moral sino cuando el azúcar antillano dejó de ser rentable, y el capital industrial británico se levantó sobre la trata. Es la obra de la que se descuelga casi todo el capitalismo racial que el atlas ya cataloga.",
+      "recorrido": "c2",
+      "recorridos_sec": [
+        "c4"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El libro sitúa la trata y la esclavización antillana en la formación del capitalismo británico y discute la abolición desde la transformación económica.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "piloto-generado.json"
+      ]
     },
     {
       "id": "wynterblackmetamorphosis",
@@ -3128,7 +4702,20 @@
       ],
       "l": "jamaica",
       "tr": "anglófono (Jamaica)",
-      "ap": "El manuscrito que Wynter nunca publicó y que circula fotocopiado desde los setenta: la población esclavizada como pueblo que se indigeniza en el Nuevo Mundo por vía de la cultura, no del suelo. Faltaba la voz jamaiquina que piensa la creolización como acto político y no como mezcla feliz."
+      "ap": "El manuscrito que Wynter nunca publicó y que circula fotocopiado desde los setenta: la población esclavizada como pueblo que se indigeniza en el Nuevo Mundo por vía de la cultura, no del suelo. Faltaba la voz jamaiquina que piensa la creolización como acto político y no como mezcla feliz.",
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c4"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "decisión de Dirección Académica con lectura documentada"
+      },
+      "fuente_recorrido": [
+        "decision-academica-wynterblackmetamorphosis-p2-etapa-2-3f.md"
+      ]
     },
     {
       "id": "mgsmithplural",
@@ -3142,7 +4729,11 @@
       ],
       "l": "jamaica",
       "tr": "anglófono (Jamaica)",
-      "ap": "El modelo contra el que se escribió medio siglo de antropología caribeña: sociedades que comparten territorio y mercado pero no instituciones, mantenidas juntas por la fuerza. El atlas tenía a todos sus contradictores y no tenía el texto que contradicen."
+      "ap": "El modelo contra el que se escribió medio siglo de antropología caribeña: sociedades que comparten territorio y mercado pero no instituciones, mantenidas juntas por la fuerza. El atlas tenía a todos sus contradictores y no tenía el texto que contradicen.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "rtsmithmatrifocal",
@@ -3156,7 +4747,11 @@
       ],
       "l": "guyana",
       "tr": "anglófono (R.U./Guyana)",
-      "ap": "Treinta años de discusión sobre el parentesco afrocaribeño recogidos por quien acuñó la matrifocalidad: no una familia rota por la esclavitud sino una forma con su propia lógica de poder. Recoloca la pregunta del hogar en el centro de la teoría del Caribe."
+      "ap": "Treinta años de discusión sobre el parentesco afrocaribeño recogidos por quien acuñó la matrifocalidad: no una familia rota por la esclavitud sino una forma con su propia lógica de poder. Recoloca la pregunta del hogar en el centro de la teoría del Caribe.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "clarkemymother",
@@ -3170,7 +4765,11 @@
       ],
       "l": "jamaica",
       "tr": "anglófono (Jamaica)",
-      "ap": "La primera etnógrafa jamaiquina del parentesco en su propia isla, y el título que sigue nombrando una experiencia: la madre que también hace de padre. Casi todo lo que el atlas cataloga sobre familia y género en el Caribe anglófono la cita."
+      "ap": "La primera etnógrafa jamaiquina del parentesco en su propia isla, y el título que sigue nombrando una experiencia: la madre que también hace de padre. Casi todo lo que el atlas cataloga sobre familia y género en el Caribe anglófono la cita.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "barrowfamily",
@@ -3184,7 +4783,11 @@
       ],
       "l": "barbados",
       "tr": "anglófono (Barbados)",
-      "ap": "El balance crítico de cuarenta años de estudios de familia caribeña, hecho desde la UWI y contra la mirada que los inauguró: el hogar afrocaribeño no como desviación de la norma europea sino como arreglo con historia propia."
+      "ap": "El balance crítico de cuarenta años de estudios de familia caribeña, hecho desde la UWI y contra la mirada que los inauguró: el hogar afrocaribeño no como desviación de la norma europea sino como arreglo con historia propia.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "mintzpricebirth",
@@ -3198,7 +4801,11 @@
       ],
       "l": "suriname",
       "tr": "anglófono (EE.UU.)",
-      "ap": "El ensayo que cambió la pregunta: no qué sobrevivió de África sino qué inventaron, y con qué rapidez, poblaciones arrancadas de sociedades distintas y obligadas a entenderse. El atlas tenía a Mintz y a Price por separado y no el texto que escribieron juntos."
+      "ap": "El ensayo que cambió la pregunta: no qué sobrevivió de África sino qué inventaron, y con qué rapidez, poblaciones arrancadas de sociedades distintas y obligadas a entenderse. El atlas tenía a Mintz y a Price por separado y no el texto que escribieron juntos.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "trouillottransformaciones",
@@ -3212,7 +4819,11 @@
       ],
       "l": "haiti",
       "tr": "francófono (Haití) / anglófono",
-      "ap": "Trouillot le pasa a la antropología la misma factura que le pasó a la historia: la disciplina heredó un «nicho salvaje» que no puede simplemente abandonar declarándose crítica. Cierra el arco de Trouillot en el corpus, que ya tenía la historiografía y la etnografía dominiquesa pero no la crítica de la disciplina misma."
+      "ap": "Trouillot le pasa a la antropología la misma factura que le pasó a la historia: la disciplina heredó un «nicho salvaje» que no puede simplemente abandonar declarándose crítica. Cierra el arco de Trouillot en el corpus, que ya tenía la historiografía y la etnografía dominiquesa pero no la crítica de la disciplina misma.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "morenofraginals",
@@ -3226,7 +4837,22 @@
       ],
       "l": "cuba",
       "tr": "hispano (Cuba)",
-      "ap": "La plantación azucarera cubana contada desde adentro de su contabilidad: precios, zafras, cuerpos amortizados. La contraparte hispana y material del Contrapunteo de Ortiz, que el atlas tenía solo en su versión culturalista."
+      "ap": "La plantación azucarera cubana contada desde adentro de su contabilidad: precios, zafras, cuerpos amortizados. La contraparte hispana y material del Contrapunteo de Ortiz, que el atlas tenía solo en su versión culturalista.",
+      "recorrido": "c2",
+      "recorridos_sec": [
+        "c4"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El objeto es el complejo azucarero esclavista; postplantación describe mejor la persistencia posterior que el núcleo histórico del libro.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "a01-generado.json"
+      ]
     },
     {
       "id": "meeks_postcolonial",
@@ -3240,7 +4866,11 @@
       ],
       "l": "jamaica",
       "tr": "anglófono (Jamaica)",
-      "ap": "Balance de la generación que hizo y perdió las revoluciones caribeñas, escrito por quien estuvo en Granada. Pregunta qué queda de la imaginación política antillana cuando ya no hay proyecto nacional que la sostenga."
+      "ap": "Balance de la generación que hizo y perdió las revoluciones caribeñas, escrito por quien estuvo en Granada. Pregunta qué queda de la imaginación política antillana cuando ya no hay proyecto nacional que la sostenga.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "oostindiedecolonising",
@@ -3254,7 +4884,11 @@
       ],
       "l": "curazao",
       "tr": "neerlandés (Países Bajos/Caribe)",
-      "ap": "La descolonización que no ocurrió: por qué el Caribe neerlandés negoció quedarse dentro del reino mientras las colonias británicas y francesas seguían caminos opuestos. Da el contexto histórico de la no-soberanía que Bonilla y van der Pijl piensan en clave teórica."
+      "ap": "La descolonización que no ocurrió: por qué el Caribe neerlandés negoció quedarse dentro del reino mientras las colonias británicas y francesas seguían caminos opuestos. Da el contexto histórico de la no-soberanía que Bonilla y van der Pijl piensan en clave teórica.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "kloosterrealm",
@@ -3268,7 +4902,11 @@
       ],
       "l": "curazao",
       "tr": "neerlandés (Países Bajos/Caribe)",
-      "ap": "El Atlántico neerlandés como sistema intersticial: menos colonias que nodos de contrabando, crédito y tránsito entre imperios ajenos. Explica por qué Curazao y Surinam funcionan distinto del resto de la cuenca."
+      "ap": "El Atlántico neerlandés como sistema intersticial: menos colonias que nodos de contrabando, crédito y tránsito entre imperios ajenos. Explica por qué Curazao y Surinam funcionan distinto del resto de la cuenca.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "hoeftesuriname",
@@ -3282,7 +4920,11 @@
       ],
       "l": "suriname",
       "tr": "neerlandés (Países Bajos/Surinam)",
-      "ap": "Surinam del contrato de indentura a la independencia y la dictadura, con la bauxita en el centro. El atlas tenía Surinam solo por el cimarronaje saramaka; aquí aparece el país como Estado, con su economía y sus fracturas étnicas."
+      "ap": "Surinam del contrato de indentura a la independencia y la dictadura, con la bauxita en el centro. El atlas tenía Surinam solo por el cimarronaje saramaka; aquí aparece el país como Estado, con su economía y sus fracturas étnicas.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "hoeftetrajectories",
@@ -3296,7 +4938,11 @@
       ],
       "l": "guyana",
       "tr": "comparado (Guayanas)",
-      "ap": "Las tres Guayanas leídas juntas —independiente, departamento francés, república de habla neerlandesa— para mostrar que el estatus político no predice la vida material. El borde continental del Caribe, que el atlas suele tratar como excepción."
+      "ap": "Las tres Guayanas leídas juntas —independiente, departamento francés, república de habla neerlandesa— para mostrar que el estatus político no predice la vida material. El borde continental del Caribe, que el atlas suele tratar como excepción.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "bestlevitt",
@@ -3310,7 +4956,22 @@
       ],
       "l": "trinidad",
       "tr": "anglófono (Trinidad/Canadá)",
-      "ap": "La economía de plantación teorizada por el New World Group como estructura persistente y no como etapa superada: la economía caribeña sigue diseñada para exportar y depender. La pieza económica que le faltaba a la postplantación del atlas."
+      "ap": "La economía de plantación teorizada por el New World Group como estructura persistente y no como etapa superada: la economía caribeña sigue diseñada para exportar y depender. La pieza económica que le faltaba a la postplantación del atlas.",
+      "recorrido": "c4",
+      "recorridos_sec": [
+        "c7"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La economía de plantación se teoriza como estructura persistente de dependencia; subordinación metropolitana y soberanía económica son secundarias.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "a01-generado.json"
+      ]
     },
     {
       "id": "duboisturits",
@@ -3325,7 +4986,11 @@
       ],
       "l": "haiti",
       "tr": "anglófono (EE.UU.)",
-      "ap": "Historia general de la región organizada alrededor de una idea: la libertad caribeña se pensó primero como acceso a la tierra y a la vida propia, no como ciudadanía abstracta. Sirve de texto-brújula junto al Trouillot de 1992 y al Knight."
+      "ap": "Historia general de la región organizada alrededor de una idea: la libertad caribeña se pensó primero como acceso a la tierra y a la vida propia, no como ciudadanía abstracta. Sirve de texto-brújula junto al Trouillot de 1992 y al Knight.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "austinfearblack",
@@ -3339,7 +5004,11 @@
       ],
       "l": "trinidad",
       "tr": "anglófono (Canadá/Antillas)",
-      "ap": "El Congreso de Escritores Negros de Montreal en 1968 y la revuelta de Sir George Williams como episodio caribeño ocurrido en Canadá: C. L. R. James, Rodney y Carmichael en la misma sala. Extiende hacia el norte el mapa del Poder Negro antillano que el atlas trazaba solo en la cuenca."
+      "ap": "El Congreso de Escritores Negros de Montreal en 1968 y la revuelta de Sir George Williams como episodio caribeño ocurrido en Canadá: C. L. R. James, Rodney y Carmichael en la misma sala. Extiende hacia el norte el mapa del Poder Negro antillano que el atlas trazaba solo en la cuenca.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "puriradical",
@@ -3353,7 +5022,11 @@
       ],
       "l": "trinidad",
       "tr": "comparado (anglófono Caribe)",
-      "ap": "Qué queda del radicalismo antillano cuando sus revoluciones fracasaron o fueron invadidas: el volumen lee las herencias en la cultura, no en los partidos. Acompaña a Quinn y a Scott en el racimo del Poder Negro."
+      "ap": "Qué queda del radicalismo antillano cuando sus revoluciones fracasaron o fueron invadidas: el volumen lee las herencias en la cultura, no en los partidos. Acompaña a Quinn y a Scott en el racimo del Poder Negro.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "grenaderevolution",
@@ -3367,7 +5040,11 @@
       ],
       "l": "granada",
       "tr": "anglófono (Granada/Barbados)",
-      "ap": "El episodio que el Caribe anglófono todavía no termina de contarse: la revolución de 1979, el asesinato de Bishop y la invasión estadounidense de 1983, revisados por autores de la propia isla. Abre el primer nodo del atlas en Granada."
+      "ap": "El episodio que el Caribe anglófono todavía no termina de contarse: la revolución de 1979, el asesinato de Bishop y la invasión estadounidense de 1983, revisados por autores de la propia isla. Abre el primer nodo del atlas en Granada.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "smithredblack",
@@ -3381,7 +5058,11 @@
       ],
       "l": "haiti",
       "tr": "anglófono (Jamaica/Haití)",
-      "ap": "Los veintitrés años que van de la salida de los marines a la llegada de Duvalier: comunistas, noiristes y sindicatos disputando el país. El tramo que el Haití del corpus se saltaba entre la ocupación y el duvalierismo."
+      "ap": "Los veintitrés años que van de la salida de los marines a la llegada de Duvalier: comunistas, noiristes y sindicatos disputando el país. El tramo que el Haití del corpus se saltaba entre la ocupación y el duvalierismo.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "becklessavingsouls",
@@ -3395,7 +5076,11 @@
       ],
       "l": "barbados",
       "tr": "anglófono (Barbados/Jamaica)",
-      "ap": "El bicentenario de la abolición de la trata leído desde el Caribe y no desde Westminster: quiénes la terminaron realmente y a qué precio. Es también el aparato erudito del que sale la demanda caribeña de reparaciones que el atlas ya cataloga con Araujo y Headley."
+      "ap": "El bicentenario de la abolición de la trata leído desde el Caribe y no desde Westminster: quiénes la terminaron realmente y a qué precio. Es también el aparato erudito del que sale la demanda caribeña de reparaciones que el atlas ya cataloga con Araujo y Headley.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "kalefragments",
@@ -3409,7 +5094,11 @@
       ],
       "l": "guyana",
       "tr": "anglófono (EE.UU./India)",
-      "ap": "La indentura india no como sucesora natural de la esclavitud sino como invento administrativo que el imperio construyó para no llamarla trabajo forzado. Lee el archivo colonial contra su propia retórica de la libertad de contrato."
+      "ap": "La indentura india no como sucesora natural de la esclavitud sino como invento administrativo que el imperio construyó para no llamarla trabajo forzado. Lee el archivo colonial contra su propia retórica de la libertad de contrato.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "shepherdmaharani",
@@ -3423,7 +5112,23 @@
       ],
       "l": "guyana",
       "tr": "anglófono (Jamaica)",
-      "ap": "La muerte de una mujer india en la travesía de 1885 reconstruida desde la investigación colonial que la archivó: el kala pani contado desde el cuerpo de una migrante y no desde la estadística de embarques."
+      "ap": "La muerte de una mujer india en la travesía de 1885 reconstruida desde la investigación colonial que la archivó: el kala pani contado desde el cuerpo de una migrante y no desde la estadística de embarques.",
+      "recorrido": "c5",
+      "recorridos_sec": [
+        "c4",
+        "c10"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La travesía y el traslado de trabajo contratado desde India al Caribe organizan el libro; explotación laboral y género son secundarios.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "a01-generado.json"
+      ]
     },
     {
       "id": "looklaichinese",
@@ -3437,7 +5142,11 @@
       ],
       "l": "trinidad",
       "tr": "anglófono (Trinidad)",
-      "ap": "Dos siglos de presencia china en las Antillas reunidos en documentos: contratos, censos, prensa, peticiones. La tercera migración forzada de la cuenca, que el atlas apenas insinuaba con la indentura india."
+      "ap": "Dos siglos de presencia china en las Antillas reunidos en documentos: contratos, censos, prensa, peticiones. La tercera migración forzada de la cuenca, que el atlas apenas insinuaba con la indentura india.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente"
     },
     {
       "id": "putnamradical",
@@ -3451,7 +5160,22 @@
       ],
       "l": "costarica",
       "tr": "anglófono (EE.UU.)",
-      "ap": "La circulación antillana entre Panamá, Limón, Cuba y Harlem como un solo espacio social, y la política racial que se formó en ese ir y venir. Da el marco regional a las obras panameñas que el atlas sembró en agosto."
+      "ap": "La circulación antillana entre Panamá, Limón, Cuba y Harlem como un solo espacio social, y la política racial que se formó en ese ir y venir. Da el marco regional a las obras panameñas que el atlas sembró en agosto.",
+      "recorrido": "c5",
+      "recorridos_sec": [
+        "c7"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Las movilidades caribeñas y la circulación de ideas políticas organizan el libro; soberanía y fronteras son consecuencias secundarias.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "a02-generado.json"
+      ]
     },
     {
       "id": "harpellecostarica",
@@ -3465,7 +5189,23 @@
       ],
       "l": "costarica",
       "tr": "anglófono (Canadá/Costa Rica)",
-      "ap": "Cómo una población antillana llevada a Limón por la United Fruit fue convertida en minoría nacional costarricense, con ciudadanía tardía y a cambio del olvido de su lengua. Abre el nodo de Costa Rica junto a Bourgois."
+      "ap": "Cómo una población antillana llevada a Limón por la United Fruit fue convertida en minoría nacional costarricense, con ciudadanía tardía y a cambio del olvido de su lengua. Abre el nodo de Costa Rica junto a Bourgois.",
+      "recorrido": "c5",
+      "recorridos_sec": [
+        "c4",
+        "c7"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La migración antillana y su asentamiento en Costa Rica estructuran el libro; trabajo bananero y fronteras nacionales son secundarios.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "a02-generado.json"
+      ]
     },
     {
       "id": "bourgoisethnicity",
@@ -3479,7 +5219,20 @@
       ],
       "l": "costarica",
       "tr": "anglófono (EE.UU./Centroamérica)",
-      "ap": "La empresa bananera administrando la diferencia étnica como herramienta de producción: negros antillanos, guaymíes, mestizos e indígenas repartidos por tarea y por salario. La plantación del siglo XX, no la del XVIII."
+      "ap": "La empresa bananera administrando la diferencia étnica como herramienta de producción: negros antillanos, guaymíes, mestizos e indígenas repartidos por tarea y por salario. La plantación del siglo XX, no la del XVIII.",
+      "recorrido": "c4",
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La obra muestra cómo una empresa bananera transnacional organiza la división étnica del trabajo y reproduce jerarquías raciales y de clase en Costa Rica y Panamá.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "piloto-generado.json"
+      ]
     },
     {
       "id": "legrandfrontier",
@@ -3493,7 +5246,11 @@
       ],
       "l": "santamarta",
       "tr": "anglófono (Canadá/Colombia)",
-      "ap": "Cómo se hizo propiedad privada la tierra baldía del Caribe colombiano, y quién quedó adentro y quién afuera del cercado. Es el trasfondo agrario de la Zona Bananera que el atlas trabaja con Almanza y Granados."
+      "ap": "Cómo se hizo propiedad privada la tierra baldía del Caribe colombiano, y quién quedó adentro y quién afuera del cercado. Es el trasfondo agrario de la Zona Bananera que el atlas trabaja con Almanza y Granados.",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "sin_evaluar"
     },
     {
       "id": "keeganhofman",
@@ -3507,7 +5264,22 @@
       ],
       "l": "jamaica",
       "tr": "anglófono (EE.UU./Países Bajos)",
-      "ap": "Siete mil años de poblamiento archipiélico antes de 1492, contados como historia de navegación y no como prehistoria estática. El atlas piensa el agua como vía; aquí está la evidencia arqueológica de que lo fue mucho antes de la colonia."
+      "ap": "Siete mil años de poblamiento archipiélico antes de 1492, contados como historia de navegación y no como prehistoria estática. El atlas piensa el agua como vía; aquí está la evidencia arqueológica de que lo fue mucho antes de la colonia.",
+      "recorrido": "c1",
+      "recorridos_sec": [
+        "c5"
+      ],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La síntesis arqueológica reconstruye poblamientos, redes interinsulares y mundos indígenas anteriores a la ocupación europea.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "fuente_recorrido": [
+        "piloto-generado.json"
+      ]
     },
     {
       "id": "atkinsonearliest",
@@ -3521,7 +5293,18 @@
       ],
       "l": "jamaica",
       "tr": "anglófono (Jamaica)",
-      "ap": "Arqueología taína hecha desde Jamaica y publicada por la UWI, contra el lugar común de que la isla quedó vacía de indígenas antes de la llegada africana. Es la contraparte insular del trabajo de Whitehead sobre los caribes del continente."
+      "ap": "Arqueología taína hecha desde Jamaica y publicada por la UWI, contra el lugar común de que la isla quedó vacía de indígenas antes de la llegada africana. Es la contraparte insular del trabajo de Whitehead sobre los caribes del continente.",
+      "recorrido": "c1",
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "decisión de Dirección Académica con lectura documentada"
+      },
+      "fuente_recorrido": [
+        "decision-academica-atkinsonearliest-p2-etapa-2-3f.md"
+      ]
     }
   ],
   "relaciones": [
