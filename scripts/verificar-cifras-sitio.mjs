@@ -82,10 +82,10 @@ const reglas = [
   ["proyectos/reflujo-guia.html", /son resonancias y solo (\d+) son disonancias/, "disonancias"],
   ["proyectos/reflujo-guia-en.html", /between (\d+) works/, "entradas"],
   ["proyectos/reflujo-guia-en.html", /the (\d+) present entries/, "entradas"],
-  ["proyectos/metodologia-agua-de-por-medio.html", /contiene cinco entradas frente a (\d+) obras/, "obras"],
+  ["proyectos/metodologia-agua-de-por-medio.html", /contiene tres entradas frente a (\d+) obras/, "obras"],
   ["proyectos/metodologia-agua-de-por-medio.html", /registra (\d+) resonancias/, "resonancias"],
   ["proyectos/metodologia-agua-de-por-medio.html", /resonancias y (\d+) disonancias/, "disonancias"],
-  ["proyectos/metodologia-agua-de-por-medio-en.html", /contains five entries against (\d+) works/, "obras"],
+  ["proyectos/metodologia-agua-de-por-medio-en.html", /contains three entries against (\d+) works/, "obras"],
 ];
 
 const errores = [];

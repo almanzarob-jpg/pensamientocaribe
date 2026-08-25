@@ -12,7 +12,7 @@
   "meta": {
     "titulo": "Con el agua de por medio",
     "subtitulo": "Atlas para una antropología archipiélica",
-    "responsable": "Centro de Pensamiento Caribe",
+    "responsable": "Grupo de Investigación Pensamiento Caribe",
     "version": "2.0.0-borrador",
     "fecha": "pendiente",
     "esquema": "2.0",
@@ -51,8 +51,8 @@
     "_ejemplo": {
       "invasiones_mundos_indigenas": {
         "n": 1,
-        "label": "Invasiones y mundos indígenas",
-        "label_en": "Invasions, colonialities and indigenous worlds",
+        "label": "Invasiones, despojos y mundos indígenas",
+        "label_en": "Invasions, dispossessions and Indigenous worlds",
         "c": "#c65a3f",
         "pregunta": "¿Qué mundos y conocimientos existían antes de la ocupación europea y cómo persistieron, se transformaron o reaparecieron?",
         "guion": "50 a 90 palabras. Presenta una pregunta, describe una fuerza relacional, evita la definición totalizante, señala una tensión e invita a recorrer obras y orillas.",

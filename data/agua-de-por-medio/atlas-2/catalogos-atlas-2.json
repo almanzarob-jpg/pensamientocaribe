@@ -7,8 +7,8 @@
   "corrientes": {
     "invasiones_mundos_indigenas": {
       "n": 1,
-      "label": "Invasiones y mundos indígenas",
-      "label_en": "Invasions and Indigenous worlds",
+      "label": "Invasiones, despojos y mundos indígenas",
+      "label_en": "Invasions, dispossessions and Indigenous worlds",
       "provisional": true
     },
     "trata_esclavizacion_plantacion": {
@@ -55,8 +55,8 @@
     },
     "memorias_espiritualidades_archivos_vivos": {
       "n": 9,
-      "label": "Espiritualidades, rituales y archivos vivos",
-      "label_en": "Spiritualities, rituals and living archives",
+      "label": "Archivos vivos, espiritualidades y saberes transmitidos",
+      "label_en": "Living archives, spiritualities and transmitted knowledges",
       "provisional": true
     },
     "cuerpos_parentescos_eroticas": {
@@ -212,5 +212,5 @@
     "cuenca": "Declara un espacio acuoso o hidrográfico sin convertirlo en punto."
   },
   "regla_niveles": "Tres niveles que no se mezclan. Corriente: recorrido que organiza el argumento de una obra. Marca transversal: dimensión que puede aparecer en varias corrientes. Fricción: propiedad argumentada de una relación entre obras, nunca una marca de entrada. Ninguna palabra puede nombrar a la vez un nivel y otro: por eso colonialidad y memoria se conservan como marcas y salen del nombre de las corrientes 1 y 9.",
-  "nota_renombramiento": "10 de agosto de 2026: se renombraron las etiquetas de las corrientes 1 y 9 para retirar colonialidades y memorias, que ya eran marcas. Las claves no se tocaron, porque están escritas en piloto-config, s01, a01 y a02, y la regla 3 de la memoria operativa prohíbe reabrir capas cerradas. La clave memorias_espiritualidades_archivos_vivos conserva por eso una palabra que su etiqueta ya no usa."
+  "nota_renombramiento": "10 de agosto de 2026: se renombraron las etiquetas de las corrientes 1 y 9 para retirar colonialidades y memorias, que ya eran marcas. Las claves no se tocaron, porque están escritas en piloto-config, s01, a01 y a02, y la regla 3 de la memoria operativa prohíbe reabrir capas cerradas. La clave memorias_espiritualidades_archivos_vivos conserva por eso una palabra que su etiqueta ya no usa. 11 de agosto de 2026: el plan operativo de la Etapa 1 fijó la redacción definitiva de ambas etiquetas, que sustituye a la del 10 de agosto: la corriente 1 pasa a 'Invasiones, despojos y mundos indígenas' y la corriente 9 a 'Archivos vivos, espiritualidades y saberes transmitidos', redacción aprobada ese mismo 11 de agosto tras un primer ajuste intermedio ('Archivos vivos, espiritualidades y transmisión') que no llegó a publicarse. Sigue sin tocarse ninguna clave, por la misma razón. Las etiquetas del 10 de agosto quedan documentadas aquí y en incidencias-cerradas.md y fenomenos-ampliacion.md como redacción transitoria, no como error: ese cambio intermedio sigue siendo el registro correcto de lo que existió entre el 10 y el 11 de agosto."
 }

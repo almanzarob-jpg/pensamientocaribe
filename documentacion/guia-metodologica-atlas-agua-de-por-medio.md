@@ -25,7 +25,7 @@ atlas-id: apellido
 
 **El aporte va en el campo Resumen, en 60 palabras o menos.** No es un resumen del libro entero — es la respuesta a "¿qué le aporta esta obra específicamente al argumento del atlas?". Un aporte que podría copiarse de la contraportada del libro no sirve; tiene que estar escrito desde adentro del proyecto.
 
-**Las relaciones tienen tres tipos, y no son intercambiables.** Vienen de Michael J. Monahan, *Creolizing Practices of Freedom: Recognition and Dissonance* (Rowman & Littlefield, 2023): **resonancia** cuando dos obras se refuerzan o comparten un argumento; **disonancia** cuando lo tensionan o contradicen abiertamente; **fricción epistémica** cuando la relación cruza dos tradiciones lingüísticas o intelectuales distintas y esa distancia misma es parte de lo que hay que señalar. La fricción epistémica no se decide a mano: el motor del atlas la calcula solo, comparando las etiquetas `trad:` de las dos obras relacionadas. Quien fiche no tiene que preocuparse por marcarla, solo por completar `trad:` con precisión.
+**Las relaciones tienen dos tipos, y no son intercambiables.** Vienen de Michael J. Monahan, *Creolizing Practices of Freedom: Recognition and Dissonance* (Rowman & Littlefield, 2023): **resonancia** cuando dos obras se refuerzan o comparten un argumento; **disonancia** cuando lo tensionan o contradicen abiertamente. La fricción epistémica no es un tercer tipo ni se calcula sola: es una afirmación editorial aparte, que solo existe cuando quien ficha la argumenta con clase y evidencia — la categoría la formula José Medina y la reelabora el propio Monahan dentro de esa misma práctica creolizadora. Comparar las etiquetas `trad:` de dos obras relacionadas no produce una fricción: produce un **cruce lingüístico**, un dato derivado que el compilador calcula solo y que únicamente señala que las obras se publicaron en tradiciones distintas. Quien fiche sigue completando `trad:` con precisión, porque de ahí sale el cruce lingüístico, pero si además quiere declarar una fricción epistémica tiene que escribirla con argumento y fuente, igual que cualquier otra relación verificada.
 
 **Una relación verificada necesita una fuente concreta, no una intuición temática.** "Los dos hablan de cimarronaje" no es una fuente, es una coincidencia de tema. Una fuente real es: el libro A cita al libro B en su bibliografía o en el cuerpo del texto, o ambos autores comparten un dato biográfico verificable (codirección de tesis, coautoría, correspondencia documentada), o hay una cita textual localizable. Si no se encuentra nada de eso, la relación se deja explícitamente como `Por corroborar`. Eso está bien. Inventar una fuente para no dejar el campo vacío rompe el proyecto.
 
@@ -119,7 +119,7 @@ Una vez entregadas las fichas (exportadas de Zotero en RDF, o llenadas en la hoj
 - Valida que cada `atlas-id` sea único y que no haya caracteres prohibidos (`|` o saltos de línea dentro de `fuente`, que rompen el formato).
 - Valida que cada relación apunte a un `atlas-id` que exista — una relación a un id inexistente ("relación huérfana") se reporta como error, no se ignora.
 - Valida que las etiquetas `fen:`, `lugar:`, `capa:`, `trad:` estén dentro de las listas cerradas.
-- Calcula la fricción epistémica automáticamente cuando dos obras relacionadas tienen `trad:` distintas — nadie tiene que marcarla a mano.
+- Calcula el cruce lingüístico automáticamente cuando dos obras relacionadas tienen `trad:` distintas — nadie tiene que marcarlo a mano. No calcula la fricción epistémica: esa la declara quien ficha, con argumento y fuente, y el compilador solo la registra si viene con ambos.
 - Genera `datos-atlas.js` / `datos-atlas.json` actualizados y un reporte de errores legible, con las métricas del corpus (total de obras, relaciones, porcentaje por corroborar, distribución por fenómeno).
 
 Ese reporte vuelve a quien fichó para corregir lo que haya que corregir antes de que el lote entre a producción.
@@ -157,7 +157,7 @@ El atlas no se alimenta de fichas sueltas entregadas una por una — eso hace in
 - [ ] Metadata bibliográfica completa (autor, título, año, editorial, ISBN/DOI si existe) verificada contra el documento o el ejemplar físico, no contra el nombre de archivo
 - [ ] Aporte en Resumen, 60 palabras o menos, escrito desde el argumento del atlas
 - [ ] Etiquetas `fen:` / `lugar:` / `capa:` / `trad:` dentro de las listas cerradas
-- [ ] Cada relación tiene tipo (resonancia o disonancia — la fricción epistémica la calcula el motor solo)
+- [ ] Cada relación tiene tipo (resonancia o disonancia; si además hay fricción epistémica, va declarada aparte con argumento y fuente, nunca inferida de `trad:`)
 - [ ] Cada relación tiene fuente real y verificable, marcada como verificación por texto (pista 1) o `verificado-manual` con página e iniciales (pista 2), o explícitamente `Por corroborar`
 - [ ] Sin caracteres `|` ni saltos de línea dentro del campo `fuente`
 - [ ] Ficha revisada contra duplicados antes de entrar al lote
