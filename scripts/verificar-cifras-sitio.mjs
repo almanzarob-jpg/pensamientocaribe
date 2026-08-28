@@ -62,7 +62,7 @@ const reglas = [
   ["proyectos/con-el-agua-de-por-medio.html", /archipiélica: (\d+) obras/, "entradas"],
   ["proyectos/con-el-agua-de-por-medio.html", /(\d+) obras y manifestaciones del Gran Caribe conectadas/g, "entradas"],
   ["proyectos/con-el-agua-de-por-medio.html", /conecta (\d+) obras y manifestaciones/, "entradas"],
-  ["proyectos/con-el-agua-de-por-medio.html", /(\d+) de 588 relaciones/g, "porCorroborar"],
+  ["proyectos/con-el-agua-de-por-medio.html", /(\d+) de 614 relaciones/g, "porCorroborar"],
   ["proyectos/marca-de-marea.html", /id="mObras">(\d+)</, "entradas"],
   ["proyectos/marca-de-marea.html", /id="mVer">([\d.]+)</, "version"],
   ["proyectos/marca-de-marea.html", /(\d+) de (?:\d+) corrientes esperan fuente/, "porCorroborar"],

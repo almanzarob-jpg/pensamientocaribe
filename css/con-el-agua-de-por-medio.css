@@ -389,7 +389,7 @@
   #umbral p{font-size:15px; line-height:1.65; color:var(--cream); margin:0 0 16px}
   #umbral .how{font-size:13px; line-height:1.6; color:var(--gray); margin-bottom:26px}
   #umbral .how b{color:var(--orange); font-weight:600}
-  #umbral button{font-family:var(--ff-mono); font-size:12px; text-transform:uppercase; letter-spacing:1.6px; padding:12px 28px; background:var(--orange); color:var(--bg-deep); border:0; border-radius:2px; cursor:pointer}
+  #umbral button{font-family:var(--ff-mono); font-size:12px; text-transform:uppercase; letter-spacing:1.6px; padding:12px 28px; min-height:44px; background:var(--orange); color:var(--bg-deep); border:0; border-radius:2px; cursor:pointer}
   #umbral button:hover{background:var(--cream)}
   /* vista tabla accesible */
   #tabla{position:absolute; inset:0; overflow:auto; padding:20px 26px 60px; display:none}
@@ -452,7 +452,14 @@
   #presHelp b{color:var(--gold); font-weight:600; margin-right:4px}
 
   /* ---------- móvil: el header apilaba los 6 grupos de controles en 4 filas y se comía el 44% de la pantalla. Aquí el título se compacta y los controles pasan a UNA sola fila horizontal deslizable, devolviéndole al mapa la mayor parte del alto. ---------- */
-  @media (max-width:780px){
+  /* Teléfono en horizontal (25-08-2026): un teléfono girado supera fácilmente
+     los 780px de ancho (iPhone 13 en horizontal: 844px) pero sigue siendo un
+     teléfono — con 390px de alto, el encabezado de 4 filas se comía hasta el 70%
+     de la pantalla y la columna de zoom (bottom:14px) tapaba el crédito/DOI.
+     Verificado con Playwright (iPhone 13 apaisado, 844×390): el disparador
+     correcto no es el ancho, es el alto disponible. Se reutiliza este mismo
+     bloque —ya probado— también por alto, sin duplicar reglas. */
+  @media (max-width:780px), (max-height:520px){
     header{flex-direction:column; align-items:stretch; padding:10px 12px 8px; gap:8px;}
     header::after{left:12px; right:12px;}
     header .t{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;}
