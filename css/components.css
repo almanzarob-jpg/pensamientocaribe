@@ -2463,6 +2463,81 @@
   padding-left: var(--space-xs);
 }
 
+.semana-card--ancha {
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 700px) {
+  .semana-card--ancha {
+    flex-direction: row;
+  }
+  .semana-card--ancha .semana-card-poster {
+    width: 300px;
+    flex-shrink: 0;
+  }
+  .semana-card--ancha .semana-card-body {
+    flex: 1;
+  }
+}
+
+.semana-card-epigrafe {
+  font-family: var(--ff-display);
+  font-style: italic;
+  font-size: clamp(1rem, 1.3vw, 1.1rem);
+  color: var(--c-cream);
+  opacity: 0.85;
+  line-height: 1.6;
+  border-left: 2px solid var(--c-orange);
+  padding-left: var(--space-sm);
+  margin: var(--space-xs) 0 !important;
+}
+
+.semana-card-ejes-titulo {
+  font-family: var(--ff-mono);
+  font-size: var(--fs-meta);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--c-orange);
+  display: block;
+  margin-top: var(--space-sm);
+  margin-bottom: 0.35rem;
+}
+
+.semana-card-conv-panel {
+  margin-top: var(--space-md);
+  padding-top: var(--space-md);
+  border-top: 1px dashed var(--c-border-orange);
+  display: flex;
+  gap: var(--space-md);
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.semana-card-conv-thumb {
+  width: 110px;
+  flex-shrink: 0;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  display: block;
+}
+
+.semana-card-conv-thumb img {
+  width: 100%;
+  height: auto;
+  display: block;
+  filter: brightness(0.92) contrast(1.03);
+  transition: transform 0.3s ease;
+}
+
+.semana-card-conv-thumb:hover img {
+  transform: scale(1.05);
+}
+
+.semana-card-conv-info {
+  flex: 1;
+  min-width: 200px;
+}
+
 @media (max-width: 900px) {
   .semana-archivo-grid {
     grid-template-columns: 1fr;
