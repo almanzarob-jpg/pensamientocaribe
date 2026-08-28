@@ -1,0 +1,515 @@
+  :root{
+    --bg-deep:#050604; --bg-warm:#0a0b08; --panel:#11130d;
+    --green:#245f1e; --green-l:#3f8a35; --orange:#f07a16; --red:#d83a2e; --gold:#c9a24d; --gold-d:#8a6c2c;
+    --cream:#f2ead8; --gray:#b9b09f; --line:#2c2e24;
+    --ff-display:'Cormorant Garamond',Georgia,serif;
+    --ff-body:'Inter',system-ui,sans-serif;
+    --ff-mono:ui-monospace,'SFMono-Regular','Consolas',monospace;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%; height:100dvh; overscroll-behavior:none; overflow-x:hidden;}
+  body{background:var(--bg-deep); color:var(--cream); font-family:var(--ff-body); -webkit-font-smoothing:antialiased; overflow:hidden; display:flex; flex-direction:column;}
+  header{flex:0 0 auto; padding:18px 28px 14px; border-bottom:1px solid var(--line); display:flex; align-items:flex-end; justify-content:space-between; gap:24px; flex-wrap:wrap; background:linear-gradient(180deg,var(--bg-warm),var(--bg-deep)); position:relative;}
+  header::after{content:"";position:absolute; left:28px; right:28px; bottom:0; height:2px;
+    background:linear-gradient(90deg, var(--green-l) 0 64px, transparent 64px 76px, var(--gold) 76px 118px, transparent 118px);}
+  header .t .back{display:inline-flex; align-items:center; gap:5px; font-family:var(--ff-mono); font-size:10px; text-transform:uppercase; letter-spacing:1.4px; color:var(--gray); text-decoration:none; margin-bottom:9px; transition:color .15s}
+  header .t .back:hover, header .t .back:focus{color:var(--gold)}
+  /* Ruta de navegación: landmark propio con el camino de vuelta al sitio.
+     Reemplaza al enlace suelto .back, que quedaba fuera de todo landmark.
+     La página está anclada al viewport (body overflow:hidden), así que la
+     navegación vive en la cabecera; un pie de página sería inalcanzable. */
+  header .t .migas{display:flex; align-items:center; flex-wrap:wrap; gap:6px; margin-bottom:9px;
+    font-family:var(--ff-mono); font-size:11.5px; text-transform:uppercase; letter-spacing:1.2px; line-height:1.5}
+  header .t .migas a{display:inline-flex; align-items:center; gap:5px; color:var(--gray); text-decoration:none;
+    padding:3px 2px; border-radius:3px; transition:color .15s}
+  header .t .migas a:hover{color:var(--gold)}
+  header .t .migas a:focus-visible{outline:2px solid var(--gold); outline-offset:2px; color:var(--gold)}
+  header .t .migas .sep{color:var(--line); user-select:none}
+  header .t .migas [aria-current="page"]{color:var(--cream); opacity:.75}
+  header .t h1{font-family:var(--ff-display); font-size:32px; margin:0; font-weight:700; letter-spacing:.3px; color:var(--cream)}
+  header .t .sub{font-family:var(--ff-mono); color:var(--red); font-size:11px; font-weight:600; text-transform:uppercase; letter-spacing:3px; margin-top:8px}
+  /* Fase 4B · jerarquía del aparato de control.
+     Los nueve grupos del encabezado se leían como una sola fila indiferenciada. Aquí
+     se agrupan en cuatro familias con los medios que ya existen —separación y una
+     regla de var(--line)—, sin mover ni renombrar nada: navegación de vistas,
+     búsqueda, control del mapa (zoom) y, al final, filtrado e idioma. */
+  .controls{display:flex; gap:14px; align-items:flex-end; flex-wrap:wrap}
+  .controls .grp.familia{border-left:1px solid var(--line); padding-left:16px; margin-left:2px}
+  .grp{display:flex; flex-direction:column; gap:6px}
+  .grp label{font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1.6px; color:var(--gray)}
+  .seg{display:flex; border:1px solid var(--line); border-radius:3px; overflow:hidden; background:rgba(255,255,255,.02)}
+  .seg button{font-family:var(--ff-mono); font-size:10.5px; text-transform:uppercase; letter-spacing:1px; padding:7px 13px; border:0; cursor:pointer; background:transparent; color:var(--gray); border-right:1px solid var(--line); transition:background .15s,color .15s;}
+  .seg button:last-child{border-right:0}
+  .seg button:hover{color:var(--cream)}
+  .seg button.on{background:var(--cream); color:var(--bg-deep)}
+  /* cada grupo de filtro con su propio acento, para leerse de un vistazo */
+  .seg.vista button:hover{background:rgba(63,138,53,.16)}
+  .seg.vista button.on{background:var(--green-l); color:#08110a; box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
+  .seg.capa button:hover{background:rgba(201,162,77,.14)}
+  .seg.capa button.on{background:var(--gold); color:#211a06; box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
+  .seg.lengua button:hover{background:rgba(74,157,176,.16)}
+  .seg.lengua button.on{background:#4a9db0; color:#04181c; box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
+  .seg.base{background:transparent; border-color:var(--red)}
+  .seg.base button{color:var(--red); border-right:0; font-weight:600; letter-spacing:1.2px}
+  /* rojo más oscuro solo en este estado :hover (no se toca --red, que sigue
+     usándose como texto/acento en el resto del sitio): cream sobre --red daba
+     3.84:1, por debajo de AA 4.5:1; este tono da 5.87:1 */
+  .seg.base button:hover{background:#a8281f; color:var(--cream)}
+  .seg.base button[aria-pressed="true"]{background:#a8281f; color:var(--cream)}
+  #filtrosBtn{position:relative}
+  #filtrosBtn.activo::after{content:""; position:absolute; top:4px; right:5px; width:6px; height:6px; border-radius:50%; background:var(--gold)}
+  /* etiquetas de filtros activos, siempre visibles y removibles con un toque */
+  .chips{flex:1 0 100%; display:flex; flex-wrap:wrap; gap:6px; margin-top:2px}
+  .chips:empty{display:none; margin:0}
+  /* 32px de alto: por debajo del ideal de 44px, pero deliberado — son etiquetas
+     compactas y removibles (como un chip de filtro de Gmail o Material), separadas
+     entre sí por gap:6px como espaciado equivalente contra el toque accidental */
+  .chip{display:inline-flex; align-items:center; gap:6px; min-height:32px; font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:.7px; padding:8px 12px; border:1px solid var(--gold-d); border-radius:16px; background:rgba(201,162,77,.12); color:var(--gold); cursor:pointer}
+  /* --gold-d con #211a06 daba 3.51:1; --gold (ya usado así en .seg.capa.on) da 7.21:1 */
+  .chip:hover{background:var(--gold); color:#211a06}
+  .chip span{opacity:.75; font-size:11px; line-height:1}
+  /* paneles laterales plegables (Filtros, Información) */
+  .panelLateral{position:absolute; top:14px; right:14px; z-index:17; width:300px; max-height:calc(100% - 28px); overflow:auto; background:var(--panel); border:1px solid var(--line); border-radius:3px; padding:20px 22px; box-shadow:0 16px 44px rgba(0,0,0,.55)}
+  .panelLateral[hidden]{display:none}
+  .panelLateral h2{font-family:var(--ff-display); font-size:19px; margin:0 0 16px; font-weight:600; padding-right:20px}
+  .panelLateral .grp{margin-bottom:16px; align-items:flex-start}
+  .panelLateral .grp:last-child{margin-bottom:0}
+  .panelLateral .seg{flex-wrap:wrap}
+  .panelCerrar{position:absolute; top:0; right:0; width:44px; height:44px; display:flex; align-items:center; justify-content:center; background:transparent; border:0; color:var(--gray); font-size:19px; line-height:1; cursor:pointer}
+  .panelCerrar:hover{color:var(--cream)}
+  .chkLbl{display:flex; align-items:flex-start; gap:8px; font-size:12px; color:var(--gray); line-height:1.5; cursor:pointer}
+  .chkLbl input{margin-top:2px; accent-color:var(--orange); width:auto}
+  #panelInfo a{color:var(--gold); text-decoration:none; font-family:var(--ff-mono); font-size:10.5px; text-transform:uppercase; letter-spacing:1px}
+  #panelInfo a:hover{text-decoration:underline}
+  /* leyenda compacta siempre visible + leyenda completa plegable encima de ella */
+  #legendBar{position:absolute; left:16px; bottom:14px; z-index:14; display:flex; align-items:center; gap:10px; background:rgba(10,11,8,.86); backdrop-filter:blur(3px); border:1px solid var(--line); border-radius:3px; padding:8px 12px; font-family:var(--ff-mono); font-size:9.5px; letter-spacing:.4px; color:var(--gray)}
+  #legendBarTxt{white-space:nowrap}
+  #legendBtn{min-height:44px; display:inline-flex; align-items:center; font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:.8px; padding:0 14px; border:1px solid var(--line); background:transparent; color:var(--gold); cursor:pointer; border-radius:2px; white-space:nowrap}
+  #legendBtn:hover{border-color:var(--gold-d); color:var(--cream)}
+  /* ---------- buscador por título y autor ---------- */
+  .buscador{display:flex; align-items:center; border:1px solid var(--line); border-radius:3px; background:rgba(255,255,255,.02); transition:border-color .15s}
+  .buscador:focus-within{border-color:var(--gold)}
+  .buscador input{font-family:var(--ff-mono); font-size:10.5px; letter-spacing:.6px; padding:7px 10px; width:180px; border:0; background:transparent; color:var(--cream); outline:none}
+  .buscador input::placeholder{color:var(--gray); opacity:.75; text-transform:none; letter-spacing:.4px}
+  .buscador .bclear{border:0; background:transparent; color:var(--gray); cursor:pointer; font-size:15px; line-height:1; padding:0 9px 2px; visibility:hidden}
+  .buscador.has .bclear{visibility:visible}
+  .buscador .bclear:hover{color:var(--red)}
+  .bcount{font-family:var(--ff-mono); font-size:9px; letter-spacing:1px; color:var(--gold); padding-right:9px; white-space:nowrap}
+  .bcount.nada{color:var(--red)}
+  .node.qhit circle.dot{stroke:var(--cream); stroke-width:2.2}
+  main{position:relative; flex:1 1 auto; min-height:0;}
+  #stage{width:100%; height:100%; display:block; cursor:grab; touch-action:none;}
+  /* El grupo de controles se aparta cuando el panel de lectura entra por
+     la derecha. Se usa una variable para que el desplazamiento lateral y el
+     centrado vertical de móvil convivan en una sola transformación. */
+  main{--zc-x:0px; --zc-y:0px}
+  main:has(#panel.open){--zc-x:-372px}
+  .zc{transform:translate(var(--zc-x),var(--zc-y)); transition:transform .3s cubic-bezier(.4,0,.2,1), opacity .2s ease}
+  #stage.grabbing{cursor:grabbing}
+  .node circle.dot{transition:opacity .25s, r .2s}
+  .halo{fill:none; stroke:var(--cream); opacity:0; transition:opacity .2s}
+  /* Etapa 6, Cronología en modo Investigado: sin inventar una posición en el
+     eje del periodo estudiado, estas entradas se atenúan en su sitio de
+     siempre (el eje de publicación) — visibles, no ocultas, pero claramente
+     fuera de foco mientras el modo activo es ese. */
+  .node.sindato circle.dot{opacity:.32}
+  .node.sindato:hover circle.dot, .node.sindato:focus-visible circle.dot{opacity:.85}
+  .edge{fill:none; stroke:var(--orange); stroke-opacity:.4; stroke-width:1.3; stroke-linecap:round; stroke-dasharray:1.5 6; transition:stroke-opacity .25s}
+  .edge.disonancia{stroke:var(--red)}
+  .fricc{pointer-events:none}
+  .coast{fill:none; stroke:var(--green-l); stroke-opacity:.16; stroke-width:1}
+  .tideband{fill:none; stroke:#4a9db0; stroke-opacity:.07}
+  .placelbl{font-family:var(--ff-mono); font-size:10px; letter-spacing:.6px; pointer-events:none; transition:opacity .25s}
+  .placelbl.pais{fill:var(--gray); opacity:.85}
+  .placelbl.ciudad{fill:var(--orange); opacity:.9}
+  .clbl{font-family:var(--ff-mono); font-size:10.5px; text-transform:uppercase; letter-spacing:1.4px; font-weight:600; pointer-events:none; transition:opacity .25s}
+  /* banda del tiempo de lo ocurrido: la barra del periodo y el reflujo que la une
+     con su año de publicación. Siguen el mismo foco que los nodos y las corrientes. */
+  .periodo{transition:opacity .25s}
+  .reflujo{transition:stroke-opacity .25s, stroke-width .25s; pointer-events:none}
+  /* tooltip flotante (siempre nítido) */
+  #tip{position:absolute; left:0; top:0; pointer-events:none; z-index:16; background:rgba(17,19,13,.97); border:1px solid var(--line); border-left:3px solid var(--cream); border-radius:3px; padding:8px 12px; width:max-content; max-width:290px; opacity:0; transform:translate(-50%,calc(-100% - 15px)); transition:opacity .12s; box-shadow:0 10px 26px rgba(0,0,0,.55)}
+  #tip.show{opacity:1}
+  #tip.below{transform:translate(-50%,18px)}
+  #tip .tt{font-family:var(--ff-display); font-size:16px; line-height:1.22; color:var(--cream); font-weight:600}
+  #tip .ta{font-family:var(--ff-mono); font-size:9.5px; letter-spacing:.4px; color:var(--gray); margin-top:4px}
+  #tip .tf{font-family:var(--ff-mono); font-size:8.5px; text-transform:uppercase; letter-spacing:1px; margin-top:5px}
+  /* panel */
+  #panel{position:absolute; top:14px; right:14px; width:352px; max-height:calc(100% - 28px); overflow:auto; background:var(--panel); border:1px solid var(--line); border-radius:3px; padding:22px 24px; box-shadow:0 16px 44px rgba(0,0,0,.55); transform:translateX(125%); transition:transform .3s cubic-bezier(.4,0,.2,1), opacity .3s, visibility .3s;}
+  #panel.open{transform:none}
+  #panel .close{float:right; width:44px; height:44px; margin:-11px -12px 0 0; display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--gray); font-size:20px; line-height:1; border:0; background:none}
+  #panel .kind{font-family:var(--ff-mono); font-size:9.5px; text-transform:uppercase; letter-spacing:1.6px; color:var(--red)}
+  #panel h2{font-family:var(--ff-display); font-size:24px; margin:8px 0 3px; font-weight:600; line-height:1.2}
+  #panel .meta{font-size:12.5px; color:var(--gray); font-style:italic; margin-bottom:6px}
+  #panel .lugar{font-family:var(--ff-mono); font-size:10.5px; letter-spacing:.5px; margin-bottom:12px}
+  #panel .lugar.pais{color:var(--green-l)} #panel .lugar.ciudad{color:var(--orange)}
+  #panel .tags{display:flex; flex-wrap:wrap; gap:6px; margin:10px 0 12px}
+  #panel .tag{font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:.8px; padding:4px 10px; border-radius:11px; color:var(--bg-deep); cursor:pointer}
+  #panel .aporte{font-size:14px; line-height:1.55; margin:0 0 14px}
+  #panel .rel h3{font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1.4px; margin:14px 0 6px; border-top:1px solid var(--line); padding-top:12px}
+  #panel .rel h3.dir{color:var(--orange)} #panel .rel h3.ind{color:var(--gray)}
+  #panel .rel a{display:block; font-size:13px; color:var(--cream); text-decoration:none; padding:5px 0; cursor:pointer; border-bottom:1px dotted var(--line)}
+  #panel .rel a:hover{color:var(--orange)}
+  #panel .rel a .rtitle{color:var(--cream)}
+  #panel .rel a .r{color:var(--gray); font-style:italic; font-size:11px}
+  #panel .rel a .via{color:var(--green-l); font-style:italic; font-size:11px}
+  #panel .rel a .fu{display:block; font-size:11px; line-height:1.4; color:var(--gray); margin-top:3px; font-style:italic}
+  #panel .rel a .fu.pc{color:var(--red); opacity:.85}
+  /* ── el reflujo: marca discreta junto a cada corriente sin fuente ── */
+  #panel .rel a .conoces{display:inline-block; font-family:var(--ff-mono); font-size:8.5px; letter-spacing:.9px; text-transform:lowercase; color:var(--orange); border:1px solid rgba(240,122,22,.35); border-radius:2px; padding:2px 6px; margin-top:4px; cursor:pointer; background:transparent}
+  #panel .rel a .conoces:hover{background:rgba(240,122,22,.16)}
+  /* ── semáforo de corroboración: declara el estatus epistémico de cada corriente ── */
+  #panel .rel a .ev{display:inline-block; width:7px; height:7px; border-radius:50%; margin-right:7px; vertical-align:1px; flex:0 0 auto}
+  #panel .rel a .ev.ok{background:var(--green-l)}
+  #panel .rel a .ev.pc{background:var(--red)}
+  #panel .rel h3 .evn{float:right; font-size:8.5px; letter-spacing:.8px; color:var(--gray); text-transform:none; font-style:italic}
+  .seg.ev button:hover{background:rgba(63,138,53,.14)}
+  .seg.ev button.on{background:var(--green-l); color:#08110a; box-shadow:inset 0 0 0 1px rgba(255,255,255,.18)}
+  .seg.ev button.on[data-ev="pc"]{background:var(--red); color:#2a0d0a}
+  #legend .corr{margin-top:9px; padding-top:9px; border-top:1px solid var(--line); font-family:var(--ff-mono); font-size:9px; letter-spacing:.5px; color:var(--gray); line-height:1.5}
+  #legend .corrbar{display:flex; height:5px; border-radius:3px; overflow:hidden; background:var(--line); margin:5px 0 5px}
+  #legend .corrbar i{display:block; height:100%}
+  #legend .corrbar i.ok{background:var(--green-l)}
+  #legend .corrbar i.pc{background:var(--red)}
+  #legend .corr a, #legend .corr [role="button"]{color:var(--green-l); cursor:pointer; text-decoration:none; border-bottom:1px dotted rgba(63,138,53,.5)}
+  #legend .corr a:hover, #legend .corr [role="button"]:hover{color:var(--cream)}
+  #panel .cita{margin-top:16px; padding-top:12px; border-top:1px solid var(--line)}
+  #panel .cita .citalbl{display:block; font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1.4px; color:var(--gray); margin-bottom:6px}
+  #panel .cita .apa{font-size:12px; line-height:1.5; color:var(--cream); background:rgba(201,162,77,.06); border-left:2px solid var(--gold); padding:8px 10px; border-radius:2px; margin-bottom:8px}
+  #panel .cita .citarow{display:flex; align-items:center; gap:6px; flex-wrap:wrap}
+  #panel .cita code{font-family:var(--ff-mono); font-size:10px; color:var(--gold); word-break:break-all; background:rgba(201,162,77,.08); padding:2px 5px; border-radius:2px; flex:1 1 60%}
+  #panel .cita button{font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1px; padding:4px 9px; border:1px solid var(--line); background:transparent; color:var(--gray); cursor:pointer; border-radius:2px}
+  #panel .cita button:hover{color:var(--cream); border-color:var(--gold)}
+  /* exportación bibliográfica: la ficha deja de ser solo lectura y pasa a alimentar
+     el gestor de referencias de quien la consulta */
+  #panel .bibrow{display:flex; align-items:center; gap:6px; flex-wrap:wrap; margin-top:9px; padding-top:9px; border-top:1px dashed var(--line)}
+  #panel .bibrow .biblbl{font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1.2px; color:var(--gray); flex:1 1 100%}
+  #panel .bibbtn{font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1px; padding:4px 10px; border:1px solid var(--gold-d); background:transparent; color:var(--gold); cursor:pointer; border-radius:2px}
+  #panel .bibbtn:hover{background:var(--gold); color:#211a06}
+  #panel .bibdoi{font-family:var(--ff-mono); font-size:9px; letter-spacing:1px; color:var(--green-l); text-decoration:none; border-bottom:1px dotted var(--green-l)}
+  #panel .btnIndMapa{float:right; font-family:var(--ff-mono); font-size:8.5px; text-transform:none; letter-spacing:.6px; padding:9px 10px; border:1px solid var(--line); background:transparent; color:var(--gray); cursor:pointer; border-radius:2px; min-height:40px}
+  #panel .btnIndMapa:hover{border-color:var(--gold-d); color:var(--gold)}
+  #panel .btnIndMapa[aria-pressed="true"]{background:var(--gold-d); color:#211a06; border-color:var(--gold-d)}
+  .anolbl{font-family:var(--ff-mono); font-size:9px; letter-spacing:1.1px; fill:var(--gray)}
+  .anolbl.gold{fill:var(--gold-d)}
+  #panel .bibwarn{margin-top:8px; font-family:var(--ff-mono); font-size:9.5px; line-height:1.5; letter-spacing:.3px; color:var(--red); border-left:2px solid var(--red); padding:5px 8px; background:rgba(216,58,46,.06)}
+  /* Etapa 6: bloque del esquema 2.0, plegado por defecto (revelado progresivo) */
+  #panel .e20{margin-top:16px; border-top:1px solid var(--line); padding-top:12px}
+  #panel .e20 summary{cursor:pointer; font-family:var(--ff-mono); font-size:9.5px; text-transform:uppercase; letter-spacing:1.2px; color:var(--gray); display:flex; align-items:center; gap:8px; min-height:32px}
+  #panel .e20 summary:hover{color:var(--cream)}
+  #panel .e20 summary::-webkit-details-marker{color:var(--gray)}
+  /* Etapa 6: la insignia de estado se usa tanto en la ficha (#panel) como en la
+     columna Estado (2.0) de la tabla accesible — por eso no queda anclada a #panel. */
+  .e20-badge{font-size:8.5px; letter-spacing:.6px; padding:2px 8px; border-radius:9px; text-transform:none; white-space:nowrap}
+  .e20-badge.e20-pendiente{color:var(--gray); background:rgba(185,176,159,.12); border:1px solid var(--line)}
+  .e20-badge.e20-preliminar{color:var(--gold); background:rgba(201,162,77,.14); border:1px solid var(--gold-d)}
+  .e20-badge.e20-confirmada{color:var(--green-l); background:rgba(63,138,53,.14); border:1px solid var(--green-l)}
+  /* ── Carril A · 24-08-2026 · Estado de la curaduría ──
+     Síntesis visible sin desplegar nada, previa al bloque <details class="e20">, que
+     se conserva íntegro debajo. Hereda el color del badge que ya existía y añade una
+     regla de borde a la izquierda, para que el estado no dependa solo del color.
+     Ningún color nuevo: verde, oro y gris salen de :root. */
+  #panel .curaduria{margin-top:16px; padding:10px 12px; border-left:2px solid var(--line); background:rgba(255,255,255,.025); border-radius:0 3px 3px 0}
+  #panel .curaduria.cur-confirmada{border-left-color:var(--green-l)}
+  #panel .curaduria.cur-preliminar{border-left-color:var(--gold-d)}
+  #panel .curaduria.cur-pendiente{border-left-color:var(--line)}
+  #panel .cur-l{display:inline-block; font-family:var(--ff-mono); font-size:8.5px; text-transform:uppercase; letter-spacing:1.1px; color:var(--gray); margin-right:8px}
+  #panel .cur-g{margin:7px 0 0; font-size:11.5px; line-height:1.55; color:var(--gray)}
+  #panel .e20-body{margin-top:10px; display:flex; flex-direction:column; gap:11px}
+  #panel .e20-f{font-size:12px; line-height:1.5}
+  #panel .e20-l{display:block; font-family:var(--ff-mono); font-size:8.5px; text-transform:uppercase; letter-spacing:1.1px; color:var(--gray); opacity:.75; margin-bottom:3px}
+  #panel .e20-f p{margin:0; color:var(--cream)}
+  .e20-vacio{color:var(--gray) !important; font-style:italic}
+  #panel .e20-chips{display:flex; flex-wrap:wrap; gap:5px}
+  #panel .e20-chip{font-family:var(--ff-mono); font-size:9px; letter-spacing:.5px; padding:3px 8px; border-radius:9px; border:1px solid var(--line); color:var(--cream); background:rgba(255,255,255,.03)}
+  #panel .e20-flag{color:var(--red); font-style:italic; font-size:11px}
+  #panel .e20-fundamento{color:var(--gray); font-style:italic; font-size:11px}
+  #panel .e20-rutas{margin:0; padding-left:16px}
+  #panel .e20-rutas li{margin-bottom:6px}
+  #panel .e20-nota{margin:4px 0 0; font-size:10.5px; line-height:1.5; color:var(--gray); font-style:italic}
+  /* leyenda: franja compacta siempre visible (#legendBar) + panel plegable con el detalle */
+  #legend{position:absolute; left:16px; bottom:58px; z-index:16; background:rgba(10,11,8,.86); backdrop-filter:blur(3px); border:1px solid var(--line); border-radius:3px; padding:12px 15px; font-family:var(--ff-mono); font-size:10px; letter-spacing:.4px; color:var(--gray); max-width:370px; max-height:calc(100% - 100px); overflow:auto}
+  #legend[hidden]{display:none}
+  /* 36px: la leyenda es un panel angosto (12/15px de relleno); 44px chocaría con el
+     título "N entradas". Se prioriza no tapar contenido sobre el ideal estricto. */
+  #legend .panelCerrar{top:2px; right:4px; width:36px; height:36px; font-size:16px}
+  #legend.docked .panelCerrar{display:none}
+  #legend .lgtitle{font-size:8.5px; text-transform:uppercase; letter-spacing:1.4px; color:var(--gray); opacity:.7; margin-bottom:8px}
+  #legend .grid{display:grid; grid-template-columns:1fr 1fr; gap:5px 16px}
+  /* objetivo táctil de la fila: ~30px con padding:7px, por debajo de 44px por la
+     misma razón que .chip — grilla densa de hasta 10 corrientes; gap:5px del grid
+     como espaciado equivalente */
+  #legend .li{display:flex; align-items:center; gap:7px; cursor:pointer; padding:7px 4px; margin:-7px -4px; border-radius:3px; transition:background .15s}
+  #legend .li:hover{background:rgba(242,234,216,.06)}
+  #legend .li.sel{background:rgba(240,122,22,.15)}
+  #legend .sw{width:9px; height:9px; border-radius:50%; flex:none}
+  #legend .keys{display:flex; gap:14px; margin-top:9px; padding-top:9px; border-top:1px solid var(--line); font-size:9px; color:var(--gray); flex-wrap:wrap}
+  #legend .keys span{display:flex; align-items:center; gap:5px}
+  #legend .kob{width:9px;height:9px;border-radius:50%;background:var(--gray)}
+  #legend .kma{width:9px;height:9px;border-radius:50%;border:2px solid var(--gray);background:transparent}
+  #legend .kre{width:15px;height:0;border-top:2px solid var(--orange)}
+  #legend .kdi{width:15px;height:0;border-top:2px dashed var(--red)}
+  #legend .kfr{color:var(--cream);font-size:10px;line-height:1}
+  #legend .mlink{margin-top:9px;padding-top:9px;border-top:1px solid var(--line)}
+  #legend .mlink a, #legend .mlink [role="button"]{color:var(--orange);cursor:pointer;text-decoration:none;font-size:9.5px;letter-spacing:.6px}
+
+  /* ══ EL REFLUJO ══ la marea que vuelve: lo que el lector deja en la corriente.
+     La puerta no existe al cargar. Aparece en la leyenda cuando quien mira ya recorrió
+     el mapa (seis fichas o cuatro minutos). Filtra por atención, no por credenciales. */
+  #legend .puerta{display:none; margin-top:9px; padding-top:9px; border-top:1px solid var(--line); align-items:center; gap:8px; flex-wrap:wrap}
+  #legend .puerta.on{display:flex; animation:sube .9s ease}
+  @keyframes sube{from{opacity:0; transform:translateY(5px)} to{opacity:1; transform:none}}
+  #legend .puerta .marca{display:inline-block; width:20px; height:1px; background:var(--orange); flex:0 0 auto}
+  #legend .puerta a, #legend .puerta [role="button"]{color:var(--orange); cursor:pointer; text-decoration:none; font-size:9.5px; letter-spacing:.6px}
+  #legend .puerta a:hover, #legend .puerta [role="button"]:hover{text-decoration:underline}
+
+  #reflujo{position:absolute; top:14px; right:14px; z-index:21; width:414px; max-width:calc(100% - 28px); max-height:calc(100% - 28px); overflow:auto; background:var(--panel); border:1px solid var(--line); border-radius:3px; padding:22px 24px 26px; box-shadow:0 16px 44px rgba(0,0,0,.55); transform:translateX(125%); transition:transform .3s cubic-bezier(.4,0,.2,1)}
+  #reflujo.open{transform:none}
+  #reflujo .close{position:absolute; top:0; right:0; width:44px; height:44px; display:flex; align-items:center; justify-content:center; background:transparent; border:0; color:var(--gray); font-size:19px; line-height:1; cursor:pointer}
+  #reflujo .close:hover{color:var(--cream)}
+  #reflujo .tit{font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1.7px; color:var(--gold)}
+  #reflujo h2{font-family:var(--ff-display); font-weight:500; font-size:25px; margin:5px 0 6px; line-height:1.15}
+  #reflujo .lead{font-size:11.5px; color:var(--gray); line-height:1.65; margin:0 0 14px}
+  #reflujo .seg{flex-wrap:wrap; margin-bottom:2px}
+  #reflujo .seg button{padding:6px 9px; font-size:9px; letter-spacing:.6px}
+  #reflujo .seg button.on{background:var(--orange); color:#180a01}
+  #reflujo .seg button.on[data-rt="friccion"]{background:var(--red); color:#2a0d0a}
+  #reflujo .seg button.on[data-rt="corroboracion"]{background:var(--gold); color:#211a06}
+  #reflujo .f{margin-top:12px; position:relative}
+  #reflujo .f>label{display:block; font-family:var(--ff-mono); font-size:8.5px; text-transform:uppercase; letter-spacing:1.3px; color:var(--gray); margin-bottom:4px}
+  #reflujo .f>label .req{color:var(--orange)}
+  #reflujo input[type=text],#reflujo input[type=email],#reflujo textarea,#reflujo select{width:100%; background:var(--bg-deep); border:1px solid var(--line); border-radius:2px; color:var(--cream); font-family:var(--ff-body); font-size:12.5px; padding:8px 10px; line-height:1.5}
+  #reflujo textarea{min-height:78px; resize:vertical}
+  #reflujo input:focus,#reflujo textarea:focus,#reflujo select:focus{outline:0; border-color:var(--orange)}
+  #reflujo .hint{font-size:10.5px; color:var(--gray); line-height:1.5; margin-top:4px; font-style:italic}
+  #reflujo .cnt{font-family:var(--ff-mono); font-size:8.5px; color:var(--gray); text-align:right; margin-top:3px}
+  #reflujo .cnt.ok{color:var(--green-l)}
+  #reflujo .aclist{position:absolute; z-index:9; left:0; right:0; top:100%; background:var(--bg-deep); border:1px solid var(--orange); border-top:0; max-height:180px; overflow-y:auto}
+  #reflujo .aclist div{padding:6px 10px; font-size:12px; cursor:pointer; border-bottom:1px solid var(--line)}
+  #reflujo .aclist div:hover{background:rgba(240,122,22,.16)}
+  #reflujo .aclist small{display:block; color:var(--gray); font-size:10.5px}
+  #reflujo .chips{display:flex; flex-wrap:wrap; gap:5px}
+  #reflujo .chip{font-family:var(--ff-mono); font-size:8.5px; letter-spacing:.6px; text-transform:uppercase; padding:5px 7px; border:1px solid var(--line); border-radius:2px; cursor:pointer; color:var(--gray); background:transparent}
+  #reflujo .chip.on{color:var(--cream); border-color:var(--orange); background:rgba(240,122,22,.14)}
+  #reflujo .chip b{font-weight:400; opacity:.55; margin-left:4px}
+  #reflujo .relprev{background:var(--bg-deep); border:1px solid var(--line); border-left:2px solid var(--orange); padding:9px 11px; font-size:12.5px; line-height:1.5}
+  #reflujo .relprev.diso{border-left-color:var(--red)}
+  #reflujo .relprev .k{font-family:var(--ff-mono); font-size:8.5px; text-transform:uppercase; letter-spacing:1.2px; color:var(--gray); margin-top:5px}
+  #reflujo .divi{border-top:1px solid var(--line); margin-top:18px; padding-top:13px}
+  #reflujo .divi .dl{font-family:var(--ff-mono); font-size:8.5px; text-transform:uppercase; letter-spacing:1.5px; color:var(--gray); margin-bottom:6px}
+  #reflujo .check{display:flex; gap:8px; align-items:flex-start; font-size:11px; color:var(--gray); line-height:1.55; margin-top:9px; cursor:pointer}
+  #reflujo .check input{margin-top:2px; accent-color:var(--orange); width:auto}
+  #reflujo .envio{display:flex; gap:8px; margin-top:15px; flex-wrap:wrap}
+  #reflujo .envio button{font-family:var(--ff-mono); font-size:10px; text-transform:uppercase; letter-spacing:1.3px; padding:10px 15px; border:0; border-radius:2px; cursor:pointer; background:var(--orange); color:#180a01}
+  #reflujo .envio button.alt{background:transparent; color:var(--gray); border:1px solid var(--line)}
+  #reflujo .envio button.alt:hover{color:var(--cream); border-color:var(--gray)}
+  #reflujo .envio button:disabled{opacity:.3; cursor:not-allowed}
+  #reflujo .porque{font-size:10.5px; color:var(--red); margin-top:8px; line-height:1.5}
+  #reflujo .avisos{margin-top:13px; padding-top:11px; border-top:1px solid var(--line); font-size:10.5px; color:var(--gray); line-height:1.6}
+  #reflujo .hp{position:absolute; left:-9999px}
+  @media(max-width:760px){ #reflujo{width:calc(100% - 28px); top:8px; right:8px; left:8px; padding:18px 17px 22px} }
+  #legend .mlink a:hover{color:var(--cream)}
+  /* marco conceptual */
+  #marco{position:absolute; inset:0; background:rgba(5,6,4,.95); backdrop-filter:blur(5px); z-index:22; display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity .35s}
+  #marco.show{opacity:1; pointer-events:auto}
+  #marco .mbox{max-width:760px; max-height:86%; overflow:auto; padding:34px 40px; background:var(--panel); border:1px solid var(--line); border-radius:4px; box-shadow:0 20px 60px rgba(0,0,0,.6)}
+  #marco .mclose{float:right; width:44px; height:44px; margin:-14px -16px 0 0; display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--gray); font-size:24px; border:0; background:none; line-height:1}
+  #marco h2{font-family:var(--ff-display); font-size:30px; font-weight:700; margin:0 0 3px}
+  #marco .msub{font-family:var(--ff-mono); font-size:9.5px; text-transform:uppercase; letter-spacing:2px; color:var(--red); margin-bottom:22px}
+  #marco .c{margin-bottom:19px; padding-left:16px; border-left:2px solid var(--line)}
+  #marco .c h3{font-family:var(--ff-display); font-size:20px; margin:0 0 3px; font-weight:600; color:var(--cream)}
+  #marco .c .who{font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1.2px; color:var(--orange); margin-bottom:5px}
+  #marco .c p{font-size:13.5px; line-height:1.55; color:var(--gray); margin:0}
+  #marco .c p b{color:var(--cream); font-weight:500}
+  #hint{position:absolute; left:16px; top:14px; font-size:12px; color:var(--gray); font-style:italic; max-width:240px; line-height:1.5}
+  .skip-link{position:absolute; left:1rem; top:-100px; z-index:9999; background:var(--orange); color:var(--bg-deep); font-family:var(--ff-mono); font-size:.85rem; font-weight:600; letter-spacing:.02em; padding:.8rem 1.4rem; border-radius:4px; text-decoration:none; transition:top .2s ease}
+  .skip-link:focus{top:1rem}
+  /* texto presente para lectores de pantalla, invisible en pantalla; nunca display:none
+     (eso lo saca del árbol de accesibilidad) */
+  .visually-hidden{position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0}
+  /* foco visible consistente en todo el documento, incluidos los nodos del SVG */
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible, select:focus-visible,
+  [tabindex]:focus-visible, .node:focus-visible, [role="button"]:focus-visible{
+    outline:2px solid var(--gold); outline-offset:2px;
+  }
+  .node:focus-visible .dot{stroke:var(--cream); stroke-width:2.4}
+  #guion{position:absolute; left:50%; top:16px; transform:translateX(-50%) translateY(-14px); width:min(580px,74vw); background:rgba(17,19,13,.95); border:1px solid var(--line); border-left-width:3px; border-radius:3px; padding:13px 22px; opacity:0; pointer-events:none; transition:opacity .3s, transform .3s;}
+  #guion.show{opacity:1; transform:translateX(-50%) translateY(0)}
+  #guion .gf{font-family:var(--ff-mono); font-size:10px; text-transform:uppercase; letter-spacing:1.6px; margin-bottom:5px}
+  #guion .gt{font-family:var(--ff-display); font-size:17px; line-height:1.4; color:var(--cream)}
+  /* Fase 4B: el crédito y el texto de ayuda son informativos y cubrían franjas del
+     mapa. Dejan de recibir el puntero para que la pulsación llegue al nodo que hay
+     debajo. El enlace del DOI sí lo conserva, porque es lo único interactivo que
+     contienen: se separa el texto del área que responde, no se esconde el crédito. */
+  /* right:70px deja libre la columna de controles, que en escritorio se ancla al
+     costado derecho: antes el crédito quedaba pisado justo sobre el enlace del DOI. */
+  .credit{position:absolute; right:70px; bottom:12px; font-family:var(--ff-mono); font-size:9px; letter-spacing:.8px; text-transform:uppercase; color:var(--gray); opacity:.5; text-align:right; line-height:1.7; pointer-events:none}
+  .credit a{pointer-events:auto}
+  #hint{pointer-events:none}
+  #umbral{position:absolute; inset:0; background:rgba(5,6,4,.94); backdrop-filter:blur(4px); display:flex; align-items:center; justify-content:center; z-index:20; transition:opacity .5s}
+  #umbral.gone{opacity:0; pointer-events:none}
+  #umbral .box{max-width:640px; padding:0 30px; text-align:center}
+  #umbral h2{font-family:var(--ff-display); font-size:36px; font-weight:700; margin:0 0 4px}
+  #umbral .u-sub{font-family:var(--ff-mono); font-size:10px; text-transform:uppercase; letter-spacing:2.4px; color:var(--red); margin-bottom:22px}
+  #umbral p{font-size:15px; line-height:1.65; color:var(--cream); margin:0 0 16px}
+  #umbral .how{font-size:13px; line-height:1.6; color:var(--gray); margin-bottom:26px}
+  #umbral .how b{color:var(--orange); font-weight:600}
+  #umbral button{font-family:var(--ff-mono); font-size:12px; text-transform:uppercase; letter-spacing:1.6px; padding:12px 28px; background:var(--orange); color:var(--bg-deep); border:0; border-radius:2px; cursor:pointer}
+  #umbral button:hover{background:var(--cream)}
+  /* vista tabla accesible */
+  #tabla{position:absolute; inset:0; overflow:auto; padding:20px 26px 60px; display:none}
+  #tabla.show{display:block}
+  /* leyenda anclada: dentro de #tabla deja de ser un overlay flotante y pasa a ser
+     una franja fija al inicio del listado, en el flujo normal del documento */
+  #legend.docked{position:static; max-width:none; max-height:none; width:100%; margin:0 0 22px; backdrop-filter:none; background:rgba(255,255,255,.03)}
+  #legend.docked .grid{grid-template-columns:repeat(auto-fill,minmax(180px,1fr))}
+  #tabla .tcap{font-family:var(--ff-display); font-size:22px; color:var(--cream); margin:2px 0 4px}
+  #tabla .tsub{font-family:var(--ff-mono); font-size:10px; text-transform:uppercase; letter-spacing:1.4px; color:var(--gray); margin-bottom:16px}
+  #tabla table{border-collapse:collapse; width:100%; font-size:13.5px}
+  #tabla caption{text-align:left; color:var(--gray); font-size:12px; font-style:italic; margin-bottom:10px}
+  #tabla th{font-family:var(--ff-mono); font-size:9.5px; text-transform:uppercase; letter-spacing:1px; text-align:left; color:var(--gray); border-bottom:2px solid var(--line); padding:8px 12px; position:sticky; top:0; background:var(--bg-deep); cursor:pointer; user-select:none}
+  #tabla th:hover{color:var(--cream)}
+  #tabla th[aria-sort="ascending"]::after{content:" ▲"; color:var(--gold)}
+  #tabla th[aria-sort="descending"]::after{content:" ▼"; color:var(--gold)}
+  #tabla td{padding:9px 12px; border-bottom:1px solid var(--line); vertical-align:top; color:var(--cream)}
+  #tabla tbody tr{cursor:pointer; transition:background .12s}
+  #tabla tbody tr:hover, #tabla tbody tr:focus-within{background:rgba(242,234,216,.05)}
+  #tabla td.tit a{color:var(--cream); text-decoration:none; font-weight:500}
+  #tabla td.tit a:hover, #tabla td.tit a:focus{color:var(--gold); text-decoration:underline; outline:2px solid var(--gold); outline-offset:2px}
+  #tabla td .fenchip{display:inline-block; width:9px; height:9px; border-radius:50%; margin-right:5px; vertical-align:middle}
+  #tabla td .kind-o{color:var(--gray)} #tabla td .kind-m{color:var(--orange)}
+  #tabla .tnote{margin-top:22px; font-size:12px; color:var(--gray); font-style:italic; line-height:1.6; max-width:760px}
+  #tabla .tnote a{color:var(--gold)}
+  /* Etapa 6: selector de columnas — plegado por defecto, expone las diez
+     columnas posibles sin forzar a nadie a desplazarse de más ni perder de
+     vista las que ya tenía visibles */
+  #tabla .tcolsel{margin-bottom:14px; max-width:560px}
+  #tabla .tcolsel summary{cursor:pointer; font-family:var(--ff-mono); font-size:10px; text-transform:uppercase; letter-spacing:1.2px; color:var(--gray); min-height:32px; display:flex; align-items:center; list-style:none}
+  #tabla .tcolsel summary::-webkit-details-marker{display:none}
+  #tabla .tcolsel summary::before{content:"▸ "; color:var(--gold-d)}
+  #tabla .tcolsel[open] summary::before{content:"▾ "}
+  #tabla .tcolsel summary:hover{color:var(--cream)}
+  #tabla .tcolsel fieldset{border:1px solid var(--line); border-radius:2px; margin:8px 0 0; padding:12px 14px; display:flex; flex-wrap:wrap; gap:8px 18px}
+  #tabla .tcolsel legend{font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1.2px; color:var(--gray); padding:0 4px}
+  #tabla .tcolopt{display:flex; align-items:center; gap:6px; font-size:12.5px; color:var(--cream); cursor:pointer; min-height:32px}
+  #tabla .tcolopt input{width:16px; height:16px; accent-color:var(--gold-d); cursor:pointer}
+  #tabla .tcolopt.esencial{color:var(--gray); cursor:default}
+  #tabla .tcolopt.esencial input{cursor:default}
+  #tabla .tcolnota{font-size:10px; opacity:.75}
+  /* modo presentación: pantalla negra, solo el mapa/constelación, sin cromo de interfaz */
+  body.presenting{background:#000}
+  body.presenting #stage{background:#000}
+  body.presenting header{display:none}
+  body.presenting main{height:100%}
+  body.presenting #legend{display:none}
+  body.presenting #legendBar{display:none}
+  body.presenting .panelLateral{display:none}
+  body.presenting .chips{display:none}
+  body.presenting #hint{display:none}
+  body.presenting .credit{display:none}
+  body.presenting #tabla{display:none !important}
+  #presExit{position:fixed; right:16px; top:16px; z-index:30; font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1.4px; padding:7px 13px; background:rgba(0,0,0,.55); color:var(--gray); border:1px solid var(--line); border-radius:2px; cursor:pointer; opacity:0; pointer-events:none; transition:opacity .25s;}
+  body.presenting #presExit{opacity:.3; pointer-events:auto}
+  body.presenting #presExit:hover{opacity:1; color:var(--cream); border-color:var(--gold)}
+  #presHelp{position:fixed; left:16px; bottom:16px; z-index:30; font-family:var(--ff-mono); font-size:9.5px; letter-spacing:.6px; padding:9px 13px; background:rgba(0,0,0,.55); border:1px solid var(--line); border-radius:2px; color:var(--gray); opacity:0; pointer-events:none; transition:opacity .25s; display:flex; gap:14px; flex-wrap:wrap;}
+  body.presenting #presHelp{opacity:.4; pointer-events:auto}
+  body.presenting #presHelp:hover{opacity:1}
+  #presHelp b{color:var(--gold); font-weight:600; margin-right:4px}
+
+  /* ---------- móvil: el header apilaba los 6 grupos de controles en 4 filas y se comía el 44% de la pantalla. Aquí el título se compacta y los controles pasan a UNA sola fila horizontal deslizable, devolviéndole al mapa la mayor parte del alto. ---------- */
+  @media (max-width:780px){
+    header{flex-direction:column; align-items:stretch; padding:10px 12px 8px; gap:8px;}
+    header::after{left:12px; right:12px;}
+    header .t{display:flex; align-items:baseline; gap:10px; flex-wrap:wrap;}
+    header .t .back{font-size:8.5px; margin-bottom:5px}
+    header .t h1{font-size:19px}
+    header .t .sub{font-size:8px; letter-spacing:1.5px; margin-top:0}
+    /* min-width:0 es obligatorio: sin él, un hijo flex en columna nunca se encoge
+       por debajo del ancho de su contenido y overflow-x:auto no llega a activarse
+       — el header entero (y el body) se ensanchaba a 851px en un viewport de 375px,
+       lo que Etapa 5 detectó al enfocar un control fuera de esa franja: el navegador
+       desplazaba TODA la página en vez de solo la franja de controles. */
+    /* Carril A · 24-08-2026: la franja ya se deslizaba, pero con scrollbar-width:none
+       no había ninguna señal de que a la derecha quedaran otros 500 px de controles
+       (buscador, filtros, idioma). Se restituye una barra fina y un degradado de
+       continuidad en el borde. No se quita ni se reordena ningún control. */
+    .controls{gap:0; flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch;
+      scrollbar-width:thin; scrollbar-color:var(--gold-d) transparent;
+      padding-bottom:4px; min-width:0; max-width:100%;
+      -webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 26px),transparent 100%);
+      mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 26px),transparent 100%);}
+    .controls::-webkit-scrollbar{height:3px}
+    .controls::-webkit-scrollbar-thumb{background:var(--gold-d); border-radius:2px}
+    .controls::-webkit-scrollbar-track{background:transparent}
+    /* al llegar al extremo la máscara sobra: recortaría el último control */
+    .controls.alFinal{-webkit-mask-image:none; mask-image:none}
+    .grp{flex:0 0 auto; gap:3px; padding-right:12px;}
+    .grp:last-child{padding-right:26px}
+    /* Carril A · 24-08-2026: 7.5px quedaba por debajo del mínimo confortable en
+       pantalla táctil. Misma familia y mismo tracking; solo cambia el cuerpo, y solo
+       por debajo de 780px: la escala de escritorio no se toca. */
+    .grp label{font-size:9px; letter-spacing:1px}
+    .seg button{padding:8px 10px; font-size:10.5px; min-height:44px; letter-spacing:.5px}
+    .buscador input{width:132px; font-size:11px; padding:9px 9px; min-height:44px}
+    .bcount{font-size:8px; padding-right:7px}
+    #hint{display:none}
+    .chips{padding:0 2px}
+    /* Carril A · 24-08-2026: #legendBarTxt lleva white-space:nowrap y empujaba el botón
+       «Ver leyenda completa» fuera de la pantalla entre 320 y 430 px. Cede el texto,
+       no el botón. */
+    #legendBar{left:8px; right:8px; bottom:8px; max-width:none; justify-content:space-between; align-items:center; gap:8px}
+    #legendBar #legendBarTxt{white-space:normal; min-width:0; flex:1 1 auto; line-height:1.4}
+    #legendBar #legendBtn{flex:0 0 auto}
+    #legend{left:8px; right:8px; bottom:56px; max-width:none; max-height:calc(100% - 130px); padding:9px 11px; font-size:9px;}
+    #legend .grid{grid-template-columns:1fr 1fr}
+    #guion{width:calc(100vw - 24px); left:12px; right:12px; transform:translateY(-14px); top:10px;}
+    #guion.show{transform:none}
+    #panel{left:8px; right:8px; top:8px; width:auto; max-height:calc(100% - 16px); padding:18px 18px; transform:translateY(-16px); opacity:0; visibility:hidden;}
+    #panel.open{transform:none; opacity:1; visibility:visible;}
+    /* filtros e información pasan de panel lateral a hoja inferior en móvil */
+    .panelLateral{left:0; right:0; top:auto; bottom:0; width:auto; max-height:76vh; border-radius:10px 10px 0 0; padding:18px 18px 24px; box-shadow:0 -12px 30px rgba(0,0,0,.5)}
+    .panelLateral .grp{margin-bottom:18px}
+    .seg.lengua button, .seg.capa button, .seg.ev button{padding:8px 10px; font-size:9.5px; min-height:44px}
+    #marco .mbox{max-width:calc(100vw - 24px); padding:22px 20px; max-height:90%}
+    #marco h2{font-size:24px}
+    .credit{display:none}
+    #tip{max-width:220px}
+    #presHelp{font-size:8.5px; gap:8px 10px; left:8px; bottom:8px}
+    #presExit{right:8px; top:8px}
+    /* La leyenda ocupa todo el borde inferior en móvil, así que los controles
+       dejan la esquina y se anclan a media altura sobre el costado derecho.
+       Aquí el panel entra desde arriba y cubre la pieza: los controles se
+       retiran mientras está abierto en vez de apartarse de lado. */
+    /* Fase 4B · los controles de zoom dejan el centro del costado derecho.
+       Medido antes de moverlos: a media altura tapaban el centro de 16 nodos en 430,
+       41 en 390, 10 en 375 y 33 en 320 px. La franja inmediatamente bajo el encabezado
+       está vacía de mapa en los cuatro anchos, porque el encuadre de la Fase 4A centra
+       el contenido y deja aire arriba. Se conservan los tres controles y el indicador
+       de escala; solo cambia dónde se anclan. */
+    main{--zc-y:0}
+    main:has(#panel.open){--zc-x:0px}
+    .zc{bottom:auto; top:10px; right:10px; gap:7px}
+    /* área táctil de 44 px sin agrandar el dibujo del botón */
+    .zc-btn{width:44px; height:44px}
+    .zc-riel{height:40px}
+    /* Fase 4B: la regla existente retiraba los controles cuando se abría la ficha.
+       Al subirlos al borde superior del mapa pasaron a coincidir con la esquina donde
+       las hojas de Filtros e Información colocan su botón de cierre, y lo interceptaban.
+       Se extiende el mismo retiro a cualquier panel lateral abierto. */
+    main:has(#panel.open) .zc,
+    main:has(aside.panelLateral:not([hidden])) .zc{opacity:0; pointer-events:none}
+  }
+  /* Fase 4B: por debajo de 360 px la banda de mapa mide menos de 300 px de alto y una
+     columna de 200 px seguiría alcanzando nodos. Se compacta el indicador de escala,
+     que es una lectura y no un mando: los tres controles siguen completos y con área
+     táctil de 44 px. */
+  @media (max-width:360px){
+    .zc{top:8px; right:8px; gap:5px}
+    .zc-riel{height:24px; margin:0}
+    .zc-lectura{font-size:9.5px}
+  }
+  @media (max-width:780px) and (max-height:480px){
+    header{padding:8px 12px 6px}
+    header .t h1{font-size:17px}
+    header .t .sub{display:none}
+  }

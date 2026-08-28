@@ -176,34 +176,53 @@
     }
   }
 
-  // ── Efemérides: zoom de lectura al señalar la pieza ──
-  // El toque/clic alterna el estado; hover y foco de teclado quedan
-  // cubiertos solo con CSS. Una sola tarjeta abierta a la vez; Escape
-  // y un clic fuera de la grilla la cierran.
+  // ── Efemérides: lightbox de lectura al señalar la pieza ──
+  // Antes la tarjeta se escalaba 1.65x en su propio sitio dentro de la
+  // grilla: en piezas de retrato quedaba pequeña y con bandas laterales
+  // (su caja seguía siendo 16:11), y la ficha semitransparente tapaba
+  // la parte baja del diseño. Ahora el clic, Enter/Espacio o el toque
+  // abren un <dialog> centrado con la imagen a su proporción real y la
+  // ficha en una línea aparte, debajo — nunca superpuesta.
   var efemeridesGrids = document.querySelectorAll('.efemerides-grid');
-  if (efemeridesGrids.length) {
-    var closeAllZoom = function (except) {
-      var open = document.querySelectorAll('.efemeride-card.is-zoomed');
-      for (var z = 0; z < open.length; z++) {
-        if (open[z] !== except) {
-          open[z].classList.remove('is-zoomed');
-          open[z].setAttribute('aria-pressed', 'false');
-        }
+  var efemeridesLightbox = document.getElementById('efemerides-lightbox');
+  if (efemeridesGrids.length && efemeridesLightbox) {
+    var lightboxImg = document.getElementById('efemerides-lightbox-img');
+    var lightboxFecha = document.getElementById('efemerides-lightbox-fecha');
+    var lightboxNombre = document.getElementById('efemerides-lightbox-nombre');
+    var lightboxCloseBtn = document.getElementById('efemerides-lightbox-close');
+    var lightboxTrigger = null;
+
+    var openLightbox = function (card) {
+      var img = card.querySelector('img');
+      if (!img) return;
+      var fecha = card.querySelector('.efemeride-fecha');
+      var nombre = card.querySelector('.efemeride-nombre');
+      lightboxImg.src = img.currentSrc || img.src;
+      lightboxImg.alt = img.alt;
+      if (lightboxFecha) lightboxFecha.textContent = fecha ? fecha.textContent : '';
+      if (lightboxNombre) lightboxNombre.textContent = nombre ? nombre.textContent : '';
+      lightboxTrigger = card;
+      if (typeof efemeridesLightbox.showModal === 'function') {
+        efemeridesLightbox.showModal();
+      } else {
+        efemeridesLightbox.setAttribute('open', '');
       }
+      if (lightboxCloseBtn) lightboxCloseBtn.focus();
     };
 
-    var toggleZoom = function (card) {
-      var willOpen = !card.classList.contains('is-zoomed');
-      closeAllZoom(willOpen ? card : null);
-      card.classList.toggle('is-zoomed', willOpen);
-      card.setAttribute('aria-pressed', willOpen ? 'true' : 'false');
+    var closeLightbox = function () {
+      if (typeof efemeridesLightbox.close === 'function' && efemeridesLightbox.open) {
+        efemeridesLightbox.close();
+      } else {
+        efemeridesLightbox.removeAttribute('open');
+      }
     };
 
     for (var g = 0; g < efemeridesGrids.length; g++) {
       efemeridesGrids[g].addEventListener('click', function (e) {
         var card = e.target.closest('.efemeride-card');
         if (!card) return;
-        toggleZoom(card);
+        openLightbox(card);
       });
 
       efemeridesGrids[g].addEventListener('keydown', function (e) {
@@ -211,16 +230,23 @@
         var card = e.target.closest('.efemeride-card');
         if (!card) return;
         e.preventDefault();
-        toggleZoom(card);
+        openLightbox(card);
       });
     }
 
-    document.addEventListener('click', function (e) {
-      if (!e.target.closest('.efemeride-card')) closeAllZoom();
+    if (lightboxCloseBtn) {
+      lightboxCloseBtn.addEventListener('click', closeLightbox);
+    }
+
+    // Clic en el fondo del <dialog> (fuera de la figura) lo cierra;
+    // Escape lo cierra solo mediante el comportamiento nativo de
+    // showModal, así que aquí solo cubrimos el clic de fondo.
+    efemeridesLightbox.addEventListener('click', function (e) {
+      if (e.target === efemeridesLightbox) closeLightbox();
     });
 
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape') closeAllZoom();
+    efemeridesLightbox.addEventListener('close', function () {
+      if (lightboxTrigger) lightboxTrigger.focus();
     });
   }
 })();

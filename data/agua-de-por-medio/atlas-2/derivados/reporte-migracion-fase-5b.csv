@@ -1,0 +1,233 @@
+id,estado,recorrido,sec,arq,fuente,resultado
+mintz,pendiente,,,,piloto-generado.json,pendiente
+trouillot,sin_evaluar,,,,,sin evaluar
+casimir,pendiente,,,,,pendiente
+price,confirmado,c3,,,piloto-generado.json,ordinaria
+fouchard,pendiente,,,,,pendiente
+roberts,pendiente,,,,,pendiente
+totumo,confirmado,c3,,,piloto-generado.json,ordinaria
+ortiz,confirmado,c8,c4,,s01-generado.json,ordinaria
+glissant,confirmado,c8,c7,,s01-generado.json,ordinaria
+brathwaite,confirmado,c8,c9,,s01-generado.json,ordinaria
+creolite,sin_evaluar,,,,,sin evaluar
+monahan,confirmado,c8,,,s01-generado.json,ordinaria
+vete,sin_evaluar,,,,,sin evaluar
+chande,confirmado,c9,c8,,piloto-generado.json,ordinaria
+quintero,confirmado,c10,,,dictamen-academico-bloque-1-etapa-2-3.md,ordinaria
+perezmorales,confirmado,,,sintesis_multicorriente:c3/c5/c7,dictamen-academico-bloque-4-etapa-2-3.md,arquitectura sintesis_multicorriente
+sherwood,confirmado,c2,,,dictamen-academico-bloque-4-etapa-2-3.md,ordinaria
+cabrera,sin_evaluar,,,,,sin evaluar
+tambu,sin_evaluar,,,,,sin evaluar
+bonilla,sin_evaluar,,,,,sin evaluar
+lindskoog,sin_evaluar,,,,,sin evaluar
+ferdinand,pendiente,,,,,pendiente
+beyondsun,confirmado,c6,c7,,a02-generado.json,ordinaria
+aftershocks,pendiente,,,,,pendiente
+rodney,sin_evaluar,,,,,sin evaluar
+araujo,pendiente,,,,,pendiente
+manoalzada,confirmado,c9,c5,,s01-generado.json,ordinaria
+gudynas,pendiente,,,,a02-generado.json,pendiente
+esquiva,confirmado,c7,c4,,s01-generado.json,ordinaria
+workercane,confirmado,c4,c2,,a02-generado.json,ordinaria
+steward,confirmado,c4,,,piloto-generado.json,ordinaria
+olwigstjohn,pendiente,,,,,pendiente
+hagedorn,sin_evaluar,,,,,sin evaluar
+pricefirst,confirmado,,,frontera_constitutiva:c3/c9,dictamen-academico-bloque-2-etapa-2-3.md,arquitectura frontera_constitutiva
+dunham,sin_evaluar,,,,,sin evaluar
+friedemannlengua,pendiente,,,,,pendiente
+mamalola,pendiente,,,,,pendiente
+besson,pendiente,,,,,pendiente
+taylor,sin_evaluar,,,,,sin evaluar
+peasantscapital,confirmado,c4,c7,,a02-generado.json,ordinaria
+chevannes,confirmado,c9,,,dictamen-academico-bloque-2-etapa-2-3.md,ordinaria
+escalante,pendiente,,,,,pendiente
+rebeldestiny,pendiente,,,,,pendiente
+tellmyhorse,sin_evaluar,,,,,sin evaluar
+palmiengangas,sin_evaluar,,,,,sin evaluar
+travelstooy,confirmado,c9,,,dictamen-academico-bloque-2-etapa-2-3.md,ordinaria
+truebornmaroons,pendiente,,,,,pendiente
+palmiewizards,sin_evaluar,,,,,sin evaluar
+pricemars,confirmado,c9,c8,,decision-academica-pricemars-p2-etapa-2-3f.md,ordinaria
+alabi,confirmado,c7,c3,,dictamen-academico-bloque-3-etapa-2-3.md,ordinaria
+exceptviolence,confirmado,c4,c5,,dictamen-academico-bloque-4-etapa-2-3.md,ordinaria
+modernblackness,sin_evaluar,,,,,sin evaluar
+citizenshipedge,sin_evaluar,,,,,sin evaluar
+politicallife,confirmado,c4,c7|c9,,a02-generado.json,ordinaria
+downtownladies,confirmado,c4,c5|c10,,a01-generado.json,ordinaria
+reddock,confirmado,c4,c10,,a01-generado.json,ordinaria
+caribjourneys,pendiente,,,,,pendiente
+globalculture,pendiente,,,,,pendiente
+islandscity,confirmado,c5,c7|c10,,a02-generado.json,ordinaria
+callaloonation,pendiente,,,,,pendiente
+reconfdominic,sin_evaluar,,,,,sin evaluar
+cuijla,pendiente,,,,,pendiente
+chocolatecorn,sin_evaluar,,,,,sin evaluar
+womenancestors,confirmado,c10,c9,,decision-academica-womenancestors-p2-etapa-2-3f.md,ordinaria
+afrocentroam,confirmado,c5,c7|c10,,a02-generado.json,ordinaria
+cunin,sin_evaluar,,,,,sin evaluar
+figueroa,confirmado,c4,c8,,s01-generado.json,ordinaria
+tinsley,sin_evaluar,,,,,sin evaluar
+alexander,sin_evaluar,,,,,sin evaluar
+curiel,sin_evaluar,,,,,sin evaluar
+shellererotic,pendiente,,,,,pendiente
+ramadan,sin_evaluar,,,,,sin evaluar
+islandfutures,pendiente,,,,,pendiente
+lara,sin_evaluar,,,,,sin evaluar
+mintzarea,confirmado,c2,c4,,decision-academica-mintzarea-p2-etapa-2-3f.md,ordinaria
+gill,confirmado,c10,c9,,a01-generado.json,ordinaria
+deere,pendiente,,,,,pendiente
+abello,pendiente,,,,,pendiente
+benitez,confirmado,c8,c4,,s01-generado.json,ordinaria
+cesaire,sin_evaluar,,,,,sin evaluar
+fanon,sin_evaluar,,,,,sin evaluar
+james,confirmado,c3,c7,,dictamen-academico-bloque-3-etapa-2-3.md,ordinaria
+trouillotsilencing,sin_evaluar,,,,,sin evaluar
+brownreaper,confirmado,c9,c2,,a02-generado.json,ordinaria
+kempadoo,confirmado,c10,c4,,a01-generado.json,ordinaria
+kingisland,sin_evaluar,,,,,sin evaluar
+fuentesdispossessed,confirmado,c9,c2|c10,,a01-generado.json,ordinaria
+bollandbelize,pendiente,,,,,pendiente
+hintzen,confirmado,c7,c4,,a02-generado.json,ordinaria
+rainforestwarriors,confirmado,c7,c3,,dictamen-academico-bloque-3-etapa-2-3.md,ordinaria
+quinnblackpower,pendiente,,,,,pendiente
+russwurm,pendiente,,,,,pendiente
+tackysrevolt,confirmado,c3,c2|c5,,a01-generado.json,ordinaria
+helgnuncamas,confirmado,c3,c2,,a01-generado.json,ordinaria
+robinsonmarxismo,pendiente,,,,,pendiente
+bassiacuoso,confirmado,c5,c7,,piloto-generado.json,ordinaria
+rediker,pendiente,,,,,pendiente
+gosinenature,sin_evaluar,,,,,sin evaluar
+headleyreparaciones,pendiente,,,,,pendiente
+jaffeconcrete,confirmado,c6,,,dictamen-academico-bloque-4-etapa-2-3.md,ordinaria
+pardomosquerahoffmann,pendiente,,,,,pendiente
+scher,pendiente,,,,,pendiente
+hallafricanslouisiana,pendiente,,,,,pendiente
+creolenieworleans,sin_evaluar,,,,,sin evaluar
+ramsaranlewis,pendiente,,,,,pendiente
+gonzalezsojourners,confirmado,c5,c3,,dictamen-academico-bloque-1-etapa-2-3.md,ordinaria
+andersonblackindigenous,confirmado,c1,c7|c10,,decision-academica-andersonblackindigenous-p2-etapa-2-3f.md,ordinaria
+munrohaitirising,pendiente,,,,,pendiente
+meniketinevis,pendiente,,,,,pendiente
+handlerlangebarbados,confirmado,c2,c9,,a02-generado.json,ordinaria
+kutzinskisugar,confirmado,c10,c7,,a01-generado.json,ordinaria
+curtispleasures,confirmado,c10,c4,,a01-generado.json,ordinaria
+bebelgislerleonora,sin_evaluar,,,,,sin evaluar
+ulysseWhyHaiti,sin_evaluar,,,,,sin evaluar
+sharpewake,pendiente,,,,,pendiente
+ferrerfreedomsmirror,pendiente,,,,,pendiente
+deloughrey,pendiente,,,,,pendiente
+johnson_climatecuba,pendiente,,,,,pendiente
+allen_dikimanera,pendiente,,,,,pendiente
+vanderpijl_equaliberty,sin_evaluar,,,,,sin evaluar
+naveda_esclavoscordoba,confirmado,c2,c4,,s01-generado.json,ordinaria
+mohammed_generosrealidades,sin_evaluar,,,,,sin evaluar
+james_bannerethiopia,pendiente,,,,,pendiente
+schuller_killingkindness,confirmado,c7,c4,,a02-generado.json,ordinaria
+zips_nannysasafo,pendiente,,,,,pendiente
+brereton_racerelationstrinidad,pendiente,,,,,pendiente
+nixon_resistingparadise,confirmado,c10,c4|c5,,a01-generado.json,ordinaria
+schwartz_seaofstorms,confirmado,,c2|c4,frontera_constitutiva:c6/c7,decision-academica-schwartz_seaofstorms-p2-etapa-2-3f.md,arquitectura frontera_constitutiva
+smith_sexcitizen,sin_evaluar,,,,,sin evaluar
+hall_slavesocietydanish,confirmado,c2,c3|c4,,a01-generado.json,ordinaria
+knight_genesisnacionalismo,sin_evaluar,,,,,sin evaluar
+benedictykokken_haitiexception,confirmado,c8,c7|c9,,a02-generado.json,ordinaria
+klein_battleparadise,confirmado,c4,c6|c7,,a02-generado.json,ordinaria
+trouillothaitistate,sin_evaluar,,,,,sin evaluar
+kincaidsmallplace,sin_evaluar,,,,,sin evaluar
+wilsoncrabantics,pendiente,,,,,pendiente
+gomezexperiential,confirmado,c9,c5,,decision-academica-gomezexperiential-cierre-p1-etapa-2-3.md,ordinaria
+goffedarklab,confirmado,c6,c1|c2,,a02-generado.json,ordinaria
+wilderfreedomtime,sin_evaluar,,,,,sin evaluar
+bogueslammingreader,sin_evaluar,,,,,sin evaluar
+mahlertricontinental,confirmado,c5,c7|c8,,a02-generado.json,ordinaria
+castrogomezhybris,pendiente,,,,,pendiente
+firmin,sin_evaluar,,,,,sin evaluar
+shellerconsuming,confirmado,c4,c5|c8,,a01-generado.json,ordinaria
+henrycaliban,pendiente,,,,,pendiente
+lebroncimarronaje,pendiente,,,,,pendiente
+sonicbodies,sin_evaluar,,,,,sin evaluar
+yountaesecular,sin_evaluar,,,,,sin evaluar
+branddoor,pendiente,,,,,pendiente
+grosfoguelcolonial,pendiente,,,,,pendiente
+bahadurcoolie,pendiente,,,,,pendiente
+zapataarbol,pendiente,,,,,pendiente
+almanzaorilla,sin_evaluar,,,,,sin evaluar
+goldbergabolition,pendiente,,,,,pendiente
+hurboncomprendre,sin_evaluar,,,,,sin evaluar
+rifkinfictions,confirmado,,,frontera_constitutiva:c1/c3,dictamen-academico-bloque-1-etapa-2-3.md,arquitectura frontera_constitutiva
+whiteheadtiger,confirmado,,,frontera_constitutiva:c1/c7,decision-academica-whiteheadtiger-p2-etapa-2-3f.md,arquitectura frontera_constitutiva
+olsencartagena,pendiente,,,,,pendiente
+cosgrovegarifuna,confirmado,c9,c5|c1,,decision-academica-cosgrovegarifuna-p2-etapa-2-3f.md,ordinaria
+helglibertyequality,pendiente,,,,,pendiente
+brathwaitearchipelago,sin_evaluar,,,,,sin evaluar
+muneraelfracaso,pendiente,,,,,pendiente
+saetheridentidades,pendiente,,,,,pendiente
+zonabananera,pendiente,,,,,pendiente
+rappaportcobarde,sin_evaluar,,,,,sin evaluar
+reysinningcristorey,pendiente,,,,,pendiente
+hurbondictadura,sin_evaluar,,,,,sin evaluar
+lizcanocarnaval,pendiente,,,,,pendiente
+sangbenvolviendo,pendiente,,,,,pendiente
+chicamusicaafricana,sin_evaluar,,,,,sin evaluar
+zambrana,pendiente,,,,,pendiente
+martinezsanmiguel,pendiente,,,,,pendiente
+archipelagicthinking,pendiente,,,,,pendiente
+brownetropic,sin_evaluar,,,,,sin evaluar
+lightfoot,confirmado,c4,c3,,dictamen-academico-bloque-1-etapa-2-3.md,ordinaria
+fischer,pendiente,,,,,pendiente
+felicianosantos,confirmado,c1,c7|c9,,decision-academica-felicianosantos-p2-etapa-2-3f.md,ordinaria
+prestolmasacre,pendiente,,,,,pendiente
+hazareesingh,confirmado,c3,c7|c9,,a02-generado.json,ordinaria
+johnsonbelize,pendiente,,,,,pendiente
+millerbassey,sin_evaluar,,,,,sin evaluar
+schweitzerbata,sin_evaluar,,,,,sin evaluar
+mendozaraices,pendiente,,,,,pendiente
+scottconscripts,sin_evaluar,,,,,sin evaluar
+mcneillmosquito,pendiente,,,,,pendiente
+lassoerased,sin_evaluar,,,,,sin evaluar
+floresvillalobos,confirmado,c4,c5|c10,,a01-generado.json,ordinaria
+corinealdipanama,sin_evaluar,,,,,sin evaluar
+kahnislands,pendiente,,,,,pendiente
+dubuissonhaiti,pendiente,,,,,pendiente
+pinedashipwrecked,confirmado,,,sintesis_multicorriente:c1/c4/c7,decision-academica-pinedashipwrecked-p2-etapa-2-3f.md,arquitectura sintesis_multicorriente
+stoutafterlove,confirmado,c10,c4,,a01-generado.json,ordinaria
+wirtzperforming,sin_evaluar,,,,,sin evaluar
+belisodelirium,confirmado,c10,c7|c9,,a01-generado.json,ordinaria
+garciapenaborders,sin_evaluar,,,,,sin evaluar
+godreauscripts,sin_evaluar,,,,,sin evaluar
+castorspiritual,pendiente,,,,,pendiente
+alvarezboro,confirmado,c4,,,s01-generado.json,ordinaria
+londonoargonauts,confirmado,c5,c1|c4,,s01-generado.json,ordinaria
+crawfordturtlemen,pendiente,,,,,pendiente
+mitchellalibi,pendiente,,,,,pendiente
+allenvenceremos,sin_evaluar,,,,,sin evaluar
+williamscapitalismo,confirmado,c2,c4,,piloto-generado.json,ordinaria
+wynterblackmetamorphosis,confirmado,c8,c4,,decision-academica-wynterblackmetamorphosis-p2-etapa-2-3f.md,ordinaria
+mgsmithplural,sin_evaluar,,,,,sin evaluar
+rtsmithmatrifocal,pendiente,,,,,pendiente
+clarkemymother,sin_evaluar,,,,,sin evaluar
+barrowfamily,sin_evaluar,,,,,sin evaluar
+mintzpricebirth,pendiente,,,,,pendiente
+trouillottransformaciones,sin_evaluar,,,,,sin evaluar
+morenofraginals,confirmado,c2,c4,,a01-generado.json,ordinaria
+meeks_postcolonial,sin_evaluar,,,,,sin evaluar
+oostindiedecolonising,sin_evaluar,,,,,sin evaluar
+kloosterrealm,pendiente,,,,,pendiente
+hoeftesuriname,pendiente,,,,,pendiente
+hoeftetrajectories,sin_evaluar,,,,,sin evaluar
+bestlevitt,confirmado,c4,c7,,a01-generado.json,ordinaria
+duboisturits,pendiente,,,,,pendiente
+austinfearblack,pendiente,,,,,pendiente
+puriradical,pendiente,,,,,pendiente
+grenaderevolution,sin_evaluar,,,,,sin evaluar
+smithredblack,sin_evaluar,,,,,sin evaluar
+becklessavingsouls,pendiente,,,,,pendiente
+kalefragments,pendiente,,,,,pendiente
+shepherdmaharani,confirmado,c5,c4|c10,,a01-generado.json,ordinaria
+looklaichinese,pendiente,,,,,pendiente
+putnamradical,confirmado,c5,c7,,a02-generado.json,ordinaria
+harpellecostarica,confirmado,c5,c4|c7,,a02-generado.json,ordinaria
+bourgoisethnicity,confirmado,c4,,,piloto-generado.json,ordinaria
+legrandfrontier,sin_evaluar,,,,,sin evaluar
+keeganhofman,confirmado,c1,c5,,piloto-generado.json,ordinaria
+atkinsonearliest,confirmado,c1,,,decision-academica-atkinsonearliest-p2-etapa-2-3f.md,ordinaria
