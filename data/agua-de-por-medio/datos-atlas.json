@@ -1089,10 +1089,15 @@
       "l": "palenque",
       "tr": "hispano (Colombia)",
       "ap": "El estudio que fija la lengua palenquera como criollo con estatus propio, no como corrupción del español.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c3"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-friedemannlengua-p3-etapa-2-3k.md"
+      ]
     },
     {
       "id": "mamalola",
@@ -1926,10 +1931,15 @@
       "l": "haiti",
       "tr": "anglófono (EE.UU./Caribe)",
       "ap": "El Antropoceno caribeño leído desde el régimen colonial de movilidad: el terremoto de Haití y los huracanes no son eventos naturales aislados sino la forma que toma hoy la extracción que empezó con la plantación.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c5",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-islandfutures-p3-etapa-2-3k.md"
+      ]
     },
     {
       "id": "lara",
@@ -2853,10 +2863,13 @@
       "l": "haiti",
       "tr": "anglófono (EE.UU./Haití)",
       "ap": "Una antropóloga haitiana-estadounidense escribe desde adentro contra el relato mediático del terremoto de 2010 como caos sin agencia: Haití necesita otras historias, no otra intervención.",
-      "recorrido": null,
+      "recorrido": "c9",
       "recorridos_sec": [],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-ulyssewhyhaiti-p3-etapa-2-3k.md"
+      ]
     },
     {
       "id": "sharpewake",
