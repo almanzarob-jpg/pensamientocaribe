@@ -374,10 +374,15 @@
       "l": "jamaica",
       "tr": "anglófono (Antillas)",
       "ap": "La libertad pensada como fuga y no como estado: cimarronaje sociogénico, agencia esclava.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c3",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "decision-academica-roberts-p3-etapa-2-3h.md"
+      ]
     },
     {
       "id": "totumo",
@@ -796,10 +801,16 @@
       "l": "puertorico",
       "tr": "anglófono (PR)",
       "ap": "El desastre como revelador político de la relación colonial, no como evento natural.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c4",
+        "c6"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "decision-academica-aftershocks-p3-etapa-2-3h.md"
+      ]
     },
     {
       "id": "rodney",
@@ -983,9 +994,20 @@
       "tr": "anglófono (hoy EE.UU., antes colonia danesa)",
       "ap": "Tres siglos de vida afrocaribeña en una isla que cambió de imperio sin que sus habitantes dejaran de rehacer comunidad.",
       "recorrido": null,
-      "recorridos_sec": [],
-      "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "recorridos_sec": [
+        "c2"
+      ],
+      "arquitectura_recorrido": {
+        "tipo": "frontera_constitutiva",
+        "recorridos": [
+          "c4",
+          "c10"
+        ]
+      },
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "decision-academica-olwigstjohn-p3-etapa-2-3h.md"
+      ]
     },
     {
       "id": "hagedorn",
@@ -1634,10 +1656,15 @@
       "l": "costachica",
       "tr": "hispano (México)",
       "ap": "La etnografía fundacional de la negritud mexicana; nombra la Costa Chica como territorio afrodescendiente antes de que el Estado lo reconociera.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c4",
+      "recorridos_sec": [
+        "c2"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "decision-academica-cuijla-p3-etapa-2-3h.md"
+      ]
     },
     {
       "id": "chocolatecorn",
@@ -1974,10 +2001,15 @@
       "l": "cartagena",
       "tr": "hispano (Colombia)",
       "ap": "Colombia como una isla varada dentro de su propia nación: el Caribe colombiano leído no desde la pereza que le atribuye el relato andino sino desde una economía cafetera que lo dejó fuera del reparto, capital que cruzó su litoral sin quedarse.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c2"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "decision-academica-abello-p3-etapa-2-3h.md"
+      ]
     },
     {
       "id": "benitez",
@@ -2879,9 +2911,20 @@
       "tr": "neerlandófono (Curazao)",
       "ap": "Historia oral poscolonial curazoleña: documenta cómo la comunidad afrocurazoleña disputó, con sus propios términos culturales, el poder asimétrico del Estado, los antiguos amos y la Iglesia tras la abolición.",
       "recorrido": null,
-      "recorridos_sec": [],
-      "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "recorridos_sec": [
+        "c9"
+      ],
+      "arquitectura_recorrido": {
+        "tipo": "frontera_constitutiva",
+        "recorridos": [
+          "c4",
+          "c10"
+        ]
+      },
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "decision-academica-allen_dikimanera-p3-etapa-2-3h.md"
+      ]
     },
     {
       "id": "vanderpijl_equaliberty",
@@ -3271,9 +3314,20 @@
       "tr": "anglófono (Nueva Zelanda/Providencia)",
       "ap": "Respetabilidad y reputación: dos sistemas de valor en tensión, uno heredado de la norma colonial, el otro igualitario y local, que Wilson sitúa en el centro de la vida social caribeña. El canasto de cangrejos —la nivelación social, la competencia masculina en Providencia— le da cuerpo a esa dialéctica y funda un marco propio para pensar identidad y cultura popular en el archipiélago.",
       "recorrido": null,
-      "recorridos_sec": [],
-      "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "recorridos_sec": [
+        "c2"
+      ],
+      "arquitectura_recorrido": {
+        "tipo": "frontera_constitutiva",
+        "recorridos": [
+          "c4",
+          "c10"
+        ]
+      },
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "decision-academica-wilsoncrabantics-p3-etapa-2-3h.md"
+      ]
     },
     {
       "id": "gomezexperiential",
@@ -4802,10 +4856,15 @@
       "l": "suriname",
       "tr": "anglófono (EE.UU.)",
       "ap": "El ensayo que cambió la pregunta: no qué sobrevivió de África sino qué inventaron, y con qué rapidez, poblaciones arrancadas de sociedades distintas y obligadas a entenderse. El atlas tenía a Mintz y a Price por separado y no el texto que escribieron juntos.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c2"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "decision-academica-mintzpricebirth-p3-etapa-2-3h.md"
+      ]
     },
     {
       "id": "trouillottransformaciones",
@@ -4988,9 +5047,21 @@
       "tr": "anglófono (EE.UU.)",
       "ap": "Historia general de la región organizada alrededor de una idea: la libertad caribeña se pensó primero como acceso a la tierra y a la vida propia, no como ciudadanía abstracta. Sirve de texto-brújula junto al Trouillot de 1992 y al Knight.",
       "recorrido": null,
-      "recorridos_sec": [],
-      "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "recorridos_sec": [
+        "c2",
+        "c7"
+      ],
+      "arquitectura_recorrido": {
+        "tipo": "frontera_constitutiva",
+        "recorridos": [
+          "c3",
+          "c4"
+        ]
+      },
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "decision-academica-duboisturits-p3-etapa-2-3h.md"
+      ]
     },
     {
       "id": "austinfearblack",
