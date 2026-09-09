@@ -401,18 +401,18 @@ function validateRecorridoArchitecture(work) {
     }
     if (arquitectura.tipo === "sin_principal_clasificable") {
       // decision-normativa-sin-principal-clasificable-atlas-2.md: esta categoría exige un caso
-      // académicamente cerrado, no una lectura pendiente ni un atajo de clasificación. La regla
-      // es deliberadamente estricta (revisión de la Etapa 2.3J): no autoriza recorridos_sec,
-      // a diferencia de frontera_constitutiva, porque aquí no hay recorrido principal al que
-      // una secundaria pueda subordinarse.
+      // académicamente cerrado, no una lectura pendiente ni un atajo de clasificación.
+      // decision-normativa-sin-principal-con-dimensiones-p3-etapa-2-3j.md: recorridos_sec admite
+      // 0 a 2 elementos bajo esta arquitectura (antes exigía arreglo vacío sin excepción). La
+      // subordinación ya no exige un recorrido principal: exige una decisión académica que
+      // documente, por cada elemento, sustantividad segmentaria y la doble prueba de retirada
+      // (destructiva o fuertemente degradante en su segmento; no destructiva para el libro
+      // completo) — condición académica que este validador no puede verificar por sí solo.
       if (arquitectura.recorridos.length !== 0) {
         report.error("SIN_PRINCIPAL_CLASIFICABLE", `${work.id}: sin_principal_clasificable no admite recorridos estructurantes.`);
       }
       if (recorrido !== null && recorrido !== undefined) {
         report.error("SIN_PRINCIPAL_CLASIFICABLE", `${work.id}: sin_principal_clasificable exige recorrido: null.`);
-      }
-      if (!Array.isArray(recorridosSec) || recorridosSec.length !== 0) {
-        report.error("SIN_PRINCIPAL_CLASIFICABLE", `${work.id}: sin_principal_clasificable exige recorridos_sec: [] — no autoriza secundarias contextuales.`);
       }
       if (estado !== "confirmado") {
         report.error("SIN_PRINCIPAL_CLASIFICABLE", `${work.id}: sin_principal_clasificable exige estado_recorrido "confirmado" — no puede quedar pendiente ni usarse como atajo de lectura incompleta.`);
