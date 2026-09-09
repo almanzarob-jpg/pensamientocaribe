@@ -1126,9 +1126,20 @@
       "tr": "anglófono (Jamaica/R.U.)",
       "ap": "Tenencia de tierra campesina jamaicana como forma de contrademanda frente a la plantación; parentesco y tierra como soberanía cotidiana.",
       "recorrido": null,
-      "recorridos_sec": [],
-      "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "recorridos_sec": [
+        "c2"
+      ],
+      "arquitectura_recorrido": {
+        "tipo": "frontera_constitutiva",
+        "recorridos": [
+          "c4",
+          "c10"
+        ]
+      },
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "decision-academica-besson-p3-etapa-2-3i.md"
+      ]
     },
     {
       "id": "taylor",
@@ -1233,10 +1244,15 @@
       "l": "suriname",
       "tr": "anglófono (EE.UU./Surinam neerlandés)",
       "ap": "La primera etnografía de un pueblo cimarrón de las Américas; funda el campo que Price retomará setenta años después.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c3",
+      "recorridos_sec": [
+        "c9"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "decision-academica-rebeldestiny-p3-etapa-2-3i.md"
+      ]
     },
     {
       "id": "tellmyhorse",

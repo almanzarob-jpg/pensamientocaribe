@@ -1,0 +1,39 @@
+# Apertura de control · Sublote P3-B · Etapa 2.3I
+
+**Universo.** P3-B son 10 casos, tomados sin alteración del orden y la lista fijados en `apertura-recalibracion-p3-etapa-2-3g.md` §18: `rebeldestiny`, `besson`, `rtsmithmatrifocal`, `sharpewake`, `zonabananera`, `dubuissonhaiti`, `fouchard`, `mintz`, `casimir`, `shellererotic`. Orden interno seguido: 1→6, luego 7, 9, 10, dejando `mintz` al final por depender de una política editorial pendiente (`decisiones-pendientes.md` §6), tal como recomienda §18.
+
+**Método.** Inventario en una sola pasada: existencia de fuente en `Biliografia` (Google Drive local), existencia de expediente previo (lectura o decisión ya redactada), estado actual en `datos-atlas.json`/`.js`, y anomalías detectables sin interpretación académica de la obra.
+
+| # | Caso | Fuente completa | Expediente previo | Estado JSON | Recorrido actual | Anomalía inicial | Condición |
+|---|---|---|---|---|---|---|---|
+| 1 | `rebeldestiny` | Sí — *Rebel Destiny* (Herskovits & Herskovits, 1934), PDF completo (424 pp.) | No | Sincronizado, `pendiente` | `null` | Ninguna | LISTO |
+| 2 | `besson` | Sí — *Martha Brae's Two Histories* (Besson, 2002), PDF completo (438 pp.) | No | Sincronizado, `pendiente` | `null` | Ninguna | LISTO |
+| 3 | `rtsmithmatrifocal` | Sí — *The Matrifocal Family* (R. T. Smith, 1996), PDF completo (247 pp.) | No | Sincronizado, `pendiente` | `null` | Es una colección de ensayos de distintas décadas; el propio subtítulo ("Power, Pluralism, and Politics") y la introducción anuncian ejes que exceden el parentesco (pluralismo étnico y política nacional en Guyana, un estudio comparado de pobreza urbana en EE. UU.) | LISTO (procesado parcialmente, ver §3 más abajo — requiere continuar la lectura antes de decisión) |
+| 4 | `sharpewake` | Sí — *In the Wake* (Sharpe, 2016), PDF completo | No | Sincronizado, `pendiente` | `null` | Ninguna detectada en esta fase de inventario | LISTO |
+| 5 | `zonabananera` | Sí — "Geografías negras zona bananera_Nov 21.docx" (`Proyectos /Geografias negras/`) | No | Sincronizado, `pendiente` | `null` | Coautoría de Roberto Almanza y Margarita Granados Castellanos, ya señalada como nota de transparencia en `apertura-recalibracion-p3-etapa-2-3g.md` §18; esa auditoría explícitamente no decidió si aplica un protocolo especial de lectura por autoría propia | REVISAR EXPEDIENTE — pendiente de que Dirección Académica autorice el protocolo de lectura antes de abrirlo |
+| 6 | `dubuissonhaiti` | Sí — *Reclaiming Haiti's Futures* (Dubuisson, 2024), PDF completo | No | Sincronizado, `pendiente` | `null` | Ninguna | LISTO |
+| 7 | `fouchard` | **No localizada** — confirmado en esta pasada (`Fouchard`, `marrons de la liberté` sin resultado en `Biliografia`) | No | Sincronizado, `pendiente` | `null` | Bloqueo bibliográfico, ya documentado en §18 | BLOQUEADO |
+| 8 | `mintz` | **Parcial** — localizada *Dulzura y poder* (trad. esp. de *Sweetness and Power*, 1985); no localizada *Caribbean Transformations* | No | Sincronizado, `pendiente`, pero `fuente_recorrido: ["piloto-generado.json"]` — valor residual de una generación automática de un piloto anterior, no una fuente académica real | `null` | Entrada compuesta (dos títulos bajo un id) sujeta a una decisión de política editorial todavía no tomada (`decisiones-pendientes.md` §6); `fuente_recorrido` actual no debe tratarse como fuente válida | FUENTE PARCIAL — se deja al final del sublote, como recomienda §18 |
+| 9 | `casimir` | **No localizada** — confirmado en esta pasada | No | Sincronizado, `pendiente` | `null` | Bloqueo bibliográfico, ya documentado en §18; la recalibración de prioridad de P1 a P3 se sostiene, lo que falta es la fuente | BLOQUEADO |
+| 10 | `shellererotic` | **No localizada** — confirmado en esta pasada (solo se encontraron otras obras de Sheller con título distinto: *Consuming the Caribbean*, *Island Futures*) | No | Sincronizado, `pendiente` | `null` | Bloqueo bibliográfico, ya documentado en §18 | BLOQUEADO |
+
+**Verificación en una sola pasada (§4 del procedimiento):**
+- Coincidencia JSON/JS: verificada por los cuatro validadores del repositorio, 0 errores, antes de tocar ningún caso de P3-B (línea base).
+- Expedientes previos: ninguno de los 10 casos tiene `lectura-*` ni `decision-academica-*` previa. P3-B parte de cero documentalmente.
+- Fuentes: 6 completas, 1 parcial, 3 no localizadas (bloqueadas). Coincide con lo ya anticipado en §18.
+- Casos implementados sin decisión: ninguno — los 10 tienen `recorrido: null`, `estado_recorrido: "pendiente"`, sin arquitectura previa.
+- Duplicaciones sospechosas de arquitectura: no aplica todavía — ninguno tiene arquitectura implementada.
+
+**No se hizo interpretación académica de las obras en esta fase**, salvo la lectura ya iniciada de `rtsmithmatrifocal` (caso 3), que se iba a abrir en el primer ciclo y cuya condición de "colección de ensayos" se detectó al revisar su introducción, no por juicio de clasificación.
+
+## Gestión de acceso acumulada
+
+Se acumulan para tratamiento separado, sin gastar más tiempo en esta sesión: `fouchard`, `casimir`, `shellererotic` (bloqueo bibliográfico) y la decisión de política editorial para entradas compuestas que condiciona a `mintz` (`decisiones-pendientes.md` §6).
+
+## Estado
+
+`P3_B_APERTURA_COMPLETADA`
+`6_CASOS_LISTOS` (`rebeldestiny`, `besson`, `rtsmithmatrifocal`, `sharpewake`, `zonabananera` con reserva de protocolo, `dubuissonhaiti`)
+`3_CASOS_BLOQUEADOS` (`fouchard`, `casimir`, `shellererotic`)
+`1_CASO_FUENTE_PARCIAL` (`mintz`)
+`1_CASO_PENDIENTE_DE_AUTORIZACION_DE_PROTOCOLO` (`zonabananera`)
