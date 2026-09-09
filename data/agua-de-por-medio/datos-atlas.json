@@ -1333,8 +1333,18 @@
       "ap": "Comparatismo del cimarronaje jamaicano frente al de Surinam: identidad maroon como tratado, no solo como origen.",
       "recorrido": null,
       "recorridos_sec": [],
-      "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "arquitectura_recorrido": {
+        "tipo": "frontera_constitutiva",
+        "recorridos": [
+          "c3",
+          "c9"
+        ]
+      },
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "rojo-truebornmaroons-p3-etapa-2-3k.md",
+        "ampliacion-truebornmaroons-frontera-c3-c9-p3-etapa-2-3k.md"
+      ]
     },
     {
       "id": "palmiewizards",
@@ -1639,10 +1649,13 @@
       "l": "trinidad",
       "tr": "anglófono (Trinidad/EE.UU.)",
       "ap": "El Caribe indoantillano, descendiente de la indentura, piensa su mezcla racial con las mismas metáforas culinarias que Glissant piensa la Relación.",
-      "recorrido": null,
+      "recorrido": "c8",
       "recorridos_sec": [],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-callaloonation-p3-etapa-2-3k.md"
+      ]
     },
     {
       "id": "reconfdominic",
@@ -3874,10 +3887,15 @@
       "l": "cartagena",
       "tr": "hispano (Suiza/Colombia)",
       "ap": "Dos generaciones antes de ¡Nunca más esclavos!, Helg reconstruye el Caribe neogranadino desde la frontera colonial hasta la primera república: cómo la retórica de igualdad de la independencia convivió con la exclusión racial de facto. Reconoce explícitamente el trabajo de Múnera por haber sacado de la invisibilidad a líderes mulatos como Pedro Romero, artesano que organizó a la Cartagena de color contra España en 1811.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c3"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-helglibertyequality-p3-etapa-2-3k.md"
+      ]
     },
     {
       "id": "brathwaitearchipelago",
