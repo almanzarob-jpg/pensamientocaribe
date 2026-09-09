@@ -1,5 +1,7 @@
 # Decisión académica compacta · `rtsmithmatrifocal` · P3-B · Etapa 2.3J
 
+**Estado del documento: REVISADA por adjudicación de direccionalidad (§10).** Los §§1–9 documentan correctamente la evidencia probatoria (tesis del volumen, resultados de dependencia C10→C7 y C7→C10, control C4, prueba del método transversal) y esa evidencia queda sin cambios. Lo que estaba mal formado era la inferencia entre esa evidencia y la jerarquía principal/secundaria: los §§6 y 9 originales concluían C10 principal a partir de la secuencia editorial del volumen (Parte Uno antes que Parte Dos), no a partir de la definición normativa de recorrido principal. El §10 corrige esa inferencia sin reabrir la evidencia. La arquitectura vigente es la del §10, no la del §6.
+
 **Objeto.** *The Matrifocal Family: Power, Pluralism, and Politics* (Raymond T. Smith, 1996). Once ensayos publicados entre 1956 y 1996, reorganizados por Smith en dos partes ("Kinship and Family Structure" / "Conflict and Difference: Race, Culture, and Politics") para el volumen. Este documento resuelve exclusivamente la arquitectura C1–C10, tras la corrección metodológica de la prueba de frontera ordenada por Dirección Académica. No repite la historia de la lectura, ya documentada en `lectura-rtsmithmatrifocal-p3-etapa-2-3j.md`.
 
 ## 1. Tesis del volumen de 1996
@@ -50,4 +52,28 @@ Ninguna. La prueba del método transversal (§5) resultó en afinidad metodológ
 ]
 ```
 
-**Estado.** `DECISION_ACADEMICA_EMITIDA` / `C10_PRINCIPAL_C7_SECUNDARIA_C4_SECUNDARIA` / `SIN_RESERVA_CONCEPTUAL` / `IMPLEMENTADA`.
+## 10. Adjudicación final de direccionalidad
+
+**10.1 Definición normativa de principal.** Decisión normativa 4 del contrato de datos: recorrido principal es "el recorrido que organiza la arquitectura causal, interpretativa o valorativa central del argumento de una obra." El criterio es explicativo — qué corriente hace el trabajo causal — no editorial, cronológico ni de extensión.
+
+**10.2 C10 depende de C7: resultado.** NO puede explicarse adecuadamente sin C7. Confirmado en §2: la forma familiar (matrifocalidad, sistema dual de matrimonio) no se explica en el cap. 5 por sí misma ni por continuidad cultural; se explica como producto directo de la jerarquía racial, la estructura de clase y el poder colonial. Retirar C7 deja sin mecanismo explicativo al argumento sobre la familia.
+
+**10.3 C7 depende de C10: resultado.** SÍ puede sostenerse sin la teoría de parentesco de la Parte Uno. Confirmado en §3: los caps. 8, 9 y 11 construyen su argumento sobre casta, clase, raza y etnicidad con aparato propio (economía política de plantación, ideología racial, crítica al Informe Moynihan como caso nuevo), sin necesitar ni citar los hallazgos específicos sobre matrifocalidad de la Parte Uno.
+
+**10.4 Centralidad editorial contra centralidad explicativa.** El §6 original confundió las dos. Centralidad editorial: la familia da título al volumen, la Parte Uno aparece primero, la introducción presenta el parentesco como el punto de partida "más íntimo." Ninguno de estos hechos es un criterio válido según el contrato (§1 de la instrucción de Dirección Académica lo excluye expresamente). Centralidad explicativa: la corriente sin la cual el mecanismo general deja de funcionar. Por 10.2–10.3, ese mecanismo es raza/clase/jerarquía colonial (C7): es la variable invariante que produce tanto la forma familiar (Parte Uno) como las formas de etnicidad, pluralismo y conflicto político (Parte Dos); el parentesco, en cambio, es uno de los dos dominios a los que ese mecanismo se aplica, no la fuente del mecanismo. La tesis transversal del volumen corresponde, por tanto, a la opción B del §4 de la instrucción: una crítica estructural de cómo raza, clase y poder colonial/poscolonial producen diferencias sociales que se naturalizan como familia, etnicidad o cultura — no una teoría de la familia que luego se amplía hacia la política.
+
+**10.5 Decisión final.** `SALIDA B` — C7 principal / C10 secundaria / C4 secundaria. La asimetría de dependencia (10.2–10.3) es exactamente la que exige el contrato para asignar principalidad: C7 organiza la arquitectura causal del argumento en las dos partes del volumen; C10 es el dominio en el que ese mecanismo se demuestra primero, sin ser su origen. `FRONTERA_CONSTITUTIVA(C10,C7)` sigue descartada porque la dependencia no es recíproca (§§2–3, sin cambios). `SIN_PRINCIPAL_CLASIFICABLE` sigue descartada porque C7 supera con claridad la prueba de organización. C4 se mantiene como segunda secundaria: el control C4 (§4) no se reabre y su resultado —sustantiva pero subordinada— es compatible con cualquiera de las dos jerarquías.
+
+**10.6 Bloque de datos definitivo**, que sustituye al del §9:
+```json
+"recorrido": "c7",
+"recorridos_sec": ["c10", "c4"],
+"arquitectura_recorrido": null,
+"estado_recorrido": "confirmado",
+"fuente_recorrido": [
+  "decision-academica-rtsmithmatrifocal-p3-etapa-2-3j.md",
+  "lectura-rtsmithmatrifocal-p3-etapa-2-3j.md"
+]
+```
+
+**Estado.** `DECISION_ACADEMICA_REVISADA` / `C7_PRINCIPAL_C10_SECUNDARIA_C4_SECUNDARIA` / `SIN_RESERVA_CONCEPTUAL` / `IMPLEMENTADA`.
