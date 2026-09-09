@@ -43,12 +43,17 @@ Se acumulan para tratamiento separado, sin gastar más tiempo en esta sesión: `
 ## Estado
 
 `P3_B_APERTURA_COMPLETADA`
-`5_CASOS_LISTOS` (`rebeldestiny`, `besson`, `rtsmithmatrifocal`, `sharpewake`, `dubuissonhaiti`)
-`1_CASO_CON_FUENTE_DISPONIBLE_PENDIENTE_DE_PROTOCOLO` (`zonabananera` — no cuenta como LISTO: tiene fuente pero no puede abrirse sin que Dirección Académica autorice el protocolo de lectura por autoría propia)
+`3_CASOS_RESUELTOS` (`rebeldestiny`, `besson`, `rtsmithmatrifocal`)
+`2_CASOS_LISTOS_PARA_PROCESAR` (`sharpewake`, `dubuissonhaiti`)
+`1_CASO_PENDIENTE_DE_PROTOCOLO` (`zonabananera` — tiene fuente pero no puede abrirse sin que Dirección Académica autorice el protocolo de lectura por autoría propia)
 `3_CASOS_BLOQUEADOS` (`fouchard`, `casimir`, `shellererotic`)
 `1_CASO_FUENTE_PARCIAL_POLITICA_EDITORIAL_PENDIENTE` (`mintz`)
 
-**Corrección de conteo (Etapa 2.3J):** la versión anterior de este acta contaba `zonabananera` simultáneamente como uno de los "casos listos" (con una nota "con reserva de protocolo") y, aparte, como el caso pendiente de autorización — un doble conteo. Queda corregido: `zonabananera` es exclusivamente el caso con fuente disponible pero pendiente de protocolo; no forma parte de los 5 listos. El total de los diez sigue siendo diez: 5 listos + 1 pendiente de protocolo + 3 bloqueados + 1 fuente parcial.
+Total: 10. Ningún caso figura simultáneamente como RESUELTO y LISTO.
+
+**Corrección de conteo (Etapa 2.3J):** la versión anterior de este acta contaba `zonabananera` simultáneamente como uno de los "casos listos" (con una nota "con reserva de protocolo") y, aparte, como el caso pendiente de autorización — un doble conteo. Queda corregido: `zonabananera` es exclusivamente el caso con fuente disponible pero pendiente de protocolo.
+
+**Saneamiento del estado operativo (Etapa 2.3J, segunda pasada):** la distribución `5_CASOS_LISTOS` quedó obsoleta en cuanto `rebeldestiny`, `besson` y `rtsmithmatrifocal` pasaron de LISTO a RESUELTO; se sustituye por la distribución efectiva de arriba, que separa RESUELTOS de LISTOS_PARA_PROCESAR.
 
 ## Cierre del primer microlote (Etapa 2.3J)
 
