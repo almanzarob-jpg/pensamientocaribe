@@ -1,5 +1,7 @@
 # Decisión académica compacta · `sharpewake` · P3-B · Etapa 2.3J
 
+**Estado del documento: REVISADA por adjudicación C9/C2 (§9).** Los §§1–8 reconstruyen correctamente la arquitectura interna de Sharpe y el repertorio de candidatas; esa evidencia no cambia. Lo que estaba mal calibrado era la prueba de retirada de C2 (§2, fila C2) y, en consecuencia, la elección entre principal/secundaria y frontera (§§3, 6): la retirada de C2 se había probado sobre "la trata como referente histórico literal" en vez de sobre "la esclavitud entendida como singularidad histórica que continúa estructurando el presente" — el objeto que el propio §1 ya había identificado como la tesis del libro. Corregida esa prueba, la relación con C9 resulta simétrica, no jerárquica. El §9 corrige la arquitectura sin reabrir la lectura. La arquitectura vigente es la del §9, no la del §6.
+
 **Objeto.** Christina Sharpe, *In the Wake: On Blackness and Being* (Duke University Press, 2016). Cuatro capítulos ("The Wake", "The Ship", "The Hold", "The Weather") y una coda breve. Lectura dirigida mínima: capítulo 1 completo (funciona como introducción conceptual del libro — no hay una sección separada llamada "Introduction" en la tabla de contenidos), apertura y cierre de los capítulos 2–4, coda completa, pasajes definitorios de *wake*, *wake work*, *ship*, *hold* y *weather*.
 
 ## 1. Arquitectura interna de Sharpe (antes de C1–C10)
@@ -69,4 +71,33 @@ Ninguna. Formulado primero en el vocabulario de Sharpe: *"la obra organiza su ar
 ]
 ```
 
-**Estado.** `DECISION_ACADEMICA_EMITIDA` / `C9_PRINCIPAL_C2_C5_SECUNDARIAS` / `SIN_RESERVA_CONCEPTUAL` / `IMPLEMENTADA`.
+**Estado.** `DECISION_ACADEMICA_EMITIDA` / `C9_PRINCIPAL_C2_C5_SECUNDARIAS` / `SIN_RESERVA_CONCEPTUAL` / `IMPLEMENTADA` — **superado por §9.**
+
+## 9. Adjudicación final C9/C2 y reserva conceptual
+
+**9.1 Retirada de C2, prueba corregida.** Objeto de la prueba: no "la trata como referente histórico" sino la tesis exacta del §1 — *"la esclavitud entendida como singularidad histórica que continúa estructurando el presente negro."* Retirar eso destruye el libro entero: *wake*, *ship*, *hold* y *weather* son glosas distintas de esa misma continuidad ("slavery was not singular; it was, rather, a singularity"; "Emancipation did not make free Black life free; it continues to hold us in that singularity"). Sin esa continuidad no hay objeto del que *wake work* se ocupe. Resultado: **DESTRUCTIVA** (revoca el resultado ESTRUCTURAL del §2).
+
+**9.2 Retirada de C9.** Pregunta: ¿la tesis de la esclavitud como estructura persistente hace sola todo el trabajo interpretativo, sin *wake work*, contraarchivo, transmisión, cuidado, memoria viva? No: diagnosticar que la esclavitud persiste como estructura es un argumento historiográfico que el libro comparte con otros estudios negros; lo que hace específicamente este libro —el rechazo del duelo freudiano y del monumento/archivo estatal, el "Ruttier" de Brand, *Zong!*, la rememoria, el cuidado como método— es *wake work*. Sin C9 la continuidad de la esclavitud queda diagnosticada pero no adquiere "la forma epistemológica, ética y política que constituye el argumento específico del libro." Resultado: **DESTRUCTIVA**.
+
+**9.3 Direccionalidad.** No hay asimetría: C2 (la esclavitud como singularidad persistente — objeto/condición) y C9 (*wake work* — mecanismo interpretativo y respuesta epistemológica) se necesitan en sentidos distintos y ninguna se reduce a la otra. Sin la continuidad de la esclavitud no existe aquello que Sharpe llama *wake*; sin *wake work* esa continuidad no adquiere la forma específica del argumento de Sharpe, y queda como tesis historiográfica general. Ninguna puede degradarse a secundaria sin falsear la arquitectura: es `FRONTERA_CONSTITUTIVA(C2,C9)`, no principal/secundaria en ningún sentido.
+
+**9.4 Control de C5.** Pregunta: ¿rutas, mar, Pasaje Medio, estela y territorios acuosos son una dimensión sustantiva subordinada, o el campo metafórico/material mediante el cual Sharpe formula *wake*? Es lo segundo: *wake* es literalmente la estela de un barco en el agua y "residence time" es un término oceanográfico adoptado como figura, pero el libro no tiene como operación "seguir una ruta" ni "comparar orillas" (vocabulario de `catalogos-atlas-2.json`) — el mar es el vehículo con el que se dice la frontera C2/C9, no un tercer eje que la obra necesite para sostener su argumento. Resultado: **CONTEXTUAL** (se retira del rango de secundaria fijado en el §8 original).
+
+**9.5 Reserva conceptual, prueba corregida.** Pregunta correcta: ¿pueden C1–C10 representar sin pérdida significativa la operación de *wake work*, reconstruida como relación entre continuidad no terminada de la esclavitud, existencia negra en el presente, vigilancia/wakefulness, cuidado, conocimiento, duelo imposible de cerrar, ruptura del archivo y el monumento, e imaginación de vida negra? Esa operación se distribuye completa entre los dos términos de la frontera: continuidad de la esclavitud, existencia negra en el presente y duelo imposible de cerrar caen del lado de C2 (la condición no ha terminado, así que no hay "cierre" que hacer); vigilancia, cuidado, conocimiento, ruptura del archivo/monumento e imaginación de vida negra caen del lado de C9 (el mecanismo). No queda un residuo que ninguno de los dos términos, ni su combinación en frontera, alcance a nombrar. **SIN RESERVA CONCEPTUAL.**
+
+**9.6 Distinción frente a los precedentes (§6 original).** `sharpewake` no repite ni a `cuijla` (clasificación válida más excedente conceptual que se registra aparte) ni a `rebeldestiny` (ningún principal clasificable). Es un tercer caso: dos corrientes mutuamente indispensables cuya combinación representa la arquitectura completa de la obra — clasificación válida, en frontera, sin reserva.
+
+**9.7 Decisión final de arquitectura.** `FRONTERA_CONSTITUTIVA(C2,C9)`. Sin secundarias: C5 queda contextual (9.4) y ninguna otra candidata superó CONTEXTUAL en el §2 original.
+
+**9.8 Bloque de datos definitivo**, que sustituye al del §8:
+```json
+"recorrido": null,
+"recorridos_sec": [],
+"arquitectura_recorrido": {"tipo": "frontera_constitutiva", "recorridos": ["c2", "c9"]},
+"estado_recorrido": "confirmado",
+"fuente_recorrido": [
+  "decision-academica-sharpewake-p3-etapa-2-3j.md"
+]
+```
+
+**Estado.** `DECISION_ACADEMICA_REVISADA` / `FRONTERA_CONSTITUTIVA_C2_C9` / `SIN_RESERVA_CONCEPTUAL` / `IMPLEMENTADA`.
