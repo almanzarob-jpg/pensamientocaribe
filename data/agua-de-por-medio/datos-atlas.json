@@ -1244,14 +1244,17 @@
       "l": "suriname",
       "tr": "anglófono (EE.UU./Surinam neerlandés)",
       "ap": "La primera etnografía de un pueblo cimarrón de las Américas; funda el campo que Price retomará setenta años después.",
-      "recorrido": "c3",
-      "recorridos_sec": [
-        "c9"
-      ],
-      "arquitectura_recorrido": null,
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": {
+        "tipo": "sin_principal_clasificable",
+        "recorridos": []
+      },
       "estado_recorrido": "confirmado",
       "fuente_recorrido": [
-        "decision-academica-rebeldestiny-p3-etapa-2-3i.md"
+        "decision-academica-rebeldestiny-p3-etapa-2-3i.md",
+        "dictamen-metodologico-rebeldestiny-p3-etapa-2-3i.md",
+        "decision-normativa-sin-principal-clasificable-atlas-2.md"
       ]
     },
     {

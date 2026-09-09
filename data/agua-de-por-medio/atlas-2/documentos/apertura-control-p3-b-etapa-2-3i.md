@@ -26,6 +26,16 @@
 
 **No se hizo interpretación académica de las obras en esta fase**, salvo la lectura ya iniciada de `rtsmithmatrifocal` (caso 3), que se iba a abrir en el primer ciclo y cuya condición de "colección de ensayos" se detectó al revisar su introducción, no por juicio de clasificación.
 
+## Reservas conceptuales — inventario (P3-B, en curso)
+
+Este inventario sigue la misma estructura procedimental que `cierre-lote-p2-etapa-2-3f.md` §4 y `cierre-p3-a-etapa-2-3h.md` §5bis usaron para P2 y P3-A respectivamente — una tabla dentro del acta del sublote, no un campo nuevo en `datos-atlas.json`. Se actualiza a medida que P3-B avanza y se consolidará, con el resto del sublote, en el acta de cierre correspondiente.
+
+| Caso | Estado | Descripción | Clasificación operativa vigente | Consecuencia | Condición de reevaluación | Prohibición provisional |
+|---|---|---|---|---|---|---|
+| `rebeldestiny` | `SIN_PRINCIPAL_CLASIFICABLE` (categoría normativa nueva, ver `decision-normativa-sin-principal-clasificable-atlas-2.md`) | El vocabulario C1–C10 no captura el principio transversal mediante el cual *Rebel Destiny* articula persistencia y reinterpretación de africanismos a través de dominios heterogéneos (duelo/muerte, parentesco clasificatorio, gobierno, oficios, arte, folclor, religión); dos de esos dominios (folclor/oralidad, arte/talla) no tienen corriente propia en C1–C10. A diferencia de `cuijla`, aquí ninguna corriente individual (C3, C9, C10) satisface la prueba de retirada que exige el recorrido principal: no hay clasificación operativa válida a la que la reserva se añada como excedente | Ninguna — `recorrido: null`, `arquitectura_recorrido: {"tipo":"sin_principal_clasificable"}` | La ausencia de principal es aquí la conclusión académica misma, no una limitación de la implementación (a diferencia de `cuijla`, donde C4/C2 sí clasificaban y solo faltaba el mecanismo de registro de la reserva) | Acumulación de evidencia comparativa de otros casos del corpus que documenten una tensión equivalente entre el vocabulario C1–C10 y un principio organizador transversal sin corriente candidata viable | No crear una corriente nueva (C11) a partir de este único caso; no reclasificar por analogía otros casos del corpus sin lectura y prueba de retirada propias |
+
+**Fuente:** `lectura-rebeldestiny-p3-etapa-2-3i.md`, AMPLIACIÓN DIRIGIDA; `dictamen-metodologico-rebeldestiny-p3-etapa-2-3i.md`; `decision-academica-rebeldestiny-p3-etapa-2-3i.md`; `decision-normativa-sin-principal-clasificable-atlas-2.md`.
+
 ## Gestión de acceso acumulada
 
 Se acumulan para tratamiento separado, sin gastar más tiempo en esta sesión: `fouchard`, `casimir`, `shellererotic` (bloqueo bibliográfico) y la decisión de política editorial para entradas compuestas que condiciona a `mintz` (`decisiones-pendientes.md` §6).

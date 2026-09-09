@@ -537,3 +537,27 @@ FASE_5A_D_DECISION_NORMATIVA_Y_CONTRATO_APROBADOS — LISTO_PARA_INSTRUCCION_TEC
 ```
 
 No se sincroniza todavía.
+
+---
+
+## 26. Addendum — Etapa 2.3J: tercer tipo de `arquitectura_recorrido`
+
+**Fecha:** 9 de septiembre de 2026. **Instancia que decide:** Dirección Académica de Pensamiento Caribe, a partir de la adjudicación metodológica del caso `rebeldestiny` (P3-B).
+
+Este addendum no reabre ni modifica los §1–25: el contrato de Fase 5A-D permanece vigente en su forma original. Extiende puntualmente dos de sus decisiones normativas para cubrir un caso que la Fase 5A-D no anticipó — una obra evaluada académicamente para la cual ninguna corriente C1–C10 satisface la definición de recorrido principal (§9), y que tampoco es frontera constitutiva (§4) ni síntesis multicorriente (§6).
+
+La resolución completa, su justificación y las alternativas descartadas están en `decision-normativa-sin-principal-clasificable-atlas-2.md`. En síntesis:
+
+**Se extiende §8 (forma del campo `arquitectura_recorrido`)** con un tercer valor de `tipo`:
+
+```json
+"arquitectura_recorrido": { "tipo": "sin_principal_clasificable", "recorridos": [] }
+```
+
+**Se extiende §9 (recorrido principal)**: la excepción "`null` cuando la obra tenga arquitectura especial" incluye ahora este tercer tipo, además de frontera constitutiva y síntesis multicorriente.
+
+La categoría `SIN_PRINCIPAL_CLASIFICABLE` exige, sin excepción: lectura probatoria suficiente, prueba de retirada aplicada a cada corriente candidata, ausencia demostrada de frontera constitutiva y de síntesis multicorriente, `estado_recorrido: "confirmado"` y `fuente_recorrido` con trazabilidad documental — nunca puede usarse para cerrar una lectura incompleta ni como sustituto de `pendiente`. El detalle normativo completo, incluida la regla para casos futuros, está en el documento citado.
+
+```
+FASE_5A_D_CONTRATO_VIGENTE — EXTENDIDO_POR_ADDENDUM_2_3J_SIN_PRINCIPAL_CLASIFICABLE
+```

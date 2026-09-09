@@ -38,6 +38,14 @@ const listIds = (values, limit = 12) => {
   const head = values.slice(0, limit).join(", ");
   return values.length > limit ? `${head} (+${values.length - limit})` : head;
 };
+
+// Campos 2.0 de arquitectura de recorridos (decision-normativa-contrato-recorridos-fase-5a-d.md
+// y decision-normativa-sin-principal-clasificable-atlas-2.md). Los ids de corriente se validan
+// por forma (c1..c10), no contra un catálogo cargado aparte, porque el catálogo de corrientes
+// vive en catalogos-atlas-2.json y este script valida solo datos-atlas.json/.js.
+const RECORRIDO_ID = /^c([1-9]|10)$/;
+const ARQUITECTURA_TIPOS = new Set(["frontera_constitutiva", "sintesis_multicorriente", "sin_principal_clasificable"]);
+const ESTADO_RECORRIDO_VALORES = new Set(["confirmado", "preliminar", "pendiente", "sin_evaluar"]);
 const pendingSource = (source) => /por corroborar/i.test(source || "");
 
 const PROCEDENCIAS = new Set([
@@ -357,6 +365,65 @@ function validateLanguagesAndTime(work) {
   }
 }
 
+function validateRecorridoArchitecture(work) {
+  const { recorrido, recorridos_sec: recorridosSec, arquitectura_recorrido: arquitectura, estado_recorrido: estado, fuente_recorrido: fuente } = work;
+
+  if (recorrido !== undefined && recorrido !== null && !RECORRIDO_ID.test(recorrido)) {
+    report.error("RECORRIDO", `${work.id}: recorrido principal inválido ${recorrido}.`);
+  }
+  if (recorridosSec !== undefined) {
+    if (!Array.isArray(recorridosSec) || recorridosSec.length > 2) {
+      report.error("RECORRIDOS_SEC", `${work.id}: recorridos_sec debe ser una lista de máximo dos.`);
+    } else {
+      for (const sec of recorridosSec) {
+        if (!RECORRIDO_ID.test(sec)) report.error("RECORRIDOS_SEC", `${work.id}: recorrido secundario inválido ${sec}.`);
+        if (sec === recorrido) report.error("RECORRIDOS_SEC", `${work.id}: el recorrido principal se repite como secundario.`);
+      }
+    }
+  }
+  if (estado !== undefined && !ESTADO_RECORRIDO_VALORES.has(estado)) {
+    report.error("ESTADO_RECORRIDO", `${work.id}: estado_recorrido inválido ${estado}.`);
+  }
+
+  if (arquitectura !== undefined && arquitectura !== null) {
+    if (!isObject(arquitectura) || !ARQUITECTURA_TIPOS.has(arquitectura.tipo) || !Array.isArray(arquitectura.recorridos)) {
+      report.error("ARQUITECTURA_RECORRIDO", `${work.id}: arquitectura_recorrido mal formada.`);
+      return;
+    }
+    for (const r of arquitectura.recorridos) {
+      if (!RECORRIDO_ID.test(r)) report.error("ARQUITECTURA_RECORRIDO", `${work.id}: arquitectura_recorrido cita un recorrido inexistente ${r}.`);
+    }
+    if (arquitectura.tipo === "frontera_constitutiva" && arquitectura.recorridos.length !== 2) {
+      report.error("FRONTERA_CONSTITUTIVA", `${work.id}: frontera_constitutiva exige exactamente dos recorridos (decision-normativa-contrato-recorridos-fase-5a-d.md §4).`);
+    }
+    if (arquitectura.tipo === "sintesis_multicorriente" && arquitectura.recorridos.length < 3) {
+      report.error("SINTESIS_MULTICORRIENTE", `${work.id}: sintesis_multicorriente exige tres o más recorridos (decision-normativa-contrato-recorridos-fase-5a-d.md §6).`);
+    }
+    if (arquitectura.tipo === "sin_principal_clasificable") {
+      // decision-normativa-sin-principal-clasificable-atlas-2.md: esta categoría exige un caso
+      // académicamente cerrado, no una lectura pendiente ni un atajo de clasificación.
+      if (arquitectura.recorridos.length !== 0) {
+        report.error("SIN_PRINCIPAL_CLASIFICABLE", `${work.id}: sin_principal_clasificable no admite recorridos estructurantes (usa recorridos_sec para dimensiones contextuales si corresponde).`);
+      }
+      if (recorrido !== null && recorrido !== undefined) {
+        report.error("SIN_PRINCIPAL_CLASIFICABLE", `${work.id}: sin_principal_clasificable exige recorrido: null.`);
+      }
+      if (estado !== "confirmado") {
+        report.error("SIN_PRINCIPAL_CLASIFICABLE", `${work.id}: sin_principal_clasificable exige estado_recorrido "confirmado" — no puede quedar pendiente ni usarse como atajo de lectura incompleta.`);
+      }
+      if (!Array.isArray(fuente) || fuente.length === 0) {
+        report.error("SIN_PRINCIPAL_CLASIFICABLE", `${work.id}: sin_principal_clasificable exige fuente_recorrido con trazabilidad documental.`);
+      }
+    }
+  } else if ((recorrido === null || recorrido === undefined) && estado === "confirmado") {
+    // decision-normativa-contrato-recorridos-fase-5a-d.md §9: recorrido solo admite null bajo
+    // arquitectura especial. Sin arquitectura, un caso confirmado sin principal es una laguna:
+    // o falta asignar recorrido, o falta declarar arquitectura_recorrido (incluida
+    // sin_principal_clasificable, si es ese el caso).
+    report.error("RECORRIDO_NULL_SIN_ARQUITECTURA", `${work.id}: recorrido null con estado_recorrido "confirmado" y sin arquitectura_recorrido — el contrato solo admite recorrido null bajo arquitectura especial.`);
+  }
+}
+
 function validateV2Work(work, schema2) {
   const placeholder = /^(archivo|borrador(?:\s*\/\s*archivo)?|sin autor(?:ía)?)$/i.test((work.a || "").trim());
   if (schema2) {
@@ -369,6 +436,7 @@ function validateV2Work(work, schema2) {
   }
   validateProcesses(work);
   validateReview(work, placeholder);
+  validateRecorridoArchitecture(work);
   validateCurrentsAndMarks(work, atlas);
   validateOperationsAndGeography(work, atlas);
   validateLanguagesAndTime(work);

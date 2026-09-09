@@ -1,18 +1,25 @@
 # Decisión académica compacta · `rebeldestiny` · P3-B · Etapa 2.3I
 
-1. **Decisión.** Se aprueba la clasificación propuesta en la lectura probatoria sin ampliación dirigida: evidencia suficiente y no controvertida.
-2. **Evidencia decisiva.** Prefacio (huida y tratados de paz fundan la autonomía saramaka); cap. X (corte del Granman, gobierno autónomo); cap. XVII (cosmología obia, jerarquía teórica propia). Ver `lectura-rebeldestiny-p3-etapa-2-3i.md` preguntas 2–6 para citas y ubicación exactas.
-3. **Recorrido principal.** C3 — Fugas, cimarronajes y emancipaciones.
-4. **Secundarios.** C9 — Archivos vivos, espiritualidades y saberes transmitidos.
-5. **Arquitectura.** Ninguna especial. Se evaluó y descartó `FRONTERA_CONSTITUTIVA(C3,C9)` por asimetría en la prueba de retirada (lectura §4): C3 es indispensable para el marco narrativo completo; C9 no lo es para el resto del libro.
-6. **Alternativas descartadas.** `FRONTERA_CONSTITUTIVA(C3,C9)` (asimetría de retirada); C10 y C2 como secundarias (un solo capítulo cada una, sin desarrollo teórico propio, contextuales); `VACÍO_TAXONÓMICO_POSIBLE` (no se encontró el patrón de dominios huérfanos agrupados explícitamente que sí existe en `cuijla`).
-7. **Estado.** `DECISION_ACADEMICA_EMITIDA` / `LISTA_PARA_IMPLEMENTAR`.
-8. **Reserva conceptual.** Ninguna.
-9. **Bloque autorizado para implementación.**
+**Estado del documento: REVISADA por segunda vez conforme a `dictamen-metodologico-rebeldestiny-p3-etapa-2-3i.md`, e IMPLEMENTADA tras la aprobación de `decision-normativa-sin-principal-clasificable-atlas-2.md`.** La versión inmediatamente anterior de este documento proponía C9 como recorrido principal a título de "mejor ajuste operativo disponible"; esa propuesta quedó revocada por el dictamen metodológico, que estableció que C9 no satisface la definición vigente de recorrido principal (Decisión normativa 4 del contrato de datos). Se mantienen, sin cambio, la revocación de C3 como principal y el hallazgo de `RESERVA_CONCEPTUAL`, ambos ya aprobados por Dirección Académica. El bloqueo de implementación —el contrato no admitía representar "evaluado, sin principal clasificable" sin confundirlo con "no evaluado"— quedó resuelto por la decisión normativa citada, que extiende `arquitectura_recorrido` con el tipo `sin_principal_clasificable`.
+
+1. **Decisión.** Se revoca la clasificación C3 principal / C9 secundaria de la lectura original (condición histórica de posibilidad frente a objeto argumentativo — ningún capítulo investiga la fuga o los tratados como tema propio). Se revoca además, por el dictamen metodológico, la propuesta posterior de C9 como principal operativo: la prueba de retirada aplicada correctamente muestra que C9 es uno entre varios dominios paralelos del argumento, no el que organiza su arquitectura general (`RETIRADA_PARCIAL`, no `RETIRADA_DESTRUCTIVA`). No queda, por tanto, ninguna corriente C1–C10 que satisfaga los requisitos formales de recorrido principal.
+2. **Evidencia decisiva.** Prefacio e índice completo (ningún capítulo trata la fuga/guerra/tratados como objeto; gobierno, parentesco, oficios, arte, folclor y religión reciben tratamiento paralelo comparativo con África); cap. VIII (parentesco clasificatorio); cap. XVII (cosmología obia). Ver `lectura-rebeldestiny-p3-etapa-2-3i.md`, AMPLIACIÓN DIRIGIDA, pruebas A–D, y `dictamen-metodologico-rebeldestiny-p3-etapa-2-3i.md`, §§1–4, para el contraste formal de C9 contra la definición de recorrido principal y la comparación procedimental con `cuijla` y `wynterblackmetamorphosis`.
+3. **Recorrido principal.** Ninguno. C9 fue evaluado formalmente contra la Decisión normativa 4 del contrato y no la satisface: organiza uno de los dominios paralelos del argumento, no su arquitectura general. El precedente `wynterblackmetamorphosis`, que permitió adoptar como principal la corriente más próxima disponible, exige una retirada destructiva del problema que esa corriente aproxima; aquí la retirada es solo parcial. No se fuerza, en consecuencia, ningún principal.
+4. **Secundarios.** Ninguno formal. C3 (condición histórica) y C10 (parentesco, un capítulo) quedan como datos contextuales.
+5. **Arquitectura.** Ninguna especial. Se descartan tanto frontera constitutiva (asimetría de retirada entre C3 y C9, ya establecida) como síntesis multicorriente (esta exige tres o más corrientes existentes en C1–C10 estructurando irreductiblemente el argumento; aquí hay, en cambio, un principio transversal no capturado por ninguna combinación de corrientes, más dominios —folclor, oficios artesanales— sin corriente propia, lo que corresponde a vacío taxonómico, no a síntesis).
+6. **Alternativas descartadas.** C3 principal (prueba B: condición histórica, no objeto argumentativo); `FRONTERA_CONSTITUTIVA(C3,C9)` (asimetría de retirada); C10 como secundaria (un solo capítulo); C9 como principal operativo (dictamen metodológico: no supera la prueba de retirada destructiva que exige la Decisión normativa 4, y el precedente `wynterblackmetamorphosis` no es aplicable sin esa retirada).
+7. **Estado.** `DECISION_ACADEMICA_REVISADA` / `SIN_PRINCIPAL_CLASIFICABLE` / `RESERVA_CONCEPTUAL_CONFIRMADA` / `DEUDA_METODOLOGICA_DEL_SISTEMA_RESUELTA` / `IMPLEMENTADA`.
+8. **Reserva conceptual.** `RESERVA_CONCEPTUAL` — persistencia y reinterpretación de africanismos a través de dominios heterogéneos (duelo/muerte, parentesco clasificatorio, gobierno, oficios, arte, folclor, religión), ninguno individualmente necesario para sostener la tesis y al menos dos sin corriente propia en C1–C10 (folclor/oralidad, arte/talla). Patrón estructuralmente comparable al de `cuijla`, sin traslado de contenido sustantivo entre los dos casos, pero de insuficiencia taxonómica más fuerte: en `cuijla` la reserva se añade a una clasificación operativa válida (C4/C2); aquí no existe clasificación operativa válida sobre la cual añadirse (dictamen metodológico, §4).
+9. **Bloque de datos implementado**, conforme a `decision-normativa-sin-principal-clasificable-atlas-2.md`:
 ```json
-"recorrido": "c3",
-"recorridos_sec": ["c9"],
-"arquitectura_recorrido": null,
+"recorrido": null,
+"recorridos_sec": [],
+"arquitectura_recorrido": {"tipo": "sin_principal_clasificable", "recorridos": []},
 "estado_recorrido": "confirmado",
-"fuente_recorrido": ["decision-academica-rebeldestiny-p3-etapa-2-3i.md"]
+"fuente_recorrido": [
+  "decision-academica-rebeldestiny-p3-etapa-2-3i.md",
+  "dictamen-metodologico-rebeldestiny-p3-etapa-2-3i.md",
+  "decision-normativa-sin-principal-clasificable-atlas-2.md"
+]
 ```
+Verificado en `datos-atlas.json` y `datos-atlas.js` (identidad confirmada) y validado con los cuatro validadores del repositorio: 0 errores. La `RESERVA_CONCEPTUAL` del punto 8 no se traslada a ningún campo de datos; queda registrada en `apertura-control-p3-b-etapa-2-3i.md`, inventario de reservas conceptuales de P3-B, siguiendo el mismo mecanismo ya usado para `cuijla`.
