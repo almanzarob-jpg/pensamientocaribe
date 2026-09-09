@@ -401,12 +401,18 @@ function validateRecorridoArchitecture(work) {
     }
     if (arquitectura.tipo === "sin_principal_clasificable") {
       // decision-normativa-sin-principal-clasificable-atlas-2.md: esta categoría exige un caso
-      // académicamente cerrado, no una lectura pendiente ni un atajo de clasificación.
+      // académicamente cerrado, no una lectura pendiente ni un atajo de clasificación. La regla
+      // es deliberadamente estricta (revisión de la Etapa 2.3J): no autoriza recorridos_sec,
+      // a diferencia de frontera_constitutiva, porque aquí no hay recorrido principal al que
+      // una secundaria pueda subordinarse.
       if (arquitectura.recorridos.length !== 0) {
-        report.error("SIN_PRINCIPAL_CLASIFICABLE", `${work.id}: sin_principal_clasificable no admite recorridos estructurantes (usa recorridos_sec para dimensiones contextuales si corresponde).`);
+        report.error("SIN_PRINCIPAL_CLASIFICABLE", `${work.id}: sin_principal_clasificable no admite recorridos estructurantes.`);
       }
       if (recorrido !== null && recorrido !== undefined) {
         report.error("SIN_PRINCIPAL_CLASIFICABLE", `${work.id}: sin_principal_clasificable exige recorrido: null.`);
+      }
+      if (!Array.isArray(recorridosSec) || recorridosSec.length !== 0) {
+        report.error("SIN_PRINCIPAL_CLASIFICABLE", `${work.id}: sin_principal_clasificable exige recorridos_sec: [] — no autoriza secundarias contextuales.`);
       }
       if (estado !== "confirmado") {
         report.error("SIN_PRINCIPAL_CLASIFICABLE", `${work.id}: sin_principal_clasificable exige estado_recorrido "confirmado" — no puede quedar pendiente ni usarse como atajo de lectura incompleta.`);
