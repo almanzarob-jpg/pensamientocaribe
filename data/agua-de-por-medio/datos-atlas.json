@@ -2858,10 +2858,13 @@
       "l": "barbados",
       "tr": "anglófono (Canadá/Barbados)",
       "ap": "La estela del barco negrero leída como clima permanente y no como pasado cerrado: la muerte negra prematura como algo estructural, normalizado, que sigue produciéndose hoy.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": ["c2", "c5"],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "decision-academica-sharpewake-p3-etapa-2-3j.md"
+      ]
     },
     {
       "id": "ferrerfreedomsmirror",
