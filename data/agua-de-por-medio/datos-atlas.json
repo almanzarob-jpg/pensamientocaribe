@@ -1661,9 +1661,10 @@
         "c2"
       ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "confirmado",
+      "estado_recorrido": "pendiente",
       "fuente_recorrido": [
-        "decision-academica-cuijla-p3-etapa-2-3h.md"
+        "decision-academica-cuijla-p3-etapa-2-3h.md",
+        "dictamen-resolucion-cuijla-p3-etapa-2-3h.md"
       ]
     },
     {
