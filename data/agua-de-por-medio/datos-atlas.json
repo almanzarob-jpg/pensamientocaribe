@@ -1609,10 +1609,15 @@
       "l": "nevis",
       "tr": "anglófono (Dinamarca/Caribe)",
       "ap": "Identidad insular que se sostiene precisamente por su circulación migratoria, no a pesar de ella.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c5"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-globalculture-p3-etapa-2-3m.md"
+      ]
     },
     {
       "id": "islandscity",
@@ -2513,10 +2518,15 @@
       "l": "jamaica",
       "tr": "comparado (transnacional)",
       "ap": "El barco negrero leído como institución total y como el primer espacio moderno de mezcla forzada entre africanos de naciones distintas: la travesía misma como origen de una identidad diaspórica antes de tocar tierra caribeña.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c2",
+      "recorridos_sec": [
+        "c8"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-rediker-p3-etapa-2-3m.md"
+      ]
     },
     {
       "id": "gosinenature",
@@ -2951,10 +2961,13 @@
       "l": "barbados",
       "tr": "anglófono (EE.UU./Caribe)",
       "ap": "Piensa el archipiélago desde la era geológica humana: retoma explícitamente la tidaléctica de Brathwaite como método para leer el tiempo oceánico y la desproporción del daño climático colonial.",
-      "recorrido": null,
+      "recorrido": "c6",
       "recorridos_sec": [],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-deloughrey-p3-etapa-2-3m.md"
+      ]
     },
     {
       "id": "johnson_climatecuba",
