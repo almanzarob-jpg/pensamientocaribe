@@ -2810,16 +2810,21 @@
       "a": "Marco G. Meniketti",
       "y": "2015",
       "f": [
-        "postplantacion",
+        "capitalismo_racial",
         "catastrofes"
       ],
       "l": "nevis",
       "tr": "anglófono (EE.UU.)",
       "ap": "Doce temporadas de excavación en Nevis muestran cómo la economía azucarera transformó literalmente el paisaje de la isla, dejando una huella ecológica que la arqueología puede leer siglos después.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c2",
+      "recorridos_sec": [
+        "c6"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-meniketinevis-p3-etapa-2-3n.md"
+      ]
     },
     {
       "id": "handlerlangebarbados",
@@ -4863,8 +4868,18 @@
       "ap": "La ruta de Trinidad al Black Power hacia la religión yoruba/ifá como ciudadanía espiritual: la diáspora rehaciendo pertenencia por fuera del Estado-nación.",
       "recorrido": null,
       "recorridos_sec": [],
-      "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "arquitectura_recorrido": {
+        "tipo": "sintesis_multicorriente",
+        "recorridos": [
+          "c5",
+          "c7",
+          "c9"
+        ]
+      },
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-castorspiritual-p3-etapa-2-3n.md"
+      ]
     },
     {
       "id": "alvarezboro",
@@ -4960,10 +4975,13 @@
       "l": "haiti",
       "tr": "anglófono (Reino Unido/EE.UU.)",
       "ap": "Historia global del capital que no es un libro caribeño —su eje es Egipto y el petróleo— pero hace de la plantación azucarera del Caribe y de la Revolución Haitiana una bisagra estructural en el origen del capitalismo moderno, citando a Cedric Robinson como autoridad. Entra con esa salvedad declarada, no como obra centrada en la cuenca.",
-      "recorrido": null,
+      "recorrido": "c2",
       "recorridos_sec": [],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-mitchellalibi-p3-etapa-2-3n.md"
+      ]
     },
     {
       "id": "allenvenceremos",
@@ -5381,8 +5399,17 @@
       "ap": "Qué queda del radicalismo antillano cuando sus revoluciones fracasaron o fueron invadidas: el volumen lee las herencias en la cultura, no en los partidos. Acompaña a Quinn y a Scott en el racimo del Poder Negro.",
       "recorrido": null,
       "recorridos_sec": [],
-      "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "arquitectura_recorrido": {
+        "tipo": "frontera_constitutiva",
+        "recorridos": [
+          "c7",
+          "c5"
+        ]
+      },
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-puriradical-p3-etapa-2-3n.md"
+      ]
     },
     {
       "id": "grenaderevolution",
