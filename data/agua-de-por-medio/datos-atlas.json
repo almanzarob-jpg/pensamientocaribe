@@ -2357,10 +2357,15 @@
       "l": "trinidad",
       "tr": "comparado (anglófono Caribe)",
       "ap": "El Poder Negro caribeño de 1968-1970 leído región por región, desde la Revolución de Febrero en Trinidad hasta sus ecos en Jamaica, Guyana y Curazao: una radicalización pan-caribeña que la historiografía nacional suele contar isla por isla.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c4"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-quinnblackpower-p3-etapa-2-3k.md"
+      ]
     },
     {
       "id": "russwurm",
@@ -2452,10 +2457,13 @@
       "l": "jamaica",
       "tr": "comparado (transnacional)",
       "ap": "El origen mismo del término capitalismo racial: el capitalismo europeo nunca dejó de ser racial desde su origen medieval, y la tradición radical negra no es una rama del marxismo sino una crítica a su ceguera racial.",
-      "recorrido": null,
+      "recorrido": "c3",
       "recorridos_sec": [],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-robinsonmarxismo-p3-etapa-2-3k.md"
+      ]
     },
     {
       "id": "bassiacuoso",
@@ -2947,10 +2955,13 @@
       "l": "cuba",
       "tr": "anglófono (EE.UU.)",
       "ap": "El huracán como acelerador político: muestra cómo el desastre climático reordenó el comercio y la política imperial cubana en la era de las revoluciones atlánticas.",
-      "recorrido": null,
+      "recorrido": "c6",
       "recorridos_sec": [],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-johnson_climatecuba-p3-etapa-2-3k.md"
+      ]
     },
     {
       "id": "allen_dikimanera",
@@ -4349,10 +4360,15 @@
       "l": "santamarta",
       "tr": "hispano (Colombia)",
       "ap": "Medio milenio de presencia afro en Santa Marta, compilado por catorce autores entre ellos Edgar Rey Sinning, que firma la presentación, y Roberto Almanza junto con Margarita Granados Castellanos, que aportan el capítulo sobre las geografías negras de la Zona Bananera. El propio libro cita a Rey Sinning por el título exacto de su obra ya catalogada.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c3"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-mendozaraices-p3-etapa-2-3k.md"
+      ]
     },
     {
       "id": "scottconscripts",
