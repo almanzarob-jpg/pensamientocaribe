@@ -1714,10 +1714,11 @@
         "c2"
       ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "fuente_recorrido": [
         "decision-academica-cuijla-p3-etapa-2-3h.md",
-        "dictamen-resolucion-cuijla-p3-etapa-2-3h.md"
+        "dictamen-resolucion-cuijla-p3-etapa-2-3h.md",
+        "resolucion-reserva-cuijla-post-p3.md"
       ]
     },
     {
