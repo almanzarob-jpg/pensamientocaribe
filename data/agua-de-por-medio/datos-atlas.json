@@ -4176,10 +4176,15 @@
       "l": "barranquilla",
       "tr": "hispano (Colombia)",
       "ap": "Compilación que piensa el carnaval como fenómeno transatlántico leyendo juntas Barranquilla, Salvador de Bahía y Barcelona: el mismo mecanismo de mestizaje ritual puesto a circular por tres orillas distintas. Primera obra que ancla al atlas en Barranquilla, lugar que hasta ahora no tenía ninguna obra propia.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c9"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-lizcanocarnaval-p3-etapa-2-3n.md"
+      ]
     },
     {
       "id": "sangbenvolviendo",
@@ -4408,10 +4413,15 @@
       "l": "dominicana",
       "tr": "hispano (República Dominicana)",
       "ap": "Testimonio directo de un funcionario dominicano en la frontera durante la matanza de 1937 contra la población haitiana: la fuente primaria con la que discute toda la historiografía posterior. Hasta esta entrada el atlas no tenía ninguna obra sobre el episodio de violencia racial de Estado más citado del Caribe insular después de la Revolución haitiana.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c8"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-prestolmasacre-p3-etapa-2-3n.md"
+      ]
     },
     {
       "id": "hazareesingh",
@@ -4458,8 +4468,17 @@
       "ap": "Naturaleza y raza pensadas juntas en Belice, donde la ecología política explica la criollización tanto como la historia social. Cita repetidamente a Bolland, ya presente en el atlas, para fechar el esclavismo colonial desde 1724.",
       "recorrido": null,
       "recorridos_sec": [],
-      "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "arquitectura_recorrido": {
+        "tipo": "frontera_constitutiva",
+        "recorridos": [
+          "c6",
+          "c8"
+        ]
+      },
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-johnsonbelize-p3-etapa-2-3n.md"
+      ]
     },
     {
       "id": "millerbassey",
@@ -4551,10 +4570,15 @@
       "l": "cartagena",
       "tr": "comparado (cuenca completa)",
       "ap": "La fiebre amarilla y la malaria como actores de la historia militar del Gran Caribe: España retuvo sus colonias más tiempo que sus rivales por ecología, no solo por estrategia. El sitio de Cartagena de 1741 es uno de sus casos centrales. Cita en extenso a Stuart Schwartz sobre demografía esclava e inmunidad al mosquito, aunque por un trabajo de 1985 distinto al que el atlas ya cataloga.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c6",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-mcneillmosquito-p3-etapa-2-3n.md"
+      ]
     },
     {
       "id": "lassoerased",
