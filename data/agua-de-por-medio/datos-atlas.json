@@ -3746,10 +3746,15 @@
       "l": "guyana",
       "tr": "anglófono (Guyana/EE.UU.)",
       "ap": "El trabajo por contrato indio en la Guyana poscolonial, seguido desde la experiencia de las mujeres. La postplantación deja de ser solo economía y se vuelve régimen sexual y de parentesco.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c4",
+      "recorridos_sec": [
+        "c10"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-bahadurcoolie-p3-etapa-2-3n.md"
+      ]
     },
     {
       "id": "zapataarbol",
@@ -4165,10 +4170,15 @@
       "l": "puertorico",
       "tr": "hispano (Puerto Rico)",
       "ap": "La deuda pública como tecnología colonial: la Junta de Control Fiscal impuesta tras la quiebra de 2015 hereda la lógica de la hacienda sin necesitar plantación ni bandera. Zambrana piensa las protestas del verano de 2019 desde Fanon y desde Bonilla, a quien reconoce como interlocutora directa del libro.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c4",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-zambrana-p3-etapa-2-3n.md"
+      ]
     },
     {
       "id": "martinezsanmiguel",
@@ -4206,10 +4216,13 @@
       "l": "puertorico",
       "tr": "comparado (métodos comparados)",
       "ap": "El volumen que da nombre al método que este atlas ya practicaba sin declararlo: pensar el Caribe como archipiélago relacional en vez de área delimitada por lengua imperial o frontera nacional. Organiza el libro alrededor de Glissant, con Elizabeth DeLoughrey entre las colaboradoras que lo escriben.",
-      "recorrido": null,
+      "recorrido": "c5",
       "recorridos_sec": [],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-archipelagicthinking-p3-etapa-2-3n.md"
+      ]
     },
     {
       "id": "brownetropic",
@@ -5118,10 +5131,15 @@
       "l": "curazao",
       "tr": "neerlandés (Países Bajos/Caribe)",
       "ap": "El Atlántico neerlandés como sistema intersticial: menos colonias que nodos de contrabando, crédito y tránsito entre imperios ajenos. Explica por qué Curazao y Surinam funcionan distinto del resto de la cuenca.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c2"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-kloosterrealm-p3-etapa-2-3n.md"
+      ]
     },
     {
       "id": "hoeftesuriname",
