@@ -104,3 +104,82 @@ Sin cambios respecto al cierre del saneamiento, porque ningún caso cruzó de bl
 No se abre P4.
 
 **DETENTE.**
+
+---
+
+# Ronda 2 · cinco frentes pendientes
+
+Continuación dirigida, sin nueva ronda general de búsqueda: trabaja exclusivamente sobre `mintz`, `zapataarbol`, `ferdinand`, `lebroncimarronaje` y `zonabananera` (esta última auditada por separado en `auditoria-protocolo-zonabananera-post-p3.md`). Los siete casos de búsqueda agotada de la ronda 1 no se reabren.
+
+## 1. `mintz` — acceso controlado
+
+La copia de *Caribbean Transformations* en Internet Archive (`archive.org/details/caribbeantransfo0000unse`) permanece bajo préstamo controlado (`Access-restricted-item: true`). Este entorno no dispone de sesión ni cuenta de Internet Archive para abrir el préstamo, y no se intentó eludir el mecanismo de préstamo ni DRM alguno.
+
+Estado: `ACCESO_CONTROLADO_IDENTIFICADO`, `INTERVENCION_MANUAL_REQUERIDA`. No se buscó otra copia mientras esta vía sigue siendo viable. Micro-P3 no se activa: falta que Rob abra el préstamo desde su propia cuenta y confirme si permite consulta suficientemente completa.
+
+## 2. `zapataarbol` — auditoría de equivalencia 2002/2014
+
+Metadatos confirmados de la edición registrada en el corpus (catálogo IUCAT Bloomington): *El árbol brujo de la libertad: África en Colombia: orígenes-transculturación-presencia: ensayo histórico mítico*, Bogotá, Ediciones Desde Abajo, 2014, ISBN 9789585856356, 289 pp., con **presentación y selección de William Mina Aragón** — una edición curada por un tercero, no una simple reimpresión del autor.
+
+De la fuente institucional de 2002 (Universidad del Valle, archivo oficial de Zapata Olivella) no se obtuvo ninguno de los elementos exigidos por esta auditoría: el PDF está en Google Drive con acceso restringido por sesión, y ninguna búsqueda adicional arrojó un registro catalográfico independiente de esa edición de 2002 con editorial, ISBN, páginas o índice propios. No hay, por tanto, base documental para comparar título completo, estructura, capítulos ni prólogos entre ambas versiones.
+
+**Resultado B.** La equivalencia sustantiva entre la fuente de 2002 y la edición de 2014 registrada en el corpus no puede demostrarse con la evidencia disponible. Se mantiene:
+
+`BLOQUEADO_FUENTE_EDICION_2014`
+
+No se clasifica el caso. No se modifican los metadatos bibliográficos del nodo.
+
+## 3. `ferdinand` — búsqueda dirigida final sobre la obra de 2019
+
+Se ratifica que *Une écologie décoloniale* (2019) y *S'aimer la Terre* (2024) son obras distintas del mismo autor (ronda 1). No se sustituye 2019 por 2024 ni se reclasifica el nodo.
+
+Búsqueda dirigida sobre *Une écologie décoloniale* (2019) en repositorios institucionales, bibliotecas y préstamo digital: se localizó un extracto de la editorial alojado en una biblioteca pública belga (`bibliotheques.wallonie.be`) que contiene portada, dedicatoria, la reproducción de una pintura de Turner (1840), el prólogo completo ("Une double fracture coloniale et environnementale") y la bibliografía — aproximadamente 22 a 25 páginas de un libro de 464. Es un extracto promocional editorial, no el texto completo: no incluye los capítulos desarrollados ni la conclusión, y no permite aplicar retirada ni cobertura sobre el argumento completo del libro.
+
+Estado: `BUSQUEDA_2019_AGOTADA_POR_AHORA`. La obra de 2024 queda anotada únicamente como `OBRA_DISTINTA_CANDIDATA_REVISION_FUTURA`, sin incorporarse al caso.
+
+## 4. `lebroncimarronaje` — comprobación interna final
+
+Búsqueda interna en el entorno de trabajo de Rob (`Biliografia`, y el resto de `~/Pagina` sin restricción de carpeta) por el nombre del autor y variantes: **sin resultado**. No existe ninguna copia de *Filosofía del cimarronaje* previamente descargada o utilizada en el repositorio. No se repitió la búsqueda web general de la ronda 1.
+
+El artículo relacionado identificado en la ronda 1 ("Teorizando una filosofía del cimarronaje", PhilPapers/PhilArchive) sigue sin poder verificarse: ambos repositorios rechazaron el acceso automatizado desde este entorno (error 403) en dos intentos distintos. No fue posible evaluar si ese artículo reproduce evidencia suficiente sobre tesis, arquitectura global, cobertura, direccionalidad o prueba de retirada.
+
+Estado: `FUENTE_PARCIAL_UTIL`, `BLOQUEADO_FUENTE_COMPLETA`. No se rebaja el estándar probatorio; no se clasifica el caso con el artículo como sustituto del libro.
+
+## 5. Adenda — posible texto de Escalante
+
+Verificación puntual sobre la ficha detectada en la ronda 1 (Google Books, registro asociado a ICANH biblionúmero 27410): *Notas sobre el Palenque de San Basilio: una comunidad negra en Colombia*, Aquiles Escalante, 1954. Comparte autor y año exactos con *El Palenque de San Basilio* (1954), pero es un **título distinto**; no se obtuvo editorial, extensión ni tabla de contenidos que permita determinar si es el mismo texto, un antecedente parcial (artículo previo a la monografía) o una obra autónoma. El acceso directo a la ficha ICANH devolvió error 403 en esta sesión.
+
+No hay identidad documental demostrada. Este texto **no entra** como evidencia de `escalante`. Queda anotado, sin usarse, para una eventual ronda futura con acceso directo al catálogo ICANH o a la obra física.
+
+## 6. Resultado consolidado — ronda 2
+
+| id | estado inicial | operación realizada | evidencia nueva | estado final | micro-P3 | commit |
+|---|---|---|---|---|---|---|
+| `mintz` | `EDICION_IDENTIFICADA` | verificación de accesibilidad del préstamo controlado | ninguna (sin sesión IA) | `ACCESO_CONTROLADO_IDENTIFICADO`, `INTERVENCION_MANUAL_REQUERIDA` | No | este |
+| `zapataarbol` | `EDICION_IDENTIFICADA` (con reserva) | auditoría de equivalencia 2002/2014 | metadatos completos de la edición 2014 (IUCAT); ninguno nuevo de 2002 | `BLOQUEADO_FUENTE_EDICION_2014` | No | este |
+| `ferdinand` | `REFERENCIA_CONFIRMADA_SIN_TEXTO` | búsqueda dirigida final del título de 2019 | extracto editorial de ~23 pp. (prólogo), insuficiente | `BUSQUEDA_2019_AGOTADA_POR_AHORA` | No | este |
+| `lebroncimarronaje` | `NO_LOCALIZADA` | búsqueda interna/local | ninguna | `FUENTE_PARCIAL_UTIL`, `BLOQUEADO_FUENTE_COMPLETA` | No | este |
+| `zonabananera` | `BLOQUEADO_PROTOCOLO` | auditoría documental del expediente | ver `auditoria-protocolo-zonabananera-post-p3.md` | ver ese documento | No | separado |
+
+Fuentes efectivamente recuperadas en esta ronda: **0**. Equivalencias editoriales confirmadas: **0** (una descartada por falta de evidencia: `zapataarbol`). Bloqueos mantenidos: `mintz`, `zapataarbol`, `ferdinand`, `lebroncimarronaje` — los cuatro, cada uno con su estado específico actualizado, ninguno resuelto. Casos implementados: **0**. No hubo cambios de datos; no se ejecutó la batería de validadores porque no hay nada que validar.
+
+## Nuevo conteo P3 (ronda 2)
+
+`P3_RESUELTOS_66_DE_78`
+`P3_BLOQUEADOS_12_DE_78`
+`VALIDACION_0_ERRORES_NUEVOS`
+
+Sin cambio: ningún caso mejoró la descripción de su bloqueo hasta el punto de contar como resuelto, y esta ronda no aumenta N por mejorar solamente la descripción bibliográfica de un bloqueo, conforme a la instrucción vigente.
+
+## Estado final — ronda 2
+
+`RONDA_2_CERRADA`
+`CINCO_FRENTES_TRABAJADOS`
+`CERO_FUENTES_COMPLETAS_NUEVAS`
+`P3_RESUELTOS_66_DE_78`
+`P3_BLOQUEADOS_12_DE_78`
+`VALIDACION_0_ERRORES_NUEVOS`
+
+No se abre P4.
+
+**DETENTE.**
