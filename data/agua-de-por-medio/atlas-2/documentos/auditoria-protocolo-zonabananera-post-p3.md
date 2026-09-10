@@ -55,4 +55,8 @@ Sin cambios en `datos-atlas.js` ni `datos-atlas.json`. No se avanza a lectura ni
 `ZONABANANERA_SIGUE_BLOQUEADO_PROTOCOLO`
 `SIN_CAMBIOS_DE_DATOS`
 
+### Nota posterior — superado por decisión de exclusión
+
+El diagnóstico de este documento (bloqueo procedimental, anterior a la generación de evidencia) sigue siendo correcto como registro de cómo llegó el caso hasta aquí. Pero deja de ser el estado vigente: Dirección Académica decidió excluir `zonabananera` del balance de P3 en lugar de resolver la autorización pendiente descrita en §6. Ver `exclusion-zonabananera-post-p3.md`. Estado vigente del caso: `EXCLUIDO_POR_DECISION_ACADEMICA`, no `BLOQUEADO_PROTOCOLO`.
+
 **DETENTE.**

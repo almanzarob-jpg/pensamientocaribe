@@ -25,9 +25,9 @@ Las cuatro correcciones se implementaron: ningún caso quedó en `F_PENDIENTE_DE
 
 La decisión académica de `cuijla` (C4 principal, C2 secundaria, cerrada sin fisuras) dejó pendiente en su §16 un único elemento: el mecanismo técnico de registro de la reserva conceptual `VACÍO_TAXONÓMICO_POSIBLE_CONFIRMADO`, sin inventar campo nuevo. Esa reserva se clasifica como tipo **D — técnica/documental**: la clasificación ya estaba resuelta, solo faltaba formalizar el registro del hallazgo. La prueba mínima se supera: formalizar la reserva sin tocar C4/C2 deja la obra suficientemente representada dentro del contrato vigente. El mecanismo adoptado es el registro documental sin campo técnico nuevo, siguiendo el único precedente procedimental que la propia decisión de `cuijla` ya había citado (`wynterblackmetamorphosis`) — no `sangbenvolviendo`, cuya estructura normativa (`sin_principal_clasificable` con dimensiones parciales) no comparte nada con este caso. `estado_recorrido` pasa a `"confirmado"`; `recorrido`, `recorridos_sec` y `arquitectura_recorrido` quedan intactos; el hallazgo del vacío taxonómico se preserva íntegro como deuda epistemológica de la taxonomía C1–C10, sin resolverse ni convertirse en corriente nueva. Documento: `resolucion-reserva-cuijla-post-p3.md`. Commit: `447fbc6` (`Post-P3: resuelve estado de Cuijla`).
 
-## 5. Los doce bloqueados
+## 5. Los once bloqueados y el caso excluido
 
-Inventario consolidado, sin búsqueda de fuente ni cambio de datos, preparado para una futura `CAMPAÑA_RECUPERACION_BIBLIOGRAFICA_POST_P3`:
+Inventario consolidado, sin búsqueda de fuente ni cambio de datos, preparado para una futura `CAMPAÑA_RECUPERACION_BIBLIOGRAFICA_POST_P3`. `zonabananera` figuraba originalmente en esta lista como `BLOQUEADO_PROTOCOLO`; una decisión posterior de Dirección Académica lo excluyó del balance de bloqueados (§5bis) sin que eso altere el resto del inventario:
 
 | sublote | id | tipo de bloqueo | fuente faltante/problema | acción futura |
 |---|---|---|---|---|
@@ -36,7 +36,6 @@ Inventario consolidado, sin búsqueda de fuente ni cambio de datos, preparado pa
 | P3-B | `fouchard` | BLOQUEADO_FUENTE | fuente no localizada | adquirir *Les marrons de la liberté* (Fouchard, 1972) |
 | P3-B | `mintz` | BLOQUEADO_FUENTE + académico | fuente parcial (*Dulzura y poder* sí, *Caribbean Transformations* no) y política editorial de entradas compuestas sin resolver | decisión de Dirección Académica sobre entradas compuestas (`decisiones-pendientes.md` §6) y adquisición del segundo componente |
 | P3-B | `shellererotic` | BLOQUEADO_FUENTE | fuente no localizada; discrepancia con nota de memoria de otra ronda | adquirir o localizar *Citizenship from Below* (Sheller, 2012), o aclarar si ya existe con otro nombre de archivo |
-| P3-B | `zonabananera` | BLOQUEADO_PROTOCOLO | fuente disponible (coautoría de Roberto Almanza); requiere protocolo autorizado para caso de autoría propia | autorización de Dirección Académica del protocolo de lectura |
 | P3-D | `lebroncimarronaje` | BLOQUEADO_FUENTE | fuente no localizada; autor de circulación editorial reducida (Puerto Rico) | gestión de acceso bibliográfico; posible fuente en biblioteca física o carpeta no indexada |
 | P3-D | `reysinningcristorey` | BLOQUEADO_FUENTE | fuente no localizada; autor de circulación editorial reducida (Santa Marta) | gestión de acceso bibliográfico |
 | P3-D | `zapataarbol` | BLOQUEADO_FUENTE | fuente no localizada; autor de circulación editorial reducida (Cartagena) | gestión de acceso bibliográfico |
@@ -44,7 +43,11 @@ Inventario consolidado, sin búsqueda de fuente ni cambio de datos, preparado pa
 | P3-E | `ferdinand` | BLOQUEADO_TECNICO | archivo local bajo el autor corresponde a *S'aimer la Terre* (2024), no al título registrado *Une écologie décoloniale* (2019) | Dirección Académica confirma cuál título corresponde, o se adquiere el registrado |
 | P3-F | `branddoor` | BLOQUEADO_FUENTE | fuente no localizada; campaña conjunta prevista con `araujo` | adquisición o localización |
 
-Diez de los doce comparten el mismo tipo de bloqueo (fuente no localizada); tres de ellos (`lebroncimarronaje`, `reysinningcristorey`, `zapataarbol`) comparten además el mismo patrón de autoría hispanófona de circulación editorial reducida, ya señalado como tal en la apertura de P3-D.
+Diez de los once comparten el mismo tipo de bloqueo (fuente no localizada); tres de ellos (`lebroncimarronaje`, `reysinningcristorey`, `zapataarbol`) comparten además el mismo patrón de autoría hispanófona de circulación editorial reducida, ya señalado como tal en la apertura de P3-D.
+
+## 5bis. Caso excluido: `zonabananera`
+
+Por decisión explícita de Dirección Académica, `zonabananera` queda excluido del balance de P3 con estado `EXCLUIDO_POR_DECISION_ACADEMICA`. La exclusión no equivale a un bloqueo bibliográfico, técnico o normativo: no se realizó lectura, no se realizó clasificación, no se abrió protocolo de autoautoría, no se buscaron fuentes adicionales y no se modificaron sus corrientes ni metadatos académicos (`recorrido`, `recorridos_sec`, `arquitectura_recorrido` y `estado_recorrido` permanecen exactamente como estaban). El expediente que reconstruyó el bloqueo procedimental del caso —una lectura nunca autorizada por tratarse de autoría propia del director del proyecto— queda preservado en `auditoria-protocolo-zonabananera-post-p3.md`, con una nota que registra su estado posterior a esta exclusión. Documento de la decisión: `exclusion-zonabananera-post-p3.md`.
 
 ## 6. Validación
 
@@ -52,14 +55,16 @@ Cada frente con cambio de datos se validó por separado antes de su commit: sinc
 
 ## 7. Deuda que permanece
 
-Los doce casos bloqueados del §5 permanecen bloqueados; ninguno se resolvió en esta fase, conforme a la instrucción. El hallazgo `VACÍO_TAXONÓMICO_POSIBLE_CONFIRMADO` de `cuijla` permanece como deuda epistemológica de la taxonomía C1–C10 (no de implementación): deberá acumular evidencia comparativa de otros casos antes de considerarse cualquier modificación del sistema de corrientes. La cobertura parcial del vocabulario `f` en `caribjourneys` y `russwurm` (certeza media, §2) queda documentada como límite estructural del vocabulario heredado de diez términos frente a mecanismos diaspóricos, sin ampliarse ese vocabulario.
+Los once casos bloqueados del §5 permanecen bloqueados; ninguno se resolvió en esta fase, conforme a la instrucción. `zonabananera` queda fuera de esa deuda: no es una obra pendiente de recuperación bibliográfica ni de resolución técnica, sino un caso que Dirección Académica decidió no contar en el balance de P3 (§5bis). El hallazgo `VACÍO_TAXONÓMICO_POSIBLE_CONFIRMADO` de `cuijla` permanece como deuda epistemológica de la taxonomía C1–C10 (no de implementación): deberá acumular evidencia comparativa de otros casos antes de considerarse cualquier modificación del sistema de corrientes. La cobertura parcial del vocabulario `f` en `caribjourneys` y `russwurm` (certeza media, §2) queda documentada como límite estructural del vocabulario heredado de diez términos frente a mecanismos diaspóricos, sin ampliarse ese vocabulario.
 
 ## 8. Estado final
 
 `POST_P3_F_SANEADAS_4_DE_4`
 `CUIJLA_RESUELTO_IMPLEMENTADO`
+`P3_RECORRIDO_78_DE_78`
 `P3_RESUELTOS_66_DE_78`
-`P3_BLOQUEADOS_12_DE_78`
+`P3_BLOQUEADOS_11_DE_78`
+`P3_EXCLUIDOS_1_DE_78`
 `VALIDACION_0_ERRORES_NUEVOS`
 `SANEAMIENTO_POST_P3_CERRADO`
 

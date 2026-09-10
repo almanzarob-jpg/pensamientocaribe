@@ -183,3 +183,25 @@ Sin cambio: ningún caso mejoró la descripción de su bloqueo hasta el punto de
 No se abre P4.
 
 **DETENTE.**
+
+---
+
+# Actualización · exclusión de `zonabananera`
+
+Por decisión explícita de Dirección Académica, posterior a las dos rondas de esta campaña, `zonabananera` queda retirado de ella y de todo el balance de bloqueados de P3. La exclusión no es un resultado de búsqueda ni de auditoría: es una decisión académica que no debe contabilizarse como bloqueo bibliográfico, técnico o normativo. En consecuencia:
+
+- Todas las referencias a `zonabananera` en las secciones anteriores de este documento (triage inicial, clasificación por naturaleza del bloqueo, tabla de trazabilidad, ronda 2 y sus resúmenes) quedan como registro histórico de lo trabajado hasta esa decisión — no se reescriben ni se borran, siguiendo el mismo criterio de trazabilidad usado en todo P3 (`no lo borres, márcalo como superado`).
+- Todas las etiquetas `P3_BLOQUEADOS_12_DE_78` que aparecen en las secciones anteriores quedan **superadas** por el balance corregido de abajo.
+- El detalle completo de la exclusión —motivo, alcance y ausencia de cambios en corrientes o metadatos— está en `exclusion-zonabananera-post-p3.md`, no en este documento.
+
+Balance corregido de la campaña, once bloqueados activos:
+
+`P3_RECORRIDO_78_DE_78`
+`P3_RESUELTOS_66_DE_78`
+`P3_BLOQUEADOS_11_DE_78`
+`P3_EXCLUIDOS_1_DE_78`
+`VALIDACION_0_ERRORES_NUEVOS`
+
+Sin datos modificados por esta actualización.
+
+**DETENTE.**
