@@ -2731,10 +2731,15 @@
       "l": "haiti",
       "tr": "anglófono/francófono (Haití)",
       "ap": "Veinticuatro ensayos escritos en caliente tras el terremoto, cruzando historia, cultura y testimonio directo: Haití pensado en su propio momento de ruina, no reconstruido después desde la distancia.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-munrohaitirising-p3-etapa-2-3l.md"
+      ]
     },
     {
       "id": "meniketinevis",
@@ -3119,8 +3124,17 @@
       "ap": "Discute extensamente a Bilby para releer a Nanny, única Héroe Nacional femenina de Jamaica, contra la historiografía que reduce a los cimarrones a una élite militar que abandonó a los suyos.",
       "recorrido": null,
       "recorridos_sec": [],
-      "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "arquitectura_recorrido": {
+        "tipo": "frontera_constitutiva",
+        "recorridos": [
+          "c3",
+          "c9"
+        ]
+      },
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-zips_nannysasafo-p3-etapa-2-3l.md"
+      ]
     },
     {
       "id": "brereton_racerelationstrinidad",
@@ -5171,10 +5185,13 @@
       "l": "trinidad",
       "tr": "anglófono (Canadá/Antillas)",
       "ap": "El Congreso de Escritores Negros de Montreal en 1968 y la revuelta de Sir George Williams como episodio caribeño ocurrido en Canadá: C. L. R. James, Rodney y Carmichael en la misma sala. Extiende hacia el norte el mapa del Poder Negro antillano que el atlas trazaba solo en la cuenca.",
-      "recorrido": null,
+      "recorrido": "c5",
       "recorridos_sec": [],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-austinfearblack-p3-etapa-2-3l.md"
+      ]
     },
     {
       "id": "puriradical",
@@ -5243,10 +5260,13 @@
       "l": "barbados",
       "tr": "anglófono (Barbados/Jamaica)",
       "ap": "El bicentenario de la abolición de la trata leído desde el Caribe y no desde Westminster: quiénes la terminaron realmente y a qué precio. Es también el aparato erudito del que sale la demanda caribeña de reparaciones que el atlas ya cataloga con Araujo y Headley.",
-      "recorrido": null,
+      "recorrido": "c2",
       "recorridos_sec": [],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-becklessavingsouls-p3-etapa-2-3l.md"
+      ]
     },
     {
       "id": "kalefragments",
