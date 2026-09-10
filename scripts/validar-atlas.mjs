@@ -372,12 +372,20 @@ function validateRecorridoArchitecture(work) {
     report.error("RECORRIDO", `${work.id}: recorrido principal inválido ${recorrido}.`);
   }
   if (recorridosSec !== undefined) {
-    if (!Array.isArray(recorridosSec) || recorridosSec.length > 2) {
-      report.error("RECORRIDOS_SEC", `${work.id}: recorridos_sec debe ser una lista de máximo dos.`);
+    // decision-normativa-cardinalidad-dimensiones-parciales-p3-etapa-2-3m.md: bajo
+    // sin_principal_clasificable, recorridos_sec admite hasta tres elementos (dimensiones
+    // sustantivas parciales macrosegmentarias, condiciones 7-9 de esa decisión). En cualquier
+    // otra arquitectura, o sin arquitectura declarada, el máximo general sigue siendo dos.
+    const maxRecorridosSec = isObject(arquitectura) && arquitectura.tipo === "sin_principal_clasificable" ? 3 : 2;
+    if (!Array.isArray(recorridosSec) || recorridosSec.length > maxRecorridosSec) {
+      report.error("RECORRIDOS_SEC", `${work.id}: recorridos_sec debe ser una lista de máximo ${maxRecorridosSec}.`);
     } else {
+      const vistos = new Set();
       for (const sec of recorridosSec) {
         if (!RECORRIDO_ID.test(sec)) report.error("RECORRIDOS_SEC", `${work.id}: recorrido secundario inválido ${sec}.`);
         if (sec === recorrido) report.error("RECORRIDOS_SEC", `${work.id}: el recorrido principal se repite como secundario.`);
+        if (vistos.has(sec)) report.error("RECORRIDOS_SEC", `${work.id}: recorrido secundario repetido ${sec}.`);
+        vistos.add(sec);
       }
     }
   }
@@ -408,6 +416,11 @@ function validateRecorridoArchitecture(work) {
       // documente, por cada elemento, sustantividad segmentaria y la doble prueba de retirada
       // (destructiva o fuertemente degradante en su segmento; no destructiva para el libro
       // completo) — condición académica que este validador no puede verificar por sí solo.
+      // decision-normativa-cardinalidad-dimensiones-parciales-p3-etapa-2-3m.md: excepcionalmente,
+      // recorridos_sec admite hasta 3 elementos bajo esta arquitectura cuando la decisión
+      // académica documenta además autonomía macrosegmentaria, irreductibilidad informativa y
+      // ausencia de integración superior en una sola corriente C1-C10 (condiciones 7-9). El
+      // límite de longitud en sí se aplica más arriba, junto con el resto de arquitecturas.
       if (arquitectura.recorridos.length !== 0) {
         report.error("SIN_PRINCIPAL_CLASIFICABLE", `${work.id}: sin_principal_clasificable no admite recorridos estructurantes.`);
       }

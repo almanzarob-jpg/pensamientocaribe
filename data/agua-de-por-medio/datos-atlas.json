@@ -4118,9 +4118,21 @@
       "tr": "hispano (Rep. Dominicana/Colombia)",
       "ap": "Ensayo panorámico de una historiadora dominicana que fundó estudios caribeños en Santo Domingo: la plantación como origen, la integración regional como promesa incumplida, y el archipiélago recorrido en primera persona. Publicado por la Universidad del Magdalena, dialoga en extenso con Glissant y reivindica a Hurbon como lectura que le cambió la comprensión de Haití.",
       "recorrido": null,
-      "recorridos_sec": [],
-      "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "recorridos_sec": [
+        "c2",
+        "c7",
+        "c5"
+      ],
+      "arquitectura_recorrido": {
+        "tipo": "sin_principal_clasificable",
+        "recorridos": []
+      },
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-sangbenvolviendo-p3-etapa-2-3m.md",
+        "auditoria-sangbenvolviendo-dimensiones-parciales-p3-etapa-2-3m.md",
+        "decision-normativa-cardinalidad-dimensiones-parciales-p3-etapa-2-3m.md"
+      ]
     },
     {
       "id": "chicamusicaafricana",
