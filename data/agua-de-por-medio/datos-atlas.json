@@ -2405,10 +2405,15 @@
       "l": "jamaica",
       "tr": "anglófono (Jamaica/EE.UU.)",
       "ap": "El primer editor negro de un periódico en Estados Unidos nació en Port Antonio, Jamaica: una genealogía pan-africanista temprana que empieza en el Caribe y que la historia afroamericana suele contar como si empezara en Estados Unidos.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c5",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-russwurm-p3-etapa-2-3n.md"
+      ]
     },
     {
       "id": "tackysrevolt",
@@ -2567,16 +2572,19 @@
       "a": "Clevis Headley",
       "y": "2026",
       "f": [
-        "capitalismo_racial",
-        "memoria"
+        "postplantacion",
+        "capitalismo_racial"
       ],
       "l": "haiti",
       "tr": "comparado (transnacional)",
       "ap": "Es un artículo filosófico, no un libro: examina los obstáculos jurídicos reales que enfrenta el reclamo caribeño de reparaciones por la esclavitud, sin resolver la tensión entre lo justo y lo legalmente exigible.",
-      "recorrido": null,
+      "recorrido": "c4",
       "recorridos_sec": [],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-headleyreparaciones-p3-etapa-2-3n.md"
+      ]
     },
     {
       "id": "jaffeconcrete",
@@ -2610,16 +2618,27 @@
       "a": "Mauricio Pardo, Claudia Mosquera y Odile Hoffmann (eds.)",
       "y": "2002",
       "f": [
-        "memoria",
-        "capitalismo_racial"
+        "cimarronaje",
+        "creolizacion",
+        "postplantacion"
       ],
       "l": "cartagena",
       "tr": "hispano (Colombia/Francia)",
       "ap": "Ciento cincuenta años de la abolición colombiana leídos no como cierre sino como apertura de una identidad afrodescendiente todavía en disputa, comparada con otras trayectorias del continente.",
       "recorrido": null,
-      "recorridos_sec": [],
-      "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "recorridos_sec": [
+        "c3",
+        "c8",
+        "c4"
+      ],
+      "arquitectura_recorrido": {
+        "tipo": "sin_principal_clasificable",
+        "recorridos": []
+      },
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-pardomosquerahoffmann-p3-etapa-2-3n.md"
+      ]
     },
     {
       "id": "scher",
@@ -2634,10 +2653,15 @@
       "l": "trinidad",
       "tr": "anglófono (Trinidad/EE.UU.)",
       "ap": "El Carnaval trinitario seguido de Puerto España a Brooklyn: una nación cultural que se rehace cada año fuera del territorio nacional, en los mas camps de la diáspora.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c5",
+      "recorridos_sec": [
+        "c8"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-scher-p3-etapa-2-3n.md"
+      ]
     },
     {
       "id": "hallafricanslouisiana",
@@ -2652,10 +2676,15 @@
       "l": "nola",
       "tr": "francófono/anglófono (Luisiana)",
       "ap": "La cultura afrocriolla de Luisiana reconstruida desde el origen étnico africano preciso de cada persona esclavizada, archivo por archivo: Nueva Orleans como puerto del Gran Caribe y no como curiosidad exclusivamente estadounidense.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c2"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-hallafricanslouisiana-p3-etapa-2-3n.md"
+      ]
     },
     {
       "id": "creolenieworleans",
@@ -4610,10 +4639,13 @@
       "l": "haiti",
       "tr": "anglófono (EE.UU.)",
       "ap": "La frontera marítima como tecnología jurídica que produce la 'ilegalidad' haitiana antes de que el migrante llegue a tierra. Migración e imperio leídos desde el derecho, no solo desde la etnografía del desplazamiento.",
-      "recorrido": null,
+      "recorrido": "c7",
       "recorridos_sec": [],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-kahnislands-p3-etapa-2-3n.md"
+      ]
     },
     {
       "id": "dubuissonhaiti",
