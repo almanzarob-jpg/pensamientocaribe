@@ -2283,10 +2283,13 @@
       "l": "belize",
       "tr": "anglófono (Belice/R.U.)",
       "ap": "Belice como sociedad colonial forjada entre colonos madereros británicos, mayas y esclavos, y no como nota marginal del Caribe insular: la otra historia colonial del Caribe continental.",
-      "recorrido": null,
+      "recorrido": "c2",
       "recorridos_sec": [],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-bollandbelize-p3-etapa-2-3l.md"
+      ]
     },
     {
       "id": "hintzen",
@@ -3075,10 +3078,13 @@
       "l": "jamaica",
       "tr": "anglófono (Jamaica/EE.UU.)",
       "ap": "El panorama completo del radicalismo caribeño migrante en Nueva York de entreguerras (Garvey, McKay, la Hermandad de Sangre Africana): amplía la biografía de Russwurm ya presente en el atlas.",
-      "recorrido": null,
+      "recorrido": "c5",
       "recorridos_sec": [],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-james_bannerethiopia-p3-etapa-2-3l.md"
+      ]
     },
     {
       "id": "schuller_killingkindness",
@@ -4146,10 +4152,15 @@
       "l": "puertorico",
       "tr": "hispano (Puerto Rico/comparado)",
       "ap": "La migración intracolonial —puertorriqueña hacia Nueva York, dominicana hacia San Juan— leída como forma ordinaria del poder colonial contemporáneo, no como su excepción. Dedica un capítulo entero a cruzar a Fanon con Piri Thomas y otro a Césaire con Muñoz Marín, y cita a Grosfoguel por el título exacto de su libro.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c5",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-martinezsanmiguel-p3-etapa-2-3l.md"
+      ]
     },
     {
       "id": "archipelagicthinking",
