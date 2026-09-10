@@ -3755,10 +3755,15 @@
       "l": "puertorico",
       "tr": "hispano (Puerto Rico)",
       "ap": "Lee la condición colonial puertorriqueña como posición dentro del sistema-mundo y no como anomalía nacional. Compara migraciones caribeñas para mostrar que la subordinación es estructural y no un rezago por superar.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c5"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-grosfoguelcolonial-p3-etapa-2-3n.md"
+      ]
     },
     {
       "id": "bahadurcoolie",
@@ -3834,10 +3839,15 @@
       "l": "guyana",
       "tr": "anglófono (EE. UU./Guyana)",
       "ap": "El derecho no tiene gramática para nombrar la masacre del Zong, y la literatura sí tiene poética para excederla. Leyendo a NourbeSe Philip, a Fred D'Aguiar y a David Dabydeen, Goldberg sostiene que la abolición no es una fecha cumplida sino un tiempo todavía por abrir.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c2"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-goldbergabolition-p3-etapa-2-3n.md"
+      ]
     },
     {
       "id": "hurboncomprendre",
@@ -3936,10 +3946,15 @@
       "l": "cartagena",
       "tr": "anglófono (EE. UU./Colombia)",
       "ap": "Lee el De instauranda Aethiopum salute de Alonso de Sandoval como texto colonial y no como ventana transparente al puerto negrero. La misión jesuita de Cartagena produjo el archivo desde el cual todavía se lee la esclavitud en el Caribe hispano, y esa producción tiene sus propias reglas.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c2"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-olsencartagena-p3-etapa-2-3n.md"
+      ]
     },
     {
       "id": "cosgrovegarifuna",
@@ -5434,10 +5449,15 @@
       "l": "trinidad",
       "tr": "anglófono (Trinidad)",
       "ap": "Dos siglos de presencia china en las Antillas reunidos en documentos: contratos, censos, prensa, peticiones. La tercera migración forzada de la cuenca, que el atlas apenas insinuaba con la indentura india.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c4",
+      "recorridos_sec": [
+        "c5"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-looklaichinese-p3-etapa-2-3n.md"
+      ]
     },
     {
       "id": "putnamradical",
