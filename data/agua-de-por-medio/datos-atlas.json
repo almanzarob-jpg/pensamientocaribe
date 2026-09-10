@@ -1593,8 +1593,17 @@
       "ap": "Tres redes familiares dispersas entre el Caribe, Norteamérica y Europa: el hogar como relación y no como lugar fijo.",
       "recorrido": null,
       "recorridos_sec": [],
-      "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "arquitectura_recorrido": {
+        "tipo": "frontera_constitutiva",
+        "recorridos": [
+          "c5",
+          "c10"
+        ]
+      },
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-caribjourneys-p3-etapa-2-3n.md"
+      ]
     },
     {
       "id": "globalculture",
@@ -2034,10 +2043,15 @@
       "l": "martinica",
       "tr": "comparado (teoría decolonial americana)",
       "ap": "La cuadrícula colonial como tecnología de poder anterior a la fábrica y el hospital foucaultianos: el archipiélago caribeño, leído con Glissant, ofrece el modelo espacial que resiste esa cuadrícula.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c1",
+      "recorridos_sec": [
+        "c8"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-deere-p3-etapa-2-3n.md"
+      ]
     },
     {
       "id": "abello",
@@ -2945,8 +2959,17 @@
       "ap": "Cuba y Haití como espejos invertidos de la misma era revolucionaria: mientras Haití se liberaba de la esclavitud, Cuba la profundizaba aprovechando el vacío azucarero que dejó su vecina.",
       "recorrido": null,
       "recorridos_sec": [],
-      "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "arquitectura_recorrido": {
+        "tipo": "frontera_constitutiva",
+        "recorridos": [
+          "c2",
+          "c3"
+        ]
+      },
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-ferrerfreedomsmirror-p3-etapa-2-3n.md"
+      ]
     },
     {
       "id": "deloughrey",
@@ -3174,10 +3197,15 @@
       "l": "trinidad",
       "tr": "anglófono (Trinidad)",
       "ap": "Historiografía fundacional de Trinidad poscolonial; Brereton se formó bajo la codirección doctoral de Neville A. T. Hall, el historiador del Caribe danés que este mismo lote incorpora.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c4",
+      "recorridos_sec": [
+        "c8"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-brereton_racerelationstrinidad-p3-etapa-2-3n.md"
+      ]
     },
     {
       "id": "nixon_resistingparadise",
@@ -4283,8 +4311,17 @@
       "ap": "La tesis de la desmentida: la Revolución haitiana fue reconocida y negada a la vez por el pensamiento moderno que dice fundarse en la libertad. Discute en detalle Silenciando el pasado de Trouillot y cita dos veces Wizards and Scientists de Palmié, ambos catalogados con el mismo título.",
       "recorrido": null,
       "recorridos_sec": [],
-      "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "arquitectura_recorrido": {
+        "tipo": "frontera_constitutiva",
+        "recorridos": [
+          "c3",
+          "c9"
+        ]
+      },
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-fischer-p3-etapa-2-3n.md"
+      ]
     },
     {
       "id": "felicianosantos",
