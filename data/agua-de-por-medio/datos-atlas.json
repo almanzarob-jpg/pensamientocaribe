@@ -1112,10 +1112,13 @@
       "l": "haiti",
       "tr": "anglófono (EE.UU., diáspora en Brooklyn)",
       "ap": "El vodou tal como se practica en la diáspora neoyorquina, lejos del templo haitiano de origen; la etnografía se escribe como varias voces trenzadas, la propia autora incluida.",
-      "recorrido": null,
+      "recorrido": "c9",
       "recorridos_sec": [],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-mamalola-p3-etapa-2-3m.md"
+      ]
     },
     {
       "id": "besson",
@@ -2661,10 +2664,13 @@
       "l": "guyana",
       "tr": "anglófono (Guyana/Trinidad)",
       "ap": "La identidad indocaribeña leída como creolización propia, no como enclave aislado del resto de la cuenca: mezcla, adaptación y resistencia desde 1838 hasta hoy en dos naciones distintas.",
-      "recorrido": null,
+      "recorrido": "c8",
       "recorridos_sec": [],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-ramsaranlewis-p3-etapa-2-3m.md"
+      ]
     },
     {
       "id": "gonzalezsojourners",
@@ -4785,10 +4791,15 @@
       "l": "bluefields",
       "tr": "anglófono (EE.UU.)",
       "ap": "La pesca de tortuga como frontera marítima disputada entre imperios y luego entre Estados: el agua como límite que se hace y deshace con el trabajo, no solo con el tratado.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c5"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-crawfordturtlemen-p3-etapa-2-3m.md"
+      ]
     },
     {
       "id": "mitchellalibi",
@@ -5292,10 +5303,13 @@
       "l": "guyana",
       "tr": "anglófono (EE.UU./India)",
       "ap": "La indentura india no como sucesora natural de la esclavitud sino como invento administrativo que el imperio construyó para no llamarla trabajo forzado. Lee el archivo colonial contra su propia retórica de la libertad de contrato.",
-      "recorrido": null,
+      "recorrido": "c4",
       "recorridos_sec": [],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-kalefragments-p3-etapa-2-3m.md"
+      ]
     },
     {
       "id": "shepherdmaharani",
