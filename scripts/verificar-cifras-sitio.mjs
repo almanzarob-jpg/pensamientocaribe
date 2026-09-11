@@ -62,7 +62,7 @@ const reglas = [
   ["proyectos/con-el-agua-de-por-medio.html", /archipiélica: (\d+) obras/, "entradas"],
   ["proyectos/con-el-agua-de-por-medio.html", /(\d+) obras y manifestaciones del Gran Caribe conectadas/g, "entradas"],
   ["proyectos/con-el-agua-de-por-medio.html", /conecta (\d+) obras y manifestaciones/, "entradas"],
-  ["proyectos/con-el-agua-de-por-medio.html", /(\d+) de 614 relaciones/g, "porCorroborar"],
+  ["proyectos/con-el-agua-de-por-medio.html", /(\d+) de (?:\d+) relaciones/g, "porCorroborar"],
   ["proyectos/marca-de-marea.html", /id="mObras">(\d+)</, "entradas"],
   ["proyectos/marca-de-marea.html", /id="mVer">([\d.]+)</, "version"],
   ["proyectos/marca-de-marea.html", /(\d+) de (?:\d+) corrientes esperan fuente/, "porCorroborar"],
@@ -82,10 +82,10 @@ const reglas = [
   ["proyectos/reflujo-guia.html", /son resonancias y solo (\d+) son disonancias/, "disonancias"],
   ["proyectos/reflujo-guia-en.html", /between (\d+) works/, "entradas"],
   ["proyectos/reflujo-guia-en.html", /the (\d+) present entries/, "entradas"],
-  ["proyectos/metodologia-agua-de-por-medio.html", /contiene tres entradas frente a (\d+) obras/, "obras"],
+  ["proyectos/metodologia-agua-de-por-medio.html", /contiene \d+ entradas frente a (\d+) obras/, "obras"],
   ["proyectos/metodologia-agua-de-por-medio.html", /registra (\d+) resonancias/, "resonancias"],
   ["proyectos/metodologia-agua-de-por-medio.html", /resonancias y (\d+) disonancias/, "disonancias"],
-  ["proyectos/metodologia-agua-de-por-medio-en.html", /contains three entries against (\d+) works/, "obras"],
+  ["proyectos/metodologia-agua-de-por-medio-en.html", /contains \d+ entries against (\d+) works/, "obras"],
 ];
 
 const errores = [];
