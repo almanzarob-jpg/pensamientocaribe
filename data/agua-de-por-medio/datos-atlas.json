@@ -1484,10 +1484,21 @@
       "l": "jamaica",
       "tr": "comparado (teoría política y etnografía)",
       "ap": "Ciudadanía pensada desde sus márgenes raciales y sexuados; Thomas aporta el andamiaje jamaicano a un problema más amplio.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c10"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Yolanda Martínez-San Miguel, Ben. Sifuentes-Jáuregui y Marisa Belausteguigoitia (eds.), Citizenship on the Edge (Fordham UP, 2022). El marco editorial de introducción organiza el volumen alrededor de la ciudadanía como categoría fronteriza/liminal (soberanía, pertenencia legal, migración) aplicada a casos latinoamericanos y caribeños. Principal C7 (soberanías/fronteras/ocupaciones); secundaria real C10 vía los capítulos sobre sexualidad/cuerpo y ciudadanía. Salvedad ya registrada en la lectura original: solo una fracción de los capítulos del volumen trata específicamente casos caribeños, pero el marco programático de las propias editoras —el organizador declarado del volumen— sostiene la clasificación.",
+        "responsable": "Dirección académica de Pensamiento Caribe (protocolo TRIAGE_INTERNO_C1_C10, lote 3, semáforo VERDE/ROJO académico representable)",
+        "fecha": "2026-09-11"
+      },
+      "fuente_recorrido": [
+        "avance-triage-interno-c1-c10-lotes-2-4.md"
+      ]
     },
     {
       "id": "politicallife",
@@ -2147,10 +2158,21 @@
       "l": "martinica",
       "tr": "francófono (Martinica/Francia)",
       "ap": "La experiencia vivida del cuerpo negro bajo la mirada blanca —el \"¡mira, un negro!\" que fija y cosifica—, y el deseo racializado que atraviesa las relaciones íntimas entre colonizado y colonizador. Fanon psiquiatra antes que teórico político, pensando desde su propia Martinica antes de escribir sobre Argelia.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c10"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Frantz Fanon, Piel negra, máscaras blancas (1952; ed. Akal 2009 con prólogo de Wallerstein). Lectura de la introducción del propio Fanon (estructura declarada en 5 capítulos) confirma que el objeto global es la alienación racial del sujeto antillano bajo el lenguaje y la mirada de la civilización blanca: el título mismo —máscara blanca sobre piel negra— es una figura de traducción/desdoblamiento identitario forzado por la cultura colonizadora (cap. 1, 'El negro y el lenguaje': hablar francés como asumir una cultura ajena). Esto corresponde a C8 (creolizaciones/traducciones/opacidades), no a la candidatura de trabajo original C10 con la que este id llegó registrado (sin ancla alguna en el catálogo de fenómenos vigente, confirmado por búsqueda dirigida: candidatura puramente léxica del expediente de evidencia C10, nunca procesada). C10 obtiene sustantividad secundaria real y acotada: el cap. 2 (deseo interracial) y el cap. 5 ('La experiencia vivida del negro', esquema corporal/epidérmico) son momentos analíticos sustantivos, pero dependen del marco más amplio de alienación lingüístico-cultural para su sentido, no al revés. Caso ROJO académico representable resuelto con el contrato vigente: la candidatura de universo (C10) no coincide con el corriente que efectivamente organiza la obra (C8), tal como el propio protocolo anticipa ('la pertenencia a un universo de triage es solo una hipótesis de trabajo').",
+        "responsable": "Dirección académica de Pensamiento Caribe (protocolo TRIAGE_INTERNO_C1_C10, lote 3, semáforo VERDE/ROJO académico representable)",
+        "fecha": "2026-09-11"
+      },
+      "fuente_recorrido": [
+        "avance-triage-interno-c1-c10-lotes-2-4.md"
+      ]
     },
     {
       "id": "james",
@@ -4826,10 +4848,22 @@
       "l": "cuba",
       "tr": "anglófono (EE.UU.)",
       "ap": "La 'afrocubanidad' como actuación semiótica —performance ritual, folclórico y turístico— que produce la raza en vez de solo representarla.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c9",
+        "c10"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Kristina Wirtz, Performing Afro-Cuba: Image, Voice, Spectacle in the Making of Race and History (Chicago UP, 2014). Objeto: cómo la performance pública (santería, folclore teatralizado, medios) produce y estabiliza 'lo afrocubano' como categoría racial-histórica. Principal C8, ancla ya registrada en fiesta_y_performance_publico (C8/C10). Secundarias reales: C9 (la obra trata la santería y la memoria ritual como archivo vivo de performance, sustantividad real en varios capítulos, sin ser el eje organizador) y C10 (el cuerpo en performance —voz, gesto, espectáculo— es vehículo constante del argumento, secundaria real vía la misma ancla).",
+        "responsable": "Dirección académica de Pensamiento Caribe (protocolo TRIAGE_INTERNO_C1_C10, lote 3, semáforo VERDE/ROJO académico representable)",
+        "fecha": "2026-09-11"
+      },
+      "fuente_recorrido": [
+        "avance-triage-interno-c1-c10-lotes-2-4.md"
+      ]
     },
     {
       "id": "belisodelirium",
@@ -4905,10 +4939,22 @@
       "l": "puertorico",
       "tr": "anglófono (EE.UU.)",
       "ap": "El nacionalismo cultural puertorriqueño necesita una negrura administrada —folclórica, festiva, del pasado— para sostener el mestizaje como guion oficial.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c7",
+        "c10"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Isar P. Godreau, Scripts of Blackness: Race, Cultural Nationalism, and U.S. Colonialism in Puerto Rico (Illinois UP, 2015). Objeto declarado en introducción y conclusión: los 'guiones raciales' (scripts) con que Puerto Rico narra su propia mezcla racial para sostener un nacionalismo cultural mestizo que minimiza la negritud. Principal C8 (creolizaciones/traducciones/opacidades: la mezcla racial como narrativa nacional performativa), ancla ya registrada en formacion_racial_nacional (C7/C8) y en fiesta_y_performance_publico (C8/C10, vía los estudios de caso sobre festivales y performance corporal negra que la propia obra analiza). Secundarias reales: C7 (el nacionalismo cultural como proyecto de soberanía/legitimación frente al colonialismo estadounidense, condición histórica explícita del argumento) y C10 (los capítulos sobre performance corporal y estética negra en fiestas populares dan sustantividad real pero no organizan el libro entero).",
+        "responsable": "Dirección académica de Pensamiento Caribe (protocolo TRIAGE_INTERNO_C1_C10, lote 3, semáforo VERDE/ROJO académico representable)",
+        "fecha": "2026-09-11"
+      },
+      "fuente_recorrido": [
+        "avance-triage-interno-c1-c10-lotes-2-4.md"
+      ]
     },
     {
       "id": "castorspiritual",
