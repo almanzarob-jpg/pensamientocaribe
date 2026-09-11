@@ -1938,7 +1938,13 @@
       "recorrido": null,
       "recorridos_sec": [],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "pendiente",
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "fundamento": "Verificacion manual de fuente (TRIAGE_INTERNO_C1_C10, lote 4) confirma que el archivo bibliografico no esta disponible localmente en Pagina/Biliografia. Coincide con hallazgo ya documentado en campanas previas: apertura-control-p3-b-etapa-2-3i.md (Sec. 57, listado en 3_CASOS_BLOQUEADOS), apertura-recalibracion-p3-etapa-2-3g.md (grado relacional 10, NO_LOCALIZADA) y campana-recuperacion-bibliografica-post-p3.md (busqueda externa ya agotada: Duke UP, academia.edu, archive.org, sin PDF autoarchivado). No se realizo nueva busqueda externa, conforme al protocolo (Seccion 7 de la instruccion vigente). El caso permanece PENDIENTE, sin lectura ni veredicto academico.",
+        "responsable": "Dirección académica de Pensamiento Caribe (protocolo TRIAGE_INTERNO_C1_C10, lote 4)",
+        "fecha": "2026-09-11"
+      }
     },
     {
       "id": "ramadan",
@@ -1996,8 +2002,23 @@
       "ap": "La soberanía negra pensada no desde el Estado sino desde el cuerpo queer: altares, agua, guerra y ceremonia como los verdaderos territorios de una libertad dominicana que la nación no alcanza a nombrar.",
       "recorrido": null,
       "recorridos_sec": [],
-      "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "arquitectura_recorrido": {
+        "tipo": "frontera_constitutiva",
+        "recorridos": [
+          "c7",
+          "c10"
+        ]
+      },
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Ana-Maurine Lara, Queer Freedom: Black Sovereignty (SUNY Afro-Latinx Series, 2020). El propio título yuxtapone dos términos sin subordinar uno a otro; la ceremonia de apertura (capítulo introductorio, leído íntegro más allá de agradecimientos) declara el objeto como 'queer freedom : Black sovereignty — queer : Black decolonization', articulado explícitamente con el signo ':' que la autora usa en el libro para significar co-constitución, no separación jerárquica (ver nota metodológica sobre 'queerness : blackness'). Los cuatro universos de trabajo en que este id fue registrado (C7_exploratorio, C7_soberanias_sin_lote, C10_exploratorio, C10_cuerpo_erotica_sin_lote) corresponden exactamente a los dos ejes irreductibles del libro: soberanía negra/decolonización frente al Estado (C7) y libertad queer/erótica-corporal (C10), organizados además por los conceptos transversales de altars-puntos, body-lands y water-memories que el propio libro se niega a jerarquizar. Ningún capítulo permite leer un eje como subordinado al otro. Arquitectura especial frontera_constitutiva [c7, c10], sin principal.",
+        "responsable": "Dirección académica de Pensamiento Caribe (protocolo TRIAGE_INTERNO_C1_C10, lote 4, semáforo VERDE/ROJO académico representable)",
+        "fecha": "2026-09-11"
+      },
+      "fuente_recorrido": [
+        "avance-triage-interno-c1-c10-lotes-2-4.md"
+      ]
     },
     {
       "id": "mintzarea",
@@ -2291,10 +2312,19 @@
       "l": "trinidad",
       "tr": "comparado (anglófono/francófono/hispano/neerlandés)",
       "ap": "Sexualidades disidentes leídas a través de las cuatro tradiciones lingüísticas del Caribe a la vez, cruzando literatura, música y cultura popular: uno de los pocos estudios que rehúsa encerrarse en un solo idioma imperial.",
-      "recorrido": null,
+      "recorrido": "c10",
       "recorridos_sec": [],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Rosamond S. King, Island Bodies: Transgressive Sexualities in the Caribbean Imagination (University Press of Florida, 2014). Introducción y tabla de contenidos (trans continuum, deseo entre hombres/mujeres, agencia sexual femenina, relaciones interraciales) declaran el objeto explícito: examinar y analizar cómo se transgreden las normas sexuales caribeñas. El concepto de 'Caribglobal' que organiza la introducción es un marco metodológico-comparativo (para justificar leer across Anglophone/Hispanophone/Francophone/Dutch Caribbean) y no una tesis de creolización/traducción identitaria: no organiza el argumento, solo delimita su alcance regional. C8 (creolizaciones/traducciones/opacidades), candidatura de universo de trabajo original, se descarta por completo. Principal c10, sin secundarias sustantivas.",
+        "responsable": "Dirección académica de Pensamiento Caribe (protocolo TRIAGE_INTERNO_C1_C10, lote 4, semáforo VERDE/ROJO académico representable)",
+        "fecha": "2026-09-11"
+      },
+      "fuente_recorrido": [
+        "avance-triage-interno-c1-c10-lotes-2-4.md"
+      ]
     },
     {
       "id": "fuentesdispossessed",
@@ -3373,8 +3403,23 @@
       "ap": "Antología que cruza sexualidad con ciudadanía política, con Kempadoo, Alexander y Reddock entre sus referencias centrales: sexualidad como pregunta de Estado, no solo de intimidad.",
       "recorrido": null,
       "recorridos_sec": [],
-      "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "arquitectura_recorrido": {
+        "tipo": "frontera_constitutiva",
+        "recorridos": [
+          "c7",
+          "c10"
+        ]
+      },
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Faith Smith (ed.), Sex and the Citizen: Interrogating the Caribbean (UVA Press, 2011). La introducción editorial ('Sexing the Citizen') fija programáticamente el marco de todo el volumen: sexualidad y ciudadanía/soberanía son co-constitutivas, no una epifenómeno de la otra ('why are responses to this question tied so insistently to the sexed bodies... and why... political and cultural sovereignty'), articulado en dos ejes históricos igualmente estructurantes —el tabú del mestizaje (soberanía racial colonial) y el tabú de la homosexualidad (pertenencia nacional contemporánea)— que atraviesan capítulos de derecho, literatura, cine y antropología por igual. A diferencia de Mohammed (2002), aquí la síntesis editorial sí articula una tesis transversal que liga ambos ejes en todo el volumen. Arquitectura especial frontera_constitutiva [c7, c10], sin principal — mismo patrón que lara, confirmado independientemente por lectura propia.",
+        "responsable": "Dirección académica de Pensamiento Caribe (protocolo TRIAGE_INTERNO_C1_C10, lote 4, semáforo VERDE/ROJO académico representable)",
+        "fecha": "2026-09-11"
+      },
+      "fuente_recorrido": [
+        "avance-triage-interno-c1-c10-lotes-2-4.md"
+      ]
     },
     {
       "id": "hall_slavesocietydanish",
