@@ -5278,10 +5278,15 @@
       "l": "suriname",
       "tr": "neerlandés (Países Bajos/Surinam)",
       "ap": "Surinam del contrato de indentura a la independencia y la dictadura, con la bauxita en el centro. El atlas tenía Surinam solo por el cimarronaje saramaka; aquí aparece el país como Estado, con su economía y sus fracturas étnicas.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c4",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-hoeftesuriname-p4-etapa-2-4a.md"
+      ]
     },
     {
       "id": "hoeftetrajectories",
