@@ -1809,10 +1809,22 @@
       "l": "cartagena",
       "tr": "francófono (Francia/Colombia)",
       "ap": "En Cartagena la negritud se negocia en la superficie del cuerpo: una antropóloga francesa hace fricción epistémica directa con el archivo hispano local.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c7",
+        "c10"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El argumento central es la construccion y ambiguedad de las categorias raciales ('apariencias y pertenencias') como practica social de mestizaje bajo el multiculturalismo colombiano: creolizacion/opacidad organiza el libro (C8). Secundaria C7 (soberanias/fronteras), ya anclada junto con C8 en el fenomeno formacion_racial_nacional (politica multicultural del Estado, Ley 70, reconocimiento etnico de palenqueros). Secundaria C10 (cuerpos): el capitulo 3 completo, 'puesta en escena del cuerpo', analiza reinas de belleza y el cuerpo racializado en publico; sustantividad real pero acotada a un capitulo, no alcanza a ser principal.",
+        "responsable": "Dirección académica de Pensamiento Caribe (protocolo TRIAGE_INTERNO_C1_C10, lote 1, semáforo VERDE/AMARILLO)",
+        "fecha": "2026-09-11"
+      },
+      "fuente_recorrido": [
+        "avance-triage-interno-c1-c10-lote-1.md"
+      ]
     },
     {
       "id": "figueroa",
@@ -3135,10 +3147,19 @@
       "l": "trinidad",
       "tr": "anglófono (Trinidad)",
       "ap": "Reúne el pensamiento feminista caribeño en su propio terreno institucional (UWI), con Reddock entre sus interlocutoras directas: abre el corpus a una voz que piensa el género desde la experiencia indocaribeña, no solo afrocaribeña.",
-      "recorrido": null,
+      "recorrido": "c10",
       "recorridos_sec": [],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Volumen editado cuya introduccion (Patricia Mohammed, 'The Material of Gender') declara explicitamente el genero como categoria analitica que organiza todo el libro ('gendered identities', 'masculinity and femininity'): C10 principal sin ambiguedad, sin necesidad de inferencia. C8 (creolizacion) descartado por completo para el volumen como unidad: los capitulos autonomos de Shepherd (diaspora india) y Trotz (etnicidad en Guyana) tocan el tema de forma aislada, pero -conforme al criterio ya establecido para volumenes editados- un capitulo autonomo no arrastra corriente secundaria al volumen completo cuando la introduccion editorial no articula una tesis transversal de mezcla/opacidad racial.",
+        "responsable": "Dirección académica de Pensamiento Caribe (protocolo TRIAGE_INTERNO_C1_C10, lote 1, semáforo VERDE/AMARILLO)",
+        "fecha": "2026-09-11"
+      },
+      "fuente_recorrido": [
+        "avance-triage-interno-c1-c10-lote-1.md"
+      ]
     },
     {
       "id": "james_bannerethiopia",
@@ -4599,8 +4620,23 @@
       "ap": "El despojo de los pueblos negros panameños por la Zona del Canal, borrados de la narrativa oficial que celebra la obra de ingeniería. Llena un vacío casi total del atlas sobre Panamá.",
       "recorrido": null,
       "recorridos_sec": [],
-      "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "arquitectura_recorrido": {
+        "tipo": "frontera_constitutiva",
+        "recorridos": [
+          "c4",
+          "c7"
+        ]
+      },
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El propio epilogo organiza el argumento en dos ejes irreductibles y de igual peso: la desposesion de una economia urbana postplantacion -pueblos, tenencias, mercados, autogobierno republicano borrados- (C4) Y el aparato de soberania-enclave de la Zona del Canal que hizo posible esa desposesion (C7). Ninguno es reducible al otro: coincide con el fenomeno ya anclado enclave_y_extractivismo, etiquetado conjuntamente bajo postplantacion_trabajo_desposesion y soberanias_fronteras_ocupaciones. Se clasifica FRONTERA_CONSTITUTIVA, sin principal. C9 (archivos vivos) descartado por completo: el unico asomo de memoria oral es el epigrafe del epilogo (testimonio del padre de Danilo Perez Urriola), recurso puntual que no organiza el libro, cuya evidencia documental central son archivos oficiales de NARA, no archivo vivo ni tradicion transmitida. Ancla ya registrada de silencio_de_archivo verificada, no reabierta.",
+        "responsable": "Dirección académica de Pensamiento Caribe (protocolo TRIAGE_INTERNO_C1_C10, lote 1, semáforo VERDE/AMARILLO)",
+        "fecha": "2026-09-11"
+      },
+      "fuente_recorrido": [
+        "avance-triage-interno-c1-c10-lote-1.md"
+      ]
     },
     {
       "id": "floresvillalobos",
@@ -4828,10 +4864,22 @@
       "l": "dominicana",
       "tr": "anglófono (EE.UU.)",
       "ap": "La dominicanidad como archivo contradictorio que necesita negar la negrura para narrarse a sí misma. Dialoga directamente con la Masacre de 1937 ya presente en el corpus.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c8",
+        "c9"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El libro reconstruye la frontera Haití-RD y el bordering nacional de la dominicanidad a traves de cinco episodios historicos (1822-2010): ocupacion de EEUU, Masacre de 1937, La Sentencia. Soberania/frontera/ocupacion organiza globalmente el argumento (C7), ya anclado ademas en el fenomeno formacion_racial_nacional junto con creolizacion/traduccion (C8: 'El Nie', diccion, bordering linguistico). C9 secundaria por el capitulo 1 (Olivorio Mateo, espiritualidad afrodominicana como archivo vivo del cuerpo, via M. Jacqui Alexander) sin llegar a ser principal. Ancla ya registrada de silencio_de_archivo (fenomeno transversal C9/C1/C2) verificada, no reabierta.",
+        "responsable": "Dirección académica de Pensamiento Caribe (protocolo TRIAGE_INTERNO_C1_C10, lote 1, semáforo VERDE/AMARILLO)",
+        "fecha": "2026-09-11"
+      },
+      "fuente_recorrido": [
+        "avance-triage-interno-c1-c10-lote-1.md"
+      ]
     },
     {
       "id": "godreauscripts",
