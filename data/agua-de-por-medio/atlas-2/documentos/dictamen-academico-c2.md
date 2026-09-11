@@ -238,6 +238,10 @@ La columna dice «omitida» y no «descartada» justamente por eso. En siete cas
 
 Es la entrada con la señal de C2 más fuerte de las 34: cuatro disparadores distintos, incluidos «slave trade» y «trata» en el propio título. **La fuerza de su señal no sustituye la lectura.**
 
+### 4.7 Nota de corrección (Reconciliación documental C1–C10, 2026-09-11)
+
+**CORREGIDO.** Auditoría programática de la tabla del apartado 4.5 confirmó que contiene **35 filas con 35 ids únicos, sin duplicados** — no 34. La aritmética declarada en este dictamen (52 señales = 18 ya revisadas + 34 pendientes) no cierra contra ese recuento: 18 + 35 = 53. Ninguno de los 35 ids de la tabla coincide con los 18 ya revisados en el apartado 4.3, de modo que la tabla es la fuente correcta y las cifras "34" (apartados 2, 4.2, 4.3, 4.5, 8) y "52" (apartados 4.2, 4.3) son un error de conteo o derivación de este dictamen, no un dato del corpus. La cifra correcta del universo de relectura de C2 es **35 entradas** (53 señales totales). Esta corrección es exclusivamente aritmética y documental: no reclasifica ninguna de las 35 entradas, no las convierte en candidaturas y no modifica el corpus. Verificación completa en `cierre-reconciliacion-documental-c1-c10.md`.
+
 ---
 
 ## 5. Catálogo de fenómenos: compatibilidad y condición provisional

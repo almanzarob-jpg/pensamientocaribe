@@ -4,6 +4,8 @@
 
 ## 0\. Qué cambió respecto de la entrega anterior (total previo \= 113\)
 
+**Actualización del 2026-09-11 (Reconciliación documental C1–C10).** Se retiraron de la cola activa `chevannes`, `pricefirst`, `travelstooy` y `quintero` (total Grupo A: 106 → 102): sus decisiones ya estaban cerradas por `dictamen-academico-bloque-1-etapa-2-3.md` y `dictamen-academico-bloque-2-etapa-2-3.md` (ambos del 2026-08-18, posteriores a la consolidación de esta cola) y ya implementadas en el corpus vivo, pero esta cola no lo reflejaba. Se corrigió además la etiqueta de estado de la frontera C2/C10 (de PR a SC, conforme a `marco-academico-consolidado-atlas-2.md`) y la cardinalidad del universo de relectura de C2 (de 34 a 35, conforme a `dictamen-academico-c2.md` §4.7). Detalle completo en `apertura-reconciliacion-documental-c1-c10.md` y `cierre-reconciliacion-documental-c1-c10.md`. Esta actualización no reabre ninguna decisión de clasificación ni modifica el corpus.
+
 **Retirados por completo de la cola de obras (7 ids):**
 
 - `saetheridentidades` — ancla de fenómeno que su propio dictamen (C3 §8.4) declara expresamente que no es candidatura, no es entrada pendiente de C3 y no es miembro probable de la corriente. Trasladada a §4 ("Anclas documentales que no constituyen lecturas pendientes").  
@@ -32,7 +34,6 @@ Esta etapa es de **organización de evidencia, no de decisión**. La cola no cla
 | id | autor | título | año | corrientes implicadas | fronteras implicadas | origen de la lectura pendiente | motivo académico | estado actual | prioridad | tipo de lectura | pregunta de decisión | fuente normativa | observaciones |
 | :---- | :---- | :---- | :---- | :---- | :---- | :---- | :---- | :---- | :---- | :---- | :---- | :---- | :---- |
 | `alabi` | no mencionado | no mencionado | no mencionado | C3 | C3/C7 (regla ordena evaluar estos casos) | mención directa / ancla | Aporte: "la soberanía cimarrona tramitada entre la fe morava y el poder colonial"; "ninguno se clasifica aquí" | PENDIENTE\_NO\_LEIDA | P1 | FRONTERA, CORRIENTE | ¿Corresponde a C3, a C7, o a ambas por la frontera C3/C7? | dictamen-academico-c3.md §7.2, §8.3, §8.5 | — |
-| `chevannes` | no mencionado | no mencionado | no mencionado | C3, C9 | C3/C9 (frontera no prevista, planteada por la evidencia) | mención directa (aporte citado) \+ lectura dirigida autorizada | "Podría leerse como C9 a juzgar por sus metadatos... lo que esos aportes permiten es abrir la pregunta, no responderla"; C9: "la clasificación efectiva... requerirá lectura específica, no ejecutada en este dictamen" | PENDIENTE\_NO\_LEIDA | P1 | FRONTERA, CORRIENTE | ¿Decide el argumento —no el sujeto— si corresponde a C3, a C9, o a ambas? | dictamen-academico-c3.md §7.6, §8.3, §8.5, §8.6; dictamen-academico-c9.md §6, §10, §12, §14, §15, §16 | Mantener como lectura dirigida de frontera C3/C9, sin resolverla (instrucción §15). |
 | `exceptviolence` | no mencionado | no mencionado | no mencionado | C2, C4, C5 | C4/C5 (heredado) | mención directa \+ caso priorizado C4 ("leer primero") | Sin candidatura derivable por la misma causa que perezmorales | PENDIENTE\_NO\_LEIDA | P1 | FRONTERA, CORRIENTE | ¿A qué corriente corresponde? | dictamen-academico-c2.md §4.6; dictamen-academico-c4.md §8; dictamen-academico-c5.md §11, §15 | Caso priorizado explícitamente por C4 ("leer primero"). |
 | `gomezexperiential` | no mencionado | no mencionado | no mencionado | C6, C9, C10 | C9/C10 (posible caso adicional) | ancla de fenómeno (C6) \+ señal léxica ambigua (C10) | C10: "queda autorizado para lectura como posible caso adicional que permita probar esta frontera. No se clasifica dentro de este dictamen" | PENDIENTE\_NO\_LEIDA | P1 | FRONTERA, FENOMENO, CORRIENTE | ¿Aporta evidencia a la frontera C9/C10? ¿Corresponde a C6, a C9, o a C10? | dictamen-academico-c6.md §14, §15; dictamen-academico-c10.md §6, §11, §14, §16, §18, §19 | Recibe "atención especial" dentro del esquema de prioridades de C10 (§11). |
 | `gonzalezsojourners` | no mencionado | Sojourners of the Caribbean: Ethnogenesis and Ethnohistory of the Garifuna | 1988 | C1, C3, C5 | C3/C5 (caso testigo) | señal léxica (C1) \+ ancla y mención directa (C3, caso testigo de etnogenesis) \+ universo pendiente (C5) | C3: "es el caso testigo, y sigue sin leer" de la frontera C3/C5 | PENDIENTE\_NO\_LEIDA | P1 | FRONTERA, CORRIENTE | ¿Un pueblo que nace de la fuga y se reasienta corresponde a C3 principal/C5 secundaria, o al revés? | dictamen-academico-c1.md §4.4, §6.3; dictamen-academico-c3.md §7.3, §8.3, §8.5, §9; dictamen-academico-c5.md §11 | Caso testigo explícito de la frontera C3/C5, además de integrar el universo interno de C1. |
@@ -40,12 +41,9 @@ Esta etapa es de **organización de evidencia, no de decisión**. La cola no cla
 | `james` | no mencionado | no mencionado | no mencionado | C3 | C3/C7 (regla ordena evaluar estos casos) | mención directa / ancla | Ancla del fenómeno independencia\_y\_conflicto\_regional; "ninguno se clasifica aquí" | PENDIENTE\_NO\_LEIDA | P1 | FRONTERA, CORRIENTE | ¿Corresponde a C3, a C7, o a ambas por la frontera C3/C7? | dictamen-academico-c3.md §7.2, §8.3, §8.5 | — |
 | `lightfoot` | no mencionado | Troubling Freedom: Antigua and the Aftermath of British Emancipation | no mencionado | C2, C3 | C2/C3; C2/C4 (según periodo) | mención directa; único caso fijado del "tercer conjunto" | "Es el caso que obligará a aplicarlo, y sigue sin leer"; única entrada cuyos metadatos anuncian la emancipación británica; justifica lectura prioritaria sin anticipar clasificación | PENDIENTE\_NO\_LEIDA | P1 | FRONTERA, CORRIENTE | ¿Corresponde a C2, a C3, o a C4 según el periodo tratado? | dictamen-academico-c3.md §7.1, §8.2, §8.5, §10.1, §12 | Declarada explícitamente de "lectura prioritaria" por el propio dictamen de C3. |
 | `perezmorales` | no mencionado | no mencionado | no mencionado | C2, C4, C5 | C4/C5 (heredado) | mención directa (decisiones-pendientes.md) \+ caso priorizado C4 ("leer primero") | Quedó sin candidatura derivable al volverse capitalismo\_racial y violencias marcas transversales; prioridad de lectura no equivale a clasificación | PENDIENTE\_NO\_LEIDA | P1 | FRONTERA, CORRIENTE | ¿A qué corriente corresponde tras la pérdida de su candidatura original? | dictamen-academico-c2.md §4.6; dictamen-academico-c4.md §8; dictamen-academico-c5.md §11, §15 | Caso priorizado explícitamente por C4 ("leer primero"), heredado sin alteración de prioridad en C5. |
-| `pricefirst` | no mencionado | no mencionado | no mencionado | C3, C9 | C3/C9 | mención directa \+ lectura dirigida autorizada | Mismo tratamiento que chevannes y travelstooy | PENDIENTE\_NO\_LEIDA | P1 | FRONTERA, CORRIENTE | ¿Corresponde a C3, a C9, o a ambas? | dictamen-academico-c3.md §7.6, §8.3, §8.5, §8.6; dictamen-academico-c9.md §6, §10, §12, §14, §15, §16 | Mantener como lectura dirigida de frontera C3/C9, sin resolverla. |
-| `quintero` | no mencionado | Cuerpo y cultura: las músicas «mulatas» y la subversión del baile | no mencionado | C3, C10 | C3/C10 (caso que originó la regla de frontera) | mención directa | "Es el caso que obligó a formular la regla. No se clasifica aquí: se lee y se decide con la regla ya escrita" | PENDIENTE\_NO\_LEIDA | P1 | FRONTERA, CORRIENTE | ¿Es cimarronaje metafórico (C10) o material/de sustracción y emancipación (C3)? | dictamen-academico-c3.md §7.5, §8.3, §8.5; dictamen-academico-c10.md §8, §11, §14, §16, §18, §19 | Caso testigo pendiente de la frontera C3/C10 (instrucción §16); no clasificar. |
 | `rainforestwarriors` | no mencionado | no mencionado | no mencionado | C3 | C3/C7 (regla ordena evaluar estos casos) | mención directa / ancla | Aporte: "el cimarronaje del siglo XVII vuelto litigio internacional del XXI"; "ninguno se clasifica aquí" | PENDIENTE\_NO\_LEIDA | P1 | FRONTERA, CORRIENTE | ¿Corresponde a C3, a C7, o a ambas por la frontera C3/C7? | dictamen-academico-c3.md §7.2, §8.3, §8.5 | — |
 | `rifkinfictions` | Mark Rifkin | Fictions of Land and Flesh: Blackness, Indigeneity, Speculation | 2019 | C1, C3, C7 | C1/C3 (caso testigo obligatorio); C1/C7 (ancla) | ancla (C1, C7) \+ mención directa (C3, único caso que aparece en los expedientes de C1 y C3 a la vez) | "Sigue sin leer y sin clasificar"; C3 prohíbe resolverla por etiqueta, ancla o señal léxica; la lectura integral debe decidir si es corriente única o principal/secundaria | PENDIENTE\_NO\_LEIDA | P1 | FRONTERA, CORRIENTE | ¿Corresponde a C1, a C3, o a ambas como principal/secundaria? ¿Resuelve además algo de C1/C7? | dictamen-academico-c1.md §5, §5.1, §6.2; dictamen-academico-c3.md §7.4, §8.3, §8.5; dictamen-academico-c7.md §8, §10, §12, §13 | Caso testigo explícito de la frontera C1/C3; máxima prioridad por concurrir en dos expedientes distintos y por integrar además el universo interno de C1. |
 | `sherwood` | no mencionado | After Abolition: Britain and the Slave Trade | 2007 | C2, C4, C5 | C4/C5 (heredado) | señal léxica fuerte (4 disparadores) \+ caso priorizado (C4: "leer primero") \+ heredado en C5 | "La fuerza de su señal no sustituye la lectura"; C2 declara expresamente: "la prioridad inicial es sherwood" | PENDIENTE\_NO\_LEIDA | P1 | FRONTERA, CORRIENTE | ¿A qué corriente corresponde: C2, C4, C5, o combinación de éstas? | dictamen-academico-c2.md §4.5, §4.6; dictamen-academico-c4.md §8; dictamen-academico-c5.md §11, §15 | Caso de máxima prioridad explícita declarada por Dirección Académica en el propio dictamen de C2. |
-| `travelstooy` | no mencionado | no mencionado | no mencionado | C3, C9 | C3/C9 | mención directa \+ lectura dirigida autorizada | Mismo tratamiento que chevannes: abre la pregunta, no la responde | PENDIENTE\_NO\_LEIDA | P1 | FRONTERA, CORRIENTE | ¿Corresponde a C3, a C9, o a ambas? | dictamen-academico-c3.md §7.6, §8.3, §8.5, §8.6; dictamen-academico-c9.md §6, §10, §12, §14, §15, §16 | Mantener como lectura dirigida de frontera C3/C9, sin resolverla. |
 | `andersonblackindigenous` | Mark Anderson | Black and Indigenous: Garifuna Activism and Consumer Culture in Honduras | 2009 | C1, C7 | C1/C7 (ancla del fenómeno indigeneidad\_en\_disputa) | ancla | Sin estado editorial formal respecto de C1; frontera C1/C7 abierta | PENDIENTE\_NO\_LEIDA | P2 | FRONTERA, CORRIENTE | ¿Corresponde a C1, a C7, o resuelve la frontera C1/C7? | dictamen-academico-c1.md §5, §5.1, §6.2; dictamen-academico-c7.md §8, §10, §12, §13 | Una de las 4 anclas comunes a C1 y C7 para esta frontera. |
 | `atkinsonearliest` | Lesley-Gail Atkinson (ed.) | The Earliest Inhabitants: The Dynamics of the Jamaican Taíno | 2006 | C1 | no aplica | ancla (mundos\_indigenas\_precoloniales) | Existencia y fundamento verificados; sin estado editorial formal respecto de C1 | PENDIENTE\_NO\_LEIDA | P2 | CORRIENTE | ¿Corresponde a C1? | dictamen-academico-c1.md §5, §5.1, §6.2 | Se mantiene como lectura interna de C1 (una de las 19); se retira la vinculación a C1/C5 por insuficiencia de evidencia obra-específica. |
 | `cosgrovegarifuna` | no mencionado | Surviving the Americas: Garifuna Persistence from Nicaragua to New York City | 2021 | C1, C5 | no indicada | señal léxica "garífuna" (C1) \+ universo pendiente (C5) | Señal sin fundamento editorial; no es candidatura | PENDIENTE\_NO\_LEIDA | P2 | CORRIENTE | ¿Su argumento corresponde a C1 o a C5? | dictamen-academico-c1.md §4.4, §6.3; dictamen-academico-c5.md §11 | También citada como ancla del catálogo de fenómenos en dictamen-academico-c3.md §8.4, donde se aclara que no es entrada pendiente de C3. |
@@ -197,8 +195,12 @@ Estas obras intervienen en una o más fronteras o corrientes, pero **ya tienen c
 | `gill` | C10 principal / C9 secundaria, confirmada. Caso directo de C9/C10 (PR). |
 | `henrycaliban` | Falso positivo verificado por lectura para C6 ("clima" es metáfora existencial, no análisis climático). Sin otra corriente que lo reclame en ningún dictamen. |
 | `muneraelfracaso` | Falso positivo verificado por lectura para C8 ("criollos"/"gesta criolla" refiere a élite histórico-política, no a creolización). dictamen-academico-c3.md §8.4 aclara además que, como ancla del catálogo de fenómenos, tampoco es entrada pendiente de C3. |
+| `chevannes` | C9 principal, sin C3 secundaria, confirmada (`dictamen-academico-bloque-2-etapa-2-3.md`, 2026-08-18). Frontera C3/C9 evaluada y descartada para este caso. |
+| `pricefirst` | Arquitectura `FRONTERA_CONSTITUTIVA(C3,C9)`, confirmada (`dictamen-academico-bloque-2-etapa-2-3.md`, 2026-08-18). Primer caso de esta frontera; segundo caso de frontera constitutiva de todo el Atlas después de `rifkinfictions` (C1/C3). |
+| `travelstooy` | C9 principal, sin C3 secundaria, confirmada (`dictamen-academico-bloque-2-etapa-2-3.md`, 2026-08-18). Frontera C3/C9 evaluada y descartada para este caso. |
+| `quintero` | C10 principal, sin C3 secundaria, confirmada (`dictamen-academico-bloque-1-etapa-2-3.md`, 2026-08-18). Frontera C3/C10 evaluada y descartada para este caso. |
 
-**Total: 51\.**
+**Total: 55.** (Reconciliación documental C1–C10, 2026-09-11: se trasladan aquí `chevannes`, `pricefirst`, `travelstooy` y `quintero`, cuyas decisiones ya estaban cerradas en los dictámenes de bloque de la Etapa 2.3 —posteriores a la consolidación de esta cola— pero no se habían reflejado en ella. Ver `cierre-reconciliacion-documental-c1-c10.md`.)
 
 ## 4\. Anclas documentales que no constituyen lecturas pendientes
 
@@ -266,31 +268,31 @@ Identidades bibliográficas **genuinamente en disputa** (procedencia no ratifica
 
 De las 19 entradas del universo interno de C1, 6 ya tienen resolución académica efectiva (`keeganhofman`, `londonoargonauts`, `bourgoisethnicity`, `afrocentroam`, `shellerconsuming`, `goffedarklab` — cada una con clasificación confirmada, por ejemplo `keeganhofman` \= C1 principal / C5 secundaria) y 13 permanecen activas en la cola (dos de ellas, `atkinsonearliest` y `mintzarea`, con su vínculo de frontera retirado por esta auditoría, pero conservando su estatus de lectura interna de C1). La Etapa 2.2 no clasificó ninguna de estas entradas ni reabrió las seis resoluciones existentes. La siembra continúa operativamente suspendida hasta agotar las 13 lecturas pendientes y evaluar después los vacíos comprobados.
 
-## 9\. C2 — discrepancia 34/35 (sin resolver)
+## 9\. C2 — discrepancia 34/35 (RESUELTA, 2026-09-11)
 
-`dictamen-academico-c2.md` declara un universo de relectura de **"34 entradas"** (§2, §4.2, §4.3, §4.5, §8), pero su propia tabla (§4.5) nomina **35**. Se mantiene visible como **DISCREPANCIA DOCUMENTAL PENDIENTE DE ACLARACIÓN**: no se decide cuál cifra es correcta ni se llama a las 35 "universo definitivo". El grupo separado de "cinco entradas sin candidatura derivable" (§4.6) se mantiene distinto de las 34/35 de relectura, salvo `sherwood`, que pertenece a ambos.
+`dictamen-academico-c2.md` declaraba un universo de relectura de "34 entradas" (§2, §4.2, §4.3, §4.5, §8), pero su propia tabla (§4.5) nombra 35. La Reconciliación documental C1–C10 auditó programáticamente la tabla: **35 filas, 35 ids únicos, sin duplicados, sin solapamiento con los 18 ids ya revisados del §4.3**. La aritmética declarada (18 + 34 = 52) no cerraba; la correcta es 18 + 35 = 53. **La cifra correcta del universo de relectura de C2 es 35, no 34.** `dictamen-academico-c2.md` §4.7 registra la corrección. Dictamen: `RESUELTA_POR_CORRECCION_DE_CONTEO`. No se reclasificó ninguna de las 35 entradas ni se tocó el corpus. El grupo separado de "cinco entradas sin candidatura derivable" (§4.6) se mantiene distinto de las 35 de relectura, salvo `sherwood`, que pertenece a ambos. Ver `cierre-reconciliacion-documental-c1-c10.md`.
 
-## 10\. C3/C9 — lectura dirigida de frontera (sin resolverla)
+## 10\. C3/C9 — lectura dirigida de frontera (RESUELTA, 2026-09-11)
 
-`chevannes`, `travelstooy` y `pricefirst` permanecen como lectura dirigida de la frontera C3/C9 (matriz: AE), verificados en la columna "Pendientes" de la matriz. No se convierten en candidaturas ni se clasifican.
+`chevannes`, `travelstooy` y `pricefirst` figuraban como lectura dirigida pendiente de la frontera C3/C9 (matriz: AE, columna "Pendientes"). La Reconciliación documental C1–C10 verificó que las tres decisiones ya estaban cerradas por `dictamen-academico-bloque-2-etapa-2-3.md` (2026-08-18) —posterior a esta cola (consolidada 2026-08-17)— e implementadas en el corpus vivo: `chevannes` y `travelstooy` en C9 principal sin C3 secundaria; `pricefirst` en `FRONTERA_CONSTITUTIVA(C3,C9)`. Además, el corpus vivo confirma otros tres casos de esta misma frontera cerrados durante P3 y tampoco reflejados hasta ahora: `truebornmaroons`, `zips_nannysasafo` y `fischer`. Los cuatro casos de `FRONTERA_CONSTITUTIVA(C3,C9)` hoy vivos en el corpus son: `pricefirst`, `truebornmaroons`, `zips_nannysasafo`, `fischer`. Dictamen: `RESUELTA_DOCUMENTALMENTE`. Los tres ids de esta sección se trasladan a §3 ("Casos excluidos de la cola por estar resueltos"). La columna "Pendientes" de `matriz-fronteras-c1-c10.md` para el par C3/C9 queda igualmente desactualizada; su corrección excede el alcance de esta fase y se señala para una consolidación posterior. Ver `cierre-reconciliacion-documental-c1-c10.md`.
 
-## 11\. C3/C10 — caso testigo pendiente (sin clasificar)
+## 11\. C3/C10 — caso testigo pendiente (RESUELTA, 2026-09-11)
 
-`quintero` permanece como caso testigo pendiente de C3/C10 (matriz: RA), verificado en la columna "Pendientes" de la matriz. No se clasifica.
+`quintero` figuraba como caso testigo pendiente de C3/C10 (matriz: RA, columna "Pendientes"). La Reconciliación documental C1–C10 verificó que la decisión ya estaba cerrada por `dictamen-academico-bloque-1-etapa-2-3.md` (2026-08-18) —posterior a esta cola (consolidada 2026-08-17)—: C10 principal, C3 descartada expresamente, sin frontera. El corpus vivo la implementa (`recorrido: "c10"`, sin `arquitectura_recorrido`). No existe en el corpus ningún caso de `FRONTERA_CONSTITUTIVA(C3,C10)`: el par permanece sin caso directo, consistente con el descarte de `quintero`. Dictamen: `RESUELTA_DOCUMENTALMENTE`. El id se traslada a §3. Ver `cierre-reconciliacion-documental-c1-c10.md`.
 
-## 12\. C2/C10 — frontera provisional sin caso empírico
+## 12\. C2/C10 — frontera sin criterio formulado (RESUELTA, 2026-09-11)
 
-C2/C10 es PR, con 0 casos directos y 0 copresencias en la matriz. Se mantiene fuera de la cola de obras como **"criterio provisional sin caso empírico nominalizado"**.
+Esta cola describía a C2/C10 como **PR** (provisional). La Reconciliación documental C1–C10 verificó que `matriz-fronteras-c1-c10.md` (fila C2/C10) y `marco-academico-consolidado-atlas-2.md` (§17, que la lista entre las fronteras "sin criterio formulado", y §22, tensión 3, que la registra expresamente como vacío no tratado por ningún dictamen) coinciden en **SC**, no PR. La etiqueta correcta es **SC**: la frontera C2/C10 nunca fue tratada por ningún dictamen, con 0 casos directos y 0 casos de `FRONTERA_CONSTITUTIVA(C2,C10)` en el corpus vivo. Se verificó además, por instrucción expresa, que la coexistencia de C2 y C10 en una misma obra no equivale a frontera: el corpus vivo tiene cuatro entradas donde ambas corrientes coexisten sin constituir un caso directo de este par (`olwigstjohn`, `besson` y `wilsoncrabantics`, con C2 secundaria dentro de una obra cuya arquitectura es `FRONTERA_CONSTITUTIVA(C4,C10)`; y `fuentesdispossessed`, con C2 y C10 ambas secundarias de C9 principal). Ninguna de las cuatro se reclasifica ni se convierte en caso de frontera C2/C10. Dictamen: `RESUELTA_DOCUMENTALMENTE`. Se mantiene fuera de la cola de obras como "criterio sin formular, sin caso empírico". Ver `cierre-reconciliacion-documental-c1-c10.md`.
 
 ## 13\. Universos de reconstrucción técnica
 
 ### A. Registros de universos operativos vigentes (17 en total)
 
-Cifras que un dictamen mantiene efectivamente como pendientes de lectura hoy. De los 17 registros, **15 presentan deuda efectiva de nominalización**, **1 está completamente nominalizado** (C6: 17/17, sin diferencia) y **1 presenta una discrepancia documental de cardinalidad, no una deuda de nominalización** (C2: 34 declaradas / 35 nominalizadas). Estas tres categorías no deben sumarse como si fueran homogéneas.
+Cifras que un dictamen mantiene efectivamente como pendientes de lectura hoy. De los 17 registros, **15 presentan deuda efectiva de nominalización** y **1 está completamente nominalizado** (C6: 17/17, sin diferencia). El registro de C2 se resolvió por la Reconciliación documental C1–C10 (2026-09-11): la cifra correcta es 35, no 34; ver `dictamen-academico-c2.md` §4.7 y `cierre-reconciliacion-documental-c1-c10.md`.
 
 | Corriente | Universo declarado | Tamaño declarado | Ids nominalizados disponibles | Diferencia no nominalizada | Categoría | Fuente |
 | :---- | :---- | ----: | ----: | :---- | :---- | :---- |
-| C2 | universo de relectura ("34 entradas" declaradas) | 34 | 35 | no aplica — ver categoría | **C. Discrepancia documental de cardinalidad** (no se decide cuál cifra es correcta; no cuenta como deuda de nominalización) | dictamen-academico-c2.md §2, §4.2, §4.3, §4.5, §8 |
+| C2 | universo de relectura (corregido a "35 entradas", Reconciliación documental C1–C10, 2026-09-11) | 35 | 35 | 0 | **B. Completamente nominalizado** (sin deuda de reconstrucción: las 35 ya están identificadas por id, obra, año y señal en dictamen-academico-c2.md §4.5; la deuda pendiente es de lectura académica, no de nominalización) | dictamen-academico-c2.md §4.7 |
 | C2 | anclas del fenómeno silencio\_de\_archivo | 5 | 0 | 5 | A. Con deuda efectiva | dictamen-academico-c2.md §5 |
 | C3 | anclas del catálogo de fenómenos (borrador) compatibles con C3 | 17 | 11 | 6 | A. Con deuda efectiva | dictamen-academico-c3.md §9 |
 | C4 | universo pendiente de lectura de C4 | 33 | 3 | 30 | A. Con deuda efectiva | dictamen-academico-c4.md §7, §10 |
@@ -308,7 +310,7 @@ Cifras que un dictamen mantiene efectivamente como pendientes de lectura hoy. De
 | C10 | entradas con etiqueta heredada cuerpo\_erotica sin lote | 18 | 0 | 18 | A. Con deuda efectiva | dictamen-academico-c10.md §4, §11 |
 | C10 | anclas de fenómeno vinculadas con C10 | 13 | 0 | 13 | A. Con deuda efectiva | dictamen-academico-c10.md §10, §11 |
 
-**Total de registros de universos operativos vigentes: 17, de los cuales 15 presentan deuda efectiva de nominalización, 1 está completamente nominalizado (C6: 17/17) y 1 presenta discrepancia documental de cardinalidad (C2: 34 declaradas / 35 nominalizadas).**
+**Total de registros de universos operativos vigentes: 17, de los cuales 15 presentan deuda efectiva de nominalización y 2 están completamente nominalizados (C6: 17/17; C2: 35/35 tras la corrección de cardinalidad de la Reconciliación documental C1–C10). Que C2 esté nominalizado no significa que esté leído: sus 35 entradas siguen pendientes de lectura académica, como registra dictamen-academico-c2.md §4.**
 
 ### B. Universos históricos / metodológicos no operativos (nota aparte, no cuentan como deuda de Etapa 2.2)
 
@@ -322,19 +324,19 @@ Cifras que un dictamen mantiene efectivamente como pendientes de lectura hoy. De
 
 **Total: 5\.** Estas cifras corresponden a artefactos metodológicos, corpus base o patrones léxicos exploratorios ya superados o de naturaleza distinta a un universo de lectura autorizada; se registran por transparencia documental pero no se contabilizan como deuda de reconstrucción técnica operativa de la Etapa 2.2.
 
-## 14\. Resultados cuantitativos (recalculados desde cero)
+## 14\. Resultados cuantitativos (recalculados tras la Reconciliación documental C1–C10, 2026-09-11)
 
-**A. Ids únicos de lectura académica activa (Grupo A): 106\.**
+**A. Ids únicos de lectura académica activa (Grupo A): 102** (antes: 106 — se retiraron `chevannes`, `pricefirst`, `quintero` y `travelstooy`, ya resueltos; ver §3 y §10, §11).
 
 **B. Distribución por prioridad:**
 
 | Prioridad | Cantidad |
 | :---- | ----: |
-| P1 | 15 |
+| P1 | 11 |
 | P2 | 11 |
 | P3 | 78 |
 | P4 | 2 |
-| **Total** | **106** |
+| **Total** | **102** |
 
 **C. Distribución por corriente implicada:**
 
@@ -342,21 +344,21 @@ Cifras que un dictamen mantiene efectivamente como pendientes de lectura hoy. De
 | :---- | ----: |
 | C1 | 13 |
 | C2 | 41 |
-| C3 | 23 |
+| C3 | 19 |
 | C4 | 10 |
 | C5 | 36 |
 | C6 | 13 |
 | C7 | 4 |
 | C8 | 1 |
-| C9 | 4 |
-| C10 | 2 |
+| C9 | 1 |
+| C10 | 1 |
 
 **D. Distribución por tipo de lectura:**
 
 | Tipo de lectura | Cantidad |
 | :---- | ----: |
-| CORRIENTE | 105 |
-| FRONTERA | 18 |
+| CORRIENTE | 101 |
+| FRONTERA | 14 |
 | FENOMENO | 15 |
 | TERRITORIO | 4 |
 | VERIFICACION\_NEGATIVA | 1 |
@@ -366,9 +368,9 @@ Cifras que un dictamen mantiene efectivamente como pendientes de lectura hoy. De
 | Estado | Casos |
 | :---- | ----: |
 | RB | 9 |
-| RA | 1 |
+| RA | 0 |
 | PR | 1 |
-| AE | 7 |
+| AE | 4 |
 | AS | — |
 | SC | — |
 
@@ -376,11 +378,13 @@ Cifras que un dictamen mantiene efectivamente como pendientes de lectura hoy. De
 
 **G. Sincronizaciones técnicas ya decididas y aún no ejecutadas: 2\.**
 
-**H. Casos excluidos por estar resueltos: 51\.**
+**H. Casos excluidos por estar resueltos: 55** (antes: 51 — se añaden `chevannes`, `pricefirst`, `quintero` y `travelstooy`).
 
 **I. Anclas documentales / fenómenos que no constituyen lecturas pendientes: 3\.**
 
-**J. Registros de universos operativos vigentes: 17, de los cuales 15 presentan deuda efectiva de nominalización, 1 está completamente nominalizado (C6: 17/17) y 1 presenta discrepancia documental de cardinalidad (C2: 34 declaradas / 35 nominalizadas)** (más 5 universos históricos/metodológicos registrados aparte en §13.B, sin contar como deuda operativa).
+**J. Registros de universos operativos vigentes: 17, de los cuales 15 presentan deuda efectiva de nominalización y 2 están completamente nominalizados (C6: 17/17; C2: 35/35 tras la corrección de cardinalidad)** (más 5 universos históricos/metodológicos registrados aparte en §13.B, sin contar como deuda operativa).
+
+**Nota de reconciliación (2026-09-11).** Los recuentos B, C y D de este apartado se recalcularon programáticamente sobre las 102 filas restantes de la tabla del apartado 2, con el mismo método de conteo verificado contra los totales originales de 106 filas antes de aplicar la resta. Detalle completo en `cierre-reconciliacion-documental-c1-c10.md`.
 
 ## 15\. Control final
 
@@ -389,9 +393,9 @@ Cifras que un dictamen mantiene efectivamente como pendientes de lectura hoy. De
 - Ningún fenómeno figura como obra (`lengua_nacion_y_criollo` y `teoria_de_la_creolizacion` fueron retirados de la tabla de obras).  
 - Ninguna obra resuelta figura como pendiente clasificatoria.  
 - Ninguna incidencia puramente técnica (`benedictykokken_haitiexception`, `gudynas`) se cuenta como lectura académica.  
-- Una obra \= una fila; verificado programáticamente: 106 filas \= 106 ids únicos, cero duplicados.  
-- Toda prioridad P1 (15 casos) tiene fundamento explícito: caso testigo confirmado por la matriz, lectura de frontera expresamente ordenada, prioridad textual del propio dictamen, o conflicto académico real pendiente — no por frecuencia de aparición ni por ser ancla de fenómeno.  
+- Una obra \= una fila; verificado programáticamente: 102 filas \= 102 ids únicos, cero duplicados (tras retirar las 4 filas resueltas el 2026-09-11).  
+- Toda prioridad P1 (11 casos) tiene fundamento explícito: caso testigo confirmado por la matriz, lectura de frontera expresamente ordenada, prioridad textual del propio dictamen, o conflicto académico real pendiente — no por frecuencia de aparición ni por ser ancla de fenómeno.  
 - No se creó ninguna clasificación nueva.  
-- `datos-atlas.json`, `catalogos-atlas-2.json`, `catalogo-fenomenos.json`, los lotes, los expedientes, los dictámenes, el marco académico consolidado y la matriz de fronteras permanecen intactos.  
-- No se modificó ningún archivo fuera de `cola-lectura-pendiente-atlas-2.md`.
+- `datos-atlas.json`, `catalogos-atlas-2.json`, `catalogo-fenomenos.json`, los lotes, los expedientes, el marco académico consolidado y la matriz de fronteras permanecen intactos.  
+- La Reconciliación documental C1–C10 (2026-09-11) modificó, además de este documento, `dictamen-academico-c2.md` (nota de corrección §4.7, sin alterar sus decisiones de clasificación) — ver `apertura-reconciliacion-documental-c1-c10.md` y `cierre-reconciliacion-documental-c1-c10.md`.
 
