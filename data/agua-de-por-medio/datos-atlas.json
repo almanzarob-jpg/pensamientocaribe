@@ -2571,10 +2571,21 @@
       "l": "trinidad",
       "tr": "anglófono (Trinidad/Canadá)",
       "ap": "Las leyes coloniales contra la sodomía y la naturaleza \"antinatural\" leídas junto al arte y el deseo caribeños contemporáneos: el cuerpo queer caribeño como territorio que la ley colonial nunca dejó de vigilar.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c10",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Andil Gosine, Nature's Wild: Love, Sex, and Law in the Caribbean (Duke UP, 2021). Objeto declarado en la introducción: la regulación histórica del deseo/sexo (sodomía) como frontera entre lo humano y lo animal en el Caribe colonial y poscolonial, y la 'autonomía erótica' (M. Jacqui Alexander) frente a esa regulación. El derecho colonial y las leyes de sodomía (C7) son el mecanismo histórico de regulación, no el objeto de la obra, que es el deseo/cuerpo erótico mismo (C10) — ancla ya registrada en el fenómeno nacion_heterosexual (C10/C7). Principal C10; secundaria real C7 (ley, estado, regulación colonial de la sexualidad como nación heterosexual), sin llegar a ser arquitectura especial: el libro no trata la soberanía/nación como objeto coequivalente, sino como aparato que actúa sobre el objeto erótico.",
+        "responsable": "Dirección académica de Pensamiento Caribe (protocolo TRIAGE_INTERNO_C1_C10, lote 2, semáforo VERDE)",
+        "fecha": "2026-09-11"
+      },
+      "fuente_recorrido": [
+        "avance-triage-interno-c1-c10-lotes-2-4.md"
+      ]
     },
     {
       "id": "headleyreparaciones",
@@ -5042,10 +5053,21 @@
       "l": "cuba",
       "tr": "anglófono (EE.UU.)",
       "ap": "El erotismo negro cubano como método de autoconstrucción política, no solo objeto de estudio. Candidata no identificada en el cruce inicial —quedaba escondida por homonimia con otra Allen ya sembrada— y encontrada al verificar una cita cruzada con Stout.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c10",
+      "recorridos_sec": [
+        "c9"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Jafari S. Allen, ¡Venceremos?: The Erotics of Black Self-Making in Cuba (Duke UP, 2011). Objeto: erotismo negro como práctica de autoconstitución política y estética en La Habana revolucionaria y pos-Período Especial. Principal C10 (ancla ya registrada en erotica_negra); secundaria real C9: el libro usa memoria/archivo vivo (entrevistas, historia oral, genealogías afrocubanas) como método sustantivo para reconstruir esa erótica negra, sin que la memoria/espiritualidad sea ella misma el objeto organizador.",
+        "responsable": "Dirección académica de Pensamiento Caribe (protocolo TRIAGE_INTERNO_C1_C10, lote 2, semáforo VERDE)",
+        "fecha": "2026-09-11"
+      },
+      "fuente_recorrido": [
+        "avance-triage-interno-c1-c10-lotes-2-4.md"
+      ]
     },
     {
       "id": "williamscapitalismo",
@@ -5161,10 +5183,22 @@
       "l": "jamaica",
       "tr": "anglófono (Jamaica)",
       "ap": "La primera etnógrafa jamaiquina del parentesco en su propia isla, y el título que sigue nombrando una experiencia: la madre que también hace de padre. Casi todo lo que el atlas cataloga sobre familia y género en el Caribe anglófono la cita.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c10",
+      "recorridos_sec": [
+        "c9",
+        "c4"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Edith Clarke, My Mother Who Fathered Me (1957/2000 UWI Press). Objeto: organización doméstica y de parentesco de tres comunidades jamaicanas rurales (Sugartown, Orange Grove, Mocca) bajo distintos regímenes de tenencia de tierra. El propio prólogo de Rex Nettleford enmarca la obra como estudio fundacional sobre estructura familiar y maternidad caribeñas, no como historia agraria ni como archivo espiritual: la tierra y el trabajo (C4) y la memoria oral (C9) son condiciones y evidencia, no el eje que organiza el argumento. Principal C10 (parentesco/familia); secundarias reales: C9 (metodología etnográfica basada en testimonio oral, ancla ya registrada en el fenómeno parentesco_y_organizacion_domestica) y C4 (tenencia de tierra como condición estructural de los tres tipos de familia estudiados, sin ser ella el objeto).",
+        "responsable": "Dirección académica de Pensamiento Caribe (protocolo TRIAGE_INTERNO_C1_C10, lote 2, semáforo VERDE)",
+        "fecha": "2026-09-11"
+      },
+      "fuente_recorrido": [
+        "avance-triage-interno-c1-c10-lotes-2-4.md"
+      ]
     },
     {
       "id": "barrowfamily",
@@ -5179,10 +5213,22 @@
       "l": "barbados",
       "tr": "anglófono (Barbados)",
       "ap": "El balance crítico de cuarenta años de estudios de familia caribeña, hecho desde la UWI y contra la mirada que los inauguró: el hogar afrocaribeño no como desviación de la norma europea sino como arreglo con historia propia.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c10",
+      "recorridos_sec": [
+        "c9",
+        "c8"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Christine Barrow, Family in the Caribbean: Themes and Perspectives (Ian Randle, 1996/1998). Antología con fuerte síntesis editorial (a diferencia de Mohammed 2002): organiza el debate teórico completo sobre parentesco/familia caribeña (matrifocalidad, 'plural society', continuidades africanas vs. adaptación a la pobreza). Principal C10 (parentesco/familia como objeto explícito del volumen completo, ancla ya registrada en parentesco_y_organizacion_domestica); secundarias reales: C9 (debate historiográfico sobre continuidades/memoria africana en la familia caribeña, ancla compartida) y C8 (debate sobre 'creolización' vs. resistencia cultural africana como marco teórico recurrente en varios capítulos de síntesis editorial, no solo en un capítulo autónomo aislado).",
+        "responsable": "Dirección académica de Pensamiento Caribe (protocolo TRIAGE_INTERNO_C1_C10, lote 2, semáforo VERDE)",
+        "fecha": "2026-09-11"
+      },
+      "fuente_recorrido": [
+        "avance-triage-interno-c1-c10-lotes-2-4.md"
+      ]
     },
     {
       "id": "mintzpricebirth",
