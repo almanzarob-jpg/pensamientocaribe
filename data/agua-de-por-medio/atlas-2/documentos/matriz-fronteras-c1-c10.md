@@ -1,7 +1,7 @@
 # Matriz de fronteras C1–C10
 
 Etapa 2.1 · Consolidación normativa · Dirección Académica de Pensamiento Caribe
-Complementa a `marco-academico-consolidado-atlas-2.md`. Borrador para revisión. No versionado, no comprometido a Git.
+Complementa a `marco-academico-consolidado-atlas-2.md`. Borrador para revisión, versionado en el repositorio desde el commit `57dd72e` (corrige la autodescripción anterior, que decía "no versionado, no comprometido a Git"; saneamiento documental C1-C10, 2026-09-11).
 
 Leyenda de estados:
 
@@ -58,8 +58,8 @@ Leyenda de estados:
 | C3/C6 | SC | No mencionada | — | 0 | 0 | — | — |
 | C3/C7 | RB | Forma del argumento, no origen del sujeto | `dictamen-academico-c3.md` §7.2; `dictamen-academico-c7.md` §8 | 1 (`hazareesingh`, C3 ppal./C7 sec.) | 1 | `rainforestwarriors`, `james`, `alabi` | `hazareesingh` también lleva C9 como secundaria; esa copresencia pertenece al par C7/C9, no a este |
 | C3/C8 | AS | Sin lectura dirigida | `dictamen-academico-c8.md` §8 | 0 | 0 | — | — |
-| C3/C9 | AE | Decide la forma del argumento, no el origen del sujeto (antecedente de C3, aplicado como hipótesis de lectura) | `dictamen-academico-c9.md` §6, §10 | 0 | 0 | `chevannes`, `travelstooy`, `pricefirst` | Parcialmente abierta: candidatura histórica doble (`price`, `totumo`) ya resuelta hacia C3, fuera de C9 |
-| C3/C10 | RA | Subversión estética/corporal: C10 puede ser principal; C3 secundaria si se piensa como sustracción | `dictamen-academico-c3.md` §7.5; `dictamen-academico-c10.md` §8 | 0 | 0 | `quintero` | Criterio conservado sin reabrir; caso testigo sigue sin leer |
+| C3/C9 | AE | Decide la forma del argumento, no el origen del sujeto (antecedente de C3, aplicado como hipótesis de lectura) | `dictamen-academico-c9.md` §6, §10 | **4** (`pricefirst`, `truebornmaroons`, `zips_nannysasafo`, `fischer`) | **4** | — | **ACTUALIZADO (saneamiento documental C1-C10, 2026-09-11).** `chevannes` y `travelstooy` ya fueron resueltos (C9 principal, sin C3 secundaria) y `pricefirst` confirmado como primer caso de esta frontera, los tres por `dictamen-academico-bloque-2-etapa-2-3.md` (2026-08-18); `truebornmaroons`, `zips_nannysasafo` y `fischer` se confirmaron después, durante P3. La candidatura histórica doble (`price`, `totumo`) permanece resuelta hacia C3, fuera de C9. El estado normativo del par (AE) no se reevalúa: sigue sin criterio fijado, aunque ahora con cuatro casos vivos |
+| C3/C10 | RA | Subversión estética/corporal: C10 puede ser principal; C3 secundaria si se piensa como sustracción | `dictamen-academico-c3.md` §7.5; `dictamen-academico-c10.md` §8 | 0 | 0 | — | **ACTUALIZADO (saneamiento documental C1-C10, 2026-09-11).** `quintero`, el caso testigo, ya fue resuelto por `dictamen-academico-bloque-1-etapa-2-3.md` (2026-08-18): C10 principal, C3 descartada expresamente. No existe actualmente ninguna frontera constitutiva C3/C10 viva en el corpus. Criterio conservado sin reabrir |
 | C4/C5 | RB | Régimen analítico dominante | `dictamen-academico-c5.md` §5 | **6** (dirección mixta: `londonoargonauts`, `shepherdmaharani`, `harpellecostarica` con C5 ppal.; `downtownladies`, `floresvillalobos`, `shellerconsuming` con C4 ppal.) | **7** | — | **CORREGIDO.** El séptimo cruce, `nixon_resistingparadise`, tiene C10 como principal y C4+C5 ambas secundarias: es copresencia, no caso directo. La cifra original (7 directos) sumaba ese caso indebidamente; queda en 6 directos / 7 de copresencia total |
 | C4/C6 | PR | Régimen analítico dominante | `dictamen-academico-c6.md` §9, §17 | 1 (`klein_battleparadise`, C4 ppal./C6 sec.) | 1 | — | Único caso confirmado. `klein_battleparadise` también lleva C7 como secundaria; esa copresencia pertenece al par C6/C7, no a este |
 | C4/C7 | RB | Constitución/disputa de autoridad política (C7) vs. producción material de subordinación (C4) | `dictamen-academico-c7.md` §8 | 7 (3 C7 ppal.: `esquiva`, `schuller_killingkindness`, `hintzen`; 4 C4 ppal.: `bestlevitt`, `peasantscapital`, `politicallife`, `klein_battleparadise`) | 7 | — | **Verificado de nuevo: los 7 son casos directos**, ninguno es ambas-secundarias para este par (aunque `politicallife` y `klein_battleparadise` cada uno lleva una tercera corriente como secundaria adicional, en ambos casos C4 o C7 es principal, no secundaria) |
@@ -135,7 +135,7 @@ Las 45 filas, revisadas una por una contra las expresiones señaladas ("ambas se
 | C3/C6 | 0 | 0 | — | sin cambio |
 | C3/C7 | 1 | 1 | — | sin cambio |
 | C3/C8 | 0 | 0 | — | sin cambio |
-| C3/C9 | 0 | 0 | — | sin cambio |
+| C3/C9 | **4** | **4** | — | **CORREGIDO (saneamiento documental C1-C10, 2026-09-11)** — cuatro casos directos confirmados (`pricefirst`, `truebornmaroons`, `zips_nannysasafo`, `fischer`), ninguno con tercera corriente principal |
 | C3/C10 | 0 | 0 | — | sin cambio |
 | C4/C5 | **6** | **7** | `nixon_resistingparadise` (C10 ppal.) | **corregida** |
 | C4/C6 | 1 | 1 | — | sin cambio |
@@ -159,4 +159,4 @@ Las 45 filas, revisadas una por una contra las expresiones señaladas ("ambas se
 | C8/C10 | 0 | 0 | — | sin cambio |
 | C9/C10 | **3** | **3** | — | **corregida** (`fuentesdispossessed` deja de figurar como pendiente) |
 
-**45/45 fronteras revisadas.** Cinco correcciones (C4/C5, C5/C8, C5/C10, C6/C7, C9/C10); tres confirmaciones explícitas de filas que ya distinguían correctamente caso directo de copresencia (C3/C4, C7/C9, C7/C10); las 37 restantes no tenían casos con más de una corriente secundaria simultánea, o no tenían casos en absoluto, por lo que la distinción no les aplica y quedan con directos = copresencia (o 0 = 0). Ningún caso con ambas corrientes en posición secundaria quedó contado como directo. Ningún caso ya clasificado quedó presentado como pendiente. Ningún estado normativo (RB/RA/PR/AE/AS/SC) fue modificado — la corrección fue exclusivamente aritmético-documental sobre las columnas de casos, tal como lo pidió la instrucción.
+**45/45 fronteras revisadas.** Cinco correcciones (C4/C5, C5/C8, C5/C10, C6/C7, C9/C10); tres confirmaciones explícitas de filas que ya distinguían correctamente caso directo de copresencia (C3/C4, C7/C9, C7/C10); las 37 restantes no tenían casos con más de una corriente secundaria simultánea, o no tenían casos en absoluto, por lo que la distinción no les aplica y quedan con directos = copresencia (o 0 = 0). Ningún caso con ambas corrientes en posición secundaria quedó contado como directo. Ningún caso ya clasificado quedó presentado como pendiente. Ningún estado normativo (RB/RA/PR/AE/AS/SC) fue modificado — la corrección fue exclusivamente aritmético-documental sobre las columnas de casos, tal como lo pidió la instrucción. (La fila de C3/C9 recibió una corrección adicional y distinta el 2026-09-11, fuera de esta auditoría: no es una reclasificación directo/copresencia, sino el registro de cuatro casos confirmados con posterioridad a esta consolidación de Etapa 2.1; ver la fila misma y el saneamiento documental C1-C10.)
