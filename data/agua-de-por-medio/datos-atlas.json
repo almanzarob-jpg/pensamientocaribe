@@ -564,10 +564,10 @@
     },
     {
       "id": "chande",
-      "k": "manifestacion",
-      "t": "Sonoridades del Chandé en el Caribe seco",
-      "a": "borrador / archivo",
-      "y": "",
+      "k": "obra",
+      "t": "Un silencio que habla: Las sonoridades narradas del Chandé en el Caribe seco colombiano",
+      "a": "Ernell Villa y Wilmer Villa",
+      "y": "2016",
       "f": [
         "creolizacion",
         "memoria"
@@ -575,8 +575,8 @@
       "l": "santamarta",
       "tr": "hispano (Colombia)",
       "ap": "Oralitura y ritmo del Magdalena Grande como lengua-nación local.",
-      "procedencia": "manifestación",
-      "procedencia_verificada": false,
+      "procedencia": "corpus heredado",
+      "procedencia_verificada": true,
       "recorrido": "c9",
       "recorridos_sec": [
         "c8"
@@ -850,9 +850,9 @@
     },
     {
       "id": "manoalzada",
-      "k": "manifestacion",
-      "t": "A mano alzada: diáspora intelectual afrocolombiana",
-      "a": "archivo",
+      "k": "obra",
+      "t": "A mano alzada: memoria escrita de la diáspora intelectual afrocolombiana",
+      "a": "José Antonio Caicedo Ortiz",
       "y": "2013",
       "f": [
         "memoria",
@@ -861,8 +861,8 @@
       "l": "cartagena",
       "tr": "hispano (Colombia)",
       "ap": "Memoria escrita de la diáspora intelectual negra del Caribe colombiano.",
-      "procedencia": "manifestación",
-      "procedencia_verificada": false,
+      "procedencia": "corpus heredado",
+      "procedencia_verificada": true,
       "recorrido": "c9",
       "recorridos_sec": [
         "c5"
@@ -902,10 +902,10 @@
     },
     {
       "id": "esquiva",
-      "k": "manifestacion",
-      "t": "La esquiva promesa de desarrollo",
-      "a": "archivo",
-      "y": "",
+      "k": "obra",
+      "t": "La esquiva promesa de desarrollo para las comunidades afrodescendientes: el futuro de la Ley 70",
+      "a": "Karen Engle",
+      "y": "2011",
       "f": [
         "capitalismo_racial",
         "violencias"
@@ -913,8 +913,8 @@
       "l": "cartagena",
       "tr": "hispano (Colombia)",
       "ap": "El desarrollo como promesa incumplida en comunidades afrodescendientes del Caribe.",
-      "procedencia": "manifestación",
-      "procedencia_verificada": false,
+      "procedencia": "corpus heredado",
+      "procedencia_verificada": true,
       "recorrido": "c7",
       "recorridos_sec": [
         "c4"
