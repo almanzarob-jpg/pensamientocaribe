@@ -69,6 +69,31 @@ const FUNCIONES_ORILLA = new Set([
   "territorio estudiado", "lugar de producción intelectual", "destino migratorio",
   "lugar de circulación", "territorio comparado", "espacio diaspórico",
 ]);
+
+// Saneamiento territorial (siembra S17, 2026-09-11): una orilla declarada como región o
+// cuenca solo puede quedar sin `lugar` cuando no existe un referente canónico pertinente
+// en el diccionario de lugares. Este mapa recoge, uno por uno y por decisión editorial
+// explícita, los nombres alternos que SÍ corresponden a un lugar ya registrado (nombre
+// completo de un país, forma alterna de un topónimo). No se generan equivalencias
+// automáticas ni por coincidencia parcial: cada entrada se verificó a mano.
+const ALIASES_LUGAR_REGION = new Map([
+  ["trinidad y tobago", "trinidad"],
+  ["república dominicana", "dominicana"],
+  ["republica dominicana", "dominicana"],
+  ["palenque de san basilio", "palenque"],
+]);
+const normalizaEtiquetaOrilla = (s) => String(s || "")
+  .toLowerCase()
+  .normalize("NFD").replace(/[\u0300-\u036f]/g, "")
+  .trim();
+function lugarCanonicoParaEtiqueta(label, lugares) {
+  const norm = normalizaEtiquetaOrilla(label);
+  if (ALIASES_LUGAR_REGION.has(norm)) return ALIASES_LUGAR_REGION.get(norm);
+  for (const [id, l] of Object.entries(lugares)) {
+    if (normalizaEtiquetaOrilla(l[2]) === norm) return id;
+  }
+  return null;
+}
 const TIPOS_RUTA = new Set([
   "navegación indígena", "trata", "fuga", "migración laboral", "exilio", "refugio",
   "deportación", "retorno", "circulación intelectual", "circulación musical",
@@ -290,8 +315,23 @@ function validateOperationsAndGeography(work, data) {
       report.error("ORILLAS", `${work.id}: orillas debe ser una lista no vacía.`);
     } else {
       for (const shore of work.orillas) {
-        if (!isObject(shore) || !Object.hasOwn(data.lugares, shore.lugar)) {
-          report.error("ORILLA_LUGAR", `${work.id}: orilla con lugar inexistente.`);
+        // El contrato territorial admite regiones y cuencas sin coordenadas, pero solo
+        // cuando no existe un lugar canónico que represente efectivamente esa geografía:
+        // una etiqueta suelta no puede usarse para evitar un enlace que ya es posible.
+        const descriptive = isObject(shore) && ["región", "cuenca"].includes(shore.tipo);
+        if (descriptive) {
+          if (!isNonEmptyString(shore.label)) {
+            report.error("ORILLA_ETIQUETA", `${work.id}: región o cuenca sin etiqueta.`);
+          } else if (shore.lugar === undefined) {
+            const canonico = lugarCanonicoParaEtiqueta(shore.label, data.lugares);
+            if (canonico) {
+              report.error("ORILLA_LUGAR_EVITADO", `${work.id}: «${shore.label}» corresponde al lugar canónico «${canonico}»; debe enlazarse con \`lugar\`, no dejarse como etiqueta suelta.`);
+            }
+          } else if (!Object.hasOwn(data.lugares, shore.lugar)) {
+            report.error("ORILLA_LUGAR", `${work.id}: referencia opcional a lugar inexistente.`);
+          }
+        } else if (!isObject(shore) || (shore.tipo !== undefined && shore.tipo !== "punto") || !Object.hasOwn(data.lugares, shore.lugar)) {
+          report.error("ORILLA_LUGAR", `${work.id}: punto o tipo de orilla inválido.`);
         }
         if (!isObject(shore) || !FUNCIONES_ORILLA.has(shore.funcion)) {
           report.error("ORILLA_FUNCION", `${work.id}: función de orilla inválida.`);

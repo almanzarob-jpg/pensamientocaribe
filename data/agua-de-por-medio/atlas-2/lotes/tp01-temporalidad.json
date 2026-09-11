@@ -2,7 +2,7 @@
   "lote": "TP01",
   "nombre": "Temporalidad: separación de publicación y periodo estudiado",
   "fecha": "2026-08-10",
-  "base": "datos-atlas.json v1.16.0 · 232 entradas",
+  "base": "datos-atlas.json v1.18.0 · 274 entradas",
   "limite": "Capa aditiva. No modifica el campo heredado y, ni datos-atlas.json, ni el orden actual de la cronología. Un periodo estudiado no se deriva nunca de forma mecánica: exige lectura de la obra.",
   "procedencias": {
     "dictamen": "Aprobado en una capa cerrada (P00, S01, A01 o A02). Estado: confirmado.",
@@ -10,12 +10,12 @@
     "sin_derivar": "El campo y está vacío o guarda una cadena que no es un año. Estado: pendiente."
   },
   "recuento": {
-    "entradas": 232,
+    "entradas": 274,
     "confirmados": 53,
-    "candidaturas": 167,
+    "candidaturas": 209,
     "pendientes": 12,
     "con_periodo_estudiado": 24,
-    "sin_periodo_estudiado": 208
+    "sin_periodo_estudiado": 250
   },
   "registros": [
     {
@@ -3339,6 +3339,210 @@
       "y_heredado": "2024",
       "publicacion": {
         "valor": 2024,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "antczakislandssalt",
+      "y_heredado": "2019",
+      "publicacion": {
+        "valor": 2019,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "barriteauconfronting",
+      "y_heredado": "2003",
+      "publicacion": {
+        "valor": 2003,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "becklesgreathouse",
+      "y_heredado": "2004",
+      "publicacion": {
+        "valor": 2004,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "boguesheretics",
+      "y_heredado": "2003",
+      "publicacion": {
+        "valor": 2003,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "coopernoises",
+      "y_heredado": "1995",
+      "publicacion": {
+        "valor": 1995,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "espinosahabitarmultiespecie",
+      "y_heredado": "2026",
+      "publicacion": {
+        "valor": 2026,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "featherstonecricket",
+      "y_heredado": "2018",
+      "publicacion": {
+        "valor": 2018,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "forsdickhogsbjergreader",
+      "y_heredado": "2017",
+      "publicacion": {
+        "valor": 2017,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "friedemanncrossmangombe",
+      "y_heredado": "1979",
+      "publicacion": {
+        "valor": 1979,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "hillmandagostinocaribbean",
+      "y_heredado": "2009",
+      "publicacion": {
+        "valor": 2009,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "honychurchcaribbeanpeople1",
+      "y_heredado": "1995",
+      "publicacion": {
+        "valor": 1995,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "josephmocombefirmin",
+      "y_heredado": "2021",
+      "publicacion": {
+        "valor": 2021,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "kingshoals",
+      "y_heredado": "2019",
+      "publicacion": {
+        "valor": 2019,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "quinterosalsa",
+      "y_heredado": "1998",
+      "publicacion": {
+        "valor": 1998,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "schullerhumanitarian",
+      "y_heredado": "2016",
+      "publicacion": {
+        "valor": 2016,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "scottvientocomun",
+      "y_heredado": "2021",
+      "publicacion": {
+        "valor": 2021,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "zeidermanartery",
+      "y_heredado": "2025",
+      "publicacion": {
+        "valor": 2025,
         "era": "EC",
         "precision": "exacta"
       },

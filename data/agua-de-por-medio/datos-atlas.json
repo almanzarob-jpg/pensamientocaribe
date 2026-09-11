@@ -3,9 +3,9 @@
     "titulo": "Con el agua de por medio",
     "subtitulo": "Atlas para una antropología archipiélica",
     "responsable": "Grupo de Investigación Pensamiento Caribe",
-    "version": "1.17.0",
-    "fecha": "2026-08-25",
-    "nota_version": "1.17.0 ejecuta una nueva siembra bibliográfica: incorpora 25 obras nuevas identificadas en el cruce de la carpeta Biliografia (26 candidatas tras descartar duplicados y artefactos; se excluyó una por no ser específicamente caribeña -- Affergan, Anthropologie et poésie) y 12 relaciones nuevas, todas verificadas por cita exacta contra el corpus existente y entre las obras nuevas mediante pdftotext/grep con revisión manual de contexto. Ver siembra-atlas-1.17.0.md para el detalle completo."
+    "version": "1.18.0",
+    "fecha": "2026-09-11",
+    "nota_version": "Lote S17: 17 libros, 11 relaciones documentadas y 7 propuestas expresamente por corroborar. Clasificaciones de las nuevas obras pendientes de adjudicación académica. Orillas descriptivas separadas del anclaje visual. Véase documentacion/siembra-s17-2026-09-11.md."
   },
   "fenomenos": {
     "colonialidad": {
@@ -6333,6 +6333,1925 @@
       "recorridos_sec": [],
       "arquitectura_recorrido": null,
       "estado_recorrido": "sin_evaluar"
+    },
+    {
+      "id": "boguesheretics",
+      "k": "obra",
+      "t": "Black Heretics, Black Prophets: Radical Political Intellectuals",
+      "a": "Anthony Bogues",
+      "y": "2003",
+      "f": [
+        "colonialidad",
+        "memoria"
+      ],
+      "l": "jamaica",
+      "tr": "inglés",
+      "ap": "Examina la tradición intelectual radical negra mediante figuras, prácticas políticas y formas de producción de conocimiento. La distinción entre herejes y profetas permite leer conjuntamente a Cugoano, Wells, James, Du Bois, Nyerere, Rodney, Rastafari y Marley, sin reducir su pensamiento a una derivación de categorías europeas.",
+      "ed": "Routledge",
+      "edicion_consultada": "Routledge, 2003",
+      "nota_bibliografica": "Libro de alcance afrodiaspórico; no reducirlo a Jamaica. El PDF está escaneado a doble página: las localizaciones PDF no equivalen a páginas impresas.",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal de metadatos, índice e introducción o pasajes seleccionados; no lectura integral",
+        "responsable": "Preparación asistida del lote S17; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-11",
+        "fundamento": "La autonomía intelectual y la crítica de la dominación organizan el argumento. C7 y C9 son posibilidades parciales; ninguna se confirma solo por la presencia de anticolonialismo o Rastafari."
+      },
+      "fuente_recorrido": [
+        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "memorias_espiritualidades_archivos_vivos"
+        ],
+        "corriente_confirmada": null
+      },
+      "operaciones": [
+        "teorizar",
+        "confrontar una categoría"
+      ],
+      "orillas": [
+        {
+          "tipo": "región",
+          "label": "Caribe",
+          "funcion": "territorio comparado"
+        },
+        {
+          "lugar": "jamaica",
+          "funcion": "lugar de producción intelectual"
+        },
+        {
+          "tipo": "región",
+          "label": "África",
+          "funcion": "territorio comparado"
+        },
+        {
+          "tipo": "región",
+          "label": "Estados Unidos",
+          "funcion": "territorio comparado"
+        }
+      ],
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "fuentes_revision": [
+        {
+          "tipo": "archivo consultado",
+          "edicion": "Routledge, 2003",
+          "localizadores": [
+            {
+              "pagina_pdf": 3,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "OCR",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 4,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "OCR",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 5,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "OCR",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 6,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "OCR",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 9,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "OCR",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 11,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "OCR",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            }
+          ]
+        }
+      ],
+      "lote_incorporacion": "S17-2026-09-11",
+      "lenguas_publicacion": [
+        "inglés"
+      ]
+    },
+    {
+      "id": "zeidermanartery",
+      "k": "obra",
+      "t": "Artery: Racial Ecologies on Colombia’s Magdalena River",
+      "a": "Austin Zeiderman",
+      "y": "2025",
+      "f": [
+        "colonialidad",
+        "capitalismo_racial",
+        "catastrofes"
+      ],
+      "l": "cartagena",
+      "tr": "inglés",
+      "ap": "Estudia las relaciones entre raza, naturaleza y logística en el río Magdalena. La investigación articula navegación comercial, proyectos de infraestructura y encuentros cotidianos para analizar cómo las ecologías racializadas ordenan ambientes y vidas humanas. Aporta una etnografía fluvial que permite examinar conjuntamente circulación, cuidado y violencia.",
+      "ed": "Duke University Press",
+      "edicion_consultada": "Duke University Press, 2025",
+      "nota_bibliografica": "El río es una cuenca y una ruta; no representarlo como si todo el estudio ocurriera en Cartagena.",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal de metadatos, índice e introducción o pasajes seleccionados; no lectura integral",
+        "responsable": "Preparación asistida del lote S17; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-11",
+        "fundamento": "C6 es la candidatura principal por el concepto de ecologías racializadas; C5 aporta el circuito fluvial y logístico. Debe evaluarse si ambos resultan constitutivos."
+      },
+      "fuente_recorrido": [
+        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "huracanes_ecologias_materialidades_vivas",
+          "rutas_diasporas_territorios_acuosos"
+        ],
+        "corriente_confirmada": null
+      },
+      "operaciones": [
+        "producir etnografía"
+      ],
+      "orillas": [
+        {
+          "tipo": "cuenca",
+          "label": "Río Magdalena",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "cartagena",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Colombia",
+          "funcion": "territorio estudiado"
+        }
+      ],
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "fuentes_revision": [
+        {
+          "tipo": "archivo consultado",
+          "edicion": "Duke University Press, 2025",
+          "localizadores": [
+            {
+              "pagina_pdf": 4,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 5,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 20,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 25,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 26,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 27,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            }
+          ]
+        }
+      ],
+      "lote_incorporacion": "S17-2026-09-11",
+      "isbn": "9781478060390",
+      "lenguas_publicacion": [
+        "inglés"
+      ]
+    },
+    {
+      "id": "barriteauconfronting",
+      "k": "obra",
+      "t": "Confronting Power, Theorizing Gender: Interdisciplinary Perspectives in the Caribbean",
+      "a": "Eudine Barriteau (ed.)",
+      "y": "2003",
+      "f": [
+        "cuerpo_erotica",
+        "soberanias"
+      ],
+      "l": "barbados",
+      "tr": "inglés",
+      "ap": "El volumen interroga las relaciones de género como relaciones de poder y somete a crítica categorías, prácticas institucionales y estrategias feministas. Reúne intervenciones sobre epistemología, ciudadanía y desigualdad para vincular producción de conocimiento y acción política en las sociedades caribeñas.",
+      "ed": "University of the West Indies Press",
+      "edicion_consultada": "University of the West Indies Press, 2003",
+      "nota_bibliografica": "Se trata de una colección interdisciplinaria; distinguir el programa de la editora de las tesis de cada capítulo.",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal de metadatos, índice e introducción o pasajes seleccionados; no lectura integral",
+        "responsable": "Preparación asistida del lote S17; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-11",
+        "fundamento": "C10 es una candidatura por el eje de género; C7 recoge las discusiones sobre instituciones y ciudadanía. No basta la palabra género para confirmar C10."
+      },
+      "fuente_recorrido": [
+        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "cuerpos_parentescos_eroticas",
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "corriente_confirmada": null
+      },
+      "operaciones": [
+        "teorizar",
+        "confrontar una categoría"
+      ],
+      "orillas": [
+        {
+          "tipo": "región",
+          "label": "Caribe anglófono",
+          "funcion": "territorio estudiado"
+        }
+      ],
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "fuentes_revision": [
+        {
+          "tipo": "archivo consultado",
+          "edicion": "University of the West Indies Press, 2003",
+          "localizadores": [
+            {
+              "pagina_pdf": 3,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 4,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 21,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 22,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 23,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            }
+          ]
+        }
+      ],
+      "lote_incorporacion": "S17-2026-09-11",
+      "lenguas_publicacion": [
+        "inglés"
+      ]
+    },
+    {
+      "id": "scottvientocomun",
+      "k": "obra",
+      "t": "El viento común: corrientes afroamericanas en la era de la Revolución haitiana",
+      "a": "Julius S. Scott",
+      "y": "2021",
+      "f": [
+        "cimarronaje",
+        "memoria",
+        "colonialidad"
+      ],
+      "l": "haiti",
+      "tr": "español",
+      "ap": "Reconstruye la circulación de noticias, rumores e ideas de emancipación entre puertos, barcos y plantaciones del Caribe revolucionario. Sigue a marineros, fugitivos y poblaciones negras para mostrar la formación de circuitos de comunicación que desbordaban las fronteras imperiales.",
+      "ed": "Traficantes de Sueños",
+      "edicion_consultada": "Traducción de Esther Pérez; Traficantes de Sueños, 2021",
+      "nota_bibliografica": "Registrar 2018 como primera publicación del libro y 2021 como edición leída; no confundirlo con la tesis anterior.",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal de metadatos, índice e introducción o pasajes seleccionados; no lectura integral",
+        "responsable": "Preparación asistida del lote S17; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-11",
+        "fundamento": "C5 es la candidatura principal por la circulación de información; C3 permite examinar sus relaciones con fugas y emancipaciones, sin volver equivalentes movilidad e insurrección."
+      },
+      "fuente_recorrido": [
+        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "rutas_diasporas_territorios_acuosos",
+          "fugas_cimarronajes_emancipaciones"
+        ],
+        "corriente_confirmada": null
+      },
+      "operaciones": [
+        "reconstruir un archivo",
+        "seguir una ruta"
+      ],
+      "orillas": [
+        {
+          "tipo": "cuenca",
+          "label": "Gran Caribe",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Saint-Domingue/Haití",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "jamaica",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "cuba",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Tierra Firme",
+          "funcion": "territorio estudiado"
+        }
+      ],
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "fuentes_revision": [
+        {
+          "tipo": "archivo consultado",
+          "edicion": "Traducción de Esther Pérez; Traficantes de Sueños, 2021",
+          "localizadores": [
+            {
+              "pagina_pdf": 10,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 12,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 22,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 23,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 34,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 39,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 40,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            }
+          ]
+        }
+      ],
+      "lote_incorporacion": "S17-2026-09-11",
+      "y0": "2018",
+      "url": "https://traficantes.net/libros/el-viento-comun",
+      "lenguas_publicacion": [
+        "español"
+      ]
+    },
+    {
+      "id": "becklesgreathouse",
+      "k": "obra",
+      "t": "Great House Rules: Landless Emancipation and Workers’ Protest in Barbados, 1838–1938",
+      "a": "Hilary McD. Beckles",
+      "y": "2004",
+      "f": [
+        "postplantacion",
+        "capitalismo_racial"
+      ],
+      "l": "barbados",
+      "tr": "inglés",
+      "ap": "Analiza la emancipación sin acceso a la tierra y los conflictos laborales de Barbados entre 1838 y 1938. Estudia la persistencia del poder de los propietarios y los límites materiales de la libertad después de la esclavitud, atendiendo a las respuestas y protestas de los trabajadores.",
+      "ed": "Ian Randle Publishers",
+      "edicion_consultada": "Primera edición 2004; edición electrónica 2013",
+      "nota_bibliografica": "El nombre del archivo dice 2013: corresponde a la edición electrónica, no al año original.",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal de metadatos, índice e introducción o pasajes seleccionados; no lectura integral",
+        "responsable": "Preparación asistida del lote S17; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-11",
+        "fundamento": "C4 organiza la candidatura por las relaciones entre tierra, trabajo y dominación después de la emancipación. C3 queda como dimensión secundaria por discutir las promesas de la libertad."
+      },
+      "fuente_recorrido": [
+        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "postplantacion_trabajo_desposesion",
+          "fugas_cimarronajes_emancipaciones"
+        ],
+        "corriente_confirmada": null
+      },
+      "operaciones": [
+        "reconstruir un archivo"
+      ],
+      "orillas": [
+        {
+          "lugar": "barbados",
+          "funcion": "territorio estudiado"
+        }
+      ],
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "fuentes_revision": [
+        {
+          "tipo": "archivo consultado",
+          "edicion": "Primera edición 2004; edición electrónica 2013",
+          "localizadores": [
+            {
+              "pagina_pdf": 4,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 5,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 12,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 13,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 14,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            }
+          ]
+        }
+      ],
+      "lote_incorporacion": "S17-2026-09-11",
+      "lenguas_publicacion": [
+        "inglés"
+      ]
+    },
+    {
+      "id": "espinosahabitarmultiespecie",
+      "k": "obra",
+      "t": "Habitar multiespecie: una etnografía de cuerpos, casas y parques en algunos pueblos del Caribe colombiano",
+      "a": "Sebastián Isidro Espinosa Martínez",
+      "y": "2026",
+      "f": [
+        "cuerpo_erotica",
+        "memoria",
+        "colonialidad"
+      ],
+      "l": "palenque",
+      "tr": "español",
+      "ap": "Explora cómo casas, patios, plazas y cuerpos se producen en relaciones entre humanos y más-que-humanos. A partir de escenas etnográficas en Palenque, Palenquito y Gamero, cuestiona la separación entre hábitats humanos y naturales y examina cuidados, diferencias de género y relaciones con el ganado.",
+      "ed": "Universidad Nacional de Colombia",
+      "edicion_consultada": "Primera edición, abril de 2026",
+      "nota_bibliografica": "No convertir el uso ampliado de cimarrón en una equivalencia histórica entre personas esclavizadas y animales. La referencia a Ma Ngombe aparece con la errata Ma Ngombre en la bibliografía.",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal de metadatos, índice e introducción o pasajes seleccionados; no lectura integral",
+        "responsable": "Preparación asistida del lote S17; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-11",
+        "fundamento": "C6 es la candidatura principal porque las relaciones multiespecie organizan la pregunta y la etnografía. C10 corresponde a la articulación entre cuerpos, género y cuidado."
+      },
+      "fuente_recorrido": [
+        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "huracanes_ecologias_materialidades_vivas",
+          "cuerpos_parentescos_eroticas"
+        ],
+        "corriente_confirmada": null
+      },
+      "operaciones": [
+        "producir etnografía"
+      ],
+      "orillas": [
+        {
+          "lugar": "palenque",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Palenquito",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Gamero",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Caribe colombiano",
+          "funcion": "territorio estudiado"
+        }
+      ],
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "fuentes_revision": [
+        {
+          "tipo": "archivo consultado",
+          "edicion": "Primera edición, abril de 2026",
+          "localizadores": [
+            {
+              "pagina_pdf": 7,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 9,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 20,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 97,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 164,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            }
+          ]
+        }
+      ],
+      "lote_incorporacion": "S17-2026-09-11",
+      "isbn": "9786285032073",
+      "doi": "10.15446/edunal.559",
+      "lenguas_publicacion": [
+        "español"
+      ]
+    },
+    {
+      "id": "schullerhumanitarian",
+      "k": "obra",
+      "t": "Humanitarian Aftershocks in Haiti",
+      "a": "Mark Schuller",
+      "y": "2016",
+      "f": [
+        "catastrofes",
+        "soberanias"
+      ],
+      "l": "haiti",
+      "tr": "inglés",
+      "ap": "Examina las consecuencias de la respuesta humanitaria al terremoto de 2010 desde la experiencia de personas desplazadas y actores de la ayuda. Analiza jerarquías institucionales, intermediación y exclusión de las decisiones, mostrando cómo las intervenciones pueden prolongar la inseguridad y debilitar formas locales de organización.",
+      "ed": "Rutgers University Press",
+      "edicion_consultada": "Rutgers University Press, 2016; EPUB",
+      "nota_bibliografica": "El terremoto no es un huracán. Las referencias se localizan por sección del EPUB, sin inventar paginación.",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal de metadatos, índice e introducción o pasajes seleccionados; no lectura integral",
+        "responsable": "Preparación asistida del lote S17; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-11",
+        "fundamento": "C7 es la candidatura por las relaciones de poder y decisión en la ayuda internacional; C6 corresponde al desastre y sus efectos socialmente producidos."
+      },
+      "fuente_recorrido": [
+        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "huracanes_ecologias_materialidades_vivas"
+        ],
+        "corriente_confirmada": null
+      },
+      "operaciones": [
+        "producir etnografía"
+      ],
+      "orillas": [
+        {
+          "lugar": "haiti",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Puerto Príncipe",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Léogâne",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Jacmel",
+          "funcion": "territorio estudiado"
+        }
+      ],
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "fuentes_revision": [
+        {
+          "tipo": "archivo consultado",
+          "edicion": "Rutgers University Press, 2016; EPUB",
+          "localizadores": [
+            {
+              "seccion_epub": "Text/rut-schuller-0009.xhtml",
+              "localizador": "Introduction",
+              "tipo": "pasaje argumentativo"
+            },
+            {
+              "seccion_epub": "Text/rut-schuller-0022.xhtml",
+              "localizador": "Referencias",
+              "tipo": "comprobación de relación"
+            },
+            {
+              "seccion_epub": "content.opf",
+              "localizador": "dc:title, dc:creator, dc:publisher, dc:date",
+              "tipo": "metadatos del EPUB"
+            }
+          ]
+        }
+      ],
+      "lote_incorporacion": "S17-2026-09-11",
+      "lenguas_publicacion": [
+        "inglés"
+      ]
+    },
+    {
+      "id": "antczakislandssalt",
+      "k": "obra",
+      "t": "Islands of Salt: Historical Archaeology of Seafarers and Things in the Venezuelan Caribbean, 1624–1880",
+      "a": "Konrad A. Antczak",
+      "y": "2019",
+      "f": [
+        "capitalismo_racial",
+        "colonialidad"
+      ],
+      "l": "curazao",
+      "tr": "inglés",
+      "ap": "Reconstruye itinerarios marítimos y prácticas cotidianas en campamentos salineros del Caribe venezolano. Combina documentos y cultura material para estudiar las relaciones entre navegantes, salinas y objetos, y propone un marco de ensamblajes de práctica que permite relacionar experiencias locales y circuitos transimperiales.",
+      "ed": "Sidestone Press Academics",
+      "edicion_consultada": "Sidestone Press Academics, 2019",
+      "nota_bibliografica": "El horizonte 1624–1880 corresponde al estudio. No atribuir al conjunto de sus marineros una identidad negra ni convertir la extracción de sal en plantación azucarera.",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal de metadatos, índice e introducción o pasajes seleccionados; no lectura integral",
+        "responsable": "Preparación asistida del lote S17; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-11",
+        "fundamento": "C5 es la candidatura principal por los itinerarios y las estancias marítimas; C6 recoge la materialidad de la sal y los objetos."
+      },
+      "fuente_recorrido": [
+        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "rutas_diasporas_territorios_acuosos",
+          "huracanes_ecologias_materialidades_vivas"
+        ],
+        "corriente_confirmada": null
+      },
+      "operaciones": [
+        "reconstruir un archivo",
+        "documentar una práctica"
+      ],
+      "orillas": [
+        {
+          "tipo": "región",
+          "label": "Isla La Tortuga",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Cayo Sal, archipiélago Los Roques",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Caribe venezolano",
+          "funcion": "territorio estudiado"
+        }
+      ],
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "fuentes_revision": [
+        {
+          "tipo": "archivo consultado",
+          "edicion": "Sidestone Press Academics, 2019",
+          "localizadores": [
+            {
+              "pagina_pdf": 1,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 6,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 7,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 17,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 18,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 19,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            }
+          ]
+        }
+      ],
+      "lote_incorporacion": "S17-2026-09-11",
+      "isbn": "9789088908170",
+      "lenguas_publicacion": [
+        "inglés"
+      ]
+    },
+    {
+      "id": "friedemanncrossmangombe",
+      "k": "obra",
+      "t": "Ma Ngombe: guerreros y ganaderos en Palenque",
+      "a": "Nina S. de Friedemann y Richard Cross",
+      "y": "1979",
+      "f": [
+        "cimarronaje",
+        "memoria"
+      ],
+      "l": "palenque",
+      "tr": "español",
+      "ap": "Articula reconstrucción histórica y etnografía de Palenque para examinar la organización social, la ganadería y las relaciones entre las comunidades cimarronas y el poblado contemporáneo. El trabajo pregunta por los procesos que conectan la historia de los palenques con formas posteriores de vida y organización.",
+      "ed": "Carlos Valencia Editores (primera edición)",
+      "edicion_consultada": "Copia local de 98 páginas con prólogo a segunda edición; año de esta versión no indicado",
+      "nota_bibliografica": "La copia local no conserva la paginación de la edición original. El prólogo recuerda una presentación en 1980, que no sustituye el año bibliográfico 1979.",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal de metadatos, índice e introducción o pasajes seleccionados; no lectura integral",
+        "responsable": "Preparación asistida del lote S17; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-11",
+        "fundamento": "C3 es una candidatura por la formación histórica cimarrona; C9 exige considerar los saberes, las narraciones y los rituales, sin absorber en ellos todo el libro."
+      },
+      "fuente_recorrido": [
+        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "fugas_cimarronajes_emancipaciones",
+          "memorias_espiritualidades_archivos_vivos"
+        ],
+        "corriente_confirmada": null
+      },
+      "operaciones": [
+        "producir etnografía",
+        "reconstruir un archivo"
+      ],
+      "orillas": [
+        {
+          "lugar": "palenque",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Provincia histórica de Cartagena",
+          "funcion": "territorio estudiado"
+        }
+      ],
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "fuentes_revision": [
+        {
+          "tipo": "archivo consultado",
+          "edicion": "Copia local de 98 páginas con prólogo a segunda edición; año de esta versión no indicado",
+          "localizadores": [
+            {
+              "pagina_pdf": 2,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 3,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 9,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 12,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 18,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 88,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            }
+          ]
+        }
+      ],
+      "lote_incorporacion": "S17-2026-09-11",
+      "url": "https://babel.banrepcultural.org/digital/collection/p17054coll10/id/2789/",
+      "lenguas_publicacion": [
+        "español"
+      ]
+    },
+    {
+      "id": "featherstonecricket",
+      "k": "obra",
+      "t": "Marxism, Colonialism, and Cricket: C. L. R. James’s Beyond a Boundary",
+      "a": "David Featherstone, Christopher Gair, Christian Høgsbjerg y Andrew Smith (eds.)",
+      "y": "2018",
+      "f": [
+        "colonialidad",
+        "soberanias",
+        "creolizacion"
+      ],
+      "l": "trinidad",
+      "tr": "inglés",
+      "ap": "Reexamina Beyond a Boundary como intervención sobre deporte, cultura y política. Los capítulos sitúan el críquet en las relaciones imperiales y en la elaboración de identidades y demandas de independencia, y revisan problemas de representación, género y cultura popular en el pensamiento de James.",
+      "ed": "Duke University Press",
+      "edicion_consultada": "Duke University Press, 2018",
+      "nota_bibliografica": "No es Beyond a Boundary ni una nueva edición de The Black Jacobins.",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal de metadatos, índice e introducción o pasajes seleccionados; no lectura integral",
+        "responsable": "Preparación asistida del lote S17; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-11",
+        "fundamento": "C7 y C8 son candidaturas por la independencia y las formas culturales. Requiere distinguir la arquitectura del volumen colectivo de la obra de James que interpreta."
+      },
+      "fuente_recorrido": [
+        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "creolizaciones_traducciones_opacidades"
+        ],
+        "corriente_confirmada": null
+      },
+      "operaciones": [
+        "teorizar"
+      ],
+      "orillas": [
+        {
+          "lugar": "trinidad",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Caribe anglófono",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Gran Bretaña",
+          "funcion": "territorio estudiado"
+        }
+      ],
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "fuentes_revision": [
+        {
+          "tipo": "archivo consultado",
+          "edicion": "Duke University Press, 2018",
+          "localizadores": [
+            {
+              "pagina_pdf": 4,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 5,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 11,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 12,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 13,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 26,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            }
+          ]
+        }
+      ],
+      "lote_incorporacion": "S17-2026-09-11",
+      "lenguas_publicacion": [
+        "inglés"
+      ]
+    },
+    {
+      "id": "coopernoises",
+      "k": "obra",
+      "t": "Noises in the Blood: Orality, Gender, and the “Vulgar” Body of Jamaican Popular Culture",
+      "a": "Carolyn Cooper",
+      "y": "1995",
+      "f": [
+        "creolizacion",
+        "cuerpo_erotica"
+      ],
+      "l": "jamaica",
+      "tr": "inglés",
+      "ap": "Analiza las relaciones entre oralidad y escritura en la literatura y la cultura popular jamaicanas. A través de poesía, narrativa, performance y música, examina cómo saberes y lenguajes desvalorizados disputan jerarquías culturales; el género y las representaciones del cuerpo forman parte del problema interpretativo.",
+      "ed": "Duke University Press (edición consultada)",
+      "edicion_consultada": "Primera edición estadounidense: Duke University Press, 1995; original Macmillan, 1993",
+      "nota_bibliografica": "No presentar toda cultura popular como resistencia por definición; atribuir a la autora las lecturas concretas de transgresión.",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal de metadatos, índice e introducción o pasajes seleccionados; no lectura integral",
+        "responsable": "Preparación asistida del lote S17; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-11",
+        "fundamento": "C8 es la candidatura principal por la relación entre registros orales y escritos; C10 representa el papel sustantivo del género y del cuerpo."
+      },
+      "fuente_recorrido": [
+        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "creolizaciones_traducciones_opacidades",
+          "cuerpos_parentescos_eroticas"
+        ],
+        "corriente_confirmada": null
+      },
+      "operaciones": [
+        "teorizar",
+        "documentar una práctica"
+      ],
+      "orillas": [
+        {
+          "lugar": "jamaica",
+          "funcion": "territorio estudiado"
+        }
+      ],
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "fuentes_revision": [
+        {
+          "tipo": "archivo consultado",
+          "edicion": "Primera edición estadounidense: Duke University Press, 1995; original Macmillan, 1993",
+          "localizadores": [
+            {
+              "pagina_pdf": 7,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 8,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 11,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 21,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 22,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 23,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            }
+          ]
+        }
+      ],
+      "lote_incorporacion": "S17-2026-09-11",
+      "y0": "1993",
+      "lenguas_publicacion": [
+        "inglés"
+      ]
+    },
+    {
+      "id": "josephmocombefirmin",
+      "k": "obra",
+      "t": "Reconstructing the Social Sciences and Humanities: Anténor Firmin, Western Intellectual Tradition, and Black Atlantic Tradition",
+      "a": "Celucien L. Joseph y Paul C. Mocombe (eds.)",
+      "y": "2021",
+      "f": [
+        "colonialidad",
+        "memoria"
+      ],
+      "l": "haiti",
+      "tr": "inglés",
+      "ap": "Estudia la intervención de Anténor Firmin en las ciencias sociales y las humanidades, con atención a su crítica de las jerarquías raciales y a las dimensiones históricas, políticas y epistemológicas de su pensamiento. El volumen permite trabajar la producción intelectual haitiana como objeto de análisis y como intervención en debates más amplios.",
+      "ed": "Routledge",
+      "edicion_consultada": "Routledge, 2021",
+      "nota_bibliografica": "No adoptar sin discusión las afirmaciones de prioridad absoluta que formula la introducción sobre Firmin. Es un estudio sobre Firmin, no su obra de 1885.",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal de metadatos, índice e introducción o pasajes seleccionados; no lectura integral",
+        "responsable": "Preparación asistida del lote S17; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-11",
+        "fundamento": "Las candidaturas C7 y C9 son exploratorias: historia intelectual y crítica epistemológica no encajan automáticamente en soberanías o archivos vivos. Hace falta valorar el ajuste conceptual antes de confirmar una corriente."
+      },
+      "fuente_recorrido": [
+        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "memorias_espiritualidades_archivos_vivos"
+        ],
+        "corriente_confirmada": null
+      },
+      "operaciones": [
+        "teorizar",
+        "confrontar una categoría"
+      ],
+      "orillas": [
+        {
+          "lugar": "haiti",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Francia",
+          "funcion": "lugar de circulación"
+        },
+        {
+          "tipo": "cuenca",
+          "label": "Atlántico negro",
+          "funcion": "territorio estudiado"
+        }
+      ],
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "fuentes_revision": [
+        {
+          "tipo": "archivo consultado",
+          "edicion": "Routledge, 2021",
+          "localizadores": [
+            {
+              "pagina_pdf": 3,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 4,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 5,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 10,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 16,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 39,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            }
+          ]
+        }
+      ],
+      "lote_incorporacion": "S17-2026-09-11",
+      "lenguas_publicacion": [
+        "inglés"
+      ]
+    },
+    {
+      "id": "forsdickhogsbjergreader",
+      "k": "obra",
+      "t": "The Black Jacobins Reader",
+      "a": "Charles Forsdick y Christian Høgsbjerg (eds.)",
+      "y": "2017",
+      "f": [
+        "cimarronaje",
+        "soberanias"
+      ],
+      "l": "haiti",
+      "tr": "inglés",
+      "ap": "Reúne estudios sobre la elaboración, las lecturas y la trayectoria política e intelectual de The Black Jacobins. Sitúa la obra de James en sus contextos y examina su contribución a la interpretación de la Revolución haitiana y a las discusiones sobre historia y emancipación.",
+      "ed": "Duke University Press",
+      "edicion_consultada": "Duke University Press, 2017",
+      "nota_bibliografica": "El año de portada y copyright es 2017; la ficha CIP interna menciona 2016. Se conserva 2017 para la edición consultada.",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal de metadatos, índice e introducción o pasajes seleccionados; no lectura integral",
+        "responsable": "Preparación asistida del lote S17; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-11",
+        "fundamento": "C3 es una candidatura por la revolución de esclavizados y la emancipación; C7 recoge los problemas de revolución y política. Debe comprobarse la unidad del volumen antes de cerrar la clasificación."
+      },
+      "fuente_recorrido": [
+        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "fugas_cimarronajes_emancipaciones",
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "corriente_confirmada": null
+      },
+      "operaciones": [
+        "reconstruir un archivo"
+      ],
+      "orillas": [
+        {
+          "tipo": "región",
+          "label": "Haití/Saint-Domingue",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "trinidad",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Gran Bretaña",
+          "funcion": "lugar de circulación"
+        },
+        {
+          "tipo": "región",
+          "label": "Circulación internacional",
+          "funcion": "lugar de circulación"
+        }
+      ],
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "fuentes_revision": [
+        {
+          "tipo": "archivo consultado",
+          "edicion": "Duke University Press, 2017",
+          "localizadores": [
+            {
+              "pagina_pdf": 6,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 7,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 26,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 27,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            }
+          ]
+        }
+      ],
+      "lote_incorporacion": "S17-2026-09-11",
+      "lenguas_publicacion": [
+        "inglés"
+      ]
+    },
+    {
+      "id": "hillmandagostinocaribbean",
+      "k": "obra",
+      "t": "Understanding the Contemporary Caribbean",
+      "a": "Richard S. Hillman y Thomas J. D’Agostino (eds.)",
+      "y": "2009",
+      "f": [
+        "colonialidad",
+        "soberanias"
+      ],
+      "l": "trinidad",
+      "tr": "inglés",
+      "ap": "Presenta una introducción interdisciplinaria a las sociedades caribeñas contemporáneas. Reúne dimensiones históricas, geográficas, políticas, económicas y culturales, y discute las conexiones regionales e internacionales que impiden reducir el Caribe a una imagen turística de islas aisladas.",
+      "ed": "Lynne Rienner Publishers e Ian Randle Publishers",
+      "edicion_consultada": "Segunda edición, 2009",
+      "nota_bibliografica": "2009 es el año de la segunda edición consultada; no se lo registra como primera publicación de la obra. Libro de consulta panorámica, no una monografía con una única tesis.",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal de metadatos, índice e introducción o pasajes seleccionados; no lectura integral",
+        "responsable": "Preparación asistida del lote S17; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-11",
+        "fundamento": "C7, C4 y C5 son candidaturas para evaluar una posible arquitectura de síntesis; la condición de manual general no prueba por sí misma una síntesis multicorriente."
+      },
+      "fuente_recorrido": [
+        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "postplantacion_trabajo_desposesion",
+          "rutas_diasporas_territorios_acuosos"
+        ],
+        "corriente_confirmada": null
+      },
+      "operaciones": [
+        "comparar orillas"
+      ],
+      "orillas": [
+        {
+          "tipo": "cuenca",
+          "label": "Gran Caribe",
+          "funcion": "territorio estudiado"
+        }
+      ],
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "fuentes_revision": [
+        {
+          "tipo": "archivo consultado",
+          "edicion": "Segunda edición, 2009",
+          "localizadores": [
+            {
+              "pagina_pdf": 3,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 4,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 5,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 15,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 16,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            }
+          ]
+        }
+      ],
+      "lote_incorporacion": "S17-2026-09-11",
+      "lenguas_publicacion": [
+        "inglés"
+      ]
+    },
+    {
+      "id": "kingshoals",
+      "k": "obra",
+      "t": "The Black Shoals: Offshore Formations of Black and Native Studies",
+      "a": "Tiffany Lethabo King",
+      "y": "2019",
+      "f": [
+        "colonialidad",
+        "violencias"
+      ],
+      "l": "nola",
+      "tr": "inglés",
+      "ap": "Propone el shoal como formación conceptual que interrumpe lecturas separadas de la esclavización negra y el despojo indígena. El libro pone en relación estudios negros e indígenas y examina sus encuentros, límites y tensiones, atendiendo a las condiciones de producción de lo humano.",
+      "ed": "Duke University Press",
+      "edicion_consultada": "Duke University Press, 2019",
+      "nota_bibliografica": "Su foco es norteamericano y afrodiaspórico. Su pertinencia para el Atlas es comparativa; no presentarlo como etnografía del Caribe.",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal de metadatos, índice e introducción o pasajes seleccionados; no lectura integral",
+        "responsable": "Preparación asistida del lote S17; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-11",
+        "fundamento": "C1 y C2 son candidaturas por la relación entre despojo y esclavización; C5 es una alternativa a contrastar por su lenguaje oceánico. La metáfora acuosa no basta para clasificarlo como estudio de rutas."
+      },
+      "fuente_recorrido": [
+        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "invasiones_mundos_indigenas",
+          "trata_esclavizacion_plantacion",
+          "rutas_diasporas_territorios_acuosos"
+        ],
+        "corriente_confirmada": null
+      },
+      "operaciones": [
+        "elaborar un concepto",
+        "confrontar una categoría"
+      ],
+      "orillas": [
+        {
+          "tipo": "región",
+          "label": "Norteamérica",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "cuenca",
+          "label": "Atlántico negro",
+          "funcion": "territorio estudiado"
+        }
+      ],
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "fuentes_revision": [
+        {
+          "tipo": "archivo consultado",
+          "edicion": "Duke University Press, 2019",
+          "localizadores": [
+            {
+              "pagina_pdf": 3,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 4,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 15,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 21,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 22,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 25,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            }
+          ]
+        }
+      ],
+      "lote_incorporacion": "S17-2026-09-11",
+      "lenguas_publicacion": [
+        "inglés"
+      ]
+    },
+    {
+      "id": "honychurchcaribbeanpeople1",
+      "k": "obra",
+      "t": "The Caribbean People. Book 1",
+      "a": "Lennox Honychurch",
+      "y": "1995",
+      "f": [
+        "colonialidad",
+        "creolizacion"
+      ],
+      "l": "dominica",
+      "tr": "inglés",
+      "ap": "Manual de historia que introduce el poblamiento de las Américas y del Caribe y sitúa ese proceso en una comparación con otras regiones del mundo. Su organización didáctica permite examinar formas de narrar los antecedentes de las sociedades caribeñas y de enseñar una historia regional.",
+      "ed": "Thomas Nelson & Sons",
+      "edicion_consultada": "Edición revisada de 1995; Book 1",
+      "nota_bibliografica": "Solo se prepara el libro 1. Conservar la distancia crítica frente a formulaciones escolares sobre razas, migraciones y descubrimientos.",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal de metadatos, índice e introducción o pasajes seleccionados; no lectura integral",
+        "responsable": "Preparación asistida del lote S17; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-11",
+        "fundamento": "C1 es una candidatura por el poblamiento y los mundos indígenas, pero el libro también desarrolla una historia comparativa mundial. Debe evaluarse como manual y fuente para docencia."
+      },
+      "fuente_recorrido": [
+        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "invasiones_mundos_indigenas"
+        ],
+        "corriente_confirmada": null
+      },
+      "operaciones": [
+        "narrar",
+        "comparar orillas"
+      ],
+      "orillas": [
+        {
+          "tipo": "región",
+          "label": "Caribe",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Américas",
+          "funcion": "territorio comparado"
+        },
+        {
+          "tipo": "región",
+          "label": "África",
+          "funcion": "territorio comparado"
+        },
+        {
+          "tipo": "región",
+          "label": "Asia",
+          "funcion": "territorio comparado"
+        },
+        {
+          "tipo": "región",
+          "label": "Europa",
+          "funcion": "territorio comparado"
+        }
+      ],
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "fuentes_revision": [
+        {
+          "tipo": "archivo consultado",
+          "edicion": "Edición revisada de 1995; Book 1",
+          "localizadores": [
+            {
+              "pagina_pdf": 3,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 4,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 5,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 7,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            }
+          ]
+        }
+      ],
+      "lote_incorporacion": "S17-2026-09-11",
+      "y0": "1979",
+      "lenguas_publicacion": [
+        "inglés"
+      ]
+    },
+    {
+      "id": "quinterosalsa",
+      "k": "obra",
+      "t": "¡Salsa, sabor y control! Sociología de la música “tropical”",
+      "a": "Ángel G. Quintero Rivera",
+      "y": "1998",
+      "f": [
+        "creolizacion",
+        "cuerpo_erotica"
+      ],
+      "l": "puertorico",
+      "tr": "español",
+      "ap": "Estudia las relaciones entre música y sociedad a través de la salsa y otras formas sonoras del Caribe hispano. Examina temporalidades, identidades y modos de creación musical, relacionando ritmo, improvisación y circulación con procesos históricos y transformaciones sociales.",
+      "ed": "Siglo XXI Editores",
+      "edicion_consultada": "Primera edición, Siglo XXI Editores, 1998",
+      "nota_bibliografica": "El ISBN del nombre de archivo no coincide con el de la página legal: se usa 968-23-2149-2, correspondiente al ejemplar leído.",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal de metadatos, índice e introducción o pasajes seleccionados; no lectura integral",
+        "responsable": "Preparación asistida del lote S17; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-11",
+        "fundamento": "C8 es la candidatura principal por las formas de creación y expresión cultural; C5 corresponde a las circulaciones musicales. La relación con Cuerpo y cultura debe examinarse sin inferirla únicamente por autoría compartida."
+      },
+      "fuente_recorrido": [
+        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "creolizaciones_traducciones_opacidades",
+          "rutas_diasporas_territorios_acuosos"
+        ],
+        "corriente_confirmada": null
+      },
+      "operaciones": [
+        "teorizar",
+        "documentar una práctica"
+      ],
+      "orillas": [
+        {
+          "lugar": "puertorico",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "cuba",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "dominicana",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Nueva York",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Caribe hispano",
+          "funcion": "territorio estudiado"
+        }
+      ],
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "fuentes_revision": [
+        {
+          "tipo": "archivo consultado",
+          "edicion": "Primera edición, Siglo XXI Editores, 1998",
+          "localizadores": [
+            {
+              "pagina_pdf": 7,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 8,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 9,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 15,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 16,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 17,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            }
+          ]
+        }
+      ],
+      "lote_incorporacion": "S17-2026-09-11",
+      "isbn": "9682321492",
+      "lenguas_publicacion": [
+        "español"
+      ]
     }
   ],
   "relaciones": [
@@ -10019,6 +11938,222 @@
       "b": "creolenieworleans",
       "tipo": "resonancia",
       "fuente": "Comparten el lugar, Luisiana/Nueva Orleans colonial: las mujeres negras libres y esclavizadas que estudia Johnson y la formación racial criolla neorleansina de Hirsch y Logsdon leen el mismo espacio atlántico francés. Por corroborar el vínculo directo."
+    },
+    {
+      "a": "zeidermanartery",
+      "b": "jaffeconcrete",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Austin Zeiderman, Artery: Racial Ecologies on Colombia’s Magdalena River, edición consultada: Duke University Press, 2025. PDF, hoja 26. La nota 6 de la introducción incluye Concrete Jungles entre los estudios que influyen en el análisis del entrelazamiento de raza y naturaleza.",
+      "id_lote": "S17-R01",
+      "lote_incorporacion": "S17-2026-09-11"
+    },
+    {
+      "a": "zeidermanartery",
+      "b": "ferdinand",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Austin Zeiderman, Artery: Racial Ecologies on Colombia’s Magdalena River, edición consultada: Duke University Press, 2025. PDF, hoja 26. La misma nota incluye Decolonial Ecology, traducción de Une écologie décoloniale. La referencia documenta interlocución; no se afirma identidad conceptual.",
+      "id_lote": "S17-R02",
+      "lote_incorporacion": "S17-2026-09-11"
+    },
+    {
+      "a": "scottvientocomun",
+      "b": "james",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Julius S. Scott, El viento común: corrientes afroamericanas en la era de la Revolución haitiana, edición consultada: Traducción de Esther Pérez; Traficantes de Sueños, 2021. PDF, hoja 34. Cita The Black Jacobins en las notas de la reconstrucción histórica. La presencia es documental; no se deduce una adhesión a todas las tesis de James.",
+      "id_lote": "S17-R03",
+      "lote_incorporacion": "S17-2026-09-11"
+    },
+    {
+      "a": "espinosahabitarmultiespecie",
+      "b": "friedemanncrossmangombe",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Sebastián Isidro Espinosa Martínez, Habitar multiespecie: una etnografía de cuerpos, casas y parques en algunos pueblos del Caribe colombiano, edición consultada: Primera edición, abril de 2026. PDF, hoja 97; PDF, hoja 164. El análisis de ganadería remite a Friedemann (1979); la bibliografía identifica Ma Ngombe con la errata Ma Ngombre. PDF 97 = p. impresa 94; PDF 164 = p. impresa 161.",
+      "id_lote": "S17-R04",
+      "lote_incorporacion": "S17-2026-09-11"
+    },
+    {
+      "a": "schullerhumanitarian",
+      "b": "schuller_killingkindness",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Mark Schuller, Humanitarian Aftershocks in Haiti, edición consultada: Rutgers University Press, 2016; EPUB. EPUB, Text/rut-schuller-0016.xhtml; EPUB, Text/rut-schuller-0022.xhtml. El pasaje sobre intermediarios remite a Schuller 2012c; la bibliografía identifica esa clave como Killing with Kindness.",
+      "id_lote": "S17-R05",
+      "lote_incorporacion": "S17-2026-09-11"
+    },
+    {
+      "a": "friedemanncrossmangombe",
+      "b": "escalante",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Nina S. de Friedemann y Richard Cross, Ma Ngombe: guerreros y ganaderos en Palenque, edición consultada: Copia local de 98 páginas con prólogo a segunda edición; año de esta versión no indicado. PDF, hoja 18. Friedemann formula sus preguntas contrastando la reconstrucción de Arrázola y el estudio de Escalante de 1954. Revisar el título abreviado del nodo escalante antes de publicar la arista; no declarar disonancia sin evaluar la objeción completa.",
+      "id_lote": "S17-R06",
+      "lote_incorporacion": "S17-2026-09-11"
+    },
+    {
+      "a": "featherstonecricket",
+      "b": "james",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "David Featherstone, Christopher Gair, Christian Høgsbjerg y Andrew Smith (eds.), Marxism, Colonialism, and Cricket: C. L. R. James’s Beyond a Boundary, edición consultada: Duke University Press, 2018. PDF, hoja 26. La introducción sitúa Beyond a Boundary en relación con el tratamiento de cultura popular y resistencia imperial en The Black Jacobins.",
+      "id_lote": "S17-R07",
+      "lote_incorporacion": "S17-2026-09-11"
+    },
+    {
+      "a": "coopernoises",
+      "b": "glissant",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Carolyn Cooper, Noises in the Blood: Orality, Gender, and the “Vulgar” Body of Jamaican Popular Culture, edición consultada: Primera edición estadounidense: Duke University Press, 1995; original Macmillan, 1993. PDF, hoja 21; PDF, hoja 22; PDF, hoja 226. Los epígrafes y la introducción leen la relación oral/escrito desde Caribbean Discourse; la bibliografía identifica la traducción inglesa de Le Discours antillais. La relación corresponde al componente Le Discours antillais del nodo compuesto glissant.",
+      "id_lote": "S17-R08",
+      "lote_incorporacion": "S17-2026-09-11"
+    },
+    {
+      "a": "josephmocombefirmin",
+      "b": "firmin",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Celucien L. Joseph y Paul C. Mocombe (eds.), Reconstructing the Social Sciences and Humanities: Anténor Firmin, Western Intellectual Tradition, and Black Atlantic Tradition, edición consultada: Routledge, 2021. PDF, hoja 10. La introducción identifica De l’égalité des races humaines y explica la intervención de Firmin en los métodos y categorías de las ciencias sociales.",
+      "id_lote": "S17-R09",
+      "lote_incorporacion": "S17-2026-09-11"
+    },
+    {
+      "a": "forsdickhogsbjergreader",
+      "b": "james",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Charles Forsdick y Christian Høgsbjerg (eds.), The Black Jacobins Reader, edición consultada: Duke University Press, 2017. PDF, hoja 26. La introducción reconstruye la publicación y la trayectoria de The Black Jacobins; el libro entero tiene esta obra como objeto explícito.",
+      "id_lote": "S17-R10",
+      "lote_incorporacion": "S17-2026-09-11"
+    },
+    {
+      "a": "kingshoals",
+      "b": "sharpewake",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Tiffany Lethabo King, The Black Shoals: Offshore Formations of Black and Native Studies, edición consultada: Duke University Press, 2019. PDF, hoja 25. La introducción discute explícitamente In the Wake y el trabajo de la estela dentro de los desplazamientos oceánicos de los estudios negros.",
+      "id_lote": "S17-R11",
+      "lote_incorporacion": "S17-2026-09-11"
+    },
+    {
+      "a": "boguesheretics",
+      "b": "robinsonmarxismo",
+      "tipo": "resonancia",
+      "estado": "por_corroborar",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Por corroborar. Posible comparación entre las formulaciones de la tradición radical negra; no se verificó una cita al título en los pasajes OCR revisados.",
+      "id_lote": "S17-R12",
+      "lote_incorporacion": "S17-2026-09-11"
+    },
+    {
+      "a": "barriteauconfronting",
+      "b": "reddock",
+      "tipo": "resonancia",
+      "estado": "por_corroborar",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Por corroborar. Posible contraste entre la teorización del género y el estudio histórico de mujeres, trabajo y política en Trinidad y Tobago. No equivale a cita comprobada.",
+      "id_lote": "S17-R13",
+      "lote_incorporacion": "S17-2026-09-11"
+    },
+    {
+      "a": "becklesgreathouse",
+      "b": "williamscapitalismo",
+      "tipo": "resonancia",
+      "estado": "por_corroborar",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Por corroborar. Capitalism and Slavery aparece en la bibliografía. Esta presencia todavía no prueba el uso argumentativo que exigiría la relación.",
+      "id_lote": "S17-R14",
+      "lote_incorporacion": "S17-2026-09-11"
+    },
+    {
+      "a": "antczakislandssalt",
+      "b": "mintz",
+      "tipo": "resonancia",
+      "estado": "por_corroborar",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Por corroborar. Sweetness and Power aparece en la bibliografía. Verificar el pasaje de uso antes de proponer una relación intelectual corroborada.",
+      "id_lote": "S17-R15",
+      "lote_incorporacion": "S17-2026-09-11"
+    },
+    {
+      "a": "hillmandagostinocaribbean",
+      "b": "mintz",
+      "tipo": "resonancia",
+      "estado": "por_corroborar",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Por corroborar. El volumen incluye Caribbean Transformations y Sweetness and Power en referencias; falta establecer el argumento específico de conexión.",
+      "id_lote": "S17-R16",
+      "lote_incorporacion": "S17-2026-09-11"
+    },
+    {
+      "a": "honychurchcaribbeanpeople1",
+      "b": "keeganhofman",
+      "tipo": "resonancia",
+      "estado": "por_corroborar",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Por corroborar. Comparación posible entre un manual escolar y una síntesis arqueológica del Caribe anterior a Colón. No se afirma una relación de influencia.",
+      "id_lote": "S17-R17",
+      "lote_incorporacion": "S17-2026-09-11"
+    },
+    {
+      "a": "quinterosalsa",
+      "b": "quintero",
+      "tipo": "resonancia",
+      "estado": "por_corroborar",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Por corroborar. Comparación posible entre dos libros distintos de Quintero Rivera sobre música, cuerpo e historia social. La autoría compartida no demuestra por sí sola la relación.",
+      "id_lote": "S17-R18",
+      "lote_incorporacion": "S17-2026-09-11"
     }
   ],
   "redirecciones": {
