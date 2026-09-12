@@ -600,7 +600,7 @@
   #stage.reposo .placelbl.pais{opacity:.5}
   #stage.reposo .placelbl.ciudad{opacity:.55}
   /* --- 2 · trama submarina -------------------------------------------- */
-  .hilo{fill:none; stroke:var(--hilo); stroke-width:.7; stroke-opacity:.16; pointer-events:none}
+  .hilo{fill:none; stroke:var(--hilo); stroke-width:.7; stroke-opacity:.20; pointer-events:none}
   .trama{transition:opacity .5s ease}
   #stage:not(.reposo) .trama{opacity:0}
   #stage.reposo .trama{opacity:1}
