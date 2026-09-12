@@ -555,3 +555,107 @@
     header .t h1{font-size:17px}
     header .t .sub{display:none}
   }
+
+/* ==================================================================
+   TANDA UX · tinta única, trama submarina y clave como control
+   ------------------------------------------------------------------
+   Tres decisiones, ningún color nuevo fuera de la paleta ya declarada:
+
+   1. TINTA ÚNICA EN REPOSO. Con nada seleccionado, los 274 nodos van en
+      una sola tinta. El color de fenómeno no desaparece: deja de ser
+      fondo permanente y pasa a ser estado de foco. El atlas argumenta
+      que la unidad de análisis es la relación, no el lugar; diez
+      matices encendidos a la vez sobre un mapa de países decían
+      exactamente lo contrario.
+   2. TRAMA SUBMARINA. Las 632 corrientes se dibujan como fondo tenue
+      antes de que nadie haga clic. «The unity is submarine»: lo que une
+      corre por debajo, y ahora se ve por debajo. Al enfocar algo, la
+      trama cede el paso a las corrientes dibujadas con su resonancia,
+      su disonancia y su cruce lingüístico.
+   3. LA CLAVE ES EL CONTROL. Los diez matices salen del panel plegable
+      y ocupan el margen izquierdo —el sitio que gastaba el párrafo de
+      instrucciones en cursiva—, cada uno pulsable.
+   ================================================================== */
+  :root{
+    /* hueso apagado: el crema de la casa, bajado de saturación para que no
+       compita con el color de foco cuando este entra */
+    --ink:rgba(226,221,206,.15);
+    --ink-line:rgba(226,221,206,.38);
+    --ink-dim:rgba(226,221,206,.30);
+    /* el azul de la marea (--tideband ya lo usa) sostiene la trama */
+    --hilo:#5d8f9b;
+  }
+  /* --- 1 · tinta única ------------------------------------------------ */
+  #stage.reposo .node.obra circle.dot{fill:var(--ink); stroke:var(--ink-line); stroke-width:.9}
+  #stage.reposo .node.manif circle.dot{fill:var(--bg-deep); stroke:var(--ink-line); stroke-width:1.9}
+  #stage .node.apagado circle.dot{fill:var(--ink-dim); stroke:var(--ink-dim)}
+  #stage.reposo .node:hover circle.dot,
+  #stage.reposo .node:focus-visible circle.dot{fill:var(--cream); stroke:var(--cream)}
+  #stage .node circle.dot{transition:opacity .25s, r .2s, fill .35s, stroke .35s}
+  /* Los rótulos caían dentro de los cúmulos y se volvían ilegibles: Cuba, Haití o
+     Puerto Rico quedaban tachados por sus propios puntos. Un contorno del color del
+     fondo, dibujado por debajo del texto, los despega sin añadir ninguna caja. */
+  .placelbl, .clbl{paint-order:stroke; stroke:var(--bg-deep); stroke-width:3.2px; stroke-linejoin:round}
+  /* en reposo los rótulos de lugar bajan de peso: son contexto, no el argumento */
+  #stage.reposo .placelbl.pais{opacity:.5}
+  #stage.reposo .placelbl.ciudad{opacity:.55}
+  /* --- 2 · trama submarina -------------------------------------------- */
+  .hilo{fill:none; stroke:var(--hilo); stroke-width:.7; stroke-opacity:.16; pointer-events:none}
+  .trama{transition:opacity .5s ease}
+  #stage:not(.reposo) .trama{opacity:0}
+  #stage.reposo .trama{opacity:1}
+  /* --- 3 · la clave de corrientes -------------------------------------- */
+  /* La clave es columna real, no capa flotante: así el mapa no queda por debajo
+     de ella y no hay que adivinar dónde empieza el lienzo. */
+  main{display:flex; align-items:stretch}
+  #clave{order:-1; flex:0 0 212px; align-self:stretch; overflow:auto;
+    padding:16px 16px 16px 22px; border-right:1px solid var(--line);
+    background:linear-gradient(90deg, var(--bg-warm), var(--bg-deep));
+    display:flex; flex-direction:column; gap:10px; font-family:var(--ff-mono)}
+  #stage{flex:1 1 auto; min-width:0}
+  #clave .clv-t{font-size:8.5px; text-transform:uppercase; letter-spacing:1.8px; color:var(--gray); opacity:.7}
+  #clave .clv-lista{display:flex; flex-direction:column}
+  #clave .clv-i{display:flex; align-items:center; gap:9px; width:100%; min-height:30px;
+    padding:4px 7px; margin-left:-7px; border:0; border-left:2px solid transparent; border-radius:3px;
+    background:transparent; color:var(--gray); font-family:inherit; font-size:10px; letter-spacing:.5px;
+    text-align:left; cursor:pointer; transition:background .15s, color .15s, border-color .15s}
+  #clave .clv-sw{flex:none; width:8px; height:8px; border-radius:50%; background:var(--fc);
+    opacity:.55; transition:opacity .15s, box-shadow .15s}
+  #clave .clv-n{flex:1 1 auto; line-height:1.3}
+  #clave .clv-c{flex:none; font-size:9px; color:var(--gray); opacity:.45; font-variant-numeric:tabular-nums}
+  #clave .clv-i:hover{background:rgba(242,234,216,.05); color:var(--cream)}
+  #clave .clv-i:hover .clv-sw{opacity:1}
+  #clave .clv-i:focus-visible{outline:2px solid var(--gold); outline-offset:1px}
+  /* la corriente elegida se declara con su propio color: es la única línea encendida */
+  #clave .clv-i.sel{border-left-color:var(--fc); background:rgba(242,234,216,.06); color:var(--fc)}
+  #clave .clv-i.sel .clv-sw{opacity:1; box-shadow:0 0 0 3px color-mix(in srgb, var(--fc) 22%, transparent)}
+  #clave .clv-i.sel .clv-c{color:var(--fc); opacity:.7}
+  /* con una corriente encendida, las demás se retiran sin desaparecer */
+  #clave.conFoco .clv-i:not(.sel){opacity:.42}
+  #clave.conFoco .clv-i:not(.sel):hover{opacity:1}
+  #clave .clv-pie{display:flex; flex-direction:column; align-items:flex-start; gap:7px;
+    padding-top:10px; border-top:1px solid var(--line)}
+  #clave .clv-cifras{font-size:9px; letter-spacing:.4px; color:var(--gray); opacity:.6; line-height:1.6}
+  #clave .clv-pie button{min-height:30px; padding:0; border:0; background:transparent;
+    font-family:inherit; font-size:9px; text-transform:uppercase; letter-spacing:1px;
+    color:var(--gold); cursor:pointer; border-bottom:1px dotted rgba(201,162,77,.45)}
+  #clave .clv-pie button:hover{color:var(--cream); border-bottom-color:var(--cream)}
+  /* el texto de ayuda deja de ser permanente: se despliega bajo la clave */
+  #hint{position:absolute; left:232px; top:auto; bottom:16px; max-width:280px; z-index:15;
+    font-size:11.5px; font-style:normal; line-height:1.55; color:var(--gray);
+    background:rgba(10,11,8,.92); backdrop-filter:blur(3px);
+    border:1px solid var(--line); border-left:2px solid var(--gold-d);
+    border-radius:3px; padding:12px 14px; max-height:46%; overflow:auto}
+  #hint[hidden]{display:none}
+  /* en escritorio la barra inferior de leyenda es redundante con la clave */
+  #legendBar{display:none}
+  #legend{bottom:16px; left:232px}
+  body.presenting #clave{display:none}
+  /* En teléfono la clave no cabe como columna: allí siguen mandando la barra
+     inferior y el panel de leyenda completa, que ya estaban resueltos. */
+  @media (max-width:780px), (max-height:520px){
+    #clave{display:none}
+    #legendBar{display:flex}
+    #legend{left:16px; bottom:58px}
+    #hint{display:none}
+  }

@@ -102,7 +102,21 @@
   <svg id="stage" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid meet" role="group" aria-label="Mapa interactivo del atlas" aria-describedby="mapaInstrucciones"><defs><linearGradient id="difuminaPeriodo" x1="0" x2="1"><stop offset="0" stop-color="#3f8a35" stop-opacity="0"/><stop offset="1" stop-color="#3f8a35" stop-opacity=".95"/></linearGradient></defs></svg>
   <section id="tabla" aria-label="Catálogo del atlas en tabla accesible"><div id="tablaBody"></div></section>
   <div id="tip"></div>
-  <div id="hint"></div>
+  <div id="hint" hidden></div>
+  <!-- TANDA UX · la clave cromática deja de estar detrás de un botón.
+       El color es la codificación principal del atlas; tenerlo en un panel plegable
+       obligaba a memorizar diez matices. Aquí la clave es, además, el control: cada
+       línea enciende su corriente. Ocupa el sitio que antes gastaba el párrafo de
+       instrucciones en cursiva, que ahora vive plegado tras «cómo se lee». -->
+  <nav id="clave" aria-label="Corrientes del atlas">
+    <div class="clv-t" id="clvTitId" data-i18n="clvTit">Corrientes</div>
+    <div class="clv-lista" id="clvLista" role="group" aria-labelledby="clvTitId"></div>
+    <div class="clv-pie">
+      <div class="clv-cifras" id="clvCifras"></div>
+      <button type="button" id="clvLeyenda" aria-expanded="false" aria-controls="legend" data-i18n="legendAbrir">Ver leyenda completa</button>
+      <button type="button" id="clvComo" aria-expanded="false" aria-controls="hint" data-i18n="clvComo">Cómo se lee</button>
+    </div>
+  </nav>
   <div id="guion"><div class="gf"></div><div class="gt"></div></div>
   <div id="legendBar"><span id="legendBarTxt"></span><button type="button" id="legendBtn" aria-expanded="false" aria-controls="legend" data-i18n="legendAbrir">Ver leyenda completa</button></div>
   <div id="legend" hidden>
@@ -195,6 +209,26 @@ const fuenteDe=(a,b)=>{ const r=relDe(a,b); return r?(r.fuente||''):''; };
    El corpus distingue así dos estatutos: el vínculo documentado y el vínculo propuesto por el
    investigador, que la interfaz no debe presentar como si fueran lo mismo. */
 const esCorr=(a,b)=>{ const fu=fuenteDe(a,b); return !!fu && !/corroborar/i.test(fu); };
+
+/* ==================== TANDA UX · tinta única y trama de fondo ====================
+   El atlas sostiene que la unidad de análisis es el fenómeno-relación que atraviesa
+   la cuenca, no el lugar que la aloja. Hasta aquí el estado de reposo mostraba lo
+   contrario: 274 discos de diez colores posados sobre lugares, con las 632 corrientes
+   sin dibujar hasta que alguien hiciera clic. Dos cambios, ningún color nuevo:
+     1. En reposo los nodos van en una sola tinta. El color de fenómeno deja de ser
+        decoración permanente y pasa a ser estado de foco: entra al elegir una
+        corriente o abrir una obra, que es cuando significa algo.
+     2. La jerarquía la da el grado, no el matiz: una obra con veintidós conexiones
+        pesa más en la retina que una con dos.
+   DEG se calcula una sola vez sobre R; no depende de filtros ni de vista. */
+const DEG={};
+R.forEach(([a,b])=>{ DEG[a]=(DEG[a]||0)+1; DEG[b]=(DEG[b]||0)+1; });
+const DEG_MAX=Math.max(1,...Object.values(DEG));
+/* raíz cuadrada: el área del disco crece con el grado, que es como el ojo compara
+   círculos. Techo bajo para que el nodo más conectado no tape a sus vecinos. */
+const radioDe=n=>{ const base=n.k==="obra"?4.4:4.2; return base+2.9*Math.sqrt((DEG[n.id]||0)/DEG_MAX); };
+/* Reposo: nada abierto, nada buscado, ningún recorrido ni corriente elegida. */
+const enReposo=()=>!state.active && !state.focusFen && !state.recorrido && !QTERMS.length;
 
 /* ==================== ESQUEMA 2.0 (Etapa 6) ====================
    El esquema 2.0 está aprobado pero casi no se ha aplicado al corpus: de 274
@@ -438,6 +472,8 @@ const I18N = {
     lgTitle:"referencias · clic en un fenómeno para iluminar",
     lgResearch:"obras", lgEthno:"manifestaciones culturales", lgReson:"resonancia", lgDisso:"disonancia", lgFricc:"cruce lingüístico",
     lgMarco:"Base conceptual: Brathwaite · Monahan →",
+    clvTit:"Corrientes", clvComo:"Cómo se lee", clvComoCerrar:"Ocultar",
+    clvEntradas:"entradas", clvCorrientes:"corrientes", clvCorrob:"corroborado",
     pKindObra:"Obra", pKindManif:"Manifestación cultural",
     pNacion:"nación caribeña", pRegion:"región en tensión con",
     pRelDir:"Conexiones directas · dialoga con", pRelInd:"Conexiones indirectas · a dos orillas", pVia:"vía",
@@ -451,7 +487,7 @@ const I18N = {
     lblIndirectas:"Conexiones indirectas", indCheckLbl:"Mostrar también las indirectas en el mapa",
     chipQuitarAria:"Quitar filtro: {label}", chipTipo:"Tipo", chipEvid:"Evidencia", chipLengua:"Lengua", chipMov:"Movimiento", chipInd:"Indirectas",
     legendBarTpl:"{n} entradas · {r} relaciones visibles · {p}% corroborado",
-    legendBarReposo:"{n} entradas · {R} relaciones, visibles al elegir una obra o un fenómeno · {p}% corroborado",
+    legendBarReposo:"{n} entradas · {R} corrientes · {p}% corroborado",
     legendAbrir:"Ver leyenda completa", legendCerrar:"Cerrar leyenda",
     umbralNoMostrar:"No volver a mostrar esta introducción",
     mapaAria:"Mapa interactivo del atlas",
@@ -554,6 +590,8 @@ const I18N = {
     lgTitle:"references · click a phenomenon to illuminate",
     lgResearch:"works", lgEthno:"cultural manifestations", lgReson:"resonance", lgDisso:"dissonance", lgFricc:"linguistic crossing",
     lgMarco:"Conceptual base: Brathwaite · Monahan →",
+    clvTit:"Currents", clvComo:"How to read it", clvComoCerrar:"Hide",
+    clvEntradas:"entries", clvCorrientes:"currents", clvCorrob:"corroborated",
     pKindObra:"Work", pKindManif:"Cultural manifestation",
     pNacion:"Caribbean nation", pRegion:"region in tension with",
     pRelDir:"Direct connections · in dialogue with", pRelInd:"Indirect connections · across two shores", pVia:"via",
@@ -567,7 +605,7 @@ const I18N = {
     lblIndirectas:"Indirect connections", indCheckLbl:"Also show indirect connections on the map",
     chipQuitarAria:"Remove filter: {label}", chipTipo:"Type", chipEvid:"Evidence", chipLengua:"Language", chipMov:"Motion", chipInd:"Indirect",
     legendBarTpl:"{n} entries · {r} visible relations · {p}% corroborated",
-    legendBarReposo:"{n} entries · {R} relations, shown when you pick a work or a phenomenon · {p}% corroborated",
+    legendBarReposo:"{n} entries · {R} currents · {p}% corroborated",
     legendAbrir:"See full legend", legendCerrar:"Close legend",
     umbralNoMostrar:"Do not show this introduction again",
     mapaAria:"Interactive map of the atlas",
@@ -698,7 +736,7 @@ function updateQCount(){
   c.textContent = k===0 ? t('buscarNada') : k===1 ? t('buscarUna') : t('buscarN').replace('{n}',k);
   c.classList.toggle('nada', k===0);
 }
-let VNODES=[], EDGES=[], CLUSTERS=[]; let hoverNode=null; let CRONO=null; let egGroup=null;
+let VNODES=[], EDGES=[], CLUSTERS=[]; let hoverNode=null; let CRONO=null; let egGroup=null; let tramaGroup=null;
 let rovingId=null; /* id del único nodo del mapa que es parada de Tab (tabulación itinerante) */
 let vpt={k:1,tx:0,ty:0}; let vp=null;
 
@@ -715,6 +753,10 @@ let vpt={k:1,tx:0,ty:0}; let vp=null;
    a esta ventana, no a la de escritorio. */
 const VB_ESCRITORIO=[0,0,VW,VH];
 const OCUPACION_OBJETIVO=0.40;  /* del alto del elemento que debe llevar mapa */
+/* TANDA UX · con la clave ocupando una columna, el lienzo dejó de ser tan ancho como
+   la ventana y el viewBox fijo de escritorio empezaba a dejar franjas muertas arriba
+   y abajo. El mismo ajuste al contenido que ya se hacía en teléfono resuelve ambos. */
+const OCUPACION_ESCRITORIO=0.74;
 function cajaContenido(){
   const xs=[], ys=[];
   N.forEach(n=>{ if(n._bx!=null && n._by!=null && visible(n)){ xs.push(n._bx); ys.push(n._by); } });
@@ -725,7 +767,7 @@ function encuadrarMapa(){
   if(!svg) return;
   const r=svg.getBoundingClientRect();
   const movil = window.matchMedia('(max-width:780px)').matches;
-  if(!movil || !r.width || !r.height || state.view!=='corriente'){
+  if(!r.width || !r.height || state.view!=='corriente'){
     svg.setAttribute('viewBox', VB_ESCRITORIO.join(' '));
     return;
   }
@@ -734,8 +776,24 @@ function encuadrarMapa(){
   const [x0,y0,x1,y1]=c;
   const anchoC=x1-x0, altoC=y1-y0;
   if(anchoC<=0 || altoC<=0){ svg.setAttribute('viewBox', VB_ESCRITORIO.join(' ')); return; }
+  /* TANDA UX · escritorio: ajuste a la caja del corpus, no al viewBox fijo.
+     Con la clave ocupando una columna, el lienzo dejó de tener la proporción para la
+     que se escribió VB_ESCRITORIO y aparecían franjas muertas arriba y abajo. Aquí la
+     ventana se calcula para que quepa todo el corpus con margen: la cuenca entra
+     completa —Veracruz y Costa Chica incluidas, que son corpus y no decorado— y el
+     mapa ocupa el lienzo. En teléfono sigue mandando el centro de masa, que es otra
+     necesidad: allí no cabe la cuenca entera a un tamaño legible. */
+  const MX=76, MY=40;
+  if(!movil){
+    let vbW=Math.max(anchoC+2*MX, (altoC+2*MY)*r.width/r.height);
+    vbW=Math.min(vbW, VW*1.08);
+    const vbH=vbW*r.height/r.width;
+    const ccx=(x0+x1)/2, ccy=(y0+y1)/2;
+    svg.setAttribute('viewBox',[ (ccx-vbW/2).toFixed(1), (ccy-vbH/2).toFixed(1), vbW.toFixed(1), vbH.toFixed(1) ].join(' '));
+    return;
+  }
   /* escala que deja OCUPACION_OBJETIVO del alto ocupado por contenido */
-  const s = OCUPACION_OBJETIVO*r.height/altoC;
+  const s = (movil?OCUPACION_OBJETIVO:OCUPACION_ESCRITORIO)*r.height/altoC;
   let vbW = r.width/s;
   /* nunca ampliar más allá de la cuenca entera ni recortar por debajo de un tercio */
   vbW = Math.max(anchoC/3, Math.min(vbW, VW));
@@ -747,7 +805,14 @@ function encuadrarMapa(){
   let sx=0, sy=0, nn=0;
   N.forEach(o=>{ if(o._bx!=null && o._by!=null && visible(o)){ sx+=o._bx; sy+=o._by; nn++; } });
   const cx = nn ? sx/nn : (x0+x1)/2, cy = nn ? sy/nn : (y0+y1)/2;
-  svg.setAttribute('viewBox', [ (cx-vbW/2).toFixed(1), (cy-vbH/2).toFixed(1), vbW.toFixed(1), vbH.toFixed(1) ].join(' '));
+  let vbX = cx-vbW/2, vbY = cy-vbH/2;
+  /* TANDA UX · el centro de masa está en el arco insular, así que al encuadrar por él
+     la ventana se iba hacia el este y dejaba fuera Veracruz y Costa Chica, que son
+     corpus, no decorado. Si la ventana da de sí para contenerlo todo, se desplaza lo
+     justo para que nada quede cortado; si no da, sigue mandando el centro de masa. */
+  if(vbW >= anchoC+2*MX) vbX = Math.max(Math.min(vbX, x0-MX), x1+MX-vbW);
+  if(vbH >= altoC+2*MY) vbY = Math.max(Math.min(vbY, y0-MY), y1+MY-vbH);
+  svg.setAttribute('viewBox', [ vbX.toFixed(1), vbY.toFixed(1), vbW.toFixed(1), vbH.toFixed(1) ].join(' '));
 }
 function applyVP(){ if(vp) vp.setAttribute('transform',`translate(${vpt.tx},${vpt.ty}) scale(${vpt.k})`); }
 
@@ -955,9 +1020,15 @@ function render(){
   vp=el("g",{id:"vp"}); svg.appendChild(vp); applyVP();
   computeBase();
   const hint=document.getElementById('hint');
+  /* el texto de ayuda cambia con la vista: se repliega para que nadie lo lea
+     creyendo que describe la vista anterior */
+  hint.hidden=true;
+  const bComo=document.getElementById('clvComo');
+  if(bComo){ bComo.setAttribute('aria-expanded','false'); bComo.textContent=t('clvComo'); }
   if(state.view==="corriente"){ drawBasin(); hint.textContent=t('hintCorriente'); }
   else if(state.view==="cronologia"){ drawEjeTiempo(); hint.textContent=t('hintCronologia'); }
   else hint.textContent=t('hintConstelacion');
+  tramaGroup=el("g",{class:"trama"}); vp.appendChild(tramaGroup);
   egGroup=el("g"); vp.appendChild(egGroup);
   buildEdgeElements(relevantPairs());
   if(state.view==="corriente"){
@@ -972,7 +1043,7 @@ function render(){
   const rovingPrevio=rovingId; rovingId=null;
   N.forEach(n=>{
     if(!visible(n))return;
-    const g=el("g",{class:"node", role:"button", tabindex:"-1", "aria-label":accessibleNameFor(n)}); const r=n.k==="obra"?7:6.5;
+    const g=el("g",{class:"node "+(n.k==="obra"?"obra":"manif"), role:"button", tabindex:"-1", "aria-label":accessibleNameFor(n)}); const r=radioDe(n);
     /* En Cronología/Investigado, las entradas sin periodo estudiado se atenúan
        en vez de fingir una posición que nadie verificó (ver drawEjeTiempo). */
     if(state.view==="cronologia" && state.cronoModo==="investigado" && CRONO){
@@ -1003,8 +1074,43 @@ function render(){
   /* conserva el nodo que tenía el foco itinerante si sigue visible; si no, cae en el primero */
   const siguePresente = rovingPrevio && VNODES.some(n=>n.id===rovingPrevio);
   if(VNODES.length) setRoving(siguePresente?byId(rovingPrevio):VNODES[0]);
+  buildTrama();
   buildLegend(); refreshHi(); place(0);
   encuadrarMapa(); _kPrevio=null; ajustarEtiquetas();
+}
+
+/* ---------- la trama: las 632 corrientes como fondo del estado de reposo ----------
+   «The unity is submarine». Hasta aquí, con nada seleccionado, el mapa no dibujaba
+   ninguna relación: el lector llegaba a un campo de puntos sueltos sobre lugares,
+   que es justamente la antropología continental que el atlas discute. La trama pone
+   las corrientes antes de la pregunta, sin pedir un clic.
+   No entra en EDGES ni en el bucle de animación: son trazos estáticos que se calculan
+   una vez por render. Al enfocar algo, se apaga y ceden el paso a las corrientes
+   dibujadas de verdad, con su resonancia, su disonancia y su cruce lingüístico. */
+function buildTrama(){
+  if(!tramaGroup) return;
+  tramaGroup.innerHTML="";
+  if(state.view==="tabla") return;
+  const frag=document.createDocumentFragment();
+  R.forEach(([a,b])=>{
+    const na=byId(a), nb=byId(b);
+    if(!na||!nb||!visible(na)||!visible(nb)) return;
+    const ax=na._bx, ay=na._by, bx=nb._bx, by=nb._by;
+    if(ax==null||bx==null) return;
+    const dx=bx-ax, dy=by-ay, len=Math.hypot(dx,dy);
+    if(len<1) return;
+    /* curvatura hacia el mismo lado que las corrientes animadas, para que la trama
+       y lo que aparece al enfocar se lean como el mismo gesto y no como dos grafos */
+    const mx=(ax+bx)/2 - dy/len*Math.min(26,len*0.13);
+    const my=(ay+by)/2 + dx/len*Math.min(26,len*0.13);
+    frag.appendChild(el("path",{class:"hilo", d:`M ${ax.toFixed(1)},${ay.toFixed(1)} Q ${mx.toFixed(1)},${my.toFixed(1)} ${bx.toFixed(1)},${by.toFixed(1)}`}));
+  });
+  tramaGroup.appendChild(frag);
+}
+/* Un único interruptor de estado en el SVG. En reposo manda la tinta; en cuanto hay
+   foco —obra, corriente, búsqueda o recorrido— entra el color, que es cuando dice algo. */
+function sincronizarReposo(){
+  if(svg) svg.classList.toggle('reposo', enReposo());
 }
 
 function drawBasin(){
@@ -1048,7 +1154,11 @@ function screenXY(n){
   return [vx/VW*r.width, vy/VH*r.height];
 }
 function updateTip(){
-  const n = hoverNode || (state.active?byId(state.active):null);
+  /* TANDA UX · con la ficha abierta, el globo flotante repetía título, autor y
+     etiquetas a dos palmos del panel que ya los declara. El globo queda para el
+     recorrido con el cursor; el panel, para la obra que se está leyendo. */
+  const fichaAbierta = !!document.querySelector('#panel.open');
+  const n = hoverNode || (fichaAbierta ? null : (state.active?byId(state.active):null));
   if(!n || !n._g || !visible(n)){ tip.classList.remove('show'); tip._for=null; return; }
   const [lx,ly]=screenXY(n); tip.style.left=lx+'px'; tip.style.top=ly+'px'; tip.classList.toggle('below', ly<130);
   if(tip._for!==n.id){ tip._for=n.id; tip.style.borderLeftColor=col(n.f[0]);
@@ -1070,6 +1180,12 @@ function refreshHi(){
        foco por fenómeno, sin paleta nueva ni geometría nueva. */
     else if(fr){ const g=recGrado(n,fr); if(g===2){op=1;rmul=1.25;} else if(g===1){op=.5;rmul=1.05;} else op=.09; }
     n._c.style.opacity=op; n._c.setAttribute('r', n._c._r*rmul); n._halo.style.opacity=halo?.9:0; n._halo.style.stroke=col(n.f[0]);
+    /* TANDA UX · lo que queda fuera del foco vuelve a la tinta. Atenuar un color sin
+       quitarle el matiz dejaba un fondo teñido de diez tonos que competía con la
+       corriente encendida; el color debe señalar solo lo que está en juego. Solo se
+       apaga lo que queda fuera del foco (opacidades de .04 a .12): lo secundario
+       —indirectas, grado 1 de un recorrido— conserva su color, que ahí sí informa. */
+    n._g.classList.toggle('apagado', op<.2);
     n._g.classList.toggle('qhit', qOn && matchQ(n));
   });
   EDGES.forEach(e=>{ let op="";
@@ -1110,6 +1226,7 @@ function refreshHi(){
     });
   }
   updateQCount();
+  sincronizarReposo();
 }
 
 function showGuion(f){ const g=document.getElementById('guion'); if(!f){ g.classList.remove('show'); return; } g.style.borderLeftColor=FEN[f].c; const gf=g.querySelector('.gf'); gf.textContent=fenLabel(f); gf.style.color=FEN[f].c; g.querySelector('.gt').textContent=fenGlosa(f); g.classList.add('show'); }
@@ -1352,6 +1469,34 @@ function buildLegend(){
   activarBoton(lg.querySelector('#marcoLink'), openMarco);
   activarBoton(lg.querySelector('#corrLink'), ()=>setEvid(state.evid==="ok"?"todas":"ok"));
   activarBoton(lg.querySelector('#rfLink'), ()=>rfAbrir());
+  buildClave();
+}
+/* ---------- la clave como control, no como pie de página ----------
+   Diez matices son la codificación principal del atlas y estaban detrás de «Ver
+   leyenda completa»: el lector tenía que abrir un panel, memorizar y cerrarlo.
+   Aquí cada corriente es una línea legible y pulsable; el recuento se ajusta al
+   filtro activo, de modo que la clave también informa de lo que el filtro dejó fuera. */
+function buildClave(){
+  const cont=document.getElementById('clvLista'); if(!cont) return;
+  cont.innerHTML="";
+  Object.entries(FEN).forEach(([k,v])=>{
+    const sel=state.focusFen===k;
+    const c=N.filter(n=>n.f.includes(k)&&visible(n)).length;
+    const b=document.createElement('button');
+    b.type='button'; b.className='clv-i'+(sel?' sel':'');
+    b.setAttribute('aria-pressed', sel?'true':'false');
+    b.style.setProperty('--fc', v.c);
+    b.innerHTML=`<span class="clv-sw" aria-hidden="true"></span><span class="clv-n">${fenLabel(k)}</span><span class="clv-c">${c}</span>`;
+    b.onclick=()=>focusFen(k);
+    cont.appendChild(b);
+  });
+  const cif=document.getElementById('clvCifras');
+  if(cif){
+    const visN=N.filter(visible).length, pct=RELS.length?(CORR_OK/RELS.length*100):0;
+    cif.textContent=`${visN} ${t('clvEntradas')} · ${RELS.length} ${t('clvCorrientes')} · ${pct.toFixed(0)} % ${t('clvCorrob')}`;
+  }
+  const rail=document.getElementById('clave');
+  if(rail) rail.classList.toggle('conFoco', !!state.focusFen);
 }
 /* Etapa 5: #marco sí es un modal en sentido estricto (overlay a pantalla completa,
    bloquea el resto de la página): foco inicial, trampa de Tab mientras esté abierto
@@ -1531,12 +1676,15 @@ function switchView(v){
   const lb=document.getElementById('legendBar');
   const cr=document.querySelector('.credit');
   const cg=document.getElementById('cronoGrp');
+  /* TANDA UX · la clave de corrientes es cromo del mapa: en vista Tabla sobra, porque
+     la tabla trae su propia leyenda anclada al inicio del listado. */
+  const clv=document.getElementById('clave');
   /* .credit está fijo en la esquina inferior derecha de <main>, sobre el lienzo
      vacío del mapa; en vista Tabla el contenido real llega hasta ahí y quedaba
      tapado por ese crédito decorativo — se oculta solo en esa vista, igual que
      el resto del cromo propio del mapa (hint, zoomGrp, legendBar). */
-  if(v==="tabla"){ svg0.style.display="none"; document.getElementById('hint').style.display="none"; if(zg) zg.style.display="none"; if(lb) lb.style.display="none"; if(cr) cr.style.display="none"; if(cg) cg.style.display="none"; dockLegendInTable(); tbl.classList.add('show'); tbl.setAttribute('tabindex','-1'); renderTable(); tbl.focus(); }
-  else { svg0.style.display="block"; document.getElementById('hint').style.display=""; if(zg) zg.style.display=""; if(lb) lb.style.display=""; if(cr) cr.style.display=""; if(cg) cg.style.display=(v==="cronologia"?"":"none"); undockLegend(); tbl.classList.remove('show'); render(); }
+  if(v==="tabla"){ svg0.style.display="none"; document.getElementById('hint').style.display="none"; if(zg) zg.style.display="none"; if(lb) lb.style.display="none"; if(cr) cr.style.display="none"; if(cg) cg.style.display="none"; if(clv) clv.style.display="none"; dockLegendInTable(); tbl.classList.add('show'); tbl.setAttribute('tabindex','-1'); renderTable(); tbl.focus(); }
+  else { svg0.style.display="block"; document.getElementById('hint').style.display=""; if(zg) zg.style.display=""; if(lb) lb.style.display=""; if(cr) cr.style.display=""; if(cg) cg.style.display=(v==="cronologia"?"":"none"); if(clv) clv.style.display=""; undockLegend(); tbl.classList.remove('show'); render(); }
   if(zc) zc.elementos.caja.style.display = (v==="tabla") ? "none" : "";
   if(zc) zc.sincronizar();
 }
@@ -1887,6 +2035,26 @@ document.getElementById('recorridosCerrar').addEventListener('click',()=>cerrarP
 document.getElementById('filtrosCerrar').addEventListener('click',()=>cerrarPanelLateral('panelFiltros','filtrosBtn'));
 document.getElementById('infoCerrar').addEventListener('click',()=>cerrarPanelLateral('panelInfo','infoBtn'));
 document.getElementById('legendCerrar').addEventListener('click',()=>cerrarPanelLateral('legend','legendBtn'));
+/* TANDA UX · los dos botones del pie de la clave. El de la leyenda completa abre el
+   mismo panel que el de la barra inferior (que en escritorio queda retirada); el de
+   «cómo se lee» despliega el texto de ayuda que antes ocupaba el margen izquierdo de
+   forma permanente. Se pliega solo al cambiar de vista: el texto cambia con ella. */
+(function(){
+  const bLeg=document.getElementById('clvLeyenda');
+  if(bLeg) bLeg.addEventListener('click',()=>{
+    const p=document.getElementById('legend');
+    if(p.hidden) abrirPanelLateral('legend','legendBtn'); else cerrarPanelLateral('legend','legendBtn');
+    bLeg.setAttribute('aria-expanded', p.hidden?'false':'true');
+  });
+  const bComo=document.getElementById('clvComo');
+  if(bComo) bComo.addEventListener('click',()=>{
+    const h=document.getElementById('hint');
+    const abierto=!h.hidden;
+    h.hidden=abierto;
+    bComo.setAttribute('aria-expanded', abierto?'false':'true');
+    bComo.textContent = abierto ? t('clvComo') : t('clvComoCerrar');
+  });
+})();
 const fenKeys=Object.keys(FEN); let presIdx=-1;
 function presSetFen(f){ state.active=null; ocultarFicha(); state.focusFen=f; showGuion(f); buildLegend(); refreshHi(); updateTip(); if(state.view==="tabla") renderTable(); }
 function presNext(){ presIdx=(presIdx+1)%fenKeys.length; presSetFen(fenKeys[presIdx]); }
@@ -1897,10 +2065,20 @@ function enterPresent(){
   const el=document.documentElement;
   const req=el.requestFullscreen||el.webkitRequestFullscreen||el.msRequestFullscreen;
   if(req) req.call(el).catch(()=>{});
+  reencuadrarTrasCromo();
 }
 function exitPresent(){
   document.body.classList.remove('presenting');
   if(document.fullscreenElement){ const ex=document.exitFullscreen||document.webkitExitFullscreen||document.msExitFullscreen; if(ex) ex.call(document).catch(()=>{}); }
+  reencuadrarTrasCromo();
+}
+/* TANDA UX · entrar y salir del modo presentación muestra u oculta la clave de
+   corrientes, o sea cambia el ancho del lienzo. Cuando el navegador concede la
+   pantalla completa llega un «resize» que ya rehace el encuadre, pero si la niega
+   —permiso denegado, o salida con Esc desde el propio navegador— no llega ninguno
+   y el mapa se queda encuadrado para el ancho anterior. */
+function reencuadrarTrasCromo(){
+  setTimeout(()=>{ encuadrarMapa(); _kPrevio=null; ajustarEtiquetas(); }, 180);
 }
 document.getElementById('presBtn').onclick=enterPresent;
 document.getElementById('presExit').onclick=exitPresent;
