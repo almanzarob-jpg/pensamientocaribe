@@ -64,12 +64,17 @@
     // Sin prefijo de Leaflet en la atribución (solo créditos de los mapas)
     if (map.attributionControl) map.attributionControl.setPrefix(false);
 
-    // ── Tile layer oscuro y sobrio (CARTO Dark Matter) ──
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
-      subdomains: 'abcd',
-      maxZoom: 19
-    }).addTo(map);
+    // ── Fondo cartografico propio (ver js/fondo-orillas.js) ──
+    // Mismo motivo que en el atlas del Gran Caribe: las teselas de CARTO
+    // vienen marcadas con «API KEY REQUIRED». La silueta del Atlantico se
+    // dibuja con Natural Earth desde este mismo sitio.
+    if (typeof crearFondoOrillas === 'function') {
+      crearFondoOrillas(map, {
+        tierra: SCRIPT_SRC.replace(/js\/[^\/?#]*(?:[?#].*)?$/, 'data/cartografia/') + 'tierra-atlantico.json',
+        pasoGraticula: 15,
+        grosorCosta: 0.6
+      });
+    }
 
     // ── Idioma del mapa: 'es' por defecto, o 'en' si la página lo indica ──
     var IDIOMA = (container.getAttribute('data-lang') === 'en') ? 'en' : 'es';

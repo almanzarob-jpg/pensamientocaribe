@@ -3,6 +3,11 @@
    Leaflet + cartografía oscura sobria + 43 nodos
    ════════════════════════════════════════════════ */
 (function () {
+  // Ruta de los datos derivada del propio <script>, igual que en
+  // js/mapa-afrodiasporico.js: sirve lo mismo en la raiz que en /en/.
+  var SCRIPT_SRC = (document.currentScript && document.currentScript.src) || '';
+  var BASE_DATOS = SCRIPT_SRC.replace(/js\/[^\/?#]*(?:[?#].*)?$/, 'data/cartografia/');
+
   function init() {
     var container = document.getElementById('caribe-leaflet-map');
     if (!container || typeof L === 'undefined') return;
@@ -28,12 +33,19 @@
       worldCopyJump: false
     });
 
-    // ── Tile layer oscuro y sobrio (CARTO Dark Matter) ──
-    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
-      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> &copy; <a href="https://carto.com/attributions">CARTO</a>',
-      subdomains: 'abcd',
-      maxZoom: 19
-    }).addTo(map);
+    // ── Fondo cartografico propio (ver js/fondo-orillas.js) ──
+    // Las teselas de CARTO llegan desde 2026 estampadas con la marca de agua
+    // «API KEY REQUIRED». Aqui la tierra se dibuja con datos de Natural Earth,
+    // en dominio publico y servidos desde este mismo sitio: sin llaves, sin
+    // marcas ajenas y con la costa como unica linea del fondo.
+    if (typeof crearFondoOrillas === 'function') {
+      crearFondoOrillas(map, {
+        tierra:    BASE_DATOS + 'tierra-caribe.json',
+        fronteras: BASE_DATOS + 'fronteras-caribe.json',
+        pasoGraticula: 5,
+        limite: [[-16, -118], [38, -34]]
+      });
+    }
 
     // Etiqueta "Mar Caribe" en español (sutil, gris, estilo cartográfico)
     L.marker([15.4, -75.5], {
@@ -293,6 +305,28 @@
       }
     });
 
+    // ── Nombres de region para la leyenda ──
+    // Los datos del atlas estan en español; los rotulos de la leyenda siguen
+    // el idioma de la pagina, igual que ya hacian los botones de filtro. Antes
+    // la version en ingles mostraba «Antillas Mayores» junto a «Greater
+    // Antilles» en el mismo bloque.
+    var EN_REGION = {
+      'Caribe colombiano':         'Colombian Caribbean',
+      'Caribe insular colombiano': 'Colombian insular',
+      'Antillas Mayores':          'Greater Antilles',
+      'Antillas Menores':          'Lesser Antilles',
+      'Caribe centroamericano':    'Central American',
+      'Caribe venezolano':         'Venezuelan',
+      'Caribe mexicano':           'Mexican',
+      'Golfo de México':           'Gulf of Mexico',
+      'Guyanas':                   'Guianas',
+      'Caribe suroriental':        'Southeastern'
+    };
+    var ENGLISH = (document.documentElement.getAttribute('lang') || '').slice(0, 2) === 'en';
+    function rotuloRegion(cat) {
+      return (ENGLISH && EN_REGION[cat]) ? EN_REGION[cat] : cat;
+    }
+
     // ── Leyenda visual con muestras de color ──
     var swatchesContainer = document.getElementById('caribe-legend-swatches');
     if (swatchesContainer) {
@@ -305,9 +339,11 @@
         item.className = 'legend-swatch';
         item.type = 'button';
         item.setAttribute('data-layer', cat);
+        item.setAttribute('aria-pressed', 'false');
+        item.title = rotuloRegion(cat) + ' · ' + (conteos[cat] || 0);
         item.innerHTML =
           '<span class="legend-swatch-dot" style="background:' + colorCategoria[cat] + '"></span>' +
-          '<span class="legend-swatch-name">' + cat + '</span>' +
+          '<span class="legend-swatch-name">' + rotuloRegion(cat) + '</span>' +
           '<span class="legend-swatch-count">' + (conteos[cat] || 0) + '</span>';
         item.addEventListener('click', function () {
           aplicarFiltro(cat);
@@ -322,7 +358,9 @@
         b.classList.toggle('is-active', b.getAttribute('data-layer') === layer);
       });
       document.querySelectorAll('.legend-swatch').forEach(function (s) {
-        s.classList.toggle('is-active', s.getAttribute('data-layer') === layer);
+        var activa = s.getAttribute('data-layer') === layer;
+        s.classList.toggle('is-active', activa);
+        s.setAttribute('aria-pressed', activa ? 'true' : 'false');
       });
       allMarkers.forEach(function (m) {
         if (layer === 'all' || m.categoria === layer) {

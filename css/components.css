@@ -1576,20 +1576,24 @@
 }
 
 /* ── Contenedor del mapa Leaflet ── */
-.caribe-leaflet-map {
+/* El selector lleva .leaflet-container a proposito: leaflet.css se carga
+   despues de esta hoja y pinta el contenedor de #ddd. Mientras el mapa era
+   de teselas no se notaba —las imagenes tapaban el fondo—, pero ahora el
+   fondo ES el mar y tiene que ganar. */
+.caribe-leaflet-map,
+.caribe-leaflet-map.leaflet-container {
   width: 100%;
   height: 620px;
   border-radius: var(--radius-lg);
   border: 1px solid rgba(245,237,221,0.1);
-  background: #050604;
+  /* El mar ya no es una imagen servida por un tercero: es este fondo.
+     La tierra la dibuja js/fondo-orillas.js sobre el. El degradado apenas
+     se nota, pero evita que 620 px de negro plano se vean como un hueco. */
+  background:
+    radial-gradient(120% 90% at 50% 40%, #0A0D10 0%, #050604 62%, #040503 100%);
   overflow: hidden;
   position: relative;
   z-index: 1;
-}
-
-/* Tile filter para integrar con la paleta */
-.caribe-leaflet-map .leaflet-tile-pane {
-  filter: hue-rotate(-15deg) saturate(0.85) brightness(0.95);
 }
 
 /* Controles Leaflet con estética sobria */
