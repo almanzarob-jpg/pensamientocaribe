@@ -99,11 +99,10 @@
 </header>
 <main id="main-content">
   <p id="mapaInstrucciones" class="visually-hidden" data-i18n="mapaInstrucciones">Mapa interactivo con las obras y manifestaciones culturales del atlas. Use las flechas para moverse entre ellas, Intro o espacio para abrir su ficha, Inicio o Fin para ir al primero o al último, y Escape para cerrar la ficha abierta.</p>
-  <svg id="stage" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid meet" role="group" aria-label="Mapa interactivo del atlas" aria-describedby="mapaInstrucciones"><defs><linearGradient id="difuminaPeriodo" x1="0" x2="1"><stop offset="0" stop-color="#3f8a35" stop-opacity="0"/><stop offset="1" stop-color="#3f8a35" stop-opacity=".95"/></linearGradient></defs></svg>
-  <section id="tabla" aria-label="Catálogo del atlas en tabla accesible"><div id="tablaBody"></div></section>
-  <div id="tip"></div>
-  <div id="hint" hidden></div>
-  <!-- TANDA UX · la clave cromática deja de estar detrás de un botón.
+  <!-- El bloque va delante del mapa en el marcado, no solo a su izquierda por CSS:
+       si no, el tabulador recorría los 274 nodos antes de llegar a la clave, que es
+       lo primero que se ve. El orden de lectura y el de foco tienen que coincidir.
+       TANDA UX · la clave cromática deja de estar detrás de un botón.
        El color es la codificación principal del atlas; tenerlo en un panel plegable
        obligaba a memorizar diez matices. Aquí la clave es, además, el control: cada
        línea enciende su corriente. Ocupa el sitio que antes gastaba el párrafo de
@@ -122,6 +121,10 @@
       <button type="button" id="clvComo" aria-expanded="false" aria-controls="hint" data-i18n="clvComo">Cómo se lee</button>
     </div>
   </nav>
+  <svg id="stage" viewBox="0 0 1200 640" preserveAspectRatio="xMidYMid meet" role="group" aria-label="Mapa interactivo del atlas" aria-describedby="mapaInstrucciones"><defs><linearGradient id="difuminaPeriodo" x1="0" x2="1"><stop offset="0" stop-color="#3f8a35" stop-opacity="0"/><stop offset="1" stop-color="#3f8a35" stop-opacity=".95"/></linearGradient></defs></svg>
+  <section id="tabla" aria-label="Catálogo del atlas en tabla accesible"><div id="tablaBody"></div></section>
+  <div id="tip"></div>
+  <div id="hint" hidden></div>
   <div id="guion"><div class="gf"></div><div class="gt"></div></div>
   <div id="legendBar"><span id="legendBarTxt"></span><button type="button" id="legendBtn" aria-expanded="false" aria-controls="legend" data-i18n="legendAbrir">Ver leyenda completa</button></div>
   <div id="legend" hidden>
@@ -159,7 +162,7 @@
   <aside id="panelInfo" class="panelLateral" aria-label="Información" hidden>
     <button type="button" id="infoCerrar" class="panelCerrar" data-i18n-title="btnInfoCerrar" aria-label="Cerrar información">×</button>
     <h2 data-i18n="lblInfo">Información</h2>
-    <div class="grp"><div class="seg base"><button id="comoUsarBtn" type="button" data-i18n="iComoUsar">Cómo usar</button></div></div>
+    <div class="grp"><div class="seg base"><button id="comoUsarBtn" type="button" data-i18n="iComoUsar">Volver a la introducción</button></div></div>
     <div class="grp"><div class="seg base"><button id="marcoBtn" data-i18n="marcoBtn">Marco conceptual</button></div></div>
     <div class="grp"><div class="seg base"><a id="metodologiaLink" href="metodologia-agua-de-por-medio.html" data-i18n="iMetodologia">Metodología completa</a></div></div>
     <div class="grp"><div class="seg base"><button id="presBtn" data-i18n="presBtn">Pantalla completa</button></div></div>
@@ -444,7 +447,6 @@ const I18N = {
     lblMarea:"Marea", mFlujo:"Flujo", mQuieta:"Quieta",
     lblBase:"Base", marcoBtn:"Marco conceptual",
     lblModo:"Modo", presBtn:"Pantalla completa",
-    lblZoom:"Zoom", resetBtn:"⤢ Reencuadrar", resetTitle:"Vuelve al zoom y encuadre inicial de esta vista",
     lblBuscar:"Buscar", buscarPh:"título o autor…", buscarNada:"sin coincidencias", buscarUna:"1 obra", buscarN:"{n} obras",
     lblIdioma:"Idioma",
     entrar:"Entrar en la corriente", umbralBase:"Base conceptual: Brathwaite · Monahan — ", verMarco:"ver marco",
@@ -472,8 +474,8 @@ const I18N = {
     mc6p:"Almanza, R. (2026). <i>Atlas para una antropología archipiélica: con el agua de por medio</i> [conjunto de datos]. Zenodo. <a href=\"https://doi.org/10.5281/zenodo.21483568\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold)\">https://doi.org/10.5281/zenodo.21483568</a><br><span style=\"font-size:.85em; opacity:.75; font-style:italic\">Versión depositada 1.15.0 · corpus vivo 1.17.0 · <a href=\"https://doi.org/10.5281/zenodo.21875688\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold)\">DOI de esta versión</a> · Licencia <a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold)\">CC BY-NC-SA 4.0</a>: atribución, uso no comercial, compartir igual.</span>",
     presExit:"✕ salir",
     presHelp:"<span><b>1</b>corriente</span><span><b>2</b>constelación</span><span><b>M</b>marea</span><span><b>→</b>siguiente fenómeno</span><span><b>←</b>anterior</span><span><b>0</b>despejar</span><span><b>Esc</b>salir</span>",
-    hintCorriente:"La cuenca vista desde el mar. Islas por su país; puntos continentales (naranja) por su ciudad, regiones en tensión con un centro no caribeño. Selecciona una corriente en la leyenda o una obra en el mapa para ver sus relaciones. Rueda: zoom · arrastra: desplaza · doble clic o botón «Reencuadrar»: vuelve al inicio. Pasa el cursor sobre un punto para leerlo.",
-    hintConstelacion:"Constelación de los fenómenos que atraviesan la cuenca. Selecciona una corriente en la leyenda o una obra en el mapa para ver sus relaciones. Rueda: zoom · arrastra: desplaza · doble clic o botón «Reencuadrar»: vuelve al inicio. Pasa el cursor sobre un punto para leerlo.",
+    hintCorriente:"La cuenca vista desde el mar. Islas por su país; puntos continentales (naranja) por su ciudad, regiones en tensión con un centro no caribeño. Selecciona una corriente en la leyenda o una obra en el mapa para ver sus relaciones. Rueda: zoom · arrastra: desplaza · doble clic, o el botón de reencuadre de la columna de zoom: vuelve al inicio. Pasa el cursor sobre un punto para leerlo.",
+    hintConstelacion:"Constelación de los fenómenos que atraviesan la cuenca. Selecciona una corriente en la leyenda o una obra en el mapa para ver sus relaciones. Rueda: zoom · arrastra: desplaza · doble clic, o el botón de reencuadre de la columna de zoom: vuelve al inicio. Pasa el cursor sobre un punto para leerlo.",
     lgTitle:"referencias · clic en un fenómeno para iluminar",
     lgResearch:"obras", lgEthno:"manifestaciones culturales", lgReson:"resonancia", lgDisso:"disonancia", lgFricc:"cruce lingüístico",
     lgMarco:"Base conceptual: Brathwaite · Monahan →",
@@ -486,7 +488,7 @@ const I18N = {
     lblEvid:"Evidencia", eTodas:"Todas", eCorr:"Corroboradas", ePorCorr:"Por corroborar",
     lblFiltros:"Filtros", btnFiltrosAbrir:"Abrir filtros", btnFiltrosCerrar:"Cerrar filtros",
     lblInfo:"Información", btnInfoAbrir:"Abrir información", btnInfoCerrar:"Cerrar información",
-    iComoUsar:"Cómo usar", iMetodologia:"Metodología completa", iModo:"Modo presentación",
+    iComoUsar:"Volver a la introducción", iMetodologia:"Metodología completa", iModo:"Modo presentación",
     lblLengua:"Lengua", lenTodas:"Todas", lenAng:"Anglófona", lenHis:"Hispanófona", lenFra:"Francófona", lenNeer:"Neerlandesa", lenCrio:"Criolla", lenSin:"Sin declarar",
     lblMovimiento:"Movimiento", movOn:"Animación: activada", movOff:"Animación: en pausa",
     lblIndirectas:"Conexiones indirectas", indCheckLbl:"Mostrar también las indirectas en el mapa",
@@ -562,7 +564,6 @@ const I18N = {
     lblMarea:"Tide", mFlujo:"Flow", mQuieta:"Still",
     lblBase:"Base", marcoBtn:"Conceptual frame",
     lblModo:"Mode", presBtn:"Full screen",
-    lblZoom:"Zoom", resetBtn:"⤢ Recenter", resetTitle:"Return to this view's default zoom and framing",
     lblBuscar:"Search", buscarPh:"title or author…", buscarNada:"no matches", buscarUna:"1 work", buscarN:"{n} works",
     lblIdioma:"Language",
     entrar:"Enter the current", umbralBase:"Conceptual base: Brathwaite · Monahan — ", verMarco:"see frame",
@@ -590,8 +591,8 @@ const I18N = {
     mc6p:"Almanza, R. (2026). <i>Atlas para una antropología archipiélica: con el agua de por medio</i> [dataset]. Zenodo. <a href=\"https://doi.org/10.5281/zenodo.21483568\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold)\">https://doi.org/10.5281/zenodo.21483568</a><br><span style=\"font-size:.85em; opacity:.75; font-style:italic\">Licensed under <a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold)\">CC BY-NC-SA 4.0</a>: attribution, non-commercial, share-alike.</span>",
     presExit:"✕ exit",
     presHelp:"<span><b>1</b>current</span><span><b>2</b>constellation</span><span><b>M</b>tide</span><span><b>→</b>next phenomenon</span><span><b>←</b>previous</span><span><b>0</b>clear</span><span><b>Esc</b>exit</span>",
-    hintCorriente:"The basin seen from the sea. Islands by their country; continental points (orange) by their city, regions in tension with a non-Caribbean center. Select a current in the legend or a work on the map to see its relations. Wheel: zoom · drag: pan · double-click or the «Recenter» button: back to start. Hover over a point to read it.",
-    hintConstelacion:"Constellation of the phenomena that run through the basin. Select a current in the legend or a work on the map to see its relations. Wheel: zoom · drag: pan · double-click or the «Recenter» button: back to start. Hover over a point to read it.",
+    hintCorriente:"The basin seen from the sea. Islands by their country; continental points (orange) by their city, regions in tension with a non-Caribbean center. Select a current in the legend or a work on the map to see its relations. Wheel: zoom · drag: pan · double-click, or the recenter button in the zoom column: back to start. Hover over a point to read it.",
+    hintConstelacion:"Constellation of the phenomena that run through the basin. Select a current in the legend or a work on the map to see its relations. Wheel: zoom · drag: pan · double-click, or the recenter button in the zoom column: back to start. Hover over a point to read it.",
     lgTitle:"references · click a phenomenon to illuminate",
     lgResearch:"works", lgEthno:"cultural manifestations", lgReson:"resonance", lgDisso:"dissonance", lgFricc:"linguistic crossing",
     lgMarco:"Conceptual base: Brathwaite · Monahan →",
@@ -604,7 +605,7 @@ const I18N = {
     lblEvid:"Evidence", eTodas:"All", eCorr:"Corroborated", ePorCorr:"To be corroborated",
     lblFiltros:"Filters", btnFiltrosAbrir:"Open filters", btnFiltrosCerrar:"Close filters",
     lblInfo:"Information", btnInfoAbrir:"Open information", btnInfoCerrar:"Close information",
-    iComoUsar:"How to use it", iMetodologia:"Full methodology", iModo:"Presentation mode",
+    iComoUsar:"Back to the introduction", iMetodologia:"Full methodology", iModo:"Presentation mode",
     lblLengua:"Language", lenTodas:"All", lenAng:"Anglophone", lenHis:"Hispanophone", lenFra:"Francophone", lenNeer:"Dutch-language", lenCrio:"Creole", lenSin:"Undeclared",
     lblMovimiento:"Motion", movOn:"Animation: on", movOff:"Animation: paused",
     lblIndirectas:"Indirect connections", indCheckLbl:"Also show indirect connections on the map",
@@ -754,7 +755,7 @@ let vpt={k:1,tx:0,ty:0}; let vp=null;
    La solución es una ventana de viewBox más estrecha en móvil, centrada en el
    contenido y con la proporción del elemento, de modo que no quede banda negra.
    No se toca px(), py(), la proyección ni ninguna coordenada: cambia qué parte del
-   mismo lienzo se ve al entrar, y el paneo alcanza el resto. «Reencuadrar» vuelve
+   mismo lienzo se ve al entrar, y el paneo alcanza el resto. El reencuadre vuelve
    a esta ventana, no a la de escritorio. */
 const VB_ESCRITORIO=[0,0,VW,VH];
 const OCUPACION_OBJETIVO=0.40;  /* del alto del elemento que debe llevar mapa */

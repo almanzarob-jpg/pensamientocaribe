@@ -269,6 +269,15 @@
      título "N entradas". Se prioriza no tapar contenido sobre el ideal estricto. */
   #legend .panelCerrar{top:2px; right:4px; width:36px; height:36px; font-size:16px}
   #legend.docked .panelCerrar{display:none}
+  /* La retícula de los diez fenómenos vive ahora en la columna de corrientes, a la
+     vista y pulsable. Repetirla aquí obligaba a leer dos veces lo mismo, así que
+     flotando la leyenda se queda solo con lo que no está en ninguna otra parte:
+     las formas, los tipos de corriente y el estado de corroboración. En vista
+     Tabla la leyenda se ancla (.docked) y la columna no existe: allí la retícula
+     sigue siendo la única clave de color, y se conserva. */
+  #legend:not(.docked) .lgtitle,
+  #legend:not(.docked) .grid{display:none}
+  #legend:not(.docked) .keys:first-of-type{margin-top:0; padding-top:0; border-top:0}
   #legend .lgtitle{font-size:8.5px; text-transform:uppercase; letter-spacing:1.4px; color:var(--gray); opacity:.7; margin-bottom:8px}
   #legend .grid{display:grid; grid-template-columns:1fr 1fr; gap:5px 16px}
   /* objetivo táctil de la fila: ~30px con padding:7px, por debajo de 44px por la
@@ -580,10 +589,16 @@
     /* hueso apagado: el crema de la casa, bajado de saturación para que no
        compita con el color de foco cuando este entra */
     --ink:rgba(226,221,206,.15);
-    --ink-line:rgba(226,221,206,.38);
+    /* .38 daba 2,80:1 y el mínimo para un elemento gráfico es 3:1; .42 da 3,21:1
+       sin subir el relleno ni la trama, que fijan el peso del reposo. */
+    --ink-line:rgba(226,221,206,.42);
     --ink-dim:rgba(226,221,206,.30);
     /* el azul de la marea (--tideband ya lo usa) sostiene la trama */
     --hilo:#5d8f9b;
+    /* --red (#d83a2e) da 4,41:1 sobre el fondo: bastaba como borde de recuadro,
+       no como texto pequeño, que pide 4,5:1. Este tono da 5,01:1 y solo se usa en
+       los botones de texto del encabezado; --red sigue igual en todo el sitio. */
+    --red-txt:#df4a3d;
   }
   /* --- 1 · tinta única ------------------------------------------------ */
   #stage.reposo .node.obra circle.dot{fill:var(--ink); stroke:var(--ink-line); stroke-width:.9}
@@ -608,7 +623,7 @@
   /* La clave es columna real, no capa flotante: así el mapa no queda por debajo
      de ella y no hay que adivinar dónde empieza el lienzo. */
   main{display:flex; align-items:stretch}
-  #clave{order:-1; flex:0 0 212px; align-self:stretch; overflow:auto;
+  #clave{flex:0 0 212px; align-self:stretch; overflow:auto;
     padding:16px 16px 16px 22px; border-right:1px solid var(--line);
     background:linear-gradient(90deg, var(--bg-warm), var(--bg-deep));
     display:flex; flex-direction:column; gap:10px; font-family:var(--ff-mono)}
@@ -689,8 +704,8 @@
   header .seg.base{border:0; background:transparent; border-radius:0}
   header .seg.base button{
     min-height:34px; display:inline-flex; align-items:center; padding:0 1px 4px;
-    color:var(--red); background:transparent; border:0;
-    border-bottom:1px dotted rgba(216,58,46,.45); letter-spacing:1.2px}
+    color:var(--red-txt); background:transparent; border:0;
+    border-bottom:1px dotted rgba(223,74,61,.5); letter-spacing:1.2px}
   header .seg.base button:hover,
   header .seg.base button[aria-pressed="true"]{
     background:transparent; color:var(--gold); border-bottom-color:var(--gold)}
@@ -723,7 +738,7 @@
    ================================================================== */
   @media (max-width:780px), (max-height:520px){
     main{flex-direction:column}
-    #clave{display:flex; order:-1; flex:0 0 auto; width:100%; align-self:stretch;
+    #clave{display:flex; flex:0 0 auto; width:100%; align-self:stretch;
       flex-direction:column; gap:7px; overflow:visible;
       padding:9px 0 8px 12px; border-right:0; border-bottom:1px solid var(--line)}
     #clave .clv-t, #clave .clv-pie{display:none}
