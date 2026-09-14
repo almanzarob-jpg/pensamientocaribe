@@ -82,14 +82,14 @@
   </div>
   <div class="controls">
     <div class="grp"><label id="lblVistaId" data-i18n="lblVista">Vista</label><div class="seg vista" id="viewSeg" role="group" aria-labelledby="lblVistaId"><button type="button" data-v="corriente" class="on" aria-pressed="true" data-i18n="vCorriente">Corriente</button><button type="button" data-v="constelacion" aria-pressed="false" data-i18n="vConstelacion">Constelación</button><button type="button" data-v="cronologia" aria-pressed="false" data-i18n="vCronologia">Cronología</button><button type="button" data-v="tabla" aria-pressed="false" data-i18n="vTabla">Tabla</button></div></div>
-    <div class="grp" id="cronoGrp" style="display:none"><label id="lblCronoModoId" data-i18n="lblCronoModo">Eje temporal</label><div class="seg vista" id="cronoSeg" role="group" aria-labelledby="lblCronoModoId"><button type="button" data-cm="publicacion" class="on" aria-pressed="true" data-i18n="cmPublicacion">Publicación</button><button type="button" data-cm="investigado" aria-pressed="false" data-i18n="cmInvestigado">Investigado</button><button type="button" data-cm="combinada" aria-pressed="false" data-i18n="cmCombinada">Combinada</button></div></div>
     <div class="grp familia"><label for="qbox" data-i18n="lblBuscar">Buscar</label>
       <div class="buscador" id="buscador">
         <input id="qbox" type="search" autocomplete="off" spellcheck="false" placeholder="título o autor…" data-i18n-ph="buscarPh" aria-describedby="qcount">
         <span class="bcount" id="qcount" role="status" aria-live="polite"></span>
         <button class="bclear" id="qclear" type="button" title="Limpiar" aria-label="Limpiar búsqueda">×</button>
       </div></div>
-    <div class="grp familia" id="zoomGrp"><label data-i18n="lblZoom">Zoom</label><div class="seg base"><button id="resetZoomBtn" data-i18n="resetBtn" data-i18n-title="resetTitle">⤢ Reencuadrar</button></div></div>
+    <!-- TANDA B · «Reencuadrar» salió del encabezado: la columna de zoom ya trae su
+         propio botón de reencuadre, con las cuatro esquinas que se leen sin texto. -->
     <div class="grp familia"><div class="seg base"><button id="recorridosBtn" type="button" aria-expanded="false" aria-controls="panelRecorridos" data-i18n-title="btnRecorridosAbrir" data-i18n="lblRecorridos">Recorridos</button></div></div>
     <div class="grp"><div class="seg base"><button id="filtrosBtn" type="button" aria-expanded="false" aria-controls="panelFiltros" data-i18n-title="btnFiltrosAbrir" data-i18n="lblFiltros">Filtros</button></div></div>
     <div class="grp"><div class="seg base"><button id="infoBtn" type="button" aria-expanded="false" aria-controls="panelInfo" data-i18n-title="btnInfoAbrir" data-i18n="lblInfo">Información</button></div></div>
@@ -109,6 +109,11 @@
        línea enciende su corriente. Ocupa el sitio que antes gastaba el párrafo de
        instrucciones en cursiva, que ahora vive plegado tras «cómo se lee». -->
   <nav id="clave" aria-label="Corrientes del atlas">
+    <!-- TANDA B · el eje temporal solo gobierna la vista Cronología y vivía en la barra
+         general: al entrar en esa vista la barra saltaba a dos filas y todos los demás
+         controles cambiaban de sitio. Aquí acompaña al mapa, aparece donde se usa y no
+         mueve nada al aparecer. -->
+    <div class="grp clv-crono" id="cronoGrp" style="display:none"><label id="lblCronoModoId" data-i18n="lblCronoModo">Eje temporal</label><div class="seg vista" id="cronoSeg" role="group" aria-labelledby="lblCronoModoId"><button type="button" data-cm="publicacion" class="on" aria-pressed="true" data-i18n="cmPublicacion">Publicación</button><button type="button" data-cm="investigado" aria-pressed="false" data-i18n="cmInvestigado">Investigado</button><button type="button" data-cm="combinada" aria-pressed="false" data-i18n="cmCombinada">Combinada</button></div></div>
     <div class="clv-t" id="clvTitId" data-i18n="clvTit">Corrientes</div>
     <div class="clv-lista" id="clvLista" role="group" aria-labelledby="clvTitId"></div>
     <div class="clv-pie">
@@ -767,6 +772,16 @@ function encuadrarMapa(){
   if(!svg) return;
   const r=svg.getBoundingClientRect();
   const movil = window.matchMedia('(max-width:780px)').matches;
+  /* TANDA C · Cronología usaba el viewBox entero, 1200x640, cuando la mitad
+     superior solo se dibuja en los modos «Investigado» y «Combinada»: en
+     «Publicación» el gráfico quedaba pegado al borde de abajo con media pantalla
+     vacía encima. La ventana se ajusta a la banda que cada modo usa de verdad.
+     No agranda el gráfico —el ancho ya manda— pero lo centra. */
+  if(state.view==='cronologia' && r.width && r.height){
+    const banda = (state.cronoModo==='publicacion') ? [0,208,VW,352] : [0,28,VW,532];
+    svg.setAttribute('viewBox', banda.join(' '));
+    return;
+  }
   if(!r.width || !r.height || state.view!=='corriente'){
     svg.setAttribute('viewBox', VB_ESCRITORIO.join(' '));
     return;
@@ -1700,7 +1715,10 @@ function setCronoModo(v){
   if(state.view==="cronologia") render();
 }
 document.getElementById('cronoSeg').addEventListener('click',e=>{ if(e.target.dataset.cm) setCronoModo(e.target.dataset.cm); });
-document.getElementById('resetZoomBtn').addEventListener('click',()=>{ vpt={k:1,tx:0,ty:0}; applyVP(); if(zc) zc.sincronizar(); });
+/* El botón de reencuadre del encabezado se retiró (la columna de zoom ya lo trae);
+   el enlace queda por si alguna versión del marcado vuelve a incluirlo. */
+const _btnReset=document.getElementById('resetZoomBtn');
+if(_btnReset) _btnReset.addEventListener('click',()=>{ vpt={k:1,tx:0,ty:0}; applyVP(); if(zc) zc.sincronizar(); });
 /* Fase 4A: girar el teléfono o cambiar el tamaño de la ventana cruza el umbral de
    780 px en los dos sentidos; el encuadre y la descongestión se rehacen entonces. */
 (function reencuadrarAlRedimensionar(){
