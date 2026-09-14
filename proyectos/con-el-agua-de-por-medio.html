@@ -799,7 +799,12 @@ function encuadrarMapa(){
      completa —Veracruz y Costa Chica incluidas, que son corpus y no decorado— y el
      mapa ocupa el lienzo. En teléfono sigue mandando el centro de masa, que es otra
      necesidad: allí no cabe la cuenca entera a un tamaño legible. */
-  const MX=76, MY=40;
+  /* En presentación el mapa se proyecta y no compite con ningún panel: el margen
+     de reserva puede ser mucho menor. Medido a 1440x900: pasa de ocupar el 87 % del
+     ancho al 94 %. No hay letterbox que corregir —el encuadre ya centra el contenido
+     con aire simétrico—, la ganancia está en el tamaño. */
+  const enPresentacion = document.body.classList.contains('presenting');
+  const MX = enPresentacion ? 26 : 76, MY = enPresentacion ? 18 : 40;
   if(!movil){
     let vbW=Math.max(anchoC+2*MX, (altoC+2*MY)*r.width/r.height);
     vbW=Math.min(vbW, VW*1.08);
@@ -938,7 +943,7 @@ function drawEjeTiempo(){
       const bx1 = escalaT(p.fin);
       /* Un inicio que no se pudo fijar no se dibuja como si empezara en 1450:
          la barra se desvanece, que es lo que «milenios anteriores» significa. */
-      const barra=el("rect",{class:"periodo", x:bx0, y:y-2.7, width:Math.max(3,bx1-bx0), height:5.4, rx:2.2,
+      const barra=el("rect",{class:"periodo"+(p.ini==null?" difumina":""), x:bx0, y:y-2.7, width:Math.max(3,bx1-bx0), height:5.4, rx:2.2,
         fill: p.ini==null ? "url(#difuminaPeriodo)" : col(n.f[0]), opacity:.9});
       barra._id=n.id; g.appendChild(barra);
       /* La curva de reflujo —lo que cruza entre el hecho y el libro— solo
@@ -1239,6 +1244,7 @@ function refreshHi(){
       else if(ff){ const n=byId(b._id); op = (n && n.f.includes(ff)) ? 1 : .12; }
       else if(fr){ const n=byId(b._id); op = (n && recGrado(n,fr)>0) ? 1 : .12; }
       b.style.opacity=op;
+      b.classList.toggle('apagado', op<.2);
     });
   }
   updateQCount();

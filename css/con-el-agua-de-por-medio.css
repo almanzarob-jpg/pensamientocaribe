@@ -604,6 +604,13 @@
   #stage.reposo .node.obra circle.dot{fill:var(--ink); stroke:var(--ink-line); stroke-width:.9}
   #stage.reposo .node.manif circle.dot{fill:var(--bg-deep); stroke:var(--ink-line); stroke-width:1.9}
   #stage .node.apagado circle.dot{fill:var(--ink-dim); stroke:var(--ink-dim)}
+  /* La banda del tiempo de lo ocurrido seguía llegando en diez colores mientras los
+     nodos de abajo iban en tinta: dos gramáticas en la misma pantalla. Las barras de
+     periodo obedecen ahora la misma regla —tinta en reposo, color al enfocar—.
+     Quedan fuera las difuminadas: su degradado no es color de fenómeno, es la manera
+     de decir que el inicio del periodo no se pudo fijar. */
+  #stage.reposo .periodo:not(.difumina){fill:var(--ink-line)}
+  #stage .periodo.apagado:not(.difumina){fill:var(--ink-dim)}
   #stage.reposo .node:hover circle.dot,
   #stage.reposo .node:focus-visible circle.dot{fill:var(--cream); stroke:var(--cream)}
   #stage .node circle.dot{transition:opacity .25s, r .2s, fill .35s, stroke .35s}
@@ -720,10 +727,26 @@
      caía solo a una segunda línea, gastando un renglón entero en un botón de
      dos letras. Se aprieta el espaciado antes que partir la fila. */
   @media (min-width:781px) and (max-width:1200px){
-    header .controls{gap:12px}
-    header .controls .grp.familia{padding-left:13px}
-    header .seg.vista button{padding:7px 10px}
-    .buscador input{width:146px}
+    header .controls{gap:9px}
+    header .controls .grp.familia{padding-left:10px}
+    header .seg.vista button{padding:7px 9px}
+    .buscador input{width:134px}
+    /* Medido: los seis grupos suman 819 px y con separaciones piden ~865. A 1000 px
+       de ventana caben; a 900 faltaban 35 y la fila se partía en dos, gastando 46 px
+       de mapa. Apretar el espaciado resuelve hasta ~880; por debajo no hay número
+       que alcance sin encoger la letra, así que la franja se desliza —el mismo
+       patrón ya probado en teléfono, con barra fina y degradado de continuidad—
+       en vez de partirse. Donde cabe, no aparece ningún deslizador. */
+    header .controls{flex-wrap:nowrap; overflow-x:auto; -webkit-overflow-scrolling:touch;
+      min-width:0; max-width:100%; padding-bottom:3px;
+      scrollbar-width:thin; scrollbar-color:var(--gold-d) transparent;
+      -webkit-mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 24px),transparent 100%);
+      mask-image:linear-gradient(90deg,#000 0,#000 calc(100% - 24px),transparent 100%)}
+    header .controls.alFinal{-webkit-mask-image:none; mask-image:none}
+    header .controls::-webkit-scrollbar{height:3px}
+    header .controls::-webkit-scrollbar-thumb{background:var(--gold-d); border-radius:2px}
+    header .controls::-webkit-scrollbar-track{background:transparent}
+    header .controls > .grp{flex:0 0 auto}
   }
 
 /* ==================================================================
