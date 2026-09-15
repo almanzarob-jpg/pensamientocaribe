@@ -194,8 +194,15 @@
     panel.setAttribute('aria-label', qt('tit'));
     const d = QC.def ? DEF_POR_ID[QC.def] : null;
     const cerrarHtml=`<button type="button" class="panelCerrar" data-qc="cerrar" aria-label="${esc(qt('cerrar'))}" title="${esc(qt('cerrar'))}">×</button>`;
+    /* al cambiar de definición o de vista, la ficha empieza arriba: si no, al elegir una
+       definición del final de la lista se abría a media altura, con el título fuera de vista */
+    const clave=(d&&QC.vista==='ficha')?d.id+'|'+(QC.contra||''):'lista';
+    const mismaPantalla = panel._qcClave===clave;
+    const scrollPrevio = panel.scrollTop;
     if(!d || QC.vista==='lista'){ panel.innerHTML = cerrarHtml + htmlLista(); }
     else { panel.innerHTML = cerrarHtml + htmlFicha(d); }
+    panel.scrollTop = mismaPantalla ? scrollPrevio : 0;
+    panel._qcClave=clave;
     cablearPanel();
   }
   function htmlLista(){
