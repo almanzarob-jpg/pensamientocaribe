@@ -53,6 +53,7 @@
       sinCentro:'Sin borde ni centro: el Caribe se sale de su propio mar.',
       relaciones:'Frontera abierta: la región se compara, no se delimita.',
       trama:'La unidad es el fenómeno: entra todo lo que una corriente atraviesa.',
+      rutas:'Territorio acuoso: el mar es lugar, y las líneas son conexiones marineras, no fronteras.', rutasLeyenda:'Conexiones desde la costa neogranadina',
       contrasteLeyenda:'Contraste',
       lista:'Definiciones, de la más antigua a la más reciente'
     },
@@ -83,6 +84,7 @@
       sinCentro:'Neither boundary nor centre: the Caribbean overflows its own sea.',
       relaciones:'Open frontier: the region is compared, not bounded.',
       trama:'The unit is the phenomenon: whatever a current crosses comes in.',
+      rutas:'Aqueous territory: the sea is a place, and the lines are sailors\' connections, not borders.', rutasLeyenda:'Connections from the New Granada coast',
       contrasteLeyenda:'Contrast',
       lista:'Definitions, from the oldest to the most recent'
     }
@@ -270,6 +272,7 @@
       if(d.forma==='sin_centro') h+=`<p class="qc-forma">${esc(qt('sinCentro'))}</p>`;
       if(d.forma==='relaciones') h+=`<p class="qc-forma">${esc(qt('relaciones'))}</p>`;
       if(d.forma==='trama') h+=`<p class="qc-forma">${esc(qt('trama'))}</p>`;
+      if(d.forma==='rutas') h+=`<p class="qc-forma">${esc(qt('rutas'))}</p>`;
       ['dentro','margen','disputa','fuera','nada'].forEach(e=>{
         const ks=Object.keys(L).filter(k=>(estadoDe(d,k)||'nada')===e);
         if(!ks.length) return;
@@ -286,8 +289,9 @@
            ex.map(([k,v])=>`<li>${esc(nombreLugar(k))} <span class="qc-estado-mini qc-t-${v.e}">${esc(qt('e_'+v.e))}</span>${v.n?`<span class="qc-nota">${esc(loc(v.n))}</span>`:''}</li>`).join('')+
            (d.mundo?`<li><i>${esc(qt('mundo'))}:</i> ${esc(loc(d.mundo))}</li>`:'')+`</ul></details>`;
       }
-      if(d.trazos) h+=`<p class="qc-forma qc-leyenda-trazos"><span class="qc-sw qc-sw-trazo" aria-hidden="true"></span>${esc(qt('trazos'))}: `+
-           d.trazos.map(([a,b])=>`${esc(nombreLugar(a))} ≈ ${esc(nombreLugar(b))}`).join(' · ')+`</p>`;
+      if(d.trazos){ const ru=d.forma==='rutas';
+        h+=`<p class="qc-forma qc-leyenda-trazos"><span class="qc-sw ${ru?'qc-sw-ruta':'qc-sw-trazo'}" aria-hidden="true"></span>${esc(qt(ru?'rutasLeyenda':'trazos'))}: `+
+           d.trazos.map(([a,b])=>`${esc(nombreLugar(a))} ${ru?'↔':'≈'} ${esc(nombreLugar(b))}`).join(' · ')+`</p>`; }
       if(d.canon) h+=`<p class="qc-forma"><span class="qc-sw qc-sw-canon" aria-hidden="true"></span>${esc(qt('canon'))}: ${d.canon.map(nombreLugar).map(esc).join(', ')}</p>`;
     }
 
@@ -455,12 +459,13 @@
           const t=mk('text',{x:(x0+x1)/2, y:y1+16, class:'qc-rotulo qc-rotulo-encallada', 'text-anchor':'middle'}); t.textContent=qt('encallada'); capaTxt.appendChild(t);
         }
       }
-      /* parecidos de familia de Trouillot */
+      /* parecidos de familia de Trouillot y rutas marineras de Bassi */
       (d.trazos||[]).forEach(([a,bb])=>{
         const pa=centroDe(a,G), pb=centroDe(bb,G); if(!pa||!pb) return;
         const dx=pb.x-pa.x, dy=pb.y-pa.y, len=Math.hypot(dx,dy)||1;
         const mx=(pa.x+pb.x)/2 + dy/len*Math.min(38,len*.28), my=(pa.y+pb.y)/2 - dx/len*Math.min(38,len*.28);
-        trazosG.appendChild(mk('path',{d:`M ${pa.x},${pa.y} Q ${mx},${my} ${pb.x},${pb.y}`, class:'qc-trazo'}));
+        trazosG.appendChild(mk('path',{d:`M ${pa.x},${pa.y} Q ${mx},${my} ${pb.x},${pb.y}`, class:forma==='rutas'?'qc-ruta':'qc-trazo'}));
+        if(forma==='rutas') return;
         const t=mk('text',{x:mx, y:my, class:'qc-rotulo qc-rotulo-trazo', 'text-anchor':'middle', dy:'.35em'}); t.textContent='≈'; capaTxt.appendChild(t);
       });
       (d.canon||[]).forEach(k=>{ const p=G[k]; if(!p) return; marcasG.appendChild(mk('circle',{cx:p.x, cy:p.y, r:p.r+10, class:'qc-anillo qc-canon'})); });

@@ -3,9 +3,9 @@
     "titulo": "Con el agua de por medio",
     "subtitulo": "Atlas para una antropología archipiélica",
     "responsable": "Grupo de Investigación Pensamiento Caribe",
-    "version": "1.18.0",
-    "fecha": "2026-09-11",
-    "nota_version": "Lote S17: 17 libros, 11 relaciones documentadas y 7 propuestas expresamente por corroborar. Clasificaciones de las nuevas obras pendientes de adjudicación académica. Orillas descriptivas separadas del anclaje visual. Véase documentacion/siembra-s17-2026-09-11.md."
+    "version": "1.19.0",
+    "fecha": "2026-09-15",
+    "nota_version": "Lote S18: 2 obras sobre las definiciones del Caribe (Gaztambide-Géigel 2006; Meeks y Girvan 2010), 19 relaciones documentadas y 1 propuesta por corroborar. Se corroboran con el ejemplar las relaciones de Trouillot con Smith, Mintz y Price-Mars; la relación Mintz–Smith pasa de disonancia a resonancia y la de Bassi con Benítez Rojo de resonancia a disonancia tras revisar los textos. Bassi entra en la capa «¿Qué Caribe?» con el Gran Caribe transimperial. Clasificaciones de las nuevas obras pendientes de adjudicación académica. Véase documentacion/siembra-s18-2026-09-15.md."
   },
   "fenomenos": {
     "colonialidad": {
@@ -8252,6 +8252,325 @@
       "lenguas_publicacion": [
         "español"
       ]
+    },
+    {
+      "id": "gaztambideinvencion",
+      "k": "obra",
+      "t": "La invención del Caribe a partir de 1898 (Las definiciones del Caribe, revisitadas)",
+      "a": "Antonio Gaztambide-Géigel",
+      "y": "2006",
+      "y0": "1996",
+      "f": [
+        "colonialidad",
+        "soberanias"
+      ],
+      "l": "puertorico",
+      "tr": "español",
+      "ap": "Sostiene que el Caribe como región es una invención del siglo XX, posterior a 1898 y ligada a la expansión de Estados Unidos. Ordena sus definiciones en cuatro tendencias: Caribe insular o etnohistórico, Caribe geopolítico, Gran Caribe o Cuenca del Caribe y Caribe cultural o Afro-América Central. Ninguna es pura ni definitiva, y por eso cada uso del nombre exige declarar de qué Caribe se habla.",
+      "ed": "Jangwa Pana, Universidad del Magdalena",
+      "edicion_consultada": "Revista Jangwa Pana, vol. 5, núm. 1, 2006, pp. 1-24, Universidad del Magdalena; PDF de Redalyc",
+      "url": "https://www.redalyc.org/articulo.oa?id=588069656001",
+      "nota_bibliografica": "Artículo, no libro. Es la versión revisada de un texto aparecido en 1996 en la Revista Mexicana del Caribe con otro título; las citas a esa primera versión no se imputan a esta ficha. No confundir con La invención del Caribe de Jean Casimir. PDF escaneado de 25 hojas: página impresa = hoja − 1.",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Lectura integral del artículo, con verificación de notas; la clasificación no se adjudica en esta revisión",
+        "responsable": "Preparación asistida del lote S18; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-15",
+        "fundamento": "C7 es la candidatura principal: el artículo fecha la invención regional en 1898 y la vincula con la hegemonía de Estados Unidos y con los intereses de las élites de la región. El Caribe cultural es solo una de sus cuatro tendencias, por lo que C8 no debe inferirse de ese apartado."
+      },
+      "fuente_recorrido": [
+        "Lote S18, 15-09-2026: lectura integral; clasificación pendiente"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "corriente_confirmada": null
+      },
+      "operaciones": [
+        "confrontar una categoría",
+        "comparar orillas"
+      ],
+      "orillas": [
+        {
+          "tipo": "cuenca",
+          "label": "Gran Caribe",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "puertorico",
+          "funcion": "lugar de producción intelectual"
+        },
+        {
+          "lugar": "santamarta",
+          "funcion": "lugar de circulación"
+        }
+      ],
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "fuentes_revision": [
+        {
+          "tipo": "archivo consultado",
+          "edicion": "Revista Jangwa Pana, vol. 5, núm. 1, 2006, pp. 1-24, Universidad del Magdalena; PDF de Redalyc",
+          "localizadores": [
+            {
+              "pagina_pdf": 1,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 2,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 12,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 14,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 16,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 19,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 20,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 21,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 22,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "extracción de texto",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            }
+          ]
+        }
+      ],
+      "lote_incorporacion": "S18-2026-09-15",
+      "lenguas_publicacion": [
+        "español"
+      ]
+    },
+    {
+      "id": "meeksgirvannewworld",
+      "k": "obra",
+      "t": "The Thought of New World: The Quest for Decolonisation",
+      "a": "Brian Meeks y Norman Girvan (eds.)",
+      "y": "2010",
+      "f": [
+        "postplantacion",
+        "soberanias"
+      ],
+      "l": "jamaica",
+      "tr": "inglés",
+      "ap": "Balance colectivo del New World Group, formado en Georgetown en 1962 y extendido luego a Trinidad, Jamaica, Montreal y Nueva York. Examina su tesis más influyente, la plantación como paradigma para leer la economía, la política, la sociedad y la cultura del Caribe, junto con sus críticas y su vigencia. Combina ensayos, relecturas y memorias de sus integrantes, e incluye una conversación con Lloyd Best.",
+      "ed": "Ian Randle Publishers",
+      "edicion_consultada": "Ian Randle Publishers, Kingston y Miami, 2010",
+      "isbn": "9789766374013",
+      "nota_bibliografica": "Volumen colectivo. El PDF es un escaneo a doble página leído por OCR: cada hoja reúne dos páginas impresas. Las localizaciones se dan por hoja y la página impresa solo se indica cuando la confirma el índice analítico.",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal por OCR: sumario, capítulo de Girvan, capítulo de Levitt sobre Montreal, capítulo de Paget Henry, notas de la conversación con Best e índice analítico; no lectura integral",
+        "responsable": "Preparación asistida del lote S18; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-15",
+        "fundamento": "C4 es la candidatura principal por el modelo de economía de plantación y sus críticas; C7 corresponde al proyecto de pensamiento independiente y descolonización. Debe evaluarse si un volumen que funciona como archivo de un grupo admite una corriente constitutiva."
+      },
+      "fuente_recorrido": [
+        "Lote S18, 15-09-2026: revisión focal por OCR; clasificación pendiente"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "postplantacion_trabajo_desposesion",
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "corriente_confirmada": null
+      },
+      "operaciones": [
+        "reconstruir un archivo",
+        "teorizar"
+      ],
+      "orillas": [
+        {
+          "tipo": "región",
+          "label": "Caribe anglófono",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "guyana",
+          "funcion": "lugar de producción intelectual"
+        },
+        {
+          "lugar": "jamaica",
+          "funcion": "lugar de producción intelectual"
+        },
+        {
+          "lugar": "trinidad",
+          "funcion": "lugar de producción intelectual"
+        },
+        {
+          "tipo": "región",
+          "label": "Montreal",
+          "funcion": "lugar de circulación"
+        }
+      ],
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "fuentes_revision": [
+        {
+          "tipo": "archivo consultado",
+          "edicion": "Ian Randle Publishers, Kingston y Miami, 2010",
+          "localizadores": [
+            {
+              "pagina_pdf": 2,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "OCR",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 6,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "OCR",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 13,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "OCR",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 19,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "OCR",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 23,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "OCR",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 24,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "OCR",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 46,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "OCR",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 48,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "OCR",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 93,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "OCR",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 97,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "OCR",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 98,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "OCR",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 107,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "OCR",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 174,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "OCR",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 179,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "OCR",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 180,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "OCR",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            },
+            {
+              "pagina_pdf": 181,
+              "localizador": "PDF físico (1 = primera hoja)",
+              "metodo": "OCR",
+              "tipo": "lectura de metadatos, índice o pasaje argumentativo"
+            }
+          ]
+        }
+      ],
+      "lote_incorporacion": "S18-2026-09-15",
+      "lenguas_publicacion": [
+        "inglés"
+      ]
     }
   ],
   "relaciones": [
@@ -8259,7 +8578,15 @@
       "a": "mintz",
       "b": "trouillot",
       "tipo": "resonancia",
-      "fuente": "Por corroborar."
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Michel-Rolph Trouillot, «The Caribbean Region: An Open Frontier in Anthropological Theory» (1992), edición consultada: Trouillot Remixed: The Michel-Rolph Trouillot Reader, Duke University Press, 2021. PDF, hoja 175 (p. 168); PDF, hoja 179 (p. 172); PDF, hoja 182 (p. 175); PDF, hoja 185 (p. 178); PDF, hoja 194 (p. 187). El ensayo cita Mintz 1985b y Mintz 1990, que la bibliografía identifica como Sweetness and Power y Caribbean Transformations. Lo presenta como proponente de una antropología históricamente orientada, reconoce que el complejo campesinado-plantación es un tema central de la antropología regional en parte por su obra, y lamenta que sus intuiciones metateóricas estén dispersas en más de cien publicaciones. La valoración del área sociocultural en la p. 178 remite a Mintz 1971a, que corresponde a la ficha mintzarea.",
+      "id_lote": "S18-M01",
+      "lote_revision": "S18-2026-09-15",
+      "tipo_previo": "resonancia",
+      "fuente_previa": "Por corroborar."
     },
     {
       "a": "trouillot",
@@ -8643,7 +8970,15 @@
       "a": "pricemars",
       "b": "trouillot",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo."
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Michel-Rolph Trouillot, «The Caribbean Region: An Open Frontier in Anthropological Theory» (1992), edición consultada: Trouillot Remixed: The Michel-Rolph Trouillot Reader, Duke University Press, 2021. PDF, hoja 171 (p. 164); PDF, hoja 173 (p. 166); PDF, hoja 179 (p. 172); PDF, hoja 195 (p. 188). El ensayo cita Price-Mars 1983, que la bibliografía identifica como So Spoke the Uncle, traducción de Ainsi parla l'oncle. Lo sitúa entre los enfoques de segmentación étnica o cultural (p. 164), entre los intelectuales residentes que dialogaron con los debates europeos (p. 166) y entre los estudiosos nativos que «saw the study of culture as inevitably tied to history» (p. 172).",
+      "id_lote": "S18-M02",
+      "lote_revision": "S18-2026-09-15",
+      "tipo_previo": "resonancia",
+      "fuente_previa": "Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo."
     },
     {
       "a": "pricemars",
@@ -9279,13 +9614,31 @@
       "a": "bassiacuoso",
       "b": "abello",
       "tipo": "resonancia",
-      "fuente": "Dos lecturas del Caribe colombiano como archipiélago y no como periferia andina, una desde la geografía marinera del XVIII-XIX, otra desde el presente (Bassi 2016; Abello Vives 2015)."
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Ernesto Bassi, Un territorio acuoso: geografías marineras y el Gran Caribe transimperial de la Nueva Granada, edición consultada: traducción de María José Montoya; Editorial Universidad del Norte y Banco de la República, 2021. PDF, hoja 28 (p. 16); PDF, hoja 359 (p. 350). La nota 47 cita «Un Caribe por fuera de la ruta de la plantación» (Abello y Bassi, 2006) entre los trabajos que entienden el Caribe más allá de las plantaciones. Ese capítulo, escrito a cuatro manos, es el capítulo 3 de La isla encallada (EPUB, OEBPS/Text/cap3_split_000.xhtml), de modo que la cita remite a un texto incluido en la obra catalogada. En sentido inverso, Abello cita en el capítulo 1 (nota 17; EPUB, OEBPS/Text/cap1_split_000.xhtml) la tesis doctoral de Bassi de 2012, origen de este libro, porque «abre un nuevo momento en los estudios colombianos sobre el Caribe». Revisada en S18: la relación descansa en la coautoría y en citas cruzadas, no solo en la afinidad de lecturas.",
+      "id_lote": "S18-M05",
+      "lote_revision": "S18-2026-09-15",
+      "tipo_previo": "resonancia",
+      "fuente_previa": "Dos lecturas del Caribe colombiano como archipiélago y no como periferia andina, una desde la geografía marinera del XVIII-XIX, otra desde el presente (Bassi 2016; Abello Vives 2015)."
     },
     {
       "a": "bassiacuoso",
       "b": "benitez",
-      "tipo": "resonancia",
-      "fuente": "Bassi construye su territorio acuoso en diálogo explícito con la isla que se repite de Benítez Rojo (Bassi 2016; Benítez Rojo 1989)."
+      "tipo": "disonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": true,
+        "clase": "crítica explícita",
+        "argumento": "Contra el área que unifican la plantación y la insularidad, Bassi propone una región hecha por la movilidad de los marineros, que incluye las costas de Tierra Firme (pp. 16-17). Aplicada a Benítez Rojo, la objeción es discutible: su meta-archipiélago incluye las corrientes que bañan las costas del norte de Suramérica y de Centroamérica (The Repeating Island, p. 24)."
+      },
+      "fuente": "Ernesto Bassi, Un territorio acuoso: geografías marineras y el Gran Caribe transimperial de la Nueva Granada, edición consultada: traducción de María José Montoya; Editorial Universidad del Norte y Banco de la República, 2021. PDF, hoja 28 (p. 16); PDF, hojas 53-54 (pp. 42-43). En la p. 16 (nota 46) Bassi pone La isla que se repite, junto a Mintz y Knight, entre las definiciones que hacen de la plantación el factor unificador del Caribe y dan un mapa en el que «a las costas caribeñas del continente, sin embargo, en su mayoría se les niega su pertenencia al Caribe». La nota 25 del capítulo 1 cita también la descripción que Benítez Rojo hace del sistema de flotas. Revisada en S18: la fuente anterior hablaba de un «diálogo explícito» con la isla que se repite en la construcción del territorio acuoso, y el texto no lo sostiene.",
+      "id_lote": "S18-M06",
+      "lote_revision": "S18-2026-09-15",
+      "tipo_previo": "resonancia",
+      "fuente_previa": "Bassi construye su territorio acuoso en diálogo explícito con la isla que se repite de Benítez Rojo (Bassi 2016; Benítez Rojo 1989)."
     },
     {
       "a": "bassiacuoso",
@@ -10965,13 +11318,31 @@
       "a": "trouillot",
       "b": "mgsmithplural",
       "tipo": "resonancia",
-      "fuente": "Trouillot inventaría el pluralismo de Smith entre los marcos que hicieron del Caribe una frontera abierta de la teoría antropológica. Cita verificada en el ejemplar."
+      "estado": "corroborada",
+      "friccion": {
+        "hay": true,
+        "clase": "crítica explícita",
+        "argumento": "Trouillot rechaza la rigidez de la distinción entre sociedades plurales y no plurales, pero conserva la pregunta de Smith por la relación entre heterogeneidad y poder (p. 164)."
+      },
+      "fuente": "Michel-Rolph Trouillot, «The Caribbean Region: An Open Frontier in Anthropological Theory» (1992), edición consultada: Trouillot Remixed: The Michel-Rolph Trouillot Reader, Duke University Press, 2021. PDF, hoja 168 (p. 161); PDF, hoja 171 (p. 164); PDF, hoja 196 (p. 189). El ensayo cita Smith 1965 al tratar la heterogeneidad caribeña, y la bibliografía identifica esa clave como The Plural Society in the British West Indies. En la p. 164 observa que los caribeñistas no aceptan «the insurmountable wall that Smith erects» entre sociedades plurales y no plurales, pero concede que «Smith is right in suggesting that in the Caribbean case, at least, one cannot presume “culture”». La frase sobre el monopolio del poder que Trouillot cita en la p. 163 procede de Smith 1984a, no de este libro.",
+      "id_lote": "S18-M03",
+      "lote_revision": "S18-2026-09-15",
+      "tipo_previo": "resonancia",
+      "fuente_previa": "Trouillot inventaría el pluralismo de Smith entre los marcos que hicieron del Caribe una frontera abierta de la teoría antropológica. Cita verificada en el ejemplar."
     },
     {
       "a": "mintzarea",
       "b": "mgsmithplural",
-      "tipo": "disonancia",
-      "fuente": "El área sociocultural de Mintz y la sociedad plural de Smith son dos respuestas incompatibles a la misma pregunta: si lo que une al Caribe es una historia común o solo la coacción de un mercado. Cita verificada en el ejemplar."
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Sidney W. Mintz, «El Caribe como área sociocultural», edición consultada: traducción publicada en Op. Cit., núm. 23, 2014-2015, pp. 61-100. PDF, hoja 4 (p. 64); PDF, hoja 5 (p. 65); PDF, hoja 23 (p. 83). Mintz toma de The Plural Society in the British West Indies (nota 5, que remite a su p. 19) «una buena generalización de relevancia histórica» para situar el área entre Brasil y Estados Unidos. En la nota 26 se apoya en la sociedad plural para explicar la aculturación mínima entre grupos de migrantes y concluye que «Smith ha llevado el tema más lejos». En la p. 65 comparte con Smith la premisa de que el Caribe no es un área cultural si por cultura se entiende una tradición histórica común. Revisada en S18: figuraba como disonancia, pero el ensayo no discute a Smith. La distancia entre área sociocultural y sociedad plural es de enfoque y el texto no la argumenta como objeción.",
+      "id_lote": "S18-M04",
+      "lote_revision": "S18-2026-09-15",
+      "tipo_previo": "disonancia",
+      "fuente_previa": "El área sociocultural de Mintz y la sociedad plural de Smith son dos respuestas incompatibles a la misma pregunta: si lo que une al Caribe es una historia común o solo la coacción de un mercado. Cita verificada en el ejemplar."
     },
     {
       "a": "rtsmithmatrifocal",
@@ -12154,6 +12525,250 @@
       "fuente": "Por corroborar. Comparación posible entre dos libros distintos de Quintero Rivera sobre música, cuerpo e historia social. La autoría compartida no demuestra por sí sola la relación.",
       "id_lote": "S17-R18",
       "lote_incorporacion": "S17-2026-09-11"
+    },
+    {
+      "a": "gaztambideinvencion",
+      "b": "mintzarea",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Antonio Gaztambide-Géigel, La invención del Caribe a partir de 1898 (Las definiciones del Caribe, revisitadas), edición consultada: Jangwa Pana, vol. 5, núm. 1, 2006. PDF, hoja 20 (p. 19). La nota 65 cita «The Caribbean as a Socio-Cultural Area» entre los textos que buscan lo que une a los Caribes en la plantación. La ficha corresponde a la traducción española de ese ensayo.",
+      "id_lote": "S18-R01",
+      "lote_incorporacion": "S18-2026-09-15"
+    },
+    {
+      "a": "gaztambideinvencion",
+      "b": "beckfordpersistent",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Antonio Gaztambide-Géigel, La invención del Caribe a partir de 1898 (Las definiciones del Caribe, revisitadas), edición consultada: Jangwa Pana, vol. 5, núm. 1, 2006. PDF, hoja 20 (p. 19). La nota 64 cita Persistent Poverty (1972) y remite a la insistencia de Beckford en el campesinado como depositario de una cultura popular de autosuficiencia.",
+      "id_lote": "S18-R02",
+      "lote_incorporacion": "S18-2026-09-15"
+    },
+    {
+      "a": "gaztambideinvencion",
+      "b": "benitez",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Antonio Gaztambide-Géigel, La invención del Caribe a partir de 1898 (Las definiciones del Caribe, revisitadas), edición consultada: Jangwa Pana, vol. 5, núm. 1, 2006. PDF, hoja 21 (p. 20). «A pesar de su título, Antonio Benítez Rojo nos remite a tal espacio en La isla que se repite»: lo sitúa en el Caribe cultural que trasciende al insular. La nota 69 da la edición definitiva de 1998.",
+      "id_lote": "S18-R03",
+      "lote_incorporacion": "S18-2026-09-15"
+    },
+    {
+      "a": "gaztambideinvencion",
+      "b": "quinterosalsa",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Antonio Gaztambide-Géigel, La invención del Caribe a partir de 1898 (Las definiciones del Caribe, revisitadas), edición consultada: Jangwa Pana, vol. 5, núm. 1, 2006. PDF, hoja 21 (p. 20). La nota 70 cita ¡Salsa, sabor y control! (Siglo XXI, 1998): el «cimarronaje cultural» de Quintero Rivera es otra afirmación del Caribe cultural.",
+      "id_lote": "S18-R04",
+      "lote_incorporacion": "S18-2026-09-15"
+    },
+    {
+      "a": "gaztambideinvencion",
+      "b": "knight_genesisnacionalismo",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Antonio Gaztambide-Géigel, La invención del Caribe a partir de 1898 (Las definiciones del Caribe, revisitadas), edición consultada: Jangwa Pana, vol. 5, núm. 1, 2006. PDF, hoja 14 (p. 13). La nota 40 cita The Caribbean: The Genesis of a Fragmented Nationalism (2.ª ed., 1991) como texto panorámico en el que perdura la definición insular. La ficha registra la primera edición.",
+      "id_lote": "S18-R05",
+      "lote_incorporacion": "S18-2026-09-15"
+    },
+    {
+      "a": "gaztambideinvencion",
+      "b": "hillmandagostinocaribbean",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Antonio Gaztambide-Géigel, La invención del Caribe a partir de 1898 (Las definiciones del Caribe, revisitadas), edición consultada: Jangwa Pana, vol. 5, núm. 1, 2006. PDF, hoja 14 (p. 13). La misma nota 40 cita Understanding the Contemporary Caribbean (2003) con igual función. La ficha registra la edición de 2009. El volumen de Hillman y D'Agostino cita, a su vez, la versión de 1996 del artículo, de título distinto, y esa cita no se registra como relación.",
+      "id_lote": "S18-R06",
+      "lote_incorporacion": "S18-2026-09-15"
+    },
+    {
+      "a": "meeksgirvannewworld",
+      "b": "beckfordpersistent",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Brian Meeks y Norman Girvan (eds.), The Thought of New World: The Quest for Decolonisation, edición consultada: Ian Randle Publishers, 2010. PDF, hoja 19 (p. 16 según el índice); PDF, hoja 23. El capítulo de Girvan presenta Persistent Poverty como la obra seminal de Beckford al discutir el método del grupo, y las notas dan la referencia completa.",
+      "id_lote": "S18-R07",
+      "lote_incorporacion": "S18-2026-09-15"
+    },
+    {
+      "a": "meeksgirvannewworld",
+      "b": "bestlevitt",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Brian Meeks y Norman Girvan (eds.), The Thought of New World: The Quest for Decolonisation, edición consultada: Ian Randle Publishers, 2010. PDF, hoja 174; PDF, hoja 175. Las notas de la conversación con Lloyd Best remiten a Essays on the Theory of Plantation Economy (UWI Press, 2009), y la nota de colaboradores lo presenta como su estudio conjunto con Kari Polanyi Levitt.",
+      "id_lote": "S18-R08",
+      "lote_incorporacion": "S18-2026-09-15"
+    },
+    {
+      "a": "meeksgirvannewworld",
+      "b": "mgsmithplural",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Brian Meeks y Norman Girvan (eds.), The Thought of New World: The Quest for Decolonisation, edición consultada: Ian Randle Publishers, 2010. PDF, hoja 174. Una nota de la conversación con Lloyd Best remite a The Plural Society in the British West Indies (1965), junto a los libros de Elsa Goveia y al simposio editado por Vera Rubin.",
+      "id_lote": "S18-R09",
+      "lote_incorporacion": "S18-2026-09-15"
+    },
+    {
+      "a": "meeksgirvannewworld",
+      "b": "james",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Brian Meeks y Norman Girvan (eds.), The Thought of New World: The Quest for Decolonisation, edición consultada: Ian Randle Publishers, 2010. PDF, hoja 97 (p. 173 según el índice). Paget Henry afirma que las raíces imperiales de las economías caribeñas estaban «well established in his classic text, The Black Jacobins».",
+      "id_lote": "S18-R10",
+      "lote_incorporacion": "S18-2026-09-15"
+    },
+    {
+      "a": "meeksgirvannewworld",
+      "b": "williamscapitalismo",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Brian Meeks y Norman Girvan (eds.), The Thought of New World: The Quest for Decolonisation, edición consultada: Ian Randle Publishers, 2010. PDF, hoja 98 (p. 174 según el índice). En el mismo capítulo, Paget Henry escribe que «Capitalism and Slavery was the text that established his view of the imperial origins of Caribbean economies». La ficha es la traducción española.",
+      "id_lote": "S18-R11",
+      "lote_incorporacion": "S18-2026-09-15"
+    },
+    {
+      "a": "meeksgirvannewworld",
+      "b": "rodney",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Brian Meeks y Norman Girvan (eds.), The Thought of New World: The Quest for Decolonisation, edición consultada: Ian Randle Publishers, 2010. PDF, hoja 24. Las notas del capítulo de Girvan citan How Europe Underdeveloped Africa (1972) entre las obras del «Third World Marxism» que influyó en Beckford, Girvan y C. Y. Thomas.",
+      "id_lote": "S18-R12",
+      "lote_incorporacion": "S18-2026-09-15"
+    },
+    {
+      "a": "meeksgirvannewworld",
+      "b": "modernblackness",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Brian Meeks y Norman Girvan (eds.), The Thought of New World: The Quest for Decolonisation, edición consultada: Ian Randle Publishers, 2010. PDF, hoja 93. Una nota remite, «for example», a Modern Blackness de Deborah Thomas.",
+      "id_lote": "S18-R13",
+      "lote_incorporacion": "S18-2026-09-15"
+    },
+    {
+      "a": "meeksgirvannewworld",
+      "b": "henrycaliban",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Brian Meeks y Norman Girvan (eds.), The Thought of New World: The Quest for Decolonisation, edición consultada: Ian Randle Publishers, 2010. PDF, hoja 107 (p. 193 según el índice). Paget Henry retoma su propio libro: «In Caliban's Reason, I argued that the philosophical foundation of plantation theory was historicism».",
+      "id_lote": "S18-R14",
+      "lote_incorporacion": "S18-2026-09-15"
+    },
+    {
+      "a": "meeks_postcolonial",
+      "b": "meeksgirvannewworld",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Brian Meeks, After the Postcolonial Caribbean: Memory, Imagination, Hope, edición consultada: Pluto Press, 2022; EPUB. EPUB, OEBPS/xhtml/chapter05.xhtml. La nota 4 remite a «New World and Its Critics», de Norman Girvan, en The Thought of New World (Ian Randle, 2010), p. 4. Meeks es coeditor del volumen citado.",
+      "id_lote": "S18-R15",
+      "lote_incorporacion": "S18-2026-09-15"
+    },
+    {
+      "a": "quinnblackpower",
+      "b": "meeksgirvannewworld",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Kate Quinn (ed.), Black Power in the Caribbean, edición consultada: University Press of Florida, 2014. PDF, hoja 100; PDF, hoja 102; PDF, hoja 280. La nota 34 del capítulo sobre Abeng remite al volumen para la historia y las ideas del New World Group; la bibliografía de ese capítulo y la de la conclusión dan la referencia completa.",
+      "id_lote": "S18-R16",
+      "lote_incorporacion": "S18-2026-09-15"
+    },
+    {
+      "a": "austinfearblack",
+      "b": "meeksgirvannewworld",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "David Austin, Fear of a Black Nation: Race, Sex, and Security in Sixties Montreal, edición consultada: Between the Lines, 2013; EPUB. EPUB, OEBPS/xhtml/notes.xhtml. La nota 46 cita «The Montreal New World Group», de Kari Levitt, en The Thought of New World, pp. 71-80, como fuente para la historia del grupo en Montreal.",
+      "id_lote": "S18-R17",
+      "lote_incorporacion": "S18-2026-09-15"
+    },
+    {
+      "a": "puriradical",
+      "b": "meeksgirvannewworld",
+      "tipo": "resonancia",
+      "estado": "por_corroborar",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Por corroborar. La bibliografía del capítulo 8 de The Legacies of Caribbean Radical Politics (Routledge, 2010; EPUB, Text/14_Chapter08.xhtml) registra el volumen con la variante «The Thought of New World Group»; falta localizar el pasaje que lo usa.",
+      "id_lote": "S18-R18",
+      "lote_incorporacion": "S18-2026-09-15"
+    },
+    {
+      "a": "bassiacuoso",
+      "b": "mintzarea",
+      "tipo": "disonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": true,
+        "clase": "crítica explícita",
+        "argumento": "Contra el área que unifican la plantación y la insularidad, Bassi propone una región hecha por la movilidad de los marineros, que incluye las costas de Tierra Firme (pp. 16-17)."
+      },
+      "fuente": "Ernesto Bassi, Un territorio acuoso: geografías marineras y el Gran Caribe transimperial de la Nueva Granada, edición consultada: traducción de María José Montoya; Editorial Universidad del Norte y Banco de la República, 2021. PDF, hoja 28 (p. 16); PDF, hoja 380 (p. 371). La nota 46 cita «The Caribbean as Socio-Cultural Area» (p. 20), de donde Bassi toma la «economía de tierras bajas, subtropical e insular» con que Mintz, Benítez Rojo y Knight caracterizan el área. Objeta que el mapa resultante niega a las costas continentales su pertenencia al Caribe. La ficha es la traducción española del mismo ensayo.",
+      "id_lote": "S18-R19",
+      "lote_incorporacion": "S18-2026-09-15"
+    },
+    {
+      "a": "bassiacuoso",
+      "b": "knight_genesisnacionalismo",
+      "tipo": "disonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": true,
+        "clase": "crítica explícita",
+        "argumento": "Contra el área que unifican la plantación y la insularidad, Bassi propone una región hecha por la movilidad de los marineros, que incluye las costas de Tierra Firme (pp. 16-17)."
+      },
+      "fuente": "Ernesto Bassi, Un territorio acuoso: geografías marineras y el Gran Caribe transimperial de la Nueva Granada, edición consultada: traducción de María José Montoya; Editorial Universidad del Norte y Banco de la República, 2021. PDF, hoja 28 (p. 16); PDF, hoja 377 (p. 368). La nota 46 cita Knight, The Caribbean, que la bibliografía identifica como The Caribbean: The Genesis of a Fragmented Nationalism (1978). Bassi lo cuenta entre las definiciones por la plantación, retoma su «nacionalismo fragmentado» y objeta que esa caracterización deja fuera las costas continentales.",
+      "id_lote": "S18-R20",
+      "lote_incorporacion": "S18-2026-09-15"
     }
   ],
   "redirecciones": {

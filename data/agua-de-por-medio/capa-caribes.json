@@ -29,7 +29,7 @@
    "ref": "Gaztambide-Géigel, A. (2006). La invención del Caribe a partir de 1898 (Las definiciones del Caribe, revisitadas). Jangwa Pana, 5(1), 1-24. Universidad del Magdalena. Versión revisada de Revista Mexicana del Caribe, 1 (1996).",
    "corto": "Gaztambide 2006",
    "ejemplar": true,
-   "corpus": null
+   "corpus": "gaztambideinvencion"
   },
   "TRO": {
    "ref": "Trouillot, M.-R. (2021 [1992]). The Caribbean Region: An Open Frontier in Anthropological Theory. En Y. Bonilla, G. Beckett y M. L. Mullings (eds.), Trouillot Remixed (pp. 159-180). Duke University Press. Orig. Annual Review of Anthropology, 21, 19-42.",
@@ -65,7 +65,7 @@
    "ref": "Girvan, N. (2010). New World and Its Critics. En B. Meeks y N. Girvan (eds.), The Thought of New World: The Quest for Decolonisation. Ian Randle.",
    "corto": "Girvan 2010",
    "ejemplar": true,
-   "corpus": null
+   "corpus": "meeksgirvannewworld"
   },
   "BEC": {
    "ref": "Beckford, G. L. (1972). Persistent Poverty: Underdevelopment in Plantation Economies of the Third World. Oxford University Press.",
@@ -78,6 +78,12 @@
    "corto": "Abello Vives 2015",
    "ejemplar": true,
    "corpus": "abello"
+  },
+  "BAS": {
+   "ref": "Bassi, E. (2021 [2016]). Un territorio acuoso: geografías marineras y el Gran Caribe transimperial de la Nueva Granada (trad. M. J. Montoya). Editorial Universidad del Norte / Banco de la República. Orig. An Aqueous Territory: Sailor Geographies and New Granada's Transimperial Greater Caribbean World, Duke University Press.",
+   "corto": "Bassi 2021 [2016]",
+   "ejemplar": true,
+   "corpus": "bassiacuoso"
   },
   "ATL": {
    "ref": "Grupo de Investigación Pensamiento Caribe (2026). Con el agua de por medio. Atlas para una antropología archipiélica. Marco conceptual.",
@@ -182,6 +188,18 @@
    -54.0,
    "África atlántica →",
    "Atlantic Africa →"
+  ],
+  "stthomas": [
+   18.34,
+   -64.93,
+   "Saint Thomas",
+   "St. Thomas"
+  ],
+  "filadelfia": [
+   31.3,
+   -79.6,
+   "Filadelfia ↑",
+   "Philadelphia ↑"
   ]
  },
  "definiciones": [
@@ -1064,6 +1082,7 @@
     }
    },
    "corpus": [
+    "meeksgirvannewworld",
     "bestlevitt",
     "beckfordpersistent",
     "williamscapitalismo"
@@ -1795,6 +1814,7 @@
     }
    },
    "corpus": [
+    "gaztambideinvencion",
     "knight_genesisnacionalismo",
     "hillmandagostinocaribbean"
    ],
@@ -1934,7 +1954,9 @@
      }
     }
    },
-   "corpus": []
+   "corpus": [
+    "gaztambideinvencion"
+   ]
   },
   {
    "autor": "Antonio Gaztambide-Géigel",
@@ -2076,6 +2098,7 @@
     }
    },
    "corpus": [
+    "gaztambideinvencion",
     "abello"
    ]
   },
@@ -2170,36 +2193,36 @@
     "cartagena": {
      "e": "disputa",
      "n": {
-      "es": "Gaztambide dice que partes importantes de Colombia «han sido siempre parte del Caribe» (p. 16) y funda el Caribe cultural en la plantación y la contraplantación (pp. 19-20). Abello responde que en el Caribe colombiano la plantación «nunca se desarrolló» (cap. 3).",
-      "en": "Gaztambide says important parts of Colombia “have always been part of the Caribbean” (p. 16) and grounds the cultural Caribbean on plantation and counter-plantation (pp. 19-20). Abello answers that in the Colombian Caribbean the plantation “never developed” (ch. 3)."
+      "es": "Gaztambide dice que partes importantes de Colombia «han sido siempre parte del Caribe» (p. 16) y funda el Caribe cultural en la plantación y la contraplantación (pp. 19-20). Abello y Bassi responden, en un capítulo escrito a cuatro manos, que en el Caribe colombiano la plantación «nunca se desarrolló» (cap. 3).",
+      "en": "Gaztambide says important parts of Colombia “have always been part of the Caribbean” (p. 16) and grounds the cultural Caribbean on plantation and counter-plantation (pp. 19-20). Abello and Bassi answer, in a co-written chapter, that in the Colombian Caribbean the plantation “never developed” (ch. 3)."
      }
     },
     "santamarta": {
      "e": "disputa",
      "n": {
-      "es": "Gaztambide dice que partes importantes de Colombia «han sido siempre parte del Caribe» (p. 16) y funda el Caribe cultural en la plantación y la contraplantación (pp. 19-20). Abello responde que en el Caribe colombiano la plantación «nunca se desarrolló» (cap. 3).",
-      "en": "Gaztambide says important parts of Colombia “have always been part of the Caribbean” (p. 16) and grounds the cultural Caribbean on plantation and counter-plantation (pp. 19-20). Abello answers that in the Colombian Caribbean the plantation “never developed” (ch. 3)."
+      "es": "Gaztambide dice que partes importantes de Colombia «han sido siempre parte del Caribe» (p. 16) y funda el Caribe cultural en la plantación y la contraplantación (pp. 19-20). Abello y Bassi responden, en un capítulo escrito a cuatro manos, que en el Caribe colombiano la plantación «nunca se desarrolló» (cap. 3).",
+      "en": "Gaztambide says important parts of Colombia “have always been part of the Caribbean” (p. 16) and grounds the cultural Caribbean on plantation and counter-plantation (pp. 19-20). Abello and Bassi answer, in a co-written chapter, that in the Colombian Caribbean the plantation “never developed” (ch. 3)."
      }
     },
     "palenque": {
      "e": "disputa",
      "n": {
-      "es": "Gaztambide dice que partes importantes de Colombia «han sido siempre parte del Caribe» (p. 16) y funda el Caribe cultural en la plantación y la contraplantación (pp. 19-20). Abello responde que en el Caribe colombiano la plantación «nunca se desarrolló» (cap. 3).",
-      "en": "Gaztambide says important parts of Colombia “have always been part of the Caribbean” (p. 16) and grounds the cultural Caribbean on plantation and counter-plantation (pp. 19-20). Abello answers that in the Colombian Caribbean the plantation “never developed” (ch. 3)."
+      "es": "Gaztambide dice que partes importantes de Colombia «han sido siempre parte del Caribe» (p. 16) y funda el Caribe cultural en la plantación y la contraplantación (pp. 19-20). Abello y Bassi responden, en un capítulo escrito a cuatro manos, que en el Caribe colombiano la plantación «nunca se desarrolló» (cap. 3).",
+      "en": "Gaztambide says important parts of Colombia “have always been part of the Caribbean” (p. 16) and grounds the cultural Caribbean on plantation and counter-plantation (pp. 19-20). Abello and Bassi answer, in a co-written chapter, that in the Colombian Caribbean the plantation “never developed” (ch. 3)."
      }
     },
     "barranquilla": {
      "e": "disputa",
      "n": {
-      "es": "Gaztambide dice que partes importantes de Colombia «han sido siempre parte del Caribe» (p. 16) y funda el Caribe cultural en la plantación y la contraplantación (pp. 19-20). Abello responde que en el Caribe colombiano la plantación «nunca se desarrolló» (cap. 3).",
-      "en": "Gaztambide says important parts of Colombia “have always been part of the Caribbean” (p. 16) and grounds the cultural Caribbean on plantation and counter-plantation (pp. 19-20). Abello answers that in the Colombian Caribbean the plantation “never developed” (ch. 3)."
+      "es": "Gaztambide dice que partes importantes de Colombia «han sido siempre parte del Caribe» (p. 16) y funda el Caribe cultural en la plantación y la contraplantación (pp. 19-20). Abello y Bassi responden, en un capítulo escrito a cuatro manos, que en el Caribe colombiano la plantación «nunca se desarrolló» (cap. 3).",
+      "en": "Gaztambide says important parts of Colombia “have always been part of the Caribbean” (p. 16) and grounds the cultural Caribbean on plantation and counter-plantation (pp. 19-20). Abello and Bassi answer, in a co-written chapter, that in the Colombian Caribbean the plantation “never developed” (ch. 3)."
      }
     },
     "guajira": {
      "e": "disputa",
      "n": {
-      "es": "Gaztambide dice que partes importantes de Colombia «han sido siempre parte del Caribe» (p. 16) y funda el Caribe cultural en la plantación y la contraplantación (pp. 19-20). Abello responde que en el Caribe colombiano la plantación «nunca se desarrolló» (cap. 3).",
-      "en": "Gaztambide says important parts of Colombia “have always been part of the Caribbean” (p. 16) and grounds the cultural Caribbean on plantation and counter-plantation (pp. 19-20). Abello answers that in the Colombian Caribbean the plantation “never developed” (ch. 3)."
+      "es": "Gaztambide dice que partes importantes de Colombia «han sido siempre parte del Caribe» (p. 16) y funda el Caribe cultural en la plantación y la contraplantación (pp. 19-20). Abello y Bassi responden, en un capítulo escrito a cuatro manos, que en el Caribe colombiano la plantación «nunca se desarrolló» (cap. 3).",
+      "en": "Gaztambide says important parts of Colombia “have always been part of the Caribbean” (p. 16) and grounds the cultural Caribbean on plantation and counter-plantation (pp. 19-20). Abello and Bassi answer, in a co-written chapter, that in the Colombian Caribbean the plantation “never developed” (ch. 3)."
      }
     },
     "nola": {
@@ -2226,6 +2249,7 @@
     }
    },
    "corpus": [
+    "gaztambideinvencion",
     "mintzarea",
     "beckfordpersistent",
     "benitez",
@@ -2269,7 +2293,11 @@
     {
      "txt": "este sistema se dio de manera tardía en el Caribe español y, en algunas regiones, como el Caribe colombiano, nunca se desarrolló.",
      "ref": "ABE",
-     "pag": "cap. 3"
+     "pag": "cap. 3",
+     "nota": {
+      "es": "capítulo escrito con Ernesto Bassi",
+      "en": "chapter co-written with Ernesto Bassi"
+     }
     }
    ],
    "lugares": {
@@ -2436,6 +2464,231 @@
     "zonabananera",
     "sangbenvolviendo"
    ]
+  },
+  {
+   "id": "bassi",
+   "anio": 2016,
+   "autor": "Ernesto Bassi",
+   "obra": "Un territorio acuoso: geografías marineras y el Gran Caribe transimperial de la Nueva Granada",
+   "apellido": {
+    "es": "Gran Caribe transimperial",
+    "en": "Transimperial Greater Caribbean"
+   },
+   "forma": "rutas",
+   "lectura": "ejemplar",
+   "familia": {
+    "clave": "grancaribe",
+    "fuente": "Bassi 2021, p. 5 (declarada por el autor)"
+   },
+   "criterio": {
+    "es": "La región la hacen los marineros al cruzar fronteras imperiales, no la plantación ni la naturaleza. El mar deja de ser un vacío entre puertos y se vuelve territorio. Sus bordes son vagos y cambian según la costa desde la que se mire: aquí, la de la Nueva Granada.",
+    "en": "Sailors make the region by crossing imperial borders; neither the plantation nor nature does. The sea stops being a void between ports and becomes territory. Its edges are vague and shift with the coast one looks from: here, New Granada's."
+   },
+   "citas": [
+    {
+     "txt": "develarlo hace visibles las interacciones humanas ocluidas por las definiciones convencionales del Caribe que tienden a crear una barrera artificial entre las costas continentales y las islas caribeñas",
+     "ref": "BAS",
+     "pag": "15"
+    },
+    {
+     "txt": "intentar delimitar y fijar la forma del Gran Caribe transimperial se convierte en una tarea fútil",
+     "ref": "BAS",
+     "pag": "114"
+    },
+    {
+     "txt": "puertos como Kingston, Les Cayes, Saint Thomas, Curaçao, Cartagena, La Habana e incluso Filadelfia fueron parte de un espacio geográfico más amplio e interconectado",
+     "ref": "BAS",
+     "pag": "114"
+    }
+   ],
+   "lugares": {
+    "cartagena": {
+     "e": "dentro",
+     "n": {
+      "es": "Puerto mayor de la Nueva Granada y uno de los nodos que nombra (p. 114; mapa 1.1, p. 39).",
+      "en": "New Granada's main port and one of the nodes he names (p. 114; map 1.1, p. 39)."
+     }
+    },
+    "santamarta": {
+     "e": "dentro",
+     "n": {
+      "es": "Entre los puertos neogranadinos que aparecen en primer plano desde esta costa (p. 5).",
+      "en": "Among the New Granada ports that come to the fore from this coast (p. 5)."
+     }
+    },
+    "guajira": {
+     "e": "dentro",
+     "n": {
+      "es": "Riohacha, en primer plano desde esta costa (p. 5); los wayúu, «indios marítimos» (p. 129).",
+      "en": "Riohacha, in the foreground from this coast (p. 5); the Wayuu, “maritime Indians” (p. 129)."
+     }
+    },
+    "panama": {
+     "e": "dentro",
+     "n": {
+      "es": "Portobelo (p. 5) y los cunas, «indios marítimos» (p. 129).",
+      "en": "Portobelo (p. 5) and the Kuna, “maritime Indians” (p. 129)."
+     }
+    },
+    "barranquilla": {
+     "e": "dentro",
+     "n": {
+      "es": "Por Sabanilla, puerto menor en el mapa 1.1 (p. 39). En el siglo XX, el departamento del Atlántico, con Barranquilla por capital, cierra «(casi) cien años de descaribeñización» (p. 301).",
+      "en": "Through Sabanilla, a minor port on map 1.1 (p. 39). In the twentieth century, the Atlántico department, with Barranquilla as its capital, closes “(almost) a hundred years of de-Caribbeanisation” (p. 301)."
+     }
+    },
+    "sanandres": {
+     "e": "dentro",
+     "n": {
+      "es": "En las redes comerciales del mapa 1.1 (p. 39) y en el mapa 4.1 (p. 172).",
+      "en": "In the trade networks of map 1.1 (p. 39) and on map 4.1 (p. 172)."
+     }
+    },
+    "bluefields": {
+     "e": "dentro",
+     "n": {
+      "es": "Los miskitos de la costa de Mosquitos, «indios marítimos» (p. 129); Bluefields figura en el mapa 4.1 (p. 172).",
+      "en": "The Miskitu of the Mosquito Coast, “maritime Indians” (p. 129); Bluefields appears on map 4.1 (p. 172)."
+     }
+    },
+    "jamaica": {
+     "e": "dentro",
+     "n": {
+      "es": "Kingston, que el sistema británico de puertos libres convirtió en «el centro comercial del Caribe» (p. 253).",
+      "en": "Kingston, which the British free-port system turned into “the commercial centre of the Caribbean” (p. 253)."
+     }
+    },
+    "curazao": {
+     "e": "dentro",
+     "n": {
+      "es": "Uno de los nodos que nombra (p. 114).",
+      "en": "One of the nodes he names (p. 114)."
+     }
+    },
+    "haiti": {
+     "e": "dentro",
+     "n": {
+      "es": "Les Cayes (p. 114). Antes de la revolución, Saint-Domingue rivalizaba con Jamaica como centro comercial (mapa 2.3, p. 89).",
+      "en": "Les Cayes (p. 114). Before the revolution, Saint-Domingue rivalled Jamaica as a commercial centre (map 2.3, p. 89)."
+     }
+    },
+    "cuba": {
+     "e": "dentro",
+     "n": {
+      "es": "La Habana (p. 114). Desde Cuba, la esclavitud es lo más visible de esta región; desde la Nueva Granada, no (p. 6).",
+      "en": "Havana (p. 114). From Cuba, slavery is the most visible feature of this region; from New Granada it is not (p. 6)."
+     }
+    },
+    "dominicana": {
+     "e": "dentro",
+     "n": {
+      "es": "Santo Domingo, en la ruta del capitán Juan Guardiola (mapa 2.1, p. 88).",
+      "en": "Santo Domingo, on Captain Juan Guardiola's route (map 2.1, p. 88)."
+     }
+    },
+    "puertorico": {
+     "e": "dentro",
+     "n": {
+      "es": "En la ruta del capitán Pedro Corrales (mapa 2.2, p. 89).",
+      "en": "On Captain Pedro Corrales's route (map 2.2, p. 89)."
+     }
+    },
+    "martinica": {
+     "e": "margen",
+     "n": {
+      "es": "Solo como conexión con el Caribe francés en el mapa de los indios marítimos (mapa 3.1, p. 131).",
+      "en": "Only as a link to the French Caribbean on the map of the maritime Indians (map 3.1, p. 131)."
+     }
+    },
+    "guadalupe": {
+     "e": "margen",
+     "n": {
+      "es": "Solo como conexión con el Caribe francés en el mapa de los indios marítimos (mapa 3.1, p. 131).",
+      "en": "Only as a link to the French Caribbean on the map of the maritime Indians (map 3.1, p. 131)."
+     }
+    },
+    "belize": {
+     "e": "margen",
+     "n": {
+      "es": "Asentamiento británico en el mapa 4.1 (p. 172).",
+      "en": "A British settlement on map 4.1 (p. 172)."
+     }
+    },
+    "nola": {
+     "e": "margen",
+     "n": {
+      "es": "Desde Nueva Orleans el mismo espacio pone en primer plano La Habana y Cap Français (p. 5): es otra vista de la región, no la del libro.",
+      "en": "From New Orleans the same space brings Havana and Cap Français to the fore (p. 5): another view of the region, not the book's."
+     }
+    },
+    "veracruz": {
+     "e": "margen",
+     "n": {
+      "es": "Desde Nueva España, Veracruz es un punto nodal del Gran Caribe (p. 6); desde la Nueva Granada, no.",
+      "en": "From New Spain, Veracruz is a nodal point of the Greater Caribbean (p. 6); from New Granada, it is not."
+     }
+    },
+    "trinidad": {
+     "n": {
+      "es": "La «Trinidad» del mapa 2.1 es Trinidad de Cuba, no la isla (p. 88).",
+      "en": "The “Trinidad” on map 2.1 is Trinidad de Cuba, not the island (p. 88)."
+     }
+    }
+   },
+   "extras": {
+    "stthomas": {
+     "e": "dentro",
+     "n": {
+      "es": "Uno de los nodos que nombra, en el Caribe «danés» (pp. 5 y 114).",
+      "en": "One of the nodes he names, in the “Danish” Caribbean (pp. 5 and 114)."
+     }
+    },
+    "filadelfia": {
+     "e": "dentro",
+     "n": {
+      "es": "«e incluso Filadelfia» (p. 114): las ciudades costeras de Estados Unidos están entre las conexiones de la costa neogranadina (p. 4).",
+      "en": "“and even Philadelphia” (p. 114): US coastal cities are among the New Granada coast's connections (p. 4)."
+     }
+    },
+    "florida": {
+     "e": "margen",
+     "n": {
+      "es": "Otro punto de vista posible sobre el Gran Caribe (p. 5).",
+      "en": "Another possible vantage point on the Greater Caribbean (p. 5)."
+     }
+    }
+   },
+   "trazos": [
+    [
+     "cartagena",
+     "jamaica"
+    ],
+    [
+     "cartagena",
+     "curazao"
+    ],
+    [
+     "cartagena",
+     "haiti"
+    ],
+    [
+     "cartagena",
+     "stthomas"
+    ],
+    [
+     "cartagena",
+     "filadelfia"
+    ]
+   ],
+   "corpus": [
+    "bassiacuoso",
+    "abello",
+    "perezmorales"
+   ],
+   "corpus_nota": {
+    "es": "Bassi cita «Un Caribe por fuera de la ruta de la plantación», que escribió con Abello y es el capítulo 3 de La isla encallada (p. 16, n. 47).",
+    "en": "Bassi cites “Un Caribe por fuera de la ruta de la plantación”, which he co-wrote with Abello and is chapter 3 of La isla encallada (p. 16, n. 47)."
+   }
   },
   {
    "id": "atlas",
@@ -2640,8 +2893,8 @@
    "a": "abello",
    "b": "gaz-cultural",
    "tipo": "disonancia",
-   "es": "El Caribe cultural descansa en la plantación y la contraplantación; Abello muestra que en el Caribe colombiano la plantación azucarera nunca se desarrolló (cap. 3).",
-   "en": "The cultural Caribbean rests on plantation and counter-plantation; Abello shows the sugar plantation never developed in the Colombian Caribbean (ch. 3).",
+   "es": "El Caribe cultural descansa en la plantación y la contraplantación; Abello y Bassi, en un capítulo escrito a cuatro manos, muestran que en el Caribe colombiano la plantación azucarera nunca se desarrolló (cap. 3).",
+   "en": "The cultural Caribbean rests on plantation and counter-plantation; Abello and Bassi, in a co-written chapter, show the sugar plantation never developed in the Colombian Caribbean (ch. 3).",
    "ref": "ABE · cap. 3"
   },
   {
@@ -2659,6 +2912,30 @@
    "es": "Según Girvan, Best incluía partes de Estados Unidos y Brasil; Gaztambide se aparta: eso «sería la totalidad de Afro-América» (p. 20, n. 72).",
    "en": "According to Girvan, Best included parts of the US and Brazil; Gaztambide departs: that “would be the whole of Afro-America” (p. 20, n. 72).",
    "ref": "GAZ · p. 20, n. 72"
+  },
+  {
+   "a": "bassi",
+   "b": "mintz",
+   "tipo": "disonancia",
+   "es": "Bassi retoma la «economía de tierras bajas, subtropical e insular» con que Mintz caracteriza el área y objeta que esa definición deja sin lugar a las costas continentales (p. 16).",
+   "en": "Bassi takes up the “lowland, subtropical, insular economy” by which Mintz characterises the area and objects that this definition leaves no room for the mainland coasts (p. 16).",
+   "ref": "BAS · p. 16"
+  },
+  {
+   "a": "bassi",
+   "b": "benitez",
+   "tipo": "disonancia",
+   "es": "Bassi pone a Benítez Rojo entre quienes definen el Caribe por la plantación y dejan fuera las costas continentales (p. 16). Pero las corrientes del meta-archipiélago bañan «the north coasts of South and Central America» (Benítez, p. 24): la objeción alcanza a Mintz más que a Benítez.",
+   "en": "Bassi places Benítez Rojo among those who define the Caribbean by the plantation and leave out the mainland coasts (p. 16). Yet the meta-archipelago's currents bathe “the north coasts of South and Central America” (Benítez, p. 24): the objection hits Mintz more than Benítez.",
+   "ref": "BAS · p. 16 / BEN · p. 24"
+  },
+  {
+   "a": "abello",
+   "b": "bassi",
+   "tipo": "apropiacion",
+   "es": "Abello toma de la tesis doctoral de Bassi (2012), origen de este libro, la pregunta por el papel de la Nueva Granada en el Gran Caribe, que según él «abre un nuevo momento en los estudios colombianos sobre el Caribe» (cap. 1). Los dos firman juntos el capítulo 3 de La isla encallada.",
+   "en": "Abello takes from Bassi's 2012 dissertation, the origin of this book, the question of New Granada's role in the Greater Caribbean, which in his words “opens a new moment in Colombian studies of the Caribbean” (ch. 1). The two co-wrote chapter 3 of La isla encallada.",
+   "ref": "ABE · cap. 1"
   }
  ]
 }
