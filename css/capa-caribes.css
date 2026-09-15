@@ -1,0 +1,223 @@
+/* ==========================================================================
+   ¿Qué Caribe? · capa de definiciones (prefijo qc-)
+   Paleta del atlas, sin tonos nuevos: oro para lo que una definición incluye
+   (la familia de la resonancia), rojo para lo que se disputa (la de la
+   disonancia), el azul de la marea para la segunda lectura de un contraste y
+   la tinta para lo que queda fuera.
+   ========================================================================== */
+
+/* ---------------- botón del encabezado ---------------- */
+#caribesBtn{position:relative}
+#caribesBtn.activo::after{content:""; position:absolute; top:4px; right:5px; width:6px; height:6px; border-radius:50%; background:var(--gold)}
+
+/* ---------------- sobre el mapa ---------------- */
+.qc-luz{fill:var(--qc-dentro)}
+.qc-luz-margen{fill:var(--qc-margen); opacity:var(--qc-luz-margen) !important}
+.qc-luz-roja{fill:var(--qc-disputa)}
+.qc-c-a{fill:var(--qc-ca)}
+.qc-c-b{fill:var(--qc-cb)}
+.qc-c-ab{fill:var(--qc-cab)}
+.qc-anillo{fill:none; stroke-width:1.1; vector-effect:non-scaling-stroke}
+.qc-margen{stroke:var(--qc-margen); stroke-opacity:.9; stroke-dasharray:1.5 3.5}
+.qc-disputa{stroke:var(--qc-disputa); stroke-opacity:.95; stroke-width:1.4; stroke-dasharray:5 3}
+.qc-fragmento{stroke:var(--qc-dentro); stroke-opacity:.95; stroke-width:1.3}
+.qc-canon{stroke:var(--gray); stroke-opacity:.55; stroke-dasharray:2 4}
+.qc-tacha{stroke:var(--qc-fuera); stroke-opacity:.8; stroke-width:1.2; stroke-linecap:round; vector-effect:non-scaling-stroke}
+.qc-trazo{fill:none; stroke:var(--qc-dentro); stroke-opacity:.85; stroke-width:1.4; vector-effect:non-scaling-stroke}
+.qc-fuga{fill:none; stroke:var(--qc-dentro); stroke-opacity:.3; stroke-width:1; stroke-dasharray:1 5; vector-effect:non-scaling-stroke}
+.qc-encallada{fill:none; stroke:var(--qc-encallada); stroke-opacity:.8; stroke-width:1.2; stroke-dasharray:6 3; vector-effect:non-scaling-stroke}
+.qc-extra{stroke-width:1; vector-effect:non-scaling-stroke}
+.qc-extra.qc-t-dentro{fill:var(--qc-dentro); stroke:var(--qc-dentro)}
+.qc-extra.qc-t-margen{fill:none; stroke:var(--qc-margen); stroke-dasharray:1.5 2}
+.qc-extra.qc-t-disputa{fill:none; stroke:var(--qc-disputa)}
+.qc-extra.qc-t-fuera{fill:none; stroke:var(--qc-fuera); stroke-opacity:.8}
+
+.qc-rotulo{font-family:var(--ff-mono); font-size:9.5px; letter-spacing:.5px; pointer-events:none;
+  paint-order:stroke; stroke:var(--bg-deep); stroke-width:3px; stroke-linejoin:round}
+.qc-rotulo-extra{font-style:italic}
+.qc-rotulo-extra.qc-t-dentro{fill:var(--qc-dentro)}
+.qc-rotulo-extra.qc-t-margen{fill:var(--qc-margen)}
+.qc-rotulo-extra.qc-t-disputa{fill:var(--qc-disputa)}
+.qc-rotulo-extra.qc-t-fuera{fill:var(--qc-fuera)}
+.qc-rotulo-trazo{fill:var(--qc-dentro); font-family:var(--ff-display); font-weight:600}
+.qc-rotulo-encallada{fill:var(--qc-encallada); text-transform:uppercase; letter-spacing:1.4px}
+
+/* los rótulos de lugar hablan en el idioma de la definición */
+#stage.qc-activa .placelbl{transition:opacity .25s, fill .25s}
+#stage.qc-activa .placelbl.qc-l-dentro{opacity:1; fill:var(--cream)}
+#stage.qc-activa .placelbl.ciudad.qc-l-dentro{fill:var(--orange)}
+#stage.qc-activa .placelbl.qc-l-margen{opacity:1; fill:var(--qc-margen)}
+#stage.qc-activa .placelbl.qc-l-disputa{opacity:1; fill:var(--qc-disputa)}
+#stage.qc-activa .placelbl.qc-l-fuera{opacity:.38}
+#stage.qc-activa .placelbl.qc-l-nada{opacity:.26}
+
+/* con la capa puesta, la trama baja un escalón para que se lea la bruma */
+#stage.reposo.qc-activa .trama{opacity:.45}
+/* salvo donde la trama es el argumento: Brathwaite y el propio atlas */
+#stage.reposo.qc-submarina .trama, #stage.reposo.qc-trama .trama{opacity:1}
+#stage.qc-submarina .hilo, #stage.qc-trama .hilo{stroke-opacity:.34}
+
+
+/* ---------------- paleta de estado: «Mar y coral» ----------------
+   Elegida por Rob el 15-sep-2026 frente a la primera, toda en oro, donde «dentro» y
+   «al margen» solo se distinguían por la intensidad. Cada estado tiene matiz propio
+   y además forma propia (bruma, punteado, discontinuo, aspa), para que la lectura
+   no dependa solo del color. El aguamarina se aleja de los diez colores de las
+   corrientes: la capa no se confunde con ellas. */
+body{
+  --qc-dentro:#4cc3c9;   /* aguamarina */
+  --qc-margen:#e9d8a6;   /* arena */
+  --qc-disputa:#ff5a7a;  /* coral */
+  --qc-fuera:#9b9588;    /* gris piedra */
+  --qc-encallada:#f07a16;
+  --qc-ca:#f5a524;       /* contraste: solo en la primera */
+  --qc-cb:#5b8def;       /* contraste: solo en la segunda */
+  --qc-cab:#f2ead8;      /* contraste: en las dos */
+  --qc-luz-margen:.26;
+}
+
+/* ---------------- barra compacta ---------------- */
+#qcBarra{position:absolute; left:calc(212px + 16px); bottom:14px; z-index:15;
+  display:flex; align-items:center; gap:4px; max-width:min(680px, calc(100% - 212px - 420px));
+  background:rgba(10,11,8,.9); backdrop-filter:blur(3px); border:1px solid var(--line); border-left:3px solid var(--gold);
+  border-radius:3px; padding:4px 4px 4px 12px; font-family:var(--ff-mono); font-size:10px; color:var(--gray); box-shadow:0 10px 26px rgba(0,0,0,.45)}
+#qcBarra[hidden]{display:none}
+#qcBarra .qc-b-t{font-size:8.5px; text-transform:uppercase; letter-spacing:1.6px; color:var(--gold); white-space:nowrap; margin-right:6px}
+#qcBarra .qc-b-def{white-space:nowrap; overflow:hidden; text-overflow:ellipsis; min-width:0; padding:0 4px; letter-spacing:.3px}
+#qcBarra .qc-b-def b{font-family:var(--ff-display); font-size:15px; font-weight:600; color:var(--cream); letter-spacing:0; margin-right:4px}
+#qcBarra .qc-b-def b{color:var(--qc-ca)} #qcBarra .qc-b-def b.qc-b-b{color:var(--qc-cb)}
+#qcBarra:not(:has(.qc-b-vs)) .qc-b-def b{color:var(--cream)}
+#qcBarra .qc-b-vs{color:var(--gray); margin:0 4px}
+#qcBarra button{min-width:36px; min-height:36px; background:transparent; border:0; color:var(--gray); cursor:pointer; font-family:var(--ff-mono); border-radius:2px}
+#qcBarra button:hover, #qcBarra button:focus-visible{color:var(--cream); background:rgba(255,255,255,.05)}
+#qcBarra .qc-b-paso{font-size:18px; line-height:1}
+#qcBarra .qc-b-acc{font-size:9px; text-transform:uppercase; letter-spacing:1.2px; color:var(--gold); padding:0 10px; border:1px solid var(--gold-d); margin-left:4px}
+#qcBarra .qc-b-x{font-size:17px}
+main:has(#panelCaribes:not([hidden])) #qcBarra{display:none}
+/* en presentación no hay paneles: la barra es el único mando de la capa y va sobre la ayuda de atajos */
+body.presenting #qcBarra, body.presenting main:has(#panelCaribes:not([hidden])) #qcBarra{display:flex; left:16px; bottom:60px; max-width:calc(100% - 120px)}
+body.presenting #qcBarra[hidden]{display:none}
+body.presenting #qcBarra .qc-b-acc{display:none}
+body.presenting main:has(#panelCaribes:not([hidden])){--zc-x:0px}
+
+/* ---------------- panel ---------------- */
+.panelLateral.qc-panel{width:352px; padding:20px 22px 22px}
+.qc-panel h2{font-family:var(--ff-display); font-size:22px; font-weight:600; margin:0 0 10px; padding-right:24px; line-height:1.15}
+.qc-panel h3{font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1.4px; color:var(--gray); margin:18px 0 8px; padding-top:12px; border-top:1px solid var(--line); font-weight:400}
+.qc-intro{font-size:13px; line-height:1.55; color:var(--cream); margin:0 0 10px}
+.qc-epi{font-family:var(--ff-display); font-style:italic; font-size:15px; color:var(--gold); margin:0 0 14px; line-height:1.35}
+.qc-epi span{display:block; font-family:var(--ff-mono); font-style:normal; font-size:8.5px; letter-spacing:1px; text-transform:uppercase; color:var(--gray); margin-top:4px}
+
+.qc-lista{list-style:none; margin:0; padding:0; border-top:1px solid var(--line)}
+.qc-lista li{border-bottom:1px solid var(--line)}
+.qc-item{display:flex; gap:12px; align-items:baseline; width:100%; min-height:44px; text-align:left; padding:9px 4px; background:transparent; border:0; color:var(--cream); cursor:pointer}
+.qc-item:hover, .qc-item:focus-visible{background:rgba(201,162,77,.07)}
+.qc-item.on{background:rgba(201,162,77,.14); box-shadow:inset 3px 0 0 var(--gold)}
+.qc-anio{flex:0 0 38px; font-family:var(--ff-mono); font-size:10px; color:var(--gold); letter-spacing:.5px}
+.qc-txt{display:flex; flex-direction:column; gap:2px; min-width:0}
+.qc-ap{font-family:var(--ff-display); font-size:16.5px; font-weight:600; line-height:1.2}
+.qc-autor{font-size:11px; color:var(--gray); line-height:1.35}
+.qc-autor i{color:var(--red-txt); font-style:normal; font-family:var(--ff-mono); font-size:8.5px; letter-spacing:.5px; text-transform:uppercase}
+.qc-gaz{display:flex; gap:12px; align-items:baseline; padding:9px 4px}
+.qc-gaz-cuerpo{display:flex; flex-direction:column; gap:7px; min-width:0}
+.qc-gaz-bts{display:flex; flex-wrap:wrap; gap:5px}
+.qc-gaz-bts button{font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:.8px; padding:7px 10px; min-height:32px; border:1px solid var(--gold-d); background:transparent; color:var(--gold); border-radius:16px; cursor:pointer}
+.qc-gaz-bts button:hover, .qc-gaz-bts button:focus-visible{background:rgba(201,162,77,.12)}
+.qc-gaz-bts button[aria-pressed="true"]{background:var(--gold); color:#211a06}
+
+.qc-nav{display:flex; align-items:center; justify-content:space-between; gap:8px; margin:-6px 30px 12px 0}
+.qc-nav button{background:transparent; border:0; color:var(--gray); cursor:pointer; font-family:var(--ff-mono); font-size:9.5px; letter-spacing:.6px; min-height:36px; padding:0 4px}
+.qc-nav button:hover, .qc-nav button:focus-visible{color:var(--cream)}
+.qc-pasos{display:flex; align-items:center; gap:2px}
+.qc-pasos button{font-size:18px; min-width:34px}
+.qc-pos{font-family:var(--ff-mono); font-size:9px; color:var(--gray); letter-spacing:.5px}
+.qc-kind{font-family:var(--ff-mono); font-size:9.5px; text-transform:uppercase; letter-spacing:1.5px; color:var(--gold)}
+.qc-h{font-size:26px !important; margin:6px 0 4px !important}
+.qc-meta{font-size:12.5px; color:var(--gray); line-height:1.45; margin-bottom:10px}
+.qc-fam{display:inline-block; font-family:var(--ff-mono); font-size:9px; letter-spacing:.6px; color:var(--gray); border:1px solid var(--line); border-radius:2px; padding:5px 8px; margin-bottom:12px}
+.qc-fam b{color:var(--gold); font-weight:400; text-transform:uppercase; letter-spacing:1px}
+.qc-fam span{opacity:.75}
+.qc-fam-no{color:var(--hilo); border-color:rgba(93,143,155,.45)}
+.qc-criterio{font-size:14px; line-height:1.55; color:var(--cream); margin:0 0 10px}
+.qc-aviso{font-family:var(--ff-mono); font-size:9.5px; line-height:1.55; letter-spacing:.3px; color:var(--red-txt); border-left:2px solid var(--red); padding:5px 9px; background:rgba(216,58,46,.06); margin:0 0 6px}
+.qc-cita{margin:0 0 8px; padding:8px 11px; border-left:2px solid var(--gold); background:rgba(201,162,77,.06); border-radius:2px}
+.qc-cita p{margin:0; font-family:var(--ff-display); font-size:15px; line-height:1.4; color:var(--cream)}
+.qc-cita footer{margin-top:5px; font-family:var(--ff-mono); font-size:9px; letter-spacing:.4px; color:var(--gray)}
+
+.qc-contra{display:flex; flex-direction:column; gap:6px; margin:16px 0 0; padding-top:12px; border-top:1px solid var(--line)}
+.qc-contra label{font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1.4px; color:var(--gray)}
+.qc-contra select{appearance:none; -webkit-appearance:none; font-family:var(--ff-mono); font-size:11px; color:var(--cream); background:var(--bg-deep) linear-gradient(45deg,transparent 50%,var(--gray) 50%) no-repeat right 14px center/5px 5px; border:1px solid var(--line); border-radius:2px; padding:10px 30px 10px 10px; min-height:40px; cursor:pointer}
+.qc-contra select:focus-visible{outline:2px solid var(--gold); outline-offset:1px}
+
+.qc-forma{font-size:12px; line-height:1.5; color:var(--gray); font-style:italic; margin:0 0 8px}
+.qc-grupo{border-bottom:1px dotted var(--line)}
+.qc-grupo summary{display:flex; align-items:center; gap:8px; min-height:36px; cursor:pointer; list-style:none; font-family:var(--ff-mono); font-size:10px; letter-spacing:.4px; color:var(--cream)}
+.qc-grupo summary::-webkit-details-marker{display:none}
+.qc-grupo summary::after{content:"+"; margin-left:auto; color:var(--gray); font-size:13px; padding-left:6px}
+.qc-grupo[open] summary::after{content:"–"}
+.qc-en{text-transform:uppercase; letter-spacing:1px; font-size:9px; white-space:nowrap}
+.qc-n{color:var(--gold); font-size:10px}
+.qc-desc{color:var(--gray); font-size:9.5px; font-style:italic; letter-spacing:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; min-width:0}
+.qc-grupo ul{list-style:none; margin:0 0 8px; padding:0 0 0 18px}
+.qc-grupo li{font-size:12.5px; line-height:1.4; color:var(--cream); padding:3px 0}
+.qc-nota{display:block; font-size:11px; line-height:1.45; color:var(--gray); font-style:italic; margin-top:2px}
+.qc-estado-mini{font-family:var(--ff-mono); font-size:8.5px; letter-spacing:.6px; text-transform:uppercase; margin-left:4px}
+.qc-estado-mini.qc-t-dentro{color:var(--qc-dentro)} .qc-estado-mini.qc-t-margen{color:var(--qc-margen)}
+.qc-estado-mini.qc-t-disputa{color:var(--qc-disputa)} .qc-estado-mini.qc-t-fuera{color:var(--qc-fuera)}
+
+.qc-sw{flex:0 0 auto; display:inline-block; width:11px; height:11px; border-radius:50%}
+.qc-sw-dentro{background:var(--qc-dentro); box-shadow:0 0 8px color-mix(in srgb, var(--qc-dentro) 80%, transparent)}
+.qc-sw-margen{border:1.5px dotted var(--qc-margen)}
+.qc-sw-disputa{border:1.5px dashed var(--qc-disputa); background:color-mix(in srgb, var(--qc-disputa) 22%, transparent)}
+.qc-sw-fuera{background:linear-gradient(45deg,transparent 45%,var(--qc-fuera) 45%,var(--qc-fuera) 55%,transparent 55%),linear-gradient(-45deg,transparent 45%,var(--qc-fuera) 45%,var(--qc-fuera) 55%,transparent 55%); border-radius:0}
+.qc-sw-nada{border:1px solid var(--ink-line)}
+.qc-sw-extra{width:8px; height:8px; border-radius:0; transform:rotate(45deg); background:var(--qc-dentro); margin:0 2px}
+.qc-sw-trazo{width:18px; height:8px; border-radius:0; border-top:1.5px solid var(--qc-dentro); border-radius:50% 50% 0 0; margin-right:6px; vertical-align:middle}
+.qc-sw-canon{border:1px dashed var(--gray); margin-right:6px; vertical-align:middle}
+.qc-sw-c-a{background:var(--qc-ca); box-shadow:0 0 8px color-mix(in srgb, var(--qc-ca) 70%, transparent)}
+.qc-sw-c-b{background:var(--qc-cb); box-shadow:0 0 8px color-mix(in srgb, var(--qc-cb) 70%, transparent)}
+.qc-sw-c-ab{background:var(--qc-cab); box-shadow:0 0 8px color-mix(in srgb, var(--qc-cab) 60%, transparent)}
+.qc-sw-c-ninguna{border:1px solid var(--ink-line)}
+
+.qc-disputas, .qc-obras{list-style:none; margin:0; padding:0}
+.qc-disputas li{padding:7px 0; border-bottom:1px dotted var(--line)}
+.qc-disputas button{display:block; text-align:left; background:transparent; border:0; padding:0; color:var(--cream); cursor:pointer; font-size:13px; line-height:1.35; min-height:28px}
+.qc-disputas button:hover, .qc-disputas button:focus-visible{color:var(--gold)}
+.qc-dtipo{font-family:var(--ff-mono); font-size:8.5px; text-transform:uppercase; letter-spacing:.8px; padding:2px 6px; border-radius:2px; margin-right:4px; vertical-align:1px}
+.qc-d-apropiacion .qc-dtipo{color:var(--gold); border:1px solid var(--gold-d)}
+.qc-d-disonancia .qc-dtipo{color:var(--red-txt); border:1px solid rgba(216,58,46,.55)}
+.qc-dtxt{display:block; font-size:11.5px; line-height:1.45; color:var(--gray); font-style:italic; margin-top:3px}
+.qc-obras button{display:flex; flex-direction:column; gap:1px; width:100%; text-align:left; background:transparent; border:0; border-bottom:1px dotted var(--line); padding:7px 0; cursor:pointer; min-height:40px}
+.qc-obras button:hover .qc-ot, .qc-obras button:focus-visible .qc-ot{color:var(--orange)}
+.qc-ot{font-size:13px; color:var(--cream); line-height:1.3}
+.qc-oa{font-size:11px; color:var(--gray); font-style:italic}
+
+.qc-fuentes{margin-top:16px; padding-top:10px; border-top:1px solid var(--line)}
+.qc-fuentes summary{cursor:pointer; font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1.4px; color:var(--gray); min-height:32px; display:flex; align-items:center}
+.qc-fuentes ul{margin:4px 0 0; padding:0 0 0 14px}
+.qc-fuentes li{font-size:11px; line-height:1.45; color:var(--gray); margin-bottom:5px}
+.qc-pie{display:flex; gap:8px; flex-wrap:wrap; margin-top:14px}
+.qc-pie button{font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1px; padding:8px 11px; min-height:36px; border:1px solid var(--line); background:transparent; color:var(--gray); cursor:pointer; border-radius:2px}
+.qc-pie button:hover, .qc-pie button:focus-visible{color:var(--cream); border-color:var(--gold)}
+
+/* ---------------- teléfono y horizontal bajo ---------------- */
+@media (max-width:780px), (max-height:520px){
+  .panelLateral.qc-panel{width:auto}
+  #qcBarra{left:8px; right:8px; transform:none; max-width:none; bottom:8px}
+  #qcBarra .qc-b-t{display:none}
+  main:has(#qcBarra:not([hidden])) #legendBar{display:none}
+}
+@media (max-height:520px){
+  #qcBarra{bottom:4px; padding:2px 2px 2px 8px}
+  #qcBarra button{min-height:32px; min-width:32px}
+  #qcBarra .qc-b-def b{font-size:13px}
+}
+@media (prefers-reduced-motion: reduce){
+  #stage.qc-activa .placelbl{transition:none}
+}
+
+/* la columna de zoom se aparta del panel, igual que ante la ficha de una obra */
+main:has(#panelCaribes:not([hidden])){--zc-x:-372px}
+@media (max-width:780px), (max-height:520px){
+  main:has(#panelCaribes:not([hidden])){--zc-x:0px}
+}
