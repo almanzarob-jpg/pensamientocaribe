@@ -377,8 +377,14 @@
     outline:2px solid var(--gold); outline-offset:2px;
   }
   .node:focus-visible .dot{stroke:var(--cream); stroke-width:2.4}
-  #guion{position:absolute; left:50%; top:16px; transform:translateX(-50%) translateY(-14px); width:min(580px,74vw); background:rgba(17,19,13,.95); border:1px solid var(--line); border-left-width:3px; border-radius:3px; padding:13px 22px; opacity:0; pointer-events:none; transition:opacity .3s, transform .3s;}
+  #guion{position:absolute; left:50%; top:16px; transform:translateX(-50%) translateY(-14px); width:min(580px,74vw); background:rgba(17,19,13,.95); border:1px solid var(--line); border-left-width:3px; border-radius:3px; padding:13px 40px 13px 22px; opacity:0; pointer-events:none; transition:opacity .3s, transform .3s;}
+  /* Corrección 15-sep-2026: el banner no tenía botón de cierre — con foco de
+     fenómeno activo y sin ficha ni panel abiertos no había forma de apagarlo
+     salvo recordar hacer clic en el mapa vacío. pointer-events se restablece
+     solo en el botón: el resto del banner sigue sin bloquear el mapa. */
+  #guion .panelCerrar{top:2px; right:4px; width:32px; height:32px; font-size:15px; pointer-events:none}
   #guion.show{opacity:1; transform:translateX(-50%) translateY(0)}
+  #guion.show .panelCerrar{pointer-events:auto}
   #guion .gf{font-family:var(--ff-mono); font-size:10px; text-transform:uppercase; letter-spacing:1.6px; margin-bottom:5px}
   #guion .gt{font-family:var(--ff-display); font-size:17px; line-height:1.4; color:var(--cream)}
   /* Fase 4B: el crédito y el texto de ayuda son informativos y cubrían franjas del

@@ -126,7 +126,7 @@
   <section id="tabla" aria-label="Catálogo del atlas en tabla accesible"><div id="tablaBody"></div></section>
   <div id="tip"></div>
   <div id="hint" hidden></div>
-  <div id="guion"><div class="gf"></div><div class="gt"></div></div>
+  <div id="guion"><button type="button" id="guionCerrar" class="panelCerrar" data-i18n-title="legendCerrar" aria-label="Quitar el foco de este fenómeno">×</button><div class="gf"></div><div class="gt"></div></div>
   <div id="legendBar"><span id="legendBarTxt"></span><button type="button" id="legendBtn" aria-expanded="false" aria-controls="legend" data-i18n="legendAbrir">Ver leyenda completa</button></div>
   <div id="legend" hidden>
     <button type="button" id="legendCerrar" class="panelCerrar" data-i18n-title="legendCerrar" aria-label="Cerrar leyenda">×</button>
@@ -1265,7 +1265,17 @@ function ocultarFicha(){
   if(p._retornoFoco && document.contains(p._retornoFoco)) p._retornoFoco.focus({preventScroll:true});
   p._retornoFoco=null;
 }
-function focusFen(f){ state.active=null; ocultarFicha(); state.focusFen=(state.focusFen===f)?null:f; syncEdges(); showGuion(state.focusFen); buildLegend(); refreshHi(); updateTip(); if(state.view==="tabla") renderTable(); }
+/* Corrección 15-sep-2026: el foco de fenómeno tenía una sola puerta de entrada
+   (focusFen) que además cerraba la ficha abierta, la sacara la leyenda lateral
+   o una etiqueta dentro de la propia ficha. Desde una etiqueta interna eso
+   apagaba las fuentes que el lector tenía delante para mostrarle un banner sin
+   botón de cierre: quedaba encendido y no había ficha a la que volver. Se separa
+   la actualización del foco (setFocusFen, sin efectos sobre la ficha) de las dos
+   puertas de entrada: focusFen (leyenda lateral, si cierra la ficha) y
+   focusFenDesdeFicha (etiqueta dentro de la ficha, que ahora la deja abierta). */
+function setFocusFen(f){ state.focusFen=(state.focusFen===f)?null:f; syncEdges(); showGuion(state.focusFen); buildLegend(); refreshHi(); updateTip(); if(state.view==="tabla") renderTable(); }
+function focusFen(f){ state.active=null; ocultarFicha(); setFocusFen(f); }
+function focusFenDesdeFicha(f){ setFocusFen(f); }
 
 /* ==================== Etapa 6: bloque del esquema 2.0 en la ficha ====================
    Revelado progresivo: es un <details> plegado por defecto (no compite con el aporte
@@ -1446,7 +1456,7 @@ function openPanel(id){
     const ir=ev=>{ ev.preventDefault(); ev.stopPropagation(); rfAbrir('corroboracion',{a:b.dataset.rfa,b:b.dataset.rfb}); };
     b.onclick=ir; b.onkeydown=ev=>{ if(ev.key==='Enter'||ev.key===' ') ir(ev); };
   });
-  p.querySelectorAll('[data-fen]').forEach(tg=>tg.onclick=()=>focusFen(tg.dataset.fen));
+  p.querySelectorAll('[data-fen]').forEach(tg=>tg.onclick=()=>focusFenDesdeFicha(tg.dataset.fen));
   const tib=p.querySelector('#toggleIndirectasMapa');
   if(tib) tib.onclick=()=>setShowIndirect(!state.showIndirect);
   const cb=p.querySelector('#citabtn'); if(cb) cb.onclick=()=>{ try{ const txt=document.getElementById('apacita').textContent; navigator.clipboard.writeText(txt); cb.textContent=t('pCitaOk'); setTimeout(()=>cb.textContent=t('pCitaBtn'),1400); }catch(e){} };
@@ -2061,6 +2071,7 @@ document.getElementById('recorridosCerrar').addEventListener('click',()=>cerrarP
 document.getElementById('filtrosCerrar').addEventListener('click',()=>cerrarPanelLateral('panelFiltros','filtrosBtn'));
 document.getElementById('infoCerrar').addEventListener('click',()=>cerrarPanelLateral('panelInfo','infoBtn'));
 document.getElementById('legendCerrar').addEventListener('click',()=>cerrarPanelLateral('legend','legendBtn'));
+document.getElementById('guionCerrar').addEventListener('click',()=>{ if(state.focusFen) setFocusFen(state.focusFen); });
 /* TANDA UX · los dos botones del pie de la clave. El de la leyenda completa abre el
    mismo panel que el de la barra inferior (que en escritorio queda retirada); el de
    «cómo se lee» despliega el texto de ayuda que antes ocupaba el margen izquierdo de
@@ -2512,6 +2523,10 @@ document.addEventListener('keydown', ev=>{
     const pl=document.getElementById(id);
     if(pl && !pl.hidden){ cerrarPanelLateral(id,btnId); return; }
   }
+  /* Corrección 15-sep-2026: si no hay ficha ni panel lateral abiertos pero sí
+     queda un fenómeno enfocado (llegó desde la etiqueta de una ficha, o el
+     lector cambió de vista sin pasar por el mapa), Escape también lo suelta. */
+  if(state.focusFen){ setFocusFen(state.focusFen); return; }
 });
 </script>
 <!-- Capa «¿Qué Caribe?» (15-sep-2026): definiciones del Caribe sobre el mapa. Se engancha al script
