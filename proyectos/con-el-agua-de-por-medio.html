@@ -1473,6 +1473,7 @@ function openPanel(id){
     else bajar(claveBib(obra)+'.ris', aRIS(obra), 'application/x-research-info-systems');
     const antes=b.textContent; b.textContent=t('pCitaOk'); setTimeout(()=>b.textContent=antes,1400);
   });
+  cerrarSelector(); encuadrarFicha(id); /* Bloque B: la ficha encuadra sus conexiones */
 }
 function clearFocus({historia=true}={}){ state.active=null; state.focusFen=null; hoverNode=null; ocultarFicha(); syncEdges(); showGuion(null); buildLegend(); refreshHi(); updateTip();
   /* Bloque A: cerrar también es un paso. Solo se toca la dirección si nombra una obra
@@ -1499,7 +1500,7 @@ function buildLegend(){
       : t('legendBarTpl').replace('{n}',visN).replace('{r}',EDGES.length).replace('{p}',pct.toFixed(0));
   }
   lg.innerHTML=`<div class="lgtitle">${total} ${t('lgTitle')}</div><div class="grid"></div>`+
-    `<div class="keys"><span><i class="kob"></i>${t('lgResearch')} (${obras})</span><span><i class="kma"></i>${t('lgEthno')} (${manif})</span></div>`+
+    `<div class="keys"><span><i class="kob"></i>${t('lgResearch')} (${obras})</span>${manif?`<span><i class="kma"></i>${t('lgEthno')} (${manif})</span>`:''}</div>`+
     `<div class="keys"><span><i class="kre"></i>${t('lgReson')}</span><span><i class="kdi"></i>${t('lgDisso')}</span><span><i class="kfr">✕</i>${t('lgFricc')}</span></div>`+
     `<div class="corr"><div class="corrbar"><i class="ok" style="width:${(CORR_OK/RELS.length*100).toFixed(1)}%"></i><i class="pc" style="width:${(CORR_PC/RELS.length*100).toFixed(1)}%"></i></div>`+
       `${CORR_OK} / ${RELS.length} ${t('lgCorr')} (${(CORR_OK/RELS.length*100).toFixed(0)} %) · <span id="corrLink" role="button" tabindex="0">${t('lgCorrVer')}</span></div>`+
@@ -1772,8 +1773,15 @@ function runQuery(){
 function clearQuery(){ qbox.value=""; runQuery(); }
 qbox.addEventListener('input', runQuery);
 qbox.addEventListener('keydown', ev=>{
-  if(ev.key==='Escape'){ ev.stopPropagation(); clearQuery(); qbox.blur(); }
-  else if(ev.key==='Enter'){ ev.preventDefault(); const h=qHits(); if(h.length===1){ document.getElementById('umbral').classList.add('gone'); openPanel(h[0].id); qbox.blur(); } }
+  /* Bloque B: con la lista abierta, Escape primero la cierra; flechas la recorren;
+     Intro abre la opción marcada o, si no hay ninguna, el primer acierto */
+  const abierta=!qlista.hidden;
+  if(ev.key==='ArrowDown'){ ev.preventDefault(); if(!abierta) qlPintar(); qlMover(1); }
+  else if(ev.key==='ArrowUp'){ if(abierta){ ev.preventDefault(); qlMover(-1); } }
+  else if(ev.key==='Escape'){ ev.stopPropagation(); if(abierta){ ev.preventDefault(); qlCerrar(); } /* un campo type=search se vacía solo con Escape */ else { clearQuery(); qbox.blur(); } }
+  else if(ev.key==='Enter'){ ev.preventDefault();
+    if(abierta && qlActivo>=0) qlElegir(qlActivo);
+    else { const h=qlOrdenados(); if(h.length){ qlCerrar(); document.getElementById('umbral').classList.add('gone'); openPanel(h[0].id); } } }
 });
 document.getElementById('qclear').addEventListener('click',()=>{ clearQuery(); qbox.focus(); });
 /* «/» enfoca el campo desde cualquier parte, salvo si ya se está escribiendo en otro */
@@ -2169,13 +2177,15 @@ document.addEventListener('keydown',ev=>{
 
 document.getElementById('entrar').onclick=()=>{
   document.getElementById('umbral').classList.add('gone');
+  focoTrasUmbral(); /* Bloque B: el foco no se queda en un botón que ya no se ve */
   try{ if(document.getElementById('umbralSkip').checked) localStorage.setItem('pc_umbral_visto','1'); }catch(e){}
 };
 document.getElementById('marcoBtn').onclick=openMarco;
 document.getElementById('umarco').onclick=ev=>{ ev.preventDefault(); openMarco(); };
 document.getElementById('comoUsarBtn').onclick=()=>{
   cerrarPanelLateral('panelInfo','infoBtn');
-  document.getElementById('umbral').classList.remove('gone');
+  const u=document.getElementById('umbral'); u.classList.remove('gone'); u.removeAttribute('inert');
+  document.getElementById('entrar').focus({preventScroll:true}); /* Bloque B */
 };
 document.querySelector('#marco .mclose').onclick=closeMarco;
 document.getElementById('marco').addEventListener('click',ev=>{ if(ev.target.id==='marco') closeMarco(); });
@@ -2492,6 +2502,247 @@ function rfCopiar(btn){
   try{ navigator.clipboard.writeText(txt); }catch(e){}
   const antes=btn.textContent; btn.textContent=rf('bCopiado'); setTimeout(()=>btn.textContent=antes,1400);
 }
+
+/* ══════════ BLOQUE B · 17-09-2026 · navegación ══════════════════════════════
+   Cinco piezas que no cambian datos ni textos del atlas. Diccionario propio (BB_T)
+   para no tocar I18N. Todas se enganchan con llamadas de una línea desde el código
+   existente: openPanel → encuadrarFicha, el buscador → qlPintar, #entrar → foco. */
+const BB_T = {
+  es:{ tsCab:"{n} obras en este punto", tsMas:"Acercar aquí para separar {m} más", tsCerrar:"Cerrar",
+       qlTabla:"Ver las {n} en la tabla →", ctrlDer:"Ver más controles", ctrlIzq:"Volver al inicio de la franja", selAria:"Obras cercanas al toque" },
+  en:{ tsCab:"{n} works at this spot", tsMas:"Zoom in here to separate {m} more", tsCerrar:"Close",
+       qlTabla:"See all {n} in the table →", ctrlDer:"More controls", ctrlIzq:"Back to the start of the strip", selAria:"Works near your tap" }
+};
+const bb = k => (BB_T[LANG]||BB_T.es)[k];
+const bbEsc = s => String(s==null?'':s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const bbMovil = () => window.matchMedia('(max-width:780px), (max-height:520px)').matches;
+
+/* ── B6 · la introducción retirada sale del foco y del árbol accesible ──────────
+   Antes .gone solo bajaba la opacidad: tras «Entrar» quedaban tres paradas de Tab
+   invisibles y el foco seguía en un botón que ya no se veía. Un observador sobre la
+   clase cubre todas las puertas de salida (Entrar, «/», buscador, enlaces profundos,
+   capa ¿Qué Caribe?, reflujo) sin tocar ninguna. */
+(function(){
+  const u=document.getElementById('umbral'); if(!u) return;
+  const sync=()=>{ if(u.classList.contains('gone')) u.setAttribute('inert',''); else u.removeAttribute('inert'); };
+  new MutationObserver(sync).observe(u,{attributes:true, attributeFilter:['class']});
+  sync();
+})();
+function focoTrasUmbral(){
+  const pri=document.querySelector('#clvLista button');
+  if(pri && pri.offsetParent!==null) pri.focus({preventScroll:true});
+}
+
+/* ── B7 · la ficha encuadra sus propias conexiones ─────────────────────────────
+   Medido en el publicado: al abrir Benítez Rojo, 3 de sus 6 conexiones directas
+   quedaban bajo el panel. Si la obra y sus vecinas ya se ven en el hueco libre, no se
+   mueve nada; si no, el mapa se aleja lo justo (nunca se acerca) y se desplaza hasta
+   que caben. Con movimiento reducido el cambio es inmediato. */
+let _encRAF=0;
+function areaLibreMapa(){
+  const r=svg.getBoundingClientRect(); const M=bbMovil()?12:26;
+  const a={l:r.left+M, t:r.top+M, r:r.right-M, b:r.bottom-M};
+  const p=document.getElementById('panel');
+  if(p && p.classList.contains('open') && p.offsetParent){
+    /* offsetTop/offsetLeft dan la posición final, sin la transición de entrada. Si la
+       ficha arranca en el borde izquierdo es hoja inferior (teléfono en vertical); si
+       no, es panel lateral (escritorio, tableta, teléfono en horizontal). */
+    const base=p.offsetParent.getBoundingClientRect();
+    if(p.offsetLeft<=4) a.b=Math.min(a.b, base.top+p.offsetTop-M);
+    else a.r=Math.min(a.r, base.left+p.offsetLeft-M);
+  }
+  return a;
+}
+function centroPantalla(n){ const b=n._c.getBoundingClientRect(); return [b.left+b.width/2, b.top+b.height/2]; }
+function animarVP(dest, ms){
+  cancelAnimationFrame(_encRAF);
+  if(reduced || !ms){ vpt={k:dest.k,tx:dest.tx,ty:dest.ty}; applyVP(); if(zc) zc.sincronizar(); return; }
+  const o={k:vpt.k,tx:vpt.tx,ty:vpt.ty}, t0=performance.now();
+  const paso=now=>{
+    let u=Math.min(1,(now-t0)/ms); u=1-Math.pow(1-u,3);
+    vpt.k=o.k+(dest.k-o.k)*u; vpt.tx=o.tx+(dest.tx-o.tx)*u; vpt.ty=o.ty+(dest.ty-o.ty)*u; applyVP();
+    if(u<1) _encRAF=requestAnimationFrame(paso); else if(zc) zc.sincronizar();
+  };
+  _encRAF=requestAnimationFrame(paso);
+}
+function encuadrarFicha(id){
+  if(state.view==='tabla') return;
+  const n=byId(id); if(!n || !n._c || !n._c.isConnected) return;
+  const grupo=[n, ...(ADJ[id]||[]).map(byId)].filter(o=>o && o._c && o._c.isConnected && visible(o));
+  const A=areaLibreMapa(); if(A.r-A.l<60 || A.b-A.t<50) return;
+  const cabe=()=>grupo.every(o=>{ const [x,y]=centroPantalla(o); return x>=A.l && x<=A.r && y>=A.t && y<=A.b; });
+  if(cabe()) return;
+  const origen={k:vpt.k,tx:vpt.tx,ty:vpt.ty};
+  const pts=grupo.map(centroPantalla);
+  const xs=pts.map(p=>p[0]), ys=pts.map(p=>p[1]);
+  const x0=Math.min(...xs), x1=Math.max(...xs), y0=Math.min(...ys), y1=Math.max(...ys);
+  const f=Math.min(1, (A.r-A.l)/Math.max(1,x1-x0+20), (A.b-A.t)/Math.max(1,y1-y0+20));
+  const bcx=(x0+x1)/2, bcy=(y0+y1)/2;
+  zcMotor.aplicar(vpt.k*f, bcx, bcy);
+  zcMotor.panear((A.l+A.r)/2-bcx, (A.t+A.b)/2-bcy);
+  /* si ni alejando al máximo caben todas, manda la obra abierta: queda centrada */
+  const [nx,ny]=centroPantalla(n);
+  if(nx<A.l || nx>A.r || ny<A.t || ny>A.b) zcMotor.panear((A.l+A.r)/2-nx, (A.t+A.b)/2-ny);
+  const destino={k:vpt.k,tx:vpt.tx,ty:vpt.ty};
+  vpt=origen; applyVP();
+  animarVP(destino, 460);
+}
+
+/* ── B8 · varias obras bajo el mismo dedo ─────────────────────────────────────
+   En un iPhone 13, cada uno de los 272 puntos visibles tiene al menos dos vecinos a
+   menos de 22 px: tocar era apostar. Con el dedo (nunca con ratón o teclado) se miran
+   las obras a 24 px del toque; si hay más de una, se ofrecen en una lista corta. */
+let _ptrTipo='mouse';
+const toqueSel=document.createElement('div');
+toqueSel.id='toqueSel'; toqueSel.hidden=true; toqueSel.setAttribute('role','dialog');
+document.body.appendChild(toqueSel);
+function cerrarSelector(){ if(!toqueSel.hidden){ toqueSel.hidden=true; toqueSel.innerHTML=''; } }
+function abrirSelector(cands, x, y){
+  const MAX=7, vis=cands.slice(0,MAX), resto=cands.length-vis.length;
+  toqueSel.setAttribute('aria-label', bb('selAria'));
+  /* con muchas obras encimadas acercar es la acción útil: va arriba, antes de la lista */
+  toqueSel.innerHTML=`<div class="ts-cab"><span>${bbEsc(bb('tsCab').replace('{n}',cands.length))}</span><button type="button" class="ts-x" aria-label="${bbEsc(bb('tsCerrar'))}">×</button></div>`+
+    (resto>0?`<button type="button" class="ts-mas">${bbEsc(bb('tsMas').replace('{m}',resto))}</button>`:'')+
+    vis.map(({n})=>`<button type="button" class="ts-o" data-id="${bbEsc(n.id)}"><span class="ts-sw" style="background:${col(n.f[0])}"></span><span class="ts-t">${bbEsc(n.t)}</span><span class="ts-a">${bbEsc(n.a)}${n.y?' · '+bbEsc(n.y):''}</span></button>`).join('');
+  toqueSel.hidden=false; toqueSel.scrollTop=0;
+  const w=toqueSel.offsetWidth, h=toqueSel.offsetHeight, vw=innerWidth, vh=innerHeight;
+  let left=Math.max(12, Math.min(x-w/2, vw-w-12));
+  let top=y+20; if(top+h>vh-12) top=Math.max(12, y-h-20);
+  toqueSel.style.left=left+'px'; toqueSel.style.top=top+'px';
+  toqueSel.querySelector('.ts-x').onclick=cerrarSelector;
+  toqueSel.querySelectorAll('.ts-o').forEach(b=>b.onclick=()=>{ cerrarSelector(); openPanel(b.dataset.id); });
+  const mas=toqueSel.querySelector('.ts-mas');
+  if(mas) mas.onclick=()=>{ cerrarSelector(); zcMotor.aplicar(vpt.k*2.4, x, y); if(zc) zc.sincronizar(); };
+}
+svg.addEventListener('pointerdown', ev=>{ _ptrTipo=ev.pointerType||'mouse'; }, true);
+svg.addEventListener('click', ev=>{
+  if(_ptrTipo!=='touch' && _ptrTipo!=='pen') return;
+  if(state.view==='tabla') return;
+  const R=24;
+  const cands=VNODES.map(n=>{ if(!n._c) return null; const [cx,cy]=centroPantalla(n); const d=Math.hypot(cx-ev.clientX, cy-ev.clientY); return d<=R?{n,d}:null; })
+    .filter(Boolean).sort((a,b)=>a.d-b.d);
+  if(cands.length<2) return;             /* una sola obra: el toque sigue su camino de siempre */
+  ev.stopPropagation(); ev.preventDefault();
+  abrirSelector(cands, ev.clientX, ev.clientY);
+}, true);
+document.addEventListener('pointerdown', ev=>{ if(!toqueSel.hidden && !toqueSel.contains(ev.target)) cerrarSelector(); }, true);
+document.addEventListener('keydown', ev=>{ if(ev.key==='Escape' && !toqueSel.hidden){ ev.stopPropagation(); cerrarSelector(); } }, true);
+svg.addEventListener('wheel', cerrarSelector, {passive:true});
+window.addEventListener('resize', cerrarSelector);
+
+/* ── B9 · la franja de controles avisa que sigue ──────────────────────────────────
+   En 390 px la franja mide 1.118: Buscar, Recorridos, ¿Qué Caribe?, Filtros e Idioma
+   quedaban dos pantallas a la derecha, anunciados solo por un degradado de 26 px. Dos
+   flechas visibles la desplazan; son ayuda de puntero (el tabulador ya recorre todo). */
+(function(){
+  const c=document.querySelector('header .controls'); const h=c && c.parentElement; if(!c||!h) return;
+  const mk=(cls,txt)=>{ const b=document.createElement('button'); b.type='button'; b.className='ctrlDesliza '+cls; b.textContent=txt; b.tabIndex=-1; b.setAttribute('aria-hidden','true'); h.appendChild(b); return b; };
+  const der=mk('der','›'), izq=mk('izq','‹');
+  const pos=()=>{
+    const top=c.offsetTop, alto=Math.max(0,c.offsetHeight-4);
+    [der,izq].forEach(b=>{ b.style.top=top+'px'; b.style.height=alto+'px'; });
+    const max=c.scrollWidth-c.clientWidth;
+    der.hidden = max<=2 || c.scrollLeft>=max-2;
+    izq.hidden = c.scrollLeft<=2;
+    der.title=bb('ctrlDer'); izq.title=bb('ctrlIzq');
+  };
+  der.onclick=()=>c.scrollBy({left:c.clientWidth*0.7, behavior:reduced?'auto':'smooth'});
+  izq.onclick=()=>c.scrollBy({left:-c.clientWidth*0.7, behavior:reduced?'auto':'smooth'});
+  c.addEventListener('scroll', pos, {passive:true});
+  window.addEventListener('resize', pos);
+  new MutationObserver(pos).observe(c,{subtree:true, childList:true, characterData:true});
+  pos();
+})();
+
+/* ── B10 · el buscador muestra lo que encontró ────────────────────────────────────
+   Con más de un acierto Intro no hacía nada y no había lista: el lector tenía que
+   cazar puntos iluminados. Ahora una lista (patrón combobox de ARIA) ordena los
+   aciertos —primero por título, luego por autoría, luego por recorrido, y en cada grupo
+   las más conectadas—; flechas e
+   Intro la recorren, y si hay más de ocho, la tabla los muestra todos. */
+const qlista=document.createElement('ul');
+qlista.id='qlista'; qlista.setAttribute('role','listbox'); qlista.hidden=true;
+document.body.appendChild(qlista);
+qbox.setAttribute('role','combobox'); qbox.setAttribute('aria-autocomplete','list');
+qbox.setAttribute('aria-expanded','false'); qbox.setAttribute('aria-controls','qlista');
+let qlOpciones=[], qlActivo=-1;
+function qlMarcar(txt){
+  const e=bbEsc(txt); if(!QTERMS.length) return e;
+  const base=sinTildes(txt); if(base.length!==txt.length) return e;
+  const marcas=new Array(txt.length).fill(false);
+  QTERMS.forEach(w=>{ let i=base.indexOf(w); while(i>=0){ for(let k=i;k<i+w.length;k++) marcas[k]=true; i=base.indexOf(w,i+w.length); } });
+  let out='', dentro=false;
+  for(let i=0;i<txt.length;i++){ if(marcas[i]&&!dentro){ out+='<mark>'; dentro=true; } if(!marcas[i]&&dentro){ out+='</mark>'; dentro=false; } out+=bbEsc(txt[i]); }
+  return dentro? out+'</mark>' : out;
+}
+function qlPosicionar(){
+  if(qlista.hidden) return;
+  const r=document.getElementById('buscador').getBoundingClientRect();
+  if(bbMovil()){ qlista.style.left='8px'; qlista.style.width='calc(100vw - 16px)'; }
+  else { qlista.style.width=Math.max(r.width,360)+'px'; qlista.style.left=Math.max(8, Math.min(r.left, innerWidth-qlista.offsetWidth-8))+'px'; }
+  qlista.style.top=(r.bottom+4)+'px';
+}
+function qlCerrar(){
+  if(qlista.hidden) return;
+  qlista.hidden=true; qlista.innerHTML=''; qlOpciones=[]; qlActivo=-1;
+  qbox.setAttribute('aria-expanded','false'); qbox.removeAttribute('aria-activedescendant');
+}
+function qlOrdenados(){
+  const puntua=n=>{ const t=sinTildes(n.t), a=sinTildes(n.a);
+    if(QTERMS.every(w=>t.includes(w))) return 0;
+    if(QTERMS.every(w=>(t+' '+a).includes(w))) return 1;
+    return 2; };
+  /* dentro de cada grupo, primero las obras más conectadas: es el criterio del atlas
+     (la relación, no la fecha ni la autoría) y evita premiar lo más reciente */
+  const grado=n=>(ADJ[n.id]||[]).length;
+  return qHits().map(n=>({n,p:puntua(n)})).sort((x,y)=>x.p-y.p || grado(y.n)-grado(x.n) || x.n.t.localeCompare(y.n.t)).map(o=>o.n);
+}
+function qlPintar(){
+  if(!QTERMS.length || document.activeElement!==qbox){ qlCerrar(); return; }
+  const hits=qlOrdenados(); const MAX=8;
+  const cab=hits.length===0 ? t('buscarNada') : hits.length===1 ? t('buscarUna') : t('buscarN').replace('{n}',hits.length);
+  qlOpciones=hits.slice(0,MAX).map(n=>({tipo:'obra', id:n.id}));
+  if(hits.length>MAX && state.view!=='tabla') qlOpciones.push({tipo:'tabla'});
+  qlista.innerHTML=`<li class="ql-cab" role="presentation">${bbEsc(cab)}</li>`+
+    qlOpciones.map((o,i)=>{
+      if(o.tipo==='tabla') return `<li role="option" id="ql-${i}" class="ql-pie" aria-selected="false">${bbEsc(bb('qlTabla').replace('{n}',hits.length))}</li>`;
+      const n=byId(o.id);
+      return `<li role="option" id="ql-${i}" aria-selected="false" data-i="${i}"><span class="ql-sw" style="background:${col(n.f[0])}"></span><span class="ql-t">${qlMarcar(n.t)}</span><span class="ql-a">${qlMarcar(n.a)}${n.y?' · '+bbEsc(n.y):''}</span></li>`;
+    }).join('');
+  qlActivo=-1; qbox.removeAttribute('aria-activedescendant');
+  qlista.hidden=false; qbox.setAttribute('aria-expanded','true');
+  qlPosicionar();
+}
+function qlMover(d){
+  if(!qlOpciones.length) return;
+  qlActivo = qlActivo<0 ? (d>0?0:qlOpciones.length-1) : (qlActivo+d+qlOpciones.length)%qlOpciones.length;
+  qlista.querySelectorAll('[role="option"]').forEach((li,i)=>li.setAttribute('aria-selected', i===qlActivo?'true':'false'));
+  const li=document.getElementById('ql-'+qlActivo);
+  if(li){ qbox.setAttribute('aria-activedescendant', li.id); li.scrollIntoView({block:'nearest'}); }
+}
+function qlElegir(i){
+  const o=qlOpciones[i]; if(!o) return;
+  qlCerrar();
+  if(o.tipo==='tabla'){ setView('tabla'); return; }
+  document.getElementById('umbral').classList.add('gone');
+  openPanel(o.id);
+}
+qlista.addEventListener('mousedown', ev=>ev.preventDefault());   /* elegir no debe desenfocar el campo antes del clic */
+qlista.addEventListener('click', ev=>{ const li=ev.target.closest('[role="option"]'); if(!li) return; qlElegir([...qlista.querySelectorAll('[role="option"]')].indexOf(li)); });
+qbox.addEventListener('input', qlPintar);
+qbox.addEventListener('focus', qlPintar);
+qbox.addEventListener('blur', ()=>setTimeout(()=>{ if(document.activeElement!==qbox) qlCerrar(); }, 120));
+window.addEventListener('resize', qlPosicionar);
+document.querySelector('header .controls').addEventListener('scroll', qlPosicionar, {passive:true});
+
+/* ── B11 · el filtro de manifestaciones solo aparece si hay manifestaciones ─────────
+   El corpus 1.19.0 tiene 276 obras y 0 manifestaciones: el botón llevaba a un mapa
+   vacío. Se calcula, no se borra: si mañana entra una manifestación, vuelve solo. */
+(function(){
+  const hay=N.some(n=>n.k!=='obra');
+  const seg=document.getElementById('layerSeg');
+  if(seg && !hay) seg.closest('.grp').style.display='none';
+})();
 
 /* ---------- conmutador de idioma ES / EN ---------- */
 function applyLang(){
