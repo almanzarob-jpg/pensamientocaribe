@@ -83,3 +83,8 @@ data/**/.respaldo-siembra/
 
 # Copias que deja aplicar-fusion-steward.mjs; el histórico de git ya guarda la versión previa
 *.anterior
+
+# Resto de una prueba vieja con la CLI de Netlify. El sitio se sirve por GitHub Pages
+# desde main (CNAME + server: GitHub.com); esta carpeta no despliega nada y solo
+# confundía sobre el hosting. Retirada del repo el 17-sep-2026.
+.netlify/
