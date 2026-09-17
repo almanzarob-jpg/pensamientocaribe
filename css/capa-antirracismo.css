@@ -1,8 +1,9 @@
 /* ==========================================================================
    Antirracismo y reparaciones · estilos de la capa
-   Prefijo ar-. No introduce ningún color nuevo: todo sale de :root del atlas,
-   salvo los cuatro colores de desenlace, que vienen de los datos porque son
-   parte del dato y no de la hoja.
+   Prefijo ar-, y todo el panel bajo #panelAntirracismo, para que nada de aquí
+   alcance a los demás paneles del atlas. No introduce ningún color nuevo:
+   todo sale de :root, salvo los cuatro colores de desenlace, que vienen de los
+   datos porque son dato y no hoja de estilos.
    ========================================================================== */
 
 /* ---------------- capa sobre el mapa ---------------- */
@@ -15,63 +16,138 @@
 .ar-sitio .ar-base-hueco{fill:none;stroke:var(--orange);vector-effect:non-scaling-stroke}
 .ar-sitio.ar-hueco .ar-aro{stroke:var(--orange)}
 .ar-sitio .ar-n{fill:var(--cream);font-family:var(--ff-mono);font-weight:600;text-anchor:middle;pointer-events:none}
+.ar-sitio .ar-q{fill:var(--orange);font-family:var(--ff-mono);font-weight:700;text-anchor:middle;pointer-events:none}
+
+/* Jerarquía: con la capa encendida, lo ajeno baja de tono y no desaparece. */
+#stage.ar-activa .ar-apagado{opacity:.16;transition:opacity .2s}
+#stage.ar-activa .ar-vivo{opacity:1}
+#stage.ar-activa .edge.ar-apagada{opacity:.05;transition:opacity .2s}
+#stage.ar-activa .edge.ar-viva{opacity:.85;stroke-width:1.4}
 
 /* ---------------- panel ---------------- */
-.ar-panel{overflow-y:auto}
-.ar-cab{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:10px}
-.ar-cab h2{font-family:var(--ff-display);font-size:21px;margin:0;font-weight:700;color:var(--cream)}
-.ar-quitar{background:transparent;border:1px solid var(--line);border-radius:3px;color:var(--gray);cursor:pointer;
-  font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:1.1px;padding:5px 9px;transition:.15s;flex:0 0 auto}
-.ar-quitar:hover{color:var(--cream);border-color:var(--gold-d)}
-.ar-intro{font-size:12.5px;line-height:1.6;color:var(--gray);margin:0 0 12px;max-width:52ch}
-.ar-busca{width:100%;background:var(--bg-deep);border:1px solid var(--line);border-radius:3px;color:var(--cream);
-  font-family:var(--ff-body);font-size:12.5px;padding:7px 9px;margin-bottom:10px}
-.ar-busca::placeholder{color:var(--gray);opacity:.7}
-.ar-chips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
-.ar-chip{display:inline-flex;align-items:center;gap:6px;background:transparent;border:1px solid var(--line);border-radius:20px;
-  padding:3px 10px 3px 7px;color:var(--gray);cursor:pointer;transition:.15s;
-  font-family:var(--ff-mono);font-size:9px;text-transform:uppercase;letter-spacing:1.1px}
-.ar-chip i{width:8px;height:8px;border-radius:50%;display:inline-block;flex:0 0 auto}
-.ar-chip b{font-weight:600;color:var(--cream);opacity:.75}
-.ar-chip:hover{color:var(--cream);border-color:var(--gold-d)}
-.ar-chip[aria-pressed="true"]{color:var(--cream);border-color:var(--gold);background:rgba(201,162,77,.12)}
-.ar-cuenta{font-family:var(--ff-mono);font-size:9.5px;text-transform:uppercase;letter-spacing:1.3px;color:var(--gold);margin-bottom:10px}
-.ar-nada{font-size:12.5px;color:var(--gray)}
+#panelAntirracismo{width:clamp(380px,32vw,440px);max-width:calc(100vw - 32px);
+  display:flex;flex-direction:column;overflow:hidden}
+#panelAntirracismo .ar-cab{flex:0 0 auto;padding-bottom:10px;border-bottom:1px solid var(--line)}
+#panelAntirracismo .ar-cuerpo{flex:1 1 auto;min-height:0;overflow-y:auto;padding-top:12px;
+  scroll-padding-top:6px;
+  /* El texto que sale por arriba se desvanece: así el corte se lee como
+     desplazamiento y no como una línea rota. */
+  -webkit-mask-image:linear-gradient(to bottom,transparent 0,#000 14px);
+  mask-image:linear-gradient(to bottom,transparent 0,#000 14px)}
+#panelAntirracismo .ar-grupo,#panelAntirracismo .ar-huecos{scroll-margin-top:8px}
 
-.ar-grupo{margin-bottom:12px}
-.ar-grupo>h3{font-family:var(--ff-mono);font-size:9.2px;text-transform:uppercase;letter-spacing:1.3px;color:var(--gray);
-  margin:0 0 5px;padding-bottom:4px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between}
-.ar-grupo>h3 span{color:var(--gold-d)}
-.ar-grupo.viva>h3{color:var(--gold);border-bottom-color:var(--gold-d)}
-.ar-grupo.viva>h3 span{color:var(--gold)}
-.ar-grupo.viva{background:rgba(201,162,77,.055);border-radius:3px;padding:4px 6px 2px;margin-left:-6px}
+#panelAntirracismo .ar-tit{font-family:var(--ff-display);font-size:25px;line-height:1.15;font-weight:700;
+  color:var(--cream);margin:0 0 4px;letter-spacing:.2px}
+#panelAntirracismo .ar-resumen{font-family:var(--ff-mono);font-size:11px;letter-spacing:.4px;color:var(--gold);margin:0 0 12px}
+#panelAntirracismo .ar-acciones{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:10px}
+#panelAntirracismo .ar-accion{background:transparent;border:1px solid var(--line);border-radius:3px;color:var(--gray);
+  cursor:pointer;font-family:var(--ff-body);font-size:12px;padding:5px 10px;transition:.15s}
+#panelAntirracismo .ar-accion:hover{color:var(--cream);border-color:var(--gold-d)}
+#panelAntirracismo .ar-accion-off{border-style:dashed}
+#panelAntirracismo .ar-accion-off:hover{color:var(--cream);border-color:var(--red)}
+#panelAntirracismo .ar-solo-movil{display:none}
 
-.ar-caso{display:block;width:100%;text-align:left;background:none;border:0;border-left:2px solid var(--line);
-  color:inherit;cursor:pointer;font:inherit;padding:8px 0 8px 11px;margin-bottom:5px;transition:.15s;border-radius:0 3px 3px 0}
-.ar-caso:hover{background:rgba(255,255,255,.03)}
-.ar-caso[aria-expanded="true"]{background:rgba(255,255,255,.05)}
-.ar-obra-t{font-family:var(--ff-display);font-size:15px;line-height:1.3;color:var(--cream);display:block;margin-bottom:3px}
-.ar-meta{font-family:var(--ff-mono);font-size:8.8px;text-transform:uppercase;letter-spacing:1.1px;color:var(--gray);display:flex;gap:8px;flex-wrap:wrap}
-.ar-des{font-weight:600}
-.ar-marca{color:var(--orange)}
+#panelAntirracismo .ar-como{margin-bottom:11px}
+#panelAntirracismo .ar-como summary{cursor:pointer;font-family:var(--ff-body);font-size:12.5px;color:var(--gold);
+  padding:4px 0;list-style:none;display:flex;align-items:center;gap:6px}
+#panelAntirracismo .ar-como summary::-webkit-details-marker{display:none}
+#panelAntirracismo .ar-como summary::before{content:"＋";font-family:var(--ff-mono);font-size:11px;color:var(--gold-d)}
+#panelAntirracismo .ar-como[open] summary::before{content:"－"}
+#panelAntirracismo .ar-como summary:hover{color:var(--cream)}
+#panelAntirracismo .ar-como p{margin:4px 0 0;font-size:14px;line-height:1.62;color:var(--gray);max-width:46ch}
 
-.ar-ficha{border-left:2px solid var(--line);padding:2px 0 10px 13px;margin:-3px 0 8px;font-size:12.5px;line-height:1.58;color:var(--gray)}
-.ar-ficha dl{display:grid;grid-template-columns:auto 1fr;gap:3px 10px;margin:0 0 8px}
-.ar-ficha dt{font-family:var(--ff-mono);font-size:8.4px;text-transform:uppercase;letter-spacing:1.1px;color:var(--gold-d);padding-top:2px}
-.ar-ficha dd{margin:0;color:var(--cream);font-size:12.5px;line-height:1.48}
-.ar-ficha p{margin:0;max-width:54ch}
-.ar-ir{margin-top:8px !important}
-.ar-obra{background:transparent;border:1px solid var(--line);border-radius:3px;color:var(--gray);cursor:pointer;
-  font-family:var(--ff-mono);font-size:8.6px;text-transform:uppercase;letter-spacing:1.1px;padding:4px 8px;transition:.15s}
-.ar-obra:hover{color:var(--cream);border-color:var(--gold-d)}
+#panelAntirracismo .ar-busca{width:100%;background:var(--bg-deep);border:1px solid var(--line);border-radius:3px;
+  color:var(--cream);font-family:var(--ff-body);font-size:14px;padding:8px 10px;margin-bottom:9px}
+#panelAntirracismo .ar-busca::placeholder{color:var(--gray);opacity:.75}
 
-.ar-huecos{margin-top:16px;padding-top:12px;border-top:1px solid var(--line)}
-.ar-huecos>h3{font-family:var(--ff-mono);font-size:9.2px;text-transform:uppercase;letter-spacing:1.3px;color:var(--orange);margin:0 0 8px}
-.ar-vacio{border-left:2px solid var(--orange);padding:2px 0 9px 11px;margin-bottom:9px;font-size:12.5px;line-height:1.58;color:var(--gray)}
-.ar-vacio-t{font-family:var(--ff-display);font-size:14.5px;line-height:1.3;color:var(--cream);margin-bottom:3px}
-.ar-vacio-l{font-family:var(--ff-mono);font-size:8.6px;text-transform:uppercase;letter-spacing:1.1px;color:var(--orange);margin-bottom:5px}
-.ar-vacio p{margin:0;max-width:54ch}
+/* Dos columnas, altura pareja, y el seleccionado se reconoce por la marca ✓ y
+   el trazo, no solo por el color. */
+#panelAntirracismo .ar-chips{display:grid;grid-template-columns:1fr 1fr;gap:6px}
+#panelAntirracismo .ar-chip{display:grid;grid-template-columns:auto auto 1fr auto;align-items:center;gap:6px;
+  background:transparent;border:1px solid var(--line);border-radius:3px;color:var(--gray);cursor:pointer;
+  font-family:var(--ff-body);font-size:12px;padding:6px 9px;min-height:32px;text-align:left;transition:.15s;width:100%}
+#panelAntirracismo .ar-chip i{width:8px;height:8px;border-radius:50%;display:inline-block}
+#panelAntirracismo .ar-chip b{font-family:var(--ff-mono);font-size:11px;font-weight:600;color:var(--cream);opacity:.7}
+#panelAntirracismo .ar-chip .ar-tick{font-size:10px;width:9px;color:var(--gold);opacity:0}
+#panelAntirracismo .ar-chip:hover{color:var(--cream);border-color:var(--gold-d)}
+#panelAntirracismo .ar-chip[aria-pressed="true"]{color:var(--cream);border-color:var(--gold);
+  background:rgba(201,162,77,.12);box-shadow:inset 0 0 0 1px rgba(201,162,77,.35)}
+#panelAntirracismo .ar-chip[aria-pressed="true"] .ar-tick{opacity:1}
+#panelAntirracismo .ar-chip[aria-pressed="true"] b{opacity:1}
+#panelAntirracismo .ar-limpiar{margin-top:7px;background:transparent;border:1px solid var(--line);border-radius:3px;
+  color:var(--gray);cursor:pointer;font-family:var(--ff-body);font-size:12px;padding:5px 10px;transition:.15s}
+#panelAntirracismo .ar-limpiar:hover{color:var(--cream);border-color:var(--gold-d)}
+
+#panelAntirracismo .ar-cuenta{font-family:var(--ff-mono);font-size:11px;letter-spacing:.4px;color:var(--gold);margin:0 0 12px}
+#panelAntirracismo .ar-nada{font-size:14px;color:var(--gray)}
+
+#panelAntirracismo .ar-grupo{margin-bottom:18px}
+#panelAntirracismo .ar-grupo>h3{font-family:var(--ff-mono);font-size:11px;letter-spacing:.9px;text-transform:uppercase;
+  color:var(--gray);margin:0 0 8px;padding-bottom:5px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between}
+#panelAntirracismo .ar-grupo>h3 span{color:var(--gold-d)}
+#panelAntirracismo .ar-grupo.viva>h3{color:var(--gold);border-bottom-color:var(--gold-d)}
+#panelAntirracismo .ar-grupo.viva>h3 span{color:var(--gold)}
+
+#panelAntirracismo .ar-caso-c{border-left:2px solid var(--line);margin-bottom:12px;padding-left:12px;transition:border-color .15s}
+#panelAntirracismo .ar-caso-c.abierta{border-left-color:var(--gold);background:rgba(255,255,255,.035);
+  border-radius:0 3px 3px 0;padding-top:4px}
+#panelAntirracismo .ar-caso{display:block;width:100%;text-align:left;background:none;border:0;color:inherit;
+  cursor:pointer;font:inherit;padding:4px 0 6px}
+#panelAntirracismo .ar-caso:hover .ar-obra-t{color:var(--gold)}
+#panelAntirracismo .ar-obra-t{display:block;font-family:var(--ff-display);font-size:17.5px;line-height:1.28;
+  color:var(--cream);margin-bottom:3px;transition:color .15s}
+#panelAntirracismo .ar-autor{display:block;font-size:12.5px;line-height:1.4;color:var(--gray);margin-bottom:6px}
+#panelAntirracismo .ar-desen{display:inline-block;font-family:var(--ff-mono);font-size:11px;letter-spacing:.5px;
+  color:var(--c);border:1px solid color-mix(in srgb, var(--c) 45%, transparent);border-radius:2px;padding:2px 7px}
+/* El estado de revisión no es un desenlace: va en su propio renglón y en gris. */
+#panelAntirracismo .ar-rev{display:block;margin-top:6px;font-family:var(--ff-body);font-size:11.5px;
+  color:var(--gray);opacity:.85}
+
+#panelAntirracismo .ar-ficha{padding:2px 0 12px;font-size:14px;line-height:1.6;color:var(--gray)}
+#panelAntirracismo .ar-ficha dl{margin:0 0 10px;display:flex;flex-direction:column;gap:8px}
+#panelAntirracismo .ar-par dt{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.7px;color:var(--gold-d);margin-bottom:2px}
+#panelAntirracismo .ar-par dd{margin:0;color:var(--cream);font-size:14px;line-height:1.45}
+#panelAntirracismo .ar-nota{margin:0;font-size:14px;line-height:1.62;color:var(--gray);max-width:46ch}
+#panelAntirracismo .ar-ir{margin:10px 0 0;display:flex;gap:6px;flex-wrap:wrap}
+#panelAntirracismo .ar-obra{background:transparent;border:1px solid var(--line);border-radius:3px;color:var(--gray);
+  cursor:pointer;font-family:var(--ff-body);font-size:12px;padding:5px 10px;transition:.15s}
+#panelAntirracismo .ar-obra:hover{color:var(--cream);border-color:var(--gold-d)}
+
+#panelAntirracismo .ar-huecos{margin-top:20px;padding-top:14px;border-top:1px solid var(--line)}
+#panelAntirracismo .ar-huecos>h3{font-family:var(--ff-mono);font-size:11px;letter-spacing:.9px;text-transform:uppercase;
+  color:var(--orange);margin:0 0 6px}
+#panelAntirracismo .ar-huecos-n{margin:0 0 12px;font-size:13px;line-height:1.55;color:var(--gray);max-width:46ch}
+#panelAntirracismo .ar-vacio{border-left:2px dashed var(--orange);padding:2px 0 10px 12px;margin-bottom:12px;
+  font-size:14px;line-height:1.6;color:var(--gray)}
+#panelAntirracismo .ar-vacio-t{font-family:var(--ff-display);font-size:16px;line-height:1.3;color:var(--cream);
+  margin-bottom:4px;display:flex;align-items:baseline;gap:7px}
+#panelAntirracismo .ar-marca-hueco{flex:0 0 auto;width:10px;height:10px;border-radius:50%;
+  border:1.5px dashed var(--orange);display:inline-block;transform:translateY(1px)}
+#panelAntirracismo .ar-vacio-l{font-family:var(--ff-mono);font-size:10.5px;letter-spacing:.6px;color:var(--orange);margin-bottom:6px}
+#panelAntirracismo .ar-vacio p{margin:0;max-width:46ch}
+
+/* ---------------- teléfono: hoja inferior con dos alturas ---------------- */
+@media (max-width:780px){
+  #panelAntirracismo{position:fixed;left:0;right:0;bottom:0;top:auto;width:100%;max-width:none;
+    height:46vh;border-radius:10px 10px 0 0;border-top:1px solid var(--line);
+    box-shadow:0 -10px 30px rgba(0,0,0,.5);transition:height .22s ease}
+  #panelAntirracismo.ar-ampliada{height:88vh}
+  #panelAntirracismo .ar-tit{font-size:21px}
+  #panelAntirracismo .ar-solo-movil{display:inline-block}
+  #panelAntirracismo .ar-acciones{position:sticky;top:0;z-index:2}
+  #panelAntirracismo .ar-como{margin-bottom:9px}
+  #panelAntirracismo .ar-chips{grid-template-columns:1fr 1fr}
+  #panelAntirracismo .ar-accion,#panelAntirracismo .ar-obra,#panelAntirracismo .ar-limpiar{min-height:38px;padding:8px 12px}
+  #panelAntirracismo .ar-chip{min-height:40px}
+  #panelAntirracismo .ar-busca{min-height:40px}
+}
 
 @media (prefers-reduced-motion: reduce){
-  .ar-sitio .ar-aro,.ar-caso,.ar-chip,.ar-quitar,.ar-obra{transition:none}
+  #panelAntirracismo,#panelAntirracismo .ar-caso-c,#panelAntirracismo .ar-chip,
+  #panelAntirracismo .ar-accion,#panelAntirracismo .ar-obra,.ar-sitio .ar-aro{transition:none}
 }
+
+/* Hilos del caso abierto: las relaciones que el corpus declara, ni una más. */
+.ar-hilo{fill:none;stroke-width:1.1;vector-effect:non-scaling-stroke;opacity:.75}
+.ar-hilo-resonancia{stroke:var(--green-l)}
+.ar-hilo-disonancia{stroke:var(--red);stroke-dasharray:4 3}
