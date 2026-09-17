@@ -1,0 +1,55 @@
+{
+  "lote": "F02",
+  "nombre": "Apertura del fenómeno antirracismo_y_reconocimiento",
+  "fecha": "2026-09-17",
+  "catalogo": "catalogo-fenomenos.json v0.2.0-borrador",
+  "base": "datos-atlas.json v1.19.0 · 276 obras · 652 relaciones",
+  "limite": "Capa aditiva. No modifica f, ni fenomenos, ni datos-atlas.json, ni la interfaz. Ninguna asignación está confirmada. Ninguna clasificación de corriente se reabre.",
+  "criterio_de_muestreo": "Las cinco anclas declaradas por el fenómeno nuevo en su apertura, más los fenómenos vecinos que cada una sostiene. No es una muestra estadística: es la prueba de que el fenómeno tiene suelo.",
+  "estado_general": "propuesto",
+  "nota_sobre_el_fundamento": "A diferencia de F01, el fundamento de esta ronda no se apoya en el campo ap ni en el título, sino en los dictámenes de lectura ya firmados para cada entrada, citados por archivo en el campo fuente. El estado se mantiene en propuesto porque el fenómeno mismo es nuevo y el catálogo sigue en borrador, no por debilidad probatoria de las filas.",
+  "documento": "documentos/apertura-fenomeno-antirracismo-reconocimiento-capa-f.md",
+  "asignaciones": [
+    {
+      "id": "rainforestwarriors",
+      "f_heredado": ["cimarronaje", "soberanias"],
+      "fenomenos_asignados": ["antirracismo_y_reconocimiento", "cimarronaje_territorial"],
+      "fundamento": "Los saramaka llevan al Estado de Surinam ante la Corte Interamericana de Derechos Humanos y ganan: reclamo, instancia, categoría jurídica y resultado, los cuatro elementos del criterio. La comunidad cimarrona con territorio identificable sostiene la segunda asignación.",
+      "fuente": "dictamen-academico-bloque-3-etapa-2-3.md",
+      "estado": "propuesto"
+    },
+    {
+      "id": "pardomosquerahoffmann",
+      "f_heredado": ["cimarronaje", "creolizacion", "postplantacion"],
+      "fenomenos_asignados": ["antirracismo_y_reconocimiento", "cimarronaje_territorial", "formacion_racial_nacional"],
+      "fundamento": "El dictamen de lectura documenta por página y autor la Parte 4 (reparaciones, discriminación positiva, ciudadanía afrobrasileña) y la Parte 5 (militancias étnicas, Ley 70, balance de la Conferencia Mundial contra el Racismo): once artículos sobre el reclamo y su tramitación. La Parte 1 ancla el cimarronaje del Chocó y Panamá; la Parte 2, el mestizaje y el multiculturalismo como política cultural del Estado.",
+      "fuente": "lectura-decision-pardomosquerahoffmann-p3-etapa-2-3n.md",
+      "estado": "propuesto"
+    },
+    {
+      "id": "andersonblackindigenous",
+      "f_heredado": ["memoria", "soberanias"],
+      "fenomenos_asignados": ["antirracismo_y_reconocimiento", "indigeneidad_en_disputa"],
+      "fundamento": "El activismo garífuna hondureño obligado a elegir entre reconocerse indígena o negro para acceder a derechos legales. La obra está exactamente en la bisagra de los dos fenómenos y por eso los sostiene a ambos: el reclamo tramitado por un lado, la disputa por la categoría indígena por el otro.",
+      "fuente": "decision-academica-andersonblackindigenous-p2-etapa-2-3f.md",
+      "estado": "propuesto"
+    },
+    {
+      "id": "politicallife",
+      "f_heredado": ["postplantacion", "violencias"],
+      "fenomenos_asignados": ["antirracismo_y_reconocimiento", "plantacion_y_secuela"],
+      "fundamento": "El testimonio y la reparación tras la incursión de Tivoli Gardens se trabajan como práctica política y no como dispositivo contable, razón por la que la entrada no va a deuda_como_tecnologia_colonial, cuyas anclas no la incluyen. La lectura de la soberanía suspendida como presente de la plantación sostiene la segunda asignación.",
+      "fuente": "a02-generado.json; corroborado en expediente-evidencia-c7.md §9.2",
+      "estado": "propuesto"
+    },
+    {
+      "id": "esquiva",
+      "f_heredado": ["capitalismo_racial", "violencias"],
+      "fenomenos_asignados": ["antirracismo_y_reconocimiento"],
+      "alerta": "Asignación única y deliberada. dictamen-academico-c7.md §6 dejó pendiente de verificación la identidad bibliográfica de esta entrada, sin reabrir su clasificación. Mientras esa verificación no se resuelva, no se le atribuye un segundo fenómeno, porque hacerlo exigiría afirmar cosas sobre una obra cuya identidad la Dirección Académica no ha ratificado.",
+      "fundamento": "El futuro de la Ley 70 como promesa de desarrollo incumplida: legislación etnorracial colombiana leída por sus efectos sobre las comunidades que la reclamaron. La clasificación C7 principal está confirmada por el lote S01 y es independiente de la identidad bibliográfica pendiente.",
+      "fuente": "s01-generado.json; reserva en dictamen-academico-c7.md §6",
+      "estado": "propuesto"
+    }
+  ]
+}

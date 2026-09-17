@@ -1,6 +1,6 @@
 {
-  "version_catalogo": "0.1.0-borrador",
-  "fecha": "2026-08-10",
+  "version_catalogo": "0.2.0-borrador",
+  "fecha": "2026-09-17",
   "estado": "borrador para dictamen académico; no se ha aplicado al corpus publicado",
   "que_es_un_fenomeno": "Proceso histórico, material, cultural o epistémico que atraviesa la cuenca del Gran Caribe y permanece abierto a investigación. No es una categoría temática ni un resumen del contenido: nombra aquello que la obra permite seguir.",
   "relacion_con_las_corrientes": "Capa fina. Las diez corrientes siguen siendo el anclaje de navegación y el origen del color del nodo. Un fenómeno se asocia a una o varias corrientes y nunca las sustituye. Un fenómeno puede cruzar corrientes: esa es su razón de ser.",
@@ -182,6 +182,16 @@
       "criterio": "La obra toma un aparato de conocimiento como objeto y muestra su función en el orden colonial.",
       "no_confundir_con": "filosofia_afrocaribena, que constituye un campo en positivo.",
       "anclas": ["castrogomezhybris", "cesaire", "deere", "trouillottransformaciones"]
+    },
+    "antirracismo_y_reconocimiento": {
+      "familia": "regimen",
+      "label": "Antirracismo y reconocimiento",
+      "label_en": "Antiracism and recognition",
+      "glosa": "La demanda de reconocimiento y de derechos hecha contra el orden racial, y el aparato estatal o internacional que la tramita: litigio, legislación etnorracial, política multicultural, movilización organizada.",
+      "corrientes": ["soberanias_fronteras_ocupaciones", "postplantacion_trabajo_desposesion"],
+      "criterio": "La obra sigue el reclamo y su tramitación institucional: quién lo formula, ante qué instancia, bajo qué categoría y con qué resultado. No basta con que la obra denuncie el racismo o describa una identidad en disputa.",
+      "no_confundir_con": "deuda_como_tecnologia_colonial, que trata el dispositivo financiero o jurídico y su genealogía; formacion_racial_nacional, que opera en el discurso del Estado; radicalismo_negro_transnacional, que sigue una red militante y no una demanda tramitada; e indigeneidad_en_disputa, que trabaja la disputa por la categoría indígena y no la tramitación del reclamo.",
+      "anclas": ["rainforestwarriors", "pardomosquerahoffmann", "andersonblackindigenous", "politicallife", "esquiva"]
     },
 
     "plantacion_y_secuela": {
