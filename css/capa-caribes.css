@@ -1,9 +1,9 @@
 /* ==========================================================================
    ¿Qué Caribe? · capa de definiciones (prefijo qc-)
-   Paleta del atlas, sin tonos nuevos: oro para lo que una definición incluye
-   (la familia de la resonancia), rojo para lo que se disputa (la de la
-   disonancia), el azul de la marea para la segunda lectura de un contraste y
-   la tinta para lo que queda fuera.
+   Paleta «Mar y coral» (variables al final del bloque del mapa): aguamarina para
+   lo que una definición incluye, arena para lo que roza, coral para lo que se
+   disputa y gris piedra para lo que excluye. Cada estado lleva además forma
+   propia, y las muestras de la leyenda (.qc-lsw-*) repiten esas mismas marcas.
    ========================================================================== */
 
 /* ---------------- botón del encabezado ---------------- */
@@ -101,6 +101,55 @@ body.presenting #qcBarra[hidden]{display:none}
 body.presenting #qcBarra .qc-b-acc{display:none}
 body.presenting main:has(#panelCaribes:not([hidden])){--zc-x:0px}
 
+/* ---------------- leyenda flotante ----------------
+   Va encima de la barra compacta; cuando la ficha está abierta la barra se oculta y la
+   leyenda baja a su sitio, para que el mapa nunca quede sin clave. */
+#qcLeyenda{position:absolute; left:calc(212px + 16px); bottom:68px; z-index:15;
+  display:flex; align-items:flex-start; gap:6px; max-width:min(980px, calc(100% - 212px - 120px));
+  background:rgba(10,11,8,.86); backdrop-filter:blur(3px); border:1px solid var(--line); border-radius:3px;
+  padding:4px 10px 4px 4px; font-family:var(--ff-mono); color:var(--gray); box-shadow:0 10px 26px rgba(0,0,0,.4)}
+#qcLeyenda[hidden]{display:none}
+#qcLeyenda.plegada{padding-right:4px}
+#qcLeyenda .qc-l-tog{flex:0 0 auto; display:flex; align-items:center; gap:7px; min-height:30px; padding:0 8px; background:transparent; border:0; border-right:1px solid var(--line);
+  color:var(--gold); font-family:var(--ff-mono); font-size:8.5px; text-transform:uppercase; letter-spacing:1.5px; cursor:pointer; border-radius:2px}
+#qcLeyenda.plegada .qc-l-tog{border-right:0}
+#qcLeyenda .qc-l-tog span{color:var(--gray); font-size:12px; letter-spacing:0}
+#qcLeyenda .qc-l-tog:hover, #qcLeyenda .qc-l-tog:focus-visible{background:rgba(255,255,255,.05)}
+#qcLeyenda ul{list-style:none; margin:0; padding:0; display:flex; flex-wrap:wrap; align-items:center; gap:2px 14px; min-width:0}
+#qcLeyenda ul[hidden]{display:none}
+#qcLeyenda li{display:flex; align-items:center; gap:5px; min-height:30px; white-space:nowrap; font-size:9.5px; letter-spacing:.4px}
+#qcLeyenda .qc-l-rot{color:var(--cream)}
+#qcLeyenda .qc-l-n{color:var(--gold)}
+main:has(#panelCaribes:not([hidden])) #qcLeyenda{bottom:14px}
+body.presenting #qcLeyenda, body.presenting main:has(#panelCaribes:not([hidden])) #qcLeyenda{left:16px; bottom:112px; max-width:calc(100% - 120px)}
+
+/* muestras: la misma gramática de marcas que la capa dibuja sobre el mapa */
+.qc-lsw{flex:0 0 auto; display:inline-block; vertical-align:middle; overflow:visible}
+.qc-lsw-nodo{fill:rgba(10,11,8,.6); stroke:var(--cream); stroke-opacity:.75; stroke-width:1}
+.qc-lsw-apagado{stroke-opacity:.5}
+.qc-lsw-luz{fill:var(--qc-dentro); opacity:.8}
+.qc-lsw-luz-margen{fill:var(--qc-margen); opacity:.3}
+.qc-lsw-luz-disputa{fill:var(--qc-disputa); opacity:.35}
+.qc-lsw-anillo{fill:none; stroke-width:1.2}
+.qc-lsw-margen{stroke:var(--qc-margen); stroke-dasharray:1.2 2}
+.qc-lsw-disputa{stroke:var(--qc-disputa); stroke-width:1.4; stroke-dasharray:3.2 1.8}
+.qc-lsw-fragmento{stroke:var(--qc-dentro); stroke-width:1.4}
+.qc-lsw-canon{stroke:var(--gray); stroke-opacity:.8; stroke-dasharray:1.5 2.2}
+.qc-lsw-tacha{stroke:var(--qc-fuera); stroke-width:1.4; stroke-linecap:round}
+.qc-lsw-hilo{fill:none; stroke:var(--hilo, #5d8f9b); stroke-opacity:.8; stroke-width:1}
+.qc-lsw-fuga{fill:none; stroke:var(--qc-dentro); stroke-opacity:.8; stroke-width:1.1; stroke-dasharray:1 2.4; stroke-linecap:round}
+.qc-lsw-fuga-punta{fill:none; stroke:var(--qc-dentro); stroke-opacity:.8; stroke-width:1.1; stroke-linecap:round}
+.qc-lsw-extra{fill:var(--qc-dentro); stroke:var(--qc-dentro); stroke-width:1}
+.qc-lsw-trazo{fill:none; stroke:var(--qc-dentro); stroke-width:1.4}
+.qc-lsw-aprox{fill:var(--qc-dentro); font-family:var(--ff-display); font-weight:600; font-size:9px}
+.qc-lsw-ruta{fill:none; stroke:var(--qc-dentro); stroke-width:1.3; stroke-dasharray:3.5 2; stroke-linecap:round}
+.qc-lsw-encallada{fill:none; stroke:var(--qc-encallada); stroke-width:1.2; stroke-dasharray:3 1.6}
+.qc-lsw-c-a{fill:var(--qc-ca); opacity:.85}
+.qc-lsw-c-b{fill:var(--qc-cb); opacity:.9}
+.qc-lsw-c-ab{fill:var(--qc-cab); opacity:.7}
+.qc-grupo summary .qc-lsw{margin-left:-6px}
+.qc-forma .qc-lsw{margin:0 6px 0 -3px; vertical-align:-3px; font-style:normal}
+
 /* ---------------- panel ---------------- */
 .panelLateral.qc-panel{width:352px; padding:20px 22px 22px}
 .qc-panel h2{font-family:var(--ff-display); font-size:22px; font-weight:600; margin:0 0 10px; padding-right:24px; line-height:1.15}
@@ -158,7 +207,7 @@ body.presenting main:has(#panelCaribes:not([hidden])){--zc-x:0px}
 .qc-grupo[open] summary::after{content:"–"}
 .qc-en{text-transform:uppercase; letter-spacing:1px; font-size:9px; white-space:nowrap}
 .qc-n{color:var(--gold); font-size:10px}
-.qc-desc{color:var(--gray); font-size:9.5px; font-style:italic; letter-spacing:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; min-width:0}
+.qc-desc{color:var(--gray); font-size:9.5px; font-style:italic; letter-spacing:0; line-height:1.3; min-width:0; padding:4px 0}
 .qc-grupo ul{list-style:none; margin:0 0 8px; padding:0 0 0 18px}
 .qc-grupo li{font-size:12.5px; line-height:1.4; color:var(--cream); padding:3px 0}
 .qc-nota{display:block; font-size:11px; line-height:1.45; color:var(--gray); font-style:italic; margin-top:2px}
@@ -208,8 +257,15 @@ body.presenting main:has(#panelCaribes:not([hidden])){--zc-x:0px}
   #qcBarra{left:8px; right:8px; transform:none; max-width:none; bottom:8px}
   #qcBarra .qc-b-t{display:none}
   main:has(#qcBarra:not([hidden])) #legendBar{display:none}
+  #qcLeyenda{left:8px; bottom:62px; max-width:max(210px, calc(100% - 170px)); flex-direction:column; gap:0; padding:3px}
+  #qcLeyenda .qc-l-tog{border-right:0; min-height:34px}
+  #qcLeyenda:not(.plegada) .qc-l-tog{border-bottom:1px solid var(--line); width:100%; justify-content:space-between}
+  #qcLeyenda ul{flex-direction:column; align-items:flex-start; gap:0; padding:2px 8px 4px 2px; max-height:40vh; overflow-y:auto}
+  #qcLeyenda li{min-height:26px; white-space:normal; line-height:1.25; padding:2px 0}
+  main:has(#panelCaribes:not([hidden])) #qcLeyenda{display:none}
 }
 @media (max-height:520px){
+  #qcLeyenda{bottom:48px}
   #qcBarra{bottom:4px; padding:2px 2px 2px 8px}
   #qcBarra button{min-height:32px; min-width:32px}
   #qcBarra .qc-b-def b{font-size:13px}

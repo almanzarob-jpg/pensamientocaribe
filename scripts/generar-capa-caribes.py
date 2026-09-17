@@ -18,7 +18,7 @@ Estados:
 """
 import json, datetime, pathlib
 
-HOY = "2026-09-15"
+HOY = "2026-09-16"
 
 # ---------------------------------------------------------------- lugares del atlas
 ISL = ["cuba","jamaica","haiti","dominicana","puertorico","curazao","martinica","guadalupe",
@@ -53,6 +53,7 @@ EXTRAS = {
   "africa":    [15.5,-54.0,"África atlántica →","Atlantic Africa →"],
   "stthomas":  [18.34,-64.93,"Saint Thomas","St. Thomas"],
   "filadelfia":[31.3,-79.6,"Filadelfia ↑","Philadelphia ↑"],
+  "guatemala": [14.4,-91.3,"Guatemala","Guatemala"],
 }
 
 # ---------------------------------------------------------------- fuentes
@@ -77,6 +78,12 @@ FUENTES = {
          "corto":"Abello Vives 2015", "ejemplar":True, "corpus":"abello"},
  "BAS": {"ref":"Bassi, E. (2021 [2016]). Un territorio acuoso: geografías marineras y el Gran Caribe transimperial de la Nueva Granada (trad. M. J. Montoya). Editorial Universidad del Norte / Banco de la República. Orig. An Aqueous Territory: Sailor Geographies and New Granada's Transimperial Greater Caribbean World, Duke University Press.",
          "corto":"Bassi 2021 [2016]", "ejemplar":True, "corpus":"bassiacuoso"},
+ "ARC": {"ref":"Arciniegas, G. (1975 [1945]). Biografía del Caribe. Círculo de Lectores, Barcelona, con licencia de Editorial Sudamericana (ed. 1966). Orig. Editorial Sudamericana, Buenos Aires, 1945. Se cita por la paginación de la edición digital del ejemplar.",
+         "corto":"Arciniegas 1945", "ejemplar":True, "corpus":None},
+ "GLR": {"ref":"Glissant, É. (2017 [1990]). Poética de la Relación (trad. S. I. Sferco y A. P. Penchaszadeh; pról. M. Rebón). Universidad Nacional de Quilmes. Orig. Poétique de la Relation, Gallimard, 1990.",
+         "corto":"Glissant 1990", "ejemplar":True, "corpus":"glissant"},
+ "GLD": {"ref":"Glissant, É. (2010 [1981]). El discurso antillano (trad. A. M. Boadas y L. Arencibia Rodríguez). Fondo Editorial Casa de las Américas. Orig. Le Discours antillais, Seuil, 1981.",
+         "corto":"Glissant 1981", "ejemplar":True, "corpus":"glissant"},
  "ATL": {"ref":"Grupo de Investigación Pensamiento Caribe (2026). Con el agua de por medio. Atlas para una antropología archipiélica. Marco conceptual.",
          "corto":"Este atlas", "ejemplar":True, "corpus":None},
 }
@@ -92,8 +99,6 @@ def junta(*dicts):
 N = lambda es,en: {"es":es,"en":en}
 
 # ---------------------------------------------------------------- notas que se repiten
-N_ARCI_COL = N("Gaztambide (p. 15) sitúa a Arciniegas en el origen del Gran Caribe; Abello (cap. 1) lee lo contrario: «Colombia no forma parte del Caribe de Arciniegas».",
-               "Gaztambide (p. 15) places Arciniegas at the origin of the Greater Caribbean; Abello (ch. 1) reads the opposite: Colombia is not part of Arciniegas's Caribbean.")
 N_SMITH_CTX = N("Fuera del campo de Smith, que se limita a las unidades británicas (p. 4), pero dentro del contexto comparativo «de Brasil a Estados Unidos» (p. 19).",
                 "Outside Smith's field, restricted to the British units (p. 4), but inside the comparative context “from Brazil to the United States” (p. 19).")
 N_SMITH_MID = N("Smith la agrupa entre los «Middle American states», con Colombia y Venezuela, como parte del contexto comparativo (p. 20).",
@@ -114,21 +119,45 @@ DEF = []
 
 DEF.append({
  "id":"arciniegas", "anio":1945, "autor":"Germán Arciniegas", "obra":"Biografía del Caribe",
- "apellido":N("Biografía del Caribe","Biography of the Caribbean"),
- "forma":"area", "lectura":"referida",
+ "apellido":N("Mar del Nuevo Mundo","Sea of the New World"),
+ "forma":"area", "lectura":"ejemplar",
  "familia":{"clave":"grancaribe","fuente":"Gaztambide 2006, p. 15"},
- "criterio":N("Un mar de guerra y de huracanes contado desde las islas. Quién queda dentro es justo lo que discuten sus lectores.",
-              "A sea of war and hurricanes told from the islands. Who is inside is exactly what its readers dispute."),
+ "criterio":N("El Caribe es un mar antes que una sociedad: el lugar donde, desde 1492, se cruzan todos los caminos y chocan los imperios. España se hace fuerte en los Andes y deja el mar como único frente. Lo delimita la navegación, y por eso entran las islas, las costas de Tierra Firme, el golfo de México y el Mississippi.",
+              "The Caribbean is a sea before it is a society: the place where, from 1492, all roads cross and empires collide. Spain entrenches itself in the Andes and leaves the sea as its only front. Navigation sets its bounds, so the islands, the mainland coasts, the Gulf of Mexico and the Mississippi all come in."),
  "citas":[
-   {"txt":"«Caribe» es como decir «indio bravo». Es una palabra de guerra que cubre la floresta americana como el veneno de que se unta el aguijón de las flechas. Y así es el mar.","ref":"GAZ","pag":"15","nota":N("citado por Gaztambide","quoted by Gaztambide")},
-   {"txt":"el Caribe allí representado es antillano y está conformado por islas mayores y menores situadas frente a la Tierra Firme […] Colombia no forma parte del Caribe de Arciniegas.","ref":"ABE","pag":"cap. 1","nota":N("lectura de Abello","Abello's reading")},
+   {"txt":"Cuando llegaron las naves de Colón, el Caribe pasó, de súbito, a ser cruce de todos los caminos. Por primera vez los pueblos de este hemisferio se vieron las caras. […] El Caribe empezó a ensancharse y fue el mar del Nuevo Mundo.","ref":"ARC","pag":"19"},
+   {"txt":"El imperio de España en América está en la montaña, sobre la cumbre de los Andes, a donde no llegan las tentaciones del mar, ni se corre el peligro de los ingleses. […] Sólo quedó un frente de choque: el Caribe.","ref":"ARC","pag":"240"},
+   {"txt":"Islas menudas, grandes continentes, pequeñas repúblicas, todos se miran en estas aguas y ponen en ellas su temor y su esperanza.","ref":"ARC","pag":"583"},
+   {"txt":"«Caribe» es como decir «indio bravo». Es una palabra de guerra que cubre la floresta americana como el veneno de que se unta el aguijón de las flechas. Y así es el mar.","ref":"ARC","pag":"17","nota":N("el pasaje que cita Gaztambide (p. 15)","the passage Gaztambide quotes (p. 15)")},
  ],
- "lugares": junta(todos(ISL,"dentro"), todos(COL,"disputa",N_ARCI_COL),
-                  {"panama":{"e":"margen","n":N("Abello: la biografía se detiene en Urabá, el Darién y la independencia de Panamá, sin integrar la Tierra Firme.","Abello: the biography pauses on Urabá, the Darién and Panama's independence without integrating the mainland.")}}),
- "extras":{},
- "corpus":["abello"],
- "aviso":N("El atlas no tiene el ejemplar de Arciniegas. Esta lectura se arma con dos citas de segunda mano que no coinciden.",
-           "The atlas does not hold Arciniegas's book. This reading is built from two second-hand quotations that disagree."),
+ "lugares": junta(
+   todos([k for k in ISL if k!="stjohn"],"dentro"),
+   {"stjohn":{"e":None,"n":N("El capítulo de los daneses se ocupa de Saint Thomas (pp. 312-340); Saint John no aparece.","The chapter on the Danes deals with St. Thomas (pp. 312-340); St. John does not appear.")}},
+   {"guyana":{"e":"dentro","n":N("La Guayana de Raleigh y El Dorado cierran el Libro Primero (pp. 212-236).","Raleigh's Guiana and El Dorado close Book One (pp. 212-236).")},
+    "suriname":{"e":"dentro","n":N("Holanda recibe Surinam a cambio de Nueva York en la paz de Breda (p. 303).","The Netherlands receives Suriname in exchange for New York at the Peace of Breda (p. 303).")},
+    "belize":{"e":"dentro","n":N("Los ingleses de Belice derrotan al filibustero Walker (pp. 478-479).","The Belize English defeat the filibuster Walker (pp. 478-479).")},
+    "bluefields":{"e":"dentro","n":N("Los corsarios de Jamaica entran a Nicaragua por la costa de Mosquitos, «donde los indios se entienden con los ingleses» (p. 281).","Jamaica's privateers enter Nicaragua by the Mosquito Coast, “where the Indians get along with the English” (p. 281).")},
+    "costarica":{"e":"dentro","n":N("«Costa Rica democrática», entre los que se miran en estas aguas (p. 583).","“Democratic Costa Rica”, among those who look at themselves in these waters (p. 583).")},
+    "panama":{"e":"dentro","n":N("«Panamá corazón de la rosa de los mares» (p. 583). El libro termina con el canal (pp. 539-580).","“Panama, heart of the rose of the seas” (p. 583). The book ends with the canal (pp. 539-580).")},
+    "cartagena":{"e":"dentro","n":N("«La llave que abre las puertas de Sudamérica» (p. 183) y «el puerto del Caribe» frente a Santa Fe, «la capital de los Andes» (p. 516). Aparece en 63 páginas y tiene capítulo propio: el sitio de Vernon y Blas de Lezo (pp. 379-390).","“The key that opens the doors of South America” (p. 183) and “the port of the Caribbean” as against Santa Fe, “the capital of the Andes” (p. 516). It appears on 63 pages and has its own chapter: the siege of Vernon and Blas de Lezo (pp. 379-390).")},
+    "santamarta":{"e":"dentro","n":N("Río Hacha, Santa Marta y Cartagena son «los puntos de la costa en Tierra Firme donde España concentra su poder» (p. 183).","Río Hacha, Santa Marta and Cartagena are “the points on the Tierra Firme coast where Spain concentrates its power” (p. 183).")},
+    "guajira":{"e":"dentro","n":N("Río Hacha y las perlas de la Ranchería, en las correrías de Hawkins y Drake (pp. 182-183 y 208).","Río Hacha and the pearls of La Ranchería, in the raids of Hawkins and Drake (pp. 182-183 and 208).")},
+    "sanandres":{"e":"dentro","n":N("San Andrés y Providencia, colonia puritana «frente a la costa de Panamá» (pp. 256-263).","San Andrés and Providencia, a Puritan colony “off the coast of Panama” (pp. 256-263).")},
+    "barranquilla":{"e":None,"n":N("No aparece en el libro.","It does not appear in the book.")},
+    "palenque":{"e":None,"n":N("Los cimarrones del libro son los del istmo, aliados de Drake (pp. 190-192); los palenques de la costa colombiana no aparecen.","The book's maroons are those of the isthmus, Drake's allies (pp. 190-192); the palenques of the Colombian coast do not appear.")},
+    "veracruz":{"e":"dentro","n":N("En San Juan de Ulúa el virrey destruye las naves de los contrabandistas ingleses: «un cambio de rumbo en la política europea» (p. 7).","At San Juan de Ulúa the viceroy destroys the English smugglers' ships: “a change of course in European politics” (p. 7).")},
+    "costachica":{"e":None,"n":N("No aparece: el México del libro es el del golfo.","It does not appear: the book's Mexico is the Gulf's.")},
+    "nola":{"e":"dentro","n":N("Un capítulo entero, «Canción de cuna del Mississippi», sigue la Luisiana francesa hasta la fundación de Nueva Orleans (pp. 345-359 y 588).","A whole chapter, “Mississippi lullaby”, follows French Louisiana to the founding of New Orleans (pp. 345-359 and 588).")}}),
+ "extras":{"bahamas":{"e":"dentro","n":N("Guanahaní, donde Colón toca tierra (p. 16).","Guanahaní, where Columbus makes landfall (p. 16).")},
+           "florida":{"e":"dentro","n":N("Ponce de León y la fuente de la eterna juventud (pp. 130-139).","Ponce de León and the fountain of youth (pp. 130-139).")},
+           "yucatan":{"e":"dentro","n":N("«El mar Caribe y el golfo de Yucatán forman un ocho, que aprieta en la cintura el estrecho de Yucatán» (p. 107).","“The Caribbean Sea and the Gulf of Yucatán form a figure eight, pinched at the waist by the Yucatán Channel” (p. 107).")},
+           "stthomas":{"e":"dentro","n":N("Capítulo de los daneses: «En Copenhague, como en Edimburgo, hay quienes sueñan sobre la rosa del mar» (pp. 312-340).","Chapter on the Danes: “In Copenhagen, as in Edinburgh, there are those who dream over the rose of the sea” (pp. 312-340).")},
+           "venezuela":{"e":"dentro","n":N("«Venezuela redimida» (p. 583): Miranda y Bolívar cruzan estas aguas (pp. 489-524).","“Venezuela redeemed” (p. 583): Miranda and Bolívar cross these waters (pp. 489-524).")},
+           "honduras":{"e":"dentro","n":N("«Honduras tantas veces oprimida» (p. 583).","“Honduras, so many times oppressed” (p. 583).")},
+           "guatemala":{"e":"dentro","n":N("«Guatemala que viene del más remoto sueño de los indios» (p. 583).","“Guatemala, coming from the Indians' most remote dream” (p. 583).")}},
+ "corpus":["gaztambideinvencion","abello"],
+ "aviso":N("El ejemplar no confirma la lectura de Abello (cap. 1), que lo tiene por antillano y sin Colombia: Cartagena aparece en 63 páginas y Colombia figura entre los países que «se miran en estas aguas» (p. 583). Las páginas son las de la edición digital del ejemplar.",
+           "The copy does not bear out Abello's reading (ch. 1), which takes the book as Antillean and without Colombia: Cartagena appears on 63 pages and Colombia is among the countries that “look at themselves in these waters” (p. 583). Page numbers follow the digital edition of the copy."),
 })
 
 DEF.append({
@@ -272,6 +301,51 @@ DEF.append({
            "brasil":{"e":"margen"},"nuevayork":{"e":"margen","n":N("«perhaps» (p. 25).","“perhaps” (p. 25).")}},
  "mundo":N("Bombay · Gambia · una taberna cantonesa · un pub de Bristol · un café de Manhattan (p. 4)","Bombay · Gambia · a Cantonese tavern · a Bristol pub · a Manhattan café (p. 4)"),
  "corpus":["benitez","ortiz","abello"],
+})
+
+N_GLI_ARCO = N("Por el criterio que declara: el Caribe como «un mar que contiene el estallido de tierras esparcidas en arco» (pp. 67-68).",
+                "By his stated criterion: the Caribbean as “a sea that contains the burst of lands scattered in an arc” (pp. 67-68).")
+N_GLI_FRANJA = N("En El discurso antillano, la presencia africana «forma una franja alrededor del mar Caribe, desde Brasil hasta Panamá hacia el Oeste (la costa)» (1981, p. 217). La creolización está «consagrada aquí al estallido de tierras que ya no son más islas» (1990, p. 68).",
+                 "In Caribbean Discourse, the African presence “forms a band around the Caribbean Sea, from Brazil to Panama westward (the coast)” (1981, p. 217). Creolisation is “devoted here to the burst of lands that are no longer islands” (1990, p. 68).")
+N_GLI_CARIFESTA = N("Carifesta «se inauguró en Guyana, tuvo su continuación en Jamaica y en 1982 se llevará a cabo en Barbados. Lo importante de Carifesta es el movimiento civilizacional» (1981, p. 218).",
+                    "Carifesta “opened in Guyana, continued in Jamaica and in 1982 will take place in Barbados. What matters about Carifesta is the civilisational movement” (1981, p. 218).")
+N_GLI_CREOL = N("Los dialectos del creol, frágiles frente al francés «en Guadalupe, en Martinica», «salvo en Haití, probablemente» (p. 103, nota).",
+                "Creole dialects, fragile before French “in Guadeloupe, in Martinique”, “except in Haiti, probably” (p. 103, note).")
+
+DEF.append({
+ "id":"glissant", "anio":1990, "autor":"Édouard Glissant", "obra":"Poétique de la Relation",
+ "apellido":N("Caribe-Relación","Caribbean-Relation"),
+ "forma":"fragmentos", "lectura":"ejemplar",
+ "familia":None,
+ "criterio":N("El Caribe no constituye una unidad porque comparta una esencia, una frontera o un origen común, sino porque sus diferencias entran continuamente en relación. El archipiélago aproxima sin fundir: conecta islas, lenguas, memorias y trayectorias sin convertirlas en una totalidad homogénea. La unidad caribeña reside, así, menos en lo que sus territorios comparten que en las relaciones mediante las cuales se transforman mutuamente.",
+              "The Caribbean is not a unity because it shares an essence, a border or a common origin, but because its differences keep entering into relation. The archipelago brings together without fusing: it connects islands, languages, memories and trajectories without turning them into a homogeneous totality. Caribbean unity lies less in what its territories share than in the relations through which they transform one another."),
+ "citas":[
+   {"txt":"En lo que me concierne, cito el Caribe como uno de los lugares del mundo donde la relación se hace más visible, una zona de destello donde parece reforzarse.","ref":"GLR","pag":"67"},
+   {"txt":"En comparación con el Mediterráneo, que es un mar interior, cercado por tierras, un mar que concentra […], definiría el Caribe como un mar que contiene el estallido de tierras esparcidas en arco. Un mar que difracta.","ref":"GLR","pag":"67-68"},
+   {"txt":"Pero el estallido de las culturas no es su esparcimiento, ni su disolución mutua. Es el signo violento de su reparto consentido, no impuesto.","ref":"GLR","pag":"68"},
+   {"txt":"No se trata solo de consentir el derecho a la diferencia sino, antes bien, el derecho a la opacidad, que no es el encierro en una autarquía impenetrable, sino la subsistencia en una singularidad no reductible.","ref":"GLR","pag":"220"},
+   {"txt":"La presencia africana, ocultada por mucho tiempo, forma una franja alrededor del mar Caribe, desde Brasil hasta Panamá hacia el Oeste (la costa), y desde Venezuela hasta Cuba hacia el Este (las islas).","ref":"GLD","pag":"217"},
+ ],
+ "lugares": junta(
+   todos([k for k in ISL if k not in ("martinica","guadalupe","haiti","cuba","jamaica","barbados","curazao")],"dentro",N_GLI_ARCO),
+   {"martinica":{"e":"dentro","n":N("Desde Martinica: «veo Santa Lucía en el horizonte. De este modo, yendo de lo próximo a lo próximo, evocando la extensión, pude realizar este arco-en-mar» (p. 238).","From Martinique: “I see Saint Lucia on the horizon. Thus, going from near to near, evoking the expanse, I was able to make this arc-in-sea” (p. 238).")}},
+   todos(["guadalupe","haiti"],"dentro",N_GLI_CREOL),
+   {"cuba":{"e":"dentro","n":N("Lo que se le pide a Cuba es «la voluntad de ser antillano, es decir, plurirrelatado» (1981, p. 218).","What is asked of Cuba is “the will to be Antillean, that is, multiply related” (1981, p. 218).")}},
+   todos(["jamaica","barbados"],"dentro",N_GLI_CARIFESTA),
+   {"curazao":{"e":"dentro","n":N("El papiamento, con base léxica hispánica «en países (Curazao) que dejaron de serlo» (p. 129, nota).","Papiamentu, with a Hispanic lexical base “in countries (Curaçao) that ceased to be so” (p. 129, note).")}},
+   {"guyana":{"e":"dentro","n":N_GLI_CARIFESTA}},
+   todos(["suriname","cartagena","santamarta","palenque","barranquilla","guajira","panama"],"dentro",N_GLI_FRANJA),
+   {"sanandres":{"e":None,"n":N("No lo nombra: queda al oeste de las islas que van «desde Venezuela hasta Cuba» (1981, p. 217).","He does not name it: it lies west of the islands that run “from Venezuela to Cuba” (1981, p. 217).")}},
+   todos(["belize","bluefields","costarica"],None,
+         N("Quedan fuera de la franja que traza, que por la costa llega hasta Panamá (1981, p. 217). La «costa caribe de América Latina» aparece en la extensión del sistema de plantaciones (p. 97), sin nombrarlas.","They fall outside the band he draws, which reaches Panama along the coast (1981, p. 217). The “Caribbean coast of Latin America” appears within the spread of the plantation system (p. 97), without naming them.")),
+   {"nola":{"e":None,"n":N("El sur de Estados Unidos comparte el sistema de plantaciones (p. 97), y la misma poética ocurre allí «bajo aspectos bien diferentes» (p. 68): lo lee a través de Faulkner, no como Caribe.","The US South shares the plantation system (p. 97), and the same poetics happens there “under very different guises” (p. 68): he reads it through Faulkner, not as Caribbean.")}}),
+ "extras":{"stlucia":{"e":"dentro","n":N("El otro extremo del «arco-en-mar» que ve desde Martinica (p. 238).","The other end of the “arc-in-sea” he sees from Martinique (p. 238).")},
+           "venezuela":{"e":"dentro","n":N("Donde empieza la franja de las islas, «desde Venezuela hasta Cuba» (1981, p. 217).","Where the island band begins, “from Venezuela to Cuba” (1981, p. 217).")},
+           "brasil":{"e":"margen","n":N("La franja arranca en Brasil (1981, p. 217), pero en 1990 el Caribe y Brasil son dos conjuntos que podrían reencontrarse en «nuevas zonas de comunidad relacional» (p. 176).","The band starts in Brazil (1981, p. 217), but in 1990 the Caribbean and Brazil are two groupings that could meet again in “new zones of relational community” (p. 176).")},
+           "sureeuu":{"e":"margen","n":N("«El sistema de plantaciones se extendió, con los mismos principios estructurales, en el sur de los Estados Unidos, el Caribe, la costa caribe de América Latina y el noreste de Brasil» (p. 97).","“The plantation system spread, on the same structural principles, across the US South, the Caribbean, the Caribbean coast of Latin America and north-eastern Brazil” (p. 97).")}},
+ "corpus":["glissant","brathwaitearchipelago","archipelagicthinking","deere"],
+ "aviso":N("Conceptos clave: Relación · archipiélago · diferencia · creolización · opacidad · pensamiento archipelágico. En la genealogía de la capa, Glissant es puente y no equivalente: Benítez Rojo ve un meta-archipiélago que se repite y desborda sus fronteras; Glissant, diferencias que entran en relación sin fundirse en una totalidad; Bassi, un espacio producido históricamente por circulaciones transimperiales; este atlas hace del fenómeno-relación su unidad de análisis, una categoría propia que no es de Glissant.",
+           "Key concepts: Relation · archipelago · difference · creolisation · opacity · archipelagic thought. In the layer's genealogy Glissant is a bridge, not an equivalent: Benítez Rojo sees a meta-archipelago that repeats and overflows its borders; Glissant, differences entering into relation without fusing into a totality; Bassi, a space historically produced by trans-imperial circulation; this atlas makes the phenomenon-relation its unit of analysis, a category of its own that is not Glissant's."),
 })
 
 DEF.append({
@@ -461,9 +535,12 @@ DISPUTAS = [
  {"a":"bosch","b":"gaz-insular","tipo":"disonancia",
   "es":"Bosch y Eric Williams publican en 1970 historias casi homónimas sobre dos Caribes distintos: la frontera imperial y el Caribe insular (Gaztambide, p. 13).",
   "en":"Bosch and Eric Williams publish almost identically titled histories in 1970 about two different Caribbeans: the imperial frontier and the insular Caribbean (Gaztambide, p. 13).","ref":"GAZ · p. 13"},
- {"a":"arciniegas","b":"gaz-grancaribe","tipo":"disonancia",
-  "es":"Gaztambide pone a Arciniegas en el origen del Gran Caribe (p. 15); Abello dice que su Caribe es antillano y deja fuera a Colombia (cap. 1).",
-  "en":"Gaztambide places Arciniegas at the origin of the Greater Caribbean (p. 15); Abello says his Caribbean is Antillean and leaves Colombia out (ch. 1).","ref":"GAZ · p. 15 / ABE · cap. 1"},
+ {"a":"gaz-grancaribe","b":"arciniegas","tipo":"apropiacion",
+  "es":"Gaztambide pone la Biografía de Arciniegas en los comienzos del Gran Caribe y lee en «“Caribe” es como decir “indio bravo”» una reivindicación de los aborígenes a la manera de los nacionalistas del siglo XIX (p. 15). El ejemplar le da la razón en la extensión: el libro recorre la Tierra Firme, el golfo y el Mississippi.",
+  "en":"Gaztambide places Arciniegas's Biography at the beginnings of the Greater Caribbean and reads “Carib is like saying fierce Indian” as a vindication of the aborigines in the manner of nineteenth-century nationalists (p. 15). The copy bears him out on extent: the book ranges over the mainland, the Gulf and the Mississippi.","ref":"GAZ · p. 15 / ARC · p. 17"},
+ {"a":"abello","b":"arciniegas","tipo":"disonancia",
+  "es":"Abello lee un Caribe «antillano» en el que «Colombia no forma parte» (cap. 1). El ejemplar no lo sostiene: Cartagena, «el puerto del Caribe» (p. 516), aparece en 63 páginas, y Colombia está entre los que «se miran en estas aguas» (p. 583). Lo que Arciniegas sí ve es la espalda andina: el imperio español «está en la montaña» y deja el mar como «frente de choque» (p. 240). Esa imagen no queda lejos de la isla encallada.",
+  "en":"Abello reads an “Antillean” Caribbean of which “Colombia is not part” (ch. 1). The copy does not bear this out: Cartagena, “the port of the Caribbean” (p. 516), appears on 63 pages, and Colombia is among those who “look at themselves in these waters” (p. 583). What Arciniegas does see is the Andean back turned to the sea: the Spanish empire “is in the mountains” and leaves the sea as its “front of collision” (p. 240). That image is not far from the stranded island.","ref":"ABE · cap. 1 / ARC · pp. 240, 516, 583"},
  {"a":"abello","b":"gaz-cultural","tipo":"disonancia",
   "es":"El Caribe cultural descansa en la plantación y la contraplantación; Abello y Bassi, en un capítulo escrito a cuatro manos, muestran que en el Caribe colombiano la plantación azucarera nunca se desarrolló (cap. 3).",
   "en":"The cultural Caribbean rests on plantation and counter-plantation; Abello and Bassi, in a co-written chapter, show the sugar plantation never developed in the Colombian Caribbean (ch. 3).","ref":"ABE · cap. 3"},
@@ -482,6 +559,9 @@ DISPUTAS = [
  {"a":"abello","b":"bassi","tipo":"apropiacion",
   "es":"Abello toma de la tesis doctoral de Bassi (2012), origen de este libro, la pregunta por el papel de la Nueva Granada en el Gran Caribe, que según él «abre un nuevo momento en los estudios colombianos sobre el Caribe» (cap. 1). Los dos firman juntos el capítulo 3 de La isla encallada.",
   "en":"Abello takes from Bassi's 2012 dissertation, the origin of this book, the question of New Granada's role in the Greater Caribbean, which in his words “opens a new moment in Colombian studies of the Caribbean” (ch. 1). The two co-wrote chapter 3 of La isla encallada.","ref":"ABE · cap. 1"},
+ {"a":"glissant","b":"brathwaite","tipo":"apropiacion",
+  "es":"Glissant abre Poética de la Relación con «The unity is sub-marine» de Brathwaite como epígrafe, y ya lo había glosado en El discurso antillano: «Raíces submarinas: es decir, derivadas, no implantadas con un único mástil en un único limo, sino prolongadas en todas las direcciones de nuestro universo por su red de ramas» (1981, p. 128). La unidad submarina se vuelve raíz de la Relación.",
+  "en":"Glissant opens Poetics of Relation with Brathwaite's “The unity is sub-marine” as epigraph, and had already glossed it in Caribbean Discourse: “Submarine roots: that is, derived, not planted with a single mast in a single silt, but extended in every direction of our universe through their network of branches” (1981, p. 128). The submarine unity becomes the root of Relation.","ref":"GLR · epígrafe / GLD · p. 128"},
 ]
 
 FAMILIAS = {

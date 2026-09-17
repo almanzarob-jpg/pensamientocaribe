@@ -29,17 +29,17 @@
     es:{
       btn:'¿Qué Caribe?', btnTitle:'Abrir las definiciones del Caribe',
       tit:'¿Qué Caribe?',
-      intro:'No hay un Caribe sino muchos, y cada uno dibuja otro mapa. Elige una definición: se enciende lo que incluye, queda en penumbra lo que no nombra, se marca en rojo lo que se disputa y se tacha lo que excluye.',
+      intro:'No hay un Caribe sino muchos, y cada uno dibuja otro mapa. Elige una definición y el mapa se lee así: la bruma aguamarina cubre lo que incluye, el anillo punteado señala lo que apenas roza, el anillo coral lo que está en disputa y el aspa lo que excluye. Donde el texto calla, el lugar se apaga.',
       epi:'«cada vez que hablemos de la región, debemos de apellidarla»', epiRef:'Gaztambide 2006, p. 21',
       gazGrupo:'Gaztambide 1996 · cuatro tendencias',
       volver:'Todas las definiciones', anterior:'Definición anterior', siguiente:'Definición siguiente',
       cerrar:'Cerrar', quitar:'Quitar la capa',
       ejemplar:'leída en el ejemplar', referida:'referida · sin ejemplar',
       familia:'Tendencia según', sinFamilia:'Fuera de la tipología de Gaztambide',
-      criterio:'Criterio', citas:'En el texto', dibuja:'Qué dibuja en el mapa',
+      criterio:'Criterio', citas:'En el texto', dibuja:'Cómo se lee en el mapa',
       e_dentro:'Dentro', e_margen:'Al margen', e_disputa:'En disputa', e_fuera:'Fuera', e_nada:'No se pronuncia',
-      d_dentro:'el texto lo incluye', d_margen:'como contexto, litoral o «tal vez»', d_disputa:'dos textos se contradicen', d_fuera:'el texto lo excluye', d_nada:'el texto no lo nombra',
-      fuera_mapa:'Fuera del atlas', mundo:'Sin borde', canon:'Canon anglófono', trazos:'Parecidos de familia',
+      d_dentro:'lo nombra o cabe en su criterio', d_margen:'lo roza: contexto, litoral o un «tal vez»', d_disputa:'lecturas que chocan o pregunta abierta', d_fuera:'lo excluye de forma expresa', d_nada:'calla, y no se completa por analogía',
+      fuera_mapa:'Sin nodo en el atlas', mundo:'Sin borde', canon:'Canon anglófono', trazos:'Parecidos de familia',
       disputas:'Con quién discute', rel_toma:'toma de', rel_retoma:'la retoma', rel_discute:'discute con',
       corpus:'En el corpus del atlas', abrirObra:'Abrir la ficha de la obra',
       contrastar:'Contrastar con', sinContraste:'— ninguna —',
@@ -49,28 +49,33 @@
       encallada:'La isla encallada',
       anuncio:'{def}. {d} lugares dentro, {m} al margen, {x} en disputa, {f} fuera, {n} sin pronunciamiento.',
       anuncioC:'Contraste entre {a} y {b}. {sa} solo en la primera, {ab} en las dos, {sb} solo en la segunda.',
+      area:'Área: la bruma cubre lo que la definición abarca. Su borde es el que traza el texto, no el de un mapa político.',
       submarina:'The unity is submarine: los fragmentos se encienden sueltos y la trama los une por debajo.',
       sinCentro:'Sin borde ni centro: el Caribe se sale de su propio mar.',
       relaciones:'Frontera abierta: la región se compara, no se delimita.',
       trama:'La unidad es el fenómeno: entra todo lo que una corriente atraviesa.',
       rutas:'Territorio acuoso: el mar es lugar, y las líneas son conexiones marineras, no fronteras.', rutasLeyenda:'Conexiones desde la costa neogranadina',
       contrasteLeyenda:'Contraste',
+      leyenda:'Leyenda', leyendaAria:'Leyenda de la capa ¿Qué Caribe?', leyendaMostrar:'Mostrar la leyenda', leyendaOcultar:'Ocultar la leyenda',
+      l_fragmento:'Fragmento', l_trama:'Obras unidas por corrientes', l_fuga:'Se sale del marco', l_extra:'Sin nodo en el atlas',
+      l_trazo:'Parecido de familia', l_ruta:'Conexión marinera', l_canon:'Canon anglófono', l_encallada:'La isla encallada',
+      l_extraNota:'rombo con el color de su estado',
       lista:'Definiciones, de la más antigua a la más reciente'
     },
     en:{
       btn:'Which Caribbean?', btnTitle:'Open the definitions of the Caribbean',
       tit:'Which Caribbean?',
-      intro:'There is no single Caribbean but many, and each one draws a different map. Choose a definition: what it includes lights up, what it does not name stays in shadow, what is disputed turns red and what it excludes is struck out.',
+      intro:'There is no single Caribbean but many, and each one draws a different map. Choose a definition and read the map this way: the aquamarine haze covers what it includes, the dotted ring marks what it barely touches, the coral ring what is disputed and the cross what it excludes. Where the text is silent, the place dims.',
       epi:'“whenever we speak of the region, we must give it a surname”', epiRef:'Gaztambide 2006, p. 21',
       gazGrupo:'Gaztambide 1996 · four tendencies',
       volver:'All definitions', anterior:'Previous definition', siguiente:'Next definition',
       cerrar:'Close', quitar:'Remove the layer',
       ejemplar:'read in the copy', referida:'second-hand · no copy held',
       familia:'Tendency according to', sinFamilia:'Outside Gaztambide\'s typology',
-      criterio:'Criterion', citas:'In the text', dibuja:'What it draws on the map',
+      criterio:'Criterion', citas:'In the text', dibuja:'How to read the map',
       e_dentro:'Inside', e_margen:'At the margin', e_disputa:'Disputed', e_fuera:'Outside', e_nada:'Not addressed',
-      d_dentro:'the text includes it', d_margen:'as context, littoral or “perhaps”', d_disputa:'two texts contradict each other', d_fuera:'the text excludes it', d_nada:'the text does not name it',
-      fuera_mapa:'Beyond the atlas', mundo:'No boundary', canon:'Anglophone canon', trazos:'Family resemblances',
+      d_dentro:'named, or within its stated criterion', d_margen:'barely touched: context, littoral or a “perhaps”', d_disputa:'clashing readings or an open question', d_fuera:'expressly excluded', d_nada:'silent, and not filled in by analogy',
+      fuera_mapa:'No atlas node', mundo:'No boundary', canon:'Anglophone canon', trazos:'Family resemblances',
       disputas:'Who it argues with', rel_toma:'borrows from', rel_retoma:'taken up by', rel_discute:'argues with',
       corpus:'In the atlas corpus', abrirObra:'Open the work',
       contrastar:'Contrast with', sinContraste:'— none —',
@@ -80,12 +85,17 @@
       encallada:'The stranded island',
       anuncio:'{def}. {d} places inside, {m} at the margin, {x} disputed, {f} outside, {n} not addressed.',
       anuncioC:'Contrast between {a} and {b}. {sa} only in the first, {ab} in both, {sb} only in the second.',
+      area:'Area: the haze covers what the definition takes in. Its edge is the one the text draws, not a political map\'s.',
       submarina:'The unity is submarine: the fragments light up one by one and the web joins them underneath.',
       sinCentro:'Neither boundary nor centre: the Caribbean overflows its own sea.',
       relaciones:'Open frontier: the region is compared, not bounded.',
       trama:'The unit is the phenomenon: whatever a current crosses comes in.',
       rutas:'Aqueous territory: the sea is a place, and the lines are sailors\' connections, not borders.', rutasLeyenda:'Connections from the New Granada coast',
       contrasteLeyenda:'Contrast',
+      leyenda:'Legend', leyendaAria:'Legend of the Which Caribbean? layer', leyendaMostrar:'Show the legend', leyendaOcultar:'Hide the legend',
+      l_fragmento:'Fragment', l_trama:'Works joined by currents', l_fuga:'Overflows the frame', l_extra:'No atlas node',
+      l_trazo:'Family resemblance', l_ruta:'Sailors\' connection', l_canon:'Anglophone canon', l_encallada:'The stranded island',
+      l_extraNota:'diamond in the colour of its state',
       lista:'Definitions, from the oldest to the most recent'
     }
   };
@@ -97,7 +107,11 @@
   const tituloDef = d => loc(d.apellido);
 
   /* ---------------- estado de la capa ---------------- */
-  const QC = { def:null, contra:null, vista:'lista' };
+  const QC = { def:null, contra:null, vista:'lista', leyenda:true };
+  try{
+    const g=localStorage.getItem('qc-leyenda');
+    QC.leyenda = g!==null ? g==='1' : !window.matchMedia('(max-width:780px), (max-height:520px)').matches;
+  }catch(e){ QC.leyenda = !(window.matchMedia && window.matchMedia('(max-width:780px)').matches); }
   window.QC_ESTADO = QC; /* para las pruebas */
 
   function estadoDe(d, k){ const v=d && d.lugares[k]; return v && v.e ? v.e : null; }
@@ -117,6 +131,40 @@
     return out;
   }
 
+  /* ---------------- muestras de leyenda ----------------
+     Cada muestra repite en pequeño la marca que la capa dibuja en el mapa (bruma,
+     anillo punteado, anillo discontinuo, aspa, rombo, ruta…), para que la ficha y la
+     leyenda flotante hablen la misma gramática y la lectura no dependa del color. */
+  (function(){
+    if(document.getElementById('qcLswDefs')) return;
+    const d=document.createElementNS('http://www.w3.org/2000/svg','svg');
+    d.id='qcLswDefs'; d.setAttribute('width','0'); d.setAttribute('height','0'); d.setAttribute('aria-hidden','true');
+    d.style.cssText='position:absolute;width:0;height:0;overflow:hidden';
+    d.innerHTML='<defs><filter id="qcLswBlur" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="1.7"/></filter></defs>';
+    document.body.appendChild(d);
+  })();
+  const NODO='<circle cx="12" cy="8" r="2.2" class="qc-lsw-nodo"/>';
+  const MUESTRAS={
+    dentro:  `<circle cx="12" cy="8" r="6.2" class="qc-lsw-luz" filter="url(#qcLswBlur)"/>${NODO}`,
+    margen:  `<circle cx="12" cy="8" r="5.6" class="qc-lsw-luz-margen" filter="url(#qcLswBlur)"/><circle cx="12" cy="8" r="6" class="qc-lsw-anillo qc-lsw-margen"/>${NODO}`,
+    disputa: `<circle cx="12" cy="8" r="5.6" class="qc-lsw-luz-disputa" filter="url(#qcLswBlur)"/><circle cx="12" cy="8" r="6" class="qc-lsw-anillo qc-lsw-disputa"/>${NODO}`,
+    fuera:   `<circle cx="12" cy="8" r="2" class="qc-lsw-nodo qc-lsw-apagado"/><path d="M8.5,4.5 L15.5,11.5 M15.5,4.5 L8.5,11.5" class="qc-lsw-tacha"/>`,
+    nada:    `<circle cx="12" cy="8" r="2" class="qc-lsw-nodo qc-lsw-apagado"/>`,
+    fragmento:`<circle cx="12" cy="8" r="5.5" class="qc-lsw-anillo qc-lsw-fragmento"/>${NODO}`,
+    trama:   `<path d="M4,11 L11,4 L20,9 M4,11 L20,9" class="qc-lsw-hilo"/><circle cx="4" cy="11" r="1.8" class="qc-lsw-nodo"/><circle cx="11" cy="4" r="1.8" class="qc-lsw-nodo"/><circle cx="20" cy="9" r="1.8" class="qc-lsw-nodo"/>`,
+    fuga:    `<path d="M3,12 Q11,11 21,3" class="qc-lsw-fuga"/><path d="M17.5,3.2 L21,3 L20.2,6.3" class="qc-lsw-fuga-punta"/>`,
+    extra:   `<path d="M12,3.6 L16.4,8 L12,12.4 L7.6,8 Z" class="qc-lsw-extra"/>`,
+    trazo:   `<path d="M3,12 Q12,1 21,12" class="qc-lsw-trazo"/><text x="12" y="9.3" class="qc-lsw-aprox" text-anchor="middle">≈</text>`,
+    ruta:    `<path d="M3,12 Q12,1 21,12" class="qc-lsw-ruta"/>`,
+    canon:   `<circle cx="12" cy="8" r="6" class="qc-lsw-anillo qc-lsw-canon"/>${NODO}`,
+    encallada:`<rect x="2.5" y="3.5" width="19" height="9" rx="4.5" class="qc-lsw-encallada"/>`,
+    'c-a':   `<circle cx="12" cy="8" r="6.2" class="qc-lsw-c-a" filter="url(#qcLswBlur)"/>${NODO}`,
+    'c-b':   `<circle cx="12" cy="8" r="6.2" class="qc-lsw-c-b" filter="url(#qcLswBlur)"/>${NODO}`,
+    'c-ab':  `<circle cx="12" cy="8" r="6.2" class="qc-lsw-c-ab" filter="url(#qcLswBlur)"/>${NODO}`,
+    'c-ninguna':`<circle cx="12" cy="8" r="2" class="qc-lsw-nodo qc-lsw-apagado"/>`
+  };
+  const muestra = (tipo, extraClase='') => `<svg class="qc-lsw ${extraClase}" viewBox="0 0 24 16" width="28" height="19" aria-hidden="true" focusable="false">${MUESTRAS[tipo]||''}</svg>`;
+
   /* ---------------- marcado: botón del encabezado, panel, barra, anuncios ---------------- */
   const controls=document.querySelector('header .controls');
   const grpRec=document.getElementById('recorridosBtn') ? document.getElementById('recorridosBtn').closest('.grp') : null;
@@ -133,6 +181,10 @@
   const barra=document.createElement('div');
   barra.id='qcBarra'; barra.hidden=true;
   main.appendChild(barra);
+
+  const leyenda=document.createElement('div');
+  leyenda.id='qcLeyenda'; leyenda.hidden=true; leyenda.setAttribute('role','group');
+  main.appendChild(leyenda);
 
   const anuncio=document.createElement('div');
   anuncio.className='visually-hidden'; anuncio.setAttribute('role','status'); anuncio.setAttribute('aria-live','polite');
@@ -230,8 +282,9 @@
     h+='</ol>';
     return h;
   }
+  let forma_=null;
   function chipEstado(e, n){
-    return `<span class="qc-sw qc-sw-${e}" aria-hidden="true"></span><span class="qc-en">${esc(qt('e_'+e))}</span>${n!=null?`<span class="qc-n">${n}</span>`:''}`;
+    return `${muestra(forma_ && e==='dentro' ? forma_ : e)}<span class="qc-en">${esc(qt('e_'+e))}</span>${n!=null?`<span class="qc-n">${n}</span>`:''}`;
   }
   function htmlFicha(d){
     const i=ORDEN.indexOf(d.id);
@@ -258,7 +311,7 @@
 
     if(QC.contra){
       const b=DEF_POR_ID[QC.contra], c=contraste(d,b);
-      const fila=(clase, rot, arr)=>`<details class="qc-grupo"${arr.length&&clase!=='ninguna'?' open':''}><summary><span class="qc-sw qc-sw-c-${clase}" aria-hidden="true"></span><span class="qc-en">${rot}</span><span class="qc-n">${arr.length}</span></summary>`+
+      const fila=(clase, rot, arr)=>`<details class="qc-grupo"${arr.length&&clase!=='ninguna'?' open':''}><summary>${muestra('c-'+clase)}<span class="qc-en">${rot}</span><span class="qc-n">${arr.length}</span></summary>`+
         (arr.length?`<ul>${arr.map(k=>`<li>${esc(nombreLugar(k))}</li>`).join('')}</ul>`:'')+`</details>`;
       h+=`<h3>${esc(qt('contrasteLeyenda'))}</h3>`;
       h+=fila('a', `${esc(qt('soloA'))} ${esc(tituloDef(d))}`, c.soloA);
@@ -268,6 +321,7 @@
     } else {
       const c=cuentas(d);
       h+=`<h3>${esc(qt('dibuja'))}</h3>`;
+      if(d.forma==='area') h+=`<p class="qc-forma">${esc(qt('area'))}</p>`;
       if(d.forma==='fragmentos') h+=`<p class="qc-forma">${esc(qt('submarina'))}</p>`;
       if(d.forma==='sin_centro') h+=`<p class="qc-forma">${esc(qt('sinCentro'))}</p>`;
       if(d.forma==='relaciones') h+=`<p class="qc-forma">${esc(qt('relaciones'))}</p>`;
@@ -280,19 +334,22 @@
         /* los lugares que comparten nota van juntos: la nota se lee una vez */
         const porNota=[]; ks.forEach(k=>{ const n=notaDe(d,k); const g=porNota.find(x=>x.n===n); if(g) g.ks.push(k); else porNota.push({n, ks:[k]}); });
         porNota.sort((a,b)=>(a.n?1:0)-(b.n?1:0));
+        forma_ = d.forma==='fragmentos' ? 'fragmento' : null;
         h+=`<details class="qc-grupo"${abierto?' open':''}><summary>${chipEstado(e,ks.length)}<span class="qc-desc">${esc(qt('d_'+e))}</span></summary><ul>`+
            porNota.map(g=>`<li>${g.ks.map(nombreLugar).map(esc).join(', ')}${g.n?`<span class="qc-nota">${esc(g.n)}</span>`:''}</li>`).join('')+`</ul></details>`;
       });
       const ex=Object.entries(d.extras||{});
       if(ex.length || d.mundo){
-        h+=`<details class="qc-grupo"><summary><span class="qc-sw qc-sw-extra" aria-hidden="true"></span><span class="qc-en">${esc(qt('fuera_mapa'))}</span><span class="qc-n">${ex.length}</span></summary><ul>`+
+        forma_=null;
+        h+=`<details class="qc-grupo"><summary>${muestra('extra')}<span class="qc-en">${esc(qt('fuera_mapa'))}</span><span class="qc-n">${ex.length}</span></summary><ul>`+
            ex.map(([k,v])=>`<li>${esc(nombreLugar(k))} <span class="qc-estado-mini qc-t-${v.e}">${esc(qt('e_'+v.e))}</span>${v.n?`<span class="qc-nota">${esc(loc(v.n))}</span>`:''}</li>`).join('')+
            (d.mundo?`<li><i>${esc(qt('mundo'))}:</i> ${esc(loc(d.mundo))}</li>`:'')+`</ul></details>`;
       }
       if(d.trazos){ const ru=d.forma==='rutas';
-        h+=`<p class="qc-forma qc-leyenda-trazos"><span class="qc-sw ${ru?'qc-sw-ruta':'qc-sw-trazo'}" aria-hidden="true"></span>${esc(qt(ru?'rutasLeyenda':'trazos'))}: `+
+        h+=`<p class="qc-forma qc-leyenda-trazos">${muestra(ru?'ruta':'trazo')}${esc(qt(ru?'rutasLeyenda':'trazos'))}: `+
            d.trazos.map(([a,b])=>`${esc(nombreLugar(a))} ${ru?'↔':'≈'} ${esc(nombreLugar(b))}`).join(' · ')+`</p>`; }
-      if(d.canon) h+=`<p class="qc-forma"><span class="qc-sw qc-sw-canon" aria-hidden="true"></span>${esc(qt('canon'))}: ${d.canon.map(nombreLugar).map(esc).join(', ')}</p>`;
+      if(d.encallada) h+=`<p class="qc-forma">${muestra('encallada')}${esc(qt('l_encallada'))}: ${d.encallada.map(nombreLugar).map(esc).join(', ')}</p>`;
+      if(d.canon) h+=`<p class="qc-forma">${muestra('canon')}${esc(qt('canon'))}: ${d.canon.map(nombreLugar).map(esc).join(', ')}</p>`;
     }
 
     /* disputas */
@@ -339,8 +396,60 @@
     if(sel) sel.addEventListener('change',()=>{ contrastarCon(sel.value); const s=panel.querySelector('#qcContra'); if(s) s.focus(); });
   }
 
+  /* ---------------- leyenda flotante sobre el mapa ----------------
+     La capa se lee sin abrir la ficha: la leyenda dice qué significa cada marca de la
+     definición activa y cuántos lugares lleva. Solo aparece lo que la definición
+     dibuja de verdad, en el orden en que se lee: estados, forma propia, lugares sin nodo. */
+  function itemsLeyenda(d, b){
+    const it=[];
+    if(b){
+      const c=contraste(d,b);
+      it.push({m:'c-a', t:`${qt('soloA')} ${tituloDef(d)}`, n:c.soloA.length});
+      it.push({m:'c-ab', t:qt('ambas'), n:c.ambas.length});
+      it.push({m:'c-b', t:`${qt('soloB')} ${tituloDef(b)}`, n:c.soloB.length});
+      if(Object.keys(L).some(k=>estadoDe(d,k)==='disputa'||estadoDe(b,k)==='disputa')) it.push({m:'disputa', t:qt('e_disputa')});
+      return it;
+    }
+    const c=cuentas(d);
+    if(d.forma==='trama'){
+      it.push({m:'trama', t:qt('l_trama'), n:c.dentro+c.margen+c.disputa});
+    } else if(d.forma==='fragmentos'){
+      it.push({m:'fragmento', t:qt('l_fragmento'), n:c.dentro, d:qt('d_dentro')});
+      it.push({m:'trama', t:qt('l_trama')});
+      if(c.nada+c.margen+c.fuera) it.push({m:'nada', t:qt('e_nada'), n:c.nada+c.margen+c.fuera});
+    } else {
+      ESTADOS.concat('nada').forEach(e=>{ if(c[e]) it.push({m:e, t:qt('e_'+e), n:c[e], d:qt('d_'+e)}); });
+    }
+    if(d.trazos) it.push({m:d.forma==='rutas'?'ruta':'trazo', t:qt(d.forma==='rutas'?'l_ruta':'l_trazo'), n:d.trazos.length});
+    if(d.canon) it.push({m:'canon', t:qt('l_canon'), n:d.canon.length});
+    if(d.encallada) it.push({m:'encallada', t:qt('l_encallada')});
+    if(d.forma==='sin_centro') it.push({m:'fuga', t:qt('l_fuga')});
+    const ex=Object.keys(d.extras||{}).length;
+    if(ex) it.push({m:'extra', t:qt('l_extra'), n:ex, d:qt('l_extraNota')});
+    return it;
+  }
+  function pintarLeyenda(){
+    const d=QC.def?DEF_POR_ID[QC.def]:null;
+    if(!d || state.view!=='corriente'){ leyenda.hidden=true; leyenda.innerHTML=''; return; }
+    const b=QC.contra?DEF_POR_ID[QC.contra]:null;
+    leyenda.hidden=false;
+    leyenda.setAttribute('aria-label', qt('leyendaAria'));
+    leyenda.classList.toggle('plegada', !QC.leyenda);
+    leyenda.innerHTML=`<button type="button" class="qc-l-tog" aria-expanded="${QC.leyenda}" aria-controls="qcLeyendaLista" title="${esc(qt(QC.leyenda?'leyendaOcultar':'leyendaMostrar'))}">${esc(qt('leyenda'))}<span aria-hidden="true">${QC.leyenda?'–':'+'}</span></button>`+
+      `<ul id="qcLeyendaLista"${QC.leyenda?'':' hidden'}>`+
+      itemsLeyenda(d,b).map(x=>`<li${x.d?` title="${esc(x.d)}"`:''}>${muestra(x.m)}<span class="qc-l-rot">${esc(x.t)}</span>${x.n!=null?`<span class="qc-l-n">${x.n}</span>`:''}${x.d?`<span class="visually-hidden">: ${esc(x.d)}</span>`:''}</li>`).join('')+
+      `</ul>`;
+    leyenda.querySelector('.qc-l-tog').onclick=()=>{
+      QC.leyenda=!QC.leyenda;
+      try{ localStorage.setItem('qc-leyenda', QC.leyenda?'1':'0'); }catch(e){}
+      pintarLeyenda();
+      const t=leyenda.querySelector('.qc-l-tog'); if(t) t.focus();
+    };
+  }
+
   /* ---------------- barra compacta sobre el mapa ---------------- */
   function pintarBarra(){
+    pintarLeyenda();
     const d=QC.def?DEF_POR_ID[QC.def]:null;
     if(!d){ barra.hidden=true; barra.innerHTML=''; return; }
     barra.hidden=false;
