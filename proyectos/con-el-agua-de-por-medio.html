@@ -347,23 +347,94 @@ function anoNum(n){
   return m?parseInt(m[0],10):null;
 }
 
+/* ══════════ BLOQUE C · autorías ══════════════════════════════════════════════
+   El campo `a` es texto libre: «Alberto Abello Vives», «Mintz y Price», «Richard Price
+   (ed.)». Antes el apellido se sacaba con la última palabra, que es la convención
+   anglófona: daba «vía Vives» para Abello Vives, «vía Rojo» para Benítez Rojo, «vía
+   Castellanos» para Almanza y Granados Castellanos, y BibTeX archivaba a Roberto Almanza
+   Hernández bajo «Hernández». El doble apellido no se puede adivinar (José Antonio
+   Figueroa tiene nombre doble y apellido simple), así que no se infiere: los apellidos
+   compuestos del corpus se declaran uno por uno en esta tabla, revisable y ampliable.
+   Todo lo demás toma la última palabra, con sus partículas (de, van der, …). */
+const APELLIDOS_COMPUESTOS = {
+  "Dolcey Romero Jaramillo":"Romero Jaramillo", "Ángel Quintero Rivera":"Quintero Rivera", "Ángel G. Quintero Rivera":"Quintero Rivera",
+  "Edgardo Pérez Morales":"Pérez Morales", "José Antonio Caicedo Ortiz":"Caicedo Ortiz", "Carlos Patiño Rosselli":"Patiño Rosselli",
+  "Gonzalo Aguirre Beltrán":"Aguirre Beltrán", "Alberto Abello Vives":"Abello Vives", "Antonio Benítez Rojo":"Benítez Rojo",
+  "Adriana Naveda Chávez-Hita":"Naveda Chávez-Hita", "Pedro Lebrón Ortiz":"Lebrón Ortiz", "Manuel Zapata Olivella":"Zapata Olivella",
+  "Roberto Almanza Hernández":"Almanza Hernández", "Margarita Granados Castellanos":"Granados Castellanos", "Édgar Rey Sinning":"Rey Sinning",
+  "Martha Lizcano Angarita":"Lizcano Angarita", "Danny González Cueto":"González Cueto", "Mukien Adriana Sang Ben":"Sang Ben",
+  "Ricardo Chica Geliz":"Chica Geliz", "Adrián Fajardo Martínez":"Fajardo Martínez", "Yolanda Martínez-San Miguel":"Martínez-San Miguel",
+  "Freddy Prestol Castillo":"Prestol Castillo", "María Angélica del Mar Mendoza Manotas":"Mendoza Manotas", "William Álvarez Álvarez":"Álvarez Álvarez",
+  "Wilhelm Londoño Díaz":"Londoño Díaz", "Manuel Moreno Fraginals":"Moreno Fraginals", "José Polo Acuña":"Polo Acuña",
+  "Sebastián Isidro Espinosa Martínez":"Espinosa Martínez", "Elena Padilla Seda":"Padilla Seda", "Aisha M. Beliso-De Jesús":"Beliso-De Jesús",
+  "Walton Look Lai":"Look Lai", "H. U. E. Thoden van Velzen":"Thoden van Velzen"
+};
+/* autorías que el texto libre no deja separar bien */
+const AUTORIAS_ESPECIALES = {
+  "Melville & Frances Herskovits":[{nombres:"Melville", apellidos:"Herskovits"},{nombres:"Frances", apellidos:"Herskovits"}]
+};
+const PARTICULAS = new Set(['de','del','la','las','los','van','der','den','von','da','das','do','dos','du','le','ten','ter']);
+function autoriasDe(n){
+  const bruto=String(n&&n.a||'').trim();
+  const rol = /\((comps?)\.?\)/i.test(bruto) ? 'comp' : /\((eds?)\.?\)/i.test(bruto) ? 'ed' : 'autor';
+  if(AUTORIAS_ESPECIALES[bruto]) return AUTORIAS_ESPECIALES[bruto].map(x=>({...x, rol}));
+  const limpio=bruto.replace(/\s*\([^)]*\)\s*/g,' ').replace(/\s+et al\.?\s*$/i,'').trim();
+  return limpio.split(/\s*(?:;|,|\s+y\s+|\s+e\s+|\s+and\s+|\s*&\s*)\s*/).filter(Boolean).map(p=>{
+    if(APELLIDOS_COMPUESTOS[p]){ const ap=APELLIDOS_COMPUESTOS[p]; return {nombres:p.slice(0,p.length-ap.length).trim(), apellidos:ap, rol}; }
+    const tk=p.split(/\s+/);
+    if(tk.length===1) return {nombres:'', apellidos:tk[0], rol};
+    let i=tk.length-1;
+    while(i>1 && PARTICULAS.has(tk[i-1].toLowerCase())) i--;
+    return {nombres:tk.slice(0,i).join(' '), apellidos:tk.slice(i).join(' '), rol};
+  });
+}
+/* «vía Abello Vives», «vía Mintz y Price», «vía Steward et al.» */
+function autoriaBreve(n){
+  const au=autoriasDe(n); if(!au.length) return '…';
+  const y = LANG==='en' ? ' and ' : ' y ';
+  return au.length===1 ? au[0].apellidos : au.length===2 ? au[0].apellidos+y+au[1].apellidos : au[0].apellidos+' et al.';
+}
+/* APA 7: «Abello Vives, A.», iniciales con guion («M.-R.») y partículas en minúscula */
+function inicialesAPA(nombres){
+  return nombres.split(/\s+/).filter(Boolean).map(w=>{
+    if(PARTICULAS.has(w.toLowerCase())) return w.toLowerCase();
+    if(/\.$/.test(w)) return w;
+    return w.split('-').map(s=>s.charAt(0).toUpperCase()+'.').join('-');
+  }).join(' ');
+}
+function autoresAPA(n){
+  const au=autoriasDe(n); if(!au.length) return n.a||'';
+  const uno=x=>x.nombres ? `${x.apellidos}, ${inicialesAPA(x.nombres)}` : x.apellidos;
+  const y = LANG==='en' ? '&' : 'y';
+  const sinNombres = au.every(x=>!x.nombres);   /* «Baver y Lynch», no «Baver, y Lynch» */
+  let txt = au.length===1 ? uno(au[0])
+          : (au.length===2 && sinNombres) ? `${uno(au[0])} ${y} ${uno(au[1])}`
+          : au.slice(0,-1).map(uno).join(', ')+`, ${y} `+uno(au[au.length-1]);
+  const rol=au[0].rol;
+  if(rol!=='autor'){
+    const pl=au.length>1;
+    const lbl = rol==='comp' ? (LANG==='en' ? (pl?'Comps.':'Comp.') : (pl?'Comps.':'Comp.')) : (pl?'Eds.':'Ed.');
+    txt += ` (${lbl})`;
+  }
+  return txt;
+}
 function apellidoDe(a){
-  const primero=String(a||'').split(/[,;]| y | and /)[0].trim();
-  const partes=primero.replace(/\(.*?\)/g,'').trim().split(/\s+/);
-  return partes[partes.length-1]||'anon';
+  const au=autoriasDe({a}); return au.length ? au[0].apellidos : 'anon';
 }
 function claveBib(n){
-  const ap=apellidoDe(n.a).toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[^a-z0-9]/g,'');
+  const ap=apellidoDe(n.a).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9]/g,'');
   return (ap||'anon')+(anoNum(n)||'sf');
 }
+/* BibTeX y RIS esperan «Apellidos, Nombres»: así el doble apellido llega entero a Zotero */
 function autoresBib(a){
-  return String(a||'').split(/\s*(?:;| y | and )\s*/).filter(Boolean);
+  return autoriasDe({a}).map(x=>x.nombres ? `${x.apellidos}, ${x.nombres}` : x.apellidos);
 }
 
 function aBibTeX(n){
   const tipo = n.k==='obra' ? (n.doi&&!n.isbn?'article':'book') : 'misc';
+  const au=autoriasDe(n); const campo = au.length && au[0].rol!=='autor' ? 'editor' : 'author';
   const L=['@'+tipo+'{'+claveBib(n)+','];
-  L.push('  author    = {'+autoresBib(n.a).join(' and ')+'},');
+  L.push(('  '+campo+'       ').slice(0,12)+'= {'+autoresBib(n.a).join(' and ')+'},');
   L.push('  title     = {'+n.t+'},');
   if(anoNum(n)) L.push('  year      = {'+anoNum(n)+'},');
   if(n.y && String(n.y)!==String(anoNum(n))) L.push('  note      = {'+t('bibPeriodo')+': '+n.y+'},');
@@ -379,7 +450,9 @@ function aBibTeX(n){
 
 function aRIS(n){
   const L=['TY  - '+(n.k==='obra'?'BOOK':'GEN')];
-  autoresBib(n.a).forEach(x=>L.push('AU  - '+x));
+  const au=autoriasDe(n); const et = au.length && au[0].rol!=='autor' ? 'ED' : 'AU';
+  autoresBib(n.a).forEach(x=>L.push(et+'  - '+x));
+
   L.push('TI  - '+n.t);
   if(anoNum(n)) L.push('PY  - '+anoNum(n));
   if(n.ed)   L.push('PB  - '+n.ed);
@@ -1087,10 +1160,15 @@ function render(){
     g.addEventListener('keydown',ev=>{
       switch(ev.key){
         case 'Enter': case ' ': ev.preventDefault(); openPanel(n.id); break;
-        case 'ArrowRight': case 'ArrowDown': ev.preventDefault(); moverRoving(1); break;
-        case 'ArrowLeft': case 'ArrowUp': ev.preventDefault(); moverRoving(-1); break;
-        case 'Home': ev.preventDefault(); irAExtremo(false); break;
-        case 'End': ev.preventDefault(); irAExtremo(true); break;
+        /* Bloque C: las flechas siguen la geografía del mapa, no el orden del corpus */
+        /* stopPropagation: el módulo de zoom escucha las flechas en el lienzo y, sin
+           esto, cada pulsación además desplazaba el mapa 55 px en sentido contrario */
+        case 'ArrowRight': ev.preventDefault(); ev.stopPropagation(); moverEspacial('der'); break;
+        case 'ArrowLeft': ev.preventDefault(); ev.stopPropagation(); moverEspacial('izq'); break;
+        case 'ArrowDown': ev.preventDefault(); ev.stopPropagation(); moverEspacial('abajo'); break;
+        case 'ArrowUp': ev.preventDefault(); ev.stopPropagation(); moverEspacial('arriba'); break;
+        case 'Home': ev.preventDefault(); ev.stopPropagation(); irAExtremo(false); break;
+        case 'End': ev.preventDefault(); ev.stopPropagation(); irAExtremo(true); break;
         case 'Escape': if(state.active===n.id){ ev.stopPropagation(); clearFocus(); } break;
       }
     });
@@ -1322,7 +1400,7 @@ function recorridosHtml(n){
     if(clave) cuerpo += `<p class="rec-meta">${t('recEstado')}: ${t(clave)}</p>`;
   }
   if((n.fuente_recorrido||[]).length){
-    cuerpo += `<p class="rec-meta rec-fuente">${t('recFuente')}: ${n.fuente_recorrido.join(' · ')}</p>`;
+    cuerpo += `<p class="rec-meta rec-fuente">${ct('expediente')}: ${n.fuente_recorrido.map(f=>`<span title="${bbEsc(f)}">${bbEsc(expedienteLegible(f))}</span>`).join(' · ')}</p>`; /* Bloque C */
   }
   return `<div class="rec-block"><h3 class="rec-h">${t('recBloque')}</h3>${cuerpo}</div>`;
 }
@@ -1424,16 +1502,26 @@ function openPanel(id){
   const lugarHeredado = lu[3]==="pais" ? `<div class="lugar pais">◈ ${lu[2]} · ${t('pNacion')}</div>` : `<div class="lugar ciudad">◆ ${lu[2]} · ${t('pRegion')} ${lu[4]}</div>`;
   const textoSeguro = valor => String(valor).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const lugar = n.orillas?.length
-    ? `<div class="lugar">${state.lang==='en'?'Map anchor':'Anclaje en el mapa'}: ${textoSeguro(lu[2])}</div><p class="meta">${state.lang==='en'?'Shores / scope':'Orillas / ámbito'}: ${n.orillas.map(o=>textoSeguro(o.label||L[o.lugar]?.[2]||o.lugar)).join(' · ')}</p>`
+    ? `<div class="lugar">${LANG==='en'?'Map anchor':'Anclaje en el mapa'}: ${textoSeguro(lu[2])}</div><p class="meta">${LANG==='en'?'Shores / scope':'Orillas / ámbito'}: ${n.orillas.map(o=>textoSeguro(o.label||L[o.lugar]?.[2]||o.lugar)).join(' · ')}</p>`
     : lugarHeredado;
-  const edicion = n.edicion_consultada ? `<p class="meta">${state.lang==='en'?'Edition consulted':'Edición consultada'}: ${textoSeguro(n.edicion_consultada)}</p>` : '';
+  const edicion = n.edicion_consultada ? `<p class="meta">${LANG==='en'?'Edition consulted':'Edición consultada'}: ${textoSeguro(n.edicion_consultada)}</p>` : '';
 
   const dAll=[...direct].map(x=>byId(x)).filter(Boolean);
   const dShown=dAll.filter(o=>{ if(state.evid==="todas") return true; return esCorr(id,o.id)===(state.evid==="ok"); });
   const dList=dShown.map(o=>{ const fu=fuenteDe(id,o.id); const diso=isDiso(id,o.id); const ok=esCorr(id,o.id);
     return `<a href="#${o.id}" data-go="${o.id}"><span class="ev ${ok?'ok':'pc'}" title="${ok?t('evOkT'):t('evPcT')}" aria-label="${ok?t('evOkT'):t('evPcT')}"></span><span class="rtitle">${diso?'⚡ ':''}${o.t}</span> <span class="r">— ${o.a}</span>${fu&&ok?`<span class="fu">${fu}</span>`:`<span class="fu pc">${t('evPcT')}</span><span class="conoces" role="button" tabindex="0" data-rfa="${id}" data-rfb="${o.id}">${rf('conoces')}</span>`}</a>`; }).join("");
   const dCount = state.evid==="todas" ? `<span class="evn">${dAll.length}</span>` : `<span class="evn">${dShown.length} / ${dAll.length}</span>`;
-  const iList=[...indirect].map(x=>{ const o=byId(x); if(!o)return""; let via=[...direct].find(d=>(ADJ[d]||[]).includes(x)); const vn=via?byId(via):null; const vname=vn?vn.a.replace(/\(.*/,'').split(',')[0].trim().split(' ').slice(-1)[0]:'…'; return `<a href="#${o.id}" data-go="${o.id}">${o.t} <span class="via">— ${t('pVia')} ${vname}</span></a>`; }).join("");
+  /* Bloque C · las indirectas se agrupan por la obra que hace de puente. Benítez Rojo
+     tenía 60 seguidas (la ficha medía nueve pantallas en teléfono). Cada grupo nombra su
+     puente con autoría completa y año —«vía Abello Vives 2015»— y se pliega cuando la
+     lista pasa de ocho. */
+  const gruposInd=new Map();
+  [...indirect].forEach(x=>{ const o=byId(x); if(!o) return; const via=[...direct].find(d=>(ADJ[d]||[]).includes(x)); if(!gruposInd.has(via)) gruposInd.set(via,[]); gruposInd.get(via).push(o); });
+  const totalInd=[...gruposInd.values()].reduce((s,a)=>s+a.length,0);
+  const iList=[...gruposInd.entries()].sort((a,b)=>b[1].length-a[1].length).map(([via,arr])=>{
+    const vn=via?byId(via):null; const puente=vn?autoriaBreve(vn)+(anoNum(vn)?' '+anoNum(vn):''):'…';
+    return `<details class="indGrupo"${totalInd<=8?' open':''}><summary><span class="via">${t('pVia')} ${bbEsc(puente)}</span><span class="indN">${arr.length}</span></summary>${arr.map(o=>`<a href="#${o.id}" data-go="${o.id}">${o.t}</a>`).join('')}</details>`;
+  }).join("");
   p.setAttribute('role','dialog'); p.setAttribute('aria-labelledby','panelTitId');
   p.innerHTML=`<button class="close" aria-label="${t('cerrarFicha')}">×</button><div class="kind">${n.k==="obra"?t('pKindObra'):t('pKindManif')}</div>
     <h2 id="panelTitId">${n.t}</h2><div class="meta">${n.a}${n.y?" · "+n.y:""} · ${n.tr}</div>${edicion}${lugar}
@@ -1441,7 +1529,7 @@ function openPanel(id){
     <div class="rel"><h3 class="dir">${t('pRelDir')}${dCount}</h3>${dList||`<span style='font-size:11.5px;color:var(--gray);font-style:italic'>${t('evNada')}</span>`}</div>
     ${iList?`<div class="rel"><h3 class="ind">${t('pRelInd')}<button type="button" class="btnIndMapa" id="toggleIndirectasMapa" aria-pressed="${state.showIndirect?'true':'false'}">${state.showIndirect?t('ocultarIndirectasMapa'):t('mostrarIndirectasMapa')}</button></h3>${iList}</div>`:""}
     <div class="cita"><span class="citalbl">${t('pCitaLbl')}</span>
-      <div class="apa" id="apacita">${n.a}${n.y?" ("+n.y+")":""}. <i>${n.t}</i>. ${t('pCitaEn')} <i>${t('pProyecto')}</i>, Grupo de Investigación Pensamiento Caribe. ${location.origin+location.pathname}#${id}</div>
+      <div class="apa" id="apacita">${autoresAPA(n)}${/\)$/.test(autoresAPA(n))?'.':''} (${n.y||(LANG==='en'?'n.d.':'s. f.')}). <i>${n.t}</i>. ${t('pCitaEn')} <i>${t('pProyecto')}</i>, Grupo de Investigación Pensamiento Caribe. ${location.origin+location.pathname}#${id}</div>
       <div class="citarow"><code id="citaurl">${location.origin+location.pathname}#${id}</code><button id="citabtn">${t('pCitaBtn')}</button></div>
       <div class="bibrow"><span class="biblbl">${t('bibLbl')}</span>
         <button class="bibbtn" data-bib="bibtex">BibTeX</button><button class="bibbtn" data-bib="ris">RIS</button>
@@ -2744,6 +2832,142 @@ document.querySelector('header .controls').addEventListener('scroll', qlPosicion
   if(seg && !hay) seg.closest('.grp').style.display='none';
 })();
 
+/* ══════════ BLOQUE C · 17-09-2026 · lectura y rigor ═══════════════════════════
+   Diccionario propio (C_T). Piezas: expediente legible en la ficha, flechas que se
+   mueven por el mapa, enlace a una vista, crédito en inglés y nombres de racimo
+   por encima de los puntos. Las autorías viven arriba, junto a BibTeX y RIS. */
+const C_T = {
+  es:{ expediente:"Expediente", copiarVista:"Copiar enlace a esta vista", vistaCopiada:"Enlace copiado",
+       vistaNoCopiada:"Copia este enlace:", credito:"Grupo de Investigación Pensamiento Caribe<br>siembra desde el archivo · boceto de investigación",
+       titulo:"Con el agua de por medio · atlas archipiélico del Gran Caribe",
+       dAcad:"decisión académica", dLect:"lectura y decisión", lect:"lectura dirigida", dict:"dictamen académico", dMet:"dictamen metodológico",
+       dRes:"dictamen de resolución", dNorm:"decisión normativa", ampl:"ampliación probatoria", audit:"auditoría", reserva:"resolución de reserva",
+       triage:"triage interno", lote:"lote", lotes:"lotes", bloque:"bloque", etapa:"etapa", doc:"documento del expediente" },
+  en:{ expediente:"Case file", copiarVista:"Copy link to this view", vistaCopiada:"Link copied",
+       vistaNoCopiada:"Copy this link:", credito:"Pensamiento Caribe Research Group<br>seeded from the archive · research sketch",
+       titulo:"Con el agua de por medio · archipelagic atlas of the Greater Caribbean",
+       dAcad:"scholarly decision", dLect:"reading and decision", lect:"directed reading", dict:"scholarly assessment", dMet:"methodological assessment",
+       dRes:"resolution assessment", dNorm:"normative decision", ampl:"evidentiary extension", audit:"audit", reserva:"reservation ruling",
+       triage:"internal triage", lote:"batch", lotes:"batches", bloque:"block", etapa:"stage", doc:"case-file document" }
+};
+const ct = k => (C_T[LANG]||C_T.es)[k];
+
+/* ── C14 · el expediente en lengua de lector ───────────────────────────────────
+   La ficha decía «Decidido en: s01-generado.json». La procedencia se conserva —el
+   nombre exacto del documento queda en el title, para quien quiera rastrearlo— pero
+   se lee como lo que es: una decisión académica, una lectura, un dictamen, un lote. */
+function expedienteLegible(f){
+  const s=String(f||'');
+  if(/^Lote /.test(s)) return s;
+  const gen=s.match(/^(piloto|s01|a01|a02)-generado\.json$/i);
+  if(gen) return `${ct('lote')} ${gen[1]==='piloto' ? (LANG==='en'?'pilot':'piloto') : gen[1].toUpperCase()}`;
+  const et=s.match(/-(p\d)-etapa-(\d)-(\d)([a-z]?)/i);
+  const cola = et ? ` · ${et[1].toUpperCase()}, ${ct('etapa')} ${et[2]}.${et[3]}${et[4]}` : (()=>{ const e2=s.match(/etapa-(\d)-(\d)([a-z]?)/); return e2?` · ${ct('etapa')} ${e2[1]}.${e2[2]}${e2[3]}`:''; })();
+  const bl=s.match(/bloque-(\d+)/);
+  const tipos=[[/^decision-academica-/,'dAcad'],[/^lectura-decision-/,'dLect'],[/^lectura-/,'lect'],[/^dictamen-academico-/,'dict'],
+    [/^dictamen-metodologico-/,'dMet'],[/^dictamen-resolucion-/,'dRes'],[/^decision-normativa-/,'dNorm'],[/^ampliacion/,'ampl'],
+    [/^auditoria-/,'audit'],[/^resolucion-reserva-/,'reserva'],[/^avance-triage-/,'triage']];
+  const tipo=(tipos.find(([re])=>re.test(s))||[null,'doc'])[1];
+  if(tipo==='triage'){ const l=s.match(/(lotes?)-([\d-]+)\.md$/); return `${ct('triage')}${l?` · ${l[1]==='lotes'?ct('lotes'):ct('lote')} ${l[2].replace('-','–')}`:''}`; }
+  return `${ct(tipo)}${bl?` · ${ct('bloque')} ${bl[1]}`:''}${cola}`;
+}
+
+/* ── C16 · las flechas se mueven por el mapa ──────────────────────────────────────
+   La tabulación itinerante recorría las obras en el orden del corpus: de un nodo al
+   siguiente había 215 px de mediana y hasta 642. Ahora → va a la obra más cercana hacia
+   la derecha, ↑ hacia arriba, etc. (la distancia en la dirección pedida pesa uno; la
+   desviación lateral, dos). Inicio y Fin siguen yendo al primero y al último. */
+function moverEspacial(dir){
+  if(!VNODES.length) return;
+  const actual=rovingId?byId(rovingId):null;
+  if(!actual || !actual._c){ moverRoving(1); return; }
+  const [x0,y0]=centroPantalla(actual);
+  let mejor=null, pMejor=Infinity;
+  VNODES.forEach(n=>{
+    if(n===actual || !n._c) return;
+    const [x,y]=centroPantalla(n); const dx=x-x0, dy=y-y0;
+    const [adelante,lado] = dir==='der'?[dx,dy] : dir==='izq'?[-dx,dy] : dir==='abajo'?[dy,dx] : [-dy,dx];
+    if(adelante<=0.5) return;
+    const p=adelante+2*Math.abs(lado);
+    if(p<pMejor){ pMejor=p; mejor=n; }
+  });
+  if(mejor){ setRoving(mejor,{mover:true}); asegurarVisible(mejor); }
+}
+/* si la obra enfocada queda fuera del hueco visible, el mapa se desplaza lo justo */
+function asegurarVisible(n){
+  if(!n || !n._c) return;
+  const A=areaLibreMapa(); const [x,y]=centroPantalla(n);
+  const dx = x<A.l ? A.l-x+20 : x>A.r ? A.r-x-20 : 0;
+  const dy = y<A.t ? A.t-y+20 : y>A.b ? A.b-y-20 : 0;
+  if(dx||dy){ zcMotor.panear(dx,dy); if(zc) zc.sincronizar(); }
+}
+
+/* ── C17 · enlace a una vista ─────────────────────────────────────────────────────
+   Para clase: #vista=constelacion&rec=c2&fen=cimarronaje (y &obra=id). Convive con los
+   enlaces de obra (#id), de definición (#caribe=) y del reflujo (#reflujo). El botón de
+   Información compone el enlace del estado que se ve. */
+const VISTAS_VALIDAS=['corriente','constelacion','cronologia','tabla'];
+function aplicarEstadoHash(h){
+  if(!/^(?:vista|rec|fen|obra)=/.test(h||'')) return false;
+  const P={}; h.split('&').forEach(par=>{ const [k,v]=par.split('='); if(k&&v) P[k]=decodeURIComponent(v); });
+  document.getElementById('umbral').classList.add('gone');
+  /* el enlace describe el estado entero: lo que no nombra vuelve a su valor inicial */
+  const vista = VISTAS_VALIDAS.includes(P.vista) ? P.vista : 'corriente';
+  const rec = P.rec && RECORRIDOS.some(r=>r.c===P.rec.toLowerCase()) ? P.rec.toLowerCase() : null;
+  const fen = P.fen && FEN[P.fen] ? P.fen : null;
+  if(state.view!==vista) setView(vista);
+  if(state.recorrido!==rec) setRecorrido(rec);
+  if(state.focusFen!==fen) setFocusFen(fen || state.focusFen);
+  if(P.obra){ const id=resolverIdSeguro(P.obra); if(byId(id)) openPanel(id); }
+  return true;
+}
+function enlaceDeVista(){
+  const base=location.origin+location.pathname;
+  const qc=window.QC_ESTADO;
+  if(qc && qc.def) return base+'#caribe='+qc.def+(qc.contra?'+'+qc.contra:'');
+  const partes=[];
+  if(state.view!=='corriente') partes.push('vista='+state.view);
+  if(state.recorrido && state.recorrido!=='pendiente' && state.recorrido!=='sin_evaluar') partes.push('rec='+state.recorrido);
+  if(state.focusFen) partes.push('fen='+state.focusFen);
+  if(state.active) partes.push(partes.length ? 'obra='+state.active : state.active);
+  return base+(partes.length?'#'+partes.join('&'):'');
+}
+(function(){
+  const info=document.getElementById('panelInfo'); if(!info) return;
+  const grp=document.createElement('div'); grp.className='grp';
+  grp.innerHTML=`<div class="seg base"><button type="button" id="copiarVistaBtn"></button></div><p class="vistaEstado" id="vistaEstado" role="status"></p>`;
+  const ancla=document.getElementById('marcoBtn'); const g=ancla && ancla.closest('.grp');
+  if(g) g.after(grp); else info.appendChild(grp);
+  const btn=grp.querySelector('button'), st=grp.querySelector('#vistaEstado');
+  btn.textContent=ct('copiarVista');
+  btn.onclick=()=>{
+    const url=enlaceDeVista();
+    const ok=()=>{ st.textContent=ct('vistaCopiada')+' · '+url; };
+    const mal=()=>{ st.textContent=ct('vistaNoCopiada')+' '+url; };
+    try{ navigator.clipboard.writeText(url).then(ok, mal); }catch(e){ mal(); }
+  };
+})();
+
+/* ── C18 · crédito y título en inglés; nombres de racimo sobre los puntos ─────────── */
+function pintarCredito(){
+  const c=document.querySelector('.credit'); if(!c) return;
+  const doi=c.querySelector('a');
+  c.innerHTML=ct('credito')+'<br>'; if(doi) c.appendChild(doi);
+  document.title=ct('titulo');
+  const b=document.getElementById('copiarVistaBtn'); if(b) b.textContent=ct('copiarVista');
+  const st=document.getElementById('vistaEstado'); if(st) st.textContent='';
+}
+const _applyLangC=applyLang;
+applyLang=function(){ _applyLangC(); pintarCredito(); };
+const _renderC=render;
+render=function(){
+  _renderC();
+  /* en Constelación los nombres de fenómeno quedaban atravesados por los puntos, que se
+     dibujan después; se suben al final del grupo (no reciben puntero: no tapan clics) */
+  const cl=vp && vp.querySelector('text.clbl');
+  if(cl) vp.appendChild(cl.parentNode);
+};
+
 /* ---------- conmutador de idioma ES / EN ---------- */
 function applyLang(){
   try{ localStorage.setItem('atlas-lang', LANG); }catch(e){} /* Bloque A: sin almacenamiento el idioma dura lo que dura la visita */
@@ -2778,9 +3002,11 @@ const resolverId = h => (REDIR[h] && byId(REDIR[h])) ? REDIR[h] : h;
 /* enlace profundo: si la URL trae #idObra, abrir esa ficha y saltar el umbral */
 (function(){ const h=resolverId(decodeURIComponent(location.hash.replace(/^#/,'')));
   if(h==='reflujo'){ document.getElementById('umbral').classList.add('gone'); rfAbrir(); return; }
+  if(aplicarEstadoHash(h)) return; /* Bloque C: #vista=…&rec=…&fen=…&obra=… */
   if(h && byId(h)){ document.getElementById('umbral').classList.add('gone'); openPanel(h); } })();
 window.addEventListener('hashchange',()=>{ const h=resolverId(decodeURIComponent(location.hash.replace(/^#/,'')));
   if(h==='reflujo'){ rfAbrir(); return; }
+  if(aplicarEstadoHash(h)) return;
   if(h && byId(h) && state.active!==h) openPanel(h); });
 /* Bloque A · Atrás y Adelante: la dirección manda. Si nombra una obra, se abre su ficha
    (openPanel no vuelve a empujar porque la dirección ya coincide); si no nombra ninguna,

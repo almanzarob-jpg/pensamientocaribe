@@ -913,3 +913,24 @@ main:has(#qcLeyenda:not([hidden])) #hint{bottom:auto; top:16px}
     transform:translateX(24px); box-shadow:-14px 0 32px rgba(0,0,0,.55)}
   #panel::before{display:none}
 }
+
+/* ══════════ BLOQUE C · 17-09-2026 ══════════════════════════════════════════ */
+/* C13 · conexiones indirectas agrupadas por puente */
+#panel .rel details.indGrupo{border-bottom:1px dotted var(--line)}
+#panel .rel details.indGrupo summary{display:flex; align-items:baseline; justify-content:space-between; gap:10px; min-height:34px; padding:6px 0;
+  cursor:pointer; list-style:none; font-size:12px}
+#panel .rel details.indGrupo summary::-webkit-details-marker{display:none}
+#panel .rel details.indGrupo summary::before{content:"▸"; color:var(--gray); font-size:10px; margin-right:6px; transition:transform .2s}
+#panel .rel details.indGrupo[open] summary::before{transform:rotate(90deg)}
+#panel .rel details.indGrupo summary .via{flex:1 1 auto; font-size:12px}
+#panel .rel details.indGrupo summary .indN{font-family:var(--ff-mono); font-size:9px; color:var(--gray)}
+#panel .rel details.indGrupo a{padding-left:16px; font-size:12.5px}
+#panel .rel details.indGrupo a:last-child{border-bottom:0}
+/* C16 · la lista de recorridos ya no se desplaza dentro del panel: C9 y C10 quedaban
+   ocultos bajo un segundo desplazamiento sin indicio */
+.seg.recSeg{max-height:none; overflow:visible}
+/* C17 · enlace a la vista */
+#panelInfo .vistaEstado{margin:8px 0 0; font-family:var(--ff-mono); font-size:9.5px; letter-spacing:.3px; line-height:1.5; color:var(--gold); word-break:break-all}
+#panelInfo .vistaEstado:empty{display:none}
+/* el botón «mostrar en el mapa» flota en el encabezado y montaba el primer grupo */
+#panel .rel h3.ind::after{content:""; display:block; clear:both}
