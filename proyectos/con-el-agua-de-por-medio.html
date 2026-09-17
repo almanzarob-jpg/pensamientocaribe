@@ -404,7 +404,10 @@ const CORR_PC = RELS.length - CORR_OK;
 const col = f => FEN[f].c;
 
 /* ==================== BILINGÜE ES / EN ==================== */
-let LANG = (localStorage.getItem('atlas-lang')==='en') ? 'en' : 'es';
+/* Bloque A · 17-09-2026: con el almacenamiento del sitio bloqueado (cookies bloqueadas,
+   algunos equipos institucionales) leer localStorage lanza SecurityError; sin este try el
+   script entero moría aquí y el lector veía la introducción sobre un mapa vacío. */
+let LANG = (()=>{ try{ return localStorage.getItem('atlas-lang')==='en' ? 'en' : 'es'; }catch(e){ return 'es'; } })();
 /* Etiquetas y glosas de fenómenos en inglés (los datos base quedan en español) */
 const FEN_EN = {
   colonialidad:{label:"Coloniality", g:"The wound that founds the region. It keeps ordering knowledge, body and territory long after the independence acts were signed. Trouillot reads it from the silence that history imposed on Haiti."},
@@ -1411,7 +1414,11 @@ function openPanel(id){
   const yaAbierta=p0.classList.contains('open');
   if(!yaAbierta){ p0._retornoFoco=document.activeElement; p0.removeAttribute('inert'); }
   state.focusFen=null; showGuion(null); state.active=id; syncEdges(); buildLegend(); refreshHi(); updateTip();
-  if(location.hash!=="#"+id){ try{ history.replaceState(null,"","#"+id); }catch(e){} }
+  /* Bloque A · 17-09-2026: cada ficha abierta es un paso del recorrido y queda en el
+     historial (antes replaceState). Así el botón Atrás —o el gesto de volver en Android—
+     desanda Benítez → Glissant → Ortiz en lugar de sacar al lector del atlas. Si la
+     dirección ya es la de la ficha (enlace profundo, Atrás, cambio de idioma) no se empuja nada. */
+  if(location.hash!=="#"+id){ try{ history.pushState({atlas:"ficha"},"","#"+id); }catch(e){} }
   const n=byId(id); const p=document.getElementById('panel'); const lu=L[n.l]; const {direct,indirect}=neighbors(id);
   const tags=n.f.map(f=>`<span class="tag" data-fen="${f}" style="background:${col(f)}">${fenLabel(f)}</span>`).join("");
   const lugarHeredado = lu[3]==="pais" ? `<div class="lugar pais">◈ ${lu[2]} · ${t('pNacion')}</div>` : `<div class="lugar ciudad">◆ ${lu[2]} · ${t('pRegion')} ${lu[4]}</div>`;
@@ -1467,7 +1474,16 @@ function openPanel(id){
     const antes=b.textContent; b.textContent=t('pCitaOk'); setTimeout(()=>b.textContent=antes,1400);
   });
 }
-function clearFocus(){ state.active=null; state.focusFen=null; hoverNode=null; ocultarFicha(); syncEdges(); showGuion(null); buildLegend(); refreshHi(); updateTip(); try{ history.replaceState(null,"",location.pathname); }catch(e){} }
+function clearFocus({historia=true}={}){ state.active=null; state.focusFen=null; hoverNode=null; ocultarFicha(); syncEdges(); showGuion(null); buildLegend(); refreshHi(); updateTip();
+  /* Bloque A: cerrar también es un paso. Solo se toca la dirección si nombra una obra
+     (una definición #caribe= o #reflujo la gobierna su propio módulo); y se empuja, no se
+     reemplaza, para que Atrás devuelva la ficha recién cerrada en vez de no hacer nada. */
+  if(!historia) return;
+  const h=decodeURIComponent(location.hash.replace(/^#/,''));
+  if(h && byId(resolverIdSeguro(h))){ try{ history.pushState({atlas:"mapa"},"",location.pathname+location.search); }catch(e){} }
+}
+/* resolverId se declara más abajo, junto al enlace profundo; esta versión no depende del orden */
+function resolverIdSeguro(h){ const R=(typeof ATLAS!=='undefined' && ATLAS.redirecciones)||{}; return (R[h] && byId(R[h])) ? R[h] : h; }
 
 function buildLegend(){
   const lg=document.getElementById('legendBody');
@@ -2101,11 +2117,15 @@ function enterPresent(){
   document.body.classList.add('presenting');
   const el=document.documentElement;
   const req=el.requestFullscreen||el.webkitRequestFullscreen||el.msRequestFullscreen;
-  if(req) req.call(el).catch(()=>{});
+  /* Bloque A: en pantalla completa el navegador se queda con Escape y la escalera de arriba
+     nunca lo recibe. Donde existe Keyboard Lock (Chrome, Edge) se le pide la tecla: Escape
+     cierra la ficha y mantener Escape pulsado sigue saliendo de pantalla completa. */
+  if(req) Promise.resolve(req.call(el)).then(()=>{ try{ if(navigator.keyboard && navigator.keyboard.lock) navigator.keyboard.lock(['Escape']).catch(()=>{}); }catch(e){} }).catch(()=>{});
   reencuadrarTrasCromo();
 }
 function exitPresent(){
   document.body.classList.remove('presenting');
+  try{ if(navigator.keyboard && navigator.keyboard.unlock) navigator.keyboard.unlock(); }catch(e){}
   if(document.fullscreenElement){ const ex=document.exitFullscreen||document.webkitExitFullscreen||document.msExitFullscreen; if(ex) ex.call(document).catch(()=>{}); }
   reencuadrarTrasCromo();
 }
@@ -2120,9 +2140,24 @@ function reencuadrarTrasCromo(){
 document.getElementById('presBtn').onclick=enterPresent;
 document.getElementById('presExit').onclick=exitPresent;
 document.addEventListener('fullscreenchange',()=>{ if(!document.fullscreenElement) document.body.classList.remove('presenting'); });
+/* Bloque A · 17-09-2026, dos arreglos del modo presentación:
+   1. Los atajos no se disparan mientras se escribe. Con el reflujo abierto (tecla A) la
+      M apagaba la marea, el 1 cambiaba de vista y la propia A volvía a pintar el
+      formulario: no se podía escribir una sola letra.
+   2. Escape cierra primero lo que esté abierto (reflujo, ficha) y solo sale del modo
+      cuando no queda nada. Antes cerraba la ficha y además sacaba de pantalla completa:
+      en clase, cerrar una ficha devolvía al escritorio. */
+function escribiendoEn(el){ return !!(el && el.closest && el.closest('input, textarea, select, [contenteditable="true"]')); }
 document.addEventListener('keydown',ev=>{
   if(!document.body.classList.contains('presenting'))return;
-  if(ev.key==='Escape') exitPresent();
+  if(escribiendoEn(ev.target)) return; /* Escape dentro del formulario lo atiende el oyente del reflujo */
+  if(ev.key==='Escape'){
+    ev.preventDefault();
+    const rfa=document.getElementById('reflujo');
+    if(rfa && rfa.classList.contains('open')){ rfCerrar(); return; }
+    if(document.getElementById('panel').classList.contains('open')){ clearFocus(); return; }
+    exitPresent();
+  }
   else if(ev.key==='1') setView('corriente');
   else if(ev.key==='2') setView('constelacion');
   else if(ev.key.toLowerCase()==='m') setTide(!state.tide);
@@ -2460,7 +2495,7 @@ function rfCopiar(btn){
 
 /* ---------- conmutador de idioma ES / EN ---------- */
 function applyLang(){
-  localStorage.setItem('atlas-lang', LANG);
+  try{ localStorage.setItem('atlas-lang', LANG); }catch(e){} /* Bloque A: sin almacenamiento el idioma dura lo que dura la visita */
   document.documentElement.lang = LANG;
   document.querySelectorAll('[data-i18n]').forEach(e=>{ const k=e.getAttribute('data-i18n'); if(I18N[LANG][k]!==undefined) e.textContent=I18N[LANG][k]; });
   document.querySelectorAll('[data-i18n-html]').forEach(e=>{ const k=e.getAttribute('data-i18n-html'); if(I18N[LANG][k]!==undefined) e.innerHTML=I18N[LANG][k]; });
@@ -2495,7 +2530,16 @@ const resolverId = h => (REDIR[h] && byId(REDIR[h])) ? REDIR[h] : h;
   if(h && byId(h)){ document.getElementById('umbral').classList.add('gone'); openPanel(h); } })();
 window.addEventListener('hashchange',()=>{ const h=resolverId(decodeURIComponent(location.hash.replace(/^#/,'')));
   if(h==='reflujo'){ rfAbrir(); return; }
-  if(h && byId(h)) openPanel(h); });
+  if(h && byId(h) && state.active!==h) openPanel(h); });
+/* Bloque A · Atrás y Adelante: la dirección manda. Si nombra una obra, se abre su ficha
+   (openPanel no vuelve a empujar porque la dirección ya coincide); si no nombra ninguna,
+   se cierra la ficha sin escribir historial. #reflujo y #caribe= siguen con sus oyentes. */
+window.addEventListener('popstate',()=>{
+  const h=resolverId(decodeURIComponent(location.hash.replace(/^#/,'')));
+  if(h==='reflujo' || /^caribe=/.test(h)) return;
+  if(h && byId(h)){ document.getElementById('umbral').classList.add('gone'); if(state.active!==h) openPanel(h); return; }
+  if(document.getElementById('panel').classList.contains('open')) clearFocus({historia:false});
+});
 /* Esc cierra también el reflujo, coherente con el resto del atlas */
 document.addEventListener('keydown',ev=>{ if(ev.key==='Escape') rfCerrar(); });
 

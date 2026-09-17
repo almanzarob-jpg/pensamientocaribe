@@ -399,6 +399,18 @@
   #umbral{position:absolute; inset:0; background:rgba(5,6,4,.94); backdrop-filter:blur(4px); display:flex; align-items:center; justify-content:center; z-index:20; transition:opacity .5s}
   #umbral.gone{opacity:0; pointer-events:none}
   #umbral .box{max-width:640px; padding:0 30px; text-align:center}
+  /* Bloque A · 17-09-2026: en teléfonos pequeños la caja mide más que el hueco bajo el
+     encabezado. Con align-items:center el sobrante se repartía por arriba y por abajo: el
+     título se montaba sobre el encabezado y «Entrar» quedaba bajo el borde, sin forma de
+     desplazarse. margin:auto centra cuando cabe y arranca desde arriba cuando no. */
+  #umbral{align-items:flex-start; overflow-y:auto; overscroll-behavior:contain; -webkit-overflow-scrolling:touch}
+  #umbral .box{margin:auto; padding-top:24px; padding-bottom:24px}
+  /* La columna de zoom (z-index 900, del módulo compartido) se pintaba encima de la
+     introducción y del marco conceptual, y era pulsable detrás de ellos. */
+  main:has(#umbral:not(.gone)) .zc, main:has(#marco.show) .zc{visibility:hidden}
+  /* En teléfono el encabezado ya muestra título y subtítulo justo encima: repetirlos
+     empujaba «Entrar» fuera de la pantalla (iPhone 13: quedaban 31 px del botón). */
+  @media (max-width:780px), (max-height:520px){ #umbral h2, #umbral .u-sub{display:none} #umbral .box{padding-top:20px} }
   #umbral h2{font-family:var(--ff-display); font-size:36px; font-weight:700; margin:0 0 4px}
   #umbral .u-sub{font-family:var(--ff-mono); font-size:10px; text-transform:uppercase; letter-spacing:2.4px; color:var(--red); margin-bottom:22px}
   #umbral p{font-size:15px; line-height:1.65; color:var(--cream); margin:0 0 16px}
