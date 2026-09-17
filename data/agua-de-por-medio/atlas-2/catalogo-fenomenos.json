@@ -1,5 +1,5 @@
 {
-  "version_catalogo": "0.2.0-borrador",
+  "version_catalogo": "0.3.1-borrador",
   "fecha": "2026-09-17",
   "estado": "borrador para dictamen académico; no se ha aplicado al corpus publicado",
   "que_es_un_fenomeno": "Proceso histórico, material, cultural o epistémico que atraviesa la cuenca del Gran Caribe y permanece abierto a investigación. No es una categoría temática ni un resumen del contenido: nombra aquello que la obra permite seguir.",
@@ -13,7 +13,8 @@
     "Entre dos y cuatro fenómenos por entrada. Menos de dos suele indicar lectura incompleta; más de cuatro suele indicar que se está resumiendo la obra en vez de nombrar lo que permite seguir.",
     "El campo no_confundir_con es vinculante: si la entrada encaja mejor en el fenómeno vecino, se usa el vecino.",
     "El catálogo es abierto. Proponer un fenómeno nuevo exige tres entradas ancla del corpus que lo sostengan y una razón de por qué ninguno de los existentes lo cubre.",
-    "Un fenómeno se retira cuando queda por debajo de dos entradas ancla tras una pasada editorial completa."
+    "Un fenómeno se retira cuando queda por debajo de dos entradas ancla tras una pasada editorial completa.",
+    "Alcance de cuenca. El atlas cubre el Gran Caribe y la circulación que parte de él o llega a él. Una obra cuyo caso ocurre fuera de la cuenca solo entra si sigue esa circulación. No basta con que trate poblaciones afrodescendientes: el Pacífico colombiano, el interior andino y el Atlántico sur quedan fuera del alcance. Ninguna siembra puede añadir lugares fuera de la cuenca para acomodar una obra."
   ],
 
   "familias": {
@@ -189,9 +190,9 @@
       "label_en": "Antiracism and recognition",
       "glosa": "La demanda de reconocimiento y de derechos hecha contra el orden racial, y el aparato estatal o internacional que la tramita: litigio, legislación etnorracial, política multicultural, movilización organizada.",
       "corrientes": ["soberanias_fronteras_ocupaciones", "postplantacion_trabajo_desposesion"],
-      "criterio": "La obra sigue el reclamo y su tramitación institucional: quién lo formula, ante qué instancia, bajo qué categoría y con qué resultado. No basta con que la obra denuncie el racismo o describa una identidad en disputa.",
+      "criterio": "La obra sigue el reclamo y su tramitación institucional: quién lo formula, ante qué instancia, bajo qué categoría y con qué resultado. No basta con que la obra denuncie el racismo o describa una identidad en disputa, y el reclamo tiene que ocurrir en la cuenca o en su circulación: la población estudiada no es el criterio, el lugar donde se tramita sí.",
       "no_confundir_con": "deuda_como_tecnologia_colonial, que trata el dispositivo financiero o jurídico y su genealogía; formacion_racial_nacional, que opera en el discurso del Estado; radicalismo_negro_transnacional, que sigue una red militante y no una demanda tramitada; e indigeneidad_en_disputa, que trabaja la disputa por la categoría indígena y no la tramitación del reclamo.",
-      "anclas": ["rainforestwarriors", "pardomosquerahoffmann", "andersonblackindigenous", "politicallife", "esquiva"]
+      "anclas": ["rainforestwarriors", "pardomosquerahoffmann", "andersonblackindigenous", "politicallife", "vergesabolir", "becklesgreathouse", "esquiva"]
     },
 
     "plantacion_y_secuela": {

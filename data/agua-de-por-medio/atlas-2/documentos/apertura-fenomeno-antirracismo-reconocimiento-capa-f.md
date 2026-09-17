@@ -81,6 +81,37 @@ no_confundir_con: deuda_como_tecnologia_colonial · formacion_racial_nacional ·
 3. **`firmin`** (`sin_evaluar`) es el antecedente histórico obvio del antirracismo caribeño, pero su ciencia antirracista pertenece al orden del saber, no al de la demanda tramitada: si entra, entra por `filosofia_afrocaribena` o `critica_del_saber_colonial`, donde ya está anclado. No se añade aquí.
 4. **Hueco bibliográfico.** El corpus no tiene todavía la literatura colombiana específica sobre movimiento negro y Ley 70 (Wade, Restrepo, Arocha, Grueso/Rosero, Friedemann más allá de *Ma Ngombe*). Con ella, este fenómeno pasaría de cinco anclas a una densidad comparable a la de sus vecinos. Es la siembra que esta apertura vuelve prioritaria.
 
+## 8. Alcance de cuenca (adenda del 17 de septiembre de 2026)
+
+La Dirección Académica objetó, con razón, la siembra propuesta al cerrar esta apertura: la literatura colombiana sobre movimiento negro y Ley 70 —Wade, Restrepo, Arocha, Grueso y Rosero— es mayoritariamente del Pacífico, y este es un atlas del Gran Caribe. La objeción se verificó contra los datos: los 30 lugares de `datos-atlas.json` están todos en la cuenca, y Colombia aparece solo por Cartagena (20 obras), Santa Marta (10), Palenque (5), Barranquilla (1), San Andrés (1) y La Guajira (0). Sembrar obras del Chocó, Buenaventura, Tumaco o Cauca obligaría a añadir nodos del Pacífico al mapa: un cambio de alcance del proyecto, no una siembra.
+
+En consecuencia se incorpora al catálogo una novena regla, vinculante para los 36 fenómenos y no solo para este:
+
+> **Alcance de cuenca.** El atlas cubre el Gran Caribe y la circulación que parte de él o llega a él. Una obra cuyo caso ocurre fuera de la cuenca solo entra si sigue esa circulación. No basta con que trate poblaciones afrodescendientes: el Pacífico colombiano, el interior andino y el Atlántico sur quedan fuera del alcance. Ninguna siembra puede añadir lugares fuera de la cuenca para acomodar una obra.
+
+La regla distingue dos cosas que se confunden con facilidad. Montreal, Nueva York y Costa Rica ya están en el corpus porque las obras que los tocan siguen una circulación que sale de la cuenca —es la razón de ser de C5 y de `radicalismo_negro_transnacional`—. El Chocó no es una circulación caribeña: es otra cuenca. La población estudiada no decide; el lugar donde el reclamo se tramita, sí. El criterio del fenómeno recoge esa distinción en su propio texto.
+
+**Por qué ahora y no después.** El atlas entra en una etapa de financiación con seis nodos —Santa Marta, La Habana, República Dominicana, Martinica, Curazao y Jamaica—, todos ellos en la cuenca. La ampliación de nodos alimentará este fenómeno con material legítimo: la sentencia 168-13 dominicana, la Comisión de Reparaciones del CARICOM que preside Beckles, la ley Taubira y el comité de memoria que presidió Vergès, el debate antirracista cubano posterior a 2010. Pero una financiación de origen antirracista también crea presión para que el fenómeno crezca más de lo que la evidencia aguanta. Contra eso ya existía la regla 4 —«el reparto numérico entre fenómenos no es criterio de asignación»—; la regla 9 cierra el flanco geográfico. Escribirlas antes del primer desembolso las vuelve parte del diseño; escribirlas después las volvería un obstáculo puesto a destiempo.
+
+El catálogo pasa a `0.3.0-borrador` por este cambio: no añade ni retira fenómenos, pero modifica lo que el catálogo admite.
+
+## 9. Primera ronda de lectura (17 de septiembre de 2026)
+
+De los tres pendientes que dejaba el §7, dos quedan resueltos por dictamen propio y uno sigue abierto.
+
+- **`vergesabolir`** — Vergès, *Abolir l'esclavage : une utopie coloniale*. **C4 principal, C7 secundaria, confirmado.** Fenómenos: `antirracismo_y_reconocimiento`, `deuda_como_tecnologia_colonial`, `critica_del_saber_colonial`. Ver `lectura-decision-vergesabolir-capa-f-2026-09-17.md`.
+- **`becklesgreathouse`** — Beckles, *Great House Rules*. **C4 principal, sin secundaria, confirmado.** Fenómenos: `plantacion_y_secuela`, `segmentacion_racial_del_trabajo`, `antirracismo_y_reconocimiento`. Ver `lectura-decision-becklesgreathouse-capa-f-2026-09-17.md`.
+- **`araujo`** — *Reparations for Slavery and the Slave Trade*. **Sin resolver: no hay ejemplar en la bibliografía del proyecto.** Sigue en `pendiente`, sin corriente, y sigue siendo ancla de `deuda_como_tecnologia_colonial` sin lectura registrada. Conseguir el ejemplar es el primer paso de la ronda siguiente.
+
+Las dos lecturas tropezaron con el mismo falso positivo y lo descartaron con el mismo instrumento: «emancipación» aparece en el título de ambas obras y empuja hacia C3, y el criterio ratificado de la frontera C3/C4 (`dictamen-academico-c4.md` §4) lo excluye en los dos casos, porque ni la abolición decretada por la metrópoli ni la huelga salarial son prácticas sustraídas al orden dominante. Queda como advertencia para las obras que vengan: en este fenómeno, el vocabulario de la emancipación es sistemáticamente engañoso.
+
+El fenómeno pasa de cinco a siete anclas y el catálogo a `0.3.1-borrador`. Las asignaciones van en el lote F03.
+
+**Dos hallazgos documentales de esta ronda, uno corregido y otro no.**
+
+1. **Corregido.** El registro de `becklesgreathouse` en `datos-atlas.js` tenía **dos claves `fuente_recorrido`** en el mismo objeto: la del bloque de recorrido y una posterior, del lote S17, que decía «clasificación pendiente». Con claves duplicadas el JSON es ambiguo y el generador se quedaba con la última, de modo que el campo mostraba el texto viejo aunque el bloque de recorrido dijera otra cosa. Se eliminó la obsoleta y se cerró `propuesta_clasificacion`, que seguía con `corriente_confirmada: null`.
+2. **No corregido, a decisión de la Dirección Académica.** `matriz-fronteras-c1-c10.md` registra la frontera C3/C4 con **0 casos directos**, pero el corpus tiene desde la Etapa 2.3H un caso directo: `duboisturits`, clasificado `FRONTERA_CONSTITUTIVA` entre C3 y C4. La matriz es de la Etapa 2.1 y quedó desactualizada por esa decisión posterior. No se toca aquí porque exige juicio sobre los estados normativos de la tabla, no una corrección mecánica; se suma a la deuda documental ya señalada en varias actas de cierre.
+
 ---
 
 **Dirección Académica de Pensamiento Caribe**
@@ -90,7 +121,7 @@ no_confundir_con: deuda_como_tecnologia_colonial · formacion_racial_nacional ·
 
 ```
 FENOMENO_ABIERTO
-CATALOGO_0.2.0-BORRADOR
+CATALOGO_0.3.1-BORRADOR
 ASIGNACIONES_EN_ESTADO_PROPUESTO
 CAPA_ESTRICTAMENTE_ADITIVA
 SITIO_PUBLICADO_NO_MODIFICADO

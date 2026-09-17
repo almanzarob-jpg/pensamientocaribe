@@ -1,0 +1,30 @@
+{
+  "lote": "F03",
+  "nombre": "Lecturas de la ronda del fenómeno antirracismo_y_reconocimiento",
+  "fecha": "2026-09-17",
+  "catalogo": "catalogo-fenomenos.json v0.3.0-borrador",
+  "base": "datos-atlas.json v1.19.0 · 276 obras · 652 relaciones",
+  "limite": "Capa aditiva. No modifica f, ni el catálogo fenomenos del corpus, ni la interfaz. Las asignaciones se apoyan en lectura del ejemplar, no en el campo ap ni en el título.",
+  "criterio_de_muestreo": "Las obras del corpus que sostenían el reclamo antirracista y estaban sin clasificar. Araujo, Reparations for Slavery and the Slave Trade, es la tercera de la lista y queda fuera: no hay ejemplar en la bibliografía.",
+  "estado_general": "propuesto",
+  "nota_sobre_el_fundamento": "Ambas entradas se leyeron sobre el ejemplar y tienen dictamen propio con los campos de corriente autorizados. El estado se mantiene en propuesto porque el fenómeno antirracismo_y_reconocimiento sigue en catálogo borrador; la clasificación de corriente, en cambio, va a confirmado por dictamen.",
+  "documento": "documentos/apertura-fenomeno-antirracismo-reconocimiento-capa-f.md",
+  "asignaciones": [
+    {
+      "id": "vergesabolir",
+      "f_heredado": ["colonialidad", "capitalismo_racial"],
+      "fenomenos_asignados": ["antirracismo_y_reconocimiento", "deuda_como_tecnologia_colonial", "critica_del_saber_colonial"],
+      "fundamento": "El avant-propos dedica su tramo central al reclamo contemporáneo: Durban 2001, la exigencia de que trata y esclavitud se reconozcan como crimen contra la humanidad, la ley francesa de 2001, N'COBRA y The Debt de Randall Robinson, y la crítica del deslizamiento de lo político a lo jurídico. La deuda de 150 millones impuesta a Haití, la indemnización a los amos y el colonat partiaire con deudas heredadas de padre a hijo sostienen el segundo fenómeno. La crítica de la doctrina abolicionista y humanitaria como aparato cómplice del imperio sostiene el tercero, y es la dimensión que el nivel corriente no absorbe.",
+      "fuente": "lectura-decision-vergesabolir-capa-f-2026-09-17.md",
+      "estado": "propuesto"
+    },
+    {
+      "id": "becklesgreathouse",
+      "f_heredado": ["postplantacion", "capitalismo_racial"],
+      "fenomenos_asignados": ["plantacion_y_secuela", "segmentacion_racial_del_trabajo", "antirracismo_y_reconocimiento"],
+      "fundamento": "Los cien años que el libro recorre son la continuidad institucional de la plantación tras la abolición, documentada con evidencia económica y social: es el criterio de plantacion_y_secuela. El mecanismo de la carencia de tierra, que fija salarios de hambre y reparte trabajo por raza, es el mecanismo concreto que segmentacion_racial_del_trabajo exige documentar y no solo afirmar. El manifiesto del partido de Prescod —derechos civiles, reducción del prejuicio de raza y color en las instituciones de gobierno, extensión del censo electoral— y el Franchise Bill de 1840 son el reclamo formulado ante una instancia identificable y con resultado verificable, que es el criterio del tercero.",
+      "fuente": "lectura-decision-becklesgreathouse-capa-f-2026-09-17.md",
+      "estado": "propuesto"
+    }
+  ]
+}

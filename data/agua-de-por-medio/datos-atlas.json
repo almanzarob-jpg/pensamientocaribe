@@ -6203,10 +6203,15 @@
       "l": "martinica",
       "tr": "francófono (Francia)",
       "ap": "La abolición francesa de la esclavitud leída como utopía colonial: emancipar sin descolonizar, la trampa que hereda el presente.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c4",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-vergesabolir-capa-f-2026-09-17.md"
+      ]
     },
     {
       "id": "philipzong",
@@ -6828,10 +6833,13 @@
       "proceso": [
         "siembra"
       ],
-      "recorrido": null,
+      "recorrido": "c4",
       "recorridos_sec": [],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "lectura-decision-becklesgreathouse-capa-f-2026-09-17.md"
+      ],
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión focal de metadatos, índice e introducción o pasajes seleccionados; no lectura integral",
@@ -6839,16 +6847,14 @@
         "fecha": "2026-09-11",
         "fundamento": "C4 organiza la candidatura por las relaciones entre tierra, trabajo y dominación después de la emancipación. C3 queda como dimensión secundaria por discutir las promesas de la libertad."
       },
-      "fuente_recorrido": [
-        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente"
-      ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "postplantacion_trabajo_desposesion",
           "fugas_cimarronajes_emancipaciones"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "postplantacion_trabajo_desposesion",
+        "nota": "C3 evaluada y descartada por el criterio ratificado de la frontera C3/C4; ver lectura-decision-becklesgreathouse-capa-f-2026-09-17.md §2 y §7."
       },
       "operaciones": [
         "reconstruir un archivo"
