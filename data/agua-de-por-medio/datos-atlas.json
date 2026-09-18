@@ -3,9 +3,9 @@
     "titulo": "Con el agua de por medio",
     "subtitulo": "Atlas para una antropología archipiélica",
     "responsable": "Grupo de Investigación Pensamiento Caribe",
-    "version": "1.19.0",
-    "fecha": "2026-09-15",
-    "nota_version": "Lote S18: 2 obras sobre las definiciones del Caribe (Gaztambide-Géigel 2006; Meeks y Girvan 2010), 19 relaciones documentadas y 1 propuesta por corroborar. Se corroboran con el ejemplar las relaciones de Trouillot con Smith, Mintz y Price-Mars; la relación Mintz–Smith pasa de disonancia a resonancia y la de Bassi con Benítez Rojo de resonancia a disonancia tras revisar los textos. Bassi entra en la capa «¿Qué Caribe?» con el Gran Caribe transimperial. Clasificaciones de las nuevas obras pendientes de adjudicación académica. Véase documentacion/siembra-s18-2026-09-15.md."
+    "version": "1.20.0",
+    "fecha": "2026-09-18",
+    "nota_version": "Lote S19: siembra de 10 obras procedentes del cruce completo de la carpeta de bibliografía (270 archivos) contra el corpus 1.19.0. Entran Orlando Patterson con tres obras (The Sociology of Slavery, Slavery and Social Death, The Confounding Island), Juan Bosch, Yolanda Wood, Jean-Luc Bonniol, Cécile Vidal, Tessa Murphy, Aviva Chomsky y una segunda obra de Elisabeth Cunin. 45 relaciones nuevas, 33 con cita localizada y 12 declaradas por corroborar; dos disonancias corroboradas: Patterson contra Tacky's Revolt de Vincent Brown y Vidal contra la alternativa Hall/Ingersoll sobre la formación racial en la Luisiana francesa. Clasificación por corrientes pendiente de adjudicación académica en las diez fichas."
   },
   "fenomenos": {
     "colonialidad": {
@@ -8577,6 +8577,699 @@
       "lenguas_publicacion": [
         "inglés"
       ]
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S19-2026-09-18: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S19-2026-09-18",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "id": "pattersonsociology",
+      "t": "The Sociology of Slavery: An Analysis of the Origins, Development and Structure of Negro Slave Society in Jamaica",
+      "a": "Orlando Patterson",
+      "y": "1967",
+      "f": [
+        "postplantacion",
+        "violencias",
+        "capitalismo_racial"
+      ],
+      "l": "jamaica",
+      "tr": "anglófono (Jamaica)",
+      "ap": "La primera sociología de la esclavitud jamaicana escrita por un caribeño, contra una historiografía que estudiaba la isla sin mirar a los esclavizados. Lee la plantación como un orden social completo —lo que en la introducción de 2022 llama «capitalismo doulótico»— sostenido apenas por la fuerza bruta, y no como un apéndice del azúcar.",
+      "ed": "Polity Press",
+      "edicion_consultada": "Polity Press, Cambridge, 2022, con introducción nueva del autor (1.ª ed. MacGibbon & Kee, Londres, 1967); PDF",
+      "isbn": "9781509550999",
+      "lenguas_publicacion": [
+        "inglés"
+      ],
+      "operaciones": [
+        "teorizar",
+        "reconstruir un archivo"
+      ],
+      "orillas": [
+        {
+          "lugar": "jamaica",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Caribe anglófono",
+          "funcion": "territorio comparado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "trata_esclavizacion_plantacion",
+          "postplantacion_trabajo_desposesion"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: portada, créditos, introducción de 2022 y notas 1-20, 125-140",
+        "responsable": "Preparación asistida del lote S19; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-18",
+        "fundamento": "C2 es la candidatura principal por la anatomía de la sociedad esclavista; C4 aparece por la lectura de la plantación como matriz de un orden laboral que sobrevive a la abolición. Debe decidirse si una obra de 1967 releída por su autor en 2022 se clasifica por el argumento original o por el prólogo."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S19-2026-09-18: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S19-2026-09-18",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "id": "pattersonsocialdeath",
+      "t": "Slavery and Social Death: A Comparative Study",
+      "a": "Orlando Patterson",
+      "y": "1982",
+      "f": [
+        "violencias",
+        "colonialidad",
+        "capitalismo_racial"
+      ],
+      "l": "jamaica",
+      "tr": "anglófono (comparado: 66 sociedades esclavistas)",
+      "ap": "La esclavitud definida no por la propiedad sino por la dominación parasitaria: alienación natal, deshonor y muerte social. Es el libro caribeño que más ha viajado fuera del Caribe, y el prefacio de 2018 responde a la crítica de Vincent Brown por haber convertido la muerte social en una condición sin vida política.",
+      "ed": "Harvard University Press",
+      "edicion_consultada": "Harvard University Press, Cambridge (Mass.), 2018, con prefacio nuevo (1.ª ed. 1982); EPUB",
+      "isbn": "9780674916135",
+      "lenguas_publicacion": [
+        "inglés"
+      ],
+      "operaciones": [
+        "teorizar",
+        "comparar orillas",
+        "elaborar un concepto"
+      ],
+      "orillas": [
+        {
+          "lugar": "jamaica",
+          "funcion": "lugar de producción intelectual"
+        },
+        {
+          "tipo": "cuenca",
+          "label": "Gran Caribe",
+          "funcion": "territorio comparado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "trata_esclavizacion_plantacion",
+          "cuerpos_parentescos_eroticas"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: prefacio de 2018 (c2C), notas comparativas (c289, c2ZX)",
+        "responsable": "Preparación asistida del lote S19; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-18",
+        "fundamento": "C2 es la candidatura principal. La obra excede el Caribe —compara 66 sociedades— y habrá que decidir si una teoría general escrita desde Jamaica entra por el territorio estudiado o por el lugar de producción."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S19-2026-09-18: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S19-2026-09-18",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "id": "pattersonconfounding",
+      "t": "The Confounding Island: Jamaica and the Postcolonial Predicament",
+      "a": "Orlando Patterson",
+      "y": "2019",
+      "f": [
+        "soberanias",
+        "postplantacion",
+        "violencias"
+      ],
+      "l": "jamaica",
+      "tr": "anglófono (Jamaica)",
+      "ap": "El enigma que da título al libro: por qué la misma isla produce una influencia cultural global desproporcionada y un crecimiento económico casi nulo con una de las tasas de homicidio más altas del mundo. Patterson responde desde adentro y sin coartada poscolonial, lo que lo pone en tensión con buena parte de los estudios caribeños contemporáneos.",
+      "ed": "Belknap Press / Harvard University Press",
+      "edicion_consultada": "The Belknap Press of Harvard University Press, Cambridge (Mass.), 2019; EPUB",
+      "isbn": "9780674243064",
+      "lenguas_publicacion": [
+        "inglés"
+      ],
+      "operaciones": [
+        "teorizar",
+        "narrar",
+        "confrontar una categoría"
+      ],
+      "orillas": [
+        {
+          "lugar": "jamaica",
+          "funcion": "territorio estudiado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "postplantacion_trabajo_desposesion",
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: epílogo, capítulos 1 y 6, bibliografía completa",
+        "responsable": "Preparación asistida del lote S19; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-18",
+        "fundamento": "C4 y C7 compiten: el argumento económico es postplantación, el argumento político es el de una soberanía que no cumple lo que prometió. No se resuelve sin lectura íntegra."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S19-2026-09-18: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S19-2026-09-18",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "id": "boschcolonfidel",
+      "t": "De Cristóbal Colón a Fidel Castro: El Caribe, frontera imperial",
+      "a": "Juan Bosch",
+      "y": "1970",
+      "f": [
+        "colonialidad",
+        "soberanias",
+        "capitalismo_racial"
+      ],
+      "l": "dominicana",
+      "tr": "hispanófono (Gran Caribe)",
+      "ap": "Escrito en el exilio por un presidente derrocado con ayuda de una invasión: el Caribe no como archipiélago de islas sino como frontera imperial, el tablero donde Europa y después Estados Unidos se disputaron el mundo. Su valor para el atlas es la periodización y la tesis política, no el archivo: es historia sin aparato de citas.",
+      "ed": "ePubLibre (edición digital de la obra de 1970)",
+      "edicion_consultada": "Edición digital ePubLibre del texto de 1970; EPUB",
+      "lenguas_publicacion": [
+        "español"
+      ],
+      "nota_bibliografica": "El ejemplar consultado es una edición digital sin pie de imprenta comercial y sin bibliografía: el texto no lleva notas ni referencias, de modo que ninguna relación puede corroborarse por cita interna.",
+      "operaciones": [
+        "narrar",
+        "teorizar",
+        "intervenir políticamente"
+      ],
+      "orillas": [
+        {
+          "lugar": "dominicana",
+          "funcion": "lugar de producción intelectual"
+        },
+        {
+          "tipo": "cuenca",
+          "label": "Gran Caribe",
+          "funcion": "territorio estudiado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "invasiones_mundos_indigenas"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: capítulos iniciales, capítulos 14-20 y cierre",
+        "responsable": "Preparación asistida del lote S19; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-18",
+        "fundamento": "C7 es la candidatura principal por la tesis de la frontera imperial. Queda por decidir cómo se clasifica una obra de intervención política sin aparato erudito, cuyo argumento organiza siglos enteros."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S19-2026-09-18: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S19-2026-09-18",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "id": "woodislascaribe",
+      "t": "Islas del Caribe: naturaleza, arte, sociedad",
+      "a": "Yolanda Wood",
+      "y": "2011",
+      "f": [
+        "creolizacion",
+        "memoria",
+        "catastrofes"
+      ],
+      "l": "cuba",
+      "tr": "hispanófono (Caribe insular)",
+      "ap": "Una historia del arte caribeño leída como historia de la relación con la naturaleza: el paisaje colonial como inventario de recursos, el monte como refugio del esclavizado, la isla como forma. Llega a la capa de catástrofes por un camino distinto al de la ecología política: el de las imágenes.",
+      "ed": "Editorial UH (Universidad de La Habana)",
+      "edicion_consultada": "Editorial UH, La Habana, 2011, prólogo de Nancy Morejón, 324 pp.; PDF",
+      "isbn": "9789597211143",
+      "lenguas_publicacion": [
+        "español"
+      ],
+      "operaciones": [
+        "narrar",
+        "cartografiar",
+        "preservar una memoria"
+      ],
+      "orillas": [
+        {
+          "lugar": "cuba",
+          "funcion": "lugar de producción intelectual"
+        },
+        {
+          "tipo": "región",
+          "label": "Caribe insular",
+          "funcion": "territorio estudiado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "huracanes_ecologias_materialidades_vivas",
+          "creolizaciones_traducciones_opacidades"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: índice, capítulos sobre Humboldt y el ingenio, sección «El arte en diálogo medioambiental», bibliografía",
+        "responsable": "Preparación asistida del lote S19; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-18",
+        "fundamento": "C6 y C8 compiten y el riesgo de falso positivo es alto: el vocabulario de la naturaleza puede ser objeto del arte y no principio organizador del argumento."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S19-2026-09-18: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S19-2026-09-18",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "id": "bonniolcouleur",
+      "t": "La couleur comme maléfice : Une illustration créole de la généalogie des «Blancs» et des «Noirs»",
+      "a": "Jean-Luc Bonniol",
+      "y": "1992",
+      "f": [
+        "colonialidad",
+        "creolizacion",
+        "cuerpo_erotica"
+      ],
+      "l": "guadalupe",
+      "tr": "francófono (Guadalupe/Les Saintes)",
+      "ap": "Etnografía de una isla de las Saintes donde una población blanca pobre vive la genealogía del color como maleficio. Invierte el objeto habitual —estudia la blancura criolla, no la negritud— y muestra que la raza se hereda como se hereda una deuda.",
+      "ed": "Albin Michel",
+      "edicion_consultada": "Albin Michel, París, 1992, col. Bibliothèque de synthèse; PDF",
+      "isbn": "9782226057389",
+      "lenguas_publicacion": [
+        "francés"
+      ],
+      "operaciones": [
+        "producir etnografía",
+        "teorizar",
+        "confrontar una categoría"
+      ],
+      "orillas": [
+        {
+          "lugar": "guadalupe",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "martinica",
+          "funcion": "territorio comparado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "creolizaciones_traducciones_opacidades",
+          "cuerpos_parentescos_eroticas"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: portada y créditos, capítulo sobre la génesis de las sociedades antillanas, notas 20-45, bibliografía",
+        "responsable": "Preparación asistida del lote S19; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-18",
+        "fundamento": "C8 y C10 compiten: la genealogía del color es a la vez asunto de parentesco y de traducción social de la diferencia."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S19-2026-09-18: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S19-2026-09-18",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "id": "vidalneworleans",
+      "t": "Caribbean New Orleans: Empire, Race, and the Making of a Slave Society",
+      "a": "Cécile Vidal",
+      "y": "2019",
+      "f": [
+        "colonialidad",
+        "capitalismo_racial",
+        "postplantacion"
+      ],
+      "l": "nola",
+      "tr": "anglófono (Nueva Orleans)",
+      "ap": "Devuelve la Nueva Orleans francesa al Caribe del que la historiografía estadounidense la había separado: una ciudad-puerto de sociedad esclavista, no una frontera continental. Discute de frente las dos lecturas rivales sobre la formación racial en la Luisiana francesa y propone una tercera.",
+      "ed": "Omohundro Institute of Early American History and Culture / University of North Carolina Press",
+      "edicion_consultada": "Omohundro Institute y University of North Carolina Press, Williamsburg y Chapel Hill, 2019; PDF",
+      "isbn": "9781469645186",
+      "lenguas_publicacion": [
+        "inglés"
+      ],
+      "operaciones": [
+        "reconstruir un archivo",
+        "comparar orillas"
+      ],
+      "orillas": [
+        {
+          "lugar": "nola",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "cuenca",
+          "label": "Gran Caribe",
+          "funcion": "territorio comparado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "trata_esclavizacion_plantacion",
+          "rutas_diasporas_territorios_acuosos"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: introducción y notas 9-34, capítulos sobre la ciudad portuaria, bibliografía",
+        "responsable": "Preparación asistida del lote S19; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-18",
+        "fundamento": "C2 es la candidatura principal; C5 aparece por la reinscripción de la ciudad en un circuito imperial marítimo y habrá que probar si organiza el argumento o solo lo enmarca."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S19-2026-09-18: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S19-2026-09-18",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "id": "murphycreolearchipelago",
+      "t": "The Creole Archipelago: Race and Borders in the Colonial Caribbean",
+      "a": "Tessa Murphy",
+      "y": "2021",
+      "f": [
+        "soberanias",
+        "creolizacion",
+        "colonialidad"
+      ],
+      "l": "dominica",
+      "tr": "anglófono (Antillas Menores)",
+      "ap": "Las Antillas Menores como un archipiélago criollo anterior a las fronteras imperiales: kalinagos, colonos franceses y esclavizados sostuvieron durante un siglo un espacio común que Gran Bretaña desarmó al convertir las islas cedidas en colonias azucareras. Es la obra del corpus que más cerca está del método archipiélico que da nombre al proyecto.",
+      "ed": "University of Pennsylvania Press",
+      "edicion_consultada": "University of Pennsylvania Press, Filadelfia, 2021, col. Early American Studies; PDF",
+      "isbn": "9780812253382",
+      "lenguas_publicacion": [
+        "inglés"
+      ],
+      "operaciones": [
+        "reconstruir un archivo",
+        "cartografiar",
+        "seguir una ruta"
+      ],
+      "orillas": [
+        {
+          "lugar": "dominica",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "granada",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Antillas Menores",
+          "funcion": "territorio estudiado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "invasiones_mundos_indigenas"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: introducción, capítulos sobre las islas cedidas y notas 14-145",
+        "responsable": "Preparación asistida del lote S19; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-18",
+        "fundamento": "C7 y C1 compiten; la presencia kalinaga es constitutiva del argumento y no un antecedente, lo que abre la posibilidad de una frontera constitutiva. No se decide sin lectura íntegra."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S19-2026-09-18: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S19-2026-09-18",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "id": "chomskyunitedfruit",
+      "t": "West Indian Workers and the United Fruit Company in Costa Rica, 1870-1940",
+      "a": "Aviva Chomsky",
+      "y": "1996",
+      "f": [
+        "postplantacion",
+        "capitalismo_racial",
+        "violencias"
+      ],
+      "l": "costarica",
+      "tr": "anglófono (Costa Rica/Limón)",
+      "ap": "La plantación bananera de Limón como sistema de trabajo racializado: antillanos anglófonos reclutados para una economía de enclave que los necesitaba y no los quería, y una nación costarricense que se pensó blanca mientras vivía de ellos. Es la pieza que faltaba para que el Caribe centroamericano deje de ser un nodo casi vacío.",
+      "ed": "Louisiana State University Press",
+      "edicion_consultada": "Louisiana State University Press, Baton Rouge, 1996; PDF",
+      "isbn": "9780585325828",
+      "lenguas_publicacion": [
+        "inglés"
+      ],
+      "operaciones": [
+        "reconstruir un archivo",
+        "documentar una práctica"
+      ],
+      "orillas": [
+        {
+          "lugar": "costarica",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "jamaica",
+          "funcion": "espacio diaspórico"
+        },
+        {
+          "tipo": "región",
+          "label": "Caribe centroamericano",
+          "funcion": "territorio comparado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "postplantacion_trabajo_desposesion",
+          "rutas_diasporas_territorios_acuosos"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: introducción y notas 10-19, capítulos sobre tierra y subsistencia, bibliografía",
+        "responsable": "Preparación asistida del lote S19; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-18",
+        "fundamento": "C4 es la candidatura principal; C5 aparece por la migración antillana y debe probarse si el argumento se organiza por el trabajo o por la ruta."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S19-2026-09-18: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S19-2026-09-18",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "id": "cuninextranjeros",
+      "t": "Administrar los extranjeros: raza, mestizaje, nación. Migraciones afrobeliceñas en el territorio de Quintana Roo, 1902-1940",
+      "a": "Elisabeth Cunin",
+      "y": "2021",
+      "f": [
+        "colonialidad",
+        "soberanias",
+        "capitalismo_racial"
+      ],
+      "l": "belize",
+      "tr": "hispanófono (Quintana Roo/Belice)",
+      "ap": "Una frontera caribeña que el mestizaje mexicano volvió invisible: trabajadores afrobeliceños administrados como extranjeros en un territorio federal que el Estado quería poblar sin reconocer a quienes lo poblaban. Extiende hacia el norte el archivo de la negritud que Cunin había levantado en Cartagena.",
+      "ed": "CIESAS / IRD / Karthala (Publicaciones de la Casa Chata)",
+      "edicion_consultada": "Publicaciones de la Casa Chata (CIESAS), IRD y Karthala, México, 2021; traducción de Silvia Kiczkovsky; PDF, 294 pp.",
+      "lenguas_publicacion": [
+        "español"
+      ],
+      "nota_bibliografica": "Traducción al español del original francés. El ejemplar consultado es un PDF con OCR; la portada interior trae erratas de reconocimiento («extrangeraos», «afrobelicinas») que no están en el libro.",
+      "operaciones": [
+        "reconstruir un archivo",
+        "documentar una práctica",
+        "confrontar una categoría"
+      ],
+      "orillas": [
+        {
+          "lugar": "belize",
+          "funcion": "lugar de producción intelectual"
+        },
+        {
+          "tipo": "región",
+          "label": "Quintana Roo",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "cartagena",
+          "funcion": "territorio comparado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "rutas_diasporas_territorios_acuosos"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: portada y ficha catalográfica, capítulo sobre los estudios afromexicanos, bibliografía",
+        "responsable": "Preparación asistida del lote S19; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-18",
+        "fundamento": "C7 y C5 compiten: la administración de la frontera y la migración laboral son ambas estructurantes. La adjudicación exige lectura íntegra."
+      }
     }
   ],
   "relaciones": [
@@ -12775,6 +13468,622 @@
       "fuente": "Ernesto Bassi, Un territorio acuoso: geografías marineras y el Gran Caribe transimperial de la Nueva Granada, edición consultada: traducción de María José Montoya; Editorial Universidad del Norte y Banco de la República, 2021. PDF, hoja 28 (p. 16); PDF, hoja 377 (p. 368). La nota 46 cita Knight, The Caribbean, que la bibliografía identifica como The Caribbean: The Genesis of a Fragmented Nationalism (1978). Bassi lo cuenta entre las definiciones por la plantación, retoma su «nacionalismo fragmentado» y objeta que esa caracterización deja fuera las costas continentales.",
       "id_lote": "S18-R20",
       "lote_incorporacion": "S18-2026-09-15"
+    },
+    {
+      "a": "pattersonsociology",
+      "b": "james",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Orlando Patterson, The Sociology of Slavery, edición consultada: Polity Press, 2022; PDF PDF, hoja 16; nota 4, hoja 47. La introducción de 2022 nombra The Black Jacobins (1938) entre las pocas excepciones —con Williams y Goveia— a una historiografía que estudiaba Jamaica sin los esclavizados, y Patterson recuerda que James escribía el apéndice «From Toussaint L'Ouverture to Fidel Castro» mientras se reunían.",
+      "id_lote": "S19-R01",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "pattersonsociology",
+      "b": "williamscapitalismo",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Orlando Patterson, The Sociology of Slavery, edición consultada: Polity Press, 2022; PDF PDF, hoja 16; nota 9, hoja 47. Cita Capitalism and Slavery (1944) como una de las obras que sí hicieron de la esclavitud el foco de la investigación antes de 1967.",
+      "id_lote": "S19-R02",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "pattersonsociology",
+      "b": "mgsmithplural",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Orlando Patterson, The Sociology of Slavery, edición consultada: Polity Press, 2022; PDF PDF, nota 14, hoja 48. Cita «Some Aspects of Social Structure in the British Caribbean about 1820», recogido en The Plural Society in the British West Indies (1965), entre las fuentes de su reconstrucción de la sociedad blanca.",
+      "id_lote": "S19-R03",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "pattersonsociology",
+      "b": "tackysrevolt",
+      "tipo": "disonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": true,
+        "clase": "crítica explícita",
+        "argumento": "Patterson niega el lugar que Brown le da a la revuelta de Tacky en la historia de la resistencia jamaicana y le opone la serie de revueltas coromantíes de la frontera (hoja 34-35)."
+      },
+      "fuente": "Orlando Patterson, The Sociology of Slavery, edición consultada: Polity Press, 2022; PDF PDF, hoja 34; nota 129, hoja 60. Patterson escribe que la revuelta de Tacky «ha sido celebrada como la mayor» de las rebeliones jamaicanas y que esa afirmación, junto con la de la excepcionalidad haitiana, «es incorrecta»: sostiene que las revueltas coromantíes interconectadas de la frontera amenazaron mucho más el poder blanco. La nota 129 identifica la obra discutida como Tacky's Revolt de Vincent Brown (2020).",
+      "id_lote": "S19-R04",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "pattersonsociology",
+      "b": "reddock",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Orlando Patterson, The Sociology of Slavery, edición consultada: Polity Press, 2022; PDF PDF, nota 37, hoja 51. La introducción de 2022 cita Women, Labour and Politics in Trinidad and Tobago (1994) al revisar lo que su libro de 1967 no vio sobre el trabajo de las mujeres esclavizadas.",
+      "id_lote": "S19-R05",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "pattersonsocialdeath",
+      "b": "pattersonsociology",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Orlando Patterson, Slavery and Social Death, edición consultada: Harvard University Press, 2018; EPUB EPUB, OEBPS/c289.xhtml. Las notas comparativas remiten a «Patterson, The Sociology of Slavery» junto a Higman y a Handler y Lange: la teoría general de 1982 se apoya en el trabajo jamaicano de 1967. Continuidad de autor entre dos entradas con ficha propia.",
+      "id_lote": "S19-R06",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "pattersonsocialdeath",
+      "b": "price",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Orlando Patterson, Slavery and Social Death, edición consultada: Harvard University Press, 2018; EPUB EPUB, OEBPS/c289.xhtml. Remite a Maroon Societies (ed. Richard Price, 2.ª ed. 1979) como la referencia principal sobre revueltas y cimarronaje en el Nuevo Mundo, señalando el epílogo y la bibliografía.",
+      "id_lote": "S19-R07",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "pattersonsocialdeath",
+      "b": "james",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Orlando Patterson, Slavery and Social Death, edición consultada: Harvard University Press, 2018; EPUB EPUB, OEBPS/c289.xhtml. Cita The Black Jacobins (ed. Vintage, 1963) como referencia para Haití en la discusión sobre cimarronaje y revueltas.",
+      "id_lote": "S19-R08",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "pattersonsocialdeath",
+      "b": "mgsmithplural",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Orlando Patterson, Slavery and Social Death, edición consultada: Harvard University Press, 2018; EPUB EPUB, OEBPS/c289.xhtml y OEBPS/c2ZX.xhtml. Cita dos veces «Slavery and Emancipation in Two Societies», de M. G. Smith, en The Plural Society in the British West Indies (1965), pp. 116-161, para la comparación entre manumisión y estructura social.",
+      "id_lote": "S19-R09",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "pattersonsocialdeath",
+      "b": "mintz",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Orlando Patterson, Slavery and Social Death, edición consultada: Harvard University Press, 2018; EPUB EPUB, OEBPS/c2ZX.xhtml, nota 68. Para el Caribe remite al capítulo 7 de Caribbean Transformations (1974) al discutir los mecanismos por los que los esclavizados reunían fondos para comprar su libertad.",
+      "id_lote": "S19-R10",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "pattersonsocialdeath",
+      "b": "smallwoodsaltwater",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Orlando Patterson, Slavery and Social Death, edición consultada: Harvard University Press, 2018; EPUB EPUB, OEBPS/c2C.xhtml, nota 34. En el prefacio de 2018 Patterson rechaza la «falsa dicotomía» que Vincent Brown le atribuyó en «Social Death and Political Life» y nombra Saltwater Slavery (2008) entre las obras que supuestamente pertenecerían a ese campo. La discusión es con Brown, no con Smallwood.",
+      "id_lote": "S19-R11",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "pattersonsocialdeath",
+      "b": "baucomspecters",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Orlando Patterson, Slavery and Social Death, edición consultada: Harvard University Press, 2018; EPUB EPUB, OEBPS/c2C.xhtml, nota 34. La misma nota nombra Specters of the Atlantic (2005) en la lista de obras adscritas al campo de la muerte social, adscripción que Patterson discute.",
+      "id_lote": "S19-R12",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "pattersonsocialdeath",
+      "b": "handlerlangebarbados",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Orlando Patterson, Slavery and Social Death, edición consultada: Harvard University Press, 2018; EPUB EPUB, OEBPS/c2ZX.xhtml, nota 99. Toma de Plantation Slavery in Barbados (1978), p. 15, las estimaciones de población blanca y negra con las que calcula la proporción de libres no blancos.",
+      "id_lote": "S19-R13",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "pattersonsocialdeath",
+      "b": "brereton_racerelationstrinidad",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Orlando Patterson, Slavery and Social Death, edición consultada: Harvard University Press, 2018; EPUB EPUB, OEBPS/c289.xhtml, nota 109. Remite a Race Relations in Colonial Trinidad, 1870-1900 (1979) para el color y el prejuicio en Trinidad tras la emancipación.",
+      "id_lote": "S19-R14",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "pattersonconfounding",
+      "b": "pattersonsociology",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Orlando Patterson, The Confounding Island, edición consultada: Belknap Press, 2019; EPUB EPUB, OEBPS/xhtml/workcited.xhtml. La bibliografía registra «Patterson, O. 1967. The Sociology of Slavery: Jamaica, 1655-1834» entre las obras propias sobre las que se apoya el diagnóstico de la Jamaica poscolonial. Continuidad de autor entre dos entradas con ficha propia.",
+      "id_lote": "S19-R15",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "pattersonconfounding",
+      "b": "modernblackness",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Orlando Patterson, The Confounding Island, edición consultada: Belknap Press, 2019; EPUB EPUB, OEBPS/xhtml/epilogue.xhtml. En el epílogo contrapone la visión de una negritud domesticada a «lo que Deborah Thomas llama modern blackness (Thomas 2004)», con referencia a las pp. 1-15 de Modern Blackness.",
+      "id_lote": "S19-R16",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "pattersonconfounding",
+      "b": "coopernoises",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Orlando Patterson, The Confounding Island, edición consultada: Belknap Press, 2019; EPUB EPUB, OEBPS/xhtml/chapter_6.xhtml. Describe la oralidad del dancehall como algo que penetra el cuerpo «like noises in the blood», citando a Cooper (1993/1995, pp. 136-173).",
+      "id_lote": "S19-R17",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "pattersonconfounding",
+      "b": "exceptviolence",
+      "tipo": "resonancia",
+      "estado": "por_corroborar",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Por corroborar. La bibliografía de The Confounding Island (Belknap Press, 2019; EPUB, OEBPS/xhtml/workcited.xhtml) registra Exceptional Violence (2011) con título exacto, pero no se ha localizado el pasaje que la usa. La relación importa porque ambos explican la violencia jamaicana con marcos opuestos.",
+      "id_lote": "S19-R18",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "pattersonconfounding",
+      "b": "beckfordpersistent",
+      "tipo": "resonancia",
+      "estado": "por_corroborar",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Por corroborar. La bibliografía de The Confounding Island (Belknap Press, 2019; EPUB, workcited.xhtml) registra Persistent Poverty (1972) con título exacto; falta localizar el pasaje del capítulo económico que lo discute.",
+      "id_lote": "S19-R19",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "pattersonconfounding",
+      "b": "schwartz_seaofstorms",
+      "tipo": "resonancia",
+      "estado": "por_corroborar",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Por corroborar. La bibliografía de The Confounding Island (Belknap Press, 2019; EPUB, workcited.xhtml) registra Sea of Storms (2015) con título exacto; falta localizar el pasaje que lo usa.",
+      "id_lote": "S19-R20",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "murphycreolearchipelago",
+      "b": "pattersonsociology",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Tessa Murphy, The Creole Archipelago, edición consultada: University of Pennsylvania Press, 2021; PDF PDF, hoja 271, nota 109. Cita «Orlando Patterson, Sociology of Slavery… London: MacGibbon & Kee, 1967, especially 74» sobre la violencia en las sociedades esclavistas, junto a The Reaper's Garden de Brown.",
+      "id_lote": "S19-R21",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "murphycreolearchipelago",
+      "b": "vidalneworleans",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Tessa Murphy, The Creole Archipelago, edición consultada: University of Pennsylvania Press, 2021; PDF PDF, hoja 266, nota 33. Remite a «Vidal, Caribbean New Orleans» al tratar la alta proporción de gente libre de color en el archipiélago criollo, junto a Garrigus, Dawdy y Johnson.",
+      "id_lote": "S19-R22",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "murphycreolearchipelago",
+      "b": "tackysrevolt",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Tessa Murphy, The Creole Archipelago, edición consultada: University of Pennsylvania Press, 2021; PDF PDF, hojas 95 y 101. La revuelta de Tacky funciona en el argumento como la advertencia que empuja a Londres a poblar de colonos blancos las islas cedidas: «authorities were anxious to populate sugar colonies with loyal subjects».",
+      "id_lote": "S19-R23",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "murphycreolearchipelago",
+      "b": "keeganhofman",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Tessa Murphy, The Creole Archipelago, edición consultada: University of Pennsylvania Press, 2021; PDF PDF, hojas 254 y 256, notas 23 y 45. Cita The Caribbean before Columbus (2017) para el poblamiento de las Antillas Menores y para la genealogía de los nombres «taíno», «arahuaco» y «caribe».",
+      "id_lote": "S19-R24",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "murphycreolearchipelago",
+      "b": "gonzalezsojourners",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Tessa Murphy, The Creole Archipelago, edición consultada: University of Pennsylvania Press, 2021; PDF PDF, hojas 250 y 303, notas 24, 25 y 143. Usa Sojourners of the Caribbean (1988) para la etnogénesis garífuna y para la deportación desde Baliceaux a Roatán.",
+      "id_lote": "S19-R25",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "murphycreolearchipelago",
+      "b": "johnsonwickedflesh",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Tessa Murphy, The Creole Archipelago, edición consultada: University of Pennsylvania Press, 2021; PDF PDF, hojas 260 y 266, notas 70 y 33. Cita Wicked Flesh (2020), pp. 134-143, al leer los vacíos de los censos coloniales y la condición de las mujeres libres de color.",
+      "id_lote": "S19-R26",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "murphycreolearchipelago",
+      "b": "duboisturits",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Tessa Murphy, The Creole Archipelago, edición consultada: University of Pennsylvania Press, 2021; PDF PDF, hoja 261, nota 34. Remite a Freedom Roots (2019), p. 92, para los ataques posteriores a las islas de Sotavento.",
+      "id_lote": "S19-R27",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "murphycreolearchipelago",
+      "b": "fuentesdispossessed",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Tessa Murphy, The Creole Archipelago, edición consultada: University of Pennsylvania Press, 2021; PDF PDF, hojas 249 y 252, notas 14 y 60. Toma de Dispossessed Lives (2016) el problema del archivo colonial y lo aplica a los registros producidos por las insurrecciones.",
+      "id_lote": "S19-R28",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "vidalneworleans",
+      "b": "hallafricanslouisiana",
+      "tipo": "disonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": true,
+        "clase": "diferencia productiva argumentada",
+        "argumento": "Vidal no adopta ni la cultura afrocriolla autónoma de Hall ni el determinismo racial de Ingersoll: sitúa la formación racial en el orden urbano e imperial de una ciudad-puerto caribeña (hoja 40)."
+      },
+      "fuente": "Cécile Vidal, Caribbean New Orleans, edición consultada: Omohundro Institute y University of North Carolina Press, 2019; PDF PDF, hojas 34 y 40, notas 15 y 24. Vidal declara que Gwendolyn Midlo Hall y Thomas Ingersoll «formularon los dos puntos de vista más contrapuestos sobre la formación racial en la Luisiana francesa» y construye su libro contra esa alternativa, proponiendo una lectura más matizada de la sociedad esclavista urbana.",
+      "id_lote": "S19-R29",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "vidalneworleans",
+      "b": "hall_slavesocietydanish",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Cécile Vidal, Caribbean New Orleans, edición consultada: Omohundro Institute y University of North Carolina Press, 2019; PDF PDF, hojas 328 y 340, notas 37 y 104-105. Usa Slave Society in the Danish West Indies (ed. Higman, 1992), pp. 87-92, para comparar la esclavitud urbana de Nueva Orleans con la de las ciudades danesas del Caribe.",
+      "id_lote": "S19-R30",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "vidalneworleans",
+      "b": "creolenieworleans",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Cécile Vidal, Caribbean New Orleans, edición consultada: Omohundro Institute y University of North Carolina Press, 2019; PDF PDF, hojas 27 y 39, notas 9 y 23. Cita Creole New Orleans: Race and Americanization (1992) como la lectura de la ciudad como puerto norteamericano y como fuente de la caracterización de Nueva Orleans como ciudad criolla, para discutir ambas.",
+      "id_lote": "S19-R31",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "vidalneworleans",
+      "b": "regentlibres",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Cécile Vidal, Caribbean New Orleans, edición consultada: Omohundro Institute y University of North Carolina Press, 2019; PDF PDF, hojas 26 y 43 y doce ocurrencias más. La serie de trabajos franceses sobre «les libres de couleur» —incluido el de Frédéric Régent— sostiene su comparación entre Nueva Orleans y las Antillas francesas.",
+      "id_lote": "S19-R32",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "vidalneworleans",
+      "b": "mcneillmosquito",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Cécile Vidal, Caribbean New Orleans, edición consultada: Omohundro Institute y University of North Carolina Press, 2019; PDF PDF, hoja 28, nota 10. Cita Mosquito Empires (2010) entre las obras que definen el Gran Caribe como región ecológica y militar compartida.",
+      "id_lote": "S19-R33",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "chomskyunitedfruit",
+      "b": "bourgoisethnicity",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Aviva Chomsky, West Indian Workers and the United Fruit Company in Costa Rica, edición consultada: Louisiana State University Press, 1996; PDF PDF, hojas 31 y 42, notas 19 y 7, y dieciséis ocurrencias más. Ethnicity at Work (1989) es el interlocutor constante del libro: Chomsky lo sigue en la lectura de la división racial del trabajo bananero y le objeta que no mire el cambio en el tiempo del sistema de plantación.",
+      "id_lote": "S19-R34",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "chomskyunitedfruit",
+      "b": "mintz",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Aviva Chomsky, West Indian Workers and the United Fruit Company in Costa Rica, edición consultada: Louisiana State University Press, 1996; PDF PDF, hojas 28 y 58, notas 10 y 6. Usa Caribbean Transformations (1974), pp. 180-224, para discutir si el campesinado nace contra la plantación o junto a ella.",
+      "id_lote": "S19-R35",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "chomskyunitedfruit",
+      "b": "legrandfrontier",
+      "tipo": "resonancia",
+      "estado": "por_corroborar",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Por corroborar. West Indian Workers and the United Fruit Company in Costa Rica (LSU Press, 1996; PDF, hojas 32, 105 y 299): Chomsky discute a Catherine LeGrand en el cuerpo del texto —la comparación entre el campesinado de la Zona Bananera de Santa Marta y la ausencia de producción campesina en Limón— pero citando su artículo «Colombian Transformations», no el libro catalogado; la bibliografía sí registra Frontier Expansion and Peasant Protest in Colombia con título exacto. Falta localizar el pasaje que use el libro.",
+      "id_lote": "S19-R36",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "chomskyunitedfruit",
+      "b": "beckfordpersistent",
+      "tipo": "resonancia",
+      "estado": "por_corroborar",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Por corroborar. La bibliografía de West Indian Workers and the United Fruit Company in Costa Rica (LSU Press, 1996; PDF, hoja 292) registra Persistent Poverty (1972) con título exacto; falta localizar el pasaje que lo usa.",
+      "id_lote": "S19-R37",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "chomskyunitedfruit",
+      "b": "williamscapitalismo",
+      "tipo": "resonancia",
+      "estado": "por_corroborar",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Por corroborar. La bibliografía de West Indian Workers and the United Fruit Company in Costa Rica (LSU Press, 1996; PDF, hoja 307) registra Capitalism and Slavery (ed. Londres, 1964) con título exacto; falta localizar el pasaje que lo usa.",
+      "id_lote": "S19-R38",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "bonniolcouleur",
+      "b": "benoistarchipel",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Jean-Luc Bonniol, La couleur comme maléfice, edición consultada: Albin Michel, 1992; PDF PDF, hoja 267, nota 27, y bibliografía, hoja 281. Cita la introducción de L'Archipel inachevé (ed. Jean Benoist, Montreal, 1972) y el capítulo del propio Benoist sobre Les Saintes, «De la voile au moteur», publicado en ese volumen.",
+      "id_lote": "S19-R39",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "bonniolcouleur",
+      "b": "mgsmithplural",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Jean-Luc Bonniol, La couleur comme maléfice, edición consultada: Albin Michel, 1992; PDF PDF, hoja 258, nota 42, y bibliografía, hoja 296. Cita The Plural Society in the British West Indies (1965) en la discusión sobre pluralismo, clase y color, junto a Furnivall, Porter y Kuper.",
+      "id_lote": "S19-R40",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "bonniolcouleur",
+      "b": "mintz",
+      "tipo": "resonancia",
+      "estado": "por_corroborar",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Por corroborar. La bibliografía de La couleur comme maléfice (Albin Michel, 1992; PDF, hoja 293) registra Caribbean Transformations (Aldine, 1974) con título exacto; falta localizar el pasaje que lo usa.",
+      "id_lote": "S19-R41",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "bonniolcouleur",
+      "b": "steward",
+      "tipo": "resonancia",
+      "estado": "por_corroborar",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Por corroborar. La bibliografía de La couleur comme maléfice (Albin Michel, 1992; PDF, hoja 297) registra The People of Puerto Rico (ed. Julian H. Steward, 1956) con título exacto; falta localizar el pasaje que lo usa.",
+      "id_lote": "S19-R42",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "bonniolcouleur",
+      "b": "glissant",
+      "tipo": "resonancia",
+      "estado": "por_corroborar",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Por corroborar. La bibliografía de La couleur comme maléfice (Albin Michel, 1992; PDF, hoja 288) registra Le discours antillais (Le Seuil, 1981), uno de los dos títulos de la ficha de Glissant; falta localizar el pasaje que lo usa.",
+      "id_lote": "S19-R43",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "woodislascaribe",
+      "b": "morenofraginals",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Yolanda Wood, Islas del Caribe: naturaleza, arte, sociedad, edición consultada: Editorial UH, 2011; PDF PDF, hojas 64 y 65, nota 60, y cinco ocurrencias más. Cita a Moreno Fraginals para sostener que el ingenio fue, además de una actividad económica, «una aventura del espíritu», y lee las imágenes de la bonanza azucarera como lo que oculta el conflicto de la sociedad plantadora.",
+      "id_lote": "S19-R44",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "woodislascaribe",
+      "b": "benitez",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Yolanda Wood, Islas del Caribe: naturaleza, arte, sociedad, edición consultada: Editorial UH, 2011; PDF PDF, hoja 194, y bibliografía, hoja 286. Remite a La isla que se repite (Ediciones del Norte, Hanover, 1989) al leer la palangana horadada de Christopher Cozier como forma insular que pierde su carácter de contenedor.",
+      "id_lote": "S19-R45",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "woodislascaribe",
+      "b": "pricemars",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Yolanda Wood, Islas del Caribe: naturaleza, arte, sociedad, edición consultada: Editorial UH, 2011; PDF PDF, hoja 93. Sitúa las conferencias de 1919-1928 reunidas en Ainsi parla l'oncle (1928) como el acontecimiento que puso en valor la cultura popular y el componente negro de la sociedad haitiana.",
+      "id_lote": "S19-R46",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "woodislascaribe",
+      "b": "cesaire",
+      "tipo": "resonancia",
+      "estado": "por_corroborar",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Por corroborar. Islas del Caribe (Editorial UH, 2011; PDF, hoja 101) narra el movimiento martiniqueño en torno al Cuaderno de un retorno al país natal (1939), pero la ficha del corpus cataloga el Discurso sobre el colonialismo (1950): falta localizar una cita del título catalogado.",
+      "id_lote": "S19-R47",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "cuninextranjeros",
+      "b": "cunin",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Elisabeth Cunin, Administrar los extranjeros, edición consultada: CIESAS/IRD/Karthala, 2021; PDF PDF, hoja 271. La bibliografía registra con título exacto «Cunin, Elisabeth, 2003, Identidades a flor de piel: lo negro entre apariencias y pertenencias. Mestizaje y categorías raciales en Cartagena», su propio trabajo anterior, del que este libro extiende el archivo hacia la frontera mexicana. Continuidad de autor entre dos entradas con ficha propia.",
+      "id_lote": "S19-R48",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "cuninextranjeros",
+      "b": "cuijla",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Elisabeth Cunin, Administrar los extranjeros, edición consultada: CIESAS/IRD/Karthala, 2021; PDF PDF, hojas 92 y 265. Discute Cuijla: esbozo etnográfico de un pueblo negro (1958) como la monografía etnográfica de Aguirre Beltrán que, pese a su lugar fundador, no dio origen a una línea de investigación sobre poblaciones negras en México hasta los años noventa.",
+      "id_lote": "S19-R49",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "boschcolonfidel",
+      "b": "garciapenaborders",
+      "tipo": "resonancia",
+      "estado": "por_corroborar",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Por corroborar. The Borders of Dominicanidad (Duke University Press, 2016; PDF, hojas 12, 32-33 y 117-118) hace de «el legado intelectual de Juan Bosch» un puente de su propio archivo y lee su cuento «Luis Pie» (1942) entre las cuatro ficciones de la masacre de 1937; cita la obra literaria de Bosch, no De Cristóbal Colón a Fidel Castro. La relación es fuerte en argumento y está sin corroborar por título.",
+      "id_lote": "S19-R50",
+      "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "boschcolonfidel",
+      "b": "duboisturits",
+      "tipo": "resonancia",
+      "estado": "por_corroborar",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Por corroborar. Freedom Roots (University of North Carolina Press, 2019; PDF, hojas 241 y 269-270) narra el gobierno socialdemócrata de Bosch en 1963, el golpe y la invasión estadounidense como el límite que la región le puso a un proyecto no plantacionista; se refiere al político, no al libro catalogado.",
+      "id_lote": "S19-R51",
+      "lote_incorporacion": "S19-2026-09-18"
     }
   ],
   "redirecciones": {
