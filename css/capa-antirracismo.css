@@ -27,6 +27,12 @@
 /* ---------------- panel ---------------- */
 #panelAntirracismo{width:clamp(380px,32vw,440px);max-width:calc(100vw - 32px);
   display:flex;flex-direction:column;overflow:hidden}
+/* El display:flex de arriba es un selector de id y le gana al display:none que
+   el navegador aplica por el atributo hidden. Sin esta línea, cerrar el panel
+   cambiaba el estado pero el panel seguía en pantalla, y desactivar la capa
+   retiraba las marcas dejando el panel puesto. En teléfono la hoja inferior
+   se quedaba tapando la pantalla para siempre. */
+#panelAntirracismo[hidden]{display:none}
 #panelAntirracismo .ar-cab{flex:0 0 auto;padding-bottom:10px;border-bottom:1px solid var(--line)}
 #panelAntirracismo .ar-cuerpo{flex:1 1 auto;min-height:0;overflow-y:auto;padding-top:12px;
   scroll-padding-top:6px;
