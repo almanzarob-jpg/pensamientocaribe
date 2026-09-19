@@ -5,7 +5,7 @@
     "responsable": "Grupo de Investigación Pensamiento Caribe",
     "version": "1.21.0",
     "fecha": "2026-09-18",
-    "nota_version": "Lote S20-BR: primera entrada lusófona del corpus. Entra Freedom by a Thread / Liberdade por um fio (Reis y Gomes, orgs.), con seis relaciones nuevas, todas corroboradas por cita de título catalogado: Maroon Societies, First-Time, Alabi's World, Travels with Tooy y Rainforest Warriors de Richard Price, y Caribbean Transformations de Mintz. El anclaje es Surinam conforme al contrato territorial §14 —punto existente del mapa—, y el territorio estudiado, el Baixo Amazonas, se declara en orillas. Quedan fuera de este lote, verificadas pero sin anclaje decidido, Palmares y O Alufá Rufino de Gomes/Reis/Carvalho y Brazil: Mixture or Massacre? de Abdias do Nascimento. Clasificación por corrientes pendiente de adjudicación académica."
+    "nota_version": "Lote S20-BR: primera entrada lusófona del corpus. Entra Freedom by a Thread / Liberdade por um fio (Reis y Gomes, orgs.), con seis relaciones nuevas, todas corroboradas por cita de título catalogado: Maroon Societies, First-Time, Alabi's World, Travels with Tooy y Rainforest Warriors de Richard Price, y Caribbean Transformations de Mintz. El anclaje cartográfico es Oriximiná · Trombetas, Pará, como geografía situada de los quilombos amazónicos; el ámbito más amplio del Baixo Amazonas y Brasil se conserva en orillas. Quedan fuera de este lote, verificadas pero sin anclaje decidido, Palmares y O Alufá Rufino de Gomes/Reis/Carvalho y Brazil: Mixture or Massacre? de Abdias do Nascimento. Clasificación por corrientes pendiente de adjudicación académica."
   },
   "fenomenos": {
     "colonialidad": {
@@ -244,6 +244,13 @@
       -83.03,
       "Costa Rica (Limón)",
       "pais"
+    ],
+    "oriximina": [
+      -1.7656,
+      -55.8661,
+      "Oriximiná · Trombetas",
+      "ciudad",
+      "la Amazonia quilombola · Brasil"
     ],
     "granada": [
       12.12,
@@ -9288,7 +9295,7 @@
       "lote_incorporacion": "S20-2026-09-18",
       "anclaje_cartografico": {
         "funcion": "anclaje visual, no delimitación del territorio estudiado",
-        "fundamento": "Surinam ancla el volumen conforme al contrato territorial §14: se usa un punto existente del mapa y el ámbito académico se declara en orillas. El anclaje no es arbitrario — el propio libro sitúa los mocambos del Curuá y el Trombetas «above rapids and waterfalls of the Amazon river effluents… a few leagues from the border with Suriname»."
+        "fundamento": "Oriximiná · Trombetas, en Pará, funciona como anclaje situado de la Amazonia quilombola estudiada en el volumen. La elección privilegia una geografía histórica concreta de mocambos y quilombos del Trombetas y el Curuá, en lugar de representar Brasil como una unidad nacional abstracta. El ámbito académico completo se conserva en orillas."
       },
       "id": "reisgomesliberdade",
       "t": "Freedom by a Thread: The History of Quilombos in Brazil",
@@ -9298,7 +9305,7 @@
         "cimarronaje",
         "memoria"
       ],
-      "l": "suriname",
+      "l": "oriximina",
       "tr": "lusófono (Brasil)",
       "ap": "El quilombo dicho en serie americana. El volumen abre nombrando las denominaciones de la fuga —palenques y cumbes en la América española, maroons en la inglesa, grand marronage en la francesa, quilombos y mocambos en Brasil— y las trata como un mismo fenómeno de cuenca, no como casos nacionales comparables. Su capítulo amazónico, de Eurípedes Funes, reconstruye con testimonio oral de quilombolas los mocambos del Curuá y el Trombetas, río arriba de las cachoeiras, a pocas leguas de la frontera surinamesa. Primera entrada lusófona del corpus.",
       "ed": "Diasporic Africa Press",
@@ -9314,6 +9321,10 @@
         "producir testimonio"
       ],
       "orillas": [
+        {
+          "lugar": "oriximina",
+          "funcion": "territorio estudiado"
+        },
         {
           "tipo": "región",
           "label": "Baixo Amazonas (Curuá y Trombetas, Pará)",
