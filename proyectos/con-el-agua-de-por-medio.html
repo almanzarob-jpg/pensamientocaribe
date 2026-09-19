@@ -150,6 +150,7 @@
       <button type="button" data-len="his" aria-pressed="false" data-i18n="lenHis">Hispanófona</button>
       <button type="button" data-len="fra" aria-pressed="false" data-i18n="lenFra">Francófona</button>
       <button type="button" data-len="neer" aria-pressed="false" data-i18n="lenNeer">Neerlandesa</button>
+      <button type="button" data-len="lus" aria-pressed="false" data-i18n="lenLus">Lusófona</button>
       <button type="button" data-len="crio" aria-pressed="false" data-i18n="lenCrio">Criolla</button>
       <button type="button" data-len="sin" aria-pressed="false" data-i18n="lenSin">Sin declarar</button>
     </div></div>
@@ -598,7 +599,7 @@ const I18N = {
     lblFiltros:"Filtros", btnFiltrosAbrir:"Abrir filtros", btnFiltrosCerrar:"Cerrar filtros",
     lblInfo:"Información", btnInfoAbrir:"Abrir información", btnInfoCerrar:"Cerrar información",
     iComoUsar:"Volver a la introducción", iMetodologia:"Metodología completa", iModo:"Modo presentación",
-    lblLengua:"Lengua", lenTodas:"Todas", lenAng:"Anglófona", lenHis:"Hispanófona", lenFra:"Francófona", lenNeer:"Neerlandesa", lenCrio:"Criolla", lenSin:"Sin declarar",
+    lblLengua:"Lengua", lenTodas:"Todas", lenAng:"Anglófona", lenHis:"Hispanófona", lenFra:"Francófona", lenNeer:"Neerlandesa", lenLus:"Lusófona", lenCrio:"Criolla", lenSin:"Sin declarar",
     lblMovimiento:"Movimiento", movOn:"Animación: activada", movOff:"Animación: en pausa",
     lblIndirectas:"Conexiones indirectas", indCheckLbl:"Mostrar también las indirectas en el mapa",
     chipQuitarAria:"Quitar filtro: {label}", chipTipo:"Tipo", chipEvid:"Evidencia", chipLengua:"Lengua", chipMov:"Movimiento", chipInd:"Indirectas",
@@ -715,7 +716,7 @@ const I18N = {
     lblFiltros:"Filters", btnFiltrosAbrir:"Open filters", btnFiltrosCerrar:"Close filters",
     lblInfo:"Information", btnInfoAbrir:"Open information", btnInfoCerrar:"Close information",
     iComoUsar:"Back to the introduction", iMetodologia:"Full methodology", iModo:"Presentation mode",
-    lblLengua:"Language", lenTodas:"All", lenAng:"Anglophone", lenHis:"Hispanophone", lenFra:"Francophone", lenNeer:"Dutch-language", lenCrio:"Creole", lenSin:"Undeclared",
+    lblLengua:"Language", lenTodas:"All", lenAng:"Anglophone", lenHis:"Hispanophone", lenFra:"Francophone", lenNeer:"Dutch-language", lenLus:"Lusophone", lenCrio:"Creole", lenSin:"Undeclared",
     lblMovimiento:"Motion", movOn:"Animation: on", movOff:"Animation: paused",
     lblIndirectas:"Indirect connections", indCheckLbl:"Also show indirect connections on the map",
     chipQuitarAria:"Remove filter: {label}", chipTipo:"Type", chipEvid:"Evidence", chipLengua:"Language", chipMov:"Motion", chipInd:"Indirect",
@@ -784,6 +785,7 @@ function tradCodes(n){
   if(/francofon|frances/.test(s)) codes.push("fra");
   if(/anglofon|ingles/.test(s)) codes.push("ang");
   if(/hispanofon|hispano|espanol/.test(s)) codes.push("his");
+  if(/lusofon|portugues/.test(s)) codes.push("lus");
   if(/crioll|creole/.test(s)) codes.push("crio");
   return new Set(codes);
 }
@@ -1842,7 +1844,7 @@ function renderChips(){
   if(state.layer!=="ambas") chips.push({txt:t('chipTipo')+': '+(state.layer==='obra'?t('cObra'):t('cManif')), reset:()=>setLayer('ambas')});
   if(state.evid!=="todas") chips.push({txt:t('chipEvid')+': '+(state.evid==='ok'?t('eCorr'):t('ePorCorr')), reset:()=>setEvid('todas')});
   if(state.lengua && state.lengua!=="todas"){
-    const map={ang:'lenAng',his:'lenHis',fra:'lenFra',neer:'lenNeer',crio:'lenCrio',sin:'lenSin'};
+    const map={ang:'lenAng',his:'lenHis',fra:'lenFra',neer:'lenNeer',lus:'lenLus',crio:'lenCrio',sin:'lenSin'};
     chips.push({txt:t('chipLengua')+': '+t(map[state.lengua]), reset:()=>setLengua('todas')});
   }
   if(state.recorrido){
