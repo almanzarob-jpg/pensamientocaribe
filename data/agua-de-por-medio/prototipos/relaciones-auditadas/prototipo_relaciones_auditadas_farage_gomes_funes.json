@@ -1,0 +1,87 @@
+{
+  "schema": "prototipo-relaciones-auditadas-v1",
+  "atlas": "Con el agua de por medio",
+  "fecha_auditoria": "2026-09-19",
+  "principios": {
+    "null": "desconocido: la propiedad no puede establecerse con la evidencia revisada",
+    "intensidad_historica": "No se infiere a partir de cantidad de citas, importancia temática o densidad documental.",
+    "densidad_evidencial": "Describe la solidez documental disponible y no equivale a intensidad histórica."
+  },
+  "relaciones": [
+    {
+      "id": "farage_rio_branco_guianas_neerlandesas",
+      "autora": "Nádia Farage",
+      "obra": "As Muralhas dos Sertões",
+      "origen": "Rio Branco",
+      "destino": "Guianas neerlandesas (Essequibo–Surinam)",
+      "denominacion": "tráfico Caribe-holandés",
+      "propiedades": {
+        "existencia": "sostenida",
+        "temporalidad": "segunda mitad del siglo XVIII",
+        "ventana_documentada": "1750–1786",
+        "recurrencia": "recurrente_estacional_y_sostenida",
+        "direccion": "bidireccional_asimetrica",
+        "intensidad_historica": null,
+        "densidad_evidencial": "alta"
+      },
+      "nota": "Caribe refiere aquí a intermediarios indígenas caribes; no al Caribe neerlandés insular.",
+      "fuente": "Farage, Nádia. As Muralhas dos Sertões: os povos indígenas no Rio Branco e a colonização."
+    },
+    {
+      "id": "gomes_amapa_guayana_francesa",
+      "autor": "Flávio dos Santos Gomes",
+      "obra": "Other Black Atlantic Borders",
+      "origen": "Amapá / Macapá / Araguari",
+      "destino": "Guayana Francesa / Cayena",
+      "propiedades": {
+        "existencia": "sostenida",
+        "temporalidad": "siglos XVIII–XIX",
+        "recurrencia": "recurrente",
+        "frecuencia_general": null,
+        "direccion": "bidireccional",
+        "intensidad_historica": null,
+        "densidad_evidencial": "alta"
+      },
+      "observacion_local": {
+        "frecuencia": "diaria",
+        "contexto": "mocambo de la región del Araguari, interrogatorio de 1791",
+        "advertencia": "No extrapolar esta frecuencia a toda la relación Amapá–Guayana Francesa."
+      },
+      "fuente": "Gomes, Flávio dos Santos. Other Black Atlantic Borders: Escape Routes, Mocambos, and Fears of Sedition in Brazil and French Guiana."
+    },
+    {
+      "id": "funes_trombetas_red_guayanesa",
+      "autor": "Eurípedes Antônio Funes",
+      "obra": "Nasci nas matas, nunca tive senhor",
+      "origen": "Trombetas / Curuá / Baixo Amazonas",
+      "destino": "pueblos indígenas y marrons de Surinam",
+      "propiedades": {
+        "existencia": "sostenida",
+        "temporalidad": "siglo XIX",
+        "recurrencia": null,
+        "direccion_global": null,
+        "intensidad_historica": null,
+        "densidad_evidencial": "media"
+      },
+      "subrelaciones": [
+        {
+          "id": "funes_trombetas_indigenas",
+          "origen": "pueblos indígenas",
+          "destino": "sociedades mocambeiras",
+          "flujo": "conocimiento territorial, selva y rutas",
+          "direccion": "indigenas_hacia_mocambeiros",
+          "recurrencia": null
+        },
+        {
+          "id": "funes_trombetas_suriman",
+          "origen": "Trombetas / Curuá",
+          "destino": "marrons de Surinam",
+          "flujo": "contacto transfronterizo",
+          "direccion": null,
+          "recurrencia": null
+        }
+      ],
+      "fuente": "Funes, Eurípedes Antônio. Nasci nas matas, nunca tive senhor: história e memória dos mocambos do Baixo Amazonas."
+    }
+  ]
+}
