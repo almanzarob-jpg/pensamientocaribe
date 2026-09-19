@@ -50,6 +50,7 @@ const LENGUAS = {
   francofonas: /franc[oó]fon|franc[eé]s/i,
   neerlandesas: /neerland/i,
   danesas: /dan[eé]s/i,
+  lusofonas: /lus[oó]fon|portugu[eé]s/i,
 };
 for (const [clave, re] of Object.entries(LENGUAS)) {
   V[clave] = O.filter((o) => re.test(desc(o.tr))).length;
@@ -145,7 +146,7 @@ for (const [archivo, patron, clave] of reglas) {
 // ------------------------------------------------------------------- informe
 console.log(`Corpus v${V.version}: ${V.entradas} entradas (${V.obras} obras, ${V.manifestaciones} manifestaciones), ` +
   `${V.relaciones} relaciones (${V.corroboradas} corroboradas, ${V.porCorroborar} por corroborar), ${V.lugares} lugares.`);
-console.log(`Lengua de publicación declarada: ${V.anglofonas} anglófonas, ${V.hispanas} hispanas, ${V.francofonas} francófonas, ${V.neerlandesas} neerlandesas, ${V.danesas} danesa(s); ${V.sinLengua} sin declarar.\n`);
+console.log(`Lengua de publicación declarada: ${V.anglofonas} anglófonas, ${V.hispanas} hispanas, ${V.francofonas} francófonas, ${V.neerlandesas} neerlandesas, ${V.danesas} danesa(s), ${V.lusofonas} lusófona(s); ${V.sinLengua} sin declarar.\n`);
 console.log(`Afirmaciones comprobadas: ${comprobadas.length}`);
 errores.forEach((e) => console.log(e));
 console.log(`\nResultado: ${errores.length} desfase(s).`);

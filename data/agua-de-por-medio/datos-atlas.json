@@ -3,9 +3,9 @@
     "titulo": "Con el agua de por medio",
     "subtitulo": "Atlas para una antropología archipiélica",
     "responsable": "Grupo de Investigación Pensamiento Caribe",
-    "version": "1.20.0",
+    "version": "1.21.0",
     "fecha": "2026-09-18",
-    "nota_version": "Lote S19: siembra de 10 obras procedentes del cruce completo de la carpeta de bibliografía (270 archivos) contra el corpus 1.19.0. Entran Orlando Patterson con tres obras (The Sociology of Slavery, Slavery and Social Death, The Confounding Island), Juan Bosch, Yolanda Wood, Jean-Luc Bonniol, Cécile Vidal, Tessa Murphy, Aviva Chomsky y una segunda obra de Elisabeth Cunin. 45 relaciones nuevas, 33 con cita localizada y 12 declaradas por corroborar; dos disonancias corroboradas: Patterson contra Tacky's Revolt de Vincent Brown y Vidal contra la alternativa Hall/Ingersoll sobre la formación racial en la Luisiana francesa. Clasificación por corrientes pendiente de adjudicación académica en las diez fichas."
+    "nota_version": "Lote S20-BR: primera entrada lusófona del corpus. Entra Freedom by a Thread / Liberdade por um fio (Reis y Gomes, orgs.), con seis relaciones nuevas, todas corroboradas por cita de título catalogado: Maroon Societies, First-Time, Alabi's World, Travels with Tooy y Rainforest Warriors de Richard Price, y Caribbean Transformations de Mintz. El anclaje es Surinam conforme al contrato territorial §14 —punto existente del mapa—, y el territorio estudiado, el Baixo Amazonas, se declara en orillas. Quedan fuera de este lote, verificadas pero sin anclaje decidido, Palmares y O Alufá Rufino de Gomes/Reis/Carvalho y Brazil: Mixture or Massacre? de Abdias do Nascimento. Clasificación por corrientes pendiente de adjudicación académica."
   },
   "fenomenos": {
     "colonialidad": {
@@ -9270,6 +9270,85 @@
         "fecha": "2026-09-18",
         "fundamento": "C7 y C5 compiten: la administración de la frontera y la migración laboral son ambas estructurantes. La adjudicación exige lectura íntegra."
       }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S20-2026-09-18: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S20-2026-09-18",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Surinam ancla el volumen conforme al contrato territorial §14: se usa un punto existente del mapa y el ámbito académico se declara en orillas. El anclaje no es arbitrario — el propio libro sitúa los mocambos del Curuá y el Trombetas «above rapids and waterfalls of the Amazon river effluents… a few leagues from the border with Suriname»."
+      },
+      "id": "reisgomesliberdade",
+      "t": "Freedom by a Thread: The History of Quilombos in Brazil",
+      "a": "João José Reis y Flávio dos Santos Gomes (orgs.)",
+      "y": "1996",
+      "f": [
+        "cimarronaje",
+        "memoria"
+      ],
+      "l": "suriname",
+      "tr": "lusófono (Brasil)",
+      "ap": "El quilombo dicho en serie americana. El volumen abre nombrando las denominaciones de la fuga —palenques y cumbes en la América española, maroons en la inglesa, grand marronage en la francesa, quilombos y mocambos en Brasil— y las trata como un mismo fenómeno de cuenca, no como casos nacionales comparables. Su capítulo amazónico, de Eurípedes Funes, reconstruye con testimonio oral de quilombolas los mocambos del Curuá y el Trombetas, río arriba de las cachoeiras, a pocas leguas de la frontera surinamesa. Primera entrada lusófona del corpus.",
+      "ed": "Diasporic Africa Press",
+      "edicion_consultada": "Freedom by a Thread: The History of Quilombos in Brazil, Diasporic Africa Press, 2017; traducción de Liberdade por um fio: história dos quilombos no Brasil, Companhia das Letras, São Paulo, 1996. Epub sin paginación estable: las citas se localizan por búsqueda de frase.",
+      "isbn": "9781937306311",
+      "lenguas_publicacion": [
+        "portugués",
+        "inglés"
+      ],
+      "operaciones": [
+        "comparar orillas",
+        "reconstruir un archivo",
+        "producir testimonio"
+      ],
+      "orillas": [
+        {
+          "tipo": "región",
+          "label": "Baixo Amazonas (Curuá y Trombetas, Pará)",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Brasil",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "suriname",
+          "funcion": "territorio comparado"
+        },
+        {
+          "tipo": "región",
+          "label": "Américas esclavistas",
+          "funcion": "territorio comparado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "fugas_cimarronajes_emancipaciones",
+          "memorias_espiritualidades_archivos_vivos"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: introducción del volumen, capítulo de Eurípedes Funes sobre los mocambos del Baixo Amazonas y notas bibliográficas que citan a Price y a Mintz.",
+        "responsable": "Preparación asistida del lote S20; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-18",
+        "fundamento": "C3 es la candidatura principal: el volumen organiza su argumento alrededor de la fuga y sus comunidades. C9 aparece por el peso del testimonio oral de quilombolas en el capítulo amazónico. Debe decidirse si un volumen colectivo con capítulos de argumento heterogéneo se clasifica por su introducción o exige arquitectura de síntesis multicorriente."
+      }
     }
   ],
   "relaciones": [
@@ -14084,6 +14163,78 @@
       "fuente": "Por corroborar. Freedom Roots (University of North Carolina Press, 2019; PDF, hojas 241 y 269-270) narra el gobierno socialdemócrata de Bosch en 1963, el golpe y la invasión estadounidense como el límite que la región le puso a un proyecto no plantacionista; se refiere al político, no al libro catalogado.",
       "id_lote": "S19-R51",
       "lote_incorporacion": "S19-2026-09-18"
+    },
+    {
+      "a": "reisgomesliberdade",
+      "b": "price",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Reis y Gomes (orgs.), Freedom by a Thread, Diasporic Africa Press, 2017; epub sin paginación estable, cita localizable por búsqueda de frase. Cita el título catalogado: «autonomous communities with similarities to other maroon societies in the americas but with one important difference —i.e., the role of gold mining in the formation and duration of the communities». La introducción establece además la serie comparada de la fuga: «in spanish america: palenques, cumbes, etc.; in the english: maroons; in the french: grand maroonage». Relación de serie, no de influencia.",
+      "id_lote": "S20-R01",
+      "lote_incorporacion": "S20-2026-09-18"
+    },
+    {
+      "a": "reisgomesliberdade",
+      "b": "pricefirst",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Reis y Gomes (orgs.), Freedom by a Thread, Diasporic Africa Press, 2017; epub sin paginación estable, cita localizable por búsqueda de frase. Nota bibliográfica que enumera tres títulos de Price seguidos: «first-time: the historical vision of an african american people (Baltimore: Johns Hopkins University Press, 1983); alabi's world (1990); travels with tooy (2008)». Título catalogado presente.",
+      "id_lote": "S20-R02",
+      "lote_incorporacion": "S20-2026-09-18"
+    },
+    {
+      "a": "reisgomesliberdade",
+      "b": "alabi",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Reis y Gomes (orgs.), Freedom by a Thread, Diasporic Africa Press, 2017; epub sin paginación estable, cita localizable por búsqueda de frase. Misma nota que S20-R02: «alabi's world (Baltimore: Johns Hopkins University Press, 1990)».",
+      "id_lote": "S20-R03",
+      "lote_incorporacion": "S20-2026-09-18"
+    },
+    {
+      "a": "reisgomesliberdade",
+      "b": "travelstooy",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Reis y Gomes (orgs.), Freedom by a Thread, Diasporic Africa Press, 2017; epub sin paginación estable, cita localizable por búsqueda de frase. Misma nota que S20-R02: «travels with tooy: history, memory, and the african american imagination (Chicago: University of Chicago Press, 2008)».",
+      "id_lote": "S20-R04",
+      "lote_incorporacion": "S20-2026-09-18"
+    },
+    {
+      "a": "reisgomesliberdade",
+      "b": "rainforestwarriors",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Reis y Gomes (orgs.), Freedom by a Thread, Diasporic Africa Press, 2017; epub sin paginación estable, cita localizable por búsqueda de frase. Nota que cita el título catalogado —«price, rainforest warriors: human rights on trial (Philadelphia: University of Pennsylvania Press, 2011)»— inmediatamente después de remitir a Richard Price, «Scrapping Maroon History: Brazil's Promise, Suriname's Shame», New West Indian Guide 72 (1998), 233-255. Es Price quien pone Brasil y Surinam en la misma frase.",
+      "id_lote": "S20-R05",
+      "lote_incorporacion": "S20-2026-09-18"
+    },
+    {
+      "a": "reisgomesliberdade",
+      "b": "mintz",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Reis y Gomes (orgs.), Freedom by a Thread, Diasporic Africa Press, 2017; epub sin paginación estable, cita localizable por búsqueda de frase. «See Sidney W. Mintz, “The Origins of the Jamaican Market System”, in Caribbean Transformations (Chicago: Aldine Publishing Company, 1974), 180-213», en la discusión sobre la economía propia de los esclavizados. Título catalogado presente.",
+      "id_lote": "S20-R06",
+      "lote_incorporacion": "S20-2026-09-18"
     }
   ],
   "redirecciones": {
