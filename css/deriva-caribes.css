@@ -1,0 +1,113 @@
+/* «La deriva» — recorrido por las definiciones del Caribe. Prefijo dv-.
+   Usa solo los tokens del atlas (--cream, --gray, --line, --bg-deep, --ink-line,
+   --gold, --ff-*) y la paleta «Mar y coral» de la capa (--qc-*). Ningún color propio. */
+
+#derivaBtn[aria-pressed="true"]{ background:var(--cream); color:var(--bg-deep); border-color:var(--cream); }
+
+.dv-barra{
+  position:fixed; left:0; right:0; bottom:0; z-index:640;
+  background:rgba(5,6,4,.94); backdrop-filter:blur(8px);
+  border-top:1px solid var(--line);
+  color:var(--cream); font-family:var(--ff-body);
+  padding:.6rem .9rem calc(.7rem + env(safe-area-inset-bottom, 0px));
+  display:grid; gap:.5rem; font-size:.86rem; max-height:40vh; overflow:auto;
+}
+.dv-barra[hidden]{ display:none; }
+
+.dv-fila{ display:flex; align-items:center; gap:.6rem; flex-wrap:wrap; }
+.dv-ctrl{ display:flex; align-items:center; gap:.3rem; }
+.dv-btn{
+  border:1px solid var(--line); background:transparent; color:var(--cream);
+  border-radius:999px; padding:.28rem .75rem; font:inherit; font-size:.82rem; cursor:pointer; line-height:1.3;
+  transition:background .15s, border-color .15s;
+}
+.dv-btn:hover{ background:rgba(226,221,206,.07); border-color:var(--ink-line); }
+.dv-btn[aria-pressed="true"]{ background:var(--cream); color:var(--bg-deep); border-color:var(--cream); }
+.dv-btn.dv-play{ min-width:6.4rem; font-family:var(--ff-mono); }
+.dv-btn:focus-visible, .dv-tick:focus-visible, .dv-card:focus-visible, .dv-lugar:focus-visible{
+  outline:2px solid var(--qc-dentro); outline-offset:2px; }
+select.dv-btn{ background:var(--bg-deep); }
+
+/* ----- línea de años ----- */
+.dv-linea{ position:relative; height:34px; flex:1 1 300px; min-width:220px; }
+.dv-linea::before{ content:""; position:absolute; left:0; right:0; top:22px; height:1px; background:var(--line); }
+.dv-tick{
+  position:absolute; top:14px; width:2px; height:9px; transform:translateX(-1px);
+  background:var(--gray); opacity:.7; border:0; padding:0; cursor:pointer;
+  transition:height .18s, top .18s, background .18s, opacity .18s;
+}
+.dv-tick:hover{ background:var(--cream); opacity:1; height:15px; top:11px; }
+.dv-tick[aria-current="true"]{ background:var(--qc-disputa); opacity:1; height:19px; top:8px; width:3px; }
+.dv-anio{ position:absolute; top:0; transform:translateX(-50%); font-size:.68rem; color:var(--gray);
+  font-family:var(--ff-mono); }
+
+/* ----- narración ----- */
+.dv-narra{ display:grid; gap:.15rem; flex:1 1 100%; }
+.dv-titulo{ font-family:var(--ff-display); font-size:1.05rem; }
+.dv-titulo .dv-year{ font-family:var(--ff-mono); font-size:.8rem; color:var(--gray); margin-right:.5rem; }
+.dv-criterio{ color:var(--gray); line-height:1.45; }
+
+/* ----- cinta de cambios ----- */
+.dv-cinta{ display:flex; gap:.35rem; flex-wrap:wrap; align-items:center; }
+.dv-cinta .dv-nada{ color:var(--gray); font-style:italic; }
+.dv-chip{
+  display:inline-flex; align-items:center; gap:.3rem; font-size:.76rem;
+  border-radius:999px; padding:.14rem .55rem; border:1px solid var(--line);
+}
+.dv-chip b{ font-weight:500; }
+.dv-chip i{ font-style:normal; color:var(--gray); }
+.dv-pt{ width:.55rem; height:.55rem; border-radius:50%; display:inline-block; }
+.dv-pt[data-e="dentro"]{ background:var(--qc-dentro); }
+.dv-pt[data-e="margen"]{ background:var(--qc-margen); }
+.dv-pt[data-e="fuera"]{ background:none; border:1.5px solid var(--qc-fuera); }
+.dv-pt[data-e="disputa"]{ background:var(--qc-disputa); }
+.dv-pt[data-e="nada"]{ background:none; border:1px dashed var(--ink-line); }
+
+/* ----- índice de parpadeo ----- */
+.dv-indice{ display:grid; gap:.18rem; max-height:15rem; overflow:auto; padding-right:.2rem; }
+.dv-lugar{
+  display:grid; grid-template-columns:8.5rem 2rem 1fr; gap:.5rem; align-items:center;
+  background:none; border:0; padding:.16rem .25rem; font:inherit; font-size:.78rem;
+  text-align:left; cursor:pointer; border-radius:4px; color:var(--cream);
+  transition:background .14s;
+}
+.dv-lugar:hover{ background:rgba(226,221,206,.07); }
+.dv-lugar[aria-pressed="true"]{ background:rgba(226,221,206,.07); box-shadow:inset 2px 0 0 var(--qc-disputa); }
+.dv-nombre{ overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+.dv-num{ font-family:var(--ff-mono); color:var(--gray); text-align:right; }
+.dv-perfil{ display:flex; gap:1px; height:13px; }
+.dv-perfil span{ flex:1 1 auto; border-radius:1px; }
+.dv-perfil span[data-e="dentro"]{ background:var(--qc-dentro); }
+.dv-perfil span[data-e="margen"]{ background:var(--qc-margen); }
+.dv-perfil span[data-e="fuera"]{ background:var(--qc-fuera); opacity:.5; }
+.dv-perfil span[data-e="disputa"]{ background:var(--qc-disputa); }
+.dv-perfil span[data-e="nada"]{ background:var(--line); }
+.dv-perfil span[data-aqui="1"]{ outline:1px solid var(--cream); outline-offset:-1px; }
+.dv-rotulo{ font-size:.74rem; color:var(--gray); letter-spacing:.06em; text-transform:uppercase; }
+label.dv-rotulo{ position:static; }
+
+/* ----- la pared ----- */
+.dv-pared{
+  position:fixed; inset:0; z-index:700; overflow:auto;
+  padding:calc(1.2rem + env(safe-area-inset-top, 0px)) 1.2rem calc(1.2rem + env(safe-area-inset-bottom, 0px));
+  background:var(--bg-deep); color:var(--cream); font-family:var(--ff-body);
+}
+.dv-pared[hidden]{ display:none; }
+.dv-pared h2{ margin:.2rem 0 .1rem; font-family:var(--ff-display); font-size:1.4rem; font-weight:600; }
+.dv-pared .dv-sub{ color:var(--gray); font-size:.85rem; margin:0 0 1.1rem; max-width:56ch; line-height:1.5; }
+.dv-rejilla{ display:grid; gap:.85rem; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); }
+.dv-card{
+  border:1px solid var(--line); border-radius:8px; padding:.5rem; background:none; cursor:pointer;
+  color:var(--cream); font:inherit; text-align:left; display:grid; gap:.22rem;
+  transition:border-color .16s, transform .16s;
+}
+.dv-card:hover{ border-color:var(--ink-line); transform:translateY(-2px); }
+.dv-card svg{ width:100%; height:auto; display:block; }
+.dv-card small{ font-size:.72rem; color:var(--gray); font-family:var(--ff-mono); }
+.dv-card strong{ font-family:var(--ff-display); font-size:.95rem; font-weight:600; line-height:1.2; }
+.dv-cerrar{ position:absolute; top:calc(1rem + env(safe-area-inset-top, 0px)); right:1rem; }
+
+@media (max-width:780px){
+  .dv-barra{ max-height:60vh; font-size:.82rem; }
+  .dv-lugar{ grid-template-columns:7rem 1.8rem 1fr; }
+}

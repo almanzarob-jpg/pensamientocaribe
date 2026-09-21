@@ -113,6 +113,9 @@
     QC.leyenda = g!==null ? g==='1' : !window.matchMedia('(max-width:780px), (max-height:520px)').matches;
   }catch(e){ QC.leyenda = !(window.matchMedia && window.matchMedia('(max-width:780px)').matches); }
   window.QC_ESTADO = QC; /* para las pruebas */
+  /* Interfaz mínima para módulos que se montan encima (la deriva). Una línea, sin
+     cambiar nada del comportamiento: expone lo que el hash #caribe= ya permite hacer. */
+  window.QC_API = null; /* se completa más abajo, cuando las acciones existen */
 
   function estadoDe(d, k){ const v=d && d.lugares[k]; return v && v.e ? v.e : null; }
   function notaDe(d, k){ const v=d && (d.lugares[k] || (d.extras||{})[k]); return v && v.n ? loc(v.n) : ''; }
@@ -234,6 +237,8 @@
     anuncio.textContent=qt('anuncio').replace('{def}',`${tituloDef(d)}, ${etiquetaDef(d)}`)
       .replace('{d}',c.dentro).replace('{m}',c.margen).replace('{x}',c.disputa).replace('{f}',c.fuera).replace('{n}',c.nada);
   }
+  window.QC_API = { activar, quitar, paso, contrastarCon, get orden(){ return ORDEN.slice(); }, porId:DEF_POR_ID };
+
   function marcarHash(){
     try{
       const base=location.pathname+location.search;
