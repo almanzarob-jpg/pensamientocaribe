@@ -237,7 +237,8 @@
     anuncio.textContent=qt('anuncio').replace('{def}',`${tituloDef(d)}, ${etiquetaDef(d)}`)
       .replace('{d}',c.dentro).replace('{m}',c.margen).replace('{x}',c.disputa).replace('{f}',c.fuera).replace('{n}',c.nada);
   }
-  window.QC_API = { activar, quitar, paso, contrastarCon, get orden(){ return ORDEN.slice(); }, porId:DEF_POR_ID };
+  window.QC_API = { activar, quitar, paso, contrastarCon, get orden(){ return ORDEN.slice(); }, porId:DEF_POR_ID,
+                    geo:geometriaLugares, centro:centroDe };
 
   function marcarHash(){
     try{

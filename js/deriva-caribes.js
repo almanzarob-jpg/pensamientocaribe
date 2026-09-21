@@ -34,6 +34,53 @@
   const D = { i:0, tocando:false, ritmo:5000, foco:null, temp:null, soloParpadeo:false, abierta:false, indice:false };
   const menosMovimiento = () => window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+  /* ---------------- estela ----------------
+     Al pasar de una definición a la siguiente, cada lugar que cambia de estado
+     deja un anillo del color que tenía, que se ensancha y se apaga. No toca el
+     pintado de la capa: dibuja encima, en el mismo grupo y sistema de
+     coordenadas que ella usa, y se borra solo. Es lo que convierte la sucesión
+     de mapas en un desplazamiento que se ve. */
+  const COLOR_EDO = {dentro:'var(--qc-dentro)', margen:'var(--qc-margen)',
+                     disputa:'var(--qc-disputa)', fuera:'var(--qc-fuera)'};
+  function cambiosCrudos(i){
+    if(i<=0) return [];
+    const a=DEFS[i-1], b=DEFS[i], out=[];
+    for(const k of LUGARES){
+      const ea=EST(a,k), eb=EST(b,k);
+      if(ea!==eb) out.push({k, a:ea, b:eb});
+    }
+    return out;
+  }
+  function estela(i){
+    if(menosMovimiento()) return;
+    const api=API();
+    if(!api || typeof api.geo!=='function' || typeof vp==='undefined' || !vp) return;
+    if(typeof state!=='undefined' && state.view!=='corriente') return;
+    const cam = cambiosCrudos(i);
+    if(!cam.length) return;
+    let G; try{ G = api.geo(); }catch(e){ return; }
+    const NS='http://www.w3.org/2000/svg';
+    const capa = document.createElementNS(NS,'g');
+    capa.setAttribute('class','dv-estela-capa');
+    capa.setAttribute('aria-hidden','true');
+    for(const c of cam){
+      let p=null; try{ p = api.centro(c.k, G); }catch(e){}
+      if(!p) continue;
+      const anillo = document.createElementNS(NS,'circle');
+      anillo.setAttribute('class','dv-estela');
+      anillo.setAttribute('cx', p.x); anillo.setAttribute('cy', p.y);
+      anillo.setAttribute('r', Math.max(6, p.r || 9));
+      anillo.setAttribute('fill','none');
+      anillo.setAttribute('stroke', COLOR_EDO[c.a] || 'var(--gray)');
+      anillo.setAttribute('stroke-width', c.a==='dentro' ? 2.2 : 1.6);
+      capa.appendChild(anillo);
+    }
+    if(!capa.childNodes.length) return;
+    vp.appendChild(capa);
+    requestAnimationFrame(()=> capa.classList.add('va'));
+    setTimeout(()=>{ if(capa.parentNode) capa.parentNode.removeChild(capa); }, 1400);
+  }
+
   /* ---------------- oleaje ----------------
      Sonido sintetizado con Web Audio: ruido marrón bajo un filtro paso bajo para
      el cuerpo del agua, más una banda alta y tenue para la espuma, con dos
@@ -285,6 +332,7 @@
     if(api) api.activar(DEFS[D.i].id, {abrirFicha:false, anunciar:false});
     else location.hash = '#caribe='+DEFS[D.i].id;
     pintarBarra(); avanceVisible();
+    requestAnimationFrame(()=>estela(D.i));
     const d=DEFS[D.i];
     vivo.textContent = `${d.anio}. ${loc(d.apellido)}, ${d.autor}. `+
       (cambiosEntre(D.i).slice(0,6).map(c=>`${NOMBRE(c.k)}: ${c.a} a ${c.b}`).join('; ') || t('nada'));

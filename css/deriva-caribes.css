@@ -14,6 +14,15 @@
   opacity:.75; pointer-events:none; border-radius:2px; }
 @media (prefers-reduced-motion: reduce){ .dv-avance{ display:none; } }
 
+/* estela: el anillo del estado anterior se ensancha y se apaga sobre el mapa.
+   La escala va por transform, no por el atributo r, que no todos los navegadores
+   interpolan. transform-box:fill-box hace que el centro del círculo sea el origen. */
+.dv-estela-capa{ pointer-events:none; }
+.dv-estela{ opacity:.8; transform-box:fill-box; transform-origin:center;
+  transform:scale(1); transition:opacity 1.15s ease-out, transform 1.15s cubic-bezier(.2,.7,.3,1); }
+.dv-estela-capa.va .dv-estela{ opacity:0; transform:scale(1.5); }
+@media (prefers-reduced-motion: reduce){ .dv-estela-capa{ display:none; } }
+
 .dv-btn.dv-oleaje[aria-pressed="true"]{ background:var(--qc-dentro); color:var(--bg-deep); border-color:var(--qc-dentro); }
 
 .dv-barra{
