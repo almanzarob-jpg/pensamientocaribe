@@ -31,8 +31,75 @@
   const INESTABLES = new Set(POR_PARPADEO.filter(k => CAMBIOS[k] >= 5));
 
   /* ---------------- estado ---------------- */
-  const D = { i:0, tocando:false, ritmo:7000, foco:null, temp:null, soloParpadeo:false, abierta:false, indice:false };
+  const D = { i:0, tocando:false, ritmo:5000, foco:null, temp:null, soloParpadeo:false, abierta:false, indice:false };
   const menosMovimiento = () => window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* ---------------- oleaje ----------------
+     Sonido sintetizado con Web Audio: ruido marrón bajo un filtro paso bajo para
+     el cuerpo del agua, más una banda alta y tenue para la espuma, con dos
+     osciladores lentos en contrafase que hacen la respiración de la marea.
+     No hay archivo de audio: el sitio no gana un solo byte binario.
+     Arranca apagado y solo suena tras un gesto del visitante, como exige el navegador. */
+  const OLA = { ctx:null, maestro:null, on:false };
+  function construirOleaje(){
+    const AC = window.AudioContext || window.webkitAudioContext;
+    if(!AC) return false;
+    const ctx = new AC();
+    const seg = 3, buf = ctx.createBuffer(1, ctx.sampleRate*seg, ctx.sampleRate);
+    const dat = buf.getChannelData(0);
+    let ult = 0;                                   /* ruido marrón: ruido blanco integrado */
+    for(let i=0;i<dat.length;i++){
+      const blanco = Math.random()*2-1;
+      ult = (ult + 0.02*blanco) / 1.02;
+      dat[i] = ult*3.2;
+    }
+    const fuente = ctx.createBufferSource(); fuente.buffer = buf; fuente.loop = true;
+
+    const cuerpo = ctx.createBiquadFilter(); cuerpo.type='lowpass';
+    cuerpo.frequency.value = 420; cuerpo.Q.value = 0.6;
+    const gCuerpo = ctx.createGain(); gCuerpo.gain.value = 0.55;
+
+    const espuma = ctx.createBiquadFilter(); espuma.type='bandpass';
+    espuma.frequency.value = 1900; espuma.Q.value = 0.8;
+    const gEspuma = ctx.createGain(); gEspuma.gain.value = 0.05;
+
+    /* la marea: dos ciclos lentos y desfasados, para que no se oiga el bucle */
+    const lfo1 = ctx.createOscillator(); lfo1.frequency.value = 1/11;
+    const lfo2 = ctx.createOscillator(); lfo2.frequency.value = 1/17;
+    const pf1 = ctx.createGain(); pf1.gain.value = 0.3;
+    const pf2 = ctx.createGain(); pf2.gain.value = 0.035;
+    lfo1.connect(pf1).connect(gCuerpo.gain);
+    lfo2.connect(pf2).connect(gEspuma.gain);
+
+    const maestro = ctx.createGain(); maestro.gain.value = 0;
+    fuente.connect(cuerpo).connect(gCuerpo).connect(maestro);
+    fuente.connect(espuma).connect(gEspuma).connect(maestro);
+    maestro.connect(ctx.destination);
+    fuente.start(); lfo1.start(); lfo2.start();
+    OLA.ctx = ctx; OLA.maestro = maestro;
+    return true;
+  }
+  function rampa(a, seg){
+    if(!OLA.maestro || !OLA.ctx) return;
+    const g = OLA.maestro.gain, t = OLA.ctx.currentTime;
+    g.cancelScheduledValues(t); g.setValueAtTime(g.value, t); g.linearRampToValueAtTime(a, t+seg);
+  }
+  function sonarOleaje(){
+    if(!OLA.on) return;
+    if(!OLA.ctx && !construirOleaje()){ OLA.on=false; return; }
+    if(OLA.ctx.state==='suspended') OLA.ctx.resume();
+    rampa(0.16, 2.5);
+  }
+  function pausarOleaje(){ if(OLA.ctx) rampa(0, 1.4); }
+  function silenciarOleaje(){ OLA.on=false; if(OLA.ctx) rampa(0, .6); }
+  function alternarOleaje(){
+    OLA.on = !OLA.on;
+    if(OLA.on){ if(!OLA.ctx) construirOleaje();
+      if(OLA.ctx && OLA.ctx.state==='suspended') OLA.ctx.resume();
+      rampa(0.16, 2.5); }
+    else rampa(0, 1.2);
+    pintarBarra();
+  }
 
   /* ---------------- chrome ---------------- */
   const T = {
@@ -52,16 +119,25 @@
     solo:     {es:'Solo lo que parpadea', en:'Only what flickers'},
     ritmo:    {es:'Ritmo', en:'Pace'},
     quieto:   {es:'{n} nunca cambia de estado: está dentro de las veinte.', en:'{n} never changes state: it is inside all twenty.'},
-    salir:    {es:'Salir del foco', en:'Clear focus'}
+    salir:    {es:'Salir del foco', en:'Clear focus'},
+    oleaje:   {es:'Oleaje', en:'Surf'},
+    oleajeOn: {es:'Oleaje encendido', en:'Surf on'}
   };
   const t = k => loc(T[k]);
 
-  const btn = document.createElement('button');
-  btn.id='derivaBtn'; btn.type='button'; btn.className='botonEncabezado'; btn.setAttribute('aria-pressed','false');
+  /* El botón se construye con el marcado del propio atlas —.grp > .seg.base > button—
+     para que herede sus estilos: rojo sobre transparente, y #a8281f al estar pulsado.
+     Una clase inventada lo dejaba sin estilo, es decir, blanco. */
+  const grpDv = document.createElement('div');
+  grpDv.className = 'grp familia';
+  grpDv.innerHTML = '<div class="seg base"><button id="derivaBtn" type="button" aria-pressed="false"></button></div>';
+  const grpQc = document.getElementById('caribesBtn') ? document.getElementById('caribesBtn').closest('.grp') : null;
+  const controlesDv = document.querySelector('header .controls');
+  if(grpQc && grpQc.nextSibling) grpQc.parentNode.insertBefore(grpDv, grpQc.nextSibling);
+  else if(controlesDv) controlesDv.appendChild(grpDv);
+  else document.body.appendChild(grpDv);
+  const btn = document.getElementById('derivaBtn');
   btn.textContent = t('btn');
-  const refBtn = document.getElementById('caribesBtn');
-  if(refBtn && refBtn.parentNode) refBtn.parentNode.insertBefore(btn, refBtn.nextSibling);
-  else document.body.appendChild(btn);
 
   const barra = document.createElement('div');
   barra.className='dv-barra'; barra.hidden=true; barra.setAttribute('role','region');
@@ -170,14 +246,15 @@
           `<button type="button" class="dv-btn dv-play" data-acc="play">${D.tocando? t('pausa') : t('jugar')}</button>`+
           `<button type="button" class="dv-btn" data-acc="sig">→</button>`+
         `</span>`+
-        `<span class="dv-linea">${anios}${ticks}</span>`+
+        `<span class="dv-linea">${anios}${ticks}<span class="dv-avance" id="dvAvance"></span></span>`+
         `<span class="dv-ctrl"><label class="dv-rotulo" for="dvRitmo">${t('ritmo')}</label>`+
           `<select class="dv-btn" id="dvRitmo" data-acc="ritmo">`+
-            [4000,7000,12000].map(v=>`<option value="${v}"${v===D.ritmo?' selected':''}>${v/1000}s</option>`).join('')+
+            [3000,5000,9000,15000].map(v=>`<option value="${v}"${v===D.ritmo?' selected':''}>${v/1000}s</option>`).join('')+
           `</select></span>`+
         `<button type="button" class="dv-btn" data-acc="pared">${t('pared')}</button>`+
         `<button type="button" class="dv-btn" data-acc="solo" aria-pressed="${D.soloParpadeo}">${t('solo')}</button>`+
         `<button type="button" class="dv-btn" data-acc="indice" aria-pressed="${D.indice}" aria-expanded="${D.indice}">${t('indice')}</button>`+
+        `<button type="button" class="dv-btn dv-oleaje" data-acc="oleaje" aria-pressed="${OLA.on}" title="${t('oleajeOn')}">${t('oleaje')}</button>`+
       `</div>`+
       `<div class="dv-narra">`+
         `<span class="dv-titulo"><span class="dv-year">${d.anio}</span>${loc(d.apellido)} · ${d.autor}</span>`+
@@ -192,13 +269,22 @@
   }
 
   /* ---------------- acciones ---------------- */
+  function avanceVisible(){
+    /* Una línea que se llena entre paso y paso. Sin ella, con el ritmo por defecto
+       la pieza parece congelada durante segundos y el visitante cree que no corre. */
+    const a = document.getElementById('dvAvance'); if(!a) return;
+    a.style.transition='none'; a.style.width='0%';
+    if(!D.tocando || menosMovimiento()) return;
+    void a.offsetWidth;
+    a.style.transition='width '+D.ritmo+'ms linear'; a.style.width='100%';
+  }
   function ir(i, {parar=false}={}){
     D.i = (i + DEFS.length) % DEFS.length;
     if(parar) detener();
     const api = API();
     if(api) api.activar(DEFS[D.i].id, {abrirFicha:false, anunciar:false});
     else location.hash = '#caribe='+DEFS[D.i].id;
-    pintarBarra();
+    pintarBarra(); avanceVisible();
     const d=DEFS[D.i];
     vivo.textContent = `${d.anio}. ${loc(d.apellido)}, ${d.autor}. `+
       (cambiosEntre(D.i).slice(0,6).map(c=>`${NOMBRE(c.k)}: ${c.a} a ${c.b}`).join('; ') || t('nada'));
@@ -209,9 +295,10 @@
     if(menosMovimiento()){ ir(D.i+1); return; }   /* sin animación automática */
     D.tocando=true; clearInterval(D.temp);
     D.temp = setInterval(avanzar, D.ritmo);
-    pintarBarra();
+    sonarOleaje();
+    ir(D.i+1);          /* el primer paso, en el acto */
   }
-  function detener(){ D.tocando=false; clearInterval(D.temp); D.temp=null; pintarBarra(); }
+  function detener(){ D.tocando=false; clearInterval(D.temp); D.temp=null; pausarOleaje(); pintarBarra(); avanceVisible(); }
   function enfocar(k){
     D.foco = (D.foco===k) ? null : k;
     if(D.foco) D.indice = true;
@@ -225,12 +312,13 @@
     pintarBarra();
   }
   function abrir(){
-    D.abierta=true; barra.hidden=false; btn.setAttribute('aria-pressed','true');
+    D.abierta=true; barra.hidden=false; btn.setAttribute('aria-pressed','true'); btn.classList.add('activo');
     if(!barra.dataset.lista){ barra.dataset.lista='1'; }
     ir(D.i);
   }
   function cerrar(){
-    D.abierta=false; detener(); barra.hidden=true; btn.setAttribute('aria-pressed','false');
+    D.abierta=false; detener(); silenciarOleaje(); barra.hidden=true;
+    btn.setAttribute('aria-pressed','false'); btn.classList.remove('activo');
     const api=API(); if(api) api.quitar();
     try{ history.replaceState(null,'',location.pathname+location.search); }catch(e){}
   }
@@ -252,6 +340,7 @@
     if(acc==='pared'){ pintarPared(); pared.hidden=false; const c=pared.querySelector('[data-cerrar]'); if(c) c.focus(); }
     if(acc==='solo'){ D.soloParpadeo=!D.soloParpadeo; D.foco=null; pintarBarra(); }
     if(acc==='indice'){ D.indice=!D.indice; pintarBarra(); }
+    if(acc==='oleaje'){ alternarOleaje(); }
   });
   barra.addEventListener('change', ev=>{
     const s=ev.target.closest('[data-acc="ritmo"]'); if(!s) return;

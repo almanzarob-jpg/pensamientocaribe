@@ -2,7 +2,19 @@
    Usa solo los tokens del atlas (--cream, --gray, --line, --bg-deep, --ink-line,
    --gold, --ff-*) y la paleta «Mar y coral» de la capa (--qc-*). Ningún color propio. */
 
-#derivaBtn[aria-pressed="true"]{ background:var(--cream); color:var(--bg-deep); border-color:var(--cream); }
+/* El botón vive dentro de .seg.base del propio atlas y hereda sus estilos
+   (rojo sobre transparente, #a8281f al estar pulsado). Aquí solo se añade el
+   punto dorado con que el sitio marca una capa encendida, igual que #caribesBtn. */
+#derivaBtn{ position:relative; }
+#derivaBtn.activo::after{ content:""; position:absolute; top:4px; right:5px; width:6px; height:6px;
+  border-radius:50%; background:var(--gold); }
+
+/* línea de avance entre paso y paso: sin ella la pieza parece detenida */
+.dv-avance{ position:absolute; left:0; top:22px; height:2px; width:0; background:var(--qc-dentro);
+  opacity:.75; pointer-events:none; border-radius:2px; }
+@media (prefers-reduced-motion: reduce){ .dv-avance{ display:none; } }
+
+.dv-btn.dv-oleaje[aria-pressed="true"]{ background:var(--qc-dentro); color:var(--bg-deep); border-color:var(--qc-dentro); }
 
 .dv-barra{
   position:fixed; left:0; right:0; bottom:0; z-index:640;
