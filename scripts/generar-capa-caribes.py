@@ -25,11 +25,12 @@ ISL = ["cuba","jamaica","haiti","dominicana","puertorico","curazao","martinica",
        "barbados","trinidad","dominica","stjohn","nevis","antigua","granada"]
 GUY = ["guyana","suriname"]
 BEL = ["belize"]
-CA  = ["bluefields","costarica","panama"]
+CA  = ["bluefields","costarica","panama","honduras"]
 COL = ["cartagena","santamarta","palenque","barranquilla","guajira","sanandres"]
 MEX = ["veracruz","costachica"]
 US  = ["nola"]
-TODOS = ISL+GUY+BEL+CA+COL+MEX+US
+BR  = ["oriximina","palmaresbr"]   # nodos brasileños del corpus (lotes S20 y S21)
+TODOS = ISL+GUY+BEL+CA+COL+MEX+US+BR
 
 # ---------------------------------------------------------------- lugares que el atlas no tiene como nodo
 # [lat, lng, etiqueta ES, etiqueta EN]. Los que están fuera del encuadre llevan flecha
@@ -38,7 +39,6 @@ EXTRAS = {
   "bahamas":   [24.3,-76.6,"Bahamas","Bahamas"],
   "caiman":    [19.3,-81.3,"Islas Caimán","Cayman Islands"],
   "yucatan":   [20.4,-88.8,"Yucatán","Yucatán"],
-  "honduras":  [15.0,-86.6,"Honduras","Honduras"],
   "elsalvador":[13.8,-89.2,"El Salvador","El Salvador"],
   "venezuela": [8.4,-66.2,"Venezuela","Venezuela"],
   "florida":   [27.6,-81.6,"Florida","Florida"],
@@ -76,6 +76,8 @@ FUENTES = {
          "corto":"Beckford 1972", "ejemplar":True, "corpus":"beckfordpersistent"},
  "ABE": {"ref":"Abello Vives, A. (2015). La isla encallada: el Caribe colombiano en el archipiélago del Caribe. Siglo del Hombre / Parque Cultural del Caribe. Edición digital sin paginación: se cita por capítulo.",
          "corto":"Abello Vives 2015", "ejemplar":True, "corpus":"abello"},
+ "GIR2000": {"ref":"Girvan, N. (2000). Reinterpretar al Caribe. Revista Mexicana del Caribe, 7, University of the West Indies. Copia digital de 25 páginas sin numeración impresa: se cita por página del PDF.",
+         "corto":"Girvan 2000", "ejemplar":True, "corpus":"girvanreinterpretar"},
  "BAS": {"ref":"Bassi, E. (2021 [2016]). Un territorio acuoso: geografías marineras y el Gran Caribe transimperial de la Nueva Granada (trad. M. J. Montoya). Editorial Universidad del Norte / Banco de la República. Orig. An Aqueous Territory: Sailor Geographies and New Granada's Transimperial Greater Caribbean World, Duke University Press.",
          "corto":"Bassi 2021 [2016]", "ejemplar":True, "corpus":"bassiacuoso"},
  "ARC": {"ref":"Arciniegas, G. (1975 [1945]). Biografía del Caribe. Círculo de Lectores, Barcelona, con licencia de Editorial Sudamericana (ed. 1966). Orig. Editorial Sudamericana, Buenos Aires, 1945. Se cita por la paginación de la edición digital del ejemplar.",
@@ -138,6 +140,7 @@ DEF.append({
     "belize":{"e":"dentro","n":N("Los ingleses de Belice derrotan al filibustero Walker (pp. 478-479).","The Belize English defeat the filibuster Walker (pp. 478-479).")},
     "bluefields":{"e":"dentro","n":N("Los corsarios de Jamaica entran a Nicaragua por la costa de Mosquitos, «donde los indios se entienden con los ingleses» (p. 281).","Jamaica's privateers enter Nicaragua by the Mosquito Coast, “where the Indians get along with the English” (p. 281).")},
     "costarica":{"e":"dentro","n":N("«Costa Rica democrática», entre los que se miran en estas aguas (p. 583).","“Democratic Costa Rica”, among those who look at themselves in these waters (p. 583).")},
+    "honduras":{"e":"dentro","n":N("«Honduras tantas veces oprimida» (p. 583).","“Honduras, so many times oppressed” (p. 583).")},
     "panama":{"e":"dentro","n":N("«Panamá corazón de la rosa de los mares» (p. 583). El libro termina con el canal (pp. 539-580).","“Panama, heart of the rose of the seas” (p. 583). The book ends with the canal (pp. 539-580).")},
     "cartagena":{"e":"dentro","n":N("«La llave que abre las puertas de Sudamérica» (p. 183) y «el puerto del Caribe» frente a Santa Fe, «la capital de los Andes» (p. 516). Aparece en 63 páginas y tiene capítulo propio: el sitio de Vernon y Blas de Lezo (pp. 379-390).","“The key that opens the doors of South America” (p. 183) and “the port of the Caribbean” as against Santa Fe, “the capital of the Andes” (p. 516). It appears on 63 pages and has its own chapter: the siege of Vernon and Blas de Lezo (pp. 379-390).")},
     "santamarta":{"e":"dentro","n":N("Río Hacha, Santa Marta y Cartagena son «los puntos de la costa en Tierra Firme donde España concentra su poder» (p. 183).","Río Hacha, Santa Marta and Cartagena are “the points on the Tierra Firme coast where Spain concentrates its power” (p. 183).")},
@@ -153,7 +156,6 @@ DEF.append({
            "yucatan":{"e":"dentro","n":N("«El mar Caribe y el golfo de Yucatán forman un ocho, que aprieta en la cintura el estrecho de Yucatán» (p. 107).","“The Caribbean Sea and the Gulf of Yucatán form a figure eight, pinched at the waist by the Yucatán Channel” (p. 107).")},
            "stthomas":{"e":"dentro","n":N("Capítulo de los daneses: «En Copenhague, como en Edimburgo, hay quienes sueñan sobre la rosa del mar» (pp. 312-340).","Chapter on the Danes: “In Copenhagen, as in Edinburgh, there are those who dream over the rose of the sea” (pp. 312-340).")},
            "venezuela":{"e":"dentro","n":N("«Venezuela redimida» (p. 583): Miranda y Bolívar cruzan estas aguas (pp. 489-524).","“Venezuela redeemed” (p. 583): Miranda and Bolívar cross these waters (pp. 489-524).")},
-           "honduras":{"e":"dentro","n":N("«Honduras tantas veces oprimida» (p. 583).","“Honduras, so many times oppressed” (p. 583).")},
            "guatemala":{"e":"dentro","n":N("«Guatemala que viene del más remoto sueño de los indios» (p. 583).","“Guatemala, coming from the Indians' most remote dream” (p. 583).")}},
  "corpus":["gaztambideinvencion","abello"],
  "aviso":N("El ejemplar no confirma la lectura de Abello (cap. 1), que lo tiene por antillano y sin Colombia: Cartagena aparece en 63 páginas y Colombia figura entre los países que «se miran en estas aguas» (p. 583). Las páginas son las de la edición digital del ejemplar.",
@@ -256,7 +258,7 @@ DEF.append({
    {"txt":"libro en el que amplía el universo Caribe a las costas de Tierra Firme, reafirma la inclusión de Colombia en él","ref":"ABE","pag":"cap. 1"},
  ],
  "lugares": junta(todos(ISL+GUY+BEL+CA+COL,"dentro"), {"veracruz":{"e":"dentro"}}),
- "extras":{"venezuela":{"e":"dentro"},"yucatan":{"e":"dentro"},"honduras":{"e":"dentro"}},
+ "extras":{"venezuela":{"e":"dentro"},"yucatan":{"e":"dentro"}},
  "corpus":["abello"],
  "aviso":N("El atlas no tiene el ejemplar de Bosch. La extensión se toma de Gaztambide y de Abello, que coinciden.",
            "The atlas does not hold Bosch's book. Its extent is taken from Gaztambide and Abello, who agree."),
@@ -397,7 +399,7 @@ DEF.append({**GAZ_BASE,
               "The insular Caribbean plus Central America and Panama: the map of US military interventions. The only tendency born entirely in the United States."),
  "citas":[{"txt":"El Caribe geopolítico se refiere al Caribe insular, Centroamérica y Panamá, sobre todo después de 1945","ref":"GAZ","pag":"13"}],
  "lugares": junta(todos(ISL+GUY+BEL+CA,"dentro"), todos(COL+MEX+US,"fuera")),
- "extras":{"honduras":{"e":"dentro"},"elsalvador":{"e":"dentro","n":N("«al cual no toca una gota de agua del Caribe» (p. 13).","“not touched by a drop of Caribbean water” (p. 13).")}},
+ "extras":{"elsalvador":{"e":"dentro","n":N("«al cual no toca una gota de agua del Caribe» (p. 13).","“not touched by a drop of Caribbean water” (p. 13).")}},
  "corpus":["gaztambideinvencion"],
 })
 DEF.append({**GAZ_BASE,
@@ -493,6 +495,118 @@ DEF.append({
                  "Bassi cites “Un Caribe por fuera de la ruta de la plantación”, which he co-wrote with Abello and is chapter 3 of La isla encallada (p. 16, n. 47)."),
 })
 
+# ---------------------------------------------------------------- Girvan 2000: los tres Caribes de la Tabla 1
+N_GIR_TESIS = N("Girvan sostiene que «no hay una definición “precisa” o consumada; el contenido depende más bien del contexto, pero ello debe especificarse con claridad cuando se emplee con propósitos descriptivos o analíticos» (p. 4). Por eso el artículo entra en la capa como tres definiciones y no como una: son tres de los siete Caribes que él mismo tabula.",
+                "Girvan holds that “there is no ‘precise’ or finished definition; content depends rather on context, but this must be stated clearly when used for descriptive or analytical purposes” (p. 4). Hence the article enters the layer as three definitions rather than one: three of the seven Caribbeans he himself tabulates.")
+N_GIR_ISLA = N("Isla: entra por la enumeración del criterio, «las islas, las tres Guyanas y Belice» (p. 4), y por la membresía del CCDC, que «se corresponde rígidamente con la pertenencia al Caribe insular» (p. 2).",
+               "Island: it enters through the criterion's enumeration, \u201cthe islands, the three Guianas and Belize\u201d (p. 4), and through CDCC membership, which \u201ccorresponds rigidly to belonging to the insular Caribbean\u201d (p. 2).")
+N_GIR_TERR_FR = N("Territorio francés de ultramar. La AEC los cuenta como «tres territorios franceses ultramarinos (no ratificados como miembros asociados)» (p. 5), y la lista del CCDC nombra los holandeses, los estadounidenses y tres dependencias británicas, no los franceses (p. 5).",
+                  "French overseas territory. The ACS counts them as “three French overseas territories (not ratified as associate members)” (p. 5), and the CDCC list names the Dutch, US and three British dependencies, not the French ones (p. 5).")
+N_GIR_TERR_COL = N("El artículo dice que «la mayoría de los territorios coloniales en el Caribe no pertenecen a CARICOM, CARIFORUM o a la AEC» (p. 2), pero no los nombra uno por uno: el lugar queda sin estado.",
+                   "The article says that “most of the colonial territories in the Caribbean do not belong to CARICOM, CARIFORUM or the ACS” (p. 2), but does not name them one by one: the place is left without a state.")
+N_GIR_CERRADA = N("Queda fuera por la enumeración cerrada del criterio —«las islas, las tres Guyanas y Belice» (p. 4)— y porque «la CCDC excluye a gran parte de los Estados de la cuenca» (p. 2).",
+                  "Left out by the criterion's closed enumeration —“the islands, the three Guianas and Belize” (p. 4)— and because “the CDCC excludes a large part of the basin's states” (p. 2).")
+N_GIR_CCDC_ULTRA = N("Entra por la lista del CCDC: «todos los Estados miembros pertenecen al Caribe insular únicamente, más los territorios ultramarinos de Holanda y Estados Unidos, así como tres territorios dependientes de Inglaterra» (p. 5).",
+                     "Enters through the CDCC list: “all member states belong to the insular Caribbean only, plus the overseas territories of the Netherlands and the United States, as well as three British dependencies” (p. 5).")
+N_GIR_CUENCA = N("Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+                 "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4).")
+N_GIR_AEC_ESTADO = N("La AEC «reúne a estados de toda la cuenca» (p. 2) y «todos los miembros son Estados de El Gran Caribe» (p. 5): el lugar entra por el Estado al que pertenece, no por sí mismo.",
+                     "The ACS “brings together states from across the basin” (p. 2) and “all members are Greater Caribbean states” (p. 5): the place enters through the state it belongs to, not on its own.")
+
+DEF.append({
+ "id":"girvan-insular", "anio":2000, "autor":"Norman Girvan", "obra":"Reinterpretar al Caribe",
+ "apellido":N("Caribe insular","Insular Caribbean"),
+ "forma":"area", "lectura":"ejemplar",
+ "familia":{"clave":"insular","fuente":"Girvan 2000, p. 4"},
+ "criterio":N("Una categoría sociohistórica, no geográfica, con frontera nítida: las islas, las tres Guayanas y Belice. Es el Caribe que sostienen los organismos de cooperación —CCDC, Asociación de Economistas del Caribe— y el que deja el continente afuera. Girvan lo declara etnohistórico y lo separa expresamente de la cuenca.",
+              "A sociohistorical rather than geographical category, with a sharp boundary: the islands, the three Guianas and Belize. It is the Caribbean upheld by the cooperation bodies —CDCC, Caribbean Association of Economists— and the one that leaves the mainland out. Girvan calls it ethnohistorical and separates it expressly from the basin."),
+ "citas":[
+   {"txt":"Desde el punto de vista conceptual resulta útil distinguir dos variantes: el Caribe insular (una categoría sociohistórica más que geográfica, que incluye las islas, las tres Guyanas y Belice) y el Gran Caribe (la cuenca).","ref":"GIR2000","pag":"4"},
+   {"txt":"Insular o Isla caribeña · Etnohistórico · CCDC, AE, CCD · Islas, las tres Guyanas y Belice","ref":"GIR2000","pag":"4","nota":N("fila de la Tabla 1, «Los Caribes»","row from Table 1, “The Caribbeans”")},
+   {"txt":"La CCDC excluye a gran parte de los Estados de la cuenca; la membresía se corresponde rígidamente con la pertenencia al Caribe insular.","ref":"GIR2000","pag":"2"},
+   {"txt":"Todos los Estados miembros pertenecen al Caribe insular únicamente más los territorios ultramarinos de Holanda y Estados Unidos, así como tres territorios dependientes de Inglaterra.","ref":"GIR2000","pag":"5","nota":N("nota de siglas sobre el CCDC","acronym note on the CDCC")},
+ ],
+ "lugares": junta(
+   todos([k for k in ISL if k not in ("martinica","guadalupe","puertorico","stjohn","curazao")],"dentro",N_GIR_ISLA),
+   todos(["puertorico","stjohn","curazao"],"dentro",N_GIR_CCDC_ULTRA),
+   todos(["martinica","guadalupe"],"margen",N_GIR_TERR_FR),
+   todos(GUY,"dentro",N("«Las tres Guyanas» (p. 4): la tercera, la Guayana francesa, no es nodo de este atlas.",
+                        "“The three Guianas” (p. 4): the third, French Guiana, is not a node of this atlas.")),
+   todos(BEL,"dentro",N("Belice está nombrado en el criterio, letra por letra (p. 4).","Belize is named in the criterion, word for word (p. 4).")),
+   {"sanandres":{"e":"margen","n":N("Es una isla de un Estado de la cuenca, y ahí se parte el criterio: Girvan define el Caribe insular como categoría sociohistórica «más que geográfica» (p. 4), y la membresía del CCDC va por Estado, no por isla (p. 2). El archipiélago queda en el borde de su propia definición.",
+                                    "It is an island of a basin state, and that is where the criterion splits: Girvan defines the insular Caribbean as a sociohistorical category “rather than geographical” (p. 4), and CDCC membership goes by state, not by island (p. 2). The archipelago sits on the edge of his own definition.")}},
+   todos(CA+[k for k in COL if k!="sanandres"]+MEX+US,"fuera",N_GIR_CERRADA)),
+ "extras":{"bahamas":{"e":"dentro","n":N_GIR_CERRADA},
+           "caiman":{"e":"dentro","n":N_GIR_CCDC_ULTRA},
+           "venezuela":{"e":"fuera","n":N_GIR_CERRADA},
+           "guatemala":{"e":"fuera","n":N_GIR_CERRADA},
+           "yucatan":{"e":"fuera","n":N_GIR_CERRADA},
+           "stthomas":{"e":"dentro","n":N_GIR_CCDC_ULTRA},
+           "stlucia":{"e":"dentro"}},
+ "corpus":["girvanreinterpretar","meeksgirvannewworld","gaztambideinvencion"],
+ "aviso":N_GIR_TESIS,
+})
+
+DEF.append({
+ "id":"girvan-aec", "anio":2000, "autor":"Norman Girvan", "obra":"Reinterpretar al Caribe",
+ "apellido":N("Gran Caribe de la AEC","Greater Caribbean of the ACS"),
+ "forma":"area", "lectura":"ejemplar",
+ "familia":{"clave":"grancaribe","fuente":"Girvan 2000, p. 4"},
+ "criterio":N("El Caribe definido por pertenencia a un organismo regional. La Asociación de Estados del Caribe reúne a los Estados de toda la cuenca y su principio no es la historia ni la cultura sino la geoeconomía y la cooperación. Es la única definición de la capa que se delimita por membresía, y la que mete al continente entero.",
+              "The Caribbean defined by membership in a regional body. The Association of Caribbean States brings together the states of the whole basin, and its principle is neither history nor culture but geoeconomics and cooperation. It is the only definition in the layer bounded by membership, and the one that brings in the entire mainland."),
+ "citas":[
+   {"txt":"La Asociación de Estados del Caribe (AEC) reúne a estados de toda la cuenca.","ref":"GIR2000","pag":"2"},
+   {"txt":"El Gran Caribe 1 (Greater Caribbean) · Continente e islas · Geoeconómico / cooperación · AEC","ref":"GIR2000","pag":"4","nota":N("fila de la Tabla 1, «Los Caribes»","row from Table 1, “The Caribbeans”")},
+   {"txt":"Asociación de Estados del Caribe. Todos los miembros son Estados de El Gran Caribe, más tres territorios franceses ultramarinos (no ratificados como miembros asociados).","ref":"GIR2000","pag":"5"},
+   {"txt":"la definición del Caribe podría fundamentarse en el idioma y la identidad, en la geografía, en la historia y la cultura, en la geopolítica, en la geoeconomía o incluso en la pertenencia a un organismo regional.","ref":"GIR2000","pag":"2"},
+ ],
+ "lugares": junta(
+   todos([k for k in ISL if k not in ("martinica","guadalupe","puertorico","stjohn","curazao")],"dentro",N_GIR_AEC_ESTADO),
+   todos(["martinica","guadalupe"],"margen",N_GIR_TERR_FR),
+   todos(["puertorico","stjohn","curazao"],None,N_GIR_TERR_COL),
+   todos(GUY+BEL+CA+COL+MEX,"dentro",N_GIR_AEC_ESTADO),
+   {"nola":{"e":"fuera","n":N("«Todos los miembros son Estados de El Gran Caribe» (p. 5). Estados Unidos no lo es: es, en la otra definición de Girvan, quien nombra la cuenca desde afuera.",
+                              "“All members are Greater Caribbean states” (p. 5). The United States is not one: in Girvan's other definition it is the power that names the basin from outside.")}}),
+ "extras":{"venezuela":{"e":"dentro","n":N_GIR_AEC_ESTADO},
+           "guatemala":{"e":"dentro","n":N_GIR_AEC_ESTADO},"elsalvador":{"e":"dentro","n":N_GIR_AEC_ESTADO},
+           "yucatan":{"e":"dentro","n":N_GIR_AEC_ESTADO},"bahamas":{"e":"dentro","n":N_GIR_AEC_ESTADO},
+           "caiman":{"e":None,"n":N_GIR_TERR_COL},"stlucia":{"e":"dentro","n":N_GIR_AEC_ESTADO},
+           "florida":{"e":"fuera","n":N("Estados Unidos no es miembro de la AEC (p. 5).","The United States is not an ACS member (p. 5).")}},
+ "corpus":["girvanreinterpretar","bassiacuoso","abello"],
+ "aviso":N_GIR_TESIS,
+})
+
+DEF.append({
+ "id":"girvan-cuenca", "anio":2000, "autor":"Norman Girvan", "obra":"Reinterpretar al Caribe",
+ "apellido":N("La Cuenca del Caribe","The Caribbean Basin"),
+ "forma":"area", "lectura":"referida",
+ "familia":{"clave":"geopolitico","fuente":"Girvan 2000, p. 4"},
+ "criterio":N("La definición hecha desde afuera y desde arriba. Girvan la tabula con nombre propio —«La Cuenca del Caribe (Estados Unidos)»— y principio declarado: geopolítico y hegemónico. Su linaje va de la expansión estadounidense de fines del siglo XIX a la Comisión Anglo-Americana del Caribe de 1942 y a la Iniciativa de la Cuenca del Caribe de Reagan. El nombre y su aplicación a una zona, dice, fueron invenciones de los poderes imperiales.",
+              "The definition made from outside and from above. Girvan tabulates it under its own name —“The Caribbean Basin (United States)”— with a declared principle: geopolitical and hegemonic. Its lineage runs from late-nineteenth-century US expansion to the 1942 Anglo-American Caribbean Commission and Reagan's Caribbean Basin Initiative. The name and its application to a zone, he says, were inventions of the imperial powers."),
+ "citas":[
+   {"txt":"La Cuenca del Caribe (Estados Unidos) · Continente e islas · Geopolítico / hegemónico · ICC","ref":"GIR2000","pag":"4","nota":N("primera fila de la Tabla 1, «Los Caribes»","first row of Table 1, “The Caribbeans”")},
+   {"txt":"Gaztambide-Geigel (1996, 76, 83) ha mostrado que el nombre de Caribe comenzó a ser usado para denominar a la región al final del siglo XIX, en el contexto de la expansión estadounidense hacia la frontera sur.","ref":"GIR2000","pag":"2"},
+   {"txt":"Expresiones posteriores de tal denominación fueron la Comisión Anglo-Americana del Caribe (organizada en 1942, y conocida después como Comisión del Caribe) y la Iniciativa de la Cuenca del Caribe, impulsada por el presidente Ronald Reagan en la década de 1980. De modo que tanto el nombre como su aplicación posterior a una zona geográfica fueron invenciones de los poderes imperiales.","ref":"GIR2000","pag":"2"},
+   {"txt":"Como muestra de resistencia, la noción de «cuenca», del poder imperial, ha sido invertida por los académicos de la región.","ref":"GIR2000","pag":"3"},
+ ],
+ "lugares": junta(
+   todos([k for k in TODOS if k!="nola" and k not in BR],"dentro",N_GIR_CUENCA),
+   todos(BR,None,N("La Tabla 1 declara la cobertura «continente e islas» de la cuenca del Caribe (p. 4); el artículo no dice nada de Brasil, que no es ribereño. El lugar queda sin estado.",
+                   "Table 1 declares the coverage \u201cmainland and islands\u201d of the Caribbean basin (p. 4); the article says nothing about Brazil, which is not a riparian country. The place is left without a state.")),
+   {"nola":{"e":None,"n":N("El artículo pone a Estados Unidos como quien inventa el nombre y su aplicación a una zona (p. 2), no como territorio que la denominación incluya. El lugar queda sin estado: es la sede de la definición, no su objeto.",
+                           "The article casts the United States as the inventor of the name and of its application to a zone (p. 2), not as a territory the denomination includes. The place is left without a state: it is the seat of the definition, not its object.")}}),
+ "extras":{"venezuela":{"e":"dentro","n":N_GIR_CUENCA},
+           "guatemala":{"e":"dentro","n":N_GIR_CUENCA},"elsalvador":{"e":"dentro","n":N_GIR_CUENCA},
+           "yucatan":{"e":"dentro","n":N_GIR_CUENCA},"bahamas":{"e":"dentro","n":N_GIR_CUENCA},
+           "caiman":{"e":"dentro","n":N_GIR_CUENCA},"stlucia":{"e":"dentro","n":N_GIR_CUENCA},
+           "florida":{"e":None,"n":N("Igual que Nueva Orleans: el artículo sitúa la frontera sur estadounidense como el lugar desde donde se nombra la cuenca (p. 2), no como parte nombrada.",
+                                     "Like New Orleans: the article places the US southern frontier as the place from which the basin is named (p. 2), not as a named part.")}},
+ "corpus":["girvanreinterpretar","gaztambideinvencion"],
+ "aviso":N("El atlas no tiene el documento de la Iniciativa de la Cuenca del Caribe: esta definición se reconstruye con la Tabla 1 de Girvan, que declara su cobertura («continente e islas») y su principio, pero no enumera países miembros. Por eso la extensión sigue el criterio declarado y no una lista de membresía, y por eso la lectura es «referida».",
+           "The atlas does not hold the Caribbean Basin Initiative document: this definition is reconstructed from Girvan's Table 1, which states its coverage (“mainland and islands”) and its principle, but does not enumerate member countries. Its extent therefore follows the declared criterion rather than a membership list, and that is why the reading is “reported”."),
+})
+
+
 DEF.append({
  "id":"atlas", "anio":2026, "autor":"Grupo de Investigación Pensamiento Caribe", "obra":"Con el agua de por medio",
  "apellido":N("El Caribe de este atlas","This atlas's Caribbean"),
@@ -501,7 +615,9 @@ DEF.append({
  "criterio":N("La unidad es el fenómeno que cruza la cuenca, no el área. Un lugar entra cuando lo atraviesa una corriente. Por eso la Costa Chica, que casi todas las definiciones dejan fuera, está aquí.",
               "The unit is the phenomenon crossing the basin, not the area. A place enters when a current runs through it. That is why the Costa Chica, which nearly every definition leaves out, is here."),
  "citas":[{"txt":"aquí la unidad de análisis es el fenómeno que atraviesa la cuenca, no el lugar que lo aloja.","ref":"ATL","pag":"marco conceptual"}],
- "lugares": junta(todos([k for k in TODOS if k!="guajira"],"dentro"),
+ "lugares": junta(todos([k for k in TODOS if k!="guajira" and k not in BR],"dentro"),
+                  todos(BR,"dentro",N("Nodo propio del atlas: Oriximiná entró con el lote S20 y Palmares con el S21, por obras del corpus sobre los quilombos. Es el atlas, no un texto ajeno, quien los pone dentro.",
+                                      "The atlas's own node: Oriximiná entered with batch S20 and Palmares with S21, through corpus works on the quilombos. It is the atlas, not another text, that places them inside.")),
                   {"guajira":{"e":None,"n":N("El atlas tiene el nodo, pero ninguna obra lo ancla todavía: por su propio criterio, aún no entra.","The atlas has the node, but no work anchors it yet: by its own criterion, it is not in yet.")}}),
  "extras":{},
  "corpus":[],
@@ -564,10 +680,40 @@ DISPUTAS = [
   "en":"Glissant opens Poetics of Relation with Brathwaite's “The unity is sub-marine” as epigraph, and had already glossed it in Caribbean Discourse: “Submarine roots: that is, derived, not planted with a single mast in a single silt, but extended in every direction of our universe through their network of branches” (1981, p. 128). The submarine unity becomes the root of Relation.","ref":"GLR · epígrafe / GLD · p. 128"},
 ]
 
+DISPUTAS += [
+ {"a":"girvan-cuenca","b":"gaz-geopolitico","tipo":"apropiacion",
+  "es":"Girvan toma de Gaztambide la tesis del origen imperial del nombre —«el nombre de Caribe comenzó a ser usado… en el contexto de la expansión estadounidense»— y la lleva hasta la Iniciativa de Reagan (Gaztambide 1996, pp. 76 y 83, citado en p. 2).",
+  "en":"Girvan takes from Gaztambide the thesis of the name's imperial origin —“the name Caribbean began to be used… in the context of US expansion”— and carries it to Reagan's Initiative (Gaztambide 1996, pp. 76 and 83, cited on p. 2).","ref":"GIR2000 · p. 2"},
+ {"a":"girvan-insular","b":"girvan-cuenca","tipo":"disonancia",
+  "es":"El mismo autor sostiene las dos y las separa por principio: etnohistórico una, geopolítico y hegemónico la otra (Tabla 1, p. 4). Es la única disputa de la capa que ocurre dentro de un solo texto.",
+  "en":"The same author holds both and separates them by principle: ethnohistorical one, geopolitical and hegemonic the other (Table 1, p. 4). It is the layer's only dispute occurring inside a single text.","ref":"GIR2000 · p. 4"},
+ {"a":"girvan-aec","b":"newworld","tipo":"apropiacion",
+  "es":"Girvan recoge la fórmula de Best —«muchas veces el Caribe también incluye el litoral que rodea nuestro mar» (Best 1971, 7, citado en p. 3)— y la reencuentra treinta años después en el Gran Caribe de la AEC, ya no como cosmología sino como membresía.",
+  "en":"Girvan picks up Best's formula —“the Caribbean often also includes the littoral around our sea” (Best 1971, 7, cited on p. 3)— and finds it again thirty years later in the ACS's Greater Caribbean, no longer as cosmology but as membership.","ref":"GIR2000 · p. 3"},
+ {"a":"girvan-insular","b":"atlas","tipo":"disonancia",
+  "es":"El Caribe insular deja fuera la costa colombiana por enumeración cerrada (p. 4); este atlas se ancla en ella. La frontera de Girvan corre justo por donde el atlas pone su centro.",
+  "en":"The insular Caribbean leaves the Colombian coast out by closed enumeration (p. 4); this atlas is anchored there. Girvan's boundary runs exactly where the atlas places its centre.","ref":"GIR2000 · p. 4"},
+]
+
 FAMILIAS = {
  "insular":N("Insular","Insular"), "geopolitico":N("Geopolítico","Geopolitical"),
  "grancaribe":N("Gran Caribe","Greater Caribbean"), "cultural":N("Cultural","Cultural"),
 }
+
+# ---------------------------------------------------------------- nodos brasileños heredados
+# Oriximiná (lote S20) y Palmares (lote S21) entraron al corpus después de escrita esta capa.
+# Ninguna de las veinte definiciones se pronuncia sobre ellos; seis sí se pronuncian sobre Brasil.
+# Se hereda ese estado, y la nota dice exactamente que el texto habla del país y no del lugar,
+# para no romper la regla de la capa: un estado sale del texto, no de la analogía.
+N_BR_HEREDA = N("El texto no nombra este lugar: se pronuncia sobre Brasil, y de ahí se hereda el estado. Oriximiná y Palmares entraron al corpus en septiembre de 2026, después de que esta capa se escribiera.",
+                "The text does not name this place: it speaks of Brazil, and the state is inherited from there. Oriximiná and Palmares entered the corpus in September 2026, after this layer was written.")
+
+for _d in DEF:
+    _br = (_d.get("extras") or {}).get("brasil")
+    if not _br or not _br.get("e"): continue
+    for _k in ("oriximina","palmaresbr"):
+        if _k in _d["lugares"]: continue
+        _d["lugares"][_k] = {"e":_br["e"], "n":N_BR_HEREDA}
 
 # ---------------------------------------------------------------- validación
 def validar():

@@ -80,6 +80,12 @@ window.CARIBES = {
    "ejemplar": true,
    "corpus": "abello"
   },
+  "GIR2000": {
+   "ref": "Girvan, N. (2000). Reinterpretar al Caribe. Revista Mexicana del Caribe, 7, University of the West Indies. Copia digital de 25 páginas sin numeración impresa: se cita por página del PDF.",
+   "corto": "Girvan 2000",
+   "ejemplar": true,
+   "corpus": "girvanreinterpretar"
+  },
   "BAS": {
    "ref": "Bassi, E. (2021 [2016]). Un territorio acuoso: geografías marineras y el Gran Caribe transimperial de la Nueva Granada (trad. M. J. Montoya). Editorial Universidad del Norte / Banco de la República. Orig. An Aqueous Territory: Sailor Geographies and New Granada's Transimperial Greater Caribbean World, Duke University Press.",
    "corto": "Bassi 2021 [2016]",
@@ -129,12 +135,6 @@ window.CARIBES = {
    -88.8,
    "Yucatán",
    "Yucatán"
-  ],
-  "honduras": [
-   15.0,
-   -86.6,
-   "Honduras",
-   "Honduras"
   ],
   "elsalvador": [
    13.8,
@@ -357,6 +357,13 @@ window.CARIBES = {
       "en": "“Democratic Costa Rica”, among those who look at themselves in these waters (p. 583)."
      }
     },
+    "honduras": {
+     "e": "dentro",
+     "n": {
+      "es": "«Honduras tantas veces oprimida» (p. 583).",
+      "en": "“Honduras, so many times oppressed” (p. 583)."
+     }
+    },
     "panama": {
      "e": "dentro",
      "n": {
@@ -459,13 +466,6 @@ window.CARIBES = {
      "n": {
       "es": "«Venezuela redimida» (p. 583): Miranda y Bolívar cruzan estas aguas (pp. 489-524).",
       "en": "“Venezuela redeemed” (p. 583): Miranda and Bolívar cross these waters (pp. 489-524)."
-     }
-    },
-    "honduras": {
-     "e": "dentro",
-     "n": {
-      "es": "«Honduras tantas veces oprimida» (p. 583).",
-      "en": "“Honduras, so many times oppressed” (p. 583)."
      }
     },
     "guatemala": {
@@ -594,6 +594,20 @@ window.CARIBES = {
      "n": {
       "es": "México queda en Indo-América (Gaztambide, p. 18).",
       "en": "Mexico falls in Indo-America (Gaztambide, p. 18)."
+     }
+    },
+    "oriximina": {
+     "e": "dentro",
+     "n": {
+      "es": "El texto no nombra este lugar: se pronuncia sobre Brasil, y de ahí se hereda el estado. Oriximiná y Palmares entraron al corpus en septiembre de 2026, después de que esta capa se escribiera.",
+      "en": "The text does not name this place: it speaks of Brazil, and the state is inherited from there. Oriximiná and Palmares entered the corpus in September 2026, after this layer was written."
+     }
+    },
+    "palmaresbr": {
+     "e": "dentro",
+     "n": {
+      "es": "El texto no nombra este lugar: se pronuncia sobre Brasil, y de ahí se hereda el estado. Oriximiná y Palmares entraron al corpus en septiembre de 2026, después de que esta capa se escribiera.",
+      "en": "The text does not name this place: it speaks of Brazil, and the state is inherited from there. Oriximiná and Palmares entered the corpus in September 2026, after this layer was written."
      }
     }
    },
@@ -833,6 +847,13 @@ window.CARIBES = {
       "en": "Smith groups it among the “Middle American states”, with Colombia and Venezuela, as comparative context (p. 20)."
      }
     },
+    "honduras": {
+     "e": "margen",
+     "n": {
+      "es": "Smith la agrupa entre los «Middle American states», con Colombia y Venezuela, como parte del contexto comparativo (p. 20).",
+      "en": "Smith groups it among the “Middle American states”, with Colombia and Venezuela, as comparative context (p. 20)."
+     }
+    },
     "veracruz": {
      "e": "margen",
      "n": {
@@ -852,6 +873,20 @@ window.CARIBES = {
      "n": {
       "es": "El sur de Estados Unidos es una región del contexto comparativo (p. 20).",
       "en": "The US South is a region of the comparative context (p. 20)."
+     }
+    },
+    "oriximina": {
+     "e": "margen",
+     "n": {
+      "es": "El texto no nombra este lugar: se pronuncia sobre Brasil, y de ahí se hereda el estado. Oriximiná y Palmares entraron al corpus en septiembre de 2026, después de que esta capa se escribiera.",
+      "en": "The text does not name this place: it speaks of Brazil, and the state is inherited from there. Oriximiná and Palmares entered the corpus in September 2026, after this layer was written."
+     }
+    },
+    "palmaresbr": {
+     "e": "margen",
+     "n": {
+      "es": "El texto no nombra este lugar: se pronuncia sobre Brasil, y de ahí se hereda el estado. Oriximiná y Palmares entraron al corpus en septiembre de 2026, después de que esta capa se escribiera.",
+      "en": "The text does not name this place: it speaks of Brazil, and the state is inherited from there. Oriximiná and Palmares entered the corpus in September 2026, after this layer was written."
      }
     }
    },
@@ -1209,6 +1244,20 @@ window.CARIBES = {
       "es": "Según Girvan, el pasaje de Best «sí incluía partes de Estados Unidos y de Brasil»; Gaztambide se aparta expresamente (p. 20, n. 72).",
       "en": "According to Girvan, Best's passage “did include parts of the United States and Brazil”; Gaztambide explicitly departs from it (p. 20, n. 72)."
      }
+    },
+    "oriximina": {
+     "e": "margen",
+     "n": {
+      "es": "El texto no nombra este lugar: se pronuncia sobre Brasil, y de ahí se hereda el estado. Oriximiná y Palmares entraron al corpus en septiembre de 2026, después de que esta capa se escribiera.",
+      "en": "The text does not name this place: it speaks of Brazil, and the state is inherited from there. Oriximiná and Palmares entered the corpus in September 2026, after this layer was written."
+     }
+    },
+    "palmaresbr": {
+     "e": "margen",
+     "n": {
+      "es": "El texto no nombra este lugar: se pronuncia sobre Brasil, y de ahí se hereda el estado. Oriximiná y Palmares entraron al corpus en septiembre de 2026, después de que esta capa se escribiera.",
+      "en": "The text does not name this place: it speaks of Brazil, and the state is inherited from there. Oriximiná and Palmares entered the corpus in September 2026, after this layer was written."
+     }
     }
    },
    "extras": {
@@ -1321,6 +1370,9 @@ window.CARIBES = {
     "panama": {
      "e": "dentro"
     },
+    "honduras": {
+     "e": "dentro"
+    },
     "cartagena": {
      "e": "dentro"
     },
@@ -1348,9 +1400,6 @@ window.CARIBES = {
      "e": "dentro"
     },
     "yucatan": {
-     "e": "dentro"
-    },
-    "honduras": {
      "e": "dentro"
     }
    },
@@ -1564,6 +1613,9 @@ window.CARIBES = {
     "panama": {
      "e": "dentro"
     },
+    "honduras": {
+     "e": "dentro"
+    },
     "cartagena": {
      "e": "dentro"
     },
@@ -1594,6 +1646,20 @@ window.CARIBES = {
      "n": {
       "es": "El pasaje de las corrientes no la nombra: el golfo queda entre el delta del Mississippi y las costas de Centroamérica que sí nombra.",
       "en": "The currents passage does not name it: the Gulf lies between the Mississippi delta and the Central American coasts it does name."
+     }
+    },
+    "oriximina": {
+     "e": "margen",
+     "n": {
+      "es": "El texto no nombra este lugar: se pronuncia sobre Brasil, y de ahí se hereda el estado. Oriximiná y Palmares entraron al corpus en septiembre de 2026, después de que esta capa se escribiera.",
+      "en": "The text does not name this place: it speaks of Brazil, and the state is inherited from there. Oriximiná and Palmares entered the corpus in September 2026, after this layer was written."
+     }
+    },
+    "palmaresbr": {
+     "e": "margen",
+     "n": {
+      "es": "El texto no nombra este lugar: se pronuncia sobre Brasil, y de ahí se hereda el estado. Oriximiná y Palmares entraron al corpus en septiembre de 2026, después de que esta capa se escribiera.",
+      "en": "The text does not name this place: it speaks of Brazil, and the state is inherited from there. Oriximiná and Palmares entered the corpus in September 2026, after this layer was written."
      }
     }
    },
@@ -1866,6 +1932,20 @@ window.CARIBES = {
      "n": {
       "es": "El sur de Estados Unidos comparte el sistema de plantaciones (p. 97), y la misma poética ocurre allí «bajo aspectos bien diferentes» (p. 68): lo lee a través de Faulkner, no como Caribe.",
       "en": "The US South shares the plantation system (p. 97), and the same poetics happens there “under very different guises” (p. 68): he reads it through Faulkner, not as Caribbean."
+     }
+    },
+    "oriximina": {
+     "e": "margen",
+     "n": {
+      "es": "El texto no nombra este lugar: se pronuncia sobre Brasil, y de ahí se hereda el estado. Oriximiná y Palmares entraron al corpus en septiembre de 2026, después de que esta capa se escribiera.",
+      "en": "The text does not name this place: it speaks of Brazil, and the state is inherited from there. Oriximiná and Palmares entered the corpus in September 2026, after this layer was written."
+     }
+    },
+    "palmaresbr": {
+     "e": "margen",
+     "n": {
+      "es": "El texto no nombra este lugar: se pronuncia sobre Brasil, y de ahí se hereda el estado. Oriximiná y Palmares entraron al corpus en septiembre de 2026, después de que esta capa se escribiera.",
+      "en": "The text does not name this place: it speaks of Brazil, and the state is inherited from there. Oriximiná and Palmares entered the corpus in September 2026, after this layer was written."
      }
     }
    },
@@ -2210,6 +2290,9 @@ window.CARIBES = {
     "panama": {
      "e": "fuera"
     },
+    "honduras": {
+     "e": "fuera"
+    },
     "veracruz": {
      "e": "fuera"
     },
@@ -2329,6 +2412,9 @@ window.CARIBES = {
     "panama": {
      "e": "dentro"
     },
+    "honduras": {
+     "e": "dentro"
+    },
     "cartagena": {
      "e": "fuera"
     },
@@ -2358,9 +2444,6 @@ window.CARIBES = {
     }
    },
    "extras": {
-    "honduras": {
-     "e": "dentro"
-    },
     "elsalvador": {
      "e": "dentro",
      "n": {
@@ -2467,6 +2550,9 @@ window.CARIBES = {
      "e": "dentro"
     },
     "panama": {
+     "e": "dentro"
+    },
+    "honduras": {
      "e": "dentro"
     },
     "cartagena": {
@@ -2646,6 +2732,20 @@ window.CARIBES = {
       "es": "«pero sin incluirlos» (p. 20).",
       "en": "“but without including them” (p. 20)."
      }
+    },
+    "oriximina": {
+     "e": "fuera",
+     "n": {
+      "es": "El texto no nombra este lugar: se pronuncia sobre Brasil, y de ahí se hereda el estado. Oriximiná y Palmares entraron al corpus en septiembre de 2026, después de que esta capa se escribiera.",
+      "en": "The text does not name this place: it speaks of Brazil, and the state is inherited from there. Oriximiná and Palmares entered the corpus in September 2026, after this layer was written."
+     }
+    },
+    "palmaresbr": {
+     "e": "fuera",
+     "n": {
+      "es": "El texto no nombra este lugar: se pronuncia sobre Brasil, y de ahí se hereda el estado. Oriximiná y Palmares entraron al corpus en septiembre de 2026, después de que esta capa se escribiera.",
+      "en": "The text does not name this place: it speaks of Brazil, and the state is inherited from there. Oriximiná and Palmares entered the corpus in September 2026, after this layer was written."
+     }
     }
    },
    "extras": {
@@ -2782,6 +2882,9 @@ window.CARIBES = {
       "es": "«se puede pertenecer a él, como ocurre con ciudades como Panamá, en el Pacífico» (cap. 2).",
       "en": "One can belong to it, “as with cities like Panama, on the Pacific” (ch. 2)."
      }
+    },
+    "honduras": {
+     "e": "dentro"
     },
     "cartagena": {
      "e": "dentro",
@@ -3106,6 +3209,1002 @@ window.CARIBES = {
    }
   },
   {
+   "id": "girvan-insular",
+   "anio": 2000,
+   "autor": "Norman Girvan",
+   "obra": "Reinterpretar al Caribe",
+   "apellido": {
+    "es": "Caribe insular",
+    "en": "Insular Caribbean"
+   },
+   "forma": "area",
+   "lectura": "ejemplar",
+   "familia": {
+    "clave": "insular",
+    "fuente": "Girvan 2000, p. 4"
+   },
+   "criterio": {
+    "es": "Una categoría sociohistórica, no geográfica, con frontera nítida: las islas, las tres Guayanas y Belice. Es el Caribe que sostienen los organismos de cooperación —CCDC, Asociación de Economistas del Caribe— y el que deja el continente afuera. Girvan lo declara etnohistórico y lo separa expresamente de la cuenca.",
+    "en": "A sociohistorical rather than geographical category, with a sharp boundary: the islands, the three Guianas and Belize. It is the Caribbean upheld by the cooperation bodies —CDCC, Caribbean Association of Economists— and the one that leaves the mainland out. Girvan calls it ethnohistorical and separates it expressly from the basin."
+   },
+   "citas": [
+    {
+     "txt": "Desde el punto de vista conceptual resulta útil distinguir dos variantes: el Caribe insular (una categoría sociohistórica más que geográfica, que incluye las islas, las tres Guyanas y Belice) y el Gran Caribe (la cuenca).",
+     "ref": "GIR2000",
+     "pag": "4"
+    },
+    {
+     "txt": "Insular o Isla caribeña · Etnohistórico · CCDC, AE, CCD · Islas, las tres Guyanas y Belice",
+     "ref": "GIR2000",
+     "pag": "4",
+     "nota": {
+      "es": "fila de la Tabla 1, «Los Caribes»",
+      "en": "row from Table 1, “The Caribbeans”"
+     }
+    },
+    {
+     "txt": "La CCDC excluye a gran parte de los Estados de la cuenca; la membresía se corresponde rígidamente con la pertenencia al Caribe insular.",
+     "ref": "GIR2000",
+     "pag": "2"
+    },
+    {
+     "txt": "Todos los Estados miembros pertenecen al Caribe insular únicamente más los territorios ultramarinos de Holanda y Estados Unidos, así como tres territorios dependientes de Inglaterra.",
+     "ref": "GIR2000",
+     "pag": "5",
+     "nota": {
+      "es": "nota de siglas sobre el CCDC",
+      "en": "acronym note on the CDCC"
+     }
+    }
+   ],
+   "lugares": {
+    "cuba": {
+     "e": "dentro",
+     "n": {
+      "es": "Isla: entra por la enumeración del criterio, «las islas, las tres Guyanas y Belice» (p. 4), y por la membresía del CCDC, que «se corresponde rígidamente con la pertenencia al Caribe insular» (p. 2).",
+      "en": "Island: it enters through the criterion's enumeration, “the islands, the three Guianas and Belize” (p. 4), and through CDCC membership, which “corresponds rigidly to belonging to the insular Caribbean” (p. 2)."
+     }
+    },
+    "jamaica": {
+     "e": "dentro",
+     "n": {
+      "es": "Isla: entra por la enumeración del criterio, «las islas, las tres Guyanas y Belice» (p. 4), y por la membresía del CCDC, que «se corresponde rígidamente con la pertenencia al Caribe insular» (p. 2).",
+      "en": "Island: it enters through the criterion's enumeration, “the islands, the three Guianas and Belize” (p. 4), and through CDCC membership, which “corresponds rigidly to belonging to the insular Caribbean” (p. 2)."
+     }
+    },
+    "haiti": {
+     "e": "dentro",
+     "n": {
+      "es": "Isla: entra por la enumeración del criterio, «las islas, las tres Guyanas y Belice» (p. 4), y por la membresía del CCDC, que «se corresponde rígidamente con la pertenencia al Caribe insular» (p. 2).",
+      "en": "Island: it enters through the criterion's enumeration, “the islands, the three Guianas and Belize” (p. 4), and through CDCC membership, which “corresponds rigidly to belonging to the insular Caribbean” (p. 2)."
+     }
+    },
+    "dominicana": {
+     "e": "dentro",
+     "n": {
+      "es": "Isla: entra por la enumeración del criterio, «las islas, las tres Guyanas y Belice» (p. 4), y por la membresía del CCDC, que «se corresponde rígidamente con la pertenencia al Caribe insular» (p. 2).",
+      "en": "Island: it enters through the criterion's enumeration, “the islands, the three Guianas and Belize” (p. 4), and through CDCC membership, which “corresponds rigidly to belonging to the insular Caribbean” (p. 2)."
+     }
+    },
+    "barbados": {
+     "e": "dentro",
+     "n": {
+      "es": "Isla: entra por la enumeración del criterio, «las islas, las tres Guyanas y Belice» (p. 4), y por la membresía del CCDC, que «se corresponde rígidamente con la pertenencia al Caribe insular» (p. 2).",
+      "en": "Island: it enters through the criterion's enumeration, “the islands, the three Guianas and Belize” (p. 4), and through CDCC membership, which “corresponds rigidly to belonging to the insular Caribbean” (p. 2)."
+     }
+    },
+    "trinidad": {
+     "e": "dentro",
+     "n": {
+      "es": "Isla: entra por la enumeración del criterio, «las islas, las tres Guyanas y Belice» (p. 4), y por la membresía del CCDC, que «se corresponde rígidamente con la pertenencia al Caribe insular» (p. 2).",
+      "en": "Island: it enters through the criterion's enumeration, “the islands, the three Guianas and Belize” (p. 4), and through CDCC membership, which “corresponds rigidly to belonging to the insular Caribbean” (p. 2)."
+     }
+    },
+    "dominica": {
+     "e": "dentro",
+     "n": {
+      "es": "Isla: entra por la enumeración del criterio, «las islas, las tres Guyanas y Belice» (p. 4), y por la membresía del CCDC, que «se corresponde rígidamente con la pertenencia al Caribe insular» (p. 2).",
+      "en": "Island: it enters through the criterion's enumeration, “the islands, the three Guianas and Belize” (p. 4), and through CDCC membership, which “corresponds rigidly to belonging to the insular Caribbean” (p. 2)."
+     }
+    },
+    "nevis": {
+     "e": "dentro",
+     "n": {
+      "es": "Isla: entra por la enumeración del criterio, «las islas, las tres Guyanas y Belice» (p. 4), y por la membresía del CCDC, que «se corresponde rígidamente con la pertenencia al Caribe insular» (p. 2).",
+      "en": "Island: it enters through the criterion's enumeration, “the islands, the three Guianas and Belize” (p. 4), and through CDCC membership, which “corresponds rigidly to belonging to the insular Caribbean” (p. 2)."
+     }
+    },
+    "antigua": {
+     "e": "dentro",
+     "n": {
+      "es": "Isla: entra por la enumeración del criterio, «las islas, las tres Guyanas y Belice» (p. 4), y por la membresía del CCDC, que «se corresponde rígidamente con la pertenencia al Caribe insular» (p. 2).",
+      "en": "Island: it enters through the criterion's enumeration, “the islands, the three Guianas and Belize” (p. 4), and through CDCC membership, which “corresponds rigidly to belonging to the insular Caribbean” (p. 2)."
+     }
+    },
+    "granada": {
+     "e": "dentro",
+     "n": {
+      "es": "Isla: entra por la enumeración del criterio, «las islas, las tres Guyanas y Belice» (p. 4), y por la membresía del CCDC, que «se corresponde rígidamente con la pertenencia al Caribe insular» (p. 2).",
+      "en": "Island: it enters through the criterion's enumeration, “the islands, the three Guianas and Belize” (p. 4), and through CDCC membership, which “corresponds rigidly to belonging to the insular Caribbean” (p. 2)."
+     }
+    },
+    "puertorico": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la lista del CCDC: «todos los Estados miembros pertenecen al Caribe insular únicamente, más los territorios ultramarinos de Holanda y Estados Unidos, así como tres territorios dependientes de Inglaterra» (p. 5).",
+      "en": "Enters through the CDCC list: “all member states belong to the insular Caribbean only, plus the overseas territories of the Netherlands and the United States, as well as three British dependencies” (p. 5)."
+     }
+    },
+    "stjohn": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la lista del CCDC: «todos los Estados miembros pertenecen al Caribe insular únicamente, más los territorios ultramarinos de Holanda y Estados Unidos, así como tres territorios dependientes de Inglaterra» (p. 5).",
+      "en": "Enters through the CDCC list: “all member states belong to the insular Caribbean only, plus the overseas territories of the Netherlands and the United States, as well as three British dependencies” (p. 5)."
+     }
+    },
+    "curazao": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la lista del CCDC: «todos los Estados miembros pertenecen al Caribe insular únicamente, más los territorios ultramarinos de Holanda y Estados Unidos, así como tres territorios dependientes de Inglaterra» (p. 5).",
+      "en": "Enters through the CDCC list: “all member states belong to the insular Caribbean only, plus the overseas territories of the Netherlands and the United States, as well as three British dependencies” (p. 5)."
+     }
+    },
+    "martinica": {
+     "e": "margen",
+     "n": {
+      "es": "Territorio francés de ultramar. La AEC los cuenta como «tres territorios franceses ultramarinos (no ratificados como miembros asociados)» (p. 5), y la lista del CCDC nombra los holandeses, los estadounidenses y tres dependencias británicas, no los franceses (p. 5).",
+      "en": "French overseas territory. The ACS counts them as “three French overseas territories (not ratified as associate members)” (p. 5), and the CDCC list names the Dutch, US and three British dependencies, not the French ones (p. 5)."
+     }
+    },
+    "guadalupe": {
+     "e": "margen",
+     "n": {
+      "es": "Territorio francés de ultramar. La AEC los cuenta como «tres territorios franceses ultramarinos (no ratificados como miembros asociados)» (p. 5), y la lista del CCDC nombra los holandeses, los estadounidenses y tres dependencias británicas, no los franceses (p. 5).",
+      "en": "French overseas territory. The ACS counts them as “three French overseas territories (not ratified as associate members)” (p. 5), and the CDCC list names the Dutch, US and three British dependencies, not the French ones (p. 5)."
+     }
+    },
+    "guyana": {
+     "e": "dentro",
+     "n": {
+      "es": "«Las tres Guyanas» (p. 4): la tercera, la Guayana francesa, no es nodo de este atlas.",
+      "en": "“The three Guianas” (p. 4): the third, French Guiana, is not a node of this atlas."
+     }
+    },
+    "suriname": {
+     "e": "dentro",
+     "n": {
+      "es": "«Las tres Guyanas» (p. 4): la tercera, la Guayana francesa, no es nodo de este atlas.",
+      "en": "“The three Guianas” (p. 4): the third, French Guiana, is not a node of this atlas."
+     }
+    },
+    "belize": {
+     "e": "dentro",
+     "n": {
+      "es": "Belice está nombrado en el criterio, letra por letra (p. 4).",
+      "en": "Belize is named in the criterion, word for word (p. 4)."
+     }
+    },
+    "sanandres": {
+     "e": "margen",
+     "n": {
+      "es": "Es una isla de un Estado de la cuenca, y ahí se parte el criterio: Girvan define el Caribe insular como categoría sociohistórica «más que geográfica» (p. 4), y la membresía del CCDC va por Estado, no por isla (p. 2). El archipiélago queda en el borde de su propia definición.",
+      "en": "It is an island of a basin state, and that is where the criterion splits: Girvan defines the insular Caribbean as a sociohistorical category “rather than geographical” (p. 4), and CDCC membership goes by state, not by island (p. 2). The archipelago sits on the edge of his own definition."
+     }
+    },
+    "bluefields": {
+     "e": "fuera",
+     "n": {
+      "es": "Queda fuera por la enumeración cerrada del criterio —«las islas, las tres Guyanas y Belice» (p. 4)— y porque «la CCDC excluye a gran parte de los Estados de la cuenca» (p. 2).",
+      "en": "Left out by the criterion's closed enumeration —“the islands, the three Guianas and Belize” (p. 4)— and because “the CDCC excludes a large part of the basin's states” (p. 2)."
+     }
+    },
+    "costarica": {
+     "e": "fuera",
+     "n": {
+      "es": "Queda fuera por la enumeración cerrada del criterio —«las islas, las tres Guyanas y Belice» (p. 4)— y porque «la CCDC excluye a gran parte de los Estados de la cuenca» (p. 2).",
+      "en": "Left out by the criterion's closed enumeration —“the islands, the three Guianas and Belize” (p. 4)— and because “the CDCC excludes a large part of the basin's states” (p. 2)."
+     }
+    },
+    "panama": {
+     "e": "fuera",
+     "n": {
+      "es": "Queda fuera por la enumeración cerrada del criterio —«las islas, las tres Guyanas y Belice» (p. 4)— y porque «la CCDC excluye a gran parte de los Estados de la cuenca» (p. 2).",
+      "en": "Left out by the criterion's closed enumeration —“the islands, the three Guianas and Belize” (p. 4)— and because “the CDCC excludes a large part of the basin's states” (p. 2)."
+     }
+    },
+    "honduras": {
+     "e": "fuera",
+     "n": {
+      "es": "Queda fuera por la enumeración cerrada del criterio —«las islas, las tres Guyanas y Belice» (p. 4)— y porque «la CCDC excluye a gran parte de los Estados de la cuenca» (p. 2).",
+      "en": "Left out by the criterion's closed enumeration —“the islands, the three Guianas and Belize” (p. 4)— and because “the CDCC excludes a large part of the basin's states” (p. 2)."
+     }
+    },
+    "cartagena": {
+     "e": "fuera",
+     "n": {
+      "es": "Queda fuera por la enumeración cerrada del criterio —«las islas, las tres Guyanas y Belice» (p. 4)— y porque «la CCDC excluye a gran parte de los Estados de la cuenca» (p. 2).",
+      "en": "Left out by the criterion's closed enumeration —“the islands, the three Guianas and Belize” (p. 4)— and because “the CDCC excludes a large part of the basin's states” (p. 2)."
+     }
+    },
+    "santamarta": {
+     "e": "fuera",
+     "n": {
+      "es": "Queda fuera por la enumeración cerrada del criterio —«las islas, las tres Guyanas y Belice» (p. 4)— y porque «la CCDC excluye a gran parte de los Estados de la cuenca» (p. 2).",
+      "en": "Left out by the criterion's closed enumeration —“the islands, the three Guianas and Belize” (p. 4)— and because “the CDCC excludes a large part of the basin's states” (p. 2)."
+     }
+    },
+    "palenque": {
+     "e": "fuera",
+     "n": {
+      "es": "Queda fuera por la enumeración cerrada del criterio —«las islas, las tres Guyanas y Belice» (p. 4)— y porque «la CCDC excluye a gran parte de los Estados de la cuenca» (p. 2).",
+      "en": "Left out by the criterion's closed enumeration —“the islands, the three Guianas and Belize” (p. 4)— and because “the CDCC excludes a large part of the basin's states” (p. 2)."
+     }
+    },
+    "barranquilla": {
+     "e": "fuera",
+     "n": {
+      "es": "Queda fuera por la enumeración cerrada del criterio —«las islas, las tres Guyanas y Belice» (p. 4)— y porque «la CCDC excluye a gran parte de los Estados de la cuenca» (p. 2).",
+      "en": "Left out by the criterion's closed enumeration —“the islands, the three Guianas and Belize” (p. 4)— and because “the CDCC excludes a large part of the basin's states” (p. 2)."
+     }
+    },
+    "guajira": {
+     "e": "fuera",
+     "n": {
+      "es": "Queda fuera por la enumeración cerrada del criterio —«las islas, las tres Guyanas y Belice» (p. 4)— y porque «la CCDC excluye a gran parte de los Estados de la cuenca» (p. 2).",
+      "en": "Left out by the criterion's closed enumeration —“the islands, the three Guianas and Belize” (p. 4)— and because “the CDCC excludes a large part of the basin's states” (p. 2)."
+     }
+    },
+    "veracruz": {
+     "e": "fuera",
+     "n": {
+      "es": "Queda fuera por la enumeración cerrada del criterio —«las islas, las tres Guyanas y Belice» (p. 4)— y porque «la CCDC excluye a gran parte de los Estados de la cuenca» (p. 2).",
+      "en": "Left out by the criterion's closed enumeration —“the islands, the three Guianas and Belize” (p. 4)— and because “the CDCC excludes a large part of the basin's states” (p. 2)."
+     }
+    },
+    "costachica": {
+     "e": "fuera",
+     "n": {
+      "es": "Queda fuera por la enumeración cerrada del criterio —«las islas, las tres Guyanas y Belice» (p. 4)— y porque «la CCDC excluye a gran parte de los Estados de la cuenca» (p. 2).",
+      "en": "Left out by the criterion's closed enumeration —“the islands, the three Guianas and Belize” (p. 4)— and because “the CDCC excludes a large part of the basin's states” (p. 2)."
+     }
+    },
+    "nola": {
+     "e": "fuera",
+     "n": {
+      "es": "Queda fuera por la enumeración cerrada del criterio —«las islas, las tres Guyanas y Belice» (p. 4)— y porque «la CCDC excluye a gran parte de los Estados de la cuenca» (p. 2).",
+      "en": "Left out by the criterion's closed enumeration —“the islands, the three Guianas and Belize” (p. 4)— and because “the CDCC excludes a large part of the basin's states” (p. 2)."
+     }
+    }
+   },
+   "extras": {
+    "bahamas": {
+     "e": "dentro",
+     "n": {
+      "es": "Queda fuera por la enumeración cerrada del criterio —«las islas, las tres Guyanas y Belice» (p. 4)— y porque «la CCDC excluye a gran parte de los Estados de la cuenca» (p. 2).",
+      "en": "Left out by the criterion's closed enumeration —“the islands, the three Guianas and Belize” (p. 4)— and because “the CDCC excludes a large part of the basin's states” (p. 2)."
+     }
+    },
+    "caiman": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la lista del CCDC: «todos los Estados miembros pertenecen al Caribe insular únicamente, más los territorios ultramarinos de Holanda y Estados Unidos, así como tres territorios dependientes de Inglaterra» (p. 5).",
+      "en": "Enters through the CDCC list: “all member states belong to the insular Caribbean only, plus the overseas territories of the Netherlands and the United States, as well as three British dependencies” (p. 5)."
+     }
+    },
+    "venezuela": {
+     "e": "fuera",
+     "n": {
+      "es": "Queda fuera por la enumeración cerrada del criterio —«las islas, las tres Guyanas y Belice» (p. 4)— y porque «la CCDC excluye a gran parte de los Estados de la cuenca» (p. 2).",
+      "en": "Left out by the criterion's closed enumeration —“the islands, the three Guianas and Belize” (p. 4)— and because “the CDCC excludes a large part of the basin's states” (p. 2)."
+     }
+    },
+    "guatemala": {
+     "e": "fuera",
+     "n": {
+      "es": "Queda fuera por la enumeración cerrada del criterio —«las islas, las tres Guyanas y Belice» (p. 4)— y porque «la CCDC excluye a gran parte de los Estados de la cuenca» (p. 2).",
+      "en": "Left out by the criterion's closed enumeration —“the islands, the three Guianas and Belize” (p. 4)— and because “the CDCC excludes a large part of the basin's states” (p. 2)."
+     }
+    },
+    "yucatan": {
+     "e": "fuera",
+     "n": {
+      "es": "Queda fuera por la enumeración cerrada del criterio —«las islas, las tres Guyanas y Belice» (p. 4)— y porque «la CCDC excluye a gran parte de los Estados de la cuenca» (p. 2).",
+      "en": "Left out by the criterion's closed enumeration —“the islands, the three Guianas and Belize” (p. 4)— and because “the CDCC excludes a large part of the basin's states” (p. 2)."
+     }
+    },
+    "stthomas": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la lista del CCDC: «todos los Estados miembros pertenecen al Caribe insular únicamente, más los territorios ultramarinos de Holanda y Estados Unidos, así como tres territorios dependientes de Inglaterra» (p. 5).",
+      "en": "Enters through the CDCC list: “all member states belong to the insular Caribbean only, plus the overseas territories of the Netherlands and the United States, as well as three British dependencies” (p. 5)."
+     }
+    },
+    "stlucia": {
+     "e": "dentro"
+    }
+   },
+   "corpus": [
+    "girvanreinterpretar",
+    "meeksgirvannewworld",
+    "gaztambideinvencion"
+   ],
+   "aviso": {
+    "es": "Girvan sostiene que «no hay una definición “precisa” o consumada; el contenido depende más bien del contexto, pero ello debe especificarse con claridad cuando se emplee con propósitos descriptivos o analíticos» (p. 4). Por eso el artículo entra en la capa como tres definiciones y no como una: son tres de los siete Caribes que él mismo tabula.",
+    "en": "Girvan holds that “there is no ‘precise’ or finished definition; content depends rather on context, but this must be stated clearly when used for descriptive or analytical purposes” (p. 4). Hence the article enters the layer as three definitions rather than one: three of the seven Caribbeans he himself tabulates."
+   }
+  },
+  {
+   "id": "girvan-aec",
+   "anio": 2000,
+   "autor": "Norman Girvan",
+   "obra": "Reinterpretar al Caribe",
+   "apellido": {
+    "es": "Gran Caribe de la AEC",
+    "en": "Greater Caribbean of the ACS"
+   },
+   "forma": "area",
+   "lectura": "ejemplar",
+   "familia": {
+    "clave": "grancaribe",
+    "fuente": "Girvan 2000, p. 4"
+   },
+   "criterio": {
+    "es": "El Caribe definido por pertenencia a un organismo regional. La Asociación de Estados del Caribe reúne a los Estados de toda la cuenca y su principio no es la historia ni la cultura sino la geoeconomía y la cooperación. Es la única definición de la capa que se delimita por membresía, y la que mete al continente entero.",
+    "en": "The Caribbean defined by membership in a regional body. The Association of Caribbean States brings together the states of the whole basin, and its principle is neither history nor culture but geoeconomics and cooperation. It is the only definition in the layer bounded by membership, and the one that brings in the entire mainland."
+   },
+   "citas": [
+    {
+     "txt": "La Asociación de Estados del Caribe (AEC) reúne a estados de toda la cuenca.",
+     "ref": "GIR2000",
+     "pag": "2"
+    },
+    {
+     "txt": "El Gran Caribe 1 (Greater Caribbean) · Continente e islas · Geoeconómico / cooperación · AEC",
+     "ref": "GIR2000",
+     "pag": "4",
+     "nota": {
+      "es": "fila de la Tabla 1, «Los Caribes»",
+      "en": "row from Table 1, “The Caribbeans”"
+     }
+    },
+    {
+     "txt": "Asociación de Estados del Caribe. Todos los miembros son Estados de El Gran Caribe, más tres territorios franceses ultramarinos (no ratificados como miembros asociados).",
+     "ref": "GIR2000",
+     "pag": "5"
+    },
+    {
+     "txt": "la definición del Caribe podría fundamentarse en el idioma y la identidad, en la geografía, en la historia y la cultura, en la geopolítica, en la geoeconomía o incluso en la pertenencia a un organismo regional.",
+     "ref": "GIR2000",
+     "pag": "2"
+    }
+   ],
+   "lugares": {
+    "cuba": {
+     "e": "dentro",
+     "n": {
+      "es": "La AEC «reúne a estados de toda la cuenca» (p. 2) y «todos los miembros son Estados de El Gran Caribe» (p. 5): el lugar entra por el Estado al que pertenece, no por sí mismo.",
+      "en": "The ACS “brings together states from across the basin” (p. 2) and “all members are Greater Caribbean states” (p. 5): the place enters through the state it belongs to, not on its own."
+     }
+    },
+    "jamaica": {
+     "e": "dentro",
+     "n": {
+      "es": "La AEC «reúne a estados de toda la cuenca» (p. 2) y «todos los miembros son Estados de El Gran Caribe» (p. 5): el lugar entra por el Estado al que pertenece, no por sí mismo.",
+      "en": "The ACS “brings together states from across the basin” (p. 2) and “all members are Greater Caribbean states” (p. 5): the place enters through the state it belongs to, not on its own."
+     }
+    },
+    "haiti": {
+     "e": "dentro",
+     "n": {
+      "es": "La AEC «reúne a estados de toda la cuenca» (p. 2) y «todos los miembros son Estados de El Gran Caribe» (p. 5): el lugar entra por el Estado al que pertenece, no por sí mismo.",
+      "en": "The ACS “brings together states from across the basin” (p. 2) and “all members are Greater Caribbean states” (p. 5): the place enters through the state it belongs to, not on its own."
+     }
+    },
+    "dominicana": {
+     "e": "dentro",
+     "n": {
+      "es": "La AEC «reúne a estados de toda la cuenca» (p. 2) y «todos los miembros son Estados de El Gran Caribe» (p. 5): el lugar entra por el Estado al que pertenece, no por sí mismo.",
+      "en": "The ACS “brings together states from across the basin” (p. 2) and “all members are Greater Caribbean states” (p. 5): the place enters through the state it belongs to, not on its own."
+     }
+    },
+    "barbados": {
+     "e": "dentro",
+     "n": {
+      "es": "La AEC «reúne a estados de toda la cuenca» (p. 2) y «todos los miembros son Estados de El Gran Caribe» (p. 5): el lugar entra por el Estado al que pertenece, no por sí mismo.",
+      "en": "The ACS “brings together states from across the basin” (p. 2) and “all members are Greater Caribbean states” (p. 5): the place enters through the state it belongs to, not on its own."
+     }
+    },
+    "trinidad": {
+     "e": "dentro",
+     "n": {
+      "es": "La AEC «reúne a estados de toda la cuenca» (p. 2) y «todos los miembros son Estados de El Gran Caribe» (p. 5): el lugar entra por el Estado al que pertenece, no por sí mismo.",
+      "en": "The ACS “brings together states from across the basin” (p. 2) and “all members are Greater Caribbean states” (p. 5): the place enters through the state it belongs to, not on its own."
+     }
+    },
+    "dominica": {
+     "e": "dentro",
+     "n": {
+      "es": "La AEC «reúne a estados de toda la cuenca» (p. 2) y «todos los miembros son Estados de El Gran Caribe» (p. 5): el lugar entra por el Estado al que pertenece, no por sí mismo.",
+      "en": "The ACS “brings together states from across the basin” (p. 2) and “all members are Greater Caribbean states” (p. 5): the place enters through the state it belongs to, not on its own."
+     }
+    },
+    "nevis": {
+     "e": "dentro",
+     "n": {
+      "es": "La AEC «reúne a estados de toda la cuenca» (p. 2) y «todos los miembros son Estados de El Gran Caribe» (p. 5): el lugar entra por el Estado al que pertenece, no por sí mismo.",
+      "en": "The ACS “brings together states from across the basin” (p. 2) and “all members are Greater Caribbean states” (p. 5): the place enters through the state it belongs to, not on its own."
+     }
+    },
+    "antigua": {
+     "e": "dentro",
+     "n": {
+      "es": "La AEC «reúne a estados de toda la cuenca» (p. 2) y «todos los miembros son Estados de El Gran Caribe» (p. 5): el lugar entra por el Estado al que pertenece, no por sí mismo.",
+      "en": "The ACS “brings together states from across the basin” (p. 2) and “all members are Greater Caribbean states” (p. 5): the place enters through the state it belongs to, not on its own."
+     }
+    },
+    "granada": {
+     "e": "dentro",
+     "n": {
+      "es": "La AEC «reúne a estados de toda la cuenca» (p. 2) y «todos los miembros son Estados de El Gran Caribe» (p. 5): el lugar entra por el Estado al que pertenece, no por sí mismo.",
+      "en": "The ACS “brings together states from across the basin” (p. 2) and “all members are Greater Caribbean states” (p. 5): the place enters through the state it belongs to, not on its own."
+     }
+    },
+    "martinica": {
+     "e": "margen",
+     "n": {
+      "es": "Territorio francés de ultramar. La AEC los cuenta como «tres territorios franceses ultramarinos (no ratificados como miembros asociados)» (p. 5), y la lista del CCDC nombra los holandeses, los estadounidenses y tres dependencias británicas, no los franceses (p. 5).",
+      "en": "French overseas territory. The ACS counts them as “three French overseas territories (not ratified as associate members)” (p. 5), and the CDCC list names the Dutch, US and three British dependencies, not the French ones (p. 5)."
+     }
+    },
+    "guadalupe": {
+     "e": "margen",
+     "n": {
+      "es": "Territorio francés de ultramar. La AEC los cuenta como «tres territorios franceses ultramarinos (no ratificados como miembros asociados)» (p. 5), y la lista del CCDC nombra los holandeses, los estadounidenses y tres dependencias británicas, no los franceses (p. 5).",
+      "en": "French overseas territory. The ACS counts them as “three French overseas territories (not ratified as associate members)” (p. 5), and the CDCC list names the Dutch, US and three British dependencies, not the French ones (p. 5)."
+     }
+    },
+    "puertorico": {
+     "n": {
+      "es": "El artículo dice que «la mayoría de los territorios coloniales en el Caribe no pertenecen a CARICOM, CARIFORUM o a la AEC» (p. 2), pero no los nombra uno por uno: el lugar queda sin estado.",
+      "en": "The article says that “most of the colonial territories in the Caribbean do not belong to CARICOM, CARIFORUM or the ACS” (p. 2), but does not name them one by one: the place is left without a state."
+     }
+    },
+    "stjohn": {
+     "n": {
+      "es": "El artículo dice que «la mayoría de los territorios coloniales en el Caribe no pertenecen a CARICOM, CARIFORUM o a la AEC» (p. 2), pero no los nombra uno por uno: el lugar queda sin estado.",
+      "en": "The article says that “most of the colonial territories in the Caribbean do not belong to CARICOM, CARIFORUM or the ACS” (p. 2), but does not name them one by one: the place is left without a state."
+     }
+    },
+    "curazao": {
+     "n": {
+      "es": "El artículo dice que «la mayoría de los territorios coloniales en el Caribe no pertenecen a CARICOM, CARIFORUM o a la AEC» (p. 2), pero no los nombra uno por uno: el lugar queda sin estado.",
+      "en": "The article says that “most of the colonial territories in the Caribbean do not belong to CARICOM, CARIFORUM or the ACS” (p. 2), but does not name them one by one: the place is left without a state."
+     }
+    },
+    "guyana": {
+     "e": "dentro",
+     "n": {
+      "es": "La AEC «reúne a estados de toda la cuenca» (p. 2) y «todos los miembros son Estados de El Gran Caribe» (p. 5): el lugar entra por el Estado al que pertenece, no por sí mismo.",
+      "en": "The ACS “brings together states from across the basin” (p. 2) and “all members are Greater Caribbean states” (p. 5): the place enters through the state it belongs to, not on its own."
+     }
+    },
+    "suriname": {
+     "e": "dentro",
+     "n": {
+      "es": "La AEC «reúne a estados de toda la cuenca» (p. 2) y «todos los miembros son Estados de El Gran Caribe» (p. 5): el lugar entra por el Estado al que pertenece, no por sí mismo.",
+      "en": "The ACS “brings together states from across the basin” (p. 2) and “all members are Greater Caribbean states” (p. 5): the place enters through the state it belongs to, not on its own."
+     }
+    },
+    "belize": {
+     "e": "dentro",
+     "n": {
+      "es": "La AEC «reúne a estados de toda la cuenca» (p. 2) y «todos los miembros son Estados de El Gran Caribe» (p. 5): el lugar entra por el Estado al que pertenece, no por sí mismo.",
+      "en": "The ACS “brings together states from across the basin” (p. 2) and “all members are Greater Caribbean states” (p. 5): the place enters through the state it belongs to, not on its own."
+     }
+    },
+    "bluefields": {
+     "e": "dentro",
+     "n": {
+      "es": "La AEC «reúne a estados de toda la cuenca» (p. 2) y «todos los miembros son Estados de El Gran Caribe» (p. 5): el lugar entra por el Estado al que pertenece, no por sí mismo.",
+      "en": "The ACS “brings together states from across the basin” (p. 2) and “all members are Greater Caribbean states” (p. 5): the place enters through the state it belongs to, not on its own."
+     }
+    },
+    "costarica": {
+     "e": "dentro",
+     "n": {
+      "es": "La AEC «reúne a estados de toda la cuenca» (p. 2) y «todos los miembros son Estados de El Gran Caribe» (p. 5): el lugar entra por el Estado al que pertenece, no por sí mismo.",
+      "en": "The ACS “brings together states from across the basin” (p. 2) and “all members are Greater Caribbean states” (p. 5): the place enters through the state it belongs to, not on its own."
+     }
+    },
+    "panama": {
+     "e": "dentro",
+     "n": {
+      "es": "La AEC «reúne a estados de toda la cuenca» (p. 2) y «todos los miembros son Estados de El Gran Caribe» (p. 5): el lugar entra por el Estado al que pertenece, no por sí mismo.",
+      "en": "The ACS “brings together states from across the basin” (p. 2) and “all members are Greater Caribbean states” (p. 5): the place enters through the state it belongs to, not on its own."
+     }
+    },
+    "honduras": {
+     "e": "dentro",
+     "n": {
+      "es": "La AEC «reúne a estados de toda la cuenca» (p. 2) y «todos los miembros son Estados de El Gran Caribe» (p. 5): el lugar entra por el Estado al que pertenece, no por sí mismo.",
+      "en": "The ACS “brings together states from across the basin” (p. 2) and “all members are Greater Caribbean states” (p. 5): the place enters through the state it belongs to, not on its own."
+     }
+    },
+    "cartagena": {
+     "e": "dentro",
+     "n": {
+      "es": "La AEC «reúne a estados de toda la cuenca» (p. 2) y «todos los miembros son Estados de El Gran Caribe» (p. 5): el lugar entra por el Estado al que pertenece, no por sí mismo.",
+      "en": "The ACS “brings together states from across the basin” (p. 2) and “all members are Greater Caribbean states” (p. 5): the place enters through the state it belongs to, not on its own."
+     }
+    },
+    "santamarta": {
+     "e": "dentro",
+     "n": {
+      "es": "La AEC «reúne a estados de toda la cuenca» (p. 2) y «todos los miembros son Estados de El Gran Caribe» (p. 5): el lugar entra por el Estado al que pertenece, no por sí mismo.",
+      "en": "The ACS “brings together states from across the basin” (p. 2) and “all members are Greater Caribbean states” (p. 5): the place enters through the state it belongs to, not on its own."
+     }
+    },
+    "palenque": {
+     "e": "dentro",
+     "n": {
+      "es": "La AEC «reúne a estados de toda la cuenca» (p. 2) y «todos los miembros son Estados de El Gran Caribe» (p. 5): el lugar entra por el Estado al que pertenece, no por sí mismo.",
+      "en": "The ACS “brings together states from across the basin” (p. 2) and “all members are Greater Caribbean states” (p. 5): the place enters through the state it belongs to, not on its own."
+     }
+    },
+    "barranquilla": {
+     "e": "dentro",
+     "n": {
+      "es": "La AEC «reúne a estados de toda la cuenca» (p. 2) y «todos los miembros son Estados de El Gran Caribe» (p. 5): el lugar entra por el Estado al que pertenece, no por sí mismo.",
+      "en": "The ACS “brings together states from across the basin” (p. 2) and “all members are Greater Caribbean states” (p. 5): the place enters through the state it belongs to, not on its own."
+     }
+    },
+    "guajira": {
+     "e": "dentro",
+     "n": {
+      "es": "La AEC «reúne a estados de toda la cuenca» (p. 2) y «todos los miembros son Estados de El Gran Caribe» (p. 5): el lugar entra por el Estado al que pertenece, no por sí mismo.",
+      "en": "The ACS “brings together states from across the basin” (p. 2) and “all members are Greater Caribbean states” (p. 5): the place enters through the state it belongs to, not on its own."
+     }
+    },
+    "sanandres": {
+     "e": "dentro",
+     "n": {
+      "es": "La AEC «reúne a estados de toda la cuenca» (p. 2) y «todos los miembros son Estados de El Gran Caribe» (p. 5): el lugar entra por el Estado al que pertenece, no por sí mismo.",
+      "en": "The ACS “brings together states from across the basin” (p. 2) and “all members are Greater Caribbean states” (p. 5): the place enters through the state it belongs to, not on its own."
+     }
+    },
+    "veracruz": {
+     "e": "dentro",
+     "n": {
+      "es": "La AEC «reúne a estados de toda la cuenca» (p. 2) y «todos los miembros son Estados de El Gran Caribe» (p. 5): el lugar entra por el Estado al que pertenece, no por sí mismo.",
+      "en": "The ACS “brings together states from across the basin” (p. 2) and “all members are Greater Caribbean states” (p. 5): the place enters through the state it belongs to, not on its own."
+     }
+    },
+    "costachica": {
+     "e": "dentro",
+     "n": {
+      "es": "La AEC «reúne a estados de toda la cuenca» (p. 2) y «todos los miembros son Estados de El Gran Caribe» (p. 5): el lugar entra por el Estado al que pertenece, no por sí mismo.",
+      "en": "The ACS “brings together states from across the basin” (p. 2) and “all members are Greater Caribbean states” (p. 5): the place enters through the state it belongs to, not on its own."
+     }
+    },
+    "nola": {
+     "e": "fuera",
+     "n": {
+      "es": "«Todos los miembros son Estados de El Gran Caribe» (p. 5). Estados Unidos no lo es: es, en la otra definición de Girvan, quien nombra la cuenca desde afuera.",
+      "en": "“All members are Greater Caribbean states” (p. 5). The United States is not one: in Girvan's other definition it is the power that names the basin from outside."
+     }
+    }
+   },
+   "extras": {
+    "venezuela": {
+     "e": "dentro",
+     "n": {
+      "es": "La AEC «reúne a estados de toda la cuenca» (p. 2) y «todos los miembros son Estados de El Gran Caribe» (p. 5): el lugar entra por el Estado al que pertenece, no por sí mismo.",
+      "en": "The ACS “brings together states from across the basin” (p. 2) and “all members are Greater Caribbean states” (p. 5): the place enters through the state it belongs to, not on its own."
+     }
+    },
+    "guatemala": {
+     "e": "dentro",
+     "n": {
+      "es": "La AEC «reúne a estados de toda la cuenca» (p. 2) y «todos los miembros son Estados de El Gran Caribe» (p. 5): el lugar entra por el Estado al que pertenece, no por sí mismo.",
+      "en": "The ACS “brings together states from across the basin” (p. 2) and “all members are Greater Caribbean states” (p. 5): the place enters through the state it belongs to, not on its own."
+     }
+    },
+    "elsalvador": {
+     "e": "dentro",
+     "n": {
+      "es": "La AEC «reúne a estados de toda la cuenca» (p. 2) y «todos los miembros son Estados de El Gran Caribe» (p. 5): el lugar entra por el Estado al que pertenece, no por sí mismo.",
+      "en": "The ACS “brings together states from across the basin” (p. 2) and “all members are Greater Caribbean states” (p. 5): the place enters through the state it belongs to, not on its own."
+     }
+    },
+    "yucatan": {
+     "e": "dentro",
+     "n": {
+      "es": "La AEC «reúne a estados de toda la cuenca» (p. 2) y «todos los miembros son Estados de El Gran Caribe» (p. 5): el lugar entra por el Estado al que pertenece, no por sí mismo.",
+      "en": "The ACS “brings together states from across the basin” (p. 2) and “all members are Greater Caribbean states” (p. 5): the place enters through the state it belongs to, not on its own."
+     }
+    },
+    "bahamas": {
+     "e": "dentro",
+     "n": {
+      "es": "La AEC «reúne a estados de toda la cuenca» (p. 2) y «todos los miembros son Estados de El Gran Caribe» (p. 5): el lugar entra por el Estado al que pertenece, no por sí mismo.",
+      "en": "The ACS “brings together states from across the basin” (p. 2) and “all members are Greater Caribbean states” (p. 5): the place enters through the state it belongs to, not on its own."
+     }
+    },
+    "caiman": {
+     "e": null,
+     "n": {
+      "es": "El artículo dice que «la mayoría de los territorios coloniales en el Caribe no pertenecen a CARICOM, CARIFORUM o a la AEC» (p. 2), pero no los nombra uno por uno: el lugar queda sin estado.",
+      "en": "The article says that “most of the colonial territories in the Caribbean do not belong to CARICOM, CARIFORUM or the ACS” (p. 2), but does not name them one by one: the place is left without a state."
+     }
+    },
+    "stlucia": {
+     "e": "dentro",
+     "n": {
+      "es": "La AEC «reúne a estados de toda la cuenca» (p. 2) y «todos los miembros son Estados de El Gran Caribe» (p. 5): el lugar entra por el Estado al que pertenece, no por sí mismo.",
+      "en": "The ACS “brings together states from across the basin” (p. 2) and “all members are Greater Caribbean states” (p. 5): the place enters through the state it belongs to, not on its own."
+     }
+    },
+    "florida": {
+     "e": "fuera",
+     "n": {
+      "es": "Estados Unidos no es miembro de la AEC (p. 5).",
+      "en": "The United States is not an ACS member (p. 5)."
+     }
+    }
+   },
+   "corpus": [
+    "girvanreinterpretar",
+    "bassiacuoso",
+    "abello"
+   ],
+   "aviso": {
+    "es": "Girvan sostiene que «no hay una definición “precisa” o consumada; el contenido depende más bien del contexto, pero ello debe especificarse con claridad cuando se emplee con propósitos descriptivos o analíticos» (p. 4). Por eso el artículo entra en la capa como tres definiciones y no como una: son tres de los siete Caribes que él mismo tabula.",
+    "en": "Girvan holds that “there is no ‘precise’ or finished definition; content depends rather on context, but this must be stated clearly when used for descriptive or analytical purposes” (p. 4). Hence the article enters the layer as three definitions rather than one: three of the seven Caribbeans he himself tabulates."
+   }
+  },
+  {
+   "id": "girvan-cuenca",
+   "anio": 2000,
+   "autor": "Norman Girvan",
+   "obra": "Reinterpretar al Caribe",
+   "apellido": {
+    "es": "La Cuenca del Caribe",
+    "en": "The Caribbean Basin"
+   },
+   "forma": "area",
+   "lectura": "referida",
+   "familia": {
+    "clave": "geopolitico",
+    "fuente": "Girvan 2000, p. 4"
+   },
+   "criterio": {
+    "es": "La definición hecha desde afuera y desde arriba. Girvan la tabula con nombre propio —«La Cuenca del Caribe (Estados Unidos)»— y principio declarado: geopolítico y hegemónico. Su linaje va de la expansión estadounidense de fines del siglo XIX a la Comisión Anglo-Americana del Caribe de 1942 y a la Iniciativa de la Cuenca del Caribe de Reagan. El nombre y su aplicación a una zona, dice, fueron invenciones de los poderes imperiales.",
+    "en": "The definition made from outside and from above. Girvan tabulates it under its own name —“The Caribbean Basin (United States)”— with a declared principle: geopolitical and hegemonic. Its lineage runs from late-nineteenth-century US expansion to the 1942 Anglo-American Caribbean Commission and Reagan's Caribbean Basin Initiative. The name and its application to a zone, he says, were inventions of the imperial powers."
+   },
+   "citas": [
+    {
+     "txt": "La Cuenca del Caribe (Estados Unidos) · Continente e islas · Geopolítico / hegemónico · ICC",
+     "ref": "GIR2000",
+     "pag": "4",
+     "nota": {
+      "es": "primera fila de la Tabla 1, «Los Caribes»",
+      "en": "first row of Table 1, “The Caribbeans”"
+     }
+    },
+    {
+     "txt": "Gaztambide-Geigel (1996, 76, 83) ha mostrado que el nombre de Caribe comenzó a ser usado para denominar a la región al final del siglo XIX, en el contexto de la expansión estadounidense hacia la frontera sur.",
+     "ref": "GIR2000",
+     "pag": "2"
+    },
+    {
+     "txt": "Expresiones posteriores de tal denominación fueron la Comisión Anglo-Americana del Caribe (organizada en 1942, y conocida después como Comisión del Caribe) y la Iniciativa de la Cuenca del Caribe, impulsada por el presidente Ronald Reagan en la década de 1980. De modo que tanto el nombre como su aplicación posterior a una zona geográfica fueron invenciones de los poderes imperiales.",
+     "ref": "GIR2000",
+     "pag": "2"
+    },
+    {
+     "txt": "Como muestra de resistencia, la noción de «cuenca», del poder imperial, ha sido invertida por los académicos de la región.",
+     "ref": "GIR2000",
+     "pag": "3"
+    }
+   ],
+   "lugares": {
+    "cuba": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "jamaica": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "haiti": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "dominicana": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "puertorico": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "curazao": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "martinica": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "guadalupe": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "barbados": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "trinidad": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "dominica": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "stjohn": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "nevis": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "antigua": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "granada": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "guyana": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "suriname": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "belize": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "bluefields": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "costarica": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "panama": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "honduras": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "cartagena": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "santamarta": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "palenque": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "barranquilla": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "guajira": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "sanandres": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "veracruz": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "costachica": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "oriximina": {
+     "n": {
+      "es": "La Tabla 1 declara la cobertura «continente e islas» de la cuenca del Caribe (p. 4); el artículo no dice nada de Brasil, que no es ribereño. El lugar queda sin estado.",
+      "en": "Table 1 declares the coverage “mainland and islands” of the Caribbean basin (p. 4); the article says nothing about Brazil, which is not a riparian country. The place is left without a state."
+     }
+    },
+    "palmaresbr": {
+     "n": {
+      "es": "La Tabla 1 declara la cobertura «continente e islas» de la cuenca del Caribe (p. 4); el artículo no dice nada de Brasil, que no es ribereño. El lugar queda sin estado.",
+      "en": "Table 1 declares the coverage “mainland and islands” of the Caribbean basin (p. 4); the article says nothing about Brazil, which is not a riparian country. The place is left without a state."
+     }
+    },
+    "nola": {
+     "n": {
+      "es": "El artículo pone a Estados Unidos como quien inventa el nombre y su aplicación a una zona (p. 2), no como territorio que la denominación incluya. El lugar queda sin estado: es la sede de la definición, no su objeto.",
+      "en": "The article casts the United States as the inventor of the name and of its application to a zone (p. 2), not as a territory the denomination includes. The place is left without a state: it is the seat of the definition, not its object."
+     }
+    }
+   },
+   "extras": {
+    "venezuela": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "guatemala": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "elsalvador": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "yucatan": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "bahamas": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "caiman": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "stlucia": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
+      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "florida": {
+     "e": null,
+     "n": {
+      "es": "Igual que Nueva Orleans: el artículo sitúa la frontera sur estadounidense como el lugar desde donde se nombra la cuenca (p. 2), no como parte nombrada.",
+      "en": "Like New Orleans: the article places the US southern frontier as the place from which the basin is named (p. 2), not as a named part."
+     }
+    }
+   },
+   "corpus": [
+    "girvanreinterpretar",
+    "gaztambideinvencion"
+   ],
+   "aviso": {
+    "es": "El atlas no tiene el documento de la Iniciativa de la Cuenca del Caribe: esta definición se reconstruye con la Tabla 1 de Girvan, que declara su cobertura («continente e islas») y su principio, pero no enumera países miembros. Por eso la extensión sigue el criterio declarado y no una lista de membresía, y por eso la lectura es «referida».",
+    "en": "The atlas does not hold the Caribbean Basin Initiative document: this definition is reconstructed from Girvan's Table 1, which states its coverage (“mainland and islands”) and its principle, but does not enumerate member countries. Its extent therefore follows the declared criterion rather than a membership list, and that is why the reading is “reported”."
+   }
+  },
+  {
    "id": "atlas",
    "anio": 2026,
    "autor": "Grupo de Investigación Pensamiento Caribe",
@@ -3192,6 +4291,9 @@ window.CARIBES = {
     "panama": {
      "e": "dentro"
     },
+    "honduras": {
+     "e": "dentro"
+    },
     "cartagena": {
      "e": "dentro"
     },
@@ -3215,6 +4317,20 @@ window.CARIBES = {
     },
     "nola": {
      "e": "dentro"
+    },
+    "oriximina": {
+     "e": "dentro",
+     "n": {
+      "es": "Nodo propio del atlas: Oriximiná entró con el lote S20 y Palmares con el S21, por obras del corpus sobre los quilombos. Es el atlas, no un texto ajeno, quien los pone dentro.",
+      "en": "The atlas's own node: Oriximiná entered with batch S20 and Palmares with S21, through corpus works on the quilombos. It is the atlas, not another text, that places them inside."
+     }
+    },
+    "palmaresbr": {
+     "e": "dentro",
+     "n": {
+      "es": "Nodo propio del atlas: Oriximiná entró con el lote S20 y Palmares con el S21, por obras del corpus sobre los quilombos. Es el atlas, no un texto ajeno, quien los pone dentro.",
+      "en": "The atlas's own node: Oriximiná entered with batch S20 and Palmares with S21, through corpus works on the quilombos. It is the atlas, not another text, that places them inside."
+     }
     },
     "guajira": {
      "n": {
@@ -3367,6 +4483,38 @@ window.CARIBES = {
    "es": "Glissant abre Poética de la Relación con «The unity is sub-marine» de Brathwaite como epígrafe, y ya lo había glosado en El discurso antillano: «Raíces submarinas: es decir, derivadas, no implantadas con un único mástil en un único limo, sino prolongadas en todas las direcciones de nuestro universo por su red de ramas» (1981, p. 128). La unidad submarina se vuelve raíz de la Relación.",
    "en": "Glissant opens Poetics of Relation with Brathwaite's “The unity is sub-marine” as epigraph, and had already glossed it in Caribbean Discourse: “Submarine roots: that is, derived, not planted with a single mast in a single silt, but extended in every direction of our universe through their network of branches” (1981, p. 128). The submarine unity becomes the root of Relation.",
    "ref": "GLR · epígrafe / GLD · p. 128"
+  },
+  {
+   "a": "girvan-cuenca",
+   "b": "gaz-geopolitico",
+   "tipo": "apropiacion",
+   "es": "Girvan toma de Gaztambide la tesis del origen imperial del nombre —«el nombre de Caribe comenzó a ser usado… en el contexto de la expansión estadounidense»— y la lleva hasta la Iniciativa de Reagan (Gaztambide 1996, pp. 76 y 83, citado en p. 2).",
+   "en": "Girvan takes from Gaztambide the thesis of the name's imperial origin —“the name Caribbean began to be used… in the context of US expansion”— and carries it to Reagan's Initiative (Gaztambide 1996, pp. 76 and 83, cited on p. 2).",
+   "ref": "GIR2000 · p. 2"
+  },
+  {
+   "a": "girvan-insular",
+   "b": "girvan-cuenca",
+   "tipo": "disonancia",
+   "es": "El mismo autor sostiene las dos y las separa por principio: etnohistórico una, geopolítico y hegemónico la otra (Tabla 1, p. 4). Es la única disputa de la capa que ocurre dentro de un solo texto.",
+   "en": "The same author holds both and separates them by principle: ethnohistorical one, geopolitical and hegemonic the other (Table 1, p. 4). It is the layer's only dispute occurring inside a single text.",
+   "ref": "GIR2000 · p. 4"
+  },
+  {
+   "a": "girvan-aec",
+   "b": "newworld",
+   "tipo": "apropiacion",
+   "es": "Girvan recoge la fórmula de Best —«muchas veces el Caribe también incluye el litoral que rodea nuestro mar» (Best 1971, 7, citado en p. 3)— y la reencuentra treinta años después en el Gran Caribe de la AEC, ya no como cosmología sino como membresía.",
+   "en": "Girvan picks up Best's formula —“the Caribbean often also includes the littoral around our sea” (Best 1971, 7, cited on p. 3)— and finds it again thirty years later in the ACS's Greater Caribbean, no longer as cosmology but as membership.",
+   "ref": "GIR2000 · p. 3"
+  },
+  {
+   "a": "girvan-insular",
+   "b": "atlas",
+   "tipo": "disonancia",
+   "es": "El Caribe insular deja fuera la costa colombiana por enumeración cerrada (p. 4); este atlas se ancla en ella. La frontera de Girvan corre justo por donde el atlas pone su centro.",
+   "en": "The insular Caribbean leaves the Colombian coast out by closed enumeration (p. 4); this atlas is anchored there. Girvan's boundary runs exactly where the atlas places its centre.",
+   "ref": "GIR2000 · p. 4"
   }
  ]
 };
