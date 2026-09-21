@@ -28,10 +28,11 @@
     CAMBIOS[k] = s.reduce((n,x,i)=> i && x!==s[i-1] ? n+1 : n, 0);
   }
   const POR_PARPADEO = LUGARES.slice().sort((a,b)=> CAMBIOS[b]-CAMBIOS[a] || NOMBRE(a).localeCompare(NOMBRE(b)));
-  const INESTABLES = new Set(POR_PARPADEO.filter(k => CAMBIOS[k] >= 5));
+  const UMBRAL_PARPADEO = 5;   /* a partir de aquí un lugar se considera inestable */
+  const INESTABLES = new Set(POR_PARPADEO.filter(k => CAMBIOS[k] >= UMBRAL_PARPADEO));
 
   /* ---------------- estado ---------------- */
-  const D = { i:0, tocando:false, ritmo:5000, foco:null, temp:null, soloParpadeo:false, abierta:false, indice:false };
+  const D = { i:0, tocando:false, ritmo:5000, foco:null, temp:null, soloParpadeo:false, abierta:false, indice:false, guia:false };
   const menosMovimiento = () => window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   /* ---------------- estela ----------------
@@ -168,7 +169,10 @@
     quieto:   {es:'{n} nunca cambia de estado: está dentro de las veinte.', en:'{n} never changes state: it is inside all twenty.'},
     salir:    {es:'Salir del foco', en:'Clear focus'},
     oleaje:   {es:'Oleaje', en:'Surf'},
-    oleajeOn: {es:'Oleaje encendido', en:'Surf on'}
+    oleajeOn: {es:'Oleaje encendido', en:'Surf on'},
+    guia:     {es:'Cómo funciona', en:'How it works'},
+    guiaT:    {es:'Cómo funciona la deriva', en:'How the drift works'},
+    guiaOk:   {es:'Entendido, empezar', en:'Got it, start'}
   };
   const t = k => loc(T[k]);
 
@@ -194,6 +198,10 @@
   const pared = document.createElement('div');
   pared.className='dv-pared'; pared.hidden=true; pared.setAttribute('role','dialog'); pared.setAttribute('aria-modal','true');
   document.body.appendChild(pared);
+
+  const guia = document.createElement('div');
+  guia.className='dv-guia'; guia.hidden=true; guia.setAttribute('role','dialog'); guia.setAttribute('aria-modal','true');
+  document.body.appendChild(guia);
 
   const vivo = document.createElement('p');
   vivo.className='visualmenteOculto'; vivo.setAttribute('aria-live','polite');
@@ -232,6 +240,133 @@
     return `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${loc(d.apellido)}"><rect width="${W}" height="${H}" fill="none"/>${puntos}</svg>`;
   }
 
+  /* ---------------- cómo funciona ----------------
+     La deriva es una pieza de lectura, no un adorno: si no se dice qué está
+     mirando, el visitante ve colores que se mueven. Las cifras del texto se
+     calculan del propio corpus —no hay ningún número escrito a mano— para que
+     la explicación no envejezca cuando entren definiciones nuevas. */
+  function cifrasGuia(){
+    const top = POR_PARPADEO[0];
+    return {
+      n: DEFS.length,
+      a0: DEFS[0].anio, a1: DEFS[DEFS.length-1].anio,
+      L: LUGARES.length,
+      top: NOMBRE(top).split(' · ')[0],
+      ntop: CAMBIOS[top],
+      quietos: LUGARES.filter(k=>CAMBIOS[k]===0).length,
+      estables: LUGARES.filter(k=>CAMBIOS[k]===0).map(k=>NOMBRE(k).split(' · ')[0]),
+      u: UMBRAL_PARPADEO,
+      r: (D.ritmo/1000)
+    };
+  }
+  const pt = e => '<span class="dv-pt" data-e="'+e+'"></span>';
+  /* la frase de los lugares estables se arma según cuántos sean: con uno solo
+     se le nombra, que es lo interesante; con varios basta el número */
+  function fraseEstables(c){
+    if(!c.quietos) return ES() ? 'Ningún lugar se libra del desacuerdo.' : 'No place escapes the disagreement.';
+    if(c.quietos<=2) return ES()
+      ? (c.quietos===1 ? 'Uno solo no cambia nunca: '+c.estables[0]+', dentro de las '+c.n+'.'
+                       : 'Solo dos no cambian nunca: '+c.estables.join(' y ')+'.')
+      : (c.quietos===1 ? 'Only one never changes: '+c.estables[0]+', inside all '+c.n+'.'
+                       : 'Only two never change: '+c.estables.join(' and ')+'.');
+    return ES() ? c.quietos+' lugares no cambian nunca.' : c.quietos+' places never change.';
+  }
+
+  function textoGuia(){
+    const c = cifrasGuia();
+    if(ES()) return (
+      '<p class="dv-entrada">La deriva recorre las '+c.n+' definiciones del Caribe que el atlas tiene documentadas, '+
+        'de '+c.a0+' a '+c.a1+', en el orden en que fueron escritas, y las proyecta una tras otra sobre los mismos '+c.L+' '+
+        'lugares. No añade ningún dato: cada estado que se ve viene de un texto fechado y citado con página en la ficha '+
+        'de su definición. Lo que cambia entre un mapa y el siguiente no es el Caribe, son los autores.</p>'+
+
+      '<h3>El mapa</h3><p>Cada lugar se pinta con el estado que esa definición le da: '+
+        pt('dentro')+' <b>aguamarina</b>, dentro del Caribe; '+pt('margen')+' <b>arena</b>, al margen; '+
+        pt('fuera')+' <b>anillo gris</b>, expresamente afuera; '+pt('disputa')+' <b>coral</b>, en disputa; y '+
+        pt('nada')+' <b>punteado</b> cuando el texto no se pronuncia. El silencio también se dibuja, porque una '+
+        'definición se reconoce tanto por lo que nombra como por lo que calla.</p>'+
+
+      '<h3>La estela</h3><p>Al pasar de una definición a la siguiente, cada lugar que cambia de estado deja un anillo '+
+        'del color que tenía, que se ensancha y se apaga. Es lo que hace visible el desplazamiento: sin ella se verían '+
+        c.n+' mapas sueltos; con ella se ve un movimiento.</p>'+
+
+      '<h3>La cinta de cambios</h3><p>Bajo la línea de años, la deriva enumera qué lugares cambian al entrar en cada '+
+        'definición, y de qué estado a cuál. Es el argumento del paso, escrito en lugares.</p>'+
+
+      '<h3>El índice de parpadeo</h3><p>Cuenta, para cada lugar, cuántas veces cambia de estado a lo largo de las '+c.n+
+        ' definiciones. '+c.top+' es el más inestable: cambia '+c.ntop+' veces. '+fraseEstables(c)+' '+
+        'El parpadeo no mide ambigüedad geográfica sino desacuerdo teórico: señala dónde se juega la discusión sobre '+
+        'qué es el Caribe.</p>'+
+
+      '<h3>Los mandos</h3><p><b>Reproducir</b> avanza en el acto y luego cada '+c.r+' segundos; el ritmo se cambia en el '+
+        'selector de al lado. <b>←</b> y <b>→</b>, o las flechas del teclado, pasan de una en una, y la <b>barra '+
+        'espaciadora</b> reproduce y pausa. <b>La pared</b> muestra las '+c.n+' a la vez, en miniatura, y al pulsar una '+
+        'se salta a ella. <b>Solo lo que parpadea</b> deja en el índice los lugares que cambian '+c.u+' veces o más. '+
+        '<b>Oleaje</b> enciende un mar sintetizado en el navegador —no hay archivo de sonido— que acompaña la '+
+        'reproducción. La dirección del navegador guarda la definición en pantalla: se puede citar o enviar tal cual.</p>'+
+
+      '<p class="dv-nota">Si el sistema está configurado para reducir el movimiento, la deriva no se reproduce sola ni '+
+        'deja estela: se avanza paso a paso y el resto funciona igual. Esta ayuda vuelve a abrirse con el botón '+
+        '«Cómo funciona» de la barra.</p>'
+    );
+    return (
+      '<p class="dv-entrada">The drift walks through the '+c.n+' definitions of the Caribbean documented in the atlas, '+
+        'from '+c.a0+' to '+c.a1+', in the order they were written, projecting each in turn onto the same '+c.L+' places. '+
+        'It adds no data: every state shown comes from a dated text, cited with page in that definition\u2019s record. '+
+        'What changes from one map to the next is not the Caribbean, it is the authors.</p>'+
+
+      '<h3>The map</h3><p>Each place is drawn with the state that definition gives it: '+
+        pt('dentro')+' <b>aquamarine</b>, inside the Caribbean; '+pt('margen')+' <b>sand</b>, at the margin; '+
+        pt('fuera')+' <b>open grey ring</b>, explicitly outside; '+pt('disputa')+' <b>coral</b>, in dispute; and '+
+        pt('nada')+' <b>dotted</b> where the text says nothing. Silence is drawn too, because a definition is known '+
+        'as much by what it names as by what it leaves out.</p>'+
+
+      '<h3>The wake</h3><p>Moving from one definition to the next, every place that changes state leaves a ring in its '+
+        'former colour, which widens and fades. That is what makes the displacement visible: without it you would see '+
+        c.n+' separate maps; with it you see a movement.</p>'+
+
+      '<h3>The change ribbon</h3><p>Below the year rail, the drift lists which places change on entering each '+
+        'definition, and from which state to which. It is the argument of the step, written in places.</p>'+
+
+      '<h3>The flicker index</h3><p>For each place it counts how many times it changes state across the '+c.n+
+        ' definitions. '+c.top+' is the most unstable: it changes '+c.ntop+' times. '+fraseEstables(c)+' '+
+        'Flicker measures theoretical disagreement rather than geographical vagueness: it marks where the argument '+
+        'about what the Caribbean is actually takes place.</p>'+
+
+      '<h3>The controls</h3><p><b>Play</b> steps forward at once and then every '+c.r+' seconds; the pace is set in the '+
+        'selector beside it. <b>←</b> and <b>→</b>, or the arrow keys, move one at a time, and the <b>space bar</b> '+
+        'plays and pauses. <b>The wall</b> shows all '+c.n+' at once as thumbnails, and clicking one jumps to it. '+
+        '<b>Only what flickers</b> keeps in the index the places that change '+c.u+' times or more. <b>Surf</b> turns on '+
+        'a sea synthesised in the browser —there is no audio file— that accompanies playback. The browser address holds '+
+        'the definition on screen: it can be cited or sent as it stands.</p>'+
+
+      '<p class="dv-nota">If the system asks for reduced motion, the drift does not play by itself and leaves no wake: '+
+        'you step through it, and everything else works the same. This help reopens with the «How it works» button on '+
+        'the bar.</p>'
+    );
+  }
+
+  function pintarGuia(){
+    guia.innerHTML =
+      '<div class="dv-guia-caja">'+
+        '<button type="button" class="dv-btn dv-cerrar" data-cerrar="1">'+t('cerrar')+'</button>'+
+        '<h2>'+t('guiaT')+'</h2>'+ textoGuia()+
+        '<p class="dv-cierre"><button type="button" class="dv-btn" data-cerrar="1" data-empezar="1">'+t('guiaOk')+'</button></p>'+
+      '</div>';
+  }
+  function abrirGuia(){
+    D.guia=true; pintarGuia(); guia.hidden=false;
+    const c=guia.querySelector('.dv-cerrar'); if(c) c.focus();
+  }
+  function cerrarGuia(){ D.guia=false; guia.hidden=true; if(!barra.hidden) btn.focus(); }
+  guia.addEventListener('click', ev=>{
+    const c = ev.target.closest('[data-cerrar]');
+    if(!c && ev.target!==guia) return;
+    const empezar = !!(c && c.dataset.empezar);
+    cerrarGuia();
+    if(empezar && !D.tocando) tocar();   /* el rótulo promete empezar: que empiece */
+  });
+
   /* ---------------- la pared ---------------- */
   function pintarPared(){
     pared.innerHTML =
@@ -249,7 +384,8 @@
     const card = ev.target.closest('.dv-card'); if(!card) return;
     pared.hidden=true; ir(+card.dataset.i, {parar:true});
   });
-  pared.addEventListener('keydown', ev=>{ if(ev.key==='Escape'){ pared.hidden=true; btn.focus(); } });
+  /* El Escape de la pared lo atiende el oyente de documento, más abajo: si además
+     se escuchara aquí, el mismo evento cerraría la pared y, al burbujear, la deriva. */
 
   /* ---------------- la barra ---------------- */
   function cambiosEntre(i){
@@ -302,6 +438,7 @@
         `<button type="button" class="dv-btn" data-acc="solo" aria-pressed="${D.soloParpadeo}">${t('solo')}</button>`+
         `<button type="button" class="dv-btn" data-acc="indice" aria-pressed="${D.indice}" aria-expanded="${D.indice}">${t('indice')}</button>`+
         `<button type="button" class="dv-btn dv-oleaje" data-acc="oleaje" aria-pressed="${OLA.on}" title="${t('oleajeOn')}">${t('oleaje')}</button>`+
+        `<button type="button" class="dv-btn dv-guia-abrir" data-acc="guia">${t('guia')}</button>`+
       `</div>`+
       `<div class="dv-narra">`+
         `<span class="dv-titulo"><span class="dv-year">${d.anio}</span>${loc(d.apellido)} · ${d.autor}</span>`+
@@ -359,13 +496,16 @@
     }
     pintarBarra();
   }
-  function abrir(){
+  function abrir({ayuda=true}={}){
     D.abierta=true; barra.hidden=false; btn.setAttribute('aria-pressed','true'); btn.classList.add('activo');
     if(!barra.dataset.lista){ barra.dataset.lista='1'; }
     ir(D.i);
+    /* la primera vez se explica sola: después, solo a petición */
+    let vista=false; try{ vista = localStorage.getItem('dv-guia')==='1'; }catch(e){ vista=true; }
+    if(!vista && ayuda){ try{ localStorage.setItem('dv-guia','1'); }catch(e){} abrirGuia(); }
   }
   function cerrar(){
-    D.abierta=false; detener(); silenciarOleaje(); barra.hidden=true;
+    D.abierta=false; detener(); silenciarOleaje(); barra.hidden=true; guia.hidden=true; D.guia=false;
     btn.setAttribute('aria-pressed','false'); btn.classList.remove('activo');
     const api=API(); if(api) api.quitar();
     try{ history.replaceState(null,'',location.pathname+location.search); }catch(e){}
@@ -389,6 +529,7 @@
     if(acc==='solo'){ D.soloParpadeo=!D.soloParpadeo; D.foco=null; pintarBarra(); }
     if(acc==='indice'){ D.indice=!D.indice; pintarBarra(); }
     if(acc==='oleaje'){ alternarOleaje(); }
+    if(acc==='guia'){ detener(); abrirGuia(); }
   });
   barra.addEventListener('change', ev=>{
     const s=ev.target.closest('[data-acc="ritmo"]'); if(!s) return;
@@ -397,12 +538,18 @@
 
   document.addEventListener('keydown', ev=>{
     if(barra.hidden) return;
+    if(!guia.hidden && ev.key!=='Escape') return;
     const dst = ev.target;
     if(dst && typeof dst.closest==='function' && dst.closest('input,select,textarea')) return;
     if(ev.key==='ArrowLeft'){ ir(D.i-1,{parar:true}); ev.preventDefault(); }
     if(ev.key==='ArrowRight'){ ir(D.i+1,{parar:true}); ev.preventDefault(); }
     if(ev.key===' '){ D.tocando? detener() : tocar(); ev.preventDefault(); }
-    if(ev.key==='Escape'){ if(!pared.hidden){ pared.hidden=true; } else cerrar(); }
+    if(ev.key==='Escape'){
+      if(!guia.hidden){ cerrarGuia(); }
+      else if(!pared.hidden){ pared.hidden=true; btn.focus(); }
+      else cerrar();
+      ev.preventDefault();
+    }
   });
 
   function leerHash(){
@@ -411,7 +558,7 @@
     const i = m[1] ? DEFS.findIndex(d=>d.id===m[1]) : 0;
     D.i = i<0 ? 0 : i;
     const u=document.getElementById('umbral'); if(u) u.classList.add('gone');
-    abrir();
+    abrir({ayuda:!m[1]});   /* si el enlace apunta a una definición, no se tapa con la ayuda */
     return true;
   }
   window.addEventListener('hashchange', leerHash);

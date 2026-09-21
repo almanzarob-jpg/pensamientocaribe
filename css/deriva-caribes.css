@@ -128,7 +128,33 @@ label.dv-rotulo{ position:static; }
 .dv-card strong{ font-family:var(--ff-display); font-size:.95rem; font-weight:600; line-height:1.2; }
 .dv-cerrar{ position:absolute; top:calc(1rem + env(safe-area-inset-top, 0px)); right:1rem; }
 
+/* ----- cómo funciona -----
+   Una tarjeta centrada sobre el mapa, con los mismos tokens del atlas. Se abre
+   sola la primera vez que se enciende la deriva y después solo a petición. */
+.dv-guia{ position:fixed; inset:0; z-index:720; display:grid; place-items:center;
+  padding:1.2rem; background:rgba(5,6,4,.86); backdrop-filter:blur(3px); }
+.dv-guia[hidden]{ display:none; }
+.dv-guia-caja{ position:relative; width:100%; max-width:60ch; max-height:84vh; overflow:auto;
+  background:var(--bg-deep); border:1px solid var(--line); border-radius:10px;
+  padding:1.4rem 1.5rem 1.5rem; color:var(--cream);
+  font-family:var(--ff-body); font-size:.88rem; line-height:1.58; }
+.dv-guia h2{ margin:.1rem 3.5rem .6rem 0; font-family:var(--ff-display); font-size:1.4rem; font-weight:600; }
+.dv-guia h3{ margin:1.05rem 0 .22rem; font-size:.72rem; letter-spacing:.07em; text-transform:uppercase;
+  color:var(--gold); font-weight:500; font-family:var(--ff-body); }
+.dv-guia p{ margin:0; }
+.dv-guia b{ font-weight:500; }
+.dv-guia .dv-entrada{ color:var(--gray); margin:0 0 .2rem; }
+.dv-guia .dv-nota{ color:var(--gray); font-size:.8rem; margin-top:1.1rem;
+  border-top:1px solid var(--line); padding-top:.75rem; }
+.dv-guia .dv-cierre{ margin-top:1.2rem; }
+.dv-guia .dv-pt{ transform:translateY(1px); }
+
 @media (max-width:780px){
   .dv-barra{ max-height:60vh; font-size:.82rem; }
   .dv-lugar{ grid-template-columns:7rem 1.8rem 1fr; }
+}
+
+@media (max-width:780px){
+  .dv-guia{ padding:.8rem; }
+  .dv-guia-caja{ padding:1.1rem 1.1rem 1.2rem; max-height:88vh; }
 }
