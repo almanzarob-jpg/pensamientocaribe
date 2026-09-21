@@ -1,8 +1,8 @@
 {
   "lote": "TP01",
   "nombre": "Temporalidad: separación de publicación y periodo estudiado",
-  "fecha": "2026-09-18",
-  "base": "datos-atlas.json v1.21.0 · 287 entradas",
+  "fecha": "2026-09-21",
+  "base": "datos-atlas.json v1.22.0 · 310 entradas",
   "limite": "Capa aditiva. No modifica el campo heredado y, ni datos-atlas.json, ni el orden actual de la cronología. Un periodo estudiado no se deriva nunca de forma mecánica: exige lectura de la obra.",
   "procedencias": {
     "dictamen": "Aprobado en una capa cerrada (P00, S01, A01 o A02). Estado: confirmado.",
@@ -10,12 +10,12 @@
     "sin_derivar": "El campo y está vacío o guarda una cadena que no es un año. Estado: pendiente."
   },
   "recuento": {
-    "entradas": 287,
+    "entradas": 310,
     "confirmados": 53,
-    "candidaturas": 222,
+    "candidaturas": 245,
     "pendientes": 12,
     "con_periodo_estudiado": 24,
-    "sin_periodo_estudiado": 263
+    "sin_periodo_estudiado": 286
   },
   "registros": [
     {
@@ -3699,6 +3699,282 @@
       "y_heredado": "1996",
       "publicacion": {
         "valor": 1996,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "depestrenegritud",
+      "y_heredado": "1980",
+      "publicacion": {
+        "valor": 1980,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "cesairetoussaint",
+      "y_heredado": "1960",
+      "publicacion": {
+        "valor": 1960,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "duboisavengers",
+      "y_heredado": "2004",
+      "publicacion": {
+        "valor": 2004,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "hectorhurbongenese",
+      "y_heredado": "2009",
+      "publicacion": {
+        "valor": 2009,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "putnamcompany",
+      "y_heredado": "2002",
+      "publicacion": {
+        "valor": 2002,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "chambershonduras",
+      "y_heredado": "2010",
+      "publicacion": {
+        "valor": 2010,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "johnsonfrenchnegroes",
+      "y_heredado": "2012",
+      "publicacion": {
+        "valor": 2012,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "rodneygroundings",
+      "y_heredado": "1969",
+      "publicacion": {
+        "valor": 1969,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "rodneyguyanese",
+      "y_heredado": "1981",
+      "publicacion": {
+        "valor": 1981,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "oxaaltrinidad",
+      "y_heredado": "1982",
+      "publicacion": {
+        "valor": 1982,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "graydemeaned",
+      "y_heredado": "2004",
+      "publicacion": {
+        "valor": 2004,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "marsyounglabor",
+      "y_heredado": "2004",
+      "publicacion": {
+        "valor": 2004,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "huttonhowell",
+      "y_heredado": "2015",
+      "publicacion": {
+        "valor": 2015,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "walmsleycam",
+      "y_heredado": "1992",
+      "publicacion": {
+        "valor": 1992,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "gloverregarded",
+      "y_heredado": "2021",
+      "publicacion": {
+        "valor": 2021,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "barriteaupolecon",
+      "y_heredado": "2001",
+      "publicacion": {
+        "valor": 2001,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "sanmigueltinoel",
+      "y_heredado": "2004",
+      "publicacion": {
+        "valor": 2004,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "diazquinonesmemoria",
+      "y_heredado": "1993",
+      "publicacion": {
+        "valor": 1993,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "harrispalace",
+      "y_heredado": "1960",
+      "publicacion": {
+        "valor": 1960,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "girvanreinterpretar",
+      "y_heredado": "2000",
+      "publicacion": {
+        "valor": 2000,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "gomespalmares",
+      "y_heredado": "2012",
+      "publicacion": {
+        "valor": 2012,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "cabarcascartografia",
+      "y_heredado": "2025",
+      "publicacion": {
+        "valor": 2025,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "chamorroclubnegro",
+      "y_heredado": "2024",
+      "publicacion": {
+        "valor": 2024,
         "era": "EC",
         "precision": "exacta"
       },

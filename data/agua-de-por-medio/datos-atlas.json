@@ -3,9 +3,9 @@
     "titulo": "Con el agua de por medio",
     "subtitulo": "Atlas para una antropología archipiélica",
     "responsable": "Grupo de Investigación Pensamiento Caribe",
-    "version": "1.21.0",
-    "fecha": "2026-09-18",
-    "nota_version": "Lote S20-BR: primera entrada lusófona del corpus. Entra Freedom by a Thread / Liberdade por um fio (Reis y Gomes, orgs.), con seis relaciones nuevas, todas corroboradas por cita de título catalogado: Maroon Societies, First-Time, Alabi's World, Travels with Tooy y Rainforest Warriors de Richard Price, y Caribbean Transformations de Mintz. El anclaje cartográfico es Oriximiná · Trombetas, Pará, como geografía situada de los quilombos amazónicos; el ámbito más amplio del Baixo Amazonas y Brasil se conserva en orillas. Quedan fuera de este lote, verificadas pero sin anclaje decidido, Palmares y O Alufá Rufino de Gomes/Reis/Carvalho y Brazil: Mixture or Massacre? de Abdias do Nascimento. Clasificación por corrientes pendiente de adjudicación académica."
+    "version": "1.22.0",
+    "fecha": "2026-09-21",
+    "nota_version": "Lote S21-2026-09-21: 23 obras y 132 relaciones nuevas, 124 de ellas corroboradas por cita de título catalogado. Se abre el nodo Honduras (Tela, costa norte), que cierra el arco centroamericano del atlas, y el nodo Serra da Barriga · União dos Palmares para la segunda entrada lusófona. Entran por decisión expresa de la dirección académica dos registros nuevos para el corpus: una obra de ficción (Palace of the Peacock, de Wilson Harris) y un artículo de revista (Reinterpretar al Caribe, de Norman Girvan), además de dos volúmenes de la colección institucional Otras Colombias posibles. Descartes argumentados del lote: Adeleke, Africa in Black Liberation Activism (eje africano, no de cuenca) y Nascimento, Brazil: Mixture or Massacre? (la única coincidencia con el corpus es un uso genérico de «maroon societies» en un glosario, no una cita). Clasificación por corrientes pendiente de adjudicación académica en las 23 fichas."
   },
   "fenomenos": {
     "colonialidad": {
@@ -257,6 +257,20 @@
       -61.68,
       "Granada",
       "pais"
+    ],
+    "honduras": [
+      15.78,
+      -87.46,
+      "Tela · costa norte de Honduras",
+      "ciudad",
+      "el enclave bananero hondureño · Honduras"
+    ],
+    "palmaresbr": [
+      -9.16,
+      -36.03,
+      "Serra da Barriga · União dos Palmares",
+      "ciudad",
+      "el quilombo de Palmares · Alagoas, Brasil"
     ]
   },
   "obras": [
@@ -9360,6 +9374,1705 @@
         "fecha": "2026-09-18",
         "fundamento": "C3 es la candidatura principal: el volumen organiza su argumento alrededor de la fuga y sus comunidades. C9 aparece por el peso del testimonio oral de quilombolas en el capítulo amazónico. Debe decidirse si un volumen colectivo con capítulos de argumento heterogéneo se clasifica por su introducción o exige arquitectura de síntesis multicorriente."
       }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S21-2026-09-21",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "id": "depestrenegritud",
+      "t": "Buenos días y adiós a la negritud",
+      "a": "René Depestre",
+      "y": "1980",
+      "f": [
+        "colonialidad",
+        "creolizacion",
+        "memoria"
+      ],
+      "l": "haiti",
+      "tr": "francófono (Haití/Cuba)",
+      "ap": "La despedida razonada de la negritud escrita desde dentro de ella. Depestre desmonta el «plancton racial en eterna suspensión» con que la antropología culturalista leyó la presencia africana en América: lo heredado de África, de Europa y del mundo precolombino no fue reinterpretado por los negros, fue remetabolizado por las condiciones materiales de vida y por las luchas de emancipación que dieron forma a los Estados nacionales del área. De ahí su tesis: la negritud fue necesaria como respuesta al mito racial —esa «semiología somática» que valorizaba al blanco cualquiera fuese su clase— pero se vuelve una trampa cuando convierte la reacción en esencia. El libro incluye la entrevista con Césaire que es, ella sola, un documento de la disputa interna del pensamiento afrocaribeño del siglo XX.",
+      "ed": "Casa de las Américas",
+      "edicion_consultada": "Buenos días y adiós a la negritud, Cuadernos Casa 29, Casa de las Américas, La Habana, 1985; traducción de Bonjour et adieu à la négritude, Robert Laffont, París, 1980. Ejemplar digitalizado por OCR, sin paginación estable.",
+      "lenguas_publicacion": [
+        "francés",
+        "español"
+      ],
+      "operaciones": [
+        "confrontar una categoría",
+        "teorizar",
+        "elaborar un concepto"
+      ],
+      "orillas": [
+        {
+          "lugar": "haiti",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "cuba",
+          "funcion": "lugar de producción intelectual"
+        },
+        {
+          "tipo": "región",
+          "label": "Caribe francófono",
+          "funcion": "territorio comparado"
+        },
+        {
+          "tipo": "región",
+          "label": "Américas negras",
+          "funcion": "territorio comparado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "creolizaciones_traducciones_opacidades",
+          "memorias_espiritualidades_archivos_vivos"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: introducción, capítulos sobre el mito racial y la semiología somática, entrevista con Aimé Césaire y notas que citan a Price-Mars, Césaire y Fanon.",
+        "responsable": "Preparación asistida del lote S21; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-21",
+        "fundamento": "C8 es la candidatura principal: el libro discute cómo se nombra y se traduce la diferencia, no cómo se huye de ella. C9 aparece porque la discusión se libra sobre la herencia y su transmisión. Debe decidirse si una crítica de la negritud se clasifica por su objeto (la categoría) o por el campo que la produce."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S21-2026-09-21",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "id": "cesairetoussaint",
+      "t": "Toussaint Louverture: la Révolution française et le problème colonial",
+      "a": "Aimé Césaire",
+      "y": "1960",
+      "f": [
+        "colonialidad",
+        "soberanias",
+        "cimarronaje"
+      ],
+      "l": "haiti",
+      "tr": "francófono (Haití/Martinica)",
+      "ap": "Césaire historiador, no poeta. Lee la Revolución de Saint-Domingue como el lugar donde la Revolución francesa encuentra su límite: la libertad universal proclamada en París tropieza con el problema colonial y solo se resuelve cuando los esclavizados la toman por su cuenta. Toussaint no aparece como discípulo tardío de 1789 sino como quien obliga a la metrópoli a decir lo que su propia declaración implicaba. El libro es además la prueba de que la negritud martiniqueña necesitó escribir la historia haitiana para fundarse.",
+      "ed": "Présence Africaine",
+      "edicion_consultada": "Toussaint Louverture: The French Revolution and the Colonial Problem, trad. Kate Nash, pref. Gary Wilder, Polity Press, Cambridge, 2024 (1.ª ed. Club français du livre, París, 1960; Présence Africaine, 1961); PDF.",
+      "isbn": "9781509559374",
+      "lenguas_publicacion": [
+        "francés",
+        "inglés"
+      ],
+      "operaciones": [
+        "reconstruir un archivo",
+        "teorizar",
+        "narrar"
+      ],
+      "orillas": [
+        {
+          "lugar": "haiti",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "martinica",
+          "funcion": "lugar de producción intelectual"
+        },
+        {
+          "tipo": "región",
+          "label": "Francia revolucionaria",
+          "funcion": "territorio comparado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "fugas_cimarronajes_emancipaciones",
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: prefacio de Gary Wilder, capítulos sobre la Asamblea Constituyente y el problema colonial, y aparato de notas.",
+        "responsable": "Preparación asistida del lote S21; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-21",
+        "fundamento": "C3 por la emancipación como acto de los esclavizados; C7 porque el argumento central es la soberanía que la metrópoli no quiso conceder. Debe decidirse si una obra de historia escrita por un poeta de la negritud se clasifica por su objeto o por su lugar de enunciación."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S21-2026-09-21",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "id": "duboisavengers",
+      "t": "Avengers of the New World: The Story of the Haitian Revolution",
+      "a": "Laurent Dubois",
+      "y": "2004",
+      "f": [
+        "cimarronaje",
+        "soberanias",
+        "colonialidad"
+      ],
+      "l": "haiti",
+      "tr": "anglófono (Haití)",
+      "ap": "La síntesis que devolvió la Revolución haitiana al centro de la historia atlántica. Dubois sigue el paso de esclavizados a ciudadanos del imperio que los esclavizó y de ahí a fundadores de una nación, y muestra que el mismo acontecimiento funcionó como esperanza para quienes combatían la esclavitud y como advertencia para quienes la defendían: de esa doble lectura nació el aislamiento económico y el escarnio racista del Haití decimonónico. Explicita la operación historiográfica que Trouillot había nombrado: la revolución no fue ignorada por falta de fuentes sino porque resultaba impensable.",
+      "ed": "The Belknap Press of Harvard University Press",
+      "edicion_consultada": "Harvard University Press, Cambridge (Mass.), 2004; PDF.",
+      "isbn": "9780674013049",
+      "lenguas_publicacion": [
+        "inglés"
+      ],
+      "operaciones": [
+        "reconstruir un archivo",
+        "narrar",
+        "comparar orillas"
+      ],
+      "orillas": [
+        {
+          "lugar": "haiti",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Atlántico revolucionario",
+          "funcion": "territorio comparado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "fugas_cimarronajes_emancipaciones",
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: prólogo, capítulos iniciales y notas que citan a C.L.R. James, Trouillot, Mintz y Fouchard.",
+        "responsable": "Preparación asistida del lote S21; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-21",
+        "fundamento": "C3 por la emancipación armada como eje; C7 por la fundación estatal y su castigo internacional. Debe decidirse si una síntesis narrativa de alcance general se clasifica igual que una monografía de archivo."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S21-2026-09-21",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "id": "hectorhurbongenese",
+      "t": "Genèse de l'État haïtien (1804-1859)",
+      "a": "Michel Hector y Laënnec Hurbon (dirs.)",
+      "y": "2009",
+      "f": [
+        "soberanias",
+        "colonialidad",
+        "postplantacion"
+      ],
+      "l": "haiti",
+      "tr": "francófono (Haití)",
+      "ap": "Qué clase de Estado salió de la única revolución de esclavizados que triunfó. El volumen —nacido del coloquio de Puerto Príncipe de 2005, dentro del proyecto Ruta del Esclavo de la Unesco— reúne a historiadores y sociólogos haitianos, Jean Casimir entre ellos, para seguir el medio siglo en que el país tuvo que inventar instituciones sin modelo y bajo bloqueo. Contra la lectura del «fracaso haitiano», muestra un Estado que negocia entre el proyecto de los antiguos libres y el contraproyecto campesino de los recién emancipados: la disputa por la tierra es la disputa por la forma del Estado.",
+      "ed": "Éditions de la Maison des sciences de l'homme / Presses nationales d'Haïti",
+      "edicion_consultada": "Éditions de la Maison des sciences de l'homme, París, ed. digital 2018 (1.ª ed. Presses nationales d'Haïti / MSH, 2009); epub sin paginación estable.",
+      "isbn": "9782735112548",
+      "lenguas_publicacion": [
+        "francés"
+      ],
+      "operaciones": [
+        "reconstruir un archivo",
+        "teorizar",
+        "comparar orillas"
+      ],
+      "orillas": [
+        {
+          "lugar": "haiti",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Caribe francófono",
+          "funcion": "territorio comparado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "postplantacion_trabajo_desposesion"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: prefacio de la Unesco, presentación de Hector y Hurbon, notas de los capítulos sobre el campesinado y aparato bibliográfico.",
+        "responsable": "Preparación asistida del lote S21; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-21",
+        "fundamento": "C7 es la candidatura principal por la construcción estatal; C4 aparece porque la pregunta de fondo es qué hacer con la plantación después de la abolición. Debe decidirse si un volumen colectivo de actas se clasifica por su convocatoria o por capítulo."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S21-2026-09-21",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "id": "putnamcompany",
+      "t": "The Company They Kept: Migrants and the Politics of Gender in Caribbean Costa Rica, 1870-1960",
+      "a": "Lara Putnam",
+      "y": "2002",
+      "f": [
+        "postplantacion",
+        "cuerpo_erotica",
+        "capitalismo_racial"
+      ],
+      "l": "costarica",
+      "tr": "anglófono (Limón, Costa Rica)",
+      "ap": "La economía bananera vista desde la casa y no desde el muelle. Putnam sigue a migrantes jamaiquinos, nicaragüenses y del valle central hacia Limón y demuestra que las amenazas y las acusaciones de violencia fueron parte constitutiva de los reclamos de autoridad en todos los niveles —de la política pública a la línea de producción y a la vida doméstica—, y que sobre esas acusaciones se moldearon las ideas de carácter racial y nacional que circularon por las fincas. El parentesco, el trabajo sexual y la crianza dejan de ser telón de fondo y pasan a ser el mecanismo por el que se administró una fuerza de trabajo racializada.",
+      "ed": "University of North Carolina Press",
+      "edicion_consultada": "The University of North Carolina Press, Chapel Hill, 2002; PDF.",
+      "isbn": "9780807827321",
+      "lenguas_publicacion": [
+        "inglés"
+      ],
+      "operaciones": [
+        "reconstruir un archivo",
+        "producir etnografía",
+        "seguir una ruta"
+      ],
+      "orillas": [
+        {
+          "lugar": "costarica",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "jamaica",
+          "funcion": "territorio comparado"
+        },
+        {
+          "tipo": "región",
+          "label": "circuito bananero centroamericano",
+          "funcion": "territorio estudiado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "postplantacion_trabajo_desposesion",
+          "cuerpos_parentescos_eroticas"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: introducción, capítulo sobre violencia y autoridad, y bibliografía (Chomsky, Bourgois, Harpelle, Mintz, Trouillot, Wilson, Barrow, Chevannes, Cooper, Austin-Broos, Knight, Winston James).",
+        "responsable": "Preparación asistida del lote S21; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-21",
+        "fundamento": "C4 por el régimen de trabajo de enclave; C10 porque el argumento se juega en el parentesco y la sexualidad. Debe decidirse cuál de las dos ordena la obra cuando ambas son inseparables en el texto."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S21-2026-09-21",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Tela, en la costa norte de Honduras, funciona como anclaje situado del enclave bananero estudiado. La elección privilegia la geografía del puerto y la finca sobre la representación de Honduras como unidad nacional abstracta; el ámbito completo se conserva en orillas."
+      },
+      "id": "chambershonduras",
+      "t": "Race, Nation, and West Indian Immigration to Honduras, 1890-1940",
+      "a": "Glenn A. Chambers",
+      "y": "2010",
+      "f": [
+        "capitalismo_racial",
+        "postplantacion",
+        "violencias"
+      ],
+      "l": "honduras",
+      "tr": "anglófono (costa norte de Honduras)",
+      "ap": "La contracara hondureña del enclave bananero. Chambers reconstruye cómo la reforma liberal atrajo trabajadores antillanos a Tela, Trujillo y la costa norte, cómo la legislación migratoria y la intelectualidad nacional convirtieron esa presencia en «invasión negra», y cómo la crisis de los años treinta terminó en deportaciones. En el intermedio muestra a los antillanos sosteniendo escuelas, iglesias e identidad británica como estrategia de protección frente al mestizaje oficial: una ciudadanía imaginada contra el Estado que los importó. Es la pieza que faltaba para que el arco centroamericano del atlas —Costa Rica, Nicaragua, Panamá, Belice— dejara de tener un hueco en Honduras.",
+      "ed": "Louisiana State University Press",
+      "edicion_consultada": "Louisiana State University Press, Baton Rouge, 2010; PDF.",
+      "isbn": "9780807135570",
+      "lenguas_publicacion": [
+        "inglés"
+      ],
+      "operaciones": [
+        "reconstruir un archivo",
+        "comparar orillas",
+        "confrontar una categoría"
+      ],
+      "orillas": [
+        {
+          "lugar": "honduras",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "jamaica",
+          "funcion": "territorio comparado"
+        },
+        {
+          "lugar": "belize",
+          "funcion": "territorio comparado"
+        },
+        {
+          "tipo": "región",
+          "label": "circuito bananero centroamericano",
+          "funcion": "territorio estudiado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "postplantacion_trabajo_desposesion",
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: introducción, capítulos 2, 3 y 6 (legislación migratoria, respuesta intelectual y deportaciones) y notas bibliográficas.",
+        "responsable": "Preparación asistida del lote S21; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-21",
+        "fundamento": "C4 por el enclave y su régimen laboral; C7 porque el cierre del argumento es la frontera y la deportación. Debe decidirse si la expulsión ordena la obra más que el trabajo."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S21-2026-09-21",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en Haití como origen de la diáspora estudiada; Luisiana, Cuba y Jamaica quedan declaradas en orillas conforme al contrato territorial §14."
+      },
+      "id": "johnsonfrenchnegroes",
+      "t": "The Fear of French Negroes: Transcolonial Collaboration in the Revolutionary Americas",
+      "a": "Sara E. Johnson",
+      "y": "2012",
+      "f": [
+        "cimarronaje",
+        "creolizacion",
+        "violencias"
+      ],
+      "l": "haiti",
+      "tr": "anglófono (diáspora de Saint-Domingue)",
+      "ap": "Lo que asustaba a los imperios no era la revuelta sino la colaboración. Johnson sigue a la diáspora de Saint-Domingue —corsarios, perros de presa, músicos, impresores, esclavizados fugados— por Luisiana, Cuba y Jamaica, y muestra que los sujetos de imperios distintos cooperaron a pesar de la sospecha estatal, porque esa cooperación prometía autonomía. El caso de Joseph Savary, corsario negro y esclavista, le sirve para exhibir la operación por la que autoridades y después historiadores expulsaron a los actores negros del relato: ni el molde nacionalista ni el abolicionista supieron dónde ponerlo. El libro obliga a preguntar el sentido del momento revolucionario a través de las geografías, no dentro de cada una.",
+      "ed": "University of California Press",
+      "edicion_consultada": "University of California Press, Berkeley, 2012, col. FlashPoints 12; epub sin paginación estable, citas localizables por búsqueda de frase.",
+      "isbn": "9780520271128",
+      "lenguas_publicacion": [
+        "inglés"
+      ],
+      "operaciones": [
+        "comparar orillas",
+        "reconstruir un archivo",
+        "seguir una ruta"
+      ],
+      "orillas": [
+        {
+          "lugar": "haiti",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "nola",
+          "funcion": "espacio diaspórico"
+        },
+        {
+          "lugar": "cuba",
+          "funcion": "espacio diaspórico"
+        },
+        {
+          "lugar": "jamaica",
+          "funcion": "espacio diaspórico"
+        },
+        {
+          "tipo": "cuenca",
+          "label": "Caribe revolucionario",
+          "funcion": "territorio estudiado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "rutas_diasporas_territorios_acuosos",
+          "fugas_cimarronajes_emancipaciones"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: introducción, capítulo sobre Savary y aparato de notas (19 títulos catalogados citados).",
+        "responsable": "Preparación asistida del lote S21; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-21",
+        "fundamento": "C5 por la trayectoria transcolonial que estructura el libro; C3 porque el contenido de esa trayectoria es la fuga y la insurrección. Debe decidirse si la ruta o su contenido ordena la clasificación."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S21-2026-09-21",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "id": "rodneygroundings",
+      "t": "The Groundings with My Brothers",
+      "a": "Walter Rodney",
+      "y": "1969",
+      "f": [
+        "colonialidad",
+        "memoria",
+        "violencias"
+      ],
+      "l": "jamaica",
+      "tr": "anglófono (Jamaica/Guyana)",
+      "ap": "El libro que costó una expulsión y desató una revuelta. Rodney reúne las charlas que dio fuera del aula —con rastafaris, desempleados y estudiantes— y las defiende como método: sentarse en el suelo a razonar es una forma de producción de conocimiento, no su divulgación. El capítulo sobre la historia africana al servicio de la revolución negra formula la exigencia que todavía queda incompleta: enseñar historia africana en la escuela pública y disputar la universidad, que seguía siendo el problema. Es el texto donde el Black Power caribeño deja de importarse de Estados Unidos y se escribe desde la cuenca.",
+      "ed": "Verso",
+      "edicion_consultada": "Verso Books, Londres, 2019, con textos de Carole Boyce Davies, Patricia Rodney y Verene Shepherd (1.ª ed. Bogle-L'Ouverture, Londres, 1969); epub sin paginación estable.",
+      "isbn": "9781788731157",
+      "lenguas_publicacion": [
+        "inglés"
+      ],
+      "operaciones": [
+        "intervenir políticamente",
+        "producir testimonio",
+        "teorizar"
+      ],
+      "orillas": [
+        {
+          "lugar": "jamaica",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "guyana",
+          "funcion": "lugar de producción intelectual"
+        },
+        {
+          "tipo": "región",
+          "label": "África oriental (Dar es Salaam)",
+          "funcion": "lugar de circulación"
+        },
+        {
+          "tipo": "región",
+          "label": "Gran Bretaña",
+          "funcion": "lugar de circulación"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "memorias_espiritualidades_archivos_vivos",
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: prólogos de la edición de 2019, capítulo «African History in the Service of Black Revolution» y notas.",
+        "responsable": "Preparación asistida del lote S21; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-21",
+        "fundamento": "C9 por la transmisión de saber fuera de la institución; C7 por la disputa política que el libro abre en Jamaica en 1968. Debe decidirse si un conjunto de charlas transcritas se clasifica por su forma o por su efecto."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S21-2026-09-21",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "id": "rodneyguyanese",
+      "t": "A History of the Guyanese Working People, 1881-1905",
+      "a": "Walter Rodney",
+      "y": "1981",
+      "f": [
+        "postplantacion",
+        "capitalismo_racial",
+        "violencias"
+      ],
+      "l": "guyana",
+      "tr": "anglófono (Guyana)",
+      "ap": "La historia obrera que Rodney escribió mientras el gobierno preparaba su juicio y que se publicó el año en que lo asesinaron. Contra la explicación racial de la división entre trabajadores africanos e indios, Rodney reconstruye las constricciones internas y externas —el medio físico de la costa anegada, los intereses de clase, la fuerza del capital internacional— que produjeron esa división y la resistencia que la atravesó: la diferenciación socioeconómica en el pequeño campesinado de la costa y del interior aparece como el laboratorio donde se decidió qué sería el trabajo después de la plantación. La edición de Johns Hopkins, dirigida por Franklin W. Knight y Richard Price, con prólogo de George Lamming, es el gesto institucional que consagró esa historiografía.",
+      "ed": "The Johns Hopkins University Press",
+      "edicion_consultada": "The Johns Hopkins University Press, Baltimore, 1981, col. Johns Hopkins Studies in Atlantic History and Culture, eds. Franklin W. Knight y Richard Price, pref. George Lamming (ed. británica Heinemann, 1981); PDF escaneado sin capa de texto, leído por OCR parcial.",
+      "isbn": "9780435987602",
+      "lenguas_publicacion": [
+        "inglés"
+      ],
+      "operaciones": [
+        "reconstruir un archivo",
+        "teorizar",
+        "confrontar una categoría"
+      ],
+      "orillas": [
+        {
+          "lugar": "guyana",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Caribe anglófono",
+          "funcion": "territorio comparado"
+        },
+        {
+          "tipo": "cuenca",
+          "label": "costa anegada y hinterland del Demerara",
+          "funcion": "territorio estudiado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "postplantacion_trabajo_desposesion",
+          "trata_esclavizacion_plantacion"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: portada, créditos, nota de los editores (Knight y Price), prólogo de Lamming e índice analítico; el resto del volumen está en PDF escaneado y se leyó por OCR parcial.",
+        "responsable": "Preparación asistida del lote S21; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-21",
+        "fundamento": "C4 es la candidatura principal: el objeto es la clase trabajadora posterior a la abolición. C2 aparece porque el argumento remonta la división racial del trabajo a la plantación esclavista. Debe decidirse si la obra se clasifica por su periodo o por su genealogía."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S21-2026-09-21",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "id": "oxaaltrinidad",
+      "t": "Black Intellectuals and the Dilemmas of Race and Class in Trinidad",
+      "a": "Ivar Oxaal",
+      "y": "1982",
+      "f": [
+        "colonialidad",
+        "capitalismo_racial",
+        "memoria"
+      ],
+      "l": "trinidad",
+      "tr": "anglófono (Trinidad)",
+      "ap": "La sociología del «scholarship boy»: cómo una colonia produjo a la vez a Eric Williams, C.L.R. James y George Padmore, y qué les hizo la independencia. Oxaal sigue la educación colonial —el pulso entre Estado e Iglesia, la beca al extranjero, el retorno— y la enfrenta con la economía y las antipatías entre criollos y trabajadores indo-trinitarios, para explicar por qué el nacionalismo negro llegó al poder sin resolver la cuestión de clase. Escrito en 1968 y reeditado en 1982, el libro documenta también su propio desencanto, y por eso sirve de contrapunto a las historias heroicas del intelectual anticolonial.",
+      "ed": "Schenkman Publishing Company",
+      "edicion_consultada": "Schenkman Publishing Company, Cambridge (Mass.), 1982, edición revisada de Black Intellectuals Come to Power: The Rise of Creole Nationalism in Trinidad and Tobago, 1968; PDF.",
+      "isbn": "9780870734175",
+      "lenguas_publicacion": [
+        "inglés"
+      ],
+      "operaciones": [
+        "producir etnografía",
+        "reconstruir un archivo",
+        "confrontar una categoría"
+      ],
+      "orillas": [
+        {
+          "lugar": "trinidad",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Gran Bretaña",
+          "funcion": "lugar de circulación"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "postplantacion_trabajo_desposesion",
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: índice analítico, capítulos 3 y 4 (sentido de nación y educación colonial) y notas que citan a C.L.R. James y a Rodney.",
+        "responsable": "Preparación asistida del lote S21; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-21",
+        "fundamento": "C4 por la cuestión de clase que el libro sostiene contra el nacionalismo racial; C7 por la independencia como horizonte del argumento. Debe decidirse si una sociología de intelectuales se clasifica por el campo que estudia o por el conflicto que diagnostica."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S21-2026-09-21",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "id": "graydemeaned",
+      "t": "Demeaned but Empowered: The Social Power of the Urban Poor in Jamaica",
+      "a": "Obika Gray",
+      "y": "2004",
+      "f": [
+        "violencias",
+        "soberanias",
+        "postplantacion"
+      ],
+      "l": "jamaica",
+      "tr": "anglófono (Jamaica)",
+      "ap": "Una teoría del poder de los que no mandan. Gray sostiene que los pobres urbanos de Kingston ejercieron presión real sobre un Estado parasitario sin mediación política: no por asalto frontal ni conducidos por intelectuales, sino por actos autónomos, pequeños, persistentes y acumulativos dentro y fuera del aparato estatal. La contracara es amarga: los partidos reconciliaron esa tensión con clientelismo, solicitación cultural y captura de las culturas rebeldes, convirtiendo a sus portadores en comunidades «protonacionales» enfrentadas a muerte entre sí. Es la pieza que explica la violencia jamaiquina sin patologizar a los pobres ni absolver al Estado.",
+      "ed": "University of the West Indies Press",
+      "edicion_consultada": "University of the West Indies Press, Kingston, 2004; PDF.",
+      "isbn": "9781435611276",
+      "lenguas_publicacion": [
+        "inglés"
+      ],
+      "operaciones": [
+        "teorizar",
+        "producir etnografía",
+        "intervenir políticamente"
+      ],
+      "orillas": [
+        {
+          "lugar": "jamaica",
+          "funcion": "territorio estudiado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "postplantacion_trabajo_desposesion"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: introducción y capítulos sobre poder parasitario y clientelismo; notas que citan a Chevannes, Cooper y Brathwaite.",
+        "responsable": "Preparación asistida del lote S21; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-21",
+        "fundamento": "C7 por el Estado y su captura como eje; C4 porque el sujeto es una clase producida por el desempleo estructural. Debe decidirse si el poder informal se clasifica como soberanía o como trabajo."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S21-2026-09-21",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en Guyana por el legado de Jagan, con Jamaica declarada en orillas como el segundo territorio estudiado del volumen."
+      },
+      "id": "marsyounglabor",
+      "t": "Caribbean Labor and Politics: Legacies of Cheddi Jagan and Michael Manley",
+      "a": "Perry Mars y Alma H. Young (eds.)",
+      "y": "2004",
+      "f": [
+        "soberanias",
+        "capitalismo_racial",
+        "postplantacion"
+      ],
+      "l": "guyana",
+      "tr": "anglófono (Guyana/Jamaica)",
+      "ap": "Dos proyectos socialistas caribeños leídos juntos y desde el trabajo. El volumen pone a Jagan y a Manley en la misma mesa —con textos de Norman Girvan, Anthony Bogues, Clive Thomas, Hilbourne Watson y Lynn Bolles— para preguntar qué hizo la Guerra Fría con el movimiento obrero del área y qué hizo la etnopolítica con el proyecto de clase. La respuesta incómoda es que el sindicalismo anglófono fue transformado por la intervención externa antes de ser derrotado internamente, y que el liderazgo sindical femenino quedó fuera del relato de ambos legados.",
+      "ed": "Wayne State University Press",
+      "edicion_consultada": "Wayne State University Press, Detroit, 2004, col. African American Life Series; PDF.",
+      "isbn": "9780814332115",
+      "lenguas_publicacion": [
+        "inglés"
+      ],
+      "operaciones": [
+        "comparar orillas",
+        "teorizar",
+        "intervenir políticamente"
+      ],
+      "orillas": [
+        {
+          "lugar": "guyana",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "jamaica",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Caribe anglófono",
+          "funcion": "territorio comparado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "postplantacion_trabajo_desposesion"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: introducción de Mars y Young, índice de contribuciones y capítulos de Girvan y Bogues.",
+        "responsable": "Preparación asistida del lote S21; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-21",
+        "fundamento": "C7 por el Estado y la Guerra Fría; C4 por el movimiento obrero como sujeto. Debe decidirse si un volumen colectivo comparativo se clasifica por la introducción o exige arquitectura multicorriente."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S21-2026-09-21",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "id": "huttonhowell",
+      "t": "Leonard Percival Howell and the Genesis of Rastafari",
+      "a": "Clinton A. Hutton, Michael A. Barnett, D. A. Dunkley y Jahlani A. H. Niaah (eds.)",
+      "y": "2015",
+      "f": [
+        "memoria",
+        "colonialidad",
+        "violencias"
+      ],
+      "l": "jamaica",
+      "tr": "anglófono (Jamaica)",
+      "ap": "La fundación del rastafari devuelta a un hombre concreto y a un expediente policial. El volumen reconstruye a Leonard Howell —sus sermones sediciosos de 1933 a 1941, los años perdidos, la comuna de Pinnacle, su filosofía de la hombría rastafari— y discute abiertamente si llamarlo «el primer rasta» no es ya una operación de canonización. Al trabajar sobre el proceso judicial y la persecución, muestra que el movimiento nació criminalizado: el Estado colonial fue su primer etnógrafo. Es el complemento monográfico de la síntesis de Chevannes, a la que cita y corrige.",
+      "ed": "University of the West Indies Press",
+      "edicion_consultada": "The University of the West Indies Press, Kingston, 2015; PDF.",
+      "isbn": "9789766405496",
+      "lenguas_publicacion": [
+        "inglés"
+      ],
+      "operaciones": [
+        "reconstruir un archivo",
+        "documentar una práctica",
+        "preservar una memoria"
+      ],
+      "orillas": [
+        {
+          "lugar": "jamaica",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Gran Bretaña",
+          "funcion": "lugar de circulación"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "memorias_espiritualidades_archivos_vivos",
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: introducción, capítulos 1-4 y notas que citan a Chevannes, Bogues, Austin-Broos, Charles Price, Patterson, Winston James, Vincent Brown y Beckford.",
+        "responsable": "Preparación asistida del lote S21; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-21",
+        "fundamento": "C9 es la candidatura principal por la espiritualidad y su transmisión; C7 aparece por la sedición y el castigo estatal. Debe decidirse si un movimiento religioso perseguido se clasifica por su fe o por su criminalización."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S21-2026-09-21",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en Barbados, lugar de origen de Kamau Brathwaite, figura central del movimiento; Londres, Trinidad y Jamaica quedan declaradas en orillas conforme al contrato territorial §14."
+      },
+      "id": "walmsleycam",
+      "t": "The Caribbean Artists Movement, 1966-1972: A Literary and Cultural History",
+      "a": "Anne Walmsley",
+      "y": "1992",
+      "f": [
+        "creolizacion",
+        "memoria",
+        "colonialidad"
+      ],
+      "l": "barbados",
+      "tr": "anglófono (Caribe anglófono/Gran Bretaña)",
+      "ap": "La historia del movimiento que el corpus solo tenía por sus protagonistas sueltos. Walmsley reconstruye desde adentro el Caribbean Artists Movement fundado en Londres en diciembre de 1966 por Kamau Brathwaite, John La Rose y Andrew Salkey: las sesiones, las conferencias, la revista Savacou, la editorial New Beacon. Su archivo demuestra que las tendencias hoy dominantes en las artes caribeñas —la oralidad, la performance, la nation language, los ritmos del habla cotidiana— se ensayaron primero en la diáspora londinense, y que las bibliografías han borrado sistemáticamente los papeles seminales publicados en el boletín y la revista del movimiento. Documenta la infraestructura material —editoriales, revistas, reuniones— sin la cual la teoría caribeña del siglo XX no se explica.",
+      "ed": "New Beacon Books",
+      "edicion_consultada": "New Beacon Books, Londres y Puerto España, 1992; PDF.",
+      "isbn": "9781873201015",
+      "lenguas_publicacion": [
+        "inglés"
+      ],
+      "operaciones": [
+        "reconstruir un archivo",
+        "preservar una memoria",
+        "narrar"
+      ],
+      "orillas": [
+        {
+          "tipo": "región",
+          "label": "Gran Bretaña (Londres)",
+          "funcion": "lugar de producción intelectual"
+        },
+        {
+          "lugar": "barbados",
+          "funcion": "lugar de producción intelectual"
+        },
+        {
+          "lugar": "trinidad",
+          "funcion": "lugar de circulación"
+        },
+        {
+          "lugar": "jamaica",
+          "funcion": "lugar de circulación"
+        },
+        {
+          "lugar": "guyana",
+          "funcion": "lugar de circulación"
+        },
+        {
+          "tipo": "región",
+          "label": "Caribe anglófono",
+          "funcion": "territorio estudiado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "creolizaciones_traducciones_opacidades",
+          "rutas_diasporas_territorios_acuosos"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: prefacio, capítulos 1-2 (caribeños en Gran Bretaña y comienzos del CAM) y notas que citan a Brathwaite, C.L.R. James, Patterson y Lamming.",
+        "responsable": "Preparación asistida del lote S21; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-21",
+        "fundamento": "C8 por la lengua y la forma como materia del movimiento; C5 porque el movimiento existe en la diáspora y no en la isla. Debe decidirse si un movimiento fundado en la metrópoli se clasifica por su lengua o por su desplazamiento."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S21-2026-09-21",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en Haití, territorio de las autoras que abren y cierran el libro; Guadalupe, Antigua y el Caribe anglófono quedan en orillas."
+      },
+      "id": "gloverregarded",
+      "t": "A Regarded Self: Caribbean Womanhood and the Ethics of Disorderly Being",
+      "a": "Kaiama L. Glover",
+      "y": "2021",
+      "f": [
+        "cuerpo_erotica",
+        "creolizacion",
+        "memoria"
+      ],
+      "l": "haiti",
+      "tr": "anglófono (Caribe francófono y anglófono)",
+      "ap": "Una ética de la mujer caribeña que se niega a ser útil. Glover lee a Marie Chauvet, Maryse Condé, Jamaica Kincaid, Marlene NourbeSe Philip y René Depestre para defender el derecho de los personajes femeninos a la opacidad, al egoísmo y al desacato: no la heroína comunitaria que la crítica poscolonial premia, sino la mujer que se desentiende del proyecto colectivo. El argumento golpea donde duele en la tradición afrocaribeña, porque discute con Glissant y con la créolité desde dentro de su vocabulario y les reclama que la Relación no se convierta en un deber.",
+      "ed": "Duke University Press",
+      "edicion_consultada": "Duke University Press, Durham y Londres, 2021; PDF.",
+      "isbn": "9781478010173",
+      "lenguas_publicacion": [
+        "inglés"
+      ],
+      "operaciones": [
+        "teorizar",
+        "confrontar una categoría",
+        "narrar"
+      ],
+      "orillas": [
+        {
+          "lugar": "haiti",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "guadalupe",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "antigua",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Caribe francófono y anglófono",
+          "funcion": "territorio comparado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "cuerpos_parentescos_eroticas",
+          "creolizaciones_traducciones_opacidades"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: introducción, capítulo 1 y notas que citan a Bernabé/Chamoiseau/Confiant, Tinsley, Hurston, McCarthy Brown, Benítez Rojo, Paget Henry, Glissant y Brand.",
+        "responsable": "Preparación asistida del lote S21; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-21",
+        "fundamento": "C10 es la candidatura principal por el cuerpo y el género como materia; C8 aparece porque la discusión con la créolité es una disputa sobre la opacidad. Debe decidirse si una crítica literaria se clasifica por su objeto o por el debate teórico que interviene."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S21-2026-09-21",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "id": "barriteaupolecon",
+      "t": "The Political Economy of Gender in the Twentieth-Century Caribbean",
+      "a": "Eudine Barriteau",
+      "y": "2001",
+      "f": [
+        "cuerpo_erotica",
+        "postplantacion",
+        "capitalismo_racial"
+      ],
+      "l": "barbados",
+      "tr": "anglófono (Barbados/Caribe anglófono)",
+      "ap": "El género tratado como sistema económico y no como variable social. Barriteau distingue entre las dimensiones materiales del sistema de género —acceso a recursos, a crédito, al empleo— y sus dimensiones ideológicas, y muestra que en el Caribe anglófono poscolonial la mejora de las primeras convivió con la persistencia de las segundas: las mujeres ganaron escolaridad y empleo sin que se alterara la jerarquía que define lo femenino. De ahí su crítica al discurso del «desarrollo con perspectiva de mujer», que administra la desigualdad en vez de disputar el orden que la produce. Es la contraparte teórica del volumen que el corpus ya tiene de la misma autora.",
+      "ed": "Palgrave",
+      "edicion_consultada": "Palgrave, Houndmills y Nueva York, 2001; PDF.",
+      "isbn": "9780230508163",
+      "lenguas_publicacion": [
+        "inglés"
+      ],
+      "operaciones": [
+        "teorizar",
+        "confrontar una categoría",
+        "elaborar un concepto"
+      ],
+      "orillas": [
+        {
+          "lugar": "barbados",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Caribe anglófono",
+          "funcion": "territorio comparado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "cuerpos_parentescos_eroticas",
+          "postplantacion_trabajo_desposesion"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: portada, créditos, introducción y capítulos sobre relaciones de género y políticas públicas; nota de referencia a Lamming.",
+        "responsable": "Preparación asistida del lote S21; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-21",
+        "fundamento": "C10 por el sistema de género como objeto; C4 porque el argumento es de economía política poscolonial. Debe decidirse cuál ordena una obra que se define como economía política del género."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S21-2026-09-21",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en Puerto Rico, lugar de producción y de edición del volumen; República Dominicana y Haití quedan en orillas como territorios estudiados."
+      },
+      "id": "sanmigueltinoel",
+      "t": "Los desvaríos de Ti Noel: ensayos sobre la producción del saber en el Caribe",
+      "a": "Pedro L. San Miguel",
+      "y": "2004",
+      "f": [
+        "colonialidad",
+        "memoria",
+        "creolizacion"
+      ],
+      "l": "puertorico",
+      "tr": "hispano (Caribe hispano)",
+      "ap": "Una historiografía crítica del Caribe escrita desde el Caribe. San Miguel toma al Ti Noel de Carpentier como figura del sujeto que delira la historia y desde ahí examina cómo se ha producido el saber sobre la región: qué hicieron el indigenismo, el hispanismo y el antihaitianismo dominicano con el pasado, cómo se leyó a Mintz desde el área y qué pasa cuando el intelectual caribeño escribe también en la prensa de opinión, género que el volumen reivindica como forma legítima de trabajo intelectual. El libro tiene la virtud rara de discutir la producción de conocimiento sin salir de las lenguas y los archivos de la cuenca.",
+      "ed": "Ediciones Vértigo",
+      "edicion_consultada": "Ediciones Vértigo, San Juan de Puerto Rico, 2004, col. Caída libre, 1.ª ed.; PDF.",
+      "isbn": "9781932766011",
+      "lenguas_publicacion": [
+        "español"
+      ],
+      "operaciones": [
+        "teorizar",
+        "confrontar una categoría",
+        "reconstruir un archivo"
+      ],
+      "orillas": [
+        {
+          "lugar": "puertorico",
+          "funcion": "lugar de producción intelectual"
+        },
+        {
+          "lugar": "dominicana",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "haiti",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Caribe hispano",
+          "funcion": "territorio comparado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "creolizaciones_traducciones_opacidades",
+          "memorias_espiritualidades_archivos_vivos"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: agradecimientos, nota editorial, ensayos sobre historiografía caribeña y notas que citan a Mintz (8), Price-Mars, Benítez Rojo, Ortiz, Moreno Fraginals, Patterson, C.L.R. James, Fouchard, Quintero Rivera y Beckford.",
+        "responsable": "Preparación asistida del lote S21; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-21",
+        "fundamento": "C8 por la producción del saber y sus traducciones; C9 porque el libro trabaja sobre memoria e historiografía nacional. Debe decidirse si una crítica de la historiografía se clasifica por su método o por el archivo que discute."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S21-2026-09-21",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "id": "diazquinonesmemoria",
+      "t": "La memoria rota: ensayos de cultura y política",
+      "a": "Arcadio Díaz-Quiñones",
+      "y": "1993",
+      "f": [
+        "memoria",
+        "colonialidad",
+        "creolizacion"
+      ],
+      "l": "puertorico",
+      "tr": "hispano (Puerto Rico)",
+      "ap": "La formulación que dio nombre a un modo de pensar el Caribe: la memoria rota, ese pasado que el colonialismo no borra sino que fractura y vuelve inservible para fundar comunidad. Díaz-Quiñones lee la cultura puertorriqueña —sus silencios sobre la emigración, sobre el racismo, sobre la izquierda derrotada— y reconstruye las genealogías intelectuales del área, empezando por el Ortiz del Contrapunteo, para mostrar que el saber caribeño se armó mezclando registros que la academia separa. La antología brasileña de 2016, seleccionada y prologada por Pedro Meira Monteiro, reordena esos ensayos para otro público y es, como advierte el propio autor, otro libro.",
+      "ed": "Ediciones Huracán / Companhia das Letras",
+      "edicion_consultada": "A memória rota: ensaios de cultura e política, sel., trad. y pref. de Pedro Meira Monteiro, Companhia das Letras, São Paulo, 2016 (los ensayos proceden de La memoria rota, Ediciones Huracán, Río Piedras, 1993, y de trabajos posteriores); epub sin paginación estable.",
+      "isbn": "9788543805832",
+      "lenguas_publicacion": [
+        "español",
+        "portugués"
+      ],
+      "operaciones": [
+        "teorizar",
+        "elaborar un concepto",
+        "preservar una memoria"
+      ],
+      "orillas": [
+        {
+          "lugar": "puertorico",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "cuba",
+          "funcion": "territorio comparado"
+        },
+        {
+          "tipo": "región",
+          "label": "Caribe hispano",
+          "funcion": "territorio comparado"
+        },
+        {
+          "tipo": "región",
+          "label": "Brasil",
+          "funcion": "lugar de circulación"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "memorias_espiritualidades_archivos_vivos",
+          "creolizaciones_traducciones_opacidades"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: nota del autor a la antología, prefacio de Meira Monteiro, entrevista final y notas que citan el Contrapunteo cubano de Ortiz (8), La isla que se repite de Benítez Rojo (3), Quintero Rivera y Maroon Societies.",
+        "responsable": "Preparación asistida del lote S21; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-21",
+        "fundamento": "C9 es la candidatura principal: la memoria y su rotura son el objeto. C8 aparece porque el libro trabaja sobre traducción y circulación de saberes. Debe decidirse si una antología traducida se clasifica por los ensayos originales o por el volumen consultado."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S21-2026-09-21",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en un lugar existente del mapa conforme al contrato territorial §14; el ámbito académico se declara en orillas."
+      },
+      "id": "harrispalace",
+      "t": "Palace of the Peacock",
+      "a": "Wilson Harris",
+      "y": "1960",
+      "f": [
+        "creolizacion",
+        "memoria",
+        "colonialidad"
+      ],
+      "l": "guyana",
+      "tr": "anglófono (Guyana)",
+      "ap": "La primera novela de Harris y el texto donde la selva guyanesa deja de ser escenario para volverse forma. Una tripulación remonta el río hacia la misión de Mariella repitiendo un viaje que ya ocurrió y en el que todos murieron; entre ellos va una anciana amerindia que el narrador describe inmóvil «como una estatua que se inclina». La travesía no produce descubrimiento sino disolución de los límites entre conquistador y conquistado, vivo y muerto, europeo, africano e indígena. Harris escribe así lo que la teoría caribeña nombraría después como creolización y opacidad, y lo hace desde el interior guyanés y no desde el archipiélago: el atlas gana con él su primera obra de ficción, incorporada por decisión expresa de la dirección académica.",
+      "ed": "Faber and Faber",
+      "edicion_consultada": "Faber Finds, Faber and Faber, Londres, 2010 (1.ª ed. Faber and Faber, Londres, 1960); epub sin paginación estable.",
+      "isbn": "9780571260515",
+      "lenguas_publicacion": [
+        "inglés"
+      ],
+      "operaciones": [
+        "narrar",
+        "fabular ante el silencio",
+        "elaborar un concepto"
+      ],
+      "orillas": [
+        {
+          "lugar": "guyana",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "cuenca",
+          "label": "río y selva del interior guyanés",
+          "funcion": "territorio estudiado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "creolizaciones_traducciones_opacidades",
+          "invasiones_mundos_indigenas"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: los cuatro libros de la novela y el ensayo final «Pursuing the Palace of the Peacock» de la edición Faber Finds.",
+        "responsable": "Preparación asistida del lote S21; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-21",
+        "fundamento": "C8 por la forma y la opacidad; C1 porque el viaje repite y deshace la conquista sobre mundos indígenas. La decisión previa es de registro: la obra entra como ficción y exige nota en la metodología, porque hasta ahora el corpus catalogaba solo obras de argumento."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S21-2026-09-21",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en Jamaica, sede de la Universidad de las Indias Occidentales donde Girvan escribe; el objeto declarado es el Gran Caribe y se conserva en orillas."
+      },
+      "id": "girvanreinterpretar",
+      "t": "Reinterpretar al Caribe",
+      "a": "Norman Girvan",
+      "y": "2000",
+      "f": [
+        "colonialidad",
+        "soberanias",
+        "postplantacion"
+      ],
+      "l": "jamaica",
+      "tr": "anglófono (Gran Caribe)",
+      "ap": "La pregunta «¿qué se entiende por Caribe?» respondida sin coartada. Girvan muestra que la respuesta depende siempre de la perspectiva y el contexto: los anglófonos nombran las islas de habla inglesa o los Estados de Caricom y reservan «wider Caribbean» para los otros; la bibliografía hispánica dice las Antillas o solo las islas hispanohablantes. Rastrea las definiciones sucesivas como expresiones de resistencia intelectual y política, con el New World Group de los años sesenta —guiado por Wagley y forjado en el James de 1938 y el Williams de 1944— presentando al Caribe como parte de la «América de plantación». Su conclusión es la más útil para un atlas: no hay definición consumada, y el Caribe de mañana será una comunidad de intereses y estrategias antes que un espacio geográfico.",
+      "ed": "Revista Mexicana del Caribe",
+      "edicion_consultada": "«Reinterpretar al Caribe», Revista Mexicana del Caribe, núm. 7, 2000; PDF del texto completo.",
+      "lenguas_publicacion": [
+        "español"
+      ],
+      "operaciones": [
+        "teorizar",
+        "confrontar una categoría",
+        "comparar orillas"
+      ],
+      "orillas": [
+        {
+          "lugar": "jamaica",
+          "funcion": "lugar de producción intelectual"
+        },
+        {
+          "tipo": "cuenca",
+          "label": "Gran Caribe",
+          "funcion": "territorio estudiado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "postplantacion_trabajo_desposesion"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: resumen, sección «Definición» y la discusión del New World Group; cita a Bosch.",
+        "responsable": "Preparación asistida del lote S21; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-21",
+        "fundamento": "C7 por la definición regional como asunto de soberanía y pertenencia; C4 por la «América de plantación» como criterio de unidad. La decisión previa es de registro: entra un artículo de revista, no un libro, por su lugar en la capa «¿Qué Caribe?», y exige nota en la metodología."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S21-2026-09-21",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Serra da Barriga, en União dos Palmares (Alagoas), funciona como anclaje situado del quilombo estudiado. La elección privilegia la geografía histórica concreta de Palmares en lugar de representar Brasil como unidad nacional abstracta, y evita anclarlo en el nodo amazónico de Oriximiná, que corresponde a otra geografía quilombola."
+      },
+      "id": "gomespalmares",
+      "t": "Palmares",
+      "a": "Flávio dos Santos Gomes",
+      "y": "2012",
+      "f": [
+        "cimarronaje",
+        "memoria",
+        "violencias"
+      ],
+      "l": "palmaresbr",
+      "tr": "lusófono (Brasil)",
+      "ap": "Palmares releído sin heroísmo y sin historia verdadera. Gomes muestra cómo el mayor quilombo americano fue descalificado como acontecimiento histórico y a la vez resignificado como símbolo identitario, y sigue esa doble operación desde los cronistas del siglo XVIII y los coleccionistas del Instituto Histórico y Geográfico Brasileño hasta los intelectuales y movimientos sociales del siglo XX. Su exigencia es de método: Palmares debe releerse a la luz de las formas de dominio del imperio portugués y de una historia atlántica, no de una épica nacional. Es la segunda entrada lusófona del corpus y la que pone la serie palenque-cumbe-maroon-quilombo en su registro historiográfico.",
+      "ed": "Contexto",
+      "edicion_consultada": "Editora Contexto, São Paulo, 2012; PDF.",
+      "lenguas_publicacion": [
+        "portugués"
+      ],
+      "operaciones": [
+        "reconstruir un archivo",
+        "confrontar una categoría",
+        "preservar una memoria"
+      ],
+      "orillas": [
+        {
+          "lugar": "palmaresbr",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Pernambuco y Alagoas coloniales",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Américas esclavistas",
+          "funcion": "territorio comparado"
+        },
+        {
+          "tipo": "cuenca",
+          "label": "Atlántico portugués",
+          "funcion": "territorio comparado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "fugas_cimarronajes_emancipaciones",
+          "memorias_espiritualidades_archivos_vivos"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: introducción, capítulo historiográfico y bibliografía, que cita Maroon Societies de Richard Price (3), Silencing the Past de Trouillot y El Palenque de San Basilio de Escalante.",
+        "responsable": "Preparación asistida del lote S21; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-21",
+        "fundamento": "C3 es la candidatura principal por la fuga y su comunidad; C9 aparece porque medio libro trata de cómo se recordó y se instrumentalizó Palmares. Debe decidirse si una historia de la memoria de un quilombo se clasifica por el quilombo o por su memoria."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S21-2026-09-21",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en Cartagena, la geografía más densa del libro (66 menciones frente a referencias puntuales al Pacífico); el ámbito nacional se conserva en orillas."
+      },
+      "id": "cabarcascartografia",
+      "t": "Cartografía Afro",
+      "a": "Marcelo José Cabarcas Ortega",
+      "y": "2025",
+      "f": [
+        "memoria",
+        "colonialidad",
+        "creolizacion"
+      ],
+      "l": "cartagena",
+      "tr": "hispano (Colombia)",
+      "ap": "Un archivo afrocolombiano pensado como cartografía y no como catálogo. Cabarcas recorre literatura, artes plásticas y producción multimodal para mostrar el canon en disputa: qué entra en la Biblioteca nacional de la memoria y qué queda confinado en repositorios universitarios y bases de datos, y con qué riesgo el multiculturalismo asimila acríticamente lo que incluye. Trabaja con Trouillot para nombrar la producción del silencio y con Múnera para situar la exclusión del Caribe colombiano en la formación de la nación. Para este atlas es un interlocutor directo: discute, desde la misma cuenca y con archivo propio, el problema de qué se hace visible al cartografiar.",
+      "ed": "Ministerio de las Culturas, las Artes y los Saberes / Archivo General de la Nación",
+      "edicion_consultada": "Colección Otras Colombias posibles, Ministerio de las Culturas, las Artes y los Saberes y Archivo General de la Nación, Bogotá, 1.ª ed., octubre de 2025; PDF digital.",
+      "isbn": "9789587537734",
+      "lenguas_publicacion": [
+        "español"
+      ],
+      "operaciones": [
+        "cartografiar",
+        "reconstruir un archivo",
+        "confrontar una categoría"
+      ],
+      "orillas": [
+        {
+          "lugar": "cartagena",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Caribe colombiano",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Colombia",
+          "funcion": "territorio estudiado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "memorias_espiritualidades_archivos_vivos",
+          "creolizaciones_traducciones_opacidades"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: créditos, introducción, primera parte (canon, archivo y memoria cultural) y bibliografía, que cita Silencing the Past de Trouillot, El fracaso de la nación de Múnera y History of the Voice de Brathwaite.",
+        "responsable": "Preparación asistida del lote S21; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-21",
+        "fundamento": "C9 es la candidatura principal: archivo, memoria y transmisión son el objeto. C8 aparece por la disputa del canon literario y sus traducciones. La decisión previa es de registro: entra una obra de colección institucional de divulgación con aparato crítico, por decisión expresa de la dirección académica."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S21-2026-09-21",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en Cartagena por la procedencia caribeña de Zapata Olivella y del círculo que el libro reconstruye; Bogotá, donde el Club se organiza, se declara en orillas como lugar de circulación."
+      },
+      "id": "chamorroclubnegro",
+      "t": "El Club Negro de Colombia: el entrecruce de los conceptos de raza y clase en las ideas de Manuel Zapata Olivella y Natanael Díaz",
+      "a": "Rosa Chamorro",
+      "y": "2024",
+      "f": [
+        "memoria",
+        "capitalismo_racial",
+        "colonialidad"
+      ],
+      "l": "cartagena",
+      "tr": "hispano (Colombia)",
+      "ap": "La recuperación de un episodio que la historia intelectual colombiana dejó caer: el Club Negro de Colombia, organizado en Bogotá en los años cuarenta, al final de la República Liberal, para hacerle saber a la sociedad capitalina que existía una comunidad negra con presencia en la vida cultural del país y participación en la construcción de la identidad nacional. Chamorro sigue el Día del Negro, el Manifiesto y el cruce de raza y clase en Zapata Olivella y en Natanael Díaz, y muestra un antirracismo colombiano anterior a la Constitución del 91 y a la Ley 70, con vocabulario propio. Da profundidad histórica a una obra que el corpus ya tiene de Zapata Olivella.",
+      "ed": "Ministerio de las Culturas, las Artes y los Saberes / Archivo General de la Nación",
+      "edicion_consultada": "Colección Otras Colombias posibles, Ministerio de las Culturas, las Artes y los Saberes y Archivo General de la Nación, Bogotá, 1.ª ed., noviembre de 2024; PDF digital.",
+      "isbn": "9789587536317",
+      "lenguas_publicacion": [
+        "español"
+      ],
+      "operaciones": [
+        "reconstruir un archivo",
+        "preservar una memoria",
+        "intervenir políticamente"
+      ],
+      "orillas": [
+        {
+          "lugar": "cartagena",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Bogotá",
+          "funcion": "lugar de circulación"
+        },
+        {
+          "tipo": "región",
+          "label": "Colombia",
+          "funcion": "territorio estudiado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "memorias_espiritualidades_archivos_vivos",
+          "postplantacion_trabajo_desposesion"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: créditos, presentación de la colección, introducción y capítulos sobre el Día del Negro y el Manifiesto; cita ¡Nunca más esclavos! de Helg y Piel negra, máscaras blancas de Fanon.",
+        "responsable": "Preparación asistida del lote S21; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-21",
+        "fundamento": "C9 por la recuperación de un archivo intelectual olvidado; C4 porque el eje analítico declarado es el cruce de raza y clase. La decisión previa es de registro: entra una obra de colección institucional de divulgación con aparato crítico, por decisión expresa de la dirección académica."
+      }
     }
   ],
   "relaciones": [
@@ -14246,6 +15959,1592 @@
       "fuente": "Reis y Gomes (orgs.), Freedom by a Thread, Diasporic Africa Press, 2017; epub sin paginación estable, cita localizable por búsqueda de frase. «See Sidney W. Mintz, “The Origins of the Jamaican Market System”, in Caribbean Transformations (Chicago: Aldine Publishing Company, 1974), 180-213», en la discusión sobre la economía propia de los esclavizados. Título catalogado presente.",
       "id_lote": "S20-R06",
       "lote_incorporacion": "S20-2026-09-18"
+    },
+    {
+      "a": "depestrenegritud",
+      "b": "pricemars",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Depestre, Buenos días y adiós a la negritud, Casa de las Américas, La Habana, 1985; ejemplar OCR sin paginación estable. El capítulo sobre la herencia haitiana cita el título catalogado en su traducción española: «En 1928 Jean Price-Mars reunió bajo el título de Así habló el Tío los textos de las conferencias que había pronunciado a partir de 1920». 12 apariciones del título.",
+      "id_lote": "S21-R01",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "depestrenegritud",
+      "b": "cesaire",
+      "tipo": "disonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": true,
+        "clase": "crítica explícita",
+        "argumento": "Depestre sostiene que la herencia africana fue remetabolizada por las condiciones materiales y las luchas de emancipación, no reinterpretada racialmente; la negritud queda como respuesta necesaria al mito racial pero insuficiente como fundamento."
+      },
+      "fuente": "Depestre, Buenos días y adiós a la negritud, Casa de las Américas, La Habana, 1985; ejemplar OCR sin paginación estable. Cita el título catalogado Discurso sobre el colonialismo (2 apariciones). La relación es de disputa: el libro despide la negritud de la que Césaire es fundador, y el propio volumen incluye la entrevista de Depestre a Césaire donde esa diferencia se discute.",
+      "id_lote": "S21-R02",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "depestrenegritud",
+      "b": "fanon",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Depestre, Buenos días y adiós a la negritud, Casa de las Américas, La Habana, 1985; ejemplar OCR sin paginación estable. Cita el título catalogado Piel negra, máscaras blancas (2 apariciones) en la discusión sobre la semiología somática del mito racial.",
+      "id_lote": "S21-R03",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "depestrenegritud",
+      "b": "james",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Depestre, Buenos días y adiós a la negritud, Casa de las Américas, La Habana, 1985; ejemplar OCR sin paginación estable. Cita el título catalogado en su traducción española, Los jacobinos negros.",
+      "id_lote": "S21-R04",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "cesairetoussaint",
+      "b": "james",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Césaire, Toussaint Louverture, trad. Polity Press, 2024 (1.ª ed. 1960); PDF. Cita el título catalogado The Black Jacobins en la discusión historiográfica sobre Toussaint.",
+      "id_lote": "S21-R05",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "cesairetoussaint",
+      "b": "cesaire",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Césaire, Toussaint Louverture, trad. Polity Press, 2024 (1.ª ed. 1960); PDF. Continuidad de autor entre dos obras con ficha propia en el corpus: el volumen remite explícitamente al Discurso sobre el colonialismo (2 apariciones), catalogado aparte.",
+      "id_lote": "S21-R06",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "duboisavengers",
+      "b": "james",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Dubois, Avengers of the New World, Harvard University Press, 2004; PDF. Cita el título catalogado The Black Jacobins (10 apariciones) como referencia historiográfica central.",
+      "id_lote": "S21-R07",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "duboisavengers",
+      "b": "trouillotsilencing",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Dubois, Avengers of the New World, Harvard University Press, 2004; PDF. Cita el título catalogado Silencing the Past (4 apariciones) para explicar por qué la revolución fue tratada como impensable.",
+      "id_lote": "S21-R08",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "duboisavengers",
+      "b": "mintz",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Dubois, Avengers of the New World, Harvard University Press, 2004; PDF. Cita los dos títulos que componen el nodo catalogado: Sweetness and Power (2) y Caribbean Transformations (1).",
+      "id_lote": "S21-R09",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "duboisavengers",
+      "b": "fouchard",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Dubois, Avengers of the New World, Harvard University Press, 2004; PDF. Cita el título catalogado Les marrons de la liberté sobre el cimarronaje en Saint-Domingue.",
+      "id_lote": "S21-R10",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "duboisavengers",
+      "b": "mamalola",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Dubois, Avengers of the New World, Harvard University Press, 2004; PDF. Cita el título catalogado Mama Lola: A Vodou Priestess in Brooklyn.",
+      "id_lote": "S21-R11",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "duboisavengers",
+      "b": "duboisturits",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Dubois, Avengers of the New World, Harvard University Press, 2004; PDF. Continuidad de autor entre dos obras con ficha propia en el corpus: Freedom Roots (Dubois y Turits) está catalogada aparte.",
+      "id_lote": "S21-R12",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "hectorhurbongenese",
+      "b": "fouchard",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Hector y Hurbon (dirs.), Genèse de l'État haïtien (1804-1859), Éditions de la MSH; epub sin paginación estable. Cita el título catalogado Les marrons de la liberté (7 apariciones), referencia obligada del volumen sobre la emancipación.",
+      "id_lote": "S21-R13",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "hectorhurbongenese",
+      "b": "trouillotsilencing",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Hector y Hurbon (dirs.), Genèse de l'État haïtien (1804-1859), Éditions de la MSH; epub sin paginación estable. Cita el título catalogado Silencing the Past (5 apariciones).",
+      "id_lote": "S21-R14",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "hectorhurbongenese",
+      "b": "pricemars",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Hector y Hurbon (dirs.), Genèse de l'État haïtien (1804-1859), Éditions de la MSH; epub sin paginación estable. Cita el título catalogado Ainsi parla l'oncle (2 apariciones).",
+      "id_lote": "S21-R15",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "hectorhurbongenese",
+      "b": "hurboncomprendre",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Hector y Hurbon (dirs.), Genèse de l'État haïtien (1804-1859), Éditions de la MSH; epub sin paginación estable. Continuidad de autor: el volumen remite a Comprendre Haïti, catalogado aparte, y Hurbon codirige esta obra.",
+      "id_lote": "S21-R16",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "hectorhurbongenese",
+      "b": "hurbondictadura",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Hector y Hurbon (dirs.), Genèse de l'État haïtien (1804-1859), Éditions de la MSH; epub sin paginación estable. Continuidad de autor entre dos obras con ficha propia en el corpus (Culture et dictature en Haïti).",
+      "id_lote": "S21-R17",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "hectorhurbongenese",
+      "b": "glissant",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Hector y Hurbon (dirs.), Genèse de l'État haïtien (1804-1859), Éditions de la MSH; epub sin paginación estable. Cita el título catalogado Le discours antillais.",
+      "id_lote": "S21-R18",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "hectorhurbongenese",
+      "b": "pattersonsocialdeath",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Hector y Hurbon (dirs.), Genèse de l'État haïtien (1804-1859), Éditions de la MSH; epub sin paginación estable. Cita el título catalogado Slavery and Social Death.",
+      "id_lote": "S21-R19",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "hectorhurbongenese",
+      "b": "price",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Hector y Hurbon (dirs.), Genèse de l'État haïtien (1804-1859), Éditions de la MSH; epub sin paginación estable. Cita el título catalogado Maroon Societies.",
+      "id_lote": "S21-R20",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "hectorhurbongenese",
+      "b": "palmiewizards",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Hector y Hurbon (dirs.), Genèse de l'État haïtien (1804-1859), Éditions de la MSH; epub sin paginación estable. Cita el título catalogado Wizards and Scientists.",
+      "id_lote": "S21-R21",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "putnamcompany",
+      "b": "chomskyunitedfruit",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Putnam, The Company They Kept, University of North Carolina Press, 2002; PDF, bibliografía y notas. Cita el título catalogado (7 apariciones) — la obra con la que más dialoga, sobre el mismo enclave bananero.",
+      "id_lote": "S21-R22",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "putnamcompany",
+      "b": "bourgoisethnicity",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Putnam, The Company They Kept, University of North Carolina Press, 2002; PDF, bibliografía y notas. Cita el título catalogado (6 apariciones), sobre la división étnica del trabajo en la finca centroamericana.",
+      "id_lote": "S21-R23",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "putnamcompany",
+      "b": "barrowfamily",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Putnam, The Company They Kept, University of North Carolina Press, 2002; PDF, bibliografía y notas. Cita el título catalogado (3 apariciones), sobre familia y parentesco caribeños.",
+      "id_lote": "S21-R24",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "putnamcompany",
+      "b": "austinbroosgenesis",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Putnam, The Company They Kept, University of North Carolina Press, 2002; PDF, bibliografía y notas. Cita el título catalogado (3 apariciones).",
+      "id_lote": "S21-R25",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "putnamcompany",
+      "b": "wilsoncrabantics",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Putnam, The Company They Kept, University of North Carolina Press, 2002; PDF, bibliografía y notas. Cita el título catalogado (2 apariciones).",
+      "id_lote": "S21-R26",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "putnamcompany",
+      "b": "trouillot",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Putnam, The Company They Kept, University of North Carolina Press, 2002; PDF, bibliografía y notas. Cita el título catalogado (2 apariciones), The Caribbean Region: An Open Frontier.",
+      "id_lote": "S21-R27",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "putnamcompany",
+      "b": "mintz",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Putnam, The Company They Kept, University of North Carolina Press, 2002; PDF, bibliografía y notas. Cita el título catalogado (2 apariciones): «Sidney Mintz, The Origins of the Jamaican Market System, in Caribbean Transformations, 2d ed., New York: Columbia University Press, 1989».",
+      "id_lote": "S21-R28",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "putnamcompany",
+      "b": "knight_genesisnacionalismo",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Putnam, The Company They Kept, University of North Carolina Press, 2002; PDF, bibliografía y notas. Cita el título catalogado (2 apariciones).",
+      "id_lote": "S21-R29",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "putnamcompany",
+      "b": "harpellecostarica",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Putnam, The Company They Kept, University of North Carolina Press, 2002; PDF, bibliografía y notas. Cita el título catalogado (2 apariciones), sobre los antillanos de Costa Rica.",
+      "id_lote": "S21-R30",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "putnamcompany",
+      "b": "coopernoises",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Putnam, The Company They Kept, University of North Carolina Press, 2002; PDF, bibliografía y notas. Cita el título catalogado (2 apariciones).",
+      "id_lote": "S21-R31",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "putnamcompany",
+      "b": "chevannes",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Putnam, The Company They Kept, University of North Carolina Press, 2002; PDF, bibliografía y notas. Cita el título catalogado (2 apariciones).",
+      "id_lote": "S21-R32",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "putnamcompany",
+      "b": "james_bannerethiopia",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Putnam, The Company They Kept, University of North Carolina Press, 2002; PDF, bibliografía y notas. Cita el título catalogado (1 aparición).",
+      "id_lote": "S21-R33",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "putnamcompany",
+      "b": "putnamradical",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Putnam, The Company They Kept, University of North Carolina Press, 2002; PDF, bibliografía y notas. Continuidad de autor entre dos obras con ficha propia en el corpus: Radical Moves está catalogada aparte y continúa esta investigación sobre migración antillana.",
+      "id_lote": "S21-R34",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "chambershonduras",
+      "b": "gonzalezsojourners",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Chambers, Race, Nation, and West Indian Immigration to Honduras, LSU Press, 2010; PDF, notas y bibliografía. Cita el título catalogado: «Works such as Nancie González's Sojourners of the Caribbean: Ethnogenesis and Ethnohistory of the Garifuna» (2 apariciones).",
+      "id_lote": "S21-R35",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "chambershonduras",
+      "b": "chomskyunitedfruit",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Chambers, Race, Nation, and West Indian Immigration to Honduras, LSU Press, 2010; PDF, notas y bibliografía. Cita el título catalogado: «Aviva Chomsky, West Indian Workers and the United Fruit Company in Costa Rica, 1870-1940» (2 apariciones).",
+      "id_lote": "S21-R36",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "chambershonduras",
+      "b": "bourgoisethnicity",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Chambers, Race, Nation, and West Indian Immigration to Honduras, LSU Press, 2010; PDF, notas y bibliografía. Cita el título catalogado Ethnicity at Work (2 apariciones).",
+      "id_lote": "S21-R37",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "chambershonduras",
+      "b": "harpellecostarica",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Chambers, Race, Nation, and West Indian Immigration to Honduras, LSU Press, 2010; PDF, notas y bibliografía. Cita el título catalogado The West Indians of Costa Rica.",
+      "id_lote": "S21-R38",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "chambershonduras",
+      "b": "pinedashipwrecked",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Chambers, Race, Nation, and West Indian Immigration to Honduras, LSU Press, 2010; PDF, notas y bibliografía. Cita el título catalogado Shipwrecked Identities, sobre la costa caribeña nicaragüense.",
+      "id_lote": "S21-R39",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "chambershonduras",
+      "b": "knight_genesisnacionalismo",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Chambers, Race, Nation, and West Indian Immigration to Honduras, LSU Press, 2010; PDF, notas y bibliografía. Cita el título catalogado The Caribbean: The Genesis of a Fragmented Nationalism.",
+      "id_lote": "S21-R40",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "johnsonfrenchnegroes",
+      "b": "benitez",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Sara E. Johnson, The Fear of French Negroes, University of California Press, 2012; epub sin paginación estable, bibliografía verificada. Cita el título catalogado La isla que se repite (Hanover: Ediciones del Norte, 1989) y The Repeating Island.",
+      "id_lote": "S21-R41",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "johnsonfrenchnegroes",
+      "b": "price",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Sara E. Johnson, The Fear of French Negroes, University of California Press, 2012; epub sin paginación estable, bibliografía verificada. Cita el título catalogado Maroon Societies (2 apariciones).",
+      "id_lote": "S21-R42",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "johnsonfrenchnegroes",
+      "b": "glissant",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Sara E. Johnson, The Fear of French Negroes, University of California Press, 2012; epub sin paginación estable, bibliografía verificada. Cita el título catalogado Poétique de la Relation (2) y Le discours antillais (1).",
+      "id_lote": "S21-R43",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "johnsonfrenchnegroes",
+      "b": "james",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Sara E. Johnson, The Fear of French Negroes, University of California Press, 2012; epub sin paginación estable, bibliografía verificada. Cita el título catalogado The Black Jacobins.",
+      "id_lote": "S21-R44",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "johnsonfrenchnegroes",
+      "b": "trouillotsilencing",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Sara E. Johnson, The Fear of French Negroes, University of California Press, 2012; epub sin paginación estable, bibliografía verificada. Cita el título catalogado Silencing the Past.",
+      "id_lote": "S21-R45",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "johnsonfrenchnegroes",
+      "b": "pattersonsocialdeath",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Sara E. Johnson, The Fear of French Negroes, University of California Press, 2012; epub sin paginación estable, bibliografía verificada. Cita el título catalogado Slavery and Social Death.",
+      "id_lote": "S21-R46",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "johnsonfrenchnegroes",
+      "b": "mintzpricebirth",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Sara E. Johnson, The Fear of French Negroes, University of California Press, 2012; epub sin paginación estable, bibliografía verificada. Cita el título catalogado The Birth of African-American Culture.",
+      "id_lote": "S21-R47",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "johnsonfrenchnegroes",
+      "b": "smallwoodsaltwater",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Sara E. Johnson, The Fear of French Negroes, University of California Press, 2012; epub sin paginación estable, bibliografía verificada. Cita el título catalogado Saltwater Slavery.",
+      "id_lote": "S21-R48",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "johnsonfrenchnegroes",
+      "b": "hallafricanslouisiana",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Sara E. Johnson, The Fear of French Negroes, University of California Press, 2012; epub sin paginación estable, bibliografía verificada. Cita el título catalogado Africans in Colonial Louisiana.",
+      "id_lote": "S21-R49",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "johnsonfrenchnegroes",
+      "b": "creolenieworleans",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Sara E. Johnson, The Fear of French Negroes, University of California Press, 2012; epub sin paginación estable, bibliografía verificada. Cita el título catalogado Creole New Orleans: Race and Americanization.",
+      "id_lote": "S21-R50",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "johnsonfrenchnegroes",
+      "b": "fischer",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Sara E. Johnson, The Fear of French Negroes, University of California Press, 2012; epub sin paginación estable, bibliografía verificada. Cita el título catalogado Modernity Disavowed.",
+      "id_lote": "S21-R51",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "johnsonfrenchnegroes",
+      "b": "edwardsdiaspora",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Sara E. Johnson, The Fear of French Negroes, University of California Press, 2012; epub sin paginación estable, bibliografía verificada. Cita el título catalogado The Practice of Diaspora.",
+      "id_lote": "S21-R52",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "johnsonfrenchnegroes",
+      "b": "kalefragments",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Sara E. Johnson, The Fear of French Negroes, University of California Press, 2012; epub sin paginación estable, bibliografía verificada. Cita el título catalogado «Kale, Madhavi. Fragments of Empire: Capital, Slavery, and Indian Indentured Labor in the British Caribbean».",
+      "id_lote": "S21-R53",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "johnsonfrenchnegroes",
+      "b": "kutzinskisugar",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Sara E. Johnson, The Fear of French Negroes, University of California Press, 2012; epub sin paginación estable, bibliografía verificada. Cita el título catalogado «Sugar's Secrets: Race and the Erotics of Cuban Nationalism».",
+      "id_lote": "S21-R54",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "johnsonfrenchnegroes",
+      "b": "coopernoises",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Sara E. Johnson, The Fear of French Negroes, University of California Press, 2012; epub sin paginación estable, bibliografía verificada. Cita el título catalogado «Cooper, Carolyn. Noises in the Blood».",
+      "id_lote": "S21-R55",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "johnsonfrenchnegroes",
+      "b": "quinterosalsa",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Sara E. Johnson, The Fear of French Negroes, University of California Press, 2012; epub sin paginación estable, bibliografía verificada. Cita el título catalogado «Quintero Rivera, Ángel. Salsa, sabor y control: sociología de la música tropical».",
+      "id_lote": "S21-R56",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "johnsonfrenchnegroes",
+      "b": "helglibertyequality",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Sara E. Johnson, The Fear of French Negroes, University of California Press, 2012; epub sin paginación estable, bibliografía verificada. Cita el título catalogado Liberty and Equality in Caribbean Colombia.",
+      "id_lote": "S21-R57",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "johnsonfrenchnegroes",
+      "b": "knight_genesisnacionalismo",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Sara E. Johnson, The Fear of French Negroes, University of California Press, 2012; epub sin paginación estable, bibliografía verificada. Cita el título catalogado The Caribbean: The Genesis of a Fragmented Nationalism.",
+      "id_lote": "S21-R58",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "rodneygroundings",
+      "b": "rodney",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Rodney, The Groundings with My Brothers, Verso, 2019 (1.ª ed. 1969); epub sin paginación estable. Continuidad de autor entre dos obras con ficha propia en el corpus: How Europe Underdeveloped Africa (6 apariciones) está catalogada aparte.",
+      "id_lote": "S21-R59",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "rodneygroundings",
+      "b": "james",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Rodney, The Groundings with My Brothers, Verso, 2019 (1.ª ed. 1969); epub sin paginación estable. Cita el título catalogado The Black Jacobins (2 apariciones).",
+      "id_lote": "S21-R60",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "rodneygroundings",
+      "b": "williamscapitalismo",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Rodney, The Groundings with My Brothers, Verso, 2019 (1.ª ed. 1969); epub sin paginación estable. El aparato editorial de la edición de 2019 sitúa el libro junto a «Eric Williams's Capitalism and Slavery», título catalogado.",
+      "id_lote": "S21-R61",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "rodneygroundings",
+      "b": "beckfordpersistent",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Rodney, The Groundings with My Brothers, Verso, 2019 (1.ª ed. 1969); epub sin paginación estable. El mismo pasaje cita «George Beckford's Persistent Poverty», título catalogado.",
+      "id_lote": "S21-R62",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "rodneygroundings",
+      "b": "austinfearblack",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Rodney, The Groundings with My Brothers, Verso, 2019 (1.ª ed. 1969); epub sin paginación estable. Nota de la edición de 2019: «See David Austin, Fear of a Black Nation: Race, Sex, and Security in Sixties Montreal», título catalogado. La cita pertenece al aparato de 2019, no al texto de 1969.",
+      "id_lote": "S21-R63",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "rodneyguyanese",
+      "b": "beckfordpersistent",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Rodney, A History of the Guyanese Working People, Johns Hopkins University Press, 1981; PDF escaneado leído por OCR parcial (portada, créditos y bibliografía). Bibliografía: «Beckford, George L. Persistent Poverty: Underdevelopment in Plantation Economies of the Third World. Oxford, 1972». Título catalogado.",
+      "id_lote": "S21-R64",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "rodneyguyanese",
+      "b": "mgsmithplural",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Rodney, A History of the Guyanese Working People, Johns Hopkins University Press, 1981; PDF escaneado leído por OCR parcial (portada, créditos y bibliografía). Bibliografía: «Smith, M. G. The Plural Society in the British West Indies. Los Angeles, 1965». Título catalogado.",
+      "id_lote": "S21-R65",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "rodneyguyanese",
+      "b": "rodney",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Rodney, A History of the Guyanese Working People, Johns Hopkins University Press, 1981; PDF escaneado leído por OCR parcial (portada, créditos y bibliografía). Continuidad de autor entre dos obras con ficha propia en el corpus.",
+      "id_lote": "S21-R66",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "rodneyguyanese",
+      "b": "rodneygroundings",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Rodney, A History of the Guyanese Working People, Johns Hopkins University Press, 1981; PDF escaneado leído por OCR parcial (portada, créditos y bibliografía). Continuidad de autor entre dos obras con ficha propia en el corpus, incorporadas en el mismo lote.",
+      "id_lote": "S21-R67",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "oxaaltrinidad",
+      "b": "james",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Oxaal, Black Intellectuals and the Dilemmas of Race and Class in Trinidad, Schenkman, 1982; PDF. Cita el título catalogado The Black Jacobins (8 apariciones); C.L.R. James es además uno de los intelectuales estudiados.",
+      "id_lote": "S21-R68",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "oxaaltrinidad",
+      "b": "rodney",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Oxaal, Black Intellectuals and the Dilemmas of Race and Class in Trinidad, Schenkman, 1982; PDF. Cita el título catalogado How Europe Underdeveloped Africa.",
+      "id_lote": "S21-R69",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "graydemeaned",
+      "b": "chevannes",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Gray, Demeaned but Empowered, University of the West Indies Press, 2004; PDF, notas. Cita el título catalogado Rastafari: Roots and Ideology (9 apariciones).",
+      "id_lote": "S21-R70",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "graydemeaned",
+      "b": "coopernoises",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Gray, Demeaned but Empowered, University of the West Indies Press, 2004; PDF, notas. Cita el título catalogado: «Carolyn Cooper, Noises in the Blood: Orality, Gender, and the Vulgar Body of Jamaican Popular Culture» (5 apariciones).",
+      "id_lote": "S21-R71",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "graydemeaned",
+      "b": "brathwaite",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Gray, Demeaned but Empowered, University of the West Indies Press, 2004; PDF, notas. Cita el nodo conceptual catalogado por su formulación bibliográfica: «Edward Kamau Brathwaite, History of the Voice: The Development of Nation Language in Anglophone Caribbean Poetry, London and Port of Spain, New Beacon, 1984». El corpus cataloga ese trabajo como «Nation Language / Tidalectics».",
+      "id_lote": "S21-R72",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "marsyounglabor",
+      "b": "meeksgirvannewworld",
+      "tipo": "resonancia",
+      "estado": "por_corroborar",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Por corroborar. Mars y Young (eds.), Caribbean Labor and Politics, Wayne State University Press, 2004; PDF. Norman Girvan, coeditor de la obra catalogada The Thought of New World, firma aquí el capítulo «Michael Manley: A Personal Perspective». No se verificó cita del título catalogado: el vínculo es de autoría compartida, no de cita.",
+      "id_lote": "S21-R73",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "marsyounglabor",
+      "b": "boguesheretics",
+      "tipo": "resonancia",
+      "estado": "por_corroborar",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Por corroborar. Mars y Young (eds.), Caribbean Labor and Politics, Wayne State University Press, 2004; PDF. Anthony Bogues, autor de la obra catalogada Black Heretics, Black Prophets, firma aquí «Michael Manley, Trade Unionism, and the Politics of Equality». Vínculo de autoría, no de cita al título.",
+      "id_lote": "S21-R74",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "marsyounglabor",
+      "b": "rodneyguyanese",
+      "tipo": "resonancia",
+      "estado": "por_corroborar",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Por corroborar. Mars y Young (eds.), Caribbean Labor and Politics, Wayne State University Press, 2004; PDF. Vínculo temático explícito —la clase trabajadora guyanesa y su derrota política— entre dos obras del mismo lote; no se verificó cita del título catalogado.",
+      "id_lote": "S21-R75",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "huttonhowell",
+      "b": "chevannes",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Hutton, Barnett, Dunkley y Niaah (eds.), Leonard Percival Howell and the Genesis of Rastafari, UWI Press, 2015; PDF, notas. Cita el título catalogado Rastafari: Roots and Ideology (9 apariciones).",
+      "id_lote": "S21-R76",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "huttonhowell",
+      "b": "boguesheretics",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Hutton, Barnett, Dunkley y Niaah (eds.), Leonard Percival Howell and the Genesis of Rastafari, UWI Press, 2015; PDF, notas. Cita el título catalogado «Anthony Bogues, Black Heretics, Black Prophets: Radical Political Intellectuals, New York: Routledge, 2003, 160-61» (5 apariciones).",
+      "id_lote": "S21-R77",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "huttonhowell",
+      "b": "austinbroosgenesis",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Hutton, Barnett, Dunkley y Niaah (eds.), Leonard Percival Howell and the Genesis of Rastafari, UWI Press, 2015; PDF, notas. Cita el título catalogado Jamaica Genesis (3 apariciones).",
+      "id_lote": "S21-R78",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "huttonhowell",
+      "b": "pricebecomingrasta",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Hutton, Barnett, Dunkley y Niaah (eds.), Leonard Percival Howell and the Genesis of Rastafari, UWI Press, 2015; PDF, notas. Cita el título catalogado Becoming Rasta (2 apariciones).",
+      "id_lote": "S21-R79",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "huttonhowell",
+      "b": "pattersonsociology",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Hutton, Barnett, Dunkley y Niaah (eds.), Leonard Percival Howell and the Genesis of Rastafari, UWI Press, 2015; PDF, notas. Cita el título catalogado The Sociology of Slavery (2 apariciones).",
+      "id_lote": "S21-R80",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "huttonhowell",
+      "b": "james_bannerethiopia",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Hutton, Barnett, Dunkley y Niaah (eds.), Leonard Percival Howell and the Genesis of Rastafari, UWI Press, 2015; PDF, notas. Cita el título catalogado Holding Aloft the Banner of Ethiopia (2 apariciones).",
+      "id_lote": "S21-R81",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "huttonhowell",
+      "b": "brownreaper",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Hutton, Barnett, Dunkley y Niaah (eds.), Leonard Percival Howell and the Genesis of Rastafari, UWI Press, 2015; PDF, notas. Cita el título catalogado «Vincent Brown, The Reaper's Garden: Death and Power in the World of Atlantic Slavery, Cambridge MA: Harvard University Press» (2 apariciones).",
+      "id_lote": "S21-R82",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "huttonhowell",
+      "b": "beckfordpersistent",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Hutton, Barnett, Dunkley y Niaah (eds.), Leonard Percival Howell and the Genesis of Rastafari, UWI Press, 2015; PDF, notas. Cita el título catalogado Persistent Poverty.",
+      "id_lote": "S21-R83",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "walmsleycam",
+      "b": "brathwaite",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Walmsley, The Caribbean Artists Movement 1966-1972, New Beacon Books, 1992; PDF. Kamau Brathwaite es cofundador del movimiento y el libro trabaja sobre la nation language (6 apariciones) y sobre The Development of Creole Society; el corpus cataloga ese trabajo como «Nation Language / Tidalectics».",
+      "id_lote": "S21-R84",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "walmsleycam",
+      "b": "brathwaitearchipelago",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Walmsley, The Caribbean Artists Movement 1966-1972, New Beacon Books, 1992; PDF. Cita el título catalogado Caribbean Man in Space and Time (2 apariciones), ponencia del propio CAM.",
+      "id_lote": "S21-R85",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "walmsleycam",
+      "b": "james",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Walmsley, The Caribbean Artists Movement 1966-1972, New Beacon Books, 1992; PDF. Cita el título catalogado The Black Jacobins (5 apariciones); C.L.R. James participó en las sesiones del movimiento.",
+      "id_lote": "S21-R86",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "walmsleycam",
+      "b": "pattersonsociology",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Walmsley, The Caribbean Artists Movement 1966-1972, New Beacon Books, 1992; PDF. Cita el título catalogado: «Patterson was teaching at LSE; The Sociology of Slavery, based on his doctoral thesis, and his second novel An Absence of Ruins were about to be published» (3 apariciones). Patterson fue miembro del CAM.",
+      "id_lote": "S21-R87",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "walmsleycam",
+      "b": "pattersonsocialdeath",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Walmsley, The Caribbean Artists Movement 1966-1972, New Beacon Books, 1992; PDF. Cita el título catalogado Slavery and Social Death.",
+      "id_lote": "S21-R88",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "walmsleycam",
+      "b": "cesaire",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Walmsley, The Caribbean Artists Movement 1966-1972, New Beacon Books, 1992; PDF. Cita el título catalogado Discourse on Colonialism.",
+      "id_lote": "S21-R89",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "gloverregarded",
+      "b": "creolite",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Glover, A Regarded Self, Duke University Press, 2021; PDF, notas. Cita el título catalogado Éloge de la créolité (6 apariciones).",
+      "id_lote": "S21-R90",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "gloverregarded",
+      "b": "tinsley",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Glover, A Regarded Self, Duke University Press, 2021; PDF, notas. Cita el título catalogado Ezili's Mirrors (3 apariciones).",
+      "id_lote": "S21-R91",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "gloverregarded",
+      "b": "tellmyhorse",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Glover, A Regarded Self, Duke University Press, 2021; PDF, notas. Cita el título catalogado Tell My Horse (2 apariciones).",
+      "id_lote": "S21-R92",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "gloverregarded",
+      "b": "mamalola",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Glover, A Regarded Self, Duke University Press, 2021; PDF, notas. Cita el título catalogado Mama Lola (2 apariciones).",
+      "id_lote": "S21-R93",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "gloverregarded",
+      "b": "benitez",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Glover, A Regarded Self, Duke University Press, 2021; PDF, notas. Cita el título catalogado The Repeating Island (2 apariciones).",
+      "id_lote": "S21-R94",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "gloverregarded",
+      "b": "henrycaliban",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Glover, A Regarded Self, Duke University Press, 2021; PDF, notas. Cita el título catalogado Caliban's Reason.",
+      "id_lote": "S21-R95",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "gloverregarded",
+      "b": "glissant",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Glover, A Regarded Self, Duke University Press, 2021; PDF, notas. Cita el título catalogado Le discours antillais.",
+      "id_lote": "S21-R96",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "gloverregarded",
+      "b": "branddoor",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Glover, A Regarded Self, Duke University Press, 2021; PDF, notas. Cita el título catalogado A Map to the Door of No Return.",
+      "id_lote": "S21-R97",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "gloverregarded",
+      "b": "benedictykokken_haitiexception",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Glover, A Regarded Self, Duke University Press, 2021; PDF, notas. Continuidad de autor entre dos obras con ficha propia en el corpus: Glover coedita The Haiti Exception, catalogada aparte.",
+      "id_lote": "S21-R98",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "barriteaupolecon",
+      "b": "barriteauconfronting",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Barriteau, The Political Economy of Gender in the Twentieth-Century Caribbean, Palgrave, 2001; PDF. Continuidad de autor entre dos obras con ficha propia en el corpus: Confronting Power, Theorizing Gender está catalogada aparte y recoge la misma distinción entre dimensiones materiales e ideológicas del sistema de género.",
+      "id_lote": "S21-R99",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "sanmigueltinoel",
+      "b": "mintz",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "San Miguel, Los desvaríos de Ti Noel, Ediciones Vértigo, 2004; PDF, notas. Cita el título catalogado Caribbean Transformations (8 apariciones), la obra más discutida del volumen.",
+      "id_lote": "S21-R100",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "sanmigueltinoel",
+      "b": "pricemars",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "San Miguel, Los desvaríos de Ti Noel, Ediciones Vértigo, 2004; PDF, notas. Cita el título catalogado Así habló el Tío / Ainsi parla l'oncle (6 apariciones).",
+      "id_lote": "S21-R101",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "sanmigueltinoel",
+      "b": "benitez",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "San Miguel, Los desvaríos de Ti Noel, Ediciones Vértigo, 2004; PDF, notas. Cita el título catalogado La isla que se repite y The Repeating Island (4 apariciones).",
+      "id_lote": "S21-R102",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "sanmigueltinoel",
+      "b": "quinterosalsa",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "San Miguel, Los desvaríos de Ti Noel, Ediciones Vértigo, 2004; PDF, notas. Cita el título catalogado «Ángel Quintero Rivera, Salsa, sabor y control: sociología de la música tropical, México: Siglo XXI, 1998» (2 apariciones).",
+      "id_lote": "S21-R103",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "sanmigueltinoel",
+      "b": "workercane",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "San Miguel, Los desvaríos de Ti Noel, Ediciones Vértigo, 2004; PDF, notas. Cita el título catalogado Worker in the Cane.",
+      "id_lote": "S21-R104",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "sanmigueltinoel",
+      "b": "pattersonsociology",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "San Miguel, Los desvaríos de Ti Noel, Ediciones Vértigo, 2004; PDF, notas. Cita el título catalogado The Sociology of Slavery.",
+      "id_lote": "S21-R105",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "sanmigueltinoel",
+      "b": "ortiz",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "San Miguel, Los desvaríos de Ti Noel, Ediciones Vértigo, 2004; PDF, notas. Cita el título catalogado Contrapunteo cubano / Transculturación.",
+      "id_lote": "S21-R106",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "sanmigueltinoel",
+      "b": "morenofraginals",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "San Miguel, Los desvaríos de Ti Noel, Ediciones Vértigo, 2004; PDF, notas. Cita el título catalogado El ingenio.",
+      "id_lote": "S21-R107",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "sanmigueltinoel",
+      "b": "james",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "San Miguel, Los desvaríos de Ti Noel, Ediciones Vértigo, 2004; PDF, notas. Cita el título catalogado The Black Jacobins.",
+      "id_lote": "S21-R108",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "sanmigueltinoel",
+      "b": "fouchard",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "San Miguel, Los desvaríos de Ti Noel, Ediciones Vértigo, 2004; PDF, notas. Cita el título catalogado Les marrons de la liberté.",
+      "id_lote": "S21-R109",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "sanmigueltinoel",
+      "b": "beckfordpersistent",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "San Miguel, Los desvaríos de Ti Noel, Ediciones Vértigo, 2004; PDF, notas. Cita el título catalogado Persistent Poverty.",
+      "id_lote": "S21-R110",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "diazquinonesmemoria",
+      "b": "ortiz",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Díaz-Quiñones, A memória rota, Companhia das Letras, 2016; epub sin paginación estable. Cita el título catalogado: «o antropólogo cubano Fernando Ortiz (1881-1969), autor do famoso Contrapunteo cubano del tabaco y el azúcar (1940)» (8 apariciones).",
+      "id_lote": "S21-R111",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "diazquinonesmemoria",
+      "b": "benitez",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Díaz-Quiñones, A memória rota, Companhia das Letras, 2016; epub sin paginación estable. Cita el título catalogado La isla que se repite (3 apariciones).",
+      "id_lote": "S21-R112",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "diazquinonesmemoria",
+      "b": "price",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Díaz-Quiñones, A memória rota, Companhia das Letras, 2016; epub sin paginación estable. Cita el título catalogado: «interessou-me muitíssimo o livro Maroon Societies, organizado por Richard Price».",
+      "id_lote": "S21-R113",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "diazquinonesmemoria",
+      "b": "quinterosalsa",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Díaz-Quiñones, A memória rota, Companhia das Letras, 2016; epub sin paginación estable. Cita el título catalogado ¡Salsa, sabor y control!",
+      "id_lote": "S21-R114",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "harrispalace",
+      "b": "brathwaite",
+      "tipo": "resonancia",
+      "estado": "por_corroborar",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Por corroborar. Harris, Palace of the Peacock, Faber and Faber; epub sin paginación estable. Vínculo temático con el nodo Nation Language / Tidalectics: la novela ensaya en 1960 la disolución de las capas históricas que Brathwaite teorizaría como tidalectics. No hay cita cruzada: la novela no lleva aparato.",
+      "id_lote": "S21-R115",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "harrispalace",
+      "b": "glissant",
+      "tipo": "resonancia",
+      "estado": "por_corroborar",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Por corroborar. Harris, Palace of the Peacock, Faber and Faber; epub sin paginación estable. Vínculo temático con la opacidad y la poética de la Relación. No hay cita cruzada; queda a decisión de la dirección académica si una obra de ficción puede sostener relaciones solo temáticas.",
+      "id_lote": "S21-R116",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "harrispalace",
+      "b": "rodneyguyanese",
+      "tipo": "resonancia",
+      "estado": "por_corroborar",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Por corroborar. Harris, Palace of the Peacock, Faber and Faber; epub sin paginación estable. Vínculo territorial: las dos obras del lote que se sitúan en el interior guyanés. Sin cita cruzada.",
+      "id_lote": "S21-R117",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "girvanreinterpretar",
+      "b": "meeksgirvannewworld",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Girvan, «Reinterpretar al Caribe», Revista Mexicana del Caribe 7, 2000; PDF. Continuidad de autor entre dos obras con ficha propia en el corpus: Girvan coedita The Thought of New World y aquí reconstruye la definición de Caribe del New World Group.",
+      "id_lote": "S21-R118",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "girvanreinterpretar",
+      "b": "boschcolonfidel",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Girvan, «Reinterpretar al Caribe», Revista Mexicana del Caribe 7, 2000; PDF. Cita el título catalogado De Cristóbal Colón a Fidel Castro: El Caribe, frontera imperial.",
+      "id_lote": "S21-R119",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "girvanreinterpretar",
+      "b": "james",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Girvan, «Reinterpretar al Caribe», Revista Mexicana del Caribe 7, 2000; PDF. Cita el título catalogado The Black Jacobins: «forjada en los primeros trabajos de los nacionalistas radicales C. L. R. James (1938)».",
+      "id_lote": "S21-R120",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "girvanreinterpretar",
+      "b": "williamscapitalismo",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Girvan, «Reinterpretar al Caribe», Revista Mexicana del Caribe 7, 2000; PDF. Cita el título catalogado Capitalism and Slavery: «y Eric Williams (1944, 1970)», en la genealogía del New World Group.",
+      "id_lote": "S21-R121",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "gomespalmares",
+      "b": "price",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Gomes, Palmares, Editora Contexto, 2012; PDF, bibliografía. Bibliografía: «PRICE, Richard (org.). Maroon Societies: rebel slave communities in the Americas. 2. ed. Baltimore: The Johns Hopkins University Press» (3 apariciones).",
+      "id_lote": "S21-R122",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "gomespalmares",
+      "b": "trouillotsilencing",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Gomes, Palmares, Editora Contexto, 2012; PDF, bibliografía. Cita el título catalogado Silencing the Past.",
+      "id_lote": "S21-R123",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "gomespalmares",
+      "b": "escalante",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Gomes, Palmares, Editora Contexto, 2012; PDF, bibliografía. Cita el título catalogado El Palenque de San Basilio, en la serie americana de la fuga.",
+      "id_lote": "S21-R124",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "gomespalmares",
+      "b": "reisgomesliberdade",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Gomes, Palmares, Editora Contexto, 2012; PDF, bibliografía. Continuidad de autor entre dos obras con ficha propia en el corpus: Gomes coorganiza Freedom by a Thread, incorporada en el lote S20.",
+      "id_lote": "S21-R125",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "cabarcascartografia",
+      "b": "trouillotsilencing",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Cabarcas Ortega, Cartografía Afro, MinCulturas / AGN, 2025; PDF, bibliografía. Cita el título catalogado: «Trouillot, Michel-Rolph (1995). Silencing the past: power and the production of history. Beacon Press» (2 apariciones).",
+      "id_lote": "S21-R126",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "cabarcascartografia",
+      "b": "muneraelfracaso",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Cabarcas Ortega, Cartografía Afro, MinCulturas / AGN, 2025; PDF, bibliografía. Cita el título catalogado El fracaso de la nación.",
+      "id_lote": "S21-R127",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "cabarcascartografia",
+      "b": "brathwaite",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Cabarcas Ortega, Cartografía Afro, MinCulturas / AGN, 2025; PDF, bibliografía. Cita el nodo conceptual catalogado por su formulación bibliográfica: «Brathwaite, E. Kamau (1984). History of the Voice: Development of Nation Language in Anglophone Caribbean Poetry. New Beacon Books».",
+      "id_lote": "S21-R128",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "chamorroclubnegro",
+      "b": "helgnuncamas",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Chamorro, El Club Negro de Colombia, MinCulturas / AGN, 2024; PDF, bibliografía. Cita el título catalogado: «Helg, A. (2018). Nunca más esclavos. Una historia comparada de los esclavos que se liberaron en las Américas. Fondo de Cultura Económica».",
+      "id_lote": "S21-R129",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "chamorroclubnegro",
+      "b": "fanon",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Chamorro, El Club Negro de Colombia, MinCulturas / AGN, 2024; PDF, bibliografía. Cita el título catalogado Piel negra, máscaras blancas.",
+      "id_lote": "S21-R130",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "chamorroclubnegro",
+      "b": "zapataarbol",
+      "tipo": "resonancia",
+      "estado": "por_corroborar",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Por corroborar. Chamorro, El Club Negro de Colombia, MinCulturas / AGN, 2024; PDF, bibliografía. Manuel Zapata Olivella es uno de los dos autores cuyo pensamiento estudia el libro, pero el título catalogado (El árbol brujo de la libertad) no aparece citado: la bibliografía remite a otras obras suyas. Se registra como vínculo temático sin cita, conforme al criterio de cita exacta.",
+      "id_lote": "S21-R131",
+      "lote_incorporacion": "S21-2026-09-21"
+    },
+    {
+      "a": "chamorroclubnegro",
+      "b": "cabarcascartografia",
+      "tipo": "resonancia",
+      "estado": "por_corroborar",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Por corroborar. Chamorro, El Club Negro de Colombia, MinCulturas / AGN, 2024; PDF, bibliografía. Continuidad de colección: ambos volúmenes pertenecen a Otras Colombias posibles (MinCulturas / Archivo General de la Nación) y comparten el proyecto de abrir el archivo afrocolombiano a la conversación pública.",
+      "id_lote": "S21-R132",
+      "lote_incorporacion": "S21-2026-09-21"
     }
   ],
   "redirecciones": {
