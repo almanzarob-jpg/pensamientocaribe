@@ -27,6 +27,8 @@ atlas-id: apellido
 
 **Las relaciones tienen dos tipos, y no son intercambiables.** Vienen de Michael J. Monahan, *Creolizing Practices of Freedom: Recognition and Dissonance* (Rowman & Littlefield, 2023): **resonancia** cuando dos obras se refuerzan o comparten un argumento; **disonancia** cuando lo tensionan o contradicen abiertamente. La fricción epistémica no es un tercer tipo ni se calcula sola: es una afirmación editorial aparte, que solo existe cuando quien ficha la argumenta con clase y evidencia — la categoría la formula José Medina y la reelabora el propio Monahan dentro de esa misma práctica creolizadora. Comparar las etiquetas `trad:` de dos obras relacionadas no produce una fricción: produce un **cruce lingüístico**, un dato derivado que el compilador calcula solo y que únicamente señala que las obras se publicaron en tradiciones distintas. Quien fiche sigue completando `trad:` con precisión, porque de ahí sale el cruce lingüístico, pero si además quiere declarar una fricción epistémica tiene que escribirla con argumento y fuente, igual que cualquier otra relación verificada.
 
+**Y el tipo no anticipa el efecto.** Que una relación quede establecida como disonancia no dice todavía nada sobre su alcance: si desestabiliza un marco, si abre una posibilidad que antes no existía, si transforma algo o si no transforma nada. Monahan escribe que las expresiones disonantes son «often necessary for effective liberatory practice» (2023, p. 89), y ese *often* manda. El efecto se argumenta y se documenta en la propia ficha; nunca se deduce de la etiqueta. Por la misma razón, un aporte de fricción llegado por el reflujo se anota sobre la corriente que ya existe —`friccion: {hay, clase, argumento, fuente}`— y no convierte esa corriente en disonancia ni la crea si no está trazada.
+
 **Una relación verificada necesita una fuente concreta, no una intuición temática.** "Los dos hablan de cimarronaje" no es una fuente, es una coincidencia de tema. Una fuente real es: el libro A cita al libro B en su bibliografía o en el cuerpo del texto, o ambos autores comparten un dato biográfico verificable (codirección de tesis, coautoría, correspondencia documentada), o hay una cita textual localizable. Si no se encuentra nada de eso, la relación se deja explícitamente como `Por corroborar`. Eso está bien. Inventar una fuente para no dejar el campo vacío rompe el proyecto.
 
 ---
@@ -158,6 +160,7 @@ El atlas no se alimenta de fichas sueltas entregadas una por una — eso hace in
 - [ ] Aporte en Resumen, 60 palabras o menos, escrito desde el argumento del atlas
 - [ ] Etiquetas `fen:` / `lugar:` / `capa:` / `trad:` dentro de las listas cerradas
 - [ ] Cada relación tiene tipo (resonancia o disonancia; si además hay fricción epistémica, va declarada aparte con argumento y fuente, nunca inferida de `trad:`)
+- [ ] Ningún efecto emancipador o transformador se da por supuesto a partir del tipo de relación: si se afirma, va argumentado y con página
 - [ ] Cada relación tiene fuente real y verificable, marcada como verificación por texto (pista 1) o `verificado-manual` con página e iniciales (pista 2), o explícitamente `Por corroborar`
 - [ ] Sin caracteres `|` ni saltos de línea dentro del campo `fuente`
 - [ ] Ficha revisada contra duplicados antes de entrar al lote

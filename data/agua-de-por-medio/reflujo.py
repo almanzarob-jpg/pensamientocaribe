@@ -46,6 +46,13 @@ CAMPO_ENMIENDA = {'año': 'y', 'anio': 'y', 'ano': 'y', 'autoría': 'a', 'autori
                   'tradición lingüística': 'tr', 'tradicion linguistica': 'tr'}
 ARG_MIN, ARG_MAX = 200, 600
 
+# La fricción epistémica es un segundo eje sobre una corriente, no un tipo de corriente.
+# Las clases son las mismas que exige scripts/validar-atlas.mjs: si se tocan aquí, hay que
+# tocarlas allí, o el corpus pasará esta ingesta y fallará la validación.
+FRICCION_CLASES = ('crítica explícita', 'incompatibilidad conceptual',
+                   'desestabilización de una categoría', 'conflicto entre epistemologías',
+                   'objeción documentada', 'diferencia productiva argumentada')
+
 
 # ---------------------------------------------------------------- lectura
 
@@ -181,6 +188,21 @@ def valida(ap, corpus):
                     ok = error('no hay ninguna corriente entre esas dos entradas')
                 elif r.get('fuente') and 'corroborar' not in r['fuente'].lower():
                     ok = error('esa corriente ya tiene fuente: %s' % r['fuente'])
+            elif tipo == 'friccion':
+                # Una fricción se anota SOBRE una corriente existente. Nunca la crea ni
+                # decide su tipo: convertir toda fricción en disonancia era precisamente
+                # el error que el expediente del 22-09-2026 manda corregir.
+                if r is None:
+                    ok = error('no hay corriente trazada entre esas dos entradas. La fricción '
+                               'se anota sobre una corriente que ya existe: trázala primero '
+                               'como aporte de tipo «corriente» y vuelve a pasar este aporte.')
+                elif (r.get('friccion') or {}).get('hay') is True:
+                    ok = error('esa corriente ya tiene una fricción declarada')
+                clase = (ap.get('clase') or '').strip()
+                if clase not in FRICCION_CLASES:
+                    ok = error('falta el campo «clase» de la fricción, o no es una de las '
+                               'admitidas: %s. Lo decide la lectura editorial, no quien aporta.'
+                               % ', '.join(FRICCION_CLASES))
             elif r is not None:
                 ok = error('esa corriente ya existe (tipo %s)' % r['tipo'])
 
@@ -213,11 +235,18 @@ def aplica(ap, corpus):
         corpus['obras'].append(obra)
         return 'entrada «%s»' % ap['titulo'], nid
 
-    if tipo in ('corriente', 'friccion'):
+    if tipo == 'friccion':
+        # Segundo eje: se escribe en la relación que ya existe y se deja intacto su tipo.
+        r = relacion_de(corpus['relaciones'], ap['a'], ap['b'])
+        r['friccion'] = {'hay': True,
+                         'clase': ap['clase'].strip(),
+                         'argumento': ap['argumento'],
+                         'fuente': ap['fuente']}
+        return 'sobre la corriente %s — %s' % (ap['a'], ap['b']), ap['a']
+
+    if tipo == 'corriente':
         corpus['relaciones'].append({
-            'a': ap['a'], 'b': ap['b'],
-            'tipo': 'disonancia' if tipo == 'friccion' else 'resonancia',
-            'fuente': ap['fuente']})
+            'a': ap['a'], 'b': ap['b'], 'tipo': 'resonancia', 'fuente': ap['fuente']})
         return 'corriente %s — %s' % (ap['a'], ap['b']), ap['a']
 
     if tipo == 'corroboracion':

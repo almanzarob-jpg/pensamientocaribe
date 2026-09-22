@@ -88,3 +88,6 @@ data/**/.respaldo-siembra/
 # desde main (CNAME + server: GitHub.com); esta carpeta no despliega nada y solo
 # confundía sobre el hosting. Retirada del repo el 17-sep-2026.
 .netlify/
+
+# Carpeta de trabajo para renders de comprobación: nunca se publica.
+.tmp-render/
