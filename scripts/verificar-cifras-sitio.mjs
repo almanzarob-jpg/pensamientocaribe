@@ -40,6 +40,17 @@ V.porCorroborar = R.filter((r) => /por corroborar/i.test(String(r.fuente || ""))
 V.friccionesEvaluadas = R.filter((r) => r.friccion !== undefined).length;
 V.friccionesDeclaradas = R.filter((r) => r.friccion && r.friccion.hay === true).length;
 V.corroboradas = V.relaciones - V.porCorroborar;
+// El depósito en Zenodo es una foto fija: sus cifras son las del día en que se subió
+// y no se mueven cuando el corpus avanza. Comprobarlas contra el corpus vivo hacía
+// que el actualizador reescribiera la frase del depósito con los números de hoy, y el
+// 22-09-2026 llegó a publicar que la v1.22.0 contenía 311 obras y 849 relaciones. No
+// las contiene. Estas tres cifras se editan a mano, y solo al depositar una versión nueva.
+const DEPOSITO = { version: "1.22.0", entradas: 310, relaciones: 841 };
+V.depositoVersion = DEPOSITO.version;
+V.depositoEntradas = DEPOSITO.entradas;
+V.depositoRelaciones = DEPOSITO.relaciones;
+V.corroboradasPctEs = (V.corroboradas / V.relaciones * 100).toFixed(1).replace(".", ",");
+V.corroboradasPctEn = (V.corroboradas / V.relaciones * 100).toFixed(1);
 V.porCorroborarPctEs = (V.porCorroborar / V.relaciones * 100).toFixed(1).replace(".", ",");
 V.porCorroborarPctEn = (V.porCorroborar / V.relaciones * 100).toFixed(1);
 // Mismo criterio que marca-de-marea.html, y por la misma razón: el campo tr tiene
@@ -144,8 +155,10 @@ const reglas = [
   ["proyectos/metodologia-agua-de-por-medio.html", /actuales, (\d+) están corroboradas/, "corroboradas"],
   ["proyectos/metodologia-agua-de-por-medio.html", /y (\d+) siguen pendientes/, "porCorroborar"],
   ["proyectos/metodologia-agua-de-por-medio.html", /corpus va por la v([\d.]+)/, "version"],
-  ["proyectos/metodologia-agua-de-por-medio.html", /Zenodo es la v[\d.]+ \((\d+) obras/, "entradas"],
-  ["proyectos/metodologia-agua-de-por-medio.html", /Zenodo es la v[\d.]+ \(\d+ obras y (\d+) relaciones/, "relaciones"],
+  ["proyectos/metodologia-agua-de-por-medio.html", /Zenodo es la v([\d.]+) \(/, "depositoVersion"],
+  ["proyectos/metodologia-agua-de-por-medio.html", /Zenodo es la v[\d.]+ \((\d+) obras/, "depositoEntradas"],
+  ["proyectos/metodologia-agua-de-por-medio.html", /Zenodo es la v[\d.]+ \(\d+ obras y (\d+) relaciones/, "depositoRelaciones"],
+  ["proyectos/metodologia-agua-de-por-medio.html", /Corroboradas<\/span><span class="proyecto-meta-value">\d+ \(([\d,]+)%\)/, "corroboradasPctEs"],
   ["proyectos/metodologia-agua-de-por-medio.html", /subrepresentadas: (\d+) de/, "disonancias"],
   ["proyectos/metodologia-agua-de-por-medio.html", /subrepresentadas: \d+ de (\d+) relaciones/, "relaciones"],
   ["proyectos/metodologia-agua-de-por-medio-en.html", /Works<\/span><span class="proyecto-meta-value">(\d+)</, "entradas"],
@@ -158,8 +171,10 @@ const reglas = [
   ["proyectos/metodologia-agua-de-por-medio-en.html", /relations, (\d+) are corroborated/, "corroboradas"],
   ["proyectos/metodologia-agua-de-por-medio-en.html", /and (\d+) remain pending/, "porCorroborar"],
   ["proyectos/metodologia-agua-de-por-medio-en.html", /corpus is at v([\d.]+)/, "version"],
-  ["proyectos/metodologia-agua-de-por-medio-en.html", /Zenodo is v[\d.]+ \((\d+) works/, "entradas"],
-  ["proyectos/metodologia-agua-de-por-medio-en.html", /Zenodo is v[\d.]+ \(\d+ works and (\d+) relations/, "relaciones"],
+  ["proyectos/metodologia-agua-de-por-medio-en.html", /Zenodo is v([\d.]+) \(/, "depositoVersion"],
+  ["proyectos/metodologia-agua-de-por-medio-en.html", /Zenodo is v[\d.]+ \((\d+) works/, "depositoEntradas"],
+  ["proyectos/metodologia-agua-de-por-medio-en.html", /Zenodo is v[\d.]+ \(\d+ works and (\d+) relations/, "depositoRelaciones"],
+  ["proyectos/metodologia-agua-de-por-medio-en.html", /Corroborated<\/span><span class="proyecto-meta-value">\d+ \(([\d.]+)%\)/, "corroboradasPctEn"],
   ["proyectos/metodologia-agua-de-por-medio-en.html", /underrepresented: (\d+) of/, "disonancias"],
   ["proyectos/metodologia-agua-de-por-medio-en.html", /underrepresented: \d+ of (\d+) relations/, "relaciones"],
   ["proyectos/marca-de-marea.html", /desacuerdos entre (\d+) vínculos/, "relaciones"],
