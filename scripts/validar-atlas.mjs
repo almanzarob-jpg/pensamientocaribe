@@ -59,7 +59,11 @@ const PROCESOS = new Set([
 const REVISION_ESTADOS = new Set([
   "pendiente_revision_con_texto", "candidatura_preliminar", "confirmada", "revisada",
 ]);
+// Categorías públicas del atlas. El protocolo revisado del 22-09-2026 las conserva:
+// la disciplina vive en el registro interno, no en la interfaz.
 const RELACION_TIPOS = new Set(["resonancia", "disonancia"]);
+// «Tipo de apoyo» del §2: dato interno de revisión, no una categoría pública.
+const APOYOS = new Set(["documentada", "comparacion", "hipotesis"]);
 const RELACION_ESTADOS = new Set(["corroborada", "por_corroborar"]);
 const FRICCION_CLASES = new Set([
   "crítica explícita", "incompatibilidad conceptual", "desestabilización de una categoría",
@@ -539,6 +543,31 @@ function validateRelations(data, workIds) {
       const derived = isPending ? "por_corroborar" : "corroborada";
       if (relation.estado !== derived) report.error("RELACION_ESTADO", `${where}: estado no coincide con la fuente heredada.`);
     }
+    /* Registro interno (§2 del protocolo revisado). `apoyo` dice con qué se sostiene
+       el vínculo; `aspecto`, `limite` y `revision` se pueblan ficha a ficha y por eso
+       aquí solo se cuentan: exigirlos hoy dejaría 841 relaciones en falta y bloquearía
+       la publicación en vez de orientar la revisión. */
+    if (relation.apoyo !== undefined) {
+      if (!APOYOS.has(relation.apoyo)) {
+        report.error("APOYO_VALOR", `${where}: tipo de apoyo inválido ${relation.apoyo}.`);
+      } else if (relation.apoyo === "documentada" && pendingSource(relation.fuente)) {
+        report.error("APOYO_CONTRADICE_FUENTE", `${where}: declarada documentada con la fuente todavía por corroborar.`);
+      } else if (relation.apoyo === "hipotesis" && !pendingSource(relation.fuente)) {
+        report.warn("APOYO_HIPOTESIS", `${where}: marcada como hipótesis exploratoria pero su fuente ya no dice «por corroborar».`);
+      }
+    }
+    if (relation.aspecto !== undefined && !isNonEmptyString(relation.aspecto)) {
+      report.error("ASPECTO_VACIO", `${where}: aspecto declarado pero vacío.`);
+    }
+    if (relation.limite !== undefined && !isNonEmptyString(relation.limite)) {
+      report.error("LIMITE_VACIO", `${where}: límite declarado pero vacío.`);
+    }
+    if (relation.revision_interna !== undefined) {
+      const rv = relation.revision_interna;
+      if (!isObject(rv) || !isNonEmptyString(rv.responsable) || !/^\d{4}-\d{2}-\d{2}$/.test(String(rv.fecha || ""))) {
+        report.error("REVISION_INTERNA", `${where}: revision_interna debe traer responsable y fecha AAAA-MM-DD.`);
+      }
+    }
     if (relation.friccion !== undefined) {
       if (!isObject(relation.friccion) || typeof relation.friccion.hay !== "boolean") {
         report.error("FRICCION", `${where}: friccion debe declarar hay como booleano.`);
@@ -556,6 +585,18 @@ function validateRelations(data, workIds) {
   if (disconnected.length) report.error("OBRAS_DESCONECTADAS", `Entradas sin ninguna relación: ${listIds(disconnected)}.`);
   report.note(`${corroborated} relaciones corroboradas; ${pendingCount} por corroborar.`);
   report.note(`${byType.resonancia} resonancias; ${byType.disonancia} disonancias.`);
+  /* Estado del registro interno, en una línea: es lo que dice cuánto falta por revisar. */
+  const apo = { documentada: 0, comparacion: 0, hipotesis: 0, sin: 0 };
+  let conAspecto = 0, conLimite = 0, conRevision = 0;
+  data.relaciones.forEach((r) => {
+    apo[APOYOS.has(r.apoyo) ? r.apoyo : "sin"] += 1;
+    if (isNonEmptyString(r.aspecto)) conAspecto += 1;
+    if (isNonEmptyString(r.limite)) conLimite += 1;
+    if (isObject(r.revision_interna)) conRevision += 1;
+  });
+  const tot = data.relaciones.length;
+  report.note(`Apoyo: ${apo.documentada} documentadas; ${apo.comparacion} comparaciones; ${apo.hipotesis} hipótesis` + (apo.sin ? `; ${apo.sin} sin declarar` : "") + ".");
+  report.note(`Registro interno por poblar: aspecto en ${conAspecto}/${tot}; límite en ${conLimite}/${tot}; responsable y fecha en ${conRevision}/${tot}.`);
 }
 
 function validateCatalogTranslations(data, schema2) {

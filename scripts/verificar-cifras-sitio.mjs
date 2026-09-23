@@ -40,6 +40,8 @@ V.porCorroborar = R.filter((r) => /por corroborar/i.test(String(r.fuente || ""))
 V.friccionesEvaluadas = R.filter((r) => r.friccion !== undefined).length;
 V.friccionesDeclaradas = R.filter((r) => r.friccion && r.friccion.hay === true).length;
 V.corroboradas = V.relaciones - V.porCorroborar;
+V.porCorroborarPctEs = (V.porCorroborar / V.relaciones * 100).toFixed(1).replace(".", ",");
+V.porCorroborarPctEn = (V.porCorroborar / V.relaciones * 100).toFixed(1);
 // Mismo criterio que marca-de-marea.html, y por la misma razón: el campo tr tiene
 // la forma «lengua (lugar, trayectoria o corpus estudiado)», así que la lengua se
 // lee fuera del paréntesis. Contar por la cadena entera hacía que una obra hispana
@@ -66,6 +68,15 @@ const reglas = [
   ["proyectos/con-el-agua-de-por-medio.html", /(\d+) obras y manifestaciones del Gran Caribe conectadas/g, "entradas"],
   ["proyectos/con-el-agua-de-por-medio.html", /conecta (\d+) obras y manifestaciones/, "entradas"],
   ["proyectos/con-el-agua-de-por-medio.html", /(\d+) de (?:\d+) relaciones/g, "porCorroborar"],
+  ["proyectos/con-el-agua-de-por-medio.html", /\d+ de (\d+) relaciones/g, "relaciones"],
+  ["proyectos/con-el-agua-de-por-medio.html", /(\d+) of \d+ relations remain/, "porCorroborar"],
+  ["proyectos/con-el-agua-de-por-medio.html", /\d+ of (\d+) relations remain/, "relaciones"],
+  ["proyectos/con-el-agua-de-por-medio.html", /(\d+) de \d+ relaciones \(/g, "porCorroborar"],
+  ["proyectos/con-el-agua-de-por-medio.html", /\d+ de (\d+) relaciones \(/g, "relaciones"],
+  ["proyectos/con-el-agua-de-por-medio.html", /relaciones \(([\d,]+) %\)/g, "porCorroborarPctEs"],
+  ["proyectos/con-el-agua-de-por-medio.html", /(\d+) of \d+ relations \(/, "porCorroborar"],
+  ["proyectos/con-el-agua-de-por-medio.html", /\d+ of (\d+) relations \(/, "relaciones"],
+  ["proyectos/con-el-agua-de-por-medio.html", /relations \(([\d.]+)%\)/, "porCorroborarPctEn"],
   // Añadidas el 22-09-2026: la guía del reflujo (ES y EN) no tenía ni una regla y por eso
   // llevaba meses diciendo 652 corrientes, 226 sin fuente y 20 fricciones con el corpus en
   // 841 / 246 / 7. La versión inglesa además se había desincronizado de la española.
@@ -132,9 +143,9 @@ const reglas = [
   ["proyectos/metodologia-agua-de-por-medio.html", /De las (\d+) relaciones actuales/, "relaciones"],
   ["proyectos/metodologia-agua-de-por-medio.html", /actuales, (\d+) están corroboradas/, "corroboradas"],
   ["proyectos/metodologia-agua-de-por-medio.html", /y (\d+) siguen pendientes/, "porCorroborar"],
-  ["proyectos/metodologia-agua-de-por-medio.html", /última versión depositada \(v([\d.]+),/, "version"],
-  ["proyectos/metodologia-agua-de-por-medio.html", /depositada \(v[\d.]+, (\d+) obras/, "entradas"],
-  ["proyectos/metodologia-agua-de-por-medio.html", /depositada \(v[\d.]+, \d+ obras y (\d+) relaciones/, "relaciones"],
+  ["proyectos/metodologia-agua-de-por-medio.html", /corpus va por la v([\d.]+)/, "version"],
+  ["proyectos/metodologia-agua-de-por-medio.html", /Zenodo es la v[\d.]+ \((\d+) obras/, "entradas"],
+  ["proyectos/metodologia-agua-de-por-medio.html", /Zenodo es la v[\d.]+ \(\d+ obras y (\d+) relaciones/, "relaciones"],
   ["proyectos/metodologia-agua-de-por-medio.html", /subrepresentadas: (\d+) de/, "disonancias"],
   ["proyectos/metodologia-agua-de-por-medio.html", /subrepresentadas: \d+ de (\d+) relaciones/, "relaciones"],
   ["proyectos/metodologia-agua-de-por-medio-en.html", /Works<\/span><span class="proyecto-meta-value">(\d+)</, "entradas"],
@@ -146,9 +157,9 @@ const reglas = [
   ["proyectos/metodologia-agua-de-por-medio-en.html", /Of the current (\d+) relations/, "relaciones"],
   ["proyectos/metodologia-agua-de-por-medio-en.html", /relations, (\d+) are corroborated/, "corroboradas"],
   ["proyectos/metodologia-agua-de-por-medio-en.html", /and (\d+) remain pending/, "porCorroborar"],
-  ["proyectos/metodologia-agua-de-por-medio-en.html", /last deposited version \(v([\d.]+),/, "version"],
-  ["proyectos/metodologia-agua-de-por-medio-en.html", /version \(v[\d.]+, (\d+) works/, "entradas"],
-  ["proyectos/metodologia-agua-de-por-medio-en.html", /version \(v[\d.]+, \d+ works and (\d+) relations/, "relaciones"],
+  ["proyectos/metodologia-agua-de-por-medio-en.html", /corpus is at v([\d.]+)/, "version"],
+  ["proyectos/metodologia-agua-de-por-medio-en.html", /Zenodo is v[\d.]+ \((\d+) works/, "entradas"],
+  ["proyectos/metodologia-agua-de-por-medio-en.html", /Zenodo is v[\d.]+ \(\d+ works and (\d+) relations/, "relaciones"],
   ["proyectos/metodologia-agua-de-por-medio-en.html", /underrepresented: (\d+) of/, "disonancias"],
   ["proyectos/metodologia-agua-de-por-medio-en.html", /underrepresented: \d+ of (\d+) relations/, "relaciones"],
   ["proyectos/marca-de-marea.html", /desacuerdos entre (\d+) vínculos/, "relaciones"],

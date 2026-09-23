@@ -114,6 +114,45 @@ Esta marca (`verificado-manual`) es la que separa una relación comprobada por l
 
 ---
 
+## 4bis. El registro interno de cada vínculo
+
+Viene del protocolo revisado de resonancia y disonancia (22 de septiembre de 2026). Las categorías públicas del atlas no cambian: siguen siendo resonancia y disonancia, y la interfaz sigue siendo la misma. Lo que cambia es que cada vínculo tiene que poder reconstruirse. Una resonancia no prueba por sí misma influencia, contacto, continuidad histórica ni experiencia compartida; una disonancia no demuestra oposición total. La categoría nombra una operación de lectura del atlas, y su alcance depende de las fuentes.
+
+**Los siete datos que debe poder responder cada ficha:**
+
+1. Qué elementos conecta y con qué categoría.
+2. Qué pregunta o aspecto concreto motivó la relación. Campo `aspecto`.
+3. Qué fuentes se consultaron, con pasajes o localizadores verificables. Campo `fuente`, que ya existe.
+4. Con qué se sostiene. Campo `apoyo`, con tres valores y ninguno más:
+   - `documentada` — relación histórica documentada: hay cita, correspondencia, circulación, colaboración, archivo compartido o continuidad de autor, y la ficha dice dónde comprobarlo.
+   - `comparacion` — comparación fundada en fuentes: la ficha argumenta el vínculo pero no aporta localizador de contacto directo.
+   - `hipotesis` — hipótesis exploratoria: el vínculo está declarado pendiente de corroborar.
+   Este dato orienta la revisión interna y **no crea categorías públicas**. No se dibuja, no aparece en la leyenda y no cambia el color de ninguna corriente.
+5. Una frase que distinga el dato comprobable de la interpretación del atlas.
+6. Qué no permiten concluir todavía las fuentes. Campo `limite`.
+7. Quién revisó y cuándo. Campo `revision_interna`, con `responsable` y `fecha` en formato AAAA-MM-DD.
+
+A 1.23.0 el campo `apoyo` está poblado en las 841 relaciones —440 documentadas, 155 comparaciones, 246 hipótesis— y `aspecto`, `limite` y `revision_interna` están vacíos. El validador los cuenta y los informa en cada pasada, pero no los exige: si los exigiera, las 841 quedarían en falta el primer día y el registro bloquearía la publicación en vez de orientar la revisión. Sí son errores duros dos contradicciones: declarar `documentada` una relación cuya fuente todavía dice «por corroborar», y dejar cualquiera de esos campos declarado pero vacío.
+
+## 4ter. Cómo se redacta un vínculo
+
+**Nombrar el aspecto concreto.** No vale un vínculo sostenido en una semejanza vaga. Si no puedes explicar en una frase precisa qué resuena o en qué punto exacto divergen, la ficha no está lista y no se publica todavía: se deja en revisión.
+
+**Graduar el lenguaje según el sustento.** Estas cuatro expresiones no son intercambiables y cada una compromete al atlas de forma distinta:
+
+| Se escribe | Cuando |
+| :---- | :---- |
+| «documenta» | hay cita, correspondencia, circulación o archivo compartido, con localizador |
+| «permite comparar» | el atlas pone dos materiales juntos por un problema compartido, sin prueba de contacto |
+| «sugiere» | la lectura del atlas propone algo que las fuentes no cierran |
+| «queda por investigar» | el vínculo está trazado pero sin sustento todavía |
+
+**Separar lo que prueba la fuente de lo que observa el atlas.** Cuando haya contacto, cita o circulación documentada, se indica la fuente precisa. Cuando sea comparación, se presenta como lectura del atlas y se dice así.
+
+**Y una revisión que no es opcional.** Antes de asociar resistencia, pertenencia, comunidad, continuidad, origen o intención política con vidas negras, hay que comprobar que las fuentes lo sostienen. Una afinidad o una diferencia formal entre dos obras no autoriza a atribuir ninguna de esas cosas. El inventario de los vínculos del corpus que usan ese vocabulario está en `documentacion/revision-atribucion-vidas-negras-2026-09-22.md`.
+
+**Criterio de cierre.** Una relación está lista para permanecer publicada cuando se puede explicar qué conecta o tensiona los dos elementos, localizar las fuentes pertinentes y señalar el alcance de la propia lectura. Quien visita el atlas sigue encontrando resonancias y disonancias en la interfaz de siempre; el registro interno es lo que garantiza que esa experiencia esté sostenida por una investigación revisable.
+
 ## 5. Qué pasa después de entregar un lote
 
 Una vez entregadas las fichas (exportadas de Zotero en RDF, o llenadas en la hoja de cálculo `hoja-relaciones-atlas-agua-de-por-medio.xlsx` como plan B cuando Zotero no es práctico), el compilador hace el trabajo de control de calidad automático:
@@ -161,6 +200,9 @@ El atlas no se alimenta de fichas sueltas entregadas una por una — eso hace in
 - [ ] Etiquetas `fen:` / `lugar:` / `capa:` / `trad:` dentro de las listas cerradas
 - [ ] Cada relación tiene tipo (resonancia o disonancia; si además hay fricción epistémica, va declarada aparte con argumento y fuente, nunca inferida de `trad:`)
 - [ ] Ningún efecto emancipador o transformador se da por supuesto a partir del tipo de relación: si se afirma, va argumentado y con página
+- [ ] El vínculo declara su `apoyo` (documentada, comparacion o hipotesis) y el lenguaje está graduado en consecuencia: «documenta», «permite comparar», «sugiere» y «queda por investigar» no son intercambiables
+- [ ] El aspecto concreto del vínculo se puede decir en una frase precisa; si no, la ficha se queda en revisión
+- [ ] Ninguna ficha atribuye resistencia, comunidad, continuidad, procedencia o intención política a vidas negras sin que las fuentes lo sostengan
 - [ ] Cada relación tiene fuente real y verificable, marcada como verificación por texto (pista 1) o `verificado-manual` con página e iniciales (pista 2), o explícitamente `Por corroborar`
 - [ ] Sin caracteres `|` ni saltos de línea dentro del campo `fuente`
 - [ ] Ficha revisada contra duplicados antes de entrar al lote
