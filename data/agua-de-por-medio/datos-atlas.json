@@ -3,9 +3,9 @@
     "titulo": "Con el agua de por medio",
     "subtitulo": "Atlas para una antropología archipiélica",
     "responsable": "Grupo de Investigación Pensamiento Caribe",
-    "version": "1.24.0",
-    "fecha": "2026-09-22",
-    "nota_version": "Lote S22: entra Patrick Taylor, The Narrative of Liberation (1989), con ocho relaciones nuevas, siete de ellas con cita verificada y una con fricción epistémica documentada. Las relaciones del lote llegan con el registro interno completo: apoyo, aspecto, límite y responsable con fecha.",
+    "version": "1.25.0",
+    "fecha": "2026-09-23",
+    "nota_version": "Lote S23: el nodo San Andrés pasa de una obra a cinco. Entran Parsons, Ranocchiari, Márquez Pérez y el volumen de Román Romero y Vidal Ortega, con dieciséis relaciones, catorce de ellas con cita verificada y una con fricción epistémica documentada entre la historiografía y la etnografía del archipiélago. Las relaciones del lote llegan con el registro interno completo.",
     "registro_interno": {
       "proposito": "Protocolo revisado de resonancia y disonancia (22-09-2026). Las categorías públicas del atlas siguen siendo resonancia y disonancia; este registro es interno y orienta la revisión editorial. El campo apoyo no crea categorías públicas ni cambia la interfaz.",
       "apoyo": {
@@ -11162,6 +11162,298 @@
         "fecha": "2026-09-22",
         "fundamento": "C9 por el tratamiento del relato popular como archivo vivo; C2 por la lectura de la creolización como operación narrativa. La decisión previa es de registro: entra una monografía universitaria de crítica cultural, registro ya admitido en el corpus."
       }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "lote_incorporacion": "S23-2026-09-23",
+      "fuente_recorrido": [
+        "Lote S23-2026-09-23: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en San Andrés porque el archipiélago es el objeto declarado del libro. Las Islas Caimán y la Costa de Mosquitos, que Parsons recorre como el mismo mundo marítimo, se declaran en orillas: la primera sin nodo, la segunda sobre Bluefields."
+      },
+      "id": "parsonssanandres",
+      "t": "San Andrés y Providencia: una geografía histórica de las islas colombianas del mar Caribe",
+      "a": "James J. Parsons",
+      "y": "1956 / ed. esp. 1985",
+      "f": [
+        "colonialidad",
+        "soberanias",
+        "postplantacion"
+      ],
+      "l": "sanandres",
+      "tr": "anglófono (San Andrés y Providencia)",
+      "ap": "El libro que fundó el archipiélago como objeto de estudio. Parsons, geógrafo de Berkeley, reconstruye cómo unas islas sin agua ni indígenas acabaron pobladas por puritanos ingleses, bucaneros, esclavizados y bautistas, y cómo su vida material —el algodón, el coco, la tortuga verde, la migración a Panamá y a la Costa de Mosquitos— las ató al Caribe occidental angloparlante mucho antes que a Colombia. Escribe en 1956 desde el archivo y el recorrido, y lo hace con una tesis que el atlas puede discutir: el archipiélago no es una excepción colombiana sino una pieza corriente de un mundo marítimo que va de Gran Caimán a Bluefields. Los cuatro libros que el corpus tiene sobre las islas lo citan, y esa convergencia lo vuelve el texto de referencia del nodo.",
+      "ed": "El Áncora Editores",
+      "edicion_consultada": "Original: San Andrés and Providencia, English-Speaking Islands in the Western Caribbean, University of California Publications in Geography, vol. 12, núm. 1, University of California Press, 1956. Edición consultada: traducción de Marco F. Archbold Britton, revisión de Teresa Morales de Gómez, El Áncora Editores, Bogotá, 1985; ISBN 84-89209-63-4. PDF del ejemplar escaneado, con capa OCR degradada que sustituye la o por º: se normalizó antes de cualquier búsqueda.",
+      "isbn": "9788489209633",
+      "lenguas_publicacion": [
+        "inglés",
+        "español"
+      ],
+      "operaciones": [
+        "cartografiar",
+        "reconstruir un archivo",
+        "seguir una ruta"
+      ],
+      "orillas": [
+        {
+          "lugar": "sanandres",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Islas Caimán",
+          "funcion": "territorio comparado"
+        },
+        {
+          "lugar": "bluefields",
+          "funcion": "territorio comparado"
+        },
+        {
+          "lugar": "panama",
+          "funcion": "destino migratorio"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "rutas_diasporas_territorios_acuosos",
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: portada, créditos de traducción y ediciones, capítulo VII «Tortugas y lobos de mar», notas y bibliografía. Se verificó que las cuatro obras restantes del nodo lo citan por título exacto.",
+        "responsable": "Preparación asistida del lote S23; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-23",
+        "fundamento": "C6 por el archipiélago leído como territorio acuoso y ruta antes que como isla; C7 por la disputa de soberanía que el libro documenta desde la vida material. La decisión previa es de registro: entra una monografía universitaria de geografía histórica en traducción, registro ya admitido."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "lote_incorporacion": "S23-2026-09-23",
+      "fuente_recorrido": [
+        "Lote S23-2026-09-23: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en San Andrés, isla donde Ranocchiari hizo el trabajo de campo entre 2009 y 2011. La Colombia continental, término de comparación permanente del libro, se declara en orillas como región."
+      },
+      "id": "ranocchiariparaiso",
+      "t": "Paraíso y frontera: prácticas musicales y performance de la etnicidad en la isla de San Andrés",
+      "a": "Dario Ranocchiari",
+      "y": "2020",
+      "f": [
+        "creolizacion",
+        "colonialidad",
+        "memoria"
+      ],
+      "l": "sanandres",
+      "tr": "hispano (San Andrés)",
+      "ap": "Una etnografía de la isla hecha desde la música, y no una etnomusicología. Ranocchiari sigue tres ámbitos —la música «típica», el canto coral de las iglesias bautistas y la música urbana— para mostrar que la etnicidad raizal no es un dato que la música exprese, sino algo que se ejecuta, se reclama y se negocia en cada ocasión sonora, a veces frente a los colombianos continentales y a veces con ellos. El libro trae además el estado del arte más completo de la etnografía del archipiélago: discute a Parsons, a Peter Wilson y a los ensayos de Nina de Friedemann de los años sesenta, y señala con precisión qué punto de vista adoptó cada uno.",
+      "ed": "Instituto Colombiano de Antropología e Historia (ICANH)",
+      "edicion_consultada": "Colección Antropología en la Modernidad, ICANH, Bogotá, 1.ª ed., octubre de 2020; ISBN 978-958-8852-91-1; PDF de la edición web.",
+      "isbn": "9789588852911",
+      "lenguas_publicacion": [
+        "español"
+      ],
+      "operaciones": [
+        "producir etnografía",
+        "escuchar",
+        "documentar una práctica"
+      ],
+      "orillas": [
+        {
+          "lugar": "sanandres",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Colombia continental",
+          "funcion": "territorio comparado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "creolizaciones_traducciones_opacidades",
+          "memorias_espiritualidades_archivos_vivos"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: contracubierta, créditos, capítulo «Beautiful San Andrés» con el estado del arte etnográfico y bibliografía. Citas verificadas de Parsons, Wilson, Benítez Rojo, Sheller y Mintz.",
+        "responsable": "Preparación asistida del lote S23; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-23",
+        "fundamento": "C2 porque la etnicidad aparece como traducción y opacidad antes que como identidad; C9 por el archivo sonoro que el libro levanta. La decisión previa es de registro: entra una monografía de instituto estatal de investigación con aparato crítico completo."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "lote_incorporacion": "S23-2026-09-23",
+      "fuente_recorrido": [
+        "Lote S23-2026-09-23: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en San Andrés por el archipiélago. El territorio que el libro documenta son los Cayos del Norte —Quitasueño, Serrana y Roncador—, que no tienen nodo propio y se declaran en orillas como región."
+      },
+      "id": "marquezfiwisea",
+      "t": "Fi wi sea · Nuestro mar · Our sea: historias y memorias del mar isleño raizal",
+      "a": "Ana Isabel Márquez Pérez",
+      "y": "2013 / 2.ª ed. 2014",
+      "f": [
+        "memoria",
+        "soberanias",
+        "creolizacion"
+      ],
+      "l": "sanandres",
+      "tr": "hispano (San Andrés y Providencia)",
+      "ap": "El mar contado por quienes lo pescan. Márquez Pérez, antropóloga criada en el archipiélago, reúne ocho años de trabajo con pescadores artesanales de Providencia y Santa Catalina para documentar el territorio marítimo tradicional de los Cayos del Norte: cómo se navega, qué se sabe del arrecife, qué recuerdan los mayores del catboat caimanés y de la pesca de tortuga. El libro es trilingüe por decisión y no por cortesía —el título va primero en creole, fi wi sea— y algunos pasajes ingleses conservan las formas del inglés criollo isleño. Para un atlas que discute quién nombra el Caribe, es una fuente en la que el nombrar corre por cuenta de los isleños.",
+      "ed": "Instituto Colombiano de Antropología e Historia (ICANH)",
+      "edicion_consultada": "ICANH, Bogotá; 1.ª ed. septiembre de 2013, 2.ª ed. noviembre de 2014; ISBN 978-958-8181-97-4; licencia Creative Commons BY-NC-ND 4.0; PDF. En la cubierta el título va con barras —«Fi wi sea / Nuestro mar / Our sea»—; aquí se separa con puntos medios para no confundirlo con una entrada compuesta de dos obras distintas.",
+      "isbn": "9789588181974",
+      "lenguas_publicacion": [
+        "español",
+        "inglés",
+        "criollo"
+      ],
+      "operaciones": [
+        "preservar una memoria",
+        "producir testimonio",
+        "escuchar"
+      ],
+      "orillas": [
+        {
+          "lugar": "sanandres",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Cayos del Norte",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Islas Caimán",
+          "funcion": "lugar de circulación"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "memorias_espiritualidades_archivos_vivos",
+          "rutas_diasporas_territorios_acuosos"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: créditos, agradecimientos con el origen del proyecto ICANH y la tesis doctoral de la UFRRJ, y bibliografía. Citas verificadas de Parsons y Wilson.",
+        "responsable": "Preparación asistida del lote S23; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-23",
+        "fundamento": "C9 por la memoria oral del mar como archivo vivo; C6 por el territorio marítimo tradicional. Decisión de registro pendiente de ratificación: el libro se presenta como lectura para todas las edades, es decir, registro de divulgación, aunque nace de un proyecto de investigación del ICANH y de una tesis doctoral y trae bibliografía propia. Es la misma clase de excepción ya aprobada para los dos volúmenes de Otras Colombias posibles."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "lote_incorporacion": "S23-2026-09-23",
+      "fuente_recorrido": [
+        "Lote S23-2026-09-23: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en San Andrés, sede del Instituto de Estudios Caribeños de la Universidad Nacional que edita el volumen y territorio del que trata."
+      },
+      "id": "romanvidalmemorias",
+      "t": "Memorias, historias y olvidos: colonialismo, sociedad y política en San Andrés y Providencia",
+      "a": "Raúl Román Romero y Antonino Vidal Ortega (eds.)",
+      "y": "2019",
+      "f": [
+        "colonialidad",
+        "soberanias",
+        "memoria"
+      ],
+      "l": "sanandres",
+      "tr": "hispano (San Andrés y Providencia)",
+      "ap": "Doce trabajos sobre lo que el archipiélago recuerda y lo que se le hizo olvidar, publicados por la sede caribeña de la Universidad Nacional al cumplir veinte años en la isla. El volumen reúne la intendencia de 1913-1923 leída por Sharika Crawford, la soberanía marítima y su efecto económico, la quema del archivo, la literatura isleña y la voz del pastor Enrique Pusey. Su aporte al atlas es una tensión de método que el libro nombra en voz alta: mientras los historiadores buscan la prueba documental del origen del conglomerado isleño, los antropólogos buscan sus orígenes míticos, y ninguno de los dos oficios sale ileso de la comparación.",
+      "ed": "Editorial Universidad Nacional de Colombia",
+      "edicion_consultada": "Colección 20 años de presencia, Instituto de Estudios Caribeños - Sede Caribe, Universidad Nacional de Colombia, San Andrés y Bogotá, 1.ª ed., 2019; 274 pp.; ISBN 978-958-783-939-5; PDF.",
+      "isbn": "9789587839395",
+      "lenguas_publicacion": [
+        "español"
+      ],
+      "operaciones": [
+        "reconstruir un archivo",
+        "confrontar una categoría",
+        "preservar una memoria"
+      ],
+      "orillas": [
+        {
+          "lugar": "sanandres",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Colombia continental",
+          "funcion": "lugar de circulación"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "memorias_espiritualidades_archivos_vivos"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión focal: créditos y catalogación, índice con la autoría de cada capítulo, el pasaje sobre Cabrera y el mito de Morgan, y las bibliografías de capítulo. Citas verificadas de Parsons, Wilson, Trouillot, Glissant y Benítez Rojo.",
+        "responsable": "Preparación asistida del lote S23; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-23",
+        "fundamento": "C7 por el colonialismo interno y la soberanía como asunto del volumen; C9 por la quema del archivo y la memoria isleña. La decisión previa es de registro: entra un volumen colectivo universitario, registro ya admitido en el corpus."
+      }
     }
   ],
   "relaciones": [
@@ -18629,6 +18921,313 @@
       "revision_interna": {
         "responsable": "Preparación asistida del lote S22; clasificación pendiente de adjudicación académica",
         "fecha": "2026-09-22"
+      }
+    },
+    {
+      "a": "ranocchiariparaiso",
+      "b": "parsonssanandres",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Ranocchiari, Paraíso y frontera, ICANH, 2020, bibliografía: «Parsons, James. 1985. San Andrés y Providencia. Una geografía histórica de las islas colombianas del Caribe. Bogotá: El Áncora», y citas con página en el cuerpo: «(Parsons 1985, 47-48)» y «(Parsons 1985)» sobre la presencia inglesa temprana y las doce familias mulatas.",
+      "id_lote": "S23-R01",
+      "lote_incorporacion": "S23-2026-09-23",
+      "apoyo": "documentada",
+      "aspecto": "Ranocchiari apoya en Parsons la historia del poblamiento que su etnografía necesita como punto de partida: quién llegó a la isla, cuándo y desde dónde.",
+      "limite": "La cita es de contexto histórico. Ranocchiari no discute la tesis de Parsons sobre el archipiélago como pieza del Caribe occidental angloparlante.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S23; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-23"
+      }
+    },
+    {
+      "a": "romanvidalmemorias",
+      "b": "parsonssanandres",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Román Romero y Vidal Ortega (eds.), Memorias, historias y olvidos, Universidad Nacional de Colombia, 2019: «(Parsons 1985, 44-45)», «(Parsons 1985, 35; Meisel y Aguilera 2016)» y «(Parsons 1985, 41-42)» sobre el ron y la pólvora; la bibliografía de capítulo trae además «Parsons, James. 1954. “English-Speaking Settlement of the Western Caribbean”».",
+      "id_lote": "S23-R02",
+      "lote_incorporacion": "S23-2026-09-23",
+      "apoyo": "documentada",
+      "aspecto": "Los capítulos históricos del volumen usan a Parsons como base documental del poblamiento y del comercio temprano del archipiélago.",
+      "limite": "El volumen cita la edición de 1985 para datos concretos; no revisa ni corrige el marco geográfico de Parsons.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S23; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-23"
+      }
+    },
+    {
+      "a": "marquezfiwisea",
+      "b": "parsonssanandres",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Márquez Pérez, Fi wi sea / Nuestro mar, ICANH, bibliografía: «Parsons, James. San Andrés y Providencia: una geografía histórica de las islas colombianas del mar Caribe. Bogotá: Talleres Gráficos del Banco de la República, 1964», más una segunda entrada de Parsons sobre el comercio de carey en la costa Caribe de Centroamérica.",
+      "id_lote": "S23-R03",
+      "lote_incorporacion": "S23-2026-09-23",
+      "apoyo": "documentada",
+      "aspecto": "Márquez Pérez toma de Parsons la historia larga de la pesca de tortuga y carey que sus entrevistados recuerdan como oficio propio.",
+      "limite": "La edición citada es la de 1964 del Banco de la República, no la de El Áncora de 1985 que está catalogada; es el mismo libro en otra edición, declarado en la ficha.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S23; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-23"
+      }
+    },
+    {
+      "a": "crawfordturtlemen",
+      "b": "parsonssanandres",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Crawford, The Last Turtlemen of the Caribbean, UNC Press, 2020, bibliografía: «...Providencia: English-Speaking Islands in the Western Caribbean. Berkeley: University of California Press», que es el original de 1956 de la obra catalogada; Crawford cita además otro libro de Parsons, The Green Turtle and Man.",
+      "id_lote": "S23-R04",
+      "lote_incorporacion": "S23-2026-09-23",
+      "apoyo": "documentada",
+      "aspecto": "Ambas obras siguen el mismo circuito marítimo —Gran Caimán, Providencia, la Costa de Mosquitos— y la tortuga verde como el oficio que lo sostiene; Crawford recoge donde Parsons dejó.",
+      "limite": "Crawford cita el original inglés de 1956, no la traducción de 1985 que el corpus cataloga; es el mismo libro en su primera edición.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S23; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-23"
+      }
+    },
+    {
+      "a": "ranocchiariparaiso",
+      "b": "wilsoncrabantics",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Ranocchiari, 2020, dedica una sección entera a Crab Antics: «El libro de Peter J. Wilson Crab Antics se centra en los sistemas de valores que regulan la posición social en la cultura raizal de Providencia», expone respetabilidad y reputación y cita la traducción castellana Las travesuras del cangrejo (Wilson 2004, 27 y 177).",
+      "id_lote": "S23-R05",
+      "lote_incorporacion": "S23-2026-09-23",
+      "apoyo": "documentada",
+      "aspecto": "Ranocchiari se apoya en el par respetabilidad/reputación de Wilson para leer las prácticas musicales, y observa que Crab Antics describe Providencia desde un punto de vista declaradamente etic, con cita del propio Wilson.",
+      "limite": "La observación sobre el punto de vista es descriptiva, no una objeción: Ranocchiari adopta el marco de Wilson sin impugnarlo.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S23; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-23"
+      }
+    },
+    {
+      "a": "marquezfiwisea",
+      "b": "wilsoncrabantics",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Márquez Pérez, bibliografía: «Wilson, Peter. Crab Antics. A Caribbean Case Study of the Conflict between Reputation and Respectability. Prospect Heights, Illinois: Waveland Press, 1973», la edición exacta de la obra catalogada.",
+      "id_lote": "S23-R06",
+      "lote_incorporacion": "S23-2026-09-23",
+      "apoyo": "documentada",
+      "aspecto": "Márquez Pérez inscribe su trabajo con los pescadores de Providencia en la etnografía que Wilson abrió sobre la misma isla cuarenta años antes.",
+      "limite": "La relación está documentada por la entrada bibliográfica; el libro de Márquez no discute las tesis de Wilson en el cuerpo del texto.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S23; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-23"
+      }
+    },
+    {
+      "a": "romanvidalmemorias",
+      "b": "wilsoncrabantics",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": true,
+        "clase": "conflicto entre epistemologías",
+        "argumento": "El volumen nombra la divergencia en voz alta: «mientras los historiadores se esfuerzan por encontrar evidencias documentales del origen real de este conglomerado, los antropólogos buscan precisamente los orígenes míticos». Lo que para la etnografía de Wilson es dato —el relato isleño de descender de la tripulación de Morgan— para la historiografía del volumen es un mito que hay que desmontar con documentos.",
+        "fuente": "Román Romero y Vidal Ortega (eds.), Memorias, historias y olvidos, Universidad Nacional de Colombia, 2019, capítulo sobre cultura política isleña, sobre Wilson, Crab Antics ([1973] 1995), 39-41, y Cabrera (1980), 5-12 y 8."
+      },
+      "fuente": "Verificada en el texto, con conflicto de método. Román Romero y Vidal Ortega (eds.), 2019: «Wilson, Peter. (1973) 1995. Crab Antics. A Caribbean Case Study of the Conflict...» y, en el cuerpo, el mito de la descendencia de Henry Morgan «que Cabrera cita profusamente en su libro, tomado de Crab Antics de Wilson ([1973] 1995, 39-41)»; también se discute el prólogo de Sidney Mintz a la edición castellana.",
+      "id_lote": "S23-R07",
+      "lote_incorporacion": "S23-2026-09-23",
+      "apoyo": "documentada",
+      "aspecto": "El mito del origen inglés que Crab Antics registra como material etnográfico es tratado por los historiadores del volumen como identidad imaginada sin base documental.",
+      "limite": "La fricción es de oficio, no un ataque a Wilson: el volumen lo cita como fuente y la descalificación textual es de Cabrera (1980), que el volumen recoge y comenta.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S23; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-23"
+      }
+    },
+    {
+      "a": "romanvidalmemorias",
+      "b": "crawfordturtlemen",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el propio volumen. Sharika D. Crawford firma el capítulo «La Intendencia de San Andrés y Providencia, 1913-1923: promesas y peligros de la inclusión» en Román Romero y Vidal Ortega (eds.), Memorias, historias y olvidos, Universidad Nacional de Colombia, 2019; figura en el índice y en la presentación del volumen. Otro capítulo cita además su artículo de 2009 sobre la incorporación de los isleños protestantes a la nación católica.",
+      "id_lote": "S23-R08",
+      "lote_incorporacion": "S23-2026-09-23",
+      "apoyo": "documentada",
+      "aspecto": "La autora de la obra catalogada sobre los últimos tortugueros escribe, dentro de este volumen, la historia política de la intendencia que sometió el archipiélago al gobierno andino.",
+      "limite": "Lo documentado es la coautoría del volumen y una cita de su artículo de 2009: el volumen no cita The Last Turtlemen, que es del año siguiente.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S23; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-23"
+      }
+    },
+    {
+      "a": "ranocchiariparaiso",
+      "b": "benitez",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Ranocchiari, 2020, bibliografía: «Benítez Rojo, Antonio. 1989. La isla que se repite. Barcelona: Casiopea», y uso en el cuerpo: «caos dentro del cual hay una isla que se repite incesantemente —cada copia...».",
+      "id_lote": "S23-R09",
+      "lote_incorporacion": "S23-2026-09-23",
+      "apoyo": "documentada",
+      "aspecto": "Ranocchiari usa la isla que se repite de Benítez Rojo para pensar la repetición con diferencia de las prácticas musicales isleñas.",
+      "limite": "Es un préstamo conceptual; el libro no discute la teoría del caos caribeño de Benítez Rojo.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S23; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-23"
+      }
+    },
+    {
+      "a": "romanvidalmemorias",
+      "b": "benitez",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Román Romero y Vidal Ortega (eds.), 2019, bibliografía: «Benítez, Rojo, Antonio. 1998. La isla que se repite. Barcelona: Casiopea».",
+      "id_lote": "S23-R10",
+      "lote_incorporacion": "S23-2026-09-23",
+      "apoyo": "documentada",
+      "aspecto": "El volumen inscribe el archipiélago en la lectura de Benítez Rojo del Caribe como repetición, no como suma de islas aisladas.",
+      "limite": "La relación consta por la entrada bibliográfica; el volumen no desarrolla la discusión con Benítez Rojo en el cuerpo.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S23; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-23"
+      }
+    },
+    {
+      "a": "ranocchiariparaiso",
+      "b": "shellerconsuming",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Ranocchiari, 2020, bibliografía: «Sheller, Mimi. 2003. Consuming the Caribbean. From Arawaks to Zombies».",
+      "id_lote": "S23-R11",
+      "lote_incorporacion": "S23-2026-09-23",
+      "apoyo": "documentada",
+      "aspecto": "El «paraíso» del título se apoya en la crítica de Sheller al Caribe fabricado para el consumo turístico.",
+      "limite": "Es una referencia de marco; Ranocchiari no aplica el argumento de Sheller a la industria turística sanandresana en detalle.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S23; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-23"
+      }
+    },
+    {
+      "a": "ranocchiariparaiso",
+      "b": "mintzarea",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Ranocchiari, 2020, bibliografía: «Mintz, Sidney. 1965. “The Caribbean as Sociocultural Area”. Cahiers d’Histoire...», con uso y paginación en el cuerpo: «(Mintz 1965, 914-915)» y «(Mintz 1965, 915-916)» sobre los nueve patrones que caracterizan a las sociedades del Caribe.",
+      "id_lote": "S23-R12",
+      "lote_incorporacion": "S23-2026-09-23",
+      "apoyo": "documentada",
+      "aspecto": "Ranocchiari discute la definición del Caribe como área sociocultural para situar al archipiélago dentro de ella y no como anomalía colombiana.",
+      "limite": "Usa los criterios de Mintz; no entra en la polémica posterior sobre si el área sociocultural sigue siendo una unidad válida.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S23; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-23"
+      }
+    },
+    {
+      "a": "romanvidalmemorias",
+      "b": "trouillotsilencing",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Román Romero y Vidal Ortega (eds.), 2019: «Michel-Rolph Trouillot, en su aleccionador libro enseñó dos cosas», «(Trouillot 1995)» y bibliografía: «Trouillot, Michel-Rolph. 1995. Silencing the Past. Power and the Production...».",
+      "id_lote": "S23-R13",
+      "lote_incorporacion": "S23-2026-09-23",
+      "apoyo": "documentada",
+      "aspecto": "El volumen toma de Trouillot el marco para su propio título: qué se silencia y quién decide qué entra en el archivo del archipiélago.",
+      "limite": "La cita sostiene el planteamiento general; el volumen no analiza los casos haitianos de Trouillot.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S23; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-23"
+      }
+    },
+    {
+      "a": "romanvidalmemorias",
+      "b": "glissant",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Román Romero y Vidal Ortega (eds.), 2019, bibliografía (dos entradas): «Glissant, Edouard. 2005. El discurso antillano. Caracas: Monte Ávila», traducción de Le discours antillais; en el cuerpo: «Como lo propone Glissant: “Nuestro paisaje es su...”».",
+      "id_lote": "S23-R14",
+      "lote_incorporacion": "S23-2026-09-23",
+      "apoyo": "documentada",
+      "aspecto": "El volumen usa el paisaje como monumento, de Glissant, para leer la isla donde el archivo se quemó y queda el territorio.",
+      "limite": "Cita la traducción castellana de Le discours antillais; no trabaja con Poétique de la Relation, el otro título que la ficha del corpus reúne.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S23; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-23"
+      }
+    },
+    {
+      "a": "parsonssanandres",
+      "b": "wilsoncrabantics",
+      "tipo": "resonancia",
+      "estado": "por_corroborar",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Por corroborar. Parsons, ed. de 1985, remite a la obra de Peter J. Wilson sobre Providencia: «Ver también los ensayos recientes sobre la vida social de Providencia por el norteamericano Peter J. Wilson (Wilson 1961a, 1961b)», y cita Oscar: an Inquiry into the Nature of Sanity (1975) en la nota 170. La bibliografía recoge los dos artículos de 1961 en Social and Economic Studies.",
+      "id_lote": "S23-R15",
+      "lote_incorporacion": "S23-2026-09-23",
+      "apoyo": "comparacion",
+      "aspecto": "Las dos obras fundadoras del archipiélago como objeto de estudio se reparten el trabajo: Parsons la geografía histórica del poblamiento, Wilson la estructura de valores de la vida social, y la edición de 1985 remite explícitamente a la segunda.",
+      "limite": "Parsons cita a Wilson por Oscar (1975) y por dos artículos de 1961, no por Crab Antics, que es el título catalogado. Por eso la relación no cuenta como cita verificada.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S23; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-23"
+      }
+    },
+    {
+      "a": "crawfordturtlemen",
+      "b": "marquezfiwisea",
+      "tipo": "resonancia",
+      "estado": "por_corroborar",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Por corroborar. Crawford, The Last Turtlemen, UNC Press, 2020, discute los hallazgos de Márquez Pérez en el cuerpo —«Colombian anthropologist Ana Isabel Márquez Pérez directly traces the lineage of contemporary fishing vernaculars found on Providencia Island to Caymanian turtlemen»— y usa en la nota 28 una entrevista hecha por ella en Providencia en diciembre de 2011, citándola por «Culturas migratorias», no por el libro catalogado; la agradece además en los agradecimientos.",
+      "id_lote": "S23-R16",
+      "lote_incorporacion": "S23-2026-09-23",
+      "apoyo": "comparacion",
+      "aspecto": "Las dos obras documentan el mismo circuito —el catboat caimanés y el oficio de la tortuga llegando a Providencia— y comparten archivo: Crawford trabaja con una entrevista levantada por Márquez Pérez.",
+      "limite": "Crawford cita otro trabajo de la autora, no Fi wi sea / Nuestro mar. La coincidencia de archivo está documentada; la relación entre los dos libros es una lectura del atlas.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S23; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-09-23"
       }
     }
   ],
