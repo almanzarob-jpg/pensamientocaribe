@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/zoom-caribe.css">
-<link rel="stylesheet" href="../css/con-el-agua-de-por-medio.css">
+<link rel="stylesheet" href="../css/con-el-agua-de-por-medio.css?v=20260928">
 <link rel="stylesheet" href="../css/capa-caribes.css?v=20260916">
 <link rel="stylesheet" href="../css/deriva-caribes.css?v=20260921d">
 <link rel="stylesheet" href="../css/capa-antirracismo.css?v=20260917c">
@@ -110,13 +110,13 @@
        obligaba a memorizar diez matices. Aquí la clave es, además, el control: cada
        línea enciende su corriente. Ocupa el sitio que antes gastaba el párrafo de
        instrucciones en cursiva, que ahora vive plegado tras «cómo se lee». -->
-  <nav id="clave" aria-label="Corrientes del atlas">
+  <nav id="clave" aria-label="Fenómenos del atlas">
     <!-- TANDA B · el eje temporal solo gobierna la vista Cronología y vivía en la barra
          general: al entrar en esa vista la barra saltaba a dos filas y todos los demás
          controles cambiaban de sitio. Aquí acompaña al mapa, aparece donde se usa y no
          mueve nada al aparecer. -->
     <div class="grp clv-crono" id="cronoGrp" style="display:none"><label id="lblCronoModoId" data-i18n="lblCronoModo">Eje temporal</label><div class="seg vista" id="cronoSeg" role="group" aria-labelledby="lblCronoModoId"><button type="button" data-cm="publicacion" class="on" aria-pressed="true" data-i18n="cmPublicacion">Publicación</button><button type="button" data-cm="investigado" aria-pressed="false" data-i18n="cmInvestigado">Investigado</button><button type="button" data-cm="combinada" aria-pressed="false" data-i18n="cmCombinada">Combinada</button></div></div>
-    <div class="clv-t" id="clvTitId" data-i18n="clvTit">Corrientes</div>
+    <div class="clv-t" id="clvTitId" data-i18n="clvTit">Fenómenos</div>
     <div class="clv-lista" id="clvLista" role="group" aria-labelledby="clvTitId"></div>
     <div class="clv-pie">
       <div class="clv-cifras" id="clvCifras"></div>
@@ -180,7 +180,7 @@
     <h2>Con el agua de por medio</h2>
     <div class="u-sub" data-i18n="sub">Atlas para una antropología archipiélica</div>
     <p data-i18n-html="umbralP">Ninguna orilla es una totalidad. El archipiélago no lo hacen las naciones: lo hacen las fuerzas que cruzan de una orilla a otra. Cada obra vive aquí en el fenómeno que la atraviesa; el país que la aloja queda en segundo plano.</p>
-    <div class="how" data-i18n-html="umbralHow">Elige un fenómeno en la lista «Corrientes» y <b>se encienden sus puntos</b> con su guion. Abre cualquier obra y <b>se ramifican sus conexiones</b>, directas e indirectas, a través del agua. Pasa el cursor, toca o navega con tabulador para leer cada nodo. El fondo sube y baja como la marea, según Brathwaite.</div>
+    <div class="how" data-i18n-html="umbralHow">Elige un fenómeno en la lista «Fenómenos» y <b>se encienden sus puntos</b> con su guion. Abre cualquier obra y <b>se ramifican sus conexiones</b>, directas e indirectas, a través del agua. Pasa el cursor, toca o navega con tabulador para leer cada nodo. El fondo sube y baja como la marea, según Brathwaite.</div>
     <button id="entrar" data-i18n="entrar">Entrar en la corriente</button>
     <label class="chkLbl u-skip"><input type="checkbox" id="umbralSkip"> <span data-i18n="umbralNoMostrar">No volver a mostrar esta introducción</span></label>
     <div style="margin-top:16px;font-family:var(--ff-mono);font-size:9.5px;letter-spacing:.6px;color:var(--gray)"><span data-i18n="umbralBase">Base conceptual: Brathwaite · Bassi · Monahan · Medina — </span><a id="umarco" href="#marco" style="color:var(--orange);cursor:pointer;text-decoration:none" data-i18n="verMarco">ver marco</a></div>
@@ -587,7 +587,7 @@ const I18N = {
     entrar:"Entrar en la corriente", umbralBase:"Base conceptual: Brathwaite · Bassi · Monahan · Medina — ", verMarco:"ver marco",
     umbralAporte:"249 de 865 relaciones (28,8 %) siguen por corroborar. Este atlas recibe aportes — ", umbralAporteLink:"el reflujo",
     umbralP:"Ninguna orilla es una totalidad. El archipiélago no lo hacen las naciones: lo hacen las fuerzas que cruzan de una orilla a otra. Cada obra vive aquí en el fenómeno que la atraviesa; el país que la aloja queda en segundo plano.",
-    umbralHow:"Elige un fenómeno en la lista «Corrientes» y <b>se encienden sus puntos</b> con su guion. Abre cualquier obra y <b>se ramifican sus conexiones</b>, directas e indirectas, a través del agua. Pasa el cursor, toca o navega con tabulador para leer cada nodo. El fondo sube y baja como la marea, según Brathwaite.",
+    umbralHow:"Elige un fenómeno en la lista «Fenómenos» y <b>se encienden sus puntos</b> con su guion. Abre cualquier obra y <b>se ramifican sus conexiones</b>, directas e indirectas, a través del agua. Pasa el cursor, toca o navega con tabulador para leer cada nodo. El fondo sube y baja como la marea, según Brathwaite.",
     marcoTit:"Marco conceptual", marcoSub:"cómo piensa este atlas · y cómo la forma encarna la teoría",
     mc1who:"Premisa", mc1h:"Antropología archipiélica",
     mc1p:"Contra la antropología continental y nacional, que toma el territorio delimitado como contenedor, aquí la unidad de análisis es el <b>fenómeno que atraviesa</b> la cuenca, no el lugar que lo aloja. Cartagena se entiende mejor junto a Nueva Orleans y Paramaribo que junto a Bogotá. Por eso el mapa premia el eje marítimo, horizontal, y no deja leer ninguna orilla como totalidad autosuficiente.",
@@ -610,12 +610,12 @@ const I18N = {
     mc6p:"Almanza, R. (2026). <i>Atlas para una antropología archipiélica: con el agua de por medio</i> [conjunto de datos]. Zenodo. <a href=\"https://doi.org/10.5281/zenodo.21483568\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold)\">https://doi.org/10.5281/zenodo.21483568</a><br><span style=\"font-size:.85em; opacity:.75; font-style:italic\">Versión depositada 1.22.0 · <a href=\"https://doi.org/10.5281/zenodo.22886084\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold)\">DOI de esta versión</a> · Licencia <a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold)\">CC BY-NC-SA 4.0</a>: atribución, uso no comercial, compartir igual.</span>",
     presExit:"✕ salir",
     presHelp:"<span><b>1</b>corriente</span><span><b>2</b>constelación</span><span><b>M</b>marea</span><span><b>→</b>siguiente fenómeno</span><span><b>←</b>anterior</span><span><b>0</b>despejar</span><span><b>Esc</b>salir</span>",
-    hintCorriente:"La cuenca vista desde el mar. Las islas se nombran por su país; los lugares continentales, en naranja, por su ciudad o por la región en tensión con un centro no caribeño. Elige un fenómeno en la lista «Corrientes», o una obra en el mapa, para ver sus relaciones. Rueda: zoom · arrastra: desplaza · doble clic, o el botón de reencuadre de la columna de zoom: vuelve al inicio. Pasa el cursor sobre un punto para leerlo.",
-    hintConstelacion:"Constelación de los fenómenos que atraviesan la cuenca. Elige un fenómeno en la lista «Corrientes», o una obra en el mapa, para ver sus relaciones. Rueda: zoom · arrastra: desplaza · doble clic, o el botón de reencuadre de la columna de zoom: vuelve al inicio. Pasa el cursor sobre un punto para leerlo.",
+    hintCorriente:"La cuenca vista desde el mar. Las islas se nombran por su país; los lugares continentales, en naranja, por su ciudad o por la región en tensión con un centro no caribeño. Elige un fenómeno en la lista «Fenómenos», o una obra en el mapa, para ver sus relaciones. Rueda: zoom · arrastra: desplaza · doble clic, o el botón de reencuadre de la columna de zoom: vuelve al inicio. Pasa el cursor sobre un punto para leerlo.",
+    hintConstelacion:"Constelación de los fenómenos que atraviesan la cuenca. Elige un fenómeno en la lista «Fenómenos», o una obra en el mapa, para ver sus relaciones. Rueda: zoom · arrastra: desplaza · doble clic, o el botón de reencuadre de la columna de zoom: vuelve al inicio. Pasa el cursor sobre un punto para leerlo.",
     lgTitle:"referencias · clic en un fenómeno para iluminar",
     lgResearch:"obras", lgEthno:"manifestaciones culturales", lgReson:"resonancia", lgDisso:"disonancia", lgFricc:"cruce lingüístico",
     lgMarco:"Base conceptual: Brathwaite · Bassi · Monahan · Medina →",
-    clvTit:"Corrientes", clvComo:"Cómo se lee", clvComoCerrar:"Ocultar",
+    clvTit:"Fenómenos", clvComo:"Cómo se lee", clvComoCerrar:"Ocultar",
     clvEntradas:"entradas", clvCorrientes:"corrientes", clvCorrob:"corroborado",
     pKindObra:"Obra", pKindManif:"Manifestación cultural",
     pNacion:"nación caribeña", pRegion:"región en tensión con",
@@ -705,7 +705,7 @@ const I18N = {
     entrar:"Enter the current", umbralBase:"Conceptual base: Brathwaite · Bassi · Monahan · Medina — ", verMarco:"see frame",
     umbralAporte:"249 of 865 relations (28.8%) remain to be corroborated. This atlas takes contributions — ", umbralAporteLink:"the returning tide",
     umbralP:"No shore is a totality. The archipelago is not made by nations: it is made by the forces that cross from one shore to another. Each work lives here in the phenomenon that runs through it; the country that hosts it stays in the background.",
-    umbralHow:"Choose a phenomenon in the «Currents» list and <b>its points light up</b> with their note. Open any work and <b>its connections branch out</b>, direct and indirect, across the water. Hover, tap, or tab to a node to read it. The ground rises and falls like the tide, after Brathwaite.",
+    umbralHow:"Choose a phenomenon in the «Phenomena» list and <b>its points light up</b> with their note. Open any work and <b>its connections branch out</b>, direct and indirect, across the water. Hover, tap, or tab to a node to read it. The ground rises and falls like the tide, after Brathwaite.",
     marcoTit:"Conceptual frame", marcoSub:"how this atlas thinks · and how form embodies theory",
     mc1who:"Premise", mc1h:"Archipelagic anthropology",
     mc1p:"Against continental and national anthropology, which takes the bounded territory as a container, here the unit of analysis is the <b>phenomenon that runs through</b> the basin, not the place that hosts it. Cartagena is better understood alongside New Orleans and Paramaribo than alongside Bogotá. That is why the map favors the maritime, horizontal axis, and refuses to let any single shore be read as a self-sufficient totality.",
@@ -728,12 +728,12 @@ const I18N = {
     mc6p:"Almanza, R. (2026). <i>Atlas para una antropología archipiélica: con el agua de por medio</i> [dataset]. Zenodo. <a href=\"https://doi.org/10.5281/zenodo.21483568\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold)\">https://doi.org/10.5281/zenodo.21483568</a><br><span style=\"font-size:.85em; opacity:.75; font-style:italic\">Licensed under <a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold)\">CC BY-NC-SA 4.0</a>: attribution, non-commercial, share-alike.</span>",
     presExit:"✕ exit",
     presHelp:"<span><b>1</b>current</span><span><b>2</b>constellation</span><span><b>M</b>tide</span><span><b>→</b>next phenomenon</span><span><b>←</b>previous</span><span><b>0</b>clear</span><span><b>Esc</b>exit</span>",
-    hintCorriente:"The basin seen from the sea. Islands are named by their country; continental places, in orange, by their city or by the region in tension with a non-Caribbean center. Choose a phenomenon in the «Currents» list, or a work on the map, to see its relations. Wheel: zoom · drag: pan · double-click, or the recenter button in the zoom column: back to start. Hover over a point to read it.",
-    hintConstelacion:"Constellation of the phenomena that run through the basin. Choose a phenomenon in the «Currents» list, or a work on the map, to see its relations. Wheel: zoom · drag: pan · double-click, or the recenter button in the zoom column: back to start. Hover over a point to read it.",
+    hintCorriente:"The basin seen from the sea. Islands are named by their country; continental places, in orange, by their city or by the region in tension with a non-Caribbean center. Choose a phenomenon in the «Phenomena» list, or a work on the map, to see its relations. Wheel: zoom · drag: pan · double-click, or the recenter button in the zoom column: back to start. Hover over a point to read it.",
+    hintConstelacion:"Constellation of the phenomena that run through the basin. Choose a phenomenon in the «Phenomena» list, or a work on the map, to see its relations. Wheel: zoom · drag: pan · double-click, or the recenter button in the zoom column: back to start. Hover over a point to read it.",
     lgTitle:"references · click a phenomenon to illuminate",
     lgResearch:"works", lgEthno:"cultural manifestations", lgReson:"resonance", lgDisso:"dissonance", lgFricc:"linguistic crossing",
     lgMarco:"Conceptual base: Brathwaite · Bassi · Monahan · Medina →",
-    clvTit:"Currents", clvComo:"How to read it", clvComoCerrar:"Hide",
+    clvTit:"Phenomena", clvComo:"How to read it", clvComoCerrar:"Hide",
     clvEntradas:"entries", clvCorrientes:"currents", clvCorrob:"corroborated",
     pKindObra:"Work", pKindManif:"Cultural manifestation",
     pNacion:"Caribbean nation", pRegion:"region in tension with",
@@ -950,6 +950,25 @@ function encuadrarMapa(){
     const ccx=(x0+x1)/2, ccy=(y0+y1)/2;
     svg.setAttribute('viewBox',[ (ccx-vbW/2).toFixed(1), (ccy-vbH/2).toFixed(1), vbW.toFixed(1), vbH.toFixed(1) ].join(' '));
     return;
+  }
+  /* TANDA 2 · teléfono en vertical: el lienzo ya tiene el alto que la cuenca pide
+     (ver el CSS de la tanda). Se encuadra el núcleo del corpus, del 5 al 95 % de las
+     entradas en cada eje, a lo ancho; Veracruz, Costa Chica y Oriximiná quedan a un
+     deslizamiento. Con la caja entera, los extremos obligaban a dibujar todo a 0,4
+     de escala y el arco insular, donde está casi todo, se volvía ilegible. */
+  if(movil && r.height>=r.width*0.8 && window.matchMedia('(orientation:portrait)').matches){
+    const vx=[], vy=[];
+    N.forEach(o=>{ if(o._bx!=null && o._by!=null && visible(o)){ vx.push(o._bx); vy.push(o._by); } });
+    if(vx.length>=8){
+      vx.sort((a,b)=>a-b); vy.sort((a,b)=>a-b);
+      const q=(a,p)=>a[Math.floor(p*(a.length-1))];
+      const nx0=q(vx,.05), nx1=q(vx,.95), ny0=q(vy,.05), ny1=q(vy,.95), M=34;
+      let w=(nx1-nx0)+2*M, h=w*r.height/r.width;
+      if(h<(ny1-ny0)+2*M){ h=(ny1-ny0)+2*M; w=h*r.width/r.height; }
+      const cx=(nx0+nx1)/2, cy=(ny0+ny1)/2;
+      svg.setAttribute('viewBox',[ (cx-w/2).toFixed(1), (cy-h/2).toFixed(1), w.toFixed(1), h.toFixed(1) ].join(' '));
+      return;
+    }
   }
   /* escala que deja OCUPACION_OBJETIVO del alto ocupado por contenido */
   const s = (movil?OCUPACION_OBJETIVO:OCUPACION_ESCRITORIO)*r.height/altoC;
@@ -3040,6 +3059,9 @@ document.addEventListener('keydown', ev=>{
      switchView del script principal sin modificarlo, así que debe cargarse después.
      Datos: scripts/generar-capa-antirracismo.py -->
 <script src="../data/agua-de-por-medio/capa-antirracismo.js?v=20260917"></script>
-<script src="../js/capa-antirracismo.js?v=20260917b"></script>
+<script src="../js/capa-antirracismo.js?v=20260928"></script>
+<!-- TANDA 2 · 28-09-2026: las tres capas bajo un solo botón «Capas». Mueve sus botones
+     sin tocarlos, así que debe cargarse después de las tres. -->
+<script src="../js/capas-menu.js?v=20260928"></script>
 </body>
 </html>

@@ -134,13 +134,13 @@
   function activar(){
     AR.activa=true;
     if(state.view!=='corriente' && typeof setView==='function') setView('corriente'); else render();
-    pintarTodo(); atenuar(); anunciar();
+    pintarTodo(); atenuar(); anunciar(); refrescarChips();
   }
   function desactivar(){
     AR.activa=false; AR.sitio=null; AR.caso=null; AR.filtro=null; AR.q=''; 
     borrar(); atenuar(); encuadrar(false); marcarHash();
     cerrarPanelLateral('panelAntirracismo','antirracismoBtn');
-    anuncio.textContent='';
+    anuncio.textContent=''; refrescarChips();
   }
   function anunciar(){
     const g=agrupar(), n=visibles().length;
@@ -410,13 +410,32 @@
     AR.activa=true;
     if(m[1]) AR.caso=decodeURIComponent(m[1]);
     if(state.view!=='corriente' && typeof setView==='function') setView('corriente');
-    pintarTodo(); abrir_(); atenuar(); anunciar();
+    pintarTodo(); abrir_(); atenuar(); anunciar(); refrescarChips();
   }
 
   /* ---------------- enganche con el atlas ---------------- */
   const _render=render; window.render=function(){ _render.apply(this,arguments); dibujar(); atenuar(); };
   if(typeof switchView==='function'){ const _sv=switchView; window.switchView=function(v){ _sv.apply(this,arguments); dibujar(); atenuar(); }; }
   if(typeof applyLang==='function'){ const _al=applyLang; window.applyLang=function(){ _al.apply(this,arguments); rotular(); if(AR.activa) pintarTodo(); dibujar(); }; }
+
+  /* TANDA 2 · la capa encendida deja rastro fuera de su panel: un chip en la fila de
+     filtros activos, como ya hace «¿Qué Caribe?». Quitarlo apaga la capa. */
+  function refrescarChips(){ if(typeof renderChips==='function') renderChips(); }
+  const _renderChips=renderChips;
+  renderChips=function(){
+    _renderChips();
+    if(!AR.activa) return;
+    const box=document.getElementById('chipsActivos'); if(!box) return;
+    const txt=(typeof LANG!=='undefined' && LANG==='en' ? 'Layer: ' : 'Capa: ')+at('btn');
+    const b=document.createElement('button'); b.type='button'; b.className='chip ar-chip';
+    b.setAttribute('aria-label', (typeof t==='function' && t('chipQuitarAria')) ? t('chipQuitarAria').replace('{label}',txt) : txt);
+    b.innerHTML=esc(txt)+' <span aria-hidden="true">×</span>';
+    b.onclick=desactivar;
+    box.appendChild(b);
+    if(typeof FILTROS_ACTIVOS!=='undefined') FILTROS_ACTIVOS.push({txt, reset:desactivar});
+    const lg=document.getElementById('limpiarGrp'); if(lg) lg.hidden=false;
+  };
+  window.AR_API={ activar, desactivar };
 
   function rotular(){ btn.textContent=at('btn'); btn.title=at('btnTitle'); btn.setAttribute('aria-label',at('btnTitle')); }
   rotular();

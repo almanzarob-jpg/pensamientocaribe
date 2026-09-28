@@ -934,3 +934,58 @@ main:has(#qcLeyenda:not([hidden])) #hint{bottom:auto; top:16px}
 #panelInfo .vistaEstado:empty{display:none}
 /* el botón «mostrar en el mapa» flota en el encabezado y montaba el primer grupo */
 #panel .rel h3.ind::after{content:""; display:block; clear:both}
+
+/* ══════════ TANDA 2 · 28-09-2026 ═══════════════════════════════
+   1 · Menú «Capas». Misma piel que la lista del buscador: panel oscuro, filo dorado
+   arriba, sombra larga. Dentro, cada capa conserva su propio botón. */
+#capasBtn{position:relative}
+#capasBtn.activo::after{content:""; position:absolute; top:4px; right:5px; width:6px; height:6px; border-radius:50%; background:var(--gold)}
+.capas-menu{position:fixed; z-index:40; max-height:min(480px, 70vh); overflow:auto; padding:6px 0 4px;
+  background:var(--panel); border:1px solid var(--line); border-top:2px solid var(--gold); border-radius:0 0 3px 3px;
+  box-shadow:0 18px 44px rgba(0,0,0,.6)}
+.capas-menu[hidden]{display:none}
+.capas-menu .capas-tit{padding:8px 16px 8px; font-family:var(--ff-mono); font-size:9px; letter-spacing:1.4px; text-transform:uppercase; color:var(--gray)}
+.capas-menu .capa-it{padding:10px 16px 12px; border-top:1px dotted var(--line); border-left:2px solid transparent}
+.capas-menu .capa-it.on{border-left-color:var(--gold); background:rgba(201,162,77,.05)}
+.capas-menu .capa-it .grp{display:block; margin:0}
+.capas-menu .capa-it .seg{border:0; background:transparent; display:block}
+.capas-menu .capa-it .seg.base button{display:block; width:100%; text-align:left; padding:6px 0; min-height:32px;
+  font-size:11px; letter-spacing:1.2px; color:var(--red-txt, var(--red)); background:transparent}
+.capas-menu .capa-it .seg.base button:hover{background:transparent; color:var(--cream)}
+.capas-menu .capa-it .seg.base button[aria-pressed="true"]{background:transparent; color:var(--cream)}
+.capas-menu .capa-it .seg.base button::after{display:none}
+.capas-menu .capa-d{margin:2px 0 0; font-family:var(--ff-body); font-size:12px; line-height:1.45; color:var(--gray)}
+.capas-menu .capa-pie{display:flex; align-items:center; justify-content:space-between; gap:10px; margin-top:8px}
+.capas-menu .capa-it:not(.on) .capa-pie{display:none}
+.capas-menu .capa-est{font-family:var(--ff-mono); font-size:9px; letter-spacing:1.2px; text-transform:uppercase; color:var(--gold)}
+.capas-menu .capa-est::before{content:""; display:inline-block; width:6px; height:6px; margin-right:7px; border-radius:50%; background:var(--gold); vertical-align:1px}
+.capas-menu .capa-off{min-height:32px; padding:0 12px; border:1px solid var(--line); border-radius:3px; background:transparent;
+  font-family:var(--ff-mono); font-size:9.5px; letter-spacing:1px; text-transform:uppercase; color:var(--cream); cursor:pointer}
+.capas-menu .capa-off:hover{border-color:var(--gold); color:var(--gold)}
+.capas-menu button:focus-visible{outline:2px solid var(--gold); outline-offset:2px}
+
+/* 2 · Teléfono en vertical. La cuenca es casi tres veces más ancha que alta: en un
+   lienzo alto y estrecho quedaban 250 px de mapa entre dos franjas vacías, y los
+   diez fenómenos se escondían en una franja que había que deslizar. Aquí el mapa
+   toma el alto que su forma pide y los fenómenos pasan debajo, a la vista y en
+   dos columnas: son la puerta de entrada del atlas. */
+@media (max-width:780px) and (orientation:portrait){
+  main{--alto-mapa:min(86vw, 46dvh)}
+  #stage{order:1; flex:0 0 var(--alto-mapa); height:var(--alto-mapa)}
+  #clave{order:2; flex:1 1 auto; min-height:0; overflow-y:auto; gap:10px;
+    padding:14px 14px 18px; border-bottom:0; border-top:1px solid var(--line)}
+  #clave .clv-t{display:block}
+  #clave .clv-lista{display:grid; grid-template-columns:1fr 1fr; gap:7px; overflow:visible; padding:0;
+    -webkit-mask-image:none; mask-image:none}
+  #clave .clv-i{min-width:0; min-height:42px; padding:6px 12px; border-radius:21px; gap:8px}
+  #clave .clv-n{flex:1 1 auto; min-width:0; white-space:normal; font-size:10px; line-height:1.25}
+  #clave .clv-c{flex:none}
+  #clave .clv-pie{display:flex; flex-direction:row; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px 14px}
+  #clave #clvComo{display:none}
+  #legendBar{display:none}
+  main .zc{top:calc(var(--alto-mapa) - 56px); bottom:auto}
+  /* con el mapa más bajo, el guion del fenómeno tapaba los puntos que acababa de
+     encender: baja al borde superior de la lista y deja el mapa a la vista */
+  #guion{top:calc(var(--alto-mapa) + 8px); z-index:15}
+  #guion .gt{font-size:16px}
+}
