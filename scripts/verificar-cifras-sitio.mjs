@@ -76,8 +76,8 @@ V.sinLengua = O.filter((o) => !Object.values(LENGUAS).some((re) => re.test(desc(
 // Cada regla: archivo, patrón con un grupo capturado, y el valor que debe tener.
 const reglas = [
   ["proyectos/con-el-agua-de-por-medio.html", /archipiélica: (\d+) obras/, "entradas"],
-  ["proyectos/con-el-agua-de-por-medio.html", /(\d+) obras y manifestaciones del Gran Caribe conectadas/g, "entradas"],
-  ["proyectos/con-el-agua-de-por-medio.html", /conecta (\d+) obras y manifestaciones/, "entradas"],
+  ["proyectos/con-el-agua-de-por-medio.html", /(\d+) obras del Gran Caribe conectadas/g, "entradas"],
+  ["proyectos/con-el-agua-de-por-medio.html", /conecta (\d+) obras del Gran Caribe/, "entradas"],
   ["proyectos/con-el-agua-de-por-medio.html", /(\d+) de (?:\d+) relaciones/g, "porCorroborar"],
   ["proyectos/con-el-agua-de-por-medio.html", /\d+ de (\d+) relaciones/g, "relaciones"],
   ["proyectos/con-el-agua-de-por-medio.html", /(\d+) of \d+ relations remain/, "porCorroborar"],
@@ -178,6 +178,9 @@ const reglas = [
   ["proyectos/metodologia-agua-de-por-medio-en.html", /underrepresented: (\d+) of/, "disonancias"],
   ["proyectos/metodologia-agua-de-por-medio-en.html", /underrepresented: \d+ of (\d+) relations/, "relaciones"],
   ["proyectos/marca-de-marea.html", /desacuerdos entre (\d+) vínculos/, "relaciones"],
+  // Tanda 1 · 28-09-2026: la versión del corpus es también la marca de caché de sus datos.
+  // Si sube el corpus y no la marca, quien ya visitó el atlas puede seguir viendo el anterior.
+  ["proyectos/con-el-agua-de-por-medio.html", /datos-atlas\.js\?v=([\d.]+)"/, "version"],
 ];
 
 const errores = [];

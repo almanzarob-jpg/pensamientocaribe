@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Con el agua de por medio · atlas archipiélico del Gran Caribe</title>
-<meta name="description" content="Atlas para una antropología archipiélica: 315 obras y manifestaciones del Gran Caribe conectadas por diez fenómenos que atraviesan la cuenca, no por las naciones que las alojan. Basado en Brathwaite, Monahan, Walcott y Bassi.">
+<meta name="description" content="Atlas para una antropología archipiélica: 315 obras del Gran Caribe conectadas por diez fenómenos que atraviesan la cuenca, no por las naciones que las alojan. Basado en Brathwaite, Monahan, Medina y Bassi.">
 <link rel="canonical" href="https://pensamientocaribe.org/proyectos/con-el-agua-de-por-medio.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Pensamiento Caribe">
@@ -12,13 +12,13 @@
 <meta property="og:locale:alternate" content="en_US">
 <meta property="og:url" content="https://pensamientocaribe.org/proyectos/con-el-agua-de-por-medio.html">
 <meta property="og:title" content="Con el agua de por medio · atlas archipiélico del Gran Caribe">
-<meta property="og:description" content="315 obras y manifestaciones del Gran Caribe conectadas por diez fenómenos que atraviesan la cuenca. Basado en Brathwaite, Monahan, Walcott y Bassi.">
+<meta property="og:description" content="315 obras del Gran Caribe conectadas por diez fenómenos que atraviesan la cuenca. Basado en Brathwaite, Monahan, Medina y Bassi.">
 <meta property="og:image" content="https://pensamientocaribe.org/assets/og-con-el-agua-de-por-medio.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Con el agua de por medio · atlas archipiélico del Gran Caribe">
-<meta name="twitter:description" content="315 obras y manifestaciones del Gran Caribe conectadas por diez fenómenos que atraviesan la cuenca, no por las naciones que las alojan.">
+<meta name="twitter:description" content="315 obras del Gran Caribe conectadas por diez fenómenos que atraviesan la cuenca, no por las naciones que las alojan.">
 <meta name="twitter:image" content="https://pensamientocaribe.org/assets/og-con-el-agua-de-por-medio.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +34,7 @@
   "@type": "Dataset",
   "name": "Con el agua de por medio: atlas para una antropología archipiélica",
   "alternateName": "Con el agua de por medio: An Atlas for an Archipelagic Anthropology",
-  "description": "Atlas interactivo que conecta 315 obras y manifestaciones del Gran Caribe a través de diez fenómenos transversales (colonialidad, postplantación, capitalismo racial, catástrofes climáticas, soberanías, violencias, memoria y espiritualidad, cimarronaje, creolización, cuerpo y erótica), en lugar de organizarlas por país. Marco conceptual basado en Kamau Brathwaite, Michael Monahan, Derek Walcott y Ernesto Bassi.",
+  "description": "Atlas interactivo que conecta 315 obras del Gran Caribe a través de diez fenómenos transversales (colonialidad, postplantación, capitalismo racial, catástrofes climáticas, soberanías, violencias, memoria y espiritualidad, cimarronaje, creolización, cuerpo y erótica), en lugar de organizarlas por país. Marco conceptual basado en Kamau Brathwaite, Michael Monahan, José Medina y Ernesto Bassi.",
   "url": "https://pensamientocaribe.org/proyectos/con-el-agua-de-por-medio.html",
   "identifier": "https://doi.org/10.5281/zenodo.21483568",
   "sameAs": "https://doi.org/10.5281/zenodo.21483568",
@@ -101,7 +101,7 @@
   <div class="chips" id="chipsActivos" role="group" aria-label="Filtros activos"></div>
 </header>
 <main id="main-content">
-  <p id="mapaInstrucciones" class="visually-hidden" data-i18n="mapaInstrucciones">Mapa interactivo con las obras y manifestaciones culturales del atlas. Use las flechas para moverse entre ellas, Intro o espacio para abrir su ficha, Inicio o Fin para ir al primero o al último, y Escape para cerrar la ficha abierta.</p>
+  <p id="mapaInstrucciones" class="visually-hidden" data-i18n="mapaInstrucciones">Mapa interactivo con las obras del atlas. Use las flechas para moverse entre ellas, Intro o espacio para abrir su ficha, Inicio o Fin para ir al primero o al último, y Escape para cerrar la ficha abierta.</p>
   <!-- El bloque va delante del mapa en el marcado, no solo a su izquierda por CSS:
        si no, el tabulador recorría los 276 nodos antes de llegar a la clave, que es
        lo primero que se ve. El orden de lectura y el de foco tienen que coincidir.
@@ -139,6 +139,7 @@
     <h2 data-i18n="lblRecorridos">Recorridos</h2>
     <div class="grp"><div class="seg recSeg" id="recSeg" role="group" aria-label="Recorridos C1 a C10"></div></div>
     <p class="recNota recPie" data-i18n="recPie">Las obras fuera del recorrido elegido no desaparecen: se atenúan.</p>
+    <p class="recNota recPie" id="recSinAsignar"></p>
   </aside>
   <aside id="panelFiltros" class="panelLateral" aria-label="Filtros" hidden>
     <button type="button" id="filtrosCerrar" class="panelCerrar" data-i18n-title="btnFiltrosCerrar" aria-label="Cerrar filtros">×</button>
@@ -179,10 +180,10 @@
     <h2>Con el agua de por medio</h2>
     <div class="u-sub" data-i18n="sub">Atlas para una antropología archipiélica</div>
     <p data-i18n-html="umbralP">Ninguna orilla es una totalidad. El archipiélago no lo hacen las naciones: lo hacen las fuerzas que cruzan de una orilla a otra. Cada obra vive aquí en el fenómeno que la atraviesa; el país que la aloja queda en segundo plano.</p>
-    <div class="how" data-i18n-html="umbralHow">Elige un fenómeno en la leyenda y <b>se encienden sus puntos</b> con su guión. Abre cualquier obra y <b>se ramifican sus conexiones</b>, directas e indirectas, a través del agua. Pasa el cursor, toca o navega con tabulador para leer cada nodo. El fondo sube y baja como la marea, según Brathwaite.</div>
+    <div class="how" data-i18n-html="umbralHow">Elige un fenómeno en la lista «Corrientes» y <b>se encienden sus puntos</b> con su guion. Abre cualquier obra y <b>se ramifican sus conexiones</b>, directas e indirectas, a través del agua. Pasa el cursor, toca o navega con tabulador para leer cada nodo. El fondo sube y baja como la marea, según Brathwaite.</div>
     <button id="entrar" data-i18n="entrar">Entrar en la corriente</button>
     <label class="chkLbl u-skip"><input type="checkbox" id="umbralSkip"> <span data-i18n="umbralNoMostrar">No volver a mostrar esta introducción</span></label>
-    <div style="margin-top:16px;font-family:var(--ff-mono);font-size:9.5px;letter-spacing:.6px;color:var(--gray)"><span data-i18n="umbralBase">Base conceptual: Brathwaite · Monahan — </span><a id="umarco" href="#marco" style="color:var(--orange);cursor:pointer;text-decoration:none" data-i18n="verMarco">ver marco</a></div>
+    <div style="margin-top:16px;font-family:var(--ff-mono);font-size:9.5px;letter-spacing:.6px;color:var(--gray)"><span data-i18n="umbralBase">Base conceptual: Brathwaite · Bassi · Monahan · Medina — </span><a id="umarco" href="#marco" style="color:var(--orange);cursor:pointer;text-decoration:none" data-i18n="verMarco">ver marco</a></div>
     <div style="margin-top:9px;font-family:var(--ff-mono);font-size:9.5px;letter-spacing:.6px;color:var(--gray)"><span data-i18n="umbralAporte">249 de 865 relaciones (28,8 %) siguen por corroborar. Este atlas recibe aportes — </span><a href="reflujo-guia.html" style="color:var(--gold);text-decoration:none" data-i18n="umbralAporteLink">el reflujo</a></div>
   </div></div>
 
@@ -193,6 +194,7 @@
     <div class="c"><div class="who" data-i18n="mc1who">Premisa</div><h3 data-i18n="mc1h">Antropología archipiélica</h3><p data-i18n-html="mc1p">Contra la antropología continental y nacional, que toma el territorio delimitado como contenedor, aquí la unidad de análisis es el <b>fenómeno que atraviesa</b> la cuenca, no el lugar que lo aloja. Cartagena se entiende mejor junto a Nueva Orleans y Paramaribo que junto a Bogotá. Por eso el mapa premia el eje marítimo, horizontal, y no deja leer ninguna orilla como totalidad autosuficiente.</p></div>
     <div class="c"><div class="who">Kamau Brathwaite</div><h3 data-i18n="mc2h">Conexión submarina</h3><p data-i18n-html="mc2p">«The unity is submarine»: lo que une a las islas corre por debajo de la superficie, en la raíz común del agua. En el atlas, <b>las corrientes de relación cumplen esa función</b>: son la estructura del mapa, no su decoración. La tierra separa; el mar, por debajo, conecta.</p></div>
     <div class="c"><div class="who">Kamau Brathwaite</div><h3 data-i18n="mc3h">Marealéctica (tidalectics)</h3><p data-i18n-html="mc3p">Frente a la dialéctica que avanza hacia una síntesis, la marealéctica va y viene como la marea: <b>avance y retirada, sin progreso lineal</b>. El mapa entero se mueve con ese ritmo; nada se resuelve, todo vuelve. El tiempo caribeño se comporta como el agua: sube, se retira, vuelve a subir.</p></div>
+    <div class="c"><div class="who">Ernesto Bassi</div><h3 data-i18n="mcBassiH">Territorio acuoso</h3><p data-i18n-html="mcBassiP">A finales del siglo XVIII y en las primeras décadas del XIX, los marineros, contrabandistas y corsarios de la costa neogranadina vivían de rutas que las coronas no controlaban. Para ellos Riohacha quedaba más cerca de Jamaica y de Curazao que de Santa Fe, y el comercio que la sostenía pasaba por encima de las fronteras que España y Gran Bretaña trazaban en el papel. Bassi llama <b>territorio acuoso</b> a ese espacio, hecho más de trayectos que de límites. Su tesis pesa sobre este atlas: que la costa terminara siendo colombiana fue uno entre varios desenlaces posibles, y quien la lee desde la nación la lee desde el final. Por eso aquí Cartagena, Santa Marta y Riohacha se ubican en la cuenca antes que en el país.<br><span style="font-size:.85em; opacity:.75; font-style:italic">Bassi, E. (2016). <i>An Aqueous Territory: Sailor Geographies and New Granada's Transimperial Greater Caribbean World</i>. Duke University Press. <a href="#bassiacuoso" onclick="closeMarco();openPanel('bassiacuoso');return false;" style="color:var(--orange)">Ver ficha en el atlas →</a></span></p></div>
     <div class="c"><div class="who">Michael Monahan</div><h3 data-i18n="mc4h">El diálogo no siempre es acuerdo</h3><p data-i18n-html="mc4p">Un vínculo entre obras puede ser armónico o puede ser un choque. Las corrientes <b style="color:var(--orange)">doradas resuenan</b>: una idea continúa, amplifica o hereda a otra, sin fundirse con ella. Las <b style="color:var(--red)">rojas disienten</b>: no por simple desacuerdo, sino porque tensionan de forma argumentada lo que el mapa mostraría como acuerdo. Que una corriente sea disonante no dice todavía si interrumpe un silencio impuesto o abre paso a una voz antes inaudible: ese efecto se analiza en cada caso, no se presupone. El pensamiento caribeño se hace de eco y de disonancia, y el mapa distingue las dos cosas. Monahan piensa la creolización exactamente así, como reconocimiento y disonancia a la vez.<br><span style="font-size:.85em; opacity:.75; font-style:italic">Monahan, M. J. (2023). <i>Creolizing Practices of Freedom: Recognition and Dissonance</i>. Rowman &amp; Littlefield. <a href="#monahan" onclick="closeMarco();openPanel('monahan');return false;" style="color:var(--orange)">Ver ficha en el atlas →</a></span></p></div>
     <div class="c"><div class="who">José Medina · Michael Monahan</div><h3 data-i18n="mc5h">Fricción epistémica</h3><p data-i18n-html="mc5p">La fricción epistémica ocurre cuando un marco de conocimiento entra en contacto con una resistencia que revela sus límites, silencios o presupuestos y puede transformarlo. José Medina formula la categoría; Michael Monahan la reelabora dentro de una práctica creolizadora de libertad, resonancia y disonancia. <b>No equivale a hablar o publicar en lenguas distintas.</b> La cruz del mapa señala únicamente un cruce lingüístico entre las tradiciones de las dos obras; una fricción epistémica solo se incorporará cuando la relación la declare con argumento y evidencia.<br><span style="font-size:.85em; opacity:.75; font-style:italic">Medina, J. (2013). <i>The Epistemology of Resistance</i>. Oxford University Press. · Monahan, M. J. (2023). <i>Creolizing Practices of Freedom</i>. Rowman &amp; Littlefield.</span></p></div>
     <div class="c" style="border-left-color:var(--gold)"><div class="who" style="color:var(--gold)" data-i18n="mc6who">Cómo citar el corpus</div><h3 data-i18n="mc6h">Dataset con DOI en Zenodo</h3><p data-i18n-html="mc6p">Almanza, R. (2026). <i>Atlas para una antropología archipiélica: con el agua de por medio</i> [conjunto de datos]. Zenodo. <a href="https://doi.org/10.5281/zenodo.21483568" target="_blank" rel="noopener" style="color:var(--gold)">https://doi.org/10.5281/zenodo.21483568</a><br><span style="font-size:.85em; opacity:.75; font-style:italic">Versión depositada 1.22.0 · <a href="https://doi.org/10.5281/zenodo.22886084" target="_blank" rel="noopener" style="color:var(--gold)">DOI de esta versión</a> · Licencia <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" target="_blank" rel="noopener" style="color:var(--gold)">CC BY-NC-SA 4.0</a>: atribución, uso no comercial, compartir igual.</span></p></div>
@@ -202,7 +204,7 @@
   </div></div>
 </main>
 <script src="../js/zoom-caribe.js"></script>
-<script src="../data/agua-de-por-medio/datos-atlas.js?v=20260918oriximina"></script>
+<script src="../data/agua-de-por-medio/datos-atlas.js?v=1.25.0"></script>
 <!-- Capa de temporalidad. Aditiva: si falta, la cronología funciona como siempre. -->
 <script src="../data/agua-de-por-medio/datos-temporalidad.js?v=202608101"></script>
 <script>
@@ -244,6 +246,28 @@ function fuenteLegible(f){
     const nuevo = /del/.test(art) ? 'de la ficha' : 'la ficha';
     return `${nuevo} «${o.t.split(':')[0].split(' / ')[0]}»`;
   });
+  /* Tanda 1 · 28-09-2026 · lo que queda del proceso de lectura sale de la vista pública.
+     El corpus conserva la nota completa; aquí solo se deja lo que sirve para localizar
+     la cita. Tres cosas: (a) «hoja N» es la hoja del PDF, no la página impresa: si no hay
+     equivalencia declarada no puede presentarse como localizador y se retira; (b) el
+     formato del ejemplar (PDF, EPUB, rutas OEBPS) es dato de trabajo; (c) las notas de
+     OCR y normalización describen el taller, no la obra. «Sin paginación estable» sí
+     se conserva: le dice al lector por qué la cita no trae página. */
+  s=s.replace(/\b(PDF|EPUB)\s+\1\b/g,'$1');
+  s=s.replace(/[^.]*\bOCR degradada\b[^.]*\.\s*/g,'');
+  s=s.replace(/[^.]*\bse normaliz[óo]\b[^.]*\.\s*/g,'');
+  s=s.replace(/\b[Ee]pub sin paginación estable(?:,\s*citas? localizables? por búsqueda de frase|:\s*las citas se localizan por búsqueda de frase)?/g,(m)=>(m[0]==='E'?'Edición digital':'edición digital')+' sin paginación estable');
+  s=s.replace(/\bejemplar OCR sin paginación estable/g,'edición sin paginación estable');
+  s=s.replace(/\bEjemplar digitalizado por OCR,/g,'Ejemplar digitalizado,');
+  s=s.replace(/\bPDF escaneado(?: sin capa de texto,)? leído por OCR parcial/g,'consulta parcial');
+  s=s.replace(/\s*y\s+OEBPS\/[\w\/-]+(?:\.\w+)?/g,'').replace(/,?\s*OEBPS\/[\w\/-]+(?:\.\w+)?/g,'');
+  s=s.replace(/\bhojas?\s+\d+(?:[-–]\d+)?(?:(?:,\s*|\s+y\s+)\d+(?:[-–]\d+)?)*\s+y\s+\S+\s+ocurrencias más/g,'varias ocurrencias');
+  s=s.replace(/,?\s*\bhojas?\s+\d+(?:[-–]\d+)?(?:(?:,\s*|\s+y\s+)\d+(?:[-–]\d+)?)*/g,'');
+  s=s.replace(/\.;?\s*(?:(?:PDF|EPUB)\s*[;,]?\s*)+\.(?=\s|$)/g,'.');
+  s=s.replace(/;\s*(?:PDF|EPUB)\s*$/g,'').replace(/;\s*(?:PDF|EPUB)\s+y\s+/g,'; ').replace(/;\s*(?:PDF|EPUB)\b\s*(?=[,.;)])/g,';').replace(/\((?:PDF|EPUB)\b\s*[,;]?\s*/g,'(').replace(/,\s*(?:PDF|EPUB)\b(?=\s*[,.;)])/g,'');
+  s=s.replace(/;\s*,\s*y\s+/g,'; ').replace(/;\s*,\s*/g,'; ').replace(/;\s*y\s+(?=[a-záéíóú])/g,'; ');
+  s=s.replace(/\s+([,;)])/g,'$1').replace(/([^.\s])\s+\.(?=\s|$)/g,'$1.').replace(/\(\s*[,;]\s*/g,'(').replace(/[,;]\s*\)/g,')').replace(/\s*\(\s*\)/g,'');
+  s=s.replace(/;\s*(?=[.,])/g,'').replace(/,\s*\./g,'.').replace(/([^.])\.\s*;?\s*\.(?=\s|$)/g,'$1.');
   /* limpieza de separadores huérfanos */
   /* (no se toca «..» ni «...»: son elisiones dentro de las citas) */
   s=s.replace(/\.(?:\s*;)+\s*\.(?=\s|$)/g,'.').replace(/\.\s+\.(?=\s|$)/g,'.').replace(/(?:\s*;)+\s*(?=\.(?:\s|$))/g,'').replace(/;\s*;/g,';').replace(/\s{2,}/g,' ').trim();
@@ -548,7 +572,7 @@ const I18N = {
     lblRecorridos:"Recorridos", btnRecorridosAbrir:"Consultar los recorridos C1–C10", btnRecorridosCerrar:"Cerrar recorridos",
     recTodos:"Todos los recorridos", recPendientes:"Pendientes", recSinEvaluar:"Sin evaluar",
     recProvisional:"Denominaciones provisionales, en revisión académica.",
-    recPie:"Las obras fuera del recorrido elegido no desaparecen: se atenúan.",
+    recPie:"Las obras fuera del recorrido elegido no desaparecen: se atenúan.", recSinAsignar:"Todavía no todas las obras tienen recorrido asignado ({n} de {t}): las que no lo tienen también quedan atenuadas.",
     recPrincipal:"Recorrido principal", recTambien:"También dialoga con",
     recFrontera:"Frontera constitutiva", recSintesis:"Síntesis multicorriente",
     recClasif:"Clasificación de recorrido", recPendiente:"Pendiente", recSinEval:"Sin evaluar",
@@ -560,10 +584,10 @@ const I18N = {
     lblModo:"Modo", presBtn:"Pantalla completa",
     lblBuscar:"Buscar", buscarPh:"título o autor…", buscarNada:"sin coincidencias", buscarUna:"1 obra", buscarN:"{n} obras",
     lblIdioma:"Idioma",
-    entrar:"Entrar en la corriente", umbralBase:"Base conceptual: Brathwaite · Monahan — ", verMarco:"ver marco",
+    entrar:"Entrar en la corriente", umbralBase:"Base conceptual: Brathwaite · Bassi · Monahan · Medina — ", verMarco:"ver marco",
     umbralAporte:"249 de 865 relaciones (28,8 %) siguen por corroborar. Este atlas recibe aportes — ", umbralAporteLink:"el reflujo",
     umbralP:"Ninguna orilla es una totalidad. El archipiélago no lo hacen las naciones: lo hacen las fuerzas que cruzan de una orilla a otra. Cada obra vive aquí en el fenómeno que la atraviesa; el país que la aloja queda en segundo plano.",
-    umbralHow:"Elige un fenómeno en la leyenda y <b>se encienden sus puntos</b> con su guión. Abre cualquier obra y <b>se ramifican sus conexiones</b>, directas e indirectas, a través del agua. Pasa el cursor, toca o navega con tabulador para leer cada nodo. El fondo sube y baja como la marea, según Brathwaite.",
+    umbralHow:"Elige un fenómeno en la lista «Corrientes» y <b>se encienden sus puntos</b> con su guion. Abre cualquier obra y <b>se ramifican sus conexiones</b>, directas e indirectas, a través del agua. Pasa el cursor, toca o navega con tabulador para leer cada nodo. El fondo sube y baja como la marea, según Brathwaite.",
     marcoTit:"Marco conceptual", marcoSub:"cómo piensa este atlas · y cómo la forma encarna la teoría",
     mc1who:"Premisa", mc1h:"Antropología archipiélica",
     mc1p:"Contra la antropología continental y nacional, que toma el territorio delimitado como contenedor, aquí la unidad de análisis es el <b>fenómeno que atraviesa</b> la cuenca, no el lugar que lo aloja. Cartagena se entiende mejor junto a Nueva Orleans y Paramaribo que junto a Bogotá. Por eso el mapa premia el eje marítimo, horizontal, y no deja leer ninguna orilla como totalidad autosuficiente.",
@@ -571,6 +595,7 @@ const I18N = {
     mc2p:"«The unity is submarine»: lo que une a las islas corre por debajo de la superficie, en la raíz común del agua. En el atlas, <b>las corrientes de relación cumplen esa función</b>: son la estructura del mapa, no su decoración. La tierra separa; el mar, por debajo, conecta.",
     mc3h:"Marealéctica (tidalectics)",
     mc3p:"Frente a la dialéctica que avanza hacia una síntesis, la marealéctica va y viene como la marea: <b>avance y retirada, sin progreso lineal</b>. El mapa entero se mueve con ese ritmo; nada se resuelve, todo vuelve. El tiempo caribeño se comporta como el agua: sube, se retira, vuelve a subir.",
+    mcBassiH:"Territorio acuoso", mcBassiP:"A finales del siglo XVIII y en las primeras décadas del XIX, los marineros, contrabandistas y corsarios de la costa neogranadina vivían de rutas que las coronas no controlaban. Para ellos Riohacha quedaba más cerca de Jamaica y de Curazao que de Santa Fe, y el comercio que la sostenía pasaba por encima de las fronteras que España y Gran Bretaña trazaban en el papel. Bassi llama <b>territorio acuoso</b> a ese espacio, hecho más de trayectos que de límites. Su tesis pesa sobre este atlas: que la costa terminara siendo colombiana fue uno entre varios desenlaces posibles, y quien la lee desde la nación la lee desde el final. Por eso aquí Cartagena, Santa Marta y Riohacha se ubican en la cuenca antes que en el país.<br><span style=\"font-size:.85em; opacity:.75; font-style:italic\">Bassi, E. (2016). <i>An Aqueous Territory: Sailor Geographies and New Granada's Transimperial Greater Caribbean World</i>. Duke University Press. <a href=\"#bassiacuoso\" onclick=\"closeMarco();openPanel('bassiacuoso');return false;\" style=\"color:var(--orange)\">Ver ficha en el atlas →</a></span>",
     mc4who:"Resonancia y disonancia", mc4h:"El diálogo no siempre es acuerdo",
     mc4p:"Un vínculo entre obras puede ser armónico o puede ser un choque. Las corrientes <b style=\"color:var(--orange)\">doradas resuenan</b>: una idea continúa, amplifica o hereda a otra, sin fundirse con ella. Las <b style=\"color:var(--red)\">rojas disienten</b>: no por simple desacuerdo, sino porque tensionan de forma argumentada lo que el mapa mostraría como acuerdo. Que una corriente sea disonante no dice todavía si interrumpe un silencio impuesto o abre paso a una voz antes inaudible: ese efecto se analiza en cada caso, no se presupone. El pensamiento caribeño se hace de eco y de disonancia, y el mapa distingue las dos cosas. Monahan piensa la creolización exactamente así, como reconocimiento y disonancia a la vez.<br><span style=\"font-size:.85em; opacity:.75; font-style:italic\">Monahan, M. J. (2023). <i>Creolizing Practices of Freedom: Recognition and Dissonance</i>. Rowman &amp; Littlefield. <a href=\"#monahan\" onclick=\"closeMarco();openPanel('monahan');return false;\" style=\"color:var(--orange)\">Ver ficha en el atlas →</a></span>",
     mc5h:"Fricción epistémica",
@@ -585,11 +610,11 @@ const I18N = {
     mc6p:"Almanza, R. (2026). <i>Atlas para una antropología archipiélica: con el agua de por medio</i> [conjunto de datos]. Zenodo. <a href=\"https://doi.org/10.5281/zenodo.21483568\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold)\">https://doi.org/10.5281/zenodo.21483568</a><br><span style=\"font-size:.85em; opacity:.75; font-style:italic\">Versión depositada 1.22.0 · <a href=\"https://doi.org/10.5281/zenodo.22886084\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold)\">DOI de esta versión</a> · Licencia <a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold)\">CC BY-NC-SA 4.0</a>: atribución, uso no comercial, compartir igual.</span>",
     presExit:"✕ salir",
     presHelp:"<span><b>1</b>corriente</span><span><b>2</b>constelación</span><span><b>M</b>marea</span><span><b>→</b>siguiente fenómeno</span><span><b>←</b>anterior</span><span><b>0</b>despejar</span><span><b>Esc</b>salir</span>",
-    hintCorriente:"La cuenca vista desde el mar. Islas por su país; puntos continentales (naranja) por su ciudad, regiones en tensión con un centro no caribeño. Selecciona una corriente en la leyenda o una obra en el mapa para ver sus relaciones. Rueda: zoom · arrastra: desplaza · doble clic, o el botón de reencuadre de la columna de zoom: vuelve al inicio. Pasa el cursor sobre un punto para leerlo.",
-    hintConstelacion:"Constelación de los fenómenos que atraviesan la cuenca. Selecciona una corriente en la leyenda o una obra en el mapa para ver sus relaciones. Rueda: zoom · arrastra: desplaza · doble clic, o el botón de reencuadre de la columna de zoom: vuelve al inicio. Pasa el cursor sobre un punto para leerlo.",
+    hintCorriente:"La cuenca vista desde el mar. Las islas se nombran por su país; los lugares continentales, en naranja, por su ciudad o por la región en tensión con un centro no caribeño. Elige un fenómeno en la lista «Corrientes», o una obra en el mapa, para ver sus relaciones. Rueda: zoom · arrastra: desplaza · doble clic, o el botón de reencuadre de la columna de zoom: vuelve al inicio. Pasa el cursor sobre un punto para leerlo.",
+    hintConstelacion:"Constelación de los fenómenos que atraviesan la cuenca. Elige un fenómeno en la lista «Corrientes», o una obra en el mapa, para ver sus relaciones. Rueda: zoom · arrastra: desplaza · doble clic, o el botón de reencuadre de la columna de zoom: vuelve al inicio. Pasa el cursor sobre un punto para leerlo.",
     lgTitle:"referencias · clic en un fenómeno para iluminar",
     lgResearch:"obras", lgEthno:"manifestaciones culturales", lgReson:"resonancia", lgDisso:"disonancia", lgFricc:"cruce lingüístico",
-    lgMarco:"Base conceptual: Brathwaite · Monahan →",
+    lgMarco:"Base conceptual: Brathwaite · Bassi · Monahan · Medina →",
     clvTit:"Corrientes", clvComo:"Cómo se lee", clvComoCerrar:"Ocultar",
     clvEntradas:"entradas", clvCorrientes:"corrientes", clvCorrob:"corroborado",
     pKindObra:"Obra", pKindManif:"Manifestación cultural",
@@ -609,7 +634,7 @@ const I18N = {
     legendAbrir:"Ver leyenda completa", legendCerrar:"Cerrar leyenda",
     umbralNoMostrar:"No volver a mostrar esta introducción",
     mapaAria:"Mapa interactivo del atlas",
-    mapaInstrucciones:"Mapa interactivo con las obras y manifestaciones culturales del atlas. Use las flechas para moverse entre ellas, Intro o espacio para abrir su ficha, Inicio o Fin para ir al primero o al último, y Escape para cerrar la ficha abierta.",
+    mapaInstrucciones:"Mapa interactivo con las obras del atlas. Use las flechas para moverse entre ellas, Intro o espacio para abrir su ficha, Inicio o Fin para ir al primero o al último, y Escape para cerrar la ficha abierta.",
     cerrarFicha:"Cerrar ficha", cerrarMarco:"Cerrar marco conceptual", cerrarReflujo:"Cerrar el reflujo",
     e20Titulo:"Esquema 2.0", e20EstadoConfirmada:"confirmada", e20EstadoPreliminar:"preliminar", e20EstadoPendiente:"pendiente",
     limpiarFiltros:"Limpiar filtros",
@@ -644,7 +669,7 @@ const I18N = {
     pProyecto:"Con el agua de por medio: atlas para una antropología archipiélica",
     tCap:"Catálogo del atlas", tRefs:"referencias", tFiltro:"filtrado por",
     tSort:"ordena por cualquier columna · abre una fila para ver su ficha",
-    tCaption:"Obras y manifestaciones del atlas «Con el agua de por medio», con su fenómeno, lugar y tradición. Cada fila enlaza a la ficha completa.",
+    tCaption:"Obras del atlas «Con el agua de por medio», con su fenómeno, lugar y tradición. Cada fila enlaza a la ficha completa.",
     thObra:"Obra", thAutor:"Autor", thAno:"Año", thTipo:"Tipo", thFen:"Fenómenos", thLugar:"Lugar", thTrad:"Tradición", thEvid:"Corrientes corroboradas",
     thEstado:"Estado (2.0)", thProcedencia:"Procedencia",
     tKindObra:"Obra", tKindManif:"Manifestación cultural", tCiudad:"(ciudad)",
@@ -665,7 +690,7 @@ const I18N = {
     lblRecorridos:"Itineraries", btnRecorridosAbrir:"Browse itineraries C1–C10", btnRecorridosCerrar:"Close itineraries",
     recTodos:"All itineraries", recPendientes:"Pending", recSinEvaluar:"Not assessed",
     recProvisional:"Provisional denominations, under academic review.",
-    recPie:"Works outside the chosen itinerary are dimmed, not removed.",
+    recPie:"Works outside the chosen itinerary are dimmed, not removed.", recSinAsignar:"Not every work has an itinerary assigned yet ({n} of {t}): those without one are dimmed as well.",
     recPrincipal:"Main itinerary", recTambien:"Also converses with",
     recFrontera:"Constitutive boundary", recSintesis:"Multi-itinerary synthesis",
     recClasif:"Itinerary classification", recPendiente:"Pending", recSinEval:"Not assessed",
@@ -677,10 +702,10 @@ const I18N = {
     lblModo:"Mode", presBtn:"Full screen",
     lblBuscar:"Search", buscarPh:"title or author…", buscarNada:"no matches", buscarUna:"1 work", buscarN:"{n} works",
     lblIdioma:"Language",
-    entrar:"Enter the current", umbralBase:"Conceptual base: Brathwaite · Monahan — ", verMarco:"see frame",
+    entrar:"Enter the current", umbralBase:"Conceptual base: Brathwaite · Bassi · Monahan · Medina — ", verMarco:"see frame",
     umbralAporte:"249 of 865 relations (28.8%) remain to be corroborated. This atlas takes contributions — ", umbralAporteLink:"the returning tide",
     umbralP:"No shore is a totality. The archipelago is not made by nations: it is made by the forces that cross from one shore to another. Each work lives here in the phenomenon that runs through it; the country that hosts it stays in the background.",
-    umbralHow:"Choose a phenomenon in the legend and <b>its points light up</b> with their note. Open any work and <b>its connections branch out</b>, direct and indirect, across the water. Hover, tap, or tab to a node to read it. The ground rises and falls like the tide, after Brathwaite.",
+    umbralHow:"Choose a phenomenon in the «Currents» list and <b>its points light up</b> with their note. Open any work and <b>its connections branch out</b>, direct and indirect, across the water. Hover, tap, or tab to a node to read it. The ground rises and falls like the tide, after Brathwaite.",
     marcoTit:"Conceptual frame", marcoSub:"how this atlas thinks · and how form embodies theory",
     mc1who:"Premise", mc1h:"Archipelagic anthropology",
     mc1p:"Against continental and national anthropology, which takes the bounded territory as a container, here the unit of analysis is the <b>phenomenon that runs through</b> the basin, not the place that hosts it. Cartagena is better understood alongside New Orleans and Paramaribo than alongside Bogotá. That is why the map favors the maritime, horizontal axis, and refuses to let any single shore be read as a self-sufficient totality.",
@@ -688,6 +713,7 @@ const I18N = {
     mc2p:"«The unity is submarine»: what unites the islands runs beneath the surface, in the shared root of the water. In the atlas, <b>the currents of relation perform that function</b>: they are the structure of the map, not its decoration. Land separates; the sea, beneath, connects.",
     mc3h:"Tidalectics",
     mc3p:"Against a dialectic that advances toward synthesis, tidalectics comes and goes like the tide: <b>advance and retreat, with no linear progress</b>. The whole map moves to that rhythm; nothing is resolved, everything returns. Caribbean time behaves like water: it rises, retreats, rises again.",
+    mcBassiH:"Aqueous territory", mcBassiP:"In the late eighteenth century and the first decades of the nineteenth, the sailors, smugglers and privateers of the New Granadan coast lived off routes the crowns did not control. For them Riohacha lay closer to Jamaica and Curaçao than to Santa Fe, and the trade that kept it alive ran over the borders Spain and Britain drew on paper. Bassi calls that space, made more of passages than of limits, an <b>aqueous territory</b>. His argument weighs on this atlas: that the coast ended up Colombian was one outcome among several, and whoever reads it from the nation reads it from the end. That is why Cartagena, Santa Marta and Riohacha sit here in the basin before they sit in the country.<br><span style=\"font-size:.85em; opacity:.75; font-style:italic\">Bassi, E. (2016). <i>An Aqueous Territory: Sailor Geographies and New Granada's Transimperial Greater Caribbean World</i>. Duke University Press. <a href=\"#bassiacuoso\" onclick=\"closeMarco();openPanel('bassiacuoso');return false;\" style=\"color:var(--orange)\">See entry in the atlas →</a></span>",
     mc4who:"Resonance and dissonance", mc4h:"Dialogue is not always agreement",
     mc4p:"A link between works can be harmonic or it can be a clash. The <b style=\"color:var(--orange)\">golden currents resonate</b>: one idea continues, amplifies or inherits another, without fusing into it. The <b style=\"color:var(--red)\">red ones dissent</b>: not through plain disagreement, but because they strain, with argument, what the map would otherwise show as accord. That a current is dissonant does not yet say whether it interrupts an imposed silence or opens space for a previously inaudible voice: that effect is analysed case by case, never presumed. Caribbean thought is made of echo and dissonance, and the map tells the two apart. Monahan thinks creolization exactly this way, as recognition and dissonance at once.<br><span style=\"font-size:.85em; opacity:.75; font-style:italic\">Monahan, M. J. (2023). <i>Creolizing Practices of Freedom: Recognition and Dissonance</i>. Rowman &amp; Littlefield. <a href=\"#monahan\" onclick=\"closeMarco();openPanel('monahan');return false;\" style=\"color:var(--orange)\">See entry in the atlas →</a></span>",
     mc5h:"Epistemic friction",
@@ -702,11 +728,11 @@ const I18N = {
     mc6p:"Almanza, R. (2026). <i>Atlas para una antropología archipiélica: con el agua de por medio</i> [dataset]. Zenodo. <a href=\"https://doi.org/10.5281/zenodo.21483568\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold)\">https://doi.org/10.5281/zenodo.21483568</a><br><span style=\"font-size:.85em; opacity:.75; font-style:italic\">Licensed under <a href=\"https://creativecommons.org/licenses/by-nc-sa/4.0/\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold)\">CC BY-NC-SA 4.0</a>: attribution, non-commercial, share-alike.</span>",
     presExit:"✕ exit",
     presHelp:"<span><b>1</b>current</span><span><b>2</b>constellation</span><span><b>M</b>tide</span><span><b>→</b>next phenomenon</span><span><b>←</b>previous</span><span><b>0</b>clear</span><span><b>Esc</b>exit</span>",
-    hintCorriente:"The basin seen from the sea. Islands by their country; continental points (orange) by their city, regions in tension with a non-Caribbean center. Select a current in the legend or a work on the map to see its relations. Wheel: zoom · drag: pan · double-click, or the recenter button in the zoom column: back to start. Hover over a point to read it.",
-    hintConstelacion:"Constellation of the phenomena that run through the basin. Select a current in the legend or a work on the map to see its relations. Wheel: zoom · drag: pan · double-click, or the recenter button in the zoom column: back to start. Hover over a point to read it.",
+    hintCorriente:"The basin seen from the sea. Islands are named by their country; continental places, in orange, by their city or by the region in tension with a non-Caribbean center. Choose a phenomenon in the «Currents» list, or a work on the map, to see its relations. Wheel: zoom · drag: pan · double-click, or the recenter button in the zoom column: back to start. Hover over a point to read it.",
+    hintConstelacion:"Constellation of the phenomena that run through the basin. Choose a phenomenon in the «Currents» list, or a work on the map, to see its relations. Wheel: zoom · drag: pan · double-click, or the recenter button in the zoom column: back to start. Hover over a point to read it.",
     lgTitle:"references · click a phenomenon to illuminate",
     lgResearch:"works", lgEthno:"cultural manifestations", lgReson:"resonance", lgDisso:"dissonance", lgFricc:"linguistic crossing",
-    lgMarco:"Conceptual base: Brathwaite · Monahan →",
+    lgMarco:"Conceptual base: Brathwaite · Bassi · Monahan · Medina →",
     clvTit:"Currents", clvComo:"How to read it", clvComoCerrar:"Hide",
     clvEntradas:"entries", clvCorrientes:"currents", clvCorrob:"corroborated",
     pKindObra:"Work", pKindManif:"Cultural manifestation",
@@ -726,7 +752,7 @@ const I18N = {
     legendAbrir:"See full legend", legendCerrar:"Close legend",
     umbralNoMostrar:"Do not show this introduction again",
     mapaAria:"Interactive map of the atlas",
-    mapaInstrucciones:"Interactive map with the atlas's works and cultural manifestations. Use the arrow keys to move between them, Enter or space to open its entry, Home or End to go to the first or last one, and Escape to close the open entry.",
+    mapaInstrucciones:"Interactive map with the atlas's works. Use the arrow keys to move between them, Enter or space to open its entry, Home or End to go to the first or last one, and Escape to close the open entry.",
     cerrarFicha:"Close entry", cerrarMarco:"Close conceptual framework", cerrarReflujo:"Close the reflux",
     e20Titulo:"2.0 schema", e20EstadoConfirmada:"confirmed", e20EstadoPreliminar:"preliminary", e20EstadoPendiente:"pending",
     limpiarFiltros:"Clear filters",
@@ -761,7 +787,7 @@ const I18N = {
     pProyecto:"Con el agua de por medio: An Atlas for an Archipelagic Anthropology",
     tCap:"Atlas catalogue", tRefs:"references", tFiltro:"filtered by",
     tSort:"sort by any column · open a row to see its entry",
-    tCaption:"Works and manifestations of the atlas «Con el agua de por medio», with their phenomenon, place and tradition. Each row links to the full entry.",
+    tCaption:"Works of the atlas «Con el agua de por medio», with their phenomenon, place and tradition. Each row links to the full entry.",
     thObra:"Work", thAutor:"Author", thAno:"Year", thTipo:"Type", thFen:"Phenomena", thLugar:"Place", thTrad:"Tradition", thEvid:"Corroborated currents",
     thEstado:"Status (2.0)", thProcedencia:"Provenance",
     tKindObra:"Work", tKindManif:"Cultural manifestation", tCiudad:"(city)",
@@ -1449,7 +1475,9 @@ function openPanel(id){
   const lugar = n.orillas?.length
     ? `<div class="lugar">${LANG==='en'?'Map anchor':'Anclaje en el mapa'}: ${textoSeguro(lu[2])}</div><p class="meta">${LANG==='en'?'Shores / scope':'Orillas / ámbito'}: ${n.orillas.map(o=>textoSeguro(o.label||L[o.lugar]?.[2]||o.lugar)).join(' · ')}</p>`
     : lugarHeredado;
-  const edicion = n.edicion_consultada ? `<p class="meta">${LANG==='en'?'Edition consulted':'Edición consultada'}: ${textoSeguro(fuenteLegible(n.edicion_consultada))}</p>` : ''; /* Bloque D: misma limpieza que la fuente */
+  /* Tanda 1: si el propio campo ya distingue «Original: … Edición consultada: …», no se le antepone otra etiqueta */
+  const edTxt = n.edicion_consultada ? fuenteLegible(n.edicion_consultada) : '';
+  const edicion = edTxt ? `<p class="meta">${/Edición consultada:/i.test(edTxt) ? '' : (LANG==='en'?'Edition consulted':'Edición consultada')+': '}${textoSeguro(edTxt)}</p>` : ''; /* Bloque D: misma limpieza que la fuente */
 
   const dAll=[...direct].map(x=>byId(x)).filter(Boolean);
   const dShown=dAll.filter(o=>{ if(state.evid==="todas") return true; return esCorr(id,o.id)===(state.evid==="ok"); });
@@ -1574,8 +1602,13 @@ function buildClave(){
   });
   const cif=document.getElementById('clvCifras');
   if(cif){
-    const visN=N.filter(visible).length, pct=RELS.length?(CORR_OK/RELS.length*100):0;
-    cif.textContent=`${visN} ${t('clvEntradas')} · ${RELS.length} ${t('clvCorrientes')} · ${pct.toFixed(0)} % ${t('clvCorrob')}`;
+    /* Tanda 1 · con un filtro puesto, las tres cifras hablan de lo mismo: las entradas
+       visibles y las corrientes que las unen entre sí. Antes solo cambiaban las entradas
+       y el pie decía, por ejemplo, «0 entradas · 865 corrientes · 71 %». */
+    const vis=new Set(N.filter(visible).map(n=>n.id)), visN=vis.size;
+    const rv = visN===N.length ? RELS : RELS.filter(r=>vis.has(r.a)&&vis.has(r.b));
+    const ok = rv===RELS ? CORR_OK : rv.filter(r=>!!r.fuente && !/corroborar/i.test(r.fuente)).length;
+    cif.textContent = `${visN} ${t('clvEntradas')} · ${rv.length} ${t('clvCorrientes')}` + (rv.length ? ` · ${(ok/rv.length*100).toFixed(0)} % ${t('clvCorrob')}` : '');
   }
   const rail=document.getElementById('clave');
   if(rail) rail.classList.toggle('conFoco', !!state.focusFen);
@@ -1892,6 +1925,11 @@ function buildRecSeg(){
            `<span class="recTxt">${o.lbl}</span><span class="recN">${o.c.n}</span></button>`;
   }).join('');
   seg.querySelectorAll('button').forEach(b=>b.onclick=()=>setRecorrido(b.dataset.rec||null));
+  /* Tanda 1 · sin esta línea, elegir C4 atenuaba igual lo que no pertenece a C4 y lo que
+     aún no se ha leído, y las dos cosas se leían como «no pertenece». Se calcula del corpus. */
+  const sa=document.getElementById('recSinAsignar');
+  if(sa){ const sin=N.filter(n=>n.estado_recorrido!=='confirmado' && RECORRIDOS.every(r=>!recGrado(n,r.c))).length; /* una obra confirmada sin recorrido (rebeldestiny) es una decisión, no una espera */
+    sa.textContent = sin ? t('recSinAsignar').replace('{n}',sin).replace('{t}',N.length) : ''; sa.hidden=!sin; }
 }
 function setRecorrido(v){
   state.recorrido = v || null;
@@ -2786,6 +2824,14 @@ document.querySelector('header .controls').addEventListener('scroll', qlPosicion
   const hay=N.some(n=>n.k!=='obra');
   const seg=document.getElementById('layerSeg');
   if(seg && !hay) seg.closest('.grp').style.display='none';
+  /* Tanda 1 · la misma regla para las lenguas: un botón que no lleva a ninguna obra
+     se oculta; si mañana el corpus declara una, vuelve solo. La lengua se sigue leyendo
+     del descriptor, como en todo el sitio (tradCodes). */
+  document.querySelectorAll('#lenguaSeg [data-len]').forEach(b=>{
+    const v=b.dataset.len; if(v==='todas') return;
+    const n=N.filter(x=>{ const c=tradCodes(x); return v==='sin' ? !c.size : c.has(v); }).length;
+    if(!n) b.style.display='none';
+  });
 })();
 
 /* ══════════ BLOQUE C · 17-09-2026 · lectura y rigor ═══════════════════════════
@@ -2888,7 +2934,7 @@ function pintarCredito(){
   const st=document.getElementById('vistaEstado'); if(st) st.textContent='';
 }
 const _applyLangC=applyLang;
-applyLang=function(){ _applyLangC(); pintarCredito(); };
+applyLang=function(){ _applyLangC(); pintarCredito(); if(typeof buildRecSeg==='function') buildRecSeg(); /* Tanda 1: los recorridos también cambian de idioma */ };
 const _renderC=render;
 render=function(){
   _renderC();
@@ -2932,10 +2978,12 @@ const resolverId = h => (REDIR[h] && byId(REDIR[h])) ? REDIR[h] : h;
 /* enlace profundo: si la URL trae #idObra, abrir esa ficha y saltar el umbral */
 (function(){ const h=resolverId(decodeURIComponent(location.hash.replace(/^#/,'')));
   if(h==='reflujo'){ document.getElementById('umbral').classList.add('gone'); rfAbrir(); return; }
+  if(h==='marco'){ document.getElementById('umbral').classList.add('gone'); openMarco(); return; } /* Tanda 1: #marco también se puede enlazar */
   if(aplicarEstadoHash(h)) return; /* Bloque C: #vista=…&rec=…&fen=…&obra=… */
   if(h && byId(h)){ document.getElementById('umbral').classList.add('gone'); openPanel(h); } })();
 window.addEventListener('hashchange',()=>{ const h=resolverId(decodeURIComponent(location.hash.replace(/^#/,'')));
   if(h==='reflujo'){ rfAbrir(); return; }
+  if(h==='marco'){ document.getElementById('umbral').classList.add('gone'); openMarco(); return; }
   if(aplicarEstadoHash(h)) return;
   if(h && byId(h) && state.active!==h) openPanel(h); });
 /* Bloque A · Atrás y Adelante: la dirección manda. Si nombra una obra, se abre su ficha
