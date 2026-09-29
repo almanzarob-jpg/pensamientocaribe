@@ -253,6 +253,8 @@
       L: LUGARES.length,
       top: NOMBRE(top).split(' · ')[0],
       ntop: CAMBIOS[top],
+      /* si varios empatan arriba se nombran todos: decir «el más inestable» de uno solo sería falso */
+      tops: POR_PARPADEO.filter(k=>CAMBIOS[k]===CAMBIOS[top]).map(k=>NOMBRE(k).split(' · ')[0]),
       quietos: LUGARES.filter(k=>CAMBIOS[k]===0).length,
       estables: LUGARES.filter(k=>CAMBIOS[k]===0).map(k=>NOMBRE(k).split(' · ')[0]),
       u: UMBRAL_PARPADEO,
@@ -270,6 +272,13 @@
       : (c.quietos===1 ? 'Only one never changes: '+c.estables[0]+', inside all '+c.n+'.'
                        : 'Only two never change: '+c.estables.join(' and ')+'.');
     return ES() ? c.quietos+' lugares no cambian nunca.' : c.quietos+' places never change.';
+  }
+
+  function lista(xs, y){ return xs.length<2 ? xs.join('') : xs.slice(0,-1).join(', ')+' '+y+' '+xs[xs.length-1]; }
+  function fraseTop(c){
+    if(c.tops.length<2) return ES() ? c.top+' es el más inestable: cambia '+c.ntop+' veces.' : c.top+' is the most unstable: it changes '+c.ntop+' times.';
+    return ES() ? lista(c.tops,'y')+' empatan como los más inestables: cambian '+c.ntop+' veces cada uno.'
+                : lista(c.tops,'and')+' tie as the most unstable: each changes '+c.ntop+' times.';
   }
 
   function textoGuia(){
@@ -294,7 +303,7 @@
         'definición, y de qué estado a cuál. Es el argumento del paso, escrito en lugares.</p>'+
 
       '<h3>El índice de parpadeo</h3><p>Cuenta, para cada lugar, cuántas veces cambia de estado a lo largo de las '+c.n+
-        ' definiciones. '+c.top+' es el más inestable: cambia '+c.ntop+' veces. '+fraseEstables(c)+' '+
+        ' definiciones. '+fraseTop(c)+' '+fraseEstables(c)+' '+
         'El parpadeo no mide ambigüedad geográfica sino desacuerdo teórico: señala dónde se juega la discusión sobre '+
         'qué es el Caribe.</p>'+
 
@@ -329,7 +338,7 @@
         'definition, and from which state to which. It is the argument of the step, written in places.</p>'+
 
       '<h3>The flicker index</h3><p>For each place it counts how many times it changes state across the '+c.n+
-        ' definitions. '+c.top+' is the most unstable: it changes '+c.ntop+' times. '+fraseEstables(c)+' '+
+        ' definitions. '+fraseTop(c)+' '+fraseEstables(c)+' '+
         'Flicker measures theoretical disagreement rather than geographical vagueness: it marks where the argument '+
         'about what the Caribbean is actually takes place.</p>'+
 

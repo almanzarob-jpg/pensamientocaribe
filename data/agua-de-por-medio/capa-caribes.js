@@ -4,7 +4,7 @@ window.CARIBES = {
   "titulo": "¿Qué Caribe?",
   "subtitulo": "Capa de definiciones del Caribe",
   "version": "0.1.0-prototipo",
-  "fecha": "2026-09-16",
+  "fecha": "2026-09-29",
   "nota": "Cada estado sale del texto citado. Un lugar sin estado es un lugar sobre el que el texto no se pronuncia."
  },
  "familias": {
@@ -400,9 +400,10 @@ window.CARIBES = {
      }
     },
     "barranquilla": {
+     "e": "dentro",
      "n": {
-      "es": "No aparece en el libro.",
-      "en": "It does not appear in the book."
+      "es": "Una sola mención: Bolívar sale por tierra «a Soledad, a Barranquilla, y agarra una goleta. «Vamos —dice— a Jamaica»» (p. 523). Entra por el criterio del libro, el mar como camino, no por peso propio.",
+      "en": "A single mention: Bolívar leaves overland “to Soledad, to Barranquilla, and takes a schooner. ‘Let us go,’ he says, ‘to Jamaica’” (p. 523). It enters by the book's criterion, the sea as a road, not on its own weight."
      }
     },
     "palenque": {
@@ -571,13 +572,25 @@ window.CARIBES = {
      "e": "dentro"
     },
     "guyana": {
-     "e": "dentro"
+     "e": "dentro",
+     "n": {
+      "es": "Por el «Caribe insular» del resumen, que según el propio Gaztambide suele incluir las Guayanas y Belice (p. 11).",
+      "en": "Through the summary's “insular Caribbean”, which by Gaztambide's own account usually includes the Guianas and Belize (p. 11)."
+     }
     },
     "suriname": {
-     "e": "dentro"
+     "e": "dentro",
+     "n": {
+      "es": "Por el «Caribe insular» del resumen, que según el propio Gaztambide suele incluir las Guayanas y Belice (p. 11).",
+      "en": "Through the summary's “insular Caribbean”, which by Gaztambide's own account usually includes the Guianas and Belize (p. 11)."
+     }
     },
     "belize": {
-     "e": "dentro"
+     "e": "dentro",
+     "n": {
+      "es": "Por el «Caribe insular» del resumen, que según el propio Gaztambide suele incluir las Guayanas y Belice (p. 11).",
+      "en": "Through the summary's “insular Caribbean”, which by Gaztambide's own account usually includes the Guianas and Belize (p. 11)."
+     }
     },
     "nola": {
      "e": "dentro"
@@ -594,6 +607,66 @@ window.CARIBES = {
      "n": {
       "es": "México queda en Indo-América (Gaztambide, p. 18).",
       "en": "Mexico falls in Indo-America (Gaztambide, p. 18)."
+     }
+    },
+    "bluefields": {
+     "n": {
+      "es": "Según el resumen de Gaztambide, Wagley pone «la mayor parte de Centroamérica» en Indo-América (p. 18). El resumen no dice qué parte queda en la América de las plantaciones, y el atlas no tiene el ensayo para decidirlo.",
+      "en": "In Gaztambide's summary, Wagley places “most of Central America” in Indo-America (p. 18). The summary does not say which part falls in Plantation America, and the atlas lacks the essay to settle it."
+     }
+    },
+    "costarica": {
+     "n": {
+      "es": "Según el resumen de Gaztambide, Wagley pone «la mayor parte de Centroamérica» en Indo-América (p. 18). El resumen no dice qué parte queda en la América de las plantaciones, y el atlas no tiene el ensayo para decidirlo.",
+      "en": "In Gaztambide's summary, Wagley places “most of Central America” in Indo-America (p. 18). The summary does not say which part falls in Plantation America, and the atlas lacks the essay to settle it."
+     }
+    },
+    "panama": {
+     "n": {
+      "es": "Según el resumen de Gaztambide, Wagley pone «la mayor parte de Centroamérica» en Indo-América (p. 18). El resumen no dice qué parte queda en la América de las plantaciones, y el atlas no tiene el ensayo para decidirlo.",
+      "en": "In Gaztambide's summary, Wagley places “most of Central America” in Indo-America (p. 18). The summary does not say which part falls in Plantation America, and the atlas lacks the essay to settle it."
+     }
+    },
+    "honduras": {
+     "n": {
+      "es": "Según el resumen de Gaztambide, Wagley pone «la mayor parte de Centroamérica» en Indo-América (p. 18). El resumen no dice qué parte queda en la América de las plantaciones, y el atlas no tiene el ensayo para decidirlo.",
+      "en": "In Gaztambide's summary, Wagley places “most of Central America” in Indo-America (p. 18). The summary does not say which part falls in Plantation America, and the atlas lacks the essay to settle it."
+     }
+    },
+    "cartagena": {
+     "n": {
+      "es": "El resumen de Gaztambide no nombra Colombia: pone en Indo-América las porciones «principalmente andinas» donde no se exterminó a los aborígenes y en la América de las plantaciones «todos aquellos lugares donde prevaleció la plantación» (p. 18). La costa colombiana y sus islas quedan entre los dos criterios.",
+      "en": "Gaztambide's summary does not name Colombia: it places in Indo-America the “mainly Andean” portions where the natives were not exterminated, and in Plantation America “all those places where the plantation prevailed” (p. 18). The Colombian coast and its islands fall between the two criteria."
+     }
+    },
+    "santamarta": {
+     "n": {
+      "es": "El resumen de Gaztambide no nombra Colombia: pone en Indo-América las porciones «principalmente andinas» donde no se exterminó a los aborígenes y en la América de las plantaciones «todos aquellos lugares donde prevaleció la plantación» (p. 18). La costa colombiana y sus islas quedan entre los dos criterios.",
+      "en": "Gaztambide's summary does not name Colombia: it places in Indo-America the “mainly Andean” portions where the natives were not exterminated, and in Plantation America “all those places where the plantation prevailed” (p. 18). The Colombian coast and its islands fall between the two criteria."
+     }
+    },
+    "palenque": {
+     "n": {
+      "es": "El resumen de Gaztambide no nombra Colombia: pone en Indo-América las porciones «principalmente andinas» donde no se exterminó a los aborígenes y en la América de las plantaciones «todos aquellos lugares donde prevaleció la plantación» (p. 18). La costa colombiana y sus islas quedan entre los dos criterios.",
+      "en": "Gaztambide's summary does not name Colombia: it places in Indo-America the “mainly Andean” portions where the natives were not exterminated, and in Plantation America “all those places where the plantation prevailed” (p. 18). The Colombian coast and its islands fall between the two criteria."
+     }
+    },
+    "barranquilla": {
+     "n": {
+      "es": "El resumen de Gaztambide no nombra Colombia: pone en Indo-América las porciones «principalmente andinas» donde no se exterminó a los aborígenes y en la América de las plantaciones «todos aquellos lugares donde prevaleció la plantación» (p. 18). La costa colombiana y sus islas quedan entre los dos criterios.",
+      "en": "Gaztambide's summary does not name Colombia: it places in Indo-America the “mainly Andean” portions where the natives were not exterminated, and in Plantation America “all those places where the plantation prevailed” (p. 18). The Colombian coast and its islands fall between the two criteria."
+     }
+    },
+    "guajira": {
+     "n": {
+      "es": "El resumen de Gaztambide no nombra Colombia: pone en Indo-América las porciones «principalmente andinas» donde no se exterminó a los aborígenes y en la América de las plantaciones «todos aquellos lugares donde prevaleció la plantación» (p. 18). La costa colombiana y sus islas quedan entre los dos criterios.",
+      "en": "Gaztambide's summary does not name Colombia: it places in Indo-America the “mainly Andean” portions where the natives were not exterminated, and in Plantation America “all those places where the plantation prevailed” (p. 18). The Colombian coast and its islands fall between the two criteria."
+     }
+    },
+    "sanandres": {
+     "n": {
+      "es": "El resumen de Gaztambide no nombra Colombia: pone en Indo-América las porciones «principalmente andinas» donde no se exterminó a los aborígenes y en la América de las plantaciones «todos aquellos lugares donde prevaleció la plantación» (p. 18). La costa colombiana y sus islas quedan entre los dos criterios.",
+      "en": "Gaztambide's summary does not name Colombia: it places in Indo-America the “mainly Andean” portions where the natives were not exterminated, and in Plantation America “all those places where the plantation prevailed” (p. 18). The Colombian coast and its islands fall between the two criteria."
      }
     },
     "oriximina": {
@@ -617,6 +690,13 @@ window.CARIBES = {
     },
     "brasil": {
      "e": "dentro"
+    },
+    "caiman": {
+     "e": null,
+     "n": {
+      "es": "Mintz, que cita el ensayo, advierte que las Caimán «difícilmente forman parte» de la «América de la plantación», y que «lo mismo puede decirse de muchas otras partes del área del Caribe» (Mintz, p. 64, n. 4).",
+      "en": "Mintz, who cites the essay, warns that the Caymans “hardly form part” of “Plantation America”, and that “the same may be said of many other parts of the Caribbean area” (Mintz, p. 64, n. 4)."
+     }
     }
    },
    "corpus": [
@@ -1002,51 +1082,88 @@ window.CARIBES = {
     "guyana": {
      "e": "margen",
      "n": {
-      "es": "Mintz se ocupa de las islas y «solo de forma secundaria» de las sociedades continentales (p. 65); las Guayanas entran por las migraciones asiáticas (p. 82).",
-      "en": "Mintz deals with the islands and “only secondarily” with mainland societies (p. 65); the Guianas appear through Asian migration (p. 82)."
+      "es": "Son las sociedades continentales que más aparecen en el ensayo —los cimarrones de Surinam (p. 79), la migración asiática (pp. 82-83), la identidad nacional (p. 85)—, pero siempre entre las que Mintz trata «solo de forma secundaria» (p. 65).",
+      "en": "They are the mainland societies that appear most in the essay —the Surinamese maroons (p. 79), Asian migration (pp. 82-83), national identity (p. 85)— but always among those Mintz treats “only secondarily” (p. 65)."
      }
     },
     "suriname": {
      "e": "margen",
      "n": {
-      "es": "Mintz se ocupa de las islas y «solo de forma secundaria» de las sociedades continentales (p. 65); las Guayanas entran por las migraciones asiáticas (p. 82).",
-      "en": "Mintz deals with the islands and “only secondarily” with mainland societies (p. 65); the Guianas appear through Asian migration (p. 82)."
+      "es": "Son las sociedades continentales que más aparecen en el ensayo —los cimarrones de Surinam (p. 79), la migración asiática (pp. 82-83), la identidad nacional (p. 85)—, pero siempre entre las que Mintz trata «solo de forma secundaria» (p. 65).",
+      "en": "They are the mainland societies that appear most in the essay —the Surinamese maroons (p. 79), Asian migration (pp. 82-83), national identity (p. 85)— but always among those Mintz treats “only secondarily” (p. 65)."
      }
     },
     "cartagena": {
      "n": {
-      "es": "Mintz no nombra la costa colombiana. Los «palenqueros» que cita son los de Cuba (p. 79) y Providencia solo aparece en una nota, por la tesis de Peter Wilson (p. 95).",
-      "en": "Mintz does not name the Colombian coast. The “palenqueros” he cites are Cuban (p. 79), and Providencia appears only in a note, via Peter Wilson's thesis (p. 95)."
+      "es": "Mintz no nombra la costa colombiana. Queda dentro de la «costa norte de Sudamérica» que marca el borde sur del área (p. 62), y del contexto comparativo «desde Brasil hasta Estados Unidos» que toma de Smith (p. 64), no del área. Los «palenqueros» que cita son los de Cuba (p. 79) y Providencia solo aparece en una nota, por la tesis de Peter Wilson (p. 95).",
+      "en": "Mintz does not name the Colombian coast. It lies within the “north coast of South America” that marks the area's southern edge (p. 62), and within the comparative context “from Brazil to the United States” he takes from Smith (p. 64), not within the area. The “palenqueros” he cites are Cuban (p. 79), and Providencia appears only in a note, via Peter Wilson's thesis (p. 95)."
      }
     },
     "santamarta": {
      "n": {
-      "es": "Mintz no nombra la costa colombiana. Los «palenqueros» que cita son los de Cuba (p. 79) y Providencia solo aparece en una nota, por la tesis de Peter Wilson (p. 95).",
-      "en": "Mintz does not name the Colombian coast. The “palenqueros” he cites are Cuban (p. 79), and Providencia appears only in a note, via Peter Wilson's thesis (p. 95)."
+      "es": "Mintz no nombra la costa colombiana. Queda dentro de la «costa norte de Sudamérica» que marca el borde sur del área (p. 62), y del contexto comparativo «desde Brasil hasta Estados Unidos» que toma de Smith (p. 64), no del área. Los «palenqueros» que cita son los de Cuba (p. 79) y Providencia solo aparece en una nota, por la tesis de Peter Wilson (p. 95).",
+      "en": "Mintz does not name the Colombian coast. It lies within the “north coast of South America” that marks the area's southern edge (p. 62), and within the comparative context “from Brazil to the United States” he takes from Smith (p. 64), not within the area. The “palenqueros” he cites are Cuban (p. 79), and Providencia appears only in a note, via Peter Wilson's thesis (p. 95)."
      }
     },
     "palenque": {
      "n": {
-      "es": "Mintz no nombra la costa colombiana. Los «palenqueros» que cita son los de Cuba (p. 79) y Providencia solo aparece en una nota, por la tesis de Peter Wilson (p. 95).",
-      "en": "Mintz does not name the Colombian coast. The “palenqueros” he cites are Cuban (p. 79), and Providencia appears only in a note, via Peter Wilson's thesis (p. 95)."
+      "es": "Mintz no nombra la costa colombiana. Queda dentro de la «costa norte de Sudamérica» que marca el borde sur del área (p. 62), y del contexto comparativo «desde Brasil hasta Estados Unidos» que toma de Smith (p. 64), no del área. Los «palenqueros» que cita son los de Cuba (p. 79) y Providencia solo aparece en una nota, por la tesis de Peter Wilson (p. 95).",
+      "en": "Mintz does not name the Colombian coast. It lies within the “north coast of South America” that marks the area's southern edge (p. 62), and within the comparative context “from Brazil to the United States” he takes from Smith (p. 64), not within the area. The “palenqueros” he cites are Cuban (p. 79), and Providencia appears only in a note, via Peter Wilson's thesis (p. 95)."
      }
     },
     "barranquilla": {
      "n": {
-      "es": "Mintz no nombra la costa colombiana. Los «palenqueros» que cita son los de Cuba (p. 79) y Providencia solo aparece en una nota, por la tesis de Peter Wilson (p. 95).",
-      "en": "Mintz does not name the Colombian coast. The “palenqueros” he cites are Cuban (p. 79), and Providencia appears only in a note, via Peter Wilson's thesis (p. 95)."
+      "es": "Mintz no nombra la costa colombiana. Queda dentro de la «costa norte de Sudamérica» que marca el borde sur del área (p. 62), y del contexto comparativo «desde Brasil hasta Estados Unidos» que toma de Smith (p. 64), no del área. Los «palenqueros» que cita son los de Cuba (p. 79) y Providencia solo aparece en una nota, por la tesis de Peter Wilson (p. 95).",
+      "en": "Mintz does not name the Colombian coast. It lies within the “north coast of South America” that marks the area's southern edge (p. 62), and within the comparative context “from Brazil to the United States” he takes from Smith (p. 64), not within the area. The “palenqueros” he cites are Cuban (p. 79), and Providencia appears only in a note, via Peter Wilson's thesis (p. 95)."
      }
     },
     "guajira": {
      "n": {
-      "es": "Mintz no nombra la costa colombiana. Los «palenqueros» que cita son los de Cuba (p. 79) y Providencia solo aparece en una nota, por la tesis de Peter Wilson (p. 95).",
-      "en": "Mintz does not name the Colombian coast. The “palenqueros” he cites are Cuban (p. 79), and Providencia appears only in a note, via Peter Wilson's thesis (p. 95)."
+      "es": "Mintz no nombra la costa colombiana. Queda dentro de la «costa norte de Sudamérica» que marca el borde sur del área (p. 62), y del contexto comparativo «desde Brasil hasta Estados Unidos» que toma de Smith (p. 64), no del área. Los «palenqueros» que cita son los de Cuba (p. 79) y Providencia solo aparece en una nota, por la tesis de Peter Wilson (p. 95).",
+      "en": "Mintz does not name the Colombian coast. It lies within the “north coast of South America” that marks the area's southern edge (p. 62), and within the comparative context “from Brazil to the United States” he takes from Smith (p. 64), not within the area. The “palenqueros” he cites are Cuban (p. 79), and Providencia appears only in a note, via Peter Wilson's thesis (p. 95)."
      }
     },
     "sanandres": {
      "n": {
-      "es": "Mintz no nombra la costa colombiana. Los «palenqueros» que cita son los de Cuba (p. 79) y Providencia solo aparece en una nota, por la tesis de Peter Wilson (p. 95).",
-      "en": "Mintz does not name the Colombian coast. The “palenqueros” he cites are Cuban (p. 79), and Providencia appears only in a note, via Peter Wilson's thesis (p. 95)."
+      "es": "Mintz no nombra la costa colombiana. Queda dentro de la «costa norte de Sudamérica» que marca el borde sur del área (p. 62), y del contexto comparativo «desde Brasil hasta Estados Unidos» que toma de Smith (p. 64), no del área. Los «palenqueros» que cita son los de Cuba (p. 79) y Providencia solo aparece en una nota, por la tesis de Peter Wilson (p. 95).",
+      "en": "Mintz does not name the Colombian coast. It lies within the “north coast of South America” that marks the area's southern edge (p. 62), and within the comparative context “from Brazil to the United States” he takes from Smith (p. 64), not within the area. The “palenqueros” he cites are Cuban (p. 79), and Providencia appears only in a note, via Peter Wilson's thesis (p. 95)."
+     }
+    },
+    "bluefields": {
+     "n": {
+      "es": "Centroamérica entra como destino del trabajo antillano, no como parte del área: «nuevas plantaciones bananeras en Centroamérica y la construcción del Canal de Panamá crearon otras necesidades laborales en el continente que debían ser saciadas por antillanos» (p. 82).",
+      "en": "Central America enters as a destination for Antillean labour, not as part of the area: “new banana plantations in Central America and the building of the Panama Canal created other labour needs on the mainland, to be met by Antilleans” (p. 82)."
+     }
+    },
+    "costarica": {
+     "n": {
+      "es": "Centroamérica entra como destino del trabajo antillano, no como parte del área: «nuevas plantaciones bananeras en Centroamérica y la construcción del Canal de Panamá crearon otras necesidades laborales en el continente que debían ser saciadas por antillanos» (p. 82).",
+      "en": "Central America enters as a destination for Antillean labour, not as part of the area: “new banana plantations in Central America and the building of the Panama Canal created other labour needs on the mainland, to be met by Antilleans” (p. 82)."
+     }
+    },
+    "panama": {
+     "n": {
+      "es": "Centroamérica entra como destino del trabajo antillano, no como parte del área: «nuevas plantaciones bananeras en Centroamérica y la construcción del Canal de Panamá crearon otras necesidades laborales en el continente que debían ser saciadas por antillanos» (p. 82).",
+      "en": "Central America enters as a destination for Antillean labour, not as part of the area: “new banana plantations in Central America and the building of the Panama Canal created other labour needs on the mainland, to be met by Antilleans” (p. 82)."
+     }
+    },
+    "honduras": {
+     "n": {
+      "es": "Centroamérica entra como destino del trabajo antillano, no como parte del área: «nuevas plantaciones bananeras en Centroamérica y la construcción del Canal de Panamá crearon otras necesidades laborales en el continente que debían ser saciadas por antillanos» (p. 82).",
+      "en": "Central America enters as a destination for Antillean labour, not as part of the area: “new banana plantations in Central America and the building of the Panama Canal created other labour needs on the mainland, to be met by Antilleans” (p. 82)."
+     }
+    },
+    "belize": {
+     "n": {
+      "es": "La Honduras Británica solo aparece en una nota bibliográfica, por el estudio de Douglas Taylor sobre los caribes negros (p. 70, n. 7).",
+      "en": "British Honduras appears only in a bibliographic note, through Douglas Taylor's study of the Black Caribs (p. 70, n. 7)."
+     }
+    },
+    "palmaresbr": {
+     "e": "margen",
+     "n": {
+      "es": "Mintz cuenta «los experimentos de Palmares» entre los campesinados que «evolucionaron durante la esclavitud, pero en oposición abierta a ella», junto a los cimarrones de Surinam y Jamaica y los palenqueros de Cuba (p. 79, en una cita en bloque). Entra como ejemplo de la contraplantación, no como lugar del área.",
+      "en": "Mintz counts “the experiments of Palmares” among the peasantries that “evolved during slavery, but in open opposition to it”, alongside the maroons of Suriname and Jamaica and the palenqueros of Cuba (p. 79, in a block quotation). It enters as an instance of counter-plantation, not as a place in the area."
      }
     }
    },
@@ -1059,10 +1176,17 @@ window.CARIBES = {
      }
     },
     "yucatan": {
-     "e": "margen",
+     "e": null,
      "n": {
-      "es": "Límite del área, no parte de ella (p. 62).",
-      "en": "The area's edge, not part of it (p. 62)."
+      "es": "Mintz nombra la península como borde, no como parte: las islas se dispersan «entre la península de Yucatán y la costa norte de Sudamérica» (p. 62). El borde no se ilumina.",
+      "en": "Mintz names the peninsula as an edge, not a part: the islands are scattered “between the Yucatán peninsula and the north coast of South America” (p. 62). The edge is not lit."
+     }
+    },
+    "venezuela": {
+     "e": null,
+     "n": {
+      "es": "Borde sur, como Yucatán al oeste: las islas llegan «hasta Trinidad y las Antillas Holandesas frente a la costa venezolana» (p. 67).",
+      "en": "The southern edge, as Yucatán is the western one: the islands reach “to Trinidad and the Netherlands Antilles off the Venezuelan coast” (p. 67)."
      }
     },
     "caiman": {
@@ -1172,9 +1296,6 @@ window.CARIBES = {
     "suriname": {
      "e": "dentro"
     },
-    "belize": {
-     "e": "dentro"
-    },
     "cartagena": {
      "e": "margen",
      "n": {
@@ -1210,25 +1331,39 @@ window.CARIBES = {
       "en": "Best: the Caribbean “often also includes the littoral around our sea” (Gaztambide, p. 19); Girvan: “all the islands and the adjacent mainland” (pp. 6-7)."
      }
     },
+    "belize": {
+     "e": "margen",
+     "n": {
+      "es": "Best: «muchas veces el Caribe también incluye el litoral que rodea nuestro mar» (Gaztambide, p. 19); Girvan: «all the islands and the adjacent mainland» (pp. 6-7).",
+      "en": "Best: the Caribbean “often also includes the littoral around our sea” (Gaztambide, p. 19); Girvan: “all the islands and the adjacent mainland” (pp. 6-7)."
+     }
+    },
     "santamarta": {
      "e": "margen",
      "n": {
-      "es": "Beckford cuenta las plantaciones bananeras de Colombia entre las economías de plantación del siglo XX (p. 112): la plantación llega a esta costa como enclave, no como ingenio esclavista.",
-      "en": "Beckford counts Colombia's banana plantations among twentieth-century plantation economies (p. 112): the plantation reaches this coast as an enclave, not as a slave sugar estate."
+      "es": "Beckford cuenta «las plantaciones bananeras de Honduras, Guatemala, Costa Rica, Panamá y Colombia» entre las economías de plantación del siglo XX (p. 112): la plantación llega a esta costa como enclave de la United Fruit, no como ingenio esclavista.",
+      "en": "Beckford counts “the banana plantations of Honduras, Guatemala, Costa Rica, Panama, and Colombia” among twentieth-century plantation economies (p. 112): the plantation reaches this coast as a United Fruit enclave, not as a slave sugar estate."
      }
     },
     "costarica": {
      "e": "margen",
      "n": {
-      "es": "Beckford cuenta las plantaciones bananeras de Colombia entre las economías de plantación del siglo XX (p. 112): la plantación llega a esta costa como enclave, no como ingenio esclavista.",
-      "en": "Beckford counts Colombia's banana plantations among twentieth-century plantation economies (p. 112): the plantation reaches this coast as an enclave, not as a slave sugar estate."
+      "es": "Beckford cuenta «las plantaciones bananeras de Honduras, Guatemala, Costa Rica, Panamá y Colombia» entre las economías de plantación del siglo XX (p. 112): la plantación llega a esta costa como enclave de la United Fruit, no como ingenio esclavista.",
+      "en": "Beckford counts “the banana plantations of Honduras, Guatemala, Costa Rica, Panama, and Colombia” among twentieth-century plantation economies (p. 112): the plantation reaches this coast as a United Fruit enclave, not as a slave sugar estate."
      }
     },
     "panama": {
      "e": "margen",
      "n": {
-      "es": "Beckford cuenta las plantaciones bananeras de Colombia entre las economías de plantación del siglo XX (p. 112): la plantación llega a esta costa como enclave, no como ingenio esclavista.",
-      "en": "Beckford counts Colombia's banana plantations among twentieth-century plantation economies (p. 112): the plantation reaches this coast as an enclave, not as a slave sugar estate."
+      "es": "Beckford cuenta «las plantaciones bananeras de Honduras, Guatemala, Costa Rica, Panamá y Colombia» entre las economías de plantación del siglo XX (p. 112): la plantación llega a esta costa como enclave de la United Fruit, no como ingenio esclavista.",
+      "en": "Beckford counts “the banana plantations of Honduras, Guatemala, Costa Rica, Panama, and Colombia” among twentieth-century plantation economies (p. 112): the plantation reaches this coast as a United Fruit enclave, not as a slave sugar estate."
+     }
+    },
+    "honduras": {
+     "e": "margen",
+     "n": {
+      "es": "Beckford cuenta «las plantaciones bananeras de Honduras, Guatemala, Costa Rica, Panamá y Colombia» entre las economías de plantación del siglo XX (p. 112): la plantación llega a esta costa como enclave de la United Fruit, no como ingenio esclavista.",
+      "en": "Beckford counts “the banana plantations of Honduras, Guatemala, Costa Rica, Panama, and Colombia” among twentieth-century plantation economies (p. 112): the plantation reaches this coast as a United Fruit enclave, not as a slave sugar estate."
      }
     },
     "bluefields": {
@@ -1266,6 +1401,13 @@ window.CARIBES = {
     },
     "brasil": {
      "e": "margen"
+    },
+    "guatemala": {
+     "e": "margen",
+     "n": {
+      "es": "Beckford cuenta «las plantaciones bananeras de Honduras, Guatemala, Costa Rica, Panamá y Colombia» entre las economías de plantación del siglo XX (p. 112): la plantación llega a esta costa como enclave de la United Fruit, no como ingenio esclavista.",
+      "en": "Beckford counts “the banana plantations of Honduras, Guatemala, Costa Rica, Panama, and Colombia” among twentieth-century plantation economies (p. 112): the plantation reaches this coast as a United Fruit enclave, not as a slave sugar estate."
+     }
     }
    },
    "corpus": [
@@ -1304,6 +1446,15 @@ window.CARIBES = {
      "txt": "libro en el que amplía el universo Caribe a las costas de Tierra Firme, reafirma la inclusión de Colombia en él",
      "ref": "ABE",
      "pag": "cap. 1"
+    },
+    {
+     "txt": "es la historia de las luchas de los imperios contra los pueblos de la región para arrebatarles sus ricas tierras; es también la historia de las luchas de los imperios, unos contra otros, para arrebatarse porciones de lo que cada uno de ellos había conquistado",
+     "ref": "ABE",
+     "pag": "cap. 1",
+     "nota": {
+      "es": "Bosch, p. 13, citado por Abello",
+      "en": "Bosch, p. 13, quoted by Abello"
+     }
     }
    ],
    "lugares": {
@@ -1368,7 +1519,11 @@ window.CARIBES = {
      "e": "dentro"
     },
     "panama": {
-     "e": "dentro"
+     "e": "dentro",
+     "n": {
+      "es": "Bosch lee la separación de Panamá como el primer caso en que se aplicó en el Caribe «el método de la subversión para desmembrar un país» (Bosch, p. 12, citado por Abello, cap. 1).",
+      "en": "Bosch reads Panama's secession as the first case in which “the method of subversion to dismember a country” was applied in the Caribbean (Bosch, p. 12, quoted by Abello, ch. 1)."
+     }
     },
     "honduras": {
      "e": "dentro"
@@ -1392,7 +1547,11 @@ window.CARIBES = {
      "e": "dentro"
     },
     "veracruz": {
-     "e": "dentro"
+     "e": "margen",
+     "n": {
+      "es": "Bosch adopta el Gran Caribe (Gaztambide, p. 16), que suma «por lo menos partes» de México sin decir cuáles (p. 15). El golfo queda en el borde.",
+      "en": "Bosch adopts the Greater Caribbean (Gaztambide, p. 16), which adds “at least parts” of Mexico without saying which (p. 15). The Gulf sits on the edge."
+     }
     }
    },
    "extras": {
@@ -1452,7 +1611,7 @@ window.CARIBES = {
       "en": "Named in the opening poem (p. 90)."
      }
     },
-    "haiti": {
+    "puertorico": {
      "e": "dentro",
      "n": {
       "es": "Nombrada en el poema de apertura (p. 90).",
@@ -1462,15 +1621,22 @@ window.CARIBES = {
     "dominicana": {
      "e": "dentro",
      "n": {
-      "es": "Nombrada en el poema de apertura (p. 90).",
-      "en": "Named in the opening poem (p. 90)."
+      "es": "Por La Española, que nombra el poema de apertura (p. 90).",
+      "en": "Through Hispaniola, named in the opening poem (p. 90)."
      }
     },
-    "puertorico": {
+    "haiti": {
      "e": "dentro",
      "n": {
-      "es": "Nombrada en el poema de apertura (p. 90).",
-      "en": "Named in the opening poem (p. 90)."
+      "es": "Por La Española, que nombra el poema de apertura (p. 90). Y como fragmento que el modelo de plantación no explica: con Mathews, pregunta si encajaría Haití en el siglo XIX, o Puerto Rico en el XVII (p. 93).",
+      "en": "Through Hispaniola, named in the opening poem (p. 90). And as a fragment the plantation model does not explain: with Mathews he asks whether nineteenth-century Haiti, or seventeenth-century Puerto Rico, would fit (p. 93)."
+     }
+    },
+    "trinidad": {
+     "e": "dentro",
+     "n": {
+      "es": "El estudio del carnaval, el calipso y el steelband en Trinidad es «a most welcome sign» para la historia de la «plantación interior» (p. 98).",
+      "en": "The study of carnival, calypso and steelband in Trinidad is “a most welcome sign” for the history of the “inner plantation” (p. 98)."
      }
     },
     "jamaica": {
@@ -1483,8 +1649,8 @@ window.CARIBES = {
     "barbados": {
      "e": "dentro",
      "n": {
-      "es": "Por la landship, una de las formas de la «plantación interior».",
-      "en": "Through the landship, one of the forms of the “inner plantation”."
+      "es": "Por la landship, una de las formas de la «plantación interior» (p. 96).",
+      "en": "Through the landship, one of the forms of the “inner plantation” (p. 96)."
      }
     },
     "granada": {
@@ -1497,13 +1663,24 @@ window.CARIBES = {
    },
    "extras": {
     "yucatan": {
-     "e": "dentro"
+     "e": "dentro",
+     "n": {
+      "es": "«cracking open yucatan» (p. 90).",
+      "en": "“cracking open yucatan” (p. 90)."
+     }
     },
     "bahamas": {
      "e": "dentro"
     },
     "africa": {
      "e": "dentro"
+    },
+    "stlucia": {
+     "e": "dentro",
+     "n": {
+      "es": "Por la «la rose», una de las formas de la «plantación interior» (p. 96).",
+      "en": "Through “la rose”, one of the forms of the “inner plantation” (p. 96)."
+     }
     },
     "carriacou": {
      "e": "dentro",
@@ -1605,34 +1782,74 @@ window.CARIBES = {
      "e": "dentro"
     },
     "bluefields": {
-     "e": "dentro"
+     "e": "dentro",
+     "n": {
+      "es": "No las nombra una por una: entran por las corrientes que bañan «the north coasts of South and Central America» (p. 24).",
+      "en": "He does not name them one by one: they enter through the currents that bathe “the north coasts of South and Central America” (p. 24)."
+     }
     },
     "costarica": {
-     "e": "dentro"
+     "e": "dentro",
+     "n": {
+      "es": "No las nombra una por una: entran por las corrientes que bañan «the north coasts of South and Central America» (p. 24).",
+      "en": "He does not name them one by one: they enter through the currents that bathe “the north coasts of South and Central America” (p. 24)."
+     }
     },
     "panama": {
-     "e": "dentro"
+     "e": "dentro",
+     "n": {
+      "es": "«It was men from the Antilles who constructed the Panama Canal» (p. 25).",
+      "en": "“It was men from the Antilles who constructed the Panama Canal” (p. 25)."
+     }
     },
     "honduras": {
-     "e": "dentro"
+     "e": "dentro",
+     "n": {
+      "es": "No las nombra una por una: entran por las corrientes que bañan «the north coasts of South and Central America» (p. 24).",
+      "en": "He does not name them one by one: they enter through the currents that bathe “the north coasts of South and Central America” (p. 24)."
+     }
     },
     "cartagena": {
-     "e": "dentro"
+     "e": "dentro",
+     "n": {
+      "es": "Colombia está entre los países del Caribe donde «the presence of the Indoamerican cannot be avoided» (p. 200); Cartagena, entre los puertos de la flota (p. 7).",
+      "en": "Colombia is among the Caribbean countries where “the presence of the Indoamerican cannot be avoided” (p. 200); Cartagena, among the fleet ports (p. 7)."
+     }
     },
     "santamarta": {
-     "e": "dentro"
+     "e": "dentro",
+     "n": {
+      "es": "Colombia está entre los países del Caribe donde «the presence of the Indoamerican cannot be avoided» (p. 200); Cartagena, entre los puertos de la flota (p. 7).",
+      "en": "Colombia is among the Caribbean countries where “the presence of the Indoamerican cannot be avoided” (p. 200); Cartagena, among the fleet ports (p. 7)."
+     }
     },
     "palenque": {
-     "e": "dentro"
+     "e": "dentro",
+     "n": {
+      "es": "Colombia está entre los países del Caribe donde «the presence of the Indoamerican cannot be avoided» (p. 200); Cartagena, entre los puertos de la flota (p. 7).",
+      "en": "Colombia is among the Caribbean countries where “the presence of the Indoamerican cannot be avoided” (p. 200); Cartagena, among the fleet ports (p. 7)."
+     }
     },
     "barranquilla": {
-     "e": "dentro"
+     "e": "dentro",
+     "n": {
+      "es": "Colombia está entre los países del Caribe donde «the presence of the Indoamerican cannot be avoided» (p. 200); Cartagena, entre los puertos de la flota (p. 7).",
+      "en": "Colombia is among the Caribbean countries where “the presence of the Indoamerican cannot be avoided” (p. 200); Cartagena, among the fleet ports (p. 7)."
+     }
     },
     "guajira": {
-     "e": "dentro"
+     "e": "dentro",
+     "n": {
+      "es": "Colombia está entre los países del Caribe donde «the presence of the Indoamerican cannot be avoided» (p. 200); Cartagena, entre los puertos de la flota (p. 7).",
+      "en": "Colombia is among the Caribbean countries where “the presence of the Indoamerican cannot be avoided” (p. 200); Cartagena, among the fleet ports (p. 7)."
+     }
     },
     "sanandres": {
-     "e": "dentro"
+     "e": "dentro",
+     "n": {
+      "es": "Benítez le dedica un capítulo a Providencia, leída a través de Los pañamanes de Fanny Buitrago: «this rare piece of the Caribbean puzzle» (pp. 199-205).",
+      "en": "Benítez devotes a chapter to Providencia, read through Fanny Buitrago's Los pañamanes: “this rare piece of the Caribbean puzzle” (pp. 199-205)."
+     }
     },
     "nola": {
      "e": "dentro",
@@ -1642,24 +1859,24 @@ window.CARIBES = {
      }
     },
     "veracruz": {
-     "e": "margen",
+     "e": "dentro",
      "n": {
-      "es": "El pasaje de las corrientes no la nombra: el golfo queda entre el delta del Mississippi y las costas de Centroamérica que sí nombra.",
-      "en": "The currents passage does not name it: the Gulf lies between the Mississippi delta and the Central American coasts it does name."
+      "es": "San Juan de Ulúa está entre los pocos «Caribbean ports» donde se embarcaba el oro y la plata de la flota, la máquina que hizo del Caribe un meta-archipiélago (p. 7); las flotas de Cartagena y Veracruz se juntaban en La Habana (p. 8).",
+      "en": "San Juan de Ulúa is among the few “Caribbean ports” where the fleet's gold and silver was loaded, the machine that made the Caribbean a meta-archipelago (p. 7); the Cartagena and Veracruz fleets joined at Havana (p. 8)."
+     }
+    },
+    "palmaresbr": {
+     "e": "dentro",
+     "n": {
+      "es": "«The fabulous quilombo of Palmares, the most powerful and enduring city of cimarrones in history» está entre las ciudades transgresoras que resume Nueva Venecia (p. 249); la fuga cimarrona «has no frontiers, unless they are those of the meta-archipelago» (p. 254).",
+      "en": "“The fabulous quilombo of Palmares, the most powerful and enduring city of cimarrones in history” is among the transgressive cities summed up in Nueva Venecia (p. 249); the maroon's flight “has no frontiers, unless they are those of the meta-archipelago” (p. 254)."
      }
     },
     "oriximina": {
      "e": "margen",
      "n": {
-      "es": "El texto no nombra este lugar: se pronuncia sobre Brasil, y de ahí se hereda el estado. Oriximiná y Palmares entraron al corpus en septiembre de 2026, después de que esta capa se escribiera.",
-      "en": "The text does not name this place: it speaks of Brazil, and the state is inherited from there. Oriximiná and Palmares entered the corpus in September 2026, after this layer was written."
-     }
-    },
-    "palmaresbr": {
-     "e": "margen",
-     "n": {
-      "es": "El texto no nombra este lugar: se pronuncia sobre Brasil, y de ahí se hereda el estado. Oriximiná y Palmares entraron al corpus en septiembre de 2026, después de que esta capa se escribiera.",
-      "en": "The text does not name this place: it speaks of Brazil, and the state is inherited from there. Oriximiná and Palmares entered the corpus in September 2026, after this layer was written."
+      "es": "No se nombra. Las corrientes arrancan en «the mouth of the Amazon» (p. 24) y la fuga de los cimarrones de las Guayanas se adentra en el interior sudamericano, «how deeply no one knows» (pp. 253-254).",
+      "en": "Not named. The currents start at “the mouth of the Amazon” (p. 24), and the flight of the Guiana maroons reaches into the South American interior, “how deeply no one knows” (pp. 253-254)."
      }
     }
    },
@@ -1923,6 +2140,12 @@ window.CARIBES = {
      }
     },
     "costarica": {
+     "n": {
+      "es": "Quedan fuera de la franja que traza, que por la costa llega hasta Panamá (1981, p. 217). La «costa caribe de América Latina» aparece en la extensión del sistema de plantaciones (p. 97), sin nombrarlas.",
+      "en": "They fall outside the band he draws, which reaches Panama along the coast (1981, p. 217). The “Caribbean coast of Latin America” appears within the spread of the plantation system (p. 97), without naming them."
+     }
+    },
+    "honduras": {
      "n": {
       "es": "Quedan fuera de la franja que traza, que por la costa llega hasta Panamá (1981, p. 217). La «costa caribe de América Latina» aparece en la extensión del sistema de plantaciones (p. 97), sin nombrarlas.",
       "en": "They fall outside the band he draws, which reaches Panama along the coast (1981, p. 217). The “Caribbean coast of Latin America” appears within the spread of the plantation system (p. 97), without naming them."
@@ -2252,28 +2475,60 @@ window.CARIBES = {
      "e": "dentro"
     },
     "guyana": {
-     "e": "dentro"
+     "e": "dentro",
+     "n": {
+      "es": "«Suele incluír a las Guyanas y a Belize» (p. 11).",
+      "en": "It “usually includes the Guianas and Belize” (p. 11)."
+     }
     },
     "suriname": {
-     "e": "dentro"
+     "e": "dentro",
+     "n": {
+      "es": "«Suele incluír a las Guyanas y a Belize» (p. 11).",
+      "en": "It “usually includes the Guianas and Belize” (p. 11)."
+     }
     },
     "belize": {
-     "e": "dentro"
+     "e": "dentro",
+     "n": {
+      "es": "«Suele incluír a las Guyanas y a Belize» (p. 11).",
+      "en": "It “usually includes the Guianas and Belize” (p. 11)."
+     }
     },
     "cartagena": {
-     "e": "fuera"
+     "e": "fuera",
+     "n": {
+      "es": "Por el criterio: el Caribe insular es «sinónimo de las Antillas y de las West Indies» (p. 11), y las West Indies se refieren «a esas islas y no a las masas continentales» (Oldendorp, citado en p. 12).",
+      "en": "By the criterion: the insular Caribbean is “synonymous with the Antilles and the West Indies” (p. 11), and the West Indies refer “to those islands and not to the continental masses” (Oldendorp, quoted on p. 12)."
+     }
     },
     "santamarta": {
-     "e": "fuera"
+     "e": "fuera",
+     "n": {
+      "es": "Por el criterio: el Caribe insular es «sinónimo de las Antillas y de las West Indies» (p. 11), y las West Indies se refieren «a esas islas y no a las masas continentales» (Oldendorp, citado en p. 12).",
+      "en": "By the criterion: the insular Caribbean is “synonymous with the Antilles and the West Indies” (p. 11), and the West Indies refer “to those islands and not to the continental masses” (Oldendorp, quoted on p. 12)."
+     }
     },
     "palenque": {
-     "e": "fuera"
+     "e": "fuera",
+     "n": {
+      "es": "Por el criterio: el Caribe insular es «sinónimo de las Antillas y de las West Indies» (p. 11), y las West Indies se refieren «a esas islas y no a las masas continentales» (Oldendorp, citado en p. 12).",
+      "en": "By the criterion: the insular Caribbean is “synonymous with the Antilles and the West Indies” (p. 11), and the West Indies refer “to those islands and not to the continental masses” (Oldendorp, quoted on p. 12)."
+     }
     },
     "barranquilla": {
-     "e": "fuera"
+     "e": "fuera",
+     "n": {
+      "es": "Por el criterio: el Caribe insular es «sinónimo de las Antillas y de las West Indies» (p. 11), y las West Indies se refieren «a esas islas y no a las masas continentales» (Oldendorp, citado en p. 12).",
+      "en": "By the criterion: the insular Caribbean is “synonymous with the Antilles and the West Indies” (p. 11), and the West Indies refer “to those islands and not to the continental masses” (Oldendorp, quoted on p. 12)."
+     }
     },
     "guajira": {
-     "e": "fuera"
+     "e": "fuera",
+     "n": {
+      "es": "Por el criterio: el Caribe insular es «sinónimo de las Antillas y de las West Indies» (p. 11), y las West Indies se refieren «a esas islas y no a las masas continentales» (Oldendorp, citado en p. 12).",
+      "en": "By the criterion: the insular Caribbean is “synonymous with the Antilles and the West Indies” (p. 11), and the West Indies refer “to those islands and not to the continental masses” (Oldendorp, quoted on p. 12)."
+     }
     },
     "sanandres": {
      "n": {
@@ -2282,33 +2537,69 @@ window.CARIBES = {
      }
     },
     "bluefields": {
-     "e": "fuera"
+     "e": "fuera",
+     "n": {
+      "es": "Por el criterio: el Caribe insular es «sinónimo de las Antillas y de las West Indies» (p. 11), y las West Indies se refieren «a esas islas y no a las masas continentales» (Oldendorp, citado en p. 12).",
+      "en": "By the criterion: the insular Caribbean is “synonymous with the Antilles and the West Indies” (p. 11), and the West Indies refer “to those islands and not to the continental masses” (Oldendorp, quoted on p. 12)."
+     }
     },
     "costarica": {
-     "e": "fuera"
+     "e": "fuera",
+     "n": {
+      "es": "Por el criterio: el Caribe insular es «sinónimo de las Antillas y de las West Indies» (p. 11), y las West Indies se refieren «a esas islas y no a las masas continentales» (Oldendorp, citado en p. 12).",
+      "en": "By the criterion: the insular Caribbean is “synonymous with the Antilles and the West Indies” (p. 11), and the West Indies refer “to those islands and not to the continental masses” (Oldendorp, quoted on p. 12)."
+     }
     },
     "panama": {
-     "e": "fuera"
+     "e": "fuera",
+     "n": {
+      "es": "Por el criterio: el Caribe insular es «sinónimo de las Antillas y de las West Indies» (p. 11), y las West Indies se refieren «a esas islas y no a las masas continentales» (Oldendorp, citado en p. 12).",
+      "en": "By the criterion: the insular Caribbean is “synonymous with the Antilles and the West Indies” (p. 11), and the West Indies refer “to those islands and not to the continental masses” (Oldendorp, quoted on p. 12)."
+     }
     },
     "honduras": {
-     "e": "fuera"
+     "e": "fuera",
+     "n": {
+      "es": "Por el criterio: el Caribe insular es «sinónimo de las Antillas y de las West Indies» (p. 11), y las West Indies se refieren «a esas islas y no a las masas continentales» (Oldendorp, citado en p. 12).",
+      "en": "By the criterion: the insular Caribbean is “synonymous with the Antilles and the West Indies” (p. 11), and the West Indies refer “to those islands and not to the continental masses” (Oldendorp, quoted on p. 12)."
+     }
     },
     "veracruz": {
-     "e": "fuera"
+     "e": "fuera",
+     "n": {
+      "es": "Por el criterio: el Caribe insular es «sinónimo de las Antillas y de las West Indies» (p. 11), y las West Indies se refieren «a esas islas y no a las masas continentales» (Oldendorp, citado en p. 12).",
+      "en": "By the criterion: the insular Caribbean is “synonymous with the Antilles and the West Indies” (p. 11), and the West Indies refer “to those islands and not to the continental masses” (Oldendorp, quoted on p. 12)."
+     }
     },
     "costachica": {
-     "e": "fuera"
+     "e": "fuera",
+     "n": {
+      "es": "Por el criterio: el Caribe insular es «sinónimo de las Antillas y de las West Indies» (p. 11), y las West Indies se refieren «a esas islas y no a las masas continentales» (Oldendorp, citado en p. 12).",
+      "en": "By the criterion: the insular Caribbean is “synonymous with the Antilles and the West Indies” (p. 11), and the West Indies refer “to those islands and not to the continental masses” (Oldendorp, quoted on p. 12)."
+     }
     },
     "nola": {
-     "e": "fuera"
+     "e": "fuera",
+     "n": {
+      "es": "Por el criterio: el Caribe insular es «sinónimo de las Antillas y de las West Indies» (p. 11), y las West Indies se refieren «a esas islas y no a las masas continentales» (Oldendorp, citado en p. 12).",
+      "en": "By the criterion: the insular Caribbean is “synonymous with the Antilles and the West Indies” (p. 11), and the West Indies refer “to those islands and not to the continental masses” (Oldendorp, quoted on p. 12)."
+     }
     }
    },
    "extras": {
     "bahamas": {
-     "e": "dentro"
+     "e": "margen",
+     "n": {
+      "es": "«Puede llegar tan al norte como a las Bahamas y Bermuda» (p. 11): el verbo es potencial, y así se dibuja.",
+      "en": "It “may reach as far north as the Bahamas and Bermuda” (p. 11): the verb is conditional, and it is drawn that way."
+     }
     },
     "bermudas": {
-     "e": "dentro"
+     "e": "margen",
+     "n": {
+      "es": "«Puede llegar tan al norte como a las Bahamas y Bermuda» (p. 11): el verbo es potencial, y así se dibuja.",
+      "en": "It “may reach as far north as the Bahamas and Bermuda” (p. 11): the verb is conditional, and it is drawn that way."
+     }
     }
    },
    "corpus": [
@@ -2352,9 +2643,6 @@ window.CARIBES = {
     "cuba": {
      "e": "dentro"
     },
-    "jamaica": {
-     "e": "dentro"
-    },
     "haiti": {
      "e": "dentro"
     },
@@ -2364,44 +2652,99 @@ window.CARIBES = {
     "puertorico": {
      "e": "dentro"
     },
-    "curazao": {
-     "e": "dentro"
-    },
-    "martinica": {
-     "e": "dentro"
-    },
-    "guadalupe": {
-     "e": "dentro"
-    },
-    "barbados": {
-     "e": "dentro"
-    },
-    "trinidad": {
-     "e": "dentro"
-    },
-    "dominica": {
-     "e": "dentro"
-    },
     "stjohn": {
      "e": "dentro"
     },
+    "jamaica": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra después de 1945. Antes, el Caribe geopolítico eran «las repúblicas antillanas y Centroamérica, incluyendo Panamá» (p. 13), y la diplomacia estadounidense hacia el Caribe colonial «era parte de su diplomacia europea» (p. 14).",
+      "en": "It enters after 1945. Before, the geopolitical Caribbean was “the Antillean republics and Central America, including Panama” (p. 13), and US diplomacy toward the colonial Caribbean “was part of its European diplomacy” (p. 14)."
+     }
+    },
+    "curazao": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra después de 1945. Antes, el Caribe geopolítico eran «las repúblicas antillanas y Centroamérica, incluyendo Panamá» (p. 13), y la diplomacia estadounidense hacia el Caribe colonial «era parte de su diplomacia europea» (p. 14).",
+      "en": "It enters after 1945. Before, the geopolitical Caribbean was “the Antillean republics and Central America, including Panama” (p. 13), and US diplomacy toward the colonial Caribbean “was part of its European diplomacy” (p. 14)."
+     }
+    },
+    "martinica": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra después de 1945. Antes, el Caribe geopolítico eran «las repúblicas antillanas y Centroamérica, incluyendo Panamá» (p. 13), y la diplomacia estadounidense hacia el Caribe colonial «era parte de su diplomacia europea» (p. 14).",
+      "en": "It enters after 1945. Before, the geopolitical Caribbean was “the Antillean republics and Central America, including Panama” (p. 13), and US diplomacy toward the colonial Caribbean “was part of its European diplomacy” (p. 14)."
+     }
+    },
+    "guadalupe": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra después de 1945. Antes, el Caribe geopolítico eran «las repúblicas antillanas y Centroamérica, incluyendo Panamá» (p. 13), y la diplomacia estadounidense hacia el Caribe colonial «era parte de su diplomacia europea» (p. 14).",
+      "en": "It enters after 1945. Before, the geopolitical Caribbean was “the Antillean republics and Central America, including Panama” (p. 13), and US diplomacy toward the colonial Caribbean “was part of its European diplomacy” (p. 14)."
+     }
+    },
+    "barbados": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra después de 1945. Antes, el Caribe geopolítico eran «las repúblicas antillanas y Centroamérica, incluyendo Panamá» (p. 13), y la diplomacia estadounidense hacia el Caribe colonial «era parte de su diplomacia europea» (p. 14).",
+      "en": "It enters after 1945. Before, the geopolitical Caribbean was “the Antillean republics and Central America, including Panama” (p. 13), and US diplomacy toward the colonial Caribbean “was part of its European diplomacy” (p. 14)."
+     }
+    },
+    "trinidad": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra después de 1945. Antes, el Caribe geopolítico eran «las repúblicas antillanas y Centroamérica, incluyendo Panamá» (p. 13), y la diplomacia estadounidense hacia el Caribe colonial «era parte de su diplomacia europea» (p. 14).",
+      "en": "It enters after 1945. Before, the geopolitical Caribbean was “the Antillean republics and Central America, including Panama” (p. 13), and US diplomacy toward the colonial Caribbean “was part of its European diplomacy” (p. 14)."
+     }
+    },
+    "dominica": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra después de 1945. Antes, el Caribe geopolítico eran «las repúblicas antillanas y Centroamérica, incluyendo Panamá» (p. 13), y la diplomacia estadounidense hacia el Caribe colonial «era parte de su diplomacia europea» (p. 14).",
+      "en": "It enters after 1945. Before, the geopolitical Caribbean was “the Antillean republics and Central America, including Panama” (p. 13), and US diplomacy toward the colonial Caribbean “was part of its European diplomacy” (p. 14)."
+     }
+    },
     "nevis": {
-     "e": "dentro"
+     "e": "dentro",
+     "n": {
+      "es": "Entra después de 1945. Antes, el Caribe geopolítico eran «las repúblicas antillanas y Centroamérica, incluyendo Panamá» (p. 13), y la diplomacia estadounidense hacia el Caribe colonial «era parte de su diplomacia europea» (p. 14).",
+      "en": "It enters after 1945. Before, the geopolitical Caribbean was “the Antillean republics and Central America, including Panama” (p. 13), and US diplomacy toward the colonial Caribbean “was part of its European diplomacy” (p. 14)."
+     }
     },
     "antigua": {
-     "e": "dentro"
+     "e": "dentro",
+     "n": {
+      "es": "Entra después de 1945. Antes, el Caribe geopolítico eran «las repúblicas antillanas y Centroamérica, incluyendo Panamá» (p. 13), y la diplomacia estadounidense hacia el Caribe colonial «era parte de su diplomacia europea» (p. 14).",
+      "en": "It enters after 1945. Before, the geopolitical Caribbean was “the Antillean republics and Central America, including Panama” (p. 13), and US diplomacy toward the colonial Caribbean “was part of its European diplomacy” (p. 14)."
+     }
     },
     "granada": {
-     "e": "dentro"
+     "e": "dentro",
+     "n": {
+      "es": "Entra después de 1945. Antes, el Caribe geopolítico eran «las repúblicas antillanas y Centroamérica, incluyendo Panamá» (p. 13), y la diplomacia estadounidense hacia el Caribe colonial «era parte de su diplomacia europea» (p. 14).",
+      "en": "It enters after 1945. Before, the geopolitical Caribbean was “the Antillean republics and Central America, including Panama” (p. 13), and US diplomacy toward the colonial Caribbean “was part of its European diplomacy” (p. 14)."
+     }
     },
     "guyana": {
-     "e": "dentro"
+     "e": "dentro",
+     "n": {
+      "es": "Entra después de 1945. Antes, el Caribe geopolítico eran «las repúblicas antillanas y Centroamérica, incluyendo Panamá» (p. 13), y la diplomacia estadounidense hacia el Caribe colonial «era parte de su diplomacia europea» (p. 14).",
+      "en": "It enters after 1945. Before, the geopolitical Caribbean was “the Antillean republics and Central America, including Panama” (p. 13), and US diplomacy toward the colonial Caribbean “was part of its European diplomacy” (p. 14)."
+     }
     },
     "suriname": {
-     "e": "dentro"
+     "e": "dentro",
+     "n": {
+      "es": "Entra después de 1945. Antes, el Caribe geopolítico eran «las repúblicas antillanas y Centroamérica, incluyendo Panamá» (p. 13), y la diplomacia estadounidense hacia el Caribe colonial «era parte de su diplomacia europea» (p. 14).",
+      "en": "It enters after 1945. Before, the geopolitical Caribbean was “the Antillean republics and Central America, including Panama” (p. 13), and US diplomacy toward the colonial Caribbean “was part of its European diplomacy” (p. 14)."
+     }
     },
     "belize": {
-     "e": "dentro"
+     "e": "dentro",
+     "n": {
+      "es": "Entra después de 1945. Antes, el Caribe geopolítico eran «las repúblicas antillanas y Centroamérica, incluyendo Panamá» (p. 13), y la diplomacia estadounidense hacia el Caribe colonial «era parte de su diplomacia europea» (p. 14).",
+      "en": "It enters after 1945. Before, the geopolitical Caribbean was “the Antillean republics and Central America, including Panama” (p. 13), and US diplomacy toward the colonial Caribbean “was part of its European diplomacy” (p. 14)."
+     }
     },
     "bluefields": {
      "e": "dentro"
@@ -2416,31 +2759,67 @@ window.CARIBES = {
      "e": "dentro"
     },
     "cartagena": {
-     "e": "fuera"
+     "e": "fuera",
+     "n": {
+      "es": "Por el criterio: el Caribe insular, Centroamérica y Panamá (p. 13). Venezuela y partes de Colombia y México solo llegan con el Gran Caribe, que los «añade» a los anteriores (p. 15).",
+      "en": "By the criterion: the insular Caribbean, Central America and Panama (p. 13). Venezuela and parts of Colombia and Mexico only arrive with the Greater Caribbean, which “adds” them to the earlier ones (p. 15)."
+     }
     },
     "santamarta": {
-     "e": "fuera"
+     "e": "fuera",
+     "n": {
+      "es": "Por el criterio: el Caribe insular, Centroamérica y Panamá (p. 13). Venezuela y partes de Colombia y México solo llegan con el Gran Caribe, que los «añade» a los anteriores (p. 15).",
+      "en": "By the criterion: the insular Caribbean, Central America and Panama (p. 13). Venezuela and parts of Colombia and Mexico only arrive with the Greater Caribbean, which “adds” them to the earlier ones (p. 15)."
+     }
     },
     "palenque": {
-     "e": "fuera"
+     "e": "fuera",
+     "n": {
+      "es": "Por el criterio: el Caribe insular, Centroamérica y Panamá (p. 13). Venezuela y partes de Colombia y México solo llegan con el Gran Caribe, que los «añade» a los anteriores (p. 15).",
+      "en": "By the criterion: the insular Caribbean, Central America and Panama (p. 13). Venezuela and parts of Colombia and Mexico only arrive with the Greater Caribbean, which “adds” them to the earlier ones (p. 15)."
+     }
     },
     "barranquilla": {
-     "e": "fuera"
+     "e": "fuera",
+     "n": {
+      "es": "Por el criterio: el Caribe insular, Centroamérica y Panamá (p. 13). Venezuela y partes de Colombia y México solo llegan con el Gran Caribe, que los «añade» a los anteriores (p. 15).",
+      "en": "By the criterion: the insular Caribbean, Central America and Panama (p. 13). Venezuela and parts of Colombia and Mexico only arrive with the Greater Caribbean, which “adds” them to the earlier ones (p. 15)."
+     }
     },
     "guajira": {
-     "e": "fuera"
+     "e": "fuera",
+     "n": {
+      "es": "Por el criterio: el Caribe insular, Centroamérica y Panamá (p. 13). Venezuela y partes de Colombia y México solo llegan con el Gran Caribe, que los «añade» a los anteriores (p. 15).",
+      "en": "By the criterion: the insular Caribbean, Central America and Panama (p. 13). Venezuela and parts of Colombia and Mexico only arrive with the Greater Caribbean, which “adds” them to the earlier ones (p. 15)."
+     }
     },
     "sanandres": {
-     "e": "fuera"
+     "e": "fuera",
+     "n": {
+      "es": "Por el criterio: el Caribe insular, Centroamérica y Panamá (p. 13). Venezuela y partes de Colombia y México solo llegan con el Gran Caribe, que los «añade» a los anteriores (p. 15).",
+      "en": "By the criterion: the insular Caribbean, Central America and Panama (p. 13). Venezuela and parts of Colombia and Mexico only arrive with the Greater Caribbean, which “adds” them to the earlier ones (p. 15)."
+     }
     },
     "veracruz": {
-     "e": "fuera"
+     "e": "fuera",
+     "n": {
+      "es": "Por el criterio: el Caribe insular, Centroamérica y Panamá (p. 13). Venezuela y partes de Colombia y México solo llegan con el Gran Caribe, que los «añade» a los anteriores (p. 15).",
+      "en": "By the criterion: the insular Caribbean, Central America and Panama (p. 13). Venezuela and parts of Colombia and Mexico only arrive with the Greater Caribbean, which “adds” them to the earlier ones (p. 15)."
+     }
     },
     "costachica": {
-     "e": "fuera"
+     "e": "fuera",
+     "n": {
+      "es": "Por el criterio: el Caribe insular, Centroamérica y Panamá (p. 13). Venezuela y partes de Colombia y México solo llegan con el Gran Caribe, que los «añade» a los anteriores (p. 15).",
+      "en": "By the criterion: the insular Caribbean, Central America and Panama (p. 13). Venezuela and parts of Colombia and Mexico only arrive with the Greater Caribbean, which “adds” them to the earlier ones (p. 15)."
+     }
     },
     "nola": {
-     "e": "fuera"
+     "e": "fuera",
+     "n": {
+      "es": "Por el criterio: el Caribe insular, Centroamérica y Panamá (p. 13). Venezuela y partes de Colombia y México solo llegan con el Gran Caribe, que los «añade» a los anteriores (p. 15).",
+      "en": "By the criterion: the insular Caribbean, Central America and Panama (p. 13). Venezuela and parts of Colombia and Mexico only arrive with the Greater Caribbean, which “adds” them to the earlier ones (p. 15)."
+     }
     }
    },
    "extras": {
@@ -2574,7 +2953,11 @@ window.CARIBES = {
      "e": "dentro"
     },
     "veracruz": {
-     "e": "dentro"
+     "e": "margen",
+     "n": {
+      "es": "«Por lo menos partes de México» (p. 15): el texto no dice cuáles. La única que documenta es el Caribe mexicano de Quintana Roo (n. 54). Veracruz, en el golfo, queda en el borde.",
+      "en": "“At least parts of Mexico” (p. 15): the text does not say which. The only one it documents is the Mexican Caribbean of Quintana Roo (n. 54). Veracruz, on the Gulf, sits on the edge."
+     }
     },
     "costachica": {
      "n": {
@@ -2588,7 +2971,11 @@ window.CARIBES = {
      "e": "dentro"
     },
     "yucatan": {
-     "e": "dentro"
+     "e": "dentro",
+     "n": {
+      "es": "Por el Caribe mexicano de Quintana Roo, el único que documenta (p. 16, n. 54).",
+      "en": "Through the Mexican Caribbean of Quintana Roo, the only one it documents (p. 16, n. 54)."
+     }
     },
     "florida": {
      "e": "margen",
@@ -2726,6 +3113,48 @@ window.CARIBES = {
       "en": "Gaztambide says important parts of Colombia “have always been part of the Caribbean” (p. 16) and grounds the cultural Caribbean on plantation and counter-plantation (pp. 19-20). Abello and Bassi answer, in a co-written chapter, that in the Colombian Caribbean the plantation “never developed” (ch. 3)."
      }
     },
+    "belize": {
+     "e": "margen",
+     "n": {
+      "es": "Por Casimir: las migraciones intracaribeñas crearon un «espacio caribeño endógeno» que «extendió esta cultura a toda la Cuenca del Caribe» (Gaztambide, p. 20). Entra por la irradiación, no por la plantación.",
+      "en": "Through Casimir: intra-Caribbean migration created an “endogenous Caribbean space” that “extended this culture to the whole Caribbean Basin” (Gaztambide, p. 20). It enters through irradiation, not through the plantation."
+     }
+    },
+    "bluefields": {
+     "e": "margen",
+     "n": {
+      "es": "Por Casimir: las migraciones intracaribeñas crearon un «espacio caribeño endógeno» que «extendió esta cultura a toda la Cuenca del Caribe» (Gaztambide, p. 20). Entra por la irradiación, no por la plantación.",
+      "en": "Through Casimir: intra-Caribbean migration created an “endogenous Caribbean space” that “extended this culture to the whole Caribbean Basin” (Gaztambide, p. 20). It enters through irradiation, not through the plantation."
+     }
+    },
+    "costarica": {
+     "e": "margen",
+     "n": {
+      "es": "Por Casimir: las migraciones intracaribeñas crearon un «espacio caribeño endógeno» que «extendió esta cultura a toda la Cuenca del Caribe» (Gaztambide, p. 20). Entra por la irradiación, no por la plantación.",
+      "en": "Through Casimir: intra-Caribbean migration created an “endogenous Caribbean space” that “extended this culture to the whole Caribbean Basin” (Gaztambide, p. 20). It enters through irradiation, not through the plantation."
+     }
+    },
+    "panama": {
+     "e": "margen",
+     "n": {
+      "es": "Por Casimir: las migraciones intracaribeñas crearon un «espacio caribeño endógeno» que «extendió esta cultura a toda la Cuenca del Caribe» (Gaztambide, p. 20). Entra por la irradiación, no por la plantación.",
+      "en": "Through Casimir: intra-Caribbean migration created an “endogenous Caribbean space” that “extended this culture to the whole Caribbean Basin” (Gaztambide, p. 20). It enters through irradiation, not through the plantation."
+     }
+    },
+    "honduras": {
+     "e": "margen",
+     "n": {
+      "es": "Por Casimir: las migraciones intracaribeñas crearon un «espacio caribeño endógeno» que «extendió esta cultura a toda la Cuenca del Caribe» (Gaztambide, p. 20). Entra por la irradiación, no por la plantación.",
+      "en": "Through Casimir: intra-Caribbean migration created an “endogenous Caribbean space” that “extended this culture to the whole Caribbean Basin” (Gaztambide, p. 20). It enters through irradiation, not through the plantation."
+     }
+    },
+    "sanandres": {
+     "e": "margen",
+     "n": {
+      "es": "Por Casimir: las migraciones intracaribeñas crearon un «espacio caribeño endógeno» que «extendió esta cultura a toda la Cuenca del Caribe» (Gaztambide, p. 20). Entra por la irradiación, no por la plantación.",
+      "en": "Through Casimir: intra-Caribbean migration created an “endogenous Caribbean space” that “extended this culture to the whole Caribbean Basin” (Gaztambide, p. 20). It enters through irradiation, not through the plantation."
+     }
+    },
     "nola": {
      "e": "fuera",
      "n": {
@@ -2756,10 +3185,10 @@ window.CARIBES = {
      "e": "fuera"
     },
     "nuevayork": {
-     "e": "dentro",
+     "e": "margen",
      "n": {
-      "es": "«Puede, sin embargo, incluir las diásporas caribeñas en Estados Unidos y Europa» (p. 20).",
-      "en": "“It may, however, include the Caribbean diasporas in the United States and Europe” (p. 20)."
+      "es": "«Puede, sin embargo, incluir las diásporas caribeñas en Estados Unidos y Europa» (p. 20): el verbo es potencial, y así se dibuja.",
+      "en": "“It may, however, include the Caribbean diasporas in the United States and Europe” (p. 20): the verb is conditional, and it is drawn that way."
      }
     }
    },
@@ -3147,9 +3576,51 @@ window.CARIBES = {
      }
     },
     "trinidad": {
+     "e": "margen",
      "n": {
-      "es": "La «Trinidad» del mapa 2.1 es Trinidad de Cuba, no la isla (p. 88).",
-      "en": "The “Trinidad” on map 2.1 is Trinidad de Cuba, not the island (p. 88)."
+      "es": "Como los de Cuba, Florida y la Norteamérica británica, sus habitantes vivían, igual que los neogranadinos, «en un mundo enmarañado» transimperial (p. 25); su captura británica en 1797 es una de las amenazas que miran las autoridades de la costa (pp. 179 y 200). Ojo: la «Trinidad» del mapa 2.1 es Trinidad de Cuba, no la isla (p. 88).",
+      "en": "Like those of Cuba, Florida and British North America, its inhabitants lived, as New Granadans did, “in an entangled world” across empires (p. 25); its British capture in 1797 is one of the threats the coast's authorities watch (pp. 179 and 200). Note: the “Trinidad” on map 2.1 is Trinidad de Cuba, not the island (p. 88)."
+     }
+    },
+    "honduras": {
+     "e": "margen",
+     "n": {
+      "es": "El «estrecho de costa entre la bahía de Honduras y el norte de Panamá» se vuelve «prácticamente una colonia británica» (p. 195; mapa 4.1, p. 172); a la bahía se reubican en 1786 más de dos mil refugiados de la costa de Mosquitos (p. 196).",
+      "en": "The “strip of coast between the Bay of Honduras and northern Panama” becomes “practically a British colony” (p. 195; map 4.1, p. 172); more than two thousand refugees from the Mosquito Coast are resettled in the bay in 1786 (p. 196)."
+     }
+    },
+    "costarica": {
+     "e": "margen",
+     "n": {
+      "es": "Por las cacerías esclavistas de los tawira-miskitos, que llegaban «hasta el territorio cuna que hoy constituye Costa Rica y Panamá» (p. 149).",
+      "en": "Through the Tawira-Miskitu slave raids, which reached “the Kuna territory that today makes up Costa Rica and Panama” (p. 149)."
+     }
+    },
+    "stjohn": {
+     "n": {
+      "es": "La «isla de Saint John» que nombra Bassi es la actual isla del Príncipe Eduardo, en Canadá (p. 183), no la de las Islas Vírgenes.",
+      "en": "The “isle of Saint John” Bassi names is today's Prince Edward Island, in Canada (p. 183), not the Virgin Islands one."
+     }
+    },
+    "dominica": {
+     "e": "margen",
+     "n": {
+      "es": "Puertos libres británicos hacia 1805, en el sistema que hizo de Kingston el centro comercial de la costa neogranadina (p. 65, nota).",
+      "en": "British free ports by 1805, in the system that made Kingston the commercial centre for the New Granada coast (p. 65, note)."
+     }
+    },
+    "granada": {
+     "e": "margen",
+     "n": {
+      "es": "Puertos libres británicos hacia 1805, en el sistema que hizo de Kingston el centro comercial de la costa neogranadina (p. 65, nota).",
+      "en": "British free ports by 1805, in the system that made Kingston the commercial centre for the New Granada coast (p. 65, note)."
+     }
+    },
+    "antigua": {
+     "e": "margen",
+     "n": {
+      "es": "Puertos libres británicos hacia 1805, en el sistema que hizo de Kingston el centro comercial de la costa neogranadina (p. 65, nota).",
+      "en": "British free ports by 1805, in the system that made Kingston the commercial centre for the New Granada coast (p. 65, note)."
      }
     }
    },
@@ -3908,13 +4379,6 @@ window.CARIBES = {
     }
    ],
    "lugares": {
-    "cuba": {
-     "e": "dentro",
-     "n": {
-      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
-      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
-     }
-    },
     "jamaica": {
      "e": "dentro",
      "n": {
@@ -4006,13 +4470,6 @@ window.CARIBES = {
       "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
      }
     },
-    "granada": {
-     "e": "dentro",
-     "n": {
-      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
-      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
-     }
-    },
     "guyana": {
      "e": "dentro",
      "n": {
@@ -4028,13 +4485,6 @@ window.CARIBES = {
      }
     },
     "belize": {
-     "e": "dentro",
-     "n": {
-      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
-      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
-     }
-    },
-    "bluefields": {
      "e": "dentro",
      "n": {
       "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
@@ -4116,6 +4566,27 @@ window.CARIBES = {
      "n": {
       "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
       "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+     }
+    },
+    "cuba": {
+     "e": "disputa",
+     "n": {
+      "es": "La Tabla 1 da a la Cuenca cobertura de «continente e islas» (p. 4), pero Gaztambide recuerda que la Iniciativa de Reagan «no incluyó a todos los países de la cuenca» y «excluía a países como Cuba y Nicaragua», contra los que se blandió el «garrote» (Gaztambide, p. 15). Dentro como blanco, fuera como beneficiario.",
+      "en": "Table 1 gives the Basin a coverage of “mainland and islands” (p. 4), but Gaztambide recalls that Reagan's Initiative “did not include all the countries of the basin” and “excluded countries such as Cuba and Nicaragua”, against which the “stick” was wielded (Gaztambide, p. 15). Inside as a target, outside as a beneficiary."
+     }
+    },
+    "bluefields": {
+     "e": "disputa",
+     "n": {
+      "es": "La Tabla 1 da a la Cuenca cobertura de «continente e islas» (p. 4), pero Gaztambide recuerda que la Iniciativa de Reagan «no incluyó a todos los países de la cuenca» y «excluía a países como Cuba y Nicaragua», contra los que se blandió el «garrote» (Gaztambide, p. 15). Dentro como blanco, fuera como beneficiario.",
+      "en": "Table 1 gives the Basin a coverage of “mainland and islands” (p. 4), but Gaztambide recalls that Reagan's Initiative “did not include all the countries of the basin” and “excluded countries such as Cuba and Nicaragua”, against which the “stick” was wielded (Gaztambide, p. 15). Inside as a target, outside as a beneficiary."
+     }
+    },
+    "granada": {
+     "e": "dentro",
+     "n": {
+      "es": "Entra por la cobertura de la Tabla 1 (p. 4), y además como blanco: el «garrote» de los ochenta se blandió contra «Cuba, Nicaragua y Granada» (Gaztambide, p. 15).",
+      "en": "It enters through Table 1's coverage (p. 4), and also as a target: the 1980s “stick” was wielded against “Cuba, Nicaragua and Grenada” (Gaztambide, p. 15)."
      }
     },
     "oriximina": {
@@ -4217,8 +4688,8 @@ window.CARIBES = {
    "lectura": "ejemplar",
    "familia": null,
    "criterio": {
-    "es": "La unidad es el fenómeno que cruza la cuenca, no el área. Un lugar entra cuando lo atraviesa una corriente. Por eso la Costa Chica, que casi todas las definiciones dejan fuera, está aquí.",
-    "en": "The unit is the phenomenon crossing the basin, not the area. A place enters when a current runs through it. That is why the Costa Chica, which nearly every definition leaves out, is here."
+    "es": "La unidad es el fenómeno que cruza la cuenca, no el área. Un lugar entra cuando lo atraviesa una corriente. Por eso la Costa Chica, que doce definiciones callan y cuatro dejan fuera, está aquí.",
+    "en": "The unit is the phenomenon crossing the basin, not the area. A place enters when a current runs through it. That is why the Costa Chica, which twelve definitions pass over and four leave out, is here."
    },
    "citas": [
     {
@@ -4392,8 +4863,8 @@ window.CARIBES = {
    "a": "trouillot",
    "b": "mintz",
    "tipo": "apropiacion",
-   "es": "Trouillot llama al área de Mintz «one of the most sophisticated conceptualizations of a sociocultural area» y la lee como parecido de familia (p. 178).",
-   "en": "Trouillot calls Mintz's area “one of the most sophisticated conceptualizations of a sociocultural area” and reads it as family resemblance (p. 178).",
+   "es": "Trouillot llama al área de Mintz «one of the most sophisticated conceptualizations of a sociocultural area», la lee como parecido de familia y la ve «doubly open»: atada al resto del mundo, «notably to the continental Americas» (p. 178). Es la lectura opuesta a la de Bassi, que objeta que esa misma área deja fuera las costas continentales.",
+   "en": "Trouillot calls Mintz's area “one of the most sophisticated conceptualizations of a sociocultural area”, reads it as family resemblance and sees it as “doubly open”: tied to the rest of the world, “notably to the continental Americas” (p. 178). It is the opposite reading to Bassi's, who objects that the same area leaves out the mainland coasts.",
    "ref": "TRO · p. 178"
   },
   {

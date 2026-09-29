@@ -13,12 +13,13 @@ corrigen errores de reconocimiento óptico, nunca la redacción.
 Estados:
   dentro   el texto incluye el lugar de forma explícita o por el criterio que declara
   margen   lo incluye de forma secundaria: como contexto, como litoral, «tal vez»
-  disputa  dos textos de la capa dicen cosas opuestas sobre ese lugar
+  disputa  lecturas que chocan sobre ese lugar, entre dos textos o dentro de uno, o pregunta
+           que el texto deja abierta
   fuera    el texto lo deja fuera de forma explícita
 """
 import json, datetime, pathlib
 
-HOY = "2026-09-16"
+HOY = "2026-09-29"
 
 # ---------------------------------------------------------------- lugares del atlas
 ISL = ["cuba","jamaica","haiti","dominicana","puertorico","curazao","martinica","guadalupe",
@@ -105,14 +106,38 @@ N_SMITH_CTX = N("Fuera del campo de Smith, que se limita a las unidades británi
                 "Outside Smith's field, restricted to the British units (p. 4), but inside the comparative context “from Brazil to the United States” (p. 19).")
 N_SMITH_MID = N("Smith la agrupa entre los «Middle American states», con Colombia y Venezuela, como parte del contexto comparativo (p. 20).",
                 "Smith groups it among the “Middle American states”, with Colombia and Venezuela, as comparative context (p. 20).")
-N_MINTZ_CONT = N("Mintz se ocupa de las islas y «solo de forma secundaria» de las sociedades continentales (p. 65); las Guayanas entran por las migraciones asiáticas (p. 82).",
-                 "Mintz deals with the islands and “only secondarily” with mainland societies (p. 65); the Guianas appear through Asian migration (p. 82).")
-N_MINTZ_COL = N("Mintz no nombra la costa colombiana. Los «palenqueros» que cita son los de Cuba (p. 79) y Providencia solo aparece en una nota, por la tesis de Peter Wilson (p. 95).",
-                "Mintz does not name the Colombian coast. The “palenqueros” he cites are Cuban (p. 79), and Providencia appears only in a note, via Peter Wilson's thesis (p. 95).")
+N_MINTZ_CONT = N("Son las sociedades continentales que más aparecen en el ensayo —los cimarrones de Surinam (p. 79), la migración asiática (pp. 82-83), la identidad nacional (p. 85)—, pero siempre entre las que Mintz trata «solo de forma secundaria» (p. 65).",
+                 "They are the mainland societies that appear most in the essay —the Surinamese maroons (p. 79), Asian migration (pp. 82-83), national identity (p. 85)— but always among those Mintz treats “only secondarily” (p. 65).")
+N_MINTZ_COL = N("Mintz no nombra la costa colombiana. Queda dentro de la «costa norte de Sudamérica» que marca el borde sur del área (p. 62), y del contexto comparativo «desde Brasil hasta Estados Unidos» que toma de Smith (p. 64), no del área. Los «palenqueros» que cita son los de Cuba (p. 79) y Providencia solo aparece en una nota, por la tesis de Peter Wilson (p. 95).",
+                "Mintz does not name the Colombian coast. It lies within the “north coast of South America” that marks the area's southern edge (p. 62), and within the comparative context “from Brazil to the United States” he takes from Smith (p. 64), not within the area. The “palenqueros” he cites are Cuban (p. 79), and Providencia appears only in a note, via Peter Wilson's thesis (p. 95).")
+N_MINTZ_BORDE = N("Mintz nombra la península como borde, no como parte: las islas se dispersan «entre la península de Yucatán y la costa norte de Sudamérica» (p. 62). El borde no se ilumina.",
+                  "Mintz names the peninsula as an edge, not a part: the islands are scattered “between the Yucatán peninsula and the north coast of South America” (p. 62). The edge is not lit.")
+N_MINTZ_CA = N("Centroamérica entra como destino del trabajo antillano, no como parte del área: «nuevas plantaciones bananeras en Centroamérica y la construcción del Canal de Panamá crearon otras necesidades laborales en el continente que debían ser saciadas por antillanos» (p. 82).",
+               "Central America enters as a destination for Antillean labour, not as part of the area: “new banana plantations in Central America and the building of the Panama Canal created other labour needs on the mainland, to be met by Antilleans” (p. 82).")
+N_WAG_CA = N("Según el resumen de Gaztambide, Wagley pone «la mayor parte de Centroamérica» en Indo-América (p. 18). El resumen no dice qué parte queda en la América de las plantaciones, y el atlas no tiene el ensayo para decidirlo.",
+             "In Gaztambide's summary, Wagley places “most of Central America” in Indo-America (p. 18). The summary does not say which part falls in Plantation America, and the atlas lacks the essay to settle it.")
+N_WAG_COL = N("El resumen de Gaztambide no nombra Colombia: pone en Indo-América las porciones «principalmente andinas» donde no se exterminó a los aborígenes y en la América de las plantaciones «todos aquellos lugares donde prevaleció la plantación» (p. 18). La costa colombiana y sus islas quedan entre los dos criterios.",
+              "Gaztambide's summary does not name Colombia: it places in Indo-America the “mainly Andean” portions where the natives were not exterminated, and in Plantation America “all those places where the plantation prevailed” (p. 18). The Colombian coast and its islands fall between the two criteria.")
+N_BOSCH_MEX = N("Bosch adopta el Gran Caribe (Gaztambide, p. 16), que suma «por lo menos partes» de México sin decir cuáles (p. 15). El golfo queda en el borde.",
+                "Bosch adopts the Greater Caribbean (Gaztambide, p. 16), which adds “at least parts” of Mexico without saying which (p. 15). The Gulf sits on the edge.")
+N_GAZ_INS_FUERA = N("Por el criterio: el Caribe insular es «sinónimo de las Antillas y de las West Indies» (p. 11), y las West Indies se refieren «a esas islas y no a las masas continentales» (Oldendorp, citado en p. 12).",
+                    "By the criterion: the insular Caribbean is “synonymous with the Antilles and the West Indies” (p. 11), and the West Indies refer “to those islands and not to the continental masses” (Oldendorp, quoted on p. 12).")
+N_GAZ_INS_NORTE = N("«Puede llegar tan al norte como a las Bahamas y Bermuda» (p. 11): el verbo es potencial, y así se dibuja.",
+                    "It “may reach as far north as the Bahamas and Bermuda” (p. 11): the verb is conditional, and it is drawn that way.")
+N_GAZ_GEO_COLONIA = N("Entra después de 1945. Antes, el Caribe geopolítico eran «las repúblicas antillanas y Centroamérica, incluyendo Panamá» (p. 13), y la diplomacia estadounidense hacia el Caribe colonial «era parte de su diplomacia europea» (p. 14).",
+                      "It enters after 1945. Before, the geopolitical Caribbean was “the Antillean republics and Central America, including Panama” (p. 13), and US diplomacy toward the colonial Caribbean “was part of its European diplomacy” (p. 14).")
+N_GAZ_GEO_FUERA = N("Por el criterio: el Caribe insular, Centroamérica y Panamá (p. 13). Venezuela y partes de Colombia y México solo llegan con el Gran Caribe, que los «añade» a los anteriores (p. 15).",
+                    "By the criterion: the insular Caribbean, Central America and Panama (p. 13). Venezuela and parts of Colombia and Mexico only arrive with the Greater Caribbean, which “adds” them to the earlier ones (p. 15).")
+N_GAZ_GC_MEX = N("«Por lo menos partes de México» (p. 15): el texto no dice cuáles. La única que documenta es el Caribe mexicano de Quintana Roo (n. 54). Veracruz, en el golfo, queda en el borde.",
+                 "“At least parts of Mexico” (p. 15): the text does not say which. The only one it documents is the Mexican Caribbean of Quintana Roo (n. 54). Veracruz, on the Gulf, sits on the edge.")
+N_GAZ_CULT_CASIMIR = N("Por Casimir: las migraciones intracaribeñas crearon un «espacio caribeño endógeno» que «extendió esta cultura a toda la Cuenca del Caribe» (Gaztambide, p. 20). Entra por la irradiación, no por la plantación.",
+                       "Through Casimir: intra-Caribbean migration created an “endogenous Caribbean space” that “extended this culture to the whole Caribbean Basin” (Gaztambide, p. 20). It enters through irradiation, not through the plantation.")
+N_GIR_CUENCA_EXCL = N("La Tabla 1 da a la Cuenca cobertura de «continente e islas» (p. 4), pero Gaztambide recuerda que la Iniciativa de Reagan «no incluyó a todos los países de la cuenca» y «excluía a países como Cuba y Nicaragua», contra los que se blandió el «garrote» (Gaztambide, p. 15). Dentro como blanco, fuera como beneficiario.",
+                      "Table 1 gives the Basin a coverage of “mainland and islands” (p. 4), but Gaztambide recalls that Reagan's Initiative “did not include all the countries of the basin” and “excluded countries such as Cuba and Nicaragua”, against which the “stick” was wielded (Gaztambide, p. 15). Inside as a target, outside as a beneficiary.")
 N_NWG_LIT = N("Best: «muchas veces el Caribe también incluye el litoral que rodea nuestro mar» (Gaztambide, p. 19); Girvan: «all the islands and the adjacent mainland» (pp. 6-7).",
               "Best: the Caribbean “often also includes the littoral around our sea” (Gaztambide, p. 19); Girvan: “all the islands and the adjacent mainland” (pp. 6-7).")
-N_BECK_BAN = N("Beckford cuenta las plantaciones bananeras de Colombia entre las economías de plantación del siglo XX (p. 112): la plantación llega a esta costa como enclave, no como ingenio esclavista.",
-               "Beckford counts Colombia's banana plantations among twentieth-century plantation economies (p. 112): the plantation reaches this coast as an enclave, not as a slave sugar estate.")
+N_BECK_BAN = N("Beckford cuenta «las plantaciones bananeras de Honduras, Guatemala, Costa Rica, Panamá y Colombia» entre las economías de plantación del siglo XX (p. 112): la plantación llega a esta costa como enclave de la United Fruit, no como ingenio esclavista.",
+               "Beckford counts “the banana plantations of Honduras, Guatemala, Costa Rica, Panama, and Colombia” among twentieth-century plantation economies (p. 112): the plantation reaches this coast as a United Fruit enclave, not as a slave sugar estate.")
 N_CULT_COL = N("Gaztambide dice que partes importantes de Colombia «han sido siempre parte del Caribe» (p. 16) y funda el Caribe cultural en la plantación y la contraplantación (pp. 19-20). Abello y Bassi responden, en un capítulo escrito a cuatro manos, que en el Caribe colombiano la plantación «nunca se desarrolló» (cap. 3).",
                "Gaztambide says important parts of Colombia “have always been part of the Caribbean” (p. 16) and grounds the cultural Caribbean on plantation and counter-plantation (pp. 19-20). Abello and Bassi answer, in a co-written chapter, that in the Colombian Caribbean the plantation “never developed” (ch. 3).")
 
@@ -146,7 +171,7 @@ DEF.append({
     "santamarta":{"e":"dentro","n":N("Río Hacha, Santa Marta y Cartagena son «los puntos de la costa en Tierra Firme donde España concentra su poder» (p. 183).","Río Hacha, Santa Marta and Cartagena are “the points on the Tierra Firme coast where Spain concentrates its power” (p. 183).")},
     "guajira":{"e":"dentro","n":N("Río Hacha y las perlas de la Ranchería, en las correrías de Hawkins y Drake (pp. 182-183 y 208).","Río Hacha and the pearls of La Ranchería, in the raids of Hawkins and Drake (pp. 182-183 and 208).")},
     "sanandres":{"e":"dentro","n":N("San Andrés y Providencia, colonia puritana «frente a la costa de Panamá» (pp. 256-263).","San Andrés and Providencia, a Puritan colony “off the coast of Panama” (pp. 256-263).")},
-    "barranquilla":{"e":None,"n":N("No aparece en el libro.","It does not appear in the book.")},
+    "barranquilla":{"e":"dentro","n":N("Una sola mención: Bolívar sale por tierra «a Soledad, a Barranquilla, y agarra una goleta. \u00abVamos \u2014dice\u2014 a Jamaica\u00bb» (p. 523). Entra por el criterio del libro, el mar como camino, no por peso propio.","A single mention: Bolívar leaves overland “to Soledad, to Barranquilla, and takes a schooner. ‘Let us go,’ he says, ‘to Jamaica’” (p. 523). It enters by the book's criterion, the sea as a road, not on its own weight.")},
     "palenque":{"e":None,"n":N("Los cimarrones del libro son los del istmo, aliados de Drake (pp. 190-192); los palenques de la costa colombiana no aparecen.","The book's maroons are those of the isthmus, Drake's allies (pp. 190-192); the palenques of the Colombian coast do not appear.")},
     "veracruz":{"e":"dentro","n":N("En San Juan de Ulúa el virrey destruye las naves de los contrabandistas ingleses: «un cambio de rumbo en la política europea» (p. 7).","At San Juan de Ulúa the viceroy destroys the English smugglers' ships: “a change of course in European politics” (p. 7).")},
     "costachica":{"e":None,"n":N("No aparece: el México del libro es el del golfo.","It does not appear: the book's Mexico is the Gulf's.")},
@@ -173,10 +198,13 @@ DEF.append({
    {"txt":"La América de las Plantaciones que quizás debió llamar Afro-América e incluye el sur de Estados Unidos, el Caribe insular, Brasil y todos aquellos lugares donde prevaleció la plantación como organización socio-económica predominante.","ref":"GAZ","pag":"18","nota":N("resumen de Gaztambide","Gaztambide's summary")},
    {"txt":"It drew from the work of historians, sociologists and cultural anthropologists, especially from Wagley's notion of ‘plantation America’.","ref":"GIR","pag":"6","nota":N("sobre el New World Group","on the New World Group")},
  ],
- "lugares": junta(todos(ISL+GUY+BEL,"dentro"), {"nola":{"e":"dentro"}},
+ "lugares": junta(todos(ISL,"dentro"),
+                  todos(GUY+BEL,"dentro",N("Por el «Caribe insular» del resumen, que según el propio Gaztambide suele incluir las Guayanas y Belice (p. 11).","Through the summary's “insular Caribbean”, which by Gaztambide's own account usually includes the Guianas and Belize (p. 11).")),
+                  {"nola":{"e":"dentro"}},
                   todos(MEX,"fuera",N("México queda en Indo-América (Gaztambide, p. 18).","Mexico falls in Indo-America (Gaztambide, p. 18).")),
-                  todos(CA,None) ),
- "extras":{"sureeuu":{"e":"dentro"},"brasil":{"e":"dentro"}},
+                  todos(CA,None,N_WAG_CA), todos(COL,None,N_WAG_COL) ),
+ "extras":{"sureeuu":{"e":"dentro"},"brasil":{"e":"dentro"},
+           "caiman":{"e":None,"n":N("Mintz, que cita el ensayo, advierte que las Caimán «difícilmente forman parte» de la «América de la plantación», y que «lo mismo puede decirse de muchas otras partes del área del Caribe» (Mintz, p. 64, n. 4).","Mintz, who cites the essay, warns that the Caymans “hardly form part” of “Plantation America”, and that “the same may be said of many other parts of the Caribbean area” (Mintz, p. 64, n. 4).")}},
  "corpus":["mintzarea","bestlevitt","beckfordpersistent"],
  "aviso":N("El atlas no tiene el ensayo de Wagley. Se reconstruye con Gaztambide y con la nota 4 de Mintz 1966, que lo cita.",
            "The atlas does not hold Wagley's essay. It is reconstructed from Gaztambide and from note 4 in Mintz 1966, which cites it."),
@@ -217,9 +245,13 @@ DEF.append({
    {"txt":"Probablemente sería más exacto (aunque de estilo torpe) referirse al Caribe como un “área societal”","ref":"MIN","pag":"66"},
  ],
  "lugares": junta(todos(ISL,"dentro"), todos(GUY,"margen",N_MINTZ_CONT),
-                  todos(COL,None,N_MINTZ_COL)),
+                  todos(COL,None,N_MINTZ_COL),
+                  todos(["bluefields","costarica","panama","honduras"],None,N_MINTZ_CA),
+                  {"belize":{"e":None,"n":N("La Honduras Británica solo aparece en una nota bibliográfica, por el estudio de Douglas Taylor sobre los caribes negros (p. 70, n. 7).","British Honduras appears only in a bibliographic note, through Douglas Taylor's study of the Black Caribs (p. 70, n. 7).")},
+                   "palmaresbr":{"e":"margen","n":N("Mintz cuenta «los experimentos de Palmares» entre los campesinados que «evolucionaron durante la esclavitud, pero en oposición abierta a ella», junto a los cimarrones de Surinam y Jamaica y los palenqueros de Cuba (p. 79, en una cita en bloque). Entra como ejemplo de la contraplantación, no como lugar del área.","Mintz counts “the experiments of Palmares” among the peasantries that “evolved during slavery, but in open opposition to it”, alongside the maroons of Suriname and Jamaica and the palenqueros of Cuba (p. 79, in a block quotation). It enters as an instance of counter-plantation, not as a place in the area.")}}),
  "extras":{"bahamas":{"e":"dentro","n":N("Las islas «se extienden desde las Bahamas» (p. 67).","The islands “extend from the Bahamas” (p. 67).")},
-           "yucatan":{"e":"margen","n":N("Límite del área, no parte de ella (p. 62).","The area's edge, not part of it (p. 62).")},
+           "yucatan":{"e":None,"n":N_MINTZ_BORDE},
+           "venezuela":{"e":None,"n":N("Borde sur, como Yucatán al oeste: las islas llegan «hasta Trinidad y las Antillas Holandesas frente a la costa venezolana» (p. 67).","The southern edge, as Yucatán is the western one: the islands reach “to Trinidad and the Netherlands Antilles off the Venezuelan coast” (p. 67).")},
            "caiman":{"e":"dentro","n":N("Dentro del área, pero «difícilmente» parte de la «América de la plantación» (p. 64, n. 4).","Inside the area, yet “hardly” part of “Plantation America” (p. 64, n. 4).")}},
  "corpus":["mintzarea","mintz","workercane","steward"],
 })
@@ -236,13 +268,13 @@ DEF.append({
    {"txt":"New World's Pan-Caribbeanism, therefore, stemmed from a cosmology in which all the islands and the adjacent mainland were the frame of reference of regional identity.","ref":"GIR","pag":"6-7"},
    {"txt":"Es cierto que [el Caribe] incluye las Antillas —mayores y menores— y las Guyanas… Pero muchas veces el Caribe también incluye el litoral que rodea nuestro mar","ref":"GAZ","pag":"19","nota":N("Best 1967, citado por Gaztambide","Best 1967, quoted by Gaztambide")},
  ],
- "lugares": junta(todos(ISL+GUY+BEL,"dentro"),
-                  todos(["cartagena","palenque","barranquilla","guajira","sanandres"],"margen",N_NWG_LIT),
+ "lugares": junta(todos(ISL+GUY,"dentro"),
+                  todos(["cartagena","palenque","barranquilla","guajira","sanandres","belize"],"margen",N_NWG_LIT),
                   {"santamarta":{"e":"margen","n":N_BECK_BAN}},
-                  todos(["costarica","panama"],"margen",N_BECK_BAN),
+                  todos(["costarica","panama","honduras"],"margen",N_BECK_BAN),
                   {"bluefields":{"e":"margen","n":N_NWG_LIT}},
                   {"nola":{"e":"margen","n":N("Según Girvan, el pasaje de Best «sí incluía partes de Estados Unidos y de Brasil»; Gaztambide se aparta expresamente (p. 20, n. 72).","According to Girvan, Best's passage “did include parts of the United States and Brazil”; Gaztambide explicitly departs from it (p. 20, n. 72).")}}),
- "extras":{"sureeuu":{"e":"margen"},"brasil":{"e":"margen"}},
+ "extras":{"sureeuu":{"e":"margen"},"brasil":{"e":"margen"},"guatemala":{"e":"margen","n":N_BECK_BAN}},
  "corpus":["meeksgirvannewworld","bestlevitt","beckfordpersistent","williamscapitalismo"],
 })
 
@@ -256,8 +288,11 @@ DEF.append({
  "citas":[
    {"txt":"Bosch, sin embargo, no escribió sobre el mismo Caribe que Williams; mientras que éste hablaba del Caribe insular, la «frontera imperial» del primero se extendía por todo lo que hoy llamamos el Gran Caribe.","ref":"GAZ","pag":"13"},
    {"txt":"libro en el que amplía el universo Caribe a las costas de Tierra Firme, reafirma la inclusión de Colombia en él","ref":"ABE","pag":"cap. 1"},
+   {"txt":"es la historia de las luchas de los imperios contra los pueblos de la región para arrebatarles sus ricas tierras; es también la historia de las luchas de los imperios, unos contra otros, para arrebatarse porciones de lo que cada uno de ellos había conquistado","ref":"ABE","pag":"cap. 1","nota":N("Bosch, p. 13, citado por Abello","Bosch, p. 13, quoted by Abello")},
  ],
- "lugares": junta(todos(ISL+GUY+BEL+CA+COL,"dentro"), {"veracruz":{"e":"dentro"}}),
+ "lugares": junta(todos(ISL+GUY+BEL+CA+COL,"dentro"),
+                  {"panama":{"e":"dentro","n":N("Bosch lee la separación de Panamá como el primer caso en que se aplicó en el Caribe «el método de la subversión para desmembrar un país» (Bosch, p. 12, citado por Abello, cap. 1).","Bosch reads Panama's secession as the first case in which “the method of subversion to dismember a country” was applied in the Caribbean (Bosch, p. 12, quoted by Abello, ch. 1).")},
+                   "veracruz":{"e":"margen","n":N_BOSCH_MEX}}),
  "extras":{"venezuela":{"e":"dentro"},"yucatan":{"e":"dentro"}},
  "corpus":["abello"],
  "aviso":N("El atlas no tiene el ejemplar de Bosch. La extensión se toma de Gaztambide y de Abello, que coinciden.",
@@ -276,11 +311,15 @@ DEF.append({
    {"txt":"subsistent plantation maroon […] the unity is submarine / breathing air, our problem is how to study the fragments/whole","ref":"BRA","pag":"90"},
    {"txt":"The plantation model, in other words, is in itself a product of the plantation and runs the hazard of becoming as much tool as tomb of the system that it seeks to understand and transform.","ref":"BRA","pag":"93"},
  ],
- "lugares": junta(todos(["cuba","haiti","dominicana","puertorico"],"dentro",N("Nombrada en el poema de apertura (p. 90).","Named in the opening poem (p. 90).")),
+ "lugares": junta(todos(["cuba","puertorico"],"dentro",N("Nombrada en el poema de apertura (p. 90).","Named in the opening poem (p. 90).")),
+                  {"dominicana":{"e":"dentro","n":N("Por La Española, que nombra el poema de apertura (p. 90).","Through Hispaniola, named in the opening poem (p. 90).")},
+                   "haiti":{"e":"dentro","n":N("Por La Española, que nombra el poema de apertura (p. 90). Y como fragmento que el modelo de plantación no explica: con Mathews, pregunta si encajaría Haití en el siglo XIX, o Puerto Rico en el XVII (p. 93).","Through Hispaniola, named in the opening poem (p. 90). And as a fragment the plantation model does not explain: with Mathews he asks whether nineteenth-century Haiti, or seventeenth-century Puerto Rico, would fit (p. 93).")},
+                   "trinidad":{"e":"dentro","n":N("El estudio del carnaval, el calipso y el steelband en Trinidad es «a most welcome sign» para la historia de la «plantación interior» (p. 98).","The study of carnival, calypso and steelband in Trinidad is “a most welcome sign” for the history of the “inner plantation” (p. 98).")}},
                   {"jamaica":{"e":"dentro","n":N("Su propia historia de la sociedad criolla y la voz de una reina kumina sostienen la «plantación interior» (pp. 95 y ss.).","His own history of creole society and the voice of a Kumina queen carry the “inner plantation” (pp. 95 ff.).")},
-                   "barbados":{"e":"dentro","n":N("Por la landship, una de las formas de la «plantación interior».","Through the landship, one of the forms of the “inner plantation”.")}},
+                   "barbados":{"e":"dentro","n":N("Por la landship, una de las formas de la «plantación interior» (p. 96).","Through the landship, one of the forms of the “inner plantation” (p. 96).")}},
                   {"granada":{"e":"dentro","n":N("Por Carriacou, el ejemplo de lo que el modelo de plantación no explica (p. 93).","Through Carriacou, his example of what the plantation model fails to explain (p. 93).")}}),
- "extras":{"yucatan":{"e":"dentro"},"bahamas":{"e":"dentro"},"africa":{"e":"dentro"},
+ "extras":{"yucatan":{"e":"dentro","n":N("«cracking open yucatan» (p. 90).","“cracking open yucatan” (p. 90).")},"bahamas":{"e":"dentro"},"africa":{"e":"dentro"},
+           "stlucia":{"e":"dentro","n":N("Por la «la rose», una de las formas de la «plantación interior» (p. 96).","Through “la rose”, one of the forms of the “inner plantation” (p. 96).")},
            "carriacou":{"e":"dentro","n":N("«Would an island like Carriacou, for instance, fit the model?» Las zonas sin plantación entran como «maroon economies» (p. 93).","“Would an island like Carriacou, for instance, fit the model?” Non-plantation areas enter as “maroon economies” (p. 93).")}},
  "corpus":["brathwaitearchipelago","brathwaite"],
 })
@@ -297,7 +336,13 @@ DEF.append({
    {"txt":"within the marine flows that extend from the mouth of the Amazon to the Mississippi delta, that bathe the north coasts of South and Central America, the old Arawak-Carib island bridge, and parts of the United States […] we would perhaps have to count New York","ref":"BEN","pag":"24-25"},
  ],
  "lugares": junta(todos(ISL+GUY+BEL+CA+COL,"dentro"), {"nola":{"e":"dentro","n":N("El delta del Mississippi es un extremo de sus corrientes (p. 24).","The Mississippi delta is one end of its currents (p. 24).")}},
-                  {"veracruz":{"e":"margen","n":N("El pasaje de las corrientes no la nombra: el golfo queda entre el delta del Mississippi y las costas de Centroamérica que sí nombra.","The currents passage does not name it: the Gulf lies between the Mississippi delta and the Central American coasts it does name.")}}),
+                  {"veracruz":{"e":"dentro","n":N("San Juan de Ulúa está entre los pocos «Caribbean ports» donde se embarcaba el oro y la plata de la flota, la máquina que hizo del Caribe un meta-archipiélago (p. 7); las flotas de Cartagena y Veracruz se juntaban en La Habana (p. 8).","San Juan de Ulúa is among the few “Caribbean ports” where the fleet's gold and silver was loaded, the machine that made the Caribbean a meta-archipelago (p. 7); the Cartagena and Veracruz fleets joined at Havana (p. 8).")},
+                   "sanandres":{"e":"dentro","n":N("Benítez le dedica un capítulo a Providencia, leída a través de Los pañamanes de Fanny Buitrago: «this rare piece of the Caribbean puzzle» (pp. 199-205).","Benítez devotes a chapter to Providencia, read through Fanny Buitrago's Los pañamanes: “this rare piece of the Caribbean puzzle” (pp. 199-205).")},
+                   "panama":{"e":"dentro","n":N("«It was men from the Antilles who constructed the Panama Canal» (p. 25).","“It was men from the Antilles who constructed the Panama Canal” (p. 25).")},
+                   "palmaresbr":{"e":"dentro","n":N("«The fabulous quilombo of Palmares, the most powerful and enduring city of cimarrones in history» está entre las ciudades transgresoras que resume Nueva Venecia (p. 249); la fuga cimarrona «has no frontiers, unless they are those of the meta-archipelago» (p. 254).","“The fabulous quilombo of Palmares, the most powerful and enduring city of cimarrones in history” is among the transgressive cities summed up in Nueva Venecia (p. 249); the maroon's flight “has no frontiers, unless they are those of the meta-archipelago” (p. 254).")},
+                   "oriximina":{"e":"margen","n":N("No se nombra. Las corrientes arrancan en «the mouth of the Amazon» (p. 24) y la fuga de los cimarrones de las Guayanas se adentra en el interior sudamericano, «how deeply no one knows» (pp. 253-254).","Not named. The currents start at “the mouth of the Amazon” (p. 24), and the flight of the Guiana maroons reaches into the South American interior, “how deeply no one knows” (pp. 253-254).")}},
+                  todos(["cartagena","santamarta","palenque","barranquilla","guajira"],"dentro",N("Colombia está entre los países del Caribe donde «the presence of the Indoamerican cannot be avoided» (p. 200); Cartagena, entre los puertos de la flota (p. 7).","Colombia is among the Caribbean countries where “the presence of the Indoamerican cannot be avoided” (p. 200); Cartagena, among the fleet ports (p. 7).")),
+                  todos(["costarica","honduras","bluefields"],"dentro",N("No las nombra una por una: entran por las corrientes que bañan «the north coasts of South and Central America» (p. 24).","He does not name them one by one: they enter through the currents that bathe “the north coasts of South and Central America” (p. 24)."))),
  "extras":{"miami":{"e":"dentro","n":N("Entre las candidatas a «isla que se repite» (p. 3).","Among the candidates for the “repeating island” (p. 3).")},
            "recife":{"e":"dentro","n":N("Entre las candidatas a «isla que se repite» (p. 3).","Among the candidates for the “repeating island” (p. 3).")},
            "brasil":{"e":"margen"},"nuevayork":{"e":"margen","n":N("«perhaps» (p. 25).","“perhaps” (p. 25).")}},
@@ -338,7 +383,7 @@ DEF.append({
    {"guyana":{"e":"dentro","n":N_GLI_CARIFESTA}},
    todos(["suriname","cartagena","santamarta","palenque","barranquilla","guajira","panama"],"dentro",N_GLI_FRANJA),
    {"sanandres":{"e":None,"n":N("No lo nombra: queda al oeste de las islas que van «desde Venezuela hasta Cuba» (1981, p. 217).","He does not name it: it lies west of the islands that run “from Venezuela to Cuba” (1981, p. 217).")}},
-   todos(["belize","bluefields","costarica"],None,
+   todos(["belize","bluefields","costarica","honduras"],None,
          N("Quedan fuera de la franja que traza, que por la costa llega hasta Panamá (1981, p. 217). La «costa caribe de América Latina» aparece en la extensión del sistema de plantaciones (p. 97), sin nombrarlas.","They fall outside the band he draws, which reaches Panama along the coast (1981, p. 217). The “Caribbean coast of Latin America” appears within the spread of the plantation system (p. 97), without naming them.")),
    {"nola":{"e":None,"n":N("El sur de Estados Unidos comparte el sistema de plantaciones (p. 97), y la misma poética ocurre allí «bajo aspectos bien diferentes» (p. 68): lo lee a través de Faulkner, no como Caribe.","The US South shares the plantation system (p. 97), and the same poetics happens there “under very different guises” (p. 68): he reads it through Faulkner, not as Caribbean.")}}),
  "extras":{"stlucia":{"e":"dentro","n":N("El otro extremo del «arco-en-mar» que ve desde Martinica (p. 238).","The other end of the “arc-in-sea” he sees from Martinique (p. 238).")},
@@ -384,9 +429,11 @@ DEF.append({**GAZ_BASE,
  "criterio":N("Las Antillas y las West Indies, con las Guayanas y Belice. Es la definición más usada en la historiografía porque coincide con los usos antiguos y con las identidades de la región.",
               "The Antilles and the West Indies, plus the Guianas and Belize. The most used in historiography because it matches older usage and the region's own identities."),
  "citas":[{"txt":"El Caribe insular tiende a ser sinónimo de las Antillas y de las West Indies, por lo que suele incluir a las Guyanas y a Belize, y puede llegar tan al norte como a las Bahamas y Bermuda.","ref":"GAZ","pag":"11"}],
- "lugares": junta(todos(ISL+GUY+BEL,"dentro"), todos(COL+CA+MEX+US,"fuera"),
+ "lugares": junta(todos(ISL,"dentro"),
+                  todos(GUY+BEL,"dentro",N("«Suele incluír a las Guyanas y a Belize» (p. 11).","It “usually includes the Guianas and Belize” (p. 11).")),
+                  todos(COL+CA+MEX+US,"fuera",N_GAZ_INS_FUERA),
                   {"sanandres":{"e":None,"n":N("Isla del mar Caribe que no es antillana: Gaztambide no la menciona.","A Caribbean Sea island that is not Antillean: Gaztambide does not mention it.")}}),
- "extras":{"bahamas":{"e":"dentro"},"bermudas":{"e":"dentro"}},
+ "extras":{"bahamas":{"e":"margen","n":N_GAZ_INS_NORTE},"bermudas":{"e":"margen","n":N_GAZ_INS_NORTE}},
  "corpus":["gaztambideinvencion","knight_genesisnacionalismo","hillmandagostinocaribbean"],
  "corpus_nota":N("Gaztambide pone a Knight y a Hillman y D'Agostino como muestras de la persistencia de esta definición (p. 13, n. 40).",
                  "Gaztambide cites Knight and Hillman & D'Agostino as evidence that this definition persists (p. 13, n. 40)."),
@@ -398,7 +445,10 @@ DEF.append({**GAZ_BASE,
  "criterio":N("El Caribe insular más Centroamérica y Panamá: el mapa de las intervenciones militares de Estados Unidos. Es la única tendencia nacida por completo en Estados Unidos.",
               "The insular Caribbean plus Central America and Panama: the map of US military interventions. The only tendency born entirely in the United States."),
  "citas":[{"txt":"El Caribe geopolítico se refiere al Caribe insular, Centroamérica y Panamá, sobre todo después de 1945","ref":"GAZ","pag":"13"}],
- "lugares": junta(todos(ISL+GUY+BEL+CA,"dentro"), todos(COL+MEX+US,"fuera")),
+ "lugares": junta(todos(["cuba","haiti","dominicana","puertorico","stjohn"],"dentro"),
+                  todos([k for k in ISL if k not in ("cuba","haiti","dominicana","puertorico","stjohn")]+GUY+BEL,"dentro",N_GAZ_GEO_COLONIA),
+                  todos(CA,"dentro"),
+                  todos(COL+MEX+US,"fuera",N_GAZ_GEO_FUERA)),
  "extras":{"elsalvador":{"e":"dentro","n":N("«al cual no toca una gota de agua del Caribe» (p. 13).","“not touched by a drop of Caribbean water” (p. 13).")}},
  "corpus":["gaztambideinvencion"],
 })
@@ -410,9 +460,9 @@ DEF.append({**GAZ_BASE,
               "Adds Venezuela and parts of Colombia and Mexico. Pushed by the United States in the 1980s, but also by regional elites and the Association of Caribbean States."),
  "citas":[{"txt":"A los Caribes anteriores, éste añade a Venezuela y por lo menos a partes de Colombia y de México.","ref":"GAZ","pag":"15"},
           {"txt":"por lo menos partes importantes de Colombia y Venezuela han sido siempre parte del Caribe.","ref":"GAZ","pag":"16"}],
- "lugares": junta(todos(ISL+GUY+BEL+CA+COL,"dentro"), {"veracruz":{"e":"dentro"}},
+ "lugares": junta(todos(ISL+GUY+BEL+CA+COL,"dentro"), {"veracruz":{"e":"margen","n":N_GAZ_GC_MEX}},
                   {"costachica":{"e":None,"n":N("«Partes de México»: el texto no dice cuáles, y la Costa Chica mira al Pacífico.","“Parts of Mexico”: the text does not say which, and the Costa Chica faces the Pacific.")}}),
- "extras":{"venezuela":{"e":"dentro"},"yucatan":{"e":"dentro"},"florida":{"e":"margen","n":N("Florida «comenzó a reclamar un cierto parentesco con la Cuenca» (p. 16).","Florida “began to claim a certain kinship with the Basin” (p. 16).")}},
+ "extras":{"venezuela":{"e":"dentro"},"yucatan":{"e":"dentro","n":N("Por el Caribe mexicano de Quintana Roo, el único que documenta (p. 16, n. 54).","Through the Mexican Caribbean of Quintana Roo, the only one it documents (p. 16, n. 54).")},"florida":{"e":"margen","n":N("Florida «comenzó a reclamar un cierto parentesco con la Cuenca» (p. 16).","Florida “began to claim a certain kinship with the Basin” (p. 16).")}},
  "corpus":["gaztambideinvencion","abello"],
 })
 DEF.append({**GAZ_BASE,
@@ -424,8 +474,9 @@ DEF.append({**GAZ_BASE,
  "citas":[{"txt":"El Caribe cultural, por lo tanto, son todas esas partes de la América de las plantaciones que quedan entre el sur de Estados Unidos y el Brasil, pero sin incluirlos: una Afro-América Central.","ref":"GAZ","pag":"20"},
           {"txt":"La cultura caribeña es una respuesta a la sociedad de plantación, no es la cultura de la sociedad de plantación.","ref":"GAZ","pag":"19","nota":N("Jean Casimir, citado por Gaztambide","Jean Casimir, quoted by Gaztambide")}],
  "lugares": junta(todos(ISL+GUY,"dentro"), todos(["cartagena","santamarta","palenque","barranquilla","guajira"],"disputa",N_CULT_COL),
+                  todos(BEL+CA+["sanandres"],"margen",N_GAZ_CULT_CASIMIR),
                   {"nola":{"e":"fuera","n":N("«pero sin incluirlos» (p. 20).","“but without including them” (p. 20).")}}),
- "extras":{"sureeuu":{"e":"fuera"},"brasil":{"e":"fuera"},"nuevayork":{"e":"dentro","n":N("«Puede, sin embargo, incluir las diásporas caribeñas en Estados Unidos y Europa» (p. 20).","“It may, however, include the Caribbean diasporas in the United States and Europe” (p. 20).")}},
+ "extras":{"sureeuu":{"e":"fuera"},"brasil":{"e":"fuera"},"nuevayork":{"e":"margen","n":N("«Puede, sin embargo, incluir las diásporas caribeñas en Estados Unidos y Europa» (p. 20): el verbo es potencial, y así se dibuja.","“It may, however, include the Caribbean diasporas in the United States and Europe” (p. 20): the verb is conditional, and it is drawn that way.")}},
  "corpus":["gaztambideinvencion","mintzarea","beckfordpersistent","benitez","quinterosalsa"],
  "corpus_nota":N("Gaztambide pone en esta tendencia a Mintz, Beckford, Benítez Rojo y el «cimarronaje cultural» de Quintero Rivera (pp. 19-20).",
                  "Gaztambide places Mintz, Beckford, Benítez Rojo and Quintero Rivera's “cultural marronage” in this tendency (pp. 19-20)."),
@@ -485,7 +536,11 @@ DEF.append({
    {"belize":{"e":"margen","n":N("Asentamiento británico en el mapa 4.1 (p. 172).","A British settlement on map 4.1 (p. 172).")},
     "nola":{"e":"margen","n":N("Desde Nueva Orleans el mismo espacio pone en primer plano La Habana y Cap Français (p. 5): es otra vista de la región, no la del libro.","From New Orleans the same space brings Havana and Cap Français to the fore (p. 5): another view of the region, not the book's.")},
     "veracruz":{"e":"margen","n":N("Desde Nueva España, Veracruz es un punto nodal del Gran Caribe (p. 6); desde la Nueva Granada, no.","From New Spain, Veracruz is a nodal point of the Greater Caribbean (p. 6); from New Granada, it is not.")},
-    "trinidad":{"e":None,"n":N("La «Trinidad» del mapa 2.1 es Trinidad de Cuba, no la isla (p. 88).","The “Trinidad” on map 2.1 is Trinidad de Cuba, not the island (p. 88).")}}),
+    "trinidad":{"e":"margen","n":N("Como los de Cuba, Florida y la Norteamérica británica, sus habitantes vivían, igual que los neogranadinos, «en un mundo enmarañado» transimperial (p. 25); su captura británica en 1797 es una de las amenazas que miran las autoridades de la costa (pp. 179 y 200). Ojo: la «Trinidad» del mapa 2.1 es Trinidad de Cuba, no la isla (p. 88).","Like those of Cuba, Florida and British North America, its inhabitants lived, as New Granadans did, “in an entangled world” across empires (p. 25); its British capture in 1797 is one of the threats the coast's authorities watch (pp. 179 and 200). Note: the “Trinidad” on map 2.1 is Trinidad de Cuba, not the island (p. 88).")},
+    "honduras":{"e":"margen","n":N("El «estrecho de costa entre la bahía de Honduras y el norte de Panamá» se vuelve «prácticamente una colonia británica» (p. 195; mapa 4.1, p. 172); a la bahía se reubican en 1786 más de dos mil refugiados de la costa de Mosquitos (p. 196).","The “strip of coast between the Bay of Honduras and northern Panama” becomes “practically a British colony” (p. 195; map 4.1, p. 172); more than two thousand refugees from the Mosquito Coast are resettled in the bay in 1786 (p. 196).")},
+    "costarica":{"e":"margen","n":N("Por las cacerías esclavistas de los tawira-miskitos, que llegaban «hasta el territorio cuna que hoy constituye Costa Rica y Panamá» (p. 149).","Through the Tawira-Miskitu slave raids, which reached “the Kuna territory that today makes up Costa Rica and Panama” (p. 149).")},
+    "stjohn":{"e":None,"n":N("La «isla de Saint John» que nombra Bassi es la actual isla del Príncipe Eduardo, en Canadá (p. 183), no la de las Islas Vírgenes.","The “isle of Saint John” Bassi names is today's Prince Edward Island, in Canada (p. 183), not the Virgin Islands one.")}},
+   todos(["dominica","granada","antigua"],"margen",N("Puertos libres británicos hacia 1805, en el sistema que hizo de Kingston el centro comercial de la costa neogranadina (p. 65, nota).","British free ports by 1805, in the system that made Kingston the commercial centre for the New Granada coast (p. 65, note).")) ),
  "extras":{"stthomas":{"e":"dentro","n":N("Uno de los nodos que nombra, en el Caribe «danés» (pp. 5 y 114).","One of the nodes he names, in the “Danish” Caribbean (pp. 5 and 114).")},
            "filadelfia":{"e":"dentro","n":N("«e incluso Filadelfia» (p. 114): las ciudades costeras de Estados Unidos están entre las conexiones de la costa neogranadina (p. 4).","“and even Philadelphia” (p. 114): US coastal cities are among the New Granada coast's connections (p. 4).")},
            "florida":{"e":"margen","n":N("Otro punto de vista posible sobre el Gran Caribe (p. 5).","Another possible vantage point on the Greater Caribbean (p. 5).")}},
@@ -590,7 +645,9 @@ DEF.append({
    {"txt":"Como muestra de resistencia, la noción de «cuenca», del poder imperial, ha sido invertida por los académicos de la región.","ref":"GIR2000","pag":"3"},
  ],
  "lugares": junta(
-   todos([k for k in TODOS if k!="nola" and k not in BR],"dentro",N_GIR_CUENCA),
+   todos([k for k in TODOS if k!="nola" and k not in BR and k not in ("cuba","bluefields","granada")],"dentro",N_GIR_CUENCA),
+   todos(["cuba","bluefields"],"disputa",N_GIR_CUENCA_EXCL),
+   {"granada":{"e":"dentro","n":N("Entra por la cobertura de la Tabla 1 (p. 4), y además como blanco: el «garrote» de los ochenta se blandió contra «Cuba, Nicaragua y Granada» (Gaztambide, p. 15).","It enters through Table 1's coverage (p. 4), and also as a target: the 1980s “stick” was wielded against “Cuba, Nicaragua and Grenada” (Gaztambide, p. 15).")}},
    todos(BR,None,N("La Tabla 1 declara la cobertura «continente e islas» de la cuenca del Caribe (p. 4); el artículo no dice nada de Brasil, que no es ribereño. El lugar queda sin estado.",
                    "Table 1 declares the coverage \u201cmainland and islands\u201d of the Caribbean basin (p. 4); the article says nothing about Brazil, which is not a riparian country. The place is left without a state.")),
    {"nola":{"e":None,"n":N("El artículo pone a Estados Unidos como quien inventa el nombre y su aplicación a una zona (p. 2), no como territorio que la denominación incluya. El lugar queda sin estado: es la sede de la definición, no su objeto.",
@@ -612,8 +669,8 @@ DEF.append({
  "apellido":N("El Caribe de este atlas","This atlas's Caribbean"),
  "forma":"trama", "lectura":"ejemplar",
  "familia":None,
- "criterio":N("La unidad es el fenómeno que cruza la cuenca, no el área. Un lugar entra cuando lo atraviesa una corriente. Por eso la Costa Chica, que casi todas las definiciones dejan fuera, está aquí.",
-              "The unit is the phenomenon crossing the basin, not the area. A place enters when a current runs through it. That is why the Costa Chica, which nearly every definition leaves out, is here."),
+ "criterio":N("La unidad es el fenómeno que cruza la cuenca, no el área. Un lugar entra cuando lo atraviesa una corriente. Por eso la Costa Chica, que doce definiciones callan y cuatro dejan fuera, está aquí.",
+              "The unit is the phenomenon crossing the basin, not the area. A place enters when a current runs through it. That is why the Costa Chica, which twelve definitions pass over and four leave out, is here."),
  "citas":[{"txt":"aquí la unidad de análisis es el fenómeno que atraviesa la cuenca, no el lugar que lo aloja.","ref":"ATL","pag":"marco conceptual"}],
  "lugares": junta(todos([k for k in TODOS if k!="guajira" and k not in BR],"dentro"),
                   todos(BR,"dentro",N("Nodo propio del atlas: Oriximiná entró con el lote S20 y Palmares con el S21, por obras del corpus sobre los quilombos. Es el atlas, no un texto ajeno, quien los pone dentro.",
@@ -643,8 +700,8 @@ DISPUTAS = [
   "es":"Benítez Rojo concede que «one must agree with Mintz that the plantation seems indispensable» y la vuelve máquina que se repite (p. 38).",
   "en":"Benítez Rojo grants that “one must agree with Mintz that the plantation seems indispensable” and turns it into a repeating machine (p. 38).","ref":"BEN · p. 38"},
  {"a":"trouillot","b":"mintz","tipo":"apropiacion",
-  "es":"Trouillot llama al área de Mintz «one of the most sophisticated conceptualizations of a sociocultural area» y la lee como parecido de familia (p. 178).",
-  "en":"Trouillot calls Mintz's area “one of the most sophisticated conceptualizations of a sociocultural area” and reads it as family resemblance (p. 178).","ref":"TRO · p. 178"},
+  "es":"Trouillot llama al área de Mintz «one of the most sophisticated conceptualizations of a sociocultural area», la lee como parecido de familia y la ve «doubly open»: atada al resto del mundo, «notably to the continental Americas» (p. 178). Es la lectura opuesta a la de Bassi, que objeta que esa misma área deja fuera las costas continentales.",
+  "en":"Trouillot calls Mintz's area “one of the most sophisticated conceptualizations of a sociocultural area”, reads it as family resemblance and sees it as “doubly open”: tied to the rest of the world, “notably to the continental Americas” (p. 178). It is the opposite reading to Bassi's, who objects that the same area leaves out the mainland coasts.","ref":"TRO · p. 178"},
  {"a":"trouillot","b":"smith","tipo":"disonancia",
   "es":"Trouillot registra que los caribeñistas no ven «the insurmountable wall that Smith erects», pero le concede que en el Caribe «one cannot presume “culture”» (p. 164).",
   "en":"Trouillot notes that Caribbeanists fail to see “the insurmountable wall that Smith erects”, yet grants that in the Caribbean “one cannot presume ‘culture’” (p. 164).","ref":"TRO · p. 164"},
@@ -712,7 +769,7 @@ for _d in DEF:
     _br = (_d.get("extras") or {}).get("brasil")
     if not _br or not _br.get("e"): continue
     for _k in ("oriximina","palmaresbr"):
-        if _k in _d["lugares"]: continue
+        if _k in _d["lugares"]: continue   # un estado propio (con página) manda sobre la herencia
         _d["lugares"][_k] = {"e":_br["e"], "n":N_BR_HEREDA}
 
 # ---------------------------------------------------------------- validación

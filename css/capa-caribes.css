@@ -32,6 +32,7 @@
 .qc-extra.qc-t-margen{fill:none; stroke:var(--qc-margen); stroke-dasharray:1.5 2}
 .qc-extra.qc-t-disputa{fill:none; stroke:var(--qc-disputa)}
 .qc-extra.qc-t-fuera{fill:none; stroke:var(--qc-fuera); stroke-opacity:.8}
+.qc-extra.qc-t-nada{fill:none; stroke:var(--gray); stroke-opacity:.55; stroke-dasharray:1 1.6}
 
 .qc-rotulo{font-family:var(--ff-mono); font-size:9.5px; letter-spacing:.5px; pointer-events:none;
   paint-order:stroke; stroke:var(--bg-deep); stroke-width:3px; stroke-linejoin:round}
@@ -40,6 +41,10 @@
 .qc-rotulo-extra.qc-t-margen{fill:var(--qc-margen)}
 .qc-rotulo-extra.qc-t-disputa{fill:var(--qc-disputa)}
 .qc-rotulo-extra.qc-t-fuera{fill:var(--qc-fuera)}
+.qc-rotulo-extra.qc-t-nada{fill:var(--gray); opacity:.55}
+/* lectura referida: misma bruma, atenuada; el borde que dibuja es de segunda mano */
+.qc-bruma-referida{opacity:.55}
+.qc-lsw-referida{opacity:.4}
 .qc-rotulo-trazo{fill:var(--qc-dentro); font-family:var(--ff-display); font-weight:600}
 .qc-rotulo-encallada{fill:var(--qc-encallada); text-transform:uppercase; letter-spacing:1.4px}
 
@@ -214,6 +219,7 @@ body.presenting #qcLeyenda, body.presenting main:has(#panelCaribes:not([hidden])
 .qc-estado-mini{font-family:var(--ff-mono); font-size:8.5px; letter-spacing:.6px; text-transform:uppercase; margin-left:4px}
 .qc-estado-mini.qc-t-dentro{color:var(--qc-dentro)} .qc-estado-mini.qc-t-margen{color:var(--qc-margen)}
 .qc-estado-mini.qc-t-disputa{color:var(--qc-disputa)} .qc-estado-mini.qc-t-fuera{color:var(--qc-fuera)}
+.qc-estado-mini.qc-t-nada{color:var(--gray); opacity:.75}
 
 .qc-sw{flex:0 0 auto; display:inline-block; width:11px; height:11px; border-radius:50%}
 .qc-sw-dentro{background:var(--qc-dentro); box-shadow:0 0 8px color-mix(in srgb, var(--qc-dentro) 80%, transparent)}

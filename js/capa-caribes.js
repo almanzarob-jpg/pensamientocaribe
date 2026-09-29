@@ -59,7 +59,8 @@
       leyenda:'Leyenda', leyendaAria:'Leyenda de la capa ¿Qué Caribe?', leyendaMostrar:'Mostrar la leyenda', leyendaOcultar:'Ocultar la leyenda',
       l_fragmento:'Fragmento', l_trama:'Obras unidas por corrientes', l_fuga:'Se sale del marco', l_extra:'Sin nodo en el atlas',
       l_trazo:'Parecido de familia', l_ruta:'Conexión marinera', l_canon:'Canon anglófono', l_encallada:'La isla encallada',
-      l_extraNota:'rombo con el color de su estado',
+      l_extraNota:'rombo con el color de su estado; hueco y gris si el texto lo nombra sin incluirlo',
+      l_referida:'Lectura referida', l_referidaNota:'el atlas no tiene el ejemplar: la bruma se atenúa porque la extensión se reconstruye de segunda mano',
       lista:'Definiciones, de la más antigua a la más reciente'
     },
     en:{
@@ -95,7 +96,8 @@
       leyenda:'Legend', leyendaAria:'Legend of the Which Caribbean? layer', leyendaMostrar:'Show the legend', leyendaOcultar:'Hide the legend',
       l_fragmento:'Fragment', l_trama:'Works joined by currents', l_fuga:'Overflows the frame', l_extra:'No atlas node',
       l_trazo:'Family resemblance', l_ruta:'Sailors\' connection', l_canon:'Anglophone canon', l_encallada:'The stranded island',
-      l_extraNota:'diamond in the colour of its state',
+      l_extraNota:'diamond in the colour of its state; hollow and grey when the text names it without taking it in',
+      l_referida:'Second-hand reading', l_referidaNota:'the atlas holds no copy: the haze is dimmed because the extent is reconstructed second-hand',
       lista:'Definitions, from the oldest to the most recent'
     }
   };
@@ -157,6 +159,7 @@
     trama:   `<path d="M4,11 L11,4 L20,9 M4,11 L20,9" class="qc-lsw-hilo"/><circle cx="4" cy="11" r="1.8" class="qc-lsw-nodo"/><circle cx="11" cy="4" r="1.8" class="qc-lsw-nodo"/><circle cx="20" cy="9" r="1.8" class="qc-lsw-nodo"/>`,
     fuga:    `<path d="M3,12 Q11,11 21,3" class="qc-lsw-fuga"/><path d="M17.5,3.2 L21,3 L20.2,6.3" class="qc-lsw-fuga-punta"/>`,
     extra:   `<path d="M12,3.6 L16.4,8 L12,12.4 L7.6,8 Z" class="qc-lsw-extra"/>`,
+    referida:`<circle cx="12" cy="8" r="6.2" class="qc-lsw-luz qc-lsw-referida" filter="url(#qcLswBlur)"/>${NODO}`,
     trazo:   `<path d="M3,12 Q12,1 21,12" class="qc-lsw-trazo"/><text x="12" y="9.3" class="qc-lsw-aprox" text-anchor="middle">≈</text>`,
     ruta:    `<path d="M3,12 Q12,1 21,12" class="qc-lsw-ruta"/>`,
     canon:   `<circle cx="12" cy="8" r="6" class="qc-lsw-anillo qc-lsw-canon"/>${NODO}`,
@@ -348,7 +351,7 @@
       if(ex.length || d.mundo){
         forma_=null;
         h+=`<details class="qc-grupo"><summary>${muestra('extra')}<span class="qc-en">${esc(qt('fuera_mapa'))}</span><span class="qc-n">${ex.length}</span></summary><ul>`+
-           ex.map(([k,v])=>`<li>${esc(nombreLugar(k))} <span class="qc-estado-mini qc-t-${v.e}">${esc(qt('e_'+v.e))}</span>${v.n?`<span class="qc-nota">${esc(loc(v.n))}</span>`:''}</li>`).join('')+
+           ex.map(([k,v])=>`<li>${esc(nombreLugar(k))} <span class="qc-estado-mini qc-t-${v.e||'nada'}">${esc(qt('e_'+(v.e||'nada')))}</span>${v.n?`<span class="qc-nota">${esc(loc(v.n))}</span>`:''}</li>`).join('')+
            (d.mundo?`<li><i>${esc(qt('mundo'))}:</i> ${esc(loc(d.mundo))}</li>`:'')+`</ul></details>`;
       }
       if(d.trazos){ const ru=d.forma==='rutas';
@@ -430,6 +433,7 @@
     if(d.canon) it.push({m:'canon', t:qt('l_canon'), n:d.canon.length});
     if(d.encallada) it.push({m:'encallada', t:qt('l_encallada')});
     if(d.forma==='sin_centro') it.push({m:'fuga', t:qt('l_fuga')});
+    if(d.lectura==='referida') it.push({m:'referida', t:qt('l_referida'), d:qt('l_referidaNota')});
     const ex=Object.keys(d.extras||{}).length;
     if(ex) it.push({m:'extra', t:qt('l_extra'), n:ex, d:qt('l_extraNota')});
     return it;
@@ -527,6 +531,8 @@
     const trazosG=mk('g',{class:'qc-trazos'});
     const marcasG=mk('g',{class:'qc-marcas'});
     capaG.append(brumaG, trazosG, marcasG);
+    /* una lectura referida se dibuja con la bruma atenuada: la extensión viene de segunda mano */
+    if(d.lectura==='referida' && !b) brumaG.classList.add('qc-bruma-referida');
     capaTxt=mk('g',{class:'qc-textos', 'aria-hidden':'true'});
 
     svg.classList.add('qc-activa');
@@ -604,8 +610,9 @@
       const e=C.extras[k]; if(!e) return;
       const x=px(e[1]), y=py(e[0]);
       if(v.e==='dentro' && d.forma!=='relaciones' && d.forma!=='fragmentos') brumaG.appendChild(mk('circle',{cx:x, cy:y, r:14, class:'qc-luz', opacity:.26}));
-      marcasG.appendChild(mk('path',{d:`M ${x},${y-4.2} L ${x+4.2},${y} L ${x},${y+4.2} L ${x-4.2},${y} Z`, class:'qc-extra qc-t-'+v.e}));
-      const t=mk('text',{x:x+8, y:y+3.4, class:'qc-rotulo qc-rotulo-extra qc-t-'+v.e}); t.textContent=(v.e==='fuera'?'× ':'')+(LANG==='en'?e[3]:e[2]); capaTxt.appendChild(t);
+      const ev=v.e||'nada';  /* un extra que el texto nombra sin darle estado se dibuja apagado, no negro */
+      marcasG.appendChild(mk('path',{d:`M ${x},${y-4.2} L ${x+4.2},${y} L ${x},${y+4.2} L ${x-4.2},${y} Z`, class:'qc-extra qc-t-'+ev}));
+      const t=mk('text',{x:x+8, y:y+3.4, class:'qc-rotulo qc-rotulo-extra qc-t-'+ev}); t.textContent=(ev==='fuera'?'× ':'')+(LANG==='en'?e[3]:e[2]); capaTxt.appendChild(t);
     });
 
     vp.insertBefore(capaG, egGroup || vp.firstChild);
