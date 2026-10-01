@@ -1,8 +1,8 @@
 {
   "lote": "TP01",
   "nombre": "Temporalidad: separación de publicación y periodo estudiado",
-  "fecha": "2026-09-21",
-  "base": "datos-atlas.json v1.22.0 · 310 entradas",
+  "fecha": "2026-10-01",
+  "base": "datos-atlas.json v1.26.0 · 337 entradas",
   "limite": "Capa aditiva. No modifica el campo heredado y, ni datos-atlas.json, ni el orden actual de la cronología. Un periodo estudiado no se deriva nunca de forma mecánica: exige lectura de la obra.",
   "procedencias": {
     "dictamen": "Aprobado en una capa cerrada (P00, S01, A01 o A02). Estado: confirmado.",
@@ -10,12 +10,12 @@
     "sin_derivar": "El campo y está vacío o guarda una cadena que no es un año. Estado: pendiente."
   },
   "recuento": {
-    "entradas": 310,
+    "entradas": 337,
     "confirmados": 53,
-    "candidaturas": 245,
-    "pendientes": 12,
+    "candidaturas": 269,
+    "pendientes": 15,
     "con_periodo_estudiado": 24,
-    "sin_periodo_estudiado": 286
+    "sin_periodo_estudiado": 313
   },
   "registros": [
     {
@@ -3975,6 +3975,321 @@
       "y_heredado": "2024",
       "publicacion": {
         "valor": 2024,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "taylornarrative",
+      "y_heredado": "1989",
+      "publicacion": {
+        "valor": 1989,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "parsonssanandres",
+      "y_heredado": "1956 / ed. esp. 1985",
+      "publicacion": null,
+      "periodo_estudiado": null,
+      "procedencia": "sin_derivar",
+      "estado": "pendiente",
+      "motivo": "el campo y guarda algo que no es un año"
+    },
+    {
+      "id": "ranocchiariparaiso",
+      "y_heredado": "2020",
+      "publicacion": {
+        "valor": 2020,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "marquezfiwisea",
+      "y_heredado": "2013 / 2.ª ed. 2014",
+      "publicacion": null,
+      "periodo_estudiado": null,
+      "procedencia": "sin_derivar",
+      "estado": "pendiente",
+      "motivo": "el campo y guarda algo que no es un año"
+    },
+    {
+      "id": "romanvidalmemorias",
+      "y_heredado": "2019",
+      "publicacion": {
+        "valor": 2019,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "curielsentencia",
+      "y_heredado": "2021",
+      "publicacion": {
+        "valor": 2021,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "beushausenpractices",
+      "y_heredado": "2018",
+      "publicacion": {
+        "valor": 2018,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "kamugishabeyond",
+      "y_heredado": "2019",
+      "publicacion": {
+        "valor": 2019,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "torressaillanthistory",
+      "y_heredado": "2006",
+      "publicacion": {
+        "valor": 2006,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "retamarcaliban",
+      "y_heredado": "1971",
+      "publicacion": {
+        "valor": 1971,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "dautvastey",
+      "y_heredado": "2017",
+      "publicacion": {
+        "valor": 2017,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "shellerdemocracy",
+      "y_heredado": "2000",
+      "publicacion": {
+        "valor": 2000,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "coopersoundclash",
+      "y_heredado": "2004",
+      "publicacion": {
+        "valor": 2004,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "warnerlewiscentralafrica",
+      "y_heredado": "2003",
+      "publicacion": {
+        "valor": 2003,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "ellerwedream",
+      "y_heredado": "2016",
+      "publicacion": {
+        "valor": 2016,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "gregorydevil",
+      "y_heredado": "2007",
+      "publicacion": {
+        "valor": 2007,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "kloostercuracao",
+      "y_heredado": "2011",
+      "publicacion": {
+        "valor": 2011,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "loperenaparadise",
+      "y_heredado": "2022",
+      "publicacion": {
+        "valor": 2022,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "pierrecharlesutopia",
+      "y_heredado": "1999",
+      "publicacion": {
+        "valor": 1999,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "zapataclaves",
+      "y_heredado": "1989",
+      "publicacion": {
+        "valor": 1989,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "herreraordenar",
+      "y_heredado": "2002",
+      "publicacion": {
+        "valor": 2002,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "romeromanumision",
+      "y_heredado": "2018",
+      "publicacion": {
+        "valor": 2018,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "eliascaromigraciones",
+      "y_heredado": "2021",
+      "publicacion": {
+        "valor": 2021,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "falsbordahistoriadoble",
+      "y_heredado": "1979-1986",
+      "publicacion": null,
+      "periodo_estudiado": null,
+      "procedencia": "sin_derivar",
+      "estado": "pendiente",
+      "motivo": "el campo y guarda algo que no es un año"
+    },
+    {
+      "id": "tatelawracisms",
+      "y_heredado": "2015",
+      "publicacion": {
+        "valor": 2015,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "curetislands",
+      "y_heredado": "2011",
+      "publicacion": {
+        "valor": 2011,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "fordepassages",
+      "y_heredado": "2018",
+      "publicacion": {
+        "valor": 2018,
         "era": "EC",
         "precision": "exacta"
       },
