@@ -11245,17 +11245,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c8"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S22-2026-09-22: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S22-2026-09-22: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E03.md"
       ],
       "lote_incorporacion": "S22-2026-09-22",
       "anclaje_cartografico": {
@@ -11308,12 +11311,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "memorias_espiritualidades_archivos_vivos",
           "creolizaciones_traducciones_opacidades"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "nota": "Expediente E03 (1-oct-2026), aprobado por la dirección académica."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -11325,10 +11329,12 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c5",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
@@ -11336,7 +11342,8 @@
       ],
       "lote_incorporacion": "S23-2026-09-23",
       "fuente_recorrido": [
-        "Lote S23-2026-09-23: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S23-2026-09-23: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E03.md"
       ],
       "anclaje_cartografico": {
         "funcion": "anclaje visual, no delimitación del territorio estudiado",
@@ -11386,12 +11393,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "rutas_diasporas_territorios_acuosos",
           "soberanias_fronteras_ocupaciones"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "rutas_diasporas_territorios_acuosos",
+        "nota": "Expediente E03 (1-oct-2026), aprobado por la dirección académica."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -11403,10 +11411,12 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c9"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
@@ -11414,7 +11424,8 @@
       ],
       "lote_incorporacion": "S23-2026-09-23",
       "fuente_recorrido": [
-        "Lote S23-2026-09-23: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S23-2026-09-23: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E03.md"
       ],
       "anclaje_cartografico": {
         "funcion": "anclaje visual, no delimitación del territorio estudiado",
@@ -11455,12 +11466,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "creolizaciones_traducciones_opacidades",
           "memorias_espiritualidades_archivos_vivos"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "creolizaciones_traducciones_opacidades",
+        "nota": "Expediente E03 (1-oct-2026), aprobado por la dirección académica."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -11472,10 +11484,12 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c5"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
@@ -11483,7 +11497,8 @@
       ],
       "lote_incorporacion": "S23-2026-09-23",
       "fuente_recorrido": [
-        "Lote S23-2026-09-23: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S23-2026-09-23: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E03.md"
       ],
       "anclaje_cartografico": {
         "funcion": "anclaje visual, no delimitación del territorio estudiado",
@@ -11531,12 +11546,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "memorias_espiritualidades_archivos_vivos",
           "rutas_diasporas_territorios_acuosos"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "nota": "Expediente E03 (1-oct-2026), aprobado por la dirección académica."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -11548,10 +11564,12 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c9"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
@@ -11559,7 +11577,8 @@
       ],
       "lote_incorporacion": "S23-2026-09-23",
       "fuente_recorrido": [
-        "Lote S23-2026-09-23: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S23-2026-09-23: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E03.md"
       ],
       "anclaje_cartografico": {
         "funcion": "anclaje visual, no delimitación del territorio estudiado",
@@ -11600,12 +11619,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "soberanias_fronteras_ocupaciones",
           "memorias_espiritualidades_archivos_vivos"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E03 (1-oct-2026), aprobado por la dirección académica."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -14730,17 +14750,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S26-2026-10-01: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S26-2026-10-01: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E03.md"
       ],
       "lote_incorporacion": "S26-2026-10-01",
       "anclaje_cartografico": {
@@ -14792,12 +14815,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "creolizaciones_traducciones_opacidades",
           "soberanias_fronteras_ocupaciones"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "creolizaciones_traducciones_opacidades",
+        "nota": "Expediente E03 (1-oct-2026), aprobado por la dirección académica."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -14809,17 +14833,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c4"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S26-2026-10-01: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S26-2026-10-01: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E03.md"
       ],
       "lote_incorporacion": "S26-2026-10-01",
       "anclaje_cartografico": {
@@ -14859,34 +14886,39 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
-          "creolizaciones_traducciones_opacidades",
-          "soberanias_fronteras_ocupaciones"
+          "soberanias_fronteras_ocupaciones",
+          "postplantacion_trabajo_desposesion"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E03 (1-oct-2026), aprobado por la dirección académica. La propuesta daba C8 «por la traducción al español de una tradición escrita en otras lenguas», un fundamento copiado de la antología caribeña que aquí no vale: el pensamiento dominicano se escribió en español. El hilo del volumen, según su propia presentación, es la historia leída como dominación imperial (Mir, Bosch, Franco, Jimenes Grullón) y la economía del azúcar: C7 y C4."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión del índice, la presentación y las referencias. Reproduce a Bosch (De Cristóbal Colón a Fidel Castro) y cita por título a Williams, Moreno Fraginals, Ortiz y Arciniegas.",
         "responsable": "Preparación asistida del lote S26; clasificación pendiente de adjudicación académica",
         "fecha": "2026-10-01",
-        "fundamento": "C8 por la traducción al español de una tradición escrita en otras lenguas; C7 por el pensamiento anticolonial y la soberanía. Registro: antología institucional catalogada como volumen, según la decisión del 1 de octubre de 2026; la selección misma es un acto de canon regional."
+        "fundamento": "C7 por la historia dominicana leída como dominación imperial (Mir, Bosch, Franco, Jimenes Grullón); C4 por la economía del azúcar y sus secuelas. Registro: antología institucional catalogada como volumen, según la decisión del 1 de octubre de 2026.",
+        "fundamento_previo": "C8 por la traducción al español de una tradición escrita en otras lenguas; C7 por el pensamiento anticolonial y la soberanía. Registro: antología institucional catalogada como volumen, según la decisión del 1 de octubre de 2026; la selección misma es un acto de canon regional."
       }
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S26-2026-10-01: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S26-2026-10-01: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E03.md"
       ],
       "lote_incorporacion": "S26-2026-10-01",
       "anclaje_cartografico": {
@@ -14922,12 +14954,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "creolizaciones_traducciones_opacidades",
           "soberanias_fronteras_ocupaciones"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "creolizaciones_traducciones_opacidades",
+        "nota": "Expediente E03 (1-oct-2026), aprobado por la dirección académica."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -14939,17 +14972,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c8"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S26-2026-10-01: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S26-2026-10-01: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E03.md"
       ],
       "lote_incorporacion": "S26-2026-10-01",
       "anclaje_cartografico": {
@@ -14985,34 +15021,39 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
-          "creolizaciones_traducciones_opacidades",
-          "soberanias_fronteras_ocupaciones"
+          "soberanias_fronteras_ocupaciones",
+          "creolizaciones_traducciones_opacidades"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E03 (1-oct-2026), aprobado por la dirección académica. Mismo error de fundamento: el pensamiento puertorriqueño reunido está escrito en español. El eje del volumen es la colonia que no termina, que es C7. C8 queda como secundaria, pero por la raza, la música y la cultura mestiza (González, Quintero Rivera), no por traducción."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión del índice, la presentación y las referencias por capítulo. Cita por título a Césaire, Fanon, Quintero Rivera, Mintz (dos títulos y Worker in the Cane), Díaz-Quiñones, Grosfoguel y Retamar.",
         "responsable": "Preparación asistida del lote S26; clasificación pendiente de adjudicación académica",
         "fecha": "2026-10-01",
-        "fundamento": "C8 por la traducción al español de una tradición escrita en otras lenguas; C7 por el pensamiento anticolonial y la soberanía. Registro: antología institucional catalogada como volumen, según la decisión del 1 de octubre de 2026; la selección misma es un acto de canon regional."
+        "fundamento": "C7 por la colonia que no termina como eje del volumen; C8 por la raza, la música y la cultura mestiza (González, Quintero Rivera). Registro: antología institucional catalogada como volumen, según la decisión del 1 de octubre de 2026.",
+        "fundamento_previo": "C8 por la traducción al español de una tradición escrita en otras lenguas; C7 por el pensamiento anticolonial y la soberanía. Registro: antología institucional catalogada como volumen, según la decisión del 1 de octubre de 2026; la selección misma es un acto de canon regional."
       }
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c9"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S26-2026-10-01: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S26-2026-10-01: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E03.md"
       ],
       "lote_incorporacion": "S26-2026-10-01",
       "anclaje_cartografico": {
@@ -15047,12 +15088,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "creolizaciones_traducciones_opacidades",
           "memorias_espiritualidades_archivos_vivos"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "creolizaciones_traducciones_opacidades",
+        "nota": "Expediente E03 (1-oct-2026), aprobado por la dirección académica."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -15064,17 +15106,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S26-2026-10-01: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S26-2026-10-01: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E03.md"
       ],
       "lote_incorporacion": "S26-2026-10-01",
       "anclaje_cartografico": {
@@ -15109,12 +15154,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "creolizaciones_traducciones_opacidades",
           "soberanias_fronteras_ocupaciones"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "creolizaciones_traducciones_opacidades",
+        "nota": "Expediente E03 (1-oct-2026), aprobado por la dirección académica."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -15126,17 +15172,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c8"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S26-2026-10-01: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S26-2026-10-01: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E03.md"
       ],
       "lote_incorporacion": "S26-2026-10-01",
       "anclaje_cartografico": {
@@ -15181,12 +15230,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "memorias_espiritualidades_archivos_vivos",
           "creolizaciones_traducciones_opacidades"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "nota": "Expediente E03 (1-oct-2026), aprobado por la dirección académica."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -15198,17 +15248,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c5"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S26-2026-10-01: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S26-2026-10-01: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E03.md"
       ],
       "lote_incorporacion": "S26-2026-10-01",
       "anclaje_cartografico": {
@@ -15256,12 +15309,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "creolizaciones_traducciones_opacidades",
           "rutas_diasporas_territorios_acuosos"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "creolizaciones_traducciones_opacidades",
+        "nota": "Expediente E03 (1-oct-2026), aprobado por la dirección académica."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -15273,17 +15327,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c5"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S26-2026-10-01: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S26-2026-10-01: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E03.md"
       ],
       "lote_incorporacion": "S26-2026-10-01",
       "anclaje_cartografico": {
@@ -15323,12 +15380,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "soberanias_fronteras_ocupaciones",
           "rutas_diasporas_territorios_acuosos"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E03 (1-oct-2026), aprobado por la dirección académica."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -15340,17 +15398,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c9"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S26-2026-10-01: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S26-2026-10-01: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E03.md"
       ],
       "lote_incorporacion": "S26-2026-10-01",
       "anclaje_cartografico": {
@@ -15394,12 +15455,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "soberanias_fronteras_ocupaciones",
           "memorias_espiritualidades_archivos_vivos"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E03 (1-oct-2026), aprobado por la dirección académica."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -15411,17 +15473,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c3",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S26-2026-10-01: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S26-2026-10-01: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E03.md"
       ],
       "lote_incorporacion": "S26-2026-10-01",
       "anclaje_cartografico": {
@@ -15466,12 +15531,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "fugas_cimarronajes_emancipaciones",
           "soberanias_fronteras_ocupaciones"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "fugas_cimarronajes_emancipaciones",
+        "nota": "Expediente E03 (1-oct-2026), aprobado por la dirección académica."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -15483,17 +15549,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c10",
+      "recorridos_sec": [
+        "c5"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S26-2026-10-01: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S26-2026-10-01: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E03.md"
       ],
       "lote_incorporacion": "S26-2026-10-01",
       "anclaje_cartografico": {
@@ -15534,12 +15603,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "cuerpos_parentescos_eroticas",
           "rutas_diasporas_territorios_acuosos"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "cuerpos_parentescos_eroticas",
+        "nota": "Expediente E03 (1-oct-2026), aprobado por la dirección académica."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -15551,17 +15621,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c4",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S26-2026-10-01: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S26-2026-10-01: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E03.md"
       ],
       "lote_incorporacion": "S26-2026-10-01",
       "anclaje_cartografico": {
@@ -15605,12 +15678,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "postplantacion_trabajo_desposesion",
           "soberanias_fronteras_ocupaciones"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "postplantacion_trabajo_desposesion",
+        "nota": "Expediente E03 (1-oct-2026), aprobado por la dirección académica."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -15622,17 +15696,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c4",
+      "recorridos_sec": [
+        "c9"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S26-2026-10-01: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S26-2026-10-01: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E03.md"
       ],
       "lote_incorporacion": "S26-2026-10-01",
       "anclaje_cartografico": {
@@ -15673,34 +15750,39 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
-          "memorias_espiritualidades_archivos_vivos",
-          "postplantacion_trabajo_desposesion"
+          "postplantacion_trabajo_desposesion",
+          "memorias_espiritualidades_archivos_vivos"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "postplantacion_trabajo_desposesion",
+        "nota": "Expediente E03 (1-oct-2026), aprobado por la dirección académica. La propuesta confundía registro con tema. Que sea un testimonio es el registro, ya declarado en la excepción de testimonios y fuentes; lo que el libro cuenta es la lucha por la tierra contra la hacienda ganadera: tomas, reforma agraria, represión. Principal y secundaria se invierten."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Lectura del prólogo, la introducción y los capítulos sobre las tomas de tierras. No cita por título ninguna obra del corpus; sus dos relaciones son comparaciones declaradas.",
         "responsable": "Preparación asistida del lote S26; clasificación pendiente de adjudicación académica",
         "fecha": "2026-10-01",
-        "fundamento": "C9 por el testimonio de la lucha campesina; C4 por la tierra y la hacienda. Registro: testimonio, admitido el 1-oct-2026."
+        "fundamento": "C4 por la lucha por la tierra contra la hacienda ganadera; C9 por el testimonio como archivo de esa lucha. Registro: testimonio, admitido el 1-oct-2026.",
+        "fundamento_previo": "C9 por el testimonio de la lucha campesina; C4 por la tierra y la hacienda. Registro: testimonio, admitido el 1-oct-2026."
       }
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c5",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S26-2026-10-01: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S26-2026-10-01: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E03.md"
       ],
       "lote_incorporacion": "S26-2026-10-01",
       "anclaje_cartografico": {
@@ -15744,34 +15826,39 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
-          "soberanias_fronteras_ocupaciones",
-          "rutas_diasporas_territorios_acuosos"
+          "rutas_diasporas_territorios_acuosos",
+          "soberanias_fronteras_ocupaciones"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "rutas_diasporas_territorios_acuosos",
+        "nota": "Expediente E03 (1-oct-2026), aprobado por la dirección académica. La tesis del libro es el Caribe como «Mediterráneo de América»: un mar con historia propia. Esa es la definición que la capa «¿Qué Caribe?» le atribuye y la razón por la que entró. Las fronteras imperiales son el contenido; el mar es el argumento. Principal y secundaria se invierten."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Lectura del prólogo y de los capítulos sobre el mar y las flotas. Ensayo sin aparato de notas: no cita obras del corpus por título.",
         "responsable": "Preparación asistida del lote S26; clasificación pendiente de adjudicación académica",
         "fecha": "2026-10-01",
-        "fundamento": "C7 por el Caribe como frontera imperial; C5 por el mar como espacio histórico. Registro: ensayo de divulgación, admitido por su lugar en la historia de la idea de Caribe (decisión del 1-oct-2026)."
+        "fundamento": "C5 por el Caribe como «Mediterráneo de América», un mar con historia propia; C7 por las fronteras imperiales que el libro recorre. Registro: ensayo de divulgación, admitido por su lugar en la historia de la idea de Caribe (decisión del 1-oct-2026).",
+        "fundamento_previo": "C7 por el Caribe como frontera imperial; C5 por el mar como espacio histórico. Registro: ensayo de divulgación, admitido por su lugar en la historia de la idea de Caribe (decisión del 1-oct-2026)."
       }
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c6",
+      "recorridos_sec": [
+        "c4"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S26-2026-10-01: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S26-2026-10-01: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E03.md"
       ],
       "lote_incorporacion": "S26-2026-10-01",
       "anclaje_cartografico": {
@@ -15812,12 +15899,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "huracanes_ecologias_materialidades_vivas",
           "postplantacion_trabajo_desposesion"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "huracanes_ecologias_materialidades_vivas",
+        "nota": "Expediente E03 (1-oct-2026), aprobado por la dirección académica."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
