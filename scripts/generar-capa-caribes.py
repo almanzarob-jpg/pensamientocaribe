@@ -82,11 +82,11 @@ FUENTES = {
  "BAS": {"ref":"Bassi, E. (2021 [2016]). Un territorio acuoso: geografías marineras y el Gran Caribe transimperial de la Nueva Granada (trad. M. J. Montoya). Editorial Universidad del Norte / Banco de la República. Orig. An Aqueous Territory: Sailor Geographies and New Granada's Transimperial Greater Caribbean World, Duke University Press.",
          "corto":"Bassi 2021 [2016]", "ejemplar":True, "corpus":"bassiacuoso"},
  "ARC": {"ref":"Arciniegas, G. (1975 [1945]). Biografía del Caribe. Círculo de Lectores, Barcelona, con licencia de Editorial Sudamericana (ed. 1966). Orig. Editorial Sudamericana, Buenos Aires, 1945. Se cita por la paginación de la edición digital del ejemplar.",
-         "corto":"Arciniegas 1945", "ejemplar":True, "corpus":None},
+         "corto":"Arciniegas 1945", "ejemplar":True, "corpus":"arciniegasbiografia"},
  "GLR": {"ref":"Glissant, É. (2017 [1990]). Poética de la Relación (trad. S. I. Sferco y A. P. Penchaszadeh; pról. M. Rebón). Universidad Nacional de Quilmes. Orig. Poétique de la Relation, Gallimard, 1990.",
          "corto":"Glissant 1990", "ejemplar":True, "corpus":"glissant"},
  "GLD": {"ref":"Glissant, É. (2010 [1981]). El discurso antillano (trad. A. M. Boadas y L. Arencibia Rodríguez). Fondo Editorial Casa de las Américas. Orig. Le Discours antillais, Seuil, 1981.",
-         "corto":"Glissant 1981", "ejemplar":True, "corpus":"glissant"},
+         "corto":"Glissant 1981", "ejemplar":True, "corpus":"glissantdiscours"},
  "ATL": {"ref":"Grupo de Investigación Pensamiento Caribe (2026). Con el agua de por medio. Atlas para una antropología archipiélica. Marco conceptual.",
          "corto":"Este atlas", "ejemplar":True, "corpus":None},
 }

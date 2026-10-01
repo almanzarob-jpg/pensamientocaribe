@@ -529,6 +529,15 @@ function validateRelations(data, workIds) {
     linked.add(relation.b);
 
     if (!RELACION_TIPOS.has(relation.tipo)) report.error("RELACION_TIPO", `${where}: tipo inválido ${relation.tipo}.`);
+    // Decisión del 1-oct-2026: toda disonancia declara sobre qué es el desacuerdo.
+    if (relation.tipo === "disonancia") {
+      const od = relation.objeto_disonancia;
+      if (!isObject(od) || !isNonEmptyString(od.texto) || !["establecido", "por_establecer"].includes(od.estado)) {
+        report.error("OBJETO_DISONANCIA", `${where}: la disonancia no declara su objeto (texto y estado establecido|por_establecer).`);
+      }
+    } else if (relation.objeto_disonancia !== undefined) {
+      report.error("OBJETO_DISONANCIA", `${where}: objeto_disonancia solo corresponde a una disonancia.`);
+    }
     else byType[relation.tipo] += 1;
     if (!isNonEmptyString(relation.fuente)) report.error("RELACION_FUENTE", `${where}: fuente vacía.`);
 

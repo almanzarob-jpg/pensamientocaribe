@@ -96,7 +96,7 @@ window.CARIBES = {
    "ref": "Arciniegas, G. (1975 [1945]). Biografía del Caribe. Círculo de Lectores, Barcelona, con licencia de Editorial Sudamericana (ed. 1966). Orig. Editorial Sudamericana, Buenos Aires, 1945. Se cita por la paginación de la edición digital del ejemplar.",
    "corto": "Arciniegas 1945",
    "ejemplar": true,
-   "corpus": null
+   "corpus": "arciniegasbiografia"
   },
   "GLR": {
    "ref": "Glissant, É. (2017 [1990]). Poética de la Relación (trad. S. I. Sferco y A. P. Penchaszadeh; pról. M. Rebón). Universidad Nacional de Quilmes. Orig. Poétique de la Relation, Gallimard, 1990.",
@@ -108,7 +108,7 @@ window.CARIBES = {
    "ref": "Glissant, É. (2010 [1981]). El discurso antillano (trad. A. M. Boadas y L. Arencibia Rodríguez). Fondo Editorial Casa de las Américas. Orig. Le Discours antillais, Seuil, 1981.",
    "corto": "Glissant 1981",
    "ejemplar": true,
-   "corpus": "glissant"
+   "corpus": "glissantdiscours"
   },
   "ATL": {
    "ref": "Grupo de Investigación Pensamiento Caribe (2026). Con el agua de por medio. Atlas para una antropología archipiélica. Marco conceptual.",
