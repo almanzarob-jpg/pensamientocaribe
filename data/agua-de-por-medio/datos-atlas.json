@@ -16402,7 +16402,11 @@
       "objeto_disonancia": {
         "texto": "Cuándo termina la trata: con la abolición formal o mucho después, en la participación británica que siguió tras 1807.",
         "estado": "por_establecer",
-        "fecha": "2026-10-01"
+        "fecha": "2026-10-01",
+        "revision_texto": {
+          "nota": "Revisado el texto de Sherwood: no menciona a Mintz. El desacuerdo es una lectura que propone el atlas.",
+          "fecha": "2026-10-01"
+        }
       }
     },
     {
@@ -16565,7 +16569,11 @@
       "objeto_disonancia": {
         "texto": "La autoridad sobre el mismo terreno etnográfico —el vodou haitiano y jamaicano— en los años treinta.",
         "estado": "por_establecer",
-        "fecha": "2026-10-01"
+        "fecha": "2026-10-01",
+        "revision_texto": {
+          "nota": "Revisados los dos textos. Island Possessed no nombra a Hurston, y Tell My Horse no nombra a Dunham. La rivalidad por el terreno haitiano es un dato biográfico que estos dos libros no documentan.",
+          "fecha": "2026-10-01"
+        }
       }
     },
     {
@@ -16807,7 +16815,11 @@
       "objeto_disonancia": {
         "texto": "Quién define la herencia africana de Haití: la etnología haitiana de Price-Mars o el marco de las supervivencias de los Herskovits.",
         "estado": "por_establecer",
-        "fecha": "2026-10-01"
+        "fecha": "2026-10-01",
+        "revision_texto": {
+          "nota": "Revisados los dos textos. Rebel Destiny (1934) trata de los saramaka de Surinam y no menciona a Price-Mars; Haití aparece solo de paso. La edición consultada de Ainsi parla l'oncle registra un artículo de Price-Mars titulado «Le Professeur Melville J. Herskovits et son œuvre», que sugiere aprecio y no choque. La disonancia parece mal anclada: el libro haitiano de los Herskovits es Life in a Haitian Valley (1937), que no está en el corpus.",
+          "fecha": "2026-10-01"
+        }
       }
     },
     {
@@ -17142,7 +17154,11 @@
       "objeto_disonancia": {
         "texto": "Cómo se estudia la racialización hispanocaribeña: desde el discurso nacional dominicano o desde la apariencia y la interacción en Cartagena.",
         "estado": "por_establecer",
-        "fecha": "2026-10-01"
+        "fecha": "2026-10-01",
+        "revision_texto": {
+          "nota": "Revisado el texto de Cunin (2003): no menciona a Simmons ni su libro. Falta el texto de Simmons, que es anterior.",
+          "fecha": "2026-10-01"
+        }
       }
     },
     {
@@ -17372,7 +17388,11 @@
       "objeto_disonancia": {
         "texto": "Si la ciudadanía sexuada puede pensarse desde marcos liberales (Hirschmann y Thomas) o exige la crítica del régimen heterosexual de la nación (Curiel).",
         "estado": "por_establecer",
-        "fecha": "2026-10-01"
+        "fecha": "2026-10-01",
+        "revision_texto": {
+          "nota": "Revisado Citizenship on the Edge: no menciona a Curiel. Falta el texto de Curiel; por las fechas, la discusión solo podría estar del lado del volumen de 2019, que no la tiene.",
+          "fecha": "2026-10-01"
+        }
       }
     },
     {
@@ -17537,7 +17557,11 @@
       "objeto_disonancia": {
         "texto": "Si la cuadrícula colonial determina el orden caribeño o es excedida por una formación haitiana endógena.",
         "estado": "por_establecer",
-        "fecha": "2026-10-01"
+        "fecha": "2026-10-01",
+        "revision_texto": {
+          "nota": "Revisado el texto de Deere (2025), que es posterior a The Haitians (2020): no menciona a Casimir. El desacuerdo es una lectura que propone el atlas.",
+          "fecha": "2026-10-01"
+        }
       }
     },
     {
@@ -18434,7 +18458,11 @@
       "objeto_disonancia": {
         "texto": "Por establecer: la ficha no declara todavía sobre qué discrepan; la relación espera lectura de los dos libros.",
         "estado": "por_establecer",
-        "fecha": "2026-10-01"
+        "fecha": "2026-10-01",
+        "revision_texto": {
+          "nota": "Revisado el texto de Trouillot (1990): no menciona a Casimir. Falta The Haitians (2020), que es la obra que podría discutir a Trouillot.",
+          "fecha": "2026-10-01"
+        }
       }
     },
     {
@@ -19012,7 +19040,11 @@
       "objeto_disonancia": {
         "texto": "Dónde empieza el Caribe: en la plantación o en tres siglos de política indígena caribe anteriores.",
         "estado": "por_establecer",
-        "fecha": "2026-10-01"
+        "fecha": "2026-10-01",
+        "revision_texto": {
+          "nota": "Revisado el texto de Whitehead: no menciona a Mintz. El desacuerdo es una lectura que propone el atlas; no lo formula ninguno de los dos autores.",
+          "fecha": "2026-10-01"
+        }
       }
     },
     {
