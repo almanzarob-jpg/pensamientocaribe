@@ -3,9 +3,9 @@
     "titulo": "Con el agua de por medio",
     "subtitulo": "Atlas para una antropología archipiélica",
     "responsable": "Grupo de Investigación Pensamiento Caribe",
-    "version": "1.28.0",
+    "version": "1.29.0",
     "fecha": "2026-10-01",
-    "nota_version": "Lote S26: la ficha compuesta de Glissant se divide en Poétique de la Relation y Le Discours antillais, la de Mintz en Caribbean Transformations y Sweetness and Power, y la de Monahan en sus dos libros; Brathwaite, Ortiz y Benítez Rojo recuperan su título exacto. Entran dieciséis obras: las cuatro antologías de CLACSO, crítica literaria sobre Harris, Chamoiseau y Glissant, el panafricanismo caribeño de Padmore, C. L. R. James y Amy Jacques Garvey, Meisel Roca, las memorias de un dirigente de la ANUC, la Biografía del Caribe de Arciniegas y un artículo sobre la palma en el Magdalena.",
+    "nota_version": "Versión de revisión, sin obras nuevas. Se confirma la corriente de las 116 obras que tenían propuesta pendiente (expedientes E01 a E05). Se revisan contra el texto completo las 116 relaciones heredadas con fuente vaga: 34 quedan documentadas con cita y localizador, 47 pasan a comparación declarada por búsqueda negativa y 35 esperan texto. Se revisan las disonancias por establecer: Glissant frente a la créolité queda establecida con cita; dos se retiran (Herskovits y Price-Mars, anclada en el libro equivocado; Araujo y Casimir, que el texto de Casimir contradice); dos pasan a resonancia (Dunham y Hurston; Trouillot y Casimir); seis se declaran como desacuerdos que propone el atlas.",
     "registro_interno": {
       "proposito": "Protocolo revisado de resonancia y disonancia (22-09-2026). Las categorías públicas del atlas siguen siendo resonancia y disonancia; este registro es interno y orienta la revisión editorial. El campo apoyo no crea categorías públicas ni cambia la interfaz.",
       "apoyo": {
@@ -14,7 +14,23 @@
         "hipotesis": "Hipótesis exploratoria: la ficha declara el vínculo pendiente de corroborar."
       },
       "campos_pendientes": "Faltan por poblar, ficha a ficha: aspecto (el punto concreto que resuena o disuena), limite (qué no permiten concluir todavía las fuentes) y revision (responsable y fecha). El validador los cuenta pero no los exige, para que el registro se llene con la revisión y no bloquee la publicación."
-    }
+    },
+    "relaciones_retiradas": [
+      {
+        "a": "araujo",
+        "b": "casimir",
+        "tipo": "disonancia",
+        "fecha": "2026-10-01",
+        "motivo": "Revisado The Haitians (2020): no cita a Araujo, y además suscribe la exigencia de reparación por la esclavitud con Sala-Molins (cap. 2). La oposición entre reparación y contra-plantación que planteaba la ficha no se sostiene en el texto de Casimir."
+      },
+      {
+        "a": "rebeldestiny",
+        "b": "pricemars",
+        "tipo": "disonancia",
+        "fecha": "2026-10-01",
+        "motivo": "Revisados los dos textos. Rebel Destiny (1934) trata de los saramaka de Surinam y no menciona a Price-Mars; Haití aparece solo de paso. La edición consultada de Ainsi parla l'oncle registra un artículo de Price-Mars titulado «Le Professeur Melville J. Herskovits et son œuvre», que sugiere aprecio y no choque. La disonancia parece mal anclada: el libro haitiano de los Herskovits es Life in a Haitian Valley (1937), que no está en el corpus."
+      }
+    ]
   },
   "fenomenos": {
     "colonialidad": {
@@ -16383,22 +16399,6 @@
     },
     {
       "a": "araujo",
-      "b": "casimir",
-      "tipo": "disonancia",
-      "fuente": "Reparación de la deuda (Araujo) frente a la contra-plantación soberana que rehace mundo por fuera del Estado (Casimir).",
-      "apoyo": "comparacion",
-      "objeto_disonancia": {
-        "texto": "Cómo se repara la esclavitud: deuda que el Estado y las metrópolis deben pagar, o mundo rehecho fuera del Estado por la contra-plantación.",
-        "estado": "por_establecer",
-        "fecha": "2026-10-01",
-        "revision_texto": {
-          "nota": "Revisado The Haitians (2020): no cita a Araujo, y además suscribe la exigencia de reparación por la esclavitud con Sala-Molins (cap. 2). La oposición entre reparación y contra-plantación que planteaba la ficha no se sostiene en el texto de Casimir.",
-          "fecha": "2026-10-01"
-        }
-      }
-    },
-    {
-      "a": "araujo",
       "b": "rodney",
       "tipo": "resonancia",
       "fuente": "Comparten el fenómeno Capitalismo racial. Por corroborar el vínculo directo.",
@@ -16417,7 +16417,13 @@
         "revision_texto": {
           "nota": "Revisado el texto de Sherwood: no menciona a Mintz. El desacuerdo es una lectura que propone el atlas.",
           "fecha": "2026-10-01"
-        }
+        },
+        "origen": "atlas"
+      },
+      "limite": "El desacuerdo lo propone el atlas: ninguno de los dos autores lo formula en los textos revisados.",
+      "revision_interna": {
+        "responsable": "Dirección académica de Pensamiento Caribe (decisión del 1-oct-2026)",
+        "fecha": "2026-10-01"
       }
     },
     {
@@ -16574,17 +16580,15 @@
     {
       "a": "dunham",
       "b": "tellmyhorse",
-      "tipo": "disonancia",
-      "fuente": "Dunham y Hurston compitieron por el mismo terreno etnográfico en Haití y Jamaica en los años treinta.",
+      "tipo": "resonancia",
+      "fuente": "Por corroborar. Comparación declarada: Dunham y Hurston trabajaron el mismo terreno etnográfico —el vodou en Haití y Jamaica— en los años treinta. Revisión del 1-oct-2026: Island Possessed no nombra a Hurston y Tell My Horse no nombra a Dunham; la rivalidad entre ambas es un dato biográfico que estos libros no documentan.",
       "apoyo": "comparacion",
-      "objeto_disonancia": {
-        "texto": "La autoridad sobre el mismo terreno etnográfico —el vodou haitiano y jamaicano— en los años treinta.",
-        "estado": "por_establecer",
-        "fecha": "2026-10-01",
-        "revision_texto": {
-          "nota": "Revisados los dos textos. Island Possessed no nombra a Hurston, y Tell My Horse no nombra a Dunham. La rivalidad por el terreno haitiano es un dato biográfico que estos dos libros no documentan.",
-          "fecha": "2026-10-01"
-        }
+      "fuente_previa": "Dunham y Hurston compitieron por el mismo terreno etnográfico en Haití y Jamaica en los años treinta.",
+      "estado": "por_corroborar",
+      "limite": "Pasa de disonancia a resonancia por comparación por decisión de la dirección académica: el desacuerdo no está en los textos.",
+      "revision_interna": {
+        "responsable": "Dirección académica de Pensamiento Caribe (decisión del 1-oct-2026)",
+        "fecha": "2026-10-01"
       }
     },
     {
@@ -16816,22 +16820,6 @@
         "hay": false
       },
       "lote_revision": "FV-2026-10-01"
-    },
-    {
-      "a": "rebeldestiny",
-      "b": "pricemars",
-      "tipo": "disonancia",
-      "fuente": "La etnología haitiana de Price-Mars frente al encuadre estadounidense de Haití por los Herskovits. Por corroborar como choque puntual.",
-      "apoyo": "hipotesis",
-      "objeto_disonancia": {
-        "texto": "Quién define la herencia africana de Haití: la etnología haitiana de Price-Mars o el marco de las supervivencias de los Herskovits.",
-        "estado": "por_establecer",
-        "fecha": "2026-10-01",
-        "revision_texto": {
-          "nota": "Revisados los dos textos. Rebel Destiny (1934) trata de los saramaka de Surinam y no menciona a Price-Mars; Haití aparece solo de paso. La edición consultada de Ainsi parla l'oncle registra un artículo de Price-Mars titulado «Le Professeur Melville J. Herskovits et son œuvre», que sugiere aprecio y no choque. La disonancia parece mal anclada: el libro haitiano de los Herskovits es Life in a Haitian Valley (1937), que no está en el corpus.",
-          "fecha": "2026-10-01"
-        }
-      }
     },
     {
       "a": "palmiengangas",
@@ -17169,7 +17157,13 @@
         "revision_texto": {
           "nota": "Revisado el texto de Cunin (2003): no menciona a Simmons ni su libro. Falta el texto de Simmons, que es anterior.",
           "fecha": "2026-10-01"
-        }
+        },
+        "origen": "atlas"
+      },
+      "limite": "El desacuerdo lo propone el atlas: ninguno de los dos autores lo formula en los textos revisados.",
+      "revision_interna": {
+        "responsable": "Dirección académica de Pensamiento Caribe (decisión del 1-oct-2026)",
+        "fecha": "2026-10-01"
       }
     },
     {
@@ -17403,7 +17397,13 @@
         "revision_texto": {
           "nota": "Revisado Citizenship on the Edge: no menciona a Curiel. Falta el texto de Curiel; por las fechas, la discusión solo podría estar del lado del volumen de 2019, que no la tiene.",
           "fecha": "2026-10-01"
-        }
+        },
+        "origen": "atlas"
+      },
+      "limite": "El desacuerdo lo propone el atlas: ninguno de los dos autores lo formula en los textos revisados.",
+      "revision_interna": {
+        "responsable": "Dirección académica de Pensamiento Caribe (decisión del 1-oct-2026)",
+        "fecha": "2026-10-01"
       }
     },
     {
@@ -17572,7 +17572,13 @@
         "revision_texto": {
           "nota": "Revisado el texto de Deere (2025), que es posterior a The Haitians (2020): no menciona a Casimir. El desacuerdo es una lectura que propone el atlas.",
           "fecha": "2026-10-01"
-        }
+        },
+        "origen": "atlas"
+      },
+      "limite": "El desacuerdo lo propone el atlas: ninguno de los dos autores lo formula en los textos revisados.",
+      "revision_interna": {
+        "responsable": "Dirección académica de Pensamiento Caribe (decisión del 1-oct-2026)",
+        "fecha": "2026-10-01"
       }
     },
     {
@@ -17596,7 +17602,13 @@
         "revision_texto": {
           "nota": "Revisado The Haitians (2020): no cita a Mintz. El desacuerdo es una lectura que propone el atlas.",
           "fecha": "2026-10-01"
-        }
+        },
+        "origen": "atlas"
+      },
+      "limite": "El desacuerdo lo propone el atlas: ninguno de los dos autores lo formula en los textos revisados.",
+      "revision_interna": {
+        "responsable": "Dirección académica de Pensamiento Caribe (decisión del 1-oct-2026)",
+        "fecha": "2026-10-01"
       }
     },
     {
@@ -18467,17 +18479,19 @@
     {
       "a": "trouillothaitistate",
       "b": "casimir",
-      "tipo": "disonancia",
-      "fuente": "Por corroborar.",
-      "apoyo": "hipotesis",
-      "objeto_disonancia": {
-        "texto": "Por establecer: la ficha no declara todavía sobre qué discrepan; la relación espera lectura de los dos libros.",
-        "estado": "por_establecer",
-        "fecha": "2026-10-01",
-        "revision_texto": {
-          "nota": "Revisados los dos textos. Casimir cita Haiti: State against Nation solo en la bibliografía; en el cuerpo usa a Trouillot (Silencing the Past) para apoyar su lectura de la revolución como lo impensable. No hay desacuerdo en el texto: la relación documentada es de resonancia.",
-          "fecha": "2026-10-01"
-        }
+      "tipo": "resonancia",
+      "fuente": "Verificada en el texto. Jean Casimir, The Haitians: A Decolonial History, 2020, EPUB, bibliografía: «Trouillot, Michel-Rolph. 1990. Haiti, State against Nation: The Origins and Legacy of Duvalierism. New York: Monthly Review Press».",
+      "apoyo": "documentada",
+      "fuente_previa": "Por corroborar.",
+      "estado": "corroborada",
+      "aspecto": "La historia haitiana leída contra el Estado: Casimir recoge a Trouillot y lo usa a favor de su propia tesis sobre lo impensable de la revolución.",
+      "limite": "State against Nation aparece en la bibliografía; en el cuerpo Casimir cita sobre todo Silencing the Past (1995), que no está catalogado. Pasa de disonancia a resonancia por decisión de la dirección académica.",
+      "revision_interna": {
+        "responsable": "Dirección académica de Pensamiento Caribe (decisión del 1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "friccion": {
+        "hay": false
       }
     },
     {
@@ -19059,7 +19073,13 @@
         "revision_texto": {
           "nota": "Revisado el texto de Whitehead: no menciona a Mintz. El desacuerdo es una lectura que propone el atlas; no lo formula ninguno de los dos autores.",
           "fecha": "2026-10-01"
-        }
+        },
+        "origen": "atlas"
+      },
+      "limite": "El desacuerdo lo propone el atlas: ninguno de los dos autores lo formula en los textos revisados.",
+      "revision_interna": {
+        "responsable": "Dirección académica de Pensamiento Caribe (decisión del 1-oct-2026)",
+        "fecha": "2026-10-01"
       }
     },
     {
