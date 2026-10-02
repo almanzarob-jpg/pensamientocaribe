@@ -6550,27 +6550,32 @@
       "proceso": [
         "siembra"
       ],
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión focal de metadatos, índice e introducción o pasajes seleccionados; no lectura integral",
         "responsable": "Preparación asistida del lote S17; clasificación pendiente de adjudicación académica",
         "fecha": "2026-09-11",
-        "fundamento": "La autonomía intelectual y la crítica de la dominación organizan el argumento. C7 y C9 son posibilidades parciales; ninguna se confirma solo por la presencia de anticolonialismo o Rastafari."
+        "fundamento": "C9 porque el libro lee a Rastafari, a Marley y a la tradición profética como pensamiento político en sentido pleno; C7 por la crítica de la dominación y la autonomía intelectual.",
+        "fundamento_previo": "La autonomía intelectual y la crítica de la dominación organizan el argumento. C7 y C9 son posibilidades parciales; ninguna se confirma solo por la presencia de anticolonialismo o Rastafari."
       },
       "fuente_recorrido": [
-        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente"
+        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente",
+        "expediente-corrientes-E04.md"
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
-          "soberanias_fronteras_ocupaciones",
-          "memorias_espiritualidades_archivos_vivos"
+          "memorias_espiritualidades_archivos_vivos",
+          "soberanias_fronteras_ocupaciones"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "nota": "Expediente E04 (1-oct-2026), aprobado por la dirección académica. Se invierte la propuesta. Lo que distingue al libro no es el anticolonialismo, que comparte con medio corpus, sino el gesto de leer a Rastafari, a Marley y a la tradición profética como pensamiento político en sentido pleno, con el mismo rango que James o Du Bois. Eso es tratar saberes transmitidos fuera de la academia como archivo de teoría: C9. La soberanía queda como secundaria."
       },
       "operaciones": [
         "teorizar",
@@ -6672,10 +6677,12 @@
       "proceso": [
         "siembra"
       ],
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c6",
+      "recorridos_sec": [
+        "c5"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión focal de metadatos, índice e introducción o pasajes seleccionados; no lectura integral",
@@ -6684,15 +6691,17 @@
         "fundamento": "C6 es la candidatura principal por el concepto de ecologías racializadas; C5 aporta el circuito fluvial y logístico. Debe evaluarse si ambos resultan constitutivos."
       },
       "fuente_recorrido": [
-        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente"
+        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente",
+        "expediente-corrientes-E04.md"
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "huracanes_ecologias_materialidades_vivas",
           "rutas_diasporas_territorios_acuosos"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "huracanes_ecologias_materialidades_vivas",
+        "nota": "Expediente E04 (1-oct-2026), aprobado por la dirección académica."
       },
       "operaciones": [
         "producir etnografía"
@@ -6788,10 +6797,12 @@
       "proceso": [
         "siembra"
       ],
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c10",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión focal de metadatos, índice e introducción o pasajes seleccionados; no lectura integral",
@@ -6800,15 +6811,17 @@
         "fundamento": "C10 es una candidatura por el eje de género; C7 recoge las discusiones sobre instituciones y ciudadanía. No basta la palabra género para confirmar C10."
       },
       "fuente_recorrido": [
-        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente"
+        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente",
+        "expediente-corrientes-E04.md"
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "cuerpos_parentescos_eroticas",
           "soberanias_fronteras_ocupaciones"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "cuerpos_parentescos_eroticas",
+        "nota": "Expediente E04 (1-oct-2026), aprobado por la dirección académica."
       },
       "operaciones": [
         "teorizar",
@@ -6890,10 +6903,12 @@
       "proceso": [
         "siembra"
       ],
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c5",
+      "recorridos_sec": [
+        "c3"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión focal de metadatos, índice e introducción o pasajes seleccionados; no lectura integral",
@@ -6902,15 +6917,17 @@
         "fundamento": "C5 es la candidatura principal por la circulación de información; C3 permite examinar sus relaciones con fugas y emancipaciones, sin volver equivalentes movilidad e insurrección."
       },
       "fuente_recorrido": [
-        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente"
+        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente",
+        "expediente-corrientes-E04.md"
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "rutas_diasporas_territorios_acuosos",
           "fugas_cimarronajes_emancipaciones"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "rutas_diasporas_territorios_acuosos",
+        "nota": "Expediente E04 (1-oct-2026), aprobado por la dirección académica."
       },
       "operaciones": [
         "reconstruir un archivo",
@@ -7124,10 +7141,12 @@
       "proceso": [
         "siembra"
       ],
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c6",
+      "recorridos_sec": [
+        "c10"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión focal de metadatos, índice e introducción o pasajes seleccionados; no lectura integral",
@@ -7136,15 +7155,17 @@
         "fundamento": "C6 es la candidatura principal porque las relaciones multiespecie organizan la pregunta y la etnografía. C10 corresponde a la articulación entre cuerpos, género y cuidado."
       },
       "fuente_recorrido": [
-        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente"
+        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente",
+        "expediente-corrientes-E04.md"
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "huracanes_ecologias_materialidades_vivas",
           "cuerpos_parentescos_eroticas"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "huracanes_ecologias_materialidades_vivas",
+        "nota": "Expediente E04 (1-oct-2026), aprobado por la dirección académica."
       },
       "operaciones": [
         "producir etnografía"
@@ -7240,10 +7261,12 @@
       "proceso": [
         "siembra"
       ],
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c6"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión focal de metadatos, índice e introducción o pasajes seleccionados; no lectura integral",
@@ -7252,15 +7275,17 @@
         "fundamento": "C7 es la candidatura por las relaciones de poder y decisión en la ayuda internacional; C6 corresponde al desastre y sus efectos socialmente producidos."
       },
       "fuente_recorrido": [
-        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente"
+        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente",
+        "expediente-corrientes-E04.md"
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "soberanias_fronteras_ocupaciones",
           "huracanes_ecologias_materialidades_vivas"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E04 (1-oct-2026), aprobado por la dirección académica."
       },
       "operaciones": [
         "producir etnografía"
@@ -7339,10 +7364,12 @@
       "proceso": [
         "siembra"
       ],
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c5",
+      "recorridos_sec": [
+        "c6"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión focal de metadatos, índice e introducción o pasajes seleccionados; no lectura integral",
@@ -7351,15 +7378,17 @@
         "fundamento": "C5 es la candidatura principal por los itinerarios y las estancias marítimas; C6 recoge la materialidad de la sal y los objetos."
       },
       "fuente_recorrido": [
-        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente"
+        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente",
+        "expediente-corrientes-E04.md"
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "rutas_diasporas_territorios_acuosos",
           "huracanes_ecologias_materialidades_vivas"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "rutas_diasporas_territorios_acuosos",
+        "nota": "Expediente E04 (1-oct-2026), aprobado por la dirección académica."
       },
       "operaciones": [
         "reconstruir un archivo",
@@ -7457,10 +7486,12 @@
       "proceso": [
         "siembra"
       ],
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c3",
+      "recorridos_sec": [
+        "c9"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión focal de metadatos, índice e introducción o pasajes seleccionados; no lectura integral",
@@ -7469,15 +7500,17 @@
         "fundamento": "C3 es una candidatura por la formación histórica cimarrona; C9 exige considerar los saberes, las narraciones y los rituales, sin absorber en ellos todo el libro."
       },
       "fuente_recorrido": [
-        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente"
+        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente",
+        "expediente-corrientes-E04.md"
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "fugas_cimarronajes_emancipaciones",
           "memorias_espiritualidades_archivos_vivos"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "fugas_cimarronajes_emancipaciones",
+        "nota": "Expediente E04 (1-oct-2026), aprobado por la dirección académica."
       },
       "operaciones": [
         "producir etnografía",
@@ -7570,10 +7603,12 @@
       "proceso": [
         "siembra"
       ],
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c8"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión focal de metadatos, índice e introducción o pasajes seleccionados; no lectura integral",
@@ -7582,15 +7617,17 @@
         "fundamento": "C7 y C8 son candidaturas por la independencia y las formas culturales. Requiere distinguir la arquitectura del volumen colectivo de la obra de James que interpreta."
       },
       "fuente_recorrido": [
-        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente"
+        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente",
+        "expediente-corrientes-E04.md"
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "soberanias_fronteras_ocupaciones",
           "creolizaciones_traducciones_opacidades"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E04 (1-oct-2026), aprobado por la dirección académica."
       },
       "operaciones": [
         "teorizar"
@@ -7685,10 +7722,12 @@
       "proceso": [
         "siembra"
       ],
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c10"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión focal de metadatos, índice e introducción o pasajes seleccionados; no lectura integral",
@@ -7697,15 +7736,17 @@
         "fundamento": "C8 es la candidatura principal por la relación entre registros orales y escritos; C10 representa el papel sustantivo del género y del cuerpo."
       },
       "fuente_recorrido": [
-        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente"
+        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente",
+        "expediente-corrientes-E04.md"
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "creolizaciones_traducciones_opacidades",
           "cuerpos_parentescos_eroticas"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "creolizaciones_traducciones_opacidades",
+        "nota": "Expediente E04 (1-oct-2026), aprobado por la dirección académica."
       },
       "operaciones": [
         "teorizar",
@@ -7792,27 +7833,32 @@
       "proceso": [
         "siembra"
       ],
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c9"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión focal de metadatos, índice e introducción o pasajes seleccionados; no lectura integral",
         "responsable": "Preparación asistida del lote S17; clasificación pendiente de adjudicación académica",
         "fecha": "2026-09-11",
-        "fundamento": "Las candidaturas C7 y C9 son exploratorias: historia intelectual y crítica epistemológica no encajan automáticamente en soberanías o archivos vivos. Hace falta valorar el ajuste conceptual antes de confirmar una corriente."
+        "fundamento": "C7 porque Firmin responde a Gobineau desde Haití: la igualdad de las razas sostiene la soberanía de la república negra, y Firmin fue diplomático y defensor de una confederación antillana; C9 por el rescate de un pensador que la historia de las ciencias sociales borró.",
+        "fundamento_previo": "Las candidaturas C7 y C9 son exploratorias: historia intelectual y crítica epistemológica no encajan automáticamente en soberanías o archivos vivos. Hace falta valorar el ajuste conceptual antes de confirmar una corriente."
       },
       "fuente_recorrido": [
-        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente"
+        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente",
+        "expediente-corrientes-E04.md"
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "soberanias_fronteras_ocupaciones",
           "memorias_espiritualidades_archivos_vivos"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E04 (1-oct-2026), aprobado por la dirección académica. Se confirma el orden propuesto, pero con fundamento propio, porque el del lote era solo exploratorio. Firmin escribe De l'égalité des races humaines (1885) para responder a Gobineau desde Haití: la igualdad de las razas es el argumento que sostiene la soberanía de la república negra, y Firmin fue además diplomático y defensor de una confederación antillana. C9 entra por el rescate de un pensador haitiano que la sociología occidental había borrado de su propia historia."
       },
       "operaciones": [
         "teorizar",
@@ -7908,10 +7954,12 @@
       "proceso": [
         "siembra"
       ],
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c3",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión focal de metadatos, índice e introducción o pasajes seleccionados; no lectura integral",
@@ -7920,15 +7968,17 @@
         "fundamento": "C3 es una candidatura por la revolución de esclavizados y la emancipación; C7 recoge los problemas de revolución y política. Debe comprobarse la unidad del volumen antes de cerrar la clasificación."
       },
       "fuente_recorrido": [
-        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente"
+        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente",
+        "expediente-corrientes-E04.md"
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "fugas_cimarronajes_emancipaciones",
           "soberanias_fronteras_ocupaciones"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "fugas_cimarronajes_emancipaciones",
+        "nota": "Expediente E04 (1-oct-2026), aprobado por la dirección académica."
       },
       "operaciones": [
         "reconstruir un archivo"
@@ -8016,28 +8066,32 @@
       "proceso": [
         "siembra"
       ],
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c4"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión focal de metadatos, índice e introducción o pasajes seleccionados; no lectura integral",
         "responsable": "Preparación asistida del lote S17; clasificación pendiente de adjudicación académica",
         "fecha": "2026-09-11",
-        "fundamento": "C7, C4 y C5 son candidaturas para evaluar una posible arquitectura de síntesis; la condición de manual general no prueba por sí misma una síntesis multicorriente."
+        "fundamento": "C7 por la política contemporánea y las relaciones internacionales; C4 por las economías postplantación. Un manual general no prueba una síntesis de tres corrientes: se descarta C5.",
+        "fundamento_previo": "C7, C4 y C5 son candidaturas para evaluar una posible arquitectura de síntesis; la condición de manual general no prueba por sí misma una síntesis multicorriente."
       },
       "fuente_recorrido": [
-        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente"
+        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente",
+        "expediente-corrientes-E04.md"
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "soberanias_fronteras_ocupaciones",
-          "postplantacion_trabajo_desposesion",
-          "rutas_diasporas_territorios_acuosos"
+          "postplantacion_trabajo_desposesion"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E04 (1-oct-2026), aprobado por la dirección académica. Se quedan las dos primeras candidatas y se descarta C5. Un manual general no prueba una síntesis de tres corrientes; su peso está en la política y la economía contemporáneas, y las conexiones regionales e internacionales que discute son de dependencia más que de diáspora."
       },
       "operaciones": [
         "comparar orillas"
@@ -8117,28 +8171,32 @@
       "proceso": [
         "siembra"
       ],
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c1",
+      "recorridos_sec": [
+        "c2"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión focal de metadatos, índice e introducción o pasajes seleccionados; no lectura integral",
         "responsable": "Preparación asistida del lote S17; clasificación pendiente de adjudicación académica",
         "fecha": "2026-09-11",
-        "fundamento": "C1 y C2 son candidaturas por la relación entre despojo y esclavización; C5 es una alternativa a contrastar por su lenguaje oceánico. La metáfora acuosa no basta para clasificarlo como estudio de rutas."
+        "fundamento": "C1 porque el aporte del libro es leer el despojo indígena junto con la esclavización negra; C2 por la esclavización. El shoal es una figura conceptual, no un estudio de rutas: se descarta C5.",
+        "fundamento_previo": "C1 y C2 son candidaturas por la relación entre despojo y esclavización; C5 es una alternativa a contrastar por su lenguaje oceánico. La metáfora acuosa no basta para clasificarlo como estudio de rutas."
       },
       "fuente_recorrido": [
-        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente"
+        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente",
+        "expediente-corrientes-E04.md"
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "invasiones_mundos_indigenas",
-          "trata_esclavizacion_plantacion",
-          "rutas_diasporas_territorios_acuosos"
+          "trata_esclavizacion_plantacion"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "invasiones_mundos_indigenas",
+        "nota": "Expediente E04 (1-oct-2026), aprobado por la dirección académica. De las tres candidatas se descarta C5: el shoal es una figura conceptual, no un estudio de rutas, y el propio fundamento advertía que la metáfora acuosa no basta. Entre C1 y C2 va primero C1, porque el aporte del libro frente a los estudios negros es meter en ellos el despojo indígena y el colonialismo de asentamiento."
       },
       "operaciones": [
         "elaborar un concepto",
@@ -8230,26 +8288,29 @@
       "proceso": [
         "siembra"
       ],
-      "recorrido": null,
+      "recorrido": "c1",
       "recorridos_sec": [],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión focal de metadatos, índice e introducción o pasajes seleccionados; no lectura integral",
         "responsable": "Preparación asistida del lote S17; clasificación pendiente de adjudicación académica",
         "fecha": "2026-09-11",
-        "fundamento": "C1 es una candidatura por el poblamiento y los mundos indígenas, pero el libro también desarrolla una historia comparativa mundial. Debe evaluarse como manual y fuente para docencia."
+        "fundamento": "C1 por el poblamiento y los mundos indígenas, sin secundaria. Registro: manual escolar.",
+        "fundamento_previo": "C1 es una candidatura por el poblamiento y los mundos indígenas, pero el libro también desarrolla una historia comparativa mundial. Debe evaluarse como manual y fuente para docencia."
       },
       "fuente_recorrido": [
-        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente"
+        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente",
+        "expediente-corrientes-E04.md"
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "invasiones_mundos_indigenas"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "invasiones_mundos_indigenas",
+        "nota": "Expediente E04 (1-oct-2026), aprobado por la dirección académica. Queda con una sola corriente y sin secundaria. Es un manual escolar sobre el poblamiento; asignarle una segunda corriente sería inventarle un argumento que no tiene."
       },
       "operaciones": [
         "narrar",
@@ -8345,10 +8406,12 @@
       "proceso": [
         "siembra"
       ],
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c5"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión focal de metadatos, índice e introducción o pasajes seleccionados; no lectura integral",
@@ -8357,15 +8420,17 @@
         "fundamento": "C8 es la candidatura principal por las formas de creación y expresión cultural; C5 corresponde a las circulaciones musicales. La relación con Cuerpo y cultura debe examinarse sin inferirla únicamente por autoría compartida."
       },
       "fuente_recorrido": [
-        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente"
+        "Lote S17, 11-09-2026: revisión focal; clasificación pendiente",
+        "expediente-corrientes-E04.md"
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "creolizaciones_traducciones_opacidades",
           "rutas_diasporas_territorios_acuosos"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "creolizaciones_traducciones_opacidades",
+        "nota": "Expediente E04 (1-oct-2026), aprobado por la dirección académica."
       },
       "operaciones": [
         "teorizar",
