@@ -16220,15 +16220,35 @@
       "a": "fouchard",
       "b": "roberts",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Cimarronaje / fuga. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Verificada en el texto. Neil Roberts, Freedom as Marronage, 2015, PDF, hoja 241: «Fouchard, Jean. The Haitian Maroons: Liberty or Death […] Les marrons de la liberté. Port-au-Prince: Henri Deschamps, 1988».",
+      "apoyo": "documentada",
+      "fuente_previa": "Comparten el fenómeno Cimarronaje / fuga. Por corroborar el vínculo directo.",
+      "estado": "corroborada",
+      "aspecto": "El cimarronaje haitiano como forma de libertad: Roberts apoya en Fouchard su lectura del marronage como acción política.",
+      "limite": "Cita bibliográfica de la edición francesa y de la traducción inglesa; no se localizó con página el uso en el cuerpo.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "friccion": {
+        "hay": false
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "roberts",
       "b": "quintero",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Cimarronaje / fuga. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el fenómeno Cimarronaje / fuga. Revisión del 1-oct-2026: Se revisaron los textos completos de las dos obras (Neil Roberts y Ángel Quintero Rivera): ninguna de las dos obras cita a la otra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el fenómeno Cimarronaje / fuga. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "cabrera",
@@ -16241,8 +16261,20 @@
       "a": "bonilla",
       "b": "aftershocks",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Soberanías. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Verificada en el texto. Bonilla & LeBrón (eds.), Aftershocks of Disaster (huracán María), 2019, PDF, hoja 145: «Yarimar Bonilla, Non-sovereign Futures: French Caribbean Politics in the Wake of Disenchantment (Chicago: University of Chicago Press, 2015)».",
+      "apoyo": "documentada",
+      "fuente_previa": "Comparten el fenómeno Soberanías. Por corroborar el vínculo directo.",
+      "estado": "corroborada",
+      "aspecto": "La no soberanía como marco para leer el desastre de María en Puerto Rico.",
+      "limite": "Bonilla es coeditora de Aftershocks: es una autocita, que documenta continuidad de autoría más que recepción.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "friccion": {
+        "hay": false
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "bonilla",
@@ -16283,8 +16315,16 @@
       "a": "chande",
       "b": "vete",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Creolización / oralitura. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el fenómeno Creolización / oralitura. Revisión del 1-oct-2026: Se revisó el texto completo de Hanétha Vété-Congolo (ed.) (el de Ernell Villa y Wilmer Villa no está en la biblioteca del grupo): no cita a la otra obra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el fenómeno Creolización / oralitura. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "esquiva",
@@ -16297,15 +16337,35 @@
       "a": "perezmorales",
       "b": "sherwood",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Violencias. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el fenómeno Violencias. Revisión del 1-oct-2026: Se revisaron los textos completos de las dos obras (Edgardo Pérez Morales y Marika Sherwood): ninguna de las dos obras cita a la otra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el fenómeno Violencias. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "vete",
       "b": "brathwaite",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Creolización / oralitura. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Verificada en el texto. Hanétha Vété-Congolo (ed.), The Caribbean Oral Tradition, 2016, PDF, hojas 31 y 80: «as proposed by, among others, Edward Kamau Brathwaite in History of the Voice».",
+      "apoyo": "documentada",
+      "fuente_previa": "Comparten el fenómeno Creolización / oralitura. Por corroborar el vínculo directo.",
+      "estado": "corroborada",
+      "aspecto": "La oralidad caribeña como forma de conocimiento: Vété-Congolo parte de la lengua nación de Brathwaite.",
+      "limite": "Es la introducción de la editora; el resto del volumen no se revisó capítulo por capítulo.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "friccion": {
+        "hay": false
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "quintero",
@@ -16356,8 +16416,16 @@
       "a": "aftershocks",
       "b": "lindskoog",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Soberanías. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el fenómeno Soberanías. Revisión del 1-oct-2026: Se revisó el texto completo de Bonilla & LeBrón (eds.) (el de Carl Lindskoog no está en la biblioteca del grupo): no cita a la otra obra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el fenómeno Soberanías. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "monahan",
@@ -16403,29 +16471,61 @@
       "a": "workercane",
       "b": "steward",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Postplantación. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el fenómeno Postplantación. Revisión del 1-oct-2026: Se revisó el texto completo de Sidney W. Mintz (el de Julian H. Steward no está en la biblioteca del grupo): no cita a la otra obra por título. Mintz menciona el proyecto de Steward en Puerto Rico, del que salió The People of Puerto Rico, pero no cita el libro por su título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el fenómeno Postplantación. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "steward",
       "b": "olwigstjohn",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Postplantación. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el fenómeno Postplantación. Revisión del 1-oct-2026: Se revisó el texto completo de Karen Fog Olwig (el de Julian H. Steward no está en la biblioteca del grupo): no cita a la otra obra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el fenómeno Postplantación. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "hagedorn",
       "b": "cabrera",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el fenómeno Memoria y espiritualidad. Revisión del 1-oct-2026: Se revisó el texto completo de Katherine J. Hagedorn (el de Lydia Cabrera no está en la biblioteca del grupo): no cita a la otra obra por título. Hagedorn cita otras obras de Lydia Cabrera (La sociedad secreta Abakuá, Yemayá y Ochún, Vocabulario congo), no El Monte.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "hagedorn",
       "b": "palmiengangas",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el fenómeno Memoria y espiritualidad. Revisión del 1-oct-2026: Se revisaron los textos completos de las dos obras (Katherine J. Hagedorn y Stephan Palmié): ninguna de las dos obras cita a la otra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "pricefirst",
@@ -16438,8 +16538,16 @@
       "a": "pricefirst",
       "b": "roberts",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Cimarronaje / fuga. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el fenómeno Cimarronaje / fuga. Revisión del 1-oct-2026: Se revisaron los textos completos de las dos obras (Richard Price y Neil Roberts): ninguna de las dos obras cita a la otra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el fenómeno Cimarronaje / fuga. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "pricefirst",
@@ -16464,8 +16572,16 @@
       "a": "dunham",
       "b": "cabrera",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el fenómeno Memoria y espiritualidad. Revisión del 1-oct-2026: Se revisó el texto completo de Katherine Dunham (el de Lydia Cabrera no está en la biblioteca del grupo): no cita a la otra obra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "friedemannlengua",
@@ -16499,22 +16615,54 @@
       "a": "mamalola",
       "b": "tellmyhorse",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Verificada en el texto. Karen McCarthy Brown, Mama Lola: A Vodou Priestess in Brooklyn, 1991, PDF, hoja 443: «Hurston, Zora Neale. Tell My Horse. Berkeley: Turtle Island, 1981».",
+      "apoyo": "documentada",
+      "fuente_previa": "Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.",
+      "estado": "corroborada",
+      "aspecto": "La etnografía del vodou desde dentro: Brown inscribe su trabajo en la línea que abre Hurston.",
+      "limite": "Cita en la bibliografía; el diálogo en el cuerpo no se localizó con página.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "friccion": {
+        "hay": false
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "mamalola",
       "b": "cabrera",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el fenómeno Memoria y espiritualidad. Revisión del 1-oct-2026: Se revisó el texto completo de Karen McCarthy Brown (el de Lydia Cabrera no está en la biblioteca del grupo): no cita a la otra obra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "mamalola",
       "b": "pricemars",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Verificada en el texto. Karen McCarthy Brown, Mama Lola: A Vodou Priestess in Brooklyn, 1991, PDF, hoja 445: «Price-Mars, Jean. Ainsi parla l'oncle. Ottawa: Leméac, Collection Caraïbes, 1973».",
+      "apoyo": "documentada",
+      "fuente_previa": "Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.",
+      "estado": "corroborada",
+      "aspecto": "El vodou como religión y no como superstición: Brown hereda la reivindicación de Price-Mars.",
+      "limite": "Cita en la bibliografía; el diálogo en el cuerpo no se localizó con página.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "friccion": {
+        "hay": false
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "besson",
@@ -16527,8 +16675,20 @@
       "a": "besson",
       "b": "mintz",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Postplantación. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Verificada en el texto. Jean Besson, Martha Brae's Two Histories, 2002, PDF, hojas 26, 43 y 345: «In 1974, the year that I completed my doctoral dissertation, Mintz published Caribbean Transformations».",
+      "apoyo": "documentada",
+      "fuente_previa": "Comparten el fenómeno Postplantación. Por corroborar el vínculo directo.",
+      "estado": "corroborada",
+      "aspecto": "El campesinado reconstituido y la tierra familiar: Besson discute y desarrolla la tesis de Mintz sobre la campesinización.",
+      "limite": "Besson también corrige a Mintz en la lectura del parentesco cognaticio (hoja 345); la relación es de desarrollo crítico, no de adhesión plena.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "friccion": {
+        "hay": false
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "taylor",
@@ -16541,8 +16701,20 @@
       "a": "taylor",
       "b": "chevannes",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Verificada en el texto. Patrick Taylor (ed.), Nation Dance: Religion, Identity, and Cultural Difference in the Caribbean, 2001, PDF, hojas 85, 86 y 90: «Chevannes, Barry. 1994. Rastafari: Roots and Ideology. Syracuse: Syracuse University Press».",
+      "apoyo": "documentada",
+      "fuente_previa": "Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.",
+      "estado": "corroborada",
+      "aspecto": "Rastafari como religión de la nación: el volumen de Taylor se apoya en Chevannes para su historia y su lugar de las mujeres.",
+      "limite": "El volumen incluye además un capítulo del propio Chevannes; la cita verificada es la del capítulo sobre Rastafari.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "friccion": {
+        "hay": false
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "peasantscapital",
@@ -16555,22 +16727,50 @@
       "a": "peasantscapital",
       "b": "rodney",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Capitalismo racial. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el fenómeno Capitalismo racial. Revisión del 1-oct-2026: Se revisó el texto completo de Michel-Rolph Trouillot (el de Walter Rodney no está en la biblioteca del grupo): no cita a la otra obra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el fenómeno Capitalismo racial. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "chevannes",
       "b": "roberts",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Cimarronaje / fuga. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Verificada en el texto. Neil Roberts, Freedom as Marronage, 2015, PDF, hojas 231 y 237: «on the origins and genesis of Rastafari, see Barry Chevannes, Rastafari, 1994».",
+      "apoyo": "documentada",
+      "fuente_previa": "Comparten el fenómeno Cimarronaje / fuga. Por corroborar el vínculo directo.",
+      "estado": "corroborada",
+      "aspecto": "Rastafari como marronage sagrado: Roberts toma de Chevannes la génesis del movimiento.",
+      "limite": "Cita de remisión en nota; Roberts no discute la tesis de Chevannes.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "friccion": {
+        "hay": false
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "chevannes",
       "b": "truebornmaroons",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el fenómeno Memoria y espiritualidad. Revisión del 1-oct-2026: Se revisaron los textos completos de las dos obras (Barry Chevannes y Kenneth Bilby): ninguna de las dos obras cita a la otra por título. Bilby cita otras obras de Chevannes (los capítulos de Rastafari and Other African-Caribbean Worldviews, 1995), no Rastafari: Roots and Ideology.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "rebeldestiny",
@@ -16583,8 +16783,20 @@
       "a": "rebeldestiny",
       "b": "travelstooy",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Cimarronaje / fuga. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Verificada en el texto. Richard Price, Travels with Tooy: History, Memory, and the African American Imagination, 2008, PDF, hojas 127 y 418: «Melville and Frances Herskovits's Rebel Destiny: Among the Bush Negroes of Dutch Guiana, published in 1934».",
+      "apoyo": "documentada",
+      "fuente_previa": "Comparten el fenómeno Cimarronaje / fuga. Por corroborar el vínculo directo.",
+      "estado": "corroborada",
+      "aspecto": "La memoria saramaka y sus primeros registros etnográficos: Price lee a los Herskovits como fuente y como antecedente.",
+      "limite": "Price usa Rebel Destiny como documento de época; no comparte su marco de retenciones africanas.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "friccion": {
+        "hay": false
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "rebeldestiny",
@@ -16616,15 +16828,35 @@
       "a": "palmiewizards",
       "b": "cabrera",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el fenómeno Memoria y espiritualidad. Revisión del 1-oct-2026: Se revisó el texto completo de Stephan Palmié (el de Lydia Cabrera no está en la biblioteca del grupo): no cita a la otra obra por título. Palmié cita La sociedad secreta Abakuá (1958) y otras obras de Cabrera, no El Monte.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "truebornmaroons",
       "b": "price",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Cimarronaje / fuga. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Verificada en el texto. Kenneth Bilby, True-Born Maroons, 2005, PDF, hoja 516: «1996a. Introduction: Maroons and Their Communities. In Maroon Societies. Richard Price, ed., 1-30».",
+      "apoyo": "documentada",
+      "fuente_previa": "Comparten el fenómeno Cimarronaje / fuga. Por corroborar el vínculo directo.",
+      "estado": "corroborada",
+      "aspecto": "Las comunidades cimarronas como objeto comparativo: Bilby cita la introducción de Price al volumen.",
+      "limite": "Cita en la bibliografía de la edición de 1996; el uso en el cuerpo no se localizó con página.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "friccion": {
+        "hay": false
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "pricemars",
@@ -16666,15 +16898,31 @@
       "a": "alabi",
       "b": "rebeldestiny",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Cimarronaje / fuga. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el fenómeno Cimarronaje / fuga. Revisión del 1-oct-2026: Se revisaron los textos completos de las dos obras (Richard Price y Melville & Frances Herskovits): ninguna de las dos obras cita a la otra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el fenómeno Cimarronaje / fuga. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "alabi",
       "b": "bonilla",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Soberanías. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el fenómeno Soberanías. Revisión del 1-oct-2026: Se revisaron los textos completos de las dos obras (Richard Price y Yarimar Bonilla): ninguna de las dos obras cita a la otra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el fenómeno Soberanías. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "exceptviolence",
@@ -16701,8 +16949,20 @@
       "a": "modernblackness",
       "b": "downtownladies",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Capitalismo racial. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Verificada en el texto. Gina Athena Ulysse, Downtown Ladies: Informal Commercial Importers, a Haitian Anthropologist, and Self-Making in Jamaica, 2007, PDF, hojas 258 y 328: «what Brian Meeks (1997) refers to as a state of hegemonic dissolution and Deborah Thomas (2004) characterizes as expressions of modern blackness».",
+      "apoyo": "documentada",
+      "fuente_previa": "Comparten el fenómeno Capitalismo racial. Por corroborar el vínculo directo.",
+      "estado": "corroborada",
+      "aspecto": "La negritud moderna y la crisis del orden de clase y color en Jamaica, leída desde las mujeres comerciantes.",
+      "limite": "Ulysse toma el concepto de Thomas como marco; Thomas, por su parte, cita trabajos anteriores de Ulysse, no Downtown Ladies (2007).",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "friccion": {
+        "hay": false
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "modernblackness",
@@ -16722,15 +16982,39 @@
       "a": "citizenshipedge",
       "b": "bonilla",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Soberanías. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Verificada en el texto. Nancy J. Hirschmann & Deborah A. Thomas (eds.), Citizenship on the Edge: Sex, Gender, Race, 2019, PDF, hojas 20 y 21: «for the relationship between imperialism and racialization in the nonsovereign Caribbean, also see Bonilla 2015».",
+      "apoyo": "documentada",
+      "fuente_previa": "Comparten el fenómeno Soberanías. Por corroborar el vínculo directo.",
+      "estado": "corroborada",
+      "aspecto": "La no soberanía caribeña como marco para leer la ciudadanía en el margen.",
+      "limite": "Remisión en nota; no hay discusión extensa.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "friccion": {
+        "hay": false
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "politicallife",
       "b": "besson",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Postplantación. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Verificada en el texto. Deborah A. Thomas, Political Life in the Wake of the Plantation: Sovereignty, Witnessing, Repair, 2019, PDF, hoja 334: «Besson, Jean. 2002. Martha Brae's Two Histories: European Expansion and Caribbean Culture-Building in Jamaica».",
+      "apoyo": "documentada",
+      "fuente_previa": "Comparten el fenómeno Postplantación. Por corroborar el vínculo directo.",
+      "estado": "corroborada",
+      "aspecto": "La vida política después de la plantación y la tierra familiar como forma de soberanía campesina.",
+      "limite": "Cita en la bibliografía; el uso en el cuerpo no se localizó con página.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "friccion": {
+        "hay": false
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "politicallife",
@@ -16743,8 +17027,16 @@
       "a": "downtownladies",
       "b": "mamalola",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Creolización / oralitura. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el fenómeno Creolización / oralitura. Revisión del 1-oct-2026: Se revisaron los textos completos de las dos obras (Gina Athena Ulysse y Karen McCarthy Brown): ninguna de las dos obras cita a la otra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el fenómeno Creolización / oralitura. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "downtownladies",
@@ -16764,8 +17056,16 @@
       "a": "reddock",
       "b": "rodney",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Capitalismo racial. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el fenómeno Capitalismo racial. Revisión del 1-oct-2026: Se revisó el texto completo de Rhoda Reddock (el de Walter Rodney no está en la biblioteca del grupo): no cita a la otra obra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el fenómeno Capitalismo racial. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "caribjourneys",
@@ -16785,15 +17085,39 @@
       "a": "caribjourneys",
       "b": "islandscity",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Soberanías. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Verificada en el texto. Karen Fog Olwig, Caribbean Journeys: An Ethnography of Migration and Home in Three Family Networks, 2007, PDF, hoja 311: «New York as a Locality in a Global Family Network. Pp. 142–60 in Islands in the City: West Indian Migration to New York, ed. Nancy Foner».",
+      "apoyo": "documentada",
+      "fuente_previa": "Comparten el fenómeno Soberanías. Por corroborar el vínculo directo.",
+      "estado": "corroborada",
+      "aspecto": "La migración caribeña a Nueva York leída desde las redes familiares.",
+      "limite": "Olwig cita su propio capítulo en el volumen de Foner: vínculo de autoría además de cita.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "friccion": {
+        "hay": false
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "globalculture",
       "b": "besson",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Postplantación. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Verificada en el texto. Jean Besson, Martha Brae's Two Histories, 2002, PDF, hojas 132 y 404: «1993. Global Culture, Island Identity: Continuity and Change in the Afro-Caribbean Community of Nevis».",
+      "apoyo": "documentada",
+      "fuente_previa": "Comparten el fenómeno Postplantación. Por corroborar el vínculo directo.",
+      "estado": "corroborada",
+      "aspecto": "La continuidad de la cultura afrocaribeña en la isla pequeña: Besson apoya en Olwig su lectura del lugar y del parentesco.",
+      "limite": "Cita en la bibliografía y remisión en el cuerpo (hoja 132).",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "friccion": {
+        "hay": false
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "islandscity",
@@ -16825,29 +17149,65 @@
       "a": "reconfdominic",
       "b": "modernblackness",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Capitalismo racial. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el fenómeno Capitalismo racial. Revisión del 1-oct-2026: Se revisó el texto completo de Deborah A. Thomas (el de Kimberly Eison Simmons no está en la biblioteca del grupo): no cita a la otra obra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el fenómeno Capitalismo racial. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "cuijla",
       "b": "chocolatecorn",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Verificada en el texto. Laura A. Lewis, Chocolate and Corn Flour: History, Race, and Place in the Making of Black Mexico, 2012, PDF, hojas 140, 146 y 360: «Aguirre Beltrán's principal contribution was the monograph Cuijla: Esbozo etnográfico de un pueblo negro».",
+      "apoyo": "documentada",
+      "fuente_previa": "Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.",
+      "estado": "corroborada",
+      "aspecto": "Lewis reconstruye cómo Aguirre Beltrán leyó a Cuaji (Cuijla) desde las retenciones africanas de Herskovits, y lo discute.",
+      "limite": "La relación es crítica: Lewis cuestiona la clasificación racial de Cuijla (casas redondas como «bantú»). Puede revisarse como fricción.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "friccion": {
+        "hay": false
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "cuijla",
       "b": "escalante",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el fenómeno Memoria y espiritualidad. Revisión del 1-oct-2026: Se revisó el texto completo de Gonzalo Aguirre Beltrán (el de Aquiles Escalante no está en la biblioteca del grupo): no cita a la otra obra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "chocolatecorn",
       "b": "cunin",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Colonialidad. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el fenómeno Colonialidad. Revisión del 1-oct-2026: Se revisaron los textos completos de las dos obras (Laura A. Lewis y Elisabeth Cunin): ninguna de las dos obras cita a la otra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el fenómeno Colonialidad. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "womenancestors",
@@ -16860,36 +17220,80 @@
       "a": "womenancestors",
       "b": "chevannes",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el fenómeno Memoria y espiritualidad. Revisión del 1-oct-2026: Se revisaron los textos completos de las dos obras (Virginia Kerns y Barry Chevannes): ninguna de las dos obras cita a la otra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "afrocentroam",
       "b": "islandscity",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Soberanías. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Verificada en el texto. Sarah England, Afro Central Americans in New York City: Garifuna Tales of Transnational Movements in Racialized Space, 2006, PDF, hojas 268 y 280: «———, ed. 2001. Islands in the City: West Indian Migration to New York».",
+      "apoyo": "documentada",
+      "fuente_previa": "Comparten el fenómeno Soberanías. Por corroborar el vínculo directo.",
+      "estado": "corroborada",
+      "aspecto": "La migración caribeña a Nueva York, aquí desde los garífunas.",
+      "limite": "Cita en la bibliografía; el uso en el cuerpo no se localizó con página.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "friccion": {
+        "hay": false
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "afrocentroam",
       "b": "reconfdominic",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Capitalismo racial. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el fenómeno Capitalismo racial. Revisión del 1-oct-2026: Se revisó el texto completo de Sarah England (el de Kimberly Eison Simmons no está en la biblioteca del grupo): no cita a la otra obra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el fenómeno Capitalismo racial. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "cunin",
       "b": "perezmorales",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Violencias. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el fenómeno Violencias. Revisión del 1-oct-2026: Se revisaron los textos completos de las dos obras (Elisabeth Cunin y Edgardo Pérez Morales): ninguna de las dos obras cita a la otra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el fenómeno Violencias. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "figueroa",
       "b": "chande",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Creolización / oralitura. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el fenómeno Creolización / oralitura. Revisión del 1-oct-2026: Se revisó el texto completo de José Antonio Figueroa (el de Ernell Villa y Wilmer Villa no está en la biblioteca del grupo): no cita a la otra obra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el fenómeno Creolización / oralitura. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "figueroa",
@@ -16902,8 +17306,20 @@
       "a": "figueroa",
       "b": "cunin",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Violencias. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Verificada en el texto. José Antonio Figueroa, Realismo mágico, vallenato y violencia política en el Caribe colombiano, , PDF, hoja 343: «Cunin, Elizabeth. Identidades a flor de piel. Lo «negro» entre apariencias y pertenencias: categorías raciales y mestizaje en Cartagena».",
+      "apoyo": "documentada",
+      "fuente_previa": "Comparten el fenómeno Violencias. Por corroborar el vínculo directo.",
+      "estado": "corroborada",
+      "aspecto": "El mestizaje y las categorías raciales en el Caribe colombiano.",
+      "limite": "Cita en la bibliografía; el uso en el cuerpo no se localizó con página.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "friccion": {
+        "hay": false
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "tinsley",
@@ -17019,8 +17435,20 @@
       "a": "islandfutures",
       "b": "aftershocks",
       "tipo": "resonancia",
-      "fuente": "Comparten la tesis central de que el desastre revela la relación colonial en vez de ocultarla: el terremoto de Haití en Sheller, el huracán María en Bonilla y LeBrón (Sheller 2020; Bonilla y LeBrón 2019).",
-      "apoyo": "comparacion"
+      "fuente": "Verificada en el texto. Mimi Sheller, Island Futures: Caribbean Survival in the Anthropocene, 2020, EPUB, secciones 3 y 4: «As Yarimar Bonilla says in her book coedited with Marisol LeBron, Aftershocks of Disaster».",
+      "apoyo": "documentada",
+      "fuente_previa": "Comparten la tesis central de que el desastre revela la relación colonial en vez de ocultarla: el terremoto de Haití en Sheller, el huracán María en Bonilla y LeBrón (Sheller 2020; Bonilla y LeBrón 2019).",
+      "estado": "corroborada",
+      "aspecto": "La distinción entre ciudadanos y no ciudadanos frente al desastre climático.",
+      "limite": "Uso puntual en el cuerpo; sin paginación en la edición EPUB.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "friccion": {
+        "hay": false
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "islandfutures",
@@ -17054,8 +17482,16 @@
       "a": "lara",
       "b": "reconfdominic",
       "tipo": "resonancia",
-      "fuente": "Comparten el terreno de la identidad negra dominicana, una desde la disputa racial pública, otra desde la disidencia sexual (Simmons; Lara 2020).",
-      "apoyo": "comparacion"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el terreno de la identidad negra dominicana, una desde la disputa racial pública, otra desde la disidencia sexual (Simmons; Lara 2020). Revisión del 1-oct-2026: Se revisó el texto completo de Ana-Maurine Lara (el de Kimberly Eison Simmons no está en la biblioteca del grupo): no cita a la otra obra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el terreno de la identidad negra dominicana, una desde la disputa racial pública, otra desde la disidencia sexual (Simmons; Lara 2020).",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "gill",
@@ -17289,8 +17725,20 @@
       "a": "fuentesdispossessed",
       "b": "shellererotic",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Cuerpo y erótica. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Verificada en el texto. Marisa J. Fuentes, Dispossessed Lives: Enslaved Women, Violence, and the Archive, 2016, PDF, hoja 161: «Mimi Sheller, Citizenship from Below: Erotic Agency and Caribbean Freedom (Durham, N.C.: Duke University Press, 2012)».",
+      "apoyo": "documentada",
+      "fuente_previa": "Comparten el fenómeno Cuerpo y erótica. Por corroborar el vínculo directo.",
+      "estado": "corroborada",
+      "aspecto": "La agencia erótica y la violencia sexual sobre las mujeres esclavizadas.",
+      "limite": "Cita en nota; Fuentes la usa como referencia de campo, sin discutirla.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "friccion": {
+        "hay": false
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "bollandbelize",
@@ -17310,8 +17758,16 @@
       "a": "hintzen",
       "b": "bonilla",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Soberanías. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el fenómeno Soberanías. Revisión del 1-oct-2026: Se revisaron los textos completos de las dos obras (Percy C. Hintzen y Yarimar Bonilla): ninguna de las dos obras cita a la otra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el fenómeno Soberanías. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "rainforestwarriors",
@@ -17480,8 +17936,16 @@
       "a": "jaffeconcrete",
       "b": "tambu",
       "tipo": "resonancia",
-      "fuente": "Comparten el anclaje curazoleño, reforzando el todavía delgado nodo neerlandés del atlas. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el anclaje curazoleño, reforzando el todavía delgado nodo neerlandés del atlas. Revisión del 1-oct-2026: Se revisó el texto completo de Rivke Jaffe (el de Nanette de Jong no está en la biblioteca del grupo): no cita a la otra obra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el anclaje curazoleño, reforzando el todavía delgado nodo neerlandés del atlas. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "jaffeconcrete",
@@ -17606,8 +18070,16 @@
       "a": "handlerlangebarbados",
       "b": "sharpewake",
       "tipo": "resonancia",
-      "fuente": "Comparten el anclaje en Barbados. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el anclaje en Barbados. Revisión del 1-oct-2026: Se revisaron los textos completos de las dos obras (Jerome S. Handler y Frederick W. Lange y Christina Sharpe): ninguna de las dos obras cita a la otra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el anclaje en Barbados. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "kutzinskisugar",
@@ -17627,8 +18099,20 @@
       "a": "curtispleasures",
       "b": "globalculture",
       "tipo": "resonancia",
-      "fuente": "Comparten el anclaje en Nevis. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Verificada en el texto. Debra Curtis, Pleasures and Perils: Girls' Sexuality in a Caribbean Consumer Culture, 2009, PDF, hojas 209 y 222: «See Olwig (1993) for a historical analysis of the Methodist society and its affects on Nevisian social life».",
+      "apoyo": "documentada",
+      "fuente_previa": "Comparten el anclaje en Nevis. Por corroborar el vínculo directo.",
+      "estado": "corroborada",
+      "aspecto": "Nevis: la sociedad metodista y los discursos sexuales de origen colonial.",
+      "limite": "Remisión en nota a la historia de Olwig; no la discute.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "friccion": {
+        "hay": false
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "curtispleasures",
@@ -17813,8 +18297,16 @@
       "a": "schwartz_seaofstorms",
       "b": "aftershocks",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Catástrofes climáticas y el lugar Puerto Rico. Por corroborar el vínculo textual directo: no se detectó cita cruzada explícita en el rastreo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el fenómeno Catástrofes climáticas y el lugar Puerto Rico. Revisión del 1-oct-2026: Se revisaron los textos completos de las dos obras (Stuart B. Schwartz y Bonilla & LeBrón (eds.)): ninguna de las dos obras cita a la otra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el fenómeno Catástrofes climáticas y el lugar Puerto Rico. Por corroborar el vínculo textual directo: no se detectó cita cruzada explícita en el rastreo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "smith_sexcitizen",
@@ -17876,8 +18368,20 @@
       "a": "klein_battleparadise",
       "b": "aftershocks",
       "tipo": "resonancia",
-      "fuente": "Comparten fuente primaria: ambas obras se apoyan en el trabajo de Yarimar Bonilla sobre Puerto Rico pos-María.",
-      "apoyo": "comparacion"
+      "fuente": "Verificada en el texto. Bonilla & LeBrón (eds.), Aftershocks of Disaster (huracán María), 2019, PDF, hojas 41, 47 y 276: «Naomi Klein, The Battle for Paradise: Puerto Rico Takes on the Disaster Capitalists (Chicago: Haymarket Books, 2018)».",
+      "apoyo": "documentada",
+      "fuente_previa": "Comparten fuente primaria: ambas obras se apoyan en el trabajo de Yarimar Bonilla sobre Puerto Rico pos-María.",
+      "estado": "corroborada",
+      "aspecto": "El capitalismo del desastre en Puerto Rico después de María.",
+      "limite": "Klein participa en el volumen (hoja 41): vínculo de autoría además de cita.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "friccion": {
+        "hay": false
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "trouillothaitistate",
@@ -18585,15 +19089,39 @@
       "a": "helglibertyequality",
       "b": "abello",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Soberanías/Colonialidad sobre el Caribe colombiano excluido del relato nacional andino. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Verificada en el texto. Alberto Abello Vives, La isla encallada: el Caribe colombiano en el archipiélago, 2015, EPUB, sección 12: «ver Helg, Liberty and Equality in Caribbean Colombia, 1770-1835».",
+      "apoyo": "documentada",
+      "fuente_previa": "Comparten el fenómeno Soberanías/Colonialidad sobre el Caribe colombiano excluido del relato nacional andino. Por corroborar el vínculo directo.",
+      "estado": "corroborada",
+      "aspecto": "La historia del Caribe colombiano en la independencia: Abello remite a Helg como bibliografía de base.",
+      "limite": "Remisión en nota; sin paginación en la edición EPUB.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "friccion": {
+        "hay": false
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "helglibertyequality",
       "b": "bassiacuoso",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Colonialidad y el territorio del Gran Caribe neogranadino. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Verificada en el texto. Ernesto Bassi, Un territorio acuoso: geografías marineras y el Gran Caribe transimperial de la Nueva Granada, 2016 / trad. esp. 2021, PDF, hojas 34, 66 y 73: «Véase también Helg, Libertad e igualdad, 108-110».",
+      "apoyo": "documentada",
+      "fuente_previa": "Comparten el fenómeno Colonialidad y el territorio del Gran Caribe neogranadino. Por corroborar el vínculo directo.",
+      "estado": "corroborada",
+      "aspecto": "Raza e independencia en el Caribe neogranadino.",
+      "limite": "Bassi cita la traducción española (Libertad e igualdad en el Caribe colombiano); se acepta por la regla de la traducción identificada.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "friccion": {
+        "hay": false
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "helglibertyequality",
@@ -18653,29 +19181,73 @@
       "a": "muneraelfracaso",
       "b": "abello",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Soberanías/Colonialidad y la tesis del Caribe colombiano excluido del relato nacional andino. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Verificada en el texto. Alberto Abello Vives, La isla encallada: el Caribe colombiano en el archipiélago, 2015, EPUB, secciones 3 y 12: «Múnera, El fracaso de la nación. Región, clase y raza en el Caribe colombiano (1717-1821)».",
+      "apoyo": "documentada",
+      "fuente_previa": "Comparten el fenómeno Soberanías/Colonialidad y la tesis del Caribe colombiano excluido del relato nacional andino. Por corroborar el vínculo directo.",
+      "estado": "corroborada",
+      "aspecto": "La región caribe frente a la nación andina.",
+      "limite": "Remisión en nota y bibliografía; sin paginación en la edición EPUB.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "friccion": {
+        "hay": false
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "muneraelfracaso",
       "b": "bassiacuoso",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Colonialidad y el territorio del Gran Caribe neogranadino en el mismo período. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Verificada en el texto. Ernesto Bassi, Un territorio acuoso: geografías marineras y el Gran Caribe transimperial de la Nueva Granada, 2016 / trad. esp. 2021, PDF, hojas 47, 59 y 66: «Véase también Múnera, El fracaso de la nación, 111-139».",
+      "apoyo": "documentada",
+      "fuente_previa": "Comparten el fenómeno Colonialidad y el territorio del Gran Caribe neogranadino en el mismo período. Por corroborar el vínculo directo.",
+      "estado": "corroborada",
+      "aspecto": "Cartagena y el comercio colonial: Bassi discute el centralismo cartagenero de la historiografía, Múnera incluido.",
+      "limite": "Bassi usa a Múnera y a la vez señala el sesgo cartagenero de esa tradición (hoja 59).",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "friccion": {
+        "hay": false
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "saetheridentidades",
       "b": "abello",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Soberanías/Colonialidad sobre el Caribe colombiano frente al relato nacional andino. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Verificada en el texto. Alberto Abello Vives, La isla encallada: el Caribe colombiano en el archipiélago, 2015, EPUB, secciones 3 y 12: «Saether, Identidades e independencia en Santa Marta y Riohacha, 1750-1850».",
+      "apoyo": "documentada",
+      "fuente_previa": "Comparten el fenómeno Soberanías/Colonialidad sobre el Caribe colombiano frente al relato nacional andino. Por corroborar el vínculo directo.",
+      "estado": "corroborada",
+      "aspecto": "Santa Marta y Riohacha en la independencia del Caribe colombiano.",
+      "limite": "Remisión en nota y bibliografía; sin paginación en la edición EPUB.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "friccion": {
+        "hay": false
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "saetheridentidades",
       "b": "figueroa",
       "tipo": "resonancia",
-      "fuente": "Comparten el nodo Santa Marta y el problema de la violencia política regional, en distintos períodos. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el nodo Santa Marta y el problema de la violencia política regional, en distintos períodos. Revisión del 1-oct-2026: Se revisaron los textos completos de las dos obras (Steinar A. Sæther y José Antonio Figueroa): ninguna de las dos obras cita a la otra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el nodo Santa Marta y el problema de la violencia política regional, en distintos períodos. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "zonabananera",
@@ -18744,8 +19316,20 @@
       "a": "hurbondictadura",
       "b": "trouillothaitistate",
       "tipo": "resonancia",
-      "fuente": "Comparten el objeto histórico —el duvalierismo— desde ángulos distintos: el control del imaginario cultural (Hurbon) y la formación del Estado poscolonial (Trouillot). Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Verificada en el texto. Michel-Rolph Trouillot, Haiti: State Against Nation. The Origins and Legacy of Duvalierism, 1990, PDF, hojas 236 y 254: «Hurbon, Laënnec 1979. Culture et dictature en Haïti. L'Imaginaire sous contrôle. Paris: L'Harmattan».",
+      "apoyo": "documentada",
+      "fuente_previa": "Comparten el objeto histórico —el duvalierismo— desde ángulos distintos: el control del imaginario cultural (Hurbon) y la formación del Estado poscolonial (Trouillot). Por corroborar el vínculo directo.",
+      "estado": "corroborada",
+      "aspecto": "La cultura bajo la dictadura duvalierista y el Estado contra la nación.",
+      "limite": "Remisión breve en el cuerpo (hoja 236) y bibliografía.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "friccion": {
+        "hay": false
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "reysinningcristorey",
@@ -18962,8 +19546,16 @@
       "a": "prestolmasacre",
       "b": "trouillothaitistate",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Violencias y el objeto histórico de la violencia de Estado en la frontera domínico-haitiana. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el fenómeno Violencias y el objeto histórico de la violencia de Estado en la frontera domínico-haitiana. Revisión del 1-oct-2026: Se revisaron los textos completos de las dos obras (Freddy Prestol Castillo y Michel-Rolph Trouillot): ninguna de las dos obras cita a la otra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el fenómeno Violencias y el objeto histórico de la violencia de Estado en la frontera domínico-haitiana. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "hazareesingh",
@@ -19235,29 +19827,69 @@
       "a": "alvarezboro",
       "b": "chicamusicaafricana",
       "tipo": "resonancia",
-      "fuente": "Comparten lugar (Cartagena) y el eje de la vida afrocaribeña contemporánea en la ciudad —violencia y marginalidad de un lado, cultura picotera del otro, en barrios contiguos. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten lugar (Cartagena) y el eje de la vida afrocaribeña contemporánea en la ciudad —violencia y marginalidad de un lado, cultura picotera del otro, en barrios contiguos. Revisión del 1-oct-2026: Se revisó el texto completo de Ricardo Chica Geliz y Adrián Fajardo Martínez (el de William Álvarez Álvarez no está en la biblioteca del grupo): no cita a la otra obra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten lugar (Cartagena) y el eje de la vida afrocaribeña contemporánea en la ciudad —violencia y marginalidad de un lado, cultura picotera del otro, en barrios contiguos. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "belisodelirium",
       "b": "palmiengangas",
       "tipo": "resonancia",
-      "fuente": "Comparten lugar (Cuba) y el eje del cuerpo religioso afrocubano: la autora se formó en santería cubana antes de escribir sobre violencia policial. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten lugar (Cuba) y el eje del cuerpo religioso afrocubano: la autora se formó en santería cubana antes de escribir sobre violencia policial. Revisión del 1-oct-2026: Se revisaron los textos completos de las dos obras (Aisha M. Beliso-De Jesús y Stephan Palmié): ninguna de las dos obras cita a la otra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten lugar (Cuba) y el eje del cuerpo religioso afrocubano: la autora se formó en santería cubana antes de escribir sobre violencia policial. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "castorspiritual",
       "b": "james",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Soberanías: el libro rastrea explícitamente la ruta del Black Power trinitario a la religión ifá, linaje intelectual que reclama a C.L.R. James. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Verificada en el texto. N. Fadeke Castor, Spiritual Citizenship: Transnational Pathways from Black Power to Ifá in Trinidad, 2017, PDF, hoja 241: «1989 [1963]. The Black Jacobins: Toussaint L'Ouverture and the San Domingo Revolution. New York: Vintage Books».",
+      "apoyo": "documentada",
+      "fuente_previa": "Comparten el fenómeno Soberanías: el libro rastrea explícitamente la ruta del Black Power trinitario a la religión ifá, linaje intelectual que reclama a C.L.R. James. Por corroborar el vínculo directo.",
+      "estado": "corroborada",
+      "aspecto": "La Revolución haitiana como horizonte de la ciudadanía espiritual afrotrinitaria.",
+      "limite": "Cita en la bibliografía; el uso en el cuerpo no se localizó con página.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "friccion": {
+        "hay": false
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "godreauscripts",
       "b": "zambrana",
       "tipo": "resonancia",
-      "fuente": "Comparten lugar (Puerto Rico) y el fenómeno Colonialidad: ambas leen la administración colonial estadounidense sobre la isla desde ángulos distintos (raza cultural vs. deuda). Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Verificada en el texto. Rocío Zambrana, Colonial Debts: The Case of Puerto Rico, 2021, EPUB, secciones 13 y 14: «See especially Isar P. Godreau, Scripts of Blackness: Race, Cultural Nationalism, and US Colonialism in Puerto Rico».",
+      "apoyo": "documentada",
+      "fuente_previa": "Comparten lugar (Puerto Rico) y el fenómeno Colonialidad: ambas leen la administración colonial estadounidense sobre la isla desde ángulos distintos (raza cultural vs. deuda). Por corroborar el vínculo directo.",
+      "estado": "corroborada",
+      "aspecto": "La racialización en Puerto Rico como parte de la deuda colonial.",
+      "limite": "Remisión en notas; sin paginación en la edición EPUB.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "friccion": {
+        "hay": false
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "williamscapitalismo",
@@ -19354,8 +19986,16 @@
       "a": "wynterblackmetamorphosis",
       "b": "henrycaliban",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Creolización / oralitura. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el fenómeno Creolización / oralitura. Revisión del 1-oct-2026: Se revisaron los textos completos de las dos obras (Sylvia Wynter y Paget Henry): ninguna de las dos obras cita a la otra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el fenómeno Creolización / oralitura. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "brathwaitearchipelago",
@@ -19849,8 +20489,16 @@
       "a": "oostindiedecolonising",
       "b": "steward",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno de fondo. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el fenómeno de fondo. Revisión del 1-oct-2026: Se revisó el texto completo de Gert Oostindie e Inge Klinkers (el de Julian H. Steward no está en la biblioteca del grupo): no cita a la otra obra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el fenómeno de fondo. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "vanderpijl_equaliberty",
@@ -20207,8 +20855,20 @@
       "a": "shepherdmaharani",
       "b": "bahadurcoolie",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Cuerpo, género y erótica. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Verificada en el texto. Gaiutra Bahadur, Coolie Woman: The Odyssey of Indenture, 2013, PDF, hojas 78 y 263: «Verene Shepherd provides another example […] in her groundbreaking Maharani's Misery, an account of a fatal rape aboard».",
+      "apoyo": "documentada",
+      "fuente_previa": "Comparten el fenómeno Cuerpo, género y erótica. Por corroborar el vínculo directo.",
+      "estado": "corroborada",
+      "aspecto": "La violencia sexual en el pasaje de la indentura.",
+      "limite": "Bahadur la cita como antecedente y como fuente de un caso.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "friccion": {
+        "hay": false
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "putnamradical",
@@ -20221,15 +20881,31 @@
       "a": "looklaichinese",
       "b": "callaloonation",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Creolización / oralitura. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el fenómeno Creolización / oralitura. Revisión del 1-oct-2026: Se revisaron los textos completos de las dos obras (Walton Look Lai y Aisha Khan): ninguna de las dos obras cita a la otra por título. Khan cita otra obra de Look Lai (1993, sobre la indentura), no The Chinese in the West Indies.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el fenómeno Creolización / oralitura. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "looklaichinese",
       "b": "ramsaranlewis",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Creolización / oralitura. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el fenómeno Creolización / oralitura. Revisión del 1-oct-2026: Se revisaron los textos completos de las dos obras (Walton Look Lai y Dave Ramsaran y Linden F. Lewis): ninguna de las dos obras cita a la otra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el fenómeno Creolización / oralitura. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "putnamradical",
@@ -20396,15 +21072,31 @@
       "a": "bollandbelize",
       "b": "atkinsonearliest",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Colonialidad. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el fenómeno Colonialidad. Revisión del 1-oct-2026: Se revisaron los textos completos de las dos obras (O. Nigel Bolland y Lesley-Gail Atkinson (ed.)): ninguna de las dos obras cita a la otra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el fenómeno Colonialidad. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "atkinsonearliest",
       "b": "whiteheadtiger",
       "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten el fenómeno Memoria y espiritualidad. Revisión del 1-oct-2026: Se revisaron los textos completos de las dos obras (Lesley-Gail Atkinson (ed.) y Neil L. Whitehead): ninguna de las dos obras cita a la otra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten el fenómeno Memoria y espiritualidad. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "baucomspecters",
@@ -20501,8 +21193,20 @@
       "a": "beckfordpersistent",
       "b": "besson",
       "tipo": "resonancia",
-      "fuente": "Comparten postplantación y el mismo lugar, Jamaica: la crítica de Beckford al modelo de plantación como estructura persistente y la etnografía de Besson sobre el campesinado poscolonial jamaicano leen el mismo problema desde la economía política y la etnografía. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Verificada en el texto. Jean Besson, Martha Brae's Two Histories, 2002, PDF, hojas 47 y 384: «although Beckford also explores the persistent poverty generated by capitalist class relations, he contends that the plantation system resulted in weak families».",
+      "apoyo": "documentada",
+      "fuente_previa": "Comparten postplantación y el mismo lugar, Jamaica: la crítica de Beckford al modelo de plantación como estructura persistente y la etnografía de Besson sobre el campesinado poscolonial jamaicano leen el mismo problema desde la economía política y la etnografía. Por corroborar el vínculo directo.",
+      "estado": "corroborada",
+      "aspecto": "La plantación y la familia campesina en Jamaica.",
+      "limite": "Relación crítica: Besson rechaza la tesis de Beckford sobre la debilidad de la familia y la comunidad (hoja 47). Puede revisarse como fricción.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "friccion": {
+        "hay": false
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "benoistarchipel",
@@ -20515,8 +21219,16 @@
       "a": "wekkerpolitics",
       "b": "travelstooy",
       "tipo": "resonancia",
-      "fuente": "Comparten memoria y el mismo lugar, Surinam: la vida interior afro-surinamesa —el mati work en Wekker, la memoria histórica de Tooy en Price— como archivo que la etnografía convencional no captura. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten memoria y el mismo lugar, Surinam: la vida interior afro-surinamesa —el mati work en Wekker, la memoria histórica de Tooy en Price— como archivo que la etnografía convencional no captura. Revisión del 1-oct-2026: Se revisaron los textos completos de las dos obras (Gloria Wekker y Richard Price): ninguna de las dos obras cita a la otra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten memoria y el mismo lugar, Surinam: la vida interior afro-surinamesa —el mati work en Wekker, la memoria histórica de Tooy en Price— como archivo que la etnografía convencional no captura. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "chaudensoncreolization",
@@ -20529,29 +21241,65 @@
       "a": "harriottgangs",
       "b": "exceptviolence",
       "tipo": "resonancia",
-      "fuente": "Comparten violencias y el mismo lugar, Jamaica: el análisis de Estado y sociedad ante las pandillas (Harriott y Katz) y la etnografía de la violencia cotidiana de Deborah Thomas leen el mismo campo desde la criminología y la antropología. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten violencias y el mismo lugar, Jamaica: el análisis de Estado y sociedad ante las pandillas (Harriott y Katz) y la etnografía de la violencia cotidiana de Deborah Thomas leen el mismo campo desde la criminología y la antropología. Revisión del 1-oct-2026: Se revisaron los textos completos de las dos obras (Anthony Harriott y Charles M. Katz (eds.) y Deborah A. Thomas): ninguna de las dos obras cita a la otra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten violencias y el mismo lugar, Jamaica: el análisis de Estado y sociedad ante las pandillas (Harriott y Katz) y la etnografía de la violencia cotidiana de Deborah Thomas leen el mismo campo desde la criminología y la antropología. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "loweintimacies",
       "b": "brereton_racerelationstrinidad",
       "tipo": "resonancia",
-      "fuente": "Comparten colonialidad y el mismo lugar, Trinidad: las intimidades coloniales de Lowe y la historiografía de las relaciones raciales de Brereton examinan el mismo archivo colonial trinitense desde ángulos distintos. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten colonialidad y el mismo lugar, Trinidad: las intimidades coloniales de Lowe y la historiografía de las relaciones raciales de Brereton examinan el mismo archivo colonial trinitense desde ángulos distintos. Revisión del 1-oct-2026: Se revisaron los textos completos de las dos obras (Lisa Lowe y Bridget Brereton): ninguna de las dos obras cita a la otra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten colonialidad y el mismo lugar, Trinidad: las intimidades coloniales de Lowe y la historiografía de las relaciones raciales de Brereton examinan el mismo archivo colonial trinitense desde ángulos distintos. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "poloacunahistoriasocial",
       "b": "cunin",
       "tipo": "resonancia",
-      "fuente": "Comparten colonialidad y el mismo lugar, Cartagena: la historia social del Caribe colombiano editada por Polo Acuña y Solano y el trabajo de Cunin sobre raza y turismo en Cartagena examinan la misma ciudad desde la historia y la antropología. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten colonialidad y el mismo lugar, Cartagena: la historia social del Caribe colombiano editada por Polo Acuña y Solano y el trabajo de Cunin sobre raza y turismo en Cartagena examinan la misma ciudad desde la historia y la antropología. Revisión del 1-oct-2026: Se revisaron los textos completos de las dos obras (José Polo Acuña y Sergio Paolo Solano (eds.) y Elisabeth Cunin): ninguna de las dos obras cita a la otra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten colonialidad y el mismo lugar, Cartagena: la historia social del Caribe colombiano editada por Polo Acuña y Solano y el trabajo de Cunin sobre raza y turismo en Cartagena examinan la misma ciudad desde la historia y la antropología. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "austinbroosgenesis",
       "b": "chevannes",
       "tipo": "resonancia",
-      "fuente": "Comparten memoria y el mismo lugar, Jamaica: el orden moral religioso jamaicano que estudia Austin-Broos y la etnografía rastafari de Chevannes leen el mismo campo religioso jamaicano desde ángulos complementarios. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Verificada en el texto. Diane J. Austin-Broos, Jamaica Genesis: Religion and the Politics of Moral Orders, 1997, PDF, hojas 219, 273 y 305: «Chevannes (1994) is the most comprehensive account of Jamaican Rastafarianism».",
+      "apoyo": "documentada",
+      "fuente_previa": "Comparten memoria y el mismo lugar, Jamaica: el orden moral religioso jamaicano que estudia Austin-Broos y la etnografía rastafari de Chevannes leen el mismo campo religioso jamaicano desde ángulos complementarios. Por corroborar el vínculo directo.",
+      "estado": "corroborada",
+      "aspecto": "Rastafari en el campo religioso jamaicano y su orden moral.",
+      "limite": "Austin-Broos cita también otros trabajos de Chevannes (1971, 1989); la cita verificada es la de 1994.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "friccion": {
+        "hay": false
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "vergesabolir",
@@ -20564,29 +21312,65 @@
       "a": "yelvingtonproducing",
       "b": "williamscapitalismo",
       "tipo": "resonancia",
-      "fuente": "Comparten capitalismo racial, postplantación y el mismo lugar, Trinidad: la etnografía fabril de Yelvington es una extensión empírica directa de la tesis de Eric Williams sobre capitalismo y esclavitud en la misma isla. Por corroborar la referencia cruzada explícita.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten capitalismo racial, postplantación y el mismo lugar, Trinidad: la etnografía fabril de Yelvington es una extensión empírica directa de la tesis de Eric Williams sobre capitalismo y esclavitud en la misma isla. Revisión del 1-oct-2026: Se revisaron los textos completos de las dos obras (Kevin A. Yelvington y Eric Williams): ninguna de las dos obras cita a la otra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten capitalismo racial, postplantación y el mismo lugar, Trinidad: la etnografía fabril de Yelvington es una extensión empírica directa de la tesis de Eric Williams sobre capitalismo y esclavitud en la misma isla. Por corroborar la referencia cruzada explícita.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "wellsgarifuna",
       "b": "gonzalezsojourners",
       "tipo": "resonancia",
-      "fuente": "Comparten cimarronaje: ambas obras trabajan la etnogénesis garífuna como diáspora cimarrona centroamericana. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten cimarronaje: ambas obras trabajan la etnogénesis garífuna como diáspora cimarrona centroamericana. Revisión del 1-oct-2026: Se revisaron los textos completos de las dos obras (Marilyn McKillop Wells y Nancie L. González): ninguna de las dos obras cita a la otra por título.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten cimarronaje: ambas obras trabajan la etnogénesis garífuna como diáspora cimarrona centroamericana. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "smallwoodsaltwater",
       "b": "handlerlangebarbados",
       "tipo": "resonancia",
-      "fuente": "Comparten violencias y el mismo lugar, Barbados: el pasaje intermedio que estudia Smallwood y la esclavitud barbadense de Handler y Lange examinan la misma economía política de la trata desde el archivo y la arqueología. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Por corroborar. Comparación declarada. Comparten violencias y el mismo lugar, Barbados: el pasaje intermedio que estudia Smallwood y la esclavitud barbadense de Handler y Lange examinan la misma economía política de la trata desde el archivo y la arqueología. Revisión del 1-oct-2026: Se revisaron los textos completos de las dos obras (Stephanie E. Smallwood y Jerome S. Handler y Frederick W. Lange): ninguna de las dos obras cita a la otra por título. Smallwood cita un artículo de Handler (Life Histories of Enslaved Africans in Barbados, 1998), no Plantation Slavery in Barbados.",
+      "apoyo": "comparacion",
+      "fuente_previa": "Comparten violencias y el mismo lugar, Barbados: el pasaje intermedio que estudia Smallwood y la esclavitud barbadense de Handler y Lange examinan la misma economía política de la trata desde el archivo y la arqueología. Por corroborar el vínculo directo.",
+      "estado": "por_corroborar",
+      "limite": "Búsqueda negativa por título en el texto completo: la relación queda como comparación que propone el atlas, no como vínculo entre las obras.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "johnsonwickedflesh",
       "b": "creolenieworleans",
       "tipo": "resonancia",
-      "fuente": "Comparten el lugar, Luisiana/Nueva Orleans colonial: las mujeres negras libres y esclavizadas que estudia Johnson y la formación racial criolla neorleansina de Hirsch y Logsdon leen el mismo espacio atlántico francés. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
+      "fuente": "Verificada en el texto. Jessica Marie Johnson, Wicked Flesh: Black Women, Intimacy, and Freedom in the Atlantic World, 2020, PDF, hoja 281: «Jerah Johnson, Colonial New Orleans […] in Creole New Orleans: Race and Americanization, ed. Arnold R. Hirsch and Joseph Logsdon».",
+      "apoyo": "documentada",
+      "fuente_previa": "Comparten el lugar, Luisiana/Nueva Orleans colonial: las mujeres negras libres y esclavizadas que estudia Johnson y la formación racial criolla neorleansina de Hirsch y Logsdon leen el mismo espacio atlántico francés. Por corroborar el vínculo directo.",
+      "estado": "corroborada",
+      "aspecto": "La Nueva Orleans francesa y la formación de su orden racial.",
+      "limite": "Cita de un capítulo del volumen en nota.",
+      "revision_interna": {
+        "responsable": "Revisión de fuentes vagas asistida; aprobada por la dirección académica (1-oct-2026)",
+        "fecha": "2026-10-01"
+      },
+      "friccion": {
+        "hay": false
+      },
+      "lote_revision": "FV-2026-10-01"
     },
     {
       "a": "zeidermanartery",
