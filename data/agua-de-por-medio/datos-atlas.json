@@ -16182,11 +16182,18 @@
       "a": "glissant",
       "b": "creolite",
       "tipo": "disonancia",
-      "fuente": "La créolité de Bernabé, Chamoiseau y Confiant se distancia de la poética de la Relación de Glissant.",
-      "apoyo": "comparacion",
+      "fuente": "Verificada en el texto. Édouard Glissant, Poétique de la Relation, Gallimard, 1990, p. 103: «la “créolité”, dans son principe, régresserait vers des négritudes, des francités, des latinités, toutes généralisantes»; la nota de la p. 230 identifica la obra discutida: «Eloge de la Créolité (Gallimard, 1988). Un Manifeste […]. C’est à cet ouvrage que je me réfère».",
+      "apoyo": "documentada",
       "objeto_disonancia": {
-        "texto": "Si la identidad antillana debe nombrarse como créolité, una identidad afirmada, o quedar abierta como Relación, sin esencia.",
-        "estado": "por_establecer",
+        "texto": "Si la identidad antillana debe nombrarse como créolité, una identidad afirmada, o quedar abierta como Relación: para Glissant, la créolité «régresserait vers des négritudes».",
+        "estado": "establecido",
+        "fecha": "2026-10-01"
+      },
+      "fuente_previa": "La créolité de Bernabé, Chamoiseau y Confiant se distancia de la poética de la Relación de Glissant.",
+      "aspecto": "Glissant acepta lo que la créolité nombra de las créolisations, pero rechaza su «visée à l’être»: fijar una identidad en vez de mantener abierta la Relación.",
+      "limite": "El Éloge, por su parte, se declara heredero de Glissant: la disonancia la abre Glissant y, en estos dos textos, es unilateral.",
+      "revision_interna": {
+        "responsable": "Revisión con texto asistida; dirección académica de Pensamiento Caribe",
         "fecha": "2026-10-01"
       }
     },
@@ -16383,7 +16390,11 @@
       "objeto_disonancia": {
         "texto": "Cómo se repara la esclavitud: deuda que el Estado y las metrópolis deben pagar, o mundo rehecho fuera del Estado por la contra-plantación.",
         "estado": "por_establecer",
-        "fecha": "2026-10-01"
+        "fecha": "2026-10-01",
+        "revision_texto": {
+          "nota": "Revisado The Haitians (2020): no cita a Araujo, y además suscribe la exigencia de reparación por la esclavitud con Sala-Molins (cap. 2). La oposición entre reparación y contra-plantación que planteaba la ficha no se sostiene en el texto de Casimir.",
+          "fecha": "2026-10-01"
+        }
       }
     },
     {
@@ -17581,7 +17592,11 @@
       "objeto_disonancia": {
         "texto": "Si el Caribe es un área definida desde fuera por la plantación o una historia que se define desde dentro.",
         "estado": "por_establecer",
-        "fecha": "2026-10-01"
+        "fecha": "2026-10-01",
+        "revision_texto": {
+          "nota": "Revisado The Haitians (2020): no cita a Mintz. El desacuerdo es una lectura que propone el atlas.",
+          "fecha": "2026-10-01"
+        }
       }
     },
     {
@@ -18460,7 +18475,7 @@
         "estado": "por_establecer",
         "fecha": "2026-10-01",
         "revision_texto": {
-          "nota": "Revisado el texto de Trouillot (1990): no menciona a Casimir. Falta The Haitians (2020), que es la obra que podría discutir a Trouillot.",
+          "nota": "Revisados los dos textos. Casimir cita Haiti: State against Nation solo en la bibliografía; en el cuerpo usa a Trouillot (Silencing the Past) para apoyar su lectura de la revolución como lo impensable. No hay desacuerdo en el texto: la relación documentada es de resonancia.",
           "fecha": "2026-10-01"
         }
       }
