@@ -8537,10 +8537,10 @@
       "proceso": [
         "siembra"
       ],
-      "recorrido": null,
+      "recorrido": "c7",
       "recorridos_sec": [],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Lectura integral del artículo, con verificación de notas; la clasificación no se adjudica en esta revisión",
@@ -8549,14 +8549,16 @@
         "fundamento": "C7 es la candidatura principal: el artículo fecha la invención regional en 1898 y la vincula con la hegemonía de Estados Unidos y con los intereses de las élites de la región. El Caribe cultural es solo una de sus cuatro tendencias, por lo que C8 no debe inferirse de ese apartado."
       },
       "fuente_recorrido": [
-        "Lote S18, 15-09-2026: lectura integral; clasificación pendiente"
+        "Lote S18, 15-09-2026: lectura integral; clasificación pendiente",
+        "expediente-corrientes-E05.md"
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "soberanias_fronteras_ocupaciones"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E05 (1-oct-2026), aprobado por la dirección académica. Queda con una sola corriente. Sus cuatro tendencias de definición son el objeto, y la tesis las fecha en 1898 y en la hegemonía estadounidense; el Caribe cultural es un apartado, no una segunda corriente."
       },
       "operaciones": [
         "confrontar una categoría",
@@ -8670,10 +8672,12 @@
       "proceso": [
         "siembra"
       ],
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c4",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión focal por OCR: sumario, capítulo de Girvan, capítulo de Levitt sobre Montreal, capítulo de Paget Henry, notas de la conversación con Best e índice analítico; no lectura integral",
@@ -8682,15 +8686,17 @@
         "fundamento": "C4 es la candidatura principal por el modelo de economía de plantación y sus críticas; C7 corresponde al proyecto de pensamiento independiente y descolonización. Debe evaluarse si un volumen que funciona como archivo de un grupo admite una corriente constitutiva."
       },
       "fuente_recorrido": [
-        "Lote S18, 15-09-2026: revisión focal por OCR; clasificación pendiente"
+        "Lote S18, 15-09-2026: revisión focal por OCR; clasificación pendiente",
+        "expediente-corrientes-E05.md"
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "postplantacion_trabajo_desposesion",
           "soberanias_fronteras_ocupaciones"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "postplantacion_trabajo_desposesion",
+        "nota": "Expediente E05 (1-oct-2026), aprobado por la dirección académica. El volumen funciona como archivo de un grupo, pero ese grupo tiene una tesis: la plantación como paradigma. Se clasifica por ella."
       },
       "operaciones": [
         "reconstruir un archivo",
@@ -8835,17 +8841,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c2",
+      "recorridos_sec": [
+        "c4"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S19-2026-09-18: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S19-2026-09-18: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E05.md"
       ],
       "lote_incorporacion": "S19-2026-09-18",
       "anclaje_cartografico": {
@@ -8886,12 +8895,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "trata_esclavizacion_plantacion",
           "postplantacion_trabajo_desposesion"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "trata_esclavizacion_plantacion",
+        "nota": "Expediente E05 (1-oct-2026), aprobado por la dirección académica. Se clasifica por el argumento de 1967, no por el prólogo de 2022: la obra entró al corpus por lo que dijo entonces."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -8903,17 +8913,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c2",
+      "recorridos_sec": [
+        "c10"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S19-2026-09-18: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S19-2026-09-18: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E05.md"
       ],
       "lote_incorporacion": "S19-2026-09-18",
       "anclaje_cartografico": {
@@ -8955,12 +8968,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "trata_esclavizacion_plantacion",
           "cuerpos_parentescos_eroticas"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "trata_esclavizacion_plantacion",
+        "nota": "Expediente E05 (1-oct-2026), aprobado por la dirección académica. Entra por el lugar de producción: es una teoría general escrita desde Jamaica y leída como pensamiento caribeño. C10 por la alienación natal, que es una tesis sobre el parentesco."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -8972,17 +8986,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c4",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S19-2026-09-18: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S19-2026-09-18: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E05.md"
       ],
       "lote_incorporacion": "S19-2026-09-18",
       "anclaje_cartografico": {
@@ -9019,12 +9036,14 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "postplantacion_trabajo_desposesion",
           "soberanias_fronteras_ocupaciones"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "postplantacion_trabajo_desposesion",
+        "nota": "Expediente E05 (1-oct-2026), aprobado por la dirección académica. Decidido por la introducción y la arquitectura del libro, sin lectura íntegra: el enigma que lo ordena es económico (crecimiento nulo, desempleo, violencia) y la política entra como explicación. Revisable si una lectura completa lo contradice.",
+        "revisable": true
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -9036,17 +9055,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c1"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S19-2026-09-18: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S19-2026-09-18: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E05.md"
       ],
       "lote_incorporacion": "S19-2026-09-18",
       "anclaje_cartografico": {
@@ -9088,12 +9110,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "soberanias_fronteras_ocupaciones",
           "invasiones_mundos_indigenas"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E05 (1-oct-2026), aprobado por la dirección académica. Una obra de intervención sin aparato erudito se clasifica por su tesis, como cualquier otra: la frontera imperial es C7 literal."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -9105,17 +9128,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c6",
+      "recorridos_sec": [
+        "c8"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S19-2026-09-18: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S19-2026-09-18: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E05.md"
       ],
       "lote_incorporacion": "S19-2026-09-18",
       "anclaje_cartografico": {
@@ -9157,12 +9183,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "huracanes_ecologias_materialidades_vivas",
           "creolizaciones_traducciones_opacidades"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "huracanes_ecologias_materialidades_vivas",
+        "nota": "Expediente E05 (1-oct-2026), aprobado por la dirección académica. Se confirma C6 porque la relación con la naturaleza organiza la periodización del libro (inventario colonial, monte del esclavizado, isla como forma) y no aparece solo como tema de las obras de arte."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -9174,17 +9201,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c10"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S19-2026-09-18: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S19-2026-09-18: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E05.md"
       ],
       "lote_incorporacion": "S19-2026-09-18",
       "anclaje_cartografico": {
@@ -9225,12 +9255,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "creolizaciones_traducciones_opacidades",
           "cuerpos_parentescos_eroticas"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "creolizaciones_traducciones_opacidades",
+        "nota": "Expediente E05 (1-oct-2026), aprobado por la dirección académica. C8 porque el libro es un clásico de la teoría del mestizaje y de la blancura criolla; el parentesco entra como el mecanismo por el que se hereda el color."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -9242,17 +9273,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c2",
+      "recorridos_sec": [
+        "c5"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S19-2026-09-18: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S19-2026-09-18: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E05.md"
       ],
       "lote_incorporacion": "S19-2026-09-18",
       "anclaje_cartografico": {
@@ -9293,12 +9327,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "trata_esclavizacion_plantacion",
           "rutas_diasporas_territorios_acuosos"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "trata_esclavizacion_plantacion",
+        "nota": "Expediente E05 (1-oct-2026), aprobado por la dirección académica. El circuito marítimo enmarca el argumento; lo que el libro discute es la formación racial de una sociedad esclavista."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -9310,17 +9345,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c1"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S19-2026-09-18: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S19-2026-09-18: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E05.md"
       ],
       "lote_incorporacion": "S19-2026-09-18",
       "anclaje_cartografico": {
@@ -9366,12 +9404,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "soberanias_fronteras_ocupaciones",
           "invasiones_mundos_indigenas"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E05 (1-oct-2026), aprobado por la dirección académica. La presencia kalinaga es constitutiva, pero lo que el libro narra es la formación y el desmontaje de una frontera imperial. C1 queda como secundaria."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -9383,17 +9422,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c4",
+      "recorridos_sec": [
+        "c5"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S19-2026-09-18: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S19-2026-09-18: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E05.md"
       ],
       "lote_incorporacion": "S19-2026-09-18",
       "anclaje_cartografico": {
@@ -9438,12 +9480,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "postplantacion_trabajo_desposesion",
           "rutas_diasporas_territorios_acuosos"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "postplantacion_trabajo_desposesion",
+        "nota": "Expediente E05 (1-oct-2026), aprobado por la dirección académica. El argumento se organiza por el trabajo racializado del enclave; la migración antillana es su condición."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -9455,17 +9498,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c5"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S19-2026-09-18: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S19-2026-09-18: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E05.md"
       ],
       "lote_incorporacion": "S19-2026-09-18",
       "anclaje_cartografico": {
@@ -9511,12 +9557,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "soberanias_fronteras_ocupaciones",
           "rutas_diasporas_territorios_acuosos"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E05 (1-oct-2026), aprobado por la dirección académica. La administración de los extranjeros, que es el título, ordena el libro; la migración laboral es su materia."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -9528,17 +9575,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c3",
+      "recorridos_sec": [
+        "c9"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S20-2026-09-18: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S20-2026-09-18: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E05.md"
       ],
       "lote_incorporacion": "S20-2026-09-18",
       "anclaje_cartografico": {
@@ -9594,12 +9644,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "fugas_cimarronajes_emancipaciones",
           "memorias_espiritualidades_archivos_vivos"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "fugas_cimarronajes_emancipaciones",
+        "nota": "Expediente E05 (1-oct-2026), aprobado por la dirección académica. El volumen colectivo se clasifica por su introducción, que plantea la fuga como fenómeno de cuenca."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -9611,17 +9662,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c9"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E05.md"
       ],
       "lote_incorporacion": "S21-2026-09-21",
       "anclaje_cartografico": {
@@ -9672,12 +9726,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "creolizaciones_traducciones_opacidades",
           "memorias_espiritualidades_archivos_vivos"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "creolizaciones_traducciones_opacidades",
+        "nota": "Expediente E05 (1-oct-2026), aprobado por la dirección académica. Se clasifica por su objeto: una crítica de la categoría de negritud es una disputa sobre cómo se nombra y se traduce la diferencia."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -9689,17 +9744,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c3"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E05.md"
       ],
       "lote_incorporacion": "S21-2026-09-21",
       "anclaje_cartografico": {
@@ -9746,34 +9804,39 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
-          "fugas_cimarronajes_emancipaciones",
-          "soberanias_fronteras_ocupaciones"
+          "soberanias_fronteras_ocupaciones",
+          "fugas_cimarronajes_emancipaciones"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E05 (1-oct-2026), aprobado por la dirección académica. Se invierte. La propia propuesta decía que el argumento central es la soberanía que la metrópoli no quiso conceder, y el subtítulo lo nombra: «le problème colonial». Césaire lee a Toussaint como el primero que pensó la descolonización dentro del imperio; la emancipación es el punto de partida, no la tesis. Así queda distinguido de Dubois, que sí sigue el paso de esclavizados a ciudadanos (C3)."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión focal: prefacio de Gary Wilder, capítulos sobre la Asamblea Constituyente y el problema colonial, y aparato de notas.",
         "responsable": "Preparación asistida del lote S21; clasificación pendiente de adjudicación académica",
         "fecha": "2026-09-21",
-        "fundamento": "C3 por la emancipación como acto de los esclavizados; C7 porque el argumento central es la soberanía que la metrópoli no quiso conceder. Debe decidirse si una obra de historia escrita por un poeta de la negritud se clasifica por su objeto o por su lugar de enunciación."
+        "fundamento": "C7 porque el argumento central es el problema colonial: la soberanía que la Revolución francesa no quiso conceder y que Toussaint pensó dentro del imperio; C3 por la emancipación de los esclavizados como punto de partida.",
+        "fundamento_previo": "C3 por la emancipación como acto de los esclavizados; C7 porque el argumento central es la soberanía que la metrópoli no quiso conceder. Debe decidirse si una obra de historia escrita por un poeta de la negritud se clasifica por su objeto o por su lugar de enunciación."
       }
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c3",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E05.md"
       ],
       "lote_incorporacion": "S21-2026-09-21",
       "anclaje_cartografico": {
@@ -9815,12 +9878,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "fugas_cimarronajes_emancipaciones",
           "soberanias_fronteras_ocupaciones"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "fugas_cimarronajes_emancipaciones",
+        "nota": "Expediente E05 (1-oct-2026), aprobado por la dirección académica. Una síntesis narrativa se clasifica como una monografía: por su eje, que es la emancipación armada."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -9832,17 +9896,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c4"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E05.md"
       ],
       "lote_incorporacion": "S21-2026-09-21",
       "anclaje_cartografico": {
@@ -9884,12 +9951,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "soberanias_fronteras_ocupaciones",
           "postplantacion_trabajo_desposesion"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E05 (1-oct-2026), aprobado por la dirección académica. El volumen se clasifica por su convocatoria, que es la construcción del Estado."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -9901,17 +9969,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c10",
+      "recorridos_sec": [
+        "c4"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E05.md"
       ],
       "lote_incorporacion": "S21-2026-09-21",
       "anclaje_cartografico": {
@@ -9957,34 +10028,39 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
-          "postplantacion_trabajo_desposesion",
-          "cuerpos_parentescos_eroticas"
+          "cuerpos_parentescos_eroticas",
+          "postplantacion_trabajo_desposesion"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "cuerpos_parentescos_eroticas",
+        "nota": "Expediente E05 (1-oct-2026), aprobado por la dirección académica. Se invierte. El subtítulo nombra el argumento («the Politics of Gender») y el libro mira la economía bananera «desde la casa y no desde el muelle»: el parentesco, la sexualidad y la violencia doméstica son la clave de los reclamos de autoridad. El enclave es el escenario. Así queda distinguida de Chomsky, que estudia el mismo Limón desde el régimen de trabajo (C4)."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión focal: introducción, capítulo sobre violencia y autoridad, y bibliografía (Chomsky, Bourgois, Harpelle, Mintz, Trouillot, Wilson, Barrow, Chevannes, Cooper, Austin-Broos, Knight, Winston James).",
         "responsable": "Preparación asistida del lote S21; clasificación pendiente de adjudicación académica",
         "fecha": "2026-09-21",
-        "fundamento": "C4 por el régimen de trabajo de enclave; C10 porque el argumento se juega en el parentesco y la sexualidad. Debe decidirse cuál de las dos ordena la obra cuando ambas son inseparables en el texto."
+        "fundamento": "C10 porque el argumento se juega en el género, el parentesco y la sexualidad, que el subtítulo nombra; C4 por el enclave bananero como escenario y régimen de trabajo.",
+        "fundamento_previo": "C4 por el régimen de trabajo de enclave; C10 porque el argumento se juega en el parentesco y la sexualidad. Debe decidirse cuál de las dos ordena la obra cuando ambas son inseparables en el texto."
       }
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c4"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E05.md"
       ],
       "lote_incorporacion": "S21-2026-09-21",
       "anclaje_cartografico": {
@@ -10034,34 +10110,39 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
-          "postplantacion_trabajo_desposesion",
-          "soberanias_fronteras_ocupaciones"
+          "soberanias_fronteras_ocupaciones",
+          "postplantacion_trabajo_desposesion"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E05 (1-oct-2026), aprobado por la dirección académica. Se invierte. El título dice «Race, Nation, and West Indian Immigration», y el arco del libro va de la ley migratoria a la «invasión negra» construida por la intelectualidad nacional y a las deportaciones. Lo que ordena la obra es la frontera de la nación, no el trabajo en el enclave."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión focal: introducción, capítulos 2, 3 y 6 (legislación migratoria, respuesta intelectual y deportaciones) y notas bibliográficas.",
         "responsable": "Preparación asistida del lote S21; clasificación pendiente de adjudicación académica",
         "fecha": "2026-09-21",
-        "fundamento": "C4 por el enclave y su régimen laboral; C7 porque el cierre del argumento es la frontera y la deportación. Debe decidirse si la expulsión ordena la obra más que el trabajo."
+        "fundamento": "C7 porque el argumento es la frontera de la nación: legislación migratoria, «invasión negra» y deportación; C4 por el enclave bananero que atrajo a los trabajadores antillanos.",
+        "fundamento_previo": "C4 por el enclave y su régimen laboral; C7 porque el cierre del argumento es la frontera y la deportación. Debe decidirse si la expulsión ordena la obra más que el trabajo."
       }
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c5",
+      "recorridos_sec": [
+        "c3"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E05.md"
       ],
       "lote_incorporacion": "S21-2026-09-21",
       "anclaje_cartografico": {
@@ -10115,12 +10196,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "rutas_diasporas_territorios_acuosos",
           "fugas_cimarronajes_emancipaciones"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "rutas_diasporas_territorios_acuosos",
+        "nota": "Expediente E05 (1-oct-2026), aprobado por la dirección académica. La ruta ordena la clasificación: la tesis es la colaboración transcolonial, y la fuga es su contenido."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -10132,17 +10214,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E05.md"
       ],
       "lote_incorporacion": "S21-2026-09-21",
       "anclaje_cartografico": {
@@ -10193,12 +10278,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "memorias_espiritualidades_archivos_vivos",
           "soberanias_fronteras_ocupaciones"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "nota": "Expediente E05 (1-oct-2026), aprobado por la dirección académica. Se clasifica por su forma, que es también su tesis: sentarse a razonar fuera del aula es producir conocimiento."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -10210,17 +10296,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c4",
+      "recorridos_sec": [
+        "c2"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E05.md"
       ],
       "lote_incorporacion": "S21-2026-09-21",
       "anclaje_cartografico": {
@@ -10267,12 +10356,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "postplantacion_trabajo_desposesion",
           "trata_esclavizacion_plantacion"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "postplantacion_trabajo_desposesion",
+        "nota": "Expediente E05 (1-oct-2026), aprobado por la dirección académica. Se clasifica por su periodo (1881-1905); la genealogía esclavista es la secundaria."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -10284,17 +10374,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c4",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E05.md"
       ],
       "lote_incorporacion": "S21-2026-09-21",
       "anclaje_cartografico": {
@@ -10336,12 +10429,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "postplantacion_trabajo_desposesion",
           "soberanias_fronteras_ocupaciones"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "postplantacion_trabajo_desposesion",
+        "nota": "Expediente E05 (1-oct-2026), aprobado por la dirección académica. Se clasifica por el conflicto que diagnostica: la clase contra el nacionalismo racial."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -10353,17 +10447,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c4"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E05.md"
       ],
       "lote_incorporacion": "S21-2026-09-21",
       "anclaje_cartografico": {
@@ -10400,12 +10497,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "soberanias_fronteras_ocupaciones",
           "postplantacion_trabajo_desposesion"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E05 (1-oct-2026), aprobado por la dirección académica. El poder informal de los pobres urbanos se clasifica como una disputa con el Estado, que es el eje de la teoría de Gray."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -10417,17 +10515,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c4",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E05.md"
       ],
       "lote_incorporacion": "S21-2026-09-21",
       "anclaje_cartografico": {
@@ -10473,34 +10574,39 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
-          "soberanias_fronteras_ocupaciones",
-          "postplantacion_trabajo_desposesion"
+          "postplantacion_trabajo_desposesion",
+          "soberanias_fronteras_ocupaciones"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "postplantacion_trabajo_desposesion",
+        "nota": "Expediente E05 (1-oct-2026), aprobado por la dirección académica. Se invierte. El volumen lee a Jagan y a Manley «desde el trabajo», y su pregunta es qué hicieron la Guerra Fría y la etnopolítica con el movimiento obrero. El sujeto es el trabajo organizado; el Estado es lo que ese sujeto disputa."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión focal: introducción de Mars y Young, índice de contribuciones y capítulos de Girvan y Bogues.",
         "responsable": "Preparación asistida del lote S21; clasificación pendiente de adjudicación académica",
         "fecha": "2026-09-21",
-        "fundamento": "C7 por el Estado y la Guerra Fría; C4 por el movimiento obrero como sujeto. Debe decidirse si un volumen colectivo comparativo se clasifica por la introducción o exige arquitectura multicorriente."
+        "fundamento": "C4 porque el volumen lee los proyectos de Jagan y Manley desde el movimiento obrero; C7 por el Estado y la Guerra Fría que ese movimiento enfrenta.",
+        "fundamento_previo": "C7 por el Estado y la Guerra Fría; C4 por el movimiento obrero como sujeto. Debe decidirse si un volumen colectivo comparativo se clasifica por la introducción o exige arquitectura multicorriente."
       }
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E05.md"
       ],
       "lote_incorporacion": "S21-2026-09-21",
       "anclaje_cartografico": {
@@ -10542,12 +10648,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "memorias_espiritualidades_archivos_vivos",
           "soberanias_fronteras_ocupaciones"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "nota": "Expediente E05 (1-oct-2026), aprobado por la dirección académica. Un movimiento religioso perseguido se clasifica por su fe; la criminalización es la secundaria."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -10559,17 +10666,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c5"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E05.md"
       ],
       "lote_incorporacion": "S21-2026-09-21",
       "anclaje_cartografico": {
@@ -10628,12 +10738,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "creolizaciones_traducciones_opacidades",
           "rutas_diasporas_territorios_acuosos"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "creolizaciones_traducciones_opacidades",
+        "nota": "Expediente E05 (1-oct-2026), aprobado por la dirección académica. Se clasifica por la lengua y la forma, que son la materia del movimiento; la diáspora es su condición."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -10645,17 +10756,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c10",
+      "recorridos_sec": [
+        "c8"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E05.md"
       ],
       "lote_incorporacion": "S21-2026-09-21",
       "anclaje_cartografico": {
@@ -10705,12 +10819,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "cuerpos_parentescos_eroticas",
           "creolizaciones_traducciones_opacidades"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "cuerpos_parentescos_eroticas",
+        "nota": "Expediente E05 (1-oct-2026), aprobado por la dirección académica. Se clasifica por su objeto, que es la mujer caribeña y su derecho a la opacidad; el debate con la créolité es la secundaria."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -10722,17 +10837,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c10",
+      "recorridos_sec": [
+        "c4"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E05.md"
       ],
       "lote_incorporacion": "S21-2026-09-21",
       "anclaje_cartografico": {
@@ -10774,12 +10892,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "cuerpos_parentescos_eroticas",
           "postplantacion_trabajo_desposesion"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "cuerpos_parentescos_eroticas",
+        "nota": "Expediente E05 (1-oct-2026), aprobado por la dirección académica. El género es el sistema que se analiza; la economía política es el método."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -10791,17 +10910,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c9"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E05.md"
       ],
       "lote_incorporacion": "S21-2026-09-21",
       "anclaje_cartografico": {
@@ -10851,12 +10973,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "creolizaciones_traducciones_opacidades",
           "memorias_espiritualidades_archivos_vivos"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "creolizaciones_traducciones_opacidades",
+        "nota": "Expediente E05 (1-oct-2026), aprobado por la dirección académica. Se clasifica por su método, que es una crítica de cómo se produce y se traduce el saber sobre el Caribe."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -10868,17 +10991,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c8"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E05.md"
       ],
       "lote_incorporacion": "S21-2026-09-21",
       "anclaje_cartografico": {
@@ -10930,12 +11056,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "memorias_espiritualidades_archivos_vivos",
           "creolizaciones_traducciones_opacidades"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "nota": "Expediente E05 (1-oct-2026), aprobado por la dirección académica. Se clasifica por los ensayos originales: la memoria rota es su formulación."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -10947,17 +11074,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c1"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E05.md"
       ],
       "lote_incorporacion": "S21-2026-09-21",
       "anclaje_cartografico": {
@@ -10999,12 +11129,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "creolizaciones_traducciones_opacidades",
           "invasiones_mundos_indigenas"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "creolizaciones_traducciones_opacidades",
+        "nota": "Expediente E05 (1-oct-2026), aprobado por la dirección académica."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -11016,17 +11147,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c4"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E05.md"
       ],
       "lote_incorporacion": "S21-2026-09-21",
       "anclaje_cartografico": {
@@ -11067,12 +11201,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "soberanias_fronteras_ocupaciones",
           "postplantacion_trabajo_desposesion"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E05 (1-oct-2026), aprobado por la dirección académica. La definición regional se trata como asunto de pertenencia y soberanía, como en Gaztambide."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -11084,17 +11219,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c3"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E05.md"
       ],
       "lote_incorporacion": "S21-2026-09-21",
       "anclaje_cartografico": {
@@ -11145,34 +11283,39 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
-          "fugas_cimarronajes_emancipaciones",
-          "memorias_espiritualidades_archivos_vivos"
+          "memorias_espiritualidades_archivos_vivos",
+          "fugas_cimarronajes_emancipaciones"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "nota": "Expediente E05 (1-oct-2026), aprobado por la dirección académica. Se invierte. El libro no reconstruye el quilombo sino lo que se hizo con él: cómo fue descalificado como acontecimiento y resignificado como símbolo, de los cronistas del siglo XVIII al Instituto Histórico y al movimiento negro. Es una historia de la memoria. Así queda distinguido del volumen de Reis y Gomes, que trata la fuga misma (C3)."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión focal: introducción, capítulo historiográfico y bibliografía, que cita Maroon Societies de Richard Price (3), Silencing the Past de Trouillot y El Palenque de San Basilio de Escalante.",
         "responsable": "Preparación asistida del lote S21; clasificación pendiente de adjudicación académica",
         "fecha": "2026-09-21",
-        "fundamento": "C3 es la candidatura principal por la fuga y su comunidad; C9 aparece porque medio libro trata de cómo se recordó y se instrumentalizó Palmares. Debe decidirse si una historia de la memoria de un quilombo se clasifica por el quilombo o por su memoria."
+        "fundamento": "C9 porque el objeto es la memoria de Palmares, su descalificación y su resignificación; C3 por el quilombo como acontecimiento de fuga.",
+        "fundamento_previo": "C3 es la candidatura principal por la fuga y su comunidad; C9 aparece porque medio libro trata de cómo se recordó y se instrumentalizó Palmares. Debe decidirse si una historia de la memoria de un quilombo se clasifica por el quilombo o por su memoria."
       }
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c8"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E05.md"
       ],
       "lote_incorporacion": "S21-2026-09-21",
       "anclaje_cartografico": {
@@ -11219,12 +11362,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "memorias_espiritualidades_archivos_vivos",
           "creolizaciones_traducciones_opacidades"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "nota": "Expediente E05 (1-oct-2026), aprobado por la dirección académica."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
@@ -11236,17 +11380,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c4"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S21-2026-09-21: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E05.md"
       ],
       "lote_incorporacion": "S21-2026-09-21",
       "anclaje_cartografico": {
@@ -11293,12 +11440,13 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "memorias_espiritualidades_archivos_vivos",
           "postplantacion_trabajo_desposesion"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "nota": "Expediente E05 (1-oct-2026), aprobado por la dirección académica."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
