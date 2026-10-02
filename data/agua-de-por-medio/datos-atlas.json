@@ -3,9 +3,9 @@
     "titulo": "Con el agua de por medio",
     "subtitulo": "Atlas para una antropología archipiélica",
     "responsable": "Grupo de Investigación Pensamiento Caribe",
-    "version": "1.29.0",
-    "fecha": "2026-10-01",
-    "nota_version": "Versión de revisión, sin obras nuevas. Se confirma la corriente de las 116 obras que tenían propuesta pendiente (expedientes E01 a E05). Se revisan contra el texto completo las 116 relaciones heredadas con fuente vaga: 34 quedan documentadas con cita y localizador, 47 pasan a comparación declarada por búsqueda negativa y 35 esperan texto. Se revisan las disonancias por establecer: Glissant frente a la créolité queda establecida con cita; dos se retiran (Herskovits y Price-Mars, anclada en el libro equivocado; Araujo y Casimir, que el texto de Casimir contradice); dos pasan a resonancia (Dunham y Hurston; Trouillot y Casimir); seis se declaran como desacuerdos que propone el atlas.",
+    "version": "1.30.0",
+    "fecha": "2026-10-02",
+    "nota_version": "Versión de clasificación, sin obras nuevas. El expediente E06 confirma la corriente de nueve obras del corpus heredado: siete de las dieciocho que estaban pendientes y dos obras propias de la dirección académica. Se retira Extractivismos de Gudynas, que no discute un problema anclado en el Caribe, con sus dos relaciones por hipótesis. Nueve obras pendientes esperan texto.",
     "registro_interno": {
       "proposito": "Protocolo revisado de resonancia y disonancia (22-09-2026). Las categorías públicas del atlas siguen siendo resonancia y disonancia; este registro es interno y orienta la revisión editorial. El campo apoyo no crea categorías públicas ni cambia la interfaz.",
       "apoyo": {
@@ -29,6 +29,30 @@
         "tipo": "disonancia",
         "fecha": "2026-10-01",
         "motivo": "Revisados los dos textos. Rebel Destiny (1934) trata de los saramaka de Surinam y no menciona a Price-Mars; Haití aparece solo de paso. La edición consultada de Ainsi parla l'oncle registra un artículo de Price-Mars titulado «Le Professeur Melville J. Herskovits et son œuvre», que sugiere aprecio y no choque. La disonancia parece mal anclada: el libro haitiano de los Herskovits es Life in a Haitian Valley (1937), que no está en el corpus."
+      },
+      {
+        "a": "rodney",
+        "b": "gudynas",
+        "tipo": "resonancia",
+        "fecha": "2026-10-02",
+        "motivo": "Se retira la obra de Gudynas (Extractivismos) del corpus: no discute un problema anclado en el Caribe. La relación era una hipótesis por fenómeno compartido, sin corroborar."
+      },
+      {
+        "a": "kempadoo",
+        "b": "gudynas",
+        "tipo": "resonancia",
+        "fecha": "2026-10-02",
+        "motivo": "Se retira la obra de Gudynas (Extractivismos) del corpus: no discute un problema anclado en el Caribe. La relación era una hipótesis por fenómeno compartido, sin corroborar."
+      }
+    ],
+    "obras_retiradas": [
+      {
+        "id": "gudynas",
+        "a": "Eduardo Gudynas",
+        "t": "Extractivismos. Ecología, economía y política de un modo de entender el desarrollo y la Naturaleza",
+        "y": "2015",
+        "fecha": "2026-10-02",
+        "motivo": "Decisión de la dirección académica: la obra no discute un problema anclado en el Caribe (expediente E06)."
       }
     ]
   },
@@ -319,18 +343,22 @@
       "l": "puertorico",
       "tr": "anglófono (EE.UU.)",
       "ap": "La plantación como matriz socioeconómica que precede a la nación y produce la modernidad caribeña: el campesinado reconstituido, los mercados internos y la esclavitud leídos en comparación regional. Fundación del comparatismo de área.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c4",
+      "recorridos_sec": [
+        "c2",
+        "c3"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "revision": {
-        "estado": "pendiente_revision_con_texto",
-        "fundamento": "El nodo reúne dos obras con argumentos diferentes; no se confirma una corriente única hasta revisar cada componente.",
-        "responsable": "Dirección académica de Pensamiento Caribe",
-        "fecha": "2026-08-08"
+        "estado": "confirmada",
+        "fundamento": "Los campesinados reconstituidos como respuesta a la plantación ordenan el libro (Introducción, pp. 40-41; Parte II). Esclavitud y plantación (Parte I) y campesinado como modo de fuga (p. 146) son las secundarias.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E06)",
+        "fecha": "2026-10-02"
       },
       "fuente_recorrido": [
-        "piloto-generado.json"
+        "piloto-generado.json",
+        "expediente-corrientes-E06.md"
       ],
       "proceso": [
         "división"
@@ -340,6 +368,22 @@
       "division": {
         "origen_de": "mintzsweetness",
         "fecha": "2026-10-01"
+      },
+      "revision_previa": {
+        "estado": "pendiente_revision_con_texto",
+        "fundamento": "El nodo reúne dos obras con argumentos diferentes; no se confirma una corriente única hasta revisar cada componente.",
+        "responsable": "Dirección académica de Pensamiento Caribe",
+        "fecha": "2026-08-08"
+      },
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "postplantacion_trabajo_desposesion",
+          "trata_esclavizacion_plantacion",
+          "fugas_cimarronajes_emancipaciones"
+        ],
+        "corriente_confirmada": "postplantacion_trabajo_desposesion",
+        "nota": "Expediente E06 (2-oct-2026), aprobado por la dirección académica."
       }
     },
     {
@@ -355,19 +399,22 @@
       "l": "puertorico",
       "tr": "anglófono (EE.UU.)",
       "ap": "La historia del azúcar como historia del capitalismo: cómo un lujo producido por esclavizados en el Caribe se volvió alimento obrero en Inglaterra, y cómo el consumo metropolitano y la plantación colonial se hicieron mutuamente. Mintz desplaza la antropología del lugar al circuito, del pueblo a la mercancía.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c2",
+      "recorridos_sec": [
+        "c4"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "revision": {
-        "estado": "pendiente_revision_con_texto",
-        "responsable": "Dirección académica de Pensamiento Caribe (división aprobada el 1-oct-2026)",
-        "fecha": "2026-10-01",
-        "fundamento": "Nace de la división de la ficha compuesta «Caribbean Transformations / Sweetness and Power». Hereda la clasificación por corriente que el dictamen dio al nodo, porque el fundamento de entonces cubría los dos libros; queda para revisión con texto si la dirección académica lo pide."
+        "estado": "confirmada",
+        "fundamento": "La plantación esclavista como forma temprana de producción industrial ancla el argumento (cap. 2, Producción); el trabajo proletario a ambos lados del Atlántico es la secundaria. Leído en Dulzura y poder.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E06)",
+        "fecha": "2026-10-02"
       },
       "fuente_recorrido": [
         "piloto-generado.json",
-        "División S26-DIV-2026-10-01"
+        "División S26-DIV-2026-10-01",
+        "expediente-corrientes-E06.md"
       ],
       "procedencia": "corpus heredado",
       "procedencia_verificada": true,
@@ -377,6 +424,21 @@
       "division": {
         "de": "mintz",
         "fecha": "2026-10-01"
+      },
+      "revision_previa": {
+        "estado": "pendiente_revision_con_texto",
+        "responsable": "Dirección académica de Pensamiento Caribe (división aprobada el 1-oct-2026)",
+        "fecha": "2026-10-01",
+        "fundamento": "Nace de la división de la ficha compuesta «Caribbean Transformations / Sweetness and Power». Hereda la clasificación por corriente que el dictamen dio al nodo, porque el fundamento de entonces cubría los dos libros; queda para revisión con texto si la dirección académica lo pide."
+      },
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "trata_esclavizacion_plantacion",
+          "postplantacion_trabajo_desposesion"
+        ],
+        "corriente_confirmada": "trata_esclavizacion_plantacion",
+        "nota": "Expediente E06 (2-oct-2026), aprobado por la dirección académica."
       }
     },
     {
@@ -410,10 +472,30 @@
       "l": "haiti",
       "tr": "francófono (Haití)",
       "ap": "El contra-plantación: los cautivos rehacen sociedad por fuera de la lógica de la hacienda. Pueblo soberano, lakou.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c4"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "expediente-corrientes-E06.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La soberanía popular frente al Estado colonial y republicano ordena el libro (Preface; cap. 1; caps. 6-10). El contra-plantación es su forma material, pensada desde el trabajo: C4 secundaria.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E06)",
+        "fecha": "2026-10-02"
+      },
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "postplantacion_trabajo_desposesion"
+        ],
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E06 (2-oct-2026), aprobado por la dirección académica."
+      }
     },
     {
       "id": "price",
@@ -1073,33 +1155,6 @@
       "estado_recorrido": "confirmado",
       "fuente_recorrido": [
         "s01-generado.json"
-      ]
-    },
-    {
-      "id": "gudynas",
-      "k": "obra",
-      "t": "Extractivismos. Ecología, economía y política de un modo de entender el desarrollo y la Naturaleza",
-      "a": "Eduardo Gudynas",
-      "y": "2015",
-      "f": [
-        "capitalismo_racial",
-        "catastrofes"
-      ],
-      "l": "veracruz",
-      "tr": "hispano (América Latina)",
-      "ap": "Marco del extractivismo contemporáneo, extensible de la caña al turismo caribeño.",
-      "recorrido": null,
-      "recorridos_sec": [],
-      "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
-      "revision": {
-        "estado": "pendiente_revision_con_texto",
-        "fundamento": "La obra es pertinente para ecología política, pero la fuente consultada no demuestra un caso u orilla admisible del Atlas. No se asigna corriente hasta resolver elegibilidad. Título completo: Extractivismos. Ecología, economía y política de un modo de entender el desarrollo y la Naturaleza.",
-        "responsable": "Dirección académica de Pensamiento Caribe",
-        "fecha": "2026-08-08"
-      },
-      "fuente_recorrido": [
-        "a02-generado.json"
       ]
     },
     {
@@ -4001,10 +4056,30 @@
       "l": "antigua",
       "tr": "anglófono (Antigua/EE.UU.)",
       "ap": "Funda el campo como campo: distingue las corrientes historicista y poeticista de la filosofía afrocaribeña y lee a Calibán como razón propia, no derivada. Sostiene que la filosofía caribeña vive como saber subtextual, en el clima existencial antes que en el tratado.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c9"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "expediente-corrientes-E06.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Formación de una filosofía bajo colonización cultural y creolización (Introducción, pp. 1-4 y 16-17; Conclusión, pp. 273-274). La herencia filosófica africana (cap. 1) es la secundaria.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E06)",
+        "fecha": "2026-10-02"
+      },
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "creolizaciones_traducciones_opacidades",
+          "memorias_espiritualidades_archivos_vivos"
+        ],
+        "corriente_confirmada": "creolizaciones_traducciones_opacidades",
+        "nota": "Expediente E06 (2-oct-2026), aprobado por la dirección académica."
+      }
     },
     {
       "id": "lebroncimarronaje",
@@ -4074,10 +4149,30 @@
       "l": "trinidad",
       "tr": "anglófono (Trinidad/Canadá)",
       "ap": "Piensa la pertenencia desde la puerta sin retorno: un origen que no se recupera y que sin embargo organiza la vida diaspórica. Ensayo antes que monografía, y por eso escribe el archivo desde la pérdida en vez de describirlo.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c5",
+      "recorridos_sec": [
+        "c9"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "expediente-corrientes-E06.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La Puerta sin Retorno como lugar de pertenencia diaspórica, con el agua como primera geografía; el archivo escrito desde la pérdida es la secundaria.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E06)",
+        "fecha": "2026-10-02"
+      },
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "rutas_diasporas_territorios_acuosos",
+          "memorias_espiritualidades_archivos_vivos"
+        ],
+        "corriente_confirmada": "rutas_diasporas_territorios_acuosos",
+        "nota": "Expediente E06 (2-oct-2026), aprobado por la dirección académica."
+      }
     },
     {
       "id": "grosfoguelcolonial",
@@ -4159,10 +4254,32 @@
       "l": "santamarta",
       "tr": "hispano (Colombia)",
       "ap": "Rastrea la filosofía afrocaribeña del siglo XX desde el Caribe colombiano, orilla que suele quedar fuera del canon anglófono y francófono del campo. Es la posición de enunciación desde la que se construye este atlas.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c9",
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "expediente-corrientes-E06.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La especificidad de la filosofía afrocaribe y su lugar de enunciación, con Calibán como sujeto-metáfora (pp. 23, 275-277). Filosofía profética rastafari (cap. 4) y panafricanismo (cap. 3) son las secundarias. Lectura jerárquica aprobada, no síntesis. Obra propia de la dirección académica.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E06)",
+        "fecha": "2026-10-02"
+      },
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "creolizaciones_traducciones_opacidades",
+          "memorias_espiritualidades_archivos_vivos",
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "corriente_confirmada": "creolizaciones_traducciones_opacidades",
+        "nota": "Expediente E06 (2-oct-2026), aprobado por la dirección académica."
+      }
     },
     {
       "id": "goldbergabolition",
@@ -4376,10 +4493,30 @@
       "l": "cartagena",
       "tr": "hispano (Colombia)",
       "ap": "El relato que faltaba en el eje: la independencia no como empresa de criollos ilustrados sino como conflicto regional entre las élites de Cartagena y Bogotá, con la participación decisiva de negros y mulatos costeños que Múnera reconstruye a partir de fragmentos, porque el ejército realista quemó el archivo cartagenero al reconquistar la ciudad en 1815. Pedro Romero y Pedro Medrana, líderes populares casi sin rastro documental, emergen aquí como agentes políticos y no como comparsa de la gesta criolla.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c3"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "expediente-corrientes-E06.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Conflicto regional por la autoridad y la nación (Introducción, pp. 13-15; Conclusiones, p. 222). La emancipación política de mulatos y negros y la Constitución de 1812 (p. 220) son la secundaria.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E06)",
+        "fecha": "2026-10-02"
+      },
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "fugas_cimarronajes_emancipaciones"
+        ],
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E06 (2-oct-2026), aprobado por la dirección académica."
+      }
     },
     {
       "id": "saetheridentidades",
@@ -4394,10 +4531,32 @@
       "l": "santamarta",
       "tr": "hispano (Noruega/Colombia)",
       "ap": "El reverso de Múnera: si en Cartagena los comunes de color identificaron independencia con igualdad, en Santa Marta los indios tributarios sostuvieron el bando realista hasta 1820. Sæther retoma la tesis de Múnera para objetarle que no explica esa asimetría, y muestra que la composición racial de las dos ciudades no bastaba para predecir su política: la costa caribeña deja de ser un bloque y se vuelve dos historias.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c8",
+        "c1"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "expediente-corrientes-E06.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La crisis de 1808-1823 es lo que el libro explica (Parte II; Introducción, p. 19). Castas y su reconceptualización republicana (p. 244) y comunidades indígenas (caps. V y IX) son las secundarias. Se aprobó la lectura jerárquica, no la frontera C7/C8.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E06)",
+        "fecha": "2026-10-02"
+      },
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "creolizaciones_traducciones_opacidades",
+          "invasiones_mundos_indigenas"
+        ],
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E06 (2-oct-2026), aprobado por la dirección académica."
+      }
     },
     {
       "id": "zonabananera",
@@ -4412,10 +4571,32 @@
       "l": "santamarta",
       "tr": "hispano (Colombia)",
       "ap": "Piel, voz y rostro como registros de una memoria política que hace de la Zona Bananera —enclave del capitalismo racial bananero, no solo escenario de plantación— un archivo vivo de las vidas negras.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c4",
+        "c5"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "expediente-corrientes-E06.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Propuesta de método centrada en las memorias políticas (pp. 203-204, 210) y el archivo vivo (p. 220). El enclave del capitalismo racial y de plantación (p. 203) y la geopoética hidrosocial archipiélica (pp. 211-216) son las secundarias. Obra propia de la dirección académica.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E06)",
+        "fecha": "2026-10-02"
+      },
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "memorias_espiritualidades_archivos_vivos",
+          "postplantacion_trabajo_desposesion",
+          "rutas_diasporas_territorios_acuosos"
+        ],
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "nota": "Expediente E06 (2-oct-2026), aprobado por la dirección académica."
+      }
     },
     {
       "id": "rappaportcobarde",
@@ -16315,13 +16496,6 @@
     },
     {
       "a": "rodney",
-      "b": "gudynas",
-      "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Capitalismo racial. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
-    },
-    {
-      "a": "rodney",
       "b": "casimir",
       "tipo": "resonancia",
       "fuente": "Comparten el fenómeno Colonialidad. Por corroborar el vínculo directo.",
@@ -17736,13 +17910,6 @@
       "tipo": "resonancia",
       "fuente": "Ambas piensan el cuerpo caribeño racializado como terreno donde se juega la libertad o su negación: el trabajo sexual en Kempadoo, la agencia erótica ciudadana en Sheller (Kempadoo 2004; Sheller 2012).",
       "apoyo": "comparacion"
-    },
-    {
-      "a": "kempadoo",
-      "b": "gudynas",
-      "tipo": "resonancia",
-      "fuente": "Comparten el fenómeno Capitalismo racial. Por corroborar el vínculo directo.",
-      "apoyo": "hipotesis"
     },
     {
       "a": "kingisland",

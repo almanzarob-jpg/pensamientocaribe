@@ -1,8 +1,8 @@
 {
   "lote": "TP01",
   "nombre": "Temporalidad: separación de publicación y periodo estudiado",
-  "fecha": "2026-10-01",
-  "base": "datos-atlas.json v1.29.0 · 376 entradas",
+  "fecha": "2026-10-02",
+  "base": "datos-atlas.json v1.30.0 · 375 entradas",
   "limite": "Capa aditiva. No modifica el campo heredado y, ni datos-atlas.json, ni el orden actual de la cronología. Un periodo estudiado no se deriva nunca de forma mecánica: exige lectura de la obra.",
   "procedencias": {
     "dictamen": "Aprobado en una capa cerrada (P00, S01, A01 o A02). Estado: confirmado.",
@@ -10,12 +10,12 @@
     "sin_derivar": "El campo y está vacío o guarda una cadena que no es un año. Estado: pendiente."
   },
   "recuento": {
-    "entradas": 376,
-    "confirmados": 53,
+    "entradas": 375,
+    "confirmados": 52,
     "candidaturas": 311,
     "pendientes": 12,
     "con_periodo_estudiado": 24,
-    "sin_periodo_estudiado": 352
+    "sin_periodo_estudiado": 351
   },
   "registros": [
     {
@@ -387,18 +387,6 @@
       },
       "periodo_estudiado": null,
       "procedencia": "dictamen S01",
-      "estado": "confirmado"
-    },
-    {
-      "id": "gudynas",
-      "y_heredado": "2015",
-      "publicacion": {
-        "valor": 2015,
-        "era": "EC",
-        "precision": "exacta"
-      },
-      "periodo_estudiado": null,
-      "procedencia": "dictamen A02",
       "estado": "confirmado"
     },
     {
