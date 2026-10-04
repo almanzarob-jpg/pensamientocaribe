@@ -25,6 +25,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/zoom-caribe.css?v=20261003">
 <link rel="stylesheet" href="../css/con-el-agua-de-por-medio.css?v=20261004c">
+<link rel="stylesheet" href="../css/lugares-atlas.css?v=20261004">
 <link rel="stylesheet" href="../css/capa-caribes.css?v=20261003">
 <link rel="stylesheet" href="../css/deriva-caribes.css?v=20261003">
 <link rel="stylesheet" href="../css/capa-antirracismo.css?v=20261003">
@@ -3165,6 +3166,9 @@ document.addEventListener('keydown', ev=>{
   if(state.focusFen){ setFocusFen(state.focusFen); return; }
 });
 </script>
+<!-- Punto por lugar (4-oct-2026): de lejos un disco por lugar, de cerca la espiral de obras.
+     Va después del script principal y antes de las capas y las transiciones, que lo envuelven. -->
+<script src="../js/lugares-atlas.js?v=20261004"></script>
 <!-- CAPAS DE LECTURA · 4-oct-2026: llegan después del mapa.
      «¿Qué Caribe?», la deriva y Antirracismo pesan unos 75 KB comprimidos que antes había que
      descargar y ejecutar antes de poder dibujar la primera obra. Ahora el mapa se pinta primero

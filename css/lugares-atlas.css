@@ -1,0 +1,23 @@
+/* PUNTO POR LUGAR · de lejos, un disco de agua por lugar; de cerca, la espiral de obras */
+.lugares .lugar{cursor:zoom-in; outline:none}
+.lg-toque{fill:transparent}
+.lg-agua{fill:var(--bg-deep,#050604); fill-opacity:.74; stroke:var(--ink-line,rgba(226,221,206,.42)); stroke-width:.9;
+  transition:stroke var(--mov-rapido,150ms) ease, stroke-width var(--mov-rapido,150ms) ease}
+.lg-nivel{fill:none; stroke:var(--gold,#c9a24d); stroke-width:1.7; stroke-linecap:round; stroke-opacity:0; pointer-events:none;
+  transition:stroke-opacity var(--mov-medio,260ms) ease}
+.lugar.foco .lg-nivel{stroke-opacity:.95}
+.lg-n{font-family:var(--ff-mono); paint-order:stroke; stroke:var(--bg-deep,#050604); stroke-opacity:.85; stroke-width:.32em; stroke-linejoin:round; fill:var(--gray,#b9b09f); fill-opacity:.82; pointer-events:none; font-variant-numeric:tabular-nums}
+.lugar-cifra.tocado .lg-n{fill:var(--cream,#f2ead8); fill-opacity:1}
+.lugar.tocado .lg-agua{stroke:var(--cream,#f2ead8); stroke-opacity:.55}
+.lugar.fuera .lg-agua{stroke-opacity:.14; fill-opacity:.5}
+.lugar-cifra.fuera .lg-n{fill-opacity:.22}
+.lugar:hover .lg-agua{stroke:var(--cream,#f2ead8); stroke-opacity:.85}
+.lugar:focus-visible .lg-agua{stroke:var(--gold,#c9a24d); stroke-width:1.8}
+/* la onda: un anillo que se abre despacio, solo en reposo y con la marea en marcha */
+.lg-onda{fill:none; stroke:var(--hilo,#5d8f9b); stroke-width:.8; opacity:0; pointer-events:none;
+  transform-box:fill-box; transform-origin:center}
+#stage.reposo:not(.quieto) .lugar:not(.abriendo) .lg-onda{animation:lgOnda 6.2s var(--curva-llegada,cubic-bezier(.16,1,.3,1)) infinite}
+@keyframes lgOnda{0%{transform:scale(1); opacity:.6} 70%{opacity:.08} 100%{transform:scale(2.2); opacity:0}}
+/* mientras los lugares se abren o se cierran, la trama se aparta y vuelve redibujada */
+#stage.lod-viaje .trama{opacity:0 !important; transition:opacity var(--mov-rapido,150ms) ease}
+@media (prefers-reduced-motion: reduce){ .lg-onda{animation:none !important} }
