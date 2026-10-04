@@ -221,7 +221,12 @@ const L = ATLAS.lugares;
 const N = ATLAS.obras;
 const RELS = ATLAS.relaciones;
 const R = RELS.map(r=>[r.a,r.b]);
-const relDe=(a,b)=>RELS.find(x=>(x.a===a&&x.b===b)||(x.a===b&&x.b===a));
+/* PREPARAR EL CRECIMIENTO · relDe y byId recorrían la lista entera en cada llamada, y se
+   llaman miles de veces por dibujo (la trama pregunta por cada una de las relaciones):
+   con el corpus doblado el cambio de vista tardaba el triple. Un índice construido una
+   vez da la misma respuesta (la primera coincidencia, como find) en tiempo constante. */
+const _RELIDX=new Map(); RELS.forEach(x=>{ const k1=x.a+'\u0001'+x.b, k2=x.b+'\u0001'+x.a; if(!_RELIDX.has(k1)) _RELIDX.set(k1,x); if(!_RELIDX.has(k2)) _RELIDX.set(k2,x); });
+const relDe=(a,b)=>_RELIDX.get(a+'\u0001'+b);
 const isDiso=(a,b)=>{ const r=relDe(a,b); return !!r && r.tipo==='disonancia'; };
 const fuenteDe=(a,b)=>{ const r=relDe(a,b); return r?(r.fuente||''):''; };
 /* ══════════ BLOQUE D · la fuente de una relación en lengua de lector ════════════
@@ -843,7 +848,8 @@ const py = lat => PAD + (LAT1-lat)/(LAT1-LAT0)*(VH-2*PAD);
 const svg=document.getElementById('stage'); const tip=document.getElementById('tip');
 const NS="http://www.w3.org/2000/svg";
 const el=(n,at={})=>{const e=document.createElementNS(NS,n);for(const k in at)e.setAttribute(k,at[k]);return e;};
-const byId=id=>N.find(n=>n.id===id);
+const _IDX=new Map(); N.forEach(n=>{ if(!_IDX.has(n.id)) _IDX.set(n.id,n); });
+const byId=id=>_IDX.get(id) || N.find(n=>n.id===id);
 const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 let mareaGuardada=null; try{ mareaGuardada=localStorage.getItem('pc_marea'); }catch(e){}
 const tideInicial = mareaGuardada==='off' ? false : mareaGuardada==='on' ? true : !reduced;

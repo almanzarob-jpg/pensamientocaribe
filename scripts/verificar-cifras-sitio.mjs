@@ -13,6 +13,12 @@
  *   node scripts/verificar-cifras-sitio.mjs
  *
  * Sale con código 1 si alguna cifra publicada contradice al corpus.
+ *
+ * Con --corregir reescribe en las páginas cada cifra desfasada con el valor del corpus
+ * y luego comprueba. Así una siembra no obliga a tocar a mano ningún número: las
+ * frases siguen siendo las de siempre y solo cambia la cifra. Lo que no se puede
+ * corregir solo (una frase reescrita que la regla ya no encuentra) sigue saliendo
+ * como NO_ENCONTRADO y detiene la publicación.
  */
 
 import fs from "node:fs";
@@ -53,6 +59,9 @@ V.corroboradasPctEs = (V.corroboradas / V.relaciones * 100).toFixed(1).replace("
 V.corroboradasPctEn = (V.corroboradas / V.relaciones * 100).toFixed(1);
 V.porCorroborarPctEs = (V.porCorroborar / V.relaciones * 100).toFixed(1).replace(".", ",");
 V.porCorroborarPctEn = (V.porCorroborar / V.relaciones * 100).toFixed(1);
+// Cuántas resonancias hay por cada disonancia, redondeado: la guía del reflujo lo dice en
+// prosa («unos 61 a uno») y llevaba meses diciendo «treinta y tres» con el corpus en 61.
+V.razonResDis = V.disonancias ? Math.round(V.resonancias / V.disonancias) : 0;
 // Mismo criterio que marca-de-marea.html, y por la misma razón: el campo tr tiene
 // la forma «lengua (lugar, trayectoria o corpus estudiado)», así que la lengua se
 // lee fuera del paréntesis. Contar por la cadena entera hacía que una obra hispana
@@ -97,7 +106,18 @@ const reglas = [
   ["proyectos/reflujo-guia.html", /proyecto-meta-value">\d+ de (\d+) evaluadas</, "friccionesEvaluadas"],
   ["proyectos/reflujo-guia.html", /De las (\d+) corrientes que traza/, "relaciones"],
   ["proyectos/reflujo-guia.html", /que traza entre (\d+) obras/, "obras"],
-  ["proyectos/reflujo-guia.html", /obras, (\d+) —algo más/, "porCorroborar"],
+  ["proyectos/reflujo-guia.html", /obras, (\d+) —el [\d,]+ %—/, "porCorroborar"],
+  // Añadidas el 04-10-2026: cifras que estaban en palabras («algo más de un cuarto»,
+  // «treinta y tres a uno», «veinticinco desacuerdos») y que ninguna regla podía leer.
+  // Todas habían dejado de ser ciertas. Pasan a dígitos para poder comprobarlas.
+  ["proyectos/reflujo-guia.html", /obras, \d+ —el ([\d,]+) %—/, "porCorroborarPctEs"],
+  ["proyectos/reflujo-guia.html", /proporción de unos (\d+) a uno/, "razonResDis"],
+  ["proyectos/reflujo-guia-en.html", /works, \d+ \(([\d.]+)%\) are still marked/, "porCorroborarPctEn"],
+  ["proyectos/reflujo-guia-en.html", /a ratio of roughly (\d+) to one/, "razonResDis"],
+  ["proyectos/metodologia-agua-de-por-medio.html", /no produce (\d+) desacuerdos/, "disonancias"],
+  ["proyectos/metodologia-agua-de-por-medio-en.html", /does not produce (\d+) disagreements/, "disonancias"],
+  ["proyectos/marca-de-marea.html", /no produce (\d+) desacuerdos/, "disonancias"],
+  ["proyectos/marca-de-marea.html", /\d+ de (\d+) corrientes esperan fuente/, "relaciones"],
   ["proyectos/reflujo-guia.html", /De las (\d+) corrientes, \d+ son resonancias/, "relaciones"],
   ["proyectos/reflujo-guia.html", /corrientes, (\d+) son resonancias/, "resonancias"],
   ["proyectos/reflujo-guia.html", /solo (\d+) son disonancias/, "disonancias"],
@@ -112,7 +132,7 @@ const reglas = [
   ["proyectos/reflujo-guia-en.html", /proyecto-meta-value">\d+ of (\d+) assessed</, "friccionesEvaluadas"],
   ["proyectos/reflujo-guia-en.html", /Of the (\d+) connections it draws/, "relaciones"],
   ["proyectos/reflujo-guia-en.html", /it draws between (\d+) works/, "obras"],
-  ["proyectos/reflujo-guia-en.html", /works, (\d+) are still marked/, "porCorroborar"],
+  ["proyectos/reflujo-guia-en.html", /works, (\d+) \([\d.]+%\) are still marked/, "porCorroborar"],
   ["proyectos/reflujo-guia-en.html", /Of the (\d+) connections, \d+ are resonances/, "relaciones"],
   ["proyectos/reflujo-guia-en.html", /connections, (\d+) are resonances/, "resonancias"],
   ["proyectos/reflujo-guia-en.html", /only (\d+) are dissonances/, "disonancias"],
@@ -191,6 +211,30 @@ const leer = (p) => {
   return cache.get(p);
 };
 
+// ------------------------------------------------------- corrección automática
+// Solo se toca el grupo capturado de cada regla, nunca el resto de la frase.
+const corregidas = [];
+if (process.argv.includes("--corregir")) {
+  const tocados = new Set();
+  for (const [archivo, patron, clave] of reglas) {
+    let texto;
+    try { texto = leer(archivo); } catch { continue; }
+    const esperado = String(V[clave]);
+    const re = new RegExp(patron.source, patron.flags.replace("d", "") + "d" + (patron.flags.includes("g") ? "" : ""));
+    const hallazgos = patron.flags.includes("g") ? [...texto.matchAll(re)] : [re.exec(texto)].filter(Boolean);
+    // de atrás hacia delante, para que los índices sigan valiendo
+    for (const m of hallazgos.reverse()) {
+      const [ini, fin] = m.indices[1];
+      if (texto.slice(ini, fin) === esperado) continue;
+      corregidas.push(`${archivo}: ${texto.slice(ini, fin)} → ${esperado} (${clave})`);
+      texto = texto.slice(0, ini) + esperado + texto.slice(fin);
+      tocados.add(archivo);
+    }
+    cache.set(archivo, texto);
+  }
+  for (const archivo of tocados) fs.writeFileSync(path.join(raiz, archivo), cache.get(archivo));
+}
+
 for (const [archivo, patron, clave] of reglas) {
   let texto;
   try { texto = leer(archivo); } catch { errores.push(`[FALTA] ${archivo} no existe.`); continue; }
@@ -211,6 +255,7 @@ for (const [archivo, patron, clave] of reglas) {
 console.log(`Corpus v${V.version}: ${V.entradas} entradas (${V.obras} obras, ${V.manifestaciones} manifestaciones), ` +
   `${V.relaciones} relaciones (${V.corroboradas} corroboradas, ${V.porCorroborar} por corroborar), ${V.lugares} lugares.`);
 console.log(`Lengua de publicación declarada: ${V.anglofonas} anglófonas, ${V.hispanas} hispanas, ${V.francofonas} francófonas, ${V.neerlandesas} neerlandesas, ${V.danesas} danesa(s), ${V.lusofonas} lusófona(s); ${V.sinLengua} sin declarar.\n`);
+if (corregidas.length) { console.log(`Cifras corregidas: ${corregidas.length}`); corregidas.forEach((c) => console.log("  " + c)); console.log(""); }
 console.log(`Afirmaciones comprobadas: ${comprobadas.length}`);
 errores.forEach((e) => console.log(e));
 console.log(`\nResultado: ${errores.length} desfase(s).`);

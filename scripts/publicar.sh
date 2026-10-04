@@ -38,8 +38,11 @@ node scripts/validar-atlas.mjs >/tmp/pc-corpus.txt 2>&1 \
   || { cat /tmp/pc-corpus.txt; falla "El validador del corpus encontró errores."; }
 paso "Corpus: $(tail -1 /tmp/pc-corpus.txt)"
 
-node scripts/verificar-cifras-sitio.mjs >/tmp/pc-cifras.txt 2>&1 \
+# Las cifras del corpus que repiten las páginas se ponen al día solas (--corregir) y
+# luego se comprueban. Solo se detiene si una frase cambió y la regla ya no la encuentra.
+node scripts/verificar-cifras-sitio.mjs --corregir >/tmp/pc-cifras.txt 2>&1 \
   || { grep -E "DESFASE|NO_ENCONTRADO" /tmp/pc-cifras.txt; falla "Alguna cifra publicada contradice al corpus."; }
+grep -q "Cifras corregidas" /tmp/pc-cifras.txt && paso "$(grep 'Cifras corregidas' /tmp/pc-cifras.txt) en las páginas"
 paso "Cifras del sitio: $(tail -1 /tmp/pc-cifras.txt)"
 
 if [ -f scripts/validar-fenomenos.mjs ]; then
