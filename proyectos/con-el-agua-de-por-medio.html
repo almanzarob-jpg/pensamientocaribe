@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/zoom-caribe.css?v=20261003">
-<link rel="stylesheet" href="../css/con-el-agua-de-por-medio.css?v=20261003">
+<link rel="stylesheet" href="../css/con-el-agua-de-por-medio.css?v=20261004">
 <link rel="stylesheet" href="../css/capa-caribes.css?v=20261003">
 <link rel="stylesheet" href="../css/deriva-caribes.css?v=20261003">
 <link rel="stylesheet" href="../css/capa-antirracismo.css?v=20261003">
@@ -118,6 +118,12 @@
     <div class="grp clv-crono" id="cronoGrp" style="display:none"><label id="lblCronoModoId" data-i18n="lblCronoModo">Eje temporal</label><div class="seg vista" id="cronoSeg" role="group" aria-labelledby="lblCronoModoId"><button type="button" data-cm="publicacion" class="on" aria-pressed="true" data-i18n="cmPublicacion">Publicación</button><button type="button" data-cm="investigado" aria-pressed="false" data-i18n="cmInvestigado">Investigado</button><button type="button" data-cm="combinada" aria-pressed="false" data-i18n="cmCombinada">Combinada</button></div></div>
     <div class="clv-t" id="clvTitId" data-i18n="clvTit">Fenómenos</div>
     <div class="clv-lista" id="clvLista" role="group" aria-labelledby="clvTitId"></div>
+    <div class="clv-agua" id="clvAgua" role="group" aria-labelledby="clvAguaTit">
+      <div class="clv-t" id="clvAguaTit" data-i18n="aguaTit">El agua</div>
+      <div class="ag-i"><svg class="ag-m" viewBox="0 0 40 8" aria-hidden="true"><path class="ag-corr" d="M2 4 Q20 0 38 4"/></svg><span><b data-i18n="aguaCorr">Corroborada</b> <i data-i18n="aguaCorrV">fluye</i></span></div>
+      <div class="ag-i"><svg class="ag-m" viewBox="0 0 40 8" aria-hidden="true"><path class="ag-pend" d="M2 4 Q20 0 38 4"/></svg><span><b data-i18n="aguaPend">Por corroborar</b> <i data-i18n="aguaPendV">respira</i></span></div>
+      <div class="ag-i"><svg class="ag-m" viewBox="0 0 40 8" aria-hidden="true"><path class="ag-diso" d="M2 4 Q20 0 38 4"/></svg><span><b data-i18n="aguaDiso">Disonancia</b> <i data-i18n="aguaDisoV">a contracorriente</i></span></div>
+    </div>
     <div class="clv-pie">
       <div class="clv-cifras" id="clvCifras"></div>
       <button type="button" id="clvLeyenda" aria-expanded="false" aria-controls="legend" data-i18n="legendAbrir">Ver leyenda completa</button>
@@ -627,6 +633,7 @@ const I18N = {
     iComoUsar:"Volver a la introducción", iMetodologia:"Metodología completa", iModo:"Modo presentación",
     lblLengua:"Lengua", lenTodas:"Todas", lenAng:"Anglófona", lenHis:"Hispanófona", lenFra:"Francófona", lenNeer:"Neerlandesa", lenLus:"Lusófona", lenCrio:"Criolla", lenSin:"Sin declarar",
     lblMovimiento:"Movimiento", movOn:"Animación: activada", movOff:"Animación: en pausa",
+    aguaTit:"El agua", aguaCorr:"Corroborada", aguaCorrV:"fluye", aguaPend:"Por corroborar", aguaPendV:"respira", aguaDiso:"Disonancia", aguaDisoV:"a contracorriente",
     lblIndirectas:"Conexiones indirectas", indCheckLbl:"Mostrar también las indirectas en el mapa",
     chipQuitarAria:"Quitar filtro: {label}", chipTipo:"Tipo", chipEvid:"Evidencia", chipLengua:"Lengua", chipMov:"Movimiento", chipInd:"Indirectas",
     legendBarTpl:"{n} entradas · {r} relaciones visibles · {p}% corroborado",
@@ -745,6 +752,7 @@ const I18N = {
     iComoUsar:"Back to the introduction", iMetodologia:"Full methodology", iModo:"Presentation mode",
     lblLengua:"Language", lenTodas:"All", lenAng:"Anglophone", lenHis:"Hispanophone", lenFra:"Francophone", lenNeer:"Dutch-language", lenLus:"Lusophone", lenCrio:"Creole", lenSin:"Undeclared",
     lblMovimiento:"Motion", movOn:"Animation: on", movOff:"Animation: paused",
+    aguaTit:"The water", aguaCorr:"Corroborated", aguaCorrV:"flows", aguaPend:"To be corroborated", aguaPendV:"breathes", aguaDiso:"Dissonance", aguaDisoV:"against the current",
     lblIndirectas:"Indirect connections", indCheckLbl:"Also show indirect connections on the map",
     chipQuitarAria:"Remove filter: {label}", chipTipo:"Type", chipEvid:"Evidence", chipLengua:"Language", chipMov:"Motion", chipInd:"Indirect",
     legendBarTpl:"{n} entries · {r} visible relations · {p}% corroborated",
@@ -1162,9 +1170,13 @@ function buildEdgeElements(pairs){
   egGroup.innerHTML=""; EDGES=[];
   pairs.forEach(({a,b,i})=>{ const na=byId(a), nb=byId(b); if(!na||!nb||!visible(na)||!visible(nb))return;
     const type=isDiso(a,b)?"disonancia":"resonancia"; const linguisticCrossing=cruceLinguistico(na,nb);
-    const p=el("path",{class:"edge "+type}); egGroup.appendChild(p);
+    /* estatuto de evidencia y sentido: con una obra abierta, cada corriente sale de ella;
+       así «hacia fuera» y «a contracorriente» significan lo mismo en todas las aristas */
+    const corr=esCorr(a,b);
+    let A=na, B=nb; if(state.active && b===state.active){ A=nb; B=na; }
+    const p=el("path",{class:"edge "+type+(corr?" corr":" pend")}); egGroup.appendChild(p);
     let marker=null; if(linguisticCrossing){ marker=el("path",{class:"fricc", stroke:"var(--cream)", "stroke-width":1.1, fill:"none"}); egGroup.appendChild(marker); }
-    EDGES.push({na,nb,p,ph:i*0.7,type,linguisticCrossing,marker}); });
+    EDGES.push({na:A,nb:B,p,ph:i*0.7,type,linguisticCrossing,marker,corr}); });
 }
 function syncEdges(){ if(egGroup) buildEdgeElements(relevantPairs()); }
 
@@ -1274,7 +1286,9 @@ function buildTrama(){
   if(!tramaGroup) return;
   tramaGroup.innerHTML="";
   if(state.view==="tabla") return;
-  const frag=document.createDocumentFragment();
+  /* tres grupos según el estatuto de cada corriente: el CSS hace que las corroboradas
+     fluyan continuas, que las por corroborar respiren y que las disonancias deriven */
+  const gC=el("g",{class:"hilos corr"}), gP=el("g",{class:"hilos pend"}), gD=el("g",{class:"hilos diso"});
   R.forEach(([a,b])=>{
     const na=byId(a), nb=byId(b);
     if(!na||!nb||!visible(na)||!visible(nb)) return;
@@ -1286,9 +1300,10 @@ function buildTrama(){
        y lo que aparece al enfocar se lean como el mismo gesto y no como dos grafos */
     const mx=(ax+bx)/2 - dy/len*Math.min(26,len*0.13);
     const my=(ay+by)/2 + dx/len*Math.min(26,len*0.13);
-    frag.appendChild(el("path",{class:"hilo", d:`M ${ax.toFixed(1)},${ay.toFixed(1)} Q ${mx.toFixed(1)},${my.toFixed(1)} ${bx.toFixed(1)},${by.toFixed(1)}`}));
+    const destino = isDiso(a,b) ? gD : esCorr(a,b) ? gC : gP;
+    destino.appendChild(el("path",{class:"hilo", d:`M ${ax.toFixed(1)},${ay.toFixed(1)} Q ${mx.toFixed(1)},${my.toFixed(1)} ${bx.toFixed(1)},${by.toFixed(1)}`}));
   });
-  tramaGroup.appendChild(frag);
+  tramaGroup.appendChild(gC); tramaGroup.appendChild(gP); tramaGroup.appendChild(gD);
 }
 /* Un único interruptor de estado en el SVG. En reposo manda la tinta; en cuanto hay
    foco —obra, corriente, búsqueda o recorrido— entra el color, que es cuando dice algo. */
@@ -1305,7 +1320,9 @@ function currentPath(e, ph, flowing){
   const ax=e.na._x, ay=e.na._y, bx=e.nb._x, by=e.nb._y; const dx=bx-ax, dy=by-ay; const len=Math.hypot(dx,dy)||1; const nx=-dy/len, ny=dx/len;
   let amp=Math.min(30,len*0.16); if(e.type==="disonancia") amp*=1.35;
   const STEPS=22; let d="";
-  for(let i=0;i<=STEPS;i++){ const tt=i/STEPS; const env=Math.sin(Math.PI*tt); const trav=flowing?ph*1.7:0;
+  for(let i=0;i<=STEPS;i++){ const tt=i/STEPS; const env=Math.sin(Math.PI*tt); /* corroborada: fluye, onda plena y constante hacia fuera · por corroborar: deriva lenta ·
+       disonancia: la onda dominante viaja a contracorriente, de vuelta hacia la obra */
+    const trav=!flowing?0 : e.type==="disonancia" ? -ph*1.7 : e.corr ? ph*1.7 : ph*0.8;
     let wave;
     if(e.type==="disonancia") wave=Math.sin(tt*3.4-trav+e.ph)-0.55*Math.sin(tt*5.2+trav*1.3+e.ph); // ondas encontradas
     else wave=Math.sin(tt*3.4-trav+e.ph)+0.45*Math.sin(tt*6.6-trav*1.5+e.ph*1.9);
@@ -1319,14 +1336,36 @@ function place(t){
   VNODES.forEach((n,idx)=>{ let dx=0,dy=0;
     /* En cronología la posición codifica un año: si el nodo se mece, se lee mal.
        La marea queda para las vistas donde el lugar es cualitativo. */
+    /* LA MAREA CON SENTIDO · todo se mueve (tidalectics: nada queda quieto); lo que dice
+       el estatuto de cada corriente es CÓMO se mueve, no si se mueve. */
     if(flowing && state.view!=="cronologia"){ if(state.view==="corriente"){ dx=sway+4.5*Math.sin(ph+n._bx*0.012); dy=3*Math.sin(ph*0.8+n._by*0.010+1.6); } else { dx=2.2*Math.sin(ph+idx*0.5); dy=2.2*Math.cos(ph*0.9+idx*0.5);} }
     /* _pm: peso de la marea (0–1). Mientras una obra viaja entre vistas
        (js/transiciones-atlas.js) la marea entra con ella, sin sacudida. */
     if(n._pm!=null){ dx*=n._pm; dy*=n._pm; }
     n._x=n._bx+dx; n._y=n._by+dy; n._g.setAttribute('transform',`translate(${n._x},${n._y})`); });
-  EDGES.forEach(e=>{ e.p.setAttribute('d', currentPath(e,ph,flowing)); e.p.setAttribute('stroke-dashoffset', flowing?(-t*0.03)%1000:0);
+  EDGES.forEach(e=>{ e.p.setAttribute('d', currentPath(e,ph,flowing)); e.p.setAttribute('stroke-dashoffset', !flowing ? 0 : e.type==="disonancia" ? (t*0.022)%1000 : e.corr ? (-t*0.03)%1000 : (-t*0.011)%1000);
     if(e.marker){ const mx=(e.na._x+e.nb._x)/2, my=(e.na._y+e.nb._y)/2; const s=2.4+(flowing?1.1*(0.5+0.5*Math.sin(ph*3+e.ph)):0); const rot=flowing?ph*40+e.ph*30:0; const c=Math.cos(rot), si=Math.sin(rot);
       e.marker.setAttribute('d',`M ${(mx-s*c).toFixed(1)},${(my-s*si).toFixed(1)} L ${(mx+s*c).toFixed(1)},${(my+s*si).toFixed(1)} M ${(mx+s*si).toFixed(1)},${(my-s*c).toFixed(1)} L ${(mx-s*si).toFixed(1)},${(my+s*c).toFixed(1)}`); } });
+  /* EN QUIETUD, LA TRAMA SE MECE · las corrientes azules del reposo acompañan la marea
+     lenta de las obras: el grupo entero se desplaza con el mismo vaivén común (periodo
+     de ~23 s), así que los hilos y los puntos se mueven juntos y no se despegan.
+     Un solo atributo por fotograma: no cuesta lo que costaría redibujar 1.363 curvas. */
+  if(tramaGroup){
+    if(flowing && state.view!=="tabla"){
+      let gx=0, gy=0;
+      if(state.view==="corriente"){ gx=sway; gy=2.4*Math.sin(ph*0.5+1.1); }
+      else if(state.view==="constelacion"){ gx=2.2*Math.sin(ph*0.7); gy=2.2*Math.cos(ph*0.6); }
+      else { gy=1.4*Math.sin(ph*0.6); }
+      /* el vaivén es tan lento (menos de 2 px por segundo) que basta tocar la trama cuando
+         se ha corrido un cuarto de píxel: el ojo no lo distingue y el navegador repinta
+         los 1.363 hilos unas pocas veces por segundo en vez de sesenta */
+      const pg=tramaGroup._pg;
+      if(!pg || Math.abs(pg[0]-gx)>0.25 || Math.abs(pg[1]-gy)>0.25){
+        tramaGroup._pg=[gx,gy];
+        tramaGroup.setAttribute('transform',`translate(${gx.toFixed(2)},${gy.toFixed(2)})`);
+      }
+    } else if(tramaGroup._pg){ tramaGroup._pg=null; tramaGroup.removeAttribute('transform'); }
+  }
   if(state.view==="corriente" && flowing) for(let i=0;i<3;i++){ const b=document.getElementById('tb'+i); if(!b)continue; const yy=py(8-i*1.6); const amp=6+i*2; const o=ph*1.1+i; let d=`M ${px(-98)},${yy}`; for(let x=-96;x<=-53;x+=6) d+=` L ${px(x)},${yy+amp*Math.sin(o+x*0.14)}`; b.setAttribute('d',d); }
   updateTip();
 }
@@ -2138,6 +2177,7 @@ function setTide(on){
   const b=document.getElementById('movBtn');
   if(b){ b.setAttribute('aria-pressed', on?'true':'false'); b.textContent = on?t('movOn'):t('movOff'); }
   if(!on) place(0);
+  if(svg) svg.classList.toggle('quieto', !on);
   try{ localStorage.setItem('pc_marea', on?'on':'off'); }catch(e){}
   renderChips();
 }
@@ -2992,6 +3032,7 @@ montarZoom();
 setTide(state.tide); /* sincroniza el botón de movimiento y las etiquetas de filtros activos con el estado inicial */
 try{ if(localStorage.getItem('pc_umbral_visto')==='1') document.getElementById('umbral').classList.add('gone'); }catch(e){}
 if(LANG==='en') applyLang();
+if(!state.tide && svg) svg.classList.add('quieto'); /* la marea con sentido también respeta la pausa guardada */
 requestAnimationFrame(loop);
 /* Redirecciones de identificadores fusionados: un enlace ya citado no puede romperse
    porque dos entradas resultaran ser la misma obra. El mapa vive en el corpus. */
