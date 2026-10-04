@@ -145,7 +145,11 @@
         else if(dir){ ev.preventDefault(); ev.stopPropagation(); const c=centroDisco(g); navegar(dir,c[0],c[1],g); }
         else if(ev.key==='Home'||ev.key==='End'){ ev.preventDefault(); ev.stopPropagation(); extremo(ev.key==='End'); }
       });
-      g.addEventListener('focus',()=>{ if(svgEl) paradaEnDisco(g); });
+      g.addEventListener('focus',()=>{ if(svgEl) paradaEnDisco(g); cg.classList.add('ver'); });
+      g.addEventListener('blur',()=>cg.classList.remove('ver'));
+      /* en reposo la cifra no se ve: aparece al pasar por el disco o al enfocarlo */
+      g.addEventListener('mouseenter',()=>cg.classList.add('ver'));
+      g.addEventListener('mouseleave',()=>cg.classList.remove('ver'));
       capa.appendChild(g); LG.discos[k]=g;
     });
     /* debajo de los topónimos (que deben leerse) y de las obras de los lugares abiertos */

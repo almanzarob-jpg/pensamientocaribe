@@ -21,3 +21,11 @@
 /* mientras los lugares se abren o se cierran, la trama se aparta y vuelve redibujada */
 #stage.lod-viaje .trama{opacity:0 !important; transition:opacity var(--mov-rapido,150ms) ease}
 @media (prefers-reduced-motion: reduce){ .lg-onda{animation:none !important} }
+/* EN REPOSO, FANTASMAL (4-oct-2026, corrección de Rob): sin nada en uso, el mapa solo
+   muestra los hilos azules y los puntos en tinta. El disco toma la misma tinta que una
+   obra, sin cifra; la cifra aparece al pasar por él o al enfocarlo, y vuelve en cuanto
+   hay algo en uso (una ficha, una búsqueda, un fenómeno, un recorrido). */
+#stage.reposo .lg-agua{fill:var(--ink,rgba(226,221,206,.15)); fill-opacity:1; stroke:var(--ink-line,rgba(226,221,206,.42)); stroke-width:.9}
+#stage.reposo .lugar-cifra .lg-n{opacity:0; transition:opacity var(--mov-medio,260ms) ease}
+#stage.reposo .lugar-cifra.ver .lg-n{opacity:1}
+#stage.reposo .lugar:hover .lg-agua{fill:var(--cream,#f2ead8); fill-opacity:.12; stroke:var(--cream,#f2ead8); stroke-opacity:.8}
