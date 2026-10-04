@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/zoom-caribe.css?v=20261003">
-<link rel="stylesheet" href="../css/con-el-agua-de-por-medio.css?v=20261004">
+<link rel="stylesheet" href="../css/con-el-agua-de-por-medio.css?v=20261004b">
 <link rel="stylesheet" href="../css/capa-caribes.css?v=20261003">
 <link rel="stylesheet" href="../css/deriva-caribes.css?v=20261003">
 <link rel="stylesheet" href="../css/capa-antirracismo.css?v=20261003">
@@ -1282,6 +1282,7 @@ function render(){
    No entra en EDGES ni en el bucle de animación: son trazos estáticos que se calculan
    una vez por render. Al enfocar algo, se apaga y ceden el paso a las corrientes
    dibujadas de verdad, con su resonancia, su disonancia y su cruce lingüístico. */
+const OLA_ANCHO=170, OLA_CICLO=18000, OLA_CRUCE=0.78; /* ancho de la banda, ciclo total y fracción del ciclo en que cruza */
 function buildTrama(){
   if(!tramaGroup) return;
   tramaGroup.innerHTML="";
@@ -1303,7 +1304,18 @@ function buildTrama(){
     const destino = isDiso(a,b) ? gD : esCorr(a,b) ? gC : gP;
     destino.appendChild(el("path",{class:"hilo", d:`M ${ax.toFixed(1)},${ay.toFixed(1)} Q ${mx.toFixed(1)},${my.toFixed(1)} ${bx.toFixed(1)},${by.toFixed(1)}`}));
   });
+  /* LA OLA DE LUZ · en quietud, un resplandor del mismo azul cruza el mapa de oeste a este
+     cada ~18 s, como luz que corre sobre el agua: se nota sin pedir atención.
+     Es un único rectángulo con degradado encima de la trama; place() solo lo desplaza.
+     (Probado antes: pintar los 1.363 hilos con un degradado, o duplicarlos recortados,
+     dejaba la animación en un tercio de su fluidez en pantallas grandes.) */
   tramaGroup.appendChild(gC); tramaGroup.appendChild(gP); tramaGroup.appendChild(gD);
+  const defs=el("defs"), gr=el("linearGradient",{id:"olaLuz", x1:0, y1:0, x2:1, y2:0});
+  [[0,0],[.5,1],[1,0]].forEach(([o,a])=>{ const st=el("stop",{offset:o}); st.style.stopColor="var(--hilo)"; st.style.stopOpacity=a; gr.appendChild(st); });
+  defs.appendChild(gr); tramaGroup.insertBefore(defs, tramaGroup.firstChild);
+  /* inclinada como el frente de una ola, no una columna recta */
+  const luz=el("rect",{class:"ola-luz", x:-9999, y:-400, width:OLA_ANCHO*2, height:1600, fill:"url(#olaLuz)", transform:"skewX(-16)"});
+  tramaGroup.appendChild(luz); tramaGroup._ola={luz, ox:null};
 }
 /* Un único interruptor de estado en el SVG. En reposo manda la tinta; en cuanto hay
    foco —obra, corriente, búsqueda o recorrido— entra el color, que es cuando dice algo. */
@@ -1353,9 +1365,9 @@ function place(t){
   if(tramaGroup){
     if(flowing && state.view!=="tabla"){
       let gx=0, gy=0;
-      if(state.view==="corriente"){ gx=sway; gy=2.4*Math.sin(ph*0.5+1.1); }
-      else if(state.view==="constelacion"){ gx=2.2*Math.sin(ph*0.7); gy=2.2*Math.cos(ph*0.6); }
-      else { gy=1.4*Math.sin(ph*0.6); }
+      if(state.view==="corriente"){ gx=sway; gy=4*Math.sin(ph*0.5+1.1); }
+      else if(state.view==="constelacion"){ gx=4*Math.sin(ph*0.7); gy=4*Math.cos(ph*0.6); }
+      else { gy=2.5*Math.sin(ph*0.6); }
       /* el vaivén es tan lento (menos de 2 px por segundo) que basta tocar la trama cuando
          se ha corrido un cuarto de píxel: el ojo no lo distingue y el navegador repinta
          los 1.363 hilos unas pocas veces por segundo en vez de sesenta */
@@ -1365,6 +1377,16 @@ function place(t){
         tramaGroup.setAttribute('transform',`translate(${gx.toFixed(2)},${gy.toFixed(2)})`);
       }
     } else if(tramaGroup._pg){ tramaGroup._pg=null; tramaGroup.removeAttribute('transform'); }
+    /* la ola de luz: cruza de oeste a este y descansa; solo con la marea activa y en reposo */
+    const ola=tramaGroup._ola;
+    if(ola){
+      let ox=-9999;
+      if(flowing && state.view!=="tabla" && svg.classList.contains('reposo')){
+        const u=(t % OLA_CICLO)/OLA_CICLO;
+        if(u<OLA_CRUCE){ const k=u/OLA_CRUCE, e=k<.5?2*k*k:1-Math.pow(-2*k+2,2)/2; ox=-OLA_ANCHO-120 + e*(VW+2*OLA_ANCHO+520); }
+      }
+      if(ola.ox==null || Math.abs(ola.ox-ox)>1.5){ ola.ox=ox; ola.luz.setAttribute('x',(ox-OLA_ANCHO).toFixed(1)); }
+    }
   }
   if(state.view==="corriente" && flowing) for(let i=0;i<3;i++){ const b=document.getElementById('tb'+i); if(!b)continue; const yy=py(8-i*1.6); const amp=6+i*2; const o=ph*1.1+i; let d=`M ${px(-98)},${yy}`; for(let x=-96;x<=-53;x+=6) d+=` L ${px(x)},${yy+amp*Math.sin(o+x*0.14)}`; b.setAttribute('d',d); }
   updateTip();

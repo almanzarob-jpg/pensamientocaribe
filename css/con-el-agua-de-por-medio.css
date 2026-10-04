@@ -1043,6 +1043,8 @@ main:has(#qcLeyenda:not([hidden])) #hint{bottom:auto; top:16px}
 .hilos.corr .hilo{stroke-opacity:.20}
 .hilos.pend .hilo{stroke-opacity:.24; stroke-width:.75}
 .hilos.diso .hilo{stroke-opacity:.26; stroke-width:.8}
+/* la ola de luz: un resplandor tenue del azul de la trama que cruza el mapa */
+.ola-luz{pointer-events:none; opacity:.11}
 @keyframes aguaContra{to{stroke-dashoffset:18}}
 
 #stage.quieto .edge, #stage.quieto .hilos{animation:none}
