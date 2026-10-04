@@ -49,7 +49,7 @@
 .qc-rotulo-encallada{fill:var(--qc-encallada); text-transform:uppercase; letter-spacing:1.4px}
 
 /* los rótulos de lugar hablan en el idioma de la definición */
-#stage.qc-activa .placelbl{transition:opacity .25s, fill .25s}
+#stage.qc-activa .placelbl{transition:opacity var(--mov-medio,.25s) var(--curva-llegada,cubic-bezier(.16,1,.3,1)), fill var(--mov-medio,.25s) var(--curva-llegada,cubic-bezier(.16,1,.3,1))}
 #stage.qc-activa .placelbl.qc-l-dentro{opacity:1; fill:var(--cream)}
 #stage.qc-activa .placelbl.ciudad.qc-l-dentro{fill:var(--orange)}
 #stage.qc-activa .placelbl.qc-l-margen{opacity:1; fill:var(--qc-margen)}

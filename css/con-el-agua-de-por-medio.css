@@ -5,6 +5,19 @@
     --ff-display:'Cormorant Garamond',Georgia,serif;
     --ff-body:'Inter',system-ui,sans-serif;
     --ff-mono:ui-monospace,'SFMono-Regular','Consolas',monospace;
+    /* SISTEMA DE MOVIMIENTO · tres tiempos y dos curvas para todo el atlas y sus capas.
+       rápido  → respuesta a la mano (cursor, foco, color de un botón)
+       medio   → algo aparece o se atenúa (fichas, paneles, constelaciones)
+       lento   → cambia la escena (de una vista a otra, encuadres, el umbral)
+       llegada → lo que entra y se posa: arranca vivo y frena largo
+       vaivén  → lo que va de un lugar a otro: sale despacio, cruza, llega despacio
+       Una capa nueva no inventa sus tiempos: toma estos. */
+    --mov-rapido:150ms; --mov-medio:260ms; --mov-lento:720ms;
+    --curva-llegada:cubic-bezier(.16,1,.3,1);
+    --curva-vaiven:cubic-bezier(.65,0,.35,1);
+  }
+  @media (prefers-reduced-motion: reduce){
+    :root{ --mov-rapido:1ms; --mov-medio:1ms; --mov-lento:1ms; }
   }
   *{box-sizing:border-box}
   html,body{margin:0;height:100%; height:100dvh; overscroll-behavior:none; overflow-x:hidden;}
@@ -12,7 +25,7 @@
   header{flex:0 0 auto; padding:18px 28px 14px; border-bottom:1px solid var(--line); display:flex; align-items:flex-end; justify-content:space-between; gap:24px; flex-wrap:wrap; background:linear-gradient(180deg,var(--bg-warm),var(--bg-deep)); position:relative;}
   header::after{content:"";position:absolute; left:28px; right:28px; bottom:0; height:2px;
     background:linear-gradient(90deg, var(--green-l) 0 64px, transparent 64px 76px, var(--gold) 76px 118px, transparent 118px);}
-  header .t .back{display:inline-flex; align-items:center; gap:5px; font-family:var(--ff-mono); font-size:10px; text-transform:uppercase; letter-spacing:1.4px; color:var(--gray); text-decoration:none; margin-bottom:9px; transition:color .15s}
+  header .t .back{display:inline-flex; align-items:center; gap:5px; font-family:var(--ff-mono); font-size:10px; text-transform:uppercase; letter-spacing:1.4px; color:var(--gray); text-decoration:none; margin-bottom:9px; transition:color var(--mov-rapido) var(--curva-llegada)}
   header .t .back:hover, header .t .back:focus{color:var(--gold)}
   /* Ruta de navegación: landmark propio con el camino de vuelta al sitio.
      Reemplaza al enlace suelto .back, que quedaba fuera de todo landmark.
@@ -21,7 +34,7 @@
   header .t .migas{display:flex; align-items:center; flex-wrap:wrap; gap:6px; margin-bottom:9px;
     font-family:var(--ff-mono); font-size:11.5px; text-transform:uppercase; letter-spacing:1.2px; line-height:1.5}
   header .t .migas a{display:inline-flex; align-items:center; gap:5px; color:var(--gray); text-decoration:none;
-    padding:3px 2px; border-radius:3px; transition:color .15s}
+    padding:3px 2px; border-radius:3px; transition:color var(--mov-rapido) var(--curva-llegada)}
   header .t .migas a:hover{color:var(--gold)}
   header .t .migas a:focus-visible{outline:2px solid var(--gold); outline-offset:2px; color:var(--gold)}
   header .t .migas .sep{color:var(--line); user-select:none}
@@ -38,7 +51,7 @@
   .grp{display:flex; flex-direction:column; gap:6px}
   .grp label{font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1.6px; color:var(--gray)}
   .seg{display:flex; border:1px solid var(--line); border-radius:3px; overflow:hidden; background:rgba(255,255,255,.02)}
-  .seg button{font-family:var(--ff-mono); font-size:10.5px; text-transform:uppercase; letter-spacing:1px; padding:7px 13px; border:0; cursor:pointer; background:transparent; color:var(--gray); border-right:1px solid var(--line); transition:background .15s,color .15s;}
+  .seg button{font-family:var(--ff-mono); font-size:10.5px; text-transform:uppercase; letter-spacing:1px; padding:7px 13px; border:0; cursor:pointer; background:transparent; color:var(--gray); border-right:1px solid var(--line); transition:background var(--mov-rapido) var(--curva-llegada), color var(--mov-rapido) var(--curva-llegada);}
   .seg button:last-child{border-right:0}
   .seg button:hover{color:var(--cream)}
   .seg button.on{background:var(--cream); color:var(--bg-deep)}
@@ -87,7 +100,7 @@
   #legendBtn{min-height:44px; display:inline-flex; align-items:center; font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:.8px; padding:0 14px; border:1px solid var(--line); background:transparent; color:var(--gold); cursor:pointer; border-radius:2px; white-space:nowrap}
   #legendBtn:hover{border-color:var(--gold-d); color:var(--cream)}
   /* ---------- buscador por título y autor ---------- */
-  .buscador{display:flex; align-items:center; border:1px solid var(--line); border-radius:3px; background:rgba(255,255,255,.02); transition:border-color .15s}
+  .buscador{display:flex; align-items:center; border:1px solid var(--line); border-radius:3px; background:rgba(255,255,255,.02); transition:border-color var(--mov-rapido) var(--curva-llegada)}
   .buscador:focus-within{border-color:var(--gold)}
   .buscador input{font-family:var(--ff-mono); font-size:10.5px; letter-spacing:.6px; padding:7px 10px; width:180px; border:0; background:transparent; color:var(--cream); outline:none}
   .buscador input::placeholder{color:var(--gray); opacity:.75; text-transform:none; letter-spacing:.4px}
@@ -104,38 +117,38 @@
      centrado vertical de móvil convivan en una sola transformación. */
   main{--zc-x:0px; --zc-y:0px}
   main:has(#panel.open){--zc-x:-372px}
-  .zc{transform:translate(var(--zc-x),var(--zc-y)); transition:transform .3s cubic-bezier(.4,0,.2,1), opacity .2s ease}
+  .zc{transform:translate(var(--zc-x),var(--zc-y)); transition:transform var(--mov-medio) var(--curva-vaiven), opacity var(--mov-medio) var(--curva-llegada)}
   #stage.grabbing{cursor:grabbing}
-  .node circle.dot{transition:opacity .25s, r .2s}
-  .halo{fill:none; stroke:var(--cream); opacity:0; transition:opacity .2s}
+  .node circle.dot{transition:opacity var(--mov-medio) var(--curva-llegada), r var(--mov-medio) var(--curva-llegada)}
+  .halo{fill:none; stroke:var(--cream); opacity:0; transition:opacity var(--mov-medio) var(--curva-llegada)}
   /* Etapa 6, Cronología en modo Investigado: sin inventar una posición en el
      eje del periodo estudiado, estas entradas se atenúan en su sitio de
      siempre (el eje de publicación) — visibles, no ocultas, pero claramente
      fuera de foco mientras el modo activo es ese. */
   .node.sindato circle.dot{opacity:.32}
   .node.sindato:hover circle.dot, .node.sindato:focus-visible circle.dot{opacity:.85}
-  .edge{fill:none; stroke:var(--orange); stroke-opacity:.4; stroke-width:1.3; stroke-linecap:round; stroke-dasharray:1.5 6; transition:stroke-opacity .25s}
+  .edge{fill:none; stroke:var(--orange); stroke-opacity:.4; stroke-width:1.3; stroke-linecap:round; stroke-dasharray:1.5 6; transition:stroke-opacity var(--mov-medio) var(--curva-llegada)}
   .edge.disonancia{stroke:var(--red)}
   .fricc{pointer-events:none}
   .coast{fill:none; stroke:var(--green-l); stroke-opacity:.16; stroke-width:1}
   .tideband{fill:none; stroke:#4a9db0; stroke-opacity:.07}
-  .placelbl{font-family:var(--ff-mono); font-size:10px; letter-spacing:.6px; pointer-events:none; transition:opacity .25s}
+  .placelbl{font-family:var(--ff-mono); font-size:10px; letter-spacing:.6px; pointer-events:none; transition:opacity var(--mov-medio) var(--curva-llegada)}
   .placelbl.pais{fill:var(--gray); opacity:.85}
   .placelbl.ciudad{fill:var(--orange); opacity:.9}
-  .clbl{font-family:var(--ff-mono); font-size:10.5px; text-transform:uppercase; letter-spacing:1.4px; font-weight:600; pointer-events:none; transition:opacity .25s}
+  .clbl{font-family:var(--ff-mono); font-size:10.5px; text-transform:uppercase; letter-spacing:1.4px; font-weight:600; pointer-events:none; transition:opacity var(--mov-medio) var(--curva-llegada)}
   /* banda del tiempo de lo ocurrido: la barra del periodo y el reflujo que la une
      con su año de publicación. Siguen el mismo foco que los nodos y las corrientes. */
-  .periodo{transition:opacity .25s}
-  .reflujo{transition:stroke-opacity .25s, stroke-width .25s; pointer-events:none}
+  .periodo{transition:opacity var(--mov-medio) var(--curva-llegada)}
+  .reflujo{transition:stroke-opacity var(--mov-medio) var(--curva-llegada), stroke-width var(--mov-medio) var(--curva-llegada); pointer-events:none}
   /* tooltip flotante (siempre nítido) */
-  #tip{position:absolute; left:0; top:0; pointer-events:none; z-index:16; background:rgba(17,19,13,.97); border:1px solid var(--line); border-left:3px solid var(--cream); border-radius:3px; padding:8px 12px; width:max-content; max-width:290px; opacity:0; transform:translate(-50%,calc(-100% - 15px)); transition:opacity .12s; box-shadow:0 10px 26px rgba(0,0,0,.55)}
+  #tip{position:absolute; left:0; top:0; pointer-events:none; z-index:16; background:rgba(17,19,13,.97); border:1px solid var(--line); border-left:3px solid var(--cream); border-radius:3px; padding:8px 12px; width:max-content; max-width:290px; opacity:0; transform:translate(-50%,calc(-100% - 15px)); transition:opacity var(--mov-rapido) var(--curva-llegada); box-shadow:0 10px 26px rgba(0,0,0,.55)}
   #tip.show{opacity:1}
   #tip.below{transform:translate(-50%,18px)}
   #tip .tt{font-family:var(--ff-display); font-size:16px; line-height:1.22; color:var(--cream); font-weight:600}
   #tip .ta{font-family:var(--ff-mono); font-size:9.5px; letter-spacing:.4px; color:var(--gray); margin-top:4px}
   #tip .tf{font-family:var(--ff-mono); font-size:8.5px; text-transform:uppercase; letter-spacing:1px; margin-top:5px}
   /* panel */
-  #panel{position:absolute; top:14px; right:14px; width:352px; max-height:calc(100% - 28px); overflow:auto; background:var(--panel); border:1px solid var(--line); border-radius:3px; padding:22px 24px; box-shadow:0 16px 44px rgba(0,0,0,.55); transform:translateX(125%); transition:transform .3s cubic-bezier(.4,0,.2,1), opacity .3s, visibility .3s;}
+  #panel{position:absolute; top:14px; right:14px; width:352px; max-height:calc(100% - 28px); overflow:auto; background:var(--panel); border:1px solid var(--line); border-radius:3px; padding:22px 24px; box-shadow:0 16px 44px rgba(0,0,0,.55); transform:translateX(125%); transition:transform var(--mov-medio) var(--curva-vaiven), opacity var(--mov-medio) var(--curva-llegada), visibility var(--mov-medio) var(--curva-llegada);}
   #panel.open{transform:none}
   #panel .close{float:right; width:44px; height:44px; margin:-11px -12px 0 0; display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--gray); font-size:20px; line-height:1; border:0; background:none}
   #panel .kind{font-family:var(--ff-mono); font-size:9.5px; text-transform:uppercase; letter-spacing:1.6px; color:var(--red)}
@@ -283,7 +296,7 @@
   /* objetivo táctil de la fila: ~30px con padding:7px, por debajo de 44px por la
      misma razón que .chip — grilla densa de hasta 10 corrientes; gap:5px del grid
      como espaciado equivalente */
-  #legend .li{display:flex; align-items:center; gap:7px; cursor:pointer; padding:7px 4px; margin:-7px -4px; border-radius:3px; transition:background .15s}
+  #legend .li{display:flex; align-items:center; gap:7px; cursor:pointer; padding:7px 4px; margin:-7px -4px; border-radius:3px; transition:background var(--mov-rapido) var(--curva-llegada)}
   #legend .li:hover{background:rgba(242,234,216,.06)}
   #legend .li.sel{background:rgba(240,122,22,.15)}
   #legend .sw{width:9px; height:9px; border-radius:50%; flex:none}
@@ -301,13 +314,13 @@
      La puerta no existe al cargar. Aparece en la leyenda cuando quien mira ya recorrió
      el mapa (seis fichas o cuatro minutos). Filtra por atención, no por credenciales. */
   #legend .puerta{display:none; margin-top:9px; padding-top:9px; border-top:1px solid var(--line); align-items:center; gap:8px; flex-wrap:wrap}
-  #legend .puerta.on{display:flex; animation:sube .9s ease}
+  #legend .puerta.on{display:flex; animation:sube var(--mov-lento) var(--curva-llegada)}
   @keyframes sube{from{opacity:0; transform:translateY(5px)} to{opacity:1; transform:none}}
   #legend .puerta .marca{display:inline-block; width:20px; height:1px; background:var(--orange); flex:0 0 auto}
   #legend .puerta a, #legend .puerta [role="button"]{color:var(--orange); cursor:pointer; text-decoration:none; font-size:9.5px; letter-spacing:.6px}
   #legend .puerta a:hover, #legend .puerta [role="button"]:hover{text-decoration:underline}
 
-  #reflujo{position:absolute; top:14px; right:14px; z-index:21; width:414px; max-width:calc(100% - 28px); max-height:calc(100% - 28px); overflow:auto; background:var(--panel); border:1px solid var(--line); border-radius:3px; padding:22px 24px 26px; box-shadow:0 16px 44px rgba(0,0,0,.55); transform:translateX(125%); transition:transform .3s cubic-bezier(.4,0,.2,1)}
+  #reflujo{position:absolute; top:14px; right:14px; z-index:21; width:414px; max-width:calc(100% - 28px); max-height:calc(100% - 28px); overflow:auto; background:var(--panel); border:1px solid var(--line); border-radius:3px; padding:22px 24px 26px; box-shadow:0 16px 44px rgba(0,0,0,.55); transform:translateX(125%); transition:transform var(--mov-medio) var(--curva-vaiven)}
   #reflujo.open{transform:none}
   #reflujo .close{position:absolute; top:0; right:0; width:44px; height:44px; display:flex; align-items:center; justify-content:center; background:transparent; border:0; color:var(--gray); font-size:19px; line-height:1; cursor:pointer}
   #reflujo .close:hover{color:var(--cream)}
@@ -354,7 +367,7 @@
   @media(max-width:760px){ #reflujo{width:calc(100% - 28px); top:8px; right:8px; left:8px; padding:18px 17px 22px} }
   #legend .mlink a:hover{color:var(--cream)}
   /* marco conceptual */
-  #marco{position:absolute; inset:0; background:rgba(5,6,4,.95); backdrop-filter:blur(5px); z-index:22; display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity .35s}
+  #marco{position:absolute; inset:0; background:rgba(5,6,4,.95); backdrop-filter:blur(5px); z-index:22; display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity var(--mov-medio) var(--curva-llegada)}
   #marco.show{opacity:1; pointer-events:auto}
   #marco .mbox{max-width:760px; max-height:86%; overflow:auto; padding:34px 40px; background:var(--panel); border:1px solid var(--line); border-radius:4px; box-shadow:0 20px 60px rgba(0,0,0,.6)}
   #marco .mclose{float:right; width:44px; height:44px; margin:-14px -16px 0 0; display:flex; align-items:center; justify-content:center; cursor:pointer; color:var(--gray); font-size:24px; border:0; background:none; line-height:1}
@@ -366,7 +379,7 @@
   #marco .c p{font-size:13.5px; line-height:1.55; color:var(--gray); margin:0}
   #marco .c p b{color:var(--cream); font-weight:500}
   #hint{position:absolute; left:16px; top:14px; font-size:12px; color:var(--gray); font-style:italic; max-width:240px; line-height:1.5}
-  .skip-link{position:absolute; left:1rem; top:-100px; z-index:9999; background:var(--orange); color:var(--bg-deep); font-family:var(--ff-mono); font-size:.85rem; font-weight:600; letter-spacing:.02em; padding:.8rem 1.4rem; border-radius:4px; text-decoration:none; transition:top .2s ease}
+  .skip-link{position:absolute; left:1rem; top:-100px; z-index:9999; background:var(--orange); color:var(--bg-deep); font-family:var(--ff-mono); font-size:.85rem; font-weight:600; letter-spacing:.02em; padding:.8rem 1.4rem; border-radius:4px; text-decoration:none; transition:top var(--mov-medio) var(--curva-vaiven)}
   .skip-link:focus{top:1rem}
   /* texto presente para lectores de pantalla, invisible en pantalla; nunca display:none
      (eso lo saca del árbol de accesibilidad) */
@@ -377,7 +390,7 @@
     outline:2px solid var(--gold); outline-offset:2px;
   }
   .node:focus-visible .dot{stroke:var(--cream); stroke-width:2.4}
-  #guion{position:absolute; left:50%; top:16px; transform:translateX(-50%) translateY(-14px); width:min(580px,74vw); background:rgba(17,19,13,.95); border:1px solid var(--line); border-left-width:3px; border-radius:3px; padding:13px 40px 13px 22px; opacity:0; pointer-events:none; transition:opacity .3s, transform .3s;}
+  #guion{position:absolute; left:50%; top:16px; transform:translateX(-50%) translateY(-14px); width:min(580px,74vw); background:rgba(17,19,13,.95); border:1px solid var(--line); border-left-width:3px; border-radius:3px; padding:13px 40px 13px 22px; opacity:0; pointer-events:none; transition:opacity var(--mov-medio) var(--curva-llegada), transform var(--mov-medio) var(--curva-vaiven);}
   /* Corrección 15-sep-2026: el banner no tenía botón de cierre — con foco de
      fenómeno activo y sin ficha ni panel abiertos no había forma de apagarlo
      salvo recordar hacer clic en el mapa vacío. pointer-events se restablece
@@ -396,7 +409,7 @@
   .credit{position:absolute; right:70px; bottom:12px; font-family:var(--ff-mono); font-size:9px; letter-spacing:.8px; text-transform:uppercase; color:var(--gray); opacity:.5; text-align:right; line-height:1.7; pointer-events:none}
   .credit a{pointer-events:auto}
   #hint{pointer-events:none}
-  #umbral{position:absolute; inset:0; background:rgba(5,6,4,.94); backdrop-filter:blur(4px); display:flex; align-items:center; justify-content:center; z-index:20; transition:opacity .5s}
+  #umbral{position:absolute; inset:0; background:rgba(5,6,4,.94); backdrop-filter:blur(4px); display:flex; align-items:center; justify-content:center; z-index:20; transition:opacity var(--mov-lento) var(--curva-llegada)}
   #umbral.gone{opacity:0; pointer-events:none}
   #umbral .box{max-width:640px; padding:0 30px; text-align:center}
   /* Bloque A · 17-09-2026: en teléfonos pequeños la caja mide más que el hueco bajo el
@@ -434,7 +447,7 @@
   #tabla th[aria-sort="ascending"]::after{content:" ▲"; color:var(--gold)}
   #tabla th[aria-sort="descending"]::after{content:" ▼"; color:var(--gold)}
   #tabla td{padding:9px 12px; border-bottom:1px solid var(--line); vertical-align:top; color:var(--cream)}
-  #tabla tbody tr{cursor:pointer; transition:background .12s}
+  #tabla tbody tr{cursor:pointer; transition:background var(--mov-rapido) var(--curva-llegada)}
   #tabla tbody tr:hover, #tabla tbody tr:focus-within{background:rgba(242,234,216,.05)}
   #tabla td.tit a{color:var(--cream); text-decoration:none; font-weight:500}
   #tabla td.tit a:hover, #tabla td.tit a:focus{color:var(--gold); text-decoration:underline; outline:2px solid var(--gold); outline-offset:2px}
@@ -470,10 +483,10 @@
   body.presenting #hint{display:none}
   body.presenting .credit{display:none}
   body.presenting #tabla{display:none !important}
-  #presExit{position:fixed; right:16px; top:16px; z-index:30; font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1.4px; padding:7px 13px; background:rgba(0,0,0,.55); color:var(--gray); border:1px solid var(--line); border-radius:2px; cursor:pointer; opacity:0; pointer-events:none; transition:opacity .25s;}
+  #presExit{position:fixed; right:16px; top:16px; z-index:30; font-family:var(--ff-mono); font-size:9px; text-transform:uppercase; letter-spacing:1.4px; padding:7px 13px; background:rgba(0,0,0,.55); color:var(--gray); border:1px solid var(--line); border-radius:2px; cursor:pointer; opacity:0; pointer-events:none; transition:opacity var(--mov-medio) var(--curva-llegada);}
   body.presenting #presExit{opacity:.3; pointer-events:auto}
   body.presenting #presExit:hover{opacity:1; color:var(--cream); border-color:var(--gold)}
-  #presHelp{position:fixed; left:16px; bottom:16px; z-index:30; font-family:var(--ff-mono); font-size:9.5px; letter-spacing:.6px; padding:9px 13px; background:rgba(0,0,0,.55); border:1px solid var(--line); border-radius:2px; color:var(--gray); opacity:0; pointer-events:none; transition:opacity .25s; display:flex; gap:14px; flex-wrap:wrap;}
+  #presHelp{position:fixed; left:16px; bottom:16px; z-index:30; font-family:var(--ff-mono); font-size:9.5px; letter-spacing:.6px; padding:9px 13px; background:rgba(0,0,0,.55); border:1px solid var(--line); border-radius:2px; color:var(--gray); opacity:0; pointer-events:none; transition:opacity var(--mov-medio) var(--curva-llegada); display:flex; gap:14px; flex-wrap:wrap;}
   body.presenting #presHelp{opacity:.4; pointer-events:auto}
   body.presenting #presHelp:hover{opacity:1}
   #presHelp b{color:var(--gold); font-weight:600; margin-right:4px}
@@ -631,7 +644,7 @@
   #stage .periodo.apagado:not(.difumina){fill:var(--ink-dim)}
   #stage.reposo .node:hover circle.dot,
   #stage.reposo .node:focus-visible circle.dot{fill:var(--cream); stroke:var(--cream)}
-  #stage .node circle.dot{transition:opacity .25s, r .2s, fill .35s, stroke .35s}
+  #stage .node circle.dot{transition:opacity var(--mov-medio) var(--curva-llegada), r var(--mov-medio) var(--curva-llegada), fill var(--mov-medio) var(--curva-llegada), stroke var(--mov-medio) var(--curva-llegada)}
   /* Los rótulos caían dentro de los cúmulos y se volvían ilegibles: Cuba, Haití o
      Puerto Rico quedaban tachados por sus propios puntos. Un contorno del color del
      fondo, dibujado por debajo del texto, los despega sin añadir ninguna caja. */
@@ -641,7 +654,7 @@
   #stage.reposo .placelbl.ciudad{opacity:.55}
   /* --- 2 · trama submarina -------------------------------------------- */
   .hilo{fill:none; stroke:var(--hilo); stroke-width:.7; stroke-opacity:.20; pointer-events:none}
-  .trama{transition:opacity .5s ease}
+  .trama{transition:opacity var(--mov-lento) var(--curva-llegada)}
   #stage:not(.reposo) .trama{opacity:0}
   #stage.reposo .trama{opacity:1}
   /* --- 3 · la clave de corrientes -------------------------------------- */
@@ -658,9 +671,9 @@
   #clave .clv-i{display:flex; align-items:center; gap:9px; width:100%; min-height:30px;
     padding:4px 7px; margin-left:-7px; border:0; border-left:2px solid transparent; border-radius:3px;
     background:transparent; color:var(--gray); font-family:inherit; font-size:10px; letter-spacing:.5px;
-    text-align:left; cursor:pointer; transition:background .15s, color .15s, border-color .15s}
+    text-align:left; cursor:pointer; transition:background var(--mov-rapido) var(--curva-llegada), color var(--mov-rapido) var(--curva-llegada), border-color var(--mov-rapido) var(--curva-llegada)}
   #clave .clv-sw{flex:none; width:8px; height:8px; border-radius:50%; background:var(--fc);
-    opacity:.55; transition:opacity .15s, box-shadow .15s}
+    opacity:.55; transition:opacity var(--mov-rapido) var(--curva-llegada), box-shadow var(--mov-rapido) var(--curva-llegada)}
   #clave .clv-n{flex:1 1 auto; line-height:1.3}
   #clave .clv-c{flex:none; font-size:9px; color:var(--gray); opacity:.45; font-variant-numeric:tabular-nums}
   #clave .clv-i:hover{background:rgba(242,234,216,.05); color:var(--cream)}
@@ -842,7 +855,7 @@ main:has(#qcLeyenda:not([hidden])) #hint{bottom:auto; top:16px}
 
 /* B6 · la introducción retirada deja de existir para el foco y el lector de pantalla
    (el JS la marca inert); visibility espera al final del fundido */
-#umbral.gone{visibility:hidden; transition:opacity .5s, visibility 0s linear .5s}
+#umbral.gone{visibility:hidden; transition:opacity var(--mov-lento) var(--curva-llegada), visibility 0s linear var(--mov-lento)}
 
 /* B10 · buscador: una sola × (la propia) y el anillo de foco en el borde del campo, que
    ya se pone dorado, no en el input: tapaba el recuento */
@@ -920,7 +933,7 @@ main:has(#qcLeyenda:not([hidden])) #hint{bottom:auto; top:16px}
 #panel .rel details.indGrupo summary{display:flex; align-items:baseline; justify-content:space-between; gap:10px; min-height:34px; padding:6px 0;
   cursor:pointer; list-style:none; font-size:12px}
 #panel .rel details.indGrupo summary::-webkit-details-marker{display:none}
-#panel .rel details.indGrupo summary::before{content:"▸"; color:var(--gray); font-size:10px; margin-right:6px; transition:transform .2s}
+#panel .rel details.indGrupo summary::before{content:"▸"; color:var(--gray); font-size:10px; margin-right:6px; transition:transform var(--mov-medio) var(--curva-vaiven)}
 #panel .rel details.indGrupo[open] summary::before{transform:rotate(90deg)}
 #panel .rel details.indGrupo summary .via{flex:1 1 auto; font-size:12px}
 #panel .rel details.indGrupo summary .indN{font-family:var(--ff-mono); font-size:9px; color:var(--gray)}
@@ -989,3 +1002,15 @@ main:has(#qcLeyenda:not([hidden])) #hint{bottom:auto; top:16px}
   #guion{top:calc(var(--alto-mapa) + 8px); z-index:15}
   #guion .gt{font-size:16px}
 }
+
+/* ---------- TRANSICIONES ENTRE VISTAS (js/transiciones-atlas.js) ----------
+   Mientras las obras viajan, el escenario de la vista nueva (costa, ejes,
+   rótulos, trama) espera apagado; vuelve con un tiempo lento cuando se posan.
+   Así el ojo sigue a las obras y no a un decorado que cambia de golpe. */
+#stage [data-escena]{transition:opacity var(--mov-lento) var(--curva-llegada)}
+#stage.en-transito [data-escena]{opacity:0 !important; transition:none}
+#stage.en-transito .node{pointer-events:none}
+#stage .node.aparece{animation:obraAparece var(--mov-lento) var(--curva-llegada) both; animation-delay:calc(var(--mov-lento) * .6)}
+@keyframes obraAparece{from{opacity:0}to{opacity:1}}
+#stage.entra, #tabla.entra{animation:escenaEntra var(--mov-lento) var(--curva-llegada) both}
+@keyframes escenaEntra{from{opacity:0; transform:translateY(8px)}to{opacity:1; transform:none}}

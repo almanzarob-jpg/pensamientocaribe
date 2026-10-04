@@ -23,11 +23,11 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../css/zoom-caribe.css">
-<link rel="stylesheet" href="../css/con-el-agua-de-por-medio.css?v=20260928">
-<link rel="stylesheet" href="../css/capa-caribes.css?v=20260929">
-<link rel="stylesheet" href="../css/deriva-caribes.css?v=20260921d">
-<link rel="stylesheet" href="../css/capa-antirracismo.css?v=20260917c">
+<link rel="stylesheet" href="../css/zoom-caribe.css?v=20261003">
+<link rel="stylesheet" href="../css/con-el-agua-de-por-medio.css?v=20261003">
+<link rel="stylesheet" href="../css/capa-caribes.css?v=20261003">
+<link rel="stylesheet" href="../css/deriva-caribes.css?v=20261003">
+<link rel="stylesheet" href="../css/capa-antirracismo.css?v=20261003">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -1320,6 +1320,9 @@ function place(t){
     /* En cronología la posición codifica un año: si el nodo se mece, se lee mal.
        La marea queda para las vistas donde el lugar es cualitativo. */
     if(flowing && state.view!=="cronologia"){ if(state.view==="corriente"){ dx=sway+4.5*Math.sin(ph+n._bx*0.012); dy=3*Math.sin(ph*0.8+n._by*0.010+1.6); } else { dx=2.2*Math.sin(ph+idx*0.5); dy=2.2*Math.cos(ph*0.9+idx*0.5);} }
+    /* _pm: peso de la marea (0–1). Mientras una obra viaja entre vistas
+       (js/transiciones-atlas.js) la marea entra con ella, sin sacudida. */
+    if(n._pm!=null){ dx*=n._pm; dy*=n._pm; }
     n._x=n._bx+dx; n._y=n._by+dy; n._g.setAttribute('transform',`translate(${n._x},${n._y})`); });
   EDGES.forEach(e=>{ e.p.setAttribute('d', currentPath(e,ph,flowing)); e.p.setAttribute('stroke-dashoffset', flowing?(-t*0.03)%1000:0);
     if(e.marker){ const mx=(e.na._x+e.nb._x)/2, my=(e.na._y+e.nb._y)/2; const s=2.4+(flowing?1.1*(0.5+0.5*Math.sin(ph*3+e.ph)):0); const rot=flowing?ph*40+e.ph*30:0; const c=Math.cos(rot), si=Math.sin(rot);
@@ -3063,5 +3066,7 @@ document.addEventListener('keydown', ev=>{
 <!-- TANDA 2 · 28-09-2026: las tres capas bajo un solo botón «Capas». Mueve sus botones
      sin tocarlos, así que debe cargarse después de las tres. -->
 <script src="../js/capas-menu.js?v=20260928"></script>
+<!-- Transiciones entre vistas: envoltura exterior, va después de todas las capas -->
+<script src="../js/transiciones-atlas.js?v=20261003"></script>
 </body>
 </html>
