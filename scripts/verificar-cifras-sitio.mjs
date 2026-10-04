@@ -200,7 +200,10 @@ const reglas = [
   ["proyectos/marca-de-marea.html", /desacuerdos entre (\d+) vínculos/, "relaciones"],
   // Tanda 1 · 28-09-2026: la versión del corpus es también la marca de caché de sus datos.
   // Si sube el corpus y no la marca, quien ya visitó el atlas puede seguir viendo el anterior.
-  ["proyectos/con-el-agua-de-por-medio.html", /datos-atlas\.js\?v=([\d.]+)"/, "version"],
+  ["proyectos/con-el-agua-de-por-medio.html", /atlas-indice\.js\?v=([\d.]+)"/, "version"],
+  // 04-10-2026: el atlas carga el índice y pide las fichas aparte; las dos marcas de caché
+  // siguen la versión del corpus, o un visitante podría mezclar fichas viejas con mapa nuevo.
+  ["proyectos/con-el-agua-de-por-medio.html", /atlas-fichas\.js\?v=([\d.]+)'/, "version"],
 ];
 
 const errores = [];

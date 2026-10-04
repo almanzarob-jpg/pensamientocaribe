@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/zoom-caribe.css?v=20261003">
-<link rel="stylesheet" href="../css/con-el-agua-de-por-medio.css?v=20261004b">
+<link rel="stylesheet" href="../css/con-el-agua-de-por-medio.css?v=20261004c">
 <link rel="stylesheet" href="../css/capa-caribes.css?v=20261003">
 <link rel="stylesheet" href="../css/deriva-caribes.css?v=20261003">
 <link rel="stylesheet" href="../css/capa-antirracismo.css?v=20261003">
@@ -210,7 +210,51 @@
   </div></div>
 </main>
 <script src="../js/zoom-caribe.js"></script>
-<script src="../data/agua-de-por-medio/datos-atlas.js?v=1.31.0"></script>
+<!-- El mapa carga solo su índice; las fichas llegan después, en segundo plano.
+     Ambos se generan desde datos-atlas.js con scripts/partir-datos-atlas.mjs. -->
+<script src="../data/agua-de-por-medio/atlas-indice.js?v=1.31.0"></script>
+<script>
+/* FICHAS A DEMANDA · el aporte de cada obra, la edición consultada, sus orillas y el texto
+   completo de cada fuente viven en atlas-fichas.js. Se piden en cuanto el mapa está
+   dibujado; si alguien abre una ficha antes, la ficha espera esa fracción de segundo.
+   Si el archivo no llega (sin red), la ficha se abre igual con lo que trae el índice. */
+window.FICHAS_ATLAS=(function(){
+  const SRC='../data/agua-de-por-medio/atlas-fichas.js?v=1.31.0';
+  let listo=false, pedido=false; const cola=[];
+  const clave=(a,b)=>a+'\u0001'+b;
+  function aplicar(){
+    const F=window.ATLAS_FICHAS;
+    if(F && window.ATLAS){
+      if(F.version!==ATLAS.meta.version) console.warn('[atlas] fichas v'+F.version+' con índice v'+ATLAS.meta.version);
+      ATLAS.obras.forEach(o=>{ const x=F.obras[o.id]; if(x) Object.assign(o,x); });
+      ATLAS.relaciones.forEach(r=>{ const f=F.fuentes[clave(r.a,r.b)]; if(f!=null) r.fuente=f; });
+    }
+    terminar();
+  }
+  /* con red lenta, quien toca una obra antes de que lleguen las fichas ve que algo pasa */
+  let aviso=null;
+  function avisar(){
+    if(aviso) return;
+    let en=false; try{ en=localStorage.getItem('atlas-lang')==='en'; }catch(e){}
+    aviso=document.createElement('div'); aviso.className='fichas-aviso'; aviso.setAttribute('role','status');
+    aviso.textContent=en?'Opening the entry…':'Abriendo la ficha…';
+    document.body.appendChild(aviso); document.body.classList.add('fichas-cargando');
+  }
+  function terminar(){
+    listo=true; if(aviso){ aviso.remove(); aviso=null; } document.body.classList.remove('fichas-cargando');
+    cola.splice(0).forEach(f=>{ try{ f(); }catch(e){ console.error(e); } });
+  }
+  function pedir(){
+    if(pedido) return; pedido=true;
+    const s=document.createElement('script'); s.src=SRC; s.async=true;
+    s.onload=aplicar; s.onerror=()=>{ console.warn('[atlas] no llegaron las fichas; se abren con lo esencial'); terminar(); };
+    document.head.appendChild(s);
+  }
+  /* en segundo plano: después de la carga, cuando el navegador quede libre */
+  window.addEventListener('load',()=>{ (window.requestIdleCallback||((f)=>setTimeout(f,300)))(pedir,{timeout:1500}); });
+  return { listo:()=>listo, esperar(f){ if(listo) f(); else { cola.push(f); avisar(); pedir(); } }, pedir };
+})();
+</script>
 <!-- Capa de temporalidad. Aditiva: si falta, la cronología funciona como siempre. -->
 <script src="../data/agua-de-por-medio/datos-temporalidad.js?v=202608101"></script>
 <script>
@@ -1547,6 +1591,8 @@ function recorridosHtml(n){
 
 function openPanel(id){
   if(!byId(id)) return;
+  /* la ficha necesita atlas-fichas.js: si aún no llegó, se abre en cuanto llegue */
+  if(window.FICHAS_ATLAS && !FICHAS_ATLAS.listo()){ FICHAS_ATLAS.esperar(()=>openPanel(id)); return; }
   rfVisita(id); /* el reflujo cuenta las fichas recorridas: en la sexta se abre la puerta */
   const p0=document.getElementById('panel');
   const yaAbierta=p0.classList.contains('open');

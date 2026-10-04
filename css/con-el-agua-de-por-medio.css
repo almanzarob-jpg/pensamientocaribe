@@ -1082,3 +1082,10 @@ main:has(#qcLeyenda:not([hidden])) #hint{bottom:auto; top:16px}
    Era el último trazo rojo visible sin nada en uso; recupera su rojo en cuanto se abre
    una obra, se elige un fenómeno, un recorrido o una búsqueda. */
 #stage.reposo .reflujo{stroke:var(--ink-line)}
+
+/* fichas a demanda: aviso breve si alguien abre una obra antes de que lleguen */
+.fichas-aviso{position:fixed; left:50%; bottom:28px; transform:translateX(-50%); z-index:40;
+  padding:9px 16px; border:1px solid var(--line); border-radius:3px; background:rgba(17,19,13,.96);
+  font-family:var(--ff-mono); font-size:10.5px; letter-spacing:1.2px; text-transform:uppercase; color:var(--gold);
+  animation:escenaEntra var(--mov-medio) var(--curva-llegada) both}
+body.fichas-cargando #stage{cursor:progress}

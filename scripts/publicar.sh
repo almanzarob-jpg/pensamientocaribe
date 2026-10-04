@@ -34,6 +34,12 @@ python3 data/agua-de-por-medio/sincronizar.py --check >/tmp/pc-sync.txt 2>&1 \
   || falla "datos-atlas.js y datos-atlas.json no están en sincronía. Corre sincronizar.py sin --check."
 paso "$(cat /tmp/pc-sync.txt)"
 
+# El atlas no carga datos-atlas.js entero: carga un índice y pide las fichas aparte.
+# Los dos se regeneran aquí desde el canónico, para que nunca queden atrás de una siembra.
+node scripts/partir-datos-atlas.mjs >/tmp/pc-partir.txt 2>&1 \
+  || { cat /tmp/pc-partir.txt; falla "No se pudieron generar atlas-indice.js y atlas-fichas.js."; }
+paso "$(cat /tmp/pc-partir.txt)"
+
 node scripts/validar-atlas.mjs >/tmp/pc-corpus.txt 2>&1 \
   || { cat /tmp/pc-corpus.txt; falla "El validador del corpus encontró errores."; }
 paso "Corpus: $(tail -1 /tmp/pc-corpus.txt)"
