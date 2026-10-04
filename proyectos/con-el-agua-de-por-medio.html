@@ -3165,23 +3165,44 @@ document.addEventListener('keydown', ev=>{
   if(state.focusFen){ setFocusFen(state.focusFen); return; }
 });
 </script>
-<!-- Capa «¿Qué Caribe?» (15-sep-2026): definiciones del Caribe sobre el mapa. Se engancha al script
-     de arriba sin modificarlo, así que debe cargarse después. Datos: scripts/generar-capa-caribes.py -->
-<script src="../data/agua-de-por-medio/capa-caribes.js?v=20260929"></script>
-<script src="../js/capa-caribes.js?v=20260929"></script>
-<!-- La deriva: recorre las definiciones de la capa. Se monta sobre ella con window.QC_API
-     y no reescribe nada suyo, así que debe cargarse después. -->
-<script src="../js/deriva-caribes.js?v=20260929"></script>
-
-<!-- Antirracismo y reparaciones · capa de lectura. Envuelve render, applyLang y
-     switchView del script principal sin modificarlo, así que debe cargarse después.
-     Datos: scripts/generar-capa-antirracismo.py -->
-<script src="../data/agua-de-por-medio/capa-antirracismo.js?v=20260917"></script>
-<script src="../js/capa-antirracismo.js?v=20260928"></script>
-<!-- TANDA 2 · 28-09-2026: las tres capas bajo un solo botón «Capas». Mueve sus botones
-     sin tocarlos, así que debe cargarse después de las tres. -->
-<script src="../js/capas-menu.js?v=20260928"></script>
-<!-- Transiciones entre vistas: envoltura exterior, va después de todas las capas -->
-<script src="../js/transiciones-atlas.js?v=20261003"></script>
+<!-- CAPAS DE LECTURA · 4-oct-2026: llegan después del mapa.
+     «¿Qué Caribe?», la deriva y Antirracismo pesan unos 75 KB comprimidos que antes había que
+     descargar y ejecutar antes de poder dibujar la primera obra. Ahora el mapa se pinta primero
+     y las capas se piden cuando el navegador queda libre; el botón «Capas» aparece un instante
+     después. Si se llega con un enlace a una capa (#caribe=, #deriva, #antirracismo) se piden
+     de inmediato. El orden de ejecución no cambia (async=false lo respeta): cada capa envuelve
+     a la anterior, el menú las reúne y las transiciones quedan como envoltura exterior. -->
+<script>
+window.CAPAS_ATLAS=(function(){
+  const CAPAS=[
+    '../data/agua-de-por-medio/capa-caribes.js?v=20260929',
+    '../js/capa-caribes.js?v=20260929',
+    '../js/deriva-caribes.js?v=20260929',
+    '../data/agua-de-por-medio/capa-antirracismo.js?v=20260917',
+    '../js/capa-antirracismo.js?v=20260928',
+    '../js/capas-menu.js?v=20260928',
+    '../js/transiciones-atlas.js?v=20261003'
+  ];
+  let pedido=false, listo=false;
+  function fin(){ listo=true; document.dispatchEvent(new Event('capas-atlas')); }
+  function pedir(){
+    if(pedido) return; pedido=true;
+    CAPAS.forEach((src,i)=>{
+      const s=document.createElement('script'); s.src=src; s.async=false;
+      const ultima = i===CAPAS.length-1;
+      s.onerror=()=>{ console.warn('[atlas] no llegó '+src+'; el atlas sigue sin esa capa'); if(ultima) fin(); };
+      if(ultima) s.onload=fin;
+      document.body.appendChild(s);
+    });
+  }
+  const ENLACE=/^#(caribe=|deriva|antirracismo)/;
+  if(ENLACE.test(location.hash)) pedir();
+  else{
+    window.addEventListener('hashchange',()=>{ if(ENLACE.test(location.hash)) pedir(); });
+    window.addEventListener('load',()=>{ (window.requestIdleCallback||((f)=>setTimeout(f,200)))(pedir,{timeout:1200}); });
+  }
+  return { pedir, listo:()=>listo };
+})();
+</script>
 </body>
 </html>
