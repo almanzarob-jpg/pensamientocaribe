@@ -407,6 +407,8 @@
   function leerHash(){
     const m=/^#antirracismo(?:=(.+))?$/.exec(location.hash);
     if(!m) return;
+    /* como #caribe= y #deriva: quien llega con el enlace va directo al mapa */
+    const umbral=document.getElementById('umbral'); if(umbral) umbral.classList.add('gone');
     AR.activa=true;
     if(m[1]) AR.caso=decodeURIComponent(m[1]);
     if(state.view!=='corriente' && typeof setView==='function') setView('corriente');

@@ -125,7 +125,7 @@
       .sort((a,b)=>b.vis.length-a.vis.length);   /* los pequeños encima: no quedan tapados */
     lista.forEach(({k,G,vis},i)=>{
       const n=vis.length, r=radio(n);
-      const g=el('g',{class:'lugar', role:'button', tabindex:'0'});
+      const g=el('g',{class:'lugar', role:'button', tabindex:'-1'});
       g._k=k; g._r=r; g._n=n; g._rep=vis[0];
       const onda=el('circle',{class:'lg-onda', r:r});
       onda.style.animationDelay=(-((G.cx*37+G.cy*11)%6200)/1000).toFixed(2)+'s';
@@ -139,7 +139,13 @@
       const cg=el('g',{class:'lugar-cifra'}); cg.appendChild(cifra); cifras.appendChild(cg); g._cg=cg;
       [onda,toque,agua,nivel].forEach(x=>g.appendChild(x));
       g._onda=onda; g._toque=toque; g._agua=agua; g._nivel=nivel; g._cifra=cifra;
-      g.addEventListener('keydown',ev=>{ if(ev.key==='Enter'||ev.key===' '){ ev.preventDefault(); ev.stopPropagation(); irALugar(k); } });
+      g.addEventListener('keydown',ev=>{
+        const dir={ArrowRight:'der',ArrowLeft:'izq',ArrowDown:'abajo',ArrowUp:'arriba'}[ev.key];
+        if(ev.key==='Enter'||ev.key===' '){ ev.preventDefault(); ev.stopPropagation(); irALugar(k); }
+        else if(dir){ ev.preventDefault(); ev.stopPropagation(); const c=centroDisco(g); navegar(dir,c[0],c[1],g); }
+        else if(ev.key==='Home'||ev.key==='End'){ ev.preventDefault(); ev.stopPropagation(); extremo(ev.key==='End'); }
+      });
+      g.addEventListener('focus',()=>{ if(svgEl) paradaEnDisco(g); });
       capa.appendChild(g); LG.discos[k]=g;
     });
     /* debajo de los topónimos (que deben leerse) y de las obras de los lugares abiertos */
@@ -193,6 +199,7 @@
       d.classList.toggle('abriendo', v<1);
     });
     reubicarEtiquetas();
+    asegurarParada();
   }
   /* el disco sigue el vaivén de sus obras: toma la posición de una de ellas */
   function moverDiscos(){
@@ -233,6 +240,72 @@
       const x = d ? G.cx + (d._r+4)*(1-f) + (t._x0-G.cx)*f : t._x0;
       const nx=x.toFixed(1); if(t.getAttribute('x')!==nx) t.setAttribute('x',nx);
     });
+  }
+
+  /* ---------- teclado: de lejos se recorren orillas, no obras escondidas ----------
+     El atlas tiene una sola parada de tabulador en el mapa (el «foco itinerante») y las
+     flechas siguen la geografía. Con los lugares recogidos, la parada y las flechas
+     saltan entre lo que se ve: los discos y las obras sueltas de los lugares con una
+     sola entrada. Intro sobre un disco lo abre y lleva el foco a su primera obra. */
+  function centroDisco(d){ const b=d._agua.getBoundingClientRect(); return [b.left+b.width/2, b.top+b.height/2]; }
+  function puntosVisibles(){
+    const out=[];
+    VNODES.forEach(n=>{ if(n._c && !n._recogida && visible(n) && n._g.style.visibility!=='hidden'){ const b=n._c.getBoundingClientRect(); out.push({n, x:b.left+b.width/2, y:b.top+b.height/2}); } });
+    Object.values(LG.discos).forEach(d=>{ if(d.style.display!=='none'){ const [x,y]=centroDisco(d); out.push({d,x,y}); } });
+    return out;
+  }
+  function paradaEnDisco(d){
+    Object.values(LG.discos).forEach(x=>x.setAttribute('tabindex', x===d?'0':'-1'));
+    const r=rovingId && byId(rovingId); if(d && r && r._g) r._g.setAttribute('tabindex','-1');
+  }
+  function asegurarParada(){
+    const r=rovingId && byId(rovingId), act=document.activeElement;
+    if(act && act._k && LG.discos[act._k]===act && act.style.display!=='none'){ paradaEnDisco(act); return; }
+    /* si el disco que tenía el foco se abrió (por zoom), el foco pasa a una de sus obras */
+    if(act && act._k && LG.discos[act._k]===act){
+      const G=LG.geo[act._k], n=G && G.obras.find(o=>o._g && o._g.isConnected && visible(o) && !o._recogida);
+      if(n){ Object.values(LG.discos).forEach(x=>x.setAttribute('tabindex','-1')); setRoving(n,{mover:true}); return; }
+    }
+    if(r && r._recogida && LG.discos[r.l] && LG.discos[r.l].style.display!=='none'){ paradaEnDisco(LG.discos[r.l]); return; }
+    Object.values(LG.discos).forEach(x=>x.setAttribute('tabindex','-1'));
+    if(r && r._g) r._g.setAttribute('tabindex','0');
+  }
+  function enfocar(p){
+    if(p.n){ Object.values(LG.discos).forEach(x=>x.setAttribute('tabindex','-1')); setRoving(p.n,{mover:true}); if(typeof asegurarVisible==='function') asegurarVisible(p.n); return; }
+    paradaEnDisco(p.d); p.d.focus({preventScroll:true});
+    const A=areaLibreMapa(), [x,y]=centroDisco(p.d);
+    const dx = x<A.l ? A.l-x+30 : x>A.r ? A.r-x-30 : 0, dy = y<A.t ? A.t-y+30 : y>A.b ? A.b-y-30 : 0;
+    if(dx||dy){ zcMotor.panear(dx,dy); if(zc) zc.sincronizar(); }
+  }
+  function navegar(dir, x0, y0, desde){
+    let mejor=null, pMejor=Infinity;
+    puntosVisibles().forEach(p=>{
+      if((p.d && p.d===desde) || (p.n && desde && p.n===desde)) return;
+      const dx=p.x-x0, dy=p.y-y0;
+      const [adelante,lado] = dir==='der'?[dx,dy] : dir==='izq'?[-dx,dy] : dir==='abajo'?[dy,dx] : [-dy,dx];
+      if(adelante<=0.5) return;
+      const s=adelante+2*Math.abs(lado);
+      if(s<pMejor){ pMejor=s; mejor=p; }
+    });
+    if(mejor) enfocar(mejor);
+  }
+  function extremo(fin){
+    const pts=puntosVisibles().sort((a,b)=>a.x-b.x);
+    if(pts.length) enfocar(fin?pts[pts.length-1]:pts[0]);
+  }
+  const hayRecogidas=()=> corriente() && LG.capa && Object.values(LG.discos).some(d=>d.style.display!=='none');
+  if(typeof moverEspacial==='function'){
+    const _me=moverEspacial;
+    moverEspacial=function(dir){
+      if(!hayRecogidas()) return _me.apply(this,arguments);
+      const a=rovingId && byId(rovingId);
+      if(!a || !a._c){ extremo(false); return; }
+      const [x,y]=centroPantalla(a); navegar(dir,x,y,a);
+    };
+  }
+  if(typeof irAExtremo==='function'){
+    const _ie=irAExtremo;
+    irAExtremo=function(fin){ if(!hayRecogidas()) return _ie.apply(this,arguments); extremo(fin); };
   }
 
   /* ---------- abrir y cerrar: la marea de oeste a este ---------- */
