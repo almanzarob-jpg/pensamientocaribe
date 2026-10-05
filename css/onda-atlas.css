@@ -1,5 +1,0 @@
-/* LA ONDA · abrir una obra es tirar una piedra al agua */
-.onda-capa{pointer-events:none}
-.onda-anillo, .onda-destello{fill:none}
-#stage.en-transito .onda-capa{opacity:0}
-@media (prefers-reduced-motion: reduce){ .ondas{display:none} }
