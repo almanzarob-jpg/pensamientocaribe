@@ -131,14 +131,13 @@
       onda.style.animationDelay=(-((G.cx*37+G.cy*11)%6200)/1000).toFixed(2)+'s';
       const toque=el('circle',{class:'lg-toque', r:r});
       const agua=el('circle',{class:'lg-agua', r:r});
-      const nivel=el('circle',{class:'lg-nivel', r:Math.max(1.5,r-2.4), transform:'rotate(-90)'});
       /* la cifra va en una capa propia, encima de todos los discos: donde dos orillas
          se tocan (Cartagena y Barranquilla) ninguna tapa el número de la otra */
       const cifra=el('text',{class:'lg-n', 'text-anchor':'middle', 'dominant-baseline':'central'});
       cifra.textContent=n;
       const cg=el('g',{class:'lugar-cifra'}); cg.appendChild(cifra); cifras.appendChild(cg); g._cg=cg;
-      [onda,toque,agua,nivel].forEach(x=>g.appendChild(x));
-      g._onda=onda; g._toque=toque; g._agua=agua; g._nivel=nivel; g._cifra=cifra;
+      [onda,toque,agua].forEach(x=>g.appendChild(x));
+      g._onda=onda; g._toque=toque; g._agua=agua; g._cifra=cifra;
       g.addEventListener('keydown',ev=>{
         const dir={ArrowRight:'der',ArrowLeft:'izq',ArrowDown:'abajo',ArrowUp:'arriba'}[ev.key];
         if(ev.key==='Enter'||ev.key===' '){ ev.preventDefault(); ev.stopPropagation(); irALugar(k); }
@@ -222,14 +221,17 @@
     const colorFoco = state.focusFen && typeof col==='function' ? col(state.focusFen) : null;
     Object.values(LG.discos).forEach(d=>{
       const vis=LG.geo[d._k].obras.filter(n=>n._c && visible(n));
-      const encendidas = foco ? vis.filter(n=>parseFloat(n._c.style.opacity||'1')>=.5).length : vis.length;
+      const encendidas = foco ? vis.filter(n=>parseFloat(n._c.style.opacity||'1')>=.75).length : vis.length;
       d.classList.toggle('foco', foco);
       d.classList.toggle('tocado', foco && encendidas>0);
       d.classList.toggle('fuera', foco && encendidas===0);
       d._cg.classList.toggle('tocado', foco && encendidas>0); d._cg.classList.toggle('fuera', foco && encendidas===0);
-      const rr=parseFloat(d._nivel.getAttribute('r')), C=2*Math.PI*rr;
-      d._nivel.style.strokeDasharray = foco ? `${(C*encendidas/Math.max(1,vis.length)).toFixed(2)} ${C.toFixed(2)}` : '';
-      d._nivel.style.stroke = colorFoco || '';
+      /* Corrección 4-oct (Rob): el arco proporcional quedaba quieto y no se entendía.
+         Ahora el disco que tiene obras en juego late: su onda se abre en el color del foco
+         (dorado con una ficha o una búsqueda; el del fenómeno si es un fenómeno), y la
+         cifra dice cuántas son. El que no tiene ninguna se apaga. */
+      d._onda.style.stroke = (foco && encendidas>0) ? (colorFoco || '') : '';
+      d._agua.style.stroke = (foco && encendidas>0) ? (colorFoco || '') : '';
       d._cifra.textContent = foco && encendidas ? encendidas : vis.length;
       d._cifra.classList.toggle('parcial', foco && encendidas>0 && encendidas<vis.length);
     });
