@@ -108,7 +108,8 @@
       const cv = Math.min(26,len*0.13)+sep;
       const mx=(ax+bx)/2 - dy/len*cv, my=(ay+by)/2 + dx/len*cv;
       const p=el('path',{class:'hilo ruta', d:`M ${ax.toFixed(1)},${ay.toFixed(1)} Q ${mx.toFixed(1)},${my.toFixed(1)} ${bx.toFixed(1)},${by.toFixed(1)}`});
-      p.style.strokeWidth=Math.min(4.2, 0.7+0.42*(Math.sqrt(c)-1)).toFixed(2);
+      /* el grosor apenas sube con el número de relaciones: sigue siendo un hilo, no un vector */
+      p.style.strokeWidth=Math.min(1.9, 0.7+0.2*(Math.sqrt(c)-1)).toFixed(2);
       p._n=c; grupos[tipo].appendChild(p);
     });
   };

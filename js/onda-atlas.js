@@ -1,5 +1,5 @@
 /* =====================================================================
-   LA ONDA Y LA ESTELA · abrir una obra es tirar una piedra al agua
+   LA ONDA · abrir una obra es tirar una piedra al agua
    ---------------------------------------------------------------------
    Todo en el atlas se mueve con intención (la marea, el viaje entre vistas,
    los lugares que se abren) salvo el gesto central de la lectura: abrir una
@@ -11,37 +11,30 @@
    tocada. Las vecinas cercanas llegan antes y las de otra orilla después:
    la distancia se lee como tiempo, que es como el agua une y separa.
 
-   LA ESTELA. Cada obra abierta es un paso. Entre una y la siguiente queda un
-   trazo dorado, tenue, que se dibuja en el sentido del paso. Los tramos viejos
-   se apagan; quedan los siete últimos. Así un recorrido de lectura (Benítez →
-   Glissant → Ortiz) deja rastro sobre el mapa, y el lector ve por dónde vino.
-   Se borra con la tecla Escape cuando no hay ficha abierta.
-
    Solo decora: aria-hidden, sin pointer-events. Con «reducir movimiento» no hay
-   onda (las corrientes aparecen de una vez) y la estela no se dibuja animada.
+   onda: las corrientes aparecen de una vez.
+   (4-oct-2026: la estela entre obras visitadas se retiró a pedido de Rob: trazos
+   que no decían nada nuevo y ensuciaban el mapa.)
    ===================================================================== */
 (function(){
   if(typeof refreshHi!=='function' || typeof place!=='function') return;
 
   const svgEl=document.getElementById('stage');
   const reducido=()=>window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const MAX_TRAMOS=7;
-  const O={ activo:null, onda:null, raf:0, estela:[], capa:null, gOndas:null, gEstela:null };
+  const O={ activo:null, onda:null, raf:0, capa:null, gOndas:null };
   window.ONDA_ATLAS=O;
 
   const enMapa=()=> state.view!=='tabla' && vp;
   const pos=n=> (n && n._x!=null) ? [n._x, n._y] : null;
 
-  /* las dos capas viven dentro de #vp, debajo de las obras: hay que recrearlas tras cada render */
+  /* la capa vive dentro de #vp, debajo de las obras: hay que recrearla tras cada render */
   function asegurarCapas(){
     if(!enMapa()) return false;
     if(O.capa && O.capa.isConnected) return true;
     O.capa=el('g',{class:'onda-capa','aria-hidden':'true'});
-    O.gEstela=el('g',{class:'estela'}); O.gOndas=el('g',{class:'ondas'});
-    O.capa.appendChild(O.gEstela); O.capa.appendChild(O.gOndas);
+    O.gOndas=el('g',{class:'ondas'}); O.capa.appendChild(O.gOndas);
     const primero=vp.querySelector('.node');
     if(primero) vp.insertBefore(O.capa, primero); else vp.appendChild(O.capa);
-    O.estela.forEach(t=>{ t.p=null; });
     return true;
   }
 
@@ -113,68 +106,6 @@
     cancelarOnda();
   }
 
-  /* ---------- la estela ---------- */
-  function anotarPaso(id){
-    const ult=O.estela.length ? O.estela[O.estela.length-1].b : null;
-    if(ult===id) return;
-    if(ult){ O.estela.push({a:ult, b:id, t0:performance.now(), p:null}); }
-    else O.estela.push({a:null, b:id, t0:performance.now(), p:null});   /* primer paso: aún sin tramo */
-    const tramos=O.estela.filter(t=>t.a);
-    if(tramos.length>MAX_TRAMOS){ const sobra=O.estela.indexOf(tramos[0]); const t=O.estela.splice(sobra,1)[0]; if(t.p) t.p.remove(); }
-  }
-  function curva(pa,pb){
-    const dx=pb[0]-pa[0], dy=pb[1]-pa[1], len=Math.hypot(dx,dy)||1;
-    /* se curva hacia el lado contrario de las corrientes para no confundirse con ellas */
-    const cv=-Math.min(40,len*0.18);
-    const mx=(pa[0]+pb[0])/2 - dy/len*cv, my=(pa[1]+pb[1])/2 + dx/len*cv;
-    return {d:`M ${pa[0].toFixed(1)},${pa[1].toFixed(1)} Q ${mx.toFixed(1)},${my.toFixed(1)} ${pb[0].toFixed(1)},${pb[1].toFixed(1)}`, len:len*1.08};
-  }
-  function dibujarEstela(ahora){
-    if(!O.estela.length || !asegurarCapas()) return;
-    marcarPasos();
-    const tramos=O.estela.filter(t=>t.a), N_=tramos.length;
-    const abierta=!!state.active;
-    tramos.forEach((t,i)=>{
-      const na=byId(t.a), nb=byId(t.b);
-      const pa=pos(na), pb=pos(nb);
-      const ok = pa && pb && visible(na) && visible(nb);
-      if(!t.p){ t.p=el('path',{class:'estela-tramo'}); O.gEstela.appendChild(t.p); }
-      if(!ok){ t.p.style.display='none'; return; }
-      t.p.style.display='';
-      const c=curva(pa,pb);
-      t.p.setAttribute('d',c.d);
-      /* el más reciente es el más vivo; los anteriores se apagan hacia atrás */
-      const edad=N_-1-i;
-      const base=Math.max(0.14, 0.72-edad*0.1)*(abierta?1:0.6);
-      t.p.style.opacity=base.toFixed(3);
-      t.p.classList.toggle('viejo', edad>0);
-      /* el tramo nuevo se traza en el sentido del paso */
-      const q = reducido() ? 1 : Math.min(1,(ahora-t.t0)/700);
-      if(q<1){ const e=1-Math.pow(1-q,3); t.p.style.strokeDasharray=`${c.len.toFixed(1)} ${c.len.toFixed(1)}`; t.p.style.strokeDashoffset=(c.len*(1-e)).toFixed(1); }
-      else if(t.p.style.strokeDasharray && edad===0){ t.p.style.strokeDasharray=''; t.p.style.strokeDashoffset=''; }
-      else if(edad>0){ t.p.style.strokeDasharray=''; t.p.style.strokeDashoffset=''; }
-    });
-  }
-  /* anillos de espuma en las obras ya visitadas (no en la abierta: esa ya tiene su halo) */
-  function marcarPasos(){
-    if(!O.gEstela) return;
-    const ids=[...new Set(O.estela.flatMap(t=>[t.a,t.b]).filter(Boolean))];
-    const vivos=new Set();
-    ids.forEach(id=>{
-      if(id===state.active) return;
-      const n=byId(id), p=pos(n); if(!p || !visible(n)) return;
-      vivos.add(id);
-      let c=O.gEstela.querySelector(`.estela-paso[data-id="${CSS.escape(id)}"]`);
-      if(!c){ c=el('circle',{class:'estela-paso', r:6.5}); c.setAttribute('data-id',id); O.gEstela.appendChild(c); }
-      c.setAttribute('cx',p[0].toFixed(1)); c.setAttribute('cy',p[1].toFixed(1));
-      const k=(typeof vpt!=='undefined'&&vpt.k)||1; c.setAttribute('r',(6.5/Math.sqrt(k)).toFixed(2));
-      c.style.opacity = state.active ? '.55' : '.35';
-    });
-    O.gEstela.querySelectorAll('.estela-paso').forEach(c=>{ if(!vivos.has(c.getAttribute('data-id'))) c.remove(); });
-  }
-  function borrarEstela(){ O.estela.forEach(t=>{ if(t.p) t.p.remove(); }); O.estela=[]; if(O.gEstela) O.gEstela.querySelectorAll('.estela-paso').forEach(c=>c.remove()); }
-  O.borrar=borrarEstela;
-
   /* ---------- enganches ---------- */
   const _refreshHi=refreshHi;
   refreshHi=function(){
@@ -182,20 +113,16 @@
     const id=state.active||null;
     if(id!==O.activo){
       O.activo=id;
-      if(id){ anotarPaso(id); lanzarOnda(id); }
+      if(id) lanzarOnda(id);
       else cancelarOnda();
     }
   };
-  const _place=place;
-  place=function(t){ _place.apply(this,arguments); dibujarEstela(performance.now()); };
   const _render=render;
   render=function(){
     cancelarOnda();
     const r=_render.apply(this,arguments);
-    asegurarCapas(); dibujarEstela(performance.now());
+    asegurarCapas();
     return r;
   };
 
-  /* Escape sin ficha abierta borra la estela: es el gesto de «empezar de nuevo» */
-  document.addEventListener('keydown',ev=>{ if(ev.key==='Escape' && !state.active && !document.querySelector('#panel.open')) borrarEstela(); });
 })();
