@@ -227,3 +227,11 @@ body.dv-modo #qcBarra, body.dv-modo #qcLeyenda{ display:none !important; }
   .dv-barra > .dv-fila:first-child > *{ flex-shrink:0; }
   .dv-barra > .dv-fila:first-child .dv-linea{ flex:0 0 230px; }
 }
+
+/* lectura referida: la misma marca, a media voz */
+.dv-lugares.dv-referida .dv-marca{ opacity:.5; }
+.dv-ref{ font-family:var(--ff-mono); font-size:.68rem; letter-spacing:.06em; text-transform:uppercase;
+  color:var(--gold); border:1px solid var(--line); border-radius:999px; padding:.05rem .45rem; margin-right:.35rem; white-space:nowrap; }
+/* rótulo propio para los nodos que todavía no anclan ninguna obra */
+.dv-rotulo-lugar{ font-family:var(--ff-mono); fill:var(--gray); letter-spacing:.5px; pointer-events:none;
+  paint-order:stroke; stroke:var(--bg-deep); stroke-width:3px; stroke-linejoin:round; }

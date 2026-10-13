@@ -100,10 +100,26 @@
     const viejo = vp.querySelector('.dv-lugares'); if(viejo) viejo.remove();
     const NS='http://www.w3.org/2000/svg';
     const g = document.createElementNS(NS,'g');
-    g.setAttribute('class','dv-lugares'); g.setAttribute('aria-hidden','true');
     const d = DEFS[D.i], prev = D.i>0 ? DEFS[D.i-1] : null;
+    /* una lectura referida —sin ejemplar, de segunda mano— se dibuja atenuada,
+       igual que la bruma de la capa: si no, la deriva le daría la misma
+       autoridad visual que a un texto leído con página */
+    g.setAttribute('class','dv-lugares' + (d.lectura==='referida' ? ' dv-referida' : ''));
+    g.setAttribute('aria-hidden','true');
+    const k0 = Math.max((typeof vpt!=='undefined' && vpt && vpt.k) || 1, 0.0001);
     for(const k of LUGARES){
-      const p = G[k]; if(!p || !p.n) continue;
+      const p = G[k]; if(!p) continue;
+      /* un nodo sin obras visibles no tiene racimo ni rótulo en el atlas, pero las
+         definiciones sí le dan estado: La Guajira encabeza el índice de parpadeo.
+         Si no se dibujara, la cinta y el índice hablarían de un lugar invisible. */
+      if(!p.n){
+        const t = document.createElementNS(NS,'text');
+        t.setAttribute('x', p.x + 9); t.setAttribute('y', p.y + 3.5);
+        t.setAttribute('class','dv-rotulo-lugar');
+        t.style.fontSize = (9.5/k0).toFixed(2)+'px';
+        t.textContent = NOMBRE(k).split(' · ')[0];
+        g.appendChild(t);
+      }
       const e = EST(d,k);
       const c = document.createElementNS(NS,'circle');
       c.setAttribute('cx', p.x); c.setAttribute('cy', p.y);
@@ -119,6 +135,15 @@
   if(typeof render==='function'){
     const _renderDv = render;
     render = function(){ _renderDv(); pintarLugares(); };
+  }
+  /* al acercar o alejar, los rótulos propios conservan su cuerpo, como los del atlas */
+  if(typeof ajustarEtiquetas==='function'){
+    const _ajDv = ajustarEtiquetas;
+    ajustarEtiquetas = function(){ _ajDv();
+      if(typeof vp==='undefined' || !vp) return;
+      const k=Math.max((typeof vpt!=='undefined' && vpt && vpt.k)||1,0.0001);
+      vp.querySelectorAll('.dv-rotulo-lugar').forEach(t=>{ t.style.fontSize=(9.5/k).toFixed(2)+'px'; });
+    };
   }
   /* la barra ocupa el pie de la pantalla: el mapa se encoge por encima de ella
      en vez de quedar tapado. El SVG usa viewBox con «meet», así que se reencuadra solo. */
@@ -236,7 +261,9 @@
     eDisputa: {es:'en disputa', en:'disputed'},
     eFuera:   {es:'fuera', en:'outside'},
     eNada:    {es:'calla', en:'silent'},
-    claveEst: {es:'Estados', en:'States'}
+    claveEst: {es:'Estados', en:'States'},
+    ref:      {es:'lectura referida', en:'second-hand reading'},
+    refT:     {es:'El atlas no tiene el ejemplar: los estados vienen de quien lo cita.', en:'The atlas lacks the source text: states come from those who cite it.'}
   };
   const t = k => loc(T[k]);
 
@@ -516,6 +543,7 @@
       `<div class="dv-fila dv-fila-narra">`+
         `<p class="dv-narra">`+
           `<span class="dv-titulo"><span class="dv-year">${d.anio}</span>${loc(d.apellido)} · ${d.autor}</span> `+
+          (d.lectura==='referida' ? `<span class="dv-ref" title="${t('refT')}">${t('ref')}</span> ` : '')+
           `<span class="dv-criterio">${(loc(d.criterio)||'').split('. ')[0]}.</span>`+
         `</p>`+
         `<span class="dv-clave" role="list" aria-label="${t('claveEst')}">`+
