@@ -178,7 +178,10 @@ label.dv-rotulo{ position:static; }
    ===================================================================== */
 
 /* el mapa se encoge por encima de la barra en lugar de quedar tapado */
-body.dv-modo main{ margin-bottom:min(var(--dv-alto,0px), 46vh); }
+body.dv-modo main{ margin-bottom:min(var(--dv-alto,0px), 46vh); overflow:hidden; }
+/* al encogerse el mapa, el lugar más al norte (Nueva Orleans) quedaba pegado al
+   borde y su rótulo se cortaba: un respiro arriba, dentro del propio lienzo */
+body.dv-modo #stage{ box-sizing:border-box; padding-top:22px; overflow:visible; }
 
 /* las obras bajan a polvo: siguen ahí, se pueden pulsar, pero no compiten */
 body.dv-modo #stage .node.obra{ opacity:.13; transition:opacity var(--mov-medio,.25s) var(--curva-llegada,cubic-bezier(.16,1,.3,1)); }
