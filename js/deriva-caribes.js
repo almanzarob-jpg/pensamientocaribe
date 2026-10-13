@@ -382,7 +382,7 @@
 
       '<h3>El mapa</h3><p>Cada lugar se pinta con el estado que esa definición le da: '+
         pt('dentro')+' <b>aguamarina</b>, dentro del Caribe; '+pt('margen')+' <b>arena</b>, al margen; '+
-        pt('fuera')+' <b>anillo gris</b>, expresamente afuera; '+pt('disputa')+' <b>coral</b>, en disputa; y '+
+        pt('fuera')+' <b>anillo gris</b>, afuera, por el texto o por su criterio; '+pt('disputa')+' <b>coral</b>, en disputa; y '+
         pt('nada')+' <b>punteado</b> cuando el texto no se pronuncia. El silencio también se dibuja, porque una '+
         'definición se reconoce tanto por lo que nombra como por lo que calla.</p>'+
 
@@ -417,7 +417,7 @@
 
       '<h3>The map</h3><p>Each place is drawn with the state that definition gives it: '+
         pt('dentro')+' <b>aquamarine</b>, inside the Caribbean; '+pt('margen')+' <b>sand</b>, at the margin; '+
-        pt('fuera')+' <b>open grey ring</b>, explicitly outside; '+pt('disputa')+' <b>coral</b>, in dispute; and '+
+        pt('fuera')+' <b>open grey ring</b>, outside, by the text or by its criterion; '+pt('disputa')+' <b>coral</b>, in dispute; and '+
         pt('nada')+' <b>dotted</b> where the text says nothing. Silence is drawn too, because a definition is known '+
         'as much by what it names as by what it leaves out.</p>'+
 

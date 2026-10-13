@@ -87,6 +87,10 @@ FUENTES = {
          "corto":"Glissant 1990", "ejemplar":True, "corpus":"glissant"},
  "GLD": {"ref":"Glissant, É. (2010 [1981]). El discurso antillano (trad. A. M. Boadas y L. Arencibia Rodríguez). Fondo Editorial Casa de las Américas. Orig. Le Discours antillais, Seuil, 1981.",
          "corto":"Glissant 1981", "ejemplar":True, "corpus":"glissantdiscours"},
+ "BLE": {"ref":"Best, L. y Levitt, K. P. (2009). Essays on the Theory of Plantation Economy: A Historical and Institutional Approach to Caribbean Economic Development. University of the West Indies Press.",
+         "corto":"Best y Levitt 2009", "ejemplar":True, "corpus":"bestlevitt"},
+ "CBI": {"ref":"Caribbean Basin Economic Recovery Act, Pub. L. 98-67, tít. II, § 212 (1983), codificada en 19 U.S.C. § 2702(b), con las notas de enmienda: lista de países que la ley permite designar beneficiarios de la Iniciativa de la Cuenca del Caribe.",
+         "corto":"Ley de la ICC, 1983", "ejemplar":True, "corpus":None},
  "ATL": {"ref":"Grupo de Investigación Pensamiento Caribe (2026). Con el agua de por medio. Atlas para una antropología archipiélica. Marco conceptual.",
          "corto":"Este atlas", "ejemplar":True, "corpus":None},
 }
@@ -118,6 +122,8 @@ N_WAG_CA = N("Según el resumen de Gaztambide, Wagley pone «la mayor parte de C
              "In Gaztambide's summary, Wagley places “most of Central America” in Indo-America (p. 18). The summary does not say which part falls in Plantation America, and the atlas lacks the essay to settle it.")
 N_WAG_COL = N("El resumen de Gaztambide no nombra Colombia: pone en Indo-América las porciones «principalmente andinas» donde no se exterminó a los aborígenes y en la América de las plantaciones «todos aquellos lugares donde prevaleció la plantación» (p. 18). La costa colombiana y sus islas quedan entre los dos criterios.",
               "Gaztambide's summary does not name Colombia: it places in Indo-America the “mainly Andean” portions where the natives were not exterminated, and in Plantation America “all those places where the plantation prevailed” (p. 18). The Colombian coast and its islands fall between the two criteria.")
+N_WAG_COSTA = N("Wagley extiende la esfera «along the Caribbean coast» (citado por Beckford, p. 18), y Best y Levitt la leen así: «parts of the coastal areas of Venezuela, Colombia and Central America» (p. 11). Que Gaztambide ponga «la mayor parte de Centroamérica» en Indo-América (p. 18) no lo contradice: la costa es la parte menor.",
+                  "Wagley extends the sphere “along the Caribbean coast” (quoted by Beckford, p. 18), and Best and Levitt read it so: “parts of the coastal areas of Venezuela, Colombia and Central America” (p. 11). Gaztambide placing “most of Central America” in Indo-America (p. 18) does not contradict it: the coast is the lesser part.")
 N_BOSCH_MEX = N("Bosch adopta el Gran Caribe (Gaztambide, p. 16), que suma «por lo menos partes» de México sin decir cuáles (p. 15). El golfo queda en el borde.",
                 "Bosch adopts the Greater Caribbean (Gaztambide, p. 16), which adds “at least parts” of Mexico without saying which (p. 15). The Gulf sits on the edge.")
 N_GAZ_INS_FUERA = N("Por el criterio: el Caribe insular es «sinónimo de las Antillas y de las West Indies» (p. 11), y las West Indies se refieren «a esas islas y no a las masas continentales» (Oldendorp, citado en p. 12).",
@@ -196,18 +202,23 @@ DEF.append({
               "Three culture spheres for the hemisphere; the Caribbean falls inside the one organised around the plantation, from the US South to Brazil."),
  "citas":[
    {"txt":"La América de las Plantaciones que quizás debió llamar Afro-América e incluye el sur de Estados Unidos, el Caribe insular, Brasil y todos aquellos lugares donde prevaleció la plantación como organización socio-económica predominante.","ref":"GAZ","pag":"18","nota":N("resumen de Gaztambide","Gaztambide's summary")},
+   {"txt":"Briefly, this culture sphere extends spatially from about midway up the coast of Brazil into the Guianas, along the Caribbean coast, throughout the Caribbean itself, and into the United States [South].","ref":"BEC","pag":"18","nota":N("Wagley, citado textualmente por Beckford","Wagley, quoted verbatim by Beckford")},
+   {"txt":"This includes all the Caribbean islands, the Guyanas (English, French and Dutch), Northeast Brazil, parts of the coastal areas of Venezuela, Colombia and Central America and regions of the southern United States. This is substantially the area defined by Wagley as Plantation America.","ref":"BLE","pag":"11"},
    {"txt":"It drew from the work of historians, sociologists and cultural anthropologists, especially from Wagley's notion of ‘plantation America’.","ref":"GIR","pag":"6","nota":N("sobre el New World Group","on the New World Group")},
  ],
  "lugares": junta(todos(ISL,"dentro"),
                   todos(GUY+BEL,"dentro",N("Por el «Caribe insular» del resumen, que según el propio Gaztambide suele incluir las Guayanas y Belice (p. 11).","Through the summary's “insular Caribbean”, which by Gaztambide's own account usually includes the Guianas and Belize (p. 11).")),
                   {"nola":{"e":"dentro"}},
                   todos(MEX,"fuera",N("México queda en Indo-América (Gaztambide, p. 18).","Mexico falls in Indo-America (Gaztambide, p. 18).")),
-                  todos(CA,None,N_WAG_CA), todos(COL,None,N_WAG_COL) ),
+                  todos(CA+[k for k in COL if k!="sanandres"],"dentro",N_WAG_COSTA),
+                  {"sanandres":{"e":"dentro","n":N("Isla del mar Caribe: entra por «throughout the Caribbean itself» (Wagley, citado por Beckford, p. 18).","An island in the Caribbean Sea: it enters through “throughout the Caribbean itself” (Wagley, quoted by Beckford, p. 18).")}},
+                  {"oriximina":{"e":"margen","n":N("La esfera sube «from about midway up the coast of Brazil into the Guianas» (Wagley, citado por Beckford, p. 18): es costera. Oriximiná está en el interior amazónico, sobre el Trombetas, así que no hereda el «dentro» de Brasil.","The sphere runs “from about midway up the coast of Brazil into the Guianas” (Wagley, quoted by Beckford, p. 18): it is coastal. Oriximiná lies in the Amazonian interior, on the Trombetas, so it does not inherit Brazil's “inside”.")}} ),
  "extras":{"sureeuu":{"e":"dentro"},"brasil":{"e":"dentro"},
+           "venezuela":{"e":"dentro","n":N("«Parts of the coastal areas of Venezuela» (Best y Levitt, p. 11).","“Parts of the coastal areas of Venezuela” (Best and Levitt, p. 11).")},
            "caiman":{"e":None,"n":N("Mintz, que cita el ensayo, advierte que las Caimán «difícilmente forman parte» de la «América de la plantación», y que «lo mismo puede decirse de muchas otras partes del área del Caribe» (Mintz, p. 64, n. 4).","Mintz, who cites the essay, warns that the Caymans “hardly form part” of “Plantation America”, and that “the same may be said of many other parts of the Caribbean area” (Mintz, p. 64, n. 4).")}},
  "corpus":["mintzarea","bestlevitt","beckfordpersistent"],
- "aviso":N("El atlas no tiene el ensayo de Wagley. Se reconstruye con Gaztambide y con la nota 4 de Mintz 1966, que lo cita.",
-           "The atlas does not hold Wagley's essay. It is reconstructed from Gaztambide and from note 4 in Mintz 1966, which cites it."),
+ "aviso":N("El atlas no tiene el ensayo de Wagley. Se reconstruye con la frase que Beckford cita textualmente (p. 18), con la lectura de Best y Levitt (p. 11), con el resumen de Gaztambide (p. 18) y con la nota 4 de Mintz 1966.",
+           "The atlas does not hold Wagley's essay. It is reconstructed from the sentence Beckford quotes verbatim (p. 18), from Best and Levitt's reading (p. 11), from Gaztambide's summary (p. 18) and from note 4 in Mintz 1966."),
 })
 
 DEF.append({
@@ -362,7 +373,7 @@ N_GLI_CREOL = N("Los dialectos del creol, frágiles frente al francés «en Guad
 DEF.append({
  "id":"glissant", "anio":1990, "autor":"Édouard Glissant", "obra":"Poétique de la Relation",
  "apellido":N("Caribe-Relación","Caribbean-Relation"),
- "forma":"fragmentos", "lectura":"ejemplar",
+ "forma":"relacion", "lectura":"ejemplar",
  "familia":None,
  "criterio":N("El Caribe no constituye una unidad porque comparta una esencia, una frontera o un origen común, sino porque sus diferencias entran continuamente en relación. El archipiélago aproxima sin fundir: conecta islas, lenguas, memorias y trayectorias sin convertirlas en una totalidad homogénea. La unidad caribeña reside, así, menos en lo que sus territorios comparten que en las relaciones mediante las cuales se transforman mutuamente.",
               "The Caribbean is not a unity because it shares an essence, a border or a common origin, but because its differences keep entering into relation. The archipelago brings together without fusing: it connects islands, languages, memories and trajectories without turning them into a homogeneous totality. Caribbean unity lies less in what its territories share than in the relations through which they transform one another."),
@@ -563,6 +574,12 @@ N_GIR_CERRADA = N("Queda fuera por la enumeración cerrada del criterio —«las
                   "Left out by the criterion's closed enumeration —“the islands, the three Guianas and Belize” (p. 4)— and because “the CDCC excludes a large part of the basin's states” (p. 2).")
 N_GIR_CCDC_ULTRA = N("Entra por la lista del CCDC: «todos los Estados miembros pertenecen al Caribe insular únicamente, más los territorios ultramarinos de Holanda y Estados Unidos, así como tres territorios dependientes de Inglaterra» (p. 5).",
                      "Enters through the CDCC list: “all member states belong to the insular Caribbean only, plus the overseas territories of the Netherlands and the United States, as well as three British dependencies” (p. 5).")
+N_GIR_SOCIO = N("Cubierto por la cuenca que declara la Tabla 1 («continente e islas», p. 4), pero su Estado no figura entre los países que la ley de la Iniciativa permitía designar beneficiarios (19 U.S.C. § 2702(b)). No fue blanco del «garrote», como Cuba y Nicaragua (Gaztambide, p. 15), ni beneficiario: la cuenca lo roza sin incluirlo.",
+                "Covered by the basin Table 1 declares (“mainland and islands”, p. 4), but its state is not among the countries the Initiative's law allowed to be designated beneficiaries (19 U.S.C. § 2702(b)). It was neither a target of the “stick”, like Cuba and Nicaragua (Gaztambide, p. 15), nor a beneficiary: the basin brushes it without taking it in.")
+N_GIR_EEUU = N("Territorio de Estados Unidos: está en la cuenca, pero del lado de quien la nombra. No figura entre los beneficiarios designables de la Iniciativa (19 U.S.C. § 2702(b)).",
+               "A US territory: it lies in the basin, but on the side of those who name it. It is not among the Initiative's designable beneficiaries (19 U.S.C. § 2702(b)).")
+N_GIR_FRANCIA = N("Departamento francés de ultramar: está en la cuenca, pero no figura entre los beneficiarios designables de la Iniciativa (19 U.S.C. § 2702(b)).",
+                  "A French overseas department: it lies in the basin, but is not among the Initiative's designable beneficiaries (19 U.S.C. § 2702(b)).")
 N_GIR_CUENCA = N("Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
                  "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4).")
 N_GIR_AEC_ESTADO = N("La AEC «reúne a estados de toda la cuenca» (p. 2) y «todos los miembros son Estados de El Gran Caribe» (p. 5): el lugar entra por el Estado al que pertenece, no por sí mismo.",
@@ -643,24 +660,28 @@ DEF.append({
    {"txt":"Gaztambide-Geigel (1996, 76, 83) ha mostrado que el nombre de Caribe comenzó a ser usado para denominar a la región al final del siglo XIX, en el contexto de la expansión estadounidense hacia la frontera sur.","ref":"GIR2000","pag":"2"},
    {"txt":"Expresiones posteriores de tal denominación fueron la Comisión Anglo-Americana del Caribe (organizada en 1942, y conocida después como Comisión del Caribe) y la Iniciativa de la Cuenca del Caribe, impulsada por el presidente Ronald Reagan en la década de 1980. De modo que tanto el nombre como su aplicación posterior a una zona geográfica fueron invenciones de los poderes imperiales.","ref":"GIR2000","pag":"2"},
    {"txt":"Como muestra de resistencia, la noción de «cuenca», del poder imperial, ha sido invertida por los académicos de la región.","ref":"GIR2000","pag":"3"},
+   {"txt":"Anguilla · Antigua and Barbuda · Bahamas · Barbados · Belize · Cayman Islands · Dominica · Grenada · Guyana · Haiti · Jamaica · Montserrat · Netherlands Antilles · Saint Christopher-Nevis · Saint Lucia · Saint Vincent and the Grenadines · Suriname · Trinidad and Tobago · Turks and Caicos Islands · Virgin Islands, British","ref":"CBI","pag":"§ 2702(b)","nota":N("lista vigente de países designables. Costa Rica, República Dominicana, El Salvador, Guatemala, Honduras y Nicaragua salieron en 2005 (Pub. L. 109-53) y Panamá en 2011 (Pub. L. 112-43). Ni México, ni Colombia, ni Venezuela, ni Cuba, ni los territorios de Estados Unidos o de Francia figuran en la lista ni en sus enmiendas","current list of designable countries. Costa Rica, the Dominican Republic, El Salvador, Guatemala, Honduras and Nicaragua were struck in 2005 (Pub. L. 109-53) and Panama in 2011 (Pub. L. 112-43). Neither Mexico, Colombia, Venezuela, Cuba, nor US or French territories appear in the list or its amendments")},
  ],
  "lugares": junta(
-   todos([k for k in TODOS if k!="nola" and k not in BR and k not in ("cuba","bluefields","granada")],"dentro",N_GIR_CUENCA),
+   todos([k for k in TODOS if k!="nola" and k not in BR and k not in ("cuba","bluefields","granada") and k not in MEX+COL+["puertorico","stjohn","martinica","guadalupe"]],"dentro",N_GIR_CUENCA),
+   todos(MEX+COL,"margen",N_GIR_SOCIO),
+   todos(["puertorico","stjohn"],"margen",N_GIR_EEUU),
+   todos(["martinica","guadalupe"],"margen",N_GIR_FRANCIA),
    todos(["cuba","bluefields"],"disputa",N_GIR_CUENCA_EXCL),
    {"granada":{"e":"dentro","n":N("Entra por la cobertura de la Tabla 1 (p. 4), y además como blanco: el «garrote» de los ochenta se blandió contra «Cuba, Nicaragua y Granada» (Gaztambide, p. 15).","It enters through Table 1's coverage (p. 4), and also as a target: the 1980s “stick” was wielded against “Cuba, Nicaragua and Grenada” (Gaztambide, p. 15).")}},
    todos(BR,None,N("La Tabla 1 declara la cobertura «continente e islas» de la cuenca del Caribe (p. 4); el artículo no dice nada de Brasil, que no es ribereño. El lugar queda sin estado.",
                    "Table 1 declares the coverage \u201cmainland and islands\u201d of the Caribbean basin (p. 4); the article says nothing about Brazil, which is not a riparian country. The place is left without a state.")),
    {"nola":{"e":None,"n":N("El artículo pone a Estados Unidos como quien inventa el nombre y su aplicación a una zona (p. 2), no como territorio que la denominación incluya. El lugar queda sin estado: es la sede de la definición, no su objeto.",
                            "The article casts the United States as the inventor of the name and of its application to a zone (p. 2), not as a territory the denomination includes. The place is left without a state: it is the seat of the definition, not its object.")}}),
- "extras":{"venezuela":{"e":"dentro","n":N_GIR_CUENCA},
+ "extras":{"venezuela":{"e":"margen","n":N_GIR_SOCIO},
            "guatemala":{"e":"dentro","n":N_GIR_CUENCA},"elsalvador":{"e":"dentro","n":N_GIR_CUENCA},
-           "yucatan":{"e":"dentro","n":N_GIR_CUENCA},"bahamas":{"e":"dentro","n":N_GIR_CUENCA},
+           "yucatan":{"e":"margen","n":N_GIR_SOCIO},"bahamas":{"e":"dentro","n":N_GIR_CUENCA},
            "caiman":{"e":"dentro","n":N_GIR_CUENCA},"stlucia":{"e":"dentro","n":N_GIR_CUENCA},
            "florida":{"e":None,"n":N("Igual que Nueva Orleans: el artículo sitúa la frontera sur estadounidense como el lugar desde donde se nombra la cuenca (p. 2), no como parte nombrada.",
                                      "Like New Orleans: the article places the US southern frontier as the place from which the basin is named (p. 2), not as a named part.")}},
  "corpus":["girvanreinterpretar","gaztambideinvencion"],
- "aviso":N("El atlas no tiene el documento de la Iniciativa de la Cuenca del Caribe: esta definición se reconstruye con la Tabla 1 de Girvan, que declara su cobertura («continente e islas») y su principio, pero no enumera países miembros. Por eso la extensión sigue el criterio declarado y no una lista de membresía, y por eso la lectura es «referida».",
-           "The atlas does not hold the Caribbean Basin Initiative document: this definition is reconstructed from Girvan's Table 1, which states its coverage (“mainland and islands”) and its principle, but does not enumerate member countries. Its extent therefore follows the declared criterion rather than a membership list, and that is why the reading is “reported”."),
+ "aviso":N("El atlas no tiene el documento de la Iniciativa de la Cuenca del Caribe: esta definición se reconstruye con la Tabla 1 de Girvan, que declara su cobertura («continente e islas») y su principio, pero no enumera países miembros. Por eso la extensión sigue el criterio declarado, matizado con la lista de países que la ley de 1983 permitía designar beneficiarios: lo que la cuenca cubre sin incluirlo queda al margen. La lectura sigue siendo «referida».",
+           "The atlas does not hold the Caribbean Basin Initiative document: this definition is reconstructed from Girvan's Table 1, which states its coverage (“mainland and islands”) and its principle, but does not enumerate member countries. Its extent therefore follows the declared criterion, qualified by the list of countries the 1983 law allowed to be designated beneficiaries: what the basin covers without taking in sits at the margin. The reading remains “reported”."),
 })
 
 
@@ -669,8 +690,8 @@ DEF.append({
  "apellido":N("El Caribe de este atlas","This atlas's Caribbean"),
  "forma":"trama", "lectura":"ejemplar",
  "familia":None,
- "criterio":N("La unidad es el fenómeno que cruza la cuenca, no el área. Un lugar entra cuando lo atraviesa una corriente. Por eso la Costa Chica, que doce definiciones callan y cuatro dejan fuera, está aquí.",
-              "The unit is the phenomenon crossing the basin, not the area. A place enters when a current runs through it. That is why the Costa Chica, which twelve definitions pass over and four leave out, is here."),
+ "criterio":N("La unidad es el fenómeno que cruza la cuenca, no el área. Un lugar entra cuando lo atraviesa una corriente. Por eso la Costa Chica, que doce definiciones callan y cuatro dejan fuera, está aquí por lo que pasa en ella, no por el Estado al que pertenece.",
+              "The unit is the phenomenon crossing the basin, not the area. A place enters when a current runs through it. That is why the Costa Chica, which twelve definitions pass over and four leave out, is here for what happens in it, not for the state it belongs to."),
  "citas":[{"txt":"aquí la unidad de análisis es el fenómeno que atraviesa la cuenca, no el lugar que lo aloja.","ref":"ATL","pag":"marco conceptual"}],
  "lugares": junta(todos([k for k in TODOS if k!="guajira" and k not in BR],"dentro"),
                   todos(BR,"dentro",N("Nodo propio del atlas: Oriximiná entró con el lote S20 y Palmares con el S21, por obras del corpus sobre los quilombos. Es el atlas, no un texto ajeno, quien los pone dentro.",

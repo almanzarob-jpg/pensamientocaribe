@@ -110,6 +110,18 @@ window.CARIBES = {
    "ejemplar": true,
    "corpus": "glissantdiscours"
   },
+  "BLE": {
+   "ref": "Best, L. y Levitt, K. P. (2009). Essays on the Theory of Plantation Economy: A Historical and Institutional Approach to Caribbean Economic Development. University of the West Indies Press.",
+   "corto": "Best y Levitt 2009",
+   "ejemplar": true,
+   "corpus": "bestlevitt"
+  },
+  "CBI": {
+   "ref": "Caribbean Basin Economic Recovery Act, Pub. L. 98-67, tít. II, § 212 (1983), codificada en 19 U.S.C. § 2702(b), con las notas de enmienda: lista de países que la ley permite designar beneficiarios de la Iniciativa de la Cuenca del Caribe.",
+   "corto": "Ley de la ICC, 1983",
+   "ejemplar": true,
+   "corpus": null
+  },
   "ATL": {
    "ref": "Grupo de Investigación Pensamiento Caribe (2026). Con el agua de por medio. Atlas para una antropología archipiélica. Marco conceptual.",
    "corto": "Este atlas",
@@ -516,6 +528,20 @@ window.CARIBES = {
      }
     },
     {
+     "txt": "Briefly, this culture sphere extends spatially from about midway up the coast of Brazil into the Guianas, along the Caribbean coast, throughout the Caribbean itself, and into the United States [South].",
+     "ref": "BEC",
+     "pag": "18",
+     "nota": {
+      "es": "Wagley, citado textualmente por Beckford",
+      "en": "Wagley, quoted verbatim by Beckford"
+     }
+    },
+    {
+     "txt": "This includes all the Caribbean islands, the Guyanas (English, French and Dutch), Northeast Brazil, parts of the coastal areas of Venezuela, Colombia and Central America and regions of the southern United States. This is substantially the area defined by Wagley as Plantation America.",
+     "ref": "BLE",
+     "pag": "11"
+    },
+    {
      "txt": "It drew from the work of historians, sociologists and cultural anthropologists, especially from Wagley's notion of ‘plantation America’.",
      "ref": "GIR",
      "pag": "6",
@@ -610,70 +636,80 @@ window.CARIBES = {
      }
     },
     "bluefields": {
+     "e": "dentro",
      "n": {
-      "es": "Según el resumen de Gaztambide, Wagley pone «la mayor parte de Centroamérica» en Indo-América (p. 18). El resumen no dice qué parte queda en la América de las plantaciones, y el atlas no tiene el ensayo para decidirlo.",
-      "en": "In Gaztambide's summary, Wagley places “most of Central America” in Indo-America (p. 18). The summary does not say which part falls in Plantation America, and the atlas lacks the essay to settle it."
+      "es": "Wagley extiende la esfera «along the Caribbean coast» (citado por Beckford, p. 18), y Best y Levitt la leen así: «parts of the coastal areas of Venezuela, Colombia and Central America» (p. 11). Que Gaztambide ponga «la mayor parte de Centroamérica» en Indo-América (p. 18) no lo contradice: la costa es la parte menor.",
+      "en": "Wagley extends the sphere “along the Caribbean coast” (quoted by Beckford, p. 18), and Best and Levitt read it so: “parts of the coastal areas of Venezuela, Colombia and Central America” (p. 11). Gaztambide placing “most of Central America” in Indo-America (p. 18) does not contradict it: the coast is the lesser part."
      }
     },
     "costarica": {
+     "e": "dentro",
      "n": {
-      "es": "Según el resumen de Gaztambide, Wagley pone «la mayor parte de Centroamérica» en Indo-América (p. 18). El resumen no dice qué parte queda en la América de las plantaciones, y el atlas no tiene el ensayo para decidirlo.",
-      "en": "In Gaztambide's summary, Wagley places “most of Central America” in Indo-America (p. 18). The summary does not say which part falls in Plantation America, and the atlas lacks the essay to settle it."
+      "es": "Wagley extiende la esfera «along the Caribbean coast» (citado por Beckford, p. 18), y Best y Levitt la leen así: «parts of the coastal areas of Venezuela, Colombia and Central America» (p. 11). Que Gaztambide ponga «la mayor parte de Centroamérica» en Indo-América (p. 18) no lo contradice: la costa es la parte menor.",
+      "en": "Wagley extends the sphere “along the Caribbean coast” (quoted by Beckford, p. 18), and Best and Levitt read it so: “parts of the coastal areas of Venezuela, Colombia and Central America” (p. 11). Gaztambide placing “most of Central America” in Indo-America (p. 18) does not contradict it: the coast is the lesser part."
      }
     },
     "panama": {
+     "e": "dentro",
      "n": {
-      "es": "Según el resumen de Gaztambide, Wagley pone «la mayor parte de Centroamérica» en Indo-América (p. 18). El resumen no dice qué parte queda en la América de las plantaciones, y el atlas no tiene el ensayo para decidirlo.",
-      "en": "In Gaztambide's summary, Wagley places “most of Central America” in Indo-America (p. 18). The summary does not say which part falls in Plantation America, and the atlas lacks the essay to settle it."
+      "es": "Wagley extiende la esfera «along the Caribbean coast» (citado por Beckford, p. 18), y Best y Levitt la leen así: «parts of the coastal areas of Venezuela, Colombia and Central America» (p. 11). Que Gaztambide ponga «la mayor parte de Centroamérica» en Indo-América (p. 18) no lo contradice: la costa es la parte menor.",
+      "en": "Wagley extends the sphere “along the Caribbean coast” (quoted by Beckford, p. 18), and Best and Levitt read it so: “parts of the coastal areas of Venezuela, Colombia and Central America” (p. 11). Gaztambide placing “most of Central America” in Indo-America (p. 18) does not contradict it: the coast is the lesser part."
      }
     },
     "honduras": {
+     "e": "dentro",
      "n": {
-      "es": "Según el resumen de Gaztambide, Wagley pone «la mayor parte de Centroamérica» en Indo-América (p. 18). El resumen no dice qué parte queda en la América de las plantaciones, y el atlas no tiene el ensayo para decidirlo.",
-      "en": "In Gaztambide's summary, Wagley places “most of Central America” in Indo-America (p. 18). The summary does not say which part falls in Plantation America, and the atlas lacks the essay to settle it."
+      "es": "Wagley extiende la esfera «along the Caribbean coast» (citado por Beckford, p. 18), y Best y Levitt la leen así: «parts of the coastal areas of Venezuela, Colombia and Central America» (p. 11). Que Gaztambide ponga «la mayor parte de Centroamérica» en Indo-América (p. 18) no lo contradice: la costa es la parte menor.",
+      "en": "Wagley extends the sphere “along the Caribbean coast” (quoted by Beckford, p. 18), and Best and Levitt read it so: “parts of the coastal areas of Venezuela, Colombia and Central America” (p. 11). Gaztambide placing “most of Central America” in Indo-America (p. 18) does not contradict it: the coast is the lesser part."
      }
     },
     "cartagena": {
+     "e": "dentro",
      "n": {
-      "es": "El resumen de Gaztambide no nombra Colombia: pone en Indo-América las porciones «principalmente andinas» donde no se exterminó a los aborígenes y en la América de las plantaciones «todos aquellos lugares donde prevaleció la plantación» (p. 18). La costa colombiana y sus islas quedan entre los dos criterios.",
-      "en": "Gaztambide's summary does not name Colombia: it places in Indo-America the “mainly Andean” portions where the natives were not exterminated, and in Plantation America “all those places where the plantation prevailed” (p. 18). The Colombian coast and its islands fall between the two criteria."
+      "es": "Wagley extiende la esfera «along the Caribbean coast» (citado por Beckford, p. 18), y Best y Levitt la leen así: «parts of the coastal areas of Venezuela, Colombia and Central America» (p. 11). Que Gaztambide ponga «la mayor parte de Centroamérica» en Indo-América (p. 18) no lo contradice: la costa es la parte menor.",
+      "en": "Wagley extends the sphere “along the Caribbean coast” (quoted by Beckford, p. 18), and Best and Levitt read it so: “parts of the coastal areas of Venezuela, Colombia and Central America” (p. 11). Gaztambide placing “most of Central America” in Indo-America (p. 18) does not contradict it: the coast is the lesser part."
      }
     },
     "santamarta": {
+     "e": "dentro",
      "n": {
-      "es": "El resumen de Gaztambide no nombra Colombia: pone en Indo-América las porciones «principalmente andinas» donde no se exterminó a los aborígenes y en la América de las plantaciones «todos aquellos lugares donde prevaleció la plantación» (p. 18). La costa colombiana y sus islas quedan entre los dos criterios.",
-      "en": "Gaztambide's summary does not name Colombia: it places in Indo-America the “mainly Andean” portions where the natives were not exterminated, and in Plantation America “all those places where the plantation prevailed” (p. 18). The Colombian coast and its islands fall between the two criteria."
+      "es": "Wagley extiende la esfera «along the Caribbean coast» (citado por Beckford, p. 18), y Best y Levitt la leen así: «parts of the coastal areas of Venezuela, Colombia and Central America» (p. 11). Que Gaztambide ponga «la mayor parte de Centroamérica» en Indo-América (p. 18) no lo contradice: la costa es la parte menor.",
+      "en": "Wagley extends the sphere “along the Caribbean coast” (quoted by Beckford, p. 18), and Best and Levitt read it so: “parts of the coastal areas of Venezuela, Colombia and Central America” (p. 11). Gaztambide placing “most of Central America” in Indo-America (p. 18) does not contradict it: the coast is the lesser part."
      }
     },
     "palenque": {
+     "e": "dentro",
      "n": {
-      "es": "El resumen de Gaztambide no nombra Colombia: pone en Indo-América las porciones «principalmente andinas» donde no se exterminó a los aborígenes y en la América de las plantaciones «todos aquellos lugares donde prevaleció la plantación» (p. 18). La costa colombiana y sus islas quedan entre los dos criterios.",
-      "en": "Gaztambide's summary does not name Colombia: it places in Indo-America the “mainly Andean” portions where the natives were not exterminated, and in Plantation America “all those places where the plantation prevailed” (p. 18). The Colombian coast and its islands fall between the two criteria."
+      "es": "Wagley extiende la esfera «along the Caribbean coast» (citado por Beckford, p. 18), y Best y Levitt la leen así: «parts of the coastal areas of Venezuela, Colombia and Central America» (p. 11). Que Gaztambide ponga «la mayor parte de Centroamérica» en Indo-América (p. 18) no lo contradice: la costa es la parte menor.",
+      "en": "Wagley extends the sphere “along the Caribbean coast” (quoted by Beckford, p. 18), and Best and Levitt read it so: “parts of the coastal areas of Venezuela, Colombia and Central America” (p. 11). Gaztambide placing “most of Central America” in Indo-America (p. 18) does not contradict it: the coast is the lesser part."
      }
     },
     "barranquilla": {
+     "e": "dentro",
      "n": {
-      "es": "El resumen de Gaztambide no nombra Colombia: pone en Indo-América las porciones «principalmente andinas» donde no se exterminó a los aborígenes y en la América de las plantaciones «todos aquellos lugares donde prevaleció la plantación» (p. 18). La costa colombiana y sus islas quedan entre los dos criterios.",
-      "en": "Gaztambide's summary does not name Colombia: it places in Indo-America the “mainly Andean” portions where the natives were not exterminated, and in Plantation America “all those places where the plantation prevailed” (p. 18). The Colombian coast and its islands fall between the two criteria."
+      "es": "Wagley extiende la esfera «along the Caribbean coast» (citado por Beckford, p. 18), y Best y Levitt la leen así: «parts of the coastal areas of Venezuela, Colombia and Central America» (p. 11). Que Gaztambide ponga «la mayor parte de Centroamérica» en Indo-América (p. 18) no lo contradice: la costa es la parte menor.",
+      "en": "Wagley extends the sphere “along the Caribbean coast” (quoted by Beckford, p. 18), and Best and Levitt read it so: “parts of the coastal areas of Venezuela, Colombia and Central America” (p. 11). Gaztambide placing “most of Central America” in Indo-America (p. 18) does not contradict it: the coast is the lesser part."
      }
     },
     "guajira": {
+     "e": "dentro",
      "n": {
-      "es": "El resumen de Gaztambide no nombra Colombia: pone en Indo-América las porciones «principalmente andinas» donde no se exterminó a los aborígenes y en la América de las plantaciones «todos aquellos lugares donde prevaleció la plantación» (p. 18). La costa colombiana y sus islas quedan entre los dos criterios.",
-      "en": "Gaztambide's summary does not name Colombia: it places in Indo-America the “mainly Andean” portions where the natives were not exterminated, and in Plantation America “all those places where the plantation prevailed” (p. 18). The Colombian coast and its islands fall between the two criteria."
+      "es": "Wagley extiende la esfera «along the Caribbean coast» (citado por Beckford, p. 18), y Best y Levitt la leen así: «parts of the coastal areas of Venezuela, Colombia and Central America» (p. 11). Que Gaztambide ponga «la mayor parte de Centroamérica» en Indo-América (p. 18) no lo contradice: la costa es la parte menor.",
+      "en": "Wagley extends the sphere “along the Caribbean coast” (quoted by Beckford, p. 18), and Best and Levitt read it so: “parts of the coastal areas of Venezuela, Colombia and Central America” (p. 11). Gaztambide placing “most of Central America” in Indo-America (p. 18) does not contradict it: the coast is the lesser part."
      }
     },
     "sanandres": {
+     "e": "dentro",
      "n": {
-      "es": "El resumen de Gaztambide no nombra Colombia: pone en Indo-América las porciones «principalmente andinas» donde no se exterminó a los aborígenes y en la América de las plantaciones «todos aquellos lugares donde prevaleció la plantación» (p. 18). La costa colombiana y sus islas quedan entre los dos criterios.",
-      "en": "Gaztambide's summary does not name Colombia: it places in Indo-America the “mainly Andean” portions where the natives were not exterminated, and in Plantation America “all those places where the plantation prevailed” (p. 18). The Colombian coast and its islands fall between the two criteria."
+      "es": "Isla del mar Caribe: entra por «throughout the Caribbean itself» (Wagley, citado por Beckford, p. 18).",
+      "en": "An island in the Caribbean Sea: it enters through “throughout the Caribbean itself” (Wagley, quoted by Beckford, p. 18)."
      }
     },
     "oriximina": {
-     "e": "dentro",
+     "e": "margen",
      "n": {
-      "es": "El texto no nombra este lugar: se pronuncia sobre Brasil, y de ahí se hereda el estado. Oriximiná y Palmares entraron al corpus en septiembre de 2026, después de que esta capa se escribiera.",
-      "en": "The text does not name this place: it speaks of Brazil, and the state is inherited from there. Oriximiná and Palmares entered the corpus in September 2026, after this layer was written."
+      "es": "La esfera sube «from about midway up the coast of Brazil into the Guianas» (Wagley, citado por Beckford, p. 18): es costera. Oriximiná está en el interior amazónico, sobre el Trombetas, así que no hereda el «dentro» de Brasil.",
+      "en": "The sphere runs “from about midway up the coast of Brazil into the Guianas” (Wagley, quoted by Beckford, p. 18): it is coastal. Oriximiná lies in the Amazonian interior, on the Trombetas, so it does not inherit Brazil's “inside”."
      }
     },
     "palmaresbr": {
@@ -691,6 +727,13 @@ window.CARIBES = {
     "brasil": {
      "e": "dentro"
     },
+    "venezuela": {
+     "e": "dentro",
+     "n": {
+      "es": "«Parts of the coastal areas of Venezuela» (Best y Levitt, p. 11).",
+      "en": "“Parts of the coastal areas of Venezuela” (Best and Levitt, p. 11)."
+     }
+    },
     "caiman": {
      "e": null,
      "n": {
@@ -705,8 +748,8 @@ window.CARIBES = {
     "beckfordpersistent"
    ],
    "aviso": {
-    "es": "El atlas no tiene el ensayo de Wagley. Se reconstruye con Gaztambide y con la nota 4 de Mintz 1966, que lo cita.",
-    "en": "The atlas does not hold Wagley's essay. It is reconstructed from Gaztambide and from note 4 in Mintz 1966, which cites it."
+    "es": "El atlas no tiene el ensayo de Wagley. Se reconstruye con la frase que Beckford cita textualmente (p. 18), con la lectura de Best y Levitt (p. 11), con el resumen de Gaztambide (p. 18) y con la nota 4 de Mintz 1966.",
+    "en": "The atlas does not hold Wagley's essay. It is reconstructed from the sentence Beckford quotes verbatim (p. 18), from Best and Levitt's reading (p. 11), from Gaztambide's summary (p. 18) and from note 4 in Mintz 1966."
    }
   },
   {
@@ -1925,7 +1968,7 @@ window.CARIBES = {
     "es": "Caribe-Relación",
     "en": "Caribbean-Relation"
    },
-   "forma": "fragmentos",
+   "forma": "relacion",
    "lectura": "ejemplar",
    "familia": null,
    "criterio": {
@@ -4376,6 +4419,15 @@ window.CARIBES = {
      "txt": "Como muestra de resistencia, la noción de «cuenca», del poder imperial, ha sido invertida por los académicos de la región.",
      "ref": "GIR2000",
      "pag": "3"
+    },
+    {
+     "txt": "Anguilla · Antigua and Barbuda · Bahamas · Barbados · Belize · Cayman Islands · Dominica · Grenada · Guyana · Haiti · Jamaica · Montserrat · Netherlands Antilles · Saint Christopher-Nevis · Saint Lucia · Saint Vincent and the Grenadines · Suriname · Trinidad and Tobago · Turks and Caicos Islands · Virgin Islands, British",
+     "ref": "CBI",
+     "pag": "§ 2702(b)",
+     "nota": {
+      "es": "lista vigente de países designables. Costa Rica, República Dominicana, El Salvador, Guatemala, Honduras y Nicaragua salieron en 2005 (Pub. L. 109-53) y Panamá en 2011 (Pub. L. 112-43). Ni México, ni Colombia, ni Venezuela, ni Cuba, ni los territorios de Estados Unidos o de Francia figuran en la lista ni en sus enmiendas",
+      "en": "current list of designable countries. Costa Rica, the Dominican Republic, El Salvador, Guatemala, Honduras and Nicaragua were struck in 2005 (Pub. L. 109-53) and Panama in 2011 (Pub. L. 112-43). Neither Mexico, Colombia, Venezuela, Cuba, nor US or French territories appear in the list or its amendments"
+     }
     }
    ],
    "lugares": {
@@ -4400,28 +4452,7 @@ window.CARIBES = {
       "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
      }
     },
-    "puertorico": {
-     "e": "dentro",
-     "n": {
-      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
-      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
-     }
-    },
     "curazao": {
-     "e": "dentro",
-     "n": {
-      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
-      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
-     }
-    },
-    "martinica": {
-     "e": "dentro",
-     "n": {
-      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
-      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
-     }
-    },
-    "guadalupe": {
      "e": "dentro",
      "n": {
       "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
@@ -4443,13 +4474,6 @@ window.CARIBES = {
      }
     },
     "dominica": {
-     "e": "dentro",
-     "n": {
-      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
-      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
-     }
-    },
-    "stjohn": {
      "e": "dentro",
      "n": {
       "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
@@ -4512,60 +4536,88 @@ window.CARIBES = {
       "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
      }
     },
-    "cartagena": {
-     "e": "dentro",
-     "n": {
-      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
-      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
-     }
-    },
-    "santamarta": {
-     "e": "dentro",
-     "n": {
-      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
-      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
-     }
-    },
-    "palenque": {
-     "e": "dentro",
-     "n": {
-      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
-      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
-     }
-    },
-    "barranquilla": {
-     "e": "dentro",
-     "n": {
-      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
-      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
-     }
-    },
-    "guajira": {
-     "e": "dentro",
-     "n": {
-      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
-      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
-     }
-    },
-    "sanandres": {
-     "e": "dentro",
-     "n": {
-      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
-      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
-     }
-    },
     "veracruz": {
-     "e": "dentro",
+     "e": "margen",
      "n": {
-      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
-      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+      "es": "Cubierto por la cuenca que declara la Tabla 1 («continente e islas», p. 4), pero su Estado no figura entre los países que la ley de la Iniciativa permitía designar beneficiarios (19 U.S.C. § 2702(b)). No fue blanco del «garrote», como Cuba y Nicaragua (Gaztambide, p. 15), ni beneficiario: la cuenca lo roza sin incluirlo.",
+      "en": "Covered by the basin Table 1 declares (“mainland and islands”, p. 4), but its state is not among the countries the Initiative's law allowed to be designated beneficiaries (19 U.S.C. § 2702(b)). It was neither a target of the “stick”, like Cuba and Nicaragua (Gaztambide, p. 15), nor a beneficiary: the basin brushes it without taking it in."
      }
     },
     "costachica": {
-     "e": "dentro",
+     "e": "margen",
      "n": {
-      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
-      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+      "es": "Cubierto por la cuenca que declara la Tabla 1 («continente e islas», p. 4), pero su Estado no figura entre los países que la ley de la Iniciativa permitía designar beneficiarios (19 U.S.C. § 2702(b)). No fue blanco del «garrote», como Cuba y Nicaragua (Gaztambide, p. 15), ni beneficiario: la cuenca lo roza sin incluirlo.",
+      "en": "Covered by the basin Table 1 declares (“mainland and islands”, p. 4), but its state is not among the countries the Initiative's law allowed to be designated beneficiaries (19 U.S.C. § 2702(b)). It was neither a target of the “stick”, like Cuba and Nicaragua (Gaztambide, p. 15), nor a beneficiary: the basin brushes it without taking it in."
+     }
+    },
+    "cartagena": {
+     "e": "margen",
+     "n": {
+      "es": "Cubierto por la cuenca que declara la Tabla 1 («continente e islas», p. 4), pero su Estado no figura entre los países que la ley de la Iniciativa permitía designar beneficiarios (19 U.S.C. § 2702(b)). No fue blanco del «garrote», como Cuba y Nicaragua (Gaztambide, p. 15), ni beneficiario: la cuenca lo roza sin incluirlo.",
+      "en": "Covered by the basin Table 1 declares (“mainland and islands”, p. 4), but its state is not among the countries the Initiative's law allowed to be designated beneficiaries (19 U.S.C. § 2702(b)). It was neither a target of the “stick”, like Cuba and Nicaragua (Gaztambide, p. 15), nor a beneficiary: the basin brushes it without taking it in."
+     }
+    },
+    "santamarta": {
+     "e": "margen",
+     "n": {
+      "es": "Cubierto por la cuenca que declara la Tabla 1 («continente e islas», p. 4), pero su Estado no figura entre los países que la ley de la Iniciativa permitía designar beneficiarios (19 U.S.C. § 2702(b)). No fue blanco del «garrote», como Cuba y Nicaragua (Gaztambide, p. 15), ni beneficiario: la cuenca lo roza sin incluirlo.",
+      "en": "Covered by the basin Table 1 declares (“mainland and islands”, p. 4), but its state is not among the countries the Initiative's law allowed to be designated beneficiaries (19 U.S.C. § 2702(b)). It was neither a target of the “stick”, like Cuba and Nicaragua (Gaztambide, p. 15), nor a beneficiary: the basin brushes it without taking it in."
+     }
+    },
+    "palenque": {
+     "e": "margen",
+     "n": {
+      "es": "Cubierto por la cuenca que declara la Tabla 1 («continente e islas», p. 4), pero su Estado no figura entre los países que la ley de la Iniciativa permitía designar beneficiarios (19 U.S.C. § 2702(b)). No fue blanco del «garrote», como Cuba y Nicaragua (Gaztambide, p. 15), ni beneficiario: la cuenca lo roza sin incluirlo.",
+      "en": "Covered by the basin Table 1 declares (“mainland and islands”, p. 4), but its state is not among the countries the Initiative's law allowed to be designated beneficiaries (19 U.S.C. § 2702(b)). It was neither a target of the “stick”, like Cuba and Nicaragua (Gaztambide, p. 15), nor a beneficiary: the basin brushes it without taking it in."
+     }
+    },
+    "barranquilla": {
+     "e": "margen",
+     "n": {
+      "es": "Cubierto por la cuenca que declara la Tabla 1 («continente e islas», p. 4), pero su Estado no figura entre los países que la ley de la Iniciativa permitía designar beneficiarios (19 U.S.C. § 2702(b)). No fue blanco del «garrote», como Cuba y Nicaragua (Gaztambide, p. 15), ni beneficiario: la cuenca lo roza sin incluirlo.",
+      "en": "Covered by the basin Table 1 declares (“mainland and islands”, p. 4), but its state is not among the countries the Initiative's law allowed to be designated beneficiaries (19 U.S.C. § 2702(b)). It was neither a target of the “stick”, like Cuba and Nicaragua (Gaztambide, p. 15), nor a beneficiary: the basin brushes it without taking it in."
+     }
+    },
+    "guajira": {
+     "e": "margen",
+     "n": {
+      "es": "Cubierto por la cuenca que declara la Tabla 1 («continente e islas», p. 4), pero su Estado no figura entre los países que la ley de la Iniciativa permitía designar beneficiarios (19 U.S.C. § 2702(b)). No fue blanco del «garrote», como Cuba y Nicaragua (Gaztambide, p. 15), ni beneficiario: la cuenca lo roza sin incluirlo.",
+      "en": "Covered by the basin Table 1 declares (“mainland and islands”, p. 4), but its state is not among the countries the Initiative's law allowed to be designated beneficiaries (19 U.S.C. § 2702(b)). It was neither a target of the “stick”, like Cuba and Nicaragua (Gaztambide, p. 15), nor a beneficiary: the basin brushes it without taking it in."
+     }
+    },
+    "sanandres": {
+     "e": "margen",
+     "n": {
+      "es": "Cubierto por la cuenca que declara la Tabla 1 («continente e islas», p. 4), pero su Estado no figura entre los países que la ley de la Iniciativa permitía designar beneficiarios (19 U.S.C. § 2702(b)). No fue blanco del «garrote», como Cuba y Nicaragua (Gaztambide, p. 15), ni beneficiario: la cuenca lo roza sin incluirlo.",
+      "en": "Covered by the basin Table 1 declares (“mainland and islands”, p. 4), but its state is not among the countries the Initiative's law allowed to be designated beneficiaries (19 U.S.C. § 2702(b)). It was neither a target of the “stick”, like Cuba and Nicaragua (Gaztambide, p. 15), nor a beneficiary: the basin brushes it without taking it in."
+     }
+    },
+    "puertorico": {
+     "e": "margen",
+     "n": {
+      "es": "Territorio de Estados Unidos: está en la cuenca, pero del lado de quien la nombra. No figura entre los beneficiarios designables de la Iniciativa (19 U.S.C. § 2702(b)).",
+      "en": "A US territory: it lies in the basin, but on the side of those who name it. It is not among the Initiative's designable beneficiaries (19 U.S.C. § 2702(b))."
+     }
+    },
+    "stjohn": {
+     "e": "margen",
+     "n": {
+      "es": "Territorio de Estados Unidos: está en la cuenca, pero del lado de quien la nombra. No figura entre los beneficiarios designables de la Iniciativa (19 U.S.C. § 2702(b)).",
+      "en": "A US territory: it lies in the basin, but on the side of those who name it. It is not among the Initiative's designable beneficiaries (19 U.S.C. § 2702(b))."
+     }
+    },
+    "martinica": {
+     "e": "margen",
+     "n": {
+      "es": "Departamento francés de ultramar: está en la cuenca, pero no figura entre los beneficiarios designables de la Iniciativa (19 U.S.C. § 2702(b)).",
+      "en": "A French overseas department: it lies in the basin, but is not among the Initiative's designable beneficiaries (19 U.S.C. § 2702(b))."
+     }
+    },
+    "guadalupe": {
+     "e": "margen",
+     "n": {
+      "es": "Departamento francés de ultramar: está en la cuenca, pero no figura entre los beneficiarios designables de la Iniciativa (19 U.S.C. § 2702(b)).",
+      "en": "A French overseas department: it lies in the basin, but is not among the Initiative's designable beneficiaries (19 U.S.C. § 2702(b))."
      }
     },
     "cuba": {
@@ -4610,10 +4662,10 @@ window.CARIBES = {
    },
    "extras": {
     "venezuela": {
-     "e": "dentro",
+     "e": "margen",
      "n": {
-      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
-      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+      "es": "Cubierto por la cuenca que declara la Tabla 1 («continente e islas», p. 4), pero su Estado no figura entre los países que la ley de la Iniciativa permitía designar beneficiarios (19 U.S.C. § 2702(b)). No fue blanco del «garrote», como Cuba y Nicaragua (Gaztambide, p. 15), ni beneficiario: la cuenca lo roza sin incluirlo.",
+      "en": "Covered by the basin Table 1 declares (“mainland and islands”, p. 4), but its state is not among the countries the Initiative's law allowed to be designated beneficiaries (19 U.S.C. § 2702(b)). It was neither a target of the “stick”, like Cuba and Nicaragua (Gaztambide, p. 15), nor a beneficiary: the basin brushes it without taking it in."
      }
     },
     "guatemala": {
@@ -4631,10 +4683,10 @@ window.CARIBES = {
      }
     },
     "yucatan": {
-     "e": "dentro",
+     "e": "margen",
      "n": {
-      "es": "Entra por la cobertura que el artículo declara para esta definición en la Tabla 1: «continente e islas», con principio «geopolítico / hegemónico» y la ICC como organismo (p. 4).",
-      "en": "Enters through the coverage the article declares for this definition in Table 1: “mainland and islands”, with a “geopolitical / hegemonic” principle and the CBI as its carrying body (p. 4)."
+      "es": "Cubierto por la cuenca que declara la Tabla 1 («continente e islas», p. 4), pero su Estado no figura entre los países que la ley de la Iniciativa permitía designar beneficiarios (19 U.S.C. § 2702(b)). No fue blanco del «garrote», como Cuba y Nicaragua (Gaztambide, p. 15), ni beneficiario: la cuenca lo roza sin incluirlo.",
+      "en": "Covered by the basin Table 1 declares (“mainland and islands”, p. 4), but its state is not among the countries the Initiative's law allowed to be designated beneficiaries (19 U.S.C. § 2702(b)). It was neither a target of the “stick”, like Cuba and Nicaragua (Gaztambide, p. 15), nor a beneficiary: the basin brushes it without taking it in."
      }
     },
     "bahamas": {
@@ -4671,8 +4723,8 @@ window.CARIBES = {
     "gaztambideinvencion"
    ],
    "aviso": {
-    "es": "El atlas no tiene el documento de la Iniciativa de la Cuenca del Caribe: esta definición se reconstruye con la Tabla 1 de Girvan, que declara su cobertura («continente e islas») y su principio, pero no enumera países miembros. Por eso la extensión sigue el criterio declarado y no una lista de membresía, y por eso la lectura es «referida».",
-    "en": "The atlas does not hold the Caribbean Basin Initiative document: this definition is reconstructed from Girvan's Table 1, which states its coverage (“mainland and islands”) and its principle, but does not enumerate member countries. Its extent therefore follows the declared criterion rather than a membership list, and that is why the reading is “reported”."
+    "es": "El atlas no tiene el documento de la Iniciativa de la Cuenca del Caribe: esta definición se reconstruye con la Tabla 1 de Girvan, que declara su cobertura («continente e islas») y su principio, pero no enumera países miembros. Por eso la extensión sigue el criterio declarado, matizado con la lista de países que la ley de 1983 permitía designar beneficiarios: lo que la cuenca cubre sin incluirlo queda al margen. La lectura sigue siendo «referida».",
+    "en": "The atlas does not hold the Caribbean Basin Initiative document: this definition is reconstructed from Girvan's Table 1, which states its coverage (“mainland and islands”) and its principle, but does not enumerate member countries. Its extent therefore follows the declared criterion, qualified by the list of countries the 1983 law allowed to be designated beneficiaries: what the basin covers without taking in sits at the margin. The reading remains “reported”."
    }
   },
   {
@@ -4688,8 +4740,8 @@ window.CARIBES = {
    "lectura": "ejemplar",
    "familia": null,
    "criterio": {
-    "es": "La unidad es el fenómeno que cruza la cuenca, no el área. Un lugar entra cuando lo atraviesa una corriente. Por eso la Costa Chica, que doce definiciones callan y cuatro dejan fuera, está aquí.",
-    "en": "The unit is the phenomenon crossing the basin, not the area. A place enters when a current runs through it. That is why the Costa Chica, which twelve definitions pass over and four leave out, is here."
+    "es": "La unidad es el fenómeno que cruza la cuenca, no el área. Un lugar entra cuando lo atraviesa una corriente. Por eso la Costa Chica, que doce definiciones callan y cuatro dejan fuera, está aquí por lo que pasa en ella, no por el Estado al que pertenece.",
+    "en": "The unit is the phenomenon crossing the basin, not the area. A place enters when a current runs through it. That is why the Costa Chica, which twelve definitions pass over and four leave out, is here for what happens in it, not for the state it belongs to."
    },
    "citas": [
     {

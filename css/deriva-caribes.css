@@ -235,3 +235,6 @@ body.dv-modo #qcBarra, body.dv-modo #qcLeyenda{ display:none !important; }
 /* rótulo propio para los nodos que todavía no anclan ninguna obra */
 .dv-rotulo-lugar{ font-family:var(--ff-mono); fill:var(--gray); letter-spacing:.5px; pointer-events:none;
   paint-order:stroke; stroke:var(--bg-deep); stroke-width:3px; stroke-linejoin:round; }
+
+/* la deriva rotula por su cuenta los nodos sin obras: el rótulo de la capa sobraría */
+body.dv-modo #stage .qc-rotulo-vacio{ display:none; }

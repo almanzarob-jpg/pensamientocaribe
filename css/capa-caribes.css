@@ -37,6 +37,12 @@
 .qc-rotulo{font-family:var(--ff-mono); font-size:9.5px; letter-spacing:.5px; pointer-events:none;
   paint-order:stroke; stroke:var(--bg-deep); stroke-width:3px; stroke-linejoin:round}
 .qc-rotulo-extra{font-style:italic}
+/* nodos sin obras que la definición nombra: rótulo propio, con el color de su estado */
+.qc-rotulo-vacio{fill:var(--gray)}
+.qc-rotulo-vacio.qc-t-dentro{fill:var(--cream)}
+.qc-rotulo-vacio.qc-t-margen{fill:var(--qc-margen)}
+.qc-rotulo-vacio.qc-t-disputa{fill:var(--qc-disputa)}
+.qc-rotulo-vacio.qc-t-fuera{fill:var(--qc-fuera); opacity:.6}
 .qc-rotulo-extra.qc-t-dentro{fill:var(--qc-dentro)}
 .qc-rotulo-extra.qc-t-margen{fill:var(--qc-margen)}
 .qc-rotulo-extra.qc-t-disputa{fill:var(--qc-disputa)}

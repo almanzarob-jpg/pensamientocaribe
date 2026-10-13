@@ -38,7 +38,7 @@
       familia:'Tendencia según', sinFamilia:'Fuera de la tipología de Gaztambide',
       criterio:'Criterio', citas:'En el texto', dibuja:'Cómo se lee en el mapa',
       e_dentro:'Dentro', e_margen:'Al margen', e_disputa:'En disputa', e_fuera:'Fuera', e_nada:'No se pronuncia',
-      d_dentro:'lo nombra o cabe en su criterio', d_margen:'lo roza: contexto, litoral o un «tal vez»', d_disputa:'lecturas que chocan o pregunta abierta', d_fuera:'lo excluye de forma expresa', d_nada:'calla, y no se completa por analogía',
+      d_dentro:'lo nombra o cabe en su criterio', d_margen:'lo roza: contexto, litoral o un «tal vez»', d_disputa:'lecturas que chocan o pregunta abierta', d_fuera:'lo deja afuera, por el texto o por su criterio', d_nada:'calla, y no se completa por analogía',
       fuera_mapa:'Sin nodo en el atlas', mundo:'Sin borde', canon:'Canon anglófono', trazos:'Parecidos de familia',
       disputas:'Con quién discute', rel_toma:'toma de', rel_retoma:'la retoma', rel_discute:'discute con',
       corpus:'En el corpus del atlas', abrirObra:'Abrir la ficha de la obra',
@@ -53,6 +53,7 @@
       submarina:'The unity is submarine: los fragmentos se encienden sueltos y la trama los une por debajo.',
       sinCentro:'Sin borde ni centro: el Caribe se sale de su propio mar.',
       relaciones:'Frontera abierta: la región se compara, no se delimita.',
+      relacion:'Relación: un mar que difracta. Las tierras se aproximan sin fundirse, y cada lugar conserva su opacidad.',
       trama:'La unidad es el fenómeno: entra todo lo que una corriente atraviesa.',
       rutas:'Territorio acuoso: el mar es lugar, y las líneas son conexiones marineras, no fronteras.', rutasLeyenda:'Conexiones desde la costa neogranadina',
       contrasteLeyenda:'Contraste',
@@ -75,7 +76,7 @@
       familia:'Tendency according to', sinFamilia:'Outside Gaztambide\'s typology',
       criterio:'Criterion', citas:'In the text', dibuja:'How to read the map',
       e_dentro:'Inside', e_margen:'At the margin', e_disputa:'Disputed', e_fuera:'Outside', e_nada:'Not addressed',
-      d_dentro:'named, or within its stated criterion', d_margen:'barely touched: context, littoral or a “perhaps”', d_disputa:'clashing readings or an open question', d_fuera:'expressly excluded', d_nada:'silent, and not filled in by analogy',
+      d_dentro:'named, or within its stated criterion', d_margen:'barely touched: context, littoral or a “perhaps”', d_disputa:'clashing readings or an open question', d_fuera:'left out, by the text or by its criterion', d_nada:'silent, and not filled in by analogy',
       fuera_mapa:'No atlas node', mundo:'No boundary', canon:'Anglophone canon', trazos:'Family resemblances',
       disputas:'Who it argues with', rel_toma:'borrows from', rel_retoma:'taken up by', rel_discute:'argues with',
       corpus:'In the atlas corpus', abrirObra:'Open the work',
@@ -90,6 +91,7 @@
       submarina:'The unity is submarine: the fragments light up one by one and the web joins them underneath.',
       sinCentro:'Neither boundary nor centre: the Caribbean overflows its own sea.',
       relaciones:'Open frontier: the region is compared, not bounded.',
+      relacion:'Relation: a sea that diffracts. Lands draw near without fusing, and each place keeps its opacity.',
       trama:'The unit is the phenomenon: whatever a current crosses comes in.',
       rutas:'Aqueous territory: the sea is a place, and the lines are sailors\' connections, not borders.', rutasLeyenda:'Connections from the New Granada coast',
       contrasteLeyenda:'Contrast',
@@ -334,6 +336,7 @@
       if(d.forma==='fragmentos') h+=`<p class="qc-forma">${esc(qt('submarina'))}</p>`;
       if(d.forma==='sin_centro') h+=`<p class="qc-forma">${esc(qt('sinCentro'))}</p>`;
       if(d.forma==='relaciones') h+=`<p class="qc-forma">${esc(qt('relaciones'))}</p>`;
+      if(d.forma==='relacion') h+=`<p class="qc-forma">${esc(qt('relacion'))}</p>`;
       if(d.forma==='trama') h+=`<p class="qc-forma">${esc(qt('trama'))}</p>`;
       if(d.forma==='rutas') h+=`<p class="qc-forma">${esc(qt('rutas'))}</p>`;
       ['dentro','margen','disputa','fuera','nada'].forEach(e=>{
@@ -551,14 +554,22 @@
       if(forma==='trama') svg.classList.add('qc-trama');
       const anillos={margen:[], disputa:[]};
       Object.keys(L).forEach(k=>{
-        const p=G[k]; if(!p || !p.n) return;
+        const p=G[k]; if(!p) return;
         const e=estadoDe(d,k);
+        /* un nodo sin obras visibles no tiene racimo ni rótulo en el atlas, pero la
+           definición sí le da estado (La Guajira): se dibuja y se nombra igual */
+        if(!p.n){
+          if(!e) return;
+          const t=mk('text',{x:p.x+9, y:p.y+3.4, class:'qc-rotulo qc-rotulo-vacio qc-t-'+e});
+          t.textContent=nombreLugar(k); capaTxt.appendChild(t);
+        }
         if(forma==='fragmentos'){
           if(e==='dentro') marcasG.appendChild(mk('circle',{cx:p.x, cy:p.y, r:p.r+4, class:'qc-anillo qc-fragmento'}));
           return;
         }
         if(forma==='trama') return;
-        if(e==='dentro') brumaG.appendChild(mk('circle',{cx:p.x, cy:p.y, r:p.r+(forma==='relaciones'?6:16), class:'qc-luz', opacity:forma==='relaciones'?.16:.30}));
+        const rel = forma==='relaciones' || forma==='relacion';
+        if(e==='dentro') brumaG.appendChild(mk('circle',{cx:p.x, cy:p.y, r:p.r+(rel?6:16), class:'qc-luz', opacity:rel?.16:.30}));
         else if(e==='margen'){ brumaG.appendChild(mk('circle',{cx:p.x, cy:p.y, r:p.r+12, class:'qc-luz qc-luz-margen', opacity:.11})); anillos.margen.push(p); }
         else if(e==='disputa'){ brumaG.appendChild(mk('circle',{cx:p.x, cy:p.y, r:p.r+12, class:'qc-luz qc-luz-roja', opacity:.18})); anillos.disputa.push(p); }
         else if(e==='fuera'){ const s=Math.min(7,Math.max(4,p.r*.38)); marcasG.appendChild(mk('path',{d:`M ${p.x-s},${p.y-s} L ${p.x+s},${p.y+s} M ${p.x+s},${p.y-s} L ${p.x-s},${p.y+s}`, class:'qc-tacha'})); }
@@ -609,7 +620,7 @@
     Object.entries(extras).forEach(([k,v])=>{
       const e=C.extras[k]; if(!e) return;
       const x=px(e[1]), y=py(e[0]);
-      if(v.e==='dentro' && d.forma!=='relaciones' && d.forma!=='fragmentos') brumaG.appendChild(mk('circle',{cx:x, cy:y, r:14, class:'qc-luz', opacity:.26}));
+      if(v.e==='dentro' && d.forma!=='relaciones' && d.forma!=='relacion' && d.forma!=='fragmentos') brumaG.appendChild(mk('circle',{cx:x, cy:y, r:14, class:'qc-luz', opacity:.26}));
       const ev=v.e||'nada';  /* un extra que el texto nombra sin darle estado se dibuja apagado, no negro */
       marcasG.appendChild(mk('path',{d:`M ${x},${y-4.2} L ${x+4.2},${y} L ${x},${y+4.2} L ${x-4.2},${y} Z`, class:'qc-extra qc-t-'+ev}));
       const t=mk('text',{x:x+8, y:y+3.4, class:'qc-rotulo qc-rotulo-extra qc-t-'+ev}); t.textContent=(ev==='fuera'?'× ':'')+(LANG==='en'?e[3]:e[2]); capaTxt.appendChild(t);
