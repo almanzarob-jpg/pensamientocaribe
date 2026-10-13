@@ -1089,3 +1089,7 @@ main:has(#qcLeyenda:not([hidden])) #hint{bottom:auto; top:16px}
   font-family:var(--ff-mono); font-size:10.5px; letter-spacing:1.2px; text-transform:uppercase; color:var(--gold);
   animation:escenaEntra var(--mov-medio) var(--curva-llegada) both}
 body.fichas-cargando #stage{cursor:progress}
+
+/* Arrastre del mapa con el ratón: mientras dura, ningún texto de la página se
+   selecciona. La clase la pone y la quita el propio arrastre (mousedown/mouseup). */
+html.arrastrando-mapa, html.arrastrando-mapa *{ -webkit-user-select:none; user-select:none; }

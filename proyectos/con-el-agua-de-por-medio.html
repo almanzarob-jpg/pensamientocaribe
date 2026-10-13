@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/zoom-caribe.css?v=20261003">
-<link rel="stylesheet" href="../css/con-el-agua-de-por-medio.css?v=20261004c">
+<link rel="stylesheet" href="../css/con-el-agua-de-por-medio.css?v=20261013">
 <link rel="stylesheet" href="../css/capa-caribes.css?v=20261013">
 <link rel="stylesheet" href="../css/deriva-caribes.css?v=20261013d">
 <link rel="stylesheet" href="../css/capa-antirracismo.css?v=20261003">
@@ -2224,6 +2224,9 @@ svg.addEventListener('mousedown',ev=>{
   if(ev.button!==0) return;          /* el clic derecho abre el menú, no panea */
   panning=true; dragged=false; sx=ev.clientX; sy=ev.clientY;
   otx=vpt.tx; oty=vpt.ty; svg.classList.add('grabbing');
+  /* mientras se arrastra, nada de la página se selecciona: si el cursor salía
+     del mapa hacia el encabezado, el navegador pintaba de azul sus botones */
+  document.documentElement.classList.add('arrastrando-mapa');
 });
 window.addEventListener('mousemove',ev=>{
   if(!panning)return;
@@ -2232,7 +2235,9 @@ window.addEventListener('mousemove',ev=>{
   vpt.tx=otx+(ev.clientX-sx)/sx0; vpt.ty=oty+(ev.clientY-sy)/sy0;
   applyVP();
 });
-window.addEventListener('mouseup',()=>{ panning=false; svg.classList.remove('grabbing'); });
+window.addEventListener('mouseup',()=>{ panning=false; svg.classList.remove('grabbing'); document.documentElement.classList.remove('arrastrando-mapa'); });
+/* si el botón se suelta fuera de la ventana, mouseup no llega: al perder el foco se libera igual */
+window.addEventListener('blur',()=>{ if(!panning) return; panning=false; svg.classList.remove('grabbing'); document.documentElement.classList.remove('arrastrando-mapa'); });
 svg.addEventListener('click',ev=>{ if(dragged){ dragged=false; return; } clearFocus(); });
 
 /* Doble clic: acercar anclado al cursor. Con Alt, alejar. Antes reencuadraba,
