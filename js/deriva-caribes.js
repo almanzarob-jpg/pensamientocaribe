@@ -70,7 +70,7 @@
       const anillo = document.createElementNS(NS,'circle');
       anillo.setAttribute('class','dv-estela');
       anillo.setAttribute('cx', p.x); anillo.setAttribute('cy', p.y);
-      anillo.setAttribute('r', Math.max(6, p.r || 9));
+      anillo.setAttribute('r', radioMarca(p) + 3);
       anillo.setAttribute('fill','none');
       anillo.setAttribute('stroke', COLOR_EDO[c.a] || 'var(--gray)');
       anillo.setAttribute('stroke-width', c.a==='dentro' ? 2.2 : 1.6);
@@ -80,6 +80,64 @@
     vp.appendChild(capa);
     requestAnimationFrame(()=> capa.classList.add('va'));
     setTimeout(()=>{ if(capa.parentNode) capa.parentNode.removeChild(capa); }, 1400);
+  }
+
+  /* ---------------- lectura limpia ----------------
+     Con la deriva encendida lo que se lee son lugares, no obras: el estado que
+     cada definición da a cada sitio. Por eso el mapa se aquieta —las obras bajan
+     a polvo, los hilos se retiran, la bruma se aclara— y encima se dibuja una
+     sola marca por lugar con la misma gramática que la guía y las miniaturas de
+     la pared: disco aguamarina dentro, disco arena al margen, disco coral en
+     disputa, anillo gris fuera, anillo punteado donde el texto calla. Todo el
+     silenciamiento vive en el CSS bajo body.dv-modo, así que al cerrar la deriva
+     el atlas vuelve exactamente a como estaba. */
+  const radioMarca = p => Math.max(4.5, Math.min(11, 3 + Math.sqrt((p && p.n) || 1) * 1.15));
+  function pintarLugares(){
+    if(!D.abierta || typeof vp==='undefined' || !vp) return;
+    if(typeof state!=='undefined' && state.view!=='corriente') return;
+    const api=API(); if(!api || typeof api.geo!=='function') return;
+    let G; try{ G = api.geo(); }catch(e){ return; }
+    const viejo = vp.querySelector('.dv-lugares'); if(viejo) viejo.remove();
+    const NS='http://www.w3.org/2000/svg';
+    const g = document.createElementNS(NS,'g');
+    g.setAttribute('class','dv-lugares'); g.setAttribute('aria-hidden','true');
+    const d = DEFS[D.i], prev = D.i>0 ? DEFS[D.i-1] : null;
+    for(const k of LUGARES){
+      const p = G[k]; if(!p || !p.n) continue;
+      const e = EST(d,k);
+      const c = document.createElementNS(NS,'circle');
+      c.setAttribute('cx', p.x); c.setAttribute('cy', p.y);
+      c.setAttribute('r', radioMarca(p));
+      c.setAttribute('class','dv-marca dv-m-'+e + (prev && EST(prev,k)!==e ? ' dv-llega' : ''));
+      g.appendChild(c);
+    }
+    /* bajo los rótulos de lugar, para que los nombres sigan leyéndose */
+    const lbl = vp.querySelector('.placelbl');
+    const ancla = lbl ? lbl.parentNode : null;
+    if(ancla && ancla.parentNode===vp) vp.insertBefore(g, ancla); else vp.appendChild(g);
+  }
+  if(typeof render==='function'){
+    const _renderDv = render;
+    render = function(){ _renderDv(); pintarLugares(); };
+  }
+  /* la barra ocupa el pie de la pantalla: el mapa se encoge por encima de ella
+     en vez de quedar tapado. El SVG usa viewBox con «meet», así que se reencuadra solo. */
+  let obsAlto = null;
+  function medirBarra(){
+    const h = barra.hidden ? 0 : Math.ceil(barra.getBoundingClientRect().height);
+    document.body.style.setProperty('--dv-alto', h+'px');
+  }
+  function modoLimpio(on){
+    document.body.classList.toggle('dv-modo', on);
+    if(on){
+      medirBarra();
+      if(!obsAlto && 'ResizeObserver' in window){ obsAlto = new ResizeObserver(medirBarra); obsAlto.observe(barra); }
+    } else {
+      if(obsAlto){ obsAlto.disconnect(); obsAlto=null; }
+      document.body.style.removeProperty('--dv-alto');
+      const g = (typeof vp!=='undefined' && vp) ? vp.querySelector('.dv-lugares') : null; if(g) g.remove();
+    }
+    window.dispatchEvent(new Event('resize'));
   }
 
   /* ---------------- oleaje ----------------
@@ -172,7 +230,13 @@
     oleajeOn: {es:'Oleaje encendido', en:'Surf on'},
     guia:     {es:'Cómo funciona', en:'How it works'},
     guiaT:    {es:'Cómo funciona la deriva', en:'How the drift works'},
-    guiaOk:   {es:'Entendido, empezar', en:'Got it, start'}
+    guiaOk:   {es:'Entendido, empezar', en:'Got it, start'},
+    eDentro:  {es:'dentro', en:'inside'},
+    eMargen:  {es:'al margen', en:'margin'},
+    eDisputa: {es:'en disputa', en:'disputed'},
+    eFuera:   {es:'fuera', en:'outside'},
+    eNada:    {es:'calla', en:'silent'},
+    claveEst: {es:'Estados', en:'States'}
   };
   const t = k => loc(T[k]);
 
@@ -449,13 +513,19 @@
         `<button type="button" class="dv-btn dv-oleaje" data-acc="oleaje" aria-pressed="${OLA.on}" title="${t('oleajeOn')}">${t('oleaje')}</button>`+
         `<button type="button" class="dv-btn dv-guia-abrir" data-acc="guia">${t('guia')}</button>`+
       `</div>`+
-      `<div class="dv-narra">`+
-        `<span class="dv-titulo"><span class="dv-year">${d.anio}</span>${loc(d.apellido)} · ${d.autor}</span>`+
-        `<span class="dv-criterio">${(loc(d.criterio)||'').split('. ')[0]}.</span>`+
+      `<div class="dv-fila dv-fila-narra">`+
+        `<p class="dv-narra">`+
+          `<span class="dv-titulo"><span class="dv-year">${d.anio}</span>${loc(d.apellido)} · ${d.autor}</span> `+
+          `<span class="dv-criterio">${(loc(d.criterio)||'').split('. ')[0]}.</span>`+
+        `</p>`+
+        `<span class="dv-clave" role="list" aria-label="${t('claveEst')}">`+
+          ['dentro','margen','disputa','fuera','nada'].map(e=>
+            `<span role="listitem"><span class="dv-pt" data-e="${e}"></span>${t('e'+e[0].toUpperCase()+e.slice(1))}</span>`).join('')+
+        `</span>`+
       `</div>`+
       `<div class="dv-fila" style="align-items:flex-start">`+
-        `<div style="flex:1 1 420px"><b class="dv-rotulo">${t('cambios')}</b>`+
-          `<div class="dv-cinta" style="margin-top:.3rem">${cinta}</div></div>`+
+        `<div class="dv-cambios"><b class="dv-rotulo">${t('cambios')}</b>`+
+          `<div class="dv-cinta">${cinta}</div></div>`+
         (D.indice ? `<div style="flex:1 1 260px"><b class="dv-rotulo">${t('indice')}</b>`+
           `<div class="dv-indice" style="margin-top:.3rem">${lista}</div></div>` : ``)+
       `</div>`;
@@ -507,6 +577,7 @@
   }
   function abrir({ayuda=true}={}){
     D.abierta=true; barra.hidden=false; btn.setAttribute('aria-pressed','true'); btn.classList.add('activo');
+    modoLimpio(true);
     if(!barra.dataset.lista){ barra.dataset.lista='1'; }
     ir(D.i);
     /* la primera vez se explica sola: después, solo a petición */
@@ -515,6 +586,7 @@
   }
   function cerrar(){
     D.abierta=false; detener(); silenciarOleaje(); barra.hidden=true; guia.hidden=true; D.guia=false;
+    modoLimpio(false);
     btn.setAttribute('aria-pressed','false'); btn.classList.remove('activo');
     const api=API(); if(api) api.quitar();
     try{ history.replaceState(null,'',location.pathname+location.search); }catch(e){}

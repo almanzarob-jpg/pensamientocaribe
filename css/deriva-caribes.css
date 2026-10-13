@@ -31,8 +31,8 @@
   background:rgba(5,6,4,.94); backdrop-filter:blur(8px);
   border-top:1px solid var(--line);
   color:var(--cream); font-family:var(--ff-body);
-  padding:.6rem .9rem calc(.7rem + env(safe-area-inset-bottom, 0px));
-  display:grid; gap:.5rem; font-size:.86rem; max-height:40vh; overflow:auto;
+  padding:.5rem .9rem calc(.55rem + env(safe-area-inset-bottom, 0px));
+  display:grid; grid-template-columns:minmax(0,1fr); gap:.4rem; font-size:.86rem; max-height:40vh; overflow:auto;
 }
 .dv-barra[hidden]{ display:none; }
 
@@ -63,14 +63,23 @@ select.dv-btn{ background:var(--bg-deep); }
 .dv-anio{ position:absolute; top:0; transform:translateX(-50%); font-size:.68rem; color:var(--gray);
   font-family:var(--ff-mono); }
 
-/* ----- narración ----- */
-.dv-narra{ display:grid; gap:.15rem; flex:1 1 100%; }
-.dv-titulo{ font-family:var(--ff-display); font-size:1.05rem; }
+/* ----- narración: título y criterio en un solo renglón, la clave de estados al lado ----- */
+.dv-fila-narra{ align-items:baseline; gap:.4rem 1.2rem; }
+.dv-narra{ margin:0; flex:1 1 420px; min-width:0; line-height:1.4; }
+.dv-titulo{ font-family:var(--ff-display); font-size:1.05rem; margin-right:.35rem; }
+.dv-clave{ display:flex; gap:.25rem .8rem; flex-wrap:wrap; font-size:.74rem; color:var(--gray); }
+.dv-clave > span{ display:inline-flex; align-items:center; gap:.3rem; white-space:nowrap; }
 .dv-titulo .dv-year{ font-family:var(--ff-mono); font-size:.8rem; color:var(--gray); margin-right:.5rem; }
 .dv-criterio{ color:var(--gray); line-height:1.45; }
 
-/* ----- cinta de cambios ----- */
-.dv-cinta{ display:flex; gap:.35rem; flex-wrap:wrap; align-items:center; }
+/* ----- cinta de cambios: una sola fila que se desliza, no un muro de fichas ----- */
+.dv-cambios{ flex:1 1 420px; min-width:0; display:flex; align-items:center; gap:.6rem; }
+.dv-cambios > .dv-rotulo{ flex:none; }
+.dv-cinta{ display:flex; gap:.35rem; flex-wrap:nowrap; align-items:center; overflow-x:auto; min-width:0;
+  scrollbar-width:thin; padding-bottom:2px;
+  -webkit-mask-image:linear-gradient(90deg,#000 calc(100% - 2.5rem),transparent);
+          mask-image:linear-gradient(90deg,#000 calc(100% - 2.5rem),transparent); }
+.dv-cinta > *{ flex:none; }
 .dv-cinta .dv-nada{ color:var(--gray); font-style:italic; }
 .dv-chip{
   display:inline-flex; align-items:center; gap:.3rem; font-size:.76rem;
@@ -158,4 +167,63 @@ label.dv-rotulo{ position:static; }
 @media (max-width:780px){
   .dv-guia{ padding:.8rem; }
   .dv-guia-caja{ padding:1.1rem 1.1rem 1.2rem; max-height:88vh; }
+}
+
+
+/* =====================================================================
+   Lectura limpia (body.dv-modo)
+   Mientras la deriva está encendida el mapa muestra lugares, no obras. Lo que
+   no sirve para leer el paso se aquieta; nada se borra, y al cerrar la deriva
+   el atlas vuelve tal cual estaba.
+   ===================================================================== */
+
+/* el mapa se encoge por encima de la barra en lugar de quedar tapado */
+body.dv-modo main{ margin-bottom:min(var(--dv-alto,0px), 46vh); }
+
+/* las obras bajan a polvo: siguen ahí, se pueden pulsar, pero no compiten */
+body.dv-modo #stage .node.obra{ opacity:.13; transition:opacity var(--mov-medio,.25s) var(--curva-llegada,cubic-bezier(.16,1,.3,1)); }
+body.dv-modo #stage .node.obra:hover, body.dv-modo #stage .node.obra:focus-visible{ opacity:.9; }
+/* los hilos y la trama son el argumento del atlas, no el de la deriva */
+body.dv-modo #stage .hilos{ opacity:0; }
+body.dv-modo #stage .trama{ opacity:.2 !important; }
+/* la bruma queda como territorio, no como mancha */
+body.dv-modo #stage .qc-bruma{ opacity:.42; }
+body.dv-modo #stage .qc-bruma.qc-bruma-referida{ opacity:.26; }
+/* aspas y anillos de la capa repiten lo que ahora dice la marca de cada lugar */
+body.dv-modo #stage .qc-tacha,
+body.dv-modo #stage .qc-anillo.qc-margen,
+body.dv-modo #stage .qc-anillo.qc-disputa{ display:none; }
+/* rótulos: se nombra lo que la definición nombra; lo que calla, calla */
+body.dv-modo #stage .placelbl.qc-l-fuera{ opacity:.34; }
+body.dv-modo #stage .placelbl.qc-l-nada{ opacity:0; }
+
+/* una marca por lugar, con la gramática de la guía y de la pared */
+.dv-marca{ stroke-width:1.2; vector-effect:non-scaling-stroke; pointer-events:none;
+  transform-box:fill-box; transform-origin:center; }
+.dv-m-dentro { fill:var(--qc-dentro);  fill-opacity:.95; stroke:var(--bg-deep); stroke-opacity:.9; }
+.dv-m-margen { fill:var(--qc-margen);  fill-opacity:.9;  stroke:var(--bg-deep); stroke-opacity:.9; }
+.dv-m-disputa{ fill:var(--qc-disputa); fill-opacity:.95; stroke:var(--bg-deep); stroke-opacity:.9; }
+.dv-m-fuera  { fill:var(--bg-deep); fill-opacity:.6; stroke:var(--qc-fuera); stroke-width:1.4; }
+.dv-m-nada   { fill:none; stroke:var(--gray); stroke-opacity:.45; stroke-dasharray:1.5 2.5; }
+/* el lugar que acaba de cambiar llega con un pulso breve; el anillo de la estela marca de dónde viene */
+.dv-llega{ animation:dv-llega var(--mov-lento,.72s) var(--curva-llegada,cubic-bezier(.16,1,.3,1)); }
+@keyframes dv-llega{ from{ transform:scale(.35); } to{ transform:scale(1); } }
+@media (prefers-reduced-motion: reduce){ .dv-llega{ animation:none; } }
+
+/* la columna de fenómenos y el agua se aparta sin desaparecer */
+body.dv-modo #clave{ opacity:.3; transition:opacity var(--mov-medio,.25s) var(--curva-llegada,cubic-bezier(.16,1,.3,1)); }
+body.dv-modo #clave:hover, body.dv-modo #clave:focus-within{ opacity:1; }
+/* la barra y la leyenda de «¿Qué Caribe?» quedaban escondidas bajo la de la deriva:
+   la deriva ya lleva sus propios mandos y su clave */
+body.dv-modo #qcBarra, body.dv-modo #qcLeyenda{ display:none !important; }
+
+@media (max-width:780px){
+  .dv-clave{ display:none; }
+  .dv-narra{ display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+  .dv-cambios{ flex-wrap:wrap; gap:.3rem; }
+  /* en el teléfono los mandos van en una sola fila que se desliza: apilados ocupaban medio mapa */
+  .dv-barra > .dv-fila:first-child{ flex-wrap:nowrap; overflow-x:auto; scrollbar-width:none; }
+  .dv-barra > .dv-fila:first-child::-webkit-scrollbar{ display:none; }
+  .dv-barra > .dv-fila:first-child > *{ flex-shrink:0; }
+  .dv-barra > .dv-fila:first-child .dv-linea{ flex:0 0 230px; }
 }
