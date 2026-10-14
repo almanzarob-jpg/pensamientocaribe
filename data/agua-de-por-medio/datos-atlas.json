@@ -3,9 +3,9 @@
     "titulo": "Con el agua de por medio",
     "subtitulo": "Atlas para una antropología archipiélica",
     "responsable": "Grupo de Investigación Pensamiento Caribe",
-    "version": "1.33.0",
+    "version": "1.34.0",
     "fecha": "2026-10-14",
-    "nota_version": "Lote S29: entran dos obras como excepciones declaradas de registro. «What the Sands Remember», de Vanessa Agard-Jones, piensa la memoria queer y la catástrofe de la Pelée desde la arena de dos playas de Martinica. El entierro de Cortijo, de Edgardo Rodríguez Juliá, es la crónica del duelo popular por Rafael Cortijo en San Juan y la fuente primaria que analiza Quintero Rivera. 12 relaciones nuevas, todas con cita verificada.",
+    "nota_version": "Lote S30: entran cuatro obras que esperaban decisión desde el 3 de octubre. Contrapunteos diaspóricos, de Agustín Laó-Montes, cartografía la política de Nuestra Afroamérica desde la Revolución haitiana; «Afro-Caribbean Philosophy», de Clevis Headley, hace el balance del campo; Guerrero de silicio reúne lecturas mexicanas de Fanon; y Afro-Caribbean Religions, de Nathaniel Samuel Murrell, da el mapa de las espiritualidades de raíz africana. 47 relaciones nuevas, todas con cita verificada.",
     "registro_interno": {
       "proposito": "Protocolo revisado de resonancia y disonancia (22-09-2026). Las categorías públicas del atlas siguen siendo resonancia y disonancia; este registro es interno y orienta la revisión editorial. El campo apoyo no crea categorías públicas ni cambia la interfaz.",
       "apoyo": {
@@ -18857,6 +18857,294 @@
         "responsable": "Preparación asistida del lote S29; clasificación pendiente de adjudicación académica",
         "fecha": "2026-10-14",
         "fundamento": "C9 por el duelo popular como memoria colectiva; C2 por la bomba, la plena y la mezcla de tradiciones afrocaribeñas. Registro: crónica literaria, admitida como excepción declarada el 14 de octubre de 2026 (precedente de la ficción de Harris): es la fuente primaria que analizan las dos obras de Quintero Rivera del corpus."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S30-2026-10-14: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S30-2026-10-14",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en Puerto Rico, de donde es el autor y desde donde lee la región."
+      },
+      "id": "laomontescontrapunteos",
+      "t": "Contrapunteos diaspóricos. Cartografías políticas de Nuestra Afroamérica",
+      "a": "Agustín Laó-Montes",
+      "y": "2020",
+      "f": [
+        "colonialidad",
+        "soberanias"
+      ],
+      "l": "puertorico",
+      "tr": "hispano (Puerto Rico/Colombia)",
+      "ap": "El sociólogo puertorriqueño Agustín Laó-Montes reúne veinte años de trabajo sobre la política afrodescendiente de las Américas, a la que llama Nuestra Afroamérica. Cruza a Césaire, Fanon, Robinson y James con los movimientos negros de Colombia, Brasil y el Caribe hispano. El libro relee las independencias desde la Revolución haitiana, piensa la diáspora como polirritmo («malungaje», «apalencamiento»), cartografía el campo político afrodescendiente y los feminismos negros, y termina en una justicia reparativa en clave de africanía. Es la obra más conectada que ha entrado en meses: cita veintiocho títulos del corpus.",
+      "ed": "Universidad Externado de Colombia",
+      "edicion_consultada": "Universidad Externado de Colombia, Bogotá, 2020. PDF con capa de texto (los números de la página legal están dañados en el archivo).",
+      "isbn": "",
+      "lenguas_publicacion": [
+        "español"
+      ],
+      "operaciones": [
+        "teorizar",
+        "cartografiar"
+      ],
+      "orillas": [
+        {
+          "lugar": "puertorico",
+          "funcion": "lugar de producción intelectual"
+        },
+        {
+          "lugar": "haiti",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "cartagena",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Afroamérica hemisférica",
+          "funcion": "territorio comparado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "rutas_diasporas_territorios_acuosos"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión del índice, la introducción, los capítulos 1, 4 y 9 y la bibliografía.",
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14",
+        "fundamento": "C7 por la política afrodescendiente y la descolonización; C5 por la diáspora como polirritmo. Registro: ensayo de sociología política. El Pacífico colombiano aparece en 33 de 565 páginas; el centro de gravedad es la Afroamérica con eje caribeño, decisión de Rob del 14 de octubre de 2026."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S30-2026-10-14: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S30-2026-10-14",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en Jamaica, donde está la escuela de Mona que el capítulo discute (Wynter, Bogues, Henry)."
+      },
+      "id": "headleyafrocaribbean",
+      "t": "Afro-Caribbean Philosophy",
+      "a": "Clevis Headley",
+      "y": "2011",
+      "f": [
+        "creolizacion",
+        "colonialidad"
+      ],
+      "l": "jamaica",
+      "tr": "comparado (filosofía afrocaribe)",
+      "ap": "Un balance de la filosofía afrocaribeña escrito para el Oxford Handbook of World Philosophy. Headley parte de Naipaul y de su «nothing was created in the West Indies» para negarlo: ser filósofo afrocaribeño no depende de la raza sino de pertenecer a una tradición. Despeja malentendidos (no es discurso de víctima ni manifiesto identitario), discute los intentos de fijarle un canon, desde el Caliban's Reason de Paget Henry, y la presenta como una ética de la responsabilidad ante el otro. Es una puerta de entrada al campo mismo de Pensamiento Caribe.",
+      "ed": "Oxford University Press",
+      "edicion_consultada": "En William Edelglass y Jay L. Garfield (eds.), The Oxford Handbook of World Philosophy, Oxford University Press, Nueva York, 2011; DOI 10.1093/oxfordhb/9780195328998.003.0042. PDF de Oxford Handbooks Online.",
+      "isbn": "",
+      "lenguas_publicacion": [
+        "inglés"
+      ],
+      "operaciones": [
+        "teorizar",
+        "confrontar una categoría"
+      ],
+      "orillas": [
+        {
+          "lugar": "jamaica",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Caribe anglófono y francófono",
+          "funcion": "territorio comparado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "creolizaciones_traducciones_opacidades",
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Lectura completa del capítulo.",
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14",
+        "fundamento": "C2 por la filosofía afrocaribeña como tradición creolizada; C7 por su respuesta a la negación colonial. Registro: capítulo de manual, admitido el 14 de octubre de 2026 como excepción a la regla de artículos, con el argumento de Thomas: es el balance del campo."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S30-2026-10-14: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S30-2026-10-14",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en Martinica, la isla de Fanon."
+      },
+      "id": "vargassilicio",
+      "t": "Guerrero de silicio. Ecos a la obra de Frantz Fanon",
+      "a": "Margarita Aurora Vargas Canales (coord.)",
+      "y": "2018",
+      "f": [
+        "colonialidad",
+        "soberanias"
+      ],
+      "l": "martinica",
+      "tr": "hispano (México)",
+      "ap": "Seis lecturas de Fanon desde la UNAM, nacidas de un proyecto sobre el pensamiento anticolonial en el Caribe francófono. Margarita Vargas Canales pregunta quién es Fanon en Martinica; César Cruz Álvarez estudia la cuestión nacional; Perla Valero lo pone a dialogar con Marx y Engels sobre el racismo colonial; David Gómez Arredondo relee Piel negra, máscaras blancas; Jaime Ortega Reyna sigue su recepción en América Latina y el Caribe. Le da al atlas la lectura de Fanon en español, que casi no tenía.",
+      "ed": "UNAM, Centro de Investigaciones sobre América Latina y el Caribe",
+      "edicion_consultada": "UNAM-CIALC, Ciudad de México, 2018 (Colección Historia de América Latina y el Caribe, 23); ISBN 978-607-30-0835-8. PDF con capa de texto.",
+      "isbn": "9786073008358",
+      "lenguas_publicacion": [
+        "español"
+      ],
+      "operaciones": [
+        "confrontar una categoría",
+        "teorizar"
+      ],
+      "orillas": [
+        {
+          "lugar": "martinica",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "México",
+          "funcion": "lugar de producción intelectual"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "creolizaciones_traducciones_opacidades"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión del índice, el prólogo y los capítulos sobre Martinica y sobre Piel negra, máscaras blancas.",
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14",
+        "fundamento": "C7 por la cuestión nacional y la descolonización; C2 por la recepción y traducción de Fanon en América Latina. Registro: volumen colectivo de crítica que lee una obra del corpus (regla del 1 de octubre de 2026)."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S30-2026-10-14: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S30-2026-10-14",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en Jamaica, donde se concentra la parte más extensa del libro."
+      },
+      "id": "murrellreligions",
+      "t": "Afro-Caribbean Religions: An Introduction to Their Historical, Cultural, and Sacred Traditions",
+      "a": "Nathaniel Samuel Murrell",
+      "y": "2010",
+      "f": [
+        "memoria",
+        "creolizacion"
+      ],
+      "l": "jamaica",
+      "tr": "anglófono (EE.UU./Caribe)",
+      "ap": "Un recorrido completo por las religiones de raíz africana del Caribe: las raíces yoruba, fon-ewe, ashanti y kongo; el vodou haitiano; la santería y el palo monte cubanos; el candomblé y la umbanda; el orisha de Trinidad; el obeah, el myal, la kumina, el pocomania, el Zion y el Convince jamaicanos; y el movimiento rastafari. Murrell trabaja con fuentes históricas y con su propia etnografía en Cuba y Jamaica. Es un manual académico, pero cita once títulos del corpus y le da a la red de espiritualidades un mapa de conjunto.",
+      "ed": "Temple University Press",
+      "edicion_consultada": "Temple University Press, Filadelfia, 2010; ISBN 978-1-4399-0040-6 (tela). PDF con capa de texto.",
+      "isbn": "9781439900406",
+      "lenguas_publicacion": [
+        "inglés"
+      ],
+      "operaciones": [
+        "documentar una práctica",
+        "comparar orillas"
+      ],
+      "orillas": [
+        {
+          "lugar": "jamaica",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "haiti",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "cuba",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "trinidad",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Brasil",
+          "funcion": "territorio comparado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "memorias_espiritualidades_archivos_vivos",
+          "creolizaciones_traducciones_opacidades"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión del índice, la introducción, los capítulos sobre vodou, santería y religiones jamaicanas, y las notas.",
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14",
+        "fundamento": "C9 por las espiritualidades de raíz africana; C2 por la creolización religiosa. Registro: manual académico, admitido por decisión de Rob del 14 de octubre de 2026."
       }
     }
   ],
@@ -39466,6 +39754,899 @@
       "limite": "La mención está en el aparato editorial (nota de colaboradores, solapa, índice o bibliografía del autor), no en el argumento.",
       "revision_interna": {
         "responsable": "Preparación asistida del lote S29; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "laomontescontrapunteos",
+      "b": "cesaire",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Agustín Laó-Montes, Contrapunteos diaspóricos. Cartografías políticas de Nuestra Afroamérica, 2020 (PDF, hoja 403): «…Laó-Montes  territorio africano libre del poder imperial, en un acto magno de solidaridad contra la violencia fascista. Como bien planteó Aimé Césaire (1952) en su Discurso sobre el colonialismo, el fascismo representó la expresión de la violencia colonial en Europa, en el mismo corazón de la blanquitud. En esa misma era emergió el marxismo negro con la…».",
+      "id_lote": "S30-R01",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Laó-Montes retoma la tesis de Césaire: el fascismo como violencia colonial vuelta contra Europa.",
+      "limite": "Ninguno.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "laomontescontrapunteos",
+      "b": "muneraelfracaso",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Agustín Laó-Montes, Contrapunteos diaspóricos. Cartografías políticas de Nuestra Afroamérica, 2020 (PDF, hoja 428): «…Padilla y Pedro Romero. Luego del desenlace de ese momento pionero, en el entonces fallido proceso de independencia que el historiador Alfonso Múnera (2000) denominó “el fracaso de la nación”, el locus principal de poder giró hacia los Andes, donde los intelectuales-estadistas de las élites criollas blancas fundaron un estado racial nacional sostenido por…».",
+      "id_lote": "S30-R02",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Laó-Montes toma de Múnera la idea del fracaso de la nación tras la Cartagena de Padilla y Pedro Romero.",
+      "limite": "Ninguno.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "laomontescontrapunteos",
+      "b": "roberts",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Agustín Laó-Montes, Contrapunteos diaspóricos. Cartografías políticas de Nuestra Afroamérica, 2020 (PDF, hoja 39): «…y proyectos de liberación, emergentes desde casa adentro de Nuestra Afroamérica, que constituyen desafíos y alternativas a la colonialidad del poder/saber. En su libro Freedom as Marronage (2015), Neil Roberts teoriza el cimarronaje como proyecto político y epistémico fundamentado en las experiencias y saberes afroamericanos, como prácticas de…».",
+      "id_lote": "S30-R03",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "El cimarronaje como proyecto político y epistémico, según Roberts.",
+      "limite": "Ninguno.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "laomontescontrapunteos",
+      "b": "robinsonmarxismo",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Agustín Laó-Montes, Contrapunteos diaspóricos. Cartografías políticas de Nuestra Afroamérica, 2020 (PDF, hoja 56): «…Industrial. Como resultado, más africanos fueron destinados a Brasil y Cuba, en vez de ser desplazados a  El concepto de capitalismo racial fue acuñado por Cedric Robinson (2000) en su libro sobre el marxismo negro como categoría clave para analizar la consustansialidad entre capitalismo y racismo. Aquí lo desarrollamos sobre todo en los…».",
+      "id_lote": "S30-R04",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Robinson y el concepto de capitalismo racial, eje del capítulo 1.",
+      "limite": "Ninguno.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "laomontescontrapunteos",
+      "b": "rodney",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Agustín Laó-Montes, Contrapunteos diaspóricos. Cartografías políticas de Nuestra Afroamérica, 2020 (PDF, hoja 496): «…Nuestra Afroamérica La máxima que titula el libro del guyanés Walter Rodney –ciudadano destacado de África y de la diáspora africana–, Cómo Europa subdesarrolló África (How Europe Underdeveloped Africa, 1988), hoy se traduce en una ecuación de hambrunas, pandemia de sida y guerras intestinas, que son en gran medida producto tanto del legado colonial occidental como de…».",
+      "id_lote": "S30-R05",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Laó-Montes actualiza la máxima de Rodney para el presente africano y diaspórico.",
+      "limite": "Ninguno.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "laomontescontrapunteos",
+      "b": "andersonblackindigenous",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Agustín Laó-Montes, Contrapunteos diaspóricos. Cartografías políticas de Nuestra Afroamérica, 2020 (PDF, hoja 515): «…en crisis. Barcelona: El Viejo Topo. Anderson, Benedict (2016). Imagined Communities. Reflections on the Origin and Spread of Nationalism. Verso. Anderson, Mark (2009). Black and Indigenous: Garifuna Activism and Consumer Culture in Honduras. University of Minnesofa Press. Anderson, Perry (1983). In the Tracks of Historical Materialism. Verso. Andrews,…».",
+      "id_lote": "S30-R06",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Anderson en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "laomontescontrapunteos",
+      "b": "araujo",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Agustín Laó-Montes, Contrapunteos diaspóricos. Cartografías políticas de Nuestra Afroamérica, 2020 (PDF, hoja 516): « Contrapunteos diaspóricos. Cartografías políticas de Nuestra Afroamérica Araújo, Ana Lucía (2017). Reparations for Slavery and the Slave Trade: A Transnational and Comparative History. Bloombury Academic. Arboleda, Santiago (2002). Paisanajes, colonias y movilización social afrocolombiana en el suroccidente…».",
+      "id_lote": "S30-R07",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Araujo en la bibliografía; la justicia reparativa es el tema del capítulo 9.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "laomontescontrapunteos",
+      "b": "boguesheretics",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Agustín Laó-Montes, Contrapunteos diaspóricos. Cartografías políticas de Nuestra Afroamérica, 2020 (PDF, hoja 519): «Agustín Laó-Montes  Bogues, Anthony (2003). Black Heretics, Black Prophets. Radical Political Intellectuals (Africana Thought). Nueva York: Routledge. Bolívar Aróstegui, Natalia (1995). Los orishas en Cuba. Caracas: Editorial Panapo.…».",
+      "id_lote": "S30-R08",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Bogues en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "laomontescontrapunteos",
+      "b": "castrogomezhybris",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Agustín Laó-Montes, Contrapunteos diaspóricos. Cartografías políticas de Nuestra Afroamérica, 2020 (PDF, hoja 522): «…La invención del Caribe. Editorial de la Universidad de Puerto Rico. Castañeda, Jorge (2007). Lo que queda de la izquierda. Penguin. Castro-Gómez, Santiago (2010). La hybris del punto cero: ciencia, raza e ilustración en la Nueva Granada (1750-1816) (2a ed.). Bogotá: Pontificia Univesidad Javeriana. Castro-Gómez, Santiago y Mendieta, Eduardo (eds.)…».",
+      "id_lote": "S30-R09",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Castro-Gómez en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "laomontescontrapunteos",
+      "b": "cesairetoussaint",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Agustín Laó-Montes, Contrapunteos diaspóricos. Cartografías políticas de Nuestra Afroamérica, 2020 (PDF, hoja 522): «…Laberinto Ediciones. Césaire, Aimé (1952/2000). Discours sur le colonialisme. Suivi de Discours sur la negritude. París: Présence Africaine. Césaire, Aimé (1960). Toussaint Louverture. La Révolution française et le problème colonial. Presence. Césaire, Aimé (1969). Une Tempête. Collection Théâtre. Césaire, Aimé (2000). Cahier d’un retour au pays natal. París:…».",
+      "id_lote": "S30-R10",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Césaire en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "laomontescontrapunteos",
+      "b": "curielsentencia",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Agustín Laó-Montes, Contrapunteos diaspóricos. Cartografías políticas de Nuestra Afroamérica, 2020 (PDF, hoja 524): «…y el Caribe. Ponenecia presentada en el Primer Coloquio Latinoamericano sobre Praxis y Pensamiento Feminista, Buenos Aires. Curiel, Ochy (2019). Un golpe de Estado. La Sentencia 168: continuidades y discontinuidades del racismo en la República Dominicana (tesis doctoral, antropología). Universidad Nacional de Colombia.».",
+      "id_lote": "S30-R11",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Curiel en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "laomontescontrapunteos",
+      "b": "duboisavengers",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Agustín Laó-Montes, Contrapunteos diaspóricos. Cartografías políticas de Nuestra Afroamérica, 2020 (PDF, hoja 527): «…Start Publishing lcc. Doyle, Laura (1994). Bordering on the Body: The Racial Matrix of Modern Fiction and Culture. Oxford University Press. Dubois, Laurent (2005). Avengers of the New World: The Story of the Haitian Revolution. Cambridge: Harvard University Press. Du Bois, W. E. B. (1903/1989). The Souls of Black Folks. Penguin Books. Du Bois, W. E. B.…».",
+      "id_lote": "S30-R12",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Dubois en la bibliografía; el capítulo 4 relee las independencias desde la Revolución haitiana.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "laomontescontrapunteos",
+      "b": "edwardsdiaspora",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Agustín Laó-Montes, Contrapunteos diaspóricos. Cartografías políticas de Nuestra Afroamérica, 2020 (PDF, hoja 528): «…La Paz: Vicepresidencia del Estado Plurinacional de Bolivia. Edwards, Brent Hayes (2001). The Uses of Diaspora. Social Text, 19(1): 45-73. Edwards, Brent Hayes (2003). The Practice of Diaspora: Literature, Translation, and the Rise of Black Internationalism. Cambridge: Harvard University Press. Eliav-Feldon, Miriam (2013). The Origins of Racism in the West.…».",
+      "id_lote": "S30-R13",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Edwards en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "laomontescontrapunteos",
+      "b": "fanon",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Agustín Laó-Montes, Contrapunteos diaspóricos. Cartografías políticas de Nuestra Afroamérica, 2020 (PDF, hoja 530): «…Cartografías políticas de Nuestra Afroamérica Fals Borda, Orlando (2014). Una sociología sentipensante para América Latina. Siglo xxi. Fanon, Frantz (1952/2009). Piel negra, máscaras blancas. Madrid: Akal. Fanon, Frantz. (1961/2011). Los condenados de la Tierra. La Habana: Casa de las Américas. Farfán-Santos, Elizabeth (2016). Black Bodies, Black Rights:…».",
+      "id_lote": "S30-R14",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Fanon en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "laomontescontrapunteos",
+      "b": "fischer",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Agustín Laó-Montes, Contrapunteos diaspóricos. Cartografías políticas de Nuestra Afroamérica, 2020 (PDF, hoja 531): «…Press. Firmin, Antenor (1887/2016). De l’égalité des races humaines: Anthropologie positive. Create Space Independent Publishing Platform. Fischer, Sibylle (2004). Modernity Disavowed. Haiti and the Cultures of Slavery in the Age of Revolution. Durham, nc: Duke University Press. Flores, Juan; Quintero Rivera, Ángel; González, José Luis y Campos,…».",
+      "id_lote": "S30-R15",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Fischer en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "laomontescontrapunteos",
+      "b": "godreauscripts",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Agustín Laó-Montes, Contrapunteos diaspóricos. Cartografías políticas de Nuestra Afroamérica, 2020 (PDF, hoja 534): «…El discurso antillano. La Habana: Casa de las Américas. Go, Julian (2016). Postcolonial Thoguht and Social Theory. Oxford University Press. Godreau, Isar (2015). Scripts of Blackness. Race, Cultural Nationalism, and U.S. Colonialism in Puerto Rico. University of Illinois Press. Goldberg, David Theo (2001). The Racial State. Wiley-Blackwell.».",
+      "id_lote": "S30-R16",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Godreau en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "laomontescontrapunteos",
+      "b": "james_bannerethiopia",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Agustín Laó-Montes, Contrapunteos diaspóricos. Cartografías políticas de Nuestra Afroamérica, 2020 (PDF, hoja 540): «…algunas prácticas de la brujería. Editorial Jose Marti. James Figarola, Joel (2018). El Caribe entre el ser y el definir. Editorial Gedisa. James, Winston (1999). Holding Aloft the Banner of Ethiopia: Caribbean Radicalism in Early Twentieth America. Nueva York: Verso. Jay, Martin (1996). The Dialectical Imagination: A History of the Frankfurt School and the…».",
+      "id_lote": "S30-R17",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Winston James en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "laomontescontrapunteos",
+      "b": "jamespanafrican",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Agustín Laó-Montes, Contrapunteos diaspóricos. Cartografías políticas de Nuestra Afroamérica, 2020 (PDF, hoja 540): « Contrapunteos diaspóricos. Cartografías políticas de Nuestra Afroamérica James, C. L. R. (1938/2012). A History of Pan-African Revolt. The Charles H. Kerr Library. James, C. L. R. (2006). Facing Reality. The New Society: Where to look for it & How to bring it closer. Chicago, il: Charles H. Kerr…».",
+      "id_lote": "S30-R18",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "C. L. R. James en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "laomontescontrapunteos",
+      "b": "loweintimacies",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Agustín Laó-Montes, Contrapunteos diaspóricos. Cartografías políticas de Nuestra Afroamérica, 2020 (PDF, hoja 544): «…and Speeches. Crossing Press. Loverman, Mara (2014). National Colors. Racial Classifications and the State in Latin America. Oxford University Press. Lowe, Lisa (2015). The Intimacies of Four Continents. Duke University Press. Lozano, Betty Ruth (2013). Orden racial y teoría crítica contemporánea. Un acercamiento teórico-crítico al proceso de lucha contra el racismo en…».",
+      "id_lote": "S30-R19",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Lowe en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "laomontescontrapunteos",
+      "b": "manoalzada",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Agustín Laó-Montes, Contrapunteos diaspóricos. Cartografías políticas de Nuestra Afroamérica, 2020 (PDF, hoja 521): «Agustín Laó-Montes  Cabrera, Lydia (1980). Yemayá y Ochún. Miami: Ediciones Universal. Caicedo Ortiz, José Antonio (2013). A mano alzada. Memoria escrita de la diáspora intelectual afrocolombiana. Editorial Sentipensares. Caldwell, Kia Lilly (2007). Negras in Brazil: Re-envisioning Black Women,…».",
+      "id_lote": "S30-R20",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Caicedo en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "laomontescontrapunteos",
+      "b": "mintz",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Agustín Laó-Montes, Contrapunteos diaspóricos. Cartografías políticas de Nuestra Afroamérica, 2020 (PDF, hoja 548): «…Americans Today. Londres: Minority Rights Publications. Mintz, Sydney (1975). Slavery, Colonialism, and Racism: Essays. W.W. Norton & Company. Mintz, Sidney (2007). Caribbean Transformations. New Jersey: Aldine Transaction. Mintz, Sidney y Price, Richard (2012). Origen de la cultura africano americana, una perspectiva antropológica, uia. Mishra, Vijay…».",
+      "id_lote": "S30-R21",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Mintz en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "laomontescontrapunteos",
+      "b": "morenofraginals",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Agustín Laó-Montes, Contrapunteos diaspóricos. Cartografías políticas de Nuestra Afroamérica, 2020 (PDF, hoja 549): «…Universidad Nacional Autonoma de México. Morejón, Nancy (2002). Cuerda veloz: antología poética, 1962-1992. La Habana: Letras Cubanas. Moreno Fraginals, Manuel (2015). El ingenio (3a ed.). Editorial de Ciencias Sociales. Moreno, Francia Jenny (2014). Mujer afroecuatoriana como sujeto político: estrategias, resistencias o re-existencias. Editorial…».",
+      "id_lote": "S30-R22",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Moreno Fraginals en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "laomontescontrapunteos",
+      "b": "pardomosquerahoffmann",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Agustín Laó-Montes, Contrapunteos diaspóricos. Cartografías políticas de Nuestra Afroamérica, 2020 (PDF, hoja 516): «…Santiago (2002). Paisanajes, colonias y movilización social afrocolombiana en el suroccidente colombiano. En Claudia Mosquera, Mauricio Pardo y Odile Hoffmann (eds.), Afrodescendientes en las Américas: trayectorias sociales e identitarias (pp. 399-420). Bogotá: Universidad Nacional de Colombia. Arboleda, Santiago (2011). Le han florecido estrellas al cielo.…».",
+      "id_lote": "S30-R23",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Capítulo de Arboleda en el volumen de Mosquera, Pardo y Hoffmann.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "laomontescontrapunteos",
+      "b": "price",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Agustín Laó-Montes, Contrapunteos diaspóricos. Cartografías políticas de Nuestra Afroamérica, 2020 (PDF, hoja 553): «…Myth of Racial Purity. Boston: Beacon Press. Pratt, Mary Louise (1992) Imperial Eyes: Travel Writing and Transculturation. Nueva York: Routledge. Price, Richard (1996). Maroon Societies. Rebel Slave Communities in America. John Hopkins University Press. Priestley, George y Barrow, Alberto (2008). The Black Movement in Panamá: A Historical and Political…».",
+      "id_lote": "S30-R24",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Price en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "laomontescontrapunteos",
+      "b": "quintero",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Agustín Laó-Montes, Contrapunteos diaspóricos. Cartografías políticas de Nuestra Afroamérica, 2020 (PDF, hoja 554): « Contrapunteos diaspóricos. Cartografías políticas de Nuestra Afroamérica Quintero Rivera, Ángel (2014). Cuerpo y cultura: las músicas “mulatas” y la subversión del baile. Alemania: Editorial Veurbert. Quintero Rivera, Ángel (2018). La cimarronería como herencia y utopía. En Anayra Santory…».",
+      "id_lote": "S30-R25",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Quintero Rivera en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "laomontescontrapunteos",
+      "b": "sanmigueltinoel",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Agustín Laó-Montes, Contrapunteos diaspóricos. Cartografías políticas de Nuestra Afroamérica, 2020 (PDF, hoja 555): «…Nueva York: Rowman & Littlefield. Sandoval, Chela (2000). Methodology of the Oppressed. Minneapolis: University of Minnesota Press. San Miguel, Pedro Luis (2004). Los desvaríos de Ti Noel: ensayos sobre la producción del saber en el Caribe. Ediciones Vértigo.».",
+      "id_lote": "S30-R26",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "San Miguel en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "laomontescontrapunteos",
+      "b": "torressaillanthistory",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Agustín Laó-Montes, Contrapunteos diaspóricos. Cartografías políticas de Nuestra Afroamérica, 2020 (PDF, hoja 559): «…Labor, Capital, and the WorldEconomy. Rowman & Littlefield. Tomich, Dale (ed.) (2016). New Frontiers of Slavery. Albany, ny: suny Press. Torres-Saillant, Silvio (2006). An Intellectual History of the Caribbean. Nueva York: Palgrave McMillan. Torres-Saillant, Silvio y Jiménez, Blas (2004). Desde la orilla: hacia una nacionalidad sin desalojos. Santo Domingo: Editorial…».",
+      "id_lote": "S30-R27",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Torres-Saillant en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "laomontescontrapunteos",
+      "b": "valdesschomburg",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Agustín Laó-Montes, Contrapunteos diaspóricos. Cartografías políticas de Nuestra Afroamérica, 2020 (PDF, hoja 560): «…Massachusettss, Amherst. Valdés Gutiérrez, Gilberto (2010). Posneoliberalismo y movimientos antisistémicos. La Habana: Letras Cubanas. Valdés Valdés, Vanessa K. (2018). Diasporic Blackness: The Life and Times of Arturo Alfonso Schomburg. State University of New York Press. Van Dijk, Teun (2010). Discurso y poder. Editorial Gedisa. Vastey, Jean Louis y…».",
+      "id_lote": "S30-R28",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Valdés en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "figueroaantirracismo",
+      "b": "laomontescontrapunteos",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. José Antonio Figueroa Pérez, Yulexis Almeida Junco y Jochen Kemner (comps.), (Anti-)racismo y republicanismo negro en Cuba, 2023 (PDF, hoja 244): «…feminista y antirracista cubano Jabardo, Mercedes et al. (2012). Feminismos negros. Una Antología. Madrid: Traficantes de Sueños. Laó-Montes, Agustín (2020). Contrapunteos Diaspóricos. Cartografías políticas de Nuestra Afroamérica. Bogotá: Universidad Externado de Colombia. Resumen del I Congreso femenino de Cuba (1923). La Habana: Biblioteca…».",
+      "id_lote": "S30-R29",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Figueroa et al. en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "espinosahabitarmultiespecie",
+      "b": "laomontescontrapunteos",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Sebastián Isidro Espinosa Martínez, Habitar multiespecie: una etnografía de cuerpos, casas y parques en algunos pueblos del Caribe colombiano, 2026 (PDF, hoja 165): «…Salon. Duke Universitty Press. Kirksey, E. y Helmreich, S. (2010). The Emergence of Multispecies Ethnography. Cultural Anthropology 25, 545-576. Laó-Montes, A. (2020). Contrapunteos diaspóricos: cartografías políticas de nuestra afroamérica. Universidad Externado de Colombia. Latour, B. (2007). Nunca fuimos modernos. Siglo XXI Editores. Law, J. (2004). After…».",
+      "id_lote": "S30-R30",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Espinosa en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "headleyafrocaribbean",
+      "b": "henrycaliban",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Clevis Headley, Afro-Caribbean Philosophy, 2011 (PDF, hoja 13): «…briefly review the most recent attempts to impose a canonical structure on the diverse texts and thinkers within Afro-Caribbean philosophy. Paget Henry titles his text Caliban's Reason: Introducing Afro-Caribbean Philosophy. This act of naming is significant for, in referring to the character Caliban in the Shakespearean play The Tempest, a play about…».",
+      "id_lote": "S30-R31",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Headley discute el título de Henry como acto de nombrar y canonizar la filosofía afrocaribeña.",
+      "limite": "Ninguno.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "headleyafrocaribbean",
+      "b": "boguesheretics",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Clevis Headley, Afro-Caribbean Philosophy, 2011 (PDF, hoja 20): «…Durham, NC: Duke University Press. BOGUES, ANTHONY. (1997) Caliban's Freedom: The Early Political Thought of C. L. R. James. London: Pluto Press. ——— . (2003). Black Heretics, Black Prophets: Radical Public Intellectuals. New York: Routledge. Page 20 of 23 PRINTED FROM OXFORD HANDBOOKS ONLINE (www.oxfordhandbooks.com). © Oxford University Press, 2018. All…».",
+      "id_lote": "S30-R32",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Bogues en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "headleyafrocaribbean",
+      "b": "taylornarrative",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Clevis Headley, Afro-Caribbean Philosophy, 2011 (PDF, hoja 22): «…University Press. STOCK, BRIAN. (1990). Listening For the Text: On the Uses of the Past. Philadelphia, PA: University of Pennsylvania Press. TAYLOR, PATRICK. (1989). The Narrative of Liberation: Perspectives on Afro-Caribbean Literature, Popular Culture and Politics. Ithaca, NY: Cornell University Press. Page 22 of 23 PRINTED FROM OXFORD HANDBOOKS ONLINE…».",
+      "id_lote": "S30-R33",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Taylor en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "headleyafrocaribbean",
+      "b": "headleyreparaciones",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Continuidad de autor comprobada en las dos fichas: Clevis Headley, A Philosophical Investigation into the Possibility/Impossibility of Reparations for Caribbean Slavery: Assessing the Legal Challenges (2026) y Afro-Caribbean Philosophy (2011), ambas catalogadas en el corpus.",
+      "id_lote": "S30-R34",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Continuidad de autor: los dos textos de Headley tienen ficha propia.",
+      "limite": "Vínculo por autoría; el capítulo de 2011 no cita el texto sobre reparaciones.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "vargassilicio",
+      "b": "fanon",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Margarita Aurora Vargas Canales (coord.), Guerrero de silicio. Ecos a la obra de Frantz Fanon, 2018 (PDF, hoja 11): «Prólogo 11 La primera de las obras publicadas de Frantz Fanon, Piel negra, máscaras blancas (1952), marcó un hito no solamente en el mundo académico europeo de la posguerra, donde participaron activamente filósofos franceses como Jean-Paul Sartre y Francis Jeanson,…».",
+      "id_lote": "S30-R35",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "El volumen entero es una lectura de Fanon; el prólogo parte de Piel negra, máscaras blancas.",
+      "limite": "Ninguno.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "murrellreligions",
+      "b": "mamalola",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Nathaniel Samuel Murrell, Afro-Caribbean Religions: An Introduction to Their Historical, Cultural, and Sacred Traditions, 2010 (PDF, hoja 344): «…the myth, the people are 90 percent Catholic and 100 percent Vodou (Selden Rodman, Haiti: The Black Republic (New York: Devin-Adair, 1961), 61. 2. Karen McCarthy Brown, Mama Lola: A Vodou Priest in Brooklyn (Berkeley: University of California Press, 1991), 5; Robert E. Hood, Must God Remain Greek? AfroCultures and God-Talk (Minneapolis, Minn.:…».",
+      "id_lote": "S30-R36",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "McCarthy Brown en las notas del capítulo sobre el vodou.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "murrellreligions",
+      "b": "james",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Nathaniel Samuel Murrell, Afro-Caribbean Religions: An Introduction to Their Historical, Cultural, and Sacred Traditions, 2010 (PDF, hoja 345): «…History of Haitian Vodou,” in Sacred Arts of Haitian Vodou, ed. Donald J. Cosentino (Los Angeles: UCLA Museum of Cultural History, 1995), 135. 15. C. L. R. James, The Black Jacobins: Toussaint L’Overture and the San Domingo Revolution, 2nd ed. (New York: Random House, 1989), 6, 10f; Hurbon, Voodoo, 34; Mintz and Trouillot, “The Social History,”…».",
+      "id_lote": "S30-R37",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "James en las notas sobre el vodou y la Revolución haitiana.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "murrellreligions",
+      "b": "knight_genesisnacionalismo",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Nathaniel Samuel Murrell, Afro-Caribbean Religions: An Introduction to Their Historical, Cultural, and Sacred Traditions, 2010 (PDF, hoja 335): «…objects and elevated the spirits to the level of deity, to whom they attributed both human tragedies and human success. 12. Franklin W. Knight, The Caribbean: The Genesis of a Fragmented Nationalism (New York: Oxford University Press, 1990), 4. 13. Rachel E. Harding, A Refuge in Thunder, Candomble and Alternative Space of Blackness (Bloomington: Indiana…».",
+      "id_lote": "S30-R38",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Knight en las notas de la introducción.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "murrellreligions",
+      "b": "palmiewizards",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Nathaniel Samuel Murrell, Afro-Caribbean Religions: An Introduction to Their Historical, Cultural, and Sacred Traditions, 2010 (PDF, hoja 358): «…Where Men Are Wives and Mothers Rule: Santeria Ritual Practices and Their Gender Implications (Gainesville: University Press of Florida, 2005), 79; Stephen Palmie, Wizards and Scientists: Explorations in Afro-Cuban Modernity and Tradition (Chapel Hill, N.C.: Duke University Press, 2002), 162. 8. David H. Brown, Santeria Enthroned: Art, Ritual, and…».",
+      "id_lote": "S30-R39",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Palmié en las notas sobre la santería.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "murrellreligions",
+      "b": "hagedorn",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Nathaniel Samuel Murrell, Afro-Caribbean Religions: An Introduction to Their Historical, Cultural, and Sacred Traditions, 2010 (PDF, hoja 352): «…David R. Murray, Odious Commerce: Britain, Spain and Abolition of the Cuban Slave Trade (New York: Cambridge University Press, 1980), 298; Katherine J. Hagedorn, Divine Utterances: The Performance of AfroCuban Santeria (Washington, D.C.: Smithsonian Institution Press, 2001), 22; Carlos Moore, Castro, the Blacks, and Africa (Los Angeles:…».",
+      "id_lote": "S30-R40",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Hagedorn en las notas sobre la santería.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "murrellreligions",
+      "b": "pattersonsociology",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Nathaniel Samuel Murrell, Afro-Caribbean Religions: An Introduction to Their Historical, Cultural, and Sacred Traditions, 2010 (PDF, hoja 372): «…Obeah, and the Caribbean, ed. Margarite Fernandez Olmos and Lizabeth Paravisini-Gebert (New Brunswick, N.J.: Rutgers University Press, 1999), 173; Orlando Patterson, The Sociology of Slavery: An Analysis of the Origins, Development and Structure of Negro Slave Society in Jamaica (Teaneck, N.J.: Fairleigh Dickinson University Press, 1975), 185. 3. Leonard E.…».",
+      "id_lote": "S30-R41",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Patterson en las notas sobre el obeah.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "murrellreligions",
+      "b": "pattersonsocialdeath",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Nathaniel Samuel Murrell, Afro-Caribbean Religions: An Introduction to Their Historical, Cultural, and Sacred Traditions, 2010 (PDF, hoja 376): «…Barbara Bush, Slave Women in Caribbean Society 1650–1838 (Bloomington: Indiana University Press, 1990), 24, 52. 15. Bush, Slave Women, 3. See also Orlando Patterson, Slavery and Social Death: A Comparative Study (Cambridge: Harvard University Press, 1982), 35.».",
+      "id_lote": "S30-R42",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Patterson en las notas.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "murrellreligions",
+      "b": "price",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Nathaniel Samuel Murrell, Afro-Caribbean Religions: An Introduction to Their Historical, Cultural, and Sacred Traditions, 2010 (PDF, hoja 374): «…(New Haven, Conn.: Department of Anthropology, Yale University Press, 1960), 19–20. 32. Captain J. G. Steadman, “Guerrilla Warfare: A Eu ropean Soldier’s View,” in Maroon Societies: Rebel Slave Communities in the Americas, ed. Richard Price (Garden City, N.Y.: Anchor Press, 1973), 307. 33. Morrish, Obeah, 141. 34. Richardson, “Romantic Voodoo,”…».",
+      "id_lote": "S30-R43",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Price en las notas sobre los cimarrones jamaicanos.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "murrellreligions",
+      "b": "taylor",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Nathaniel Samuel Murrell, Afro-Caribbean Religions: An Introduction to Their Historical, Cultural, and Sacred Traditions, 2010 (PDF, hoja 335): «…Caribbean: An Introduction from Vodou and Santeria to Obeah and Espiritismo (New York: New York University Press, 2003) are priceless; so also are Patrick Taylor, ed., Nation Dance, Religion, Identity, and Cultural Difference in the Caribbean (Bloomington: Indiana University Press, 2001) and Dianne Stewart, Three Eyes for the Journey: African…».",
+      "id_lote": "S30-R44",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Murrell presenta el volumen de Taylor como obra de referencia.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "murrellreligions",
+      "b": "tellmyhorse",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Nathaniel Samuel Murrell, Afro-Caribbean Religions: An Introduction to Their Historical, Cultural, and Sacred Traditions, 2010 (PDF, hoja 346): «…A Case Study of the Rada Rite of Haiti” (PhD Dissertation: Tufts University, 1987), xxi; Mintz and Trouillot, “The Social History,” 147. 38. Zora Neal Hurston, Tell My Horse: Voodoo and Life in Haiti and Jamaica (New York: Harper and Row, 1938/1990); Maya Daren, Divine Horsemen: The Living Gods of Haiti (New York: McPherson, 1953); Alfred…».",
+      "id_lote": "S30-R45",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Hurston en las notas sobre el vodou.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "murrellreligions",
+      "b": "warnerlewiscentralafrica",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Nathaniel Samuel Murrell, Afro-Caribbean Religions: An Introduction to Their Historical, Cultural, and Sacred Traditions, 2010 (PDF, hoja 378): «…Religions in Jamaica,” in Encyclopedia of African and African-American Religions, ed. Stephen Glazier (New York: Routledge, 2001), 165–169; Warner-Lewis, Central Africa in the Caribbean: Transforming Time, Transforming Culture (Barbados: University of the West Indies Press, 2003), 190–198; Martha Beckwith, Christmas Mummings in Jamaica (New York:…».",
+      "id_lote": "S30-R46",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Warner-Lewis en las notas sobre kumina.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "dunkleywomen",
+      "b": "murrellreligions",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Daive A. Dunkley, Women and Resistance in the Early Rastafari Movement, 2021 (PDF, hoja 163): «…Administering the Government, JA, 3. 35. V. R. Cameron to Edward Denham, Font Hill, Trinity Ville P.O., May 19, 1936, JA 5073/34, 2. 36. Nathaniel Samuel Murrell, Afro-Caribbean Religions: An Introduction to Their Historical, Cultural, and Scared Traditions (Philadelphia: Temple University Press, 2010), 257. 37. Denvil Price to the Officer Administering…».",
+      "id_lote": "S30-R47",
+      "lote_incorporacion": "S30-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Dunkley cita a Murrell en las notas.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
         "fecha": "2026-10-14"
       }
     }

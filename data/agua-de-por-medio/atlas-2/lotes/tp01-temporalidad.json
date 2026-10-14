@@ -2,7 +2,7 @@
   "lote": "TP01",
   "nombre": "Temporalidad: separación de publicación y periodo estudiado",
   "fecha": "2026-10-14",
-  "base": "datos-atlas.json v1.33.0 · 413 entradas",
+  "base": "datos-atlas.json v1.34.0 · 417 entradas",
   "limite": "Capa aditiva. No modifica el campo heredado y, ni datos-atlas.json, ni el orden actual de la cronología. Un periodo estudiado no se deriva nunca de forma mecánica: exige lectura de la obra.",
   "procedencias": {
     "dictamen": "Aprobado en una capa cerrada (P00, S01, A01 o A02). Estado: confirmado.",
@@ -10,12 +10,12 @@
     "sin_derivar": "El campo y está vacío o guarda una cadena que no es un año. Estado: pendiente."
   },
   "recuento": {
-    "entradas": 413,
+    "entradas": 417,
     "confirmados": 52,
-    "candidaturas": 349,
+    "candidaturas": 353,
     "pendientes": 12,
     "con_periodo_estudiado": 24,
-    "sin_periodo_estudiado": 389
+    "sin_periodo_estudiado": 393
   },
   "registros": [
     {
@@ -5211,6 +5211,54 @@
       "y_heredado": "1983",
       "publicacion": {
         "valor": 1983,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "laomontescontrapunteos",
+      "y_heredado": "2020",
+      "publicacion": {
+        "valor": 2020,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "headleyafrocaribbean",
+      "y_heredado": "2011",
+      "publicacion": {
+        "valor": 2011,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "vargassilicio",
+      "y_heredado": "2018",
+      "publicacion": {
+        "valor": 2018,
+        "era": "EC",
+        "precision": "exacta"
+      },
+      "periodo_estudiado": null,
+      "procedencia": "derivado del campo y",
+      "estado": "candidatura"
+    },
+    {
+      "id": "murrellreligions",
+      "y_heredado": "2010",
+      "publicacion": {
+        "valor": 2010,
         "era": "EC",
         "precision": "exacta"
       },
