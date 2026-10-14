@@ -3,9 +3,9 @@
     "titulo": "Con el agua de por medio",
     "subtitulo": "Atlas para una antropología archipiélica",
     "responsable": "Grupo de Investigación Pensamiento Caribe",
-    "version": "1.32.0",
+    "version": "1.33.0",
     "fecha": "2026-10-14",
-    "nota_version": "Lote S28: entran diez obras de la carpeta de bibliografía. La crítica martiniqueña de la negritud llega con René Ménil, el codirector de Tropiques; el cimarronaje jamaicano, con las actas de Maroon Heritage, donde hablan los coroneles de Moore Town y Accompong; la voz de un africano esclavizado, con el Archibald Monteath de Warner-Lewis; la familia después de la esclavitud, con Jemmott; la contrata india, con Roopnarine; Haití después del terremoto, con Beckett; la reparación y la plantación, con el Scammer's Yard de Jovan Scott Lewis; la Cuba de la libreta, con Garth; el activismo queer dominicano, con el Streetwalking de Lara; y la música afrocubana, con La africanía de Fernando Ortiz. 112 relaciones nuevas, todas con cita verificada en el texto, la bibliografía o el aparato editorial.",
+    "nota_version": "Lote S29: entran dos obras como excepciones declaradas de registro. «What the Sands Remember», de Vanessa Agard-Jones, piensa la memoria queer y la catástrofe de la Pelée desde la arena de dos playas de Martinica. El entierro de Cortijo, de Edgardo Rodríguez Juliá, es la crónica del duelo popular por Rafael Cortijo en San Juan y la fuente primaria que analiza Quintero Rivera. 12 relaciones nuevas, todas con cita verificada.",
     "registro_interno": {
       "proposito": "Protocolo revisado de resonancia y disonancia (22-09-2026). Las categorías públicas del atlas siguen siendo resonancia y disonancia; este registro es interno y orienta la revisión editorial. El campo apoyo no crea categorías públicas ni cambia la interfaz.",
       "apoyo": {
@@ -18732,6 +18732,131 @@
         "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
         "fecha": "2026-10-14",
         "fundamento": "C2 por la africanía como raíz de la música cubana mestiza; C9 por la memoria sonora de los cultos de origen africano. Registro: tratado etnomusicológico."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S29-2026-10-14: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S29-2026-10-14",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en Martinica (Saint-Pierre y Sainte-Anne)."
+      },
+      "id": "agardjonessands",
+      "t": "What the Sands Remember",
+      "a": "Vanessa Agard-Jones",
+      "y": "2012",
+      "f": [
+        "cuerpo_erotica",
+        "catastrofes"
+      ],
+      "l": "martinica",
+      "tr": "anglófono (EE.UU./Martinica)",
+      "ap": "Un ensayo que piensa con la arena. Agard-Jones recorre dos playas de Martinica. En Saint-Pierre, la «París de las Antillas» que borró la erupción de la Pelée en 1902, la arena es ceniza volcánica y guarda la memoria de la catástrofe y de la ciudad de mezcla y placer que fue. En Anse Moustique, en Sainte-Anne, hombres que no se dicen gay sino chaud se encuentran en una playa apartada donde a veces se cruzan la clase y la raza, incluso con los békés. Frente al «sea is history» de Walcott y a las metáforas del agua, propone el grano de arena como archivo, y recuerda que la teoría de la diáspora olvida a quienes no pueden moverse. Thomas, Lara y King lo citan en el corpus.",
+      "ed": "GLQ: A Journal of Lesbian and Gay Studies",
+      "edicion_consultada": "Publicado en GLQ 18 (2-3), 2012, pp. 325-346. Edición consultada: reimpresión en Sarah R. Osterhoudt (ed.), Sustaining Natures: An Environmental Anthropology Reader, University of Washington Press, Seattle, 2023, cap. 10 (acceso por ProQuest Ebook Central, Biblioteca de la Universidad del Magdalena). PDF con capa de texto.",
+      "isbn": "",
+      "lenguas_publicacion": [
+        "inglés"
+      ],
+      "operaciones": [
+        "producir etnografía",
+        "teorizar"
+      ],
+      "orillas": [
+        {
+          "lugar": "martinica",
+          "funcion": "territorio estudiado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "cuerpos_parentescos_eroticas",
+          "huracanes_ecologias_materialidades_vivas"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Lectura completa del ensayo y de sus notas.",
+        "responsable": "Preparación asistida del lote S29; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14",
+        "fundamento": "C10 por la memoria queer del lugar y el cuerpo en la playa; C4 por la arena volcánica de la Pelée como archivo de la catástrofe. Registro: artículo de revista, admitido como excepción declarada el 14 de octubre de 2026 (precedente Thomas): cuatro obras del corpus lo citan, una de ellas lo discute en el cuerpo del texto."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S29-2026-10-14: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S29-2026-10-14",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en Puerto Rico (San Juan)."
+      },
+      "id": "rodriguezjuliacortijo",
+      "t": "El entierro de Cortijo",
+      "a": "Edgardo Rodríguez Juliá",
+      "y": "1983",
+      "f": [
+        "memoria",
+        "creolizacion"
+      ],
+      "l": "puertorico",
+      "tr": "hispano (Puerto Rico)",
+      "ap": "La crónica del velorio y el entierro de Rafael Cortijo, el timbalero que con su Combo e Ismael Rivera llevó la bomba y la plena a la música popular moderna, en octubre de 1982 en el caserío Luis Lloréns Torres y el cementerio de Villa Palmeras. Rodríguez Juliá mira a la multitud y lee en ella a Puerto Rico: la raza y la clase, la cultura de los caseríos, el duelo convertido en rumbón, la distancia entre la élite letrada y lo popular negro. Es lectura obligada en las universidades de la isla. Al atlas le da una fuente primaria para la subred de la música afrocaribeña: Quintero Rivera la cita en sus dos libros catalogados.",
+      "ed": "Ediciones Huracán",
+      "edicion_consultada": "Edición consultada: Cortijo’s Wake / El entierro de Cortijo, edición bilingüe, traducción e introducción de Juan Flores, pinturas de Rafael Ferrer, Duke University Press, Durham, 2004. Original: Ediciones Huracán, San Juan, 1983. PDF con capa de texto.",
+      "isbn": "",
+      "lenguas_publicacion": [
+        "español",
+        "inglés"
+      ],
+      "operaciones": [
+        "narrar",
+        "preservar una memoria"
+      ],
+      "orillas": [
+        {
+          "lugar": "puertorico",
+          "funcion": "territorio estudiado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "memorias_espiritualidades_archivos_vivos",
+          "creolizaciones_traducciones_opacidades"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Lectura de la introducción de Juan Flores y de la crónica en español.",
+        "responsable": "Preparación asistida del lote S29; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14",
+        "fundamento": "C9 por el duelo popular como memoria colectiva; C2 por la bomba, la plena y la mezcla de tradiciones afrocaribeñas. Registro: crónica literaria, admitida como excepción declarada el 14 de octubre de 2026 (precedente de la ficción de Harris): es la fuente primaria que analizan las dos obras de Quintero Rivera del corpus."
       }
     }
   ],
@@ -39113,6 +39238,234 @@
       "limite": "Ninguno.",
       "revision_interna": {
         "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "agardjonessands",
+      "b": "alexander",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Vanessa Agard-Jones, What the Sands Remember, 2012 (PDF, hoja 24): «…Entanglements: The Case of Paediatric Depressions, SSRIs, and Suicidal Ideation,” Subjectivity 4, no. 3 (2011): 277–97; quotation on 292. 6. M. Jacqui Alexander, Pedagogies of Crossing: Meditations on Feminism, Sexual Politics, Memory, and the Sacred (Durham, NC: Duke University Press, 2006). 7. The anthropologist Gloria Wekker has long done this work…».",
+      "id_lote": "S29-R01",
+      "lote_incorporacion": "S29-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Agard-Jones parte de la pregunta de Alexander sobre cómo «chocan» sexualidad y geografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S29; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "agardjonessands",
+      "b": "glissant",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Vanessa Agard-Jones, What the Sands Remember, 2012 (PDF, hoja 25): «…where he uses the beach’s mutations (in this case, the one at Diamant) to think through both relationality and disorder in Martinican politics. See Édouard Glissant, Poétique de la Relation (Paris: Messageries du Livre, 1990). 39. See Sainte-Anne’s longtime mayor Garcin Malsa’s memoir for one perspective on this history: L’écologie ou la passion du vivant:…».",
+      "id_lote": "S29-R02",
+      "lote_incorporacion": "S29-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Glissant en las notas, para pensar relación y desorden en la política martiniqueña.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S29; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "agardjonessands",
+      "b": "bonniolcouleur",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Vanessa Agard-Jones, What the Sands Remember, 2012 (PDF, hoja 25): «…chabin/e designates a person of African descent with light (often very light) skin, but “African” features. These distinctions are well documented in Jean Luc Bonniol, La couleur comme maléfice: Une illustration créole de la généalogie des “blancs” et des “noirs” (Paris: Albin Michel, 1992) as well as in the anthropologist Stéphanie Mulot’s doctoral…».",
+      "id_lote": "S29-R03",
+      "lote_incorporacion": "S29-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Bonniol documenta las distinciones de color en Martinica.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S29; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "agardjonessands",
+      "b": "barriteauconfronting",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Vanessa Agard-Jones, What the Sands Remember, 2012 (PDF, hoja 25): «…315. 32. Géache, Une nuit, 108. 33. On Carnival and sexuality more generally in the Caribbean, see Kamala Kempadoo, “Theorizing Sexual Relations in the Caribbean,” in Confronting Power, Theorizing Gender: Interdisciplinary Perspectives in the Caribbean, ed. Eudine Barriteau (Mona: University of the West Indies Press, 2003); and Linden Lewis, The Culture of Gender and…».",
+      "id_lote": "S29-R04",
+      "lote_incorporacion": "S29-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "El capítulo de Kempadoo en el volumen de Barriteau, sobre sexualidad en el Caribe.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S29; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "agardjonessands",
+      "b": "smith_sexcitizen",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Vanessa Agard-Jones, What the Sands Remember, 2012 (PDF, hoja 24): «…his positions on these issues do not, in his view, make him homophobic. 10. Vanessa Agard-Jones, “Le Jeu de Qui? Sexual Politics at Play in the French Caribbean,” in Sex and the Citizen: Interrogating the Caribbean, ed. Faith Smith (Charlottesville: University of Virginia Press, 2011). 11. José Esteban Muñoz, “Gesture, Ephemera, Queer Feeling,” in…».",
+      "id_lote": "S29-R05",
+      "lote_incorporacion": "S29-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Agard-Jones remite a su propio capítulo sobre política sexual en el Caribe francés, en el volumen de Faith Smith.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S29; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "thomasteaches",
+      "b": "agardjonessands",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Deborah A. Thomas, What the Caribbean Teaches Us: The Afterlives and New Lives of Coloniality, 2022 (PDF, hoja 16): «…returned, again, to the trinity of the political, the spiritual, and the erotic in the enactment of sovereign dreams. The Possibility of Repair In her beautiful essay “What the Sands Remember,” Vanessa Agard-Jones advances sand as a metaphor for coloniality in the Caribbean. Sand, here, is that which sticks, that which creates discomfort, that which loses…».",
+      "id_lote": "S29-R06",
+      "lote_incorporacion": "S29-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Thomas discute la arena como metáfora de la colonialidad en el Caribe.",
+      "limite": "Ninguno.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S29; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "politicallife",
+      "b": "agardjonessands",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Deborah A. Thomas, Political Life in the Wake of the Plantation: Sovereignty, Witnessing, Repair, 2019 (PDF, hoja 332): «…Secondary Works Abu-­Lughod, Lila. 2004. Dramas of Nationhood: The Politics of Television in Egypt. Chicago: University of Chicago Press. Agard-­Jones, Vanessa. 2012. “What the Sands Remember.” glq 18(2): 325 – 46. Agee, Philip. 1975. Inside the Company: cia Diary. New York: Stonehill. Agha, Asif. 2004. “Registers of Language.” In A Companion to Linguistic…».",
+      "id_lote": "S29-R07",
+      "lote_incorporacion": "S29-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Thomas en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S29; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "lara",
+      "b": "agardjonessands",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Ana-Maurine Lara, Queer Freedom: Black Sovereignty, 2020 (PDF, hoja 76): «…Gagá, Liborista, Fon, Congo, Bantu, Yoruba, Nago, Igbo, San Juanero, Cristobalsense, Higueyereño, Black, negro, zambo) religious/spiritual 7 See Vanessa Agard-Jones, “What the Sands Remember,” GLQ: A Journal of Lesbi­ an and Gay Studies 18, nos. 2–3 (2012): 325–46. 8 See Méndez, “Transcending Dimorphism.” 9 See Claire Payton, “Vodou and Protestantism, Faith…».",
+      "id_lote": "S29-R08",
+      "lote_incorporacion": "S29-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Lara en las notas, sobre la memoria queer del lugar.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S29; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "kingshoals",
+      "b": "agardjonessands",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Tiffany Lethabo King, The Black Shoals: Offshore Formations of Black and Native Studies, 2019 (PDF, hoja 269): «Black diasporic gender and sexual configurations: see Vanessa Agard-­Jones, “What the Sands Remember,” glq 18, nos. 2–3 (2012): 325–46. 49 Spillers, “Mama’s Baby, Papa’s Maybe,” 67, 74. 50 See Kathryn Bond Stockton, Beautiful Bottom, Beautiful Shame: Where “Black”…».",
+      "id_lote": "S29-R09",
+      "lote_incorporacion": "S29-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "King en las notas, sobre configuraciones de género y sexualidad en la diáspora negra.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S29; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "quinterosalsa",
+      "b": "rodriguezjuliacortijo",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Ángel G. Quintero Rivera, ¡Salsa, sabor y control! Sociología de la música “tropical”, 1998 (PDF, hoja 29): «…como mis más influyentes maestros. En segundo lugar, quisiera señalar la importancia para el desarrollo 23 Quien casi de inmediato escribió la sugestiva crónica El entierro de Cortijo, San Juan, Huracán, 1983.».",
+      "id_lote": "S29-R10",
+      "lote_incorporacion": "S29-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Quintero recuerda que Rodríguez Juliá escribió la crónica casi de inmediato tras el entierro.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S29; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "quintero",
+      "b": "rodriguezjuliacortijo",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Ángel Quintero Rivera, Cuerpo y cultura: las músicas «mulatas» y la subversión del baile, 2009 (PDF, hoja 386): «…de artículo publicado en Isla, 1939]. Rodríguez Demorizi, Emilio (1971): Música y baile en Santo Domingo. Santo Domingo: Hispaniola. Rodríguez Juliá, Edgardo (1983): El entierro de Cortijo. San Juan: Huracán. — (1986): Campeche o los diablejos de la melancolía. San Juan: ICP. — (2002): «Bobby, el cabaret y tú». En Caribeños. San Juan: ICP, pp. 233-242.…».",
+      "id_lote": "S29-R11",
+      "lote_incorporacion": "S29-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Quintero en la bibliografía de Cuerpo y cultura.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S29; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "antologiapuertorico",
+      "b": "rodriguezjuliacortijo",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el aparato editorial. Anayra Santory Jorge y Mareia Quintero Rivera (coords.), Antología del pensamiento crítico puertorriqueño contemporáneo, 2018 (PDF, hoja 675): «…y The Afro-Latino Reader (2010), junto a Miriam Jiménez Román. Se destacan además sus traducciones al inglés de textos importantes de la literatura puertorriqueña como Cortijo’s Wake de Edgardo Rodrígues Juliá (2004) y Memoirs of Bernardo Vega de César Andreu Iglesias (1984). Recibió el Latino Legacy Award del Smithsonian Institute en el 2008 por su…».",
+      "id_lote": "S29-R12",
+      "lote_incorporacion": "S29-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "La nota biográfica de Juan Flores menciona su traducción de la crónica.",
+      "limite": "La mención está en el aparato editorial (nota de colaboradores, solapa, índice o bibliografía del autor), no en el argumento.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S29; clasificación pendiente de adjudicación académica",
         "fecha": "2026-10-14"
       }
     }
