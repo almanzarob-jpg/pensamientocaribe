@@ -3,9 +3,9 @@
     "titulo": "Con el agua de por medio",
     "subtitulo": "Atlas para una antropología archipiélica",
     "responsable": "Grupo de Investigación Pensamiento Caribe",
-    "version": "1.31.0",
-    "fecha": "2026-10-03",
-    "nota_version": "Lote S27: entran veintiséis obras de la carpeta de bibliografía. Sylvia Wynter llega por los volúmenes de Bogues y McKittrick; la serie Caribbean Reasonings suma el homenaje a Rupert Lewis; Stuart Hall entra por la antología Sin garantías; el Panamá antillano por Conniff; Haití por Girard, el volumen Haiti and the Americas y la versión original de Et les chiens se taisaient de Césaire; la trata, por Midlo Hall con datos de Cartagena; la independencia cartagenera y la muerte de Padilla, por Múnera; la federación antillana, por Duke; la etnicidad comparada, por el homenaje a Hoetink; el racismo cubano, por Romay; la filosofía caribeña joven, por Creolizing Critical Theory. También Scott, Austin, Wright, Sealey, Nesbitt, Meeks, Barnett, Christensen, Deckman, Ruiz Montes, los ensayos de Wilson Harris y, como excepción a la regla de artículos, el balance de Deborah A. Thomas sobre la antropología del Caribe. Doscientas diez relaciones nuevas, todas con cita verificada en el texto o en la bibliografía; una disonancia establecida entre Nesbitt y Trouillot.",
+    "version": "1.32.0",
+    "fecha": "2026-10-14",
+    "nota_version": "Lote S28: entran diez obras de la carpeta de bibliografía. La crítica martiniqueña de la negritud llega con René Ménil, el codirector de Tropiques; el cimarronaje jamaicano, con las actas de Maroon Heritage, donde hablan los coroneles de Moore Town y Accompong; la voz de un africano esclavizado, con el Archibald Monteath de Warner-Lewis; la familia después de la esclavitud, con Jemmott; la contrata india, con Roopnarine; Haití después del terremoto, con Beckett; la reparación y la plantación, con el Scammer's Yard de Jovan Scott Lewis; la Cuba de la libreta, con Garth; el activismo queer dominicano, con el Streetwalking de Lara; y la música afrocubana, con La africanía de Fernando Ortiz. 112 relaciones nuevas, todas con cita verificada en el texto, la bibliografía o el aparato editorial.",
     "registro_interno": {
       "proposito": "Protocolo revisado de resonancia y disonancia (22-09-2026). Las categorías públicas del atlas siguen siendo resonancia y disonancia; este registro es interno y orienta la revisión editorial. El campo apoyo no crea categorías públicas ni cambia la interfaz.",
       "apoyo": {
@@ -18070,6 +18070,668 @@
         "responsable": "Preparación asistida del lote S27; clasificación pendiente de adjudicación académica",
         "fecha": "2026-10-03",
         "fundamento": "C8 por la racialidad y el mestizaje cubano; C9 por la memoria personal y colectiva del racismo. Registro: ensayo."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S28-2026-10-14: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S28-2026-10-14",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en Martinica, donde Ménil nació, enseñó filosofía y fundó el Partido Comunista Martiniqués."
+      },
+      "id": "menilantilles",
+      "t": "Las Antillas ayer y hoy. Senderos (Antilles déjà jadis, précédé de Tracées)",
+      "a": "René Ménil",
+      "y": "1999",
+      "f": [
+        "creolizacion",
+        "colonialidad"
+      ],
+      "l": "martinica",
+      "tr": "francófono (Martinica)",
+      "ap": "René Ménil fundó Légitime Défense en 1932 y codirigió Tropiques con Aimé y Suzanne Césaire. Este volumen reúne, en la traducción del Fondo de Cultura Económica, Senderos (Tracées, 1981) y los textos más recientes de Las Antillas ayer y hoy. Es la crítica de la negritud hecha desde dentro de Tropiques, y es marxista. Ménil separa al Césaire del Discurso sobre el colonialismo, en quien ve «una visión responsable y racional del destino de los colonizados», de la «prosa senghoriana», que convierte la miseria colonial, histórica y por tanto pasajera, en una naturaleza negra. Al atlas le da la voz martiniqueña que discute la negritud antes que Glissant y que los creolistas.",
+      "ed": "Fondo de Cultura Económica",
+      "edicion_consultada": "Fondo de Cultura Económica, México, 2005 (Colección Popular 654); traducción de Margarita Montero, revisión de Laura López Morales; ISBN 968-16-7539-8. Edición original: Antilles déjà jadis, précédé de Tracées, Jean-Michel Place, París, 1999. Escaneo sin capa de texto: se hizo OCR completo de las 206 hojas para verificar las citas.",
+      "isbn": "9681675398",
+      "lenguas_publicacion": [
+        "francés",
+        "español"
+      ],
+      "operaciones": [
+        "confrontar una categoría",
+        "teorizar"
+      ],
+      "orillas": [
+        {
+          "lugar": "martinica",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Francia",
+          "funcion": "territorio comparado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "creolizaciones_traducciones_opacidades",
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión del índice, de la nota editorial y de los ensayos sobre la negritud (hojas 75 a 127), con OCR de todo el volumen.",
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14",
+        "fundamento": "C2 por la crítica de la negritud como exotismo y por la identidad antillana como camino (tracée); C7 por la disputa entre asimilación y autonomía en Martinica. Registro: ensayo, obra reunida en traducción, catalogada como un volumen. El archivo de la carpeta atribuye la edición a Siglo XXI; la página legal dice Fondo de Cultura Económica."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S28-2026-10-14: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S28-2026-10-14",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en Jamaica: el simposio fue en Mona y la mayoría de los capítulos estudian Moore Town, Accompong y Nanny Town."
+      },
+      "id": "agorsahmaroon",
+      "t": "Maroon Heritage: Archaeological, Ethnographic and Historical Perspectives",
+      "a": "E. Kofi Agorsah (ed.)",
+      "y": "1994",
+      "f": [
+        "cimarronaje",
+        "memoria"
+      ],
+      "l": "jamaica",
+      "tr": "anglófono (Jamaica)",
+      "ap": "Las actas del simposio sobre herencia cimarrona que el arqueólogo Kofi Agorsah organizó en la Universidad de las Indias Occidentales, Mona, en octubre de 1991. Agorsah invitó a los propios cimarrones: el volumen abre con «The True Traditions of my Ancestors» del coronel C. L. G. Harris, de Moore Town, y sigue con el coronel Martin-Luther Wright, de Accompong, antes de dar paso a Kenneth Bilby, Carolyn Cooper, Maureen Warner-Lewis y Kamau Brathwaite, cuyo «Nanny, Palmares & the Caribbean Maroon Connexion» es lo más citado del libro. Cierra con la arqueología de Nanny Town. Para el atlas es un raro punto de encuentro: los cimarrones hablan de sí mismos junto a quienes los estudian, y se compara Jamaica con Surinam, México y Palmares.",
+      "ed": "Canoe Press / University of the West Indies",
+      "edicion_consultada": "Canoe Press, University of the West Indies, Kingston, 1994; prólogo de B. W. Higman; ISBN 976-8125-10-1. PDF con capa de texto.",
+      "isbn": "9768125101",
+      "lenguas_publicacion": [
+        "inglés"
+      ],
+      "operaciones": [
+        "preservar una memoria",
+        "producir testimonio",
+        "reconstruir un archivo"
+      ],
+      "orillas": [
+        {
+          "lugar": "jamaica",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "suriname",
+          "funcion": "territorio comparado"
+        },
+        {
+          "lugar": "palmaresbr",
+          "funcion": "territorio comparado"
+        },
+        {
+          "tipo": "región",
+          "label": "México",
+          "funcion": "territorio comparado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "fugas_cimarronajes_emancipaciones",
+          "memorias_espiritualidades_archivos_vivos"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión del índice, el prefacio, los capítulos 1, 2, 3, 8 y 11 y la bibliografía general.",
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14",
+        "fundamento": "C6 por el cimarronaje jamaicano como objeto central; C9 por la memoria oral de Moore Town y Accompong, contada por sus coroneles. Registro: actas de simposio catalogadas como un volumen; incluye testimonios, registro admitido el 30 de septiembre de 2026."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S28-2026-10-14: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S28-2026-10-14",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en Jamaica, donde vivió Monteath y donde están las misiones moravas."
+      },
+      "id": "warnerlewismonteath",
+      "t": "Archibald Monteath: Igbo, Jamaican, Moravian",
+      "a": "Maureen Warner-Lewis",
+      "y": "2007",
+      "f": [
+        "memoria",
+        "colonialidad"
+      ],
+      "l": "jamaica",
+      "tr": "anglófono (Jamaica)",
+      "ap": "Aniaso, un niño igbo raptado en la costa de Biafra, llegó a Jamaica como Toby, esclavo de los Monteath, y murió como Archibald John Monteith, ayudante nativo de la misión morava de New Carmel. Dejó una narración autobiográfica que conservaron los moravos. Maureen Warner-Lewis reconstruye la vida y la historia de esos textos y los pone frente a las redes comerciales coloniales, el color como casta y la cristianización. El libro incluye en apéndices la traducción de la narración y la versión que publicó la misión. Al atlas le aporta una de las pocas voces en primera persona de un africano esclavizado en el Caribe británico.",
+      "ed": "University of the West Indies Press",
+      "edicion_consultada": "University of the West Indies Press, Kingston, 2007; ISBN 978-976-640-197-9. PDF con capa de texto.",
+      "isbn": "9789766401979",
+      "lenguas_publicacion": [
+        "inglés"
+      ],
+      "operaciones": [
+        "reconstruir un archivo",
+        "producir testimonio"
+      ],
+      "orillas": [
+        {
+          "lugar": "jamaica",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Golfo de Biafra (país igbo)",
+          "funcion": "lugar de circulación"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "trata_esclavizacion_plantacion",
+          "memorias_espiritualidades_archivos_vivos"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión del índice, del capítulo 1 sobre la historia de los textos autobiográficos, de los apéndices y de las notas.",
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14",
+        "fundamento": "C1 por la trata y la esclavización contadas desde una vida; C9 por la conversión morava y por el archivo misionero. Registro: biografía histórica que edita como apéndices la narración de Monteath (fuente primaria editada, registro admitido el 30 de septiembre de 2026)."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S28-2026-10-14: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S28-2026-10-14",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en Jamaica."
+      },
+      "id": "jemmottties",
+      "t": "Ties That Bind: The Black Family in Post-Slavery Jamaica, 1834-1882",
+      "a": "Jenny M. Jemmott",
+      "y": "2015",
+      "f": [
+        "postplantacion",
+        "cuerpo_erotica"
+      ],
+      "l": "jamaica",
+      "tr": "anglófono (Jamaica)",
+      "ap": "Una historia de la familia negra jamaicana entre la emancipación y 1882, hecha desde los archivos. Jemmott muestra que los libertos usaron la familia como herramienta de libertad: reunieron a parientes vendidos por separado, defendieron a sus hijos frente al aprendizaje y a los patrones y resistieron las leyes con que el Estado colonial quiso imponer el matrimonio y la familia de modelo inglés. Discute la tesis de Edith Clarke sobre el padre «invisible». Para el atlas, profundiza la subred de la familia caribeña (Clarke, R. T. Smith, Barrow) con una mirada histórica.",
+      "ed": "University of the West Indies Press",
+      "edicion_consultada": "University of the West Indies Press, Kingston, 2015; ISBN 978-976-640-506-9. PDF con capa de texto.",
+      "isbn": "9789766405069",
+      "lenguas_publicacion": [
+        "inglés"
+      ],
+      "operaciones": [
+        "reconstruir un archivo",
+        "confrontar una categoría"
+      ],
+      "orillas": [
+        {
+          "lugar": "jamaica",
+          "funcion": "territorio estudiado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "cuerpos_parentescos_eroticas",
+          "postplantacion_trabajo_desposesion"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión del índice, la introducción, el capítulo 1 y la bibliografía.",
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14",
+        "fundamento": "C10 por el parentesco como forma de libertad; C3 por la transición del trabajo esclavo al libre. Registro: monografía histórica."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S28-2026-10-14: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S28-2026-10-14",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en Trinidad; Guyana es el otro territorio estudiado."
+      },
+      "id": "roopnarineindenture",
+      "t": "Indo-Caribbean Indenture: Resistance and Accommodation, 1838-1920",
+      "a": "Lomarsh Roopnarine",
+      "y": "2007",
+      "f": [
+        "postplantacion",
+        "capitalismo_racial"
+      ],
+      "l": "trinidad",
+      "tr": "anglófono (Guyana/EE.UU.)",
+      "ap": "La contrata india en Guyana y Trinidad, leída como un régimen de trabajo que los inmigrantes no solo sufrieron. Roopnarine estudia el reclutamiento en la India, el control en las plantaciones y las formas de resistencia y acomodo: la huida, la protesta, la recomposición de la casta y de la familia extensa y la posición de las mujeres. Al atlas le añade a Bahadur, Kale y Shepherd una lectura centrada en la agencia de los trabajadores contratados.",
+      "ed": "University of the West Indies Press",
+      "edicion_consultada": "University of the West Indies Press, Kingston, 2007; ISBN 978-976-640-185-6. El archivo de la carpeta es un zip con el texto OCR de las 204 páginas; las citas se ubican por número de página del escaneo.",
+      "isbn": "9789766401856",
+      "lenguas_publicacion": [
+        "inglés"
+      ],
+      "operaciones": [
+        "reconstruir un archivo",
+        "confrontar una categoría"
+      ],
+      "orillas": [
+        {
+          "lugar": "trinidad",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "guyana",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "India",
+          "funcion": "lugar de circulación"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "postplantacion_trabajo_desposesion",
+          "rutas_diasporas_territorios_acuosos"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión del índice, la introducción, los capítulos 2 y 4 y las notas.",
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14",
+        "fundamento": "C3 por la contrata como forma poscolonial de trabajo de plantación; C5 por la migración desde la India. Registro: monografía histórica."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S28-2026-10-14: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S28-2026-10-14",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en Haití, donde se hizo el trabajo de campo."
+      },
+      "id": "beckettnomorehaiti",
+      "t": "There Is No More Haiti: Between Life and Death in Port-au-Prince",
+      "a": "Greg Beckett",
+      "y": "2019",
+      "f": [
+        "catastrofes",
+        "violencias"
+      ],
+      "l": "haiti",
+      "tr": "anglófono (EE.UU./Haití)",
+      "ap": "«No hay más Haití» es lo que decían los habitantes de Puerto Príncipe, y Beckett lo toma como título. Su etnografía, hecha antes y después del terremoto de 2010, sigue a la gente entre la vida y la muerte: el bosque convertido en ciudad, la búsqueda de la vida diaria, el desorden fabricado y la ayuda humanitaria. Lee la crisis por lo que se siente y no como un caso más de Estado fallido. Para el atlas refuerza las catástrofes, uno de los fenómenos más delgados, con un relato que no reduce Haití a víctima.",
+      "ed": "University of California Press",
+      "edicion_consultada": "University of California Press, Oakland, 2019; ISBN 978-0-520-30024-8 (tela), 978-0-520-97173-8 (epub). EPUB; las citas se ubican por sección.",
+      "isbn": "9780520300248",
+      "lenguas_publicacion": [
+        "inglés"
+      ],
+      "operaciones": [
+        "producir etnografía"
+      ],
+      "orillas": [
+        {
+          "lugar": "haiti",
+          "funcion": "territorio estudiado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "huracanes_ecologias_materialidades_vivas",
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión de la introducción, el capítulo 5 y el epílogo, las notas y las referencias.",
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14",
+        "fundamento": "C4 por la catástrofe y el terremoto vividos desde Puerto Príncipe; C7 por la ocupación humanitaria y la soberanía. Registro: etnografía."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S28-2026-10-14: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S28-2026-10-14",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en Jamaica, donde se hizo el trabajo de campo (Montego Bay)."
+      },
+      "id": "scottlewisscammers",
+      "t": "Scammer's Yard: The Crime of Black Repair in Jamaica",
+      "a": "Jovan Scott Lewis",
+      "y": "2020",
+      "f": [
+        "capitalismo_racial",
+        "violencias"
+      ],
+      "l": "jamaica",
+      "tr": "anglófono (Jamaica/EE.UU.)",
+      "ap": "En Montego Bay, jóvenes jamaicanos llaman por teléfono a jubilados de Estados Unidos y les sacan dinero con la falsa noticia de un premio de lotería. Jovan Scott Lewis sigue la estafa y encuentra en ella un argumento: los estafadores la piensan como reparación, como cobro de una deuda que la plantación, el ajuste estructural y el turismo dejaron abierta. El libro se apoya en la escuela de la plantación (Beckford, Best y Levitt) y en Thomas, y discute la respetabilidad como criterio de lo legal. Para el atlas pone en el mismo lugar la reparación, la economía de plantación y la violencia.",
+      "ed": "University of Minnesota Press",
+      "edicion_consultada": "University of Minnesota Press, Minneapolis, 2020; ISBN 978-1-5179-0998-7 (rústica). PDF con capa de texto.",
+      "isbn": "9781517909987",
+      "lenguas_publicacion": [
+        "inglés"
+      ],
+      "operaciones": [
+        "producir etnografía",
+        "confrontar una categoría"
+      ],
+      "orillas": [
+        {
+          "lugar": "jamaica",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Estados Unidos",
+          "funcion": "espacio diaspórico"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "postplantacion_trabajo_desposesion",
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión del índice, la introducción, el capítulo 1 y las notas y bibliografía.",
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14",
+        "fundamento": "C3 por la plantación que «permanece» y el ajuste estructural; C7 por la reparación como reclamo político. Registro: etnografía."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S28-2026-10-14: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S28-2026-10-14",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en Cuba (Santiago de Cuba)."
+      },
+      "id": "garthfood",
+      "t": "Food in Cuba: The Pursuit of a Decent Meal",
+      "a": "Hanna Garth",
+      "y": "2020",
+      "f": [
+        "soberanias",
+        "cuerpo_erotica"
+      ],
+      "l": "cuba",
+      "tr": "anglófono (EE.UU./Cuba)",
+      "ap": "En Santiago de Cuba, conseguir una comida decente es «la lucha» de cada día. Hanna Garth sigue a las familias que buscan, cambian y cocinan con la libreta de abastecimiento y en el mercado, y que comparan su mesa con la de «antes». Muestra que de esa búsqueda dependen la idea de una vida adecuada, la reputación de las mujeres como buenas madres y esposas y la relación con el Estado. Al atlas le da una etnografía de la Cuba posterior al Periodo Especial vista desde la cocina, que dialoga con Ortiz y con Mintz sobre el azúcar y la comida.",
+      "ed": "Stanford University Press",
+      "edicion_consultada": "Stanford University Press, Stanford, 2020; ISBN 978-1-5036-0462-9. PDF con capa de texto.",
+      "isbn": "9781503604629",
+      "lenguas_publicacion": [
+        "inglés"
+      ],
+      "operaciones": [
+        "producir etnografía"
+      ],
+      "orillas": [
+        {
+          "lugar": "cuba",
+          "funcion": "territorio estudiado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "cuerpos_parentescos_eroticas"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión del prefacio, la introducción, el capítulo 3 y las referencias.",
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14",
+        "fundamento": "C7 por la relación con el Estado a través del abastecimiento; C10 por la feminidad virtuosa y el trabajo de cuidado. Registro: etnografía."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S28-2026-10-14: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S28-2026-10-14",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en República Dominicana (Santo Domingo)."
+      },
+      "id": "larastreetwalking",
+      "t": "Streetwalking: LGBTQ Lives and Protest in the Dominican Republic",
+      "a": "Ana-Maurine Lara",
+      "y": "2020",
+      "f": [
+        "cuerpo_erotica",
+        "violencias"
+      ],
+      "l": "dominicana",
+      "tr": "anglófono (EE.UU./Rep. Dominicana)",
+      "ap": "El segundo libro de Lara del mismo año sigue a activistas LGBTQ dominicanos en las calles de Santo Domingo: confrontaciones, protestas y cuentos con los que responden a la «colonialidad cristiana» y al terror sexual. Lara muestra cómo la presencia en la calle, que la ciudad castiga, se convierte en acción política. Complementa Queer Freedom: Black Sovereignty, que ya está en el corpus, con una etnografía del activismo urbano.",
+      "ed": "Rutgers University Press",
+      "edicion_consultada": "Rutgers University Press, New Brunswick, 2020 (serie Critical Caribbean Studies); ISBN 978-1-9788-1649-7. PDF con capa de texto.",
+      "isbn": "9781978816497",
+      "lenguas_publicacion": [
+        "inglés"
+      ],
+      "operaciones": [
+        "producir etnografía",
+        "intervenir políticamente"
+      ],
+      "orillas": [
+        {
+          "lugar": "dominicana",
+          "funcion": "territorio estudiado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "cuerpos_parentescos_eroticas",
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión de la introducción, el capítulo 1, las notas y las referencias.",
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14",
+        "fundamento": "C10 por la vida queer y el cuerpo en la calle; C7 por la protesta frente al Estado y la Iglesia. Registro: etnografía."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S28-2026-10-14: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S28-2026-10-14",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en Cuba."
+      },
+      "id": "ortizafricania",
+      "t": "La africanía de la música folklórica de Cuba",
+      "a": "Fernando Ortiz",
+      "y": "1950",
+      "f": [
+        "creolizacion",
+        "memoria"
+      ],
+      "l": "cuba",
+      "tr": "hispano (Cuba)",
+      "ap": "El gran tratado de Ortiz sobre la música afrocubana. Analiza el ritmo, la voz, el canto antifonal, la danza y los tambores, con transcripciones de toques batá hechas con el maestro Gaspar Agüero y los tamboreros Raúl Díaz y Trinidad Torregrosa. Ortiz discute que la música africana sea un «ruido» primitivo y la presenta como una de las raíces de la música cubana. Es la obra que piden la nota «El ritmo en el Caribe» y la ruta de lectura sobre la música: la citan Quintero Rivera, Benítez Rojo, Schweitzer, Miller y Bassey y Díaz-Quiñones, que ya están en el corpus.",
+      "ed": "Ministerio de Educación, Dirección de Cultura",
+      "edicion_consultada": "Publicaciones del Ministerio de Educación, Dirección de Cultura, La Habana, 1950 (impreso por Cárdenas y Cía.). Escaneo de microforma con capa de texto.",
+      "isbn": "",
+      "lenguas_publicacion": [
+        "español"
+      ],
+      "operaciones": [
+        "escuchar",
+        "documentar una práctica"
+      ],
+      "orillas": [
+        {
+          "lugar": "cuba",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "África occidental y central",
+          "funcion": "lugar de circulación"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "creolizaciones_traducciones_opacidades",
+          "memorias_espiritualidades_archivos_vivos"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión de los reconocimientos, del índice, de los capítulos sobre el ritmo y los tambores y de la lista de obras del autor.",
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14",
+        "fundamento": "C2 por la africanía como raíz de la música cubana mestiza; C9 por la memoria sonora de los cultos de origen africano. Registro: tratado etnomusicológico."
       }
     }
   ],
@@ -36324,6 +36986,2134 @@
       "revision_interna": {
         "responsable": "Preparación asistida del lote S27; clasificación pendiente de adjudicación académica",
         "fecha": "2026-10-03"
+      }
+    },
+    {
+      "a": "menilantilles",
+      "b": "cesaire",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. René Ménil, Las Antillas ayer y hoy. Senderos (Antilles déjà jadis, précédé de Tracées), 1999 (PDF escaneado, hoja 111, OCR propio): «…arbol saca las castafias del fuego [...]” Y esta equivalencia no es la prosa senghoriana deli negritud. Es la prosa de Césaire mismo en el Discours surk colonalisme (Discurso sobre el colonialismo), de 1955. En ese ardiente panfleto encontramos lo mejor & la filosoffa y de los conceptos contenidos en el Caliie: una vision responsable y racional del destino de los…».",
+      "id_lote": "S28-R001",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Ménil separa la prosa de Césaire en el Discurso de la «prosa senghoriana» de la negritud: ahí encuentra «lo mejor» de la filosofía del Cahier.",
+      "limite": "Ninguno.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "nesbittcritique",
+      "b": "menilantilles",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Nick Nesbitt, Caribbean Critique: Antillean Critical Theory from Toussaint to Glissant, 2013 (PDF, hoja 13): «…‘Légitime défense’ and ‘Tropiques’, René Ménil has become somewhat better known since the publication in 1999 of the majority of his writings under the double title ‘Antilles déjà jadis précédée de Tracées’. Ménil, a professor of philosophy, wrote no literary works, but the rich series of pieces collected in this volume reveals a critical vision of…».",
+      "id_lote": "S28-R002",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Nesbitt presenta el volumen de 1999 como la reunión de la obra crítica de Ménil y lo sitúa entre Césaire y Glissant.",
+      "limite": "Ninguno.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "cesairedogs",
+      "b": "menilantilles",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Aimé Césaire (Alex Gil, ed. y trad.), Et les chiens se taisaient (…And the Dogs Were Silent), 1943 (PDF, hoja 320): «Ménil, René. “Sur la préface de Breton au Cahier d’un retour au pays natal.” In Antilles déjà Jadis: Précédé de tracées, 203 – 14. Paris: Éditions Jean-­Michel Place, 1999. http://hdl.handle.net/2027/mdp.39015041882393. Munro, Martin. “Can’t Stand Up for Falling Down:…».",
+      "id_lote": "S28-R003",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "El aparato de Gil cita el ensayo de Ménil sobre el prefacio de Breton al Cahier.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "sharpleynegritude",
+      "b": "menilantilles",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. T. Denean Sharpley-Whiting, Negritude Women, 2002 (PDF, hoja 24): «…offer it but us. Unconsciously, by osmosis and reaction at the same time, we spoke like Hitler and the Colonialists, we advocated the virtues of blood.^^ In his essays \"De la negritude\" and \"De I'Exotisme,\" Rene Menil, Marxist, philosopher, and cofounder with Aime Cesaire of the Martini- can cultural review Tropiques, also critiqued Negritude as a…».",
+      "id_lote": "S28-R004",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Sharpley-Whiting expone la crítica marxista de Ménil a la negritud como exotismo negro.",
+      "limite": "Cita Tracées en la edición de 1981; el volumen catalogado la recoge en 1999.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "woodislascaribe",
+      "b": "menilantilles",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Yolanda Wood, Islas del Caribe: naturaleza, arte, sociedad, 2011 (PDF, hoja 293): «…Visiones del Caribe, 2009, <http://www.cubaalamano.net/ visiones/index.php?option=com_content&task=view&id=17&Itemid=2>. Menil, Rene: «De l´éxotisme colonial», Tracées. Identité, negritude, esthétique aux Antilles, Éditions Robert Laffont, Paris, 1981, pp. 18-25. Merino, Luz : «Otra lectura de nuestra crítica de arte en el siglo xix»,…».",
+      "id_lote": "S28-R005",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Wood cita «De l’exotisme colonial».",
+      "limite": "Cita Tracées en la edición de 1981; el volumen catalogado la recoge en 1999.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "agorsahmaroon",
+      "b": "price",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. E. Kofi Agorsah (ed.), Maroon Heritage: Archaeological, Ethnographic and Historical Perspectives, 1994 (PDF, hoja 55): «…societies have not, on the whole, become fully part of the societies into which they were introduced. Notes 1 The term \"maroon\" has been defined in various ways. Richard Price in Maroon Societies (1969) has this to say: \"The English word 'maroon' like the French 'marron' derives from Spanish 'cimarron'\". As used in the New World, \"cimarron\" originally referred…».",
+      "id_lote": "S28-R006",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Agorsah parte de la definición de «maroon» de Maroon Societies.",
+      "limite": "Ninguno.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "agorsahmaroon",
+      "b": "fouchard",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. E. Kofi Agorsah (ed.), Maroon Heritage: Archaeological, Ethnographic and Historical Perspectives, 1994 (PDF, hoja 217): «…Loteria II epoca 3, no 33:77-97. Foster, D. 1970. \"Captain Cudjoe of the Maroons and the Independence in the West Indies\". In Banjo's Notebook. Fouchard, J. 1972. Les marrons de la liberte. Paris: Edition de 1'Ecole. -. 1981. The Haitian Maroon: Liberty or death. (Translated from the French by A Faulknor Watts.) Francis, A. 1991. \"A Preliminary Report on…».",
+      "id_lote": "S28-R007",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Fouchard en la bibliografía del volumen.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "agorsahmaroon",
+      "b": "knight_genesisnacionalismo",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. E. Kofi Agorsah (ed.), Maroon Heritage: Archaeological, Ethnographic and Historical Perspectives, 1994 (PDF, hoja 221): «…413-38 (edited by J.H. Steward). Kipple, KE. 1984 The Caribbean Slave: A Biobgical History. Cambridge: Cambridge University Press. Knight, F.W. 1978. The Caribbean: The Genesis of a Fragmented Nationalism. N.Y.: Oxford Univer¬ sity Press. Knibb, W. et al., eds. N.d. Facts and Documents Connected with the Insurrection in Jamaica. Tower Hill, London: Teape &…».",
+      "id_lote": "S28-R008",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Knight en la bibliografía del volumen.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "agorsahmaroon",
+      "b": "mintzpricebirth",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. E. Kofi Agorsah (ed.), Maroon Heritage: Archaeological, Ethnographic and Historical Perspectives, 1994 (PDF, hoja 59): «…\"An objective chronological scheme for Caribbean archaeology and history\", Social and Economic Studies 42, no. 1 (1993): 119-48. 3 See R.S. Price and S.W. Mintz, The Birth of African-American Culture: An Anthropological Perspective (Boston: Beacon Press, 1992); K.E. Kiple, The Caribbean Slave: A Biological History (Cambridge University Press, 1984); M. Craton,…».",
+      "id_lote": "S28-R009",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Mintz y Price en las notas del capítulo de Bilby o de Harris.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "agorsahmaroon",
+      "b": "pattersonsociology",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. E. Kofi Agorsah (ed.), Maroon Heritage: Archaeological, Ethnographic and Historical Perspectives, 1994 (PDF, hoja 223): «…in the West Indies 1739-1763. Oxford: Oxford University Press. Parry, J.H., and P.M. Sherlock. 1956. A Short History of the West Indies. London. Patterson, H.0.1969. The Sociology of Slavery: An Analysis of the Origins, Development and Structure of Negro Slave Society in Jamaica. New Jersey: Rutherford. -. 1970. \"Slavery and Slave Revolts: ASocio-historical…».",
+      "id_lote": "S28-R010",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Patterson en la bibliografía del volumen.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "agorsahmaroon",
+      "b": "rebeldestiny",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. E. Kofi Agorsah (ed.), Maroon Heritage: Archaeological, Ethnographic and Historical Perspectives, 1994 (PDF, hoja 220): «…E., and C. Goucher. 1987. The Blooms ofBanjeli: Technology and Gender in West African Ironmaking. Watertown: (Documentary Educational Resource). Herskovits, MJ. 1934. Rebel Destiny among the Bush Negros of Dutch Guiana. New York McGraw Hill. -. 1958. The Myth oftlie Negro Past. Boston: Beacon Press. Herrera y Tordesillas, A. de. 1934-1957.…».",
+      "id_lote": "S28-R011",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Los Herskovits en la bibliografía del volumen.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "keeganhofman",
+      "b": "agorsahmaroon",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. William F. Keegan y Corinne L. Hofman, The Caribbean before Columbus, 2017 (PDF, hoja 284): «…Agorsah, E. K. 1993. An objective chronological scheme for Caribbean history and archaeology. Social and Economic Studies 21:119–​147. Agorsah, E. K., Ed. 1994. Maroon heritage: Archaeological, ethnographic and historical perspectives. Mona, Jamaica: University of the West Indies Press. Agorsah, E. K. 2013. In The Oxford handbook of Caribbean…».",
+      "id_lote": "S28-R012",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Agorsah en la bibliografía arqueológica de Keegan y Hofman.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "atkinsonearliest",
+      "b": "agorsahmaroon",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Lesley-Gail Atkinson (ed.), The Earliest Inhabitants: The Dynamics of the Jamaican Taíno, 2006 (PDF, hoja 216): «…Jamaica, n.s., 6: 1–14. ———. 1993. An objective chronological scheme for Caribbean history and archaeology. Social and Economic Studies 21: 119–47. ———. ed. 1994. Maroon Heritage: Archaeological, Ethnographic and Historical Perspectives. Kingston: Canoe Press. Alegría, R.E. 1981. El uso de la terminología etno-histórica para designar las…».",
+      "id_lote": "S28-R013",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Agorsah en la bibliografía de la arqueología taína de Jamaica.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "coopernoises",
+      "b": "agorsahmaroon",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Carolyn Cooper, Noises in the Blood: Orality, Gender, and the “Vulgar” Body of Jamaican Popular Culture, 1995 (PDF, hoja 16): «…University of Minnesota Press, 1991). 2 bell hooks, Yearning: Race, Gender, and Cultural Politics (Boston: South End Press, 1990) p. 9. 3 Kamau Brathwaite, “Nanny, Palmares and the Caribbean Maroon Connexion” in E. Kofi Agorsah, ed. Maroon Heritage: Archaeological Ethnographic and Historical Perspectives (Barbados, Jamaica, Trinidad and…».",
+      "id_lote": "S28-R014",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Cooper cita el capítulo de Brathwaite en el volumen de Agorsah, donde ella misma firma el capítulo siete.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "truebornmaroons",
+      "b": "agorsahmaroon",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Kenneth Bilby, True-Born Maroons, 2005 (PDF, hoja 505): «…in Jamaica. In Maroon Heritage: 87. Kingston: Canoe Press. a Archaeological, Ethnographic and Historical Perspectives. E. Kofi Agorsah, ed., 163- Agorsah, E. Kofi, ed. 1994b. Maroon Heritage: Archaeological, Ethnographic and Historical Perspectives. Kingston: Canoe Press, University of the West Indies. Anonymous. 1976. A Chat with Mr.…».",
+      "id_lote": "S28-R015",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Bilby cita el volumen y su capítulo de arqueología; en el cuerpo recuerda el simposio de 1991 en Mona.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "taylor",
+      "b": "agorsahmaroon",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Patrick Taylor (ed.), Nation Dance: Religion, Identity, and Cultural Difference in the Caribbean, 2001 (PDF, hoja 206): «Caribbean Religions A Supplementary Bibliography Agorsah, E. Koﬁ, ed. 1994. Maroon Heritage: Archaeological, Ethnographic and Historical Perspectives. Kingston, Jamaica: Canoe Press. Allsopp, Richard, ed. 1996. Dictionary of Caribbean English Usage. Oxford:…».",
+      "id_lote": "S28-R016",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Agorsah en la bibliografía suplementaria de religiones caribeñas.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "rifkinfictions",
+      "b": "agorsahmaroon",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Mark Rifkin, Fictions of Land and Flesh: Blackness, Indigeneity, Speculation, 2019 (PDF, hoja 298): «…Moody-­Freeman, 81–99. New York: Peter Lang, 2011. Brand, Dionne. A Map to the Door of No Return: Notes to Belonging. Toronto: Vintage Canada, 2001. Brathwaite, Kamau. “Nanny, Palmares, and the Ca­rib­bean Maroon Connection.” In Maroon Heritage: Archaeological and Ethnographic Historical Perspectives, ed. E. Kofi Agorsah, 119–38. Kingston, Jamaica:…».",
+      "id_lote": "S28-R017",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Rifkin cita el capítulo de Brathwaite en el volumen.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "zips_nannysasafo",
+      "b": "agorsahmaroon",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Werner Zips, Nanny's Asafo Warriors: The Jamaican Maroons' African Experience, 2011 (EPUB, sección Nanny's Asafo Warriors-epub-17): «…A.E. ‘West Africa’. In The Making of Modern Africa, Vol. 2. The Twentieth Century edited by A.E. Afigbo et al. Burnt Mill, Harlow: Longman, 1971. Agorsah, Kofi E., ed. Maroon Heritage. Archaeological, Ethnographic and Historical Perspectives . Kingston, Jamaica: Canoe Press, 1994. Aidoo, Agnes Akosua. ‘Asante Queen Mothers in Government and Politics…».",
+      "id_lote": "S28-R018",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Zips cita el volumen.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "christensenrastawoman",
+      "b": "agorsahmaroon",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Jeanne Christensen, Rastafari Reasoning and the RastaWoman: Gender Constructions in the Shaping of Rastafari Livity, 2014 (EPUB, sección 12-D01-bib): «…Roger. Man-of-Words in the West Indies: Performance and the Emergence of Creole Culture . Baltimore, MD: The Johns Hopkins University Press, 1983. Agorsah, E. Kofi, ed. Maroon Heritage: Archaeological Ethnographic and Historical Perspectives . Barbados: Canoe Press, 1994. Albuquerque, Klaus de. “Rastafarian and Cultural Identity in the Caribbean,”…».",
+      "id_lote": "S28-R019",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Christensen cita el volumen.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "roberts",
+      "b": "agorsahmaroon",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Neil Roberts, Freedom as Marronage, 2015 (PDF, hoja 198): «…2000. 5. Kamau brathwaite, Wars of Respect, 1977; José J. Arrom and Manuel A. Arévalo, Cimarrón, 1986; Gad heuman, ed., Out of the House of Bondage, 1986; e. Kofi Agorsah, ed., Maroon Heritage, 1994; Richard Price, ed., Maroon Societies, 1996; Kenneth bilby, True-Born Maroons, 2006. 6. James C. scott, The Art of Not Being Governed, 2009, 22– 26, 40– 63, 130–…».",
+      "id_lote": "S28-R020",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Roberts pone el volumen en la genealogía de los estudios del cimarronaje, junto a Price y Bilby.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "gomespalmares",
+      "b": "agorsahmaroon",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Flávio dos Santos Gomes, Palmares, 2012 (PDF, hoja 138): «BIBLIOGRAFIA AGORSAH, E. Kofi (org.). Maroon Heritage: Archaeological Ethnographic and Historical Perspectives. University of the West Indies, 1994. ALENCASTRO, Luiz Felipe de. O trato dos viventes: formação do Brasil no…».",
+      "id_lote": "S28-R021",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Gomes cita el volumen en su bibliografía sobre Palmares.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "torressaillanthistory",
+      "b": "agorsahmaroon",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Silvio Torres-Saillant, An Intellectual History of the Caribbean, 2006 (PDF, hoja 287): «272 WORKS CITED Robinson, Carey. “Maroons and Rebels (a Dilemma).” Maroon Heritage: Archeological, Ethnographic and Historical Perspectives. Ed. Kofi Agorsah. Barbados, Jamaica and Trinidad/Tobago: Canoe Press, 1994. 86–93. Rodó, José Enrique. Ariel.…».",
+      "id_lote": "S28-R022",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Torres-Saillant cita el capítulo de Carey Robinson.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "warnerlewiscentralafrica",
+      "b": "agorsahmaroon",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Maureen Warner-Lewis, Central Africa in the Caribbean: Transcending Time, Transforming Cultures, 2003 (PDF, hoja 421): «…1 and 2. Brussels: Desclee de Brouwer. Wooding, Charles J. 1972. Wind: Een Afroamerikaanse Godsdienstin Suriname. Meppel: Krips Repro. Wright, Martin-Luther. 1994. The Heritage of Accompong Maroons. In Maroon Heritage: Archaeological, Ethnographic and Historical Perspectives, edited by Kofi Agorsah, 64-71. Kingston: Canoe Press. Wright, Richardson. [1937]…».",
+      "id_lote": "S28-R023",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Warner-Lewis cita el capítulo del coronel Wright sobre Accompong.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "beushausenpractices",
+      "b": "agorsahmaroon",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Wiebke Beushausen, Miriam Brandel, Joseph T. Farquharson, Marius Littschwager, Annika McPherson y Julia Roth (eds.), Practices of Resistance in the Caribbean: Narratives, Aesthetics and Politics, 2018 (PDF, hoja 165): «…on the topic. I further thank Birte Timm for facilitating some contacts at the University of the West Indies, Mona, in Kingston. Works cited Agorsah, Emmanuel K. Maroon Heritage: Archaeological, Ethnographic, and Historical Perspectives. Canoe P, 1994. Beckles, Hilary M. Britain’s Black Debt: Reparations for Caribbean Slavery and Native…».",
+      "id_lote": "S28-R024",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "El volumen de Beushausen y otros cita a Agorsah.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "warnerlewismonteath",
+      "b": "warnerlewiscentralafrica",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el aparato editorial. Maureen Warner-Lewis, Archibald Monteath: Igbo, Jamaican, Moravian, 2007 (PDF, hoja 1): «…numerous publications include Trinidad Yoruba: From Mother Tongue to Memory;Yoruba Songs of Trinidad; Guinea’s Other Suns:The African Dynamic in Trinidad Culture; and Central Africa in the Caribbean:Transcending Time,Transforming Cultures, which has received several local, regional and international book awards. University of the West Indies Press Jamaica •…».",
+      "id_lote": "S28-R025",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Continuidad de autora: las dos obras de Warner-Lewis están catalogadas; la solapa presenta Central Africa in the Caribbean.",
+      "limite": "La mención está en el aparato editorial (nota de colaboradores, solapa, índice o bibliografía del autor), no en el argumento.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "warnerlewismonteath",
+      "b": "pattersonsocialdeath",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Maureen Warner-Lewis, Archibald Monteath: Igbo, Jamaican, Moravian, 2007 (PDF, hoja 356): «…Bethlehem, 8–9. 45. See MA, H–2 Fairfield, Diary for 1826, 2 August 1826. 46. MA, J–Carmel, Adult Male Baptisms, entry 24. 47. Missionary Manual, 14. 48. Patterson, Slavery and Social Death, 99. 49. Nelson, “Archibald John Monteith”, 292. 50. MA, Q–7 Fairfield, Diary of Bogue Mission, f. 162, 17 March 1816. 51. Nelson, “Archibald John Monteith”, 292. 52.…».",
+      "id_lote": "S28-R026",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Patterson en las notas, sobre la muerte social del esclavizado.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "warnerlewismonteath",
+      "b": "pattersonsociology",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Maureen Warner-Lewis, Archibald Monteath: Igbo, Jamaican, Moravian, 2007 (PDF, hoja 328): «…66. MAB, Kummer Collection, Zorn to J.G. Kummer, 14 April 1832. 67. Shepherd and Reid, “Rebel Voices”, 57, based on Turner, Slaves and Missionaries, 161. 68. Patterson, Sociology of Slavery, 273; Shepherd and Reid, “Rebel Voices”, 57. 69. IRO, Old Deeds 827, f. 47. 70. Senior, Jamaica, 39. 71. JA, 1B/11/4 49 f. 154 and 50 f. 82, Crop Accounts. 72. JA,…».",
+      "id_lote": "S28-R027",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Patterson en las notas.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "warnerlewismonteath",
+      "b": "hillmandagostinocaribbean",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Maureen Warner-Lewis, Archibald Monteath: Igbo, Jamaican, Moravian, 2007 (PDF, hoja 366): «…Present State of Slavery in the West Indies. London: Smith, Elder and Co., 1826. Baronov, David, and Kevin A. Yelvington. “Ethnicity, Race, Class and Nationality”. In Understanding the Contemporary Caribbean, edited by Richard S. Hillman and Thomas J. D’Agostino, 209–38. Boulder: Lynne Rienner. Barrett, H. May. Reflections on Black River. Kingston: Jamaica Library Service,…».",
+      "id_lote": "S28-R028",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Capítulo de Baronov y Yelvington en el volumen de Hillman y D’Agostino.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "jemmottties",
+      "b": "clarkemymother",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Jenny M. Jemmott, Ties That Bind: The Black Family in Post-Slavery Jamaica, 1834-1882, 2015 (PDF, hoja 41): «…both in historical and socio-contemporary settings. Erna Brodber describes this diminished role in her remarks on Edith Clarke’s book about family life in Jamaica, My Mother Who Fathered Me: “By its very title . . . [it] announced that the Jamaican black male is indeed . . . invisible and . . . worthless”.71 In seeking to explain the seeming marginality of…».",
+      "id_lote": "S28-R029",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Jemmott discute la lectura de Clarke sobre el padre «invisible» en la familia jamaicana.",
+      "limite": "Ninguno.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "jemmottties",
+      "b": "barrowfamily",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Jenny M. Jemmott, Ties That Bind: The Black Family in Post-Slavery Jamaica, 1834-1882, 2015 (PDF, hoja 249): «…Thomas. An Account of the Native Africans in the Neighbourhood of Sierra Leone. 2 vols. London: C. Whittingham, 1803. Secondary Sources Modern Books Barrow, Christine. Family in the Caribbean: Themes and Perspectives. Kingston: Ian Randle, 1996. Barrow, Christine, ed. Portraits of a Nearer Caribbean: Essays on Gender Ideologies and Identities. Kingston: Ian Randle,…».",
+      "id_lote": "S28-R030",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Barrow en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "jemmottties",
+      "b": "mgsmithplural",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Jenny M. Jemmott, Ties That Bind: The Black Family in Post-Slavery Jamaica, 1834-1882, 2015 (PDF, hoja 253): «…Verene, Bridget Brereton and Barbara Bailey, eds. Engendering History: Caribbean Women in Historical Perspective. Kingston: Ian Randle, 1995. Smith, Michael G. The Plural Society in the British West Indies. Berkeley: University of California Press, 1965. ———. West Indian Family Structure. Seattle: University of Washington Press, 1962. Smith, Raymond T. The Negro Family in…».",
+      "id_lote": "S28-R031",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "M. G. Smith en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "jemmottties",
+      "b": "pattersonsociology",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Jenny M. Jemmott, Ties That Bind: The Black Family in Post-Slavery Jamaica, 1834-1882, 2015 (PDF, hoja 215): «…103. Elsa Goveia, Slave Society in the British Leeward Islands at the End of the Eighteenth Century (New Haven: Yale University Press, 1965), 235–36. Orlando Patterson, The Sociology of Slavery: An Analysis of the Origins, Development and Structure of Negro Slave Society in Jamaica (London: McGibbon and Kee, 1967), 167. Quoted in Barry W. Higman, “The Slave…».",
+      "id_lote": "S28-R032",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Patterson en las notas.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "jemmottties",
+      "b": "pattersonsocialdeath",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Jenny M. Jemmott, Ties That Bind: The Black Family in Post-Slavery Jamaica, 1834-1882, 2015 (PDF, hoja 253): «UWI Press 242 B I B L I O G R A P H Y Patterson, Orlando. Freedom in the Making of Western Culture. Vol. 1 of Freedom. London: I.B. Tauris, 1991. ———. Slavery and Social Death: A Comparative Study. Cambridge: Harvard University Press, 1982. ———. The Sociology of Slavery: An Analysis of the Origins, Development and Structure of Negro Slave…».",
+      "id_lote": "S28-R033",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Patterson en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "roopnarineindenture",
+      "b": "kalefragments",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Lomarsh Roopnarine, Indo-Caribbean Indenture: Resistance and Accommodation, 1838-1920, 2007 (texto OCR del zip, página 152): «…1845-1995 (Kingston: Ian Randle, 2000); Ron Ramdin, Arising from Bondage: A History of Indo-Caribbean People (New York: New York University Press, 2000); Madhavi Kale, Fragments of Empire: Capital, Slavery, and Indian Indentured Labor Migration in the British West Indies (Philadelphia: Univer- sity of Pennsylvania Press, 1998); Keith Laurence, A Question…».",
+      "id_lote": "S28-R034",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Kale en las notas sobre la migración contratada.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "roopnarineindenture",
+      "b": "shepherdmaharani",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Lomarsh Roopnarine, Indo-Caribbean Indenture: Resistance and Accommodation, 1838-1920, 2007 (texto OCR del zip, página 153): «…Milwaukee Public Museum, 1960). On politics, see Yogendra K. Malik, East Indians in Trinidad (London: Oxford University Press, 1971). On gender, see Verene Shepherd, Maharani's Misery: Narratives of a Passage from India (Kingston: University of the West Indies Press, 2002); Verene Shepherd, Transients to Settlers: The Experience of Indians in…».",
+      "id_lote": "S28-R035",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Shepherd en las notas sobre género y contrata.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "roopnarineindenture",
+      "b": "rodney",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Lomarsh Roopnarine, Indo-Caribbean Indenture: Resistance and Accommodation, 1838-1920, 2007 (texto OCR del zip, página 125): «…endurance and the adaptive capacity of these indentured Indians – amid one of the most severe labour regimens conceivable must be meas- ured alongside their sufferings. Walter Rodney showed how Europe underde- veloped Africa,³ while Eric Williams demonstrated how slavery contributed to the development of the capitalist economy. Likewise, we have already…».",
+      "id_lote": "S28-R036",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Roopnarine abre el capítulo con Rodney y Williams para medir el trabajo contratado.",
+      "limite": "Ninguno.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "roopnarineindenture",
+      "b": "knight_genesisnacionalismo",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Lomarsh Roopnarine, Indo-Caribbean Indenture: Resistance and Accommodation, 1838-1920, 2007 (texto OCR del zip, página 160): «Notes 144 8. Inden, Imagining India, 8. 9. Tinker, New System of Slavery. 10. Haraksingh, “Control and Resistance”, 63. 11. See Franklin Knight, The Caribbean: The Genesis of a Fragmented Nationalism (New York: Oxford University Press, 1990); Brain Moore, Race, Power and Social Segmentation in Colonial Society: Guyana After Slavery 1838-1891 (New York:…».",
+      "id_lote": "S28-R037",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Knight en las notas.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "roopnarineindenture",
+      "b": "mgsmithplural",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Lomarsh Roopnarine, Indo-Caribbean Indenture: Resistance and Accommodation, 1838-1920, 2007 (texto OCR del zip, página 163): «…Family in the United States (Chicago: University of Chicago Press, 1939). 5. Melville Herskovits, The Myth of the Negro Past (New York: Harpers, 1941). 6. M.G. Smith, The Plural Society in the British West Indies (Berkeley: University of California Press, 1965); see also J.S. Furnivall, Colonial Policy and Practice: A Comparative Study of Burma and Netherlands India (Cambridge:…».",
+      "id_lote": "S28-R038",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "M. G. Smith en las notas, sobre la sociedad plural.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "roopnarineindenture",
+      "b": "pattersonsociology",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Lomarsh Roopnarine, Indo-Caribbean Indenture: Resistance and Accommodation, 1838-1920, 2007 (texto OCR del zip, página 160): «…and the Great Experiment, 1830–1865 (Oxford: Clarendon, 1976); David Lowenthal, West Indian Societies (New York: Oxford University Press, 1972); Orlando Patterson, The Sociology of Slavery (London: MacGibbon and Kee, 1967); Elsa Goveia, Slave Society in the British Leeward Islands at the end of the Eighteenth Century (New Haven: Yale University Press,…».",
+      "id_lote": "S28-R039",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Patterson en las notas.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "roopnarineindenture",
+      "b": "pattersonsocialdeath",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Lomarsh Roopnarine, Indo-Caribbean Indenture: Resistance and Accommodation, 1838-1920, 2007 (texto OCR del zip, página 160): «…and Metaphors (Chicago: University of Chicago Press, 1978); Dev Raj Channa, Slavery in Ancient India (New Delhi: People's Publishing House, 1960); Orlando Patterson, Slavery and Social Death: A Comparative Study (Cambridge: Harvard University Press, 1982). 23. Karl Marx and Friedrich Engels, The Communist Manifesto (1848; reprint, Harmondsworth: England,…».",
+      "id_lote": "S28-R040",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Patterson en las notas.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "beckettnomorehaiti",
+      "b": "ulysseWhyHaiti",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Greg Beckett, There Is No More Haiti: Between Life and Death in Port-au-Prince, 2019 (EPUB, sección References): «…2(2): 486–504. Turner, Victor W., and Edward M. Bruner, eds. 1986. The Anthropology of Experience. Urbana: University of Illinois Press. Ulysse, Gina Athena. 2015. Why Haiti Needs New Narratives: A Post-Quake Chronicle. Middletown, CT: Wesleyan University Press. UNDP. 2004. “Haiti 2004: Flash Appeal.” United Nations Development Programme.…».",
+      "id_lote": "S28-R041",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Ulysse en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "beckettnomorehaiti",
+      "b": "schuller_killingkindness",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Greg Beckett, There Is No More Haiti: Between Life and Death in Port-au-Prince, 2019 (EPUB, sección References): «…on Catastrophe: Neoliberal Strategies in Disaster Reconstruction, edited by Nandini Gunewardena and Mark Schuller, 191–214. Lanham, MD: AltaMira Press. ——— . 2012. Killing with Kindness: Haiti, International Aid, and NGOs. New Brunswick, NJ: Rutgers University Press. ——— . 2013. “Cholera and the Camps.” In The Idea of Haiti: Rethinking Crisis and…».",
+      "id_lote": "S28-R042",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Schuller en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "beckettnomorehaiti",
+      "b": "schullerhumanitarian",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Greg Beckett, There Is No More Haiti: Between Life and Death in Port-au-Prince, 2019 (EPUB, sección References): «…Manyen Fanm Nan Konsa’: Intersectionality, Structural Violence, and Vulnerability before and after Haiti’s Earthquake.” Feminist Studies 41(1): 184–210. ——— . 2016. Humanitarian Aftershocks in Haiti. New Brunswick, NJ: Rutgers University Press. Schuller, Mark, and P. Morales, eds. 2012. Tectonic Shifts: Haiti since the Earthquake. Sterling, VA: Kumarian Press.…».",
+      "id_lote": "S28-R043",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Schuller en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "beckettnomorehaiti",
+      "b": "trouillot",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Greg Beckett, There Is No More Haiti: Between Life and Death in Port-au-Prince, 2019 (EPUB, sección References): «…——— . 1990b. “The Odd and the Ordinary: Haiti, the Caribbean, and the World.” Cimarron: New Perspectives on the Caribbean 2(3): 3–12. ——— . 1992. “The Caribbean Region: An Open Frontier in Anthropological Theory.” Annual Review of Anthropology 21: 19–42. ——— . 1995. Silencing the Past: Power and the Production of History. Boston: Beacon Press. ——— . 1999. “Historiography of…».",
+      "id_lote": "S28-R044",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Trouillot en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "beckettnomorehaiti",
+      "b": "mintz",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Greg Beckett, There Is No More Haiti: Between Life and Death in Port-au-Prince, 2019 (EPUB, sección References): «…Society. Seattle: University of Washington Press. ——— . 1966. “The Caribbean as a Sociocultural Area.” Cahiers d’histoire mondiale 10(4): 912–937. ——— . 1989. Caribbean Transformations. New York: Columbia University Press. ——— . 2010. Three Ancient Colonies: Caribbean Themes and Variations. Cambridge, MA: Harvard University Press. Mintz, Sidney W.,…».",
+      "id_lote": "S28-R045",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Mintz en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "beckettnomorehaiti",
+      "b": "mintzpricebirth",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Greg Beckett, There Is No More Haiti: Between Life and Death in Port-au-Prince, 2019 (EPUB, sección References): «…Press. ——— . 2010. Three Ancient Colonies: Caribbean Themes and Variations. Cambridge, MA: Harvard University Press. Mintz, Sidney W., and Richard Price. 1992. The Birth of African-American Culture: An Anthropological Perspective. Boston: Beacon Press. Moral, Paul. 1959. L’Economie Haitienne. Port-au-Prince: Imprimerie de l’État. ——— . 2002. La Paysan Haitienne.…».",
+      "id_lote": "S28-R046",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Mintz y Price en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "beckettnomorehaiti",
+      "b": "munrohaitirising",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Greg Beckett, There Is No More Haiti: Between Life and Death in Port-au-Prince, 2019 (EPUB, sección References): «…University Press. ——— . 1990. “Constructing Regional Worlds in Experience: Kula Exchange, Witchcraft and Gawan Local Events.” Man 25: 1–17. Munro, Martin, ed. 2010. Haiti Rising: Haitian History, Culture and the Earthquake of 2010. Liverpool, UK: Liverpool University Press. ——— . 2015. Tropical Apocalypse: Haiti and the Caribbean End Times.…».",
+      "id_lote": "S28-R047",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Munro en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "beckettnomorehaiti",
+      "b": "palmiewizards",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Greg Beckett, There Is No More Haiti: Between Life and Death in Port-au-Prince, 2019 (EPUB, sección References): «…http://understandingkatrina.ssrc.org . Orner, Peter, and Evan Lyon, eds. 2017. Lavil: Life, Love, and Death in Port-au-Prince. New York: Verso. Palmié, Stephan. 2002. Wizards and Scientists: Explorations in Afro-Cuban Modernity and Tradition. Durham, NC: Duke University Press. Patterson, Orlando. 1982. Slavery and Social Death: A Comparative Study.…».",
+      "id_lote": "S28-R048",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Palmié en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "beckettnomorehaiti",
+      "b": "pattersonsocialdeath",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Greg Beckett, There Is No More Haiti: Between Life and Death in Port-au-Prince, 2019 (EPUB, sección References): «…Verso. Palmié, Stephan. 2002. Wizards and Scientists: Explorations in Afro-Cuban Modernity and Tradition. Durham, NC: Duke University Press. Patterson, Orlando. 1982. Slavery and Social Death: A Comparative Study. Cambridge, MA: Harvard University Press. Peet, Richard, and Michael Watts, eds. 1996. Liberation Ecologies: Environment, Development, Social…».",
+      "id_lote": "S28-R049",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Patterson en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "beckettnomorehaiti",
+      "b": "wilsoncrabantics",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Greg Beckett, There Is No More Haiti: Between Life and Death in Port-au-Prince, 2019 (EPUB, sección References): «…1973. The Country and the City. New York: Oxford University Press. ——— . 1977. Marxism and Literature. New York: Oxford University Press. Wilson, Peter J. 1973. Crab Antics: The Social Anthropology of English Speaking Negro Societies of the Caribbean. New Haven, CT: Yale University Press. Wingfield, Roland, and Vernon J. Parenton. 1965.…».",
+      "id_lote": "S28-R050",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Wilson en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "beckettnomorehaiti",
+      "b": "exceptviolence",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Greg Beckett, There Is No More Haiti: Between Life and Death in Port-au-Prince, 2019 (EPUB, sección References): «…South East Consortium for International Development and Auburn University. Taussig, Michael. 1992. The Nervous System. New York: Routledge. Thomas, Deborah. 2011. Exceptional Violence: Embodied Citizenship in Transnational Jamaica. Durham, NC: Duke University Press. ——— . 2016. “Time and the Otherwise: Plantations, Garrisons and Being Human in the…».",
+      "id_lote": "S28-R051",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Thomas en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "beckettnomorehaiti",
+      "b": "mamalola",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Greg Beckett, There Is No More Haiti: Between Life and Death in Port-au-Prince, 2019 (EPUB, sección References): «…A Case Study in Moral Leadership in Haitian Vodou.” In Saints and Virtues, edited by J. Hawley, 144–167. Berkeley: University of California Press. ——— . 2001. Mama Lola: A Vodou Priestess in Brooklyn, updated edition. Berkeley: University of California Press. Caldeira, Teresa P.R. 2000. City of Walls: Crime, Segregation, and…».",
+      "id_lote": "S28-R052",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "McCarthy Brown en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "beckettnomorehaiti",
+      "b": "bonilla",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Greg Beckett, There Is No More Haiti: Between Life and Death in Port-au-Prince, 2019 (EPUB, sección References): «…39(6): 21–26. Bonilla, Yarimar. 2014. “Remembering the Songwriter: The Life and Legacies of Michel-Rolph Trouillot.” Cultural Dynamics 26(2): 163–172. ——— . 2015. Non-Sovereign Futures: French Caribbean Politics in the Wake of Disenchantment. Chicago: University of Chicago Press. Bourgois, Philippe. 2003. In Search of Respect: Selling Crack in El…».",
+      "id_lote": "S28-R053",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Bonilla en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "beckettnomorehaiti",
+      "b": "benedictykokken_haitiexception",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Greg Beckett, There Is No More Haiti: Between Life and Death in Port-au-Prince, 2019 (EPUB, sección References): «…Dash. Charlottesville: University of Virginia Press. Glover, Kaiama L. 2016. “‘Written with Love’: Intimacy and Relation in Katherine Dunham’s Island Possessed. ” In The Haiti Exception: Anthropology and the Predicament of Narrative, edited by Alessandra Benedicty-Kokken, Kaiama L. Glover, Mark Schuller, and Jhon Picard Byron, 93–109. Liverpool, UK:…».",
+      "id_lote": "S28-R054",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "El volumen The Haiti Exception en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "beckettnomorehaiti",
+      "b": "dunham",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el aparato editorial. Greg Beckett, There Is No More Haiti: Between Life and Death in Port-au-Prince, 2019 (EPUB, sección Index): «…Bank, 257n4 international development. See economic development International Organization of Migration, 258n6 International Red Cross, 210–211 Iron Market, 236 Island Possessed (Dunham), 241n5 Izmery, Antione, 149 Jackson, Michael, 10 Jamaica, 251n32 James, Erica, 156 , 242n14 Jardin Botanique du Roi, 244n28 Jean: looking for life by, 72 ; on social…».",
+      "id_lote": "S28-R055",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Island Possessed en el índice, remitido a la nota 5 del capítulo 1, en la hacienda de Dunham en Martissant.",
+      "limite": "La mención está en el aparato editorial (nota de colaboradores, solapa, índice o bibliografía del autor), no en el argumento.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "thomasteaches",
+      "b": "beckettnomorehaiti",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Deborah A. Thomas, What the Caribbean Teaches Us: The Afterlives and New Lives of Coloniality, 2022 (PDF, hoja 10): «…Caribbeanist ethnography, has also been oriented toward understanding the extent to which people feel it is possible to imagine different futures. For example, in There Is No More Haiti: Between Life and Death in Port-au-Prince, Greg Beckett (2020) takes a phenomenological approach to insecurity, vulnerability, and disaster, conditions so often…».",
+      "id_lote": "S28-R056",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Thomas comenta el enfoque fenomenológico de Beckett sobre la crisis.",
+      "limite": "Ninguno.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "islandfutures",
+      "b": "beckettnomorehaiti",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Mimi Sheller, Island Futures: Caribbean Survival in the Anthropocene, 2020 (EPUB, sección afterword): «…Is Not a Requiem .koboSpan { -webkit-text-combine: inherit; } AFTERWORD THIS IS NOT A REQUIEM In his beautiful, fugue-like book on the collapse of the Haitian dream, There Is No More Haiti —a title taken from his Port-au-Prince informants—the anthropologist Greg Beckett writes of the loss of hope in Haiti over recent years, of the sense that there is no…».",
+      "id_lote": "S28-R057",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Sheller abre el epílogo con el libro de Beckett.",
+      "limite": "Ninguno.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "vanderpijl_equaliberty",
+      "b": "beckettnomorehaiti",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Yvon van der Pijl y Francio Guadeloupe (eds.), Equaliberty in the Dutch Caribbean: Ways of Being Non/Sovereign, 2022 (EPUB, sección introduction): «…Press. Beck, Ulrich. 2007. “The Cosmopolitan Condition: Why Methodological Nationalism Fails.” Theory, Culture & Society 24 (7–8): 286–290. Beckett, Greg. 2019. There Is No More Haiti: Between Life and Death in Port-au-Prince . Oakland: University of California Press. Bhambra, Gurminder K. 2014. Contested Sociologies . London: Bloomsbury Academic.…».",
+      "id_lote": "S28-R058",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Beckett en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "josephmocombefirmin",
+      "b": "beckettnomorehaiti",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el aparato editorial. Celucien L. Joseph y Paul C. Mocombe (eds.), Reconstructing the Social Sciences and Humanities: Anténor Firmin, Western Intellectual Tradition, and Black Atlantic Tradition, 2021 (PDF, hoja 242): «…in Canada. He has written extensively on Haitian politics, society, and history, with a focus on the lived experience of crisis and disaster. He is the author of There Is No More Haiti: Between Life and Death in Port-​au-​Prince. Patrick Delices is a Haitian scholar and public intellectual. Some of his publications include “The Digital Economy” in the…».",
+      "id_lote": "S28-R059",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Beckett firma un capítulo del volumen; la nota de colaboradores lo presenta por este libro.",
+      "limite": "La mención está en el aparato editorial (nota de colaboradores, solapa, índice o bibliografía del autor), no en el argumento.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "scottlewisscammers",
+      "b": "modernblackness",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Jovan Scott Lewis, Scammer's Yard: The Crime of Black Repair in Jamaica, 2020 (PDF, hoja 130): «…discourses of legitimacy are rooted in that shift, but with the augmentation of extraordinary wealth, scammers’ updated performance of what Thomas identified as a “Modern Blackness” provides further insight into how contemporary renderings of Caribbean respectability are 121».",
+      "id_lote": "S28-R060",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Lewis lee al estafador como una versión de la «modern blackness» de Thomas.",
+      "limite": "Ninguno.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "scottlewisscammers",
+      "b": "exceptviolence",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Jovan Scott Lewis, Scammer's Yard: The Crime of Black Repair in Jamaica, 2020 (PDF, hoja 207): «…-marks-41-years-of-imf-2018-marks-41-years-of-imf-8216-rescue-8217-of-jamaica. 33. Gmelch, Behind the Smile. 34. UN-­Habitat, Jamaica. 35. Thomas, Exceptional Violence, 217. 36. This is perhaps due to the predominance of the “all-­inclusive,” or “gated,” model of tourism, in which over 30 percent of sector revenue is leaked out of the…».",
+      "id_lote": "S28-R061",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Thomas en las notas.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "scottlewisscammers",
+      "b": "scottconscripts",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Jovan Scott Lewis, Scammer's Yard: The Crime of Black Repair in Jamaica, 2020 (PDF, hoja 204): «…McAnuff was an up-­a nd-­coming reggae artist who was murdered at 25 years old in 2012 in an act of community violence in the outskirts of Montego Bay. 33. Scott, Conscripts of Modernity, 14. 34. White, Metahistory. 35. Scott, Conscripts of Modernity, 169. 36. Scott, 169. 37. White, Metahistory, 10. 38. White, 10. 39. Scott, Conscripts of Modernity,…».",
+      "id_lote": "S28-R062",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Scott en las notas, sobre el tiempo trágico.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "scottlewisscammers",
+      "b": "bestlevitt",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Jovan Scott Lewis, Scammer's Yard: The Crime of Black Repair in Jamaica, 2020 (PDF, hoja 224): «…Randle, 1993. Best, Lloyd. “Outlines of a Model of the Pure Plantation Economy.” Social and Economic Studies 17, no. 3 (1968): 283–­323. Best, Lloyd, and Kari Levitt. Essays on the Theory of Plantation Economy. Kingston: University of the West Indies, 2009. Best, Stephen Michael. The Fugitive’s Properties: Law and the Poetics of Possession. Chicago: University of Chicago…».",
+      "id_lote": "S28-R063",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Best y Levitt en la bibliografía; la economía de plantación es el marco del capítulo 1.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "scottlewisscammers",
+      "b": "beckfordpersistent",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Jovan Scott Lewis, Scammer's Yard: The Crime of Black Repair in Jamaica, 2020 (PDF, hoja 47): «…economic logic that normalizes and anticipates the exploitative capacity for Black geographies and subjects.42 This condition is how George Beckford accounted for the “persistent poverty” of the geographic region termed “Plantation America” that spanned from the Northeast of Brazil to the Caribbean, the lowlands of Central America, and the United States…».",
+      "id_lote": "S28-R064",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Lewis usa a Beckford para nombrar la pobreza persistente de la «América de plantación».",
+      "limite": "Ninguno.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "scottlewisscammers",
+      "b": "rodney",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Jovan Scott Lewis, Scammer's Yard: The Crime of Black Repair in Jamaica, 2020 (PDF, hoja 50): «…by means sanctioned by the interests of Western capital. If anything, the region’s stalled development has been at its service. Walter Rodney wrote in his seminal How Europe Underdeveloped Africa of the ruse of Western development efforts in the developing world: It is fairly obvious that capitalists do not set out to create other capitalists, who would be…».",
+      "id_lote": "S28-R065",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Lewis cita a Rodney sobre el ardid del desarrollo.",
+      "limite": "Ninguno.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "scottlewisscammers",
+      "b": "mintzsweetness",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Jovan Scott Lewis, Scammer's Yard: The Crime of Black Repair in Jamaica, 2020 (PDF, hoja 206): «…1 Manley broke with the organization, causing a near scandal in the international community. 12. Best and Levitt, Essays, 14; Mintz, “Slavery and the Rise”; Mintz, Sweetness and Power. 13. Farrell, “Arthur Lewis,”52. 14. Farrell, 53. 15. Gray, Demeaned but Empowered, 355. 16. There is perhaps an argument to be made for the surplus basis of Lewis’s…».",
+      "id_lote": "S28-R066",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Mintz en las notas.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "scottlewisscammers",
+      "b": "mintz",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Jovan Scott Lewis, Scammer's Yard: The Crime of Black Repair in Jamaica, 2020 (PDF, hoja 230): «…Way Up.” Economy and Society 31, no. 2 (2002): 218–­33. Miller, Daniel, and Don Slater. The Internet: An Ethnographic Approach. Oxford: Berg, 2000. Mintz, Sidney W. Caribbean Transformations. New York: Columbia University Press, 1989. Mintz, Sidney W. “Slavery and the Rise of Peasantries.” Historical Reflections 6, no. 1 (1979): 213–­42. Mintz, Sidney W.…».",
+      "id_lote": "S28-R067",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Mintz en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "scottlewisscammers",
+      "b": "wilsoncrabantics",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Jovan Scott Lewis, Scammer's Yard: The Crime of Black Repair in Jamaica, 2020 (PDF, hoja 203): «…be criticized for having undergirded the Jamaican logics of success that augured the ultimate achievement of respectability ever since Peter Wilson’s seminal work, Crab Antics, which examined the foundational politics of respectability. He defined the social life (with particular regard to land inheritance) of Black Providencia islanders…».",
+      "id_lote": "S28-R068",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Lewis remonta la política de la respetabilidad a Crab Antics.",
+      "limite": "Ninguno.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "scottlewisscammers",
+      "b": "graydemeaned",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Jovan Scott Lewis, Scammer's Yard: The Crime of Black Repair in Jamaica, 2020 (PDF, hoja 202): «…of poverty that members of the crew have identified. That is, after all, what the condition of sufferation produces: the default, broad, condition of poverty. 6. Gray, Demeaned but Empowered. 7. Gray. 8. Patterson, Children of Sisyphus. 9. Ellis, Territories of the Soul. 10. Chevannes, Learning to Be a Man, 223. 11. Taylor backs up this assertion by quoting…».",
+      "id_lote": "S28-R069",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Gray en las notas, sobre el poder social de los pobres urbanos.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "scottlewisscammers",
+      "b": "alexander",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Jovan Scott Lewis, Scammer's Yard: The Crime of Black Repair in Jamaica, 2020 (PDF, hoja 208): «…Alexander evokes the much earlier work of Jack Alexander and his use of “mythical time” as an expression and experience of race in middle-­class Kingston (Alexander, Pedagogies of Crossing). Jack Alexander argued that the past was “not just a completed event” but “events that have taken place in the past and that are yet still in the present, not simply…».",
+      "id_lote": "S28-R070",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Alexander en las notas, sobre el tiempo mítico.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "scottlewisscammers",
+      "b": "austinbroosgenesis",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Jovan Scott Lewis, Scammer's Yard: The Crime of Black Repair in Jamaica, 2020 (PDF, hoja 204): «…Conscripts of Modernity, 168. 40. Scott, Refashioning Futures, 144. 41. Thomas, Modern Blackness, 201. 42. Wardle, Cosmopolitanism in Kingston, 7. 43. Austin-­Broos, Jamaica Genesis; Bogues, “Caribbean Inflections”; Thomas, Modern Blackness. 44. Besson, Martha Brae’s, 98–­107. 45. Rao and Ibáñez, “Social Impact,” 794. 46. Hobsbawm, Nations and…».",
+      "id_lote": "S28-R071",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Austin-Broos en las notas.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "scottlewisscammers",
+      "b": "barrowfamily",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Jovan Scott Lewis, Scammer's Yard: The Crime of Black Repair in Jamaica, 2020 (PDF, hoja 203): «…dialectic and especially its inference on the performance of race and gender has been adequately debated throughout the breadth of Caribbean scholarship (see Barrow, Family in the Caribbean; Besson, Martha Brae’s; Besson, “Reputation and Respectability”; Freeman, Entrepreneurial Selves; Freeman, High Tech and High Heels; Freeman, “ ‘Reputation’ of…».",
+      "id_lote": "S28-R072",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Barrow en las notas sobre la respetabilidad.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "scottlewisscammers",
+      "b": "clarkemymother",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Jovan Scott Lewis, Scammer's Yard: The Crime of Black Repair in Jamaica, 2020 (PDF, hoja 225): «…Learning to Be a Man: Culture, Socialization and Gender Identity in Five Caribbean Communities. Mona, Jamaica: University of the West Indies Press, 2001. Clarke, Edith. My Mother Who Fathered Me: A Study of the Family in Three Selected Communities in Jamaica. Barbados: University of the West Indies Press, 1999 [1957]. Coates, Ta-­Nehisi. “The Case for…».",
+      "id_lote": "S28-R073",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Clarke en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "scottlewisscammers",
+      "b": "globalculture",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Jovan Scott Lewis, Scammer's Yard: The Crime of Black Repair in Jamaica, 2020 (PDF, hoja 231): «…on Aging “876-­SCAM: Jamaican Phone Fraud Targeting Seniors.” 113th Congress (2013). https://www .aging.senate.gov/imo/media/doc/01_Nichols_3_13_13.pdf. Olwig, Karen F. Global Culture, Island Identity: Continuity and Change in the Afro-­Caribbean Community of Nevis. Philadelphia: Harwood Academic Publishers, 1993. Ong, Aiwa. Neoliberalism as Exception: Mutations in…».",
+      "id_lote": "S28-R074",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Olwig en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "scottlewisscammers",
+      "b": "loweintimacies",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Jovan Scott Lewis, Scammer's Yard: The Crime of Black Repair in Jamaica, 2020 (PDF, hoja 205): «…regret or disappointment. 5. Steel Pulse, “Babylon Makes the Rules,” track 5 on Tribute to the Martyrs, Island Records, 1979. 6. Taylor, Empire of Neglect. 7. Lowe, Intimacies of Four Continents, 23. 8. Taylor, Empire of Neglect, 27. 9. Best and Levitt, Essays. 10. Best, “Outlines of a Model,” 32. 11. Jamaica, however, has on several occasions resisted the…».",
+      "id_lote": "S28-R075",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Lowe en las notas.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "scottlewisscammers",
+      "b": "shellererotic",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Jovan Scott Lewis, Scammer's Yard: The Crime of Black Repair in Jamaica, 2020 (PDF, hoja 218): «…Exceptional Violence, 220. 56. Fanon, Wretched of the Earth, 5. 57. Gray, Demeaned but Empowered, 100. 58. Scott, Omens of Adversity, 28. 59. Scott, 131. 60. Sheller, Citizenship from Below, 212. 61. Jamaica Tourist Board, Annual Travel Statistics 2012. 62. Urry, Tourist Gaze. 63. Apter, Pan-­African Nation, 230. 64. Araujo, Reparations for Slavery. 65.…».",
+      "id_lote": "S28-R076",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Sheller en las notas.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "scottlewisscammers",
+      "b": "araujo",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Jovan Scott Lewis, Scammer's Yard: The Crime of Black Repair in Jamaica, 2020 (PDF, hoja 222): «…University of Chicago Press, 2005. Araujo, Ana Lucia. Politics of Memory: Making Slavery Visible in the Public Space. New York: Routledge, 2012. Araujo, Ana Lucia. Reparations for Slavery and the Slave Trade: A Transnational and Comparative History. New York: Bloomsbury, 2017. Archambault, Julie S. “Cruising through Uncertainty: Cell Phones and the Politics of Display and…».",
+      "id_lote": "S28-R077",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Araujo en la bibliografía; la reparación es el concepto del libro.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "scottlewisscammers",
+      "b": "rtsmithmatrifocal",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Jovan Scott Lewis, Scammer's Yard: The Crime of Black Repair in Jamaica, 2020 (PDF, hoja 233): «…American Ethnologist 28, no. 4 (2001): 803–­26. Smith, Michael G. Kinship and Community in Carriacou. New Haven, Conn.: Yale University Press, 1962. Smith, Raymond T. The Matrifocal Family: Power, Pluralism, and Politics. London: Routledge, 1995. Stafford, Charles. “The Punishment of Ethical Behavior.” In Ordinary Ethics: Anthropology, Language, and…».",
+      "id_lote": "S28-R078",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "R. T. Smith en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "scottlewisscammers",
+      "b": "trouillot",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Jovan Scott Lewis, Scammer's Yard: The Crime of Black Repair in Jamaica, 2020 (PDF, hoja 234): «…Plantations, Garrisons and Being Human in the Caribbean.” Anthropological Theory 16 nos. 2–­3 (2016): 177–­200. Trouillot, Michel-­Rolph. “The Caribbean Region: An Open Frontier in Anthropological Theory.” Annual Review of Anthropology 21 (1992): 19–­42. Trouillot, Michel-­Rolph. Silencing the Past: Power and the Production of History. Boston: Beacon Press, 1995. United…».",
+      "id_lote": "S28-R079",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Trouillot en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "scottlewisscammers",
+      "b": "yelvingtonproducing",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Jovan Scott Lewis, Scammer's Yard: The Crime of Black Repair in Jamaica, 2020 (PDF, hoja 203): «…Entrepreneurial Selves; Freeman, High Tech and High Heels; Freeman, “ ‘Reputation’ of Neoliberalism”; Olwig, Global Culture; Thomas, Modern Blackness; and Yelvington, Producing Power). Respectability has come to be defined in Jamaica by the middle class. 23. The first reference to Bebe as the Godfather of Lottery Scamming was in Drash, “Driven to…».",
+      "id_lote": "S28-R080",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Yelvington en las notas sobre la respetabilidad.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "thomasteaches",
+      "b": "scottlewisscammers",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Deborah A. Thomas, What the Caribbean Teaches Us: The Afterlives and New Lives of Coloniality, 2022 (PDF, hoja 7): «…us, however, the local is never disentangled from the transnational, and it is this sphere that other recent ethnographies have tackled in various ways. Jovan Lewis’s Scammers Yard: The Crime of Black Repair in Jamaica (2020) analyzes how the young Jamaican men involved in the transnational process of capital extraction—otherwise known as lotto…».",
+      "id_lote": "S28-R081",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Thomas resume el argumento de Lewis sobre la reparación.",
+      "limite": "Ninguno.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "garthfood",
+      "b": "ortiz",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Hanna Garth, Food in Cuba: The Pursuit of a Decent Meal, 2020 (PDF, hoja 219): «200 References Ortiz, Fernando.1940. Contrapunteo cubano del tabaco y el azúcar. Havana: Jesús Montero. Ortiz, Fernando. 1947 [1995]. Cuban Counterpoint: Tobacco and Sugar. Translated by H. De Onis. Durham, NC: Duke University Press. ———. 1985. Nuevo catauro de cubanismos. [New basket of Cubanisms]. Ediciones de…».",
+      "id_lote": "S28-R082",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Ortiz en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "garthfood",
+      "b": "mintzsweetness",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Hanna Garth, Food in Cuba: The Pursuit of a Decent Meal, 2020 (PDF, hoja 218): «…Cuba. Santiago de Chile: ECLAC Millet, Jose, and Rafael Brea. 1989. Grupos folkloricos de Santiago de Cuba. Santiago de Cuba: Editorial Oriente. Mintz, Sidney. 1985. Sweetness and Power. New York: Viking Penguin. ———. 1998. “The Localization of Anthropological Practice: From Area Studies to Transnationalism.” Critique of Anthropology 18 (2): 117–133.…».",
+      "id_lote": "S28-R083",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Mintz en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "garthfood",
+      "b": "wirtzperforming",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Hanna Garth, Food in Cuba: The Pursuit of a Decent Meal, 2020 (PDF, hoja 225): «…2004. “Santeria in Cuban National Consciousness: A Religious Case of the Double Moral.” Journal of Latin American and Caribbean Anthropology 9 (2): 409–438. ———. 2014. Performing Afro-Cuba: Image, Voice, Spectacle in the Making of Race and History. Chicago: University of Chicago Press. ———. 2017. “Mobilizations of Race, Place, and History in Santiago de…».",
+      "id_lote": "S28-R084",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Wirtz en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "garthfood",
+      "b": "stoutafterlove",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Hanna Garth, Food in Cuba: The Pursuit of a Decent Meal, 2020 (PDF, hoja 222): «…2 (3): 191–221. Stout, Noelle M. 2008. “Feminist, Queers, and Critics: Debating the Cuban Sex Trade.” Journal of Latin American Studies 40 (4): 721–742. ———. 2014. After Love: Queer Intimacy and Erotic Economies in Post-Soviet Cuba. Durham, NC: Duke University Press. Stowers, Sharon. 2014. “Salvadoran Immigrant Women and the Culinary Making…».",
+      "id_lote": "S28-R085",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Stout en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "garthfood",
+      "b": "bonilla",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Hanna Garth, Food in Cuba: The Pursuit of a Decent Meal, 2020 (PDF, hoja 209): «…Boehm, Deborah A. 2012. Intimate Migrations: Gender, Family, and Illegality among Transnational Mexicans. New York: New York University Press. Bonilla, Yarimar. 2015. Non-sovereign Futures: French Caribbean Politics in the Wake of Disenchantment. Chicago: University of Chicago Press. Brenner, Suzanne. 1998. The Domestication of Desire: Women, Wealth, and…».",
+      "id_lote": "S28-R086",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Bonilla en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "garthfood",
+      "b": "exceptviolence",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Hanna Garth, Food in Cuba: The Pursuit of a Decent Meal, 2020 (PDF, hoja 223): «…Limited. Thomas, Deborah A. 2004. Modern Blackness: Nationalism, Globalization, and the Politics of Culture in Jamaica. Durham, NC: Duke University Press. ———. 2011. Exceptional Violence: Embodied Citizenship in Transnational Jamaica. Durham, NC: Duke University Press Thornton, Brendan Jamal. 2016. Negotiating Respect: Pentecostalism, Masculinity, and…».",
+      "id_lote": "S28-R087",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Thomas en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "garthfood",
+      "b": "modernblackness",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Hanna Garth, Food in Cuba: The Pursuit of a Decent Meal, 2020 (PDF, hoja 223): «…and Vasilikie Demos, eds. 2016. Gender and Food: From Production to Consumption and After. Bingley, UK: Emerald Group Publishing Limited. Thomas, Deborah A. 2004. Modern Blackness: Nationalism, Globalization, and the Politics of Culture in Jamaica. Durham, NC: Duke University Press. ———. 2011. Exceptional Violence: Embodied Citizenship in…».",
+      "id_lote": "S28-R088",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Thomas en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "garthfood",
+      "b": "peasantscapital",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Hanna Garth, Food in Cuba: The Pursuit of a Decent Meal, 2020 (PDF, hoja 223): «…Gainesville: University Press of Florida. Throop, C. Jason. 2009. “Intermediary Varieties of Experience.” Ethnos 74 (4): 535–558. Trouillot, Michel-Rolph. 1988. Peasants and Capital: Dominica in the World Economy. Baltimore: Johns Hopkins University Press. ———. 1995. Silencing the Past: Power and the Production of History. Boston: Beacon Press.…».",
+      "id_lote": "S28-R089",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Trouillot en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "garthfood",
+      "b": "rtsmithmatrifocal",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Hanna Garth, Food in Cuba: The Pursuit of a Decent Meal, 2020 (PDF, hoja 222): «…in Socialist Cuba. New York: Oxford University Press. Smith, M. G. 1962. West Indian Family Structure. Seattle: University of Washington Press Smith, Raymond T. 1996. The Matrifocal Family: Power, Pluralism and Politics. New York: Routledge. Sojoyner, Damien. 2016. First Strike: Educational Enclosures in Black Los Angeles. Minneapolis: University of…».",
+      "id_lote": "S28-R090",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "R. T. Smith en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "garthfood",
+      "b": "sharpewake",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Hanna Garth, Food in Cuba: The Pursuit of a Decent Meal, 2020 (PDF, hoja 221): «…Economic Journal 108 (446): 1–25. Sharma, Aradhana, and Akhil Gupta, eds. 2006. The Anthropology of the State: A Reader. Malden, MA: Blackwell. Sharpe, Christina. 2016. In the Wake: On Blackness and Being. Durham, NC: Duke University Press. Simmons, Kimberly E. 2009. Reconstructing Racial Identity and the African Past in the Dominican Republic.…».",
+      "id_lote": "S28-R091",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Sharpe en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "garthfood",
+      "b": "ulysseWhyHaiti",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Hanna Garth, Food in Cuba: The Pursuit of a Decent Meal, 2020 (PDF, hoja 223): «…Tsing, Anna L. 1993. In the Realm of the Diamond Queen: Marginality in an Out-of-the-Way Place. Princeton, NJ: Princeton University Press. Ulysse, Gina Athena. 2015. Why Haiti Needs New Narratives: A Post-Quake Chronicle. Middletown, CT: Wesleyan University Press. Unamuno, Miguel de. 1927. “Hispanidad.” Síntesis 6 (1): 305–310. United Nations Committee on World…».",
+      "id_lote": "S28-R092",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Ulysse en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "thomasteaches",
+      "b": "garthfood",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Deborah A. Thomas, What the Caribbean Teaches Us: The Afterlives and New Lives of Coloniality, 2022 (PDF, hoja 9): «…and to create new archives through which people can recognize themselves. Hanna Garth shows us that nostalgia also shapes Cubans’ struggles for food sovereignty. In Food in Cuba (2020), food acquisition emerges as a struggle for life, family, decency, and adequacy, one that is contextualized in relation to particular historical moments—both in…».",
+      "id_lote": "S28-R093",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Thomas lee la nostalgia y la lucha por la comida en Garth.",
+      "limite": "Ninguno.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "larastreetwalking",
+      "b": "garciapenaborders",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Ana-Maurine Lara, Streetwalking: LGBTQ Lives and Protest in the Dominican Republic, 2020 (PDF, hoja 193): «…discusses the historical precedents of contemporary life in the Dominican Republic. 15. Some recent and critical texts that do this work include Lorgia García-­Peña, The Borders of Dominicanidad: Race, Nation, and Archives of Contradiction (2016); Milagros Ricourt, The Dominican Racial Imaginary (2016); Raj Chetty and Amaury Rodríguez, eds., The Black Scholar…».",
+      "id_lote": "S28-R094",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "García-Peña en las notas, entre los textos críticos sobre raza y nación dominicanas.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "larastreetwalking",
+      "b": "gregorydevil",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Ana-Maurine Lara, Streetwalking: LGBTQ Lives and Protest in the Dominican Republic, 2020 (PDF, hoja 203): «…re n ce s Goodpasture, H. McKennie. 2000. Cross and Sword: An Eyewitness History of Christianity in Latin America. Eugene, Ore.: Wipf and Stock. Gregory, Steven. 2006. The Devil Behind the Mirror: Globalization and Politics in the Dominican Republic. Berkeley: University of California Press. Gudorf, Christine. 2014. “Strategic Essentialism and Vatican Policy.”…».",
+      "id_lote": "S28-R095",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Gregory en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "larastreetwalking",
+      "b": "alexander",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Ana-Maurine Lara, Streetwalking: LGBTQ Lives and Protest in the Dominican Republic, 2020 (PDF, hoja 200): «…1994. “Not Just (Any)body Can Be a Citizen: The Politics of Law, Sexuality and Postcoloniality in Trinidad and Tobago and Bahamas.” Feminist Review 48:5–­23. ———. 2005. Pedagogies of Crossing: Meditations on Feminism, Sexual Politics, Memory, and the Sacred. Durham, N.C.: Duke University Press. Allen, Jafari S. 2011. ¡Venceremos? The Erotics of Black…».",
+      "id_lote": "S28-R096",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Alexander en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "larastreetwalking",
+      "b": "gill",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Ana-Maurine Lara, Streetwalking: LGBTQ Lives and Protest in the Dominican Republic, 2020 (PDF, hoja 202): «…Garza Carvajal, Federico. 2010. Butterflies Will Burn: Prosecuting Sodomites in Early Modern Spain and Mexico. Austin: University of Texas Press. Gill, Lyndon K. 2018. Erotic Islands: Art and Activism in the Queer Caribbean. Durham, N.C.: Duke University Press. Gilroy, Paul. 1993. The Black Atlantic: Modernity and Double Consciousness. Brooklyn:…».",
+      "id_lote": "S28-R097",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Gill en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "larastreetwalking",
+      "b": "kempadoo",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Ana-Maurine Lara, Streetwalking: LGBTQ Lives and Protest in the Dominican Republic, 2020 (PDF, hoja 203): «…University Press. Kalyvas, Stathis N., and Kees van Kersbergen. 2010. “Christian Democracy.” Annual Review of Political Science 13:183–­209. Kempadoo, Kemala. 2004. Sexing the Caribbean: Gender, Race and Sexual Labor. Oxfordshire, U.K.: Taylor & Francis. King, Tiffany Lethabo. 2016. “The Labor of (Re)reading Plantation Landscapes Fungible(ly).”…».",
+      "id_lote": "S28-R098",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Kempadoo en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "larastreetwalking",
+      "b": "reddock",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Ana-Maurine Lara, Streetwalking: LGBTQ Lives and Protest in the Dominican Republic, 2020 (PDF, hoja 206): «…Colonial Phantoms: Belonging and Refusal in the Dominican Americas, from the 19th Century to the Present. New York: New York University Press. Reddock, Rhoda. 1994. Women, Labour and Politics in Trinidad and Tobago a History. London: Zed Books. Reddy, Chandan. 2011. Freedom with Violence: Race, Sexuality, and the US States. Durham, N.C.: Duke University…».",
+      "id_lote": "S28-R099",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Reddock en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "larastreetwalking",
+      "b": "exceptviolence",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Ana-Maurine Lara, Streetwalking: LGBTQ Lives and Protest in the Dominican Republic, 2020 (PDF, hoja 207): «…99–­162. Thomas, Deborah A. 2004. Modern Blackness: Nationalism, Globalization, and the Politics of Culture in Jamaica. Durham, N.C.: Duke University Press. ———. 2011. Exceptional Violence: Embodied Citizenship in Transnational Jamaica. Durham, N.C.: Duke University Press. Thompson, Krista A. 2006. An Eye for the Tropics: Tourism, Photography, and Framing…».",
+      "id_lote": "S28-R100",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Thomas en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "larastreetwalking",
+      "b": "modernblackness",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Ana-Maurine Lara, Streetwalking: LGBTQ Lives and Protest in the Dominican Republic, 2020 (PDF, hoja 207): «…Yangüela, Argelia. 2010. “Destrujillización inconclusa: El estado confesional.” Boletín del Archivo General de la Nación 35, no. 127: 99–­162. Thomas, Deborah A. 2004. Modern Blackness: Nationalism, Globalization, and the Politics of Culture in Jamaica. Durham, N.C.: Duke University Press. ———. 2011. Exceptional Violence: Embodied Citizenship in…».",
+      "id_lote": "S28-R101",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Thomas en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "larastreetwalking",
+      "b": "mckittrickwynter",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Ana-Maurine Lara, Streetwalking: LGBTQ Lives and Protest in the Dominican Republic, 2020 (PDF, hoja 208): «…Wynter, Sylvia, and Katherine McKittrick. 2015. “Unparalleled Catastrophe for Our Species? Or, to Give Humanness a Different Future: Conversations.” In Sylvia Wynter: On Being Human as Praxis, edited by Katherine McKittrick, 9–­89. Durham, N.C.: Duke University Press. Zeller, Neici M. 2010. The Appearance of All, the Reality of Nothing: Politics and Gender…».",
+      "id_lote": "S28-R102",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "El volumen de McKittrick sobre Wynter en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "larastreetwalking",
+      "b": "lara",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Continuidad de autora comprobada en las dos fichas: Ana-Maurine Lara, Queer Freedom: Black Sovereignty (2020) y Streetwalking: LGBTQ Lives and Protest in the Dominican Republic (2020), ambas catalogadas en el corpus.",
+      "id_lote": "S28-R103",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Continuidad de autora: Queer Freedom y Streetwalking, ambos de 2020, tienen ficha propia.",
+      "limite": "Vínculo por autoría; Streetwalking no cita Queer Freedom por título.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "ortizafricania",
+      "b": "ortiz",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Fernando Ortiz, La africanía de la música folklórica de Cuba, 1950 (PDF, hoja 491): «…Cosme. \"Rev. Bimestre Cubana\". Habana, 1934. FERNANDO ORTIZ. La musica sagrada de Ios negros yorubas en Cuba. \"Estudios Afrocubanos\". Habana, 1938. FERNANDO ORTIZ. Contrapunteo cubano del tabaco y el azucar. Habana, 1940. FERNANDO ORTIZ. Los factores humanos de la cubanidad. Habana, 1940. FERNANDO ORTIZ. Las cuatro cult uras indias de Cuba. Habana, 1945.…».",
+      "id_lote": "S28-R104",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Continuidad de autor y cita: Ortiz pone el Contrapunteo en su lista de obras.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "allen_dikimanera",
+      "b": "ortizafricania",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Rose Mary Allen, Di ki manera? A Social History of Afro-Curaçaoans, 1863-1917, 2007 (PDF, hoja 283): «…Higman (ed.), 1999 General History of the Caribbean. Methodology and Historiography of the Caribbean, p. 1995a 604-30. London [etc]: Unesco. Ortiz, Fernando 1950 Opi / La Africania de la Música Folklorica de Cuba. Havanna: Cardenas y Cia. 281».",
+      "id_lote": "S28-R105",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Allen cita a Ortiz en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "quinterosalsa",
+      "b": "ortizafricania",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Ángel G. Quintero Rivera, ¡Salsa, sabor y control! Sociología de la música “tropical”, 1998 (PDF, hoja 224): «…de su trayectoria. 1... a pesar de contar con excelentes investigaciones previas, trabajadas sobre todo en Cuba: desde los “clásicos” de Fernando Ortiz (por ejemplo Africanía de la música folklórica en Cuba, La Habana, Universidad Central de las Villas, 1965, 1ra. ed. 1950; Estudiemos la música afrocubana y otros ensayos sobre el tema, recogidos como…».",
+      "id_lote": "S28-R106",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Quintero Rivera pone La africanía entre los clásicos de Ortiz sobre la música.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "benitez",
+      "b": "ortizafricania",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Antonio Benítez Rojo, La isla que se repite: el Caribe y la perspectiva posmoderna, 1989 (PDF, hoja 294): «…Muntu: Las culturas neoafricanas, trans. Jasmin Reuter (Mexico: Fondo de Cultura Economica, 1978 [German ed., 1958)), pp. 118-1947 Fernando Ortiz, La musica afivcubana {La africania de la musica folklorica de Cuba) (Madrid: Jiicar, 1974), pp. 166-67. In the last few decades special methods have been developed to annotate African percussion, but this, far from…».",
+      "id_lote": "S28-R107",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Benítez Rojo cita La africanía; edición inglesa del libro.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "diazquinonesmemoria",
+      "b": "ortizafricania",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Arcadio Díaz-Quiñones, La memoria rota: ensayos de cultura y política, 1993 (EPUB, sección MemoriaRota-12): «…trajetória de Ortiz à passagem da criminologia à transculturação não permite ver as múltiplas filiações, ressonâncias e entrecruzamentos que encontramos em textos como La africanía de la música folklórica de Cuba (1950) e Los bailes y el teatro de los negros en el folklore de Cuba (1951). Interessa-me aqui reconsiderar os beginnings de Ortiz, com o propósito…».",
+      "id_lote": "S28-R108",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Díaz-Quiñones lee La africanía como texto de entrecruzamientos que la idea de transculturación no deja ver.",
+      "limite": "Ninguno.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "millerbassey",
+      "b": "ortizafricania",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Ivor L. Miller y Bassey E. Bassey, Voice of the Leopard: African Secret Societies and Cuba, 2009 (EPUB, sección ref): «…tragedia de los ñáñigos. In Estudios etnosociológicos. Comp. Isaac Barreal Fernández. Havana: Editorial de Ciencias socials. Pp. 123–140. Ortiz, Fernando. 1993a/1950. La africania de la música folklórica de Cuba. Havana: Letras Cubanas. Ortiz, Fernando. 1993b/1950. La “tragedia” de los ñáñigos. Havana: Colección Raíces. Ortiz, Fernando. 1995. Los negros…».",
+      "id_lote": "S28-R109",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Miller y Bassey en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "pricemars",
+      "b": "ortizafricania",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el aparato editorial. Jean Price-Mars, Ainsi parla l'oncle, 1928 (EPUB, sección PL1): «…et défenseur de l’indépendance haïtienne (1811-1875) », RSHG , 21, 78, juillet, p. 1-27. Aussi dans Silhouettes…, 1960, p. 164-195. 1951 « C.r. de Fernando Ortiz, La africanía de la música folklórica de Cuba », RSHG , 22, 83, octobre, p. 82-84. « C.r. de Fernando Ortiz, Los bailes y el teatro de los negros en el folk-lore de Cuba », RSHG , 22, 82,…».",
+      "id_lote": "S28-R110",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "La bibliografía de Price-Mars que acompaña la edición registra su reseña de 1951 de La africanía.",
+      "limite": "La mención está en el aparato editorial (nota de colaboradores, solapa, índice o bibliografía del autor), no en el argumento.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "vete",
+      "b": "ortizafricania",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Hanétha Vété-Congolo (ed.), The Caribbean Oral Tradition, 2016 (PDF, hoja 159): «…Dow Turner’s linguistic study of the Georgia Sea Islands (published as Africanisms in the Gullah Dialect in 1949), and such works on music as in Fernando Ortíz’s La Africanía de la música folklorica de Cuba (The “Africanity” of the Folkloric Music of Cuba) of 1950, and sections of Alejo Carpentier’s La música en Cuba and Leroi Jones/Amiri Baraka’s Blues…».",
+      "id_lote": "S28-R111",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "El volumen pone La africanía entre los estudios fundadores de la oralidad musical.",
+      "limite": "Ninguno.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "schweitzerbata",
+      "b": "ortizafricania",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Kenneth George Schweitzer, The Artistry of Afro-Cuban Batá Drumming: Aesthetics, Transmission, and Bonding, 2013 (PDF, hoja 92): «…musicologist Fernando Ortiz began publishing his work with Afro-Cuban cults in the early twentieth century, he included extensive tran- scriptions. Of his many books, La Africania de la Musica Folklérica de Cuba (1950) contains his most complete collection of bata rhythms. Ortiz begins his discussion of transcriptions by naming six toques that are used…».",
+      "id_lote": "S28-R112",
+      "lote_incorporacion": "S28-2026-10-14",
+      "apoyo": "documentada",
+      "aspecto": "Schweitzer: la colección más completa de ritmos batá está en La africanía.",
+      "limite": "Ninguno.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S28; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-14"
       }
     }
   ],
