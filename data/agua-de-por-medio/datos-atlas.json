@@ -3,9 +3,9 @@
     "titulo": "Con el agua de por medio",
     "subtitulo": "Atlas para una antropología archipiélica",
     "responsable": "Grupo de Investigación Pensamiento Caribe",
-    "version": "1.35.0",
+    "version": "1.36.0",
     "fecha": "2026-10-15",
-    "nota_version": "Expediente E08: las dieciséis obras de los lotes S28, S29 y S30 reciben corriente, cada una con el fundamento leído en su introducción, índice o conclusión. 306 obras del atlas tienen ya corriente confirmada.",
+    "nota_version": "Expediente E07: las veintiséis obras del lote S27 reciben corriente, cada una con el fundamento leído en su prefacio, introducción o índice. 332 obras del atlas tienen ya corriente confirmada.",
     "registro_interno": {
       "proposito": "Protocolo revisado de resonancia y disonancia (22-09-2026). Las categorías públicas del atlas siguen siendo resonancia y disonancia; este registro es interno y orienta la revisión editorial. El campo apoyo no crea categorías públicas ni cambia la interfaz.",
       "apoyo": {
@@ -16327,17 +16327,20 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c9"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E07.md"
       ],
       "lote_incorporacion": "S27-2026-10-03",
       "anclaje_cartografico": {
@@ -16372,34 +16375,39 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "creolizaciones_traducciones_opacidades",
           "memorias_espiritualidades_archivos_vivos"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "creolizaciones_traducciones_opacidades",
+        "nota": "Expediente E07 (15-oct-2026). El volumen recorre «the range of Wynter's thought» (hoja 16) y abre con la crítica de la episteme normativa del Hombre occidental (Introducción, hoja 42): conocimiento, género humano y traducción entre órdenes culturales. C9 secundaria por los ensayos sobre cultura popular jamaicana y su archivo vivo."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión del prefacio, el índice y las notas de los once capítulos.",
         "responsable": "Preparación asistida del lote S27; clasificación pendiente de adjudicación académica",
         "fecha": "2026-10-03",
-        "fundamento": "C8 por la crítica de Wynter al «Hombre» como figura colonial del humano; C9 por la tradición intelectual caribeña que el volumen fija. Registro: volumen colectivo de filosofía caribeña."
+        "fundamento": "El volumen recorre «the range of Wynter's thought» (hoja 16) y abre con la crítica de la episteme normativa del Hombre occidental (Introducción, hoja 42): conocimiento, género humano y traducción entre órdenes culturales. C9 secundaria por los ensayos sobre cultura popular jamaicana y su archivo vivo.",
+        "fundamento_previo": "C8 por la crítica de Wynter al «Hombre» como figura colonial del humano; C9 por la tradición intelectual caribeña que el volumen fija. Registro: volumen colectivo de filosofía caribeña."
       }
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c9"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E07.md"
       ],
       "lote_incorporacion": "S27-2026-10-03",
       "anclaje_cartografico": {
@@ -16439,34 +16447,39 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "creolizaciones_traducciones_opacidades",
           "memorias_espiritualidades_archivos_vivos"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "creolizaciones_traducciones_opacidades",
+        "nota": "Expediente E07 (15-oct-2026). La obra busca «undo systems of racial violence and their attendant knowledge systems» (hoja 18): el código sociogénico y los géneros de lo humano. C9 secundaria por la conversación con Wynter como archivo vivo de su pensamiento. Queda en línea con el volumen de Bogues."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión del índice, la conversación inicial y la bibliografía general.",
         "responsable": "Preparación asistida del lote S27; clasificación pendiente de adjudicación académica",
         "fecha": "2026-10-03",
-        "fundamento": "C8 por el principio sociogénico y la crítica a la sobrerrepresentación del «Hombre»; C9 por la recuperación de una obra en parte inédita. Registro: volumen colectivo."
+        "fundamento": "La obra busca «undo systems of racial violence and their attendant knowledge systems» (hoja 18): el código sociogénico y los géneros de lo humano. C9 secundaria por la conversación con Wynter como archivo vivo de su pensamiento. Queda en línea con el volumen de Bogues.",
+        "fundamento_previo": "C8 por el principio sociogénico y la crítica a la sobrerrepresentación del «Hombre»; C9 por la recuperación de una obra en parte inédita. Registro: volumen colectivo."
       }
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c3"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E07.md"
       ],
       "lote_incorporacion": "S27-2026-10-03",
       "anclaje_cartografico": {
@@ -16501,34 +16514,39 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "soberanias_fronteras_ocupaciones",
           "fugas_cimarronajes_emancipaciones"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E07 (15-oct-2026). El libro extrae de Badiou una teoría del conflicto (hoja 20) y la segunda mitad la aplica a «the rich and instructive history of conflict in pre- and post-Independence Jamaica» (hoja 23): soberanía e independencia. C3 secundaria por las rebeliones que esa historia recorre."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión de la introducción, la segunda parte (caps. 6-8) y la bibliografía.",
         "responsable": "Preparación asistida del lote S27; clasificación pendiente de adjudicación académica",
         "fecha": "2026-10-03",
-        "fundamento": "C7 por la soberanía y el conflicto político jamaicano; C3 por la rebelión de Morant Bay y las fidelidades rastafari. Registro: filosofía política aplicada a un caso caribeño."
+        "fundamento": "El libro extrae de Badiou una teoría del conflicto (hoja 20) y la segunda mitad la aplica a «the rich and instructive history of conflict in pre- and post-Independence Jamaica» (hoja 23): soberanía e independencia. C3 secundaria por las rebeliones que esa historia recorre.",
+        "fundamento_previo": "C7 por la soberanía y el conflicto político jamaicano; C3 por la rebelión de Morant Bay y las fidelidades rastafari. Registro: filosofía política aplicada a un caso caribeño."
       }
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c2",
+      "recorridos_sec": [
+        "c9"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E07.md"
       ],
       "lote_incorporacion": "S27-2026-10-03",
       "anclaje_cartografico": {
@@ -16564,34 +16582,39 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "trata_esclavizacion_plantacion",
           "memorias_espiritualidades_archivos_vivos"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "trata_esclavizacion_plantacion",
+        "nota": "Expediente E07 (15-oct-2026). «I consider the historic atrocity of New World slavery» (hoja 12): la esclavitud como mal irreparable y su historia moral. C9 secundaria por la pregunta por la forma de vida y la memoria de quienes fueron arrancados de sus tradiciones (hojas 13-14)."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión de la introducción, los capítulos sobre Patterson y la bibliografía.",
         "responsable": "Preparación asistida del lote S27; clasificación pendiente de adjudicación académica",
         "fecha": "2026-10-03",
-        "fundamento": "C2 por la esclavitud del Nuevo Mundo como mal; C9 por la historia reparatoria como trabajo de memoria. Registro: ensayo de filosofía moral e historia."
+        "fundamento": "«I consider the historic atrocity of New World slavery» (hoja 12): la esclavitud como mal irreparable y su historia moral. C9 secundaria por la pregunta por la forma de vida y la memoria de quienes fueron arrancados de sus tradiciones (hojas 13-14).",
+        "fundamento_previo": "C2 por la esclavitud del Nuevo Mundo como mal; C9 por la historia reparatoria como trabajo de memoria. Registro: ensayo de filosofía moral e historia."
       }
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c5"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E07.md"
       ],
       "lote_incorporacion": "S27-2026-10-03",
       "anclaje_cartografico": {
@@ -16635,34 +16658,39 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "soberanias_fronteras_ocupaciones",
           "rutas_diasporas_territorios_acuosos"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E07 (15-oct-2026). El volumen reúne las intervenciones del Congreso de Escritores Negros de Montreal en 1968, con la «nueva militancia negra» como horizonte (Introducción, hoja 9): Black Power y descolonización. C5 secundaria por la diáspora caribeña en Canadá que lo organizó."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión de la introducción de Austin y de las intervenciones de James y Rodney.",
         "responsable": "Preparación asistida del lote S27; clasificación pendiente de adjudicación académica",
         "fecha": "2026-10-03",
-        "fundamento": "C7 por el Black Power y la descolonización; C5 por la diáspora caribeña en Montreal. Registro: fuente primaria editada."
+        "fundamento": "El volumen reúne las intervenciones del Congreso de Escritores Negros de Montreal en 1968, con la «nueva militancia negra» como horizonte (Introducción, hoja 9): Black Power y descolonización. C5 secundaria por la diáspora caribeña en Canadá que lo organizó.",
+        "fundamento_previo": "C7 por el Black Power y la descolonización; C5 por la diáspora caribeña en Montreal. Registro: fuente primaria editada."
       }
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c4",
+      "recorridos_sec": [
+        "c5"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E07.md"
       ],
       "lote_incorporacion": "S27-2026-10-03",
       "anclaje_cartografico": {
@@ -16705,34 +16733,39 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "postplantacion_trabajo_desposesion",
           "rutas_diasporas_territorios_acuosos"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "postplantacion_trabajo_desposesion",
+        "nota": "Expediente E07 (15-oct-2026). «Two subjects dominate this book»: el asentamiento de más de 100.000 antillanos en Panamá y la política laboral de Estados Unidos en el canal (hoja 21). C4 por el régimen de trabajo; C5 por la migración y la subcultura antillana (hoja 30)."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión del índice, la introducción y la bibliografía.",
         "responsable": "Preparación asistida del lote S27; clasificación pendiente de adjudicación académica",
         "fecha": "2026-10-03",
-        "fundamento": "C4 por el trabajo segregado del canal; C5 por la migración antillana. Registro: historia social."
+        "fundamento": "«Two subjects dominate this book»: el asentamiento de más de 100.000 antillanos en Panamá y la política laboral de Estados Unidos en el canal (hoja 21). C4 por el régimen de trabajo; C5 por la migración y la subcultura antillana (hoja 30).",
+        "fundamento_previo": "C4 por el trabajo segregado del canal; C5 por la migración antillana. Registro: historia social."
       }
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c5"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E07.md"
       ],
       "lote_incorporacion": "S27-2026-10-03",
       "anclaje_cartografico": {
@@ -16766,34 +16799,39 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "soberanias_fronteras_ocupaciones",
           "rutas_diasporas_territorios_acuosos"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E07 (15-oct-2026). El estudio pasa de los motivos de Clinton a las consecuencias: «what did the occupation force achieve in Haiti» (hoja 20). Es un libro sobre una ocupación. C5 secundaria por los refugiados que motivaron la invasión (hoja 20)."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión del índice, la introducción y la bibliografía.",
         "responsable": "Preparación asistida del lote S27; clasificación pendiente de adjudicación académica",
         "fecha": "2026-10-03",
-        "fundamento": "C7 por la ocupación y la soberanía; C5 por la crisis de los refugiados haitianos que precipitó la invasión. Registro: historia política."
+        "fundamento": "El estudio pasa de los motivos de Clinton a las consecuencias: «what did the occupation force achieve in Haiti» (hoja 20). Es un libro sobre una ocupación. C5 secundaria por los refugiados que motivaron la invasión (hoja 20).",
+        "fundamento_previo": "C7 por la ocupación y la soberanía; C5 por la crisis de los refugiados haitianos que precipitó la invasión. Registro: historia política."
       }
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E07.md"
       ],
       "lote_incorporacion": "S27-2026-10-03",
       "anclaje_cartografico": {
@@ -16828,34 +16866,39 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "creolizaciones_traducciones_opacidades",
           "soberanias_fronteras_ocupaciones"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "creolizaciones_traducciones_opacidades",
+        "nota": "Expediente E07 (15-oct-2026). «In creolizing the nation, I have in mind the implications of those everyday disruptive and resistive practices» que Glissant analiza en las sociedades criollas (hoja 12). C7 secundaria por la frontera y la nación que la creolización desarma (hoja 11)."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión del índice, la introducción, el capítulo 3 y las notas.",
         "responsable": "Preparación asistida del lote S27; clasificación pendiente de adjudicación académica",
         "fecha": "2026-10-03",
-        "fundamento": "C8 por la creolización como teoría de la comunidad; C7 por la nación. Registro: filosofía."
+        "fundamento": "«In creolizing the nation, I have in mind the implications of those everyday disruptive and resistive practices» que Glissant analiza en las sociedades criollas (hoja 12). C7 secundaria por la frontera y la nación que la creolización desarma (hoja 11).",
+        "fundamento_previo": "C8 por la creolización como teoría de la comunidad; C7 por la nación. Registro: filosofía."
       }
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c5"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E07.md"
       ],
       "lote_incorporacion": "S27-2026-10-03",
       "anclaje_cartografico": {
@@ -16900,34 +16943,39 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "memorias_espiritualidades_archivos_vivos",
           "rutas_diasporas_territorios_acuosos"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "nota": "Expediente E07 (15-oct-2026). Una antología sobre el movimiento rastafari y su expansión desde la Jamaica de los años treinta (prólogo de Nettleford, hoja 13): espiritualidad y saber transmitido. C5 secundaria por su «immense global reach»."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión del índice, la introducción de Barnett y la bibliografía.",
         "responsable": "Preparación asistida del lote S27; clasificación pendiente de adjudicación académica",
         "fecha": "2026-10-03",
-        "fundamento": "C9 por el rastafarismo como espiritualidad; C5 por su globalización. Registro: volumen colectivo."
+        "fundamento": "Una antología sobre el movimiento rastafari y su expansión desde la Jamaica de los años treinta (prólogo de Nettleford, hoja 13): espiritualidad y saber transmitido. C5 secundaria por su «immense global reach».",
+        "fundamento_previo": "C9 por el rastafarismo como espiritualidad; C5 por su globalización. Registro: volumen colectivo."
       }
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c10",
+      "recorridos_sec": [
+        "c9"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E07.md"
       ],
       "lote_incorporacion": "S27-2026-10-03",
       "anclaje_cartografico": {
@@ -16962,34 +17010,39 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "cuerpos_parentescos_eroticas",
           "memorias_espiritualidades_archivos_vivos"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "cuerpos_parentescos_eroticas",
+        "nota": "Expediente E07 (15-oct-2026). El estudio explora cómo Rastafari reelaboró la cultura afrocriolla heredada, y el título nace de un resultado de esa reelaboración: la construcción del género (hoja 9). C9 secundaria por la espiritualidad rastafari."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión del índice, la introducción y la bibliografía.",
         "responsable": "Preparación asistida del lote S27; clasificación pendiente de adjudicación académica",
         "fecha": "2026-10-03",
-        "fundamento": "C10 por las construcciones de género; C9 por la espiritualidad rastafari. Registro: etnografía."
+        "fundamento": "El estudio explora cómo Rastafari reelaboró la cultura afrocriolla heredada, y el título nace de un resultado de esa reelaboración: la construcción del género (hoja 9). C9 secundaria por la espiritualidad rastafari.",
+        "fundamento_previo": "C10 por las construcciones de género; C9 por la espiritualidad rastafari. Registro: etnografía."
       }
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c3",
+      "recorridos_sec": [
+        "c8"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E07.md"
       ],
       "lote_incorporacion": "S27-2026-10-03",
       "anclaje_cartografico": {
@@ -17029,34 +17082,39 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "fugas_cimarronajes_emancipaciones",
           "creolizaciones_traducciones_opacidades"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "fugas_cimarronajes_emancipaciones",
+        "nota": "Expediente E07 (15-oct-2026). La versión original del drama se centra en «the actions of the people of Haiti» antes de girar hacia el papel trágico de Toussaint (hoja 34): la Revolución haitiana. C8 secundaria por la traducción y la reconstrucción del manuscrito (hoja 24)."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión de la introducción de Gil, el prólogo de Edwards y las notas.",
         "responsable": "Preparación asistida del lote S27; clasificación pendiente de adjudicación académica",
         "fecha": "2026-10-03",
-        "fundamento": "C3 por la tragedia del Rebelde; C8 por la lengua poética de la negritud. Registro: obra literaria, fuente primaria."
+        "fundamento": "La versión original del drama se centra en «the actions of the people of Haiti» antes de girar hacia el papel trágico de Toussaint (hoja 34): la Revolución haitiana. C8 secundaria por la traducción y la reconstrucción del manuscrito (hoja 24).",
+        "fundamento_previo": "C3 por la tragedia del Rebelde; C8 por la lengua poética de la negritud. Registro: obra literaria, fuente primaria."
       }
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c1"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E07.md"
       ],
       "lote_incorporacion": "S27-2026-10-03",
       "anclaje_cartografico": {
@@ -17091,34 +17149,39 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "creolizaciones_traducciones_opacidades",
           "invasiones_mundos_indigenas"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "creolizaciones_traducciones_opacidades",
+        "nota": "Expediente E07 (15-oct-2026). El lector reúne las conferencias y ensayos de Harris para mostrar «his critical range» (hoja 14): imaginación, creolización y lo intuitivo en la cultura. C1 secundaria por los mundos amerindios que su obra convoca."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión del índice, la introducción de Bundy y los ensayos centrales.",
         "responsable": "Preparación asistida del lote S27; clasificación pendiente de adjudicación académica",
         "fecha": "2026-10-03",
-        "fundamento": "C8 por la imaginación como travesía entre culturas; C1 por la memoria amerindia de las Guayanas. Registro: ensayo de autor."
+        "fundamento": "El lector reúne las conferencias y ensayos de Harris para mostrar «his critical range» (hoja 14): imaginación, creolización y lo intuitivo en la cultura. C1 secundaria por los mundos amerindios que su obra convoca.",
+        "fundamento_previo": "C8 por la imaginación como travesía entre culturas; C1 por la memoria amerindia de las Guayanas. Registro: ensayo de autor."
       }
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c10",
+      "recorridos_sec": [
+        "c9"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E07.md"
       ],
       "lote_incorporacion": "S27-2026-10-03",
       "anclaje_cartografico": {
@@ -17159,34 +17222,39 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "cuerpos_parentescos_eroticas",
           "memorias_espiritualidades_archivos_vivos"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "cuerpos_parentescos_eroticas",
+        "nota": "Expediente E07 (15-oct-2026). Entrevistas con escritoras afrocaribeñas (índice): cuerpo, sexualidad y voz femenina. C9 secundaria porque las conversaciones transmiten memorias y saberes de las propias autoras."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión del índice, la presentación y las entrevistas con Brand y Danticat.",
         "responsable": "Preparación asistida del lote S27; clasificación pendiente de adjudicación académica",
         "fecha": "2026-10-03",
-        "fundamento": "C10 por la palabra de las mujeres negras sobre cuerpo y escritura; C9 por la memoria. Registro: entrevistas, testimonio."
+        "fundamento": "Entrevistas con escritoras afrocaribeñas (índice): cuerpo, sexualidad y voz femenina. C9 secundaria porque las conversaciones transmiten memorias y saberes de las propias autoras.",
+        "fundamento_previo": "C10 por la palabra de las mujeres negras sobre cuerpo y escritura; C9 por la memoria. Registro: entrevistas, testimonio."
       }
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c3"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E07.md"
       ],
       "lote_incorporacion": "S27-2026-10-03",
       "anclaje_cartografico": {
@@ -17224,34 +17292,39 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "soberanias_fronteras_ocupaciones",
-          "creolizaciones_traducciones_opacidades"
+          "fugas_cimarronajes_emancipaciones"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E07 (15-oct-2026). Nesbitt piensa la política como «pure, undivided equality» (cap. 1, hoja 33) y lee la descolonización en Césaire (cap. 3). C3 secundaria, no C8 como proponía la siembra: el capítulo 1 sostiene que 1789 y el jacobinismo refutan que la Revolución haitiana fuera «impensable» (hoja 1)."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Lectura de los capítulos 1 y 3, los únicos disponibles.",
         "responsable": "Preparación asistida del lote S27; clasificación pendiente de adjudicación académica",
         "fecha": "2026-10-03",
-        "fundamento": "C7 por la descolonización y la soberanía; C8 por la teoría crítica antillana. Registro: filosofía."
+        "fundamento": "Nesbitt piensa la política como «pure, undivided equality» (cap. 1, hoja 33) y lee la descolonización en Césaire (cap. 3). C3 secundaria, no C8 como proponía la siembra: el capítulo 1 sostiene que 1789 y el jacobinismo refutan que la Revolución haitiana fuera «impensable» (hoja 1).",
+        "fundamento_previo": "C7 por la descolonización y la soberanía; C8 por la teoría crítica antillana. Registro: filosofía."
       }
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c3"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E07.md"
       ],
       "lote_incorporacion": "S27-2026-10-03",
       "anclaje_cartografico": {
@@ -17295,34 +17368,39 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "soberanias_fronteras_ocupaciones",
           "fugas_cimarronajes_emancipaciones"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E07 (15-oct-2026). El volumen explora la posición de Haití en las Américas (hoja 2), y su primera parte muestra que las independencias latinoamericanas se fundaron «in the shadow of not only the United States but also Haiti» (hoja 8). C3 secundaria por la Revolución haitiana."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Lectura de la introducción y de dos capítulos.",
         "responsable": "Preparación asistida del lote S27; clasificación pendiente de adjudicación académica",
         "fecha": "2026-10-03",
-        "fundamento": "C7 por Haití en la política de las Américas; C3 por la herencia de su revolución. Registro: volumen colectivo, catalogado como un volumen."
+        "fundamento": "El volumen explora la posición de Haití en las Américas (hoja 2), y su primera parte muestra que las independencias latinoamericanas se fundaron «in the shadow of not only the United States but also Haiti» (hoja 8). C3 secundaria por la Revolución haitiana.",
+        "fundamento_previo": "C7 por Haití en la política de las Américas; C3 por la herencia de su revolución. Registro: volumen colectivo, catalogado como un volumen."
       }
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c9"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E07.md"
       ],
       "lote_incorporacion": "S27-2026-10-03",
       "anclaje_cartografico": {
@@ -17361,34 +17439,39 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "soberanias_fronteras_ocupaciones",
           "memorias_espiritualidades_archivos_vivos"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E07 (15-oct-2026). El volumen trata los problemas que Lewis enfrentó «as a radical intellectual and activist» (hoja 9), incluida la Revolución granadina. C9 secundaria por la tradición del pensamiento caribeño escrito y artístico que continúa (hoja 11)."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión del índice, la introducción de Thame y las notas.",
         "responsable": "Preparación asistida del lote S27; clasificación pendiente de adjudicación académica",
         "fecha": "2026-10-03",
-        "fundamento": "C7 por el Black Power y el socialismo caribeño; C9 por la tradición intelectual negra. Registro: volumen colectivo de homenaje."
+        "fundamento": "El volumen trata los problemas que Lewis enfrentó «as a radical intellectual and activist» (hoja 9), incluida la Revolución granadina. C9 secundaria por la tradición del pensamiento caribeño escrito y artístico que continúa (hoja 11).",
+        "fundamento_previo": "C7 por el Black Power y el socialismo caribeño; C9 por la tradición intelectual negra. Registro: volumen colectivo de homenaje."
       }
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c2",
+      "recorridos_sec": [
+        "c5"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E07.md"
       ],
       "lote_incorporacion": "S27-2026-10-03",
       "anclaje_cartografico": {
@@ -17432,34 +17515,39 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "trata_esclavizacion_plantacion",
           "rutas_diasporas_territorios_acuosos"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "trata_esclavizacion_plantacion",
+        "nota": "Expediente E07 (15-oct-2026). El libro desafía la idea de que los africanos llegaron tan fragmentados que sus etnias no influyeron en las Américas (hoja 16). C5 secundaria por las rutas entre costas africanas y regiones americanas."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión del índice, las tablas y la bibliografía.",
         "responsable": "Preparación asistida del lote S27; clasificación pendiente de adjudicación académica",
         "fecha": "2026-10-03",
-        "fundamento": "C2 por la trata; C5 por las rutas que unen regiones africanas y puertos americanos. Registro: historia cuantitativa."
+        "fundamento": "El libro desafía la idea de que los africanos llegaron tan fragmentados que sus etnias no influyeron en las Américas (hoja 16). C5 secundaria por las rutas entre costas africanas y regiones americanas.",
+        "fundamento_previo": "C2 por la trata; C5 por las rutas que unen regiones africanas y puertos americanos. Registro: historia cuantitativa."
       }
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c10"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E07.md"
       ],
       "lote_incorporacion": "S27-2026-10-03",
       "anclaje_cartografico": {
@@ -17507,34 +17595,39 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "memorias_espiritualidades_archivos_vivos",
           "cuerpos_parentescos_eroticas"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "nota": "Expediente E07 (15-oct-2026). «The women of this collection all engage in an affective-spiritual conceptualization of the uno múltiple» (hoja 26). C10 secundaria por la transcorporalidad y las mujeres afrodescendientes como sujeto (hojas 20 y 29)."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión del índice, la introducción y la lista de obras citadas.",
         "responsable": "Preparación asistida del lote S27; clasificación pendiente de adjudicación académica",
         "fecha": "2026-10-03",
-        "fundamento": "C9 por la espiritualidad afrocaribeña; C10 por el feminismo y el cuerpo. Registro: crítica cultural, admitida por decisión de la dirección académica."
+        "fundamento": "«The women of this collection all engage in an affective-spiritual conceptualization of the uno múltiple» (hoja 26). C10 secundaria por la transcorporalidad y las mujeres afrodescendientes como sujeto (hojas 20 y 29).",
+        "fundamento_previo": "C9 por la espiritualidad afrocaribeña; C10 por el feminismo y el cuerpo. Registro: crítica cultural, admitida por decisión de la dirección académica."
       }
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c9"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E07.md"
       ],
       "lote_incorporacion": "S27-2026-10-03",
       "anclaje_cartografico": {
@@ -17577,34 +17670,39 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "soberanias_fronteras_ocupaciones",
           "memorias_espiritualidades_archivos_vivos"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E07 (15-oct-2026). Los ensayos conversan sobre «the course of the radical movements of the 1970s as well as the possible paths for political and social change» (hoja 8). C9 secundaria por los filósofos orgánicos afrocaribeños y la espiritualidad (hojas 25 y 31)."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión del prefacio, el índice, las notas y la bibliografía.",
         "responsable": "Preparación asistida del lote S27; clasificación pendiente de adjudicación académica",
         "fecha": "2026-10-03",
-        "fundamento": "C7 por la soberanía y el porvenir político caribeño; C9 por la memoria del radicalismo de los setenta. Registro: ensayo político."
+        "fundamento": "Los ensayos conversan sobre «the course of the radical movements of the 1970s as well as the possible paths for political and social change» (hoja 8). C9 secundaria por los filósofos orgánicos afrocaribeños y la espiritualidad (hojas 25 y 31).",
+        "fundamento_previo": "C7 por la soberanía y el porvenir político caribeño; C9 por la memoria del radicalismo de los setenta. Registro: ensayo político."
       }
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c5"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E07.md"
       ],
       "lote_incorporacion": "S27-2026-10-03",
       "anclaje_cartografico": {
@@ -17644,34 +17742,39 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "creolizaciones_traducciones_opacidades",
           "rutas_diasporas_territorios_acuosos"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "creolizaciones_traducciones_opacidades",
+        "nota": "Expediente E07 (15-oct-2026). Para el atlas pesan «Identidad cultural y diáspora» (cap. 16, hoja 353) y «Negociando identidades caribeñas»: la identidad como posición. C5 secundaria por la diáspora."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión del índice, la introducción de los editores y los capítulos 16 y 18.",
         "responsable": "Preparación asistida del lote S27; clasificación pendiente de adjudicación académica",
         "fecha": "2026-10-03",
-        "fundamento": "C8 por la identidad cultural como posición y no como esencia; C5 por la diáspora. Registro: antología de autor en traducción, catalogada como un volumen."
+        "fundamento": "Para el atlas pesan «Identidad cultural y diáspora» (cap. 16, hoja 353) y «Negociando identidades caribeñas»: la identidad como posición. C5 secundaria por la diáspora.",
+        "fundamento_previo": "C8 por la identidad cultural como posición y no como esencia; C5 por la diáspora. Registro: antología de autor en traducción, catalogada como un volumen."
       }
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c9"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E07.md"
       ],
       "lote_incorporacion": "S27-2026-10-03",
       "anclaje_cartografico": {
@@ -17711,34 +17814,39 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "soberanias_fronteras_ocupaciones",
           "memorias_espiritualidades_archivos_vivos"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E07 (15-oct-2026). «I will focus on recent work on sovereignty» para argumentar que la soberanía es algo «constantly in process» (hoja 1). C9 secundaria por la espiritualidad y la reparación (hojas 2 y 16)."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Lectura completa del artículo y de su bibliografía.",
         "responsable": "Preparación asistida del lote S27; clasificación pendiente de adjudicación académica",
         "fecha": "2026-10-03",
-        "fundamento": "C7 por la soberanía como proceso; C9 por las vidas posteriores del imperio y de la esclavitud, y la reparación. Registro: artículo, admitido por decisión de la dirección académica (3-oct-2026) como balance de la antropología del Caribe; es una excepción declarada a la regla de artículos."
+        "fundamento": "«I will focus on recent work on sovereignty» para argumentar que la soberanía es algo «constantly in process» (hoja 1). C9 secundaria por la espiritualidad y la reparación (hojas 2 y 16).",
+        "fundamento_previo": "C7 por la soberanía como proceso; C9 por las vidas posteriores del imperio y de la esclavitud, y la reparación. Registro: artículo, admitido por decisión de la dirección académica (3-oct-2026) como balance de la antropología del Caribe; es una excepción declarada a la regla de artículos."
       }
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E07.md"
       ],
       "lote_incorporacion": "S27-2026-10-03",
       "anclaje_cartografico": {
@@ -17778,34 +17886,39 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "creolizaciones_traducciones_opacidades",
           "soberanias_fronteras_ocupaciones"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "creolizaciones_traducciones_opacidades",
+        "nota": "Expediente E07 (15-oct-2026). El volumen propone «a dialogue between and beyond the Frankfurt School and Caribbean philosophy» con la creolización como método (hoja 4). C7 secundaria porque esa crítica va más allá de las nociones sedimentadas de soberanía política (hoja 4)."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión del índice, la introducción, las notas y la bibliografía de los capítulos.",
         "responsable": "Preparación asistida del lote S27; clasificación pendiente de adjudicación académica",
         "fecha": "2026-10-03",
-        "fundamento": "C8 por la creolización como teoría crítica; C7 por la emancipación y la federación como proyectos políticos. Registro: volumen colectivo de filosofía."
+        "fundamento": "El volumen propone «a dialogue between and beyond the Frankfurt School and Caribbean philosophy» con la creolización como método (hoja 4). C7 secundaria porque esa crítica va más allá de las nociones sedimentadas de soberanía política (hoja 4).",
+        "fundamento_previo": "C8 por la creolización como teoría crítica; C7 por la emancipación y la federación como proyectos políticos. Registro: volumen colectivo de filosofía."
       }
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c9"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E07.md"
       ],
       "lote_incorporacion": "S27-2026-10-03",
       "anclaje_cartografico": {
@@ -17841,34 +17954,39 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "soberanias_fronteras_ocupaciones",
           "memorias_espiritualidades_archivos_vivos"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E07 (15-oct-2026). Múnera vuelve sobre la independencia de Cartagena para mostrar el afán de crear «una república de ciudadanos», respaldada por negros y mulatos (hoja 9). C9 secundaria por los «olvidos y ficciones» de la memoria nacional que el título nombra."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión del índice, la introducción, el capítulo VI y la bibliografía.",
         "responsable": "Preparación asistida del lote S27; clasificación pendiente de adjudicación académica",
         "fecha": "2026-10-03",
-        "fundamento": "C7 por la independencia y el racismo republicano; C9 por los olvidos de la historia nacional. Registro: historia."
+        "fundamento": "Múnera vuelve sobre la independencia de Cartagena para mostrar el afán de crear «una república de ciudadanos», respaldada por negros y mulatos (hoja 9). C9 secundaria por los «olvidos y ficciones» de la memoria nacional que el título nombra.",
+        "fundamento_previo": "C7 por la independencia y el racismo republicano; C9 por los olvidos de la historia nacional. Registro: historia."
       }
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c4"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E07.md"
       ],
       "lote_incorporacion": "S27-2026-10-03",
       "anclaje_cartografico": {
@@ -17915,34 +18033,39 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "creolizaciones_traducciones_opacidades",
           "postplantacion_trabajo_desposesion"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "creolizaciones_traducciones_opacidades",
+        "nota": "Expediente E07 (15-oct-2026). Los ensayos tratan «the significance of ethnicity for social structure and national identity in the Caribbean» (hoja 1), en la línea de Hoetink. C4 secundaria por la sociedad plural y su base económica."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión del índice, la introducción de Oostindie y los capítulos de Mintz, Maingot y Knight.",
         "responsable": "Preparación asistida del lote S27; clasificación pendiente de adjudicación académica",
         "fecha": "2026-10-03",
-        "fundamento": "C8 por la etnicidad y las imágenes somáticas; C4 por la sociedad de plantación como su fondo común. Registro: volumen de homenaje, catalogado como un volumen."
+        "fundamento": "Los ensayos tratan «the significance of ethnicity for social structure and national identity in the Caribbean» (hoja 1), en la línea de Hoetink. C4 secundaria por la sociedad plural y su base económica.",
+        "fundamento_previo": "C8 por la etnicidad y las imágenes somáticas; C4 por la sociedad de plantación como su fondo común. Registro: volumen de homenaje, catalogado como un volumen."
       }
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c5"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E07.md"
       ],
       "lote_incorporacion": "S27-2026-10-03",
       "anclaje_cartografico": {
@@ -17995,34 +18118,39 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "soberanias_fronteras_ocupaciones",
           "rutas_diasporas_territorios_acuosos"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E07 (15-oct-2026). La federación antillana y los nacionalismos local y regional son el objeto (hoja 16). C5 secundaria por la diáspora negra que impulsó la federación."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión del índice, la introducción, las notas y la bibliografía.",
         "responsable": "Preparación asistida del lote S27; clasificación pendiente de adjudicación académica",
         "fecha": "2026-10-03",
-        "fundamento": "C7 por la federación como proyecto de soberanía; C5 por la diáspora negra que lo impulsó. Registro: historia política."
+        "fundamento": "La federación antillana y los nacionalismos local y regional son el objeto (hoja 16). C5 secundaria por la diáspora negra que impulsó la federación.",
+        "fundamento_previo": "C7 por la federación como proyecto de soberanía; C5 por la diáspora negra que lo impulsó. Registro: historia política."
       }
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c9"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente"
+        "Lote S27-2026-10-03: verificación bibliográfica y de citas; clasificación pendiente",
+        "expediente-corrientes-E07.md"
       ],
       "lote_incorporacion": "S27-2026-10-03",
       "anclaje_cartografico": {
@@ -18057,19 +18185,21 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "creolizaciones_traducciones_opacidades",
           "memorias_espiritualidades_archivos_vivos"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "creolizaciones_traducciones_opacidades",
+        "nota": "Expediente E07 (15-oct-2026). «El racismo antinegro, su génesis, manifestaciones, mutaciones y vigencia constituyen el tema central de este ensayo» (hoja 13): la racialidad cubana y sus paradojas. C9 secundaria por la memoria personal y colectiva del racismo."
       },
       "revision": {
         "estado": "pendiente_revision_con_texto",
         "alcance": "Revisión de la introducción, los capítulos centrales y las notas.",
         "responsable": "Preparación asistida del lote S27; clasificación pendiente de adjudicación académica",
         "fecha": "2026-10-03",
-        "fundamento": "C8 por la racialidad y el mestizaje cubano; C9 por la memoria personal y colectiva del racismo. Registro: ensayo."
+        "fundamento": "«El racismo antinegro, su génesis, manifestaciones, mutaciones y vigencia constituyen el tema central de este ensayo» (hoja 13): la racialidad cubana y sus paradojas. C9 secundaria por la memoria personal y colectiva del racismo.",
+        "fundamento_previo": "C8 por la racialidad y el mestizaje cubano; C9 por la memoria personal y colectiva del racismo. Registro: ensayo."
       }
     },
     {
