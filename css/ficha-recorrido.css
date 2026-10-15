@@ -1,0 +1,42 @@
+/* Ficha · recorrido legible. Todo derivado de las variables del atlas
+   (--cream, --gray, --gold, --red, --line, --ff-mono): sin colores nuevos. */
+#panel .rt-ruta{display:flex; flex-wrap:wrap; align-items:baseline; gap:4px 14px; margin:0 52px 12px 0; font-family:var(--ff-mono)}
+#panel .rt-b{background:none; border:0; padding:6px 0; min-height:32px; cursor:pointer; text-align:left;
+  font-family:var(--ff-mono); font-size:10px; letter-spacing:.9px; text-transform:uppercase; color:var(--gold);
+  border-bottom:1px dotted var(--gold-d)}
+#panel .rt-b:hover{color:var(--cream)}
+#panel .rt-paso{font-size:9px; letter-spacing:1px; text-transform:uppercase; color:var(--gray); margin-left:auto}
+
+#panel .rt-tags{display:flex; flex-wrap:wrap; gap:2px 12px; margin-top:4px;
+  font-family:var(--ff-mono); font-size:9.5px; letter-spacing:.8px; text-transform:uppercase; color:var(--gray)}
+#panel .rt-t.diso{color:var(--cream)}
+/* contraste: el texto «sin fuente declarada» pasaba de 3,2:1 a ≥5,8:1 */
+#panel .rel a .fu.pc{color:#e06f61; color:color-mix(in srgb, var(--red) 70%, var(--cream)); opacity:1}
+
+#panel .rel a.fu-largo{border-bottom:0}
+#panel .rel a.fu-largo:not(.fu-abierto) .fu{display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden}
+#panel .rt-masfila{border-bottom:1px dotted var(--line); padding:0 0 6px}
+#panel .rt-mas{background:none; border:0; padding:4px 0; min-height:28px; cursor:pointer;
+  font-family:var(--ff-mono); font-size:9.5px; letter-spacing:.9px; text-transform:uppercase; color:var(--gold)}
+#panel .rt-mas:hover{color:var(--cream)}
+#panel .rt-mas::before{content:"▸ "}
+#panel .rt-mas[aria-expanded="true"]::before{content:"▾ "}
+
+#panel .rt-filtro{margin:2px 0 8px; display:flex; flex-wrap:wrap; border:0; background:none; gap:6px}
+#panel .rt-filtro button{padding:6px 8px; font-size:9px; letter-spacing:.4px; border:1px solid var(--line); border-radius:3px}
+#panel .rt-estado{display:block; min-height:14px; margin-bottom:4px; font-family:var(--ff-mono); font-size:9.5px; letter-spacing:.6px; color:var(--gray); font-style:italic}
+#panel [hidden]{display:none !important}
+
+@media (pointer:coarse){
+  #panel .rt-b, #panel .rt-mas, #panel .rt-filtro button{min-height:32px}
+}
+
+#panel .rt-c{font-family:var(--ff-mono); font-size:9.5px; letter-spacing:.6px; font-style:normal; color:var(--gold)}
+#panel .rt-corr{display:flex; align-items:center; gap:8px; margin:0 0 6px}
+#panel .rt-corr-l{font-family:var(--ff-mono); font-size:9px; letter-spacing:1px; text-transform:uppercase; color:var(--gray)}
+#panel .rt-corr select{flex:1 1 auto; min-width:0; max-width:100%; background:var(--panel); color:var(--cream); border:1px solid var(--line); border-radius:3px;
+  padding:6px 8px; font-family:var(--ff-mono); font-size:10px}
+@media (pointer:coarse){ #panel .rt-corr select{min-height:36px; font-size:12px} }
+
+/* búsqueda por concepto: motivo de la coincidencia, bajo el autor */
+#qlista [role="option"] .ql-por{grid-column:2; margin-top:3px; font-family:var(--ff-mono); font-size:9.5px; letter-spacing:.5px; color:var(--gold)}
