@@ -1,5 +1,5 @@
 {
-  "version": "1.1.0",
+  "version": "1.2.0",
   "fecha": "2026-10-15",
   "titulo_es": "Antirracismo y reparaciones",
   "titulo_en": "Antiracism and reparations",
@@ -179,36 +179,57 @@
       "nota_es": "La obra compara reclamos de reparación a lo largo de dos siglos: la deuda de Haití, la compensación a los amos y la memoria pública de la esclavitud como economía moral. El desenlace está por corroborar.",
       "nota_en": "The work compares reparation claims over two centuries: Haiti's debt, the compensation of slave owners and the public memory of slavery as a moral economy. The outcome is yet to be corroborated.",
       "sin_leer": true
+    },
+    {
+      "id": "curielsentencia",
+      "lugar": "dominicana",
+      "anio": "2021",
+      "obra": "Ochy Curiel, Un golpe de Estado: la Sentencia 168-13",
+      "quien_es": "Dominicanos de ascendencia haitiana, desnacionalizados de forma retroactiva; el caso inmediato es el de Juliana Deguis Pierre",
+      "quien_en": "Dominicans of Haitian descent, denationalised retroactively; the immediate case is that of Juliana Deguis Pierre",
+      "instancia_es": "Tribunal Constitucional dominicano (Sentencia 168-13) y Corte Interamericana de Derechos Humanos",
+      "instancia_en": "Dominican Constitutional Court (Ruling 168-13) and the Inter-American Court of Human Rights",
+      "categoria_es": "Derecho a la nacionalidad y apatridia",
+      "categoria_en": "Right to nationality and statelessness",
+      "desenlace": "parcial",
+      "nota_es": "La Corte Interamericana ordenó en octubre de 2014 restablecer la nacionalidad a las personas afectadas, y el Estado dominicano rechazó el fallo. La Ley 169-14 abrió un plan de regularización que Curiel lee como apartheid jurídico y administrativo: a cinco años de la sentencia, la mayoría de los afectados seguía sin su situación resuelta. El desenlace es el que registra la obra; su estado actual está por corroborar.",
+      "nota_en": "In October 2014 the Inter-American Court ordered the restoration of nationality to those affected, and the Dominican State rejected the ruling. Law 169-14 opened a regularisation plan that Curiel reads as legal and administrative apartheid: five years after the ruling, most of those affected still had no resolution. The outcome is the one the work records; its current state is yet to be corroborated.",
+      "reserva": true
+    },
+    {
+      "id": "figueroaantirracismo",
+      "lugar": "cuba",
+      "anio": "2023",
+      "obra": "José Antonio Figueroa, Yulexis Almeida y Jochen Kemner (comps.), (Anti-)racismo y republicanismo negro en Cuba",
+      "quien_es": "La población afrodescendiente cubana, frente a un racismo que persiste oculto tras su negación y su silencio",
+      "quien_en": "Cuba's Afro-descendant population, facing a racism that persists hidden behind its denial and silence",
+      "instancia_es": "Estado cubano: congresos de la UNEAC y la UPEC (2008) y Programa Nacional contra el Racismo y la Discriminación Racial",
+      "instancia_en": "Cuban State: the UNEAC and UPEC congresses (2008) and the National Programme against Racism and Racial Discrimination",
+      "categoria_es": "Igualdad racial y políticas públicas",
+      "categoria_en": "Racial equality and public policy",
+      "desenlace": "abierto",
+      "nota_es": "Los congresos de 2008 reconocieron un racismo oculto por su negación, y existe un programa nacional contra el racismo y la discriminación racial; los capítulos del volumen lo ven aún insuficiente ante conflictos socioestructurales complejos. Romay (2014) añade que el debate público sigue siendo escaso e inhibido. El desenlace está por corroborar.",
+      "nota_en": "The 2008 congresses acknowledged a racism hidden by its denial, and a national programme against racism and racial discrimination exists; the chapters of the volume still find it insufficient in the face of complex socio-structural conflicts. Romay (2014) adds that public debate remains scarce and inhibited. The outcome is yet to be corroborated.",
+      "reserva": true
+    },
+    {
+      "id": "vanderpijl_equaliberty",
+      "lugar": "curazao",
+      "anio": "2022",
+      "obra": "Yvon van der Pijl y Francio Guadeloupe (eds.), Equaliberty in the Dutch Caribbean",
+      "quien_es": "Sectores independentistas de Curazao, que leen la tutela neerlandesa como recolonización",
+      "quien_en": "Pro-independence sectors in Curaçao, who read Dutch tutelage as recolonisation",
+      "instancia_es": "Reino de los Países Bajos: referéndum de 2009 y disolución de las Antillas Neerlandesas en 2010",
+      "instancia_en": "Kingdom of the Netherlands: the 2009 referendum and the dissolution of the Netherlands Antilles in 2010",
+      "categoria_es": "Autonomía no soberana y cultura afrocuraçaleña",
+      "categoria_en": "Non-sovereign autonomy and Afro-Curaçaoan culture",
+      "desenlace": "abierto",
+      "nota_es": "El referéndum de 2009 aprobó con el 51,99 % el estatus de país autónomo dentro del Reino. Quienes siguen resistiendo la «recolonización» sostienen que ella suprime la cultura afrocuraçaleña; los autores del volumen advierten que ese relato supone una identidad esencialmente afro. El desenlace está por corroborar.",
+      "nota_en": "The 2009 referendum approved, with 51.99 %, the status of an autonomous country within the Kingdom. Those who keep resisting \"recolonisation\" hold that it suppresses Afro-Curaçaoan culture; the volume's authors warn that this account assumes an essentially Afro identity. The outcome is yet to be corroborated.",
+      "reserva": true
     }
   ],
   "vacios": [
-    {
-      "id": "cuba",
-      "lugar": "cuba",
-      "nodo": true,
-      "caso_es": "El debate antirracista cubano posterior a 2010",
-      "caso_en": "The Cuban antiracist debate after 2010",
-      "nota_es": "El atlas reúne obras sobre el racismo y el antirracismo en Cuba (Figueroa y otros, 2023; Romay, 2014); este debate aún no figura como caso.",
-      "nota_en": "The atlas gathers works on racism and antiracism in Cuba (Figueroa et al., 2023; Romay, 2014); this debate does not yet appear as a case."
-    },
-    {
-      "id": "dominicana",
-      "lugar": "dominicana",
-      "nodo": true,
-      "caso_es": "La sentencia 168-13 y la desnacionalización de dominicanos de ascendencia haitiana",
-      "caso_en": "Ruling 168-13 and the denationalisation of Dominicans of Haitian descent",
-      "nota_es": "Probablemente el reclamo mejor documentado del Caribe de hoy. El atlas reúne un estudio de la sentencia (Curiel, 2021), que aún no figura como caso.",
-      "nota_en": "Probably the best-documented claim in today's Caribbean. The atlas gathers a study of the ruling (Curiel, 2021), which does not yet appear as a case."
-    },
-    {
-      "id": "curazao",
-      "lugar": "curazao",
-      "nodo": true,
-      "caso_es": "El estatus tras la disolución de las Antillas Neerlandesas en 2010",
-      "caso_en": "Status after the dissolution of the Netherlands Antilles in 2010",
-      "nota_es": "El atlas reúne obras sobre la no soberanía del Caribe neerlandés (van der Pijl y Guadeloupe, 2022; Oostindie y Klinkers, 2003); el estatus posterior a 2010 aún no figura como caso.",
-      "nota_en": "The atlas gathers works on Dutch Caribbean non-sovereignty (van der Pijl and Guadeloupe, 2022; Oostindie and Klinkers, 2003); the status after 2010 does not yet appear as a case."
-    },
     {
       "id": "caricom",
       "lugar": "guyana",

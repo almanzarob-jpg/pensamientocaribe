@@ -35,7 +35,7 @@
          huecosNota:'Señalan reclamos que el atlas aún no lee como caso, no la ausencia de procesos antirracistas en esos territorios.',
          porCorr:'Por corroborar',
          buscaPh:'obra, autor, instancia…', buscaLbl:'Buscar en los casos',
-         resumen:(c,l,v)=>c+' casos · '+l+' lugares · '+v+' vacíos declarados',
+         resumen:(c,l,v)=>c+' casos · '+l+' lugares · '+v+(v===1?' vacío declarado':' vacíos declarados'),
          filtrados:(n,t)=>n+' de '+t+' casos', sinFiltro:'Todos los casos',
          nada:'Ningún caso coincide con la búsqueda.', limpiar:'Quitar filtro',
          comoSeLee:'Cómo se lee esta capa',
@@ -43,7 +43,7 @@
          desactivar:'Desactivar capa', desactivarT:'Retira las marcas del mapa y restablece la vista del atlas',
          verObra:'Ver la obra en el atlas', verMapa:'Ver el mapa',
          ampliar:'Ampliar', reducir:'Reducir',
-         anuncio:'{n} casos en {l} lugares, y {v} vacíos declarados.',
+         anuncio:'{n} casos en {l} lugares, y {v} {vv}.',
          anuncioSitio:'{s}: {n} casos.' },
     en:{ btn:'Antiracism', btnTitle:'Open the antiracism and reparations layer',
          quien:'Who claims', inst:'Before which body', cat:'Under what category', des:'Outcome',
@@ -51,7 +51,7 @@
          huecosNota:'They mark claims the atlas does not yet read as a case, not the absence of antiracist processes in those territories.',
          porCorr:'To be corroborated',
          buscaPh:'work, author, body…', buscaLbl:'Search the cases',
-         resumen:(c,l,v)=>c+' cases · '+l+' places · '+v+' declared gaps',
+         resumen:(c,l,v)=>c+' cases · '+l+' places · '+v+(v===1?' declared gap':' declared gaps'),
          filtrados:(n,t)=>n+' of '+t+' cases', sinFiltro:'All cases',
          nada:'No case matches the search.', limpiar:'Clear filter',
          comoSeLee:'How to read this layer',
@@ -59,7 +59,7 @@
          desactivar:'Turn off layer', desactivarT:'Removes the map marks and restores the atlas view',
          verObra:'See the work in the atlas', verMapa:'See the map',
          ampliar:'Expand', reducir:'Collapse',
-         anuncio:'{n} cases in {l} places, and {v} declared gaps.',
+         anuncio:'{n} cases in {l} places, and {v} {vv}.',
          anuncioSitio:'{s}: {n} cases.' }
   };
   const at = k => (AI[LANG] && AI[LANG][k]!==undefined) ? AI[LANG][k] : AI.es[k];
@@ -160,7 +160,7 @@
   }
   function anunciar(){
     const g=agrupar(), n=visibles().length;
-    anuncio.textContent=at('anuncio').replace('{n}',n).replace('{l}',g.length).replace('{v}',A.vacios.length);
+    anuncio.textContent=at('anuncio').replace('{n}',n).replace('{l}',g.length).replace('{v}',A.vacios.length).replace('{vv}',LANG==='en'?(A.vacios.length===1?'declared gap':'declared gaps'):(A.vacios.length===1?'vacío declarado':'vacíos declarados'));
   }
 
   /* ---------------- encuadre: el panel no tapa el mapa ----------------
