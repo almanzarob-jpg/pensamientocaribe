@@ -3,9 +3,9 @@
     "titulo": "Con el agua de por medio",
     "subtitulo": "Atlas para una antropología archipiélica",
     "responsable": "Grupo de Investigación Pensamiento Caribe",
-    "version": "1.36.0",
+    "version": "1.37.0",
     "fecha": "2026-10-15",
-    "nota_version": "Expediente E07: las veintiséis obras del lote S27 reciben corriente, cada una con el fundamento leído en su prefacio, introducción o índice. 332 obras del atlas tienen ya corriente confirmada.",
+    "nota_version": "Expediente E09: primera tanda de las obras sin evaluar. Veinticinco obras reciben corriente, cada una con el fundamento leído en el texto. 357 obras del atlas tienen ya corriente confirmada.",
     "registro_interno": {
       "proposito": "Protocolo revisado de resonancia y disonancia (22-09-2026). Las categorías públicas del atlas siguen siendo resonancia y disonancia; este registro es interno y orienta la revisión editorial. El campo apoyo no crea categorías públicas ni cambia la interfaz.",
       "apoyo": {
@@ -750,10 +750,30 @@
       "l": "martinica",
       "tr": "francófono (Martinica)",
       "ap": "Manifiesto de la creolidad; tensiona con la negritud de Césaire.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c9"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "expediente-corrientes-E09.md"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "creolizaciones_traducciones_opacidades",
+          "memorias_espiritualidades_archivos_vivos"
+        ],
+        "corriente_confirmada": "creolizaciones_traducciones_opacidades",
+        "nota": "Expediente E09 (15-oct-2026). «Ni Européens, ni Africains, ni Asiatiques, nous nous proclamons Créoles» (prólogo, hoja 15): la créolité como actitud y como programa de lengua y literatura. C9 secundaria por la oralidad que el manifiesto reivindica como fundamento."
+      },
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "«Ni Européens, ni Africains, ni Asiatiques, nous nous proclamons Créoles» (prólogo, hoja 15): la créolité como actitud y como programa de lengua y literatura. C9 secundaria por la oralidad que el manifiesto reivindica como fundamento.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E09, propuesta asistida)",
+        "fecha": "2026-10-15"
+      }
     },
     {
       "id": "monahan",
@@ -841,10 +861,30 @@
       "l": "guadalupe",
       "tr": "francófono (Guadalupe)",
       "ap": "La oralidad interartística como archivo transinsular.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c8"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "expediente-corrientes-E09.md"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "memorias_espiritualidades_archivos_vivos",
+          "creolizaciones_traducciones_opacidades"
+        ],
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "nota": "Expediente E09 (15-oct-2026). El libro pone en acto el concepto de interoralidad, «a practice of foundation» (hoja 11): la tradición oral como saber transmitido. C8 secundaria porque la interoralidad es transposición y traducción entre zonas culturales (hojas 7 y 14)."
+      },
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El libro pone en acto el concepto de interoralidad, «a practice of foundation» (hoja 11): la tradición oral como saber transmitido. C8 secundaria porque la interoralidad es transposición y traducción entre zonas culturales (hojas 7 y 14).",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E09, propuesta asistida)",
+        "fecha": "2026-10-15"
+      }
     },
     {
       "id": "chande",
@@ -1002,10 +1042,30 @@
       "l": "guadalupe",
       "tr": "francófono/anglófono (Guadalupe–PR)",
       "ap": "La soberanía como problema, no como meta: repensar la libertad tras la nación.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c4"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "expediente-corrientes-E09.md"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "postplantacion_trabajo_desposesion"
+        ],
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E09 (15-oct-2026). «In both the independent and non-independent Caribbean, there is a common feeling of disenchantment with the modernist project of postcolonial sovereignty» (hoja 15). C4 secundaria porque esa pregunta se hace desde los sindicalistas de Guadalupe (hoja 22)."
+      },
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "«In both the independent and non-independent Caribbean, there is a common feeling of disenchantment with the modernist project of postcolonial sovereignty» (hoja 15). C4 secundaria porque esa pregunta se hace desde los sindicalistas de Guadalupe (hoja 22).",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E09, propuesta asistida)",
+        "fecha": "2026-10-15"
+      }
     },
     {
       "id": "lindskoog",
@@ -1279,10 +1339,30 @@
       "l": "cuba",
       "tr": "anglófono (EE.UU.)",
       "ap": "La santería como performance: el canto y el tambor como forma de conocimiento religioso, no solo su ilustración.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c8"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "expediente-corrientes-E09.md"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "memorias_espiritualidades_archivos_vivos",
+          "creolizaciones_traducciones_opacidades"
+        ],
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "nota": "Expediente E09 (15-oct-2026). «This book explores the encoding of the sacred in Afro-Cuban performance» (hoja 21). C8 secundaria por el paso de lo sagrado a lo folclórico y su traducción escénica."
+      },
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "«This book explores the encoding of the sacred in Afro-Cuban performance» (hoja 21). C8 secundaria por el paso de lo sagrado a lo folclórico y su traducción escénica.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E09, propuesta asistida)",
+        "fecha": "2026-10-15"
+      }
     },
     {
       "id": "pricefirst",
@@ -1328,10 +1408,30 @@
       "l": "haiti",
       "tr": "anglófono (EE.UU.)",
       "ap": "Memoria etnográfica y autobiográfica del vodou haitiano desde una antropóloga-bailarina negra; disputó con Hurston el terreno del mismo campo.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c10"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "expediente-corrientes-E09.md"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "memorias_espiritualidades_archivos_vivos",
+          "cuerpos_parentescos_eroticas"
+        ],
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "nota": "Expediente E09 (15-oct-2026). Dunham fue a Haití en 1936 a estudiar la danza y el ritual, y su relato es el de su propia iniciación en el vodou (nota del editor, hoja 9). C10 secundaria por el cuerpo que danza como forma de conocimiento."
+      },
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Dunham fue a Haití en 1936 a estudiar la danza y el ritual, y su relato es el de su propia iniciación en el vodou (nota del editor, hoja 9). C10 secundaria por el cuerpo que danza como forma de conocimiento.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E09, propuesta asistida)",
+        "fecha": "2026-10-15"
+      }
     },
     {
       "id": "friedemannlengua",
@@ -1419,10 +1519,30 @@
       "l": "trinidad",
       "tr": "anglófono (Trinidad)",
       "ap": "Volumen panantillano sobre religión afrocaribeña como forma de identidad, no solo de creencia.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c8"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "expediente-corrientes-E09.md"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "memorias_espiritualidades_archivos_vivos",
+          "creolizaciones_traducciones_opacidades"
+        ],
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "nota": "Expediente E09 (15-oct-2026). «It is living religious traditions and their implications for Caribbean modernity that are the subject of the essays in this book» (hoja 14). C8 secundaria por el enfoque intersemiótico de los códigos culturales (hoja 16)."
+      },
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "«It is living religious traditions and their implications for Caribbean modernity that are the subject of the essays in this book» (hoja 14). C8 secundaria por el enfoque intersemiótico de los códigos culturales (hoja 16).",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E09, propuesta asistida)",
+        "fecha": "2026-10-15"
+      }
     },
     {
       "id": "peasantscapital",
@@ -1535,10 +1655,30 @@
       "l": "haiti",
       "tr": "anglófono (EE.UU.)",
       "ap": "Etnografía en primera persona, mitad memoria mitad reportaje, escrita por una mujer negra iniciada en el propio rito que describe.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c8"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "expediente-corrientes-E09.md"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "memorias_espiritualidades_archivos_vivos",
+          "creolizaciones_traducciones_opacidades"
+        ],
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "nota": "Expediente E09 (15-oct-2026). Etnografía del vodou haitiano y de las prácticas religiosas jamaicanas, escrita por Hurston en 1938. C8 secundaria por su lectura de la imitación colonial, el empeño de que todos en Jamaica «talk English, act English and look English» (hoja 18)."
+      },
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Etnografía del vodou haitiano y de las prácticas religiosas jamaicanas, escrita por Hurston en 1938. C8 secundaria por su lectura de la imitación colonial, el empeño de que todos en Jamaica «talk English, act English and look English» (hoja 18).",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E09, propuesta asistida)",
+        "fecha": "2026-10-15"
+      }
     },
     {
       "id": "palmiengangas",
@@ -1553,10 +1693,30 @@
       "l": "cuba",
       "tr": "anglófono (EE.UU.)",
       "ap": "El ritual afrocubano leído como forma de pensar la ciencia occidental, no como su objeto exótico.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c8"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "expediente-corrientes-E09.md"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "memorias_espiritualidades_archivos_vivos",
+          "creolizaciones_traducciones_opacidades"
+        ],
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "nota": "Expediente E09 (15-oct-2026). El libro pone «Afro-Cuban ritual and Western expert praxis under one analytical umbrella» (prefacio, hoja 7): el saber ritual como forma de conocimiento. C8 secundaria por la traducción entre ese saber y la ciencia occidental."
+      },
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El libro pone «Afro-Cuban ritual and Western expert praxis under one analytical umbrella» (prefacio, hoja 7): el saber ritual como forma de conocimiento. C8 secundaria por la traducción entre ese saber y la ciencia occidental.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E09, propuesta asistida)",
+        "fecha": "2026-10-15"
+      }
     },
     {
       "id": "travelstooy",
@@ -1624,10 +1784,30 @@
       "l": "cuba",
       "tr": "anglófono (EE.UU.)",
       "ap": "Modernidad y tradición afrocubana como un mismo proceso, no como dos etapas sucesivas.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c2"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "expediente-corrientes-E09.md"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "memorias_espiritualidades_archivos_vivos",
+          "trata_esclavizacion_plantacion"
+        ],
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "nota": "Expediente E09 (15-oct-2026). Exploraciones de la modernidad y la tradición afrocubanas. Palmié reconoce su deuda con Mintz sobre el lugar del Caribe en la modernidad occidental y reelabora a Mintz, Eric Williams y James (hoja 11). C2 secundaria por esa genealogía de la plantación."
+      },
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Exploraciones de la modernidad y la tradición afrocubanas. Palmié reconoce su deuda con Mintz sobre el lugar del Caribe en la modernidad occidental y reelabora a Mintz, Eric Williams y James (hoja 11). C2 secundaria por esa genealogía de la plantación.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E09, propuesta asistida)",
+        "fecha": "2026-10-15"
+      }
     },
     {
       "id": "pricemars",
@@ -1723,10 +1903,30 @@
       "l": "jamaica",
       "tr": "anglófono (Jamaica/EE.UU.)",
       "ap": "De la respetabilidad campesina a la negrura popular urbana: cómo cambia el ideal racial de nación bajo la globalización cultural.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c8"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "expediente-corrientes-E09.md"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "creolizaciones_traducciones_opacidades"
+        ],
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E09 (15-oct-2026). El libro analiza «the changing relationships among nationalism, popular culture, and the political economy of development in postcolonial Jamaica» (hoja 18). C8 secundaria por la cultura popular como lugar donde se negocia la pertenencia."
+      },
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El libro analiza «the changing relationships among nationalism, popular culture, and the political economy of development in postcolonial Jamaica» (hoja 18). C8 secundaria por la cultura popular como lugar donde se negocia la pertenencia.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E09, propuesta asistida)",
+        "fecha": "2026-10-15"
+      }
     },
     {
       "id": "citizenshipedge",
@@ -2002,10 +2202,30 @@
       "l": "costachica",
       "tr": "anglófono (EE.UU./México)",
       "ap": "Medio siglo después de Aguirre Beltrán, revisa la Costa Chica para mostrar cómo raza y lugar se hacen juntos, no uno tras otro.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c5"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "expediente-corrientes-E09.md"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "creolizaciones_traducciones_opacidades",
+          "rutas_diasporas_territorios_acuosos"
+        ],
+        "corriente_confirmada": "creolizaciones_traducciones_opacidades",
+        "nota": "Expediente E09 (15-oct-2026). «This book coheres around places and boundaries»: la raza remite a un pasado en curso y la migración a un futuro urbano (hoja 29). C8 por la raza y el mestizaje en San Nicolás; C5 por la migración."
+      },
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "«This book coheres around places and boundaries»: la raza remite a un pasado en curso y la migración a un futuro urbano (hoja 29). C8 por la raza y el mestizaje en San Nicolás; C5 por la migración.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E09, propuesta asistida)",
+        "fecha": "2026-10-15"
+      }
     },
     {
       "id": "womenancestors",
@@ -2216,10 +2436,30 @@
       "l": "puertorico",
       "tr": "anglófono (EE.UU./Puerto Rico)",
       "ap": "Rastafaris puertorriqueños que construyen una negritud espiritual no nacional sino mundial, extendida hacia el Gran Caribe y África. La identidad negra que desborda la frontera del Estado.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c5"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "expediente-corrientes-E09.md"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "memorias_espiritualidades_archivos_vivos",
+          "rutas_diasporas_territorios_acuosos"
+        ],
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "nota": "Expediente E09 (15-oct-2026). «Their performance of a spiritually Black identity creates a different understanding of Blackness in Puerto Rico, one that is not nation-based but rather worldwide» (hoja 1). C5 secundaria por esa negritud global y diaspórica."
+      },
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "«Their performance of a spiritually Black identity creates a different understanding of Blackness in Puerto Rico, one that is not nation-based but rather worldwide» (hoja 1). C5 secundaria por esa negritud global y diaspórica.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E09, propuesta asistida)",
+        "fecha": "2026-10-15"
+      }
     },
     {
       "id": "islandfutures",
@@ -2422,10 +2662,30 @@
       "l": "martinica",
       "tr": "francófono (Martinica)",
       "ap": "El colonialismo leído como la matriz que produce después el fascismo europeo: Europa no cae en la barbarie, la exporta primero a sus colonias y luego la recibe de vuelta. El texto que funda buena parte de la crítica anticolonial que ya circulaba en este atlas sin nombrarlo.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c8"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "expediente-corrientes-E09.md"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "creolizaciones_traducciones_opacidades"
+        ],
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E09 (15-oct-2026). El Discurso ataca la colonización como sistema de dominación y deshumanización, y plantea la ecuación «colonización = cosificación» (hoja 17). C8 secundaria por la crítica de la civilización europea que hace posible la negritud."
+      },
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El Discurso ataca la colonización como sistema de dominación y deshumanización, y plantea la ecuación «colonización = cosificación» (hoja 17). C8 secundaria por la crítica de la civilización europea que hace posible la negritud.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E09, propuesta asistida)",
+        "fecha": "2026-10-15"
+      }
     },
     {
       "id": "fanon",
@@ -2497,10 +2757,30 @@
       "l": "haiti",
       "tr": "anglófono (EE.UU./Haití)",
       "ap": "Cómo se produce el silencio histórico: la revolución haitiana, el acontecimiento que Occidente no podía pensar en su propio momento, borrada después de la historia que se cuenta sobre la libertad moderna.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c3"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "expediente-corrientes-E09.md"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "memorias_espiritualidades_archivos_vivos",
+          "fugas_cimarronajes_emancipaciones"
+        ],
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "nota": "Expediente E09 (15-oct-2026). El libro estudia cómo el poder produce silencios en la historia y en el archivo, el poder que «está aquí con nosotros, mientras que leemos este libro» (hoja 10). C3 secundaria por la Revolución haitiana como lo impensable."
+      },
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El libro estudia cómo el poder produce silencios en la historia y en el archivo, el poder que «está aquí con nosotros, mientras que leemos este libro» (hoja 10). C3 secundaria por la Revolución haitiana como lo impensable.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E09, propuesta asistida)",
+        "fecha": "2026-10-15"
+      }
     },
     {
       "id": "brownreaper",
@@ -3034,10 +3314,30 @@
       "l": "nola",
       "tr": "francófono/anglófono (Luisiana)",
       "ap": "Cómo una ciudad franco-africana del Gran Caribe fue \"americanizada\" a la fuerza durante el siglo XIX: la desaparición administrativa de lo criollo como política racial deliberada, no como evolución natural.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "expediente-corrientes-E09.md"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "creolizaciones_traducciones_opacidades",
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "corriente_confirmada": "creolizaciones_traducciones_opacidades",
+        "nota": "Expediente E09 (15-oct-2026). La primera parte trae a primer plano la historia colonial criolla de Nueva Orleans y la segunda, su «encounter with Americanization» (hoja 13). C7 secundaria por la imposición de instituciones estadounidenses."
+      },
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La primera parte trae a primer plano la historia colonial criolla de Nueva Orleans y la segunda, su «encounter with Americanization» (hoja 13). C7 secundaria por la imposición de instituciones estadounidenses.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E09, propuesta asistida)",
+        "fecha": "2026-10-15"
+      }
     },
     {
       "id": "ramsaranlewis",
@@ -3260,10 +3560,30 @@
       "l": "guadalupe",
       "tr": "francófono (Guadalupe)",
       "ap": "La historia enterrada de Guadalupe contada por una mujer campesina en su propia lengua: el criollo recogido como forma legítima de saber histórico, no como curiosidad folclórica.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c4"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "expediente-corrientes-E09.md"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "memorias_espiritualidades_archivos_vivos",
+          "postplantacion_trabajo_desposesion"
+        ],
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "nota": "Expediente E09 (15-oct-2026). La historia de vida de Léonora, campesina de Guadalupe, contada en su propia voz: la tierra materna, «land of the ancestors, a piece of oneself that cannot be sold» (índice, hoja 9). C4 secundaria por el trabajo campesino y la tierra."
+      },
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La historia de vida de Léonora, campesina de Guadalupe, contada en su propia voz: la tierra materna, «land of the ancestors, a piece of oneself that cannot be sold» (índice, hoja 9). C4 secundaria por el trabajo campesino y la tierra.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E09, propuesta asistida)",
+        "fecha": "2026-10-15"
+      }
     },
     {
       "id": "ulysseWhyHaiti",
@@ -3424,10 +3744,30 @@
       "l": "curazao",
       "tr": "neerlandófono (Curazao) / anglófono",
       "ap": "Extiende explícitamente el marco de la soberanía no-soberana de Bonilla al Caribe neerlandés: piensa Curazao como forma política que no aspira a la independencia clásica y aun así disputa poder.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c8"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "expediente-corrientes-E09.md"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "creolizaciones_traducciones_opacidades"
+        ],
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E09 (15-oct-2026). Los autores sostienen que «people are subtly rewriting the script of postcolonial resistance» en el Caribe neerlandés no soberano (hoja 3). C8 secundaria por las formas culturales de esa resistencia."
+      },
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Los autores sostienen que «people are subtly rewriting the script of postcolonial resistance» en el Caribe neerlandés no soberano (hoja 3). C8 secundaria por las formas culturales de esa resistencia.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E09, propuesta asistida)",
+        "fecha": "2026-10-15"
+      }
     },
     {
       "id": "naveda_esclavoscordoba",
@@ -3725,10 +4065,30 @@
       "l": "jamaica",
       "tr": "anglófono (Jamaica/EE.UU.)",
       "ap": "Síntesis histórica que cita explícitamente el comparatismo de área de Mintz; candidato a segundo texto-brújula del atlas, junto al Trouillot ya presente.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c2"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "expediente-corrientes-E09.md"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "trata_esclavizacion_plantacion"
+        ],
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E09 (15-oct-2026). La nación y el Estado nacional aparecen como formas de identificación, del «patriachiquismo» al imperio (hoja 16), y el concepto de Caribe del libro privilegia los rasgos culturales comunes (hoja 17). C2 secundaria por la historia de la plantación esclavista que lo organiza."
+      },
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La nación y el Estado nacional aparecen como formas de identificación, del «patriachiquismo» al imperio (hoja 16), y el concepto de Caribe del libro privilegia los rasgos culturales comunes (hoja 17). C2 secundaria por la historia de la plantación esclavista que lo organiza.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E09, propuesta asistida)",
+        "fecha": "2026-10-15"
+      }
     },
     {
       "id": "benedictykokken_haitiexception",
@@ -3803,10 +4163,30 @@
       "l": "haiti",
       "tr": "anglófono (Haití/EE.UU.)",
       "ap": "El cuarto Trouillot del atlas, y el que faltaba. Aquí el Estado haitiano no es heredero de 1804 sino su adversario: el duvalierismo como aparato de terror montado contra la nación, no como desvío patológico. Le da a soberanías y violencias el registro estatal que no tenían.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c4"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "expediente-corrientes-E09.md"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "postplantacion_trabajo_desposesion"
+        ],
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E09 (15-oct-2026). «The Duvalierist state emerged as the result of a long-term process that was marked by an increasing disjuncture between political and civil society» (hoja 17). C4 secundaria por el capitalismo periférico y el campesinado (hoja 29)."
+      },
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "«The Duvalierist state emerged as the result of a long-term process that was marked by an increasing disjuncture between political and civil society» (hoja 17). C4 secundaria por el capitalismo periférico y el campesinado (hoja 29).",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E09, propuesta asistida)",
+        "fecha": "2026-10-15"
+      }
     },
     {
       "id": "kincaidsmallplace",
@@ -3821,10 +4201,30 @@
       "l": "antigua",
       "tr": "anglófono (Antigua/EE.UU.)",
       "ap": "El turismo mirado desde la orilla que lo recibe: el visitante como figura moral y no como dato económico. Antigua entra al atlas por su texto más incómodo, escrito sin aparato ni bibliografía, y por eso mismo difícil de citar y difícil de refutar.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c4"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "expediente-corrientes-E09.md"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "postplantacion_trabajo_desposesion"
+        ],
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E09 (15-oct-2026). «If you go to Antigua as a tourist, this is what you will see» (hoja 19): el turismo, la corrupción y la herencia colonial de una isla nominalmente independiente. C4 secundaria por la economía de servicio que sustituye a la plantación."
+      },
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "«If you go to Antigua as a tourist, this is what you will see» (hoja 19): el turismo, la corrupción y la herencia colonial de una isla nominalmente independiente. C4 secundaria por la economía de servicio que sustituye a la plantación.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E09, propuesta asistida)",
+        "fecha": "2026-10-15"
+      }
     },
     {
       "id": "wilsoncrabantics",
@@ -3943,10 +4343,30 @@
       "l": "barbados",
       "tr": "anglófono (Barbados/Jamaica)",
       "ap": "Lamming leído como práctica intelectual insurgente y no como literatura: descolonizar exige inventar una lengua propia para desmontar el terror mental que dejó la colonia. Barbados tenía a Brathwaite y a Sharpe; le faltaba el otro polo de su misma tradición.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "expediente-corrientes-E09.md"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "creolizaciones_traducciones_opacidades",
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "corriente_confirmada": "creolizaciones_traducciones_opacidades",
+        "nota": "Expediente E09 (15-oct-2026). El volumen trabaja «the radical anticolonial tradition and the black radical tradition» desde Lamming (hoja 22). Su subtítulo es la estética de la descolonización: C8. C7 secundaria por la política, que junto con la historia «give oxygen to Caribbean thought» (hoja 30)."
+      },
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El volumen trabaja «the radical anticolonial tradition and the black radical tradition» desde Lamming (hoja 22). Su subtítulo es la estética de la descolonización: C8. C7 secundaria por la política, que junto con la historia «give oxygen to Caribbean thought» (hoja 30).",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E09, propuesta asistida)",
+        "fecha": "2026-10-15"
+      }
     },
     {
       "id": "mahlertricontinental",
@@ -4318,10 +4738,30 @@
       "l": "haiti",
       "tr": "francófono (Haití)",
       "ap": "El Estado duvalierista no como desvío de la nación haitiana sino como la forma en que esa nación quedó capturada por su propia herencia colonial. El vudú y la cultura popular aparecen aquí como el terreno donde se juega la captura, no como folclor que ilustrarla.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c9"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "expediente-corrientes-E09.md"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "memorias_espiritualidades_archivos_vivos"
+        ],
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E09 (15-oct-2026). Ensayos sobre el Estado, la nación y la cultura en Haití tras el duvalierismo: cómo salir de la dictadura (hojas 10 y 15). C9 secundaria por el vodou y la cultura popular como lugar de las reivindicaciones."
+      },
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Ensayos sobre el Estado, la nación y la cultura en Haití tras el duvalierismo: cómo salir de la dictadura (hojas 10 y 15). C9 secundaria por el vodou y la cultura popular como lugar de las reivindicaciones.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E09, propuesta asistida)",
+        "fecha": "2026-10-15"
+      }
     },
     {
       "id": "rifkinfictions",
@@ -4475,10 +4915,30 @@
       "l": "barbados",
       "tr": "anglófono (Barbados)",
       "ap": "Quince años antes de Glissant, el mismo gesto: 'archipelago: fragments... the unity is submarine'. Brathwaite propone leer el Caribe no por fragmentos nacionales sino por la placa que los conecta por debajo, y formula la creolización como dialéctica de tiempo y espacio, no como mezcla consumada. Ensayo germinal del principio de diseño de este atlas.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c5",
+      "recorridos_sec": [
+        "c8"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "expediente-corrientes-E09.md"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "rutas_diasporas_territorios_acuosos",
+          "creolizaciones_traducciones_opacidades"
+        ],
+        "corriente_confirmada": "rutas_diasporas_territorios_acuosos",
+        "nota": "Expediente E09 (15-oct-2026). «The unity is submarine» (hoja 1): el ensayo define el Caribe desde el espacio y el tiempo, más allá del territorio aislado (hoja 3). C8 secundaria por la sociedad criolla y plural que describe."
+      },
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "«The unity is submarine» (hoja 1): el ensayo define el Caribe desde el espacio y el tiempo, más allá del territorio aislado (hoja 3). C8 secundaria por la sociedad criolla y plural que describe.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E09, propuesta asistida)",
+        "fecha": "2026-10-15"
+      }
     },
     {
       "id": "muneraelfracaso",
@@ -4611,10 +5071,30 @@
       "l": "cartagena",
       "tr": "hispano (Colombia)",
       "ap": "Compartir la autoridad investigativa con las y los campesinos activistas de la ANUC como método: la Rosca de Investigación y Acción Social de Fals Borda frente al positivismo académico en las Sabanas del Caribe colombiano.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "expediente-corrientes-E09.md"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "memorias_espiritualidades_archivos_vivos",
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "nota": "Expediente E09 (15-oct-2026). Rappaport reconstruye desde el archivo de Fals Borda la investigación participativa de La Rosca, que puso el conocimiento popular y el académico «en un plano de igualdad» (hojas 13, 14 y 23). C7 secundaria por las luchas campesinas a las que servía."
+      },
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Rappaport reconstruye desde el archivo de Fals Borda la investigación participativa de La Rosca, que puso el conocimiento popular y el académico «en un plano de igualdad» (hojas 13, 14 y 23). C7 secundaria por las luchas campesinas a las que servía.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E09, propuesta asistida)",
+        "fecha": "2026-10-15"
+      }
     },
     {
       "id": "reysinningcristorey",
@@ -4718,10 +5198,30 @@
       "l": "cartagena",
       "tr": "hispano (Colombia)",
       "ap": "Etnografía del picó cartagenero y del Festival Internacional de Música del Caribe (1983-1994) construida sobre testimonios de administradores y coleccionistas, no sobre el canon académico caribeñista: un circuito sur-sur con África que las industrias culturales del norte nunca mediaron.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c9"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "fuente_recorrido": [
+        "expediente-corrientes-E09.md"
+      ],
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "creolizaciones_traducciones_opacidades",
+          "memorias_espiritualidades_archivos_vivos"
+        ],
+        "corriente_confirmada": "creolizaciones_traducciones_opacidades",
+        "nota": "Expediente E09 (15-oct-2026). El libro estudia la cultura picotera cartagenera a partir de la prensa, la memoria oral y el registro audiovisual (hoja 6), con los conceptos de «una cierta manera» (Benítez Rojo) y de apropiación: C8. C9 secundaria por la memoria oral."
+      },
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El libro estudia la cultura picotera cartagenera a partir de la prensa, la memoria oral y el registro audiovisual (hoja 6), con los conceptos de «una cierta manera» (Benítez Rojo) y de apropiación: C8. C9 secundaria por la memoria oral.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E09, propuesta asistida)",
+        "fecha": "2026-10-15"
+      }
     },
     {
       "id": "zambrana",
