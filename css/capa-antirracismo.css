@@ -203,6 +203,11 @@
 
 @media (prefers-reduced-motion: reduce){ #panelAntirracismo .ar-marea span{transition:none} }
 
+/* «Por corroborar» reemplaza a las marcas de revisión internas: el mismo anillo
+   discontinuo que el atlas usa para lo que aún respira. */
+#panelAntirracismo .ar-rev{display:inline-flex;align-items:center;gap:6px;margin-top:6px;font-size:12px;color:var(--gray);opacity:1}
+#panelAntirracismo .ar-rev::before{content:"";width:9px;height:9px;border-radius:50%;box-sizing:border-box;border:1.5px dashed var(--gray);flex:0 0 auto}
+
 /* ==========================================================================
    Franja de lectura · 15-oct-2026
    La cabecera (título, acciones, ayuda, buscador y cuatro filtros) ocupaba

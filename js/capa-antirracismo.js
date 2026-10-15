@@ -32,8 +32,8 @@
     es:{ btn:'Antirracismo', btnTitle:'Abrir la capa de antirracismo y reparaciones',
          quien:'Quién reclama', inst:'Ante qué instancia', cat:'Bajo qué categoría', des:'Desenlace',
          huecos:'Vacíos declarados',
-         huecosNota:'Señalan lo que falta en el corpus del atlas, no la ausencia de procesos antirracistas en esos territorios.',
-         nodo:'nodo de la propuesta', revision:'Revisión', sinleer:'sin leer', reserva:'con reserva',
+         huecosNota:'Señalan reclamos que el atlas aún no lee como caso, no la ausencia de procesos antirracistas en esos territorios.',
+         porCorr:'Por corroborar',
          buscaPh:'obra, autor, instancia…', buscaLbl:'Buscar en los casos',
          resumen:(c,l,v)=>c+' casos · '+l+' lugares · '+v+' vacíos declarados',
          filtrados:(n,t)=>n+' de '+t+' casos', sinFiltro:'Todos los casos',
@@ -48,8 +48,8 @@
     en:{ btn:'Antiracism', btnTitle:'Open the antiracism and reparations layer',
          quien:'Who claims', inst:'Before which body', cat:'Under what category', des:'Outcome',
          huecos:'Declared gaps',
-         huecosNota:'They mark what the atlas corpus lacks, not the absence of antiracist processes in those territories.',
-         nodo:'node in the proposal', revision:'Review', sinleer:'unread', reserva:'with reservation',
+         huecosNota:'They mark claims the atlas does not yet read as a case, not the absence of antiracist processes in those territories.',
+         porCorr:'To be corroborated',
          buscaPh:'work, author, body…', buscaLbl:'Search the cases',
          resumen:(c,l,v)=>c+' cases · '+l+' places · '+v+' declared gaps',
          filtrados:(n,t)=>n+' of '+t+' cases', sinFiltro:'All cases',
@@ -287,20 +287,20 @@
       : grupos.map(g=>'<section class="ar-grupo'+(AR.sitio===g.clave?' viva':'')+'" id="ar-g-'+g.clave+'">'
           +'<h3>'+esc(nomLugar(g.clave))+'<span class="ar-pts"><span class="visually-hidden">'+g.casos.length+'</span>'+g.casos.map(c=>glifo(c.desenlace)).join('')+'</span></h3>'
           +g.casos.map(o=>{
-            const marcas=[]; if(o.sin_leer) marcas.push(at('sinleer')); if(o.reserva) marcas.push(at('reserva'));
+            const porCorr=!!(o.sin_leer||o.reserva);
             return '<article class="ar-caso-c'+(AR.caso===o.id?' abierta':'')+'" style="--c:'+col(o.desenlace)+'">'
               +'<button type="button" class="ar-caso" data-id="'+o.id+'" aria-expanded="'+(AR.caso===o.id)+'" aria-controls="ar-f-'+o.id+'">'
                 +'<span class="ar-obra-t">'+esc(tituloDe(o))+'</span>'
                 +'<span class="ar-autor">'+esc(autorDe(o))+(anioDe(o)?' · '+esc(anioDe(o)):'')+'</span>'
                 +'<span class="ar-desen" style="--c:'+col(o.desenlace)+'">'+glifo(o.desenlace)+esc(desLbl(o.desenlace))+'</span>'
-                +(marcas.length?'<span class="ar-rev">'+at('revision')+': '+marcas.map(esc).join(' · ')+'</span>':'')
+                +(porCorr?'<span class="ar-rev">'+esc(at('porCorr'))+'</span>':'')
               +'</button>'+(AR.caso===o.id?ficha(o):'')+'</article>';
           }).join('')+'</section>').join('');
 
     s += '<section class="ar-huecos"><h3>'+at('huecos')+'</h3><p class="ar-huecos-n">'+at('huecosNota')+'</p>'
       +A.vacios.map(v=>'<div class="ar-vacio" id="ar-v-'+v.id+'">'
         +'<div class="ar-vacio-t"><span class="ar-marca-hueco" aria-hidden="true"></span>'+esc(loc(v,'caso'))+'</div>'
-        +'<div class="ar-vacio-l">'+esc(nomLugar(v.lugar))+(v.nodo?' · '+at('nodo'):'')+'</div>'
+        +'<div class="ar-vacio-l">'+esc(nomLugar(v.lugar))+'</div>'
         +'<p>'+esc(loc(v,'nota'))+'</p></div>').join('')+'</section>';
 
     cuerpo().innerHTML=s;

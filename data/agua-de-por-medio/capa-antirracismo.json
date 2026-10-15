@@ -1,6 +1,6 @@
 {
-  "version": "1.0.0",
-  "fecha": "2026-09-17",
+  "version": "1.1.0",
+  "fecha": "2026-10-15",
   "titulo_es": "Antirracismo y reparaciones",
   "titulo_en": "Antiracism and reparations",
   "pie_es": "Cada obra del atlas se lee aquí como un caso: quién reclama, ante qué instancia, bajo qué categoría y con qué desenlace. El reclamo antirracista y la deuda de la esclavitud pasan por los mismos sitios, un tribunal, una ley, una conferencia, aunque el atlas los clasifique por separado. Aquí van en el mismo mapa.",
@@ -130,8 +130,8 @@
       "categoria_es": "Legislación étnica y desarrollo",
       "categoria_en": "Ethnic legislation and development",
       "desenlace": "parcial",
-      "nota_es": "La ley reconoce y promete; el desarrollo no llega. Queda una reserva: la Dirección Académica no ha verificado todavía la identidad bibliográfica de esta entrada, aunque su clasificación sigue en pie.",
-      "nota_en": "The law recognises and promises; development does not arrive. Recorded reservation: the Academic Direction left this entry's bibliographic identity pending verification, without reopening its classification.",
+      "nota_es": "La ley reconoce y promete; el desarrollo no llega. La referencia bibliográfica de esta obra está por corroborar.",
+      "nota_en": "The law recognises and promises; development does not arrive. The bibliographic reference of this work is yet to be corroborated.",
       "reserva": true
     },
     {
@@ -176,8 +176,8 @@
       "categoria_es": "Economía moral de la memoria pública",
       "categoria_en": "Moral economy of public memory",
       "desenlace": "abierto",
-      "nota_es": "La obra está en el corpus pero no en la biblioteca del proyecto: nadie la ha leído todavía y no tiene corriente asignada. Va marcada como caso sin leer.",
-      "nota_en": "The work is in the corpus but not in the project's library: no one has read it yet and it has no assigned current. It is marked as an unread case.",
+      "nota_es": "La obra compara reclamos de reparación a lo largo de dos siglos: la deuda de Haití, la compensación a los amos y la memoria pública de la esclavitud como economía moral. El desenlace está por corroborar.",
+      "nota_en": "The work compares reparation claims over two centuries: Haiti's debt, the compensation of slave owners and the public memory of slavery as a moral economy. The outcome is yet to be corroborated.",
       "sin_leer": true
     }
   ],
@@ -188,8 +188,8 @@
       "nodo": true,
       "caso_es": "El debate antirracista cubano posterior a 2010",
       "caso_en": "The Cuban antiracist debate after 2010",
-      "nota_es": "Nodo de La Habana en la propuesta de financiación. Ninguna obra del corpus lo cubre.",
-      "nota_en": "Havana node in the funding proposal. No work in the corpus covers it."
+      "nota_es": "El atlas reúne obras sobre el racismo y el antirracismo en Cuba (Figueroa y otros, 2023; Romay, 2014); este debate aún no figura como caso.",
+      "nota_en": "The atlas gathers works on racism and antiracism in Cuba (Figueroa et al., 2023; Romay, 2014); this debate does not yet appear as a case."
     },
     {
       "id": "dominicana",
@@ -197,8 +197,8 @@
       "nodo": true,
       "caso_es": "La sentencia 168-13 y la desnacionalización de dominicanos de ascendencia haitiana",
       "caso_en": "Ruling 168-13 and the denationalisation of Dominicans of Haitian descent",
-      "nota_es": "Nodo de República Dominicana en la propuesta. Probablemente el reclamo mejor documentado del Caribe de hoy, y el atlas no lo tiene.",
-      "nota_en": "Dominican Republic node in the proposal. Probably the best-documented claim in today's Caribbean, and the atlas does not have it."
+      "nota_es": "Probablemente el reclamo mejor documentado del Caribe de hoy. El atlas reúne un estudio de la sentencia (Curiel, 2021), que aún no figura como caso.",
+      "nota_en": "Probably the best-documented claim in today's Caribbean. The atlas gathers a study of the ruling (Curiel, 2021), which does not yet appear as a case."
     },
     {
       "id": "curazao",
@@ -206,8 +206,8 @@
       "nodo": true,
       "caso_es": "El estatus tras la disolución de las Antillas Neerlandesas en 2010",
       "caso_en": "Status after the dissolution of the Netherlands Antilles in 2010",
-      "nota_es": "Nodo de Curazao en la propuesta. Sin obra que siga el reclamo.",
-      "nota_en": "Curaçao node in the proposal. No work follows the claim."
+      "nota_es": "El atlas reúne obras sobre la no soberanía del Caribe neerlandés (van der Pijl y Guadeloupe, 2022; Oostindie y Klinkers, 2003); el estatus posterior a 2010 aún no figura como caso.",
+      "nota_en": "The atlas gathers works on Dutch Caribbean non-sovereignty (van der Pijl and Guadeloupe, 2022; Oostindie and Klinkers, 2003); the status after 2010 does not yet appear as a case."
     },
     {
       "id": "caricom",
