@@ -67,6 +67,22 @@
   const col = k => A.desenlaces[k].c;
   const desLbl = k => A.desenlaces[k][LANG] || A.desenlaces[k].es;
   const nomLugar = k => (typeof L!=='undefined' && L[k]) ? L[k][2] : k;
+  /* Cada desenlace tiene además una forma propia, para que no dependa del color:
+     lleno = ganado, mitad = reconocido a medias, aro = abierto, aspa = desestimado. */
+  const GLIFO = {
+    ganado:'<circle cx="6" cy="6" r="4.2" fill="currentColor"/>',
+    parcial:'<circle cx="6" cy="6" r="4.2" fill="none" stroke="currentColor" stroke-width="1.4"/><path d="M6 1.8a4.2 4.2 0 0 0 0 8.4z" fill="currentColor"/>',
+    abierto:'<circle cx="6" cy="6" r="4.2" fill="none" stroke="currentColor" stroke-width="1.6"/>',
+    desestimado:'<path d="M2.6 2.6l6.8 6.8M9.4 2.6L2.6 9.4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>'
+  };
+  const glifo = k => '<svg class="ar-g" viewBox="0 0 12 12" width="12" height="12" aria-hidden="true" focusable="false" style="color:'+col(k)+'">'+(GLIFO[k]||'')+'</svg>';
+  /* La marea: una barra con la proporción de desenlaces. Es solo lectura; los controles son los filtros. */
+  function marea(){
+    return '<div class="ar-marea" aria-hidden="true">'+Object.keys(A.desenlaces).map(k=>{
+      const n=A.casos.filter(c=>c.desenlace===k).length; if(!n) return '';
+      return '<span data-k="'+k+'" style="flex:'+n+' 1 0;background:'+col(k)+'"></span>';
+    }).join('')+'</div>';
+  }
 
   /* Autor, título y año salen del corpus. La capa guarda un rótulo de respaldo
      por si una obra se retirara del atlas, pero nunca parte cadenas de texto. */
@@ -206,6 +222,7 @@
     cab().innerHTML =
       '<h2 class="ar-tit">'+esc(A['titulo_'+LANG]||A.titulo_es)+'</h2>'
       +'<p class="ar-resumen">'+esc(at('resumen')(A.casos.length,new Set(A.casos.map(c=>c.lugar)).size,A.vacios.length))+'</p>'
+      +marea()
       +'<div class="ar-acciones">'
         +'<button type="button" class="ar-accion" id="arCerrar" title="'+esc(at('cerrarT'))+'">'+at('cerrar')+'</button>'
         +'<button type="button" class="ar-accion ar-accion-off" id="arOff" title="'+esc(at('desactivarT'))+'">'+at('desactivar')+'</button>'
@@ -218,7 +235,7 @@
         +Object.keys(A.desenlaces).map(k=>{
           const n=A.casos.filter(c=>c.desenlace===k).length;
           return '<button type="button" class="ar-chip" data-f="'+k+'" aria-pressed="false">'
-            +'<span class="ar-tick" aria-hidden="true">✓</span><i style="background:'+col(k)+'"></i>'
+            +'<span class="ar-tick" aria-hidden="true">✓</span>'+glifo(k)+''
             +'<span class="ar-chip-t">'+esc(desLbl(k))+'</span><b>'+n+'</b></button>';
         }).join('')
       +'</div><button type="button" class="ar-limpiar" id="arLimpiar" hidden>'+at('limpiar')+'</button>';
@@ -240,6 +257,7 @@
   }
   function sincronizarChips(){
     cab().querySelectorAll('.ar-chip').forEach(b=>b.setAttribute('aria-pressed', String(AR.filtro===b.dataset.f)));
+    cab().querySelectorAll('.ar-marea span').forEach(m=>m.classList.toggle('ar-apag', !!AR.filtro && m.dataset.k!==AR.filtro));
     const l=document.getElementById('arLimpiar'); if(l) l.hidden=!AR.filtro;
   }
   function alternarAlto(){
@@ -249,12 +267,16 @@
   }
 
   /* ---------------- lista y fichas ---------------- */
+  /* El caso se lee como el recorrido de un reclamo: quién lo lleva, ante quién, bajo qué
+     nombre y en qué termina. Es una secuencia de verdad, por eso va numerada por posición. */
   function ficha(o){
-    const par=(et,v)=>'<div class="ar-par"><dt>'+et+'</dt><dd>'+esc(v)+'</dd></div>';
-    return '<div class="ar-ficha" id="ar-f-'+o.id+'"><dl>'
-      +par(at('quien'),loc(o,'quien'))+par(at('inst'),loc(o,'instancia'))+par(at('cat'),loc(o,'categoria'))
-      +'<div class="ar-par"><dt>'+at('des')+'</dt><dd><span class="ar-desen" style="--c:'+col(o.desenlace)+'">'+esc(desLbl(o.desenlace))+'</span></dd></div>'
-      +'</dl><p class="ar-nota">'+esc(loc(o,'nota'))+'</p>'
+    const est=(cl,k,v)=>'<li class="ar-est'+cl+'"><span class="ar-est-k">'+k+'</span><span class="ar-est-v">'+v+'</span></li>';
+    return '<div class="ar-ficha" id="ar-f-'+o.id+'" style="--c:'+col(o.desenlace)+'"><ol class="ar-ruta">'
+      +est(' ar-est-quien',at('quien'),esc(loc(o,'quien')))
+      +est('',at('inst'),esc(loc(o,'instancia')))
+      +est('',at('cat'),esc(loc(o,'categoria')))
+      +est(' ar-est-fin',at('des'),'<span class="ar-desen">'+glifo(o.desenlace)+esc(desLbl(o.desenlace))+'</span>')
+      +'</ol><p class="ar-nota">'+esc(loc(o,'nota'))+'</p>'
       +'<p class="ar-ir"><button type="button" class="ar-obra" data-obra="'+o.id+'">'+at('verObra')+'</button>'
       +'<button type="button" class="ar-obra ar-solo-movil" data-mapa="1">'+at('verMapa')+'</button></p></div>';
   }
@@ -263,14 +285,14 @@
     let s='<p class="ar-cuenta">'+(AR.filtro||AR.q ? esc(at('filtrados')(vis.length,A.casos.length)) : esc(at('sinFiltro')))+'</p>';
     s += vis.length===0 ? '<p class="ar-nada">'+at('nada')+'</p>'
       : grupos.map(g=>'<section class="ar-grupo'+(AR.sitio===g.clave?' viva':'')+'" id="ar-g-'+g.clave+'">'
-          +'<h3>'+esc(nomLugar(g.clave))+'<span>'+g.casos.length+'</span></h3>'
+          +'<h3>'+esc(nomLugar(g.clave))+'<span class="ar-pts"><span class="visually-hidden">'+g.casos.length+'</span>'+g.casos.map(c=>glifo(c.desenlace)).join('')+'</span></h3>'
           +g.casos.map(o=>{
             const marcas=[]; if(o.sin_leer) marcas.push(at('sinleer')); if(o.reserva) marcas.push(at('reserva'));
-            return '<article class="ar-caso-c'+(AR.caso===o.id?' abierta':'')+'">'
+            return '<article class="ar-caso-c'+(AR.caso===o.id?' abierta':'')+'" style="--c:'+col(o.desenlace)+'">'
               +'<button type="button" class="ar-caso" data-id="'+o.id+'" aria-expanded="'+(AR.caso===o.id)+'" aria-controls="ar-f-'+o.id+'">'
                 +'<span class="ar-obra-t">'+esc(tituloDe(o))+'</span>'
                 +'<span class="ar-autor">'+esc(autorDe(o))+(anioDe(o)?' · '+esc(anioDe(o)):'')+'</span>'
-                +'<span class="ar-desen" style="--c:'+col(o.desenlace)+'">'+esc(desLbl(o.desenlace))+'</span>'
+                +'<span class="ar-desen" style="--c:'+col(o.desenlace)+'">'+glifo(o.desenlace)+esc(desLbl(o.desenlace))+'</span>'
                 +(marcas.length?'<span class="ar-rev">'+at('revision')+': '+marcas.map(esc).join(' · ')+'</span>':'')
               +'</button>'+(AR.caso===o.id?ficha(o):'')+'</article>';
           }).join('')+'</section>').join('');
