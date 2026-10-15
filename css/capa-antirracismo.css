@@ -202,3 +202,46 @@
 #panelAntirracismo .ar-nota{margin-top:2px}
 
 @media (prefers-reduced-motion: reduce){ #panelAntirracismo .ar-marea span{transition:none} }
+
+/* ==========================================================================
+   Franja de lectura · 15-oct-2026
+   La cabecera (título, acciones, ayuda, buscador y cuatro filtros) ocupaba
+   hasta 300 px fijos, y la lista de casos quedaba en una franja de 12 a 44 px
+   en portátiles y teléfonos: solo se veía un fragmento del texto. Ahora el
+   panel entero se desplaza y solo las acciones se quedan arriba.
+   ========================================================================== */
+#panelAntirracismo{overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;padding-top:0}
+#panelAntirracismo .ar-tit{padding-top:20px}
+@media (max-width:780px){#panelAntirracismo .ar-tit{padding-top:18px}}
+#panelAntirracismo .ar-cab{display:contents}
+#panelAntirracismo .ar-cab>*{flex:0 0 auto}
+#panelAntirracismo .ar-cuerpo{flex:0 0 auto;min-height:auto;overflow:visible;
+  margin-top:12px;padding-top:14px;border-top:1px solid var(--line);
+  -webkit-mask-image:none;mask-image:none}
+#panelAntirracismo .ar-acciones{position:sticky;top:0;z-index:3;background:var(--panel);
+  margin:0 0 10px;padding:6px 0;box-shadow:0 1px 0 var(--line)}
+#panelAntirracismo .ar-grupo,#panelAntirracismo .ar-huecos,#panelAntirracismo .ar-ficha,
+#panelAntirracismo .ar-vacio,#panelAntirracismo .ar-caso-c{scroll-margin-top:50px}
+@media (max-width:780px){
+  #panelAntirracismo .ar-grupo,#panelAntirracismo .ar-huecos,#panelAntirracismo .ar-ficha,
+  #panelAntirracismo .ar-vacio,#panelAntirracismo .ar-caso-c{scroll-margin-top:62px}
+}
+#panelAntirracismo{scroll-padding-top:56px}
+@media (max-width:780px){#panelAntirracismo{scroll-padding-top:66px}}
+
+/* Encabezado compacto: al abrir la capa, la lista ya asoma en la primera pantalla. */
+#panelAntirracismo .ar-tit{padding-top:16px;font-size:23px;margin-bottom:2px}
+#panelAntirracismo .ar-resumen{margin-bottom:8px}
+#panelAntirracismo .ar-marea{margin-bottom:9px}
+#panelAntirracismo .ar-acciones{padding:5px 0}
+#panelAntirracismo .ar-como{margin-bottom:6px}
+#panelAntirracismo .ar-como summary{padding:2px 0}
+#panelAntirracismo .ar-busca{padding:6px 10px;margin-bottom:7px}
+#panelAntirracismo .ar-chips{display:flex;flex-wrap:wrap;gap:5px}
+#panelAntirracismo .ar-chip{width:auto;flex:1 1 auto;min-height:30px;padding:4px 9px}
+#panelAntirracismo .ar-cuerpo{margin-top:9px;padding-top:10px}
+@media (max-width:780px){
+  #panelAntirracismo .ar-tit{padding-top:14px;font-size:20px}
+  #panelAntirracismo .ar-chip{min-height:38px}
+  #panelAntirracismo .ar-busca{min-height:38px}
+}

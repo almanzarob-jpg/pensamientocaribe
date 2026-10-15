@@ -313,10 +313,18 @@
   }
   function pintarTodo(){ pintarCabecera(); pintarLista(); dibujar(); }
 
+  /* El panel entero se desplaza: al abrir un caso, su tarjeta sube hasta quedar
+     justo debajo de las acciones, para que se lea completa. */
+  function verCaso(){
+    if(!AR.caso) return;
+    const f=document.getElementById('ar-f-'+AR.caso), a=f && (f.closest('.ar-grupo')||f.closest('article'));
+    if(a && a.scrollIntoView) a.scrollIntoView({block:'start', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
+  }
   function abrirCaso(id){
     AR.caso = (AR.caso===id) ? null : id;
     if(AR.caso) AR.sitio=null;
     pintarLista(); dibujar(); atenuar(); marcarHash();
+    verCaso();
     const o=A.casos.find(c=>c.id===AR.caso);
     if(o) anuncio.textContent=tituloDe(o)+' · '+desLbl(o.desenlace);
   }
@@ -435,6 +443,7 @@
     if(m[1]) AR.caso=decodeURIComponent(m[1]);
     if(state.view!=='corriente' && typeof setView==='function') setView('corriente');
     pintarTodo(); abrir_(); atenuar(); anunciar(); refrescarChips();
+    if(AR.caso) setTimeout(verCaso,60);
   }
 
   /* ---------------- enganche con el atlas ---------------- */
