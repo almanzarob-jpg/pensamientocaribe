@@ -3,9 +3,9 @@
     "titulo": "Con el agua de por medio",
     "subtitulo": "Atlas para una antropología archipiélica",
     "responsable": "Grupo de Investigación Pensamiento Caribe",
-    "version": "1.37.0",
+    "version": "1.38.0",
     "fecha": "2026-10-15",
-    "nota_version": "Expediente E09: primera tanda de las obras sin evaluar. Veinticinco obras reciben corriente, cada una con el fundamento leído en el texto. 357 obras del atlas tienen ya corriente confirmada.",
+    "nota_version": "Lote S31: entran los cuatro libros de turismo que esperaban en la carpeta de bibliografía. Paradise and Plantation, de Ian Strachan, lee el paraíso turístico como plantación reescrita; Last Resorts, de Polly Pattullo, hace el balance del costo del turismo en la región; Economies of Desire, de Amalia Cabezas, compara el turismo sexual en Cuba y la República Dominicana; y Negotiating Paradise, de Dennis Merrill, cuenta el turismo estadounidense como poder blando en Cuba, Puerto Rico y México. 44 relaciones nuevas, todas con cita verificada.",
     "registro_interno": {
       "proposito": "Protocolo revisado de resonancia y disonancia (22-09-2026). Las categorías públicas del atlas siguen siendo resonancia y disonancia; este registro es interno y orienta la revisión editorial. El campo apoyo no crea categorías públicas ni cambia la interfaz.",
       "apoyo": {
@@ -19855,6 +19855,315 @@
         "fecha": "2026-10-14",
         "fundamento": "Un recorrido por todas las religiones de raíz africana del Caribe «under one cover» (hoja 12): vodou, santería, palo, orisha, obeah, kumina y Rastafari (índice). C8 secundaria por la creolización religiosa, que el libro nombra en sus partes IV y V («Creole Religions»).",
         "fundamento_previo": "[Sustituido por el E08: la numeración de corrientes de la siembra estaba errada.] C9 por las espiritualidades de raíz africana; C2 por la creolización religiosa. Registro: manual académico, admitido por decisión de Rob del 14 de octubre de 2026."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S31-2026-10-15: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S31-2026-10-15",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en Antigua, la isla de Kincaid, cuya voz en A Small Place articula el libro; las Bahamas, el caso del autor, no son nodo del atlas."
+      },
+      "id": "strachanparadise",
+      "t": "Paradise and Plantation: Tourism and Culture in the Anglophone Caribbean",
+      "a": "Ian Gregory Strachan",
+      "y": "2002",
+      "f": [
+        "postplantacion",
+        "colonialidad"
+      ],
+      "l": "antigua",
+      "tr": "anglófono (Bahamas)",
+      "ap": "El bahameño Ian Strachan lee el turismo como una escritura: los folletos, los anuncios y los hoteles repiten el mito del paraíso, y ese mito reescribe la plantación con otro vestuario. En «Paradise Is Plantation?» sostiene que el turismo caribeño es hijo de la economía de plantación y estudia el caso extremo de las Bahamas; los capítulos siguientes leen a Naipaul, a Walcott, a Kincaid y a Marshall como respuestas a esa fábula. El libro cita a Beckford, Brathwaite, James y Patterson, y lo citan Nixon y DeLoughrey.",
+      "ed": "University of Virginia Press",
+      "edicion_consultada": "University of Virginia Press, Charlottesville y Londres, 2002 (New World Studies); ISBN 0-8139-2146-5 (tela). PDF con capa de texto.",
+      "isbn": "9780813921464",
+      "lenguas_publicacion": [
+        "inglés"
+      ],
+      "operaciones": [
+        "confrontar una categoría",
+        "teorizar"
+      ],
+      "orillas": [
+        {
+          "lugar": "antigua",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Bahamas",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "trinidad",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "jamaica",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Santa Lucía",
+          "funcion": "territorio estudiado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "postplantacion_trabajo_desposesion",
+          "creolizaciones_traducciones_opacidades"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión del índice, la introducción, las citas y el aparato de notas y bibliografía.",
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15",
+        "fundamento": "C4 por el paraíso turístico como forma de la plantación; C8 por la lectura de la literatura anglófona como respuesta. Registro: monografía de crítica cultural y literaria que lee obras del corpus (Kincaid) y las cita (regla del 1 de octubre de 2026)."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S31-2026-10-15: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S31-2026-10-15",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en Dominica: sus amigos del valle de Roseau, dice la autora, la llevaron a mirar la industria turística; el libro cubre toda la región."
+      },
+      "id": "pattullolast",
+      "t": "Last Resorts: The Cost of Tourism in the Caribbean",
+      "a": "Polly Pattullo",
+      "y": "2005",
+      "f": [
+        "postplantacion",
+        "capitalismo_racial"
+      ],
+      "l": "dominica",
+      "tr": "anglófono (R.U./Caribe)",
+      "ap": "La periodista británica Polly Pattullo recorre el turismo caribeño desde quienes lo trabajan y lo padecen: quién es dueño de la tierra y del hotel, qué parte del dinero se queda en la isla, cómo se paga el empleo, qué hacen los cruceros y los resorts «todo incluido» con las playas y la cultura. Parte del caso de Jalousie, en Santa Lucía, y muestra que el turismo sustituyó a la economía de plantación sin romper su dependencia de un solo cultivo. Cierra con las comunidades que empiezan a reclamar su patrimonio. Es un libro de periodismo de investigación, y por eso lo citan tanto las etnografías como la crítica cultural.",
+      "ed": "Latin America Bureau / Monthly Review Press",
+      "edicion_consultada": "Latin America Bureau, Londres, y Monthly Review Press, Nueva York, 2005 (segunda edición revisada y actualizada; la primera es de 1996); ISBN 1-58367-117-X. PDF con capa de texto de la copia digitalizada de Internet Archive.",
+      "isbn": "9781583671177",
+      "lenguas_publicacion": [
+        "inglés"
+      ],
+      "operaciones": [
+        "documentar una práctica",
+        "confrontar una categoría"
+      ],
+      "orillas": [
+        {
+          "lugar": "dominica",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "jamaica",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "barbados",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "antigua",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "granada",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "cuba",
+          "funcion": "territorio estudiado"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "postplantacion_trabajo_desposesion",
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión del índice, el primer capítulo, las citas y el aparato de notas y bibliografía.",
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15",
+        "fundamento": "C4 por el turismo como sucesor de la economía de plantación; C7 por la propiedad de la tierra y la soberanía de las comunidades. Registro: estudio periodístico documentado; la bibliografía y las notas son extensas. Ediciones: 1996 (Cassell/Latin America Bureau; Ian Randle) y 2005, la catalogada."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S31-2026-10-15: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S31-2026-10-15",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en Cuba, con la que abre la introducción y el primer término de la comparación; la República Dominicana queda registrada como territorio estudiado."
+      },
+      "id": "cabezaseconomies",
+      "t": "Economies of Desire: Sex and Tourism in Cuba and the Dominican Republic",
+      "a": "Amalia L. Cabezas",
+      "y": "2009",
+      "f": [
+        "cuerpo_erotica",
+        "capitalismo_racial"
+      ],
+      "l": "cuba",
+      "tr": "anglófono (EE.UU./Caribe)",
+      "ap": "La antropóloga chicana Amalia Cabezas compara el turismo sexual en dos países que parecían opuestos: la Cuba socialista que entró al mercado tras la caída soviética, y la República Dominicana, destino consolidado del Norte. Sigue el trabajo erotizado en los resorts «todo incluido», las «hijas de Yemayá» que se vuelven luchadoras, y el discurso de los derechos humanos aplicado al trabajo sexual. Su idea central es una economía de afectos: el deseo y el trabajo sexual hacen parte de cómo se organizan el turismo, el Estado y la vida de las mujeres. Se apoya en Kempadoo y Doezema, y dialoga con Hagedorn y Gregory.",
+      "ed": "Temple University Press",
+      "edicion_consultada": "Temple University Press, Filadelfia, 2009; ISBN 978-1-59213-749-7 (tela). PDF con capa de texto.",
+      "isbn": "9781592137497",
+      "lenguas_publicacion": [
+        "inglés"
+      ],
+      "operaciones": [
+        "producir etnografía",
+        "comparar orillas"
+      ],
+      "orillas": [
+        {
+          "lugar": "cuba",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "dominicana",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "Estados Unidos",
+          "funcion": "lugar de producción intelectual"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "cuerpos_parentescos_eroticas",
+          "postplantacion_trabajo_desposesion"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión del índice, la introducción, las citas y el aparato de notas y referencias.",
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15",
+        "fundamento": "C10 por el trabajo sexual y la economía del deseo; C4 por el turismo como forma de trabajo y de desposesión. Registro: etnografía académica con trabajo de campo en los dos países."
+      }
+    },
+    {
+      "k": "obra",
+      "recorrido": null,
+      "recorridos_sec": [],
+      "arquitectura_recorrido": null,
+      "estado_recorrido": "pendiente",
+      "procedencia": "siembra nueva",
+      "procedencia_verificada": true,
+      "proceso": [
+        "siembra"
+      ],
+      "fuente_recorrido": [
+        "Lote S31-2026-10-15: verificación bibliográfica y de citas; clasificación pendiente"
+      ],
+      "lote_incorporacion": "S31-2026-10-15",
+      "anclaje_cartografico": {
+        "funcion": "anclaje visual, no delimitación del territorio estudiado",
+        "fundamento": "Anclaje en Cuba, que ocupa dos capítulos (Batista y Castro); Puerto Rico ocupa otros dos."
+      },
+      "id": "merrillparadise",
+      "t": "Negotiating Paradise: U.S. Tourism and Empire in Twentieth-Century Latin America",
+      "a": "Dennis Merrill",
+      "y": "2009",
+      "f": [
+        "colonialidad",
+        "soberanias"
+      ],
+      "l": "cuba",
+      "tr": "anglófono (EE.UU.)",
+      "ap": "El historiador Dennis Merrill sostiene que el imperio estadounidense se negoció también en hoteles, playas, casinos y aeropuertos, y que los turistas fueron su poder blando. Sigue a viajeros, anfitriones y empresas en el México posrevolucionario, la Cuba de Batista y de Castro, y el Puerto Rico del Estado Libre Asociado: cuatro de sus seis capítulos son caribeños. Insiste en que los anfitriones no son pasivos: negocian los lugares, los salarios, la etiqueta y los sentidos de raza, clase y nación. Cita a Sheller y lo citan Dubois y Turits.",
+      "ed": "University of North Carolina Press",
+      "edicion_consultada": "University of North Carolina Press, Chapel Hill, 2009; ISBN 978-0-8078-3288-2 (tela); EPUB de la edición electrónica (eISBN 9780807898635).",
+      "isbn": "9780807832882",
+      "lenguas_publicacion": [
+        "inglés"
+      ],
+      "operaciones": [
+        "reconstruir un archivo",
+        "comparar orillas"
+      ],
+      "orillas": [
+        {
+          "lugar": "cuba",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "lugar": "puertorico",
+          "funcion": "territorio estudiado"
+        },
+        {
+          "tipo": "región",
+          "label": "México",
+          "funcion": "territorio comparado"
+        },
+        {
+          "tipo": "región",
+          "label": "Estados Unidos",
+          "funcion": "lugar de producción intelectual"
+        }
+      ],
+      "propuesta_clasificacion": {
+        "estado": "propuesta editorial, no confirmada",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "postplantacion_trabajo_desposesion"
+        ],
+        "corriente_confirmada": null
+      },
+      "revision": {
+        "estado": "pendiente_revision_con_texto",
+        "alcance": "Revisión del índice, la introducción, la conclusión y el aparato de notas y bibliografía.",
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15",
+        "fundamento": "C7 por el imperio, la dependencia y la negociación con el poder estadounidense; C4 por el turismo como economía de servicio. Registro: monografía de historia. Centro de gravedad: Cuba y Puerto Rico ocupan cuatro de los seis capítulos; México, dos."
       }
     }
   ],
@@ -41358,6 +41667,842 @@
       "revision_interna": {
         "responsable": "Preparación asistida del lote S30; clasificación pendiente de adjudicación académica",
         "fecha": "2026-10-14"
+      }
+    },
+    {
+      "a": "stoutafterlove",
+      "b": "cabezaseconomies",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Noelle M. Stout, After Love: Queer Intimacy and Erotic Economies in Post-Soviet Cuba, 2014 (PDF, hoja 221): «…Cabezas, Amalia L. 2004. “Between Love and Money: Sex Tourism and Citizenship in Cuba and the Dominican Republic.” Signs 29, no. 4: 987–1015. Cabezas, Amalia L. 2009. Economies of Desire: Sex and Tourism in Cuba and the Dominican Republic. Philadelphia: Temple University Press. Carrier, Joseph. 1995. De los otros: Intimacy and Homosexuality among…».",
+      "id_lote": "S31-R01",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Stout cita a Cabezas en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "martinezsanmiguel",
+      "b": "cabezaseconomies",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Yolanda Martínez-San Miguel, Coloniality of Diasporas: Rethinking Intra-Colonial Migrations in a Pan Caribbean Context, 2014 (PDF, hoja 245): «…Edición Crítica. Madrid: Edciones Polifemo. Butler, Judith. 1990. Gender Trouble: Feminism and the Subversion of Identity. New York: Routledge. Cabezas, Amalia L. 2009. Economies of Desire: Sex and Tourism in Cuba and the Dominican Republic. Philadelphia: Temple University Press. Caminero Santángelo, Marta. 2004. “ ‘Puerto Ricann Negro’: Deﬁning Race in…».",
+      "id_lote": "S31-R02",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Martínez-San Miguel cita a Cabezas en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "garthfood",
+      "b": "cabezaseconomies",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Hanna Garth, Food in Cuba: The Pursuit of a Decent Meal, 2020 (PDF, hoja 210): «…Routledge. Buyandelger, Manduhai. 2008. “Post-Post-Transition Theories: Walking on Multiple Paths.” Annual Review of Anthropology 37: 235–50. Cabezas, Amalia. 2009. Economies of Desire: Sex and Tourism in Cuba and the Dominican Republic. Philadelphia: Temple University Press. Caldwell, Melissa. 2002. “The Taste of Nationalism: Food Politics in…».",
+      "id_lote": "S31-R03",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Garth cita a Cabezas en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "kingisland",
+      "b": "cabezaseconomies",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Rosamond S. King, Island Bodies: Transgressive Sexualities in the Caribbean Imagination, 2014 (PDF, hoja 184): «…which, in some places, is also a significant aspect of the informal economy. Scholars such as Kamala Kempadoo (Sun, Sex, and Gold and Sexing the Caribbean), Cabezas (Economies of Desire), and others have encouraged analyses of sex work that acknowledge the possibility of agency and pleasure in the worker; 34 similarly, the two films examined in this…».",
+      "id_lote": "S31-R04",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "King ubica a Cabezas junto a Kempadoo entre quienes reconocen agencia y placer en el trabajo sexual.",
+      "limite": "Ninguno.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "larastreetwalking",
+      "b": "cabezaseconomies",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Ana-Maurine Lara, Streetwalking: LGBTQ Lives and Protest in the Dominican Republic, 2020 (PDF, hoja 201): «…and Beverly Guy-­Sheftall, eds. 2009. I Am Your Sister: Collected and Unpublished Writings of Audre Lorde. Oxford: Oxford University Press. Cabezas, Amalia L. 2009. Economies of Desire: Sex and Tourism in Cuba and the Dominican Republic. Philadelphia: Temple University Press. Candelario, Ginetta E. B. 2007. Black Behind the Ears: Dominican Racial…».",
+      "id_lote": "S31-R05",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Lara cita a Cabezas en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "deloughrey",
+      "b": "strachanparadise",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Elizabeth M. DeLoughrey, Allegories of the Anthropocene, 2019 (PDF, hoja 47): «…master narratives from Christian, classical Greek, and western European contexts to cover over the rupture of colonial violence. It is precisely this tension between “paradise and plantation,” to draw from Ian Gregory Strachan’s book title, that has informed a large body of work in Caribbean island writing.19 Authors such as Jamaica Kincaid, Olive Senior,…».",
+      "id_lote": "S31-R06",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "DeLoughrey toma el título de Strachan para nombrar la tensión entre paraíso y plantación en la escritura de las islas.",
+      "limite": "Ninguno.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "jaffeconcrete",
+      "b": "strachanparadise",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Rivke Jaffe, Concrete Jungles: Urban Pollution and the Politics of Difference in the Caribbean, 2016 (PDF, hoja 196): «…1, Country Report. Kingston, Jamaica: STATIN. Stepan, Nancy Leyes. 2001. Picturing Tropical Nature. Ithaca, NY: Cornell University Press. Strachan, Ian Gregory. 2002. Paradise and Plantation: Tourism and Culture in the Anglophone Caribbean. Charlottesville: University of Virginia Press.».",
+      "id_lote": "S31-R07",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Jaffe cita a Strachan en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "nixon_resistingparadise",
+      "b": "strachanparadise",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Angelique V. Nixon, Resisting Paradise: Tourism, Diaspora, and Sexuality in Caribbean Culture, 2015 (EPUB, sección OPS/xhtml/chapter1): «…outside time and space; paradise is always on some level signifying colonial, sexualized, racialized, and gendered space/object/desire. As Ian Strachan reminds us in Paradise and Plantation : “The strength of paradise as metaphor and mythological construct lies in its ability to transform itself” (36). In both imagined and real ways, “paradise” signifies…».",
+      "id_lote": "S31-R08",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Nixon cita a Strachan sobre la capacidad del paraíso para transformarse como metáfora.",
+      "limite": "Ninguno.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "nixon_resistingparadise",
+      "b": "pattullolast",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Angelique V. Nixon, Resisting Paradise: Tourism, Diaspora, and Sexuality in Caribbean Culture, 2015 (EPUB, sección OPS/xhtml/chapter1): «…the primary focus. Hence, what economists call dependency capitalism thrives in the region, and the tourist industry supports this model. Polly Pattullo’s tourism study Last Resorts interrogates and criticizes the mid-1990s focus on tourism as the most important and only means of economic survival for the Caribbean region by its governments and…».",
+      "id_lote": "S31-R09",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Nixon presenta el estudio de Pattullo como crítica del turismo como único camino de supervivencia económica.",
+      "limite": "Ninguno.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "barriteauconfronting",
+      "b": "pattullolast",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Eudine Barriteau (ed.), Confronting Power, Theorizing Gender: Interdisciplinary Perspectives in the Caribbean, 2003 (PDF, hoja 400): «…Sociology o f Slavery: A n Analysis o f th e Origins, Development and Structure of Negro Slave Society in Jamaica. London: MacGibbo n an d Kee. Pattullo, Polly . 1996. Last Resorts: The Cost of Tourism in the Caribbean. , Kingston, Jamaica: Ian Randle. Peacocke, Nan. 1998. \"Meditation on 'The Subject': Rethinking Carin g Labour\". I n Caribbean…».",
+      "id_lote": "S31-R10",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Barriteau cita a Pattullo en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso. Cita la primera edición (1996); el volumen catalogado es la segunda edición revisada (2005).",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "shellerconsuming",
+      "b": "pattullolast",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Mimi Sheller, Consuming the Caribbean: From Arawaks to Zombies, 2011 (EPUB, sección OEBPS/Part019): «…Study , Cambridge, MA: Harvard University Press. —— (1991) Freedom in the Making of Western Culture , Cambridge, MA: Harvard University Press. Pattullo, P. (1996) Last Resorts: The Cost of Tourism in the Caribbean , London: Cassell/Latin America Bureau. Paulson, R. (1987) Representations of Revolution , New Haven: Yale University Press.…».",
+      "id_lote": "S31-R11",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Sheller cita a Pattullo en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso. Cita la primera edición (1996); el volumen catalogado es la segunda edición revisada (2005).",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "archipelagicthinking",
+      "b": "pattullolast",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Michelle Stephens y Yolanda Martínez-San Miguel (eds.), Contemporary Archipelagic Thinking: Towards New Comparative Methodologies and Disciplinary Formations, 2020 (EPUB, sección OEBPS/Text/Chapter13): «…Rico,” in “Tourisme dans la Caraïbe,” ed. Olivier Dehoorne, special issue, Téoros 26 no. 1 (2007): https://journals.openedition.org/teoros/2823 . 46 . Polly Pattullo, Last Resorts: The Cost of Tourism in the Caribbean (London: Cassell/Latin American Bureau, 1996). 47 . Sherrie Baver, “Environmental Politics in Paradise: Resistance to the Selling…».",
+      "id_lote": "S31-R12",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Stephens y Martínez-San Miguel citan a Pattullo en las notas.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso. Cita la primera edición (1996); el volumen catalogado es la segunda edición revisada (2005).",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "gregorydevil",
+      "b": "pattullolast",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Steven Gregory, The Devil Behind the Mirror: Globalization and Politics in the Dominican Republic, 2007 (PDF, hoja 283): «…International Labor Rights Fund/Fundación Laboral Dominicana. Pateman, Carol 1998 The Sexual Contract. Stanford: Stanford University Press. Pattullo, Polly 1996 Last Resorts: The Cost of Tourism in the Caribbean. London: Cassell. Pérez, Gina 2004 The Near Northwest Side Story: Migration, Displacement, and Puerto Rican Families. Berkeley:…».",
+      "id_lote": "S31-R13",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Gregory cita a Pattullo en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso. Cita la primera edición (1996); el volumen catalogado es la segunda edición revisada (2005).",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "islandfutures",
+      "b": "pattullolast",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Mimi Sheller, Island Futures: Caribbean Survival in the Anthropocene, 2020 (EPUB, sección OEBPS/xhtml/notes): «…and Urry, Tourism Mobilities ; Werner, Global Displacements. 14 Sheller and Urry, Tourism Mobilities . For works on Caribbean tourism more generally, see Pattullo, Last Resorts ; Duval, Tourism in the Caribbean ; and Klein, Paradise Lost at Sea . 15 Bærenholdt et al., Performing Tourist Places ; Sheller, “Demobilising and Remobilising the…».",
+      "id_lote": "S31-R14",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Sheller remite a Pattullo como obra de referencia sobre el turismo caribeño.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "godreauscripts",
+      "b": "pattullolast",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Isar P. Godreau, Scripts of Blackness: Race, Cultural Nationalism, and U.S. Colonialism in Puerto Rico, 2015 (EPUB, sección Text/22_ref): «…to Difference: Explaining Colombia’s Shift from Color Blindness to the Law of Black Communities. The American Journal of Sociology 116(3): 729–769. Pattullo, Polly 1996 Last Resorts: The Cost of Tourism in the Caribbean. Kingston, Jamaica: Ian Randle Publishers. Pedreira, Antonio S. 1992 Insularismo. Obras completas de Antonio S. Pedreira, Tomo 3.…».",
+      "id_lote": "S31-R15",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Godreau cita a Pattullo en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso. Cita la primera edición (1996); el volumen catalogado es la segunda edición revisada (2005).",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "kempadoo",
+      "b": "pattullolast",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Kamala Kempadoo, Sexing the Caribbean: Gender, Race and Sexual Labor, 2004 (PDF, hoja 242): «…Money? Fantasies and Realities in Sex Tourism 1. 2. 3. 4. 5. 6. 7. 8. 11 February 1996, http://www.paranoia.com/faq/prostitution/ Boca-Chica.txt.html. Polly Pattullo, Last Resorts: The Cost of Tourism in the Caribbean (Kingston: Ian Randle, 1996). Travel Industry World Yearbook, (Spencertown, NY: Travel Industry Publishing Company, 1996);…».",
+      "id_lote": "S31-R16",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Kempadoo cita a Pattullo en las notas sobre el turismo en la República Dominicana.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso. Cita la primera edición (1996); el volumen catalogado es la segunda edición revisada (2005).",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "hillmandagostinocaribbean",
+      "b": "pattullolast",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Richard S. Hillman y Thomas J. D’Agostino (eds.), Understanding the Contemporary Caribbean, 2009 (PDF, hoja 174): «…the April 1999 WTO Ruling. Study for the West Indian Farmer’s Association, the Caribbean Development Policy Center, and OXFAM, September 1999. Pattullo, Polly. Last Resorts: The Cost of Tourism in the Caribbean. New York: Monthly Review Press, 1996. Riley, Liz. “Sustainable Tourism: Repositioning the Sector to Manage Disaster Risk, a…».",
+      "id_lote": "S31-R17",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Hillman y D’Agostino citan a Pattullo en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso. Cita la primera edición (1996); el volumen catalogado es la segunda edición revisada (2005).",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "palmiewizards",
+      "b": "pattullolast",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Stephan Palmié, Wizards and Scientists, 2002 (PDF, hoja 391): «…and the Circum-Caribbean Region.’’ In Population in a Changing World, ed. William Alonso, 227–60. Cambridge, Mass.: Harvard University Press. Pattullo, Polly. 1996. Last Resorts: The Cost of Tourism in the Caribbean. London: Cassell. Peel, J. Y. D. 1979–80. ‘‘Kings, Titles, and Quarters: A Conjectural History of Ilesha.’’ History in Africa…».",
+      "id_lote": "S31-R18",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Palmié cita a Pattullo en la bibliografía.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso. Cita la primera edición (1996); el volumen catalogado es la segunda edición revisada (2005).",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "duboisturits",
+      "b": "merrillparadise",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Laurent Dubois y Richard Lee Turits, Freedom Roots: Histories from the Caribbean, 2019 (PDF, hoja 368): «…20. Louis A. Pérez, On Becoming Cuban: Identity, Nationality, and Culture (Chapel Hill: University of North Carolina Press, 1999), 166–69, esp. 167. 21. Dennis Merrill, Negotiating Paradise: U.S. Tourism and Empire in Twentieth-­ Century Latin Amer­i­ca (Chapel Hill: University of North Carolina Press, 2009), 103– 38; Christine Skwiot, The Purposes of…».",
+      "id_lote": "S31-R19",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Dubois y Turits citan a Merrill en las notas sobre el turismo estadounidense en el Caribe.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "strachanparadise",
+      "b": "pattullolast",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Ian Gregory Strachan, Paradise and Plantation: Tourism and Culture in the Anglophone Caribbean, 2002 (PDF, hoja 177): «…about the colour bar. (210) Here Naipaul documents the phenomenon of dispossession and alienation that Polly Pattullo explicates some thirty years later in her work Last Resorts. Like Paule Marshall in The Chosen Place, the Timeless People (1969) and, more recently, in Daughters (1991), Naipaul delivers a cri- tique of the complicit…».",
+      "id_lote": "S31-R20",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Strachan menciona a Pattullo como quien explica la desposesión y la alienación que Naipaul ya describía.",
+      "limite": "Ninguno.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "cabezaseconomies",
+      "b": "pattullolast",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Amalia L. Cabezas, Economies of Desire: Sex and Tourism in Cuba and the Dominican Republic, 2009 (PDF, hoja 216): «…and Reform in Contemporary Cuba.” Cuban Studies 27: 1–20. Pateman, Carole. 1988. The Sexual Contract. Stanford: Stanford University Press. Pattullo, Polly. 1996. Last Resorts: The Cost of Tourism in the Caribbean. London: Cassell. Pearson, Ruth. 1996. Foreword to Cuba: Restructuring the Economy—A Contribution to the Debate, edited by…».",
+      "id_lote": "S31-R21",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Cabezas cita a Pattullo en las referencias.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso. Cita la primera edición (1996); el volumen catalogado es la segunda edición revisada (2005).",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "merrillparadise",
+      "b": "pattullolast",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Dennis Merrill, Negotiating Paradise: U.S. Tourism and Empire in Twentieth-Century Latin America, 2009 (EPUB, sección Text/9780807898635_Part16): «…Development; Duvall, Tourism; Goldstone, To Make the World; Kadt, Tourism; Lea, Tourism and Development; Lundberg and Lundberg, International Travel; Pattullo, Last Resorts; Potter et al., Contemporary Caribbean; Scranton and Davidson, Business of Tourism; Wahab, Tourism, Development, and Growth. 8 On tourist theory and culture, see…».",
+      "id_lote": "S31-R22",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Merrill cita a Pattullo entre los estudios del turismo caribeño.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "strachanparadise",
+      "b": "beckfordpersistent",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Ian Gregory Strachan, Paradise and Plantation: Tourism and Culture in the Anglophone Caribbean, 2002 (PDF, hoja 19): «…of these definitions describes the institution with which we are concerned in this book as thoroughly as does George L. Beckford in his 1972 study of the plantation, Persistent Poverty. According to Beckford, the plantation is a total institution; it affects all aspects of the».",
+      "id_lote": "S31-R23",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Strachan toma la definición de la plantación como institución total de Beckford.",
+      "limite": "Ninguno.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "strachanparadise",
+      "b": "harrispalace",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Ian Gregory Strachan, Paradise and Plantation: Tourism and Culture in the Anglophone Caribbean, 2002 (PDF, hoja 298): «…and Tiffin, Empire Writes Back, 51; Walcott, “Muse of History,” 24. Manicheanism is a belief that the universe is locked in a battle of good versus evil. 14. Harris, Palace of the Peacock, 73. 15. Harris, History, Fable and Myth, 11, 26. 16. J. Michael Dash notes that Aimé Césaire’s essay “Poetry and Knowledge” demonstrates a similar interest in “the…».",
+      "id_lote": "S31-R24",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Strachan cita a Harris en las notas.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "strachanparadise",
+      "b": "james",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Ian Gregory Strachan, Paradise and Plantation: Tourism and Culture in the Anglophone Caribbean, 2002 (PDF, hoja 286): «…1526 using “Indians and slaves” (Natural History of the West Indies, 106). Despite Fernandez de Oviedo’s distinction, Indians were nothing less than slaves. See James, Black Jacobins, 4. 43. Craton, History of the Bahamas, 39-40; Albury, Story of the Bahamas, 34-36. 44. William Phips located the silver-laden wreck of the Concepcion in 1687 in the…».",
+      "id_lote": "S31-R25",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Strachan cita a James en las notas sobre la esclavización de los indígenas.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "strachanparadise",
+      "b": "brathwaite",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Ian Gregory Strachan, Paradise and Plantation: Tourism and Culture in the Anglophone Caribbean, 2002 (PDF, hoja 302): «…Mountain” and Other Plays, 10. 99, Walcott, “What the Twilight Says” in “Dream on Monkey Mountain” and Other Plays, 8; Walcott, “Muse of History,” 13. 100. Brathwaite, “History of the Voice,” in Roots, 265-66. 101. Walcott, “Caribbean: Culture or Mimicry?” 4. 102. Also consider Edward Kamau Brathwaite’s contention that in the Caribbean a “negative or…».",
+      "id_lote": "S31-R26",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Strachan cita a Brathwaite en las notas.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "strachanparadise",
+      "b": "brathwaitearchipelago",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Ian Gregory Strachan, Paradise and Plantation: Tourism and Culture in the Anglophone Caribbean, 2002 (PDF, hoja 284): «270 Notes to Pages 7-14 15. Brathwaite, “Caribbean Man in Space and Time,” 4. 16. Bryan, “White Minority in Jamaica.” 17. Beckford, Persistent Poverty, 48. 18. Ramsaran, “External Dependence and National Development,” 212. The Bahamian…».",
+      "id_lote": "S31-R27",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Strachan cita este ensayo de Brathwaite en las notas de la introducción.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "strachanparadise",
+      "b": "williamscapitalismo",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Ian Gregory Strachan, Paradise and Plantation: Tourism and Culture in the Anglophone Caribbean, 2002 (PDF, hoja 75): «…to become a tool in the production system of colonial capitalism which earned Malays a reputation of being indolent.”24 Caribbeans have always worked. However, in Capitalism and Slavery, Eric Williams contends that “To coercion and punishment [the slave] responded with indolence, sabotage and revolt.** But resistance to forced labor during slavery…».",
+      "id_lote": "S31-R28",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Strachan discute con Williams la respuesta del esclavizado a la coerción.",
+      "limite": "Cita la edición original en inglés; el volumen catalogado es la edición española de 2011.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "strachanparadise",
+      "b": "benitez",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Ian Gregory Strachan, Paradise and Plantation: Tourism and Culture in the Anglophone Caribbean, 2002 (PDF, hoja 283): «…of Paradise; E.E Taylor, To Hell with Paradise; J. F. Mitchell, “To Hell with Paradise”; Baudet, Paradise on Earth; Delumeau, History of Paradise. 14. Benitez-Rojo, Repeating Island, 74.».",
+      "id_lote": "S31-R29",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Strachan cita a Benítez Rojo en las notas de la introducción.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso. Cita la traducción inglesa (The Repeating Island, 1992); el volumen catalogado es el original español (1989).",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "strachanparadise",
+      "b": "pattersonsocialdeath",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Ian Gregory Strachan, Paradise and Plantation: Tourism and Culture in the Anglophone Caribbean, 2002 (PDF, hoja 287): «…Césaire may have been the first to liken the deeds of imperialism to the workings of a machine (Discourse on Colonialism, 60). 80. Aristotle, Ethics, 184; Patterson, Slavery and Social Death, S. 81. “[A] number of tools . . . form the organs of a machine” (Marx, Capital 1501): 82. Fanon, Black Skin, White Masks, 220. The father of modern racism, Arthur…».",
+      "id_lote": "S31-R30",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Strachan cita a Patterson en las notas, junto a la discusión de la muerte social del esclavizado.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "strachanparadise",
+      "b": "glissantdiscours",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Ian Gregory Strachan, Paradise and Plantation: Tourism and Culture in the Anglophone Caribbean, 2002 (PDF, hoja 70): «…slaves would want to do is continue to work for the men who captured, exiled, and enslaved them, men who tried and were still trying to work the slaves to death. In his Caribbean Discourse, Edouard Glissant discusses a similar atti- tude that existed in the French colonies. He reprints a proclamation forecasting the emancipation of slaves that took place…».",
+      "id_lote": "S31-R31",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Strachan lee con Glissant la actitud de los colonos franceses ante la emancipación.",
+      "limite": "Cita la traducción inglesa selecta (Caribbean Discourse); el volumen catalogado es el original francés (1981).",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "strachanparadise",
+      "b": "kincaidsmallplace",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Ian Gregory Strachan, Paradise and Plantation: Tourism and Culture in the Anglophone Caribbean, 2002 (PDF, hoja 95): «…nothing is really doing a great deal (swimming, tanning, shopping, gambling, touring) does not seem to matter to those who write tourist brochures. As the voice in Jamaica Kincaid’s A Small Place puts it to her tourist-reader, “Oh, the hard work all of this is, and is it any wonder, then, that on your return home you feel the need of a long rest, so that you can…».",
+      "id_lote": "S31-R32",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Strachan cita la voz de A Small Place que interpela al turista; Kincaid reaparece en sus capítulos sobre Antigua y el tiempo detenido.",
+      "limite": "Ninguno.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "strachanparadise",
+      "b": "taylornarrative",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Ian Gregory Strachan, Paradise and Plantation: Tourism and Culture in the Anglophone Caribbean, 2002 (PDF, hoja 301): «287 Notes to Pages 212-19 70. Patrick Taylor contends that “Jackson has entered into a struggle for recognition” (Narrative Of Liberation, 206). 71. Roumain, Gouverneurs de la rosé (Masters of the Dew). 72. Meehan, “‘Titid ak pép la se marasa’: Jean-Betrand Aristide and the New National Romance in Haiti,”…».",
+      "id_lote": "S31-R33",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Strachan cita a Taylor en las notas.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "strachanparadise",
+      "b": "retamarcaliban",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Ian Gregory Strachan, Paradise and Plantation: Tourism and Culture in the Anglophone Caribbean, 2002 (PDF, hoja 287): «…Berger, “Prospero’s Art,” Shakespeare Studies, 212. 71. Vaughan, “Caliban in the ‘Third World’”; Lamming, Pleasures of Exile; Césaire, Une Tempéte; Fernandez Retamar, Caliban and Other Essays. 72. Frantz Fanon proposes that labor is the basis for the relationship (Black Skin, White Masks, 220). Georg Hegel describes the master-slave relationship as one based…».",
+      "id_lote": "S31-R34",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Strachan cita a Fernández Retamar junto a Césaire y Lamming en las notas sobre Calibán.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso. Cita la traducción inglesa (Caliban and Other Essays); el volumen catalogado es el ensayo de 1971 en español.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "strachanparadise",
+      "b": "cesaire",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Ian Gregory Strachan, Paradise and Plantation: Tourism and Culture in the Anglophone Caribbean, 2002 (PDF, hoja 287): «…51, 279. 79. Benitez-Rojo, Repeating Island, 6, 8. However, in 1955 Aimé Césaire may have been the first to liken the deeds of imperialism to the workings of a machine (Discourse on Colonialism, 60). 80. Aristotle, Ethics, 184; Patterson, Slavery and Social Death, S. 81. “[A] number of tools . . . form the organs of a machine” (Marx, Capital 1501): 82. Fanon,…».",
+      "id_lote": "S31-R35",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Strachan atribuye a Césaire la primera comparación del imperialismo con una máquina.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso. Cita la traducción inglesa (A Discourse on Colonialism); el volumen catalogado es la edición en español.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "strachanparadise",
+      "b": "fanon",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Ian Gregory Strachan, Paradise and Plantation: Tourism and Culture in the Anglophone Caribbean, 2002 (PDF, hoja 287): «…Lamming, Pleasures of Exile; Césaire, Une Tempéte; Fernandez Retamar, Caliban and Other Essays. 72. Frantz Fanon proposes that labor is the basis for the relationship (Black Skin, White Masks, 220). Georg Hegel describes the master-slave relationship as one based ona reciprocal relation founded on recognition, each being dependent on the other for any notion…».",
+      "id_lote": "S31-R36",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Strachan lee con Fanon el trabajo como base de la relación entre amo y esclavo.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso. Cita la traducción inglesa (Black Skin, White Masks); el volumen catalogado es la edición en español.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "strachanparadise",
+      "b": "trouillotsilencing",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Ian Gregory Strachan, Paradise and Plantation: Tourism and Culture in the Anglophone Caribbean, 2002 (PDF, hoja 298): «284 Notes to Pages 187-96 50. Manley, Politics of Change, 62. 51. Fanon, Wretched of the Earth, 148-205. 52. Cudjoe, V. S. Naipaul, 14. 53. Rolph-Trouillot, Silencing the Past, 26. 54. Naipaul, Finding the Centre, 51. 55. Wheeler, “It’s Every Man for Himself. V. S$. Naipaul on India,” 42. 5. Walcott’s Postcolonial Adam . James, “West Indian…».",
+      "id_lote": "S31-R37",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Strachan cita a Trouillot en las notas y lo invoca en el texto para hablar de los silencios de la historia.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso. Cita la edición en inglés (Silencing the Past); el volumen catalogado es la traducción española.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "pattullolast",
+      "b": "kincaidsmallplace",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en el texto. Polly Pattullo, Last Resorts: The Cost of Tourism in the Caribbean, 2005 (PDF, hoja 92): «…on the role of manager for Western enterprise, and it will in practice set up its country as the brothel of Europe.’*! Jamaica Kincaid’s satirical essay on Antigua, A Small Place, wrote that the hotel school taught Antiguans how to be good servants. ‘In Antigua, people cannot see a relationship between their obsession with slavery and…».",
+      "id_lote": "S31-R38",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Pattullo cita a Kincaid: la escuela de hotelería enseña a los antiguanos a ser buenos sirvientes.",
+      "limite": "Ninguno.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "cabezaseconomies",
+      "b": "hagedorn",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Amalia L. Cabezas, Economies of Desire: Sex and Tourism in Cuba and the Dominican Republic, 2009 (PDF, hoja 209): «…Alive and Dead: The Troubled Meeting of Sex, Gender, Public Health, and Progress in Latin America. Lincoln: University of Nebraska Press. Hagedorn, Katherine J. 2001. Divine Utterances: The Perfor mance of AfroCuban Santeria. Washington, D.C.: Smithsonian Institution Press. Hall, Elaine. 1993. “Smiling, Deferring, and Flirting: Doing Gender by Giving…».",
+      "id_lote": "S31-R39",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Cabezas se apoya en Hagedorn para explicar la promoción estatal de la santería en Cuba.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "cabezaseconomies",
+      "b": "gregorydevil",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Amalia L. Cabezas, Economies of Desire: Sex and Tourism in Cuba and the Dominican Republic, 2009 (PDF, hoja 209): «…In Hosts and Guests: The Anthropology of Tourism, edited by Valene Smith, 171–186. Philadelphia: University of Pennsylvania Press. Gregory, Steven. 2007. The Devil behind the Mirror: Globalization and Politics in the Dominican Republic. Berkeley: University of California Press, Guillén, Nicolás. 1974. “Tengo.”¡Patria o Muerte! The Great Zoo and…».",
+      "id_lote": "S31-R40",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Cabezas cita a Gregory en las referencias y lo invoca en el texto al describir la economía informal dominicana como espacio de resistencia.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "cabezaseconomies",
+      "b": "benitez",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Amalia L. Cabezas, Economies of Desire: Sex and Tourism in Cuba and the Dominican Republic, 2009 (PDF, hoja 202): «…of Class and Gender: Industrial Homework, Subcontracting, and Household Dynamics in Mexico City. Chicago: University of Chicago Press. Benítez-Rojo, Antonio. 1992. The Repeating Island: The Caribbean and the Postmodern Perspective. Translated by James Maraniss. Durham, N.C.: Duke University Press. Berg, Mette Louise. 2004. “ ‘Sleeping with the Enemy’:…».",
+      "id_lote": "S31-R41",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Cabezas cita a Benítez Rojo para describir la máquina de la plantación y la acumulación europea.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso. Cita la traducción inglesa (The Repeating Island, 1992); el volumen catalogado es el original español (1989).",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "cabezaseconomies",
+      "b": "kempadoo",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Amalia L. Cabezas, Economies of Desire: Sex and Tourism in Cuba and the Dominican Republic, 2009 (PDF, hoja 211): «…Jo Doezema, 260–267. New York: Routledge. ———, ed. 1999. Sun, Sex, and Gold: Tourism and Sex Work in the Caribbean. Boulder, Colo.: Rowman and Littleﬁeld. ———. 2004. Sexing the Caribbean. New York: Routledge. Kempadoo, Kamala, and Jo Doezema, eds. 1998. Global Sex Workers: Rights, Resistance, and Redeﬁnition. New York: Routledge.».",
+      "id_lote": "S31-R42",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Cabezas remite a Kempadoo (2004) para el análisis histórico del trabajo sexual caribeño.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "cabezaseconomies",
+      "b": "kincaidsmallplace",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Amalia L. Cabezas, Economies of Desire: Sex and Tourism in Cuba and the Dominican Republic, 2009 (PDF, hoja 212): «…and Transgender Practices across Cultures, edited by Evelyn Blackwood and Saskia E. Wieringa, 157–178. New York: Columbia University Press. Kincaid, Jamaica. 1988. A Small Place. New York: Farrar, Straus, Giroux. Kinnaird, Vivian, and Derek Hall, eds. 1994. Tourism: A Gender Analysis. London: John Wiley. Komter, Aafke E., ed. 1996. The Gift: An…».",
+      "id_lote": "S31-R43",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Cabezas cita a Kincaid como crítica del turismo desde la escritura antiguana.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
+      }
+    },
+    {
+      "a": "merrillparadise",
+      "b": "shellerconsuming",
+      "tipo": "resonancia",
+      "estado": "corroborada",
+      "friccion": {
+        "hay": false
+      },
+      "fuente": "Verificada en la bibliografía. Dennis Merrill, Negotiating Paradise: U.S. Tourism and Empire in Twentieth-Century Latin America, 2009 (EPUB, sección Text/9780807898635_Part16): «…Diplomacy, ed. Kunz, 42–79. 94 Koshar, German Travel Cultures, 11. 95 Maier, “Consigning.” 96 Tomlinson, Globalization, 29. 97 Barber, Jihad, esp. xi-xxxii. 98 Sheller, Consuming the Caribbean, 2. Chapter 1 1 New York Times, 16, 18 December 1927; Berg, Lindbergh, 172–73; Lindbergh, Autobiography of Values, 87–88; Ross, Last Hero, 165. 2 Quoted in Nicholson,…».",
+      "id_lote": "S31-R44",
+      "lote_incorporacion": "S31-2026-10-15",
+      "apoyo": "documentada",
+      "aspecto": "Merrill cita a Sheller en la introducción y la toma para nombrar el abrazo violento entre colonizador y colonizado.",
+      "limite": "La obra figura en la bibliografía o en una nota de referencia; el texto no la discute en extenso. Cita la primera edición (2003); el volumen catalogado es la reimpresión de 2011.",
+      "revision_interna": {
+        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
+        "fecha": "2026-10-15"
       }
     }
   ],
