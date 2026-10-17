@@ -3,9 +3,9 @@
     "titulo": "Con el agua de por medio",
     "subtitulo": "Atlas para una antropología archipiélica",
     "responsable": "Grupo de Investigación Pensamiento Caribe",
-    "version": "1.39.0",
+    "version": "1.40.0",
     "fecha": "2026-10-17",
-    "nota_version": "Expediente E10: segunda tanda de las obras sin evaluar. Veinticinco obras reciben corriente con su fundamento leído en el texto: Beckford, Baucom, Edwards, Scott, Wekker, Régent (dos libros), Thoden van Velzen, Trouillot (Transformaciones globales), entre otras. Dos volúmenes colectivos, L'Archipel inachevé y la Historia social del Caribe colombiano, quedan como síntesis multicorriente sin principal.",
+    "nota_version": "Expediente E11: tercera tanda de las obras sin evaluar. Trece obras reciben corriente con su fundamento leído en el texto, entre ellas Smallwood, Johnson, Lowe, Ochoa, Ferdinand, Chivallon, Philip (Zong!) y Firmin; Sociétés antillaises, de Benoist, queda como síntesis multicorriente sin principal.",
     "registro_interno": {
       "proposito": "Protocolo revisado de resonancia y disonancia (22-09-2026). Las categorías públicas del atlas siguen siendo resonancia y disonancia; este registro es interno y orienta la revisión editorial. El campo apoyo no crea categorías públicas ni cambia la interfaz.",
       "apoyo": {
@@ -4448,10 +4448,30 @@
       "l": "haiti",
       "tr": "francófono (Haití)",
       "ap": "Ciencia positivista antirracista escrita desde Haití: Firmin refuta la jerarquía de razas de Gobineau ante la propia Sociedad de Antropología de París en 1884, casi medio siglo antes de que la antropología académica reconociera a un antropólogo negro caribeño en su canon.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c1",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "invasiones_mundos_indigenas",
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "corriente_confirmada": "invasiones_mundos_indigenas",
+        "nota": "Expediente E11 (2026-10-17). *De l’égalité des races humaines* fue «both a scientific rebuttal to de Gobineau’s racist ideas and a positive assertion of the potential of anthropology objectively to study human difference» (hoja 17, introducción de Carolyn Fluehr-Lobban): crítica del racismo científico como producción colonial de conocimiento, C1. C7 secundaria porque Haití era el argumento favorito de Gobineau contra la capacidad de gobierno negra, y Firmin le responde con la historia haitiana (hoja 33)."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E11.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "*De l’égalité des races humaines* fue «both a scientific rebuttal to de Gobineau’s racist ideas and a positive assertion of the potential of anthropology objectively to study human difference» (hoja 17, introducción de Carolyn Fluehr-Lobban): crítica del racismo científico como producción colonial de conocimiento, C1. C7 secundaria porque Haití era el argumento favorito de Gobineau contra la capacidad de gobierno negra, y Firmin le responde con la historia haitiana (hoja 33).",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E11, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "shellerconsuming",
@@ -6757,10 +6777,30 @@
       "l": "haiti",
       "tr": "anglófono (Jamaica/Haití)",
       "ap": "Los veintitrés años que van de la salida de los marines a la llegada de Duvalier: comunistas, noiristes y sindicatos disputando el país. El tramo que el Haití del corpus se saltaba entre la ocupación y el duvalierismo.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c3"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "fugas_cimarronajes_emancipaciones"
+        ],
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E11 (2026-10-17). «This book is about radical political movements in Haiti and their struggles in the period following the U.S. occupation until the creation of the Duvalierist state» (hoja 16): la política haitiana entre la ocupación y el Estado duvalierista, 1934-1957. C3 secundaria porque esos movimientos radicales son luchas de emancipación."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E11.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "«This book is about radical political movements in Haiti and their struggles in the period following the U.S. occupation until the creation of the Duvalierist state» (hoja 16): la política haitiana entre la ocupación y el Estado duvalierista, 1934-1957. C3 secundaria porque esos movimientos radicales son luchas de emancipación.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E11, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "becklessavingsouls",
@@ -7372,10 +7412,30 @@
       "l": "trinidad",
       "tr": "anglófono (EE.UU.)",
       "ap": "Las “intimidades” coloniales que unen esclavitud, servidumbre por contrato y comercio liberal en una sola economía de lo humano diferenciado.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c1",
+      "recorridos_sec": [
+        "c2"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "invasiones_mundos_indigenas",
+          "trata_esclavizacion_plantacion"
+        ],
+        "corriente_confirmada": "invasiones_mundos_indigenas",
+        "nota": "Expediente E11 (2026-10-17). «In this study of how liberal ideas of political emancipation, ethical individualism, historical progress, and free market economy were employed in the expansion of empire» (hoja 15), la colonialidad opera por diferenciación y conexión espacializadas. C1 por la división colonial de la humanidad. C2 secundaria: «the differentially situated histories of indigeneity, slavery, industry, trade, and immigration give rise to linked, but not identical, genealogies of liberalism» (hoja 20)."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E11.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "«In this study of how liberal ideas of political emancipation, ethical individualism, historical progress, and free market economy were employed in the expansion of empire» (hoja 15), la colonialidad opera por diferenciación y conexión espacializadas. C1 por la división colonial de la humanidad. C2 secundaria: «the differentially situated histories of indigeneity, slavery, industry, trade, and immigration give rise to linked, but not identical, genealogies of liberalism» (hoja 20).",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E11, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "poloacunahistoriasocial",
@@ -7548,10 +7608,30 @@
       "l": "cuba",
       "tr": "anglófono (EE.UU.)",
       "ap": "El Palo Monte cubano como sociedad de los muertos que actúa en el presente: cosmología afrocubana de fuerza, no de creencia.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c5"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "memorias_espiritualidades_archivos_vivos",
+          "rutas_diasporas_territorios_acuosos"
+        ],
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "nota": "Expediente E11 (2026-10-17). «This book is largely, though not exclusively, about Palo Briyumba» (hoja 21), una de las ramas de La Regla de Congo en La Habana; Palo es «a fluid mode of engaging the dead in matter to transform fate» (hoja 20). Ritual y relación con los muertos: C9. C5 secundaria porque Ochoa lo ancla en la herencia centroafricana, «Kongo-inspired», que llegó con la trata a Cuba."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E11.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "«This book is largely, though not exclusively, about Palo Briyumba» (hoja 21), una de las ramas de La Regla de Congo en La Habana; Palo es «a fluid mode of engaging the dead in matter to transform fate» (hoja 20). Ritual y relación con los muertos: C9. C5 secundaria porque Ochoa lo ancla en la herencia centroafricana, «Kongo-inspired», que llegó con la trata a Cuba.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E11, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "chivallonesclavage",
@@ -7566,10 +7646,30 @@
       "l": "martinica",
       "tr": "francófono (Francia)",
       "ap": "Cómo el recuerdo disperso de la esclavitud se convierte en memoria pública instituida: antropología de un pasaje incómodo.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c2"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "memorias_espiritualidades_archivos_vivos",
+          "trata_esclavizacion_plantacion"
+        ],
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "nota": "Expediente E11 (2026-10-17). La investigación «est consacrée exclusivement aux manifestations des mémoires de l’esclavage» (sección 13 del epub), con la categoría de memoria como «contre-mémoire». Memoria y archivo: C9. C2 secundaria porque el objeto es la herencia de «la matrice esclavagiste» (sección 11)."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E11.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La investigación «est consacrée exclusivement aux manifestations des mémoires de l’esclavage» (sección 13 del epub), con la categoría de memoria como «contre-mémoire». Memoria y archivo: C9. C2 secundaria porque el objeto es la herencia de «la matrice esclavagiste» (sección 11).",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E11, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "pricebecomingrasta",
@@ -7584,10 +7684,27 @@
       "l": "jamaica",
       "tr": "anglófono (EE.UU.)",
       "ap": "Los orígenes de la identidad rastafari en la formación racial jamaicana temprana, antes de que Bob Marley la volviera global.",
-      "recorrido": null,
+      "recorrido": "c9",
       "recorridos_sec": [],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "memorias_espiritualidades_archivos_vivos"
+        ],
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "nota": "Expediente E11 (2026-10-17). «This book examines the historical, social, and personal sources and consolidation of Rastafari identity and experience in Jamaica» (hoja 10), y cómo los rastafaris usan el pasado «to fashion a positive Black identity in the face of discrimination». Identidad, fe y saber transmitido: C9. Sin secundaria: el prefacio no desarrolla un segundo eje y no se inventa uno."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E11.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "«This book examines the historical, social, and personal sources and consolidation of Rastafari identity and experience in Jamaica» (hoja 10), y cómo los rastafaris usan el pasado «to fashion a positive Black identity in the face of discrimination». Identidad, fe y saber transmitido: C9. Sin secundaria: el prefacio no desarrolla un segundo eje y no se inventa uno.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E11, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "vergesabolir",
@@ -7625,10 +7742,30 @@
       "l": "jamaica",
       "tr": "anglófono (Canadá/Trinidad)",
       "ap": "El poema como forma de duelo legal: reescribir el caso judicial del Zong para devolverle lenguaje a quienes el derecho solo contó como carga.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c2",
+      "recorridos_sec": [
+        "c9"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "trata_esclavizacion_plantacion",
+          "memorias_espiritualidades_archivos_vivos"
+        ],
+        "corriente_confirmada": "trata_esclavizacion_plantacion",
+        "nota": "Expediente E11 (2026-10-17). El libro excava el único documento público de la masacre: «the case is the tombstone, the one public marker of the murder of those Africans on board the Zong» (hoja 208); *Zong!* «tells the story that cannot be told yet must be told» (hoja 228, contracubierta). Trata y asesinato de cautivos a bordo: C2. C9 secundaria porque es una obra de memoria, duelo y archivo ante el silencio."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E11.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El libro excava el único documento público de la masacre: «the case is the tombstone, the one public marker of the murder of those Africans on board the Zong» (hoja 208); *Zong!* «tells the story that cannot be told yet must be told» (hoja 228, contracubierta). Trata y asesinato de cautivos a bordo: C2. C9 secundaria porque es una obra de memoria, duelo y archivo ante el silencio.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E11, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "benoistsocietesantillaises",
@@ -7645,8 +7782,34 @@
       "ap": "Lectura de conjunto de las sociedades de plantación americanas —Antillas, Brasil, sur de Estados Unidos— como una sola área cultural comparada.",
       "recorrido": null,
       "recorridos_sec": [],
-      "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "arquitectura_recorrido": {
+        "tipo": "sintesis_multicorriente",
+        "recorridos": [
+          "c2",
+          "c4",
+          "c10"
+        ]
+      },
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "trata_esclavizacion_plantacion",
+          "postplantacion_trabajo_desposesion",
+          "cuerpos_parentescos_eroticas"
+        ],
+        "corriente_confirmada": null,
+        "nota": "Expediente E11 (2026-10-17). Volumen de ensayos clásicos, que según su cubierta reúne «des travaux de synthèse et des études inédites sur les Antilles françaises» (sección 5 del epub). El índice combina la plantación como área cultural («Une aire culturelle : l’Amérique des Plantations», de Wagley), C2; el campesinado y el mercado («Marchés et vie rurale en Haïti», de Mintz), C4; y el parentesco («La famille dans la région caraïbe», de R. T. Smith), C10 (sección 6). Síntesis multicorriente sin principal."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E11.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Volumen de ensayos clásicos, que según su cubierta reúne «des travaux de synthèse et des études inédites sur les Antilles françaises» (sección 5 del epub). El índice combina la plantación como área cultural («Une aire culturelle : l’Amérique des Plantations», de Wagley), C2; el campesinado y el mercado («Marchés et vie rurale en Haïti», de Mintz), C4; y el parentesco («La famille dans la région caraïbe», de R. T. Smith), C10 (sección 6). Síntesis multicorriente sin principal.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E11, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "yelvingtonproducing",
@@ -7661,10 +7824,30 @@
       "l": "trinidad",
       "tr": "anglófono (EE.UU.)",
       "ap": "La fábrica trinitense como escenario donde raza, género y clase se producen a diario, no como categorías previas que el trabajo solo refleja.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c4",
+      "recorridos_sec": [
+        "c10"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "postplantacion_trabajo_desposesion",
+          "cuerpos_parentescos_eroticas"
+        ],
+        "corriente_confirmada": "postplantacion_trabajo_desposesion",
+        "nota": "Expediente E11 (2026-10-17). «This book is about the social relations of female and male factory workers in a factory operated by Essential Utensils Ltd. (EUL) in Trinidad, West Indies» (hoja 25): trabajo fabril y desigualdad de clase. C10 secundaria porque el análisis de género es parte de la tesis: «the analysis of gender entails more than» una lista de agravios (hoja 19)."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E11.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "«This book is about the social relations of female and male factory workers in a factory operated by Essential Utensils Ltd. (EUL) in Trinidad, West Indies» (hoja 25): trabajo fabril y desigualdad de clase. C10 secundaria porque el análisis de género es parte de la tesis: «the analysis of gender entails more than» una lista de agravios (hoja 19).",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E11, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "wellsgarifuna",
@@ -7679,10 +7862,30 @@
       "l": "belize",
       "tr": "anglófono (EE.UU./Honduras)",
       "ap": "Genealogías y relatos familiares garífunas como archivo etnográfico de una diáspora cimarrona centroamericana.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c10"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "memorias_espiritualidades_archivos_vivos",
+          "cuerpos_parentescos_eroticas"
+        ],
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "nota": "Expediente E11 (2026-10-17). Etnografía contada en historias familiares, con el dugu, el ritual de los ancestros, como hilo: la autora ofrece «a list of people, a kinship chart of the Diego family, and a glossary» (hoja 14). C9 por el ritual. C10 secundaria por el matrimonio, la poligamia aceptada y el parentesco: «multiple wives and “partners” were accepted customs among the Garifuna» (hoja 24)."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E11.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Etnografía contada en historias familiares, con el dugu, el ritual de los ancestros, como hilo: la autora ofrece «a list of people, a kinship chart of the Diego family, and a glossary» (hoja 14). C9 por el ritual. C10 secundaria por el matrimonio, la poligamia aceptada y el parentesco: «multiple wives and “partners” were accepted customs among the Garifuna» (hoja 24).",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E11, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "smallwoodsaltwater",
@@ -7697,10 +7900,30 @@
       "l": "barbados",
       "tr": "anglófono (EE.UU.)",
       "ap": "El pasaje intermedio pensado desde la economía política del comercio de esclavos: cómo una persona se convierte en mercancía antes de tocar tierra.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c2",
+      "recorridos_sec": [
+        "c5"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "trata_esclavizacion_plantacion",
+          "rutas_diasporas_territorios_acuosos"
+        ],
+        "corriente_confirmada": "trata_esclavizacion_plantacion",
+        "nota": "Expediente E11 (2026-10-17). «Here is a history of American slavery that begins in Africa and the Atlantic, in the saltwater slavery of peoples in motion, a diaspora shaped by violence» (hoja 21): la trata y la mercantilización del cautivo. C5 secundaria por el movimiento de personas, de África al Atlántico y a las Américas, que el libro pone como origen."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E11.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "«Here is a history of American slavery that begins in Africa and the Atlantic, in the saltwater slavery of peoples in motion, a diaspora shaped by violence» (hoja 21): la trata y la mercantilización del cautivo. C5 secundaria por el movimiento de personas, de África al Atlántico y a las Américas, que el libro pone como origen.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E11, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "johnsonwickedflesh",
@@ -7715,10 +7938,30 @@
       "l": "nola",
       "tr": "francófono/anglófono (Luisiana)",
       "ap": "Mujeres negras libres y esclavizadas que fabrican intimidad, parentesco y libertad propia en los archivos del Atlántico francés.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c10",
+      "recorridos_sec": [
+        "c3"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "cuerpos_parentescos_eroticas",
+          "fugas_cimarronajes_emancipaciones"
+        ],
+        "corriente_confirmada": "cuerpos_parentescos_eroticas",
+        "nota": "Expediente E11 (2026-10-17). «This book is about the nature of those intimate and kinship ties, their ebb and flow, their power and their violence, and the role African women played in making freedom free for all people of African descent» (hoja 20). Intimidad y parentesco: C10. C3 secundaria por esa libertad que las mujeres africanas construyen."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E11.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "«This book is about the nature of those intimate and kinship ties, their ebb and flow, their power and their violence, and the role African women played in making freedom free for all people of African descent» (hoja 20). Intimidad y parentesco: C10. C3 secundaria por esa libertad que las mujeres africanas construyen.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E11, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "ferdinandsaimer",
@@ -7733,10 +7976,30 @@
       "l": "martinica",
       "tr": "francófono (Martinica)",
       "ap": "Amar la tierra como gesto que deshace el habitar colonial: continuación situada de la ecología decolonial hacia una ética de la relación con el territorio.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c6",
+      "recorridos_sec": [
+        "c4"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "huracanes_ecologias_materialidades_vivas",
+          "postplantacion_trabajo_desposesion"
+        ],
+        "corriente_confirmada": "huracanes_ecologias_materialidades_vivas",
+        "nota": "Expediente E11 (2026-10-17). El prólogo busca la Tierra «dans les ruines de l’habiter colonial» (sección 10 del epub): una ecología decolonial, que piensa el habitar y la tierra desde la plantación. C4 secundaria porque «la compréhension du capitalisme colonial bananier commence par la» historia de la plantación (sección 22)."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E11.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El prólogo busca la Tierra «dans les ruines de l’habiter colonial» (sección 10 del epub): una ecología decolonial, que piensa el habitar y la tierra desde la plantación. C4 secundaria porque «la compréhension du capitalisme colonial bananier commence par la» historia de la plantación (sección 22).",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E11, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "boguesheretics",
