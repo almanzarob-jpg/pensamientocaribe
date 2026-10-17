@@ -3,9 +3,9 @@
     "titulo": "Con el agua de por medio",
     "subtitulo": "Atlas para una antropología archipiélica",
     "responsable": "Grupo de Investigación Pensamiento Caribe",
-    "version": "1.40.0",
+    "version": "1.41.0",
     "fecha": "2026-10-17",
-    "nota_version": "Expediente E11: tercera tanda de las obras sin evaluar. Trece obras reciben corriente con su fundamento leído en el texto, entre ellas Smallwood, Johnson, Lowe, Ochoa, Ferdinand, Chivallon, Philip (Zong!) y Firmin; Sociétés antillaises, de Benoist, queda como síntesis multicorriente sin principal.",
+    "nota_version": "Expediente E12: cuarta tanda de las obras sin evaluar. Ocho obras cuyo texto se localizó reciben corriente con su fundamento leído: Trouillot (The Caribbean Region), Cabrera, de Jong (Tambú), Lindskoog, Rodney, Wilder, An Yountae y LeGrand.",
     "registro_interno": {
       "proposito": "Protocolo revisado de resonancia y disonancia (22-09-2026). Las categorías públicas del atlas siguen siendo resonancia y disonancia; este registro es interno y orienta la revisión editorial. El campo apoyo no crea categorías públicas ni cambia la interfaz.",
       "apoyo": {
@@ -454,10 +454,30 @@
       "l": "haiti",
       "tr": "francófono (Haití)",
       "ap": "El Caribe como frontera abierta que desborda las categorías de la antropología nacional. Texto-brújula del proyecto. Silenciando el pasado hace de la memoria un campo de poder.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c2"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "creolizaciones_traducciones_opacidades",
+          "trata_esclavizacion_plantacion"
+        ],
+        "corriente_confirmada": "creolizaciones_traducciones_opacidades",
+        "nota": "Expediente E12 (2026-10-17). «This region where boundaries are notoriously fuzzy has long been the open frontier of cultural anthropology» (hoja 1): el ensayo escribe sobre el Caribe «as viewed by anthropologists, but also about anthropology as viewed from the Caribbean» (hoja 1), y lo organiza en torno a la heterogeneidad, la historicidad y la articulación. Es teoría de la mezcla y de las unidades de análisis que el Caribe desordena: C8. C2 secundaria porque Trouillot funda esa complejidad en la plantación esclavista: «Many of these slaves worked on plantations run by profit-conscious Europeans» (hoja 2), de modo que eran, en sus palabras, «hardly places to look for primitives» (hoja 3)."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E12.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "«This region where boundaries are notoriously fuzzy has long been the open frontier of cultural anthropology» (hoja 1): el ensayo escribe sobre el Caribe «as viewed by anthropologists, but also about anthropology as viewed from the Caribbean» (hoja 1), y lo organiza en torno a la heterogeneidad, la historicidad y la articulación. Es teoría de la mezcla y de las unidades de análisis que el Caribe desordena: C8. C2 secundaria porque Trouillot funda esa complejidad en la plantación esclavista: «Many of these slaves worked on plantations run by profit-conscious Europeans» (hoja 2), de modo que eran, en sus palabras, «hardly places to look for primitives» (hoja 3).",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E12, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "casimir",
@@ -1006,10 +1026,27 @@
       "l": "cuba",
       "tr": "hispano (Cuba)",
       "ap": "Etnografía-archivo de la Regla de Palo y la santería; el monte como biblioteca viva y memoria ancestral.",
-      "recorrido": null,
+      "recorrido": "c9",
       "recorridos_sec": [],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "memorias_espiritualidades_archivos_vivos"
+        ],
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "nota": "Expediente E12 (2026-10-17). Solo se dispone de un extracto de una página de *El Monte* (la 14 del original), no del libro. Ese extracto basta para C9: «Persiste en el negro cubano, con tenacidad asombrosa, la creencia en la espiritualidad del monte», donde habitan «las mismas divinidades ancestrales», y «“El monte es sagrado” porque en él residen, “viven”, las divinidades». Religión, ancestros y espacio sagrado. Sin secundaria: con un solo párrafo no hay base para sostener un segundo eje, aunque la mención de la trata («igual que en los días de la trata») sugeriría C5 con el libro completo a la vista."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E12.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Solo se dispone de un extracto de una página de *El Monte* (la 14 del original), no del libro. Ese extracto basta para C9: «Persiste en el negro cubano, con tenacidad asombrosa, la creencia en la espiritualidad del monte», donde habitan «las mismas divinidades ancestrales», y «“El monte es sagrado” porque en él residen, “viven”, las divinidades». Religión, ancestros y espacio sagrado. Sin secundaria: con un solo párrafo no hay base para sostener un segundo eje, aunque la mención de la trata («igual que en los días de la trata») sugeriría C5 con el libro completo a la vista.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E12, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "tambu",
@@ -1024,10 +1061,30 @@
       "l": "curazao",
       "tr": "neerlandés (Curaçao)",
       "ap": "Ritual y política de la memoria en el Caribe neerlandés, casi ausente del canon.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c2"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "memorias_espiritualidades_archivos_vivos",
+          "trata_esclavizacion_plantacion"
+        ],
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "nota": "Expediente E12 (2026-10-17). Etnografía del Tambú curazoleño y de su política de la memoria: «With roots dating back to the slavery period, Tambú emerged as a vehicle through which modern Curaçaoans of African descent could maintain cultural links with the African continent» (hoja 22), y su capítulo 3 se titula «The Laws Couldn’t Keep Tambú Away. The Church Couldn’t Keep Tambú Away». Ritual, ancestros y memoria viva: C9. C2 secundaria porque el Tambú nace de la esclavización: «The religion to which Tambú served as accompaniment was called Montamentu during the years of slavery» (hoja 23)."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E12.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Etnografía del Tambú curazoleño y de su política de la memoria: «With roots dating back to the slavery period, Tambú emerged as a vehicle through which modern Curaçaoans of African descent could maintain cultural links with the African continent» (hoja 22), y su capítulo 3 se titula «The Laws Couldn’t Keep Tambú Away. The Church Couldn’t Keep Tambú Away». Ritual, ancestros y memoria viva: C9. C2 secundaria porque el Tambú nace de la esclavización: «The religion to which Tambú served as accompaniment was called Montamentu during the years of slavery» (hoja 23).",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E12, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "bonilla",
@@ -1080,10 +1137,30 @@
       "l": "haiti",
       "tr": "anglófono (EE.UU.)",
       "ap": "El refugiado haitiano como origen del régimen de detención migratoria estadounidense.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c5"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "rutas_diasporas_territorios_acuosos"
+        ],
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E12 (2026-10-17). «This book is a history of immigration detention in the United States from 1973 to 2000. It is also a history of Haitian refugees in the United States» (hoja 10). El objeto es el aparato estatal de frontera, detención e interdicción: C7. C5 secundaria porque los protagonistas son quienes cruzan el mar: «Haitian refugees were the central characters in immigration detention from the moment it reemerged in the early 1970s» (hoja 10)."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E12.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "«This book is a history of immigration detention in the United States from 1973 to 2000. It is also a history of Haitian refugees in the United States» (hoja 10). El objeto es el aparato estatal de frontera, detención e interdicción: C7. C5 secundaria porque los protagonistas son quienes cruzan el mar: «Haitian refugees were the central characters in immigration detention from the moment it reemerged in the early 1970s» (hoja 10).",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E12, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "ferdinand",
@@ -1169,10 +1246,30 @@
       "l": "guyana",
       "tr": "anglófono (Guyana)",
       "ap": "Subdesarrollo como producción histórica, no atraso; matriz del análisis de la dependencia.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c2",
+      "recorridos_sec": [
+        "c4"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "trata_esclavizacion_plantacion",
+          "postplantacion_trabajo_desposesion"
+        ],
+        "corriente_confirmada": "trata_esclavizacion_plantacion",
+        "nota": "Expediente E12 (2026-10-17). Se leyó la edición en español de Siglo XXI (OCR), y las citas siguen su redacción. El índice abre con «La contribución de África al desarrollo del capitalismo en Europa» (hoja 4) y dedica el capítulo 4 al comercio europeo de esclavos como raíz del subdesarrollo africano. Trata y explotación: C2. C4 secundaria porque el prefacio sostiene que el desarrollo africano solo será posible «si se basa en un rompimiento radical con el sistema capitalista internacional» (hoja 7), y el capítulo 5 trata de la expatriación «del excedente africano bajo el colonialismo» (hoja 4): trabajo y desposesión."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E12.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Se leyó la edición en español de Siglo XXI (OCR), y las citas siguen su redacción. El índice abre con «La contribución de África al desarrollo del capitalismo en Europa» (hoja 4) y dedica el capítulo 4 al comercio europeo de esclavos como raíz del subdesarrollo africano. Trata y explotación: C2. C4 secundaria porque el prefacio sostiene que el desarrollo africano solo será posible «si se basa en un rompimiento radical con el sistema capitalista internacional» (hoja 7), y el capítulo 5 trata de la expatriación «del excedente africano bajo el colonialismo» (hoja 4): trabajo y desposesión.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E12, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "araujo",
@@ -4345,10 +4442,30 @@
       "l": "martinica",
       "tr": "anglófono (EE.UU./Francia)",
       "ap": "Césaire y Senghor no pedían la independencia nacional: proponían federaciones posnacionales que la historiografía descartó como tibieza. Wilder devuelve esa apuesta al presente y le da profundidad histórica al problema que Bonilla formula desde el Caribe no soberano de hoy.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c3"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "fugas_cimarronajes_emancipaciones"
+        ],
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E12 (2026-10-17). «This book is about “the problem of freedom” after the end of empire» (hoja 18): Wilder reconstruye los proyectos federales de Césaire y Senghor, que querían «overcome colonialism without falling into the trap of national autarchy» (hoja 19), y discute «the postwar logic that reduced colonial emancipation to national liberation and self-determination to state sovereignty» (hoja 21). Soberanía, forma del Estado y federación: C7. C3 secundaria porque el libro piensa la emancipación colonial más allá de la nación."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E12.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "«This book is about “the problem of freedom” after the end of empire» (hoja 18): Wilder reconstruye los proyectos federales de Césaire y Senghor, que querían «overcome colonialism without falling into the trap of national autarchy» (hoja 19), y discute «the postwar logic that reduced colonial emancipation to national liberation and self-determination to state sovereignty» (hoja 21). Soberanía, forma del Estado y federación: C7. C3 secundaria porque el libro piensa la emancipación colonial más allá de la nación.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E12, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "bogueslammingreader",
@@ -4591,10 +4708,30 @@
       "l": "martinica",
       "tr": "comparado (transnacional)",
       "ap": "La secularización no hizo desaparecer la religión: la transmutó en ideología del Estado-nación y del mercado. Lee a Glissant, Césaire y Fanon para proponer un desencantamiento decolonial que rompa el hechizo del orden del Hombre.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c8"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "memorias_espiritualidades_archivos_vivos",
+          "creolizaciones_traducciones_opacidades"
+        ],
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "nota": "Expediente E12 (2026-10-17). «This book is an attempt to reconceptualize religion and clarify its relation to (de)coloniality» (hoja 14): «it places religion at the center of decolonial scholarship» (hoja 13), con Césaire, Fanon y la poética de lo sagrado. Religión, lo sagrado y saberes: C9. C8 secundaria porque su capítulo final se titula «Creolizing the Sacred» (índice, hoja 6), y Glissant aparece en la introducción (hoja 12) entre quienes complican las fronteras de lo religioso y lo secular."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E12.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "«This book is an attempt to reconceptualize religion and clarify its relation to (de)coloniality» (hoja 14): «it places religion at the center of decolonial scholarship» (hoja 13), con Césaire, Fanon y la poética de lo sagrado. Religión, lo sagrado y saberes: C9. C8 secundaria porque su capítulo final se titula «Creolizing the Sacred» (índice, hoja 6), y Glissant aparece en la introducción (hoja 12) entre quienes complican las fronteras de lo religioso y lo secular.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E12, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "branddoor",
@@ -6995,10 +7132,30 @@
       "l": "santamarta",
       "tr": "anglófono (Canadá/Colombia)",
       "ap": "Cómo se hizo propiedad privada la tierra baldía del Caribe colombiano, y quién quedó adentro y quién afuera del cercado. Es el trasfondo agrario de la Zona Bananera que el atlas trabaja con Almanza y Granados.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c4",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "postplantacion_trabajo_desposesion",
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "corriente_confirmada": "postplantacion_trabajo_desposesion",
+        "nota": "Expediente E12 (2026-10-17). Se leyó la edición en inglés de 1986, no la traducción al español. «The purpose of this work is to analyze the dynamics of this important but hitherto neglected form of rural conflict» (hoja 19): el choque entre colonos campesinos y empresarios de tierras en los baldíos. El índice lo nombra con claridad: «The Struggle for Land and Labor» y «The State and the Agrarian Problem» (hoja 11). Tierra, trabajo y desposesión: C4. C7 secundaria por la frontera y el papel del Estado en la adjudicación de baldíos. Además, «the United Fruit Company virtually created the Colombian banana enclave» (hoja 29), el vínculo directo con la Zona Bananera."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E12.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Se leyó la edición en inglés de 1986, no la traducción al español. «The purpose of this work is to analyze the dynamics of this important but hitherto neglected form of rural conflict» (hoja 19): el choque entre colonos campesinos y empresarios de tierras en los baldíos. El índice lo nombra con claridad: «The Struggle for Land and Labor» y «The State and the Agrarian Problem» (hoja 11). Tierra, trabajo y desposesión: C4. C7 secundaria por la frontera y el papel del Estado en la adjudicación de baldíos. Además, «the United Fruit Company virtually created the Colombian banana enclave» (hoja 29), el vínculo directo con la Zona Bananera.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E12, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "keeganhofman",
