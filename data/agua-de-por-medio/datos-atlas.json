@@ -3,9 +3,9 @@
     "titulo": "Con el agua de por medio",
     "subtitulo": "Atlas para una antropología archipiélica",
     "responsable": "Grupo de Investigación Pensamiento Caribe",
-    "version": "1.41.0",
+    "version": "1.42.0",
     "fecha": "2026-10-17",
-    "nota_version": "Expediente E12: cuarta tanda de las obras sin evaluar. Ocho obras cuyo texto se localizó reciben corriente con su fundamento leído: Trouillot (The Caribbean Region), Cabrera, de Jong (Tambú), Lindskoog, Rodney, Wilder, An Yountae y LeGrand.",
+    "nota_version": "Expediente E13: quinta tanda. Seis obras que esperaban texto reciben corriente leída en el texto: Escalante (palenques), Lebrón Ortiz (Filosofía del cimarronaje) y los cuatro libros de turismo de la siembra S31 (Strachan, Pattullo, Cabezas, Merrill), cuyas propuestas editoriales quedan verificadas.",
     "registro_interno": {
       "proposito": "Protocolo revisado de resonancia y disonancia (22-09-2026). Las categorías públicas del atlas siguen siendo resonancia y disonancia; este registro es interno y orienta la revisión editorial. El campo apoyo no crea categorías públicas ni cambia la interfaz.",
       "apoyo": {
@@ -1708,10 +1708,30 @@
       "l": "palenque",
       "tr": "hispano (Colombia)",
       "ap": "La primera etnografía académica de Palenque; abre el campo que Friedemann y Patiño Rosselli continuarán treinta años después.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c3",
+      "recorridos_sec": [
+        "c2"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "fugas_cimarronajes_emancipaciones",
+          "trata_esclavizacion_plantacion"
+        ],
+        "corriente_confirmada": "fugas_cimarronajes_emancipaciones",
+        "nota": "Expediente E13 (2026-10-17). Se leyó el texto de Escalante en el PDF «Palenques en Colombia» (*Revista del CESLA*, 7, 2005, pp. 385-390), que Rob identificó como el texto de San Basilio. Abre con la reacción de los esclavizados ante la explotación: «fugándose individual- o colectivamente para formar palenques» (hoja 2). Fuga y palenque: C3. Sobre San Basilio transcribe un documento colonial: los palenqueros, «descendientes de otros que prófugos al abrigo de aquellas ásperas montañas, defendieron su libertad» (hoja 6), hasta que el obispo Casiani pactó su asentamiento. C2 secundaria porque el texto expone el régimen que persigue la fuga: quien huya «caiga e incurra el tal negro, o negra en pena de cien azotes» (hoja 2)."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E13.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Se leyó el texto de Escalante en el PDF «Palenques en Colombia» (*Revista del CESLA*, 7, 2005, pp. 385-390), que Rob identificó como el texto de San Basilio. Abre con la reacción de los esclavizados ante la explotación: «fugándose individual- o colectivamente para formar palenques» (hoja 2). Fuga y palenque: C3. Sobre San Basilio transcribe un documento colonial: los palenqueros, «descendientes de otros que prófugos al abrigo de aquellas ásperas montañas, defendieron su libertad» (hoja 6), hasta que el obispo Casiani pactó su asentamiento. C2 secundaria porque el texto expone el régimen que persigue la fuga: quien huya «caiga e incurra el tal negro, o negra en pena de cien azotes» (hoja 2).",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E13, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "rebeldestiny",
@@ -4671,10 +4691,30 @@
       "l": "puertorico",
       "tr": "hispano (Puerto Rico)",
       "ap": "Convierte el cimarronaje en categoría filosófica y no en episodio histórico: la huida como praxis de mundo y no como reacción. Escrito en español desde Puerto Rico, desplaza el eje anglófono desde el que suele leerse la marronage.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c3",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "fugas_cimarronajes_emancipaciones",
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "corriente_confirmada": "fugas_cimarronajes_emancipaciones",
+        "nota": "Expediente E13 (2026-10-17). «Este libro pretende presentar una mirada filosófica de las experiencias de aquellas personas que buscaron afirmar su libertad dentro de un contexto esclavista y colonial, en el sentido clásico: la experiencia cimarrona» (sección 10 del epub). Fuga, cimarronaje y emancipación: C3. C7 secundaria porque esa filosofía surge «de la experiencia de un colonialismo avanzado y metamorfoseado» en Puerto Rico, «donde coexiste el colonialismo jurídico/económico y la colonialidad» (sección 10), y propone resistir «la fuerza totalizadora de la euromodernidad» desde el cimarronaje (sección 10). Se leyó el libro (epub de Educación Emergente), no los artículos de Lebrón."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E13.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "«Este libro pretende presentar una mirada filosófica de las experiencias de aquellas personas que buscaron afirmar su libertad dentro de un contexto esclavista y colonial, en el sentido clásico: la experiencia cimarrona» (sección 10 del epub). Fuga, cimarronaje y emancipación: C3. C7 secundaria porque esa filosofía surge «de la experiencia de un colonialismo avanzado y metamorfoseado» en Puerto Rico, «donde coexiste el colonialismo jurídico/económico y la colonialidad» (sección 10), y propone resistir «la fuerza totalizadora de la euromodernidad» desde el cimarronaje (sección 10). Se leyó el libro (epub de Educación Emergente), no los artículos de Lebrón.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E13, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "sonicbodies",
@@ -20791,17 +20831,19 @@
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c4",
+      "recorridos_sec": [
+        "c8"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S31-2026-10-15: verificación bibliográfica y de citas; clasificación pendiente"
+        "expediente-corrientes-E13.md"
       ],
       "lote_incorporacion": "S31-2026-10-15",
       "anclaje_cartografico": {
@@ -20854,34 +20896,37 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "postplantacion_trabajo_desposesion",
           "creolizaciones_traducciones_opacidades"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "postplantacion_trabajo_desposesion",
+        "nota": "Expediente E13 (2026-10-17). «This book is in many ways a history of ideas» (hoja 17), y su pregunta es por qué el Caribe sigue representado como paraíso pese a la plantación: «tourism makes paradise a product and uses the hotel (the new plantation?) to provide this product for visitors» (hoja 17). Plantación, trabajo y renta: C4. C8 secundaria porque el libro lee los tropos de «paraíso» y «plantación» en la escritura imperial y en la caribeña, y pasa «from historiography, travel literature, and brochures to plays» (hoja 18); esa lectura de discursos es la parte más débil de la asignación. Es propuesta editorial de la siembra S31, ahora leída en el texto."
       },
       "revision": {
-        "estado": "pendiente_revision_con_texto",
-        "alcance": "Revisión del índice, la introducción, las citas y el aparato de notas y bibliografía.",
-        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
-        "fecha": "2026-10-15",
-        "fundamento": "C4 por el paraíso turístico como forma de la plantación; C8 por la lectura de la literatura anglófona como respuesta. Registro: monografía de crítica cultural y literaria que lee obras del corpus (Kincaid) y las cita (regla del 1 de octubre de 2026)."
+        "estado": "confirmada",
+        "fundamento": "«This book is in many ways a history of ideas» (hoja 17), y su pregunta es por qué el Caribe sigue representado como paraíso pese a la plantación: «tourism makes paradise a product and uses the hotel (the new plantation?) to provide this product for visitors» (hoja 17). Plantación, trabajo y renta: C4. C8 secundaria porque el libro lee los tropos de «paraíso» y «plantación» en la escritura imperial y en la caribeña, y pasa «from historiography, travel literature, and brochures to plays» (hoja 18); esa lectura de discursos es la parte más débil de la asignación. Es propuesta editorial de la siembra S31, ahora leída en el texto.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E13, propuesta asistida)",
+        "fecha": "2026-10-17",
+        "fundamento_previo": "C4 por el paraíso turístico como forma de la plantación; C8 por la lectura de la literatura anglófona como respuesta. Registro: monografía de crítica cultural y literaria que lee obras del corpus (Kincaid) y las cita (regla del 1 de octubre de 2026)."
       }
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c4",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S31-2026-10-15: verificación bibliográfica y de citas; clasificación pendiente"
+        "expediente-corrientes-E13.md"
       ],
       "lote_incorporacion": "S31-2026-10-15",
       "anclaje_cartografico": {
@@ -20936,34 +20981,37 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "postplantacion_trabajo_desposesion",
           "soberanias_fronteras_ocupaciones"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "postplantacion_trabajo_desposesion",
+        "nota": "Expediente E13 (2026-10-17). El caso del Hilton Jalousie, en Santa Lucía, abre el libro como ejemplo típico y plantea «Who benefits? And how?» (hoja 14): reparto de ganancias, empleo y divisas. Turismo y desposesión económica: C4. C7 secundaria porque el mismo pasaje dice que el turismo «asks questions about sovereignty (when beaches and valleys become foreign fields)» (hoja 14). Además fija la herencia común del Caribe «moulded by slavery, colonialism (English, French, Spanish and Dutch) and the plantation» (hoja 15). Es propuesta editorial de la siembra S31, ahora leída en el texto."
       },
       "revision": {
-        "estado": "pendiente_revision_con_texto",
-        "alcance": "Revisión del índice, el primer capítulo, las citas y el aparato de notas y bibliografía.",
-        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
-        "fecha": "2026-10-15",
-        "fundamento": "C4 por el turismo como sucesor de la economía de plantación; C7 por la propiedad de la tierra y la soberanía de las comunidades. Registro: estudio periodístico documentado; la bibliografía y las notas son extensas. Ediciones: 1996 (Cassell/Latin America Bureau; Ian Randle) y 2005, la catalogada."
+        "estado": "confirmada",
+        "fundamento": "El caso del Hilton Jalousie, en Santa Lucía, abre el libro como ejemplo típico y plantea «Who benefits? And how?» (hoja 14): reparto de ganancias, empleo y divisas. Turismo y desposesión económica: C4. C7 secundaria porque el mismo pasaje dice que el turismo «asks questions about sovereignty (when beaches and valleys become foreign fields)» (hoja 14). Además fija la herencia común del Caribe «moulded by slavery, colonialism (English, French, Spanish and Dutch) and the plantation» (hoja 15). Es propuesta editorial de la siembra S31, ahora leída en el texto.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E13, propuesta asistida)",
+        "fecha": "2026-10-17",
+        "fundamento_previo": "C4 por el turismo como sucesor de la economía de plantación; C7 por la propiedad de la tierra y la soberanía de las comunidades. Registro: estudio periodístico documentado; la bibliografía y las notas son extensas. Ediciones: 1996 (Cassell/Latin America Bureau; Ian Randle) y 2005, la catalogada."
       }
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c10",
+      "recorridos_sec": [
+        "c4"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S31-2026-10-15: verificación bibliográfica y de citas; clasificación pendiente"
+        "expediente-corrientes-E13.md"
       ],
       "lote_incorporacion": "S31-2026-10-15",
       "anclaje_cartografico": {
@@ -21007,34 +21055,37 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "cuerpos_parentescos_eroticas",
           "postplantacion_trabajo_desposesion"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "cuerpos_parentescos_eroticas",
+        "nota": "Expediente E13 (2026-10-17). El libro «explores the erotic underpinnings of transnational tourism by offering a comparative analysis of the complex affective economies of heterosexual sexualized tourism across Cuba and the Dominican Republic» (hoja 16). Cuerpos, deseo y erotismo: C10. C4 secundaria porque Cabezas ancla esa economía en el trabajo: «the blueprint for tourism and leisure services was established with the plantation economies and the extraction of labor and natural resources in earlier eras» (hoja 17). Es propuesta editorial de la siembra S31, ahora leída en el texto."
       },
       "revision": {
-        "estado": "pendiente_revision_con_texto",
-        "alcance": "Revisión del índice, la introducción, las citas y el aparato de notas y referencias.",
-        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
-        "fecha": "2026-10-15",
-        "fundamento": "C10 por el trabajo sexual y la economía del deseo; C4 por el turismo como forma de trabajo y de desposesión. Registro: etnografía académica con trabajo de campo en los dos países."
+        "estado": "confirmada",
+        "fundamento": "El libro «explores the erotic underpinnings of transnational tourism by offering a comparative analysis of the complex affective economies of heterosexual sexualized tourism across Cuba and the Dominican Republic» (hoja 16). Cuerpos, deseo y erotismo: C10. C4 secundaria porque Cabezas ancla esa economía en el trabajo: «the blueprint for tourism and leisure services was established with the plantation economies and the extraction of labor and natural resources in earlier eras» (hoja 17). Es propuesta editorial de la siembra S31, ahora leída en el texto.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E13, propuesta asistida)",
+        "fecha": "2026-10-17",
+        "fundamento_previo": "C10 por el trabajo sexual y la economía del deseo; C4 por el turismo como forma de trabajo y de desposesión. Registro: etnografía académica con trabajo de campo en los dos países."
       }
     },
     {
       "k": "obra",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c4"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "procedencia": "siembra nueva",
       "procedencia_verificada": true,
       "proceso": [
         "siembra"
       ],
       "fuente_recorrido": [
-        "Lote S31-2026-10-15: verificación bibliográfica y de citas; clasificación pendiente"
+        "expediente-corrientes-E13.md"
       ],
       "lote_incorporacion": "S31-2026-10-15",
       "anclaje_cartografico": {
@@ -21083,19 +21134,20 @@
         }
       ],
       "propuesta_clasificacion": {
-        "estado": "propuesta editorial, no confirmada",
+        "estado": "resuelta por dictamen",
         "corrientes_candidatas": [
           "soberanias_fronteras_ocupaciones",
           "postplantacion_trabajo_desposesion"
         ],
-        "corriente_confirmada": null
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E13 (2026-10-17). «This book examines how tourists armed with suntan lotion, maps, golf shirts, straw hats, cameras, and swimsuits extended the U.S. presence in twentieth-century Latin America and helped internationalize U.S. culture» (sección 8 del epub), y su tesis es que el imperio hemisférico de Estados Unidos «has endured in part because the hard power brandished by marine brigades and financial houses has been accompanied by softer power» (sección 8). Imperio, ocupación y soberanía: C7. C4 secundaria porque la negociación turística incluye «the wages paid to labor, and the divvying up of profits» (sección 8). Es propuesta editorial de la siembra S31, ahora leída en el texto."
       },
       "revision": {
-        "estado": "pendiente_revision_con_texto",
-        "alcance": "Revisión del índice, la introducción, la conclusión y el aparato de notas y bibliografía.",
-        "responsable": "Preparación asistida del lote S31; clasificación pendiente de adjudicación académica",
-        "fecha": "2026-10-15",
-        "fundamento": "C7 por el imperio, la dependencia y la negociación con el poder estadounidense; C4 por el turismo como economía de servicio. Registro: monografía de historia. Centro de gravedad: Cuba y Puerto Rico ocupan cuatro de los seis capítulos; México, dos."
+        "estado": "confirmada",
+        "fundamento": "«This book examines how tourists armed with suntan lotion, maps, golf shirts, straw hats, cameras, and swimsuits extended the U.S. presence in twentieth-century Latin America and helped internationalize U.S. culture» (sección 8 del epub), y su tesis es que el imperio hemisférico de Estados Unidos «has endured in part because the hard power brandished by marine brigades and financial houses has been accompanied by softer power» (sección 8). Imperio, ocupación y soberanía: C7. C4 secundaria porque la negociación turística incluye «the wages paid to labor, and the divvying up of profits» (sección 8). Es propuesta editorial de la siembra S31, ahora leída en el texto.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E13, propuesta asistida)",
+        "fecha": "2026-10-17",
+        "fundamento_previo": "C7 por el imperio, la dependencia y la negociación con el poder estadounidense; C4 por el turismo como economía de servicio. Registro: monografía de historia. Centro de gravedad: Cuba y Puerto Rico ocupan cuatro de los seis capítulos; México, dos."
       }
     }
   ],
