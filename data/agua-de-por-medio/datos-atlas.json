@@ -3,9 +3,9 @@
     "titulo": "Con el agua de por medio",
     "subtitulo": "Atlas para una antropología archipiélica",
     "responsable": "Grupo de Investigación Pensamiento Caribe",
-    "version": "1.42.0",
+    "version": "1.43.0",
     "fecha": "2026-10-17",
-    "nota_version": "Expediente E13: quinta tanda. Seis obras que esperaban texto reciben corriente leída en el texto: Escalante (palenques), Lebrón Ortiz (Filosofía del cimarronaje) y los cuatro libros de turismo de la siembra S31 (Strachan, Pattullo, Cabezas, Merrill), cuyas propuestas editoriales quedan verificadas.",
+    "nota_version": "Expediente E14: sexta tanda. Seis obras con texto recién llegado reciben corriente leída: Ferdinand (Une écologie décoloniale), Araujo, Castro-Gómez, Sheller (Citizenship from Below), Henriques (Sonic Bodies) y Hurbon (Culture et dictature en Haïti).",
     "registro_interno": {
       "proposito": "Protocolo revisado de resonancia y disonancia (22-09-2026). Las categorías públicas del atlas siguen siendo resonancia y disonancia; este registro es interno y orienta la revisión editorial. El campo apoyo no crea categorías públicas ni cambia la interfaz.",
       "apoyo": {
@@ -1175,10 +1175,30 @@
       "l": "martinica",
       "tr": "francófono (Martinica)",
       "ap": "El habitar caribeño desde el barco negrero: ecología y colonialidad en un mismo pliegue.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c6",
+      "recorridos_sec": [
+        "c3"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "huracanes_ecologias_materialidades_vivas",
+          "fugas_cimarronajes_emancipaciones"
+        ],
+        "corriente_confirmada": "huracanes_ecologias_materialidades_vivas",
+        "nota": "Expediente E14 (2026-10-17). Es *Une écologie décoloniale* (Seuil, 2019), distinta de *S’aimer la Terre*. El prólogo lo plantea como «Une double fracture coloniale et environnementale : la Caraïbe au cœur de la tempête moderne» (índice, sección 7 del epub), y la Caraïbe permite pensar la crisis ecológica desde «la quête d’un monde défait de ses esclavages» (sección 9). Ecología, plantación y catástrofe: C6. C3 secundaria porque el capítulo 11 propone «L’écologie Marronne : fuir le Plantationocène» (índice, sección 7), el cimarronaje como salida."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E14.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Es *Une écologie décoloniale* (Seuil, 2019), distinta de *S’aimer la Terre*. El prólogo lo plantea como «Une double fracture coloniale et environnementale : la Caraïbe au cœur de la tempête moderne» (índice, sección 7 del epub), y la Caraïbe permite pensar la crisis ecológica desde «la quête d’un monde défait de ses esclavages» (sección 9). Ecología, plantación y catástrofe: C6. C3 secundaria porque el capítulo 11 propone «L’écologie Marronne : fuir le Plantationocène» (índice, sección 7), el cimarronaje como salida.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E14, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "beyondsun",
@@ -1284,10 +1304,30 @@
       "l": "haiti",
       "tr": "comparado (transnacional)",
       "ap": "La deuda de Haití, la compensación a los amos y la memoria pública de la esclavitud como economía moral.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c2",
+      "recorridos_sec": [
+        "c9"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "trata_esclavizacion_plantacion",
+          "memorias_espiritualidades_archivos_vivos"
+        ],
+        "corriente_confirmada": "trata_esclavizacion_plantacion",
+        "nota": "Expediente E14 (2026-10-17). «this book chronicles the history of the demands of reparations for slavery and the Atlantic slave trade» (sección 7 del epub), con la trata y la esclavización como objeto desde la primera página. C2. C9 secundaria porque Araujo parte de la memoria pública: «public memory of slavery is increasingly institutionalized» (sección 7) sin que eso repare nada, y de ahí vuelve la demanda de reparaciones."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E14.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "«this book chronicles the history of the demands of reparations for slavery and the Atlantic slave trade» (sección 7 del epub), con la trata y la esclavización como objeto desde la primera página. C2. C9 secundaria porque Araujo parte de la memoria pública: «public memory of slavery is increasingly institutionalized» (sección 7) sin que eso repare nada, y de ahí vuelve la demanda de reparaciones.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E14, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "manoalzada",
@@ -2549,16 +2589,31 @@
       "l": "jamaica",
       "tr": "anglófono (EE.UU./Caribe)",
       "ap": "La libertad caribeña posesclavista reclamada desde la agencia erótica y corporal, no solo desde el derecho formal.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c3",
+      "recorridos_sec": [
+        "c10"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente",
+      "estado_recorrido": "confirmado",
       "revision": {
-        "estado": "pendiente_revision_con_texto",
-        "fundamento": "Verificacion manual de fuente (TRIAGE_INTERNO_C1_C10, lote 4) confirma que el archivo bibliografico no esta disponible localmente en Pagina/Biliografia. Coincide con hallazgo ya documentado en campanas previas: apertura-control-p3-b-etapa-2-3i.md (Sec. 57, listado en 3_CASOS_BLOQUEADOS), apertura-recalibracion-p3-etapa-2-3g.md (grado relacional 10, NO_LOCALIZADA) y campana-recuperacion-bibliografica-post-p3.md (busqueda externa ya agotada: Duke UP, academia.edu, archive.org, sin PDF autoarchivado). No se realizo nueva busqueda externa, conforme al protocolo (Seccion 7 de la instruccion vigente). El caso permanece PENDIENTE, sin lectura ni veredicto academico.",
-        "responsable": "Dirección académica de Pensamiento Caribe (protocolo TRIAGE_INTERNO_C1_C10, lote 4)",
-        "fecha": "2026-09-11"
-      }
+        "estado": "confirmada",
+        "fundamento": "El libro estudia la libertad poscolonial desde abajo: la violencia actual viene de las «histories of colonialism, slavery, and exclusion» (hoja 19), y su índice recorre ciudadanía y emancipación («Sword-Bearing Citizens»). Libertad y ciudadanía posemancipación: C3. C10 secundaria porque cierra con «Erotic Agency and a Queer Caribbean Freedom» (hoja 9) y define la libertad como práctica corporal: «embodied (material and spiritual) practices through which people exercise and envision freedom» (hoja 24).",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E14, propuesta asistida)",
+        "fecha": "2026-10-17",
+        "fundamento_previo": "Verificacion manual de fuente (TRIAGE_INTERNO_C1_C10, lote 4) confirma que el archivo bibliografico no esta disponible localmente en Pagina/Biliografia. Coincide con hallazgo ya documentado en campanas previas: apertura-control-p3-b-etapa-2-3i.md (Sec. 57, listado en 3_CASOS_BLOQUEADOS), apertura-recalibracion-p3-etapa-2-3g.md (grado relacional 10, NO_LOCALIZADA) y campana-recuperacion-bibliografica-post-p3.md (busqueda externa ya agotada: Duke UP, academia.edu, archive.org, sin PDF autoarchivado). No se realizo nueva busqueda externa, conforme al protocolo (Seccion 7 de la instruccion vigente). El caso permanece PENDIENTE, sin lectura ni veredicto academico."
+      },
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "fugas_cimarronajes_emancipaciones",
+          "cuerpos_parentescos_eroticas"
+        ],
+        "corriente_confirmada": "fugas_cimarronajes_emancipaciones",
+        "nota": "Expediente E14 (2026-10-17). El libro estudia la libertad poscolonial desde abajo: la violencia actual viene de las «histories of colonialism, slavery, and exclusion» (hoja 19), y su índice recorre ciudadanía y emancipación («Sword-Bearing Citizens»). Libertad y ciudadanía posemancipación: C3. C10 secundaria porque cierra con «Erotic Agency and a Queer Caribbean Freedom» (hoja 9) y define la libertad como práctica corporal: «embodied (material and spiritual) practices through which people exercise and envision freedom» (hoja 24)."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E14.md"
+      ]
     },
     {
       "id": "ramadan",
@@ -4567,10 +4622,30 @@
       "l": "cartagena",
       "tr": "hispano (Colombia)",
       "ap": "La Ilustración neogranadina como dispositivo de poder y no como recepción tardía: la ciencia criolla se articula con la limpieza de sangre para producir blancura. Sostiene por el lado historiográfico la colonialidad del espacio que Deere trabaja por el lado conceptual.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c8"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "pendiente"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "creolizaciones_traducciones_opacidades"
+        ],
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E14 (2026-10-17). «la Ilustración no es un fenómeno europeo que se “difunde” luego por todo el mundo» (hoja 22), sino un conjunto de discursos con lugares de producción diversos. Su hipótesis: el escenario de la Ilustración fue «la lucha imperial por el control de los territorios claves para la expansión del naciente capitalismo y de la población que habitaba esos territorios» (hoja 22). Imperio, colonialidad y control territorial: C7. C8 secundaria por el capítulo «La Ilustración como dispositivo de expropiación epistémica» (hoja 8), sobre conocimientos ilegítimos y lugar de enunciación. Es la secundaria menos firme de la tanda."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E14.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "«la Ilustración no es un fenómeno europeo que se “difunde” luego por todo el mundo» (hoja 22), sino un conjunto de discursos con lugares de producción diversos. Su hipótesis: el escenario de la Ilustración fue «la lucha imperial por el control de los territorios claves para la expansión del naciente capitalismo y de la población que habitaba esos territorios» (hoja 22). Imperio, colonialidad y control territorial: C7. C8 secundaria por el capítulo «La Ilustración como dispositivo de expropiación epistémica» (hoja 8), sobre conocimientos ilegítimos y lugar de enunciación. Es la secundaria menos firme de la tanda.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E14, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "firmin",
@@ -4730,10 +4805,30 @@
       "l": "jamaica",
       "tr": "anglófono (Jamaica/R.U.)",
       "ap": "El sound system jamaicano como forma de conocimiento corporal y no como género musical. La negrura aparece aquí como régimen de sensibilidad: resonancia e inmersión frente a la distancia crítica del ojo.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c10"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "memorias_espiritualidades_archivos_vivos",
+          "cuerpos_parentescos_eroticas"
+        ],
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "nota": "Expediente E14 (2026-10-17). «Sonic bodies are the flesh and blood of sound system crew and “crowd,”» (hoja 16), y además son «“knowing,”» (hoja 17): cuerpos que saben. Los sound systems son una forma de conocimiento transmitido por práctica y aprendizaje (el índice incluye «Learning to Listen», hoja 9): C9. C10 secundaria por el cuerpo y el goce como centro, pero es una secundaria débil y se puede dejar vacía."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E14.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "«Sonic bodies are the flesh and blood of sound system crew and “crowd,”» (hoja 16), y además son «“knowing,”» (hoja 17): cuerpos que saben. Los sound systems son una forma de conocimiento transmitido por práctica y aprendizaje (el índice incluye «Learning to Listen», hoja 9): C9. C10 secundaria por el cuerpo y el goce como centro, pero es una secundaria débil y se puede dejar vacía.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E14, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "yountaesecular",
@@ -5344,10 +5439,30 @@
       "l": "haiti",
       "tr": "francófono (Haití)",
       "ap": "El duvalierismo leído como control del imaginario cultural, no solo del aparato de Estado: el mismo objeto histórico que Trouillot narra desde la formación estatal, aquí desde la fabricación del consentimiento simbólico.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c9"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "memorias_espiritualidades_archivos_vivos"
+        ],
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E14 (2026-10-17). El régimen duvalierista se piensa como «terrorisme politique d’État» y «Fascisme créole» (hoja 13), y el libro quiere contribuir a las luchas culturales «qui nécessairement accompagnent l’effort pour le changement radical en Haïti» (hoja 15). Dictadura, Estado y poder: C7. C9 secundaria porque examina «certains axes de la culture populaire haïtienne : le vaudou et la sorcellerie, la littérature orale» (hoja 14) como terreno de apoyo del poder y de resistencia."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E14.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El régimen duvalierista se piensa como «terrorisme politique d’État» y «Fascisme créole» (hoja 13), y el libro quiere contribuir a las luchas culturales «qui nécessairement accompagnent l’effort pour le changement radical en Haïti» (hoja 15). Dictadura, Estado y poder: C7. C9 secundaria porque examina «certains axes de la culture populaire haïtienne : le vaudou et la sorcellerie, la littérature orale» (hoja 14) como terreno de apoyo del poder y de resistencia.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E14, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "lizcanocarnaval",
