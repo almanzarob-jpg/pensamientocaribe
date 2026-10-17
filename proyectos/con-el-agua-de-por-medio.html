@@ -213,14 +213,14 @@
 <script src="../js/zoom-caribe.js"></script>
 <!-- El mapa carga solo su índice; las fichas llegan después, en segundo plano.
      Ambos se generan desde datos-atlas.js con scripts/partir-datos-atlas.mjs. -->
-<script src="../data/agua-de-por-medio/atlas-indice.js?v=1.38.0"></script>
+<script src="../data/agua-de-por-medio/atlas-indice.js?v=1.39.0"></script>
 <script>
 /* FICHAS A DEMANDA · el aporte de cada obra, la edición consultada, sus orillas y el texto
    completo de cada fuente viven en atlas-fichas.js. Se piden en cuanto el mapa está
    dibujado; si alguien abre una ficha antes, la ficha espera esa fracción de segundo.
    Si el archivo no llega (sin red), la ficha se abre igual con lo que trae el índice. */
 window.FICHAS_ATLAS=(function(){
-  const SRC='../data/agua-de-por-medio/atlas-fichas.js?v=1.38.0';
+  const SRC='../data/agua-de-por-medio/atlas-fichas.js?v=1.39.0';
   let listo=false, pedido=false; const cola=[];
   const clave=(a,b)=>a+'\u0001'+b;
   function aplicar(){

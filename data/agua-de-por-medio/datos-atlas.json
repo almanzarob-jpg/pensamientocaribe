@@ -3,9 +3,9 @@
     "titulo": "Con el agua de por medio",
     "subtitulo": "Atlas para una antropología archipiélica",
     "responsable": "Grupo de Investigación Pensamiento Caribe",
-    "version": "1.38.0",
-    "fecha": "2026-10-15",
-    "nota_version": "Lote S31: entran los cuatro libros de turismo que esperaban en la carpeta de bibliografía. Paradise and Plantation, de Ian Strachan, lee el paraíso turístico como plantación reescrita; Last Resorts, de Polly Pattullo, hace el balance del costo del turismo en la región; Economies of Desire, de Amalia Cabezas, compara el turismo sexual en Cuba y la República Dominicana; y Negotiating Paradise, de Dennis Merrill, cuenta el turismo estadounidense como poder blando en Cuba, Puerto Rico y México. 44 relaciones nuevas, todas con cita verificada.",
+    "version": "1.39.0",
+    "fecha": "2026-10-17",
+    "nota_version": "Expediente E10: segunda tanda de las obras sin evaluar. Veinticinco obras reciben corriente con su fundamento leído en el texto: Beckford, Baucom, Edwards, Scott, Wekker, Régent (dos libros), Thoden van Velzen, Trouillot (Transformaciones globales), entre otras. Dos volúmenes colectivos, L'Archipel inachevé y la Historia social del Caribe colombiano, quedan como síntesis multicorriente sin principal.",
     "registro_interno": {
       "proposito": "Protocolo revisado de resonancia y disonancia (22-09-2026). Las categorías públicas del atlas siguen siendo resonancia y disonancia; este registro es interno y orienta la revisión editorial. El campo apoyo no crea categorías públicas ni cambia la interfaz.",
       "apoyo": {
@@ -2159,10 +2159,30 @@
       "l": "dominicana",
       "tr": "anglófono (EE.UU./Rep. Dominicana)",
       "ap": "La identidad racial dominicana disputada entre el discurso oficial hispanista y la reidentificación afrodescendiente.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c8"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "creolizaciones_traducciones_opacidades"
+        ],
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E10 (2026-10-17). La tesis, según su propio resumen, «maps the process of nationness» y su expresión en «discourses involving ideas of race and color» (hoja 7): la pertenencia nacional dominicana como disputa de discursos sobre raza y color. C8 secundaria por la identidad «mixed-race» que esos discursos construyen."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E10.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "La tesis, según su propio resumen, «maps the process of nationness» y su expresión en «discourses involving ideas of race and color» (hoja 7): la pertenencia nacional dominicana como disputa de discursos sobre raza y color. C8 secundaria por la identidad «mixed-race» que esos discursos construyen.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E10, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "cuijla",
@@ -5302,10 +5322,30 @@
       "l": "trinidad",
       "tr": "anglófono (Trinidad/EE.UU.)",
       "ap": "El habla y el gesto trinitario leídos como retórica, no como folclore ni como desvío del inglés estándar. Abre varios capítulos con epígrafes de Glissant tomados de El discurso antillano, la misma obra que el atlas ya cataloga.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c5"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "creolizaciones_traducciones_opacidades",
+          "rutas_diasporas_territorios_acuosos"
+        ],
+        "corriente_confirmada": "creolizaciones_traducciones_opacidades",
+        "nota": "Expediente E10 (2026-10-17). El libro lee la retórica caribeña desde la cultura popular y pregunta por «what it means to be Caribbean in these times» (hoja 25), con el festival —el carnaval— como marco teórico: «the festival has been identified as a key signifier of “sociocultural complexity,”» (hoja 31). C5 secundaria porque se escribe desde la diáspora, en Brooklyn (hoja 28)."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E10.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El libro lee la retórica caribeña desde la cultura popular y pregunta por «what it means to be Caribbean in these times» (hoja 25), con el festival —el carnaval— como marco teórico: «the festival has been identified as a key signifier of “sociocultural complexity,”» (hoja 31). C5 secundaria porque se escribe desde la diáspora, en Brooklyn (hoja 28).",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E10, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "lightfoot",
@@ -5482,10 +5522,30 @@
       "l": "cuba",
       "tr": "comparado (transatlántico)",
       "ap": "La sociedad secreta Abakuá rastreada desde el Calabar, en el actual Nigeria, hasta su trasplante en Cuba: de los pocos estudios que documentan ese vínculo con archivo y no solo con hipótesis. El propio Miller declara que recurre 'a lo largo de todo este estudio' a Lydia Cabrera, y nombra El Monte entre sus obras fundacionales.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c5"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "memorias_espiritualidades_archivos_vivos",
+          "rutas_diasporas_territorios_acuosos"
+        ],
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "nota": "Expediente E10 (2026-10-17). «This book tells the story of how several generations of West Africans who were enslaved and forced to migrate to the Caribbean were able to regroup and reestablish an important homeland institution» (sección 13 del epub): la sociedad Abakuá como institución de saber transmitido. C5 secundaria por la migración forzada que la trae de Cross River a Cuba."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E10.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "«This book tells the story of how several generations of West Africans who were enslaved and forced to migrate to the Caribbean were able to regroup and reestablish an important homeland institution» (sección 13 del epub): la sociedad Abakuá como institución de saber transmitido. C5 secundaria por la migración forzada que la trae de Cross River a Cuba.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E10, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "schweitzerbata",
@@ -5500,10 +5560,30 @@
       "l": "cuba",
       "tr": "anglófono (EE.UU./Cuba)",
       "ap": "El tambor batá como forma de conocimiento transmitida de maestro a discípulo, no como pieza de folclore para ilustrar un capítulo sobre religión. Reconoce a Fernando Ortiz como la autoridad fundacional del campo, aunque por obras distintas a la que el atlas cataloga.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c8"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "memorias_espiritualidades_archivos_vivos",
+          "creolizaciones_traducciones_opacidades"
+        ],
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "nota": "Expediente E10 (2026-10-17). El libro desplaza el estudio del trance hacia «the entire four- to six-hour toque de santo» y cuestiona «the premise that the musicians’ prime focus is on inducing and supporting trance possession» (hoja 26): la música como parte del ritual y de su transmisión. C8 secundaria por la estética de la tradición, su traducción escénica y su recepción."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E10.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El libro desplaza el estudio del trance hacia «the entire four- to six-hour toque de santo» y cuestiona «the premise that the musicians’ prime focus is on inducing and supporting trance possession» (hoja 26): la música como parte del ritual y de su transmisión. C8 secundaria por la estética de la tradición, su traducción escénica y su recepción.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E10, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "mendozaraices",
@@ -5541,10 +5621,30 @@
       "l": "haiti",
       "tr": "comparado",
       "ap": "Relee Los jacobinos negros contra el relato triunfal de la descolonización: no como romance sino como tragedia. James no es para Scott un antecedente que superar sino la pregunta que sigue abierta —'conectar la historia de Toussaint Louverture con las historias vitales de nuestro propio tiempo'—, y discute en detalle Silenciando el pasado de Trouillot.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c3",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "fugas_cimarronajes_emancipaciones",
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "corriente_confirmada": "fugas_cimarronajes_emancipaciones",
+        "nota": "Expediente E10 (2026-10-17). Scott lee *The Black Jacobins* de C. L. R. James: «Why and how this happened is the theme of this book» es la frase de James que Scott cita como la aspiración central de *The Black Jacobins*: contar cómo los esclavizados se hicieron un pueblo capaz de vencer a Europa (hoja 17, OCR del PDF). Scott la lee como pregunta sobre la Revolución haitiana y su figuración de Toussaint: C3. C7 secundaria porque el libro mira desde «a postcolonial present that James looked forward to» (hoja 13), es decir, desde el destino de las soberanías anticoloniales."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E10.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Scott lee *The Black Jacobins* de C. L. R. James: «Why and how this happened is the theme of this book» es la frase de James que Scott cita como la aspiración central de *The Black Jacobins*: contar cómo los esclavizados se hicieron un pueblo capaz de vencer a Europa (hoja 17, OCR del PDF). Scott la lee como pregunta sobre la Revolución haitiana y su figuración de Toussaint: C3. C7 secundaria porque el libro mira desde «a postcolonial present that James looked forward to» (hoja 13), es decir, desde el destino de las soberanías anticoloniales.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E10, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "mcneillmosquito",
@@ -5648,10 +5748,30 @@
       "l": "panama",
       "tr": "anglófono (EE.UU.)",
       "ap": "La comunidad antillana de Panamá construyendo soberanía diaspórica propia —prensa, escuela, organización política— más allá de la lectura que solo la ve como mano de obra del Canal.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c5",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "rutas_diasporas_territorios_acuosos",
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "corriente_confirmada": "rutas_diasporas_territorios_acuosos",
+        "nota": "Expediente E10 (2026-10-17). «This book centers Black people […] who survived multiple forced and voluntary migrations, colonial and national expulsion campaigns, and brutal and discriminatory working conditions» (hoja 18): migración y mundos afrocaribeños en Panamá. C7 secundaria por las campañas de expulsión nacional y la pregunta por quién pertenece al Estado panameño."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E10.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "«This book centers Black people […] who survived multiple forced and voluntary migrations, colonial and national expulsion campaigns, and brutal and discriminatory working conditions» (hoja 18): migración y mundos afrocaribeños en Panamá. C7 secundaria por las campañas de expulsión nacional y la pregunta por quién pertenece al Estado panameño.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E10, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "kahnislands",
@@ -6118,10 +6238,30 @@
       "l": "jamaica",
       "tr": "anglófono (Jamaica)",
       "ap": "El modelo contra el que se escribió medio siglo de antropología caribeña: sociedades que comparten territorio y mercado pero no instituciones, mantenidas juntas por la fuerza. El atlas tenía a todos sus contradictores y no tenía el texto que contradicen.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c2",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "trata_esclavizacion_plantacion",
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "corriente_confirmada": "trata_esclavizacion_plantacion",
+        "nota": "Expediente E10 (2026-10-17). «West Indian slave society is a classic instance of the plural society identified by Furnivall» (hoja 18): la estructura de la sociedad esclavista como origen del pluralismo. C7 secundaria porque la tesis es política: las sociedades «based on conquest, slavery, or colonial domination» no descansan en valores comunes (hoja 17)."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E10.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "«West Indian slave society is a classic instance of the plural society identified by Furnivall» (hoja 18): la estructura de la sociedad esclavista como origen del pluralismo. C7 secundaria porque la tesis es política: las sociedades «based on conquest, slavery, or colonial domination» no descansan en valores comunes (hoja 17).",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E10, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "rtsmithmatrifocal",
@@ -6244,10 +6384,30 @@
       "l": "haiti",
       "tr": "francófono (Haití) / anglófono",
       "ap": "Trouillot le pasa a la antropología la misma factura que le pasó a la historia: la disciplina heredó un «nicho salvaje» que no puede simplemente abandonar declarándose crítica. Cierra el arco de Trouillot en el corpus, que ya tenía la historiografía y la etnografía dominiquesa pero no la crítica de la disciplina misma.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c1",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "invasiones_mundos_indigenas",
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "corriente_confirmada": "invasiones_mundos_indigenas",
+        "nota": "Expediente E10 (2026-10-17). «Este libro es un acto de historización» (hoja 21) que desoccidentaliza la modernidad y examina la antropología como producción colonial de conocimiento. C7 secundaria porque lo hace sobre «la nación, el Estado, la tribu, la modernidad o la globalización» (hoja 23), sobre todo desde el Caribe."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E10.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "«Este libro es un acto de historización» (hoja 21) que desoccidentaliza la modernidad y examina la antropología como producción colonial de conocimiento. C7 secundaria porque lo hace sobre «la nación, el Estado, la tribu, la modernidad o la globalización» (hoja 23), sobre todo desde el Caribe.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E10, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "morenofraginals",
@@ -6291,10 +6451,30 @@
       "l": "jamaica",
       "tr": "anglófono (Jamaica)",
       "ap": "Balance de la generación que hizo y perdió las revoluciones caribeñas, escrito por quien estuvo en Granada. Pregunta qué queda de la imaginación política antillana cuando ya no hay proyecto nacional que la sostenga.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c9"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "memorias_espiritualidades_archivos_vivos"
+        ],
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E10 (2026-10-17). «This book explores these questions and searches for new theoretical approaches» (sección 9 del epub): qué futuros políticos, justos y democráticos caben después del proyecto de la soberanía poscolonial. C9 secundaria por la memoria y la imaginación del subtítulo."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E10.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "«This book explores these questions and searches for new theoretical approaches» (sección 9 del epub): qué futuros políticos, justos y democráticos caben después del proyecto de la soberanía poscolonial. C9 secundaria por la memoria y la imaginación del subtítulo.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E10, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "oostindiedecolonising",
@@ -6309,10 +6489,30 @@
       "l": "curazao",
       "tr": "neerlandés (Países Bajos/Caribe)",
       "ap": "La descolonización que no ocurrió: por qué el Caribe neerlandés negoció quedarse dentro del reino mientras las colonias británicas y francesas seguían caminos opuestos. Da el contexto histórico de la no-soberanía que Bonilla y van der Pijl piensan en clave teórica.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c4"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "postplantacion_trabajo_desposesion"
+        ],
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E10 (2026-10-17). El libro «compares and contrasts the Dutch ‘model’» con las políticas de descolonización del Reino Unido, Francia y Estados Unidos (hoja 12), y arrastra «a perpetual legacy of ambivalent Caribbean dependency» (hoja 12). C4 secundaria por esa dependencia económica."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E10.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El libro «compares and contrasts the Dutch ‘model’» con las políticas de descolonización del Reino Unido, Francia y Estados Unidos (hoja 12), y arrastra «a perpetual legacy of ambivalent Caribbean dependency» (hoja 12). C4 secundaria por esa dependencia económica.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E10, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "kloosterrealm",
@@ -6373,10 +6573,30 @@
       "l": "guyana",
       "tr": "comparado (Guayanas)",
       "ap": "Las tres Guayanas leídas juntas —independiente, departamento francés, república de habla neerlandesa— para mostrar que el estatus político no predice la vida material. El borde continental del Caribe, que el atlas suele tratar como excepción.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c4"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "postplantacion_trabajo_desposesion"
+        ],
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E10 (2026-10-17). El volumen «compares and contrasts the contemporary development experience of neighbouring, geographically similar countries with an analogous history of exploitation but by three different European colonisers» (sección 2 del epub, texto de cubierta). C7 por la trayectoria poscolonial de Guyana, Surinam y la Guayana Francesa; C4 secundaria por el desarrollo, la minería y el trabajo que recorren los capítulos."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E10.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El volumen «compares and contrasts the contemporary development experience of neighbouring, geographically similar countries with an analogous history of exploitation but by three different European colonisers» (sección 2 del epub, texto de cubierta). C7 por la trayectoria poscolonial de Guyana, Surinam y la Guayana Francesa; C4 secundaria por el desarrollo, la minería y el trabajo que recorren los capítulos.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E10, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "bestlevitt",
@@ -6499,10 +6719,30 @@
       "l": "granada",
       "tr": "anglófono (Granada/Barbados)",
       "ap": "El episodio que el Caribe anglófono todavía no termina de contarse: la revolución de 1979, el asesinato de Bishop y la invasión estadounidense de 1983, revisados por autores de la propia isla. Abre el primer nodo del atlas en Granada.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c3",
+      "recorridos_sec": [
+        "c7"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "fugas_cimarronajes_emancipaciones",
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "corriente_confirmada": "fugas_cimarronajes_emancipaciones",
+        "nota": "Expediente E10 (2026-10-17). El libro parte de «the implosion of the Grenada Revolution and the subsequent U.S. invasion of Grenada in 1983» (sección 10 del epub): la revolución como proyecto de libertad es el objeto, C3. C7 secundaria por la invasión estadounidense y la pregunta por la soberanía en el fin de la Guerra Fría."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E10.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El libro parte de «the implosion of the Grenada Revolution and the subsequent U.S. invasion of Grenada in 1983» (sección 10 del epub): la revolución como proyecto de libertad es el objeto, C3. C7 secundaria por la invasión estadounidense y la pregunta por la soberanía en el fin de la Guerra Fría.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E10, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "smithredblack",
@@ -6787,10 +7027,30 @@
       "l": "guadalupe",
       "tr": "francófono (Francia)",
       "ap": "Cómo la categoría jurídica de “libre de color” organiza jerarquías raciales dentro de la libertad misma, antes y después de la abolición.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c3",
+      "recorridos_sec": [
+        "c2"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "fugas_cimarronajes_emancipaciones",
+          "trata_esclavizacion_plantacion"
+        ],
+        "corriente_confirmada": "fugas_cimarronajes_emancipaciones",
+        "nota": "Expediente E10 (2026-10-17). «Cet ouvrage tente de combler ce vide, à partir de la comparaison des situations» (sección 5 del epub) y pone «les femmes et les hommes dans leur vie quotidienne» antes que los sistemas; «le préjugé de couleur est le résultat de décisions prises dans des conditions particulières» (sección 19). Libertad cotidiana de los libres de color: C3. C2 secundaria porque esa libertad se define dentro de la sociedad esclavista."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E10.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "«Cet ouvrage tente de combler ce vide, à partir de la comparaison des situations» (sección 5 del epub) y pone «les femmes et les hommes dans leur vie quotidienne» antes que los sistemas; «le préjugé de couleur est le résultat de décisions prises dans des conditions particulières» (sección 19). Libertad cotidiana de los libres de color: C3. C2 secundaria porque esa libertad se define dentro de la sociedad esclavista.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E10, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "thodenvelzen",
@@ -6805,10 +7065,30 @@
       "l": "suriname",
       "tr": "neerlandés (Países Bajos/Surinam)",
       "ap": "Los cultos religiosos ndjuka como respuesta política a un siglo de amenazas externas: lo material y lo sobrenatural en la misma trama de poder cimarrón.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c3"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "memorias_espiritualidades_archivos_vivos",
+          "fugas_cimarronajes_emancipaciones"
+        ],
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "nota": "Expediente E10 (2026-10-17). «Two such cults form the subject of this book» (hoja 18): el culto Gaan Gadu o Gran Padre y el culto Na Ogii o el Peligro, leídos «against the backdrop of changing relations of production and income distribution» (hoja 25). Culto y saber transmitido: C9. C3 secundaria porque los sujetos son los cimarrones ndyuka de Surinam."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E10.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "«Two such cults form the subject of this book» (hoja 18): el culto Gaan Gadu o Gran Padre y el culto Na Ogii o el Peligro, leídos «against the backdrop of changing relations of production and income distribution» (hoja 25). Culto y saber transmitido: C9. C3 secundaria porque los sujetos son los cimarrones ndyuka de Surinam.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E10, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "regentmaitres",
@@ -6823,10 +7103,30 @@
       "l": "guadalupe",
       "tr": "francófono (Francia)",
       "ap": "Los propietarios de esclavos de Guadalupe como clase social y económica: el capital esclavista visto desde quienes lo poseían, no desde quienes lo padecían.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c2",
+      "recorridos_sec": [
+        "c3"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "trata_esclavizacion_plantacion",
+          "fugas_cimarronajes_emancipaciones"
+        ],
+        "corriente_confirmada": "trata_esclavizacion_plantacion",
+        "nota": "Expediente E10 (2026-10-17). «Cet ouvrage est une histoire des propriétaires d’esclaves […] en Guadeloupe des débuts de la colonisation française aux abolitions de l’esclavage» (sección 3 del epub): la plantación vista desde quienes poseen. C3 secundaria por el cierre en las abolitions, que cuentan como fuga del orden esclavista."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E10.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "«Cet ouvrage est une histoire des propriétaires d’esclaves […] en Guadeloupe des débuts de la colonisation française aux abolitions de l’esclavage» (sección 3 del epub): la plantación vista desde quienes poseen. C3 secundaria por el cierre en las abolitions, que cuentan como fuga del orden esclavista.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E10, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "beckfordpersistent",
@@ -6841,10 +7141,30 @@
       "l": "jamaica",
       "tr": "anglófono (Jamaica)",
       "ap": "La plantación como estructura que reproduce el subdesarrollo mucho después de la independencia formal: economía política de la pobreza persistente.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c4",
+      "recorridos_sec": [
+        "c2"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "postplantacion_trabajo_desposesion",
+          "trata_esclavizacion_plantacion"
+        ],
+        "corriente_confirmada": "postplantacion_trabajo_desposesion",
+        "nota": "Expediente E10 (2026-10-17). «Our study of plantation economy and society suggests that underdevelopment derives from the institutional environment» (hoja 7): la persistencia de la plantación como causa del subdesarrollo y del despojo negro en el Nuevo Mundo. C2 secundaria por la plantación esclavista de la que esas instituciones vienen."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E10.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "«Our study of plantation economy and society suggests that underdevelopment derives from the institutional environment» (hoja 7): la persistencia de la plantación como causa del subdesarrollo y del despojo negro en el Nuevo Mundo. C2 secundaria por la plantación esclavista de la que esas instituciones vienen.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E10, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "benoistarchipel",
@@ -6860,8 +7180,34 @@
       "ap": "Las Antillas francesas como archipiélago cultural inacabado, tironeado entre la matriz colonial y una creolización que nunca termina de asentarse.",
       "recorrido": null,
       "recorridos_sec": [],
-      "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "arquitectura_recorrido": {
+        "tipo": "sintesis_multicorriente",
+        "recorridos": [
+          "c4",
+          "c5",
+          "c9"
+        ]
+      },
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "postplantacion_trabajo_desposesion",
+          "rutas_diasporas_territorios_acuosos",
+          "memorias_espiritualidades_archivos_vivos"
+        ],
+        "corriente_confirmada": null,
+        "nota": "Expediente E10 (2026-10-17). Volumen de etnografías de Marie-Galante y Pointe-à-Pitre que no se deja subordinar a una sola corriente. El índice (sección 5) reúne el trabajo y la adaptación socioeconómica («Les pêcheurs de Marie-Galante», C4), la migración urbana («Les Marie-Galantais à Pointe-à-Pitre», C5) y la visión del mundo, con «Notes sur la médecine populaire» (sección 6, C9). Síntesis multicorriente sin principal."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E10.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Volumen de etnografías de Marie-Galante y Pointe-à-Pitre que no se deja subordinar a una sola corriente. El índice (sección 5) reúne el trabajo y la adaptación socioeconómica («Les pêcheurs de Marie-Galante», C4), la migración urbana («Les Marie-Galantais à Pointe-à-Pitre», C5) y la visión del mundo, con «Notes sur la médecine populaire» (sección 6, C9). Síntesis multicorriente sin principal.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E10, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "wekkerpolitics",
@@ -6876,10 +7222,30 @@
       "l": "suriname",
       "tr": "neerlandés (Países Bajos/Surinam)",
       "ap": "El “mati work” surinamés-afrodiaspórico como epistemología del deseo entre mujeres que no calca las categorías sexuales occidentales.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c10",
+      "recorridos_sec": [
+        "c5"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "cuerpos_parentescos_eroticas",
+          "rutas_diasporas_territorios_acuosos"
+        ],
+        "corriente_confirmada": "cuerpos_parentescos_eroticas",
+        "nota": "Expediente E10 (2026-10-17). «The mati work is an old institution […] in which women have sexual relations with men and with women» (sección 9 del epub): cultura sexual de mujeres criollas, parentesco y deseo. C5 secundaria por el título mismo, «in the Afro-Surinamese Diaspora»: el estudio sigue la institución entre Suriname y los Países Bajos."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E10.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "«The mati work is an old institution […] in which women have sexual relations with men and with women» (sección 9 del epub): cultura sexual de mujeres criollas, parentesco y deseo. C5 secundaria por el título mismo, «in the Afro-Surinamese Diaspora»: el estudio sigue la institución entre Suriname y los Países Bajos.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E10, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "edwardsdiaspora",
@@ -6894,10 +7260,30 @@
       "l": "martinica",
       "tr": "anglófono (EE.UU.)",
       "ap": "La traducción, no la sangre, como lo que hace posible la diáspora negra: circuitos internacionalistas entre Harlem, París, Haití y las Antillas francesas.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c5",
+      "recorridos_sec": [
+        "c8"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "rutas_diasporas_territorios_acuosos",
+          "creolizaciones_traducciones_opacidades"
+        ],
+        "corriente_confirmada": "rutas_diasporas_territorios_acuosos",
+        "nota": "Expediente E10 (2026-10-17). «This book attempts to hear the border of another future of black internationalism in the archive of its past» (hoja 21): la diáspora como práctica de circulación intelectual. C8 secundaria porque el subtítulo pone la traducción en el centro: «Literature, Translation, and the Rise of Black Internationalism» (hoja 4)."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E10.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "«This book attempts to hear the border of another future of black internationalism in the archive of its past» (hoja 21): la diáspora como práctica de circulación intelectual. C8 secundaria porque el subtítulo pone la traducción en el centro: «Literature, Translation, and the Rise of Black Internationalism» (hoja 4).",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E10, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "chaudensoncreolization",
@@ -6911,10 +7297,30 @@
       "l": "haiti",
       "tr": "francófono (Francia)",
       "ap": "La criollización lingüística repensada como proceso general de contacto, no como excepción caribeña: gramática comparada de lengua y cultura.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c8",
+      "recorridos_sec": [
+        "c2"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "creolizaciones_traducciones_opacidades",
+          "trata_esclavizacion_plantacion"
+        ],
+        "corriente_confirmada": "creolizaciones_traducciones_opacidades",
+        "nota": "Expediente E10 (2026-10-17). Según la contracubierta, Chaudenson «argues against traditional accounts of creole genesis» y propone una alternativa que atiende a «the peculiar linguistic and social factors at play in the European settlement colonies» (hoja 2). Criollización de lenguas: C8. C2 secundaria por el origen del criollo en las colonias de poblamiento y de plantación."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E10.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Según la contracubierta, Chaudenson «argues against traditional accounts of creole genesis» y propone una alternativa que atiende a «the peculiar linguistic and social factors at play in the European settlement colonies» (hoja 2). Criollización de lenguas: C8. C2 secundaria por el origen del criollo en las colonias de poblamiento y de plantación.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E10, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "harriottgangs",
@@ -6928,10 +7334,30 @@
       "l": "jamaica",
       "tr": "anglófono (Jamaica)",
       "ap": "Las pandillas caribeñas como respuesta social a Estados debilitados, no como simple patología importada: Estado y sociedad ante la violencia organizada.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c7",
+      "recorridos_sec": [
+        "c4"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "soberanias_fronteras_ocupaciones",
+          "postplantacion_trabajo_desposesion"
+        ],
+        "corriente_confirmada": "soberanias_fronteras_ocupaciones",
+        "nota": "Expediente E10 (2026-10-17). El volumen busca «to provide the kind of sound research that will stimulate data-driven discussions among criminologists and policymakers» (hoja 13): las respuestas del Estado a la violencia de pandillas. C4 secundaria porque ancla su formación en «marginalization and alienation» (hoja 44)."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E10.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El volumen busca «to provide the kind of sound research that will stimulate data-driven discussions among criminologists and policymakers» (hoja 13): las respuestas del Estado a la violencia de pandillas. C4 secundaria porque ancla su formación en «marginalization and alienation» (hoja 44).",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E10, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "loweintimacies",
@@ -6966,8 +7392,34 @@
       "ap": "Territorios, economías y culturas del Caribe colombiano vistos como historia social propia, no como periferia de los relatos nacionales andinos.",
       "recorrido": null,
       "recorridos_sec": [],
-      "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "arquitectura_recorrido": {
+        "tipo": "sintesis_multicorriente",
+        "recorridos": [
+          "c3",
+          "c4",
+          "c7"
+        ]
+      },
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "fugas_cimarronajes_emancipaciones",
+          "postplantacion_trabajo_desposesion",
+          "soberanias_fronteras_ocupaciones"
+        ],
+        "corriente_confirmada": null,
+        "nota": "Expediente E10 (2026-10-17). Compilación de artículos que, en palabras de la presentación, ligan «lo rural, lo urbano, lo racial, lo étnico, lo político y lo económico». Abre con «Gentes, culturas y territorios libres en el Caribe continental Neo-Granadino entre 1700 y 1850» (hoja 8), sobre palenques y comunidades libres: C3. Sigue con «los territorios indígenas y estatales en la península de la Guajira entre 1830 y 1850» (hoja 9): C7. Y con el trabajo, de artesanos a «las formas de trabajo vinculadas a la ganadería» (hoja 10): C4. Síntesis multicorriente sin principal."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E10.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "Compilación de artículos que, en palabras de la presentación, ligan «lo rural, lo urbano, lo racial, lo étnico, lo político y lo económico». Abre con «Gentes, culturas y territorios libres en el Caribe continental Neo-Granadino entre 1700 y 1850» (hoja 8), sobre palenques y comunidades libres: C3. Sigue con «los territorios indígenas y estatales en la península de la Guajira entre 1830 y 1850» (hoja 9): C7. Y con el trabajo, de artesanos a «las formas de trabajo vinculadas a la ganadería» (hoja 10): C4. Síntesis multicorriente sin principal.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E10, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "forteruins",
@@ -6982,10 +7434,30 @@
       "l": "trinidad",
       "tr": "anglófono (EE.UU./Trinidad)",
       "ap": "La ausencia declarada de los caribes de Trinidad como construcción colonial: las ruinas de un pueblo que la antropología dio por extinguido pese a su presencia.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c1",
+      "recorridos_sec": [
+        "c9"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "invasiones_mundos_indigenas",
+          "memorias_espiritualidades_archivos_vivos"
+        ],
+        "corriente_confirmada": "invasiones_mundos_indigenas",
+        "nota": "Expediente E10 (2026-10-17). El libro quiere atender a «contemporary indigenous peoples of the Caribbean» (hoja 16), un campo descuidado. Su título invierte la idea de «an absence of a historical presence of material relics» (hoja 15). Mundos indígenas y su resurgir: C1. C9 secundaria por la dialéctica de ruina y presencia, ausencia y memoria."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E10.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "El libro quiere atender a «contemporary indigenous peoples of the Caribbean» (hoja 16), un campo descuidado. Su título invierte la idea de «an absence of a historical presence of material relics» (hoja 15). Mundos indígenas y su resurgir: C1. C9 secundaria por la dialéctica de ruina y presencia, ausencia y memoria.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E10, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "austinbroosgenesis",
@@ -7000,10 +7472,30 @@
       "l": "jamaica",
       "tr": "anglófono (Australia)",
       "ap": "El orden moral jamaicano como campo religioso en disputa: pentecostalismo, rastafari y la política de lo que cuenta como respetable.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c9",
+      "recorridos_sec": [
+        "c4"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "memorias_espiritualidades_archivos_vivos",
+          "postplantacion_trabajo_desposesion"
+        ],
+        "corriente_confirmada": "memorias_espiritualidades_archivos_vivos",
+        "nota": "Expediente E10 (2026-10-17). «This book is about Jamaican Pentecostalism in all the social, economic and historical particularity from which comparison must proceed» (hoja 19). Religión y orden moral: C9. C4 secundaria por el anclaje social y económico, visible en capítulos como «Exhorting the Poor to be Rich in Spirit» (hoja 10)."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E10.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "«This book is about Jamaican Pentecostalism in all the social, economic and historical particularity from which comparison must proceed» (hoja 19). Religión y orden moral: C9. C4 secundaria por el anclaje social y económico, visible en capítulos como «Exhorting the Poor to be Rich in Spirit» (hoja 10).",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E10, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "baucomspecters",
@@ -7018,10 +7510,30 @@
       "l": "jamaica",
       "tr": "anglófono (EE.UU.)",
       "ap": "El caso del barco Zong como origen de una forma de capital financiero que convierte vidas en seguros: la esclavitud como filosofía de la historia.",
-      "recorrido": null,
-      "recorridos_sec": [],
+      "recorrido": "c2",
+      "recorridos_sec": [
+        "c9"
+      ],
       "arquitectura_recorrido": null,
-      "estado_recorrido": "sin_evaluar"
+      "estado_recorrido": "confirmado",
+      "propuesta_clasificacion": {
+        "estado": "resuelta por dictamen",
+        "corrientes_candidatas": [
+          "trata_esclavizacion_plantacion",
+          "memorias_espiritualidades_archivos_vivos"
+        ],
+        "corriente_confirmada": "trata_esclavizacion_plantacion",
+        "nota": "Expediente E10 (2026-10-17). «This book is a history of that unacknowledged letter» sobre la masacre del *Zong*, y del «silence it writes into the histories of empire and the modern» (hoja 14). Trata, seguro y capital financiero: C2. C9 secundaria por ese silencio del archivo y el esfuerzo de romperlo."
+      },
+      "fuente_recorrido": [
+        "expediente-corrientes-E10.md"
+      ],
+      "revision": {
+        "estado": "confirmada",
+        "fundamento": "«This book is a history of that unacknowledged letter» sobre la masacre del *Zong*, y del «silence it writes into the histories of empire and the modern» (hoja 14). Trata, seguro y capital financiero: C2. C9 secundaria por ese silencio del archivo y el esfuerzo de romperlo.",
+        "responsable": "Dirección académica de Pensamiento Caribe (expediente E10, propuesta asistida)",
+        "fecha": "2026-10-17"
+      }
     },
     {
       "id": "ochoasociety",
