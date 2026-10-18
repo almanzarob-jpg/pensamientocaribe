@@ -611,7 +611,7 @@
       var tourBar = '';
       if (enTour) {
         tourBar = '<div class="atlantico-tour-bar">' +
-          '<button class="atlantico-tour-btn" type="button" data-tour="prev"' + (tourIdx === 0 ? ' disabled' : '') + '>&larr; ' + t('Anterior', 'Previous') + '</button>' +
+          '<button class="atlantico-tour-btn" type="button" data-tour="prev"' + '' + '>&larr; ' + t('Anterior', 'Previous') + '</button>' +
           '<span class="atlantico-tour-paso">' + (tourIdx + 1) + ' / ' + arcos.length + '</span>' +
           '<button class="atlantico-tour-btn" type="button" data-tour="next"' + (tourIdx === arcos.length - 1 ? ' disabled' : '') + '>' + t('Siguiente', 'Next') + ' &rarr;</button>' +
           '<button class="atlantico-tour-btn atlantico-tour-btn--salir" type="button" data-tour="salir">' + t('Salir', 'Exit') + '</button>' +
@@ -647,7 +647,7 @@
         var prev = panel.querySelector('[data-tour="prev"]');
         var next = panel.querySelector('[data-tour="next"]');
         var salir = panel.querySelector('[data-tour="salir"]');
-        if (prev) prev.addEventListener('click', function () { if (tourIdx > 0) irAPaso(tourIdx - 1); });
+        if (prev) prev.addEventListener('click', function () { if (tourIdx > 0) irAPaso(tourIdx - 1); else mostrarUmbral(); });
         if (next) next.addEventListener('click', function () { if (tourIdx < arcos.length - 1) irAPaso(tourIdx + 1); });
         if (salir) salir.addEventListener('click', function () { abandonarTravesia(true); });
       }
@@ -765,7 +765,6 @@
       detenerNavio();
       var pts = arco.puntos; if (!pts || pts.length < 2) return;
       var r = arco.rutaData, color = epocas[r.epoca].color, mia = navioFicha;
-      anoEnMapa(String(r.anos).split(/[–-]/)[0], color);
       var reducido = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       navio = L.circleMarker(reducido ? pts[pts.length - 1] : pts[0], {
         radius: 7, color: '#F2EAD8', weight: 2, fillColor: color, fillOpacity: 1, interactive: false, className: 'atlantico-navio'
@@ -784,6 +783,105 @@
       navioRaf = requestAnimationFrame(paso);
     }
 
+    /* ══════════ LA FECHA SE ENCIENDE EN LOS CONTINENTES (prototipo) ══════════
+       Cada paso de la travesía enciende los continentes que la ruta toca y
+       escribe el año junto al puerto. Los continentes ya recorridos quedan como
+       brasa tenue: al final del recorrido se ve por dónde pasó el vaivén.
+       Todo es decorativo (aria-hidden); la información sigue en el panel. */
+    var NOMBRE_CONT = { america: ['América', 'The Americas'], africa: ['África', 'Africa'], europa: ['Europa', 'Europe'] };
+    var contCapas = {}, contRotulos = [];
+    function continenteDe(p) { return p[1] < -30 ? 'america' : (p[0] > 34 ? 'europa' : 'africa'); }
+    var contPedido = false;
+    function cargarContinentes() {
+      if (contPedido) return; contPedido = true;
+      var base = SCRIPT_SRC.replace(/js\/[^\/?#]*(?:[?#].*)?$/, 'data/cartografia/');
+      fetch(base + 'continentes.json').then(function (r) { return r.ok ? r.json() : null; }).then(function (geo) {
+        if (!geo) return;
+        if (!map.getPane('continentes')) { map.createPane('continentes').style.zIndex = 205; map.getPane('continentes').style.pointerEvents = 'none'; }
+        L.geoJSON(geo, {
+          pane: 'continentes', renderer: L.svg({ pane: 'continentes' }), interactive: false,
+          style: function (f) { return { className: 'continente continente--' + f.properties.id, stroke: true, weight: 1, fillOpacity: 0, opacity: 0 }; },
+          onEachFeature: function (f, capa) { contCapas[f.properties.id] = capa; }
+        }).addTo(map);
+        if (tourActivo && tourIdx >= 0 && arcos[tourIdx]) luzContinentes(tourIdx);
+      }).catch(function () { contPedido = false; });
+    }
+    function apagarContinentes() {
+      Object.keys(contCapas).forEach(function (k) { contCapas[k].setStyle({ fillOpacity: 0, opacity: 0 }); });
+      contRotulos.forEach(function (r) { if (r.el.parentNode) r.el.parentNode.removeChild(r.el); });
+      contRotulos = [];
+    }
+    function colocarRotulos() {
+      var tam = map.getSize();
+      contRotulos.forEach(function (r) {
+        var pt = map.latLngToContainerPoint(r.ll);
+        var x = pt.x + r.dx, y = pt.y - 34;
+        // dentro del mapa y lejos de los controles de zoom (esquina inferior derecha)
+        x = Math.max(70, Math.min(tam.x - 120, x));
+        y = Math.max(78, Math.min(tam.y - 110, y));
+        r.el.style.transform = 'translate(' + Math.round(x) + 'px,' + Math.round(y) + 'px) translate(-50%,-100%)';
+      });
+    }
+    map.on('move zoom resize', colocarRotulos);
+    function luzContinentes(i) {
+      var arco = arcos[i]; if (!arco || !arco.puntos) return;
+      var color = epocas[arco.rutaData.epoca].color, esEN = IDIOMA === 'en';
+      var activos = {}, brasas = {};
+      for (var k = 0; k < i; k++) {
+        var pk = arcos[k].puntos;
+        brasas[continenteDe(pk[0])] = true; brasas[continenteDe(pk[pk.length - 1])] = true;
+      }
+      var extremos = [arco.puntos[0], arco.puntos[arco.puntos.length - 1]];
+      extremos.forEach(function (e) { activos[continenteDe(e)] = e; });
+      Object.keys(contCapas).forEach(function (id) {
+        var capa = contCapas[id];
+        if (activos[id]) capa.setStyle({ color: color, fillColor: color, fillOpacity: 0.13, opacity: 0.4 });
+        else if (brasas[id]) capa.setStyle({ color: '#F2EAD8', fillColor: '#F2EAD8', fillOpacity: 0.05, opacity: 0.1 });
+        else capa.setStyle({ fillOpacity: 0, opacity: 0 });
+      });
+      contRotulos.forEach(function (r) { if (r.el.parentNode) r.el.parentNode.removeChild(r.el); });
+      contRotulos = [];
+      var anio = String(arco.rutaData.anos).split(/[–-]/)[0];
+      Object.keys(activos).forEach(function (id) {
+        var el = document.createElement('div');
+        el.className = 'atlantico-cont-ano'; el.setAttribute('aria-hidden', 'true'); el.style.color = color;
+        el.innerHTML = '<b>' + anio + '</b><i>' + NOMBRE_CONT[id][esEN ? 1 : 0] + '</i>';
+        map.getContainer().appendChild(el);
+        var otro = Object.keys(activos).filter(function (k) { return k !== id; })[0];
+        var dx = otro ? (activos[id][1] < activos[otro][1] ? -80 : 80) : 0;
+        contRotulos.push({ el: el, ll: activos[id], dx: dx });
+      });
+      colocarRotulos();
+    }
+
+    /* ══════════ UMBRAL: ANTES DE LA PRIMERA RUTA (prototipo) ══════════
+       La travesía empieza en 1796, con un regreso. Antes, un texto breve dice
+       lo que el mapa no dibuja: el pasaje medio. Sin cifras ni fechas de la
+       trata: solo lo que la página ya sostiene (Gilroy 1993; Montes Pizarro 2018). */
+    function mostrarUmbral() {
+      cargarContinentes();
+      tourIdx = -1;
+      detenerNavio(); apagarContinentes(); restaurarArcos(); marcarTiempo(-1);
+      destruirReproductorTour();
+      map.flyTo([14, -34], 3, { duration: 1.4 });
+      mostrarPanel(
+        panelCabecera('#C9B27C', t('Antes de la primera ruta', 'Before the first route')) +
+        '<h3 class="atlantico-panel-title">' + t('El viaje que este mapa no dibuja', 'The voyage this map does not draw') + '</h3>' +
+        '<p class="atlantico-panel-umbral">' + t(
+          'Antes de la primera ruta hay un viaje que este mapa no dibuja: el pasaje medio, la travesía forzada de la trata. Gilroy hizo del barco su unidad de análisis porque en él cabe lo que ninguna nación contiene, «un sistema vivo, microcultural y micropolítico en movimiento». Esta travesía parte de ahí. Sigue lo que quedó después de ese cruce y volvió a cruzar el agua en sentido contrario, como cuenta Montes Pizarro con su árbol de más ramas que raíces. Empieza en 1796, con un tambor que regresó a Freetown.',
+          'Before the first route there is a voyage this map does not draw: the Middle Passage, the forced crossing of the slave trade. Gilroy made the ship his unit of analysis because it holds what no nation contains, “a living, microcultural, micropolitical system in motion.” This journey starts there. It follows what remained after that crossing and crossed the water again in the other direction, as Montes Pizarro tells it with his tree of more branches than roots. It begins in 1796, with a drum that returned to Freetown.'
+        ) + '</p>' +
+        '<p class="atlantico-panel-fuente">' + t('Fuentes:', 'Sources:') + ' Gilroy 1993 · Montes Pizarro 2018</p>' +
+        '<div class="atlantico-tour-bar">' +
+          '<button class="atlantico-tour-btn atlantico-tour-btn--empezar" type="button" data-tour="empezar">' + t('Empezar en 1796', 'Begin in 1796') + ' &rarr;</button>' +
+          '<button class="atlantico-tour-btn atlantico-tour-btn--salir" type="button" data-tour="salir">' + t('Salir', 'Exit') + '</button>' +
+        '</div>'
+      );
+      var emp = panel.querySelector('[data-tour="empezar"]'), sal = panel.querySelector('[data-tour="salir"]');
+      if (emp) { emp.addEventListener('click', function () { irAPaso(0); }); emp.focus({ preventScroll: true }); }
+      if (sal) sal.addEventListener('click', function () { abandonarTravesia(true); });
+    }
+
     function irAPaso(i) {
       tourIdx = i;
       var arco = arcos[i];
@@ -795,6 +893,7 @@
       abrirPanelRuta(arco.rutaData, arco, true);
       marcarTiempo(i);
       navegarArco(arco);
+      luzContinentes(i);
       sonarPaso(arco.rutaData);
     }
 
@@ -802,7 +901,7 @@
       aplicarEpoca('all');
       tourActivo = true;
       escuchaEncadenada = conSonido === true;
-      irAPaso(0);
+      mostrarUmbral();
     }
 
     function abandonarTravesia(volverVista) {
@@ -810,6 +909,7 @@
       escuchaEncadenada = false;
       destruirReproductorTour();
       detenerNavio();
+      apagarContinentes();
       restaurarArcos();
       if (volverVista) {
         map.flyTo([16, -32], 3, { duration: 1.2 });

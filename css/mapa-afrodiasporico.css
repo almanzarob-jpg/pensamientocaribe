@@ -384,3 +384,20 @@ path.caribe-marker:focus-visible { stroke: var(--c-cream, #F5EDDD); stroke-width
 @keyframes ano-entra { from { opacity: 0; transform: translateY(8px); } to { opacity: .82; transform: none; } }
 path.atlantico-navio { filter: drop-shadow(0 0 7px currentColor); }
 @media (prefers-reduced-motion: reduce) { .atlantico-ano.on { animation: none; opacity: .82; } }
+
+/* ── Secuencia: la fecha se enciende en los continentes (prototipo) ── */
+path.continente{transition:fill-opacity 1.6s ease,stroke-opacity 1.6s ease;pointer-events:none}
+.atlantico-cont-ano{position:absolute;left:0;top:0;z-index:650;pointer-events:none;text-align:center;
+  margin-top:-14px;animation:cont-ano-entra 1.4s ease both;text-shadow:0 1px 14px rgba(0,0,0,.65)}
+.atlantico-cont-ano b{display:block;font-family:'Cormorant Garamond',Georgia,serif;font-weight:600;
+  font-size:clamp(1.9rem,4.6vw,3rem);line-height:1.1;padding-bottom:.12em;letter-spacing:.02em}
+.atlantico-cont-ano i{display:block;font-style:normal;font-size:.62rem;letter-spacing:.22em;
+  text-transform:uppercase;opacity:.8;margin-top:.3rem}
+@keyframes cont-ano-entra{from{opacity:0;transform-origin:50% 100%}to{opacity:1}}
+.atlantico-panel-umbral{font-family:'Cormorant Garamond',Georgia,serif;font-size:1.12rem;line-height:1.6;
+  color:var(--c-cream,#F5EDDD);margin:.2rem 0 .9rem}
+.atlantico-tour-btn--empezar{border-color:#C9B27C;color:#C9B27C}
+@media (prefers-reduced-motion:reduce){
+  path.continente{transition:none}
+  .atlantico-cont-ano{animation:none}
+}
