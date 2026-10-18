@@ -15,18 +15,18 @@
   <meta property="og:locale:alternate" content="en_US">
   <meta property="og:url" content="https://pensamientocaribe.org/proyectos/mas-ramas-que-raices.html">
   <meta property="og:title" content="Con el vaivén de las corrientes · Cartografías sonoras del Atlántico Negro">
-  <meta property="og:description" content="Mapa interactivo que conecta el Gran Caribe con África a través de la música, la negrura y el panafricanismo. Veintiséis rutas, veinticuatro puertos, cada uno con su fuente y su registro sonoro.">
+  <meta property="og:description" content="Mapa interactivo que conecta el Gran Caribe con África a través de la música, la negrura y el panafricanismo. Treinta rutas, veinticinco puertos, cada ruta con su fuente y veinte de ellas con registro sonoro.">
   <meta property="og:image" content="https://pensamientocaribe.org/assets/diagrama-antropologia-caribe.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Con el vaivén de las corrientes · Cartografías sonoras del Atlántico Negro">
-  <meta name="twitter:description" content="Mapa interactivo que conecta el Gran Caribe con África a través de la música, la negrura y el panafricanismo. Veintiséis rutas, veinticuatro puertos, cada uno con su fuente y su registro sonoro.">
+  <meta name="twitter:description" content="Mapa interactivo que conecta el Gran Caribe con África a través de la música, la negrura y el panafricanismo. Treinta rutas, veinticinco puertos, cada ruta con su fuente y veinte de ellas con registro sonoro.">
   <meta name="twitter:image" content="https://pensamientocaribe.org/assets/diagrama-antropologia-caribe.jpg">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Dataset",
     "name": "Con el vaivén de las corrientes: cartografías sonoras del Atlántico Negro",
-    "description": "Mapa interactivo que documenta y hace audible el circuito de intercambios musicales, políticos y espirituales entre el Gran Caribe y el continente africano desde finales del siglo XVIII hasta hoy. Veintiséis rutas y veinticuatro puertos, cada ruta con su fuente académica citada y su registro sonoro. Inspirado en la tesis de Errol L. Montes Pizarro (Más ramas que raíces, 2018).",
+    "description": "Mapa interactivo que documenta y hace audible el circuito de intercambios musicales, políticos y espirituales entre el Gran Caribe y el continente africano desde finales del siglo XVIII hasta hoy. Treinta rutas y veinticinco puertos, cada ruta con su fuente académica citada y veinte de ellas con registro sonoro. Inspirado en la tesis de Errol L. Montes Pizarro (Más ramas que raíces, 2018).",
     "url": "https://pensamientocaribe.org/proyectos/mas-ramas-que-raices.html",
     "identifier": "https://doi.org/10.5281/zenodo.21435772",
     "sameAs": "https://doi.org/10.5281/zenodo.21435772",
@@ -59,7 +59,7 @@
   <link rel="stylesheet" href="../css/components.css?v=4">
   <link rel="stylesheet" href="../css/animations.css?v=2">
   <link rel="stylesheet" href="../css/proyecto.css">
-  <link rel="stylesheet" href="../css/mapa-afrodiasporico.css">
+  <link rel="stylesheet" href="../css/mapa-afrodiasporico.css?v=3">
   <link rel="stylesheet" href="../css/zoom-caribe.css">
 </head>
 <body>
@@ -87,7 +87,7 @@
         <a href="../index.html#proyectos" class="proyecto-breadcrumb">&larr; Proyectos</a>
         <p class="proyecto-cat">Cartografía sonora interactiva<span class="proyecto-status">Investigación-creación</span></p>
         <h1 class="proyecto-title">Con el vaivén de las corrientes, <em>cartografías sonoras</em> del Atlántico Negro</h1>
-        <p class="proyecto-lede">Un mapa interactivo que sigue el vaivén de las corrientes entre el Gran Caribe y África: música, negrura y panafricanismo. Veintiséis rutas de ida y vuelta, veinticuatro puertos, cuatro épocas. Cada ruta cita su fuente, y la travesía guiada recorre el océano de 1795 hasta hoy. <a href="mas-ramas-que-raices-en.html" class="proyecto-lang-switch">English version &rarr;</a></p>
+        <p class="proyecto-lede">Un mapa interactivo que sigue el vaivén de las corrientes entre el Gran Caribe y África: música, negrura y panafricanismo. Treinta rutas de ida y vuelta, veinticinco puertos, cuatro épocas. Cada ruta cita su fuente, y la travesía guiada recorre el océano de 1795 hasta hoy. <a href="mas-ramas-que-raices-en.html" class="proyecto-lang-switch">English version &rarr;</a></p>
 
         <div class="proyecto-meta-bar">
           <div class="proyecto-meta-item"><span class="proyecto-meta-label">Dirección</span><span class="proyecto-meta-value">Roberto Almanza Hernández</span></div><div class="proyecto-meta-item"><span class="proyecto-meta-label">Inspiración</span><span class="proyecto-meta-value">Errol L. Montes Pizarro (2018)</span></div><div class="proyecto-meta-item"><span class="proyecto-meta-label">Territorio</span><span class="proyecto-meta-value">Gran Caribe · África · Diáspora</span></div><div class="proyecto-meta-item"><span class="proyecto-meta-label">Método</span><span class="proyecto-meta-value">Cartografía sonora</span></div><div class="proyecto-meta-item"><span class="proyecto-meta-label">Claves</span><span class="proyecto-meta-value">Música · Negrura · Panafricanismo</span></div>
@@ -105,7 +105,7 @@
             <button class="filter-btn" data-layer="4">Retornos</button>
             <span style="flex: 1 1 auto;"></span>
             <button class="filter-btn filter-btn--travesia" data-action="travesia">&#9656; Iniciar la travesía</button>
-            <button class="filter-btn filter-btn--travesia" data-action="travesia-sonora" title="Recorre las veintiséis rutas en orden y encadena sus canciones">&#9835; Travesía con música</button>
+            <button class="filter-btn filter-btn--travesia" data-action="travesia-sonora" title="Recorre las treinta rutas en orden y encadena sus canciones">&#9835; Travesía con música</button>
             <button class="filter-btn" data-view="caribe">&#8598; Caribe</button>
             <button class="filter-btn" data-view="atlantico">&#9678; Atlántico</button>
             <button class="filter-btn" data-view="africa">&#8599; África</button>
@@ -118,7 +118,7 @@
 
           <div id="atlantico-tiempo" class="atlantico-tiempo">
             <div class="atlantico-tiempo-cab">
-              <p class="atlantico-tiempo-titulo">Las veintiséis rutas en el tiempo</p>
+              <p class="atlantico-tiempo-titulo">Las treinta rutas en el tiempo</p>
               <p class="atlantico-tiempo-sub">El mapa dice dónde; esta franja dice cuándo. Cada marca es una ruta, en su año de partida y con el color de su época. Pulsa una para abrirla.</p>
             </div>
             <div class="atlantico-tiempo-scroll">
@@ -223,7 +223,7 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
   <script src="../js/zoom-caribe.js"></script>
   <script src="../js/fondo-orillas.js?v=1"></script>
-  <script src="../js/mapa-afrodiasporico.js?v=2"></script>
+  <script src="../js/mapa-afrodiasporico.js?v=5"></script>
   <script src="../js/interactions.js?v=3"></script>
 </body>
 </html>

@@ -54,6 +54,16 @@
       maxBoundsViscosity: 0.8
     });
 
+    /* Movimiento reducido: quien lo pide en su sistema no recibe vuelos animados;
+       la travesía sigue su curso, pero el mapa cambia de encuadre sin desplazarse. */
+    if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      map.flyTo = function (c, z) { return this.setView(c, z, { animate: false }); };
+      map.flyToBounds = function (b, o) {
+        return this.fitBounds(b, { animate: false, paddingTopLeft: o && o.paddingTopLeft,
+          paddingBottomRight: o && o.paddingBottomRight, maxZoom: o && o.maxZoom });
+      };
+    }
+
     /* Con puntero grueso el arrastre de un dedo se cede a la página: el mapa
        mide 480 px de alto dentro de un artículo largo y atraparlo dejaba al
        lector rodeándolo con el pulgar para poder seguir bajando. Dos dedos
@@ -340,6 +350,16 @@
       marker.on('mouseout', function () { this.setStyle({ fillOpacity: esColombia ? 0.85 : 0.7 }); this.setRadius(radius); });
 
       marker.addTo(map);
+      // Accesibilidad: cada puerto es un botón alcanzable con Tab y activable con Enter o Espacio
+      var elPuerto = marker.getElement && marker.getElement();
+      if (elPuerto) {
+        elPuerto.setAttribute('tabindex', '0');
+        elPuerto.setAttribute('role', 'button');
+        elPuerto.setAttribute('aria-label', nombreDisp(n.nombre) + (n.pais ? ', ' + paisDisp(n.pais) : '') + ' · ' + t('abrir ficha del puerto', 'open port entry'));
+        elPuerto.addEventListener('keydown', function (ev) {
+          if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); abrirPanelNodo(n); }
+        });
+      }
       marcadores[n.nombre] = { marker: marker, radiusBase: radius, opacidadBase: esColombia ? 0.85 : 0.7 };
     });
 
@@ -670,7 +690,7 @@
     }
 
     /* ══════════ ESCUCHA ENCADENADA ══════════
-       Veinte de las veintiséis rutas traen canción, y hasta ahora cada una se abría
+       Veinte de las treinta rutas traen canción, y hasta ahora cada una se abría
        por separado. Con la escucha encadenada la travesía se vuelve una audición de
        dos siglos: al terminar una pista, el mapa vuela al arco siguiente y sigue
        sonando. Si el video no permite incrustarse, no se corta el recorrido: espera
@@ -722,6 +742,48 @@
       });
     }
 
+    /* ══════════ EL NAVÍO EN LA TRAVESÍA (prototipo) ══════════
+       Durante la travesía una luz recorre el arco de la ruta, del puerto de
+       partida al de llegada, y el año aparece grande sobre el océano. Es lo mismo
+       que ya hace la travesía (volar al arco), pero ahora se ve el cruce. */
+    var navio = null, navioRaf = 0, navioFicha = 0, anoEl = null;
+    function anoEnMapa(texto, color) {
+      if (!anoEl) {
+        anoEl = document.createElement('div');
+        anoEl.className = 'atlantico-ano'; anoEl.setAttribute('aria-hidden', 'true');
+        map.getContainer().appendChild(anoEl);
+      }
+      anoEl.style.color = color;
+      anoEl.classList.remove('on'); void anoEl.offsetWidth; anoEl.textContent = texto; anoEl.classList.add('on');
+    }
+    function detenerNavio() {
+      navioFicha++; if (navioRaf) cancelAnimationFrame(navioRaf); navioRaf = 0;
+      if (navio) { map.removeLayer(navio); navio = null; }
+      if (anoEl) anoEl.classList.remove('on');
+    }
+    function navegarArco(arco) {
+      detenerNavio();
+      var pts = arco.puntos; if (!pts || pts.length < 2) return;
+      var r = arco.rutaData, color = epocas[r.epoca].color, mia = navioFicha;
+      anoEnMapa(String(r.anos).split(/[–-]/)[0], color);
+      var reducido = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      navio = L.circleMarker(reducido ? pts[pts.length - 1] : pts[0], {
+        radius: 7, color: '#F2EAD8', weight: 2, fillColor: color, fillOpacity: 1, interactive: false, className: 'atlantico-navio'
+      }).addTo(map);
+      if (reducido) return;
+      var DUR = 3600, RETRASO = 1000, t0 = null;
+      function paso(ts) {
+        if (mia !== navioFicha) return;
+        if (t0 === null) t0 = ts + RETRASO;
+        var p = Math.min(Math.max((ts - t0) / DUR, 0), 1);
+        var e = p < .5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2;   // sale despacio, cruza, llega despacio
+        var x = e * (pts.length - 1), i = Math.min(Math.floor(x), pts.length - 2), f = x - i;
+        navio.setLatLng([pts[i][0] + (pts[i + 1][0] - pts[i][0]) * f, pts[i][1] + (pts[i + 1][1] - pts[i][1]) * f]);
+        if (p < 1) navioRaf = requestAnimationFrame(paso); else navioRaf = 0;
+      }
+      navioRaf = requestAnimationFrame(paso);
+    }
+
     function irAPaso(i) {
       tourIdx = i;
       var arco = arcos[i];
@@ -732,6 +794,7 @@
       volarAArco(arco);
       abrirPanelRuta(arco.rutaData, arco, true);
       marcarTiempo(i);
+      navegarArco(arco);
       sonarPaso(arco.rutaData);
     }
 
@@ -746,6 +809,7 @@
       tourActivo = false;
       escuchaEncadenada = false;
       destruirReproductorTour();
+      detenerNavio();
       restaurarArcos();
       if (volverVista) {
         map.flyTo([16, -32], 3, { duration: 1.2 });
@@ -791,7 +855,7 @@
           x: xa, y: 20, width: Math.max(xb - xa, 2), height: 12,
           fill: epocas[k].color, class: 'att-banda'
         }));
-        var et = svgEl('text', { x: xa + 3, y: 16, class: 'att-epoca', fill: epocas[k].color });
+        var et = svgEl('text', { x: xa + 3, y: (k % 2 === 0 ? 7 : 17), class: 'att-epoca', fill: epocas[k].color });
         et.textContent = epocaNombre(k);
         tiempoSVG.appendChild(et);
       });

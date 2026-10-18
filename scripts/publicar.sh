@@ -51,6 +51,14 @@ node scripts/verificar-cifras-sitio.mjs --corregir >/tmp/pc-cifras.txt 2>&1 \
 grep -q "Cifras corregidas" /tmp/pc-cifras.txt && paso "$(grep 'Cifras corregidas' /tmp/pc-cifras.txt) en las páginas"
 paso "Cifras del sitio: $(tail -1 /tmp/pc-cifras.txt)"
 
+# La bibliografía del mapa «Con el vaivén de las corrientes» sale de
+# data/vaiven-corrientes/fuentes-sonora.json: se regenera en las dos páginas y
+# se avisa de lo que las rutas citan y aún no tiene datos (aviso, no bloqueo).
+node scripts/generar-bibliografia-vaiven.mjs >/tmp/pc-biblio.txt 2>&1 \
+  || { cat /tmp/pc-biblio.txt; falla "No se pudo generar la bibliografía del mapa sonoro."; }
+paso "Bibliografía del vaivén: $(tail -1 /tmp/pc-biblio.txt)"
+grep '^⚠' /tmp/pc-biblio.txt || true
+
 if [ -f scripts/validar-fenomenos.mjs ]; then
   node scripts/validar-fenomenos.mjs >/tmp/pc-fen.txt 2>&1 \
     || { cat /tmp/pc-fen.txt; falla "La capa de fenómenos tiene errores."; }

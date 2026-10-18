@@ -18,6 +18,12 @@ mismo modelo.
 - **`edges.json`** — 26 arcos transatlánticos. `source`/`target` apuntan al `id`
   del nodo, con `source_nombre`/`target_nombre` para lectura humana. Conserva
   `epoca`, `curva`, `titulo`, `anos`, `desc`, `claves`, `cancion`, `fuente`.
+- **`fuentes-sonora.json`** — **bibliografía única del mapa** (desde 17-oct-2026,
+  v0.3.0). Las listas APA de `proyectos/mas-ramas-que-raices.html` y su versión
+  en inglés se generan desde aquí con `node scripts/generar-bibliografia-vaiven.mjs`
+  (`--check` solo comprueba). Para añadir o corregir una referencia se edita este
+  archivo, nunca el HTML. `enPagina:false` marca lo que las rutas citan pero aún
+  no tiene datos; no se publica hasta completarlo.
 - **`fuentes.json`** — 110 obras exportadas de Zotero (`Mi biblioteca.rdf`).
   **Ojo: este es el corpus de negrura/blanquitud, no la bibliografía del mapa
   sonoro.** Está aquí por razones históricas y conviene moverlo al proyecto que

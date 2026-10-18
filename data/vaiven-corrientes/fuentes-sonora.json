@@ -1,89 +1,526 @@
 {
   "meta": {
     "titulo": "Bibliografía de Con el vaivén de las corrientes",
-    "descripcion": "Referencias citadas en los puertos y las rutas del mapa sonoro. usosEnElMapa cuenta ahora las apariciones en zoteroKeys tanto de nodes.json como de edges.json (antes solo contaba aristas). Los campos bibliográficos vacíos están pendientes de completar.",
+    "descripcion": "Fuente única de la bibliografía del mapa. Las páginas proyectos/mas-ramas-que-raices(.-en).html se generan desde aquí con scripts/generar-bibliografia-vaiven.mjs. Las referencias con enPagina:false están citadas en rutas o puertos pero faltan datos y no se publican hasta completarlas; no se rellenan por inferencia.",
     "responsable": "Roberto Almanza Hernández",
-    "version": "0.2.0",
-    "fecha": "2026-07-31",
-    "referencias": 26,
-    "completas": 2
+    "version": "0.3.0",
+    "fecha": "2026-10-17",
+    "referencias": 37,
+    "completas": 30
   },
   "referencias": [
     {
       "key": "Adi2018",
       "citaOriginal": "Adi 2018",
-      "autores": [
-        {
-          "apellido": "Adi"
-        }
-      ],
+      "autores_texto": "Adi, H.",
       "anio": "2018",
-      "titulo": "",
-      "tipo": "",
-      "editorial": "",
-      "lugar": "",
+      "sin_fecha": false,
+      "tipo": "libro",
+      "titulo": "Pan-Africanism: A history",
+      "editorial": "Bloomsbury Academic",
       "doi": "",
       "url": "",
-      "nota": "",
       "usosEnElMapa": 4,
-      "estado": "por completar"
+      "estado": "completa",
+      "enPagina": true
+    },
+    {
+      "key": "Averill1997",
+      "citaOriginal": "",
+      "autores_texto": "Averill, G.",
+      "anio": "1997",
+      "sin_fecha": false,
+      "tipo": "libro",
+      "titulo": "A day for the hunter, a day for the prey",
+      "editorial": "University of Chicago Press",
+      "doi": "",
+      "url": "",
+      "usosEnElMapa": 0,
+      "estado": "completa",
+      "enPagina": true
     },
     {
       "key": "Bilby2011",
       "citaOriginal": "Bilby 2011",
-      "autores": [
-        {
-          "apellido": "Bilby"
-        }
-      ],
+      "autores_texto": "Bilby, K.",
       "anio": "2011",
-      "titulo": "",
-      "tipo": "",
+      "sin_fecha": false,
+      "tipo": "libro",
+      "titulo": "Africa's creole drum",
       "editorial": "",
-      "lugar": "",
+      "nota": {
+        "es": "Referencia sin datos completos de publicación en la fuente original",
+        "en": "Reference lacks complete publication data in the original source"
+      },
+      "nota_estilo": "aparte",
       "doi": "",
       "url": "",
-      "nota": "",
       "usosEnElMapa": 1,
-      "estado": "por completar"
+      "estado": "incompleta_en_origen",
+      "enPagina": true
     },
     {
       "key": "Bonacci2015",
       "citaOriginal": "Bonacci 2015",
-      "autores": [
-        {
-          "apellido": "Bonacci"
-        }
-      ],
+      "autores_texto": "Bonacci, G.",
       "anio": "2015",
-      "titulo": "",
-      "tipo": "",
-      "editorial": "",
-      "lugar": "",
+      "sin_fecha": false,
+      "tipo": "libro",
+      "titulo": "Exodus! Heirs and pioneers, Rastafari return to Ethiopia",
+      "editorial": "University of the West Indies Press",
       "doi": "",
       "url": "",
-      "nota": "",
       "usosEnElMapa": 1,
-      "estado": "por completar"
+      "estado": "completa",
+      "enPagina": true
+    },
+    {
+      "key": "CentroPensamientoCaribe2024",
+      "citaOriginal": "",
+      "autores_texto": "Centro de Pensamiento Caribe.",
+      "anio": "2024",
+      "sin_fecha": false,
+      "tipo": "libro",
+      "titulo": "Picó: patrimonio cultural inmaterial de la humanidad",
+      "editorial": "",
+      "nota": {
+        "es": "Documento de propuesta institucional",
+        "en": "Institutional proposal document"
+      },
+      "nota_estilo": "corchete",
+      "doi": "",
+      "url": "",
+      "usosEnElMapa": 0,
+      "estado": "incompleta_en_origen",
+      "enPagina": true
     },
     {
       "key": "Chudesokei2015",
       "citaOriginal": "Chude-Sokei 2015",
-      "autores": [
-        {
-          "apellido": "Chude-Sokei"
-        }
-      ],
+      "autores_texto": "Chude-Sokei, L.",
       "anio": "2015",
-      "titulo": "",
-      "tipo": "",
-      "editorial": "",
-      "lugar": "",
+      "sin_fecha": false,
+      "tipo": "libro",
+      "titulo": "The sound of culture: Diaspora and Black technopoetics",
+      "editorial": "Wesleyan University Press",
       "doi": "",
       "url": "",
-      "nota": "",
       "usosEnElMapa": 1,
-      "estado": "por completar"
+      "estado": "completa",
+      "enPagina": true
+    },
+    {
+      "key": "ContrerasHernandez2008",
+      "citaOriginal": "",
+      "autores_texto": "Contreras Hernández, N. R.",
+      "anio": "2008",
+      "sin_fecha": false,
+      "tipo": "articulo",
+      "titulo": "La cultura picotera: continuidad de la herencia africana en el alma de las fiestas populares del Gran Caribe",
+      "contenedor": "Huellas",
+      "numero": "(80-82)",
+      "doi": "",
+      "url": "",
+      "usosEnElMapa": 0,
+      "estado": "completa",
+      "enPagina": true
+    },
+    {
+      "key": "ContrerasHernandezSF",
+      "citaOriginal": "",
+      "autores_texto": "Contreras Hernández, N. R.",
+      "anio": "",
+      "sin_fecha": true,
+      "tipo": "libro",
+      "titulo": "La salsa en el Caribe colombiano: con clave, bongó y mucho picó",
+      "editorial": "",
+      "nota": {
+        "es": "Manuscrito inédito",
+        "en": "Unpublished manuscript"
+      },
+      "nota_estilo": "corchete",
+      "doi": "",
+      "url": "",
+      "usosEnElMapa": 0,
+      "estado": "incompleta_en_origen",
+      "enPagina": true
+    },
+    {
+      "key": "Cunin2003",
+      "citaOriginal": "Cunin 2003",
+      "autores_texto": "Cunin, E.",
+      "anio": "2003",
+      "sin_fecha": false,
+      "tipo": "libro",
+      "titulo": "Identidades a flor de piel",
+      "editorial": "IFEA-ICANH-Uniandes",
+      "doi": "",
+      "url": "",
+      "usosEnElMapa": 3,
+      "estado": "completa",
+      "enPagina": true
+    },
+    {
+      "key": "Cunin2006",
+      "citaOriginal": "Cunin 2006",
+      "autores_texto": "Cunin, E.",
+      "anio": "2006",
+      "sin_fecha": false,
+      "tipo": "articulo",
+      "titulo": "De Kinshasa a Cartagena, pasando por París",
+      "contenedor": "Aguaita",
+      "numero": "(15-16)",
+      "doi": "",
+      "url": "",
+      "usosEnElMapa": 2,
+      "estado": "completa",
+      "enPagina": true
+    },
+    {
+      "key": "Denning2015",
+      "citaOriginal": "Denning 2015",
+      "autores_texto": "Denning, M.",
+      "anio": "2015",
+      "sin_fecha": false,
+      "tipo": "libro",
+      "titulo": "Noise uprising",
+      "editorial": "Verso",
+      "doi": "",
+      "url": "",
+      "usosEnElMapa": 1,
+      "estado": "completa",
+      "enPagina": true
+    },
+    {
+      "key": "Erlmann1991",
+      "citaOriginal": "Erlmann 1991",
+      "autores_texto": "Erlmann, V.",
+      "anio": "1991",
+      "sin_fecha": false,
+      "tipo": "libro",
+      "titulo": "African stars",
+      "editorial": "University of Chicago Press",
+      "doi": "",
+      "url": "",
+      "usosEnElMapa": 2,
+      "estado": "completa",
+      "enPagina": true
+    },
+    {
+      "key": "Ewens1991",
+      "citaOriginal": "Ewens 1991",
+      "autores_texto": "Ewens, G.",
+      "anio": "1991",
+      "sin_fecha": false,
+      "tipo": "libro",
+      "titulo": "Africa O-Ye!",
+      "editorial": "Da Capo Press",
+      "doi": "",
+      "url": "",
+      "usosEnElMapa": 1,
+      "estado": "completa",
+      "enPagina": true
+    },
+    {
+      "key": "Gilroy1993",
+      "citaOriginal": "Gilroy 1993",
+      "autores_texto": "Gilroy, P.",
+      "anio": "1993",
+      "sin_fecha": false,
+      "tipo": "libro",
+      "titulo": "The Black Atlantic",
+      "editorial": "Verso",
+      "doi": "",
+      "url": "",
+      "usosEnElMapa": 2,
+      "estado": "completa",
+      "enPagina": true
+    },
+    {
+      "key": "GiraldoBarbosa2016",
+      "citaOriginal": "Giraldo Barbosa 2016",
+      "autores_texto": "Giraldo Barbosa, J. E.",
+      "anio": "2016",
+      "sin_fecha": false,
+      "tipo": "libro",
+      "titulo": "Música champeta y africana en el Caribe colombiano: revolución y cultura desde la verbena y el picó",
+      "editorial": "Editorial Babel",
+      "doi": "",
+      "url": "",
+      "usosEnElMapa": 3,
+      "estado": "completa",
+      "enPagina": true
+    },
+    {
+      "key": "Glissant1990",
+      "citaOriginal": "",
+      "autores_texto": "Glissant, É.",
+      "anio": "1990",
+      "sin_fecha": false,
+      "tipo": "libro",
+      "titulo": "Poétique de la Relation",
+      "editorial": "Gallimard",
+      "doi": "",
+      "url": "",
+      "usosEnElMapa": 0,
+      "estado": "completa",
+      "enPagina": true
+    },
+    {
+      "key": "Guilbault1993",
+      "citaOriginal": "Guilbault 1993",
+      "autores_texto": "Guilbault, J.",
+      "anio": "1993",
+      "sin_fecha": false,
+      "tipo": "libro",
+      "titulo": "Zouk: World music in the West Indies",
+      "editorial": "University of Chicago Press",
+      "doi": "",
+      "url": "",
+      "usosEnElMapa": 2,
+      "estado": "completa",
+      "enPagina": true
+    },
+    {
+      "key": "Hamilton2019",
+      "citaOriginal": "Hamilton 2019",
+      "autores_texto": "Hamilton, N. W.",
+      "anio": "2019",
+      "sin_fecha": false,
+      "tipo": "libro",
+      "titulo": "Phonographic memories: Popular music and the contemporary Caribbean novel",
+      "editorial": "Rutgers University Press",
+      "doi": "",
+      "url": "",
+      "usosEnElMapa": 1,
+      "estado": "completa",
+      "enPagina": true
+    },
+    {
+      "key": "Henriques2011",
+      "citaOriginal": "",
+      "autores_texto": "Henriques, J.",
+      "anio": "2011",
+      "sin_fecha": false,
+      "tipo": "libro",
+      "titulo": "Sonic bodies",
+      "editorial": "Continuum",
+      "doi": "",
+      "url": "",
+      "usosEnElMapa": 0,
+      "estado": "completa",
+      "enPagina": true
+    },
+    {
+      "key": "Jaji2014",
+      "citaOriginal": "Jaji 2014",
+      "autores_texto": "Jaji, T. E.",
+      "anio": "2014",
+      "sin_fecha": false,
+      "tipo": "libro",
+      "titulo": "Africa in stereo",
+      "editorial": "Oxford University Press",
+      "doi": "",
+      "url": "",
+      "usosEnElMapa": 3,
+      "estado": "completa",
+      "enPagina": true
+    },
+    {
+      "key": "Manuel1995",
+      "citaOriginal": "Manuel 1995",
+      "autores_texto": "Manuel, P.",
+      "anio": "1995",
+      "sin_fecha": false,
+      "tipo": "libro",
+      "titulo": "Caribbean currents",
+      "editorial": "Temple University Press",
+      "doi": "",
+      "url": "",
+      "usosEnElMapa": 3,
+      "estado": "completa",
+      "enPagina": true
+    },
+    {
+      "key": "Matory2005",
+      "citaOriginal": "Matory 2005",
+      "autores_texto": "Matory, J. L.",
+      "anio": "2005",
+      "sin_fecha": false,
+      "tipo": "libro",
+      "titulo": "Black Atlantic religion",
+      "editorial": "Princeton University Press",
+      "doi": "",
+      "url": "",
+      "usosEnElMapa": 1,
+      "estado": "completa",
+      "enPagina": true
+    },
+    {
+      "key": "MontesPizarro2018",
+      "citaOriginal": "Montes Pizarro 2018",
+      "autores_texto": "Montes Pizarro, E. L.",
+      "anio": "2018",
+      "sin_fecha": false,
+      "tipo": "libro",
+      "titulo": "Más ramas que raíces",
+      "editorial": "Ediciones Callejón",
+      "doi": "",
+      "url": "",
+      "usosEnElMapa": 14,
+      "estado": "completa",
+      "enPagina": true
+    },
+    {
+      "key": "Ortiz2018",
+      "citaOriginal": "",
+      "autores_texto": "Ortiz, F.",
+      "anio": "2018",
+      "sin_fecha": false,
+      "tipo": "libro",
+      "titulo": "On music",
+      "editorial": "Temple University Press",
+      "doi": "",
+      "url": "",
+      "usosEnElMapa": 0,
+      "estado": "completa",
+      "enPagina": true
+    },
+    {
+      "key": "PaciniHernandez1993",
+      "citaOriginal": "",
+      "autores_texto": "Pacini Hernandez, D.",
+      "anio": "1993",
+      "sin_fecha": false,
+      "tipo": "articulo",
+      "titulo": "The picó phenomenon in Cartagena",
+      "contenedor": "América Negra",
+      "numero": "6",
+      "doi": "",
+      "url": "",
+      "usosEnElMapa": 0,
+      "estado": "completa",
+      "enPagina": true
+    },
+    {
+      "key": "PaciniHernandez2010",
+      "citaOriginal": "",
+      "autores_texto": "Pacini Hernandez, D.",
+      "anio": "2010",
+      "sin_fecha": false,
+      "tipo": "libro",
+      "titulo": "¡Oye como va! Hybridity and identity in Latino popular music",
+      "editorial": "Temple University Press",
+      "doi": "",
+      "url": "",
+      "usosEnElMapa": 0,
+      "estado": "completa",
+      "enPagina": true
+    },
+    {
+      "key": "QuinteroRivera1998",
+      "citaOriginal": "Quintero Rivera 1998",
+      "autores_texto": "Quintero Rivera, Á. G.",
+      "anio": "1998",
+      "sin_fecha": false,
+      "tipo": "libro",
+      "titulo": "¡Salsa, sabor y control! Sociología de la música tropical",
+      "editorial": "Siglo XXI",
+      "doi": "",
+      "url": "",
+      "usosEnElMapa": 1,
+      "estado": "completa",
+      "enPagina": true
+    },
+    {
+      "key": "QuinteroRivera2009",
+      "citaOriginal": "",
+      "autores_texto": "Quintero Rivera, Á. G.",
+      "anio": "2009",
+      "sin_fecha": false,
+      "tipo": "libro",
+      "titulo": "Cuerpo y cultura: las músicas «mulatas» y la subversión del baile",
+      "editorial": "Iberoamericana-Vervuert",
+      "doi": "",
+      "url": "",
+      "usosEnElMapa": 0,
+      "estado": "completa",
+      "enPagina": true
+    },
+    {
+      "key": "Rohlehr1990",
+      "citaOriginal": "Rohlehr 1990",
+      "autores_texto": "Rohlehr, G.",
+      "anio": "1990",
+      "sin_fecha": false,
+      "tipo": "libro",
+      "titulo": "Calypso and society in pre-independence Trinidad",
+      "editorial": "Port of Spain",
+      "doi": "",
+      "url": "",
+      "usosEnElMapa": 1,
+      "estado": "completa",
+      "enPagina": true
+    },
+    {
+      "key": "Shain2018",
+      "citaOriginal": "Shain 2018",
+      "autores_texto": "Shain, R. M.",
+      "anio": "2018",
+      "sin_fecha": false,
+      "tipo": "libro",
+      "titulo": "Roots in reverse",
+      "editorial": "Wesleyan University Press",
+      "doi": "",
+      "url": "",
+      "usosEnElMapa": 5,
+      "estado": "completa",
+      "enPagina": true
+    },
+    {
+      "key": "Stewart2000",
+      "citaOriginal": "Stewart 2000",
+      "autores_texto": "Stewart, G.",
+      "anio": "2000",
+      "sin_fecha": false,
+      "tipo": "libro",
+      "titulo": "Rumba on the river",
+      "editorial": "Verso",
+      "doi": "",
+      "url": "",
+      "usosEnElMapa": 1,
+      "estado": "completa",
+      "enPagina": true
+    },
+    {
+      "key": "VonEschen2004",
+      "citaOriginal": "Von Eschen 2004",
+      "autores_texto": "Von Eschen, P. M.",
+      "anio": "2004",
+      "sin_fecha": false,
+      "tipo": "libro",
+      "titulo": "Satchmo blows up the world",
+      "editorial": "Harvard University Press",
+      "doi": "",
+      "url": "",
+      "usosEnElMapa": 1,
+      "estado": "completa",
+      "enPagina": true
+    },
+    {
+      "key": "White2008",
+      "citaOriginal": "",
+      "autores_texto": "White, B. W.",
+      "anio": "2008",
+      "sin_fecha": false,
+      "tipo": "libro",
+      "titulo": "Rumba rules",
+      "editorial": "Duke University Press",
+      "doi": "",
+      "url": "",
+      "usosEnElMapa": 0,
+      "estado": "completa",
+      "enPagina": true
     },
     {
       "key": "Collins1994",
@@ -102,7 +539,8 @@
       "url": "",
       "nota": "",
       "usosEnElMapa": 1,
-      "estado": "por completar"
+      "estado": "por completar",
+      "enPagina": false
     },
     {
       "key": "Contreras2015",
@@ -122,102 +560,8 @@
       "url": "",
       "nota": "Fecha estimada por los metadatos del archivo (creado 2015-07-29); el texto no declara año de publicación. Citado como «Contreras H. N., 2015» en Bases epistémicas de la propuesta Picó (FUKAFRA et al., 2026).",
       "usosEnElMapa": 1,
-      "estado": "por completar"
-    },
-    {
-      "key": "Cunin2003",
-      "citaOriginal": "Cunin 2003",
-      "autores": [
-        {
-          "apellido": "Cunin"
-        }
-      ],
-      "anio": "2003",
-      "titulo": "",
-      "tipo": "",
-      "editorial": "",
-      "lugar": "",
-      "doi": "",
-      "url": "",
-      "nota": "",
-      "usosEnElMapa": 3,
-      "estado": "por completar"
-    },
-    {
-      "key": "Cunin2006",
-      "citaOriginal": "Cunin 2006",
-      "autores": [
-        {
-          "apellido": "Cunin"
-        }
-      ],
-      "anio": "2006",
-      "titulo": "",
-      "tipo": "",
-      "editorial": "",
-      "lugar": "",
-      "doi": "",
-      "url": "",
-      "nota": "",
-      "usosEnElMapa": 2,
-      "estado": "por completar"
-    },
-    {
-      "key": "Denning2015",
-      "citaOriginal": "Denning 2015",
-      "autores": [
-        {
-          "apellido": "Denning"
-        }
-      ],
-      "anio": "2015",
-      "titulo": "",
-      "tipo": "",
-      "editorial": "",
-      "lugar": "",
-      "doi": "",
-      "url": "",
-      "nota": "",
-      "usosEnElMapa": 1,
-      "estado": "por completar"
-    },
-    {
-      "key": "Erlmann1991",
-      "citaOriginal": "Erlmann 1991",
-      "autores": [
-        {
-          "apellido": "Erlmann"
-        }
-      ],
-      "anio": "1991",
-      "titulo": "",
-      "tipo": "",
-      "editorial": "",
-      "lugar": "",
-      "doi": "",
-      "url": "",
-      "nota": "",
-      "usosEnElMapa": 2,
-      "estado": "por completar"
-    },
-    {
-      "key": "Ewens1991",
-      "citaOriginal": "Ewens 1991",
-      "autores": [
-        {
-          "apellido": "Ewens"
-        }
-      ],
-      "anio": "1991",
-      "titulo": "",
-      "tipo": "",
-      "editorial": "",
-      "lugar": "",
-      "doi": "",
-      "url": "",
-      "nota": "",
-      "usosEnElMapa": 1,
-      "estado": "por completar"
+      "estado": "por completar",
+      "enPagina": false
     },
     {
       "key": "FUKAFRA2026",
@@ -236,254 +580,8 @@
       "url": "",
       "nota": "Presentada ante el Ministerio de las Culturas por la Fundación Cultural Afroamericana (FUKAFRA), la Asociación de Pikoteros de Santa Marta (ASOPIMARTA), ASOBAILES (Barranquilla) y la Asociación de Picoteros de Cartagena (ASOPICAR).",
       "usosEnElMapa": 4,
-      "estado": "por completar"
-    },
-    {
-      "key": "Gilroy1993",
-      "citaOriginal": "Gilroy 1993",
-      "autores": [
-        {
-          "apellido": "Gilroy"
-        }
-      ],
-      "anio": "1993",
-      "titulo": "",
-      "tipo": "",
-      "editorial": "",
-      "lugar": "",
-      "doi": "",
-      "url": "",
-      "nota": "",
-      "usosEnElMapa": 2,
-      "estado": "por completar"
-    },
-    {
-      "key": "GiraldoBarbosa2016",
-      "citaOriginal": "Giraldo Barbosa 2016",
-      "autores": [
-        {
-          "apellido": "Giraldo Barbosa"
-        }
-      ],
-      "anio": "2016",
-      "titulo": "",
-      "tipo": "",
-      "editorial": "",
-      "lugar": "",
-      "doi": "",
-      "url": "",
-      "nota": "",
-      "usosEnElMapa": 3,
-      "estado": "por completar"
-    },
-    {
-      "key": "Guilbault1993",
-      "citaOriginal": "Guilbault 1993",
-      "autores": [
-        {
-          "apellido": "Guilbault"
-        }
-      ],
-      "anio": "1993",
-      "titulo": "",
-      "tipo": "",
-      "editorial": "",
-      "lugar": "",
-      "doi": "",
-      "url": "",
-      "nota": "",
-      "usosEnElMapa": 2,
-      "estado": "por completar"
-    },
-    {
-      "key": "Hamilton2019",
-      "citaOriginal": "Hamilton 2019",
-      "autores": [
-        {
-          "apellido": "Hamilton"
-        }
-      ],
-      "anio": "2019",
-      "titulo": "",
-      "tipo": "",
-      "editorial": "",
-      "lugar": "",
-      "doi": "",
-      "url": "",
-      "nota": "",
-      "usosEnElMapa": 1,
-      "estado": "por completar"
-    },
-    {
-      "key": "Jaji2014",
-      "citaOriginal": "Jaji 2014",
-      "autores": [
-        {
-          "apellido": "Jaji"
-        }
-      ],
-      "anio": "2014",
-      "titulo": "",
-      "tipo": "",
-      "editorial": "",
-      "lugar": "",
-      "doi": "",
-      "url": "",
-      "nota": "",
-      "usosEnElMapa": 3,
-      "estado": "por completar"
-    },
-    {
-      "key": "Manuel1995",
-      "citaOriginal": "Manuel 1995",
-      "autores": [
-        {
-          "apellido": "Manuel"
-        }
-      ],
-      "anio": "1995",
-      "titulo": "",
-      "tipo": "",
-      "editorial": "",
-      "lugar": "",
-      "doi": "",
-      "url": "",
-      "nota": "Incluye también la cita \"Manuel 1995 (Fania)\" en la arista Zaire 74.",
-      "usosEnElMapa": 3,
-      "estado": "por completar"
-    },
-    {
-      "key": "Matory2005",
-      "citaOriginal": "Matory 2005",
-      "autores": [
-        {
-          "apellido": "Matory"
-        }
-      ],
-      "anio": "2005",
-      "titulo": "",
-      "tipo": "",
-      "editorial": "",
-      "lugar": "",
-      "doi": "",
-      "url": "",
-      "nota": "",
-      "usosEnElMapa": 1,
-      "estado": "por completar"
-    },
-    {
-      "key": "MontesPizarro2018",
-      "citaOriginal": "Montes Pizarro 2018",
-      "autores": [
-        {
-          "apellido": "Montes Pizarro"
-        }
-      ],
-      "anio": "2018",
-      "titulo": "",
-      "tipo": "",
-      "editorial": "",
-      "lugar": "",
-      "doi": "",
-      "url": "",
-      "nota": "",
-      "usosEnElMapa": 14,
-      "estado": "por completar"
-    },
-    {
-      "key": "QuinteroRivera1998",
-      "citaOriginal": "Quintero Rivera 1998",
-      "autores": [
-        {
-          "apellido": "Quintero Rivera"
-        }
-      ],
-      "anio": "1998",
-      "titulo": "",
-      "tipo": "",
-      "editorial": "",
-      "lugar": "",
-      "doi": "",
-      "url": "",
-      "nota": "",
-      "usosEnElMapa": 1,
-      "estado": "por completar"
-    },
-    {
-      "key": "Rohlehr1990",
-      "citaOriginal": "Rohlehr 1990",
-      "autores": [
-        {
-          "apellido": "Rohlehr"
-        }
-      ],
-      "anio": "1990",
-      "titulo": "",
-      "tipo": "",
-      "editorial": "",
-      "lugar": "",
-      "doi": "",
-      "url": "",
-      "nota": "",
-      "usosEnElMapa": 1,
-      "estado": "por completar"
-    },
-    {
-      "key": "Shain2018",
-      "citaOriginal": "Shain 2018",
-      "autores": [
-        {
-          "apellido": "Shain"
-        }
-      ],
-      "anio": "2018",
-      "titulo": "",
-      "tipo": "",
-      "editorial": "",
-      "lugar": "",
-      "doi": "",
-      "url": "",
-      "nota": "",
-      "usosEnElMapa": 5,
-      "estado": "por completar"
-    },
-    {
-      "key": "Stewart2000",
-      "citaOriginal": "Stewart 2000",
-      "autores": [
-        {
-          "apellido": "Stewart"
-        }
-      ],
-      "anio": "2000",
-      "titulo": "",
-      "tipo": "",
-      "editorial": "",
-      "lugar": "",
-      "doi": "",
-      "url": "",
-      "nota": "",
-      "usosEnElMapa": 1,
-      "estado": "por completar"
-    },
-    {
-      "key": "VonEschen2004",
-      "citaOriginal": "Von Eschen 2004",
-      "autores": [
-        {
-          "apellido": "Von Eschen"
-        }
-      ],
-      "anio": "2004",
-      "titulo": "",
-      "tipo": "",
-      "editorial": "",
-      "lugar": "",
-      "doi": "",
-      "url": "",
-      "nota": "",
-      "usosEnElMapa": 1,
-      "estado": "por completar"
+      "estado": "por completar",
+      "enPagina": false
     },
     {
       "key": "ZaireAlbumYFilmLiveInAfrica",
@@ -502,7 +600,8 @@
       "url": "",
       "nota": "",
       "usosEnElMapa": 1,
-      "estado": "por completar"
+      "estado": "por completar",
+      "enPagina": false
     }
   ]
 }

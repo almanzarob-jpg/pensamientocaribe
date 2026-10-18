@@ -369,3 +369,18 @@
   .atlantico-tiempo { padding: var(--space-sm); }
   .atlantico-tiempo-sub { font-size: 0.8rem; }
 }
+
+/* Foco visible en los puertos del mapa (acceso por teclado) */
+path.caribe-marker:focus { outline: none; }
+path.caribe-marker:focus-visible { stroke: var(--c-cream, #F5EDDD); stroke-width: 3.5; fill-opacity: 1; }
+
+/* El navío y el año sobre el océano (prototipo) */
+.atlantico-ano {
+  position: absolute; left: 22px; bottom: 44px; z-index: 450; pointer-events: none;
+  font-family: var(--ff-display); font-weight: 600; font-size: clamp(40px, 7vw, 76px); line-height: 1;
+  letter-spacing: .01em; opacity: 0; text-shadow: 0 2px 18px rgba(5,6,4,.9);
+}
+.atlantico-ano.on { animation: ano-entra 1.4s ease-out forwards; }
+@keyframes ano-entra { from { opacity: 0; transform: translateY(8px); } to { opacity: .82; transform: none; } }
+path.atlantico-navio { filter: drop-shadow(0 0 7px currentColor); }
+@media (prefers-reduced-motion: reduce) { .atlantico-ano.on { animation: none; opacity: .82; } }
