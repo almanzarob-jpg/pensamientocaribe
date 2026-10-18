@@ -813,3 +813,69 @@
 @media (max-width: 560px) {
   .columna-epigrafe { max-width: none; }
 }
+
+/* ─── Notas al pie ───────────────────────────────────────────── */
+
+.nota-ref {
+  font-family: var(--ff-mono);
+  font-size: 0.56em;
+  font-weight: var(--fw-semibold);
+  line-height: 0;
+  vertical-align: super;
+  margin-left: 0.15em;
+}
+.nota-ref a {
+  color: var(--c-orange);
+  text-decoration: none;
+  padding: 0 0.12em;
+  border-radius: 2px;
+}
+.nota-ref a:hover,
+.nota-ref a:focus-visible { background: rgba(240, 122, 22, 0.18); }
+
+.columna-notas {
+  max-width: 41rem;
+  margin: clamp(3rem, 6vw, 4.5rem) auto 0;
+  padding: var(--space-md) clamp(1.2rem, 4vw, 0rem) 0;
+  border-top: 1px solid var(--c-divider-orange);
+}
+.columna-notas h2 {
+  font-family: 'Oswald', var(--ff-body);
+  font-weight: var(--fw-semibold);
+  font-size: var(--fs-meta);
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--c-gray);
+  margin-bottom: var(--space-sm);
+}
+.columna-notas ol {
+  margin: 0;
+  padding-left: 1.6em;
+  list-style: decimal;
+}
+.columna-notas li {
+  margin-bottom: 0.75em;
+  padding-left: 0.2em;
+  font-family: var(--ff-body);
+  font-size: 0.88rem;
+  line-height: 1.6;
+  color: var(--c-gray);
+  overflow-wrap: anywhere;
+}
+.columna-notas li::marker {
+  font-family: var(--ff-mono);
+  color: var(--c-orange);
+}
+.columna-notas a { color: var(--c-gray); text-decoration: underline; text-underline-offset: 2px; }
+.columna-notas a:hover { color: var(--c-orange); }
+.columna-notas li:target { background: rgba(240, 122, 22, 0.1); }
+
+.nota-volver {
+  text-decoration: none !important;
+  color: var(--c-orange) !important;
+  margin-left: 0.2em;
+}
+
+/* El nav es fijo: los saltos a notas deben quedar por debajo de él. */
+.nota-ref,
+.columna-notas li { scroll-margin-top: calc(var(--nav-height) + var(--space-md)); }
