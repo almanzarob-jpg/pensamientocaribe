@@ -401,3 +401,8 @@ path.continente{transition:fill-opacity 1.6s ease,stroke-opacity 1.6s ease;point
   path.continente{transition:none}
   .atlantico-cont-ano{animation:none}
 }
+
+/* ── Botón «La travesía en secuencia» (prototipo) ── */
+.filter-btn--secuencia{min-width:15.5rem;border-color:#C9B27C;color:#C9B27C}
+.filter-btn--secuencia.is-active{background:rgba(201,178,124,.14);color:#F2EAD8}
+@media (max-width:600px){.filter-btn--secuencia{min-width:0}}

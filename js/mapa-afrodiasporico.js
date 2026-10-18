@@ -859,6 +859,30 @@
        La travesía empieza en 1796, con un regreso. Antes, un texto breve dice
        lo que el mapa no dibuja: el pasaje medio. Sin cifras ni fechas de la
        trata: solo lo que la página ya sostiene (Gilroy 1993; Montes Pizarro 2018). */
+    /* BOTÓN «LA TRAVESÍA EN SECUENCIA» (prototipo)
+       Un solo botón en la barra del mapa: cada clic lleva a la siguiente travesía
+       por año, y así se va contando el relato. Vive en la barra y no en el panel,
+       para que siga al alcance cuando el panel cubre el mapa (móvil). */
+    var modoSecuencia = false;
+    var btnSecuencia = document.querySelector('.caribe-mapa-filters .filter-btn[data-action="secuencia"]');
+    var etiquetaSecuencia = btnSecuencia ? btnSecuencia.innerHTML : '';
+    function actualizarBtnSecuencia() {
+      if (!btnSecuencia) return;
+      var texto, n = pasos.length;
+      if (!modoSecuencia || !tourActivo) { btnSecuencia.innerHTML = etiquetaSecuencia; btnSecuencia.classList.remove('is-active'); return; }
+      if (tourIdx < 0) texto = t('Empezar en 1796', 'Begin in 1796') + ' &rarr;';
+      else if (tourIdx < n - 1) texto = t('Siguiente travesía', 'Next crossing') + ' &middot; ' + (tourIdx + 1) + '/' + n + ' &rarr;';
+      else texto = t('Volver al comienzo', 'Back to the start') + ' &#8635;';
+      btnSecuencia.innerHTML = '&#9719; ' + texto;
+      btnSecuencia.classList.add('is-active');
+    }
+    if (btnSecuencia) btnSecuencia.addEventListener('click', function () {
+      if (!modoSecuencia || !tourActivo) { iniciarTravesia(false); modoSecuencia = true; actualizarBtnSecuencia(); }
+      else if (tourIdx < 0) irAPaso(0);
+      else if (tourIdx < pasos.length - 1) irAPaso(tourIdx + 1);
+      else mostrarUmbral();
+    });
+
     function mostrarUmbral() {
       cargarContinentes();
       tourIdx = -1;
@@ -879,7 +903,8 @@
         '</div>'
       );
       var emp = panel.querySelector('[data-tour="empezar"]'), sal = panel.querySelector('[data-tour="salir"]');
-      if (emp) { emp.addEventListener('click', function () { irAPaso(0); }); emp.focus({ preventScroll: true }); }
+      if (emp) { emp.addEventListener('click', function () { irAPaso(0); }); if (!modoSecuencia) emp.focus({ preventScroll: true }); }
+      actualizarBtnSecuencia();
       if (sal) sal.addEventListener('click', function () { abandonarTravesia(true); });
     }
 
@@ -895,6 +920,7 @@
       marcarTiempo(arcos.indexOf(arco));
       navegarArco(arco);
       luzContinentes(i);
+      actualizarBtnSecuencia();
       sonarPaso(arco.rutaData);
     }
 
@@ -915,6 +941,7 @@
 
     function abandonarTravesia(volverVista) {
       tourActivo = false;
+      modoSecuencia = false; actualizarBtnSecuencia();
       escuchaEncadenada = false;
       destruirReproductorTour();
       detenerNavio();
