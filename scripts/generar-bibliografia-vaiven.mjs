@@ -22,7 +22,8 @@ const esc = (s) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, 
 
 function renderizar(r, lang) {
   const anio = r.sin_fecha ? (lang === 'en' ? 'n.d.' : 's. f.') : r.anio;
-  const cabeza = `${esc(r.autores_texto)} (${anio}). `;
+  const aut = (lang === 'en' && r.autores_texto_en) ? r.autores_texto_en : r.autores_texto;
+  const cabeza = `${esc(aut)}${/\(Director\)$/.test(aut) ? '.' : ''} (${anio}). `;
   const nota = r.nota ? (r.nota[lang] || r.nota.es) : '';
   if (r.tipo === 'articulo') {
     return `${cabeza}${esc(r.titulo)}. <em>${esc(r.contenedor)}</em>, ${esc(r.numero)}.`;

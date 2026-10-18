@@ -3,10 +3,10 @@
     "titulo": "Bibliografía de Con el vaivén de las corrientes",
     "descripcion": "Fuente única de la bibliografía del mapa. Las páginas proyectos/mas-ramas-que-raices(.-en).html se generan desde aquí con scripts/generar-bibliografia-vaiven.mjs. Las referencias con enPagina:false están citadas en rutas o puertos pero faltan datos y no se publican hasta completarlas; no se rellenan por inferencia.",
     "responsable": "Roberto Almanza Hernández",
-    "version": "0.3.0",
+    "version": "0.3.2",
     "fecha": "2026-10-17",
-    "referencias": 37,
-    "completas": 30
+    "referencias": 35,
+    "completas": 33
   },
   "referencias": [
     {
@@ -72,26 +72,6 @@
       "url": "",
       "usosEnElMapa": 1,
       "estado": "completa",
-      "enPagina": true
-    },
-    {
-      "key": "CentroPensamientoCaribe2024",
-      "citaOriginal": "",
-      "autores_texto": "Centro de Pensamiento Caribe.",
-      "anio": "2024",
-      "sin_fecha": false,
-      "tipo": "libro",
-      "titulo": "Picó: patrimonio cultural inmaterial de la humanidad",
-      "editorial": "",
-      "nota": {
-        "es": "Documento de propuesta institucional",
-        "en": "Institutional proposal document"
-      },
-      "nota_estilo": "corchete",
-      "doi": "",
-      "url": "",
-      "usosEnElMapa": 0,
-      "estado": "incompleta_en_origen",
       "enPagina": true
     },
     {
@@ -525,83 +505,61 @@
     {
       "key": "Collins1994",
       "citaOriginal": "Collins 1994",
-      "autores": [
-        {
-          "apellido": "Collins"
-        }
-      ],
       "anio": "1994",
-      "titulo": "",
-      "tipo": "",
-      "editorial": "",
+      "titulo": "Highlife time",
+      "tipo": "libro",
+      "editorial": "Anansesem Publications",
       "lugar": "",
       "doi": "",
       "url": "",
       "nota": "",
       "usosEnElMapa": 1,
-      "estado": "por completar",
-      "enPagina": false
-    },
-    {
-      "key": "Contreras2015",
-      "citaOriginal": "Contreras 2015",
-      "autores": [
-        {
-          "apellido": "Contreras Hernández",
-          "nombre": "Nicolás Ramón"
-        }
-      ],
-      "anio": "2015",
-      "titulo": "La salsa en el Caribe colombiano: con clave, bongó y mucho picó",
-      "tipo": "artículo inédito",
-      "editorial": "",
-      "lugar": "",
-      "doi": "",
-      "url": "",
-      "nota": "Fecha estimada por los metadatos del archivo (creado 2015-07-29); el texto no declara año de publicación. Citado como «Contreras H. N., 2015» en Bases epistémicas de la propuesta Picó (FUKAFRA et al., 2026).",
-      "usosEnElMapa": 1,
-      "estado": "por completar",
-      "enPagina": false
+      "estado": "completa",
+      "enPagina": true,
+      "autores_texto": "Collins, J.",
+      "sin_fecha": false
     },
     {
       "key": "FUKAFRA2026",
       "citaOriginal": "FUKAFRA et al. 2026",
-      "autores": [
-        {
-          "apellido": "Fundación Cultural Afroamericana (FUKAFRA), ASOPIMARTA, ASOBAILES, ASOPICAR"
-        }
-      ],
+      "autores_texto": "Fundación Cultural Afroamericana (FUKAFRA), ASOPIMARTA, ASOBAILES y ASOPICAR",
       "anio": "2026",
+      "sin_fecha": false,
+      "tipo": "libro",
       "titulo": "Bases epistémicas de la propuesta Picó: Patrimonio Cultural Inmaterial de la Humanidad",
-      "tipo": "documento de propuesta patrimonial",
       "editorial": "",
-      "lugar": "Santa Marta / Cartagena / Barranquilla",
+      "nota": {
+        "es": "Documento de propuesta presentado al Ministerio de las Culturas",
+        "en": "Proposal document submitted to Colombia's Ministry of Cultures"
+      },
+      "nota_estilo": "corchete",
       "doi": "",
       "url": "",
-      "nota": "Presentada ante el Ministerio de las Culturas por la Fundación Cultural Afroamericana (FUKAFRA), la Asociación de Pikoteros de Santa Marta (ASOPIMARTA), ASOBAILES (Barranquilla) y la Asociación de Picoteros de Cartagena (ASOPICAR).",
       "usosEnElMapa": 4,
-      "estado": "por completar",
-      "enPagina": false
+      "estado": "completa",
+      "enPagina": true,
+      "autores_texto_en": "Fundación Cultural Afroamericana (FUKAFRA), ASOPIMARTA, ASOBAILES, & ASOPICAR"
     },
     {
       "key": "ZaireAlbumYFilmLiveInAfrica",
       "citaOriginal": "Zaire 74: álbum y film Live in Africa",
-      "autores": [
-        {
-          "apellido": "Zaire 74: álbum y film Live in Africa"
-        }
-      ],
-      "anio": "",
-      "titulo": "",
-      "tipo": "",
+      "anio": "1974",
+      "titulo": "Fania All-Stars: Live in Africa",
+      "tipo": "pelicula",
       "editorial": "",
       "lugar": "",
       "doi": "",
       "url": "",
-      "nota": "",
+      "nota": {
+        "es": "Película",
+        "en": "Film"
+      },
       "usosEnElMapa": 1,
-      "estado": "por completar",
-      "enPagina": false
+      "estado": "completa",
+      "enPagina": true,
+      "autores_texto": "Gast, L. (Director)",
+      "sin_fecha": false,
+      "nota_estilo": "corchete"
     }
   ]
 }
