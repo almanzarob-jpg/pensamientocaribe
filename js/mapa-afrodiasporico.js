@@ -420,6 +420,7 @@
     var panel = document.getElementById('atlantico-panel');
     var tourActivo = false;
     var tourIdx = 0;
+    var pasos = arcos;   // lista que recorre la travesía: por épocas (arcos) o por año (secuencia)
     var arcoSeleccionado = null;
 
     // En pantallas angostas el panel es una hoja fija inferior. Un ancestro con
@@ -612,8 +613,8 @@
       if (enTour) {
         tourBar = '<div class="atlantico-tour-bar">' +
           '<button class="atlantico-tour-btn" type="button" data-tour="prev"' + '' + '>&larr; ' + t('Anterior', 'Previous') + '</button>' +
-          '<span class="atlantico-tour-paso">' + (tourIdx + 1) + ' / ' + arcos.length + '</span>' +
-          '<button class="atlantico-tour-btn" type="button" data-tour="next"' + (tourIdx === arcos.length - 1 ? ' disabled' : '') + '>' + t('Siguiente', 'Next') + ' &rarr;</button>' +
+          '<span class="atlantico-tour-paso">' + (tourIdx + 1) + ' / ' + pasos.length + '</span>' +
+          '<button class="atlantico-tour-btn" type="button" data-tour="next"' + (tourIdx === pasos.length - 1 ? ' disabled' : '') + '>' + t('Siguiente', 'Next') + ' &rarr;</button>' +
           '<button class="atlantico-tour-btn atlantico-tour-btn--salir" type="button" data-tour="salir">' + t('Salir', 'Exit') + '</button>' +
         '</div>';
       }
@@ -648,7 +649,7 @@
         var next = panel.querySelector('[data-tour="next"]');
         var salir = panel.querySelector('[data-tour="salir"]');
         if (prev) prev.addEventListener('click', function () { if (tourIdx > 0) irAPaso(tourIdx - 1); else mostrarUmbral(); });
-        if (next) next.addEventListener('click', function () { if (tourIdx < arcos.length - 1) irAPaso(tourIdx + 1); });
+        if (next) next.addEventListener('click', function () { if (tourIdx < pasos.length - 1) irAPaso(tourIdx + 1); });
         if (salir) salir.addEventListener('click', function () { abandonarTravesia(true); });
       }
     }
@@ -707,7 +708,7 @@
 
     function siguientePaso() {
       if (!tourActivo) return;
-      if (tourIdx < arcos.length - 1) irAPaso(tourIdx + 1);
+      if (tourIdx < pasos.length - 1) irAPaso(tourIdx + 1);
       else { escuchaEncadenada = false; abandonarTravesia(true); }
     }
 
@@ -803,7 +804,7 @@
           style: function (f) { return { className: 'continente continente--' + f.properties.id, stroke: true, weight: 1, fillOpacity: 0, opacity: 0 }; },
           onEachFeature: function (f, capa) { contCapas[f.properties.id] = capa; }
         }).addTo(map);
-        if (tourActivo && tourIdx >= 0 && arcos[tourIdx]) luzContinentes(tourIdx);
+        if (tourActivo && tourIdx >= 0 && pasos[tourIdx]) luzContinentes(tourIdx);
       }).catch(function () { contPedido = false; });
     }
     function apagarContinentes() {
@@ -824,11 +825,11 @@
     }
     map.on('move zoom resize', colocarRotulos);
     function luzContinentes(i) {
-      var arco = arcos[i]; if (!arco || !arco.puntos) return;
+      var arco = pasos[i]; if (!arco || !arco.puntos) return;
       var color = epocas[arco.rutaData.epoca].color, esEN = IDIOMA === 'en';
       var activos = {}, brasas = {};
       for (var k = 0; k < i; k++) {
-        var pk = arcos[k].puntos;
+        var pk = pasos[k].puntos;
         brasas[continenteDe(pk[0])] = true; brasas[continenteDe(pk[pk.length - 1])] = true;
       }
       var extremos = [arco.puntos[0], arco.puntos[arco.puntos.length - 1]];
@@ -884,21 +885,29 @@
 
     function irAPaso(i) {
       tourIdx = i;
-      var arco = arcos[i];
+      var arco = pasos[i];
       if (!arco) return;
       if (!map.hasLayer(arco)) arco.addTo(map);
       if (arco.franja && !map.hasLayer(arco.franja)) arco.franja.addTo(map);
       resaltarArco(arco);
       volarAArco(arco);
       abrirPanelRuta(arco.rutaData, arco, true);
-      marcarTiempo(i);
+      marcarTiempo(arcos.indexOf(arco));
       navegarArco(arco);
       luzContinentes(i);
       sonarPaso(arco.rutaData);
     }
 
+    /* La travesía recorre las treinta rutas por su año de partida, así la fecha solo
+       avanza (antes seguía el orden de las épocas y el año retrocedía: 1932 y luego
+       1890). Desempata el orden en que están cargadas. */
+    function anoPartida(a) { return parseInt(String(a.rutaData.anos).split(/[–-]/)[0], 10) || 0; }
+    function secuenciaCronologica() {
+      return arcos.slice().sort(function (a, b) { return anoPartida(a) - anoPartida(b) || arcos.indexOf(a) - arcos.indexOf(b); });
+    }
     function iniciarTravesia(conSonido) {
       aplicarEpoca('all');
+      pasos = secuenciaCronologica();
       tourActivo = true;
       escuchaEncadenada = conSonido === true;
       mostrarUmbral();
