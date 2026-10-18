@@ -773,3 +773,43 @@
   .columna-convocatoria-fecha { text-align: left; }
   .columna-convocatoria .btn { width: 100%; justify-content: center; }
 }
+
+/* ─── Epígrafe, registro y foto apaisada (N.º 02) ─────────────── */
+
+.columna-epigrafe {
+  max-width: 24rem;
+  margin: 0 0 2.4em auto !important;
+  padding-right: 0.9em;
+  border-right: 2px solid var(--c-gold);
+  text-align: right;
+  font-size: clamp(1.02rem, 1.1vw, 1.12rem) !important;
+  line-height: 1.5 !important;
+  color: var(--c-gray) !important;
+  opacity: 1 !important;
+}
+.columna-epigrafe em { color: var(--c-gray); }
+
+/* Transcripción de un asiento de registro naval. */
+.columna-registro {
+  margin: 1.8em 0 !important;
+  padding: 0.9em 1.1em;
+  text-align: center;
+  font-family: var(--ff-mono) !important;
+  font-size: var(--fs-meta) !important;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  line-height: 1.6 !important;
+  color: var(--c-cream) !important;
+  background: rgba(10, 12, 8, 0.6);
+  border-top: 1px solid var(--c-divider-orange);
+  border-bottom: 1px solid var(--c-divider-orange);
+}
+.columna-registro em { font-style: normal; color: var(--c-orange); }
+
+.columna-foto--horizontal img { aspect-ratio: 4 / 3; }
+
+.pregon-card-img--centro { object-position: 50% 48%; }
+
+@media (max-width: 560px) {
+  .columna-epigrafe { max-width: none; }
+}
