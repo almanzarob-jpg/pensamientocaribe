@@ -1,0 +1,54 @@
+#!/usr/bin/env bash
+#
+# Gancho de pre-commit del sitio Pensamiento Caribe.
+#
+# La puerta de publicación es scripts/publicar.sh, que regenera los derivados del
+# corpus antes de empujar. Este gancho existe para el caso en que alguien —persona
+# o asistente— publique con un `git commit` suelto, saltándose esa puerta: el
+# 24-oct-2026 pasó, y el sitio quedó sirviendo un corpus viejo con los cuatro
+# validadores en verde, porque ninguno mira los derivados.
+#
+# No regenera nada ni toca el índice: solo se niega a dejar pasar un commit que
+# dejaría al visitante con datos distintos de los del canónico.
+#
+# Se instala con:
+#   git config core.hooksPath scripts/hooks
+#
+# Para saltárselo a conciencia una vez: git commit --no-verify
+#
+set -uo pipefail
+cd "$(git rev-parse --show-toplevel)"
+
+CANONICO=data/agua-de-por-medio/datos-atlas.js
+rojo()  { printf '\033[31m✗ %s\033[0m\n' "$1"; }
+verde() { printf '\033[32m✓\033[0m %s\n' "$1"; }
+
+# Solo cuesta algo cuando el corpus entra en el commit.
+git diff --cached --name-only | grep -qx "$CANONICO" || exit 0
+
+fallo=0
+
+if ! salida=$(python3 data/agua-de-por-medio/sincronizar.py --check 2>&1); then
+  rojo "datos-atlas.json no coincide con el canónico."
+  printf '  %s\n' "$salida"
+  printf '  Corre: python3 data/agua-de-por-medio/sincronizar.py\n'
+  fallo=1
+fi
+
+if ! salida=$(node scripts/partir-datos-atlas.mjs --check 2>&1); then
+  rojo "atlas-indice.js o atlas-fichas.js están atrás del corpus."
+  printf '  %s\n' "$salida"
+  printf '  Son los archivos que la página carga de verdad: sin esto, el visitante\n'
+  printf '  se lleva el corpus anterior y los validadores no lo notan.\n'
+  printf '  Corre: node scripts/partir-datos-atlas.mjs\n'
+  fallo=1
+fi
+
+if [ "$fallo" -ne 0 ]; then
+  printf '\nCommit detenido. Lo normal es publicar con la puerta única:\n'
+  printf '  bash scripts/publicar.sh "mensaje del commit"\n\n'
+  exit 1
+fi
+
+verde "Corpus y derivados en sincronía"
+exit 0
