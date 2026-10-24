@@ -19,7 +19,7 @@ Estados:
 """
 import json, datetime, pathlib
 
-HOY = "2026-09-29"
+HOY = "2026-10-24"
 
 # ---------------------------------------------------------------- lugares del atlas
 ISL = ["cuba","jamaica","haiti","dominicana","puertorico","curazao","martinica","guadalupe",
@@ -30,8 +30,9 @@ CA  = ["bluefields","costarica","panama","honduras"]
 COL = ["cartagena","santamarta","palenque","barranquilla","guajira","sanandres"]
 MEX = ["veracruz","costachica"]
 US  = ["nola"]
+VEN = ["barlovento"]   # nodo abierto en el corpus v1.27.0, posterior a la escritura de esta capa
 BR  = ["oriximina","palmaresbr"]   # nodos brasileños del corpus (lotes S20 y S21)
-TODOS = ISL+GUY+BEL+CA+COL+MEX+US+BR
+TODOS = ISL+GUY+BEL+CA+COL+MEX+US+VEN+BR
 
 # ---------------------------------------------------------------- lugares que el atlas no tiene como nodo
 # [lat, lng, etiqueta ES, etiqueta EN]. Los que están fuera del encuadre llevan flecha
@@ -55,6 +56,8 @@ EXTRAS = {
   "stthomas":  [18.34,-64.93,"Saint Thomas","St. Thomas"],
   "filadelfia":[31.3,-79.6,"Filadelfia ↑","Philadelphia ↑"],
   "guatemala": [14.4,-91.3,"Guatemala","Guatemala"],
+  "londres":   [31.3,-58.0,"Londres ↗","London ↗"],
+  "liverpool": [31.3,-61.0,"Liverpool ↗","Liverpool ↗"],
 }
 
 # ---------------------------------------------------------------- fuentes
@@ -87,6 +90,8 @@ FUENTES = {
          "corto":"Glissant 1990", "ejemplar":True, "corpus":"glissant"},
  "GLD": {"ref":"Glissant, É. (2010 [1981]). El discurso antillano (trad. A. M. Boadas y L. Arencibia Rodríguez). Fondo Editorial Casa de las Américas. Orig. Le Discours antillais, Seuil, 1981.",
          "corto":"Glissant 1981", "ejemplar":True, "corpus":"glissantdiscours"},
+ "TS2006": {"ref":"Torres-Saillant, S. (2006). An Intellectual History of the Caribbean. New Directions in Latino American Cultures. Palgrave Macmillan. Se cita por la paginación impresa; en el PDF del ejemplar, hoja = página impresa + 15.",
+         "corto":"Torres-Saillant 2006", "ejemplar":True, "corpus":"torressaillanthistory"},
  "BLE": {"ref":"Best, L. y Levitt, K. P. (2009). Essays on the Theory of Plantation Economy: A Historical and Institutional Approach to Caribbean Economic Development. University of the West Indies Press.",
          "corto":"Best y Levitt 2009", "ejemplar":True, "corpus":"bestlevitt"},
  "CBI": {"ref":"Caribbean Basin Economic Recovery Act, Pub. L. 98-67, tít. II, § 212 (1983), codificada en 19 U.S.C. § 2702(b), con las notas de enmienda: lista de países que la ley permite designar beneficiarios de la Iniciativa de la Cuenca del Caribe.",
@@ -703,6 +708,112 @@ DEF.append({
            "It is a definition too, and the layer sets it beside the others so it can be argued with."),
 })
 
+# ---------------------------------------------------------------- Torres-Saillant 2006: los tres espacios
+# Expediente del 24-oct-2026. Desfase pdf->impreso: hoja = impresa + 15, constante en todo el cuerpo.
+# La delimitacion esta en «The Cultural Geography» (p. 18) y se cierra con la formula de los tres
+# espacios primarios (p. 21). El espacio diasporico es parte de la definicion, no un apendice: el
+# texto dice que hoy ninguno de los tres es prescindible.
+N_TS_ARCH = N("Por la enumeración del criterio: «las islas del archipiélago antillano, incluidas las Bermudas» (p. 18).",
+              "By the criterion's enumeration: “the islands of the Antillean archipelago, including the Bermudas” (p. 18).")
+N_TS_CONT = N("Territorio continental nombrado letra por letra en el criterio (p. 18).",
+              "Mainland territory named word for word in the criterion (p. 18).")
+N_TS_COSTA = N("Entra por los «Estados de Centroamérica y Suramérica» cuyas áreas costeras atlánticas nombra el criterio: Honduras, Nicaragua, Panamá, Colombia y Venezuela (p. 18).",
+               "Enters through the “Central and South American nations” whose Atlantic coastal areas the criterion names: Honduras, Nicaragua, Panama, Colombia and Venezuela (p. 18).")
+N_TS_COSTARICA = N("Costa Rica no está en la lista de la p. 18, pero el texto la trabaja como caso del nexo continente-islas: la migración antillana de comienzos del siglo XX explica el asentamiento de Limón (p. 19).",
+                   "Costa Rica is not in the p. 18 list, but the text works it as a case of the mainland-island nexus: early twentieth-century West Indian migration explains the Limón settlement (p. 19).")
+N_TS_COL_NOMBRADA = N("Nombrada en la p. 19: en Cartagena y Barranquilla la vida cultural y las declaraciones de las autoridades locales afirman una identidad caribeña que, dice, no igualan algunas de las islas más centrales del archipiélago.",
+                      "Named on p. 19: in Cartagena and Barranquilla, cultural life and local authorities assert a Caribbean identity that, he says, some of the most central islands of the archipelago do not match.")
+N_TS_GUAJIRA = N("Nombrada en la p. 24: unos 100.000 hablantes de wayuunaiki en la península de la Guajira, «en la costa caribeña de Colombia».",
+                 "Named on p. 24: some 100,000 speakers of Goajiro on the Guajira peninsula, “on the Caribbean coast of Colombia”.")
+N_TS_HEREDA_COSTA = N("El texto no nombra este lugar: lo alcanza la regla declarada en la p. 18, que incluye las áreas costeras atlánticas de Colombia. El estado se hereda de esa regla, no de una mención.",
+                      "The text does not name this place: it falls under the rule declared on p. 18, which includes the Atlantic coastal areas of Colombia. The state is inherited from that rule, not from a mention.")
+N_TS_BARLOVENTO = N("El texto no nombra este lugar: lo alcanza la regla declarada en la p. 18, que incluye las áreas costeras atlánticas de Venezuela.",
+                    "The text does not name this place: it falls under the rule declared on p. 18, which includes the Atlantic coastal areas of Venezuela.")
+N_TS_PALENQUE = N("No está nombrado —los «palenques» de la p. 238 son los manieles de La Española, no el de San Basilio— y la regla de la p. 18 dice «áreas costeras atlánticas», no interior. Los Montes de María quedan en el borde de su propio criterio.",
+                  "Not named —the “palenques” on p. 238 are Hispaniola's manieles, not San Basilio— and the p. 18 rule says “Atlantic coastal areas”, not the interior. The Montes de María sit on the edge of his own criterion.")
+N_TS_SANANDRES = N("Insular y colombiano, pero el criterio enumera «el archipiélago antillano» y, aparte, las costas atlánticas continentales. El archipiélago de San Andrés no es antillano en sentido estricto y el texto no lo nombra: queda entre las dos mitades de la regla.",
+                   "Insular and Colombian, yet the criterion enumerates “the Antillean archipelago” and, separately, the continental Atlantic coasts. The San Andrés archipelago is not Antillean in the strict sense and the text does not name it: it falls between the two halves of the rule.")
+N_TS_MEX = N("México no está en la lista geográfica de la p. 18. Lo único mexicano que el libro admite es Quintana Roo, y por una vía propia: afinidad ecosistémica con las islas y los lazos históricos de los mayas esclavizados vendidos a las plantaciones cubanas (p. 20). Ni el golfo ni el Pacífico entran, y el texto no se pronuncia sobre ellos.",
+             "Mexico is not in the geographic list on p. 18. The only Mexican thing the book admits is Quintana Roo, and by a route of its own: ecosystemic affinity with the islands and the historical ties of enslaved Maya sold to Cuban plantations (p. 20). Neither the Gulf nor the Pacific enters, and the text does not pronounce on them.")
+N_TS_NOLA = N("No se pronuncia. Luisiana aparece una sola vez, en el argumento de que Francia no habría cedido esas tierras en 1803 sin la guerra de Saint-Domingue (p. 21): es causa histórica, no pertenencia. Entre los sitios diaspóricos nombra Miami, Nueva York, Liverpool y Londres, no Nueva Orleans.",
+              "No pronouncement. Louisiana appears once, in the argument that France would not have ceded those lands in 1803 but for the Saint-Domingue war (p. 21): historical cause, not belonging. Among diasporic sites he names Miami, New York, Liverpool and London, not New Orleans.")
+N_TS_BR = N("Brasil nunca es caribeño en este libro, pero tampoco se lo excluye de forma expresa: aparece como comparador externo, junto al Tíbet y Malasia, para hablar de pensamiento producido fuera de Occidente (pp. 4 y 6). Sin pronunciamiento, no hay estado.",
+            "Brazil is never Caribbean in this book, yet it is not expressly excluded either: it appears as an outside comparator, alongside Tibet and Malaysia, when discussing thought produced outside the West (pp. 4 and 6). With no pronouncement, there is no state.")
+N_TS_DIASPORA = N("Espacio diaspórico, el tercero de los tres. Nueva York alberga tantos millones de jamaiquinos, dominicanos, haitianos y puertorriqueños que cabe pensarla como la mayor de todas las ciudades caribeñas; Miami es, más que metafóricamente, una ciudad cubana (p. 20).",
+                  "Diasporic space, the third of the three. New York houses so many millions of Jamaicans, Dominicans, Haitians and Puerto Ricans that it can be thought of as the largest of all Caribbean cities; Miami is, more than metaphorically, a Cuban city (p. 20).")
+N_TS_EUROPA = N("Espacio diaspórico en Europa: negros liverpulenses que rastrean diez generaciones en la ciudad, y el enclave antillano de Londres a mediados del siglo XX que Selvon pudo imaginar como un cosmos urbano aparte (p. 21).",
+                "Diasporic space in Europe: black Liverpudlians tracing ten generations in the city, and the mid-twentieth-century West Indian enclave in London that Selvon could imagine as a separate urban cosmos (p. 21).")
+N_TS_YUCATAN = N("Quintana Roo entra por una vía propia y no por la lista geográfica: la afinidad ecosistémica de la península con las islas y los lazos históricos de los mayas esclavizados vendidos a las plantaciones cubanas. El estado de Quintana Roo premia el «Pensamiento Caribeño» (p. 20). Queda en el borde porque México no está en el criterio.",
+                 "Quintana Roo enters by a route of its own rather than through the geographic list: the peninsula's ecosystemic affinity with the islands and the historical ties of enslaved Maya sold to Cuban plantations. The state of Quintana Roo awards prizes for “Caribbean Thought” (p. 20). It sits on the edge because Mexico is not in the criterion.")
+N_TS_GUATEMALA = N("Ausente de la lista geográfica de la p. 18, pese a tener costa atlántica. El libro solo la nombra por la vitalidad del maya y del garífuna (p. 24): presencia lingüística sin pertenencia declarada.",
+                   "Absent from the geographic list on p. 18, despite having an Atlantic coast. The book names it only for the vitality of Maya and Black Carib (p. 24): linguistic presence without declared belonging.")
+N_TS_SALVADOR = N("Por el criterio: la p. 18 enumera Estados centroamericanos y suramericanos por sus «áreas costeras atlánticas». El Salvador no tiene costa atlántica y no está en la lista.",
+                  "By the criterion: p. 18 enumerates Central and South American states by their “Atlantic coastal areas”. El Salvador has no Atlantic coast and is not on the list.")
+N_TS_STTHOMAS = N("Nombrada en la p. 24, entre las Indias Occidentales danesas —Saint Thomas, Saint John y Saint Croix— hasta el traspaso a Estados Unidos en diciembre de 1916.",
+                  "Named on p. 24, among the Danish West Indies —St. Thomas, St. John and St. Croix— until the transfer to the United States in December 1916.")
+
+DEF.append({
+ "id":"torressaillant", "anio":2006, "autor":"Silvio Torres-Saillant", "obra":"An Intellectual History of the Caribbean",
+ "apellido":N("Los tres espacios","The three spaces"),
+ "forma":"tres_espacios", "lectura":"ejemplar",
+ "familia":{"clave":"grancaribe","fuente":"Torres-Saillant 2006, p. 18"},
+ "criterio":N("Contra el aura de misterio, afirma que el Caribe sí tiene una geografía determinada, y la enumera: el archipiélago antillano con las Bermudas, los territorios continentales de Belice, Guyana, la Guayana y Surinam, y las áreas costeras atlánticas de Honduras, Nicaragua, Panamá, Colombia y Venezuela. Pero la geografía literal no le basta. A ella suma los puentes humanos de la diáspora, y cierra con una fórmula de tres espacios primarios —el insular, el continental y el diaspórico— de los que hoy ninguno es prescindible. Es la única definición de la capa en que un espacio fuera de la cuenca no es una fuga ni una ruta, sino una de las tres partes constitutivas.",
+              "Against the aura of mystery, he holds that the Caribbean does have a determinate geography, and enumerates it: the Antillean archipelago including Bermuda, the continental territories of Belize, Guyana, Guiana and Suriname, and the Atlantic coastal areas of Honduras, Nicaragua, Panama, Colombia and Venezuela. Yet literal geography is not enough for him. To it he adds the human bridges of the diaspora, closing with a formula of three primary spaces —the insular, the continental and the diasporic— none of which can be dispensed with today. It is the layer's only definition in which a space outside the basin is neither a leak nor a route, but one of three constitutive parts."),
+ "citas":[
+   {"txt":"Geographically speaking, the term encompasses the islands of the Antillean archipelago, including the Bermudas, as Lara would posit—the continental territories of Belize, Guyana, Guiana, and Suriname, and the Atlantic coastal areas of such Central and South American nations as Honduras, Nicaragua, Panama, Colombia, and Venezuela.","ref":"TS2006","pag":"18"},
+   {"txt":"To fathom the Caribbean, then, one has to train one's eyes on three primary spaces: the insular, the continental, and the diasporic, and none today can be dispensed with in a serious attempt to understand holistically the cluster of societies involved.","ref":"TS2006","pag":"21"},
+   {"txt":"But the Caribbean, which in this book we also refer to interchangeably as Antilles and West Indies, does have a determinate geography.","ref":"TS2006","pag":"12"},
+   {"txt":"a vast and growing diaspora has widened the cultural geography of the Caribbean to encompass key sites in Europe, the United States, and Latin America.","ref":"TS2006","pag":"21"},
+   {"txt":"the city of New York houses so many millions of Jamaicans, Dominicans, Haitians, and Puerto Ricans, for instance, that one can conceivably think of it as the largest of all Caribbean cities.","ref":"TS2006","pag":"20"},
+ ],
+ "lugares": junta(
+   todos([k for k in ISL if k != "stjohn"],"dentro",N_TS_ARCH),
+   {"stjohn":{"e":"dentro","n":N_TS_STTHOMAS}},
+   todos(GUY+BEL,"dentro",N_TS_CONT),
+   todos(["honduras","panama","bluefields"],"dentro",N_TS_COSTA),
+   {"costarica":{"e":"dentro","n":N_TS_COSTARICA}},
+   todos(["cartagena","barranquilla"],"dentro",N_TS_COL_NOMBRADA),
+   {"guajira":{"e":"dentro","n":N_TS_GUAJIRA}},
+   {"santamarta":{"e":"dentro","n":N_TS_HEREDA_COSTA}},
+   {"barlovento":{"e":"dentro","n":N_TS_BARLOVENTO}},
+   {"palenque":{"e":"margen","n":N_TS_PALENQUE}},
+   {"sanandres":{"e":"margen","n":N_TS_SANANDRES}},
+   todos(MEX,None,N_TS_MEX),
+   {"nola":{"n":N_TS_NOLA}},
+   todos(BR,None,N_TS_BR)),
+ "extras":{
+   "bermudas":{"e":"dentro","n":N("Nombradas letra por letra en el criterio, apoyándose en Lara (p. 18). Ninguna otra definición de la capa las alcanza.",
+                                  "Named word for word in the criterion, on Lara's authority (p. 18). No other definition in the layer reaches them.")},
+   "bahamas":{"e":"dentro","n":N_TS_ARCH},
+   "caiman":{"e":"dentro","n":N_TS_ARCH},
+   "stlucia":{"e":"dentro","n":N_TS_ARCH},
+   "carriacou":{"e":"dentro","n":N_TS_ARCH},
+   "stthomas":{"e":"dentro","n":N_TS_STTHOMAS},
+   "venezuela":{"e":"dentro","n":N_TS_COSTA},
+   "miami":{"e":"dentro","n":N_TS_DIASPORA},
+   "nuevayork":{"e":"dentro","n":N_TS_DIASPORA},
+   "londres":{"e":"dentro","n":N_TS_EUROPA},
+   "liverpool":{"e":"dentro","n":N_TS_EUROPA},
+   "yucatan":{"e":"margen","n":N_TS_YUCATAN},
+   "guatemala":{"e":"margen","n":N_TS_GUATEMALA},
+   "elsalvador":{"e":"fuera","n":N_TS_SALVADOR},
+ },
+ "corpus":["torressaillanthistory"],
+ "aviso":N("La familia queda en Gran Caribe por la enumeración de la p. 18, pero con desborde declarado: el espacio diaspórico no cabe en ninguna de las cuatro familias de Gaztambide, que no contemplan sitios fuera de la cuenca.",
+           "The family is set to Greater Caribbean by the p. 18 enumeration, but with a declared overflow: the diasporic space fits none of Gaztambide's four families, which do not contemplate sites outside the basin."),
+})
+
+# Los tres espacios de la p. 21. El espacio no es un estado: dice por cuál de las tres
+# vías entra el lugar, y la forma «tres_espacios» lo dibuja con densidad decreciente.
+_TS = DEF[-1]
+_INS = set(ISL) | {"sanandres"}
+_DIAS = {"miami","nuevayork","londres","liverpool"}
+_EXTRA_INS = {"bermudas","bahamas","caiman","stlucia","carriacou","stthomas"}
+for _k,_v in _TS["lugares"].items():
+    if _v.get("e"): _v["esp"] = "insular" if _k in _INS else "continental"
+for _k,_v in _TS["extras"].items():
+    _v["esp"] = "diasporico" if _k in _DIAS else ("insular" if _k in _EXTRA_INS else "continental")
+
 # ---------------------------------------------------------------- disputas entre definiciones
 DISPUTAS = [
  {"a":"mintz","b":"smith","tipo":"apropiacion",
@@ -771,6 +882,9 @@ DISPUTAS += [
  {"a":"girvan-insular","b":"atlas","tipo":"disonancia",
   "es":"El Caribe insular deja fuera la costa colombiana por enumeración cerrada (p. 4); este atlas se ancla en ella. La frontera de Girvan corre justo por donde el atlas pone su centro.",
   "en":"The insular Caribbean leaves the Colombian coast out by closed enumeration (p. 4); this atlas is anchored there. Girvan's boundary runs exactly where the atlas places its centre.","ref":"GIR2000 · p. 4"},
+ {"a":"torressaillant","b":"benitez","tipo":"disonancia",
+  "es":"Torres-Saillant pone La isla que se repite entre las intervenciones clave que miran la historia cultural de la región dependiendo, para sus datos, del bloque lingüístico propio del autor, mientras formulan afirmaciones holísticas (p. 26). Es objeción de método, no de tesis: en la misma frase las reconoce como intervenciones clave. La crítica alcanza también a El discurso antillano, pero la capa dibuja a Glissant por Poética de la Relación: por el criterio de cita exacta, esa disputa no se traslada.",
+  "en":"Torres-Saillant places The Repeating Island among the key interventions that read the region's cultural history while depending, for their data, on each author's own linguistic bloc, even as they make holistic claims (p. 26). The objection is methodological, not substantive: in the same sentence he grants they are key interventions. The criticism also reaches Caribbean Discourse, but the layer draws Glissant through Poetics of Relation: by the exact-citation rule, that dispute does not carry over.","ref":"TS2006 · p. 26"},
 ]
 
 FAMILIAS = {

@@ -291,3 +291,15 @@ main:has(#panelCaribes:not([hidden])){--zc-x:-372px}
 @media (max-width:780px), (max-height:520px){
   main:has(#panelCaribes:not([hidden])){--zc-x:0px}
 }
+
+/* ---- forma «tres espacios» (Torres-Saillant 2006) ----------------------------
+   El espacio no cambia el estado: cambia la densidad con que se dibuja. El halo
+   diaspórico va punteado porque el texto lo declara parte y no apéndice, pero
+   fuera de la cuenca. Los tonos salen de las variables ya definidas en body. */
+.qc-luz.qc-esp-insular{ fill:var(--qc-dentro); }
+.qc-luz.qc-esp-continental{ fill:var(--qc-cb); }
+.qc-luz.qc-esp-diasporico{ fill:var(--qc-ca); }
+.qc-anillo.qc-esp-dias{ fill:none; stroke:var(--qc-ca); stroke-width:1; stroke-dasharray:2.5 2.5; opacity:.8; }
+.qc-lsw-luz.qc-lsw-cont{ fill:var(--qc-cb); }
+.qc-lsw-luz.qc-lsw-dias{ fill:var(--qc-ca); }
+.qc-lsw-anillo.qc-lsw-dias{ stroke:var(--qc-ca); stroke-dasharray:2 2; }

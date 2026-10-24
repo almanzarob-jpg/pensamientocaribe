@@ -55,6 +55,8 @@
       relaciones:'Frontera abierta: la región se compara, no se delimita.',
       relacion:'Relación: un mar que difracta. Las tierras se aproximan sin fundirse, y cada lugar conserva su opacidad.',
       trama:'La unidad es el fenómeno: entra todo lo que una corriente atraviesa.',
+      tresEspacios:'Tres espacios primarios: el insular, el continental y el diaspórico. Ninguno es prescindible, y por eso la diáspora se dibuja dentro y no como fuga.',
+      l_esp_insular:'Espacio insular', l_esp_continental:'Espacio continental', l_esp_diasporico:'Espacio diaspórico',
       rutas:'Territorio acuoso: el mar es lugar, y las líneas son conexiones marineras, no fronteras.', rutasLeyenda:'Conexiones desde la costa neogranadina',
       contrasteLeyenda:'Contraste',
       leyenda:'Leyenda', leyendaAria:'Leyenda de la capa ¿Qué Caribe?', leyendaMostrar:'Mostrar la leyenda', leyendaOcultar:'Ocultar la leyenda',
@@ -93,6 +95,8 @@
       relaciones:'Open frontier: the region is compared, not bounded.',
       relacion:'Relation: a sea that diffracts. Lands draw near without fusing, and each place keeps its opacity.',
       trama:'The unit is the phenomenon: whatever a current crosses comes in.',
+      tresEspacios:'Three primary spaces: insular, continental and diasporic. None is dispensable, which is why the diaspora is drawn inside rather than as a leak.',
+      l_esp_insular:'Insular space', l_esp_continental:'Continental space', l_esp_diasporico:'Diasporic space',
       rutas:'Aqueous territory: the sea is a place, and the lines are sailors\' connections, not borders.', rutasLeyenda:'Connections from the New Granada coast',
       contrasteLeyenda:'Contrast',
       leyenda:'Legend', leyendaAria:'Legend of the Which Caribbean? layer', leyendaMostrar:'Show the legend', leyendaOcultar:'Hide the legend',
@@ -169,7 +173,12 @@
     'c-a':   `<circle cx="12" cy="8" r="6.2" class="qc-lsw-c-a" filter="url(#qcLswBlur)"/>${NODO}`,
     'c-b':   `<circle cx="12" cy="8" r="6.2" class="qc-lsw-c-b" filter="url(#qcLswBlur)"/>${NODO}`,
     'c-ab':  `<circle cx="12" cy="8" r="6.2" class="qc-lsw-c-ab" filter="url(#qcLswBlur)"/>${NODO}`,
-    'c-ninguna':`<circle cx="12" cy="8" r="2" class="qc-lsw-nodo qc-lsw-apagado"/>`
+    'c-ninguna':`<circle cx="12" cy="8" r="2" class="qc-lsw-nodo qc-lsw-apagado"/>`,
+    /* los tres espacios: la misma bruma con densidad decreciente, y el diaspórico
+       además punteado, porque está fuera de la cuenca sin estar fuera del Caribe */
+    'esp-insular':   `<circle cx="12" cy="8" r="6.2" class="qc-lsw-luz" filter="url(#qcLswBlur)"/>${NODO}`,
+    'esp-continental':`<circle cx="12" cy="8" r="5.2" class="qc-lsw-luz qc-lsw-cont" filter="url(#qcLswBlur)"/>${NODO}`,
+    'esp-diasporico':`<circle cx="12" cy="8" r="4.6" class="qc-lsw-luz qc-lsw-dias" filter="url(#qcLswBlur)"/><circle cx="12" cy="8" r="5.8" class="qc-lsw-anillo qc-lsw-dias"/>${NODO}`
   };
   const muestra = (tipo, extraClase='') => `<svg class="qc-lsw ${extraClase}" viewBox="0 0 24 16" width="28" height="19" aria-hidden="true" focusable="false">${MUESTRAS[tipo]||''}</svg>`;
 
@@ -339,6 +348,7 @@
       if(d.forma==='relacion') h+=`<p class="qc-forma">${esc(qt('relacion'))}</p>`;
       if(d.forma==='trama') h+=`<p class="qc-forma">${esc(qt('trama'))}</p>`;
       if(d.forma==='rutas') h+=`<p class="qc-forma">${esc(qt('rutas'))}</p>`;
+      if(d.forma==='tres_espacios') h+=`<p class="qc-forma">${esc(qt('tresEspacios'))}</p>`;
       ['dentro','margen','disputa','fuera','nada'].forEach(e=>{
         const ks=Object.keys(L).filter(k=>(estadoDe(d,k)||'nada')===e);
         if(!ks.length) return;
@@ -431,6 +441,12 @@
       if(c.nada+c.margen+c.fuera) it.push({m:'nada', t:qt('e_nada'), n:c.nada+c.margen+c.fuera});
     } else {
       ESTADOS.concat('nada').forEach(e=>{ if(c[e]) it.push({m:e, t:qt('e_'+e), n:c[e], d:qt('d_'+e)}); });
+    }
+    if(d.forma==='tres_espacios'){
+      const ce={insular:0, continental:0, diasporico:0};
+      Object.values(d.lugares||{}).forEach(v=>{ if(v.e && v.esp) ce[v.esp]++; });
+      Object.values(d.extras||{}).forEach(v=>{ if(v.e && v.esp) ce[v.esp]++; });
+      ['insular','continental','diasporico'].forEach(k=>{ if(ce[k]) it.push({m:'esp-'+k, t:qt('l_esp_'+k), n:ce[k]}); });
     }
     if(d.trazos) it.push({m:d.forma==='rutas'?'ruta':'trazo', t:qt(d.forma==='rutas'?'l_ruta':'l_trazo'), n:d.trazos.length});
     if(d.canon) it.push({m:'canon', t:qt('l_canon'), n:d.canon.length});
@@ -569,6 +585,13 @@
         }
         if(forma==='trama') return;
         const rel = forma==='relaciones' || forma==='relacion';
+        if(forma==='tres_espacios' && (e==='dentro'||e==='margen')){
+          const esp=((d.lugares||{})[k]||{}).esp||'continental';
+          const R={insular:16, continental:14, diasporico:11}[esp], OP={insular:.30, continental:.28, diasporico:.24}[esp];
+          brumaG.appendChild(mk('circle',{cx:p.x, cy:p.y, r:p.r+(e==='margen'?R-4:R), class:'qc-luz qc-esp-'+esp, opacity:e==='margen'?OP*.4:OP}));
+          if(e==='margen') anillos.margen.push(p);
+          return;
+        }
         if(e==='dentro') brumaG.appendChild(mk('circle',{cx:p.x, cy:p.y, r:p.r+(rel?6:16), class:'qc-luz', opacity:rel?.16:.30}));
         else if(e==='margen'){ brumaG.appendChild(mk('circle',{cx:p.x, cy:p.y, r:p.r+12, class:'qc-luz qc-luz-margen', opacity:.11})); anillos.margen.push(p); }
         else if(e==='disputa'){ brumaG.appendChild(mk('circle',{cx:p.x, cy:p.y, r:p.r+12, class:'qc-luz qc-luz-roja', opacity:.18})); anillos.disputa.push(p); }
@@ -620,7 +643,13 @@
     Object.entries(extras).forEach(([k,v])=>{
       const e=C.extras[k]; if(!e) return;
       const x=px(e[1]), y=py(e[0]);
-      if(v.e==='dentro' && d.forma!=='relaciones' && d.forma!=='relacion' && d.forma!=='fragmentos') brumaG.appendChild(mk('circle',{cx:x, cy:y, r:14, class:'qc-luz', opacity:.26}));
+      if(d.forma==='tres_espacios' && v.e){
+        const esp=v.esp||'continental';
+        const R={insular:14, continental:13, diasporico:11}[esp], OP={insular:.26, continental:.24, diasporico:.22}[esp];
+        if(v.e==='dentro'||v.e==='margen') brumaG.appendChild(mk('circle',{cx:x, cy:y, r:R, class:'qc-luz qc-esp-'+esp, opacity:v.e==='margen'?OP*.4:OP}));
+        if(esp==='diasporico'&&v.e==='dentro') marcasG.appendChild(mk('circle',{cx:x, cy:y, r:R+3, class:'qc-anillo qc-esp-dias'}));
+      }
+      else       if(v.e==='dentro' && d.forma!=='relaciones' && d.forma!=='relacion' && d.forma!=='fragmentos') brumaG.appendChild(mk('circle',{cx:x, cy:y, r:14, class:'qc-luz', opacity:.26}));
       const ev=v.e||'nada';  /* un extra que el texto nombra sin darle estado se dibuja apagado, no negro */
       marcasG.appendChild(mk('path',{d:`M ${x},${y-4.2} L ${x+4.2},${y} L ${x},${y+4.2} L ${x-4.2},${y} Z`, class:'qc-extra qc-t-'+ev}));
       const t=mk('text',{x:x+8, y:y+3.4, class:'qc-rotulo qc-rotulo-extra qc-t-'+ev}); t.textContent=(ev==='fuera'?'× ':'')+(LANG==='en'?e[3]:e[2]); capaTxt.appendChild(t);

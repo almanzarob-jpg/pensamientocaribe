@@ -3,9 +3,9 @@
     "titulo": "Con el agua de por medio",
     "subtitulo": "Atlas para una antropología archipiélica",
     "responsable": "Grupo de Investigación Pensamiento Caribe",
-    "version": "1.43.0",
-    "fecha": "2026-10-17",
-    "nota_version": "Expediente E14: sexta tanda. Seis obras con texto recién llegado reciben corriente leída: Ferdinand (Une écologie décoloniale), Araujo, Castro-Gómez, Sheller (Citizenship from Below), Henriques (Sonic Bodies) y Hurbon (Culture et dictature en Haïti).",
+    "version": "1.43.1",
+    "fecha": "2026-10-24",
+    "nota_version": "Revisión S27-TS-2026-10-24: se enciende la fricción en las dos relaciones de Torres-Saillant con Benítez Rojo y con el Discours antillais, clasificadas en S24 como resonancia sin fricción pese a apoyarse en el pasaje de la p. 26, que es una objeción metodológica nominal. Se conservan tipo_previo y fuente_previa. No cambian las cifras de obras ni de relaciones.",
     "registro_interno": {
       "proposito": "Protocolo revisado de resonancia y disonancia (22-09-2026). Las categorías públicas del atlas siguen siendo resonancia y disonancia; este registro es interno y orienta la revisión editorial. El campo apoyo no crea categorías públicas ni cambia la interfaz.",
       "apoyo": {
@@ -30482,18 +30482,23 @@
       "tipo": "resonancia",
       "estado": "corroborada",
       "friccion": {
-        "hay": false
+        "hay": true,
+        "clase": "crítica explícita",
+        "argumento": "En la p. 26 Torres-Saillant pone La isla que se repite, junto al Discours antillais de Glissant, entre las intervenciones clave que miran la historia cultural de la región dependiendo, para sus datos, del bloque lingüístico propio del autor —aquí el hispanohablante— mientras formulan afirmaciones holísticas. La objeción es de método y no de tesis: en la misma frase las reconoce como intervenciones clave."
       },
-      "fuente": "Verificada en el texto. Torres-Saillant, 2006, PDF, hojas 41 y 102: «Antonio Benítez-Rojo's La isla que se repite (1989)» y su uso de la teoría del caos «in his celebrated book The Repeating Island».",
+      "fuente": "Verificada en el ejemplar. Silvio Torres-Saillant, An Intellectual History of the Caribbean, Palgrave Macmillan, 2006. Desfase pdf→impreso: hoja = impresa + 15. PDF hoja 41 (p. 26): el pasaje sobre los estudiosos que se conforman con un solo bloque lingüístico nombra «Antonio Benítez-Rojo's La isla que se repite (1989)». PDF hoja 102 (p. 87): uso de la teoría del caos en The Repeating Island. Revisada en S27-TS-2026-10-24: la clasificación anterior dejaba friccion.hay en falso y describía como resonancia sin fricción un pasaje que es una objeción metodológica nominal. El título citado coincide con el catalogado.",
       "id_lote": "S24-R26",
       "lote_incorporacion": "S24-2026-09-30",
       "apoyo": "documentada",
       "aspecto": "La isla que se repite como interpretación de conjunto del Caribe, que Torres-Saillant discute por su dependencia de autores europeos.",
-      "limite": "Torres-Saillant reprocha a Benítez Rojo apoyarse en teoría europea; es una lectura crítica dentro de una resonancia.",
+      "limite": "La objeción recae sobre la base documental, no sobre la interpretación del Caribe como meta-archipiélago.",
       "revision_interna": {
         "responsable": "Preparación asistida del lote S24; clasificación pendiente de adjudicación académica",
         "fecha": "2026-09-30"
-      }
+      },
+      "tipo_previo": "resonancia",
+      "fuente_previa": "Verificada en el texto. Torres-Saillant, 2006, PDF, hojas 41 y 102: «Antonio Benítez-Rojo's La isla que se repite (1989)» y su uso de la teoría del caos «in his celebrated book The Repeating Island».",
+      "lote_revision": "S27-TS-2026-10-24"
     },
     {
       "a": "torressaillanthistory",
@@ -30501,19 +30506,23 @@
       "tipo": "resonancia",
       "estado": "corroborada",
       "friccion": {
-        "hay": false
+        "hay": true,
+        "clase": "crítica explícita",
+        "argumento": "En la p. 26 Torres-Saillant pone el Discours antillais, junto a La isla que se repite, entre las intervenciones clave que dependen, para sus datos, del conocimiento que cada autor tiene de su propio bloque lingüístico —aquí el francófono— mientras formulan afirmaciones holísticas sobre la región. Reconoce el peso de la obra en el mismo movimiento en que le objeta el alcance."
       },
-      "fuente": "Verificada en el texto. Torres-Saillant, 2006, PDF, hojas 41 y 151: «Édouard Glissant's Discours antillais (1981)».",
+      "fuente": "Verificada en el ejemplar. Silvio Torres-Saillant, An Intellectual History of the Caribbean, Palgrave Macmillan, 2006. Desfase pdf→impreso: hoja = impresa + 15. PDF hoja 41 (p. 26): «Edouard Glissant's Discours antillais (1981)» aparece entre los ejemplos de lectura regional atada a un solo bloque lingüístico. PDF hoja 151 (p. 136). Revisada en S27-TS-2026-10-24: la clasificación anterior registraba «Límite: ninguno» para un pasaje que es una objeción metodológica nominal.",
       "id_lote": "S24-R27",
       "lote_incorporacion": "S24-2026-09-30",
       "apoyo": "documentada",
       "aspecto": "El discurso antillano como otra de las lecturas de conjunto que el libro sitúa en la historia intelectual.",
-      "limite": "Ninguno.",
+      "limite": "La objeción es de base documental. No alcanza a Poétique de la Relation (1990), que es la obra de Glissant dibujada en la capa «¿Qué Caribe?»: por el criterio de cita exacta, esta fricción no se traslada a esa definición.",
       "revision_interna": {
         "responsable": "Preparación asistida del lote S24; clasificación pendiente de adjudicación académica",
         "fecha": "2026-09-30"
       },
-      "lote_revision": "S26-DIV-2026-10-01"
+      "lote_revision": "S27-TS-2026-10-24",
+      "tipo_previo": "resonancia",
+      "fuente_previa": "Verificada en el texto. Torres-Saillant, 2006, PDF, hojas 41 y 151: «Édouard Glissant's Discours antillais (1981)»."
     },
     {
       "a": "torressaillanthistory",
