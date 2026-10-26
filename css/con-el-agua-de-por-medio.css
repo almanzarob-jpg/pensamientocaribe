@@ -125,6 +125,17 @@
      eje del periodo estudiado, estas entradas se atenúan en su sitio de
      siempre (el eje de publicación) — visibles, no ocultas, pero claramente
      fuera de foco mientras el modo activo es ese. */
+  /* Corona del dictamen. El mapa dibujaba 415 obras como corriente firme cuando solo
+     186 tienen el dictamen cerrado: marca lo verificado, no lo pendiente, para no
+     convertir media retícula en advertencia. En reposo toma la tinta única de los
+     nodos, porque ahí el color es estado de foco y no decoración permanente. */
+  .dictamen{fill:none; stroke:var(--gold); stroke-width:1; opacity:.5;
+            transition:opacity var(--mov-medio) var(--curva-llegada)}
+  #stage.reposo .dictamen{stroke:var(--ink-line); opacity:.68}
+  .node:hover .dictamen, .node:focus-visible .dictamen{opacity:.95; stroke:var(--gold)}
+  #stage .node.apagado .dictamen{opacity:.14}
+  .clv-dic .ag-m circle.dsc{fill:var(--ink-line); stroke:none}
+  .clv-dic .ag-m circle.anl{fill:none; stroke:var(--gold); stroke-width:1.1; opacity:.8}
   .node.sindato circle.dot{opacity:.32}
   .node.sindato:hover circle.dot, .node.sindato:focus-visible circle.dot{opacity:.85}
   .edge{fill:none; stroke:var(--orange); stroke-opacity:.4; stroke-width:1.3; stroke-linecap:round; stroke-dasharray:1.5 6; transition:stroke-opacity var(--mov-medio) var(--curva-llegada)}

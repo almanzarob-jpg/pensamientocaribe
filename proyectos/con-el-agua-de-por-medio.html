@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/zoom-caribe.css?v=20261003">
-<link rel="stylesheet" href="../css/con-el-agua-de-por-medio.css?v=20261026">
+<link rel="stylesheet" href="../css/con-el-agua-de-por-medio.css?v=20261026d">
 <link rel="stylesheet" href="../css/capa-caribes.css?v=20261024">
 <link rel="stylesheet" href="../css/deriva-caribes.css?v=20261013d">
 <link rel="stylesheet" href="../css/capa-antirracismo.css?v=20261020">
@@ -1307,7 +1307,59 @@ function accessibleNameFor(n){
   const base = n.t + ' — ' + n.a + (n.y ? ', ' + n.y : '');
   /* Quien navega por teclado o con lector de pantalla tiene que saber que ese disco
      no está donde le corresponde, sino acotado al borde. */
-  return base + (FUGAS[n.l] ? (FUGA_I18N[LANG]||FUGA_I18N.es) : '');
+  const dic = estado20(n)==='confirmada' ? '' : (DIC_I18N[LANG]||DIC_I18N.es).aria;
+  return base + (FUGAS[n.l] ? (FUGA_I18N[LANG]||FUGA_I18N.es) : '') + dic;
+}
+
+/* ══════════ Corona del dictamen · 26-oct-2026 ══════════
+   Diccionario propio: no se toca el I18N del atlas. El mapa venía dibujando como
+   corriente firme 415 de las 421 obras —el campo estado_recorrido— mientras la tabla
+   accesible, que lee el dictamen por estado20(), solo confirma 186. La misma obra se
+   presentaba a la vez como resuelta y como pendiente en dos vistas de la misma página,
+   y en ninguna se decía que los dos campos miden cosas distintas. Esto no cambia un
+   dato: declara lo que ya hay. */
+const DIC_I18N={
+  es:{ tit:"El dictamen", cerr:"Dictamen cerrado", cerrV:"corona", abi:"Dictamen abierto", abiV:"sin corona",
+       aria:" · dictamen sin cerrar",
+       pie:" La corona de las obras en la vista Corriente marca las que tienen el dictamen cerrado; que una obra "+
+           "lleve corriente asignada no quiere decir que su dictamen lo esté." },
+  en:{ tit:"The assessment", cerr:"Closed assessment", cerrV:"crowned", abi:"Open assessment", abiV:"uncrowned",
+       aria:" · assessment not closed",
+       pie:" The crown on works in the Current view marks those whose assessment is closed; a work having an "+
+           "assigned current does not mean its assessment is." }
+};
+const dicT = k => (DIC_I18N[LANG]||DIC_I18N.es)[k];
+function pintarDictamen(){
+  /* leyenda propia, montada junto a «El agua» y no dentro de ella: el agua habla de
+     relaciones y esto habla de obras */
+  const agua=document.getElementById('clvAgua');
+  if(agua){
+    let caja=document.getElementById('clvDic');
+    if(!caja){
+      caja=document.createElement('div');
+      caja.id='clvDic'; caja.className='clv-agua clv-dic';
+      caja.setAttribute('role','group'); caja.setAttribute('aria-labelledby','clvDicTit');
+      /* Los marcadores reproducen lo que se ve en el mapa: disco con anillo frente a
+         disco pelado. Dos anillos de distinta opacidad no distinguían nada. */
+      caja.innerHTML='<div class="clv-t" id="clvDicTit"></div>'+
+        '<div class="ag-i"><svg class="ag-m" viewBox="0 0 40 8" aria-hidden="true">'+
+          '<circle class="dsc" cx="20" cy="4" r="1.7"/><circle class="anl" cx="20" cy="4" r="3.3"/></svg>'+
+        '<span><b data-dic="cerr"></b> <i data-dic="cerrV"></i></span></div>'+
+        '<div class="ag-i"><svg class="ag-m" viewBox="0 0 40 8" aria-hidden="true">'+
+          '<circle class="dsc" cx="20" cy="4" r="1.7"/></svg>'+
+        '<span><b data-dic="abi"></b> <i data-dic="abiV"></i></span></div>';
+      agua.parentNode.insertBefore(caja, agua.nextSibling);
+    }
+    caja.querySelector('#clvDicTit').textContent=dicT('tit');
+    caja.querySelectorAll('[data-dic]').forEach(e=>{ e.textContent=dicT(e.getAttribute('data-dic')); });
+  }
+  /* y la misma advertencia en el pie de la tabla accesible, que es la otra vista */
+  const tn=document.querySelector('.tnote');
+  if(tn){
+    let m=tn.querySelector('.tnote-dic');
+    if(!m){ m=document.createElement('span'); m.className='tnote-dic'; tn.appendChild(m); }
+    m.textContent=dicT('pie');
+  }
 }
 function setRoving(node, {mover=false}={}){
   if(!node) return;
@@ -1385,10 +1437,13 @@ function render(){
       const tieneP = CRONO.TP && CRONO.TP[n.id] && CRONO.TP[n.id].fin!=null;
       if(!tieneP) g.classList.add('sindato');
     }
+    /* Corona del dictamen: se dibuja cuando estado20 dice «confirmada», es decir
+       cuando el dictamen de esa obra está cerrado. No lee el contenido, solo el campo. */
     const halo=el("circle",{class:"halo", r:r+6, "stroke-width":1.5});
+    const corona = estado20(n)==='confirmada' ? el("circle",{class:"dictamen", r:(r+4).toFixed(1)}) : null;
     const hit=el("circle",{r:16, fill:"transparent"});
     const c=el("circle",{class:"dot", r:r, fill:n.k==="obra"?col(n.f[0]):"var(--bg-deep)", stroke:col(n.f[0]), "stroke-width":n.k==="obra"?1.2:2.6}); c._r=r;
-    g.appendChild(halo); g.appendChild(hit); g.appendChild(c); g.style.cursor="pointer";
+    g.appendChild(halo); g.appendChild(hit); if(corona) g.appendChild(corona); g.appendChild(c); g.style.cursor="pointer";
     g.addEventListener('mouseenter',()=>{ hoverNode=n; updateTip(); });
     g.addEventListener('mouseleave',()=>{ if(hoverNode===n) hoverNode=null; updateTip(); });
     g.addEventListener('focus',()=>{ hoverNode=n; updateTip(); });
@@ -3171,7 +3226,15 @@ function pintarCredito(){
   const st=document.getElementById('vistaEstado'); if(st) st.textContent='';
 }
 const _applyLangC=applyLang;
-applyLang=function(){ _applyLangC(); pintarCredito(); if(typeof buildRecSeg==='function') buildRecSeg(); /* Tanda 1: los recorridos también cambian de idioma */ };
+applyLang=function(){ _applyLangC(); pintarCredito(); if(typeof buildRecSeg==='function') buildRecSeg(); /* Tanda 1: los recorridos también cambian de idioma */ pintarDictamen(); };
+/* La leyenda del dictamen se monta una vez y se repinta con cada render, porque el pie
+   de la tabla accesible se reescribe entero al cambiar de vista. */
+const _renderD=render;
+render=function(){ _renderD(); pintarDictamen(); };
+/* La vista Tabla no pasa por render(): reescribe su propio pie, así que hay que
+   engancharse también ahí o la advertencia solo saldría en el mapa. */
+const _renderTablaD=renderTable;
+renderTable=function(){ _renderTablaD(); pintarDictamen(); };
 const _renderC=render;
 render=function(){
   _renderC();
