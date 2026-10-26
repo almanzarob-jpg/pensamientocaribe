@@ -80,6 +80,15 @@ for (const [clave, re] of Object.entries(LENGUAS)) {
   V[clave] = O.filter((o) => re.test(desc(o.tr))).length;
 }
 V.sinLengua = O.filter((o) => !Object.values(LENGUAS).some((re) => re.test(desc(o.tr)))).length;
+// Catorce obras declaran dos lenguas fuera del paréntesis («francófono/anglófono»,
+// «anglófono / danés») y entran en dos de las seis cifras. Sin declararlo, el reparto
+// publicado se lee como una partición del corpus y suma más obras de las que hay.
+// Se cuentan los conteos de más, no las obras: si una obra llegara a declarar tres
+// lenguas aportaría dos repeticiones, y la identidad del cruce seguiría cerrando.
+const lenguasDe = (o) => Object.values(LENGUAS).filter((re) => re.test(desc(o.tr))).length;
+V.conLengua = O.filter((o) => lenguasDe(o) > 0).length;
+V.lenguasRepetidas = O.reduce((n, o) => n + Math.max(0, lenguasDe(o) - 1), 0);
+V.sumaLenguas = V.conLengua + V.lenguasRepetidas;
 
 // --------------------------------------------------------------- afirmaciones
 // Cada regla: archivo, patrón con un grupo capturado, y el valor que debe tener.
@@ -152,6 +161,10 @@ const reglas = [
   ["proyectos/marca-de-marea.html", /hispanas, (\d+) francófonas/, "francofonas"],
   ["proyectos/marca-de-marea.html", /francófonas, (\d+) neerlandesas/, "neerlandesas"],
   ["proyectos/marca-de-marea.html", /neerlandesas, (\d+) danesa/, "danesas"],
+  ["proyectos/marca-de-marea.html", /danesas?, (\d+) lus[oó]fonas?/, "lusofonas"],
+  ["proyectos/marca-de-marea.html", /seis cifras suman (\d+)/, "sumaLenguas"],
+  ["proyectos/marca-de-marea.html", /incluyen (\d+) conteos repetidos/, "lenguasRepetidas"],
+  ["proyectos/marca-de-marea.html", /lengua declarada son (\d+)/, "conLengua"],
   ["proyectos/marca-de-marea.html", /(\d+) entradas frente a (?:\d+) obras de investigación/, "manifestaciones"],
   ["proyectos/marca-de-marea.html", /entradas frente a (\d+) obras de investigación/, "obras"],
   ["proyectos/reflujo-guia.html", /entre (\d+) obras/, "entradas"],
@@ -238,6 +251,7 @@ if (process.argv.includes("--corregir")) {
   for (const archivo of tocados) fs.writeFileSync(path.join(raiz, archivo), cache.get(archivo));
 }
 
+const publicado = {};
 for (const [archivo, patron, clave] of reglas) {
   let texto;
   try { texto = leer(archivo); } catch { errores.push(`[FALTA] ${archivo} no existe.`); continue; }
@@ -252,11 +266,43 @@ for (const [archivo, patron, clave] of reglas) {
     if (hallado !== esperado) errores.push(`[DESFASE] ${archivo}: dice ${hallado} donde el corpus dice ${esperado} (${clave}).`);
     else comprobadas.push(`${archivo} · ${clave} = ${hallado}`);
   });
+  if (!publicado[archivo]) publicado[archivo] = {};
+  publicado[archivo][clave] = Number(encontrados[0]);
+}
+
+/* ─────────── comprobación cruzada del reparto de lenguas ───────────
+   Las reglas de arriba comparan cada cifra con el corpus una por una, de modo que la
+   página puede estar al día cifra a cifra y afirmar algo falso en conjunto: hasta el
+   26-oct-2026 presentaba las seis lenguas y las no declaradas como si fueran una
+   partición del corpus, y sumaban 435 sobre 421 obras. Esto cruza las cifras
+   publicadas entre sí, no contra el corpus, y por eso puede fallar: si alguien corrige
+   un número a mano, o se añade una lengua al cómputo sin darle su cifra en la página,
+   la identidad deja de cerrar. */
+{
+  const m = publicado["proyectos/marca-de-marea.html"] || {};
+  const seis = ["anglofonas", "hispanas", "francofonas", "neerlandesas", "danesas", "lusofonas"];
+  const faltan = [...seis, "sumaLenguas", "lenguasRepetidas", "conLengua", "sinLengua", "entradas"]
+    .filter((k) => !Number.isFinite(m[k]));
+  if (faltan.length) {
+    errores.push(`[CRUCE_LENGUAS] no se pudieron leer en la página: ${faltan.join(", ")}.`);
+  } else {
+    const suma = seis.reduce((n, k) => n + m[k], 0);
+    const antes = errores.length;
+    if (suma !== m.sumaLenguas)
+      errores.push(`[CRUCE_LENGUAS] las seis cifras publicadas suman ${suma}, y la página declara ${m.sumaLenguas}.`);
+    if (m.sumaLenguas - m.lenguasRepetidas !== m.conLengua)
+      errores.push(`[CRUCE_LENGUAS] ${m.sumaLenguas} menos ${m.lenguasRepetidas} conteos repetidos da ${m.sumaLenguas - m.lenguasRepetidas}, y la página declara ${m.conLengua} obras con lengua.`);
+    if (m.conLengua + m.sinLengua !== m.entradas)
+      errores.push(`[CRUCE_LENGUAS] ${m.conLengua} con lengua más ${m.sinLengua} sin declarar da ${m.conLengua + m.sinLengua}, y la página declara ${m.entradas} obras.`);
+    if (errores.length === antes)
+      comprobadas.push(`cruce de lenguas: ${suma} − ${m.lenguasRepetidas} + ${m.sinLengua} = ${m.entradas}`);
+  }
 }
 
 // ------------------------------------------------------------------- informe
 console.log(`Corpus v${V.version}: ${V.entradas} entradas (${V.obras} obras, ${V.manifestaciones} manifestaciones), ` +
   `${V.relaciones} relaciones (${V.corroboradas} corroboradas, ${V.porCorroborar} por corroborar), ${V.lugares} lugares.`);
+console.log(`Lenguas: ${V.conLengua} obras con lengua declarada y ${V.sinLengua} sin declarar; las seis cifras suman ${V.sumaLenguas} porque incluyen ${V.lenguasRepetidas} conteos repetidos.`);
 console.log(`Lengua de publicación declarada: ${V.anglofonas} anglófonas, ${V.hispanas} hispanas, ${V.francofonas} francófonas, ${V.neerlandesas} neerlandesas, ${V.danesas} danesa(s), ${V.lusofonas} lusófona(s); ${V.sinLengua} sin declarar.\n`);
 if (corregidas.length) { console.log(`Cifras corregidas: ${corregidas.length}`); corregidas.forEach((c) => console.log("  " + c)); console.log(""); }
 console.log(`Afirmaciones comprobadas: ${comprobadas.length}`);
