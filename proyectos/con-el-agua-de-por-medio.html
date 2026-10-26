@@ -213,14 +213,14 @@
 <script src="../js/zoom-caribe.js"></script>
 <!-- El mapa carga solo su índice; las fichas llegan después, en segundo plano.
      Ambos se generan desde datos-atlas.js con scripts/partir-datos-atlas.mjs. -->
-<script src="../data/agua-de-por-medio/atlas-indice.js?v=1.43.1"></script>
+<script src="../data/agua-de-por-medio/atlas-indice.js?v=1.43.2"></script>
 <script>
 /* FICHAS A DEMANDA · el aporte de cada obra, la edición consultada, sus orillas y el texto
    completo de cada fuente viven en atlas-fichas.js. Se piden en cuanto el mapa está
    dibujado; si alguien abre una ficha antes, la ficha espera esa fracción de segundo.
    Si el archivo no llega (sin red), la ficha se abre igual con lo que trae el índice. */
 window.FICHAS_ATLAS=(function(){
-  const SRC='../data/agua-de-por-medio/atlas-fichas.js?v=1.43.1';
+  const SRC='../data/agua-de-por-medio/atlas-fichas.js?v=1.43.2';
   let listo=false, pedido=false; const cola=[];
   const clave=(a,b)=>a+'\u0001'+b;
   function aplicar(){
@@ -338,8 +338,9 @@ const esCorr=(a,b)=>{ const fu=fuenteDe(a,b); return !!fu && !/corroborar/i.test
 /* ==================== TANDA UX · tinta única y trama de fondo ====================
    El atlas sostiene que la unidad de análisis es el fenómeno-relación que atraviesa
    la cuenca, no el lugar que la aloja. Hasta aquí el estado de reposo mostraba lo
-   contrario: 276 discos de diez colores posados sobre lugares, con las 652 corrientes
-   sin dibujar hasta que alguien hiciera clic. Dos cambios, ningún color nuevo:
+   contrario: un disco de diez colores por obra posado sobre su lugar —276 cuando se
+   escribió esto, 421 hoy— con todas las corrientes sin dibujar hasta que alguien
+   hiciera clic. Dos cambios, ningún color nuevo:
      1. En reposo los nodos van en una sola tinta. El color de fenómeno deja de ser
         decoración permanente y pasa a ser estado de foco: entra al elegir una
         corriente o abrir una obra, que es cuando significa algo.
@@ -356,15 +357,16 @@ const radioDe=n=>{ const base=n.k==="obra"?4.4:4.2; return base+2.9*Math.sqrt((D
 const enReposo=()=>!state.active && !state.focusFen && !state.recorrido && !QTERMS.length;
 
 /* ==================== ESQUEMA 2.0 (Etapa 6) ====================
-   El esquema 2.0 está aprobado pero casi no se ha aplicado al corpus: de 276
-   entradas, solo 5 tienen procedencia y ninguna tiene revision.estado, marcas,
-   operaciones, lengua_publicacion ni temporalidades estructuradas. Estas funciones
-   nunca inventan un valor: si el campo no está, declaran «pendiente» o «sin dato».
+   El esquema 2.0 se ha ido aplicando por lotes y hoy, sobre 421 entradas, 173 declaran
+   procedencia y 344 tienen revision.estado. Esta nota decía «de 276 entradas, solo 5
+   tienen procedencia y ninguna tiene revision.estado» y llevaba meses describiendo un
+   corpus que ya no existe: cifras al 26-oct-2026. Estas funciones nunca inventan un
+   valor: si el campo no está, declaran «pendiente» o «sin dato».
    Regla de estado de asignación (mecánica, no editorial — no lee el contenido de
    la entrada, solo qué campos del esquema nuevo ya tiene declarados):
      confirmada  → revision.estado es «confirmada» o «revisada»
      preliminar  → hay procedencia declarada, o revision.estado es una candidatura
-     pendiente   → cualquier otro caso (hoy, la inmensa mayoría del corpus) */
+     pendiente   → cualquier otro caso (hoy 74 de 421; confirmada 186, preliminar 161) */
 function estado20(n){
   const rev = n.revision && n.revision.estado;
   if(rev==='confirmada' || rev==='revisada') return 'confirmada';
@@ -456,7 +458,14 @@ const bibCompleta = n => BIB_CAMPOS.some(k=>n[k]);
    Tomamos el primer año de cuatro cifras para poder ordenar y filtrar sin tocar
    lo que el lector ve escrito. */
 function anoNum(n){
+  /* y0 es el año del original cuando y declara una edición posterior. Hasta el
+     26-oct-2026 esta función exigía que fuera número y en el corpus estaba guardado
+     como texto, de modo que cuatro obras con y0 declarado se colocaban en el año de
+     la edición consultada: Gaztambide en 2006 teniendo 1996, Scott en 2021 teniendo
+     2018. El dato existía y la vista lo ignoraba. Ahora se acepta también la cadena,
+     para que un cambio de tipo en los datos no vuelva a desactivar el campo. */
   if(typeof n.y0==='number') return n.y0;
+  if(typeof n.y0==='string'){ const m0=n.y0.match(/\d{4}/); if(m0) return parseInt(m0[0],10); }
   const m=String(n.y||'').match(/\d{4}/);
   return m?parseInt(m[0],10):null;
 }
@@ -1410,7 +1419,7 @@ function render(){
   encuadrarMapa(); _kPrevio=null; ajustarEtiquetas();
 }
 
-/* ---------- la trama: las 652 corrientes como fondo del estado de reposo ----------
+/* ---------- la trama: las corrientes como fondo del estado de reposo ----------
    «The unity is submarine». Hasta aquí, con nada seleccionado, el mapa no dibujaba
    ninguna relación: el lector llegaba a un campo de puntos sueltos sobre lugares,
    que es justamente la antropología continental que el atlas discute. La trama pone
@@ -2149,7 +2158,8 @@ function buildRecSeg(){
   /* Tanda 1 · sin esta línea, elegir C4 atenuaba igual lo que no pertenece a C4 y lo que
      aún no se ha leído, y las dos cosas se leían como «no pertenece». Se calcula del corpus. */
   const sa=document.getElementById('recSinAsignar');
-  if(sa){ const sin=N.filter(n=>n.estado_recorrido!=='confirmado' && RECORRIDOS.every(r=>!recGrado(n,r.c))).length; /* una obra confirmada sin recorrido (rebeldestiny) es una decisión, no una espera */
+  if(sa){ const sin=N.filter(n=>n.estado_recorrido!=='confirmado' && RECORRIDOS.every(r=>!recGrado(n,r.c))).length; /* una obra confirmada sin recorrido es una decisión, no una espera; hoy son cuatro:
+     rebeldestiny, pardomosquerahoffmann, sangbenvolviendo y dubuissonhaiti */
     sa.textContent = sin ? t('recSinAsignar').replace('{n}',sin).replace('{t}',N.length) : ''; sa.hidden=!sin; }
 }
 function setRecorrido(v){

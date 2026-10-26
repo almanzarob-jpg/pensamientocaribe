@@ -3,9 +3,9 @@
     "titulo": "Con el agua de por medio",
     "subtitulo": "Atlas para una antropología archipiélica",
     "responsable": "Grupo de Investigación Pensamiento Caribe",
-    "version": "1.43.1",
-    "fecha": "2026-10-24",
-    "nota_version": "Revisión S27-TS-2026-10-24: se enciende la fricción en las dos relaciones de Torres-Saillant con Benítez Rojo y con el Discours antillais, clasificadas en S24 como resonancia sin fricción pese a apoyarse en el pasaje de la p. 26, que es una objeción metodológica nominal. Se conservan tipo_previo y fuente_previa. No cambian las cifras de obras ni de relaciones.",
+    "version": "1.43.2",
+    "fecha": "2026-10-26",
+    "nota_version": "Corrección de metadatos 2026-10-26. Se resuelven contra su ejemplar las dos entradas sin año: totumo (Historia Caribe XV-37, 2020, con DOI) y figueroa (tesis de Georgetown, 2007; la edición ICANH de 2009 la atestigua la bibliografía del volumen de 2023 del mismo autor, ya verificada en el corpus). Los cuatro y0 existentes estaban guardados como texto y anoNum, que exige número, los ignoraba: la cronología colocaba esas obras en el año de la edición consultada y no en el del original. Pasan a número, y se declara y0 en las dieciséis entradas de fecha compuesta, de modo que el orden cronológico deja de depender de que el primer año de la cadena sea el correcto. Al cruzar la cronología con la capa de temporalidad aparecieron tres desacuerdos sin y0 que los explicara; comprobados contra sus ejemplares, dos eran errores del corpus y se corrigen: shellerconsuming pasa de 2011 a 2003 (el 2011 era el empaquetado de Taylor & Francis) y floresvillalobos de 2022 a 2023 (el 2022 era el número de la Biblioteca del Congreso). El tercero, downtownladies, lo tiene bien el corpus en 2007 —así lo declara la página de créditos de Chicago— y mal el dictamen de temporalidad, que dice 2008: queda señalado para ratificación de la dirección académica, porque corregir un dictamen no es trabajo de esta pasada. No cambian las cifras de obras ni de relaciones. Se retipa el nodo costarica: era el único lugar continental marcado como «pais», de modo que su ficha imprimía «nación caribeña» en vez de nombrar la región con la que está en tensión, que es el argumento mismo del caso limonense. Pasa a «ciudad» con el nombre Limón y la tensión declarada con el Valle Central. La clave no cambia, así que ni las capas ni los enlaces se tocan.",
     "registro_interno": {
       "proposito": "Protocolo revisado de resonancia y disonancia (22-09-2026). Las categorías públicas del atlas siguen siendo resonancia y disonancia; este registro es interno y orienta la revisión editorial. El campo apoyo no crea categorías públicas ni cambia la interfaz.",
       "apoyo": {
@@ -291,8 +291,9 @@
     "costarica": [
       9.99,
       -83.03,
-      "Costa Rica (Limón)",
-      "pais"
+      "Limón",
+      "ciudad",
+      "el Valle Central · Costa Rica"
     ],
     "oriximina": [
       -1.7656,
@@ -590,7 +591,8 @@
       "k": "obra",
       "t": "Los acuerdos y la idealización del palenque en la provincia de Cartagena: el caso del Totumo (1714-1767)",
       "a": "Dolcey Romero Jaramillo",
-      "y": "",
+      "y": "2020",
+      "doi": "10.15648/hc.37.2020.9",
       "f": [
         "cimarronaje",
         "memoria"
@@ -598,6 +600,8 @@
       "l": "palenque",
       "tr": "hispano (Colombia)",
       "ap": "Cimarronaje del Caribe seco colombiano: territorio, lengua palenquera, memoria.",
+      "edicion_consultada": "Historia Caribe, vol. XV, núm. 37, julio-diciembre de 2020, pp. 215-247. Universidad del Atlántico.",
+      "nota_bibliografica": "Año tomado del ejemplar: el artículo declara Historia Caribe XV, 37 (julio-diciembre de 2020), pp. 215-247, con DOI 10.15648/hc.37.2020.9. Recibido el 16 de diciembre de 2018, aprobado el 7 de marzo de 2019.",
       "procedencia": "corpus heredado",
       "procedencia_verificada": true,
       "recorrido": "c3",
@@ -2496,13 +2500,16 @@
       "k": "obra",
       "t": "Realismo mágico, vallenato y violencia política en el Caribe colombiano",
       "a": "José Antonio Figueroa",
-      "y": "",
+      "y": "2009",
+      "y0": 2007,
       "f": [
         "violencias",
         "creolizacion"
       ],
       "l": "santamarta",
       "tr": "hispano (Colombia)",
+      "edicion_consultada": "Tesis doctoral, Graduate School of Arts and Sciences, Georgetown University, 12 de abril de 2007, 2 vols. Es el ejemplar de la biblioteca del grupo, al que remiten los localizadores de sus relaciones.",
+      "nota_bibliografica": "Se cataloga la edición de libro: ICANH, Bogotá, 2009, atestiguada por la bibliografía del volumen de 2023 del mismo autor, verificada en PDF, hoja 160: «Figueroa, José Antonio (2009). Realismo mágico, vallenato y violencia política en el Caribe colombiano. Bogotá: ICANH». y0 recoge el original, la tesis de Georgetown de 2007, que es el ejemplar de la biblioteca del grupo y al que remiten los localizadores de sus relaciones. El dictamen S01 de la capa de temporalidad ya fijaba 2009 como publicación.",
       "ap": "El vallenato como archivo de la violencia política del Magdalena Grande, leído contra la lectura mágico-realista que la naturaliza.",
       "procedencia": "corpus heredado",
       "procedencia_verificada": true,
@@ -3247,6 +3254,7 @@
       "t": "¡Nunca más esclavos! Una historia comparada de los esclavos que se liberaron en las Américas",
       "a": "Aline Helg",
       "y": "2016 / trad. esp. 2018",
+      "y0": 2016,
       "f": [
         "cimarronaje",
         "violencias"
@@ -3297,6 +3305,7 @@
       "t": "Un territorio acuoso: geografías marineras y el Gran Caribe transimperial de la Nueva Granada",
       "a": "Ernesto Bassi",
       "y": "2016 / trad. esp. 2021",
+      "y0": 2016,
       "f": [
         "colonialidad",
         "soberanias"
@@ -3745,6 +3754,7 @@
       "t": "Léonora: The Buried Story of Guadeloupe",
       "a": "Dany Bébel-Gisler",
       "y": "1985 / trad. ingl. 1994",
+      "y0": 1985,
       "f": [
         "memoria",
         "creolizacion"
@@ -4690,7 +4700,7 @@
       "k": "obra",
       "t": "Consuming the Caribbean: From Arawaks to Zombies",
       "a": "Mimi Sheller",
-      "y": "2011",
+      "y": "2003",
       "f": [
         "postplantacion",
         "capitalismo_racial"
@@ -4698,6 +4708,7 @@
       "l": "jamaica",
       "tr": "anglófono (EE.UU./Caribe)",
       "ap": "El turismo y el consumo cultural caribeños leídos como continuación directa de la economía de plantación: del azúcar esclavista al 'zombi' turístico, Europa y Norteamérica siguen consumiendo el Caribe que alguna vez saquearon.",
+      "nota_bibliografica": "Año corregido contra el ejemplar: el EPUB declara «First published 2003», «© 2003 Mimi Sheller» y Routledge como editorial original. El 2011 que figuraba venía del empaquetado posterior de Taylor & Francis, no de la publicación. El dictamen A01 de la capa de temporalidad ya fijaba 2003.",
       "recorrido": "c4",
       "recorridos_sec": [
         "c5",
@@ -5220,6 +5231,7 @@
       "t": "Caribbean Man in Space and Time",
       "a": "Kamau Brathwaite",
       "y": "1975 / reed. 2021",
+      "y0": 1975,
       "f": [
         "creolizacion",
         "colonialidad"
@@ -5296,6 +5308,7 @@
       "t": "Identidades e independencia en Santa Marta y Riohacha, 1750-1850",
       "a": "Steinar A. Sæther",
       "y": "2005 / ed. ICANH 2012",
+      "y0": 2005,
       "f": [
         "soberanias",
         "colonialidad"
@@ -5414,6 +5427,7 @@
       "t": "Cristo Rey, un espacio para permanecer en el tiempo",
       "a": "Édgar Rey Sinning",
       "y": "1998 / ed. corr. y ampliada 2020 / relanzada 2025",
+      "y0": 1998,
       "f": [
         "memoria",
         "colonialidad"
@@ -5747,6 +5761,7 @@
       "t": "El Masacre se pasa a pie (You Can Cross the Massacre on Foot)",
       "a": "Freddy Prestol Castillo",
       "y": "1937/2019",
+      "y0": 1937,
       "f": [
         "violencias",
         "memoria"
@@ -6020,7 +6035,7 @@
       "k": "obra",
       "t": "The Silver Women: How Black Women's Labor Made the Panama Canal",
       "a": "Joan Flores-Villalobos",
-      "y": "2022",
+      "y": "2023",
       "f": [
         "postplantacion",
         "capitalismo_racial",
@@ -6029,6 +6044,7 @@
       "l": "panama",
       "tr": "anglófono (EE.UU.)",
       "ap": "El trabajo reproductivo y sexual de las mujeres antillanas migrantes sostuvo la fuerza laboral del Canal; la paga en 'plata' frente al 'oro' de los blancos estadounidenses como arquitectura racial del salario.",
+      "nota_bibliografica": "Año corregido contra el ejemplar: la página de créditos declara «Copyright © 2023 University of Pennsylvania Press» y «1st edition. Philadelphia: University of Pennsylvania Press, [2023]». El 2022 que figuraba es el año del número de control de la Biblioteca del Congreso (LCCN 2022017511), no el de publicación. El dictamen de la capa de temporalidad ya fijaba 2023.",
       "recorrido": "c4",
       "recorridos_sec": [
         "c5",
@@ -6485,6 +6501,7 @@
       "t": "Capitalismo y esclavitud (Capitalism and Slavery)",
       "a": "Eric Williams",
       "y": "1944 / ed. esp. 2011",
+      "y0": 1944,
       "f": [
         "capitalismo_racial",
         "postplantacion",
@@ -6515,6 +6532,7 @@
       "t": "Black Metamorphosis: New Natives in a New World",
       "a": "Sylvia Wynter",
       "y": "c. 1970 (manuscrito inédito)",
+      "y0": 1970,
       "f": [
         "creolizacion",
         "capitalismo_racial",
@@ -6666,6 +6684,7 @@
       "t": "The Birth of African-American Culture: An Anthropological Perspective",
       "a": "Sidney W. Mintz y Richard Price",
       "y": "1976 / 1992 (ed. port. 2003)",
+      "y0": 1976,
       "f": [
         "creolizacion",
         "memoria"
@@ -6689,6 +6708,7 @@
       "t": "Transformaciones globales: la antropología y el mundo moderno (Global Transformations)",
       "a": "Michel-Rolph Trouillot",
       "y": "2003 / trad. esp. 2011",
+      "y0": 2003,
       "f": [
         "colonialidad",
         "memoria"
@@ -6727,6 +6747,7 @@
       "t": "El ingenio: complejo económico social cubano del azúcar",
       "a": "Manuel Moreno Fraginals",
       "y": "1964 / ed. ampliada 1978",
+      "y0": 1964,
       "f": [
         "capitalismo_racial",
         "postplantacion"
@@ -7280,6 +7301,7 @@
       "t": "Colonización y protesta campesina en Colombia, 1850-1950 (Frontier Expansion and Peasant Protest in Colombia)",
       "a": "Catherine LeGrand",
       "y": "1986 / trad. esp. 1988",
+      "y0": 1986,
       "f": [
         "capitalismo_racial",
         "violencias"
@@ -8797,7 +8819,7 @@
         }
       ],
       "lote_incorporacion": "S17-2026-09-11",
-      "y0": "2018",
+      "y0": 2018,
       "url": "https://traficantes.net/libros/el-viento-comun",
       "lenguas_publicacion": [
         "español"
@@ -9591,7 +9613,7 @@
         }
       ],
       "lote_incorporacion": "S17-2026-09-11",
-      "y0": "1993",
+      "y0": 1993,
       "lenguas_publicacion": [
         "inglés"
       ]
@@ -10164,7 +10186,7 @@
         }
       ],
       "lote_incorporacion": "S17-2026-09-11",
-      "y0": "1979",
+      "y0": 1979,
       "lenguas_publicacion": [
         "inglés"
       ]
@@ -10304,7 +10326,7 @@
       "t": "La invención del Caribe a partir de 1898 (Las definiciones del Caribe, revisitadas)",
       "a": "Antonio Gaztambide-Géigel",
       "y": "2006",
-      "y0": "1996",
+      "y0": 1996,
       "f": [
         "colonialidad",
         "soberanias"
@@ -13350,6 +13372,7 @@
       "t": "San Andrés y Providencia: una geografía histórica de las islas colombianas del mar Caribe",
       "a": "James J. Parsons",
       "y": "1956 / ed. esp. 1985",
+      "y0": 1956,
       "f": [
         "colonialidad",
         "soberanias",
@@ -13505,6 +13528,7 @@
       "t": "Fi wi sea · Nuestro mar · Our sea: historias y memorias del mar isleño raizal",
       "a": "Ana Isabel Márquez Pérez",
       "y": "2013 / 2.ª ed. 2014",
+      "y0": 2013,
       "f": [
         "memoria",
         "soberanias",
@@ -15027,6 +15051,7 @@
       "t": "Historia doble de la Costa",
       "a": "Orlando Fals Borda",
       "y": "1979-1986",
+      "y0": 1979,
       "f": [
         "memoria",
         "soberanias",
