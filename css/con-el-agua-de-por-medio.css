@@ -135,6 +135,12 @@
   .placelbl{font-family:var(--ff-mono); font-size:10px; letter-spacing:.6px; pointer-events:none; transition:opacity var(--mov-medio) var(--curva-llegada)}
   .placelbl.pais{fill:var(--gray); opacity:.85}
   .placelbl.ciudad{fill:var(--orange); opacity:.9}
+  /* Marca de fuga: el borde por donde un lugar sale del encuadre de la cuenca.
+     No es interactiva —el disco del nodo, acotado al mismo punto, sí lo es—, así
+     que no captura el puntero ni el foco. */
+  .fuga{fill:var(--orange); opacity:.62; pointer-events:none;
+        transition:opacity var(--mov-medio) var(--curva-llegada)}
+  #stage.reposo .fuga{opacity:.34}
   .clbl{font-family:var(--ff-mono); font-size:10.5px; text-transform:uppercase; letter-spacing:1.4px; font-weight:600; pointer-events:none; transition:opacity var(--mov-medio) var(--curva-llegada)}
   /* banda del tiempo de lo ocurrido: la barra del periodo y el reflujo que la une
      con su año de publicación. Siguen el mismo foco que los nodos y las corrientes. */

@@ -529,6 +529,10 @@ function validateRelations(data, workIds) {
     linked.add(relation.b);
 
     if (!RELACION_TIPOS.has(relation.tipo)) report.error("RELACION_TIPO", `${where}: tipo inválido ${relation.tipo}.`);
+    /* El recuento por tipo va aquí y sin condicionar: hasta el 26-oct-2026 colgaba de la
+       cadena if/else if de objeto_disonancia, de modo que la rama de disonancia nunca
+       llegaba a incrementar el contador y el informe publicaba «0 disonancias» sobre 22. */
+    if (RELACION_TIPOS.has(relation.tipo)) byType[relation.tipo] += 1;
     // Decisión del 1-oct-2026: toda disonancia declara sobre qué es el desacuerdo.
     if (relation.tipo === "disonancia") {
       const od = relation.objeto_disonancia;
@@ -538,7 +542,6 @@ function validateRelations(data, workIds) {
     } else if (relation.objeto_disonancia !== undefined) {
       report.error("OBJETO_DISONANCIA", `${where}: objeto_disonancia solo corresponde a una disonancia.`);
     }
-    else byType[relation.tipo] += 1;
     if (!isNonEmptyString(relation.fuente)) report.error("RELACION_FUENTE", `${where}: fuente vacía.`);
 
     const isPending = pendingSource(relation.fuente);
@@ -605,7 +608,10 @@ function validateRelations(data, workIds) {
   });
   const tot = data.relaciones.length;
   report.note(`Apoyo: ${apo.documentada} documentadas; ${apo.comparacion} comparaciones; ${apo.hipotesis} hipótesis` + (apo.sin ? `; ${apo.sin} sin declarar` : "") + ".");
-  report.note(`Registro interno por poblar: aspecto en ${conAspecto}/${tot}; límite en ${conLimite}/${tot}; responsable y fecha en ${conRevision}/${tot}.`);
+  /* El rótulo decía «por poblar» y daba los contadores de las relaciones que SÍ tienen el
+     campo, invirtiendo el dato de la deuda que esta línea existe para declarar. */
+  report.note(`Registro interno poblado: aspecto en ${conAspecto}/${tot}; límite en ${conLimite}/${tot}; responsable y fecha en ${conRevision}/${tot}.`);
+  report.note(`Registro interno por poblar: aspecto en ${tot - conAspecto}/${tot}; límite en ${tot - conLimite}/${tot}; responsable y fecha en ${tot - conRevision}/${tot}.`);
 }
 
 function validateCatalogTranslations(data, schema2) {

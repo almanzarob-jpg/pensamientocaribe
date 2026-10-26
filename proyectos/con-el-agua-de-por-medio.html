@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/zoom-caribe.css?v=20261003">
-<link rel="stylesheet" href="../css/con-el-agua-de-por-medio.css?v=20261013">
+<link rel="stylesheet" href="../css/con-el-agua-de-por-medio.css?v=20261026">
 <link rel="stylesheet" href="../css/capa-caribes.css?v=20261024">
 <link rel="stylesheet" href="../css/deriva-caribes.css?v=20261013d">
 <link rel="stylesheet" href="../css/capa-antirracismo.css?v=20261020">
@@ -886,9 +886,61 @@ function neighbors(id){ const direct=new Set(ADJ[id]||[]); const indirect=new Se
   direct.forEach(d=>(ADJ[d]||[]).forEach(x=>{ if(x!==id && !direct.has(x)) indirect.add(x); })); return {direct,indirect}; }
 
 const VW=1200, VH=640, PAD=95;
-const LNG0=-98, LNG1=-53, LAT0=2, LAT1=33;
+/* ══════════ Encuadre calculado de los lugares · 26-oct-2026 ══════════
+   LNG0/LNG1/LAT0/LAT1 eran cuatro literales escritos a mano cuando la cuenca era
+   todo el corpus. Los lugares que entraron después no cabían: Palmares
+   (−9,16 / −36,03) proyectaba a x=1485,9 y=707,0 sobre un lienzo de 1200×640, o
+   sea que no se dibujaba, y Oriximiná y Costa Chica caían fuera del margen.
+
+   El encuadre no se reescribe a mano —serviría hasta la siembra siguiente— sino
+   que sale de ATLAS.lugares. Y no de su caja envolvente: con ella, un nodo de una
+   obra a cincuenta grados de la mediana obligaría al Caribe entero a encogerse
+   para caber con él, que es lo contrario de lo que el atlas sostiene. El encuadre
+   lo fija el núcleo —mediana y desviación absoluta mediana por eje, umbral
+   convencional de cuatro desviaciones robustas— y lo que queda fuera no encoge el
+   mapa: se acota al borde y se marca con una flecha hacia donde está, conservando
+   su ficha, su foco y sus relaciones. Con los 34 lugares de hoy el núcleo deja
+   fuera exactamente a Palmares; con tres desviaciones dejaría fuera también a
+   Nueva Orleans, que el atlas sí trata como nodo de la cuenca, y por eso no es tres.
+
+   Si el corpus dejara de estar centrado en la cuenca, no habría atípicos y el
+   encuadre pasaría a ser el de todos los lugares: degrada hacia lo seguro.
+   px() y py() no cambian, y con ellas no cambia nada que dependa de la proyección. */
+const NUCLEO = (()=>{
+  const lat=[], lng=[];
+  for(const k in ATLAS.lugares){ lat.push(ATLAS.lugares[k][0]); lng.push(ATLAS.lugares[k][1]); }
+  const mediana = xs => { const y=xs.slice().sort((a,b)=>a-b), m=y.length>>1;
+    return y.length%2 ? y[m] : (y[m-1]+y[m])/2; };
+  const tol = xs => { const md=mediana(xs);
+    return [md, 4*1.4826*(mediana(xs.map(x=>Math.abs(x-md)))||0.5)]; };
+  const [latMed,latTol]=tol(lat), [lngMed,lngTol]=tol(lng);
+  return {latMed,latTol,lngMed,lngTol};
+})();
+const enElNucleo = (lat,lng) =>
+  Math.abs(lat-NUCLEO.latMed)<=NUCLEO.latTol && Math.abs(lng-NUCLEO.lngMed)<=NUCLEO.lngTol;
+const [LNG0,LNG1,LAT0,LAT1] = (()=>{
+  const lat=[], lng=[];
+  for(const k in ATLAS.lugares){ const v=ATLAS.lugares[k];
+    if(enElNucleo(v[0],v[1])){ lat.push(v[0]); lng.push(v[1]); } }
+  if(!lat.length) for(const k in ATLAS.lugares){ const v=ATLAS.lugares[k]; lat.push(v[0]); lng.push(v[1]); }
+  const a0=Math.min(...lat), a1=Math.max(...lat), g0=Math.min(...lng), g1=Math.max(...lng);
+  /* 6 % de holgura por lado: deja aire para el rótulo sin empequeñecer la cuenca */
+  const hv=Math.max((a1-a0)*0.06,1.5), hl=Math.max((g1-g0)*0.06,1.5);
+  return [g0-hl, g1+hl, a0-hv, a1+hv];
+})();
 const px = lng => PAD + (lng-LNG0)/(LNG1-LNG0)*(VW-2*PAD);
 const py = lat => PAD + (LAT1-lat)/(LAT1-LAT0)*(VH-2*PAD);
+/* Lugares del mapa que quedan fuera del encuadre: clave → {x,y,ang}. Lo llena
+   computeBase() en cada pasada y lo leen los rótulos y las marcas de fuga. */
+let FUGAS={};
+/* El acotado no va al filo del lienzo sino al margen del mapa: en el filo derecho
+   vive la columna de zoom y en el inferior la línea de crédito, y un nodo ahí queda
+   tapado. El ángulo se calcula con la posición real, no con la acotada, para que la
+   flecha siga apuntando a donde el lugar está de verdad. */
+function marcaDeFuga(x,y){
+  return { x:Math.min(VW-PAD,Math.max(PAD,x)), y:Math.min(VH-40,Math.max(PAD,y)),
+           ang:Math.atan2(y-VH/2,x-VW/2)*180/Math.PI };
+}
 
 const svg=document.getElementById('stage'); const tip=document.getElementById('tip');
 const NS="http://www.w3.org/2000/svg";
@@ -1055,11 +1107,15 @@ function applyVP(){ if(vp) vp.setAttribute('transform',`translate(${vpt.tx},${vp
 
 const GOLD = 2.399963; // ángulo áureo: reparte nodos en espiral orgánica, como un arrecife, sin que se encimen
 function computeBase(){
-  CLUSTERS=[];
+  CLUSTERS=[]; FUGAS={};
   if(state.view==="corriente"){
     const groups={}; N.forEach(n=>{(groups[n.l]=groups[n.l]||[]).push(n)});
     Object.values(groups).forEach(arr=>{
-      const g=L[arr[0].l]; const bx=px(g[1]), by=py(g[0]);
+      const g=L[arr[0].l]; let bx=px(g[1]), by=py(g[0]);
+      /* Un lugar fuera del núcleo no se deja caer fuera del lienzo: se acota al borde
+         por donde sale y se anota para dibujarle la flecha. El nodo conserva todo lo
+         demás —ficha, foco, aristas— porque solo cambia su posición de reposo. */
+      if(!enElNucleo(g[0],g[1])){ const m=marcaDeFuga(bx,by); bx=m.x; by=m.y; FUGAS[arr[0].l]=m; }
       arr.forEach((n,i)=>{ const rr = arr.length<=1?0 : 10.5*Math.sqrt(i+0.5); const ang=i*GOLD;
         n._bx=bx+Math.cos(ang)*rr; n._by=by+Math.sin(ang)*rr;});
     });
@@ -1235,8 +1291,14 @@ function syncEdges(){ if(egGroup) buildEdgeElements(relevantPairs()); }
    Los 276 nodos del SVG no pueden ser 276 paradas de Tab: solo UNO es focusable a la
    vez (tabindex=0); el resto queda en tabindex=-1. Las flechas mueven ese único foco
    entre nodos visibles; Tab sigue de largo hacia el siguiente control de la página. */
+/* Diccionario propio del encuadre: no se toca el I18N del atlas. */
+const FUGA_I18N={ es:' · lugar fuera del encuadre de la cuenca, marcado en el borde',
+                  en:' · place outside the basin frame, marked on the edge' };
 function accessibleNameFor(n){
-  return n.t + ' — ' + n.a + (n.y ? ', ' + n.y : '');
+  const base = n.t + ' — ' + n.a + (n.y ? ', ' + n.y : '');
+  /* Quien navega por teclado o con lector de pantalla tiene que saber que ese disco
+     no está donde le corresponde, sino acotado al borde. */
+  return base + (FUGAS[n.l] ? (FUGA_I18N[LANG]||FUGA_I18N.es) : '');
 }
 function setRoving(node, {mover=false}={}){
   if(!node) return;
@@ -1274,7 +1336,30 @@ function render(){
   buildEdgeElements(relevantPairs());
   if(state.view==="corriente"){
     const pg=el("g");
-    Object.entries(L).forEach(([k,v])=>{ if(!N.some(n=>n.l===k && visible(n)))return; const t=el("text",{class:"placelbl "+v[3], x:px(v[1])+14, y:py(v[0])+4}); t.textContent=v[2]; t._place=k; pg.appendChild(t); });
+    Object.entries(L).forEach(([k,v])=>{ if(!N.some(n=>n.l===k && visible(n)))return;
+      /* Un lugar acotado al borde lleva su rótulo junto a la marca, no en la
+         coordenada real, que está fuera del lienzo. */
+      const f=FUGAS[k];
+      /* Si la marca quedó contra el borde derecho, el rótulo se escribe hacia dentro:
+         al revés se sale del encuadre y se mete debajo de la columna de zoom. */
+      const haciaDentro = !!f && f.x > VW/2;
+      const t=el("text",{class:"placelbl "+v[3],
+        x:(f?f.x:px(v[1])) + (haciaDentro?-14:14),
+        y:(f?f.y:py(v[0]))+4});
+      if(haciaDentro) t.setAttribute("text-anchor","end");
+      t.textContent=v[2]; t._place=k; pg.appendChild(t); });
+    /* Las marcas de fuga van debajo de los nodos: señalan el borde por donde el
+       lugar sale del encuadre, sin competir con el disco que sí es interactivo. */
+    Object.entries(FUGAS).forEach(([k,f])=>{
+      if(!N.some(n=>n.l===k && visible(n))) return;
+      /* La flecha se separa del disco hacia el borde por donde el lugar sale: debajo
+         del nodo quedaría tapada y el lector leería el punto como una posición real. */
+      const rad=f.ang*Math.PI/180, sep=13;
+      const m=el("path",{ d:"M0,-6 L10,0 L0,6 Z", class:"fuga",
+        transform:`translate(${(f.x+Math.cos(rad)*sep).toFixed(1)},${(f.y+Math.sin(rad)*sep).toFixed(1)}) rotate(${f.ang.toFixed(1)})`,
+        "aria-hidden":"true" });
+      pg.appendChild(m);
+    });
     vp.appendChild(pg);
   } else {
     const cg=el("g");
@@ -1439,7 +1524,7 @@ function place(t){
       if(ola.ox==null || Math.abs(ola.ox-ox)>1.5){ ola.ox=ox; ola.luz.setAttribute('x',(ox-OLA_ANCHO).toFixed(1)); }
     }
   }
-  if(state.view==="corriente" && flowing) for(let i=0;i<3;i++){ const b=document.getElementById('tb'+i); if(!b)continue; const yy=py(8-i*1.6); const amp=6+i*2; const o=ph*1.1+i; let d=`M ${px(-98)},${yy}`; for(let x=-96;x<=-53;x+=6) d+=` L ${px(x)},${yy+amp*Math.sin(o+x*0.14)}`; b.setAttribute('d',d); }
+  if(state.view==="corriente" && flowing) for(let i=0;i<3;i++){ const b=document.getElementById('tb'+i); if(!b)continue; const yy=py(8-i*1.6); const amp=6+i*2; const o=ph*1.1+i; let d=`M ${px(LNG0)},${yy}`; const pasoB=(LNG1-LNG0)/8; for(let x=LNG0+pasoB;x<=LNG1;x+=pasoB) d+=` L ${px(x)},${yy+amp*Math.sin(o+x*0.14)}`; b.setAttribute('d',d); }
   updateTip();
 }
 
