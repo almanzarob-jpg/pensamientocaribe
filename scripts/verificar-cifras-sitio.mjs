@@ -162,7 +162,7 @@ const reglas = [
   ["proyectos/marca-de-marea.html", /francófonas, (\d+) neerlandesas/, "neerlandesas"],
   ["proyectos/marca-de-marea.html", /neerlandesas, (\d+) danesa/, "danesas"],
   ["proyectos/marca-de-marea.html", /danesas?, (\d+) lus[oó]fonas?/, "lusofonas"],
-  ["proyectos/marca-de-marea.html", /seis cifras suman (\d+)/, "sumaLenguas"],
+  ["proyectos/marca-de-marea.html", /cifras de arriba suman (\d+)/, "sumaLenguas"],
   ["proyectos/marca-de-marea.html", /incluyen (\d+) conteos repetidos/, "lenguasRepetidas"],
   ["proyectos/marca-de-marea.html", /lengua declarada son (\d+)/, "conLengua"],
   ["proyectos/marca-de-marea.html", /(\d+) entradas frente a (?:\d+) obras de investigación/, "manifestaciones"],
@@ -281,6 +281,8 @@ for (const [archivo, patron, clave] of reglas) {
 {
   const m = publicado["proyectos/marca-de-marea.html"] || {};
   const seis = ["anglofonas", "hispanas", "francofonas", "neerlandesas", "danesas", "lusofonas"];
+  /* El HTML de reserva y el generador de la página escriben la misma frase: si divergen,
+     el verificador comprueba el archivo y el lector ve otra cosa. Pasó el 26-oct-2026. */
   const faltan = [...seis, "sumaLenguas", "lenguasRepetidas", "conLengua", "sinLengua", "entradas"]
     .filter((k) => !Number.isFinite(m[k]));
   if (faltan.length) {
@@ -302,7 +304,7 @@ for (const [archivo, patron, clave] of reglas) {
 // ------------------------------------------------------------------- informe
 console.log(`Corpus v${V.version}: ${V.entradas} entradas (${V.obras} obras, ${V.manifestaciones} manifestaciones), ` +
   `${V.relaciones} relaciones (${V.corroboradas} corroboradas, ${V.porCorroborar} por corroborar), ${V.lugares} lugares.`);
-console.log(`Lenguas: ${V.conLengua} obras con lengua declarada y ${V.sinLengua} sin declarar; las seis cifras suman ${V.sumaLenguas} porque incluyen ${V.lenguasRepetidas} conteos repetidos.`);
+console.log(`Lenguas: ${V.conLengua} obras con lengua declarada y ${V.sinLengua} sin declarar; las cifras de lengua suman ${V.sumaLenguas} porque incluyen ${V.lenguasRepetidas} conteos repetidos.`);
 console.log(`Lengua de publicación declarada: ${V.anglofonas} anglófonas, ${V.hispanas} hispanas, ${V.francofonas} francófonas, ${V.neerlandesas} neerlandesas, ${V.danesas} danesa(s), ${V.lusofonas} lusófona(s); ${V.sinLengua} sin declarar.\n`);
 if (corregidas.length) { console.log(`Cifras corregidas: ${corregidas.length}`); corregidas.forEach((c) => console.log("  " + c)); console.log(""); }
 console.log(`Afirmaciones comprobadas: ${comprobadas.length}`);

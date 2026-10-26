@@ -145,7 +145,7 @@
           <li>230 de 1578 corrientes esperan fuente verificada.</li>
           <li>El corpus registra 22 disonancias frente a 1556 resonancias.</li>
           <li>Por lengua de publicación declarada: 272 obras anglófonas, 83 hispanas, 43 francófonas, 10 neerlandesas, 1 danesa, 2 lusófonas.</li>
-          <li>Las seis cifras suman 411 porque incluyen 14 conteos repetidos: una obra que declara dos lenguas entra en las dos. Las obras con lengua declarada son 397.</li>
+          <li>Las cifras de arriba suman 411 porque incluyen 14 conteos repetidos: una obra que declara dos lenguas entra en las dos. Las obras con lengua declarada son 397.</li>
           <li>24 entradas no declaran lengua de publicación: su descriptor dice «comparado» y nombra un método o un corpus, no una lengua.</li>
           <li>La capa etnográfica tiene 0 entradas frente a 421 obras de investigación.</li>
         </ul>
@@ -198,6 +198,15 @@
     };
     const cuenta = re => O.filter(o => re.test(desc(o.tr))).length;
     const sinLengua = O.filter(o => !Object.keys(trad).some(k => trad[k].test(desc(o.tr)))).length;
+    /* Catorce obras nombran dos lenguas fuera del paréntesis («francófono/anglófono»,
+       «anglófono / danés») y entran en dos de las cifras de arriba. Sin declararlo, el
+       reparto se lee como una partición del corpus y suma más obras de las que hay.
+       Se cuentan los conteos de más y no las obras, para que la cuenta siga cerrando
+       si alguna llegara a declarar tres. */
+    const lenguasDe = o => Object.keys(trad).filter(k => trad[k].test(desc(o.tr))).length;
+    const conLengua = O.filter(o => lenguasDe(o) > 0).length;
+    const repetidas = O.reduce((n, o) => n + Math.max(0, lenguasDe(o) - 1), 0);
+    const sumaLenguas = conLengua + repetidas;
     const etno = O.filter(o => o.k !== 'obra').length;
     const set = (id, v) => { const e = document.getElementById(id); if (e) e.textContent = v; };
     set('mPend', pend + ' de ' + R.length);
@@ -210,6 +219,7 @@
         const n = cuenta(trad[k]);
         return n === 1 ? '1 obra ' + k.replace(/s$/, '') : n + ' obras ' + k;
       }).join(', ') + '.',
+      'Las cifras de arriba suman ' + sumaLenguas + ' porque incluyen ' + repetidas + ' conteos repetidos: una obra que declara dos lenguas entra en las dos. Las obras con lengua declarada son ' + conLengua + '.',
       sinLengua + ' entradas no declaran lengua de publicación: su descriptor dice «comparado» y nombra un método o un corpus, no una lengua.',
       'La capa etnográfica tiene ' + etno + ' entradas frente a ' + (O.length - etno) + ' obras de investigación.'
     ];
