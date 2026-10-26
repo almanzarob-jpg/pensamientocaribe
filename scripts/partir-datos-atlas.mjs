@@ -40,7 +40,18 @@ const FICHA_OBRA = ["ap", "edicion_consultada", "orillas"];
 // necesita saber que existe. Se deja este rótulo, que esCorr() lee como corroborada y
 // que es lo que se ve si las fichas no llegan a cargar.
 const FUENTE_RESUMIDA = "Fuente declarada (detalle en la ficha completa)";
+/* 26-10-2026. Hasta aquí toda relación cuya fuente no dijera «corroborar» salía al mapa
+   con el rótulo de arriba, y esCorr() la dibujaba corroborada. Eso incluía 150 relaciones
+   que el propio registro interno clasifica como `comparacion`: fichas que argumentan una
+   proximidad sin afirmar ninguna cita, del tipo «economía política anglófona frente a
+   transculturación cultural hispana, tensión de énfasis». El atlas las presentaba como
+   vínculos verificados contra el texto, que es justo lo que esas fichas no dicen.
+   La corrección se hace aquí y no en la interfaz: `apoyo` sigue siendo registro interno
+   y no viaja al índice; lo que viaja es el rótulo que le corresponde a cada una. El
+   vocabulario público —corroborada, por corroborar— no cambia. */
+const COMPARACION_RESUMIDA = "Comparación fundada en fuentes, por corroborar contra el texto (detalle en la ficha completa).";
 const esPendiente = (f) => !f || /corroborar/i.test(f);
+const afirmaCita = (r) => r.apoyo === "documentada";
 const clave = (r) => r.a + "\u0001" + r.b;
 
 const fichas = { version: A.meta.version, obras: {}, fuentes: {} };
@@ -55,12 +66,19 @@ for (const o of A.obras) {
   }
 }
 for (const r of A.relaciones) {
+  const documentada = afirmaCita(r);
   for (const k of INTERNO_REL) delete r[k];
   if (!esPendiente(r.fuente)) {
     const k = clave(r);
     if (!(k in fichas.fuentes)) fichas.fuentes[k] = r.fuente;
-    r.fuente = FUENTE_RESUMIDA;
+    /* la prosa completa sigue llegando a la ficha; al mapa va el rótulo que corresponde */
+    r.fuente = documentada ? FUENTE_RESUMIDA : COMPARACION_RESUMIDA;
   }
+  /* Marca explícita del estatuto. El rótulo de arriba solo vale mientras no llegan las
+     fichas: en cuanto llegan devuelven la prosa entera y un predicado que la lea se da
+     la vuelta. Por eso el mapa no debe deducir el estatuto del texto, que era el defecto
+     de fondo. `c` lo declara: 1 corroborada, 0 por corroborar. `apoyo` no viaja. */
+  r.c = (!esPendiente(r.fuente) || r.fuente === FUENTE_RESUMIDA) && documentada ? 1 : 0;
 }
 const cabecera = (que) => `/* GENERADO por scripts/partir-datos-atlas.mjs desde datos-atlas.js (v${A.meta.version}). No editar a mano: ${que}. */\n`;
 const salida = {

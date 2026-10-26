@@ -42,7 +42,12 @@ const V = {
   lugares: Object.keys(corpus.lugares).length,
   version: corpus.meta.version,
 };
-V.porCorroborar = R.filter((r) => /por corroborar/i.test(String(r.fuente || ""))).length;
+/* 26-10-2026: la misma regla que el validador y que el repartidor. Una relación está
+   por corroborar si su fuente lo dice, o si no afirma ninguna cita: el apoyo
+   `comparacion` argumenta una proximidad y declara expresamente que no aporta
+   localizador de contacto directo, de modo que contarla como corroborada era publicar
+   como verificado lo que la propia ficha dice que no lo está. */
+V.porCorroborar = R.filter((r) => /por corroborar/i.test(String(r.fuente || "")) || r.apoyo !== "documentada").length;
 V.friccionesEvaluadas = R.filter((r) => r.friccion !== undefined).length;
 V.friccionesDeclaradas = R.filter((r) => r.friccion && r.friccion.hay === true).length;
 V.corroboradas = V.relaciones - V.porCorroborar;

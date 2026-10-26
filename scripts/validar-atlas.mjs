@@ -544,7 +544,11 @@ function validateRelations(data, workIds) {
     }
     if (!isNonEmptyString(relation.fuente)) report.error("RELACION_FUENTE", `${where}: fuente vacía.`);
 
-    const isPending = pendingSource(relation.fuente);
+    /* 26-10-2026: una relación solo cuenta como corroborada si además de traer fuente
+       afirma una cita, es decir si su apoyo es `documentada`. Antes bastaba con que la
+       prosa no dijera «corroborar», de modo que 150 comparaciones declaradas salían
+       contadas y dibujadas como vínculos verificados. */
+    const isPending = pendingSource(relation.fuente) || relation.apoyo !== "documentada";
     if (isPending) {
       pendingCount += 1;
     } else {

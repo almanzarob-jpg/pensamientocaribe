@@ -54,7 +54,11 @@ def main():
 
     io.open(JSON_, 'w', encoding='utf-8').write(salida)
     corr = sum(1 for r in datos.get('relaciones', [])
-               if r.get('fuente') and 'corroborar' not in r['fuente'].lower())
+               # 26-10-2026: misma regla que el validador, el repartidor y el verificador.
+               # Corroborada exige además que la relación afirme una cita (apoyo documentada):
+               # contar las comparaciones declaradas inflaba la cifra en 150.
+               if r.get('fuente') and 'corroborar' not in r['fuente'].lower()
+               and r.get('apoyo') == 'documentada')
     print('datos-atlas.json regenerado desde datos-atlas.js')
     print('  version %s · %d obras · %d relaciones' % (ver, obras, rels))
     print('  corroboradas %d de %d (%.0f %%)' % (corr, rels, corr * 100.0 / rels if rels else 0))
