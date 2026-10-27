@@ -24,7 +24,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../css/zoom-caribe.css?v=20261003">
-<link rel="stylesheet" href="../css/con-el-agua-de-por-medio.css?v=20261026d">
+<link rel="stylesheet" href="../css/con-el-agua-de-por-medio.css?v=20261026e">
 <link rel="stylesheet" href="../css/capa-caribes.css?v=20261024">
 <link rel="stylesheet" href="../css/deriva-caribes.css?v=20261013d">
 <link rel="stylesheet" href="../css/capa-antirracismo.css?v=20261020">
@@ -122,7 +122,7 @@
     <div class="clv-agua" id="clvAgua" role="group" aria-labelledby="clvAguaTit">
       <div class="clv-t" id="clvAguaTit" data-i18n="aguaTit">El agua</div>
       <div class="ag-i"><svg class="ag-m" viewBox="0 0 40 8" aria-hidden="true"><path class="ag-corr" d="M2 4 Q20 0 38 4"/></svg><span><b data-i18n="aguaCorr">Corroborada</b> <i data-i18n="aguaCorrV">fluye</i></span></div>
-      <div class="ag-i"><svg class="ag-m" viewBox="0 0 40 8" aria-hidden="true"><path class="ag-pend" d="M2 4 Q20 0 38 4"/></svg><span><b data-i18n="aguaPend">Por corroborar</b> <i data-i18n="aguaPendV">respira</i></span></div>
+      <div class="ag-i"><svg class="ag-m" viewBox="0 0 40 8" aria-hidden="true"><path class="ag-pend" d="M2 4 Q20 0 38 4"/></svg><span><b data-i18n="aguaPend">Por corroborar</b> <i data-i18n="aguaPendV">fluye a tramos</i></span></div>
       <div class="ag-i"><svg class="ag-m" viewBox="0 0 40 8" aria-hidden="true"><path class="ag-diso" d="M2 4 Q20 0 38 4"/></svg><span><b data-i18n="aguaDiso">Disonancia</b> <i data-i18n="aguaDisoV">a contracorriente</i></span></div>
     </div>
     <div class="clv-pie">
@@ -213,14 +213,14 @@
 <script src="../js/zoom-caribe.js"></script>
 <!-- El mapa carga solo su índice; las fichas llegan después, en segundo plano.
      Ambos se generan desde datos-atlas.js con scripts/partir-datos-atlas.mjs. -->
-<script src="../data/agua-de-por-medio/atlas-indice.js?v=1.44.0"></script>
+<script src="../data/agua-de-por-medio/atlas-indice.js?v=1.44.1"></script>
 <script>
 /* FICHAS A DEMANDA · el aporte de cada obra, la edición consultada, sus orillas y el texto
    completo de cada fuente viven en atlas-fichas.js. Se piden en cuanto el mapa está
    dibujado; si alguien abre una ficha antes, la ficha espera esa fracción de segundo.
    Si el archivo no llega (sin red), la ficha se abre igual con lo que trae el índice. */
 window.FICHAS_ATLAS=(function(){
-  const SRC='../data/agua-de-por-medio/atlas-fichas.js?v=1.44.0';
+  const SRC='../data/agua-de-por-medio/atlas-fichas.js?v=1.44.1';
   let listo=false, pedido=false; const cola=[];
   const clave=(a,b)=>a+'\u0001'+b;
   function aplicar(){
@@ -704,7 +704,7 @@ const I18N = {
     iComoUsar:"Volver a la introducción", iMetodologia:"Metodología completa", iModo:"Modo presentación",
     lblLengua:"Lengua", lenTodas:"Todas", lenAng:"Anglófona", lenHis:"Hispanófona", lenFra:"Francófona", lenNeer:"Neerlandesa", lenLus:"Lusófona", lenCrio:"Criolla", lenSin:"Sin declarar",
     lblMovimiento:"Movimiento", movOn:"Animación: activada", movOff:"Animación: en pausa",
-    aguaTit:"El agua", aguaCorr:"Corroborada", aguaCorrV:"fluye", aguaPend:"Por corroborar", aguaPendV:"respira", aguaDiso:"Disonancia", aguaDisoV:"a contracorriente",
+    aguaTit:"El agua", aguaCorr:"Corroborada", aguaCorrV:"fluye", aguaPend:"Por corroborar", aguaPendV:"fluye a tramos", aguaDiso:"Disonancia", aguaDisoV:"a contracorriente",
     lblIndirectas:"Conexiones indirectas", indCheckLbl:"Mostrar también las indirectas en el mapa",
     chipQuitarAria:"Quitar filtro: {label}", chipTipo:"Tipo", chipEvid:"Evidencia", chipLengua:"Lengua", chipMov:"Movimiento", chipInd:"Indirectas",
     legendBarTpl:"{n} entradas · {r} relaciones visibles · {p}% corroborado",
@@ -823,7 +823,7 @@ const I18N = {
     iComoUsar:"Back to the introduction", iMetodologia:"Full methodology", iModo:"Presentation mode",
     lblLengua:"Language", lenTodas:"All", lenAng:"Anglophone", lenHis:"Hispanophone", lenFra:"Francophone", lenNeer:"Dutch-language", lenLus:"Lusophone", lenCrio:"Creole", lenSin:"Undeclared",
     lblMovimiento:"Motion", movOn:"Animation: on", movOff:"Animation: paused",
-    aguaTit:"The water", aguaCorr:"Corroborated", aguaCorrV:"flows", aguaPend:"To be corroborated", aguaPendV:"breathes", aguaDiso:"Dissonance", aguaDisoV:"against the current",
+    aguaTit:"The water", aguaCorr:"Corroborated", aguaCorrV:"flows", aguaPend:"To be corroborated", aguaPendV:"flows in stretches", aguaDiso:"Dissonance", aguaDisoV:"against the current",
     lblIndirectas:"Indirect connections", indCheckLbl:"Also show indirect connections on the map",
     chipQuitarAria:"Remove filter: {label}", chipTipo:"Type", chipEvid:"Evidence", chipLengua:"Language", chipMov:"Motion", chipInd:"Indirect",
     legendBarTpl:"{n} entries · {r} visible relations · {p}% corroborated",
@@ -1567,7 +1567,7 @@ function place(t){
        (js/transiciones-atlas.js) la marea entra con ella, sin sacudida. */
     if(n._pm!=null){ dx*=n._pm; dy*=n._pm; }
     n._x=n._bx+dx; n._y=n._by+dy; n._g.setAttribute('transform',`translate(${n._x},${n._y})`); });
-  EDGES.forEach(e=>{ e.p.setAttribute('d', currentPath(e,ph,flowing)); e.p.setAttribute('stroke-dashoffset', !flowing ? 0 : e.type==="disonancia" ? (t*0.022)%1000 : e.corr ? (-t*0.03)%1000 : (-t*0.011)%1000);
+  EDGES.forEach(e=>{ e.p.setAttribute('d', currentPath(e,ph,flowing)); e.p.setAttribute('stroke-dashoffset', !flowing ? 0 : e.type==="disonancia" ? (t*0.022)%1000 : e.corr ? (-t*0.03)%1000 : (-t*0.027)%1000);
     if(e.marker){ const mx=(e.na._x+e.nb._x)/2, my=(e.na._y+e.nb._y)/2; const s=2.4+(flowing?1.1*(0.5+0.5*Math.sin(ph*3+e.ph)):0); const rot=flowing?ph*40+e.ph*30:0; const c=Math.cos(rot), si=Math.sin(rot);
       e.marker.setAttribute('d',`M ${(mx-s*c).toFixed(1)},${(my-s*si).toFixed(1)} L ${(mx+s*c).toFixed(1)},${(my+s*si).toFixed(1)} M ${(mx+s*si).toFixed(1)},${(my-s*c).toFixed(1)} L ${(mx-s*si).toFixed(1)},${(my+s*c).toFixed(1)}`); } });
   /* EN QUIETUD, LA TRAMA SE MECE · las corrientes azules del reposo acompañan la marea

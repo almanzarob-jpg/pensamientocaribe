@@ -3,9 +3,9 @@
     "titulo": "Con el agua de por medio",
     "subtitulo": "Atlas para una antropología archipiélica",
     "responsable": "Grupo de Investigación Pensamiento Caribe",
-    "version": "1.44.0",
+    "version": "1.44.1",
     "fecha": "2026-10-26",
-    "nota_version": "1.44.0 · El predicado de corroboración deja de promover las comparaciones. Hasta aquí una relación se presentaba como corroborada con solo traer fuente y no decir «corroborar», de modo que 150 relaciones que el registro interno clasifica como `comparacion` —fichas que argumentan una proximidad y declaran expresamente que no aportan localizador de contacto directo— se dibujaban y se contaban como vínculos verificados contra el texto. Ahora solo cuenta como corroborada la relación que además afirma una cita, es decir cuyo apoyo es `documentada`. Las cifras pasan de 1.345 corroboradas (85 %) a 1.195 (76 %). No cambia el vocabulario público —corroborada y por corroborar siguen siendo los dos estatutos—, no cambia la leyenda y `apoyo` sigue sin viajar al índice que dibuja el mapa. Se ajusta el campo `estado` en 35 relaciones que lo declaraban corroborada sin afirmar cita. No cambian las cifras de obras ni de relaciones.",
+    "nota_version": "1.44.1 · Se revierte una corrección errónea introducida el 26-10-2026 en la relación «Antología del pensamiento crítico haitiano contemporáneo — Fanon». La ficha declaraba, correctamente, las hojas 22 y 31 del ejemplar haitiano. El cotejo automatizado que la impugnó había emparejado el expediente con el volumen caribeño de la misma colección de CLACSO, un archivo distinto, y transcribió contra él dos pasajes de las hojas 314 y 594 que no pertenecen a la obra fichada. Verificado después contra «Antologia_Haiti.pdf»: la hoja 22 nombra a Fanon, Martinica y Piel negra, máscaras blancas, y la hoja 31 vuelve sobre Fanon y el mismo título. La fuente original queda restituida palabra por palabra. El episodio queda consignado porque el defecto reportado no existía: el emparejador de ejemplares no distinguía entre los cinco volúmenes homónimos de la colección y esa limitación invalida, hasta nuevo cotejo, cualquier impugnación que dependiera de él. Las tres degradaciones de Wilson («Crab Antics») de la versión 1.44.0 no dependen del emparejador —se apoyan en lo que la propia ficha dice sobre la obra citada— y se mantienen.",
     "registro_interno": {
       "proposito": "Protocolo revisado de resonancia y disonancia (22-09-2026). Las categorías públicas del atlas siguen siendo resonancia y disonancia; este registro es interno y orienta la revisión editorial. El campo apoyo no crea categorías públicas ni cambia la interfaz.",
       "apoyo": {
@@ -34581,7 +34581,7 @@
       "friccion": {
         "hay": false
       },
-      "fuente": "Verificada en el texto. Valdés León y Voltaire (coords.), Antología del pensamiento crítico caribeño contemporáneo, 2018. PDF, hoja 314: «Frantz Fanon denunció (Piel negra, máscaras blancas) esta interpretación»; PDF, hoja 594: «Frantz Omar Fanon nació en Fort-de-France (Martinica) el 20 de julio de 1925». Corregido el 26-10-2026: la ficha declaraba las hojas 22 y 31, que son del ensayo introductorio y no nombran ni a Fanon ni a Martinica; la comprobación contra el ejemplar las situó en 314 y 594.",
+      "fuente": "Verificada en el texto. Valdés León y Voltaire (coords.), 2018, PDF, hojas 22 y 31: Fanon y «la situación colonial de Martinica (Piel negra, máscaras blancas)».",
       "id_lote": "S26-R19",
       "lote_incorporacion": "S26-2026-10-01",
       "apoyo": "documentada",
