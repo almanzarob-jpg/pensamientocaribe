@@ -31,6 +31,8 @@ atlas-id: apellido
 
 **Una relación verificada necesita una fuente concreta, no una intuición temática.** "Los dos hablan de cimarronaje" no es una fuente, es una coincidencia de tema. Una fuente real es: el libro A cita al libro B en su bibliografía o en el cuerpo del texto, o ambos autores comparten un dato biográfico verificable (codirección de tesis, coautoría, correspondencia documentada), o hay una cita textual localizable. Si no se encuentra nada de eso, la relación se deja explícitamente como `Por corroborar`. Eso está bien. Inventar una fuente para no dejar el campo vacío rompe el proyecto.
 
+**El título, no el autor.** Una cita confirma una relación cuando el texto nombra el título que tiene ficha en el corpus. Que cite otra obra del mismo autor no basta: el atlas promete que «corroborada» significa verificado contra el texto, y colar un vínculo por afinidad de autor diluye esa promesa igual que inventar una cita. La excepción real es la continuidad de autor, cuando las dos obras tienen ficha propia y deliberada. Y una obra sigue siendo la misma en otra lengua: si el texto cita *Caribbean Discourse* y la ficha cataloga *Le Discours antillais*, la cita cuenta, pero entonces la ficha declara qué edición se cotejó, porque la paginación no es la misma.
+
 ---
 
 ## 2. Primer paso siempre: decidir en qué pista estás
