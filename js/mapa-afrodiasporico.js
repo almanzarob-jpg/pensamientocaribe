@@ -116,7 +116,9 @@
       'Trinidad y Tobago': 'Trinidad and Tobago', 'Martinica': 'Martinique', 'Haití': 'Haiti',
       'Islas Vírgenes': 'Virgin Islands', 'Estados Unidos': 'United States', 'Francia': 'France',
       'Sierra Leona': 'Sierra Leone', 'R.D. del Congo': 'D.R. Congo', 'Rep. del Congo': 'Republic of Congo',
-      'Etiopía': 'Ethiopia', 'Reino Unido': 'United Kingdom', 'Sudáfrica': 'South Africa'
+      'Etiopía': 'Ethiopia', 'Reino Unido': 'United Kingdom', 'Sudáfrica': 'South Africa',
+      'Guinea Ecuatorial': 'Equatorial Guinea', 'Malí': 'Mali', 'Benín': 'Benin', 'Camerún': 'Cameroon',
+      'Antillas francesas': 'French Antilles', 'Panamá': 'Panama'
     };
     var categoriaEN = {
       'Caribe colombiano': 'Colombian Caribbean', 'Gran Caribe': 'Greater Caribbean',
@@ -125,7 +127,8 @@
     var nombreEN = {
       'La Habana': 'Havana', 'Puerto España': 'Port of Spain', 'Puerto Príncipe': 'Port-au-Prince',
       'Cartagena de Indias': 'Cartagena', 'Nueva York': 'New York', 'París': 'Paris',
-      'Adís Abeba': 'Addis Ababa', 'Londres': 'London', 'Johannesburgo': 'Johannesburg'
+      'Adís Abeba': 'Addis Ababa', 'Londres': 'London', 'Johannesburgo': 'Johannesburg',
+      'Cotonú': 'Cotonou', 'Duala': 'Douala', 'Guadalupe': 'Guadeloupe', 'Canal de Panamá': 'Panama Canal'
     };
     function nombreDisp(n) { return (IDIOMA === 'en' && nombreEN[n]) ? nombreEN[n] : n; }
     function paisDisp(p) { return (IDIOMA === 'en' && paisEN[p]) ? paisEN[p] : p; }
@@ -631,6 +634,7 @@
         '<p class="atlantico-panel-desc">' + descR + '</p>' +
         panelCancion(r.cancion) +
         panelTags(clavesR, color) +
+        (window.VaivenLecturas ? window.VaivenLecturas.lineaCorriente(r) : '') +
         (r.fuente ? '<p class="atlantico-panel-fuente">' + t('Fuente:', 'Source:') + ' ' + r.fuente + '</p>' : '') +
         '<button class="atlantico-tour-btn" type="button" data-copiar style="margin-top:12px">' + t('Copiar enlace de esta ruta', 'Copy link to this route') + '</button>' +
         tourBar
@@ -663,8 +667,8 @@
         '</div>' +
         '<h3 class="atlantico-panel-title">' + t('El Atlántico Negro, ruta por ruta', 'The Black Atlantic, route by route') + '</h3>' +
         '<p class="atlantico-panel-vacio">' + t(
-          'Haz clic en un <em>arco</em> para leer la historia de esa ruta musical (con su fuente y su canción) o en un <em>puerto</em> para saber qué se pensó y qué sonó ahí. También puedes recorrerlo todo en orden: pulsa <em>Iniciar la travesía</em> y el mapa te lleva de 1795 hasta hoy.',
-          'Click an <em>arc</em> to read the story behind that musical route (with its source and its song), or a <em>port</em> to find out what was thought and heard there. You can also travel the whole map in order: press <em>Start the journey</em> and it will carry you from 1795 to today.'
+          'Haz clic en un <em>arco</em> para leer la historia de esa ruta musical (con su fuente y su canción) o en un <em>puerto</em> para saber qué se pensó y qué sonó ahí. También puedes recorrerlo todo en orden: pulsa <em>Iniciar la travesía</em> y el mapa te lleva de 1795 hasta hoy. En la segunda fila de botones están las otras lecturas: <em>corrientes</em>, <em>ramajes</em> y <em>travesías de escucha</em>.',
+          'Click an <em>arc</em> to read the story behind that musical route (with its source and its song), or a <em>port</em> to find out what was thought and heard there. You can also travel the whole map in order: press <em>Start the journey</em> and it will carry you from 1795 to today. The second row of buttons holds the other readings: <em>currents</em>, <em>branchings</em>, and <em>listening journeys</em>.'
         ) + '</p>';
     }
 
@@ -842,7 +846,7 @@
       });
       contRotulos.forEach(function (r) { if (r.el.parentNode) r.el.parentNode.removeChild(r.el); });
       contRotulos = [];
-      var anio = String(arco.rutaData.anos).split(/[–-]/)[0];
+      var anio = (String(arco.rutaData.anos).match(/\d{4}/) || [String(arco.rutaData.anos)])[0];
       Object.keys(activos).forEach(function (id) {
         var el = document.createElement('div');
         el.className = 'atlantico-cont-ano'; el.setAttribute('aria-hidden', 'true'); el.style.color = color;
@@ -896,6 +900,7 @@
           'Antes de la primera ruta hay un viaje que este mapa no dibuja: el pasaje medio, la travesía forzada de la trata. Gilroy hizo del barco su unidad de análisis porque en él cabe lo que ninguna nación contiene, «un sistema vivo, microcultural y micropolítico en movimiento». Esta travesía parte de ahí. Sigue lo que quedó después de ese cruce y volvió a cruzar el agua en sentido contrario, como cuenta Montes Pizarro con su árbol de más ramas que raíces. Empieza en 1796, con un tambor que regresó a Freetown.',
           'Before the first route there is a voyage this map does not draw: the Middle Passage, the forced crossing of the slave trade. Gilroy made the ship his unit of analysis because it holds what no nation contains, “a living, microcultural, micropolitical system in motion.” This journey starts there. It follows what remained after that crossing and crossed the water again in the other direction, as Montes Pizarro tells it with his tree of more branches than roots. It begins in 1796, with a drum that returned to Freetown.'
         ) + '</p>' +
+        (window.VaivenLecturas ? window.VaivenLecturas.notaUmbral() : '') +
         '<p class="atlantico-panel-fuente">' + t('Fuentes:', 'Sources:') + ' Gilroy 1993 · Montes Pizarro 2018</p>' +
         '<div class="atlantico-tour-bar">' +
           '<button class="atlantico-tour-btn atlantico-tour-btn--empezar" type="button" data-tour="empezar">' + t('Empezar en 1796', 'Begin in 1796') + ' &rarr;</button>' +
@@ -906,12 +911,14 @@
       if (emp) { emp.addEventListener('click', function () { irAPaso(0); }); if (!modoSecuencia) emp.focus({ preventScroll: true }); }
       actualizarBtnSecuencia();
       if (sal) sal.addEventListener('click', function () { abandonarTravesia(true); });
+      if (window.VaivenLecturas) window.VaivenLecturas.umbral(true);
     }
 
     function irAPaso(i) {
       tourIdx = i;
       var arco = pasos[i];
       if (!arco) return;
+      if (window.VaivenLecturas) window.VaivenLecturas.umbral(false);
       if (!map.hasLayer(arco)) arco.addTo(map);
       if (arco.franja && !map.hasLayer(arco.franja)) arco.franja.addTo(map);
       resaltarArco(arco);
@@ -927,7 +934,7 @@
     /* La travesía recorre las treinta rutas por su año de partida, así la fecha solo
        avanza (antes seguía el orden de las épocas y el año retrocedía: 1932 y luego
        1890). Desempata el orden en que están cargadas. */
-    function anoPartida(a) { return parseInt(String(a.rutaData.anos).split(/[–-]/)[0], 10) || 0; }
+    function anoPartida(a) { var m = String(a.rutaData.anos).match(/\d{4}/); return m ? parseInt(m[0], 10) : 0; }
     function secuenciaCronologica() {
       return arcos.slice().sort(function (a, b) { return anoPartida(a) - anoPartida(b) || arcos.indexOf(a) - arcos.indexOf(b); });
     }
@@ -947,6 +954,7 @@
       detenerNavio();
       apagarContinentes();
       restaurarArcos();
+      if (window.VaivenLecturas) window.VaivenLecturas.umbral(false);
       if (volverVista) {
         map.flyTo([16, -32], 3, { duration: 1.2 });
         panelIntro();
@@ -1091,6 +1099,7 @@
     // ── Filtros por época ──
     function aplicarEpoca(capa) {
       if (tourActivo) abandonarTravesia(false);
+      if (window.VaivenLecturas) window.VaivenLecturas.alCambiarEpoca();
       // capa: 'all' | '1' | '2' | '3' | '4'
       document.querySelectorAll('.caribe-mapa-filters .filter-btn[data-layer]').forEach(function (b) {
         b.classList.toggle('is-active', b.getAttribute('data-layer') === capa);
@@ -1204,6 +1213,17 @@
     window.addEventListener('resize', remedir);
     window.addEventListener('orientationchange', remedir);
     setTimeout(function () { map.invalidateSize(); }, 300);
+
+    /* Puerta para js/vaiven-lecturas.js (corrientes, ramajes, travesías de escucha,
+       mar de fondo): lee el mapa y usa sus piezas de panel, sin duplicarlas. */
+    window.VaivenMapa = {
+      map: map, arcos: arcos, nodos: nodos, epocas: epocas, idioma: IDIOMA, panel: panel,
+      nombreDisp: nombreDisp, mostrarPanel: mostrarPanel, panelCabecera: panelCabecera,
+      panelCancion: panelCancion, panelTags: panelTags, panelIntro: panelIntro,
+      restaurarArcos: restaurarArcos, volarAArco: volarAArco, navegarArco: navegarArco,
+      detenerNavio: detenerNavio, aplicarEpoca: aplicarEpoca
+    };
+    try { document.dispatchEvent(new CustomEvent('vaiven:mapa')); } catch (e) {}
   }
 
   function boot() { loadAtlas(function () { init(); }); }

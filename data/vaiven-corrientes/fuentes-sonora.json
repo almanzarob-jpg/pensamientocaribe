@@ -3,10 +3,10 @@
     "titulo": "Bibliografía de Con el vaivén de las corrientes",
     "descripcion": "Fuente única de la bibliografía del mapa. Las páginas proyectos/mas-ramas-que-raices(.-en).html se generan desde aquí con scripts/generar-bibliografia-vaiven.mjs. Las referencias con enPagina:false están citadas en rutas o puertos pero faltan datos y no se publican hasta completarlas; no se rellenan por inferencia.",
     "responsable": "Roberto Almanza Hernández",
-    "version": "0.3.2",
-    "fecha": "2026-10-17",
-    "referencias": 35,
-    "completas": 33
+    "version": "0.4.0",
+    "fecha": "2026-11-16",
+    "referencias": 40,
+    "completas": 39
   },
   "referencias": [
     {
@@ -121,7 +121,7 @@
       "nota_estilo": "corchete",
       "doi": "",
       "url": "",
-      "usosEnElMapa": 0,
+      "usosEnElMapa": 1,
       "estado": "incompleta_en_origen",
       "enPagina": true
     },
@@ -347,7 +347,7 @@
       "editorial": "Ediciones Callejón",
       "doi": "",
       "url": "",
-      "usosEnElMapa": 14,
+      "usosEnElMapa": 31,
       "estado": "completa",
       "enPagina": true
     },
@@ -560,6 +560,87 @@
       "autores_texto": "Gast, L. (Director)",
       "sin_fecha": false,
       "nota_estilo": "corchete"
+    },
+    {
+      "key": "Aranzadi2010",
+      "citaOriginal": "Aranzadi 2010",
+      "autores_texto": "Aranzadi, I. de",
+      "anio": "2010",
+      "sin_fecha": false,
+      "tipo": "articulo",
+      "titulo": "A drum's trans-Atlantic journey from Africa to the Americas and back after the end of slavery: Annobonese and Fernandino musical cultures",
+      "contenedor": "African Sociological Review",
+      "numero": "14(1), 20-47",
+      "doi": "",
+      "url": "https://www.ajol.info/index.php/asr/article/view/70227",
+      "estado": "completa",
+      "enPagina": true,
+      "usosEnElMapa": 3
+    },
+    {
+      "key": "Aranzadi2014",
+      "citaOriginal": "Aranzadi 2014",
+      "autores_texto": "Aranzadi, I. de",
+      "anio": "2014",
+      "sin_fecha": false,
+      "tipo": "articulo",
+      "titulo": "Cuban heritage in Africa: Deported Ñáñigos to Fernando Po in the 19th century",
+      "contenedor": "African Sociological Review",
+      "numero": "18(2), 2-41",
+      "doi": "",
+      "url": "https://ajol.info/index.php/asr/article/view/135379",
+      "estado": "completa",
+      "enPagina": true,
+      "usosEnElMapa": 1
+    },
+    {
+      "key": "Aranzadi2021",
+      "citaOriginal": "Aranzadi 2021",
+      "autores_texto": "Aranzadi, I. de",
+      "anio": "2021",
+      "sin_fecha": false,
+      "tipo": "articulo",
+      "titulo": "El papel de Cuba como centro de la periferia africana hispana. La maringa: un género colonial y un estilo autóctono en Guinea Ecuatorial",
+      "contenedor": "Coloquios de Historia Canario-Americana",
+      "numero": "",
+      "doi": "",
+      "url": "",
+      "estado": "incompleta",
+      "enPagina": false,
+      "pendiente": "Falta número y páginas; solo se consultó el resumen. De ahí sale el intervalo 1862-1897 de la ruta e32.",
+      "usosEnElMapa": 1
+    },
+    {
+      "key": "EltisRichardson2010",
+      "citaOriginal": "Eltis y Richardson 2010",
+      "autores_texto": "Eltis, D. y Richardson, D.",
+      "autores_texto_en": "Eltis, D., & Richardson, D.",
+      "anio": "2010",
+      "sin_fecha": false,
+      "tipo": "libro",
+      "titulo": "Atlas of the transatlantic slave trade",
+      "editorial": "Yale University Press",
+      "doi": "",
+      "url": "https://www.slavevoyages.org/blog/wind-ocean-currents-atlantic-basins",
+      "estado": "completa",
+      "enPagina": true,
+      "usosEnElMapa": 1
+    },
+    {
+      "key": "GyoryMarianoRyanSF",
+      "citaOriginal": "Gyory, Mariano y Ryan, s. f.",
+      "autores_texto": "Gyory, J., Mariano, A. J. y Ryan, E. H.",
+      "autores_texto_en": "Gyory, J., Mariano, A. J., & Ryan, E. H.",
+      "anio": "",
+      "sin_fecha": true,
+      "tipo": "libro",
+      "titulo": "Ocean surface currents",
+      "editorial": "University of Miami, Rosenstiel School of Marine and Atmospheric Science",
+      "doi": "",
+      "url": "https://oceancurrents.rsmas.miami.edu/",
+      "estado": "completa",
+      "enPagina": true,
+      "usosEnElMapa": 1
     }
   ]
 }

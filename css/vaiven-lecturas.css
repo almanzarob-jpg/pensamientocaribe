@@ -1,0 +1,95 @@
+/* Con el vaivén de las corrientes · lecturas (corrientes, ramajes, travesías de escucha, mar de fondo).
+   Hereda botones, panel y tipografía del mapa; aquí solo va lo que es propio. */
+
+/* ── Barra de lecturas: segunda fila sobre el mapa ── */
+.vaiven-barra { margin-top: calc(var(--space-md) * -0.5); align-items: center; }
+.vaiven-corte { flex-basis: 100%; height: 0; }
+.vaiven-barra-rot {
+  font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--c-gray-dim); margin-right: 4px;
+}
+.vaiven-barra .filter-btn[aria-pressed="true"] { background: rgba(201,162,77,0.14); border-color: var(--c-gold); color: var(--c-cream); }
+.vaiven-barra .filter-btn--lectura { border-color: rgba(232,147,90,0.55); color: #E8935A; }
+.vaiven-barra .filter-btn--lectura[aria-pressed="true"] { background: rgba(232,147,90,0.14); border-color: #E8935A; color: var(--c-cream); }
+.vaiven-barra .filter-btn:focus-visible { outline: 2px solid var(--c-cream); outline-offset: 2px; }
+
+/* ── Mar de fondo ── */
+.caribe-leaflet-map path.vaiven-giro { animation: vaiven-deriva 16s linear infinite; transition: stroke-opacity .6s, stroke-width .6s; }
+@keyframes vaiven-deriva { to { stroke-dashoffset: -110; } }
+.vaiven-giro-rotulo { pointer-events: none; text-align: center; }
+.vaiven-giro-rotulo span {
+  font-family: var(--ff-display); font-style: italic; font-size: 12.5px; letter-spacing: 0.02em;
+  color: rgba(95,176,183,0.72); white-space: nowrap; text-shadow: 0 0 4px #050604, 0 0 4px #050604;
+}
+
+/* ── Rótulos de puerto de la lectura activa ── */
+.leaflet-tooltip.vaiven-rotulo {
+  background: none; border: 0; box-shadow: none; padding: 0;
+  font-family: var(--ff-body); font-size: 12px; font-weight: 500; color: var(--c-cream);
+  text-shadow: 0 0 3px #050604, 0 0 3px #050604, 0 0 6px #050604; white-space: nowrap;
+}
+.leaflet-tooltip.vaiven-rotulo::before { display: none; }
+
+/* ── Panel ── */
+.vaiven-volver {
+  display: inline-block; background: none; border: 0; padding: 6px 0; margin: 0 0 4px; cursor: pointer;
+  font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--c-gold); min-height: 32px;
+}
+.vaiven-volver:hover { color: var(--c-cream); }
+.vaiven-volver:focus-visible, .vaiven-lista button:focus-visible, .vaiven-menu button:focus-visible { outline: 2px solid var(--c-cream); outline-offset: 2px; }
+.vaiven-nota { font-size: 0.86rem; line-height: 1.5; color: var(--c-gray); margin: 10px 0; }
+.vaiven-nota strong, .atlantico-panel-desc strong { color: #E8935A; font-weight: 600; }
+.vaiven-subtitulo {
+  font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--c-gray-dim); margin: 18px 0 6px;
+}
+.vaiven-subtitulo label { cursor: pointer; }
+.vaiven-pregunta, .vaiven-consigna p:last-child {
+  font-family: var(--ff-display); font-size: 1.22rem; line-height: 1.35; color: var(--c-cream); margin: 6px 0 10px;
+}
+.vaiven-consigna { border-left: 2px solid #E8935A; padding: 2px 0 2px 12px; margin: 8px 0 14px; }
+.vaiven-consigna-rot { font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: #E8935A; margin: 0; }
+
+.vaiven-lista { list-style: none; margin: 8px 0 0; padding: 0; border-top: 1px solid rgba(245,237,221,0.12); }
+.vaiven-lista button {
+  width: 100%; display: flex; justify-content: space-between; align-items: baseline; gap: 10px; text-align: left;
+  background: none; border: 0; border-bottom: 1px solid rgba(245,237,221,0.09); padding: 9px 4px; cursor: pointer;
+  font-family: var(--ff-body); font-size: 0.92rem; line-height: 1.35; color: var(--c-cream);
+}
+.vaiven-lista button:hover { background: rgba(245,237,221,0.05); }
+.vaiven-lista button em { display: block; font-size: 0.82rem; color: var(--c-gray); }
+.vaiven-lista button small { font-family: var(--ff-mono); font-size: 11px; color: var(--c-gray-dim); white-space: nowrap; }
+
+.vaiven-menu { display: grid; gap: 6px; margin-top: 10px; }
+.vaiven-menu button {
+  display: block; width: 100%; text-align: left; cursor: pointer; padding: 10px 12px;
+  background: rgba(245,237,221,0.03); border: 1px solid rgba(245,237,221,0.12); border-radius: var(--radius-sm); color: var(--c-cream);
+  transition: border-color .25s, background .25s;
+}
+.vaiven-menu button:hover { border-color: var(--c-border-orange); background: rgba(240,122,22,0.06); }
+.vaiven-menu b { display: block; font-family: var(--ff-display); font-size: 1.2rem; font-weight: 600; line-height: 1.2; }
+.vaiven-menu span { display: block; font-size: 0.86rem; line-height: 1.4; color: var(--c-gray); margin-top: 2px; }
+.vaiven-menu small { display: block; font-family: var(--ff-mono); font-size: 10.5px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-gray-dim); margin-top: 5px; }
+
+.vaiven-simple { margin: 4px 0; padding-left: 1.1rem; font-size: 0.92rem; line-height: 1.5; color: var(--c-gray); }
+.vaiven-simple li { margin-bottom: 4px; }
+.vaiven-libreta {
+  width: 100%; box-sizing: border-box; background: var(--c-bg-deep); color: var(--c-cream);
+  border: 1px solid rgba(245,237,221,0.22); border-radius: var(--radius-sm); padding: 10px;
+  font-family: var(--ff-body); font-size: 0.92rem; line-height: 1.5; resize: vertical;
+}
+.vaiven-libreta:focus-visible { outline: 2px solid var(--c-gold); outline-offset: 1px; }
+.vaiven-aviso { display: inline-block; margin-left: 10px; font-family: var(--ff-mono); font-size: 11px; color: var(--c-gold); }
+
+.vaiven-corriente { font-family: var(--ff-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--c-gray); margin: 12px 0 0; }
+.vaiven-corriente span { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 7px; vertical-align: baseline; }
+.vaiven-corriente em { display: block; font-family: var(--ff-body); font-style: normal; font-size: 0.82rem; letter-spacing: 0; text-transform: none; color: var(--c-gray-dim); margin-top: 3px; }
+
+@media (max-width: 720px) {
+  .vaiven-barra { justify-content: flex-start; }
+  .vaiven-corte { flex-basis: 100%; height: 0; }
+.vaiven-barra-rot { flex-basis: 100%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .caribe-leaflet-map path.vaiven-giro { animation: none; }
+}

@@ -706,5 +706,188 @@
       "Erlmann1991",
       "Jaji2014"
     ]
+  },
+  {
+    "id": "malabo",
+    "nombre": "Malabo",
+    "pais": "Guinea Ecuatorial",
+    "lat": 3.7504,
+    "lng": 8.7371,
+    "categoria": "África",
+    "desc": "Capital de Guinea Ecuatorial, en la isla de Bioko, antes Fernando Poo. Los británicos la fundaron en 1827 como Port Clarence, base de los navíos que interceptaban barcos negreros, igual que Freetown. Durante el siglo XIX llegaron obreros krio de Sierra Leona, misioneros jamaiquinos y emancipados de Cuba. Con los krio vino el gumbé: los criollos de la isla lo llamaron kunkí y en Annobón, cumbé. De aquí lo llevaron a Ghana obreros y pescadores ga, y allá se volvió gome.",
+    "claves": [
+      "Port Clarence, 1827",
+      "Kunkí · cumbé",
+      "Fernandinos"
+    ],
+    "cultura": "Kunkí · Cumbé · Bonkó",
+    "desc_en": "Capital of Equatorial Guinea, on the island of Bioko, formerly Fernando Po. The British founded it in 1827 as Port Clarence, a base for the ships that intercepted slavers, as Freetown was. During the nineteenth century Krio workers from Sierra Leone, Jamaican missionaries, and emancipated people from Cuba arrived here. The Krio brought the gumbe drum: the island's creoles called it kunkí, and on Annobón it became cumbé. From here Ga workers and fishermen carried it to Ghana, where it turned into gome.",
+    "claves_en": [
+      "Port Clarence, 1827",
+      "Kunkí · cumbé",
+      "Fernandinos"
+    ],
+    "cultura_en": "Kunkí · Cumbé · Bonkó",
+    "fuente": "Montes Pizarro 2018, pp. 79-80 · Aranzadi 2010",
+    "zoteroKeys": [
+      "MontesPizarro2018",
+      "Aranzadi2010"
+    ]
+  },
+  {
+    "id": "bamako",
+    "nombre": "Bamako",
+    "pais": "Malí",
+    "lat": 12.6392,
+    "lng": -8.0029,
+    "categoria": "África",
+    "desc": "Capital de Malí. Su primer presidente, Modibo Keita, siguió una política cultural parecida a la de Sékou Touré en Guinea, y la música afrocaribeña en español sirvió para «modernizar» las músicas del país. Las Maravillas de Malí, formada por estudiantes malienses en La Habana, regresó aquí y se volvió National Badema, con el griot Kasse Mady Diabaté. La Rail Band y Les Ambassadeurs tuvieron boleros en su repertorio.",
+    "claves": [
+      "Las Maravillas de Malí",
+      "National Badema",
+      "Rail Band · Les Ambassadeurs"
+    ],
+    "cultura": "Música mandé · Son · Bolero",
+    "desc_en": "Capital of Mali. Its first president, Modibo Keita, pursued a cultural policy much like Sékou Touré's in Guinea, and Spanish-language Afro-Caribbean music helped “modernize” the country's musics. Las Maravillas de Malí, formed by Malian students in Havana, came back here and became National Badema, with the griot Kasse Mady Diabaté. The Rail Band and Les Ambassadeurs kept boleros in their repertoire.",
+    "claves_en": [
+      "Las Maravillas de Malí",
+      "National Badema",
+      "Rail Band · Les Ambassadeurs"
+    ],
+    "cultura_en": "Mande music · Son · Bolero",
+    "fuente": "Montes Pizarro 2018, pp. 164-165, 215",
+    "zoteroKeys": [
+      "MontesPizarro2018"
+    ]
+  },
+  {
+    "id": "cotonu",
+    "nombre": "Cotonú",
+    "pais": "Benín",
+    "lat": 6.3703,
+    "lng": 2.3912,
+    "categoria": "África",
+    "desc": "Ciudad de Gnonnas Pedro (1943-2004), que juntó el highlife y el agbadja local con música afrocubana y calipso, y grabó boleros como «Perfidia». Benín es además la tierra arará de la memoria cubana: de Ouidah salieron embarques de esclavizados hacia el Caribe y Brasil, y a esta costa regresaron libertos de Brasil y de Cuba, los agudás.",
+    "claves": [
+      "Gnonnas Pedro",
+      "Agbadja",
+      "Agudás"
+    ],
+    "cultura": "Agbadja · Highlife · Bolero · Salsa",
+    "desc_en": "City of Gnonnas Pedro (1943-2004), who joined highlife and the local agbadja with Afro-Cuban music and calypso, and recorded boleros such as “Perfidia.” Benin is also the Arará land of Cuban memory: from Ouidah enslaved people were shipped to the Caribbean and Brazil, and to this coast freed people from Brazil and Cuba, the Agudás, returned.",
+    "claves_en": [
+      "Gnonnas Pedro",
+      "Agbadja",
+      "Agudás"
+    ],
+    "cultura_en": "Agbadja · Highlife · Bolero · Salsa",
+    "fuente": "Montes Pizarro 2018, pp. 213-215",
+    "zoteroKeys": [
+      "MontesPizarro2018"
+    ]
+  },
+  {
+    "id": "duala",
+    "nombre": "Duala",
+    "pais": "Camerún",
+    "lat": 4.0511,
+    "lng": 9.7679,
+    "categoria": "África",
+    "desc": "Puerto sobre el río Wouri y capital comercial de Camerún. En los años cuarenta y cincuenta se encontraron aquí las tradiciones locales con el highlife nigeriano, la música congoleña y los sones y merengues que llegaban en discos. De esa mezcla salió, a comienzos de los sesenta, el makossa. Aquí nació en 1933 Manu Dibango, que en 1973 tocó «Soul Makossa» con la Fania All Stars en Puerto Rico.",
+    "claves": [
+      "Makossa",
+      "Manu Dibango",
+      "Sones y merengues en disco"
+    ],
+    "cultura": "Makossa · Makassi",
+    "desc_en": "A port on the Wouri River and Cameroon's commercial capital. In the 1940s and 1950s local traditions met Nigerian highlife, Congolese music, and the sones and merengues that arrived on record. Out of that mix, in the early 1960s, came makossa. Manu Dibango was born here in 1933; in 1973 he played “Soul Makossa” with the Fania All Stars in Puerto Rico.",
+    "claves_en": [
+      "Makossa",
+      "Manu Dibango",
+      "Son and merengue on record"
+    ],
+    "cultura_en": "Makossa · Makassi",
+    "fuente": "Montes Pizarro 2018, pp. 222-223",
+    "zoteroKeys": [
+      "MontesPizarro2018"
+    ]
+  },
+  {
+    "id": "guadalupe",
+    "nombre": "Guadalupe",
+    "pais": "Antillas francesas",
+    "lat": 16.2411,
+    "lng": -61.5331,
+    "categoria": "Gran Caribe",
+    "desc": "La Ry-Co Jazz llegó a Martinica y Guadalupe en 1967. El tecladista guadalupeño Jean-Claude Naimro trabajó con ella y la cuenta entre las influencias de origen del zouk. Kassav', el grupo que creó ese género, se fundó en la isla en 1979 por iniciativa de Pierre-Édouard Décimus.",
+    "claves": [
+      "Kassav', 1979",
+      "Jean-Claude Naimro",
+      "Zouk"
+    ],
+    "cultura": "Gwoka · Biguine · Zouk",
+    "desc_en": "Ry-Co Jazz reached Martinique and Guadeloupe in 1967. The Guadeloupean keyboardist Jean-Claude Naimro worked with the band and counts it among the founding influences of zouk. Kassav', the group that created the genre, was founded on the island in 1979 on the initiative of Pierre-Édouard Décimus.",
+    "claves_en": [
+      "Kassav', 1979",
+      "Jean-Claude Naimro",
+      "Zouk"
+    ],
+    "cultura_en": "Gwoka · Biguine · Zouk",
+    "fuente": "Montes Pizarro 2018, p. 221",
+    "zoteroKeys": [
+      "MontesPizarro2018"
+    ]
+  },
+  {
+    "id": "canal-de-panama",
+    "nombre": "Canal de Panamá",
+    "pais": "Panamá",
+    "lat": 9.3547,
+    "lng": -79.9014,
+    "categoria": "Gran Caribe",
+    "desc": "En la década de 1880 había obreros kru, llegados de la costa de Liberia, trabajando en la construcción del canal. Era parte de un radio de trabajo que los llevó también a las Guayanas, Jamaica, Trinidad y Martinica. El libro nombra el canal y no una ciudad: el punto está puesto en su boca atlántica.",
+    "claves": [
+      "Obreros kru",
+      "Década de 1880",
+      "Trabajo africano libre en el Caribe"
+    ],
+    "cultura": "",
+    "desc_en": "In the 1880s Kru workers from the Liberian coast were at work on the construction of the canal. It was part of a range of labor that also took them to the Guianas, Jamaica, Trinidad, and Martinique. The book names the canal, not a city: the point sits at its Atlantic mouth.",
+    "claves_en": [
+      "Kru workers",
+      "The 1880s",
+      "Free African labor in the Caribbean"
+    ],
+    "cultura_en": "",
+    "fuente": "Montes Pizarro 2018, pp. 90-91",
+    "zoteroKeys": [
+      "MontesPizarro2018"
+    ]
+  },
+  {
+    "id": "dar-es-salaam",
+    "nombre": "Dar es Salaam",
+    "pais": "Tanzania",
+    "lat": -6.7924,
+    "lng": 39.2083,
+    "categoria": "África",
+    "desc": "En su discurso inaugural, Julius Nyerere lamentó que los tanzanos supieran bailar rumba y chachachá y no las danzas propias. Aun así la música caribeña, llegada sobre todo por vía de la congoleña, siguió sonando en las ciudades. La Cuban Marimba Band de Salum Abdallah, fundada en 1948, fue por casi veinte años su portaestandarte en África Oriental, junto a la Dar es Salaam Jazz Band y otras.",
+    "claves": [
+      "Cuban Marimba Band",
+      "Salum Abdallah",
+      "Nyerere"
+    ],
+    "cultura": "Rumba · Chachachá",
+    "desc_en": "In his inaugural address, Julius Nyerere regretted that Tanzanians knew how to dance the rumba and the cha-cha-chá but not their own dances. Even so, Caribbean music, arriving mostly by way of Congolese music, kept playing in the cities. Salum Abdallah's Cuban Marimba Band, founded in 1948, was its standard-bearer in East Africa for almost twenty years, alongside the Dar es Salaam Jazz Band and others.",
+    "claves_en": [
+      "Cuban Marimba Band",
+      "Salum Abdallah",
+      "Nyerere"
+    ],
+    "cultura_en": "Rumba · Cha-cha-chá",
+    "fuente": "Montes Pizarro 2018, pp. 165-166",
+    "zoteroKeys": [
+      "MontesPizarro2018"
+    ]
   }
 ]

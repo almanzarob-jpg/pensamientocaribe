@@ -1,0 +1,658 @@
+{
+  "meta": {
+    "titulo": "Lecturas de Con el vaivén de las corrientes",
+    "descripcion": "Corrientes (vehículo en que viajó la música), ramajes (rutas publicadas, encadenadas), travesías de escucha y mar de fondo. No añade rutas ni puertos: propone maneras de leer los de nodes.json y edges.json. La corriente de cada ruta va en el campo `corriente` de edges.json.",
+    "responsable": "Roberto Almanza Hernández",
+    "version": "1.0.0",
+    "fecha": "2026-11-16"
+  },
+  "corrientes": [
+    {
+      "id": "cuerpos",
+      "color": "#C9B27C",
+      "nombre": "Cuerpos",
+      "nombre_en": "Bodies",
+      "desc": "La música viaja en la gente: deportados, soldados, marineros, migrantes.",
+      "desc_en": "Music travels in people: the deported, soldiers, sailors, migrants."
+    },
+    {
+      "id": "discos",
+      "color": "#E8935A",
+      "nombre": "Discos",
+      "nombre_en": "Records",
+      "desc": "Viaja sin los músicos: 78 revoluciones, vinilos, picós.",
+      "desc_en": "It travels without the musicians: 78 rpm discs, vinyl, picó sound systems."
+    },
+    {
+      "id": "ondas",
+      "color": "#5FB0B7",
+      "nombre": "Ondas",
+      "nombre_en": "Waves",
+      "desc": "Radio, estudio compartido y red: el diálogo en tiempo corto.",
+      "desc_en": "Radio, the shared studio, the network: dialogue at short range."
+    },
+    {
+      "id": "palabras",
+      "color": "#F2EAD8",
+      "nombre": "Palabras",
+      "nombre_en": "Words",
+      "desc": "Libros, revistas y congresos: el panafricanismo letrado.",
+      "desc_en": "Books, journals, and congresses: lettered pan-Africanism."
+    },
+    {
+      "id": "escenarios",
+      "color": "#D83A2E",
+      "nombre": "Escenarios",
+      "nombre_en": "Stages",
+      "desc": "Giras, festivales y Estados que ponen la tarima.",
+      "desc_en": "Tours, festivals, and the states that build the stage."
+    },
+    {
+      "id": "espiritus",
+      "color": "#A996D6",
+      "nombre": "Espíritus",
+      "nombre_en": "Spirits",
+      "desc": "Lo sagrado como ruta: orishas, Etiopía.",
+      "desc_en": "The sacred as a route: orishas, Ethiopia."
+    }
+  ],
+  "ramajes": [
+    {
+      "id": "tambor-que-dio-la-vuelta",
+      "nombre": "El tambor que dio la vuelta",
+      "nombre_en": "The drum that came full circle",
+      "anos": "1796 → hoy",
+      "anos_en": "1796 → now",
+      "rutas": [
+        "e01",
+        "e04",
+        "e16",
+        "e24"
+      ],
+      "desc": "Kingston, Freetown, Accra, Lagos y otra vez Kingston. Cuatro rutas del mapa leídas como un solo circuito de más de dos siglos: el gumbé cruza a Sierra Leona, la música de puerto de esa costa da el highlife, el highlife se vuelve afrobeat en Lagos y sus herederos conversan hoy con Jamaica.",
+      "desc_en": "Kingston, Freetown, Accra, Lagos, and Kingston again. Four routes on the map read as a single circuit more than two centuries long: gumbe crosses to Sierra Leone, the port music of that coast gives rise to highlife, highlife becomes Afrobeat in Lagos, and its heirs now converse with Jamaica."
+    },
+    {
+      "id": "son-que-se-volvio-champeta",
+      "nombre": "El son que se volvió champeta",
+      "nombre_en": "The son that became champeta",
+      "anos": "1932 → hoy",
+      "anos_en": "1932 → now",
+      "rutas": [
+        "e07",
+        "e11",
+        "e21",
+        "e22"
+      ],
+      "desc": "El son llega al Congo en discos, se vuelve rumba en las dos orillas del río, desembarca en los picós de Cartagena y Palenque le responde.",
+      "desc_en": "Son reaches the Congo on record, becomes rumba on both banks of the river, lands in the picós of Cartagena, and Palenque answers back."
+    },
+    {
+      "id": "rumba-que-sembro-el-zouk",
+      "nombre": "La rumba que sembró el zouk",
+      "nombre_en": "The rumba that seeded zouk",
+      "anos": "1932 → 1990",
+      "anos_en": "1932 → 1990",
+      "rutas": [
+        "e07",
+        "e11",
+        "e20",
+        "e25"
+      ],
+      "desc": "La misma rumba congoleña toma otro rumbo: la Ry-Co Jazz la lleva a las Antillas y la familia de la cadence y el zouk encuentra eco en Cabo Verde.",
+      "desc_en": "The same Congolese rumba takes another course: Ry-Co Jazz carries it to the Antilles, and the family of cadence and zouk finds an echo in Cabo Verde."
+    },
+    {
+      "id": "son-cantado-en-wolof",
+      "nombre": "El son que volvió cantado en wolof",
+      "nombre_en": "The son that came back sung in Wolof",
+      "anos": "1930 → hoy",
+      "anos_en": "1930 → now",
+      "rutas": [
+        "e09",
+        "e13",
+        "e23"
+      ],
+      "desc": "La Habana suena en Dakar desde los años treinta, Dakar le contesta con su propia salsa y las dos orillas terminan grabando juntas.",
+      "desc_en": "Havana is heard in Dakar from the 1930s on, Dakar replies with a salsa of its own, and the two shores end up recording together."
+    }
+  ],
+  "travesias": [
+    {
+      "id": "raiz-o-rama",
+      "nombre": "¿Raíz o rama?",
+      "nombre_en": "Root or branch?",
+      "nivel": "Bachillerato y pregrado",
+      "nivel_en": "Secondary school and undergraduate",
+      "pregunta": "Si un tambor jamaiquino está en el origen de músicas de Sierra Leona y de Ghana, ¿quién es raíz de quién?",
+      "pregunta_en": "If a Jamaican drum stands at the origin of musics in Sierra Leone and Ghana, who is whose root?",
+      "pasos": [
+        {
+          "ruta": "e01",
+          "consigna": "Escucha el gumbay de Freetown. ¿Qué te haría decir que es música africana, y qué que es caribeña? Anota en qué te apoyas.",
+          "consigna_en": "Listen to the gumbay from Freetown. What would make you call it African music, and what Caribbean? Note what you are relying on."
+        },
+        {
+          "ruta": "e04",
+          "consigna": "Los kru eran marineros. ¿Qué le pasa a una música que vive en los puertos y no en una aldea?",
+          "consigna_en": "The Kru were sailors. What happens to a music that lives in ports rather than in a village?"
+        },
+        {
+          "ruta": "e16",
+          "consigna": "Fela mezcla highlife con jazz y funk de Estados Unidos. Cuenta cuántas orillas caben en una sola canción.",
+          "consigna_en": "Fela mixes highlife with jazz and funk from the United States. Count how many shores fit inside a single song."
+        },
+        {
+          "ruta": "e24",
+          "consigna": "El circuito llega de nuevo a Kingston dos siglos después. ¿Es un regreso o es otra rama?",
+          "consigna_en": "Two centuries later the circuit reaches Kingston again. Is it a return, or another branch?"
+        }
+      ],
+      "discutir": [
+        "¿Qué se pierde cuando la historia de la música negra se cuenta solo de África hacia América?",
+        "Montes Pizarro propone un árbol con más ramas que raíces. ¿Qué imagen propondrías tú?"
+      ],
+      "discutir_en": [
+        "What is lost when the history of Black music is told only from Africa toward the Americas?",
+        "Montes Pizarro proposes a tree with more branches than roots. What image would you propose?"
+      ],
+      "producto": "Un párrafo que explique, a alguien que no ha visto el mapa, por qué «raíz» se queda corta, con una ruta como prueba.",
+      "producto_en": "A paragraph explaining, to someone who has not seen the map, why “root” falls short, with one route as evidence."
+    },
+    {
+      "id": "el-disco-como-barco",
+      "nombre": "El disco como barco",
+      "nombre_en": "The record as a ship",
+      "nivel": "Pregrado",
+      "nivel_en": "Undergraduate",
+      "pregunta": "¿Qué cambia cuando la música viaja sin los músicos?",
+      "pregunta_en": "What changes when music travels without the musicians?",
+      "pasos": [
+        {
+          "ruta": "e07",
+          "consigna": "El son llegó al Congo en discos de 78 revoluciones. Quien lo oyó allá no vio a nadie tocarlo. ¿Qué se puede reconocer como propio solo con el oído?",
+          "consigna_en": "Son reached the Congo on 78 rpm records. Those who heard it there saw no one play it. What can be recognized as one's own by ear alone?"
+        },
+        {
+          "ruta": "e11",
+          "consigna": "Compara «Marie Louise» con «El Manisero» de la parada anterior. ¿Qué se quedó y qué cambió?",
+          "consigna_en": "Compare “Marie Louise” with “El Manisero” from the previous stop. What stayed, and what changed?"
+        },
+        {
+          "ruta": "e21",
+          "consigna": "En los picós esos discos se llamaron «música africana», sin país ni género. ¿Qué dice ese nombre sobre quien escucha?",
+          "consigna_en": "In the picós those records were called “African music,” with no country and no genre. What does that name say about the listener?"
+        },
+        {
+          "ruta": "e22",
+          "consigna": "Palenque deja de versionar y graba lo suyo. ¿En qué momento una escucha se vuelve respuesta?",
+          "consigna_en": "Palenque stops covering and records its own. At what point does listening become a reply?"
+        }
+      ],
+      "discutir": [
+        "¿Un disco es un documento histórico? ¿Qué le preguntarías como fuente?",
+        "¿Qué hace hoy el trabajo que hacían los corresponsales picoteros?"
+      ],
+      "discutir_en": [
+        "Is a record a historical document? What would you ask of it as a source?",
+        "What does today the work the picó correspondents once did?"
+      ],
+      "producto": "Una ficha de escucha comparada de dos canciones de la travesía: qué viajó, en qué viajó, qué brotó.",
+      "producto_en": "A comparative listening sheet for two songs from the journey: what traveled, what it traveled in, what sprouted."
+    },
+    {
+      "id": "la-palabra-y-el-tambor",
+      "nombre": "La palabra y el tambor",
+      "nombre_en": "The word and the drum",
+      "nivel": "Pregrado y posgrado",
+      "nivel_en": "Undergraduate and graduate",
+      "pregunta": "¿Hubo dos panafricanismos, uno de libros y otro de canciones, o uno solo?",
+      "pregunta_en": "Were there two pan-Africanisms, one of books and one of songs, or only one?",
+      "pasos": [
+        {
+          "ruta": "e02",
+          "consigna": "Blyden escribe. En esta ruta no hay canción. ¿Por qué crees que una cartografía sonora la incluye?",
+          "consigna_en": "Blyden writes. This route has no song. Why do you think a sonic cartography includes it?"
+        },
+        {
+          "ruta": "e10",
+          "consigna": "Los congresos dejaron actas. Lord Kitchener canta su llegada a Londres. ¿Cuál de los dos archivos dice más sobre lo que se sentía?",
+          "consigna_en": "The congresses left minutes. Lord Kitchener sings his arrival in London. Which of the two archives says more about how it felt?"
+        },
+        {
+          "ruta": "e05",
+          "consigna": "Los soldados antillanos no fueron a ningún congreso. ¿Qué panafricanismo hacen sin proponérselo?",
+          "consigna_en": "The West Indian soldiers attended no congress. What pan-Africanism do they practice without intending to?"
+        },
+        {
+          "ruta": "e06",
+          "consigna": "Garvey funda una naviera. ¿Qué tiene que ver un barco con una idea?",
+          "consigna_en": "Garvey founds a shipping line. What does a ship have to do with an idea?"
+        },
+        {
+          "ruta": "e14",
+          "consigna": "La négritude germina entre estudiantes que comparten pista de baile en París (mira también la ruta La Habana–París–Dakar). ¿Dónde termina el baile y dónde empieza el concepto?",
+          "consigna_en": "Négritude germinates among students who share a dance floor in Paris (see also the Havana–Paris–Dakar route). Where does the dancing end and the concept begin?"
+        }
+      ],
+      "discutir": [
+        "¿Quién queda fuera de la historia intelectual cuando solo cuentan los textos?",
+        "¿Puede una canción ser teoría?"
+      ],
+      "discutir_en": [
+        "Who is left out of intellectual history when only texts count?",
+        "Can a song be theory?"
+      ],
+      "producto": "Un cuadro de dos columnas, palabra y tambor, con tres cruces documentados entre ambas y la fuente de cada uno.",
+      "producto_en": "A two-column chart, word and drum, with three documented crossings between them and the source for each."
+    },
+    {
+      "id": "el-estado-baila",
+      "nombre": "El Estado baila",
+      "nombre_en": "The state dances",
+      "nivel": "Pregrado y posgrado",
+      "nivel_en": "Undergraduate and graduate",
+      "pregunta": "¿Qué le pide un Estado a una canción?",
+      "pregunta_en": "What does a state ask of a song?",
+      "pasos": [
+        {
+          "ruta": "e12",
+          "consigna": "Guinea hace de sus orquestas una política de Estado. ¿Por qué el son cubano sirvió para sonar moderno y africano a la vez?",
+          "consigna_en": "Guinea turns its orchestras into state policy. Why did Cuban son serve to sound modern and African at once?"
+        },
+        {
+          "ruta": "e18",
+          "consigna": "El Departamento de Estado volvió embajadores a los músicos de jazz en plena Guerra Fría. ¿Quién usa a quién en esas giras?",
+          "consigna_en": "The State Department made ambassadors of jazz musicians at the height of the Cold War. Who is using whom on those tours?"
+        },
+        {
+          "ruta": "e17",
+          "consigna": "Dakar 1966 y Lagos 1977 fueron festivales de Estado. Busca en la ficha la palabra «contradiscursos» y explica qué quiere decir ahí.",
+          "consigna_en": "Dakar 1966 and Lagos 1977 were state festivals. Find the word “counter-discourses” in the entry and explain what it means there."
+        },
+        {
+          "ruta": "e19",
+          "consigna": "Zaire 74 fue la antesala de una pelea que el régimen de Mobutu quiso como vitrina. Celia Cruz canta «Quimbara» ante un estadio que la entiende. ¿Puede una canción decir algo distinto de lo que espera quien pone la tarima?",
+          "consigna_en": "Zaire 74 was the prelude to a fight the Mobutu regime wanted as a showcase. Celia Cruz sings “Quimbara” to a stadium that understands her. Can a song say something other than what those who build the stage expect?"
+        }
+      ],
+      "discutir": [
+        "¿En qué se parece la política cultural de las independencias a la de un ministerio de hoy?",
+        "¿Qué distingue una música oficial de una música popular que el Estado adopta?"
+      ],
+      "discutir_en": [
+        "How does the cultural policy of the independence era resemble that of a ministry today?",
+        "What separates an official music from a popular music the state adopts?"
+      ],
+      "producto": "Una crónica breve escrita desde el público de uno de estos conciertos, apoyada en dos datos de la ficha.",
+      "producto_en": "A short chronicle written from the audience at one of these concerts, resting on two facts from the entry."
+    },
+    {
+      "id": "desde-esta-orilla",
+      "nombre": "Desde esta orilla",
+      "nombre_en": "From this shore",
+      "nivel": "Cátedra de Estudios Afrocolombianos · semilleros",
+      "nivel_en": "Afro-Colombian Studies · research seedbeds",
+      "pregunta": "¿Qué África suena en un picó?",
+      "pregunta_en": "Which Africa sounds in a picó?",
+      "pasos": [
+        {
+          "ruta": "e21",
+          "consigna": "Pregunta en tu casa o en tu barrio qué canciones africanas se conocen por un nombre puesto aquí. Anota ese nombre y, si lo encuentras, el original.",
+          "consigna_en": "Ask at home or in your neighborhood which African songs are known by a name given here. Write down that name and, if you can find it, the original."
+        },
+        {
+          "ruta": "e28",
+          "consigna": "La salsa también se pegó en los picós. ¿Por qué una música carga un estigma cuando suena en ciertos barrios?",
+          "consigna_en": "Salsa caught on in the picós too. Why does a music carry a stigma when it plays in certain neighborhoods?"
+        },
+        {
+          "ruta": "e22",
+          "consigna": "Escucha «Paquete Chileno». ¿Qué oyes de soukous y qué de Palenque?",
+          "consigna_en": "Listen to “Paquete Chileno.” What do you hear of soukous, and what of Palenque?"
+        },
+        {
+          "ruta": "e26",
+          "consigna": "Un programa de radio hecho en San Juan se oye en Barranquilla. ¿Qué músicas te llegaron a ti por la radio antes que por una pantalla?",
+          "consigna_en": "A radio show made in San Juan is heard in Barranquilla. Which musics reached you by radio before they reached you on a screen?"
+        },
+        {
+          "ruta": "e30",
+          "consigna": "Santa Marta, Barranquilla y Cartagena piden que el picó sea patrimonio. ¿Qué gana y qué arriesga una fiesta cuando se vuelve patrimonio?",
+          "consigna_en": "Santa Marta, Barranquilla, and Cartagena ask that the picó be declared heritage. What does a party gain, and what does it risk, when it becomes heritage?"
+        }
+      ],
+      "discutir": [
+        "¿Por qué el Caribe colombiano suele quedar por fuera de los mapas del Atlántico Negro?",
+        "¿Qué sabe un picotero que no sabe un archivo?"
+      ],
+      "discutir_en": [
+        "Why is the Colombian Caribbean so often left off maps of the Black Atlantic?",
+        "What does a picotero know that an archive does not?"
+      ],
+      "producto": "Una entrevista corta a un picotero, un coleccionista o un bailador mayor, con una canción identificada y su ruta en el mapa.",
+      "producto_en": "A short interview with a picotero, a collector, or an older dancer, with one song identified and its route on the map."
+    },
+    {
+      "id": "lo-que-el-mapa-no-dibuja",
+      "nombre": "Lo que el mapa no dibuja",
+      "nombre_en": "What the map does not draw",
+      "nivel": "Posgrado y semilleros",
+      "nivel_en": "Graduate and research seedbeds",
+      "pregunta": "¿Qué se puede oír de un viaje del que casi no quedó registro?",
+      "pregunta_en": "What can be heard of a voyage that left almost no record?",
+      "pasos": [
+        {
+          "ruta": "umbral",
+          "consigna": "El pasaje medio no tiene arco en este mapa. Sigue en el mar de fondo las corrientes que van de la costa africana al Caribe. ¿Por qué crees que la travesía forzada queda sin dibujar, y qué dice de ella el agua?",
+          "consigna_en": "The Middle Passage has no arc on this map. In the sea beneath, follow the currents that run from the African coast to the Caribbean. Why do you think the forced crossing is left undrawn, and what does the water say of it?"
+        },
+        {
+          "ruta": "e08",
+          "consigna": "Los cantos a los orishas viajan entre La Habana y Lagos. ¿Qué clase de archivo es un canto?",
+          "consigna_en": "The chants to the orishas travel between Havana and Lagos. What kind of archive is a chant?"
+        },
+        {
+          "ruta": "e03",
+          "consigna": "Los espirituales nacen de la esclavitud y llegan a Sudáfrica en una gira. ¿Qué reconoce allá quien los oye?",
+          "consigna_en": "The spirituals are born of slavery and reach South Africa on a tour. What do those who hear them there recognize?"
+        },
+        {
+          "ruta": "e15",
+          "consigna": "Los rastafaris llaman éxodo a su viaje a Etiopía. ¿A qué responde ese nombre?",
+          "consigna_en": "Rastafari call their journey to Ethiopia an exodus. What is that name answering?"
+        }
+      ],
+      "discutir": [
+        "¿Qué hace una cartografía honesta con lo que no puede documentar?",
+        "¿El silencio es del mundo, del archivo o del mapa?"
+      ],
+      "discutir_en": [
+        "What does an honest cartography do with what it cannot document?",
+        "Does the silence belong to the world, to the archive, or to the map?"
+      ],
+      "producto": "Una página sobre un silencio del mapa: qué falta, por qué falta y qué fuente podría empezar a llenarlo.",
+      "producto_en": "One page on a silence in the map: what is missing, why it is missing, and which source could begin to fill it."
+    }
+  ],
+  "mar": {
+    "nota": "Trazo esquemático de las corrientes superficiales del Atlántico. Orienta la lectura; no es dato de navegación.",
+    "nota_en": "A schematic tracing of the Atlantic's surface currents. It guides the reading; it is not navigational data.",
+    "fuente": "Gyory, Mariano y Ryan, s. f. · Eltis y Richardson 2010",
+    "fuente_en": "Gyory, Mariano & Ryan, n.d. · Eltis & Richardson 2010",
+    "zoteroKeys": [
+      "GyoryMarianoRyanSF",
+      "EltisRichardson2010"
+    ],
+    "pasaje": [
+      "canarias",
+      "norecuatorial"
+    ],
+    "corrientes": [
+      {
+        "id": "canarias",
+        "nombre": "Corriente de Canarias",
+        "nombre_en": "Canary Current",
+        "rotulo": [
+          27,
+          -22.5
+        ],
+        "puntos": [
+          [
+            42,
+            -11
+          ],
+          [
+            34,
+            -13
+          ],
+          [
+            26,
+            -17
+          ],
+          [
+            19,
+            -20
+          ],
+          [
+            14,
+            -24
+          ]
+        ]
+      },
+      {
+        "id": "norecuatorial",
+        "nombre": "Corriente Norecuatorial",
+        "nombre_en": "North Equatorial Current",
+        "rotulo": [
+          19.5,
+          -47
+        ],
+        "puntos": [
+          [
+            14,
+            -24
+          ],
+          [
+            13.5,
+            -34
+          ],
+          [
+            14,
+            -46
+          ],
+          [
+            14.5,
+            -56
+          ],
+          [
+            15,
+            -61
+          ]
+        ]
+      },
+      {
+        "id": "caribe",
+        "nombre": "Corriente del Caribe",
+        "nombre_en": "Caribbean Current",
+        "rotulo": [
+          13.2,
+          -79.5
+        ],
+        "puntos": [
+          [
+            15,
+            -61
+          ],
+          [
+            14.5,
+            -68
+          ],
+          [
+            15,
+            -76
+          ],
+          [
+            18,
+            -82
+          ],
+          [
+            21.5,
+            -86
+          ]
+        ]
+      },
+      {
+        "id": "golfo",
+        "nombre": "Corriente del Golfo",
+        "nombre_en": "Gulf Stream",
+        "rotulo": [
+          37.5,
+          -66
+        ],
+        "puntos": [
+          [
+            21.5,
+            -86
+          ],
+          [
+            24,
+            -84
+          ],
+          [
+            25,
+            -80
+          ],
+          [
+            30,
+            -79.5
+          ],
+          [
+            36,
+            -74
+          ],
+          [
+            40,
+            -64
+          ],
+          [
+            43,
+            -50
+          ],
+          [
+            46,
+            -38
+          ]
+        ]
+      },
+      {
+        "id": "atlantico-norte",
+        "nombre": "Deriva del Atlántico Norte",
+        "nombre_en": "North Atlantic Drift",
+        "rotulo": [
+          49.5,
+          -30
+        ],
+        "puntos": [
+          [
+            46,
+            -38
+          ],
+          [
+            47,
+            -28
+          ],
+          [
+            45,
+            -19
+          ],
+          [
+            42,
+            -11
+          ]
+        ]
+      },
+      {
+        "id": "surecuatorial",
+        "nombre": "Corriente Surecuatorial",
+        "nombre_en": "South Equatorial Current",
+        "rotulo": [
+          -5.5,
+          -20
+        ],
+        "puntos": [
+          [
+            -9,
+            9
+          ],
+          [
+            -6,
+            0
+          ],
+          [
+            -3,
+            -12
+          ],
+          [
+            -2,
+            -24
+          ],
+          [
+            -3,
+            -34
+          ],
+          [
+            1,
+            -44
+          ],
+          [
+            6,
+            -52
+          ],
+          [
+            11,
+            -61
+          ]
+        ]
+      },
+      {
+        "id": "benguela",
+        "nombre": "Corriente de Benguela",
+        "nombre_en": "Benguela Current",
+        "rotulo": [
+          -22,
+          4
+        ],
+        "puntos": [
+          [
+            -33,
+            16
+          ],
+          [
+            -25,
+            13
+          ],
+          [
+            -17,
+            11
+          ],
+          [
+            -9,
+            9
+          ]
+        ]
+      },
+      {
+        "id": "guinea",
+        "nombre": "Corriente de Guinea",
+        "nombre_en": "Guinea Current",
+        "rotulo": [
+          0.3,
+          -6
+        ],
+        "puntos": [
+          [
+            7,
+            -17
+          ],
+          [
+            4.2,
+            -12
+          ],
+          [
+            3.6,
+            -5
+          ],
+          [
+            4.5,
+            2
+          ],
+          [
+            3.5,
+            7
+          ]
+        ]
+      }
+    ]
+  }
+}

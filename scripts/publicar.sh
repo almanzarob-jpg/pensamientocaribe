@@ -59,6 +59,14 @@ node scripts/generar-bibliografia-vaiven.mjs >/tmp/pc-biblio.txt 2>&1 \
 paso "Bibliografía del vaivén: $(tail -1 /tmp/pc-biblio.txt)"
 grep '^⚠' /tmp/pc-biblio.txt || true
 
+# Datos del mapa sonoro (rutas, puertos, corrientes, ramajes, travesías) y las
+# cifras que sus páginas repiten en letras.
+if [ -f scripts/validar-vaiven.mjs ]; then
+  node scripts/validar-vaiven.mjs >/tmp/pc-vaiven.txt 2>&1 \
+    || { cat /tmp/pc-vaiven.txt; falla "El mapa sonoro tiene datos o cifras incoherentes."; }
+  paso "$(tail -1 /tmp/pc-vaiven.txt)"
+fi
+
 if [ -f scripts/validar-fenomenos.mjs ]; then
   node scripts/validar-fenomenos.mjs >/tmp/pc-fen.txt 2>&1 \
     || { cat /tmp/pc-fen.txt; falla "La capa de fenómenos tiene errores."; }

@@ -11,11 +11,11 @@ mismo modelo.
 
 ## Archivos
 
-- **`nodes.json`** — 24 nodos (puertos). Cada uno conserva sus campos originales
+- **`nodes.json`** — 32 nodos (puertos; eran 24 en julio de 2026). Cada uno conserva sus campos originales
   (`nombre`, `lat`, `lng`, `categoria`, `desc`/`desc_en`, `claves`, `cultura`,
   `cancion`, `fuente`) y añade `id` (slug estable) y `zoteroKeys`.
   Estado: solo 2 de los 24 declaran `fuente`. Completarlos es trabajo pendiente.
-- **`edges.json`** — 26 arcos transatlánticos. `source`/`target` apuntan al `id`
+- **`edges.json`** — 40 arcos (eran 26 en julio de 2026). Desde la versión 1.1.0 cada uno lleva `corriente`, el vehículo en que viajó la música. `source`/`target` apuntan al `id`
   del nodo, con `source_nombre`/`target_nombre` para lectura humana. Conserva
   `epoca`, `curva`, `titulo`, `anos`, `desc`, `claves`, `cancion`, `fuente`.
 - **`fuentes-sonora.json`** — **bibliografía única del mapa** (desde 17-oct-2026,
@@ -24,6 +24,15 @@ mismo modelo.
   (`--check` solo comprueba). Para añadir o corregir una referencia se edita este
   archivo, nunca el HTML. `enPagina:false` marca lo que las rutas citan pero aún
   no tiene datos; no se publica hasta completarlo.
+- **`lecturas.json`** — maneras de leer el mapa que no añaden datos (16-nov-2026):
+  las seis **corrientes** (Cuerpos, Discos, Ondas, Palabras, Escenarios, Espíritus),
+  los **ramajes** (rutas publicadas, encadenadas), las **travesías de escucha**
+  (pregunta, paradas con consigna, discusión, producto) y el **mar de fondo**
+  (esquema de las corrientes superficiales del Atlántico, con su fuente). Lo lee
+  `js/vaiven-lecturas.js`. Todo va en español e inglés.
+  `node scripts/validar-vaiven.mjs` comprueba que rutas, puertos, corrientes,
+  ramajes y travesías casan entre sí y que las cifras escritas en letras en las
+  páginas coinciden con los datos; `scripts/publicar.sh` lo corre antes de publicar.
 - **`fuentes.json`** — 110 obras exportadas de Zotero (`Mi biblioteca.rdf`).
   **Ojo: este es el corpus de negrura/blanquitud, no la bibliografía del mapa
   sonoro.** Está aquí por razones históricas y conviene moverlo al proyecto que

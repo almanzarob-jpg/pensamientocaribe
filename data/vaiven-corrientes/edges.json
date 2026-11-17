@@ -32,7 +32,8 @@
     "zoteroKeys": [
       "MontesPizarro2018",
       "Bilby2011"
-    ]
+    ],
+    "corriente": "cuerpos"
   },
   {
     "id": "e02",
@@ -61,7 +62,8 @@
     ],
     "zoteroKeys": [
       "Adi2018"
-    ]
+    ],
+    "corriente": "palabras"
   },
   {
     "id": "e03",
@@ -96,7 +98,8 @@
     "zoteroKeys": [
       "Erlmann1991",
       "Jaji2014"
-    ]
+    ],
+    "corriente": "escenarios"
   },
   {
     "id": "e04",
@@ -131,7 +134,8 @@
     "zoteroKeys": [
       "MontesPizarro2018",
       "Collins1994"
-    ]
+    ],
+    "corriente": "cuerpos"
   },
   {
     "id": "e05",
@@ -165,7 +169,8 @@
     "zoteroKeys": [
       "MontesPizarro2018",
       "Rohlehr1990"
-    ]
+    ],
+    "corriente": "cuerpos"
   },
   {
     "id": "e06",
@@ -199,7 +204,8 @@
     ],
     "zoteroKeys": [
       "Adi2018"
-    ]
+    ],
+    "corriente": "cuerpos"
   },
   {
     "id": "e07",
@@ -234,7 +240,8 @@
     "zoteroKeys": [
       "MontesPizarro2018",
       "Denning2015"
-    ]
+    ],
+    "corriente": "discos"
   },
   {
     "id": "e08",
@@ -267,7 +274,8 @@
     ],
     "zoteroKeys": [
       "Matory2005"
-    ]
+    ],
+    "corriente": "espiritus"
   },
   {
     "id": "e09",
@@ -296,7 +304,8 @@
     ],
     "zoteroKeys": [
       "Shain2018"
-    ]
+    ],
+    "corriente": "discos"
   },
   {
     "id": "e10",
@@ -330,7 +339,8 @@
     ],
     "zoteroKeys": [
       "Adi2018"
-    ]
+    ],
+    "corriente": "palabras"
   },
   {
     "id": "e11",
@@ -363,7 +373,8 @@
     ],
     "zoteroKeys": [
       "MontesPizarro2018"
-    ]
+    ],
+    "corriente": "escenarios"
   },
   {
     "id": "e12",
@@ -397,7 +408,8 @@
     ],
     "zoteroKeys": [
       "MontesPizarro2018"
-    ]
+    ],
+    "corriente": "escenarios"
   },
   {
     "id": "e13",
@@ -431,7 +443,8 @@
     ],
     "zoteroKeys": [
       "Shain2018"
-    ]
+    ],
+    "corriente": "discos"
   },
   {
     "id": "e14",
@@ -461,7 +474,8 @@
     "zoteroKeys": [
       "Shain2018",
       "Gilroy1993"
-    ]
+    ],
+    "corriente": "palabras"
   },
   {
     "id": "e29",
@@ -491,7 +505,8 @@
     "zoteroKeys": [
       "Shain2018",
       "Gilroy1993"
-    ]
+    ],
+    "corriente": "palabras"
   },
   {
     "id": "e15",
@@ -526,7 +541,8 @@
     "zoteroKeys": [
       "Bonacci2015",
       "Adi2018"
-    ]
+    ],
+    "corriente": "espiritus"
   },
   {
     "id": "e16",
@@ -555,7 +571,13 @@
     ],
     "zoteroKeys": [
       "MontesPizarro2018"
-    ]
+    ],
+    "corriente": "escenarios",
+    "cancion": {
+      "titulo": "Water No Get Enemy",
+      "artista": "Fela Kuti",
+      "youtubeId": "kisTH3SFegc"
+    }
   },
   {
     "id": "e17",
@@ -584,7 +606,8 @@
     ],
     "zoteroKeys": [
       "Jaji2014"
-    ]
+    ],
+    "corriente": "escenarios"
   },
   {
     "id": "e18",
@@ -618,7 +641,8 @@
     ],
     "zoteroKeys": [
       "VonEschen2004"
-    ]
+    ],
+    "corriente": "escenarios"
   },
   {
     "id": "e19",
@@ -653,7 +677,8 @@
     "zoteroKeys": [
       "ZaireAlbumYFilmLiveInAfrica",
       "Manuel1995"
-    ]
+    ],
+    "corriente": "escenarios"
   },
   {
     "id": "e27",
@@ -683,7 +708,8 @@
     "zoteroKeys": [
       "Guilbault1993",
       "Manuel1995"
-    ]
+    ],
+    "corriente": "escenarios"
   },
   {
     "id": "e20",
@@ -718,7 +744,8 @@
     "zoteroKeys": [
       "MontesPizarro2018",
       "Stewart2000"
-    ]
+    ],
+    "corriente": "escenarios"
   },
   {
     "id": "e28",
@@ -747,7 +774,8 @@
     ],
     "zoteroKeys": [
       "ContrerasHernandezSF"
-    ]
+    ],
+    "corriente": "discos"
   },
   {
     "id": "e21",
@@ -783,7 +811,8 @@
       "Cunin2006",
       "GiraldoBarbosa2016",
       "Ewens1991"
-    ]
+    ],
+    "corriente": "discos"
   },
   {
     "id": "e22",
@@ -818,7 +847,8 @@
     "zoteroKeys": [
       "Cunin2003",
       "MontesPizarro2018"
-    ]
+    ],
+    "corriente": "cuerpos"
   },
   {
     "id": "e23",
@@ -853,7 +883,8 @@
     "zoteroKeys": [
       "Shain2018",
       "QuinteroRivera1998"
-    ]
+    ],
+    "corriente": "ondas"
   },
   {
     "id": "e24",
@@ -885,7 +916,8 @@
       "Shared riddims",
       "A living present"
     ],
-    "zoteroKeys": []
+    "zoteroKeys": [],
+    "corriente": "ondas"
   },
   {
     "id": "e25",
@@ -920,7 +952,8 @@
     "zoteroKeys": [
       "Guilbault1993",
       "Manuel1995"
-    ]
+    ],
+    "corriente": "escenarios"
   },
   {
     "id": "e26",
@@ -949,7 +982,8 @@
     ],
     "zoteroKeys": [
       "MontesPizarro2018"
-    ]
+    ],
+    "corriente": "ondas"
   },
   {
     "id": "e30",
@@ -978,6 +1012,345 @@
     ],
     "zoteroKeys": [
       "FUKAFRA2026"
+    ],
+    "corriente": "discos"
+  },
+  {
+    "id": "e31",
+    "source": "freetown",
+    "target": "malabo",
+    "source_nombre": "Freetown",
+    "target_nombre": "Malabo",
+    "epoca": 1,
+    "curva": 0.2,
+    "corriente": "cuerpos",
+    "titulo": "El gumbé sigue hasta Fernando Poo",
+    "anos": "1827–1900",
+    "desc": "Los krio, uno de los pueblos más móviles de la costa africana, llevaron el tambor gumbé de Freetown a las islas de la actual Guinea Ecuatorial, adonde llegaron como obreros durante el siglo XIX. En Fernando Poo lo llamaron kunkí; en Annobón, cumbé. El viaje no terminó ahí: obreros y pescadores ga lo llevaron de Malabo a Ghana a comienzos del siglo XX, donde se volvió gome.",
+    "claves": [
+      "Obreros krio",
+      "Kunkí · cumbé",
+      "De Malabo a Ghana: el gome"
+    ],
+    "cancion": null,
+    "fuente": "Montes Pizarro 2018, pp. 79-80 · Aranzadi 2010",
+    "titulo_en": "Gumbe travels on to Fernando Po",
+    "anos_en": "1827–1900",
+    "desc_en": "The Krio, among the most mobile peoples of the African coast, carried the gumbe drum from Freetown to the islands of present-day Equatorial Guinea, where they arrived as workers during the nineteenth century. On Fernando Po it was called kunkí; on Annobón, cumbé. The voyage did not end there: Ga workers and fishermen took it from Malabo to Ghana in the early twentieth century, where it became gome.",
+    "claves_en": [
+      "Krio workers",
+      "Kunkí · cumbé",
+      "From Malabo to Ghana: gome"
+    ],
+    "zoteroKeys": [
+      "MontesPizarro2018",
+      "Aranzadi2010"
+    ]
+  },
+  {
+    "id": "e32",
+    "source": "la-habana",
+    "target": "malabo",
+    "source_nombre": "La Habana",
+    "target_nombre": "Malabo",
+    "epoca": 1,
+    "curva": -0.14,
+    "corriente": "cuerpos",
+    "titulo": "De Cuba a Fernando Poo: emancipados y ñáñigos",
+    "anos": "1862–1897",
+    "desc": "Entre 1862 y 1897 llegaron de La Habana a Fernando Poo negros emancipados, deportados políticos y ñáñigos, miembros de la sociedad abakuá. Con ellos cruzaron prácticas musicales del Calabar que habían seguido vivas en Cuba y que volvían así al golfo de Guinea, a poca distancia de donde habían salido. El baile ritual que en Bioko y Annobón se llama bonkó o ñánkue viene de ahí.",
+    "claves": [
+      "Emancipados y deportados",
+      "Abakuá → bonkó",
+      "Del Calabar a Cuba, y de vuelta"
+    ],
+    "cancion": null,
+    "fuente": "Montes Pizarro 2018, p. 79 · Aranzadi 2010 · Aranzadi 2014 · Aranzadi 2021",
+    "titulo_en": "From Cuba to Fernando Po: the emancipated and the ñáñigos",
+    "anos_en": "1862–1897",
+    "desc_en": "Between 1862 and 1897, emancipated Black people, political deportees, and ñáñigos, members of the Abakuá society, arrived on Fernando Po from Havana. With them crossed musical practices from Calabar that had stayed alive in Cuba and so returned to the Gulf of Guinea, a short distance from where they had set out. The ritual dance known on Bioko and Annobón as bonkó or ñánkue comes from there.",
+    "claves_en": [
+      "The emancipated and the deported",
+      "Abakuá → bonkó",
+      "From Calabar to Cuba, and back"
+    ],
+    "zoteroKeys": [
+      "MontesPizarro2018",
+      "Aranzadi2010",
+      "Aranzadi2014",
+      "Aranzadi2021"
+    ]
+  },
+  {
+    "id": "e33",
+    "source": "monrovia",
+    "target": "canal-de-panama",
+    "source_nombre": "Monrovia",
+    "target_nombre": "Canal de Panamá",
+    "epoca": 1,
+    "curva": 0.16,
+    "corriente": "cuerpos",
+    "titulo": "Los kru cruzan al Caribe",
+    "anos": "1841–1897",
+    "desc": "Los marineros kru de la costa de Liberia trabajaron en barcos europeos y estadounidenses durante todo el siglo XIX, y también cruzaron el océano: hubo kru en las Guayanas, Jamaica, Trinidad y Martinica, y en la década de 1880 en la construcción del canal de Panamá. Son los mismos que tejieron la palmwine music por los puertos africanos. Qué música llevaron y trajeron en este cruce está por documentar.",
+    "claves": [
+      "Marineros kru",
+      "Trabajo contratado",
+      "Guayanas · Jamaica · Trinidad · Martinica"
+    ],
+    "cancion": null,
+    "fuente": "Montes Pizarro 2018, pp. 90-91",
+    "titulo_en": "The Kru cross to the Caribbean",
+    "anos_en": "1841–1897",
+    "desc_en": "Kru sailors from the Liberian coast worked on European and American ships throughout the nineteenth century, and they crossed the ocean too: there were Kru in the Guianas, Jamaica, Trinidad, and Martinique, and in the 1880s on the construction of the Panama Canal. They are the same men who wove palmwine music through the African ports. What music they carried and brought back on this crossing remains to be documented.",
+    "claves_en": [
+      "Kru sailors",
+      "Contract labor",
+      "Guianas · Jamaica · Trinidad · Martinique"
+    ],
+    "zoteroKeys": [
+      "MontesPizarro2018"
+    ]
+  },
+  {
+    "id": "e34",
+    "source": "la-habana",
+    "target": "bamako",
+    "source_nombre": "La Habana",
+    "target_nombre": "Bamako",
+    "epoca": 3,
+    "curva": 0.2,
+    "corriente": "escenarios",
+    "titulo": "Las Maravillas de Malí",
+    "anos": "1964–1972",
+    "desc": "Los acuerdos de Cuba con los nuevos Estados africanos incluían becas para músicos. Con estudiantes malienses del conservatorio de La Habana se formó en 1964 Las Maravillas de Malí, dirigida por Boncana Maïga. Tras ocho años en Cuba la orquesta regresó a Malí, sumó al griot Kasse Mady Diabaté y pasó a llamarse National Badema. Maïga sería después director musical de Africando.",
+    "claves": [
+      "Boncana Maïga",
+      "Becas y conservatorio",
+      "National Badema"
+    ],
+    "cancion": {
+      "titulo": "Rendez-vous chez Fatimata",
+      "artista": "Las Maravillas de Malí",
+      "youtubeId": "2KSzjyPn6Kk"
+    },
+    "fuente": "Montes Pizarro 2018, p. 164",
+    "titulo_en": "Las Maravillas de Malí",
+    "anos_en": "1964–1972",
+    "desc_en": "Cuba's agreements with the new African states included scholarships for musicians. In 1964, Malian students at the Havana conservatory formed Las Maravillas de Malí, led by Boncana Maïga. After eight years in Cuba the orchestra returned to Mali, took on the griot Kasse Mady Diabaté, and renamed itself National Badema. Maïga would later be the musical director of Africando.",
+    "claves_en": [
+      "Boncana Maïga",
+      "Scholarships and the conservatory",
+      "National Badema"
+    ],
+    "zoteroKeys": [
+      "MontesPizarro2018"
+    ]
+  },
+  {
+    "id": "e35",
+    "source": "conakry",
+    "target": "la-habana",
+    "source_nombre": "Conakry",
+    "target_nombre": "La Habana",
+    "epoca": 3,
+    "curva": 0.26,
+    "corriente": "escenarios",
+    "titulo": "La Bembeya Jazz en Cuba",
+    "anos": "1966",
+    "desc": "La ruta de la authenticité también corrió al revés. En 1966 la Bembeya Jazz se presentó en Cuba durante el Festival Tricontinental y se quedó mes y medio tocando por todo el país. Se cuenta que su cantante, Aboubacar Demba Camara, hizo llorar a Abelardo Barroso al cantarle una de sus canciones. En 1978 el sello cubano Areíto publicó un disco compartido de música guineana y cubana.",
+    "claves": [
+      "Festival Tricontinental, 1966",
+      "Demba Camara y Abelardo Barroso",
+      "Disco guineano-cubano de 1978"
+    ],
+    "cancion": null,
+    "fuente": "Montes Pizarro 2018, p. 164",
+    "titulo_en": "Bembeya Jazz in Cuba",
+    "anos_en": "1966",
+    "desc_en": "The route of authenticité also ran the other way. In 1966 Bembeya Jazz performed in Cuba during the Tricontinental Festival and stayed for a month and a half, playing all over the country. The story goes that its singer, Aboubacar Demba Camara, moved Abelardo Barroso to tears by singing him one of his own songs. In 1978 the Cuban label Areíto released a shared album of Guinean and Cuban music.",
+    "claves_en": [
+      "Tricontinental Festival, 1966",
+      "Demba Camara and Abelardo Barroso",
+      "The Guinean-Cuban album of 1978"
+    ],
+    "zoteroKeys": [
+      "MontesPizarro2018"
+    ]
+  },
+  {
+    "id": "e36",
+    "source": "brazzaville",
+    "target": "la-habana",
+    "source_nombre": "Brazzaville",
+    "target_nombre": "La Habana",
+    "epoca": 3,
+    "curva": -0.18,
+    "corriente": "discos",
+    "titulo": "«Mwanga»: el Congo en la Aragón",
+    "anos": "1970",
+    "desc": "Franklin Boukaka, de la República del Congo, grabó «Mwanga» en 1970. A comienzos de esa década la Orquesta Aragón, que había girado por varios países africanos, la llevó al disco. Una canción congoleña entró así al repertorio de la charanga cubana que más había influido en las orquestas del continente.",
+    "claves": [
+      "Franklin Boukaka",
+      "Orquesta Aragón",
+      "Una canción de ida y vuelta"
+    ],
+    "cancion": {
+      "titulo": "Mwanga",
+      "artista": "Franklin Boukaka",
+      "youtubeId": "4xLtI0UV-DM"
+    },
+    "fuente": "Montes Pizarro 2018, p. 164",
+    "titulo_en": "“Mwanga”: the Congo in the Aragón",
+    "anos_en": "1970",
+    "desc_en": "Franklin Boukaka, from the Republic of the Congo, recorded “Mwanga” in 1970. Early in that decade the Orquesta Aragón, which had toured several African countries, put it on record. A Congolese song thus entered the repertoire of the Cuban charanga that had most influenced the continent's orchestras.",
+    "claves_en": [
+      "Franklin Boukaka",
+      "Orquesta Aragón",
+      "A song that went both ways"
+    ],
+    "zoteroKeys": [
+      "MontesPizarro2018"
+    ]
+  },
+  {
+    "id": "e37",
+    "source": "la-habana",
+    "target": "cotonu",
+    "source_nombre": "La Habana",
+    "target_nombre": "Cotonú",
+    "epoca": 3,
+    "curva": 0.1,
+    "corriente": "discos",
+    "titulo": "Gnonnas Pedro: el bolero en Benín",
+    "anos": "1960–2004",
+    "desc": "Gnonnas Pedro empezó su carrera en Cotonú a comienzos de los sesenta y juntó el highlife y el agbadja de Benín con la música afrocubana y el calipso. En sus discos abundan los boleros, «Perfidia» entre ellos. En sus últimos años cantó con Africando. El bolero, que en la región mandé sirvió de molde para los cantos de elogio de los griots, es el género caribeño que este mapa no había seguido todavía.",
+    "claves": [
+      "Bolero africano",
+      "Agbadja y música afrocubana",
+      "De Cotonú a Africando"
+    ],
+    "cancion": {
+      "titulo": "El Perfidia",
+      "artista": "Gnonnas Pedro & ses Dadjès",
+      "youtubeId": "fdwvzQ120x4"
+    },
+    "fuente": "Montes Pizarro 2018, pp. 213-215",
+    "titulo_en": "Gnonnas Pedro: the bolero in Benin",
+    "anos_en": "1960–2004",
+    "desc_en": "Gnonnas Pedro began his career in Cotonou in the early 1960s and joined Benin's highlife and agbadja with Afro-Cuban music and calypso. His records are full of boleros, “Perfidia” among them. In his last years he sang with Africando. The bolero, which in the Mande region served as a mold for the griots' praise songs, is the Caribbean genre this map had not yet followed.",
+    "claves_en": [
+      "African bolero",
+      "Agbadja and Afro-Cuban music",
+      "From Cotonou to Africando"
+    ],
+    "zoteroKeys": [
+      "MontesPizarro2018"
+    ]
+  },
+  {
+    "id": "e38",
+    "source": "duala",
+    "target": "guadalupe",
+    "source_nombre": "Duala",
+    "target_nombre": "Guadalupe",
+    "epoca": 4,
+    "curva": 0.22,
+    "corriente": "ondas",
+    "titulo": "Makossa y zouk",
+    "anos": "1970–1990",
+    "desc": "El makossa nació en Duala a comienzos de los sesenta y desde los setenta se grabó sobre todo en París, donde músicos cameruneses y antillanos trabajaron juntos: el guadalupeño Jean-Claude Naimro, luego fundador de Kassav', grabó con Moni Bile. «Amie», «Essele Mba» y «African Typic Collection» sonaron mucho en el Caribe francófono e influyeron en el zouk. Y el zouk volvió a Camerún convertido en makassi, con Sam Fan Thomas.",
+    "claves": [
+      "París como estudio común",
+      "Kassav' · Moni Bile",
+      "Makassi"
+    ],
+    "cancion": {
+      "titulo": "Amie (Amio)",
+      "artista": "Bebe Manga",
+      "youtubeId": "-G_f_IQeru8"
+    },
+    "fuente": "Montes Pizarro 2018, pp. 221-224",
+    "titulo_en": "Makossa and zouk",
+    "anos_en": "1970–1990",
+    "desc_en": "Makossa was born in Douala in the early 1960s and from the 1970s was recorded mostly in Paris, where Cameroonian and Antillean musicians worked side by side: the Guadeloupean Jean-Claude Naimro, later a founder of Kassav', recorded with Moni Bile. “Amie,” “Essele Mba,” and “African Typic Collection” were widely heard in the French-speaking Caribbean and influenced zouk. And zouk went back to Cameroon as makassi, with Sam Fan Thomas.",
+    "claves_en": [
+      "Paris as a shared studio",
+      "Kassav' · Moni Bile",
+      "Makassi"
+    ],
+    "zoteroKeys": [
+      "MontesPizarro2018"
+    ]
+  },
+  {
+    "id": "e39",
+    "source": "johannesburgo",
+    "target": "nueva-york",
+    "source_nombre": "Johannesburgo",
+    "target_nombre": "Nueva York",
+    "epoca": 3,
+    "curva": 0.2,
+    "corriente": "escenarios",
+    "titulo": "Makeba: el exilio que canta",
+    "anos": "1960–1975",
+    "desc": "El apartheid le prohibió a Miriam Makeba volver a Sudáfrica y ella empezó a trabajar desde Nueva York, con ayuda de Harry Belafonte. Fue la primera estrella africana de escala mundial y cantó contra el apartheid, por los derechos civiles y por las independencias. El trío que la acompañaba en esos años era un panafricanismo en pequeño: el brasileño Sivuca, el afroestadounidense William Salter y el puertorriqueño Leopoldo F. Fleming, nacido en Puerta de Tierra.",
+    "claves": [
+      "Mamá África",
+      "Harry Belafonte",
+      "Leopoldo F. Fleming, de San Juan"
+    ],
+    "cancion": {
+      "titulo": "Pata Pata (en vivo, 1967)",
+      "artista": "Miriam Makeba",
+      "youtubeId": "lNeP3hrm__k"
+    },
+    "fuente": "Montes Pizarro 2018, pp. 224-225",
+    "titulo_en": "Makeba: exile that sings",
+    "anos_en": "1960–1975",
+    "desc_en": "Apartheid barred Miriam Makeba from returning to South Africa, and she began working out of New York with help from Harry Belafonte. She was the first African star on a world scale, and she sang against apartheid, for civil rights, and for the independence struggles. The trio that backed her in those years was pan-Africanism in miniature: the Brazilian Sivuca, the African American William Salter, and the Puerto Rican Leopoldo F. Fleming, born in Puerta de Tierra.",
+    "claves_en": [
+      "Mama Africa",
+      "Harry Belafonte",
+      "Leopoldo F. Fleming, of San Juan"
+    ],
+    "zoteroKeys": [
+      "MontesPizarro2018"
+    ]
+  },
+  {
+    "id": "e40",
+    "source": "la-habana",
+    "target": "dar-es-salaam",
+    "source_nombre": "La Habana",
+    "target_nombre": "Dar es Salaam",
+    "epoca": 3,
+    "curva": -0.12,
+    "corriente": "discos",
+    "titulo": "La rumba que Nyerere regañó",
+    "anos": "1948–1965",
+    "desc": "En su discurso inaugural, Julius Nyerere se quejó de que los tanzanos supieran bailar rumba y chachachá y no las danzas de su tierra. No sirvió de mucho: la música caribeña, llegada sobre todo a través de la congoleña, siguió entusiasmando a las ciudades, y las bandas que la tocaban recibieron dinero del gobierno. La Cuban Marimba Band de Salum Abdallah, fundada en 1948, fue por casi veinte años su portaestandarte en África Oriental.",
+    "claves": [
+      "Cuban Marimba Band",
+      "El discurso de Nyerere",
+      "Por vía del Congo"
+    ],
+    "cancion": {
+      "titulo": "Ngoma Iko Huku",
+      "artista": "Salum Abdallah & Cuban Marimba Band",
+      "youtubeId": "H25hjaMKR_g"
+    },
+    "fuente": "Montes Pizarro 2018, pp. 165-166",
+    "titulo_en": "The rumba Nyerere scolded",
+    "anos_en": "1948–1965",
+    "desc_en": "In his inaugural address, Julius Nyerere complained that Tanzanians could dance the rumba and the cha-cha-chá but not the dances of their own land. It made little difference: Caribbean music, arriving mostly through Congolese music, kept thrilling the cities, and the bands that played it received government money. Salum Abdallah's Cuban Marimba Band, founded in 1948, was its standard-bearer in East Africa for almost twenty years.",
+    "claves_en": [
+      "Cuban Marimba Band",
+      "Nyerere's speech",
+      "By way of the Congo"
+    ],
+    "zoteroKeys": [
+      "MontesPizarro2018"
     ]
   }
 ]
