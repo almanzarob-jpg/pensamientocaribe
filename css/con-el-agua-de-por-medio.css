@@ -2,6 +2,10 @@
     --bg-deep:#050604; --bg-warm:#0a0b08; --panel:#11130d;
     --green:#245f1e; --green-l:#3f8a35; --orange:#f07a16; --red:#d83a2e; --gold:#c9a24d; --gold-d:#8a6c2c;
     --cream:#f2ead8; --gray:#b9b09f; --line:#2c2e24;
+    /* 17-nov-2026 · las corrientes son agua: el azul de la unidad submarina (--hilo), claro
+       y apagado para no confundirse con ningún nodo; la disonancia, coral, el arrecife donde
+       la corriente rompe. ΔE con el nodo más cercano: 29 (Catástrofes) y 29 (Colonialidad). */
+    --corr:#bcdcec; --corr-diso:#ff9e94;
     --ff-display:'Cormorant Garamond',Georgia,serif;
     --ff-body:'Inter',system-ui,sans-serif;
     --ff-mono:ui-monospace,'SFMono-Regular','Consolas',monospace;
@@ -138,8 +142,8 @@
   .clv-dic .ag-m circle.anl{fill:none; stroke:var(--gold); stroke-width:1.1; opacity:.8}
   .node.sindato circle.dot{opacity:.32}
   .node.sindato:hover circle.dot, .node.sindato:focus-visible circle.dot{opacity:.85}
-  .edge{fill:none; stroke:var(--orange); stroke-opacity:.4; stroke-width:1.3; stroke-linecap:round; stroke-dasharray:1.5 6; transition:stroke-opacity var(--mov-medio) var(--curva-llegada)}
-  .edge.disonancia{stroke:var(--red)}
+  .edge{fill:none; stroke:var(--corr); stroke-opacity:.4; stroke-width:1.3; stroke-linecap:round; stroke-dasharray:1.5 6; transition:stroke-opacity var(--mov-medio) var(--curva-llegada)}
+  .edge.disonancia{stroke:var(--corr-diso)}
   .fricc{pointer-events:none}
   .coast{fill:none; stroke:var(--green-l); stroke-opacity:.16; stroke-width:1}
   .tideband{fill:none; stroke:#4a9db0; stroke-opacity:.07}
@@ -321,8 +325,8 @@
   #legend .keys span{display:flex; align-items:center; gap:5px}
   #legend .kob{width:9px;height:9px;border-radius:50%;background:var(--gray)}
   #legend .kma{width:9px;height:9px;border-radius:50%;border:2px solid var(--gray);background:transparent}
-  #legend .kre{width:15px;height:0;border-top:2px solid var(--orange)}
-  #legend .kdi{width:15px;height:0;border-top:2px dashed var(--red)}
+  #legend .kre{width:15px;height:0;border-top:2px solid var(--corr)}
+  #legend .kdi{width:15px;height:0;border-top:2px dashed var(--corr-diso)}
   #legend .kfr{color:var(--cream);font-size:10px;line-height:1}
   #legend .mlink{margin-top:9px;padding-top:9px;border-top:1px solid var(--line)}
   #legend .mlink a, #legend .mlink [role="button"]{color:var(--orange);cursor:pointer;text-decoration:none;font-size:9.5px;letter-spacing:.6px}
@@ -1048,7 +1052,7 @@ main:has(#qcLeyenda:not([hidden])) #hint{bottom:auto; top:16px}
    que el estatuto de la cita decidía si la relación se movía. Eso contradice la premisa
    del atlas: nada queda quieto, y la unidad es submarina —no deja de existir por no
    asomar en una nota al pie. El trazo largo con corte deja ver las dos cosas a la vez. */
-.edge.disonancia{stroke-dasharray:7 5; stroke-width:1.35}
+.edge.disonancia{stroke-dasharray:7 5; stroke-width:1.75}
 .edge.disonancia.pend{stroke-dasharray:14 4 3 4}
 @keyframes aguaRespira{0%,100%{opacity:.38}50%{opacity:1}}
 #stage.ar-activa .edge.ar-apagada{animation:none}
@@ -1083,10 +1087,10 @@ main:has(#qcLeyenda:not([hidden])) #hint{bottom:auto; top:16px}
 #clave .ag-i i{font-style:normal; opacity:.6}
 #clave .ag-m{flex:none; width:34px; height:8px; overflow:visible}
 #clave .ag-m path{fill:none; stroke-linecap:round}
-.ag-corr{stroke:var(--gray); stroke-opacity:.75; stroke-width:1.2; animation:aguaMece 3.2s var(--curva-vaiven) infinite alternate}
+.ag-corr{stroke:var(--corr); stroke-opacity:.75; stroke-width:1.2; animation:aguaMece 3.2s var(--curva-vaiven) infinite alternate}
 @keyframes aguaMece{from{transform:translate(-1.5px,-.8px)}to{transform:translate(1.5px,.8px)}}
-.ag-pend{stroke:var(--gray); stroke-opacity:.85; stroke-width:1.2; stroke-dasharray:9 4; animation:aguaFuera 3.4s linear infinite}
-.ag-diso{stroke:var(--gray); stroke-opacity:.75; stroke-width:1.2; stroke-dasharray:6 4; animation:aguaContra 2.6s linear infinite}
+.ag-pend{stroke:var(--corr); stroke-opacity:.85; stroke-width:1.2; stroke-dasharray:9 4; animation:aguaFuera 3.4s linear infinite}
+.ag-diso{stroke:var(--corr-diso); stroke-opacity:.75; stroke-width:1.2; stroke-dasharray:6 4; animation:aguaContra 2.6s linear infinite}
 @keyframes aguaFuera{to{stroke-dashoffset:-12}}
 #stage.quieto ~ * .ag-m path, body:has(#stage.quieto) .ag-m path{animation:none}
 
