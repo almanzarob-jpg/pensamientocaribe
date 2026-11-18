@@ -222,6 +222,16 @@ const reglas = [
   // 04-10-2026: el atlas carga el índice y pide las fichas aparte; las dos marcas de caché
   // siguen la versión del corpus, o un visitante podría mezclar fichas viejas con mapa nuevo.
   ["proyectos/con-el-agua-de-por-medio.html", /atlas-fichas\.js\?v=([\d.]+)'/, "version"],
+  // Añadidas el 15-11-2026 («Aprender con el atlas»): la lista de limitaciones de la
+  // metodología decía 35,8 % pendiente con el corpus en 18,4 %, contradiciendo la cifra de
+  // corroboradas de la misma página; y la guía del reflujo fechaba en la v1.22.0 unos
+  // números que ya eran de la v1.45.0. Ninguna de las tres frases tenía regla.
+  ["proyectos/metodologia-agua-de-por-medio.html", /El ([\d,]+)% de las relaciones está pendiente/, "porCorroborarPctEs"],
+  ["proyectos/metodologia-agua-de-por-medio-en.html", /([\d.]+)% of the relations are pending/, "porCorroborarPctEn"],
+  ["proyectos/reflujo-guia.html", /Datos a<\/span><span class="proyecto-meta-value">[^<·]*· v([\d.]+)</, "version"],
+  ["proyectos/reflujo-guia-en.html", /Data as of<\/span><span class="proyecto-meta-value">[^<·]*· v([\d.]+)</, "version"],
+  ["proyectos/marca-de-marea.html", /id="mPend">(\d+) de \d+</, "porCorroborar"],
+  ["proyectos/marca-de-marea.html", /id="mPend">\d+ de (\d+)</, "relaciones"],
 ];
 
 const errores = [];
